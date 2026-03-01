@@ -87,6 +87,29 @@ function getDarkTheme() {
   };
 }
 
+function getMidnightTheme() {
+  return {
+    layout: {
+      background: { type: ColorType.Solid as const, color: "#0d1117" },
+      textColor: "#c9d1d9",
+    },
+    grid: {
+      vertLines: { color: "#21262d" },
+      horzLines: { color: "#21262d" },
+    },
+    crosshair: {
+      vertLine: { color: "#6e7681", width: 1 as const, style: 3 as const },
+      horzLine: { color: "#6e7681", width: 1 as const, style: 3 as const },
+    },
+    rightPriceScale: {
+      borderColor: "#30363d",
+    },
+    timeScale: {
+      borderColor: "#30363d",
+    },
+  };
+}
+
 // ---------- Component --------------------------------------------------------
 
 export default function AdvancedChart({
@@ -110,7 +133,7 @@ export default function AdvancedChart({
   const [coinDropdownOpen, setCoinDropdownOpen] = useState(false);
 
   const { resolvedTheme } = useTheme();
-  const isDark = resolvedTheme === "dark";
+  const isDark = resolvedTheme === "dark" || resolvedTheme === "midnight";
 
   // ---- Create chart ---------------------------------------------------------
 
@@ -118,7 +141,7 @@ export default function AdvancedChart({
     if (!chartContainerRef.current) return;
 
     const container = chartContainerRef.current;
-    const theme = isDark ? getDarkTheme() : getLightTheme();
+    const theme = resolvedTheme === "midnight" ? getMidnightTheme() : isDark ? getDarkTheme() : getLightTheme();
 
     const chart = createChart(container, {
       width: container.clientWidth,

@@ -1,0 +1,1732 @@
+{
+  "info": {
+    "_postman_id": "free-crypto-news-api",
+    "name": "Free Crypto News API",
+    "description": "🆓 100% FREE crypto news API — real-time aggregator for Bitcoin, Ethereum, DeFi, Solana & altcoins.\n\nNo API key required for public endpoints.\n\nAggregates news from 75+ sources across 18 languages.\n\nBase URL: https://cryptocurrency.cv/api\n\nGitHub: https://github.com/nirholas/free-crypto-news",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://cryptocurrency.cv",
+      "type": "string"
+    },
+    {
+      "key": "apiKey",
+      "value": "",
+      "type": "string",
+      "description": "Optional API key for authenticated endpoints"
+    }
+  ],
+  "event": [
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "exec": [
+          "pm.test('Status code is 200', function () {",
+          "    pm.response.to.have.status(200);",
+          "});",
+          "",
+          "pm.test('Response time is acceptable', function () {",
+          "    pm.expect(pm.response.responseTime).to.be.below(5000);",
+          "});"
+        ]
+      }
+    }
+  ],
+  "item": [
+    {
+      "name": "News",
+      "description": "Core news endpoints — fetch, search, filter, and discover crypto news from 75+ sources.",
+      "item": [
+        {
+          "name": "Get Latest News",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/news?limit=10",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "news"],
+              "query": [
+                { "key": "limit", "value": "10", "description": "Max articles (1-50)" },
+                { "key": "source", "value": "coindesk", "description": "Filter by source", "disabled": true },
+                { "key": "from", "value": "2025-01-01", "description": "Start date (ISO)", "disabled": true },
+                { "key": "to", "value": "2025-01-07", "description": "End date (ISO)", "disabled": true },
+                { "key": "page", "value": "1", "description": "Page number", "disabled": true },
+                { "key": "per_page", "value": "20", "description": "Items per page", "disabled": true },
+                { "key": "lang", "value": "en", "description": "Language code", "disabled": true }
+              ]
+            },
+            "description": "Get the latest crypto news aggregated from all sources"
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "const json = pm.response.json();",
+                  "pm.test('Has articles array', () => pm.expect(json).to.have.property('articles'));",
+                  "pm.test('Articles have required fields', () => {",
+                  "    if (json.articles && json.articles.length > 0) {",
+                  "        const a = json.articles[0];",
+                  "        pm.expect(a).to.have.property('title');",
+                  "        pm.expect(a).to.have.property('source');",
+                  "        pm.expect(a).to.have.property('link');",
+                  "    }",
+                  "});"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Get International News",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/news/international?language=es&limit=10",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "news", "international"],
+              "query": [
+                { "key": "language", "value": "es", "description": "Language code (en, es, fr, de, ja, ko, zh, etc.)" },
+                { "key": "region", "value": "europe", "description": "Region filter", "disabled": true },
+                { "key": "translate", "value": "true", "description": "Auto-translate results", "disabled": true },
+                { "key": "limit", "value": "10", "description": "Max articles" },
+                { "key": "sources", "value": "", "description": "Comma-separated source IDs", "disabled": true }
+              ]
+            },
+            "description": "Get international crypto news from 75+ sources across 18 languages"
+          }
+        },
+        {
+          "name": "Extract Article Content",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"url\": \"https://www.coindesk.com/example-article\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/news/extract",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "news", "extract"]
+            },
+            "description": "Extract full article content from a URL"
+          }
+        },
+        {
+          "name": "Get News Categories",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/news/categories",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "news", "categories"]
+            },
+            "description": "List available news categories"
+          }
+        },
+        {
+          "name": "Search News",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/search?q=bitcoin,etf&limit=10",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "search"],
+              "query": [
+                { "key": "q", "value": "bitcoin,etf", "description": "Search keywords (comma-separated, required)" },
+                { "key": "limit", "value": "10", "description": "Max results (1-30)" },
+                { "key": "lang", "value": "en", "description": "Language filter", "disabled": true }
+              ]
+            },
+            "description": "Search news by keywords across all sources"
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "const json = pm.response.json();",
+                  "pm.test('Has articles array', () => pm.expect(json).to.have.property('articles'));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Get Bitcoin News",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/bitcoin?limit=10",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "bitcoin"],
+              "query": [
+                { "key": "limit", "value": "10", "description": "Max articles (1-30)" },
+                { "key": "lang", "value": "en", "description": "Language code", "disabled": true }
+              ]
+            },
+            "description": "Get Bitcoin-specific news (BTC, Lightning Network, miners)"
+          }
+        },
+        {
+          "name": "Get DeFi News",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/defi?limit=10",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "defi"],
+              "query": [
+                { "key": "limit", "value": "10", "description": "Max articles (1-30)" }
+              ]
+            },
+            "description": "Get DeFi-specific news (yield farming, DEXs, lending, protocols)"
+          }
+        },
+        {
+          "name": "Get Breaking News",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/breaking?limit=5",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "breaking"],
+              "query": [
+                { "key": "limit", "value": "5", "description": "Max articles (1-20)" }
+              ]
+            },
+            "description": "Get breaking news from the last 2 hours"
+          }
+        },
+        {
+          "name": "Get Trending Topics",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/trending?limit=10&period=24h",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "trending"],
+              "query": [
+                { "key": "limit", "value": "10", "description": "Max topics (1-20)" },
+                { "key": "period", "value": "24h", "description": "Time window" }
+              ]
+            },
+            "description": "Get trending crypto topics with sentiment analysis"
+          }
+        },
+        {
+          "name": "Get Daily Digest",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/digest?period=daily&format=detailed",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "digest"],
+              "query": [
+                { "key": "period", "value": "daily", "description": "Period: daily, weekly" },
+                { "key": "format", "value": "detailed", "description": "Format: brief, detailed" }
+              ]
+            },
+            "description": "Get AI-generated daily news digest"
+          }
+        },
+        {
+          "name": "Get Tags",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/tags",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "tags"]
+            },
+            "description": "Get all available news tags"
+          }
+        },
+        {
+          "name": "Get Tag Articles",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/tags/bitcoin",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "tags", "bitcoin"]
+            },
+            "description": "Get articles for a specific tag"
+          }
+        },
+        {
+          "name": "List Sources",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/sources",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "sources"]
+            },
+            "description": "Get list of all news sources with status"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Markets",
+      "description": "Market data endpoints — prices, coins, exchanges, Fear & Greed index, OHLC, and more.",
+      "item": [
+        {
+          "name": "Get Top Coins",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/market/coins?page=1&per_page=20&order=market_cap_desc&sparkline=true",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "market", "coins"],
+              "query": [
+                { "key": "page", "value": "1", "description": "Page number" },
+                { "key": "per_page", "value": "20", "description": "Items per page (1-250)" },
+                { "key": "order", "value": "market_cap_desc", "description": "Sort order" },
+                { "key": "sparkline", "value": "true", "description": "Include 7d sparkline" }
+              ]
+            },
+            "description": "Get top cryptocurrencies by market cap"
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "const json = pm.response.json();",
+                  "pm.test('Has coins data', () => pm.expect(json).to.be.an('object'));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Get OHLC Data",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/market/ohlc/bitcoin?days=30&vs_currency=usd",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "market", "ohlc", "bitcoin"],
+              "query": [
+                { "key": "days", "value": "30", "description": "Number of days (1, 7, 14, 30, 90, 180, 365)" },
+                { "key": "vs_currency", "value": "usd", "description": "Target currency" }
+              ]
+            },
+            "description": "Get OHLC candlestick data for a coin"
+          }
+        },
+        {
+          "name": "Get Historical Data",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/market/history/bitcoin?date=01-01-2025",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "market", "history", "bitcoin"],
+              "query": [
+                { "key": "date", "value": "01-01-2025", "description": "Date (dd-mm-yyyy)" }
+              ]
+            },
+            "description": "Get historical market data for a coin on a specific date"
+          }
+        },
+        {
+          "name": "Get Coin Snapshot",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/market/snapshot/bitcoin",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "market", "snapshot", "bitcoin"]
+            },
+            "description": "Get comprehensive market snapshot for a coin"
+          }
+        },
+        {
+          "name": "Get Exchanges",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/market/exchanges",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "market", "exchanges"]
+            },
+            "description": "Get exchange list and data"
+          }
+        },
+        {
+          "name": "Get Market Categories",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/market/categories",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "market", "categories"]
+            },
+            "description": "Get market categories"
+          }
+        },
+        {
+          "name": "Get Top Gainers",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/market/gainers",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "market", "gainers"]
+            },
+            "description": "Get top gaining cryptocurrencies"
+          }
+        },
+        {
+          "name": "Get Top Losers",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/market/losers",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "market", "losers"]
+            },
+            "description": "Get biggest losing cryptocurrencies"
+          }
+        },
+        {
+          "name": "Get Market Dominance",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/market/dominance",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "market", "dominance"]
+            },
+            "description": "Get BTC/ETH market dominance data"
+          }
+        },
+        {
+          "name": "Get Market Heatmap",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/market/heatmap",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "market", "heatmap"]
+            },
+            "description": "Get market heatmap data"
+          }
+        },
+        {
+          "name": "Search Coins",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/market/search?q=ethereum",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "market", "search"],
+              "query": [
+                { "key": "q", "value": "ethereum", "description": "Search query" }
+              ]
+            },
+            "description": "Search for coins by name or symbol"
+          }
+        },
+        {
+          "name": "Compare Coins",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/market/compare?coins=bitcoin,ethereum",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "market", "compare"],
+              "query": [
+                { "key": "coins", "value": "bitcoin,ethereum", "description": "Comma-separated coin IDs" }
+              ]
+            },
+            "description": "Compare multiple cryptocurrencies side by side"
+          }
+        },
+        {
+          "name": "Get Current Prices",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/prices?ids=bitcoin,ethereum&vs_currencies=usd",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "prices"],
+              "query": [
+                { "key": "ids", "value": "bitcoin,ethereum", "description": "Comma-separated coin IDs" },
+                { "key": "vs_currencies", "value": "usd", "description": "Target currencies" }
+              ]
+            },
+            "description": "Get current prices for specified coins"
+          }
+        },
+        {
+          "name": "Fear & Greed Index",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/fear-greed",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "fear-greed"]
+            },
+            "description": "Get the Crypto Fear & Greed Index"
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "const json = pm.response.json();",
+                  "pm.test('Has fear-greed value', () => pm.expect(json).to.have.property('value'));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Get Global Market Data",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/global",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "global"]
+            },
+            "description": "Get global crypto market data (total market cap, volume, dominance)"
+          }
+        },
+        {
+          "name": "Get Derivatives Market",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/market/derivatives",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "market", "derivatives"]
+            },
+            "description": "Get derivatives market overview"
+          }
+        },
+        {
+          "name": "Get DeFi Market",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/market/defi",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "market", "defi"]
+            },
+            "description": "Get DeFi market overview from CoinGecko"
+          }
+        }
+      ]
+    },
+    {
+      "name": "DeFi",
+      "description": "DeFi endpoints — yields, stablecoins, DEX volumes, bridges, TVL, and protocol health.",
+      "item": [
+        {
+          "name": "Get DeFi Yields",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/defi/yields",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "defi", "yields"],
+              "query": [
+                { "key": "chain", "value": "ethereum", "description": "Filter by chain", "disabled": true },
+                { "key": "project", "value": "aave", "description": "Filter by project", "disabled": true },
+                { "key": "stablecoin", "value": "true", "description": "Stablecoin yields only", "disabled": true }
+              ]
+            },
+            "description": "Get DeFi yields from DeFiLlama"
+          }
+        },
+        {
+          "name": "Get Stablecoin Yields",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/defi/yields/stablecoins",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "defi", "yields", "stablecoins"]
+            },
+            "description": "Get yields specifically for stablecoin pools"
+          }
+        },
+        {
+          "name": "Get Yield Statistics",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/defi/yields/stats",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "defi", "yields", "stats"]
+            },
+            "description": "Get yield statistics and median data"
+          }
+        },
+        {
+          "name": "Search Yields",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/defi/yields/search?q=USDC",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "defi", "yields", "search"],
+              "query": [
+                { "key": "q", "value": "USDC", "description": "Search query" }
+              ]
+            },
+            "description": "Search DeFi yields by name"
+          }
+        },
+        {
+          "name": "Get DeFi Summary",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/defi/summary",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "defi", "summary"]
+            },
+            "description": "Get DeFi market summary with TVL and trends"
+          }
+        },
+        {
+          "name": "Get DEX Volumes",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/defi/dex-volumes",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "defi", "dex-volumes"]
+            },
+            "description": "Get DEX trading volumes across chains"
+          }
+        },
+        {
+          "name": "Get Bridge Data",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/defi/bridges",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "defi", "bridges"]
+            },
+            "description": "Get cross-chain bridge volumes and TVL"
+          }
+        },
+        {
+          "name": "Get Protocol Health",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/defi/protocol-health",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "defi", "protocol-health"]
+            },
+            "description": "Get DeFi protocol health metrics"
+          }
+        },
+        {
+          "name": "Get Stablecoins",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/stablecoins",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "stablecoins"]
+            },
+            "description": "Get stablecoin overview data"
+          }
+        },
+        {
+          "name": "Get Stablecoin Flows",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/stablecoins/flows",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "stablecoins", "flows"]
+            },
+            "description": "Get stablecoin flow data"
+          }
+        },
+        {
+          "name": "Get Stablecoin Depeg Events",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/stablecoins/depeg",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "stablecoins", "depeg"]
+            },
+            "description": "Monitor stablecoin depeg events"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Blockchain",
+      "description": "On-chain data — Bitcoin mempool, exchange flows, gas prices, NFTs, L2 metrics, and protocol analytics.",
+      "item": [
+        {
+          "name": "Bitcoin Mempool Fees",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/bitcoin/mempool/fees",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "bitcoin", "mempool", "fees"]
+            },
+            "description": "Get Bitcoin mempool fee estimates"
+          }
+        },
+        {
+          "name": "Bitcoin Network Stats",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/bitcoin/network-stats",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "bitcoin", "network-stats"]
+            },
+            "description": "Get Bitcoin network statistics"
+          }
+        },
+        {
+          "name": "Bitcoin Block Height",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/bitcoin/block-height",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "bitcoin", "block-height"]
+            },
+            "description": "Get current Bitcoin block height"
+          }
+        },
+        {
+          "name": "Bitcoin Mining Difficulty",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/bitcoin/difficulty",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "bitcoin", "difficulty"]
+            },
+            "description": "Get Bitcoin mining difficulty"
+          }
+        },
+        {
+          "name": "Bitcoin Stats",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/bitcoin/stats",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "bitcoin", "stats"]
+            },
+            "description": "Get Bitcoin market stats"
+          }
+        },
+        {
+          "name": "Get Exchange Flows",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/onchain/exchange-flows?asset=BTC",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "onchain", "exchange-flows"],
+              "query": [
+                { "key": "asset", "value": "BTC", "description": "Asset symbol" },
+                { "key": "exchange", "value": "binance", "description": "Exchange filter", "disabled": true }
+              ]
+            },
+            "description": "Get exchange flow data (inflows/outflows)"
+          }
+        },
+        {
+          "name": "Get On-Chain Metrics",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/onchain/metrics?asset=BTC&metric=active_addresses",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "onchain", "metrics"],
+              "query": [
+                { "key": "asset", "value": "BTC", "description": "Asset symbol" },
+                { "key": "metric", "value": "active_addresses", "description": "Metric name" }
+              ]
+            },
+            "description": "Get on-chain metrics for a cryptocurrency"
+          }
+        },
+        {
+          "name": "Get On-Chain Health",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/onchain/health",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "onchain", "health"]
+            },
+            "description": "Get on-chain health score"
+          }
+        },
+        {
+          "name": "Get Ethereum Gas Prices",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/gas",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "gas"]
+            },
+            "description": "Get current Ethereum gas prices"
+          }
+        },
+        {
+          "name": "Get Gas History",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/gas/history",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "gas", "history"]
+            },
+            "description": "Get historical gas price data"
+          }
+        },
+        {
+          "name": "Get NFT Overview",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/nft",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "nft"]
+            },
+            "description": "Get NFT market overview"
+          }
+        },
+        {
+          "name": "Get Trending NFT Collections",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/nft/collections/trending",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "nft", "collections", "trending"]
+            },
+            "description": "Get trending NFT collections"
+          }
+        },
+        {
+          "name": "Get L2 Ecosystem",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/l2",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "l2"]
+            },
+            "description": "Get Layer 2 ecosystem overview"
+          }
+        },
+        {
+          "name": "Get L2 Projects",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/l2/projects",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "l2", "projects"]
+            },
+            "description": "Get list of L2 projects with TVL"
+          }
+        },
+        {
+          "name": "Solana Overview",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/solana",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "solana"]
+            },
+            "description": "Get Solana ecosystem overview"
+          }
+        },
+        {
+          "name": "Solana Tokens",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/solana/tokens",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "solana", "tokens"]
+            },
+            "description": "Get Solana SPL tokens"
+          }
+        },
+        {
+          "name": "Get Airdrops",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/airdrops",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "airdrops"]
+            },
+            "description": "Get crypto airdrop opportunities"
+          }
+        },
+        {
+          "name": "Get Token Unlocks",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/token-unlocks",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "token-unlocks"]
+            },
+            "description": "Get token unlock schedule"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Social",
+      "description": "Social intelligence — sentiment, influencers, trending topics, and social feeds.",
+      "item": [
+        {
+          "name": "Get Social Overview",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/social",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "social"]
+            },
+            "description": "Get social data overview"
+          }
+        },
+        {
+          "name": "Get Social Sentiment",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/social/sentiment",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "social", "sentiment"]
+            },
+            "description": "Get aggregate social sentiment"
+          }
+        },
+        {
+          "name": "Get Market Social Sentiment",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/social/sentiment/market",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "social", "sentiment", "market"]
+            },
+            "description": "Get market-wide social sentiment overview"
+          }
+        },
+        {
+          "name": "Get Top Influencers",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/social/influencers",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "social", "influencers"]
+            },
+            "description": "Get top crypto influencers"
+          }
+        },
+        {
+          "name": "Get Trending Social Topics",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/social/topics/trending",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "social", "topics", "trending"]
+            },
+            "description": "Get trending social topics"
+          }
+        },
+        {
+          "name": "Get Trending Narratives",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/social/trending-narratives",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "social", "trending-narratives"]
+            },
+            "description": "Get trending narratives across social media"
+          }
+        },
+        {
+          "name": "Get Social Coin Metrics",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/social/coins",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "social", "coins"]
+            },
+            "description": "Get social metrics for all coins"
+          }
+        },
+        {
+          "name": "Get Governance Updates",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/governance",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "governance"]
+            },
+            "description": "Get DAO governance proposals and updates"
+          }
+        },
+        {
+          "name": "Get Crypto Events",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/events",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "events"]
+            },
+            "description": "Get upcoming crypto events calendar"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Trading",
+      "description": "Trading endpoints — signals, arbitrage, funding rates, liquidations, whale alerts, and orderbook.",
+      "item": [
+        {
+          "name": "Get Arbitrage Opportunities",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/arbitrage",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "arbitrage"]
+            },
+            "description": "Get cross-exchange arbitrage opportunities"
+          }
+        },
+        {
+          "name": "Get Trading Signals",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/signals",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "signals"]
+            },
+            "description": "Get AI-powered trading signals"
+          }
+        },
+        {
+          "name": "Get Funding Rates",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/funding",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "funding"]
+            },
+            "description": "Get funding rates across exchanges"
+          }
+        },
+        {
+          "name": "Get Options Data",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/options",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "options"]
+            },
+            "description": "Get options market data"
+          }
+        },
+        {
+          "name": "Get Liquidations",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/liquidations",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "liquidations"]
+            },
+            "description": "Get recent liquidation data"
+          }
+        },
+        {
+          "name": "Get Whale Alerts",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/whale-alerts",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "whale-alerts"]
+            },
+            "description": "Get large transaction (whale) alerts"
+          }
+        },
+        {
+          "name": "Get Orderbook",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/orderbook?pair=BTC/USDT",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "orderbook"],
+              "query": [
+                { "key": "pair", "value": "BTC/USDT", "description": "Trading pair" },
+                { "key": "exchange", "value": "binance", "description": "Exchange name", "disabled": true }
+              ]
+            },
+            "description": "Get aggregated order book data"
+          }
+        },
+        {
+          "name": "Get Derivatives Overview",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/derivatives",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "derivatives"]
+            },
+            "description": "Get derivatives market overview"
+          }
+        },
+        {
+          "name": "Get Exchange Rates",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/exchange-rates",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "exchange-rates"]
+            },
+            "description": "Get fiat exchange rates"
+          }
+        },
+        {
+          "name": "Convert Currency",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/exchange-rates/convert?from=BTC&to=USD&amount=1",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "exchange-rates", "convert"],
+              "query": [
+                { "key": "from", "value": "BTC", "description": "Source currency" },
+                { "key": "to", "value": "USD", "description": "Target currency" },
+                { "key": "amount", "value": "1", "description": "Amount to convert" }
+              ]
+            },
+            "description": "Convert between crypto and fiat currencies"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Tools",
+      "description": "AI-powered tools — sentiment analysis, summarization, Q&A, fact-checking, content detection, and more.",
+      "item": [
+        {
+          "name": "AI Analysis (Unified)",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"action\": \"summarize\",\n  \"title\": \"Bitcoin ETF Approved\",\n  \"content\": \"The SEC has approved the first spot Bitcoin ETF in the United States, marking a milestone for crypto adoption.\",\n  \"options\": { \"length\": \"short\" }\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/ai",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "ai"]
+            },
+            "description": "Unified AI endpoint. Actions: summarize, sentiment, facts, factcheck, questions, categorize, translate"
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "const json = pm.response.json();",
+                  "pm.test('Has success field', () => pm.expect(json).to.have.property('success'));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Get Sentiment Analysis",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/sentiment?asset=bitcoin&period=24h",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "sentiment"],
+              "query": [
+                { "key": "asset", "value": "bitcoin", "description": "Asset to analyze" },
+                { "key": "period", "value": "24h", "description": "Time period" },
+                { "key": "limit", "value": "10", "description": "Number of results", "disabled": true }
+              ]
+            },
+            "description": "Get AI-powered sentiment analysis for a crypto asset"
+          }
+        },
+        {
+          "name": "Summarize Article by URL",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/summarize?url=https://example.com/article",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "summarize"],
+              "query": [
+                { "key": "url", "value": "https://example.com/article", "description": "URL of article to summarize" }
+              ]
+            },
+            "description": "AI-summarize a specific article by URL"
+          }
+        },
+        {
+          "name": "Ask a Question (Q&A)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/ask?q=What is happening with Bitcoin ETFs?",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "ask"],
+              "query": [
+                { "key": "q", "value": "What is happening with Bitcoin ETFs?", "description": "Natural language question" }
+              ]
+            },
+            "description": "Ask a natural language question about crypto news"
+          }
+        },
+        {
+          "name": "Get AI Daily Brief",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/ai/brief?format=detailed",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "ai", "brief"],
+              "query": [
+                { "key": "date", "value": "", "description": "Specific date (ISO)", "disabled": true },
+                { "key": "format", "value": "detailed", "description": "Brief format" }
+              ]
+            },
+            "description": "Get an AI-generated daily crypto news brief"
+          }
+        },
+        {
+          "name": "AI Debate (Bull vs Bear)",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"topic\": \"Will Bitcoin reach $200k in 2026?\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/ai/debate",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "ai", "debate"]
+            },
+            "description": "Generate a bull vs bear debate on a crypto topic"
+          }
+        },
+        {
+          "name": "AI Counter-Argument",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"claim\": \"DeFi will replace traditional banking\",\n  \"context\": \"Recent regulatory developments suggest otherwise\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/ai/counter",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "ai", "counter"]
+            },
+            "description": "Generate counter-arguments for any crypto claim"
+          }
+        },
+        {
+          "name": "Detect AI Content",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"content\": \"Bitcoin is the future of finance and represents a paradigm shift in monetary policy.\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/detect/ai-content",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "detect", "ai-content"]
+            },
+            "description": "Detect whether content was generated by AI"
+          }
+        },
+        {
+          "name": "Get Narratives",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/narratives",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "narratives"]
+            },
+            "description": "Track active crypto narrative lifecycles"
+          }
+        },
+        {
+          "name": "Get Clickbait Score",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/clickbait",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "clickbait"]
+            },
+            "description": "Detect clickbait in crypto headlines"
+          }
+        },
+        {
+          "name": "Fact Check",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/factcheck",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "factcheck"]
+            },
+            "description": "Fact-check crypto claims"
+          }
+        },
+        {
+          "name": "Get Entities",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/entities",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "entities"]
+            },
+            "description": "Extract named entities from crypto news"
+          }
+        },
+        {
+          "name": "AI Oracle",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"question\": \"What are the best DeFi protocols for yield farming?\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/ai/oracle",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "ai", "oracle"]
+            },
+            "description": "Ask the AI oracle any crypto question"
+          }
+        },
+        {
+          "name": "AI Research Report",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/ai/research?topic=ethereum&mode=deep",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "ai", "research"],
+              "query": [
+                { "key": "topic", "value": "ethereum", "description": "Research topic" },
+                { "key": "mode", "value": "deep", "description": "Research depth (quick, deep)" },
+                { "key": "contrarian", "value": "false", "description": "Include contrarian view", "disabled": true }
+              ]
+            },
+            "description": "Generate a deep-dive AI research report"
+          }
+        },
+        {
+          "name": "Get Regulatory Updates",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/regulatory",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "regulatory"]
+            },
+            "description": "Get latest crypto regulatory news and updates"
+          }
+        },
+        {
+          "name": "Get Predictions",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/predictions",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "predictions"]
+            },
+            "description": "Get AI-powered price predictions"
+          }
+        },
+        {
+          "name": "Get Macro Data",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/macro",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "macro"]
+            },
+            "description": "Get macroeconomic data relevant to crypto"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Feeds",
+      "description": "RSS, Atom, OPML feeds, data export, webhooks, and utility endpoints.",
+      "item": [
+        {
+          "name": "RSS Feed",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/rss?source=all&limit=20",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "rss"],
+              "query": [
+                { "key": "source", "value": "all", "description": "Source filter" },
+                { "key": "limit", "value": "20", "description": "Max articles" },
+                { "key": "lang", "value": "en", "description": "Language filter", "disabled": true }
+              ]
+            },
+            "description": "Get aggregated RSS feed"
+          }
+        },
+        {
+          "name": "JSON Feed",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/rss.json",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "rss.json"]
+            },
+            "description": "Get JSON Feed format"
+          }
+        },
+        {
+          "name": "Atom Feed",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/atom?limit=20",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "atom"],
+              "query": [
+                { "key": "limit", "value": "20", "description": "Max articles" }
+              ]
+            },
+            "description": "Get aggregated Atom feed"
+          }
+        },
+        {
+          "name": "OPML Export",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/opml",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "opml"]
+            },
+            "description": "Download OPML file with all sources for RSS readers"
+          }
+        },
+        {
+          "name": "Export as CSV",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/export?format=csv&from=2025-01-01&to=2025-01-31",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "export"],
+              "query": [
+                { "key": "format", "value": "csv", "description": "Export format: csv, json" },
+                { "key": "from", "value": "2025-01-01", "description": "Start date (ISO)" },
+                { "key": "to", "value": "2025-01-31", "description": "End date (ISO)" }
+              ]
+            },
+            "description": "Export news data as CSV"
+          }
+        },
+        {
+          "name": "Export as JSON",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/export?format=json&from=2025-01-01&to=2025-01-31",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "export"],
+              "query": [
+                { "key": "format", "value": "json", "description": "Export format: csv, json" },
+                { "key": "from", "value": "2025-01-01", "description": "Start date (ISO)" },
+                { "key": "to", "value": "2025-01-31", "description": "End date (ISO)" }
+              ]
+            },
+            "description": "Export news data as JSON"
+          }
+        },
+        {
+          "name": "Get Archive",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/archive?date=2025-01-01&limit=50",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "archive"],
+              "query": [
+                { "key": "date", "value": "2025-01-01", "description": "Archive date" },
+                { "key": "source", "value": "coindesk", "description": "Source filter", "disabled": true },
+                { "key": "limit", "value": "50", "description": "Max articles" }
+              ]
+            },
+            "description": "Get historical news archive"
+          }
+        },
+        {
+          "name": "LLMs.txt",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/llms.txt",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "llms.txt"]
+            },
+            "description": "Get LLM-readable site information"
+          }
+        },
+        {
+          "name": "OpenAPI Spec",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/openapi.json",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "openapi.json"]
+            },
+            "description": "Get the OpenAPI specification"
+          }
+        },
+        {
+          "name": "Health Check",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/health",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "health"]
+            },
+            "description": "Check API health and RSS feed status"
+          }
+        },
+        {
+          "name": "Get Statistics",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/stats",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "stats"]
+            },
+            "description": "Get API analytics: articles per source, hourly distribution"
+          }
+        },
+        {
+          "name": "Webhook Info",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/webhooks",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "webhooks"]
+            },
+            "description": "Get webhook registration info"
+          }
+        },
+        {
+          "name": "Register Webhook",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"url\": \"https://your-server.com/webhook\",\n  \"secret\": \"your-secret-key\",\n  \"events\": [\"breaking\"]\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/webhooks",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "webhooks"]
+            },
+            "description": "Register a webhook for news notifications"
+          }
+        }
+      ]
+    }
+  ]
+}

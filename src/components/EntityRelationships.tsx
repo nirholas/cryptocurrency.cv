@@ -28,7 +28,7 @@ import {
   type MouseEvent as ReactMouseEvent,
 } from 'react';
 import { cn } from '@/lib/utils';
-import { Search, X, ZoomIn, ZoomOut, Maximize2, Info } from 'lucide-react';
+import { X, ZoomIn, ZoomOut, Maximize2, Info } from 'lucide-react';
 
 /* ------------------------------------------------------------------ */
 /*  Types                                                              */

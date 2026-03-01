@@ -15,8 +15,8 @@ export function OfflineIndicator() {
   const [offlineSince, setOfflineSince] = useState<number | null>(null);
   const [elapsed, setElapsed] = useState("");
   const [retrying, setRetrying] = useState(false);
-  const timerRef = useRef<ReturnType<typeof setInterval>>();
-  const backOnlineRef = useRef<ReturnType<typeof setTimeout>>();
+  const timerRef = useRef<ReturnType<typeof setInterval>>(undefined);
+  const backOnlineRef = useRef<ReturnType<typeof setTimeout>>(undefined);
   const { networkQuality, cacheStatus } = usePWA();
 
   /* ── Online/offline listeners ── */

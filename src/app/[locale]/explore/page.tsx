@@ -79,8 +79,8 @@ async function fetchTrendingConnections(): Promise<TrendingPair[]> {
     if (!res.ok) return [];
     const data = await res.json();
     // Build trending connections from relationships sorted by weight
-    const entities = new Map(
-      (data.entities || []).map((e: { id: string; name: string }) => [e.id, e.name]),
+    const entities = new Map<string, string>(
+      (data.entities || []).map((e: { id: string; name: string }) => [e.id, e.name] as [string, string]),
     );
     const relationships = (data.relationships || []) as {
       source: string;

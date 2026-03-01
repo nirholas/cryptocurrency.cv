@@ -12,6 +12,7 @@ function ThemeDisplay() {
       <span data-testid="resolved">{resolvedTheme}</span>
       <button onClick={() => setTheme("dark")}>Dark</button>
       <button onClick={() => setTheme("light")}>Light</button>
+      <button onClick={() => setTheme("midnight")}>Midnight</button>
       <button onClick={() => setTheme("system")}>System</button>
     </div>
   );
@@ -31,7 +32,7 @@ describe("ThemeProvider", () => {
       },
     );
     // Reset document class
-    document.documentElement.classList.remove("dark");
+    document.documentElement.classList.remove("dark", "midnight", "theme-transitioning");
   });
 
   afterEach(() => {
@@ -108,5 +109,19 @@ describe("ThemeProvider", () => {
     );
     // matchMedia mocked to return matches:false → light
     expect(screen.getByTestId("resolved")).toHaveTextContent("light");
+  });
+
+  it("applies midnight theme on setTheme('midnight')", async () => {
+    const user = userEvent.setup();
+    render(
+      <ThemeProvider>
+        <ThemeDisplay />
+      </ThemeProvider>,
+    );
+
+    await user.click(screen.getByText("Midnight"));
+    expect(screen.getByTestId("resolved")).toHaveTextContent("midnight");
+    expect(document.documentElement.classList.contains("midnight")).toBe(true);
+    expect(document.documentElement.classList.contains("dark")).toBe(false);
   });
 });
