@@ -45,15 +45,32 @@ export const SECURITY_HEADERS: Record<string, string> = {
 /**
  * Build a Content-Security-Policy header value with a per-request nonce.
  *
- * `'strict-dynamic'` allows nonced scripts to load other scripts dynamically
- * (e.g. gtag.js loading analytics).  `'unsafe-inline'` is kept as a
- * backward-compatible fallback for older browsers that ignore
- * `'strict-dynamic'`.
+ * Uses nonce-based inline script control combined with explicit domain
+ * allowlists for third-party scripts.  `'unsafe-inline'` is kept as a
+ * backward-compatible fallback for older browsers that do not support
+ * nonces — modern browsers automatically ignore it when a nonce is present.
+ *
+ * NOTE: We intentionally do NOT use `'strict-dynamic'` because it disables
+ * `'self'` and host-based allowlisting.  Next.js does not reliably inject
+ * nonces into every framework `<script>` tag (especially with Turbopack),
+ * so we rely on `'self'` to allow same-origin scripts and explicit domains
+ * for known third-party sources.
  */
 export function buildCspHeader(nonce: string): string {
   return [
     "default-src 'self'",
-    `script-src 'self' 'nonce-${nonce}' 'strict-dynamic' 'unsafe-inline'`,
+    [
+      `script-src 'self' 'nonce-${nonce}' 'unsafe-inline'`,
+      // Google Analytics / Tag Manager
+      'https://www.googletagmanager.com',
+      'https://www.google-analytics.com',
+      // TradingView widgets
+      'https://s3.tradingview.com',
+      'https://www.tradingview.com',
+      // Vercel Analytics & Speed Insights (served same-origin via /_vercel,
+      // but the beacon endpoints are cross-origin)
+      'https://*.vercel-scripts.com',
+    ].join(' '),
     "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
     "img-src 'self' data: blob: https:",
     "font-src 'self' https://fonts.gstatic.com",

@@ -15,7 +15,7 @@ import { Roboto, JetBrains_Mono } from 'next/font/google';
 import { notFound } from 'next/navigation';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
-import { Analytics } from '@vercel/analytics/react';
+import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { GoogleAnalytics } from '@next/third-parties/google';
 import { PWAProvider } from '@/components/PWAProvider';
@@ -280,8 +280,8 @@ export default async function LocaleLayout({ children, params }: Props) {
           </ThemeProvider>
         </NextIntlClientProvider>
         {/* Vercel Analytics - privacy-friendly, no-cookie tracking */}
-        <Analytics nonce={nonce} />
-        <SpeedInsights nonce={nonce} />
+        <Analytics />
+        <SpeedInsights />
         {/* Google Analytics 4 — free, works on any host. Set NEXT_PUBLIC_GA_ID to enable. */}
         {process.env.NEXT_PUBLIC_GA_ID && (
           <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} nonce={nonce} />
