@@ -10,7 +10,7 @@ import {
   type ReactNode,
 } from "react";
 import * as Dialog from "@radix-ui/react-dialog";
-import { useRouter, usePathname } from "@/i18n/navigation";
+import { useRouter } from "@/i18n/navigation";
 import { Keyboard, X, ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 

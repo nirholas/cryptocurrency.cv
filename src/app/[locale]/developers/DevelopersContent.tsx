@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useCallback, useRef, useMemo } from "react";
 import CodeBlock from "@/components/CodeBlock";
 import { Badge } from "@/components/ui";
 import {
@@ -13,7 +13,9 @@ import {
 import { Button } from "@/components/ui";
 import { cn } from "@/lib/utils";
 
-/* ─── Quick Start Examples ─── */
+/* ═══════════════════════════════════════════════════════════════
+   QUICK START EXAMPLES
+   ═══════════════════════════════════════════════════════════════ */
 
 const quickStartExamples: { label: string; language: string; code: string }[] = [
   {
@@ -78,15 +80,53 @@ foreach ($data["articles"] as $article) {
     echo $article["title"] . " - " . $article["source"] . "\\n";
 }`,
   },
+  {
+    label: "Ruby",
+    language: "ruby",
+    code: `require 'net/http'
+require 'json'
+
+uri = URI("https://cryptocurrency.cv/api/news?limit=10")
+response = Net::HTTP.get(uri)
+data = JSON.parse(response)
+
+data["articles"].each do |article|
+  puts "#{article['title']} - #{article['source']}"
+end`,
+  },
+  {
+    label: "Rust",
+    language: "rust",
+    code: `use reqwest;
+use serde_json::Value;
+
+#[tokio::main]
+async fn main() -> Result<(), Box<dyn std::error::Error>> {
+    let body = reqwest::get("https://cryptocurrency.cv/api/news?limit=10")
+        .await?
+        .json::<Value>()
+        .await?;
+
+    if let Some(articles) = body["articles"].as_array() {
+        for article in articles {
+            println!("{} - {}", article["title"], article["source"]);
+        }
+    }
+    Ok(())
+}`,
+  },
 ];
 
-/* ─── Endpoint Categories ─── */
+/* ═══════════════════════════════════════════════════════════════
+   ENDPOINT CATEGORIES
+   ═══════════════════════════════════════════════════════════════ */
 
 interface EndpointParam {
   name: string;
   type: string;
   required: boolean;
   description: string;
+  default?: string;
 }
 
 interface Endpoint {
@@ -95,12 +135,14 @@ interface Endpoint {
   description: string;
   params: EndpointParam[];
   response: string;
+  status?: "stable" | "beta" | "deprecated";
 }
 
 interface EndpointCategory {
   id: string;
   title: string;
   icon: string;
+  description: string;
   endpoints: Endpoint[];
 }
 
@@ -109,6 +151,7 @@ const endpointCategories: EndpointCategory[] = [
     id: "news",
     title: "News",
     icon: "📰",
+    description: "Aggregated crypto news from 300+ sources with search, categories, and real-time updates.",
     endpoints: [
       {
         method: "GET",
@@ -186,6 +229,7 @@ const endpointCategories: EndpointCategory[] = [
     id: "markets",
     title: "Markets",
     icon: "📈",
+    description: "Real-time prices, market caps, OHLC data, and the Fear & Greed Index.",
     endpoints: [
       {
         method: "GET",
@@ -260,6 +304,7 @@ const endpointCategories: EndpointCategory[] = [
     id: "defi",
     title: "DeFi",
     icon: "🏦",
+    description: "DeFi protocol TVL rankings, yield farming rates, DEX volumes, and stablecoin data.",
     endpoints: [
       {
         method: "GET",
@@ -348,6 +393,7 @@ const endpointCategories: EndpointCategory[] = [
     id: "blockchain",
     title: "Blockchain",
     icon: "⛓️",
+    description: "On-chain analytics, gas prices, and whale movement tracking.",
     endpoints: [
       {
         method: "GET",
@@ -412,6 +458,7 @@ const endpointCategories: EndpointCategory[] = [
     id: "social",
     title: "Social",
     icon: "💬",
+    description: "Social media sentiment, trending discussions, and community metrics.",
     endpoints: [
       {
         method: "GET",
@@ -460,6 +507,7 @@ const endpointCategories: EndpointCategory[] = [
     id: "feeds",
     title: "Feeds",
     icon: "📡",
+    description: "RSS 2.0, Atom, and OPML feed formats for news reader integration.",
     endpoints: [
       {
         method: "GET",

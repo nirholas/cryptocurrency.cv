@@ -63,3 +63,162 @@ export function NewsListStructuredData({ articles }: { articles: { title: string
     />
   );
 }
+
+/**
+ * Breadcrumb structured data for rich breadcrumb results in search
+ */
+export function BreadcrumbStructuredData({
+  items,
+}: {
+  items: { name: string; url: string }[];
+}) {
+  const data = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((item, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: item.name,
+      item: item.url,
+    })),
+  };
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+    />
+  );
+}
+
+/**
+ * FAQ structured data for FAQ pages (pricing, about, etc.)
+ */
+export function FAQStructuredData({
+  questions,
+}: {
+  questions: { question: string; answer: string }[];
+}) {
+  const data = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: questions.map((q) => ({
+      "@type": "Question",
+      name: q.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: q.answer,
+      },
+    })),
+  };
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+    />
+  );
+}
+
+/**
+ * NewsArticle structured data for individual article pages
+ */
+export function ArticleStructuredData({
+  headline,
+  description,
+  url,
+  image,
+  datePublished,
+  dateModified,
+  author,
+  publisher,
+  section,
+  keywords,
+}: {
+  headline: string;
+  description: string;
+  url: string;
+  image?: string;
+  datePublished: string;
+  dateModified?: string;
+  author?: string;
+  publisher?: string;
+  section?: string;
+  keywords?: string[];
+}) {
+  const data = {
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    headline,
+    description,
+    url,
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": url,
+    },
+    ...(image ? { image: [image] } : {}),
+    datePublished,
+    dateModified: dateModified || datePublished,
+    author: {
+      "@type": "Person",
+      name: author || "Crypto Vision",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: publisher || "Crypto Vision",
+      url: "https://cryptocurrency.cv",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://cryptocurrency.cv/icons/icon-512x512.png",
+      },
+    },
+    ...(section ? { articleSection: section } : {}),
+    ...(keywords && keywords.length > 0 ? { keywords: keywords.join(", ") } : {}),
+  };
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+    />
+  );
+}
+
+/**
+ * SoftwareApplication structured data for the API product
+ */
+export function SoftwareApplicationStructuredData() {
+  const data = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: "Crypto Vision News API",
+    applicationCategory: "FinanceApplication",
+    operatingSystem: "Any",
+    description:
+      "Free crypto news API — real-time aggregator for Bitcoin, Ethereum, DeFi, Solana & altcoins. RSS/Atom feeds, JSON REST API, historical archive with market context. No API key required.",
+    url: "https://cryptocurrency.cv/en/developers",
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "USD",
+    },
+    creator: {
+      "@type": "Organization",
+      name: "Crypto Vision",
+      url: "https://cryptocurrency.cv",
+    },
+    featureList: [
+      "JSON REST API",
+      "RSS/Atom Feeds",
+      "WebSocket Real-time Updates",
+      "Historical News Archive",
+      "Market Context Data",
+      "AI/LLM Ready",
+      "SDKs for Python, TypeScript, Go, React, PHP",
+      "No API key required",
+    ],
+  };
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+    />
+  );
+}

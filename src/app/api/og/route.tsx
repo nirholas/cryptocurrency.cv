@@ -91,7 +91,7 @@ const GRID_BG =
   'linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), ' +
   'linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)';
 const ACCENT_GRADIENT =
-  'linear-gradient(90deg, #6366f1, #8b5cf6, #a855f7)';
+  'linear-gradient(90deg, #3b82f6, #6366f1, #8b5cf6)';
 
 // ---------------------------------------------------------------------------
 // Main handler
@@ -173,7 +173,7 @@ export async function GET(req: NextRequest) {
             height: '500px',
             borderRadius: '50%',
             background:
-              'radial-gradient(circle, rgba(99,102,241,0.12) 0%, transparent 70%)',
+              'radial-gradient(circle, rgba(59,130,246,0.12) 0%, transparent 70%)',
           }}
         />
 
@@ -193,7 +193,7 @@ export async function GET(req: NextRequest) {
                 width: '10px',
                 height: '10px',
                 borderRadius: '50%',
-                backgroundColor: '#6366f1',
+                backgroundColor: '#3b82f6',
               }}
             />
             <span
@@ -215,14 +215,14 @@ export async function GET(req: NextRequest) {
         >
           <div
             style={{
-              backgroundColor: 'rgba(99,102,241,0.15)',
-              border: '1px solid rgba(99,102,241,0.4)',
+              backgroundColor: 'rgba(59,130,246,0.15)',
+              border: '1px solid rgba(59,130,246,0.4)',
               borderRadius: '8px',
               padding: '5px 14px',
             }}
           >
             <span
-              style={{ color: '#a5b4fc', fontSize: '13px', fontWeight: 600 }}
+              style={{ color: '#93c5fd', fontSize: '13px', fontWeight: 600 }}
             >
               TAG
             </span>
@@ -373,7 +373,7 @@ export async function GET(req: NextRequest) {
             height: '450px',
             borderRadius: '50%',
             background:
-              'radial-gradient(circle, rgba(99,102,241,0.14) 0%, transparent 70%)',
+              'radial-gradient(circle, rgba(59,130,246,0.14) 0%, transparent 70%)',
           }}
         />
 
@@ -517,8 +517,8 @@ export async function GET(req: NextRequest) {
               <div
                 key={i}
                 style={{
-                  backgroundColor: 'rgba(99,102,241,0.1)',
-                  border: '1px solid rgba(99,102,241,0.3)',
+                  backgroundColor: 'rgba(59,130,246,0.1)',
+                  border: '1px solid rgba(59,130,246,0.3)',
                   borderRadius: '20px',
                   padding: '5px 14px',
                 }}
@@ -552,7 +552,7 @@ export async function GET(req: NextRequest) {
                 width: '10px',
                 height: '10px',
                 borderRadius: '50%',
-                backgroundColor: '#6366f1',
+                backgroundColor: '#3b82f6',
               }}
             />
             <span

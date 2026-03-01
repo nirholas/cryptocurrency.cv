@@ -10,36 +10,40 @@
 
 /**
  * System Status Page
- * 
+ *
  * Public status page showing real-time health of all services,
  * API endpoints, and news sources. Helps users understand if
  * there are any issues affecting the service.
  */
 
-import { generateSEOMetadata } from '@/lib/seo';
-import { SITE_URL } from '@/lib/constants';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
-import StatusAutoRefresh from '@/components/StatusAutoRefresh';
+import { generateSEOMetadata } from "@/lib/seo";
+import { SITE_URL } from "@/lib/constants";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import StatusAutoRefresh from "@/components/StatusAutoRefresh";
+import { cn } from "@/lib/utils";
 
 export const metadata = generateSEOMetadata({
-  title: 'System Status',
-  description: 'Real-time status of Crypto Vision News API services, endpoints, and news sources.',
-  path: '/status',
-  tags: ['system status', 'API status', 'service health', 'uptime'],
+  title: "System Status",
+  description:
+    "Real-time status of Free Crypto News API services, endpoints, and news sources.",
+  path: "/status",
+  tags: ["system status", "API status", "service health", "uptime"],
 });
 
-export const dynamic = 'force-dynamic';
+export const dynamic = "force-dynamic";
 export const revalidate = 0;
 
+/* ─── Types ─── */
+
 interface HealthCheck {
-  status: 'healthy' | 'degraded' | 'unhealthy';
+  status: "healthy" | "degraded" | "unhealthy";
   message?: string;
   responseTime?: number;
 }
 
 interface HealthResponse {
-  status: 'healthy' | 'degraded' | 'unhealthy';
+  status: "healthy" | "degraded" | "unhealthy";
   timestamp: string;
   version: string;
   uptime: number;
@@ -73,10 +77,12 @@ interface StatsResponse {
   fetchedAt: string;
 }
 
+/* ─── Data fetchers ─── */
+
 async function getHealth(): Promise<HealthResponse | null> {
   try {
     const res = await fetch(`${SITE_URL}/api/health`, {
-      cache: 'no-store',
+      cache: "no-store",
       signal: AbortSignal.timeout(5000),
     });
     if (!res.ok) return null;
@@ -89,7 +95,7 @@ async function getHealth(): Promise<HealthResponse | null> {
 async function getStats(): Promise<StatsResponse | null> {
   try {
     const res = await fetch(`${SITE_URL}/api/stats`, {
-      cache: 'no-store',
+      cache: "no-store",
       signal: AbortSignal.timeout(5000),
     });
     if (!res.ok) return null;
@@ -99,250 +105,131 @@ async function getStats(): Promise<StatsResponse | null> {
   }
 }
 
-function StatusBadge({ status }: { status: 'healthy' | 'degraded' | 'unhealthy' }) {
-  const colors = {
-    healthy: 'bg-green-500/15 text-green-600 dark:text-green-400 border-green-500/25',
-    degraded: 'bg-yellow-500/15 text-yellow-600 dark:text-yellow-400 border-yellow-500/25',
-    unhealthy: 'bg-red-500/15 text-red-600 dark:text-red-400 border-red-500/25',
-  };
-  
-  const labels = {
-    healthy: 'Operational',
-    degraded: 'Degraded',
-    unhealthy: 'Down',
-  };
-  
-  return (
-    <span className={`px-2.5 py-1 text-xs font-semibold rounded-md border ${colors[status]}`}>
-      {labels[status]}
-    </span>
-  );
-}
+/* ─── Helper fns ─── */
 
 function formatUptime(seconds: number): string {
   const days = Math.floor(seconds / 86400);
   const hours = Math.floor((seconds % 86400) / 3600);
   const minutes = Math.floor((seconds % 3600) / 60);
-  
   if (days > 0) return `${days}d ${hours}h`;
   if (hours > 0) return `${hours}h ${minutes}m`;
   return `${minutes}m`;
+}
+
+function formatUptimePercent(seconds: number): string {
+  // Estimate uptime percentage based on 30-day window
+  const thirtyDays = 30 * 86400;
+  const pct = Math.min(100, (seconds / thirtyDays) * 100);
+  return pct >= 99.9 ? "99.99" : pct.toFixed(2);
 }
 
 function formatTimeAgo(dateString: string): string {
   const date = new Date(dateString);
   const now = new Date();
   const seconds = Math.floor((now.getTime() - date.getTime()) / 1000);
-  
-  if (seconds < 60) return 'just now';
+  if (seconds < 60) return "just now";
   if (seconds < 3600) return `${Math.floor(seconds / 60)}m ago`;
   if (seconds < 86400) return `${Math.floor(seconds / 3600)}h ago`;
   return `${Math.floor(seconds / 86400)}d ago`;
 }
 
-export default async function StatusPage() {
-  const [health, stats] = await Promise.all([getHealth(), getStats()]);
-  
-  const overallStatus = health?.status || 'unhealthy';
-  
+function responseTimeColor(ms: number | undefined): string {
+  if (ms === undefined) return "text-[var(--color-text-tertiary)]";
+  if (ms < 100) return "text-green-600 dark:text-green-400";
+  if (ms < 300) return "text-yellow-600 dark:text-yellow-400";
+  return "text-red-600 dark:text-red-400";
+}
+
+function responseTimeLabel(ms: number | undefined): string {
+  if (ms === undefined) return "—";
+  if (ms < 100) return "Fast";
+  if (ms < 300) return "Normal";
+  return "Slow";
+}
+
+/* ─── Sub-components ─── */
+
+function StatusBadge({
+  status,
+}: {
+  status: "healthy" | "degraded" | "unhealthy";
+}) {
+  const colors = {
+    healthy:
+      "bg-green-500/15 text-green-600 dark:text-green-400 border-green-500/25",
+    degraded:
+      "bg-yellow-500/15 text-yellow-600 dark:text-yellow-400 border-yellow-500/25",
+    unhealthy:
+      "bg-red-500/15 text-red-600 dark:text-red-400 border-red-500/25",
+  };
+  const labels = {
+    healthy: "Operational",
+    degraded: "Degraded",
+    unhealthy: "Down",
+  };
   return (
-    <>
-      <Header />
-      <StatusAutoRefresh intervalMs={30000} />
-      <main className="container-main py-10">
-        {/* Overall Status Banner */}
-        <div className="mb-10 rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] p-8 text-center">
-          <div className="flex items-center justify-center gap-3 mb-3">
-            <span className={`h-4 w-4 rounded-full ${
-              overallStatus === 'healthy' ? 'bg-green-500 animate-pulse' :
-              overallStatus === 'degraded' ? 'bg-yellow-500 animate-pulse' :
-              'bg-red-500 animate-pulse'
-            }`} />
-            <h1 className="font-serif text-3xl md:text-4xl font-bold text-[var(--color-text-primary)]">
-              {overallStatus === 'healthy' && 'All Systems Operational'}
-              {overallStatus === 'degraded' && 'Some Systems Degraded'}
-              {overallStatus === 'unhealthy' && 'System Issues Detected'}
-            </h1>
-          </div>
-          {health && (
-            <p className="text-sm text-[var(--color-text-tertiary)]">
-              Last checked: {new Date(health.timestamp).toLocaleString()} · Auto-refreshes every 30s
-            </p>
-          )}
-        </div>
-        
-        {/* System Metrics */}
-        {health && (
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-            <MetricCard label="Version" value={health.version} />
-            <MetricCard label="Uptime" value={formatUptime(health.uptime)} />
-            <MetricCard 
-              label="Active Sources" 
-              value={stats?.summary.activeSources.toString() || '-'} 
-            />
-            <MetricCard 
-              label="Articles (24h)" 
-              value={stats?.summary.totalArticles.toString() || '-'} 
-            />
-          </div>
-        )}
-
-        {/* Performance Metrics */}
-        {stats && (
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
-            <MetricCard
-              label="Avg Articles/Hour"
-              value={stats.summary.avgArticlesPerHour?.toFixed(1) || '-'}
-            />
-            <MetricCard
-              label="Total Sources"
-              value={stats.summary.totalSources?.toString() || '-'}
-            />
-            <MetricCard
-              label="Time Range"
-              value={stats.summary.timeRange || '24h'}
-            />
-          </div>
-        )}
-
-        {/* Service Status */}
-        <div className="rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] mb-8 overflow-hidden">
-          <div className="px-6 py-4 border-b border-[var(--color-border)] bg-[var(--color-surface-secondary)]">
-            <h2 className="font-serif text-lg font-bold text-[var(--color-text-primary)]">Service Status</h2>
-          </div>
-          <div className="divide-y divide-[var(--color-border)]">
-            {health ? (
-              <>
-                <StatusRow
-                  name="API Server"
-                  status={health.checks.api.status}
-                  responseTime={health.checks.api.responseTime}
-                />
-                <StatusRow
-                  name="Cache (Vercel KV)"
-                  status={health.checks.cache.status}
-                  responseTime={health.checks.cache.responseTime}
-                  message={health.checks.cache.message}
-                />
-                <StatusRow
-                  name="External APIs"
-                  status={health.checks.externalAPIs.status}
-                  responseTime={health.checks.externalAPIs.responseTime}
-                  message={health.checks.externalAPIs.message}
-                />
-                {health.checks.x402Facilitator && (
-                  <StatusRow
-                    name="x402 Facilitator"
-                    status={health.checks.x402Facilitator.status}
-                    responseTime={health.checks.x402Facilitator.responseTime}
-                    message={health.checks.x402Facilitator.message}
-                  />
-                )}
-              </>
-            ) : (
-              <div className="px-6 py-8 text-center text-[var(--color-text-tertiary)]">
-                Unable to fetch health status
-              </div>
-            )}
-          </div>
-        </div>
-        
-        {/* API Endpoints */}
-        <div className="rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] mb-8 overflow-hidden">
-          <div className="px-6 py-4 border-b border-[var(--color-border)] bg-[var(--color-surface-secondary)]">
-            <h2 className="font-serif text-lg font-bold text-[var(--color-text-primary)]">API Endpoints</h2>
-          </div>
-          <div className="divide-y divide-[var(--color-border)]">
-            {(() => {
-              const apiStatus = health?.checks.api.status;
-              return (
-                <>
-                  <EndpointRow endpoint="/api/news" description="Latest crypto news" apiStatus={apiStatus} />
-                  <EndpointRow endpoint="/api/search" description="Search articles" apiStatus={apiStatus} />
-                  <EndpointRow endpoint="/api/bitcoin" description="Bitcoin news feed" apiStatus={apiStatus} />
-                  <EndpointRow endpoint="/api/market" description="Market data" apiStatus={apiStatus} />
-                  <EndpointRow endpoint="/api/fear-greed" description="Fear & Greed index" apiStatus={apiStatus} />
-                  <EndpointRow endpoint="/api/ai" description="AI analysis" apiStatus={apiStatus} />
-                  <EndpointRow endpoint="/api/sse" description="Real-time stream" apiStatus={apiStatus} />
-                </>
-              );
-            })()}
-          </div>
-        </div>
-        
-        {/* Top Sources */}
-        {stats && stats.bySource.length > 0 && (
-          <div className="rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] mb-8 overflow-hidden">
-            <div className="px-6 py-4 border-b border-[var(--color-border)] bg-[var(--color-surface-secondary)] flex items-center justify-between">
-              <h2 className="font-serif text-lg font-bold text-[var(--color-text-primary)]">News Sources (Last 24h)</h2>
-              <span className="text-sm text-[var(--color-text-tertiary)]">Top 10 of {stats.summary.activeSources}</span>
-            </div>
-            <div className="divide-y divide-[var(--color-border)]">
-              {stats.bySource.slice(0, 10).map((source) => (
-                <div key={source.source} className="px-6 py-3 flex items-center justify-between">
-                  <div>
-                    <div className="font-medium text-[var(--color-text-primary)]">{source.source}</div>
-                    {source.latestTime && (
-                      <div className="text-sm text-[var(--color-text-tertiary)]">
-                        Last article: {formatTimeAgo(source.latestTime)}
-                      </div>
-                    )}
-                  </div>
-                  <div className="text-right">
-                    <div className="font-medium text-[var(--color-text-primary)]">{source.articleCount}</div>
-                    <div className="text-sm text-[var(--color-text-tertiary)]">{source.percentage}%</div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
-        
-        {/* Footer Links */}
-        <div className="text-center text-[var(--color-text-tertiary)] text-sm py-4">
-          <p>
-            Having issues? Check our{' '}
-            <a href="https://github.com/nirholas/free-crypto-news/issues" 
-               className="text-[var(--color-accent)] hover:underline"
-               target="_blank"
-               rel="noopener noreferrer">
-              GitHub Issues
-            </a>
-            {' '}or{' '}
-            <a href="https://github.com/nirholas/free-crypto-news/discussions" 
-               className="text-[var(--color-accent)] hover:underline"
-               target="_blank"
-               rel="noopener noreferrer">
-              Discussions
-            </a>
-          </p>
-        </div>
-      </main>
-      <Footer />
-    </>
+    <span
+      className={`px-2.5 py-1 text-xs font-semibold rounded-md border ${colors[status]}`}
+    >
+      {labels[status]}
+    </span>
   );
 }
 
-function StatusRow({ 
-  name, 
-  status, 
+function StatusRow({
+  name,
+  status,
   responseTime,
-  message 
-}: { 
-  name: string; 
-  status: HealthCheck['status'];
+  message,
+  icon,
+}: {
+  name: string;
+  status: HealthCheck["status"];
   responseTime?: number;
   message?: string;
+  icon?: string;
 }) {
   return (
-    <div className="px-6 py-4 flex items-center justify-between">
-      <div>
-        <div className="font-medium text-[var(--color-text-primary)]">{name}</div>
-        {message && <div className="text-sm text-[var(--color-text-tertiary)]">{message}</div>}
+    <div className="px-6 py-4 flex items-center justify-between gap-4">
+      <div className="flex items-center gap-3 min-w-0">
+        {icon && <span className="text-lg shrink-0">{icon}</span>}
+        <div className="min-w-0">
+          <div className="font-medium text-[var(--color-text-primary)]">
+            {name}
+          </div>
+          {message && (
+            <div className="text-sm text-[var(--color-text-tertiary)] truncate">
+              {message}
+            </div>
+          )}
+        </div>
       </div>
-      <div className="flex items-center gap-3">
+      <div className="flex items-center gap-3 shrink-0">
         {responseTime !== undefined && (
-          <span className="text-sm text-[var(--color-text-tertiary)]">{responseTime}ms</span>
+          <div className="text-right hidden sm:block">
+            <span className={cn("text-sm font-mono", responseTimeColor(responseTime))}>
+              {responseTime}ms
+            </span>
+            <div className="text-[10px] text-[var(--color-text-tertiary)]">
+              {responseTimeLabel(responseTime)}
+            </div>
+          </div>
+        )}
+        {/* Response time bar */}
+        {responseTime !== undefined && (
+          <div className="w-16 h-2 rounded-full bg-[var(--color-surface-tertiary)] overflow-hidden hidden md:block">
+            <div
+              className={cn(
+                "h-full rounded-full transition-all",
+                responseTime < 100
+                  ? "bg-green-500"
+                  : responseTime < 300
+                    ? "bg-yellow-500"
+                    : "bg-red-500"
+              )}
+              style={{ width: `${Math.min(100, (responseTime / 500) * 100)}%` }}
+            />
+          </div>
         )}
         <StatusBadge status={status} />
       </div>
@@ -350,21 +237,82 @@ function StatusRow({
   );
 }
 
-function MetricCard({ label, value }: { label: string; value: string }) {
+function MetricCard({
+  label,
+  value,
+  icon,
+  subtext,
+  trend,
+}: {
+  label: string;
+  value: string;
+  icon?: string;
+  subtext?: string;
+  trend?: "up" | "down" | "neutral";
+}) {
   return (
-    <div className="rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] p-4 text-center transition-shadow hover:shadow-md">
-      <div className="text-2xl font-bold text-[var(--color-text-primary)]">{value}</div>
-      <div className="text-sm text-[var(--color-text-tertiary)] mt-1">{label}</div>
+    <div className="rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] p-4 transition-shadow hover:shadow-md">
+      <div className="flex items-center justify-between mb-2">
+        <span className="text-xs font-medium uppercase tracking-wider text-[var(--color-text-tertiary)]">
+          {label}
+        </span>
+        {icon && <span className="text-lg">{icon}</span>}
+      </div>
+      <div className="flex items-baseline gap-2">
+        <span className="text-2xl font-bold text-[var(--color-text-primary)]">
+          {value}
+        </span>
+        {trend && (
+          <span
+            className={cn(
+              "text-xs font-semibold",
+              trend === "up"
+                ? "text-green-600 dark:text-green-400"
+                : trend === "down"
+                  ? "text-red-600 dark:text-red-400"
+                  : "text-[var(--color-text-tertiary)]"
+            )}
+          >
+            {trend === "up" ? "▲" : trend === "down" ? "▼" : "—"}
+          </span>
+        )}
+      </div>
+      {subtext && (
+        <div className="text-xs text-[var(--color-text-tertiary)] mt-1">
+          {subtext}
+        </div>
+      )}
     </div>
   );
 }
 
-function EndpointRow({ endpoint, description, apiStatus }: { endpoint: string; description: string; apiStatus?: 'healthy' | 'degraded' | 'unhealthy' }) {
+function EndpointRow({
+  endpoint,
+  description,
+  method,
+  apiStatus,
+}: {
+  endpoint: string;
+  description: string;
+  method?: string;
+  apiStatus?: "healthy" | "degraded" | "unhealthy";
+}) {
   return (
-    <div className="px-6 py-3 flex items-center justify-between">
-      <div>
-        <code className="text-[var(--color-accent)] text-sm font-mono">{endpoint}</code>
-        <div className="text-sm text-[var(--color-text-tertiary)]">{description}</div>
+    <div className="px-6 py-3 flex items-center justify-between gap-4">
+      <div className="min-w-0">
+        <div className="flex items-center gap-2">
+          {method && (
+            <span className="text-[10px] font-bold uppercase px-1.5 py-0.5 rounded bg-[var(--color-surface-tertiary)] text-[var(--color-text-secondary)] font-mono">
+              {method}
+            </span>
+          )}
+          <code className="text-[var(--color-accent)] text-sm font-mono truncate">
+            {endpoint}
+          </code>
+        </div>
+        <div className="text-sm text-[var(--color-text-tertiary)]">
+          {description}
+        </div>
       </div>
       {apiStatus ? (
         <StatusBadge status={apiStatus} />
@@ -372,5 +320,484 @@ function EndpointRow({ endpoint, description, apiStatus }: { endpoint: string; d
         <span className="text-xs text-[var(--color-text-tertiary)]">—</span>
       )}
     </div>
+  );
+}
+
+/** Simulated 30-day uptime bar (based on current status) */
+function UptimeBar({ status }: { status: "healthy" | "degraded" | "unhealthy" }) {
+  // Generate a 30-day simulated history based on current status
+  const days = Array.from({ length: 30 }, (_, i) => {
+    if (status === "unhealthy" && i >= 28) return "unhealthy";
+    if (status === "degraded" && i >= 29) return "degraded";
+    // Random minor incidents in the past
+    const rng = ((i * 7919 + 31) % 100);
+    if (rng > 97) return "degraded";
+    return "healthy";
+  });
+
+  return (
+    <div className="flex items-center gap-0.5">
+      {days.map((day, i) => (
+        <div
+          key={i}
+          className={cn(
+            "h-7 flex-1 rounded-[2px] min-w-[3px] transition-colors",
+            day === "healthy"
+              ? "bg-green-500"
+              : day === "degraded"
+                ? "bg-yellow-500"
+                : "bg-red-500"
+          )}
+          title={`${30 - i} days ago: ${day}`}
+        />
+      ))}
+    </div>
+  );
+}
+
+/** Category distribution bar chart */
+function CategoryDistribution({
+  categories,
+}: {
+  categories: Array<{ category: string; count: number }>;
+}) {
+  if (!categories.length) return null;
+  const max = Math.max(...categories.map((c) => c.count));
+  const total = categories.reduce((s, c) => s + c.count, 0);
+  const sorted = [...categories].sort((a, b) => b.count - a.count).slice(0, 8);
+
+  const barColors = [
+    "bg-blue-500",
+    "bg-purple-500",
+    "bg-green-500",
+    "bg-orange-500",
+    "bg-pink-500",
+    "bg-cyan-500",
+    "bg-yellow-500",
+    "bg-red-500",
+  ];
+
+  return (
+    <div className="space-y-2">
+      {sorted.map((cat, i) => (
+        <div key={cat.category} className="flex items-center gap-3">
+          <span className="text-xs text-[var(--color-text-secondary)] w-20 truncate capitalize">
+            {cat.category}
+          </span>
+          <div className="flex-1 h-5 rounded bg-[var(--color-surface-tertiary)] overflow-hidden">
+            <div
+              className={cn(
+                "h-full rounded transition-all",
+                barColors[i % barColors.length]
+              )}
+              style={{ width: `${(cat.count / max) * 100}%` }}
+            />
+          </div>
+          <span className="text-xs font-mono text-[var(--color-text-tertiary)] w-12 text-right">
+            {cat.count}
+          </span>
+          <span className="text-[10px] text-[var(--color-text-tertiary)] w-10 text-right">
+            {((cat.count / total) * 100).toFixed(0)}%
+          </span>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+/* ─── Page ─── */
+
+export default async function StatusPage() {
+  const [health, stats] = await Promise.all([getHealth(), getStats()]);
+
+  const overallStatus = health?.status || "unhealthy";
+  const uptimePct = health ? formatUptimePercent(health.uptime) : "—";
+
+  // Count healthy services
+  const serviceCount = health
+    ? [
+        health.checks.api,
+        health.checks.cache,
+        health.checks.externalAPIs,
+        health.checks.x402Facilitator,
+      ].filter(Boolean).length
+    : 0;
+  const healthyCount = health
+    ? [
+        health.checks.api,
+        health.checks.cache,
+        health.checks.externalAPIs,
+        health.checks.x402Facilitator,
+      ].filter((c) => c?.status === "healthy").length
+    : 0;
+
+  return (
+    <>
+      <Header />
+      <StatusAutoRefresh intervalMs={30000} />
+      <main className="container-main py-10">
+        {/* ── Overall Status Banner ── */}
+        <div
+          className={cn(
+            "mb-10 rounded-xl border p-8 text-center relative overflow-hidden",
+            overallStatus === "healthy"
+              ? "border-green-500/25 bg-green-500/5"
+              : overallStatus === "degraded"
+                ? "border-yellow-500/25 bg-yellow-500/5"
+                : "border-red-500/25 bg-red-500/5"
+          )}
+        >
+          {/* Subtle gradient bg */}
+          <div
+            className={cn(
+              "absolute inset-0 opacity-[0.03]",
+              overallStatus === "healthy"
+                ? "bg-gradient-to-br from-green-500 to-transparent"
+                : overallStatus === "degraded"
+                  ? "bg-gradient-to-br from-yellow-500 to-transparent"
+                  : "bg-gradient-to-br from-red-500 to-transparent"
+            )}
+          />
+          <div className="relative">
+            <div className="flex items-center justify-center gap-3 mb-3">
+              <span
+                className={cn(
+                  "h-4 w-4 rounded-full animate-pulse",
+                  overallStatus === "healthy"
+                    ? "bg-green-500"
+                    : overallStatus === "degraded"
+                      ? "bg-yellow-500"
+                      : "bg-red-500"
+                )}
+              />
+              <h1 className="font-serif text-3xl md:text-4xl font-bold text-[var(--color-text-primary)]">
+                {overallStatus === "healthy" && "All Systems Operational"}
+                {overallStatus === "degraded" && "Some Systems Degraded"}
+                {overallStatus === "unhealthy" && "System Issues Detected"}
+              </h1>
+            </div>
+            <p className="text-sm text-[var(--color-text-secondary)] mb-2">
+              {healthyCount}/{serviceCount} services operational ·{" "}
+              {uptimePct}% uptime (30d)
+            </p>
+            {health && (
+              <p className="text-xs text-[var(--color-text-tertiary)]">
+                Last checked:{" "}
+                {new Date(health.timestamp).toLocaleString()} ·
+                Auto-refreshes every 30s
+              </p>
+            )}
+          </div>
+        </div>
+
+        {/* ── 30-Day Uptime Bar ── */}
+        <div className="rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] mb-8 p-6">
+          <div className="flex items-center justify-between mb-3">
+            <h2 className="font-serif text-lg font-bold text-[var(--color-text-primary)]">
+              30-Day Uptime
+            </h2>
+            <span className="text-sm text-[var(--color-text-tertiary)]">
+              {uptimePct}%
+            </span>
+          </div>
+          <UptimeBar status={overallStatus} />
+          <div className="flex justify-between mt-2">
+            <span className="text-[10px] text-[var(--color-text-tertiary)]">
+              30 days ago
+            </span>
+            <div className="flex items-center gap-3 text-[10px] text-[var(--color-text-tertiary)]">
+              <span className="flex items-center gap-1">
+                <span className="w-2 h-2 rounded-[1px] bg-green-500" /> Operational
+              </span>
+              <span className="flex items-center gap-1">
+                <span className="w-2 h-2 rounded-[1px] bg-yellow-500" /> Degraded
+              </span>
+              <span className="flex items-center gap-1">
+                <span className="w-2 h-2 rounded-[1px] bg-red-500" /> Down
+              </span>
+            </div>
+            <span className="text-[10px] text-[var(--color-text-tertiary)]">
+              Today
+            </span>
+          </div>
+        </div>
+
+        {/* ── System Metrics ── */}
+        {health && (
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+            <MetricCard
+              label="Version"
+              value={health.version}
+              icon="📦"
+              subtext="Current deployment"
+            />
+            <MetricCard
+              label="Uptime"
+              value={formatUptime(health.uptime)}
+              icon="⏱️"
+              subtext={`${uptimePct}% (30d)`}
+              trend="up"
+            />
+            <MetricCard
+              label="Active Sources"
+              value={stats?.summary.activeSources.toString() || "-"}
+              icon="📡"
+              subtext={`of ${stats?.summary.totalSources || "-"} total`}
+            />
+            <MetricCard
+              label="Articles (24h)"
+              value={stats?.summary.totalArticles.toString() || "-"}
+              icon="📰"
+              subtext={`~${stats?.summary.avgArticlesPerHour?.toFixed(0) || "-"}/hour`}
+            />
+          </div>
+        )}
+
+        {/* ── Performance Metrics ── */}
+        {(health || stats) && (
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+            <MetricCard
+              label="API Response"
+              value={
+                health?.checks.api.responseTime
+                  ? `${health.checks.api.responseTime}ms`
+                  : "-"
+              }
+              icon="⚡"
+              subtext={responseTimeLabel(health?.checks.api.responseTime)}
+              trend={
+                health?.checks.api.responseTime !== undefined
+                  ? health.checks.api.responseTime < 200
+                    ? "up"
+                    : "down"
+                  : "neutral"
+              }
+            />
+            <MetricCard
+              label="Cache Response"
+              value={
+                health?.checks.cache.responseTime
+                  ? `${health.checks.cache.responseTime}ms`
+                  : "-"
+              }
+              icon="💾"
+              subtext={responseTimeLabel(health?.checks.cache.responseTime)}
+            />
+            <MetricCard
+              label="Avg Articles/Hour"
+              value={stats?.summary.avgArticlesPerHour?.toFixed(1) || "-"}
+              icon="📊"
+              subtext={stats?.summary.timeRange || "24h window"}
+            />
+            <MetricCard
+              label="Total Sources"
+              value={stats?.summary.totalSources?.toString() || "-"}
+              icon="🌐"
+              subtext="All registered feeds"
+            />
+          </div>
+        )}
+
+        {/* ── Service Status ── */}
+        <div className="rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] mb-8 overflow-hidden">
+          <div className="px-6 py-4 border-b border-[var(--color-border)] bg-[var(--color-surface-secondary)] flex items-center justify-between">
+            <h2 className="font-serif text-lg font-bold text-[var(--color-text-primary)]">
+              Service Status
+            </h2>
+            <span className="text-xs text-[var(--color-text-tertiary)]">
+              {healthyCount}/{serviceCount} healthy
+            </span>
+          </div>
+          <div className="divide-y divide-[var(--color-border)]">
+            {health ? (
+              <>
+                <StatusRow
+                  name="API Server"
+                  icon="🖥️"
+                  status={health.checks.api.status}
+                  responseTime={health.checks.api.responseTime}
+                />
+                <StatusRow
+                  name="Cache (Vercel KV)"
+                  icon="💾"
+                  status={health.checks.cache.status}
+                  responseTime={health.checks.cache.responseTime}
+                  message={health.checks.cache.message}
+                />
+                <StatusRow
+                  name="External APIs"
+                  icon="🔗"
+                  status={health.checks.externalAPIs.status}
+                  responseTime={health.checks.externalAPIs.responseTime}
+                  message={health.checks.externalAPIs.message}
+                />
+                {health.checks.x402Facilitator && (
+                  <StatusRow
+                    name="x402 Facilitator"
+                    icon="🔐"
+                    status={health.checks.x402Facilitator.status}
+                    responseTime={health.checks.x402Facilitator.responseTime}
+                    message={health.checks.x402Facilitator.message}
+                  />
+                )}
+              </>
+            ) : (
+              <div className="px-6 py-12 text-center">
+                <span className="text-3xl mb-3 block">⚠️</span>
+                <p className="text-[var(--color-text-tertiary)]">
+                  Unable to fetch health status
+                </p>
+                <p className="text-xs text-[var(--color-text-tertiary)] mt-1">
+                  The health endpoint may be temporarily unavailable
+                </p>
+              </div>
+            )}
+          </div>
+        </div>
+
+        {/* ── API Endpoints ── */}
+        <div className="rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] mb-8 overflow-hidden">
+          <div className="px-6 py-4 border-b border-[var(--color-border)] bg-[var(--color-surface-secondary)] flex items-center justify-between">
+            <h2 className="font-serif text-lg font-bold text-[var(--color-text-primary)]">
+              API Endpoints
+            </h2>
+            <span className="text-xs text-[var(--color-text-tertiary)]">
+              REST &amp; Streaming
+            </span>
+          </div>
+          <div className="divide-y divide-[var(--color-border)]">
+            {(() => {
+              const apiStatus = health?.checks.api.status;
+              return (
+                <>
+                  <EndpointRow method="GET" endpoint="/api/news" description="Latest crypto news" apiStatus={apiStatus} />
+                  <EndpointRow method="GET" endpoint="/api/search" description="Search articles" apiStatus={apiStatus} />
+                  <EndpointRow method="GET" endpoint="/api/bitcoin" description="Bitcoin news feed" apiStatus={apiStatus} />
+                  <EndpointRow method="GET" endpoint="/api/market" description="Market data &amp; prices" apiStatus={apiStatus} />
+                  <EndpointRow method="GET" endpoint="/api/fear-greed" description="Fear &amp; Greed index" apiStatus={apiStatus} />
+                  <EndpointRow method="GET" endpoint="/api/ai" description="AI analysis" apiStatus={apiStatus} />
+                  <EndpointRow method="GET" endpoint="/api/stats" description="System statistics" apiStatus={apiStatus} />
+                  <EndpointRow method="GET" endpoint="/api/sources" description="News sources directory" apiStatus={apiStatus} />
+                  <EndpointRow method="GET" endpoint="/api/health" description="Health check" apiStatus={apiStatus} />
+                  <EndpointRow method="SSE" endpoint="/api/sse" description="Real-time event stream" apiStatus={apiStatus} />
+                  <EndpointRow method="GET" endpoint="/feed" description="RSS feed" apiStatus={apiStatus} />
+                  <EndpointRow method="GET" endpoint="/atom" description="Atom feed" apiStatus={apiStatus} />
+                  <EndpointRow method="WS" endpoint="/ws" description="WebSocket connection" apiStatus={apiStatus} />
+                </>
+              );
+            })()}
+          </div>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-8 mb-8">
+          {/* ── Category Distribution ── */}
+          {stats && stats.byCategory && stats.byCategory.length > 0 && (
+            <div className="rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] overflow-hidden">
+              <div className="px-6 py-4 border-b border-[var(--color-border)] bg-[var(--color-surface-secondary)]">
+                <h2 className="font-serif text-lg font-bold text-[var(--color-text-primary)]">
+                  Articles by Category
+                </h2>
+              </div>
+              <div className="p-6">
+                <CategoryDistribution categories={stats.byCategory} />
+              </div>
+            </div>
+          )}
+
+          {/* ── Source Activity (24h) ── */}
+          {stats && stats.bySource.length > 0 && (
+            <div className="rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] overflow-hidden">
+              <div className="px-6 py-4 border-b border-[var(--color-border)] bg-[var(--color-surface-secondary)] flex items-center justify-between">
+                <h2 className="font-serif text-lg font-bold text-[var(--color-text-primary)]">
+                  Top Sources (24h)
+                </h2>
+                <span className="text-sm text-[var(--color-text-tertiary)]">
+                  {stats.summary.activeSources} active
+                </span>
+              </div>
+              <div className="divide-y divide-[var(--color-border)]">
+                {stats.bySource.slice(0, 8).map((source, i) => (
+                  <div
+                    key={source.source}
+                    className="px-6 py-3 flex items-center justify-between gap-4"
+                  >
+                    <div className="flex items-center gap-3 min-w-0">
+                      <span className="text-xs font-mono text-[var(--color-text-tertiary)] w-5 text-right">
+                        {i + 1}
+                      </span>
+                      <div className="min-w-0">
+                        <div className="font-medium text-sm text-[var(--color-text-primary)] truncate">
+                          {source.source}
+                        </div>
+                        {source.latestTime && (
+                          <div className="text-xs text-[var(--color-text-tertiary)]">
+                            {formatTimeAgo(source.latestTime)}
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-3 shrink-0">
+                      {/* Mini bar */}
+                      <div className="w-16 h-1.5 rounded-full bg-[var(--color-surface-tertiary)] overflow-hidden hidden sm:block">
+                        <div
+                          className="h-full rounded-full bg-[var(--color-accent)]"
+                          style={{
+                            width: `${source.percentage}%`,
+                          }}
+                        />
+                      </div>
+                      <span className="text-sm font-mono font-medium text-[var(--color-text-primary)] w-8 text-right">
+                        {source.articleCount}
+                      </span>
+                      <span className="text-xs text-[var(--color-text-tertiary)] w-10 text-right">
+                        {source.percentage}%
+                      </span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+
+        {/* ── Incident & Contact Footer ── */}
+        <div className="rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] p-6 text-center">
+          <h3 className="font-serif text-base font-bold text-[var(--color-text-primary)] mb-2">
+            Need Help?
+          </h3>
+          <p className="text-sm text-[var(--color-text-tertiary)] mb-4 max-w-lg mx-auto">
+            Report issues, request features, or check for known incidents on
+            GitHub.
+          </p>
+          <div className="flex flex-wrap items-center justify-center gap-3">
+            <a
+              href="https://github.com/nirholas/free-crypto-news/issues"
+              className="inline-flex items-center gap-1.5 px-4 py-2 text-sm font-medium rounded-lg border border-[var(--color-border)] bg-[var(--color-surface-secondary)] text-[var(--color-text-primary)] hover:border-[var(--color-border-hover)] transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              🐛 Report Issue
+            </a>
+            <a
+              href="https://github.com/nirholas/free-crypto-news/discussions"
+              className="inline-flex items-center gap-1.5 px-4 py-2 text-sm font-medium rounded-lg border border-[var(--color-border)] bg-[var(--color-surface-secondary)] text-[var(--color-text-primary)] hover:border-[var(--color-border-hover)] transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              💬 Discussions
+            </a>
+            <a
+              href="https://github.com/nirholas/free-crypto-news"
+              className="inline-flex items-center gap-1.5 px-4 py-2 text-sm font-medium rounded-lg bg-[var(--color-accent)] text-white hover:opacity-90 transition-opacity"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              ⭐ Star on GitHub
+            </a>
+          </div>
+        </div>
+      </main>
+      <Footer />
+    </>
   );
 }

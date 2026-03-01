@@ -271,6 +271,190 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ============================================
+   SCREEN READER ONLY (A11y)
+   ============================================ */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* ============================================
+   RESPONSIVE TYPOGRAPHY
+   ============================================ */
+
+h1 { font-size: 1.5rem; } /* text-2xl on mobile */
+h2 { font-size: 1.25rem; }
+h3 { font-size: 1.125rem; }
+
+@media (min-width: 640px) {
+  h1 { font-size: 1.875rem; } /* text-3xl */
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.25rem; }
+}
+
+@media (min-width: 1024px) {
+  h1 { font-size: 2.25rem; } /* text-4xl */
+  h2 { font-size: 1.875rem; }
+  h3 { font-size: 1.5rem; }
+}
+
+/* Comfortable line lengths for prose content */
+.prose-content {
+  max-width: 65ch;
+}
+
+/* ============================================
+   MOBILE TABLE UTILITIES
+   ============================================ */
+
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.table-responsive table {
+  min-width: 600px;
+}
+
+/* Sticky first column for tables on mobile */
+.table-sticky-first td:first-child,
+.table-sticky-first th:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  background: var(--color-surface);
+}
+
+.dark .table-sticky-first td:first-child,
+.dark .table-sticky-first th:first-child {
+  background: var(--color-surface);
+}
+
+/* ============================================
+   TOUCH TARGET MINIMUM SIZE
+   ============================================ */
+
+@media (pointer: coarse) {
+  .touch-target {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  button, a, [role="button"] {
+    min-height: 44px;
+  }
+
+  /* Adequate spacing between tappable elements */
+  .touch-spacing > * + * {
+    margin-top: 4px;
+  }
+}
+
+/* ============================================
+   REDUCED MOTION
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ============================================
+   PRINT STYLES
+   ============================================ */
+
+@media print {
+  /* Hide non-essential elements */
+  header, footer, nav,
+  .skip-link,
+  .live-dot,
+  [data-ticker],
+  .back-to-top,
+  .newsletter-cta,
+  .mobile-menu,
+  .price-ticker-strip,
+  button[aria-label="Toggle menu"],
+  button[aria-label="Toggle theme"],
+  button[aria-label="Search (Cmd+K)"] {
+    display: none !important;
+  }
+
+  /* Reset colors to black on white */
+  body {
+    background: #fff !important;
+    color: #000 !important;
+    font-size: 12pt;
+    line-height: 1.5;
+  }
+
+  * {
+    color: #000 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    border-color: #ccc !important;
+  }
+
+  /* Show full URLs after links */
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.85em;
+    color: #555 !important;
+    word-break: break-all;
+  }
+
+  /* Don't show URLs for internal navigation links */
+  a[href^="/"]::after,
+  a[href^="#"]::after {
+    content: none;
+  }
+
+  /* Ensure images are not too large */
+  img {
+    max-width: 100% !important;
+    page-break-inside: avoid;
+  }
+
+  /* Avoid page breaks inside cards and articles */
+  article, .card, tr {
+    page-break-inside: avoid;
+  }
+
+  /* Page margins */
+  @page {
+    margin: 2cm;
+  }
+
+  /* Force container full width */
+  .container-main {
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+}
+
+/* ============================================
+   BODY SCROLL LOCK (for mobile menu)
+   ============================================ */
+
+body.menu-open {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+}
+
+/* ============================================
    SAFE AREA (notched devices)
    ============================================ */
 

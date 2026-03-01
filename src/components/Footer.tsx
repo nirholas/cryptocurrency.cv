@@ -1,5 +1,6 @@
 import { Link } from "@/i18n/navigation";
 import FooterNewsletter from "@/components/FooterNewsletter";
+import FooterSection from "@/components/FooterSection";
 import LanguageSelector from "@/components/LanguageSelector";
 import BackToTop from "@/components/BackToTop";
 
@@ -179,9 +180,9 @@ export default function Footer() {
           </div>
 
           {/* Top section */}
-          <div className="grid grid-cols-2 gap-8 md:grid-cols-4 lg:grid-cols-6">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-4 lg:grid-cols-6">
             {/* Brand + Newsletter */}
-            <div className="col-span-2 mb-4 lg:mb-0">
+            <div className="col-span-1 md:col-span-2 mb-4 lg:mb-0">
               <Link href="/" className="text-xl font-bold tracking-tight">
                 <span className="text-[#3b82f6]">C</span>V
               </Link>
@@ -220,28 +221,13 @@ export default function Footer() {
               </div>
             </div>
 
-            {/* Link sections */}
+            {/* Link sections — collapsible on mobile */}
             {FOOTER_SECTIONS.map((section) => (
-              <div key={section.title}>
-                <h3 className="mb-3 text-sm font-semibold uppercase tracking-wider text-[var(--color-text-primary)]">
-                  {section.title}
-                </h3>
-                <ul className="space-y-2">
-                  {section.links.map((link) => (
-                    <li key={link.href}>
-                      <Link
-                        href={link.href}
-                        className="group flex items-center gap-1 text-sm text-[var(--color-text-secondary)] transition-colors hover:text-[var(--color-text-primary)]"
-                      >
-                        <span className="inline-block w-0 overflow-hidden text-[#3b82f6] transition-all group-hover:w-3">
-                          →
-                        </span>
-                        {link.label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              <FooterSection
+                key={section.title}
+                title={section.title}
+                links={section.links}
+              />
             ))}
           </div>
 

@@ -601,15 +601,18 @@ async function clearCache(cacheName) {
 async function getCacheStatus() {
   const keys = await caches.keys();
   const status = {};
+  let totalEntries = 0;
   
   for (const key of keys) {
     const cache = await caches.open(key);
     const entries = await cache.keys();
     status[key] = entries.length;
+    totalEntries += entries.length;
   }
   
   return {
     caches: status,
+    totalEntries,
     version: CACHE_VERSION,
   };
 }

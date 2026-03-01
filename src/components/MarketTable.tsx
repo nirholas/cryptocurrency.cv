@@ -190,17 +190,18 @@ export default function MarketTable({ coins }: { coins: CoinRow[] }) {
   };
 
   return (
-    <div className="overflow-x-auto rounded-lg border border-[var(--color-border)]">
-      <table className="w-full text-sm">
+    <div className="overflow-x-auto rounded-lg border border-[var(--color-border)] -webkit-overflow-scrolling-touch">
+      <table className="w-full text-sm min-w-[540px]">
         <thead>
           <tr className="border-b border-[var(--color-border)] bg-[var(--color-surface)]">
             {columns.map((col) => (
               <th
                 key={col.key}
                 className={cn(
-                  "cursor-pointer select-none whitespace-nowrap px-4 py-3 font-medium text-[var(--color-text-secondary)] transition-colors hover:text-[var(--color-text-primary)]",
+                  "cursor-pointer select-none whitespace-nowrap px-3 py-2.5 sm:px-4 sm:py-3 font-medium text-[var(--color-text-secondary)] transition-colors hover:text-[var(--color-text-primary)]",
                   col.align === "right" ? "text-right" : "text-left",
                   col.hideClass,
+                  col.key === "name" && "sticky left-0 z-10 bg-[var(--color-surface)]",
                 )}
                 onClick={() => handleSort(col.key)}
               >
@@ -226,15 +227,15 @@ export default function MarketTable({ coins }: { coins: CoinRow[] }) {
               <tr
                 key={coin.id}
                 onClick={() => router.push(`/coin/${coin.id}`)}
-                className="border-b border-[var(--color-border)] bg-[var(--color-surface)] transition-colors hover:bg-[var(--color-surface-secondary)] cursor-pointer"
+                className="group border-b border-[var(--color-border)] bg-[var(--color-surface)] transition-colors hover:bg-[var(--color-surface-secondary)] cursor-pointer"
               >
                 {/* Rank */}
-                <td className="px-4 py-3 text-[var(--color-text-secondary)]">
+                <td className="px-3 py-2.5 sm:px-4 sm:py-3 text-[var(--color-text-secondary)]">
                   {coin.market_cap_rank}
                 </td>
 
-                {/* Coin name + icon */}
-                <td className="px-4 py-3">
+                {/* Coin name + icon — sticky on mobile */}
+                <td className="px-3 py-2.5 sm:px-4 sm:py-3 sticky left-0 z-10 bg-[var(--color-surface)]">
                   <div className="flex items-center gap-2">
                     {coin.image && (
                       <img
@@ -242,26 +243,26 @@ export default function MarketTable({ coins }: { coins: CoinRow[] }) {
                         alt={coin.name}
                         width={24}
                         height={24}
-                        className="rounded-full"
+                        className="rounded-full shrink-0"
                         loading="lazy"
                       />
                     )}
-                    <span className="font-medium text-[var(--color-text-primary)]">
+                    <span className="font-medium text-[var(--color-text-primary)] truncate max-w-[120px] sm:max-w-none">
                       {coin.name}
                     </span>
-                    <span className="uppercase text-[var(--color-text-tertiary)] text-xs">
+                    <span className="uppercase text-[var(--color-text-tertiary)] text-xs hidden sm:inline">
                       {coin.symbol}
                     </span>
                   </div>
                 </td>
 
                 {/* Price */}
-                <td className="px-4 py-3 text-right font-mono text-[var(--color-text-primary)]">
+                <td className="px-3 py-2.5 sm:px-4 sm:py-3 text-right font-mono text-[var(--color-text-primary)]">
                   {formatCurrency(coin.current_price)}
                 </td>
 
                 {/* 24h % */}
-                <td className={cn("px-4 py-3 text-right font-mono", pct24.className)}>
+                <td className={cn("px-3 py-2.5 sm:px-4 sm:py-3 text-right font-mono", pct24.className)}>
                   {pct24.text}
                 </td>
 

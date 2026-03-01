@@ -697,5 +697,9 @@
   "oracle": {
     "title": "Crypto Oracle",
     "description": "AI-powered cryptocurrency oracle for market insights and predictions"
+  },
+  "whales": {
+    "title": "Whale Alerts & On-Chain Activity",
+    "description": "Track large cryptocurrency whale transactions in real time. Monitor on-chain metrics, exchange flows, and notable wallet activity."
   }
 }

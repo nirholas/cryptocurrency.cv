@@ -81,11 +81,37 @@ const staticPages = [
   // Regulatory & compliance
   { path: '/regulatory', changeFrequency: 'daily' as const, priority: 0.8 },
   { path: '/protocol-health', changeFrequency: 'daily' as const, priority: 0.7 },
+  // Ecosystem hub pages
+  { path: '/bitcoin', changeFrequency: 'hourly' as const, priority: 0.9 },
+  { path: '/ethereum', changeFrequency: 'hourly' as const, priority: 0.9 },
+  { path: '/solana', changeFrequency: 'hourly' as const, priority: 0.9 },
+  // Additional market pages
+  { path: '/derivatives', changeFrequency: 'hourly' as const, priority: 0.8 },
+  { path: '/nft', changeFrequency: 'hourly' as const, priority: 0.7 },
+  { path: '/stablecoins', changeFrequency: 'daily' as const, priority: 0.7 },
+  { path: '/l2', changeFrequency: 'daily' as const, priority: 0.7 },
+  { path: '/exchanges', changeFrequency: 'daily' as const, priority: 0.7 },
+  { path: '/macro', changeFrequency: 'daily' as const, priority: 0.7 },
+  // Content & event pages
+  { path: '/search', changeFrequency: 'always' as const, priority: 0.8 },
+  { path: '/unlocks', changeFrequency: 'daily' as const, priority: 0.7 },
+  { path: '/events', changeFrequency: 'daily' as const, priority: 0.7 },
+  { path: '/regulation', changeFrequency: 'daily' as const, priority: 0.7 },
+  { path: '/research', changeFrequency: 'daily' as const, priority: 0.7 },
+  { path: '/intelligence', changeFrequency: 'daily' as const, priority: 0.7 },
+  // User features
+  { path: '/bookmarks', changeFrequency: 'daily' as const, priority: 0.5 },
+  { path: '/alerts', changeFrequency: 'daily' as const, priority: 0.5 },
+  { path: '/settings', changeFrequency: 'monthly' as const, priority: 0.4 },
   // Info pages
   { path: '/about', changeFrequency: 'monthly' as const, priority: 0.5 },
   { path: '/pricing', changeFrequency: 'monthly' as const, priority: 0.6 },
   { path: '/status', changeFrequency: 'hourly' as const, priority: 0.5 },
   { path: '/origins', changeFrequency: 'monthly' as const, priority: 0.5 },
+  { path: '/contact', changeFrequency: 'monthly' as const, priority: 0.4 },
+  { path: '/privacy', changeFrequency: 'monthly' as const, priority: 0.3 },
+  { path: '/terms', changeFrequency: 'monthly' as const, priority: 0.3 },
+  { path: '/learn', changeFrequency: 'weekly' as const, priority: 0.6 },
   // Docs & Developer
   { path: '/developers', changeFrequency: 'weekly' as const, priority: 0.6 },
   { path: '/developers/api', changeFrequency: 'weekly' as const, priority: 0.7 },
