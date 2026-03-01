@@ -39,6 +39,36 @@ export const SECURITY_HEADERS: Record<string, string> = {
 };
 
 // =============================================================================
+// NONCE-BASED CSP
+// =============================================================================
+
+/**
+ * Build a Content-Security-Policy header value with a per-request nonce.
+ *
+ * `'strict-dynamic'` allows nonced scripts to load other scripts dynamically
+ * (e.g. gtag.js loading analytics).  `'unsafe-inline'` is kept as a
+ * backward-compatible fallback for older browsers that ignore
+ * `'strict-dynamic'`.
+ */
+export function buildCspHeader(nonce: string): string {
+  return [
+    "default-src 'self'",
+    `script-src 'self' 'nonce-${nonce}' 'strict-dynamic' 'unsafe-inline'`,
+    "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+    "img-src 'self' data: blob: https:",
+    "font-src 'self' https://fonts.gstatic.com",
+    "connect-src 'self' https: wss:",
+    "media-src 'self' https:",
+    "frame-src 'self' https://www.youtube.com https://player.vimeo.com https://s.tradingview.com https://www.tradingview.com",
+    "object-src 'none'",
+    "base-uri 'self'",
+    "form-action 'self'",
+    "frame-ancestors 'self'",
+    "upgrade-insecure-requests",
+  ].join('; ');
+}
+
+// =============================================================================
 // SUSPICIOUS PAYLOAD DETECTION
 // =============================================================================
 

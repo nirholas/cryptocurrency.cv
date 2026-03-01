@@ -51,26 +51,9 @@ const nextConfig = {
             key: 'Permissions-Policy',
             value: 'camera=(), microphone=(), geolocation=()',
           },
-          {
-            key: 'Content-Security-Policy',
-            value: [
-              "default-src 'self'",
-              // Allow inline scripts and trusted analytics hosts.
-              // TODO: Migrate to nonce-based CSP with 'strict-dynamic' for full protection.
-              "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://s3.tradingview.com https://cdn.jsdelivr.net",
-              "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
-              "img-src 'self' data: blob: https:",
-              "font-src 'self' https://fonts.gstatic.com",
-              "connect-src 'self' https: wss:",
-              "media-src 'self' https:",
-              "frame-src 'self' https://www.youtube.com https://player.vimeo.com https://s.tradingview.com https://www.tradingview.com",
-              "object-src 'none'",
-              "base-uri 'self'",
-              "form-action 'self'",
-              "frame-ancestors 'self'", // Changed from 'none' to match SAMEORIGIN
-              "upgrade-insecure-requests",
-            ].join('; '),
-          },
+          // CSP is set dynamically by middleware (nonce-based).
+          // Do NOT add a static Content-Security-Policy header here — it
+          // would conflict with the per-request nonce generated in middleware.ts.
         ],
       },
       // ================================================================

@@ -88,12 +88,12 @@ export function useTheme() {
  * Theme Script - Prevents flash of wrong theme
  * Add this to your layout's <head> or as the first element in <body>
  */
-export function ThemeScript() {
+export function ThemeScript({ nonce }: { nonce?: string }) {
   const script = `
     (function() {
       document.documentElement.classList.add('dark');
     })();
   `;
 
-  return <script dangerouslySetInnerHTML={{ __html: script }} />;
+  return <script nonce={nonce} dangerouslySetInnerHTML={{ __html: script }} />;
 }

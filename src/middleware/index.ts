@@ -33,6 +33,6 @@ export {
 
 export { isBlockedBot, isApiClient } from './bot-detection';
 export { isSperaxOSRequest, isTrustedOrigin } from './trusted-origins';
-export { SECURITY_HEADERS, isSuspiciousRequest } from './security';
+export { SECURITY_HEADERS, isSuspiciousRequest, buildCspHeader } from './security';
 export { checkRateLimit, checkTierRateLimit, record429, isRepeat429Blocked } from './rate-limit';
 export { getX402Proxy } from './x402';

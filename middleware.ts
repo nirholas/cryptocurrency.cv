@@ -46,6 +46,7 @@ import {
   isTrustedOrigin,
   SECURITY_HEADERS,
   isSuspiciousRequest,
+  buildCspHeader,
   checkRateLimit,
   checkTierRateLimit,
   record429,
@@ -66,9 +67,21 @@ const intlMiddleware = createMiddleware(routing);
 export default async function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
 
-  // ── Non-API routes: internationalisation only ────────────────────────────
+  // ── Non-API routes: internationalisation + nonce-based CSP ───────────────
   if (!pathname.startsWith('/api/')) {
-    return intlMiddleware(request);
+    const nonce = Buffer.from(crypto.randomUUID()).toString('base64');
+    const csp = buildCspHeader(nonce);
+
+    const response = intlMiddleware(request);
+
+    // Expose nonce to server components via headers()
+    response.headers.set('x-middleware-request-x-nonce', nonce);
+    // Let the Next.js renderer read the CSP to auto-add nonces to framework scripts
+    response.headers.set('x-middleware-request-content-security-policy', csp);
+    // Send the CSP to the browser
+    response.headers.set('Content-Security-Policy', csp);
+
+    return response;
   }
 
   // ── API routes ────────────────────────────────────────────────────────────
