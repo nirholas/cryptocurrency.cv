@@ -701,5 +701,48 @@
   "whales": {
     "title": "Whale Alerts & On-Chain Activity",
     "description": "Track large cryptocurrency whale transactions in real time. Monitor on-chain metrics, exchange flows, and notable wallet activity."
+  },
+  "playground": {
+    "title": "API Playground",
+    "description": "Explore and test every endpoint interactively. Build your request, send it, and inspect the response — no API key needed."
+  },
+  "export": {
+    "title": "Data Export & Feeds",
+    "description": "Download crypto data in multiple formats or subscribe to real-time RSS and Atom feeds. All exports are free — no API key required."
+  },
+  "archive": {
+    "title": "Historical Archive",
+    "subtitle": "Explore years of crypto news — browse by date, view market context, and search the full archive.",
+    "dateNavigation": "Date Navigation",
+    "selectYear": "Select Year",
+    "selectMonth": "Select Month",
+    "selectDay": "Select Day",
+    "selectPeriod": "Select a date to explore",
+    "articlesFound": "articles found",
+    "noArticles": "No articles found for this period",
+    "noArticlesHint": "Try selecting a different date or broadening your search.",
+    "welcomeTitle": "Explore the Crypto Archive",
+    "welcomeDescription": "Select a year above to browse historical crypto news, market snapshots, and notable events dating back to 2021.",
+    "marketContext": "Market Context",
+    "marketCap": "Market Cap",
+    "btcDominance": "BTC Dom",
+    "fearGreed": "Fear & Greed",
+    "noMarketData": "No market data available for this period.",
+    "onThisDay": "On This Day in Crypto",
+    "statistics": "Archive Statistics",
+    "totalArticles": "Total articles in archive",
+    "to": "to",
+    "articlesPerYear": "Articles per Year",
+    "topSources": "Top Sources",
+    "topCategories": "Most Covered Topics",
+    "searchArchive": "Search Archive",
+    "searchPlaceholder": "Search historical articles...",
+    "startDate": "Start Date",
+    "endDate": "End Date",
+    "searching": "Searching...",
+    "searchButton": "Search",
+    "searchResults": "Search Results",
+    "clearSearch": "Clear",
+    "noSearchResults": "No articles matched your search."
   }
 }

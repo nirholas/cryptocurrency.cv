@@ -1,8 +1,16 @@
 "use client";
 
-import { useState, useEffect, useCallback, useRef, useMemo } from "react";
+import {
+  useState,
+  useEffect,
+  useCallback,
+  useRef,
+  useMemo,
+  type ReactNode,
+} from "react";
 import {
   Bell,
+  BellOff,
   X,
   TrendingUp,
   TrendingDown,
@@ -10,10 +18,13 @@ import {
   Zap,
   Trash2,
   Check,
+  CheckCheck,
   Settings,
   Volume2,
   VolumeX,
   ChevronRight,
+  Info,
+  Newspaper,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useAlerts, type TriggeredAlert } from "@/components/alerts";
@@ -24,13 +35,17 @@ import { Link } from "@/i18n/navigation";
 /* ------------------------------------------------------------------ */
 
 export type NotificationType =
+  | "breaking"
+  | "price_alert"
+  | "market_mover"
+  | "system"
+  | "digest"
   | "alert_triggered"
   | "whale_move"
   | "price_milestone"
-  | "market_shift"
-  | "system";
+  | "market_shift";
 
-export interface Notification {
+export interface AppNotification {
   id: string;
   type: NotificationType;
   title: string;
@@ -38,9 +53,11 @@ export interface Notification {
   timestamp: string;
   read: boolean;
   icon?: string;
-  href?: string;
+  url?: string;
   meta?: Record<string, unknown>;
 }
+
+type GroupLabel = "Today" | "Yesterday" | "This Week" | "Earlier";
 
 const STORAGE_KEY = "fcn-notifications";
 const MAX_NOTIFICATIONS = 100;
@@ -48,6 +65,61 @@ const MAX_NOTIFICATIONS = 100;
 /* ------------------------------------------------------------------ */
 /*  Helpers                                                            */
 /* ------------------------------------------------------------------ */
+
+function loadNotifications(): AppNotification[] {
+  if (typeof window === "undefined") return [];
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if (!raw) return [];
+    const parsed = JSON.parse(raw);
+    return Array.isArray(parsed) ? parsed.slice(0, MAX_NOTIFICATIONS) : [];
+  } catch {
+    return [];
+  }
+}
+
+function saveNotifications(notifications: AppNotification[]) {
+  if (typeof window === "undefined") return;
+  localStorage.setItem(
+    STORAGE_KEY,
+    JSON.stringify(notifications.slice(0, MAX_NOTIFICATIONS))
+  );
+}
+
+function getGroup(timestamp: string): GroupLabel {
+  const date = new Date(timestamp);
+  const now = new Date();
+  const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  const yesterday = new Date(today);
+  yesterday.setDate(yesterday.getDate() - 1);
+  const weekAgo = new Date(today);
+  weekAgo.setDate(weekAgo.getDate() - 7);
+
+  if (date >= today) return "Today";
+  if (date >= yesterday) return "Yesterday";
+  if (date >= weekAgo) return "This Week";
+  return "Earlier";
+}
+
+function groupNotifications(
+  notifications: AppNotification[]
+): { label: GroupLabel; items: AppNotification[] }[] {
+  const groups: Record<GroupLabel, AppNotification[]> = {
+    Today: [],
+    Yesterday: [],
+    "This Week": [],
+    Earlier: [],
+  };
+
+  for (const n of notifications) {
+    groups[getGroup(n.timestamp)].push(n);
+  }
+
+  const order: GroupLabel[] = ["Today", "Yesterday", "This Week", "Earlier"];
+  return order
+    .filter((label) => groups[label].length > 0)
+    .map((label) => ({ label, items: groups[label] }));
+}
 
 function timeAgo(dateStr: string): string {
   const diff = Date.now() - new Date(dateStr).getTime();
@@ -61,21 +133,57 @@ function timeAgo(dateStr: string): string {
   return new Date(dateStr).toLocaleDateString();
 }
 
-function notificationIcon(type: NotificationType) {
+function notificationIcon(type: NotificationType): ReactNode {
   switch (type) {
+    case "breaking":
+      return <Zap className="h-4 w-4 text-red-500" aria-hidden="true" />;
+    case "price_alert":
     case "alert_triggered":
-      return <Zap className="h-4 w-4 text-amber-500" />;
-    case "whale_move":
-      return <AlertTriangle className="h-4 w-4 text-blue-500" />;
-    case "price_milestone":
-      return <TrendingUp className="h-4 w-4 text-emerald-500" />;
+      return <TrendingUp className="h-4 w-4 text-amber-500" aria-hidden="true" />;
+    case "market_mover":
     case "market_shift":
-      return <TrendingDown className="h-4 w-4 text-red-500" />;
+      return <AlertTriangle className="h-4 w-4 text-orange-500" aria-hidden="true" />;
+    case "whale_move":
+      return <TrendingDown className="h-4 w-4 text-blue-500" aria-hidden="true" />;
+    case "price_milestone":
+      return <TrendingUp className="h-4 w-4 text-emerald-500" aria-hidden="true" />;
+    case "digest":
+      return <Newspaper className="h-4 w-4 text-[var(--color-accent)]" aria-hidden="true" />;
     case "system":
-      return <Bell className="h-4 w-4 text-[var(--color-text-tertiary)]" />;
+      return <Info className="h-4 w-4 text-blue-500" aria-hidden="true" />;
     default:
-      return <Bell className="h-4 w-4" />;
+      return <Bell className="h-4 w-4 text-[var(--color-text-tertiary)]" aria-hidden="true" />;
   }
+}
+
+/* ------------------------------------------------------------------ */
+/*  External API for adding notifications programmatically             */
+/* ------------------------------------------------------------------ */
+
+let _externalListener: ((n: AppNotification) => void) | null = null;
+
+/**
+ * Add a notification from anywhere in the app.
+ * Will persist to localStorage and update the open NotificationCenter.
+ */
+export function addNotification(
+  notification: Omit<AppNotification, "id" | "timestamp" | "read">
+): AppNotification {
+  const full: AppNotification = {
+    ...notification,
+    id: `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
+    timestamp: new Date().toISOString(),
+    read: false,
+  };
+
+  const existing = loadNotifications();
+  const updated = [full, ...existing].slice(0, MAX_NOTIFICATIONS);
+  saveNotifications(updated);
+
+  // Notify open component
+  _externalListener?.(full);
+
+  return full;
 }
 
 /* ------------------------------------------------------------------ */
@@ -84,20 +192,18 @@ function notificationIcon(type: NotificationType) {
 
 export default function NotificationCenter() {
   const [open, setOpen] = useState(false);
-  const [notifications, setNotifications] = useState<Notification[]>([]);
+  const [notifications, setNotifications] = useState<AppNotification[]>([]);
   const [soundEnabled, setSoundEnabled] = useState(true);
   const [filter, setFilter] = useState<"all" | "unread">("all");
   const panelRef = useRef<HTMLDivElement>(null);
+  const buttonRef = useRef<HTMLButtonElement>(null);
   const { triggered: triggeredAlerts } = useAlerts();
   const prevTriggeredCountRef = useRef(0);
 
   // Load from localStorage
   useEffect(() => {
+    setNotifications(loadNotifications());
     try {
-      const stored = localStorage.getItem(STORAGE_KEY);
-      if (stored) {
-        setNotifications(JSON.parse(stored));
-      }
       const sound = localStorage.getItem("fcn-notification-sound");
       if (sound !== null) setSoundEnabled(sound === "true");
     } catch {
@@ -105,13 +211,30 @@ export default function NotificationCenter() {
     }
   }, []);
 
-  // Persist to localStorage
-  const persist = useCallback((notifs: Notification[]) => {
-    try {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(notifs.slice(0, MAX_NOTIFICATIONS)));
-    } catch {
-      // ignore
-    }
+  // Listen for external additions
+  useEffect(() => {
+    _externalListener = (n: AppNotification) => {
+      setNotifications((prev) => [n, ...prev].slice(0, MAX_NOTIFICATIONS));
+    };
+    return () => {
+      _externalListener = null;
+    };
+  }, []);
+
+  // Cross-tab sync via storage events
+  useEffect(() => {
+    const handler = (e: StorageEvent) => {
+      if (e.key === STORAGE_KEY) {
+        setNotifications(loadNotifications());
+      }
+    };
+    window.addEventListener("storage", handler);
+    return () => window.removeEventListener("storage", handler);
+  }, []);
+
+  // Persist helper
+  const persist = useCallback((notifs: AppNotification[]) => {
+    saveNotifications(notifs);
   }, []);
 
   // Sync triggered alerts → notifications
@@ -122,14 +245,14 @@ export default function NotificationCenter() {
         triggeredAlerts.length - prevTriggeredCountRef.current
       );
 
-      const newNotifs: Notification[] = newAlerts.map((a: TriggeredAlert) => ({
+      const newNotifs: AppNotification[] = newAlerts.map((a: TriggeredAlert) => ({
         id: `alert-${a.id}-${a.triggeredAt}`,
-        type: "alert_triggered" as NotificationType,
+        type: "price_alert" as NotificationType,
         title: `${a.coinName} Alert Triggered`,
         message: `${a.coinName} ${a.type === "price_above" ? "above" : a.type === "price_below" ? "below" : "changed"} $${a.currentPrice.toLocaleString()}`,
         timestamp: a.triggeredAt,
         read: false,
-        href: "/alerts",
+        url: "/alerts",
         meta: { coinId: a.coinId, price: a.currentPrice },
       }));
 
@@ -161,14 +284,14 @@ export default function NotificationCenter() {
             const id = `trending-${topCoin.id || topCoin.name}-${new Date().toISOString().slice(0, 13)}`;
             setNotifications((prev) => {
               if (prev.some((n) => n.id === id)) return prev;
-              const notif: Notification = {
+              const notif: AppNotification = {
                 id,
-                type: "market_shift",
+                type: "market_mover",
                 title: "Trending Now",
                 message: `${topCoin.name} is trending — ${topCoin.score ? `Score: ${topCoin.score}` : "high interest"}`,
                 timestamp: new Date().toISOString(),
                 read: false,
-                href: topCoin.id ? `/coin/${topCoin.id}` : undefined,
+                url: topCoin.id ? `/coin/${topCoin.id}` : undefined,
               };
               const updated = [notif, ...prev].slice(0, MAX_NOTIFICATIONS);
               persist(updated);
@@ -193,7 +316,12 @@ export default function NotificationCenter() {
   useEffect(() => {
     if (!open) return;
     const handler = (e: MouseEvent) => {
-      if (panelRef.current && !panelRef.current.contains(e.target as Node)) {
+      if (
+        panelRef.current &&
+        !panelRef.current.contains(e.target as Node) &&
+        buttonRef.current &&
+        !buttonRef.current.contains(e.target as Node)
+      ) {
         setOpen(false);
       }
     };
@@ -224,6 +352,8 @@ export default function NotificationCenter() {
     [notifications, filter]
   );
 
+  const grouped = useMemo(() => groupNotifications(filtered), [filtered]);
+
   const markAllRead = useCallback(() => {
     setNotifications((prev) => {
       const updated = prev.map((n) => ({ ...n, read: true }));
@@ -245,6 +375,17 @@ export default function NotificationCenter() {
     [persist]
   );
 
+  const removeOne = useCallback(
+    (id: string) => {
+      setNotifications((prev) => {
+        const updated = prev.filter((n) => n.id !== id);
+        persist(updated);
+        return updated;
+      });
+    },
+    [persist]
+  );
+
   const clearAll = useCallback(() => {
     setNotifications([]);
     persist([]);
@@ -259,17 +400,24 @@ export default function NotificationCenter() {
   }, []);
 
   return (
-    <div className="relative" ref={panelRef}>
+    <div className="relative">
       {/* Bell trigger */}
       <button
+        ref={buttonRef}
         onClick={() => setOpen(!open)}
-        className="relative p-2 rounded-md hover:bg-[var(--color-surface-secondary)] text-[var(--color-text-secondary)] transition-colors cursor-pointer"
+        className={cn(
+          "relative p-2 rounded-md transition-colors cursor-pointer",
+          "hover:bg-[var(--color-surface-secondary)] text-[var(--color-text-secondary)]",
+          open && "bg-[var(--color-surface-secondary)] text-[var(--color-text-primary)]"
+        )}
         aria-label={`Notifications${unreadCount > 0 ? ` (${unreadCount} unread)` : ""}`}
+        aria-expanded={open}
+        aria-haspopup="true"
         title="Notifications"
       >
-        <Bell className="h-4.5 w-4.5" />
+        <Bell className="h-4.5 w-4.5" aria-hidden="true" />
         {unreadCount > 0 && (
-          <span className="absolute -top-0.5 -right-0.5 flex items-center justify-center min-w-[18px] h-[18px] px-1 rounded-full bg-red-500 text-white text-[10px] font-bold leading-none animate-pulse">
+          <span className="absolute -top-0.5 -right-0.5 flex items-center justify-center min-w-[18px] h-[18px] px-1 rounded-full bg-red-500 text-white text-[10px] font-bold leading-none animate-[scaleIn_0.2s_ease-out]">
             {unreadCount > 99 ? "99+" : unreadCount}
           </span>
         )}
@@ -277,47 +425,69 @@ export default function NotificationCenter() {
 
       {/* Dropdown panel */}
       {open && (
-        <div className="absolute right-0 top-full mt-2 w-[380px] max-h-[520px] bg-[var(--color-surface)] border border-[var(--color-border)] rounded-xl shadow-2xl z-[60] flex flex-col animate-dropdown overflow-hidden">
+        <div
+          ref={panelRef}
+          className={cn(
+            "absolute right-0 top-full mt-2 z-[60]",
+            "w-[380px] max-h-[520px] overflow-hidden rounded-xl",
+            "border border-[var(--color-border)] bg-[var(--color-surface)] shadow-2xl",
+            "flex flex-col",
+            "animate-dropdown"
+          )}
+          role="dialog"
+          aria-label="Notification Center"
+        >
           {/* Header */}
           <div className="flex items-center justify-between px-4 py-3 border-b border-[var(--color-border)]">
-            <h3 className="text-sm font-bold">Notifications</h3>
+            <h3 className="text-sm font-bold text-[var(--color-text-primary)]">
+              Notifications
+              {unreadCount > 0 && (
+                <span className="ml-2 inline-flex items-center justify-center rounded-full bg-red-500/10 text-red-500 px-2 py-0.5 text-xs font-medium">
+                  {unreadCount}
+                </span>
+              )}
+            </h3>
             <div className="flex items-center gap-1">
               <button
                 onClick={toggleSound}
                 className="p-1.5 rounded-md hover:bg-[var(--color-surface-secondary)] text-[var(--color-text-tertiary)] transition-colors cursor-pointer"
                 title={soundEnabled ? "Mute" : "Unmute"}
+                aria-label={soundEnabled ? "Mute notifications" : "Unmute notifications"}
               >
                 {soundEnabled ? (
-                  <Volume2 className="h-3.5 w-3.5" />
+                  <Volume2 className="h-3.5 w-3.5" aria-hidden="true" />
                 ) : (
-                  <VolumeX className="h-3.5 w-3.5" />
+                  <VolumeX className="h-3.5 w-3.5" aria-hidden="true" />
                 )}
               </button>
               {unreadCount > 0 && (
                 <button
                   onClick={markAllRead}
                   className="p-1.5 rounded-md hover:bg-[var(--color-surface-secondary)] text-[var(--color-text-tertiary)] transition-colors cursor-pointer"
-                  title="Mark all read"
+                  title="Mark all as read"
+                  aria-label="Mark all as read"
                 >
-                  <Check className="h-3.5 w-3.5" />
+                  <CheckCheck className="h-3.5 w-3.5" aria-hidden="true" />
                 </button>
               )}
               {notifications.length > 0 && (
                 <button
                   onClick={clearAll}
-                  className="p-1.5 rounded-md hover:bg-[var(--color-surface-secondary)] text-[var(--color-text-tertiary)] transition-colors cursor-pointer"
+                  className="p-1.5 rounded-md hover:bg-[var(--color-surface-secondary)] text-[var(--color-text-tertiary)] hover:text-red-500 transition-colors cursor-pointer"
                   title="Clear all"
+                  aria-label="Clear all notifications"
                 >
-                  <Trash2 className="h-3.5 w-3.5" />
+                  <Trash2 className="h-3.5 w-3.5" aria-hidden="true" />
                 </button>
               )}
               <Link
-                href="/settings"
+                href="/notifications"
                 className="p-1.5 rounded-md hover:bg-[var(--color-surface-secondary)] text-[var(--color-text-tertiary)] transition-colors"
-                title="Settings"
+                title="Notification Preferences"
+                aria-label="Notification Preferences"
                 onClick={() => setOpen(false)}
               >
-                <Settings className="h-3.5 w-3.5" />
+                <Settings className="h-3.5 w-3.5" aria-hidden="true" />
               </Link>
             </div>
           </div>
@@ -340,74 +510,35 @@ export default function NotificationCenter() {
             ))}
           </div>
 
-          {/* Notification list */}
-          <div className="flex-1 overflow-y-auto py-2">
+          {/* Notification list — grouped */}
+          <div className="flex-1 overflow-y-auto overscroll-contain py-1">
             {filtered.length === 0 ? (
               <div className="flex flex-col items-center justify-center py-12 text-center">
-                <Bell className="h-8 w-8 text-[var(--color-text-tertiary)] mb-3 opacity-40" />
-                <p className="text-sm text-[var(--color-text-tertiary)]">
+                <BellOff className="h-10 w-10 text-[var(--color-text-tertiary)] mb-3 opacity-40" aria-hidden="true" />
+                <p className="text-sm font-medium text-[var(--color-text-secondary)]">
                   {filter === "unread" ? "No unread notifications" : "No notifications yet"}
                 </p>
                 <p className="text-xs text-[var(--color-text-tertiary)] mt-1">
-                  Set up alerts to get notified
+                  Breaking news and alerts will appear here
                 </p>
               </div>
             ) : (
-              filtered.map((notif) => {
-                const inner = (
-                  <div
-                    className={cn(
-                      "flex gap-3 px-4 py-3 transition-colors cursor-pointer",
-                      !notif.read
-                        ? "bg-[var(--color-accent)]/5 hover:bg-[var(--color-accent)]/10"
-                        : "hover:bg-[var(--color-surface-secondary)]"
-                    )}
-                    onClick={() => markRead(notif.id)}
-                  >
-                    <div className="shrink-0 mt-0.5">
-                      {notificationIcon(notif.type)}
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <div className="flex items-center gap-2">
-                        <p className={cn(
-                          "text-sm truncate",
-                          !notif.read ? "font-semibold" : "font-medium"
-                        )}>
-                          {notif.title}
-                        </p>
-                        {!notif.read && (
-                          <span className="w-2 h-2 rounded-full bg-[var(--color-accent)] shrink-0" />
-                        )}
-                      </div>
-                      <p className="text-xs text-[var(--color-text-tertiary)] mt-0.5 truncate">
-                        {notif.message}
-                      </p>
-                      <p className="text-[10px] text-[var(--color-text-tertiary)] mt-1">
-                        {timeAgo(notif.timestamp)}
-                      </p>
-                    </div>
-                    {notif.href && (
-                      <ChevronRight className="h-4 w-4 text-[var(--color-text-tertiary)] shrink-0 self-center" />
-                    )}
+              grouped.map((group) => (
+                <div key={group.label}>
+                  <div className="sticky top-0 bg-[var(--color-surface-secondary)] px-4 py-1.5 text-[10px] font-semibold text-[var(--color-text-tertiary)] uppercase tracking-wider">
+                    {group.label}
                   </div>
-                );
-
-                return notif.href ? (
-                  <Link
-                    key={notif.id}
-                    href={notif.href}
-                    onClick={() => {
-                      markRead(notif.id);
-                      setOpen(false);
-                    }}
-                    className="block"
-                  >
-                    {inner}
-                  </Link>
-                ) : (
-                  <div key={notif.id}>{inner}</div>
-                );
-              })
+                  {group.items.map((notif) => (
+                    <NotificationItem
+                      key={notif.id}
+                      notification={notif}
+                      onMarkRead={markRead}
+                      onRemove={removeOne}
+                      onClose={() => setOpen(false)}
+                    />
+                  ))}
+                </div>
+              ))
             )}
           </div>
 
@@ -415,12 +546,12 @@ export default function NotificationCenter() {
           {notifications.length > 0 && (
             <div className="border-t border-[var(--color-border)] px-4 py-2.5">
               <Link
-                href="/alerts"
+                href="/notifications"
                 onClick={() => setOpen(false)}
                 className="flex items-center justify-center gap-1 text-xs font-medium text-[var(--color-accent)] hover:text-[var(--color-accent-hover)] transition-colors"
               >
-                Manage Alerts
-                <ChevronRight className="h-3 w-3" />
+                Notification Preferences
+                <ChevronRight className="h-3 w-3" aria-hidden="true" />
               </Link>
             </div>
           )}
@@ -437,5 +568,110 @@ export default function NotificationCenter() {
         }
       `}</style>
     </div>
+  );
+}
+
+/* ------------------------------------------------------------------ */
+/*  Notification Item                                                  */
+/* ------------------------------------------------------------------ */
+
+function NotificationItem({
+  notification,
+  onMarkRead,
+  onRemove,
+  onClose,
+}: {
+  notification: AppNotification;
+  onMarkRead: (id: string) => void;
+  onRemove: (id: string) => void;
+  onClose: () => void;
+}) {
+  const handleClick = () => {
+    if (!notification.read) onMarkRead(notification.id);
+    if (notification.url) onClose();
+  };
+
+  const content = (
+    <div
+      className={cn(
+        "group flex items-start gap-3 px-4 py-3 transition-colors",
+        "hover:bg-[var(--color-surface-secondary)]",
+        !notification.read && "bg-[var(--color-accent)]/5"
+      )}
+    >
+      {/* Icon */}
+      <div className="mt-0.5 flex-shrink-0">
+        {notificationIcon(notification.type)}
+      </div>
+
+      {/* Body */}
+      <div className="flex-1 min-w-0">
+        <div className="flex items-start justify-between gap-2">
+          <p
+            className={cn(
+              "text-sm leading-snug",
+              notification.read
+                ? "text-[var(--color-text-secondary)]"
+                : "text-[var(--color-text-primary)] font-semibold"
+            )}
+          >
+            {notification.title}
+          </p>
+          {!notification.read && (
+            <span className="mt-1.5 h-2 w-2 flex-shrink-0 rounded-full bg-[var(--color-accent)]" />
+          )}
+        </div>
+        <p className="text-xs text-[var(--color-text-tertiary)] mt-0.5 line-clamp-2">
+          {notification.message}
+        </p>
+        <p className="text-[10px] text-[var(--color-text-tertiary)] mt-1">
+          {timeAgo(notification.timestamp)}
+        </p>
+      </div>
+
+      {/* Hover actions */}
+      <div className="flex-shrink-0 flex items-center gap-0.5 opacity-0 group-hover:opacity-100 transition-opacity">
+        {!notification.read && (
+          <button
+            onClick={(e) => {
+              e.preventDefault();
+              e.stopPropagation();
+              onMarkRead(notification.id);
+            }}
+            className="p-1 rounded text-[var(--color-text-tertiary)] hover:text-[var(--color-accent)] transition-colors cursor-pointer"
+            aria-label="Mark as read"
+            title="Mark as read"
+          >
+            <Check className="h-3.5 w-3.5" aria-hidden="true" />
+          </button>
+        )}
+        <button
+          onClick={(e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            onRemove(notification.id);
+          }}
+          className="p-1 rounded text-[var(--color-text-tertiary)] hover:text-red-500 transition-colors cursor-pointer"
+          aria-label="Remove notification"
+          title="Remove"
+        >
+          <X className="h-3.5 w-3.5" aria-hidden="true" />
+        </button>
+      </div>
+    </div>
+  );
+
+  if (notification.url) {
+    return (
+      <Link href={notification.url} onClick={handleClick} className="block">
+        {content}
+      </Link>
+    );
+  }
+
+  return (
+    <button onClick={handleClick} className="w-full text-left cursor-pointer">
+      {content}
+    </button>
   );
 }

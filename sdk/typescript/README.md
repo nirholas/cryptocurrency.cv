@@ -1,11 +1,15 @@
 # Free Crypto News TypeScript SDK
 
-100% FREE TypeScript SDK for the Free Crypto News API. No API keys required!
+Production-ready TypeScript SDK for the [Free Crypto News API](https://cryptocurrency.cv). No API keys required!
 
 ## Installation
 
 ```bash
 npm install @nirholas/crypto-news
+# or
+yarn add @nirholas/crypto-news
+# or
+pnpm add @nirholas/crypto-news
 ```
 
 ## Usage
@@ -32,6 +36,23 @@ const breaking = await client.getBreaking(5);
 
 // Check API health
 const health = await client.getHealth();
+```
+
+## Market Data
+
+```typescript
+// Cryptocurrency prices
+const prices = await client.getPrices('bitcoin');
+
+// Market overview
+const market = await client.getMarket();
+
+// Fear & Greed Index
+const fearGreed = await client.getFearGreed();
+console.log(`Fear & Greed: ${fearGreed.value} (${fearGreed.classification})`);
+
+// Ethereum gas prices
+const gas = await client.getGas();
 ```
 
 ## Analytics & Trends
@@ -64,6 +85,43 @@ origins.items.forEach(item => {
 });
 ```
 
+## Error Handling
+
+```typescript
+import {
+  CryptoNews,
+  CryptoNewsError,
+  APIError,
+  RateLimitError,
+  NetworkError,
+} from '@nirholas/crypto-news';
+
+const client = new CryptoNews();
+
+try {
+  const news = await client.getLatest();
+} catch (err) {
+  if (err instanceof RateLimitError) {
+    console.log(`Rate limited — retry after ${err.retryAfter}s`);
+  } else if (err instanceof NetworkError) {
+    console.log(`Network error: ${err.message}`);
+  } else if (err instanceof APIError) {
+    console.log(`API error (HTTP ${err.statusCode}): ${err.message}`);
+  } else if (err instanceof CryptoNewsError) {
+    console.log(`SDK error: ${err.message}`);
+  }
+}
+```
+
+Exception hierarchy:
+
+```
+CryptoNewsError          ← base, catch-all
+├── NetworkError         ← connection failures, timeouts
+└── APIError             ← non-2xx HTTP responses
+    └── RateLimitError   ← HTTP 429
+```
+
 ## Convenience Functions
 
 ```typescript
@@ -79,17 +137,23 @@ const defi = await getDefiNews(5);
 All types are exported and fully documented:
 
 ```typescript
-import type { 
-  NewsArticle, 
-  NewsResponse, 
-  SourceInfo, 
+import type {
+  NewsArticle,
+  NewsResponse,
+  SourceInfo,
   HealthStatus,
   SourceKey,
   TrendingResponse,
   StatsResponse,
   AnalyzeResponse,
   ArchiveResponse,
-  OriginsResponse
+  OriginsResponse,
+  PriceData,
+  MarketOverview,
+  FearGreedIndex,
+  GasPrices,
+  CoinSentimentResult,
+  CryptoNewsOptions,
 } from '@nirholas/crypto-news';
 ```
 
@@ -113,12 +177,25 @@ const client = new CryptoNews({
 | `getBreaking(limit?)` | Breaking news (last 2h) |
 | `getSources()` | List all sources |
 | `getHealth()` | API health status |
+| `getPrices(coin?)` | Cryptocurrency prices |
+| `getMarket()` | Market overview |
+| `getFearGreed()` | Fear & Greed Index |
+| `getGas()` | Ethereum gas prices |
 | `getTrending(limit?, hours?)` | Trending topics |
 | `getStats()` | API statistics |
 | `analyze(limit?, topic?, sentiment?)` | Sentiment analysis |
 | `getArchive(date?, query?, limit?)` | Historical archive |
 | `getOrigins(query?, category?, limit?)` | Find original sources |
 | `getRSSUrl(feed?)` | Get RSS feed URL |
+| `getCoinSentiment(coins?, limit?, ...)` | Per-coin sentiment with trade signals |
+
+## Build
+
+Both ESM and CJS outputs are produced via `tsup`:
+
+```bash
+npm run build
+```
 
 ## License
 

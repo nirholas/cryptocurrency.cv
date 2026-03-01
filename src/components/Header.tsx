@@ -14,13 +14,13 @@ import {
   ChevronDown,
   Star,
   Briefcase,
-  Bell,
   TrendingUp,
   TrendingDown,
   Activity,
   Zap,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import NotificationCenter from "@/components/NotificationCenter";
 
 /* ------------------------------------------------------------------ */
 /*  Price Ticker Types & Data                                         */
@@ -366,12 +366,13 @@ export default function Header() {
   const [searchOpen, setSearchOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [headerVisible, setHeaderVisible] = useState(true);
-  const [notifCount] = useState(0);
   const lastScrollY = useRef(0);
   const { resolvedTheme, setTheme } = useTheme();
 
-  const toggleTheme = () =>
-    setTheme(resolvedTheme === "dark" ? "light" : "dark");
+  const toggleTheme = () => {
+    const cycle = { light: "dark" as const, dark: "midnight" as const, midnight: "light" as const };
+    setTheme(cycle[resolvedTheme] ?? "dark");
+  };
 
   // Scroll-aware header: hide on scroll down, show on scroll up
   useEffect(() => {
@@ -543,20 +544,10 @@ export default function Header() {
             <Briefcase className="h-4.5 w-4.5" aria-hidden="true" />
           </Link>
 
-          {/* Notification Bell */}
-          <Link
-            href="/alerts"
-            className="relative hidden sm:flex p-2 rounded-md hover:bg-[var(--color-surface-secondary)] text-[var(--color-text-secondary)] transition-colors"
-            aria-label="Alerts"
-            title="Alerts"
-          >
-            <Bell className="h-4.5 w-4.5" />
-            {notifCount > 0 && (
-              <span className="absolute -top-0.5 -right-0.5 flex h-4 min-w-4 items-center justify-center rounded-full bg-red-500 px-1 text-[10px] font-bold text-white">
-                {notifCount > 9 ? "9+" : notifCount}
-              </span>
-            )}
-          </Link>
+          {/* Notification Center */}
+          <div className="hidden sm:flex">
+            <NotificationCenter />
+          </div>
 
           <div className="hidden sm:block w-px h-5 bg-[var(--color-border)] mx-1" />
 

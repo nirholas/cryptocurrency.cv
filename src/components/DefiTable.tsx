@@ -46,7 +46,7 @@ const CHAIN_COLORS: Record<string, string> = {
 };
 
 function getChainColor(chain: string): string {
-  return CHAIN_COLORS[chain] ?? "bg-gray-500/15 text-gray-400 border-gray-500/30";
+  return CHAIN_COLORS[chain] ?? "bg-gray-500/15 text-gray-400 dark:text-gray-500 border-gray-500/30";
 }
 
 function formatTvl(value: number): string {
@@ -329,7 +329,7 @@ export default function DefiTable({ protocols }: { protocols: DefiProtocol[] }) 
                           </span>
                         ))}
                         {protocol.chains.length > 3 && (
-                          <span className="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-medium border bg-gray-500/15 text-gray-400 border-gray-500/30">
+                          <span className="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-medium border bg-gray-500/15 text-gray-400 dark:text-gray-500 border-gray-500/30">
                             +{protocol.chains.length - 3}
                           </span>
                         )}

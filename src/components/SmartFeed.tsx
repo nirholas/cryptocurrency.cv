@@ -345,7 +345,7 @@ export function SmartFeed({ initialArticles, className }: SmartFeedProps) {
         <div className="flex items-center gap-3">
           {/* Auto-refresh selector */}
           <div className="flex items-center gap-1.5">
-            <span className={cn("h-1.5 w-1.5 rounded-full", autoRefresh > 0 ? "bg-green-500 animate-pulse" : "bg-gray-400")} />
+            <span className={cn("h-1.5 w-1.5 rounded-full", autoRefresh > 0 ? "bg-green-500 animate-pulse" : "bg-gray-400 dark:bg-gray-600")} />
             <select
               value={autoRefresh}
               onChange={(e) => setAutoRefresh(Number(e.target.value))}

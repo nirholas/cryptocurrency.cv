@@ -30,6 +30,7 @@ import {
   Database,
   Cookie,
   HardDrive,
+  Palette,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/Button";
@@ -248,7 +249,7 @@ function AppearanceTab({
           title="Theme"
           description="Choose how Crypto Vision News looks to you."
         />
-        <div className="grid grid-cols-3 gap-3">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
           <RadioOption
             value="light"
             selected={theme}
@@ -262,6 +263,13 @@ function AppearanceTab({
             onSelect={setTheme}
             icon={Moon}
             label="Dark"
+          />
+          <RadioOption
+            value="midnight"
+            selected={theme}
+            onSelect={setTheme}
+            icon={Palette}
+            label="Midnight"
           />
           <RadioOption
             value="system"

@@ -140,33 +140,6 @@ export default function SourcesGrid({ sources }: SourcesGridProps) {
     setTimeout(() => setCopiedUrl(null), 2000);
   }, []);
 
-  // Export as JSON
-  const exportJSON = useCallback(() => {
-    const data = filtered.map(({ key, name, url, category, status }) => ({
-      key, name, url, category, status,
-    }));
-    const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
-    const a = document.createElement("a");
-    a.href = URL.createObjectURL(blob);
-    a.download = "crypto-news-sources.json";
-    a.click();
-    URL.revokeObjectURL(a.href);
-  }, [filtered]);
-
-  // Export as CSV
-  const exportCSV = useCallback(() => {
-    const header = "Key,Name,URL,Category,Status\n";
-    const rows = filtered
-      .map((s) => `"${s.key}","${s.name}","${s.url}","${s.category}","${s.status}"`)
-      .join("\n");
-    const blob = new Blob([header + rows], { type: "text/csv" });
-    const a = document.createElement("a");
-    a.href = URL.createObjectURL(blob);
-    a.download = "crypto-news-sources.csv";
-    a.click();
-    URL.revokeObjectURL(a.href);
-  }, [filtered]);
-
   return (
     <div>
       {/* Toolbar */}
@@ -245,25 +218,6 @@ export default function SourcesGrid({ sources }: SourcesGridProps) {
               <option value="status">By Status</option>
               <option value="category">By Category</option>
             </select>
-
-            {/* Export */}
-            <div className="relative group">
-              <button className="rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] p-2 text-[var(--color-text-tertiary)] hover:text-[var(--color-text-primary)] transition-colors" title="Export sources">
-                <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                </svg>
-              </button>
-              <div className="absolute right-0 top-full mt-1 hidden group-hover:block z-20">
-                <div className="rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] shadow-lg py-1 min-w-[120px]">
-                  <button onClick={exportJSON} className="block w-full text-left px-4 py-2 text-xs text-[var(--color-text-secondary)] hover:bg-[var(--color-surface-secondary)] transition-colors">
-                    Export JSON
-                  </button>
-                  <button onClick={exportCSV} className="block w-full text-left px-4 py-2 text-xs text-[var(--color-text-secondary)] hover:bg-[var(--color-surface-secondary)] transition-colors">
-                    Export CSV
-                  </button>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
 

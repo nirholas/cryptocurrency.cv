@@ -12,6 +12,7 @@
 export type RootStackParamList = {
   Main: undefined;
   Article: { url: string; title: string };
+  CoinDetail: { symbol: string; name: string };
 };
 
 export type TabParamList = {

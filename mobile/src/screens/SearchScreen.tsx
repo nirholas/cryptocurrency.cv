@@ -8,32 +8,100 @@
  * For licensing inquiries: nirholas@users.noreply.github.com
  */
 
-import React, { useState } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import {
   View,
   FlatList,
   TextInput,
   StyleSheet,
   Text,
+  TouchableOpacity,
   useColorScheme,
   ActivityIndicator,
   Keyboard,
+  ScrollView,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import NewsCard from '../components/NewsCard';
+import Badge from '../components/Badge';
 import { useSearch } from '../hooks/useNews';
 import type { Article } from '../api/client';
+
+const RECENT_SEARCHES_KEY = '@crypto_recent_searches';
+const MAX_RECENT = 10;
+
+const CATEGORIES = [
+  { label: 'Bitcoin', value: 'bitcoin' },
+  { label: 'Ethereum', value: 'ethereum' },
+  { label: 'DeFi', value: 'defi' },
+  { label: 'NFT', value: 'nft' },
+  { label: 'Solana', value: 'solana' },
+  { label: 'Regulation', value: 'regulation' },
+  { label: 'Market', value: 'market' },
+  { label: 'Altcoins', value: 'altcoin' },
+];
 
 export default function SearchScreen() {
   const colorScheme = useColorScheme();
   const isDark = colorScheme === 'dark';
   const [query, setQuery] = useState('');
-  const { articles, loading, error } = useSearch(query);
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [recentSearches, setRecentSearches] = useState<string[]>([]);
+  const { articles, loading, error } = useSearch(
+    selectedCategory ? `${query} ${selectedCategory}`.trim() : query
+  );
 
   const styles = createStyles(isDark);
 
-  const recentSearches = ['Bitcoin', 'Ethereum', 'DeFi', 'NFT', 'Regulation', 'SEC'];
+  // Load recent searches
+  useEffect(() => {
+    loadRecentSearches();
+  }, []);
+
+  const loadRecentSearches = async () => {
+    try {
+      const stored = await AsyncStorage.getItem(RECENT_SEARCHES_KEY);
+      if (stored) {
+        setRecentSearches(JSON.parse(stored));
+      }
+    } catch {
+      // Silently fail
+    }
+  };
+
+  const saveRecentSearch = useCallback(async (term: string) => {
+    if (!term.trim()) return;
+    try {
+      const updated = [term, ...recentSearches.filter((s) => s !== term)].slice(0, MAX_RECENT);
+      setRecentSearches(updated);
+      await AsyncStorage.setItem(RECENT_SEARCHES_KEY, JSON.stringify(updated));
+    } catch {
+      // Silently fail
+    }
+  }, [recentSearches]);
+
+  const clearRecentSearches = async () => {
+    setRecentSearches([]);
+    await AsyncStorage.removeItem(RECENT_SEARCHES_KEY);
+  };
+
+  const handleSearch = (term: string) => {
+    setQuery(term);
+    saveRecentSearch(term);
+    Keyboard.dismiss();
+  };
+
+  const handleCategoryPress = (category: string) => {
+    if (selectedCategory === category) {
+      setSelectedCategory(null);
+    } else {
+      setSelectedCategory(category);
+    }
+  };
+
+  const popularSearches = ['Bitcoin', 'Ethereum', 'DeFi', 'NFT', 'Regulation', 'SEC'];
 
   return (
     <SafeAreaView style={styles.container} edges={['left', 'right']}>
@@ -47,43 +115,92 @@ export default function SearchScreen() {
             placeholderTextColor={isDark ? '#666' : '#999'}
             value={query}
             onChangeText={setQuery}
+            onSubmitEditing={() => saveRecentSearch(query)}
             returnKeyType="search"
             autoCapitalize="none"
             autoCorrect={false}
           />
           {query.length > 0 && (
-            <Ionicons
-              name="close-circle"
-              size={20}
-              color={isDark ? '#666' : '#999'}
-              onPress={() => setQuery('')}
-            />
+            <TouchableOpacity onPress={() => { setQuery(''); setSelectedCategory(null); }}>
+              <Ionicons name="close-circle" size={20} color={isDark ? '#666' : '#999'} />
+            </TouchableOpacity>
           )}
         </View>
       </View>
 
+      {/* Category Filter Chips */}
+      <ScrollView
+        horizontal
+        showsHorizontalScrollIndicator={false}
+        contentContainerStyle={styles.categoryContainer}
+      >
+        {CATEGORIES.map((cat) => (
+          <TouchableOpacity
+            key={cat.value}
+            style={[
+              styles.categoryChip,
+              selectedCategory === cat.value && styles.categoryChipActive,
+            ]}
+            onPress={() => handleCategoryPress(cat.value)}
+          >
+            <Text
+              style={[
+                styles.categoryChipText,
+                selectedCategory === cat.value && styles.categoryChipTextActive,
+              ]}
+            >
+              {cat.label}
+            </Text>
+          </TouchableOpacity>
+        ))}
+      </ScrollView>
+
       {/* Results or Suggestions */}
-      {query.length === 0 ? (
-        <View style={styles.suggestions}>
-          <Text style={styles.suggestionsTitle}>Popular Searches</Text>
-          <View style={styles.chips}>
-            {recentSearches.map((term) => (
-              <Text
-                key={term}
-                style={styles.chip}
-                onPress={() => {
-                  setQuery(term);
-                  Keyboard.dismiss();
-                }}
-              >
-                {term}
-              </Text>
-            ))}
+      {query.length === 0 && !selectedCategory ? (
+        <ScrollView style={styles.suggestionsScroll}>
+          {/* Recent Searches */}
+          {recentSearches.length > 0 && (
+            <View style={styles.section}>
+              <View style={styles.sectionHeader}>
+                <Text style={styles.sectionTitle}>Recent Searches</Text>
+                <TouchableOpacity onPress={clearRecentSearches}>
+                  <Text style={styles.clearText}>Clear</Text>
+                </TouchableOpacity>
+              </View>
+              <View style={styles.chips}>
+                {recentSearches.map((term) => (
+                  <TouchableOpacity
+                    key={term}
+                    style={styles.recentChip}
+                    onPress={() => handleSearch(term)}
+                  >
+                    <Ionicons name="time-outline" size={14} color={isDark ? '#888' : '#666'} />
+                    <Text style={styles.recentChipText}>{term}</Text>
+                  </TouchableOpacity>
+                ))}
+              </View>
+            </View>
+          )}
+
+          {/* Popular Searches */}
+          <View style={styles.section}>
+            <Text style={styles.sectionTitle}>Popular Searches</Text>
+            <View style={styles.chips}>
+              {popularSearches.map((term) => (
+                <TouchableOpacity
+                  key={term}
+                  style={styles.chip}
+                  onPress={() => handleSearch(term)}
+                >
+                  <Text style={styles.chipText}>{term}</Text>
+                </TouchableOpacity>
+              ))}
+            </View>
           </View>
-        </View>
+        </ScrollView>
       ) : loading ? (
         <View style={styles.loadingContainer}>
-          <ActivityIndicator size="large" color="#ffffff" />
+          <ActivityIndicator size="large" color="#f7931a" />
         </View>
       ) : error ? (
         <View style={styles.errorContainer}>
@@ -93,7 +210,9 @@ export default function SearchScreen() {
       ) : articles.length === 0 ? (
         <View style={styles.emptyContainer}>
           <Ionicons name="search-outline" size={48} color={isDark ? '#666' : '#999'} />
-          <Text style={styles.emptyText}>No results for "{query}"</Text>
+          <Text style={styles.emptyText}>
+            No results for "{selectedCategory || query}"
+          </Text>
         </View>
       ) : (
         <FlatList<Article>
@@ -103,6 +222,11 @@ export default function SearchScreen() {
           showsVerticalScrollIndicator={false}
           contentContainerStyle={styles.list}
           keyboardShouldPersistTaps="handled"
+          ListHeaderComponent={
+            <Text style={styles.resultCount}>
+              {articles.length} result{articles.length !== 1 ? 's' : ''}
+            </Text>
+          }
         />
       )}
     </SafeAreaView>
@@ -117,6 +241,7 @@ const createStyles = (isDark: boolean) =>
     },
     searchContainer: {
       padding: 16,
+      paddingBottom: 8,
     },
     searchBar: {
       flexDirection: 'row',
@@ -132,13 +257,55 @@ const createStyles = (isDark: boolean) =>
       fontSize: 16,
       color: isDark ? '#ffffff' : '#000000',
     },
-    suggestions: {
-      padding: 16,
+    categoryContainer: {
+      paddingHorizontal: 16,
+      paddingBottom: 12,
+      gap: 8,
     },
-    suggestionsTitle: {
+    categoryChip: {
+      backgroundColor: isDark ? '#1a1a1a' : '#ffffff',
+      paddingHorizontal: 14,
+      paddingVertical: 8,
+      borderRadius: 20,
+      marginRight: 8,
+      borderWidth: 1,
+      borderColor: isDark ? '#2a2a2a' : '#e0e0e0',
+    },
+    categoryChipActive: {
+      backgroundColor: '#f7931a',
+      borderColor: '#f7931a',
+    },
+    categoryChipText: {
+      fontSize: 13,
+      fontWeight: '600',
+      color: isDark ? '#aaa' : '#666',
+    },
+    categoryChipTextActive: {
+      color: '#ffffff',
+    },
+    suggestionsScroll: {
+      flex: 1,
+    },
+    section: {
+      paddingHorizontal: 16,
+      paddingTop: 16,
+    },
+    sectionHeader: {
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      alignItems: 'center',
+      marginBottom: 12,
+    },
+    sectionTitle: {
       fontSize: 14,
       fontWeight: '600',
       color: isDark ? '#888' : '#666',
+      marginBottom: 12,
+    },
+    clearText: {
+      fontSize: 13,
+      color: '#f7931a',
+      fontWeight: '500',
       marginBottom: 12,
     },
     chips: {
@@ -151,6 +318,21 @@ const createStyles = (isDark: boolean) =>
       paddingHorizontal: 16,
       paddingVertical: 10,
       borderRadius: 20,
+    },
+    chipText: {
+      fontSize: 14,
+      color: isDark ? '#ffffff' : '#000000',
+    },
+    recentChip: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      backgroundColor: isDark ? '#1a1a1a' : '#ffffff',
+      paddingHorizontal: 14,
+      paddingVertical: 9,
+      borderRadius: 20,
+      gap: 6,
+    },
+    recentChipText: {
       fontSize: 14,
       color: isDark ? '#ffffff' : '#000000',
     },
@@ -181,6 +363,12 @@ const createStyles = (isDark: boolean) =>
       color: isDark ? '#666' : '#999',
       textAlign: 'center',
       fontSize: 16,
+    },
+    resultCount: {
+      fontSize: 13,
+      color: isDark ? '#888' : '#666',
+      paddingHorizontal: 16,
+      paddingVertical: 8,
     },
     list: {
       paddingBottom: 20,

@@ -113,8 +113,6 @@
   "overrides": {
     "bn.js": "^5.2.3",
     "elliptic": "^6.6.1",
-    "esbuild@<=0.24.2": ">=0.25.0",
-    "serialize-javascript@<=7.0.2": ">=7.0.3",
   },
   "packages": {
     "@acemir/cssom": ["@acemir/cssom@0.9.31", "", {}, "sha512-ZnR3GSaH+/vJ0YlHau21FjfLYjMpYVIzTD8M8vIEQvIGxeOXyXdzCI140rrCY862p/C/BbzWsjc1dgnM9mkoTA=="],

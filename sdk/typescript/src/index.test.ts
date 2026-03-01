@@ -9,7 +9,15 @@
  */
 
 import { describe, it, expect, vi, beforeEach } from 'vitest';
-import { CryptoNews, getCryptoNews, searchCryptoNews } from './index';
+import {
+  CryptoNews,
+  getCryptoNews,
+  searchCryptoNews,
+  CryptoNewsError,
+  APIError,
+  RateLimitError,
+  NetworkError,
+} from './index';
 
 // Mock fetch
 const mockFetch = vi.fn();
@@ -190,15 +198,104 @@ describe('CryptoNews', () => {
   });
 
   describe('error handling', () => {
-    it('should throw on HTTP error', async () => {
+    it('should throw APIError on HTTP error', async () => {
       mockFetch.mockResolvedValueOnce({
         ok: false,
         status: 500,
         statusText: 'Internal Server Error',
+        headers: { get: () => null },
       });
 
       const client = new CryptoNews();
-      await expect(client.getLatest()).rejects.toThrow('HTTP 500');
+      await expect(client.getLatest()).rejects.toThrow(APIError);
+    });
+
+    it('should throw RateLimitError on 429', async () => {
+      mockFetch.mockResolvedValueOnce({
+        ok: false,
+        status: 429,
+        statusText: 'Too Many Requests',
+        headers: { get: (h: string) => (h === 'Retry-After' ? '30' : null) },
+      });
+
+      const client = new CryptoNews();
+      try {
+        await client.getLatest();
+        expect.unreachable('should throw');
+      } catch (err) {
+        expect(err).toBeInstanceOf(RateLimitError);
+        expect((err as RateLimitError).retryAfter).toBe(30);
+      }
+    });
+
+    it('should throw NetworkError on fetch failure', async () => {
+      mockFetch.mockRejectedValueOnce(new TypeError('fetch failed'));
+
+      const client = new CryptoNews();
+      await expect(client.getLatest()).rejects.toThrow(NetworkError);
+    });
+
+    it('error hierarchy is correct', () => {
+      expect(new NetworkError('test')).toBeInstanceOf(CryptoNewsError);
+      expect(new APIError(500, 'test')).toBeInstanceOf(CryptoNewsError);
+      expect(new RateLimitError()).toBeInstanceOf(APIError);
+      expect(new RateLimitError()).toBeInstanceOf(CryptoNewsError);
+    });
+  });
+
+  describe('getPrices', () => {
+    it('should fetch prices', async () => {
+      mockFetch.mockResolvedValueOnce({
+        ok: true,
+        json: async () => ({ bitcoin: { usd: 100000 } }),
+      });
+
+      const client = new CryptoNews();
+      const result = await client.getPrices('bitcoin');
+      expect(mockFetch).toHaveBeenCalledWith(
+        expect.stringContaining('/api/prices?coin=bitcoin'),
+        expect.any(Object)
+      );
+      expect(result).toHaveProperty('bitcoin');
+    });
+  });
+
+  describe('getMarket', () => {
+    it('should fetch market overview', async () => {
+      mockFetch.mockResolvedValueOnce({
+        ok: true,
+        json: async () => ({ totalMarketCap: 3e12 }),
+      });
+
+      const client = new CryptoNews();
+      const result = await client.getMarket();
+      expect(result).toHaveProperty('totalMarketCap');
+    });
+  });
+
+  describe('getFearGreed', () => {
+    it('should fetch fear & greed index', async () => {
+      mockFetch.mockResolvedValueOnce({
+        ok: true,
+        json: async () => ({ value: 72, classification: 'Greed' }),
+      });
+
+      const client = new CryptoNews();
+      const result = await client.getFearGreed();
+      expect(result.value).toBe(72);
+    });
+  });
+
+  describe('getGas', () => {
+    it('should fetch gas prices', async () => {
+      mockFetch.mockResolvedValueOnce({
+        ok: true,
+        json: async () => ({ fast: 50, standard: 30 }),
+      });
+
+      const client = new CryptoNews();
+      const result = await client.getGas();
+      expect(result).toHaveProperty('fast');
     });
   });
 });

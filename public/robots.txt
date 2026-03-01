@@ -11,6 +11,9 @@ Disallow: /api/keys/
 Disallow: /api/push/
 Disallow: /api/register/
 Disallow: /api/upgrade/
+Disallow: /sources
+Disallow: /*/sources
+Disallow: /api/sources
 
 # === AI / LLM crawlers (explicitly allowed) ===
 
@@ -85,7 +88,7 @@ Allow: /api/trending
 Allow: /api/bitcoin
 Allow: /api/defi
 Allow: /api/breaking
-Allow: /api/sources
+# /api/sources removed — protected by HMAC token (anti-scraping)
 Allow: /api/sentiment
 Allow: /api/market
 Allow: /api/rss

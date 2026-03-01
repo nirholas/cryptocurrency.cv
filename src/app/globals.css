@@ -91,6 +91,43 @@
   --color-text-inverse: #0a0a0a;
 }
 
+/* Midnight Blue theme */
+.midnight {
+  color-scheme: dark;
+  --color-primary: #e2e8f0;
+  --color-accent: #58a6ff;
+  --color-accent-hover: #79b8ff;
+  --color-surface: #0d1117;
+  --color-surface-secondary: #161b22;
+  --color-surface-tertiary: #21262d;
+  --color-border: #30363d;
+  --color-border-hover: #484f58;
+  --color-text-primary: #c9d1d9;
+  --color-text-secondary: #8b949e;
+  --color-text-tertiary: #6e7681;
+  --color-text-inverse: #0d1117;
+}
+
+/* ============================================
+   THEME TRANSITION
+   ============================================ */
+
+html.theme-transitioning,
+html.theme-transitioning *,
+html.theme-transitioning *::before,
+html.theme-transitioning *::after {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease !important;
+}
+
+/* ============================================
+   IMAGE DARK MODE FILTER
+   ============================================ */
+
+.dark img:not([data-no-dark-filter]),
+.midnight img:not([data-no-dark-filter]) {
+  filter: brightness(0.9);
+}
+
 /* ============================================
    BASE STYLES
    ============================================ */
@@ -275,6 +312,16 @@ h1, h2, h3, h4, h5, h6 {
 .dark .cat-mining { background: #374151; color: #d1d5db; }
 .dark .cat-web3 { background: #831843; color: #f9a8d4; }
 
+.midnight .cat-bitcoin { background: #78350f; color: #fde68a; }
+.midnight .cat-ethereum { background: #4c1d95; color: #c4b5fd; }
+.midnight .cat-defi { background: #064e3b; color: #6ee7b7; }
+.midnight .cat-nft { background: #581c87; color: #d8b4fe; }
+.midnight .cat-regulation { background: #7f1d1d; color: #fca5a5; }
+.midnight .cat-altcoins { background: #164e63; color: #67e8f9; }
+.midnight .cat-trading { background: #713f12; color: #fde047; }
+.midnight .cat-mining { background: #374151; color: #d1d5db; }
+.midnight .cat-web3 { background: #831843; color: #f9a8d4; }
+
 /* Focus ring */
 :focus-visible {
   outline: 2px solid var(--color-accent);
@@ -346,6 +393,11 @@ h3 { font-size: 1.125rem; }
 
 .dark .table-sticky-first td:first-child,
 .dark .table-sticky-first th:first-child {
+  background: var(--color-surface);
+}
+
+.midnight .table-sticky-first td:first-child,
+.midnight .table-sticky-first th:first-child {
   background: var(--color-surface);
 }
 

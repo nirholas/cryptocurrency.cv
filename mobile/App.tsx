@@ -23,11 +23,13 @@ import MarketsScreen from './src/screens/MarketsScreen';
 import AlertsScreen from './src/screens/AlertsScreen';
 import SettingsScreen from './src/screens/SettingsScreen';
 import ArticleScreen from './src/screens/ArticleScreen';
+import CoinDetailScreen from './src/screens/CoinDetailScreen';
 
 // Types
 export type RootStackParamList = {
   Main: undefined;
   Article: { url: string; title: string };
+  CoinDetail: { symbol: string; name: string };
 };
 
 export type TabParamList = {
@@ -140,6 +142,14 @@ export default function App() {
           options={({ route }: { route: { params: RootStackParamList['Article'] } }) => ({ 
             title: route.params.title,
             headerBackTitle: 'Back',
+          })}
+        />
+        <Stack.Screen
+          name="CoinDetail"
+          component={CoinDetailScreen}
+          options={({ route }: { route: { params: RootStackParamList['CoinDetail'] } }) => ({
+            title: `${route.params.name} (${route.params.symbol.toUpperCase()})`,
+            headerBackTitle: 'Markets',
           })}
         />
       </Stack.Navigator>

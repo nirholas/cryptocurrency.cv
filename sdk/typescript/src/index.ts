@@ -204,6 +204,65 @@ export type SourceKey =
   | 'blockworks' 
   | 'defiant';
 
+/** Cryptocurrency price data */
+export interface PriceData {
+  /** Coin identifier */
+  coin: string;
+  /** Price in USD */
+  usd: number;
+  /** 24h change percentage */
+  change24h?: number;
+  /** Market cap in USD */
+  marketCap?: number;
+  /** 24h trading volume */
+  volume24h?: number;
+  /** Last updated ISO timestamp */
+  updatedAt?: string;
+}
+
+/** Market overview data */
+export interface MarketOverview {
+  /** Total market capitalisation USD */
+  totalMarketCap?: number;
+  /** Total 24h trading volume */
+  totalVolume?: number;
+  /** BTC dominance percentage */
+  btcDominance?: number;
+  /** ETH dominance percentage */
+  ethDominance?: number;
+  /** Number of active cryptocurrencies */
+  activeCurrencies?: number;
+  /** ISO timestamp */
+  updatedAt?: string;
+  [key: string]: unknown;
+}
+
+/** Fear & Greed Index */
+export interface FearGreedIndex {
+  /** Current value 0–100 */
+  value: number;
+  /** Human-readable classification */
+  classification: string;
+  /** ISO timestamp */
+  timestamp?: string;
+  [key: string]: unknown;
+}
+
+/** Ethereum gas prices */
+export interface GasPrices {
+  /** Fast gas price in Gwei */
+  fast?: number;
+  /** Standard gas price in Gwei */
+  standard?: number;
+  /** Slow/safe gas price in Gwei */
+  slow?: number;
+  /** Base fee in Gwei */
+  baseFee?: number;
+  /** ISO timestamp */
+  updatedAt?: string;
+  [key: string]: unknown;
+}
+
 export interface CryptoNewsOptions {
   /** Base URL for API (default: https://cryptocurrency.cv) */
   baseUrl?: string;
@@ -211,6 +270,51 @@ export interface CryptoNewsOptions {
   timeout?: number;
   /** Custom fetch function for environments without native fetch */
   fetch?: typeof fetch;
+}
+
+// ═══════════════════════════════════════════════════════════════
+// ERROR CLASSES
+// ═══════════════════════════════════════════════════════════════
+
+/** Base error for all Crypto News SDK errors */
+export class CryptoNewsError extends Error {
+  constructor(message: string) {
+    super(message);
+    this.name = 'CryptoNewsError';
+  }
+}
+
+/** Thrown on network-level failures (connection refused, timeout, DNS) */
+export class NetworkError extends CryptoNewsError {
+  public readonly cause?: Error;
+  constructor(message: string, cause?: Error) {
+    super(message);
+    this.name = 'NetworkError';
+    this.cause = cause;
+  }
+}
+
+/** Thrown when the API returns a non-2xx status code */
+export class APIError extends CryptoNewsError {
+  public readonly statusCode: number;
+  constructor(statusCode: number, message: string) {
+    super(`${message} (HTTP ${statusCode})`);
+    this.name = 'APIError';
+    this.statusCode = statusCode;
+  }
+}
+
+/** Thrown when the API returns HTTP 429 Too Many Requests */
+export class RateLimitError extends APIError {
+  public readonly retryAfter?: number;
+  constructor(retryAfter?: number) {
+    const msg = retryAfter
+      ? `Rate limit exceeded — retry after ${retryAfter}s`
+      : 'Rate limit exceeded';
+    super(429, msg);
+    this.name = 'RateLimitError';
+    this.retryAfter = retryAfter;
+  }
 }
 
 /**
@@ -323,10 +427,25 @@ export class CryptoNews {
       });
 
       if (!response.ok) {
-        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+        if (response.status === 429) {
+          const retryHeader = response.headers?.get?.('Retry-After');
+          throw new RateLimitError(
+            retryHeader ? parseFloat(retryHeader) : undefined
+          );
+        }
+        throw new APIError(response.status, response.statusText);
       }
 
       return response.json() as Promise<T>;
+    } catch (err) {
+      if (err instanceof CryptoNewsError) throw err;
+      if (err instanceof DOMException && err.name === 'AbortError') {
+        throw new NetworkError('Request timed out');
+      }
+      throw new NetworkError(
+        err instanceof Error ? err.message : String(err),
+        err instanceof Error ? err : undefined
+      );
     } finally {
       clearTimeout(timeoutId);
     }
@@ -404,6 +523,37 @@ export class CryptoNews {
    */
   async getHealth(): Promise<HealthStatus> {
     return this.request<HealthStatus>('/api/health');
+  }
+
+  /**
+   * Get cryptocurrency price data
+   * @param coin Optional coin filter (e.g. "bitcoin")
+   */
+  async getPrices(coin?: string): Promise<PriceData[] | Record<string, unknown>> {
+    let endpoint = '/api/prices';
+    if (coin) endpoint += `?coin=${encodeURIComponent(coin)}`;
+    return this.request(endpoint);
+  }
+
+  /**
+   * Get market overview (total cap, volume, dominance)
+   */
+  async getMarket(): Promise<MarketOverview> {
+    return this.request<MarketOverview>('/api/market');
+  }
+
+  /**
+   * Get Fear & Greed Index
+   */
+  async getFearGreed(): Promise<FearGreedIndex> {
+    return this.request<FearGreedIndex>('/api/fear-greed');
+  }
+
+  /**
+   * Get current Ethereum gas prices
+   */
+  async getGas(): Promise<GasPrices> {
+    return this.request<GasPrices>('/api/gas');
   }
 
   /**

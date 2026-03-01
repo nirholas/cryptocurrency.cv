@@ -24,8 +24,8 @@ const nextConfig = {
   async headers() {
     return [
       {
-        // Apply to all routes
-        source: '/:path*',
+        // Apply to all routes except /embed/*
+        source: '/:path((?!embed).*)',
         headers: [
           {
             key: 'X-DNS-Prefetch-Control',
@@ -54,6 +54,28 @@ const nextConfig = {
           // CSP is set dynamically by middleware (nonce-based).
           // Do NOT add a static Content-Security-Policy header here — it
           // would conflict with the per-request nonce generated in middleware.ts.
+        ],
+      },
+      {
+        // Embed widgets — allow cross-origin iframing
+        source: '/embed/:path*',
+        headers: [
+          {
+            key: 'X-DNS-Prefetch-Control',
+            value: 'on',
+          },
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff',
+          },
+          {
+            key: 'Access-Control-Allow-Origin',
+            value: '*',
+          },
+          {
+            key: 'Content-Security-Policy',
+            value: "frame-ancestors *",
+          },
         ],
       },
       // ================================================================

@@ -78,7 +78,7 @@ export function AdvancedSearchFilters({
   const [recentSearches, setRecentSearches] = useState<string[]>([]);
   const [page, setPage] = useState(1);
   const searchInputRef = useRef<HTMLInputElement>(null);
-  const debounceRef = useRef<ReturnType<typeof setTimeout>>();
+  const debounceRef = useRef<ReturnType<typeof setTimeout>>(undefined);
 
   // Load recent searches
   useEffect(() => {

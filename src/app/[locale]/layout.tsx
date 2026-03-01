@@ -24,6 +24,7 @@ import { AlertsProvider } from "@/components/alerts";
 import { PortfolioProvider } from "@/components/portfolio";
 import { SettingsProvider } from "@/components/SettingsProvider";
 import { AlternateLinks } from "@/components/AlternateLinks";
+import { ClientOnly } from "@/components/ClientOnly";
 import { locales, isRtlLocale, type Locale } from "@/i18n/config";
 
 const inter = Inter({
@@ -213,30 +214,32 @@ export default async function LocaleLayout({ children, params }: Props) {
         />
       </head>
       <body className="min-h-screen antialiased">
-        <a href="#main-content" className="skip-link">
-          Skip to main content
-        </a>
-        <NextIntlClientProvider messages={messages}>
-          <ThemeProvider>
-            <ToastProvider>
-              <SettingsProvider>
-                <KeyboardShortcutsProvider>
-                  <WatchlistProvider>
-                    <AlertsProvider>
-                      <PortfolioProvider>
-                        <BookmarksProvider>
-                          <PWAProvider>{children}</PWAProvider>
-                        </BookmarksProvider>
-                      </PortfolioProvider>
-                    </AlertsProvider>
-                  </WatchlistProvider>
-                </KeyboardShortcutsProvider>
-              </SettingsProvider>
-            </ToastProvider>
-          </ThemeProvider>
-        </NextIntlClientProvider>
-        <Analytics />
-        <SpeedInsights />
+        <ClientOnly>
+          <a href="#main-content" className="skip-link">
+            Skip to main content
+          </a>
+          <NextIntlClientProvider messages={messages}>
+            <ThemeProvider>
+              <ToastProvider>
+                <SettingsProvider>
+                  <KeyboardShortcutsProvider>
+                    <WatchlistProvider>
+                      <AlertsProvider>
+                        <PortfolioProvider>
+                          <BookmarksProvider>
+                            <PWAProvider>{children}</PWAProvider>
+                          </BookmarksProvider>
+                        </PortfolioProvider>
+                      </AlertsProvider>
+                    </WatchlistProvider>
+                  </KeyboardShortcutsProvider>
+                </SettingsProvider>
+              </ToastProvider>
+            </ThemeProvider>
+          </NextIntlClientProvider>
+          <Analytics />
+          <SpeedInsights />
+        </ClientOnly>
       </body>
     </html>
   );

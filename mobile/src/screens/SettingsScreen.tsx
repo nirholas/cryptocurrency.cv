@@ -18,6 +18,7 @@ import {
   useColorScheme,
   Switch,
   Linking,
+  Alert,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
@@ -27,17 +28,24 @@ interface SettingItem {
   icon: keyof typeof Ionicons.glyphMap;
   title: string;
   subtitle?: string;
-  type: 'toggle' | 'link' | 'button';
+  type: 'toggle' | 'link' | 'button' | 'select';
   value?: boolean;
+  selectedValue?: string;
   onPress?: () => void;
 }
+
+const CURRENCIES = ['USD', 'EUR', 'GBP', 'JPY', 'AUD', 'CAD', 'CHF', 'CNY'];
 
 export default function SettingsScreen() {
   const colorScheme = useColorScheme();
   const isDark = colorScheme === 'dark';
   const [notifications, setNotifications] = useState(true);
+  const [breakingAlerts, setBreakingAlerts] = useState(true);
+  const [priceAlerts, setPriceAlerts] = useState(false);
   const [darkMode, setDarkMode] = useState(isDark);
+  const [themeMode, setThemeMode] = useState<'light' | 'dark' | 'system'>('system');
   const [haptics, setHaptics] = useState(true);
+  const [currency, setCurrency] = useState('USD');
 
   const styles = createStyles(isDark);
 
@@ -45,31 +53,56 @@ export default function SettingsScreen() {
     Linking.openURL(url);
   };
 
+  const handleCurrencySelect = () => {
+    Alert.alert(
+      'Default Currency',
+      'Select your preferred currency',
+      CURRENCIES.map((c) => ({
+        text: c,
+        onPress: () => setCurrency(c),
+        style: c === currency ? ('cancel' as const) : ('default' as const),
+      })),
+      { cancelable: true }
+    );
+  };
+
+  const handleThemeSelect = () => {
+    Alert.alert(
+      'Theme',
+      'Choose your preferred theme',
+      [
+        { text: 'Light', onPress: () => setThemeMode('light') },
+        { text: 'Dark', onPress: () => setThemeMode('dark') },
+        { text: 'System', onPress: () => setThemeMode('system') },
+        { text: 'Cancel', style: 'cancel' },
+      ],
+      { cancelable: true }
+    );
+  };
+
   const sections = [
     {
-      title: 'Preferences',
+      title: 'Appearance',
       items: [
         {
-          id: 'notifications',
-          icon: 'notifications',
-          title: 'Push Notifications',
-          subtitle: 'Get alerts for breaking news',
-          type: 'toggle' as const,
-          value: notifications,
-          onPress: () => setNotifications(!notifications),
+          id: 'theme',
+          icon: 'color-palette' as keyof typeof Ionicons.glyphMap,
+          title: 'Theme',
+          subtitle: themeMode.charAt(0).toUpperCase() + themeMode.slice(1),
+          type: 'select' as const,
+          onPress: handleThemeSelect,
         },
         {
-          id: 'darkMode',
-          icon: 'moon',
-          title: 'Dark Mode',
-          subtitle: 'Use system setting',
-          type: 'toggle' as const,
-          value: darkMode,
-          onPress: () => setDarkMode(!darkMode),
+          id: 'currency',
+          icon: 'cash' as keyof typeof Ionicons.glyphMap,
+          title: 'Default Currency',
+          subtitle: currency,
+          type: 'select' as const,
+          onPress: handleCurrencySelect,
         },
         {
           id: 'haptics',
-          icon: 'phone-portrait',
+          icon: 'phone-portrait' as keyof typeof Ionicons.glyphMap,
           title: 'Haptic Feedback',
           subtitle: 'Vibration on interactions',
           type: 'toggle' as const,
@@ -79,11 +112,43 @@ export default function SettingsScreen() {
       ],
     },
     {
+      title: 'Notifications',
+      items: [
+        {
+          id: 'notifications',
+          icon: 'notifications' as keyof typeof Ionicons.glyphMap,
+          title: 'Push Notifications',
+          subtitle: 'Enable all notifications',
+          type: 'toggle' as const,
+          value: notifications,
+          onPress: () => setNotifications(!notifications),
+        },
+        {
+          id: 'breakingAlerts',
+          icon: 'radio' as keyof typeof Ionicons.glyphMap,
+          title: 'Breaking News',
+          subtitle: 'Get alerts for breaking stories',
+          type: 'toggle' as const,
+          value: breakingAlerts,
+          onPress: () => setBreakingAlerts(!breakingAlerts),
+        },
+        {
+          id: 'priceAlerts',
+          icon: 'trending-up' as keyof typeof Ionicons.glyphMap,
+          title: 'Price Alerts',
+          subtitle: 'Notify on significant price changes',
+          type: 'toggle' as const,
+          value: priceAlerts,
+          onPress: () => setPriceAlerts(!priceAlerts),
+        },
+      ],
+    },
+    {
       title: 'Resources',
       items: [
         {
           id: 'docs',
-          icon: 'book',
+          icon: 'book' as keyof typeof Ionicons.glyphMap,
           title: 'API Documentation',
           subtitle: 'Learn how to build with our API',
           type: 'link' as const,
@@ -91,15 +156,15 @@ export default function SettingsScreen() {
         },
         {
           id: 'github',
-          icon: 'logo-github',
+          icon: 'logo-github' as keyof typeof Ionicons.glyphMap,
           title: 'GitHub Repository',
           subtitle: 'Star us on GitHub',
           type: 'link' as const,
-          onPress: () => openLink('https://github.com/AItoolsbyai/free-crypto-news'),
+          onPress: () => openLink('https://github.com/nirholas/free-crypto-news'),
         },
         {
           id: 'website',
-          icon: 'globe',
+          icon: 'globe' as keyof typeof Ionicons.glyphMap,
           title: 'Website',
           subtitle: 'cryptocurrency.cv',
           type: 'link' as const,
@@ -112,21 +177,21 @@ export default function SettingsScreen() {
       items: [
         {
           id: 'version',
-          icon: 'information-circle',
+          icon: 'information-circle' as keyof typeof Ionicons.glyphMap,
           title: 'Version',
           subtitle: '1.0.0',
           type: 'button' as const,
         },
         {
           id: 'privacy',
-          icon: 'shield-checkmark',
+          icon: 'shield-checkmark' as keyof typeof Ionicons.glyphMap,
           title: 'Privacy Policy',
           type: 'link' as const,
           onPress: () => openLink('https://cryptocurrency.cv/privacy'),
         },
         {
           id: 'terms',
-          icon: 'document-text',
+          icon: 'document-text' as keyof typeof Ionicons.glyphMap,
           title: 'Terms of Service',
           type: 'link' as const,
           onPress: () => openLink('https://cryptocurrency.cv/terms'),
@@ -139,11 +204,12 @@ export default function SettingsScreen() {
     <TouchableOpacity
       key={item.id}
       style={styles.item}
-      onPress={item.onPress}
-      disabled={item.type === 'toggle'}
+      onPress={item.type === 'toggle' ? undefined : item.onPress}
+      disabled={item.type === 'toggle' || item.type === 'button'}
+      activeOpacity={0.7}
     >
       <View style={styles.iconContainer}>
-        <Ionicons name={item.icon} size={22} color="#ffffff" />
+        <Ionicons name={item.icon} size={22} color="#f7931a" />
       </View>
       <View style={styles.itemContent}>
         <Text style={styles.itemTitle}>{item.title}</Text>
@@ -153,12 +219,18 @@ export default function SettingsScreen() {
         <Switch
           value={item.value}
           onValueChange={item.onPress}
-          trackColor={{ false: isDark ? '#2a2a2a' : '#e0e0e0', true: '#ffffff' }}
+          trackColor={{ false: isDark ? '#2a2a2a' : '#e0e0e0', true: '#f7931a' }}
           thumbColor={item.value ? '#ffffff' : isDark ? '#888' : '#f4f4f4'}
         />
       )}
       {item.type === 'link' && (
         <Ionicons name="chevron-forward" size={20} color={isDark ? '#666' : '#999'} />
+      )}
+      {item.type === 'select' && (
+        <View style={styles.selectRow}>
+          <Text style={styles.selectValue}>{item.subtitle}</Text>
+          <Ionicons name="chevron-forward" size={20} color={isDark ? '#666' : '#999'} />
+        </View>
       )}
     </TouchableOpacity>
   );
@@ -188,7 +260,7 @@ export default function SettingsScreen() {
         {/* Footer */}
         <View style={styles.footer}>
           <Text style={styles.footerText}>Made with ❤️ for the crypto community</Text>
-          <Text style={styles.footerCopyright}>© 2025 Free Crypto News API</Text>
+          <Text style={styles.footerCopyright}>© 2024-2026 Free Crypto News API</Text>
         </View>
       </ScrollView>
     </SafeAreaView>
@@ -274,6 +346,16 @@ const createStyles = (isDark: boolean) =>
       fontSize: 13,
       color: isDark ? '#888' : '#666',
       marginTop: 2,
+    },
+    selectRow: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      gap: 4,
+    },
+    selectValue: {
+      fontSize: 14,
+      color: '#f7931a',
+      fontWeight: '500',
     },
     footer: {
       alignItems: 'center',

@@ -30,7 +30,7 @@ export function useMarketCoins(limit: number = 20) {
 
   useEffect(() => {
     fetch();
-    const interval = setInterval(fetch, 30000); // Update every 30s
+    const interval = setInterval(fetch, 60000); // Update every 60s
     return () => clearInterval(interval);
   }, [fetch]);
 

@@ -736,7 +736,7 @@ function NewsFeed() {
 
 function PriceTicker() {
   const { prices } = usePrices({ coins: ["bitcoin", "ethereum", "solana"] });
-  return <div>{prices.map(p => <span key={p.id}>{p.symbol}: ${p.price}</span>)}</div>;
+  return <div>{prices.map(p => <span key={p.id}>{p.symbol}: \${p.price}</span>)}</div>;
 }`,
   },
   {
@@ -1161,7 +1161,7 @@ function ApiPlayground() {
             </div>
             {loading ? (
               <div className="rounded-lg bg-[#0d1117] border border-[#30363d] p-8 flex items-center justify-center">
-                <svg className="animate-spin h-6 w-6 text-gray-500" viewBox="0 0 24 24" fill="none">
+                <svg className="animate-spin h-6 w-6 text-gray-500 dark:text-gray-400" viewBox="0 0 24 24" fill="none">
                   <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
                   <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
                 </svg>
@@ -1299,7 +1299,7 @@ function ApiStatusBadge() {
   }, []);
 
   const colors = {
-    loading: "bg-gray-400",
+    loading: "bg-gray-400 dark:bg-gray-500",
     online: "bg-green-500",
     degraded: "bg-yellow-500",
     offline: "bg-red-500",

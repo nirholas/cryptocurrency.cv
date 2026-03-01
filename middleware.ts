@@ -67,6 +67,15 @@ const intlMiddleware = createMiddleware(routing);
 export default async function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
 
+  // ── Embed routes: skip intl, allow cross-origin iframing ────────────────
+  if (pathname.startsWith('/embed/') || pathname === '/embed') {
+    const response = NextResponse.next();
+    // Allow embedding in iframes on any origin
+    response.headers.delete('X-Frame-Options');
+    response.headers.set('Content-Security-Policy', 'frame-ancestors *');
+    return response;
+  }
+
   // ── Non-API routes: internationalisation + nonce-based CSP ───────────────
   if (!pathname.startsWith('/api/')) {
     // Bot detection on page routes — block scrapers before rendering

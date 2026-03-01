@@ -111,7 +111,7 @@ function MomentumIcon({ direction }: { direction: string }) {
     );
   }
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="h-3.5 w-3.5 text-gray-400">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="h-3.5 w-3.5 text-gray-400 dark:text-gray-500">
       <path d="M2 8a.75.75 0 0 1 .75-.75h10.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 8Z" />
     </svg>
   );
@@ -163,7 +163,7 @@ export function TrendingTopics({ className }: { className?: string }) {
                 <span
                   className={cn(
                     "text-xs font-semibold tabular-nums",
-                    topic.change > 0 ? "text-green-500" : topic.change < 0 ? "text-red-500" : "text-gray-400",
+                    topic.change > 0 ? "text-green-500" : topic.change < 0 ? "text-red-500" : "text-gray-400 dark:text-gray-500",
                   )}
                 >
                   {topic.change > 0 ? "+" : ""}

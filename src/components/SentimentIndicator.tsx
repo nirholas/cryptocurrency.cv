@@ -44,7 +44,7 @@ const SENTIMENT_MAP: Record<SentimentLevel, SentimentConfig> = {
     emoji: "➡️",
     color: "text-gray-600 dark:text-gray-400",
     bgColor: "bg-gray-100 dark:bg-gray-800/40",
-    barColor: "bg-gray-400",
+    barColor: "bg-gray-400 dark:bg-gray-500",
     score: 50,
   },
   negative: {
@@ -192,7 +192,7 @@ export function SentimentDistribution({ counts, className }: SentimentDistProps)
 
   const segments: { label: string; value: number; color: string }[] = [
     { label: "Bullish", value: bullish, color: "bg-green-500" },
-    { label: "Neutral", value: neutral, color: "bg-gray-400" },
+    { label: "Neutral", value: neutral, color: "bg-gray-400 dark:bg-gray-500" },
     { label: "Bearish", value: bearish, color: "bg-red-500" },
   ];
 
