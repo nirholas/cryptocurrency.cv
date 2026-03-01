@@ -74,19 +74,60 @@ async function handler(
     if (!portfolioId) {
       return ApiError.badRequest('Portfolio ID required. Provide portfolio_id parameter to export your portfolio data');
     }
-    
-    // In production, fetch portfolio from database
-    // For now, return empty structure indicating no data
+
+    // Fetch portfolio data from KV storage
+    let holdings: PortfolioExport['portfolio']['holdings'] = [];
+    let transactions: PortfolioExport['portfolio']['transactions'] = [];
+
+    try {
+      const { db, isKVAvailable } = await import('@/lib/database');
+      if (isKVAvailable()) {
+        const portfolioData = await db.get<{
+          holdings: PortfolioExport['portfolio']['holdings'];
+          transactions: PortfolioExport['portfolio']['transactions'];
+        }>(`portfolio:${portfolioId}`);
+        if (portfolioData) {
+          holdings = portfolioData.holdings || [];
+          transactions = portfolioData.transactions || [];
+        }
+      }
+    } catch (dbErr) {
+      logger.warn('Could not fetch portfolio from database, returning empty', dbErr);
+    }
+
+    // If no data found, return 404 instead of empty data
+    if (holdings.length === 0 && transactions.length === 0) {
+      return NextResponse.json(
+        {
+          error: 'Portfolio not found',
+          message: `No portfolio data found for ID: ${portfolioId}. Create a portfolio first via POST /api/premium/portfolio.`,
+        },
+        { status: 404 },
+      );
+    }
+
+    // Calculate totals from holdings
+    const totalValue = holdings.reduce((sum, h) => sum + h.value, 0);
+    const totalCost = holdings.reduce((sum, h) => sum + (h.avgBuyPrice * h.quantity), 0);
+    const totalPnL = totalValue - totalCost;
+    const totalPnLPercent = totalCost > 0 ? (totalPnL / totalCost) * 100 : 0;
+
+    // Calculate allocation percentages
+    const holdingsWithAllocation = holdings.map(h => ({
+      ...h,
+      allocation: totalValue > 0 ? (h.value / totalValue) * 100 : 0,
+    }));
+
     const exportData: PortfolioExport = {
       format,
       exportedAt: new Date().toISOString(),
       portfolio: {
-        totalValue: 0,
-        totalCost: 0,
-        totalPnL: 0,
-        totalPnLPercent: 0,
-        holdings: [],
-        transactions: [],
+        totalValue,
+        totalCost,
+        totalPnL,
+        totalPnLPercent,
+        holdings: holdingsWithAllocation,
+        transactions,
       },
       meta: {
         premium: true,

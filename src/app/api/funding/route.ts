@@ -203,6 +203,14 @@ export async function POST(request: NextRequest) {
         }, { status: 400 });
       }
 
+      const deleted = fundingSubscriptions.delete(subscriptionId);
+      if (!deleted) {
+        return NextResponse.json({
+          error: 'Subscription not found',
+          subscriptionId,
+        }, { status: 404 });
+      }
+
       return NextResponse.json({
         success: true,
         message: 'Subscription cancelled',

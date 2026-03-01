@@ -98,9 +98,31 @@ export function track(event: string, properties?: Record<string, string | number
     eventQueue.push(payload);
     return;
   }
-  
-  // Send to analytics endpoint (would need backend implementation)
-  // For now, just log to console in development
+
+  // Send to analytics endpoint
+  try {
+    // Use navigator.sendBeacon for reliability (survives page unload)
+    const sent = navigator.sendBeacon?.(
+      '/api/analytics/events',
+      JSON.stringify(payload),
+    );
+    // Fallback to fetch if sendBeacon fails or is unavailable
+    if (!sent) {
+      fetch('/api/analytics/events', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+        keepalive: true,
+      }).catch(() => {
+        // Queue on failure for later retry
+        eventQueue.push(payload);
+      });
+    }
+  } catch {
+    // Queue on error for later retry
+    eventQueue.push(payload);
+  }
+
   if (process.env.NODE_ENV === 'development') {
     console.log('[Analytics]', event, properties);
   }
