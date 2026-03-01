@@ -12,6 +12,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import BreakingNewsBanner from "@/components/BreakingNewsBanner";
 import MarketsSnapshot from "@/components/MarketsSnapshot";
+import TopMovers from "@/components/TopMovers";
 import NewsletterCTA from "@/components/NewsletterCTA";
 import ExploreMore from "@/components/ExploreMore";
 import NewsCard, {
@@ -130,6 +131,9 @@ export default async function HomePage({ params }: Props) {
 
         {/* ── Markets Snapshot ── */}
         <MarketsSnapshot />
+
+        {/* ── Top Movers (Gainers / Losers) ── */}
+        <TopMovers />
 
         {/* ── Latest + Sidebar ── */}
         <section className="container-main py-8 lg:py-10">

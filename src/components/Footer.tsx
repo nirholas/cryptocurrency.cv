@@ -157,7 +157,7 @@ function ApiStatusBadge() {
 export default function Footer() {
   return (
     <>
-      <footer className="border-t border-[var(--color-border)] bg-[var(--color-surface-secondary)]">
+      <footer className="border-t border-[var(--color-border)] bg-[var(--color-surface-secondary)]" role="contentinfo">
         <FooterStructuredData />
 
         <div className="container-main py-12">
@@ -183,7 +183,7 @@ export default function Footer() {
           <div className="grid grid-cols-1 gap-8 md:grid-cols-4 lg:grid-cols-6">
             {/* Brand + Newsletter */}
             <div className="col-span-1 md:col-span-2 mb-4 lg:mb-0">
-              <Link href="/" className="text-xl font-bold tracking-tight">
+              <Link href="/" className="text-xl font-bold tracking-tight" aria-label="Crypto Vision home">
                 <span className="text-[#3b82f6]">C</span>V
               </Link>
               <p className="mt-3 max-w-xs text-sm text-[var(--color-text-secondary)]">
@@ -205,7 +205,7 @@ export default function Footer() {
               </div>
 
               {/* Social links */}
-              <div className="mt-5 flex gap-3">
+              <div className="mt-5 flex gap-3" role="list" aria-label="Social media links">
                 {SOCIAL_LINKS.map((social) => (
                   <a
                     key={social.label}

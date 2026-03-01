@@ -115,7 +115,7 @@ interface Column {
 }
 
 const columns: Column[] = [
-  { key: "market_cap_rank", label: "#", align: "left" },
+  { key: "market_cap_rank", label: "#", align: "left", hideClass: "hidden sm:table-cell" },
   { key: "name", label: "Coin", align: "left" },
   { key: "current_price", label: "Price", align: "right" },
   {
@@ -131,13 +131,13 @@ const columns: Column[] = [
   },
   {
     key: "market_cap",
-    label: "Market Cap",
+    label: "Mkt Cap",
     align: "right",
     hideClass: "hidden lg:table-cell",
   },
   {
     key: "total_volume",
-    label: "Volume (24h)",
+    label: "Vol (24h)",
     align: "right",
     hideClass: "hidden lg:table-cell",
   },
