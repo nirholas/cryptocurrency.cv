@@ -2,7 +2,7 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.nirholas/free-crypto-news",
   "title": "Free Crypto News",
-  "description": "Free crypto news aggregator MCP - Bitcoin, Ethereum, DeFi, Solana, altcoins. 12+ sources, sentiment analysis, real-time feeds.",
+  "description": "Free crypto news aggregator MCP server with 38 tools — 130+ sources, market data, sentiment analysis, whale alerts, DeFi yields, funding rates, liquidations, on-chain analytics, AI summaries & more. No API key required.",
   "license": "MIT",
   "authors": [
     {
@@ -14,7 +14,7 @@
     "url": "https://github.com/nirholas/free-crypto-news",
     "source": "github"
   },
-  "version": "1.0.1",
+  "version": "1.0.2",
   "links": {
     "homepage": "https://github.com/nirholas/free-crypto-news",
     "bugs": "https://github.com/nirholas/free-crypto-news/issues",
@@ -30,7 +30,7 @@
     {
       "registryType": "npm",
       "identifier": "free-crypto-news",
-      "version": "1.0.1",
+      "version": "1.0.2",
       "runtimeHint": "npx",
       "transport": {
         "type": "stdio"

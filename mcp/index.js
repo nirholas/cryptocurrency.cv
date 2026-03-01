@@ -28,7 +28,7 @@ const TRANSPORT_MODE = process.argv.includes('--http') ? 'http' : 'stdio';
 const server = new Server(
   {
     name: 'free-crypto-news',
-    version: '1.0.0',
+    version: '1.0.2',
   },
   {
     capabilities: {
