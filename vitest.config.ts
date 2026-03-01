@@ -22,6 +22,12 @@ export default defineConfig({
         'src/app/**/loading.tsx',
         'src/app/**/error.tsx',
       ],
+      thresholds: {
+        lines: 20,
+        branches: 15,
+        functions: 15,
+        statements: 20,
+      },
     },
     testTimeout: 10000,
   },

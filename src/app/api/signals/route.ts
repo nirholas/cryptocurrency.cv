@@ -46,8 +46,10 @@ Respond with JSON: { "signals": [...], "disclaimer": "..." }`;
 
 export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;
-  const limit = Math.min(parseInt(searchParams.get('limit') || '30'), 50);
-  const minConfidence = parseInt(searchParams.get('min_confidence') || '50');
+  const limitRaw = parseInt(searchParams.get('limit') || '30');
+  const minConfidenceRaw = parseInt(searchParams.get('min_confidence') || '50');
+  const limit = Math.min(Number.isNaN(limitRaw) ? 30 : Math.max(1, limitRaw), 50);
+  const minConfidence = Number.isNaN(minConfidenceRaw) ? 50 : Math.max(0, Math.min(minConfidenceRaw, 100));
   const ticker = searchParams.get('ticker')?.toUpperCase();
 
   if (!isGroqConfigured()) return groqNotConfiguredResponse();

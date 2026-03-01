@@ -394,7 +394,7 @@ async function handler(
   } catch (error) {
     console.error('Error in premium portfolio analytics:', error);
     return NextResponse.json(
-      { error: 'Analytics failed', message: String(error) },
+      { error: 'Analytics failed', message: 'An internal error occurred. Please try again later.' },
       { status: 500 }
     );
   }

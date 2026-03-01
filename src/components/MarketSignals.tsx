@@ -122,9 +122,9 @@ function SignalRow({
     <div
       ref={ref}
       className="relative flex items-center justify-between"
-      role={explanation ? 'button' : undefined}
-      tabIndex={explanation ? 0 : undefined}
-      aria-label={explanation ? `Show AI explanation for ${sig.ticker}` : undefined}
+      role="button"
+      tabIndex={0}
+      aria-label={explanation ? `Show AI explanation for ${sig.ticker}` : `Market signal for ${sig.ticker}`}
       onMouseEnter={() => explanation && setOpen(true)}
       onMouseLeave={() => setOpen(false)}
       onFocus={() => explanation && setOpen(true)}

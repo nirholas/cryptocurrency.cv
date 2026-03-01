@@ -20,10 +20,14 @@ export async function GET(request: NextRequest) {
   const query = searchParams.get('q');
   const action = searchParams.get('action');
   const articleId = searchParams.get('articleId');
-  const topK = parseInt(searchParams.get('topK') || '10', 10);
-  const alpha = parseFloat(searchParams.get('alpha') || '0.7');
-  const temporalDecay = parseFloat(searchParams.get('temporalDecay') || '0');
-  const minScore = parseFloat(searchParams.get('minScore') || '0.3');
+  const topKRaw = parseInt(searchParams.get('topK') || '10', 10);
+  const alphaRaw = parseFloat(searchParams.get('alpha') || '0.7');
+  const temporalDecayRaw = parseFloat(searchParams.get('temporalDecay') || '0');
+  const minScoreRaw = parseFloat(searchParams.get('minScore') || '0.3');
+  const topK = Number.isNaN(topKRaw) ? 10 : Math.max(1, Math.min(topKRaw, 100));
+  const alpha = Number.isNaN(alphaRaw) ? 0.7 : Math.max(0, Math.min(alphaRaw, 1));
+  const temporalDecay = Number.isNaN(temporalDecayRaw) ? 0 : Math.max(0, Math.min(temporalDecayRaw, 1));
+  const minScore = Number.isNaN(minScoreRaw) ? 0.3 : Math.max(0, Math.min(minScoreRaw, 1));
 
   // Special actions
   if (action === 'stats') {

@@ -12,6 +12,7 @@
 
 import { registry } from './registry';
 import type { DataCategory } from './types';
+import { logger } from '@/lib/logger';
 
 // Category chain imports
 import { marketPriceChain } from './adapters/market-price';
@@ -97,12 +98,12 @@ export function initProviders(): void {
       registered.push(label);
     } catch (err) {
        
-      console.warn(`[providers] Failed to register "${label}":`, err);
+      logger.warn(`[providers] Failed to register "${label}"`, err instanceof Error ? err : undefined);
     }
   }
 
    
-  console.log(
+  logger.info(
     `[providers] Initialized ${registered.length}/${CHAINS.length} chains: ${registered.join(', ')}`,
   );
 }

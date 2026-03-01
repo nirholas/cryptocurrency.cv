@@ -68,3 +68,10 @@ export const BLOCKCHAIN_INFO_BASE = 'https://blockchain.info';
 
 /** DeFiLlama Yields API */
 export const LLAMA_YIELDS_BASE = 'https://yields.llama.fi';
+
+// =============================================================================
+// INTERNAL URLs
+// =============================================================================
+
+/** Upgrade / premium page URL — used in free-tier degraded API responses */
+export const PREMIUM_URL = `${SITE_URL}/premium`;

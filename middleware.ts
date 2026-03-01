@@ -638,7 +638,7 @@ export default async function middleware(request: NextRequest) {
   if (blockedUntil) {
     const retryEsc = Math.ceil((blockedUntil - Date.now()) / 1000);
     return NextResponse.json(
-      {/^Bearer\s+/i
+      {
         error: 'Forbidden',
         code: 'REPEAT_RATE_LIMIT_ABUSE',
         message: 'Too many rate-limited requests. You are temporarily blocked.',

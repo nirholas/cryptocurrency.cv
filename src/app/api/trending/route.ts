@@ -65,8 +65,10 @@ export async function GET(request: NextRequest) {
   const logger = createRequestLogger(request);
   const startTime = Date.now();
   const searchParams = request.nextUrl.searchParams;
-  const limit = Math.min(parseInt(searchParams.get('limit') || '10'), 20);
-  const hours = Math.min(parseInt(searchParams.get('hours') || '24'), 72);
+  const limitRaw = parseInt(searchParams.get('limit') || '10');
+  const hoursRaw = parseInt(searchParams.get('hours') || '24');
+  const limit = Math.min(Number.isNaN(limitRaw) ? 10 : Math.max(1, limitRaw), 20);
+  const hours = Math.min(Number.isNaN(hoursRaw) ? 24 : Math.max(1, hoursRaw), 72);
   
   logger.info('Fetching trending topics', { limit, hours });
   

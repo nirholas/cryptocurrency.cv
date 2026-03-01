@@ -21,7 +21,32 @@ const eslintConfig = [
       "@typescript-eslint": tsPlugin,
     },
     rules: {
-      // Accessibility rules
+      // ── TypeScript rules ──────────────────────────────────────────────
+      "@typescript-eslint/no-unused-vars": [
+        "warn",
+        {
+          argsIgnorePattern: "^_",
+          varsIgnorePattern: "^_",
+          caughtErrorsIgnorePattern: "^_",
+        },
+      ],
+      "@typescript-eslint/no-explicit-any": "warn",
+      "@typescript-eslint/consistent-type-imports": [
+        "warn",
+        { prefer: "type-imports", fixStyle: "inline-type-imports" },
+      ],
+      "@typescript-eslint/no-empty-interface": "warn",
+      "@typescript-eslint/no-non-null-assertion": "warn",
+      "@typescript-eslint/prefer-optional-chain": "warn",
+
+      // ── General rules ─────────────────────────────────────────────────
+      "no-console": ["warn", { allow: ["warn", "error", "info"] }],
+      "no-debugger": "error",
+      "prefer-const": "warn",
+      "no-var": "error",
+      eqeqeq: ["error", "always", { null: "ignore" }],
+
+      // ── Accessibility rules ───────────────────────────────────────────
       "jsx-a11y/alt-text": "error",
       "jsx-a11y/anchor-has-content": "error",
       "jsx-a11y/anchor-is-valid": "warn",

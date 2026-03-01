@@ -11,10 +11,58 @@ hide:
 <p class="tagline">100% Free Crypto News API — No API keys, no rate limits, no BS</p>
 
 <span class="status free">✓ Always Free</span>
-<span class="status beta">7 Sources</span>
+<span class="status beta">200+ Sources</span>
 
 [Get Started :material-rocket-launch:](QUICKSTART.md){ .md-button .md-button--primary }
 [API Reference :material-api:](API.md){ .md-button }
+
+</div>
+
+---
+
+## :busts_in_silhouette: Who Is This For?
+
+<div class="grid" markdown>
+
+<div class="card" markdown>
+
+### :man_technologist: Developers
+
+Build bots, dashboards, and apps with our REST API and SDKs. No API key required — just `fetch()` and go.
+
+[:material-arrow-right: Quick Start](QUICKSTART.md)
+
+</div>
+
+<div class="card" markdown>
+
+### :chart_with_upwards_trend: Traders
+
+Get real-time sentiment analysis, trading signals, whale alerts, and fear & greed index alongside breaking news.
+
+[:material-arrow-right: Market Data](tutorials/market-data.md)
+
+</div>
+
+<div class="card" markdown>
+
+### :microscope: Researchers
+
+Analyze media narratives, credibility scores, coverage patterns, and historical archives with AI-powered analytics.
+
+[:material-arrow-right: AI Features](AI-FEATURES.md)
+
+</div>
+
+<div class="card" markdown>
+
+### :robot: AI / LLM Builders
+
+Feed crypto news into ChatGPT, Claude, LangChain, or custom agents via MCP, plugins, or plain REST.
+
+[:material-arrow-right: Integrations](integrations/index.md)
+
+</div>
 
 </div>
 
@@ -28,7 +76,7 @@ hide:
 
 ### :newspaper: Real-Time News
 
-Aggregated news from CoinDesk, The Block, Decrypt, Cointelegraph, Bitcoin Magazine, CryptoSlate, and NewsBTC — updated every 5 minutes.
+Aggregated news from 200+ professional sources including CoinDesk, The Block, Decrypt, Cointelegraph, Bitcoin Magazine, CryptoSlate, and NewsBTC — updated every 5 minutes.
 
 </div>
 
@@ -36,7 +84,7 @@ Aggregated news from CoinDesk, The Block, Decrypt, Cointelegraph, Bitcoin Magazi
 
 ### :robot: AI-Powered
 
-Sentiment analysis, automatic summaries, daily digests, and fact-checking powered by Groq LLM.
+Sentiment analysis, automatic summaries, daily digests, fact-checking, narrative tracking, and credibility scoring — powered by Groq LLM.
 
 </div>
 
@@ -44,7 +92,7 @@ Sentiment analysis, automatic summaries, daily digests, and fact-checking powere
 
 ### :electric_plug: Easy Integration
 
-SDKs for Python, JavaScript, TypeScript, React, Go, and PHP. Plus WebSocket, SSE, and webhooks.
+SDKs for Python, JavaScript, TypeScript, React, Go, PHP, Ruby, and Rust. Plus WebSocket, SSE, webhooks, RSS, and Atom feeds.
 
 </div>
 
@@ -52,7 +100,7 @@ SDKs for Python, JavaScript, TypeScript, React, Go, and PHP. Plus WebSocket, SSE
 
 ### :lock: No Auth Required
 
-No API keys, no sign-up, no rate limits. Just make requests and get data.
+No API keys, no sign-up, no rate limits. Just make requests and get data. Start building in seconds.
 
 </div>
 
@@ -72,6 +120,22 @@ No API keys, no sign-up, no rate limits. Just make requests and get data.
     curl https://cryptocurrency.cv/api/digest
     ```
 
+    **Response:**
+    ```json
+    {
+      "articles": [
+        {
+          "title": "Bitcoin Surges Past $95K...",
+          "source": "CoinDesk",
+          "link": "https://...",
+          "pubDate": "2026-03-01T14:30:00Z",
+          "sentiment": "positive"
+        }
+      ],
+      "count": 50
+    }
+    ```
+
 === "Python"
 
     ```python
@@ -81,6 +145,7 @@ No API keys, no sign-up, no rate limits. Just make requests and get data.
     
     for article in news["articles"][:5]:
         print(f"📰 {article['title']}")
+        print(f"   Sentiment: {article.get('sentiment', 'N/A')}")
     ```
 
 === "JavaScript"
@@ -90,7 +155,7 @@ No API keys, no sign-up, no rate limits. Just make requests and get data.
     const { articles } = await response.json();
     
     articles.slice(0, 5).forEach(article => {
-      console.log(`📰 ${article.title}`);
+      console.log(`📰 ${article.title} (${article.source})`);
     });
     ```
 
@@ -100,9 +165,10 @@ No API keys, no sign-up, no rate limits. Just make requests and get data.
     import { useCryptoNews } from '@free-crypto-news/react';
     
     function NewsFeed() {
-      const { articles, loading } = useCryptoNews();
+      const { articles, loading, error } = useCryptoNews();
       
       if (loading) return <p>Loading...</p>;
+      if (error) return <p>Error: {error.message}</p>;
       
       return articles.map(a => <Article key={a.id} {...a} />);
     }
@@ -173,7 +239,38 @@ Composer package
 [:material-arrow-right: PHP SDK](sdks/php.md)
 </div>
 
+<div class="card" markdown>
+### :gem: Ruby
+Gem package
+
+[:material-arrow-right: Ruby SDK](sdks/ruby.md)
 </div>
+
+<div class="card" markdown>
+### :crab: Rust
+Cargo crate
+
+[:material-arrow-right: Rust SDK](sdks/rust.md)
+</div>
+
+</div>
+
+---
+
+## :books: Tutorials
+
+Learn by doing with step-by-step guides:
+
+| Tutorial | What you'll learn |
+|----------|-------------------|
+| [News Basics](tutorials/news-basics.md) | Fetch, filter, and display crypto news |
+| [AI Sentiment](tutorials/ai-sentiment.md) | Analyze article sentiment with AI |
+| [Market Data](tutorials/market-data.md) | Get prices, charts, and market metrics |
+| [Real-Time Streaming](tutorials/realtime-sse.md) | Set up live news via SSE/WebSocket |
+| [Build a Discord Bot](examples/discord.md) | Post crypto news to Discord |
+| [Build a Telegram Bot](examples/telegram.md) | Post crypto news to Telegram |
+
+[:material-arrow-right: All Tutorials](tutorials/index.md)
 
 ---
 

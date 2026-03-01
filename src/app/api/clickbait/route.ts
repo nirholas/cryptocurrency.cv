@@ -42,8 +42,10 @@ Respond with JSON: { "analysis": [...] }`;
 
 export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;
-  const limit = Math.min(parseInt(searchParams.get('limit') || '10'), 30);
-  const threshold = parseInt(searchParams.get('threshold') || '0'); // Only return above this score
+  const limitRaw = parseInt(searchParams.get('limit') || '10');
+  const thresholdRaw = parseInt(searchParams.get('threshold') || '0');
+  const limit = Math.min(Number.isNaN(limitRaw) ? 10 : Math.max(1, limitRaw), 30);
+  const threshold = Number.isNaN(thresholdRaw) ? 0 : Math.max(0, Math.min(thresholdRaw, 100)); // Only return above this score
 
   if (!isAIConfigured()) return aiNotConfiguredResponse();
 

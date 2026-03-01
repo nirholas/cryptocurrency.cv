@@ -430,7 +430,7 @@ async function handler(
     );
   } catch (error) {
     console.error('Error in premium AI analysis route:', error);
-    return NextResponse.json({ error: 'Analysis failed', message: String(error) }, { status: 500 });
+    return NextResponse.json({ error: 'Analysis failed', message: 'An internal error occurred. Please try again later.' }, { status: 500 });
   }
 }
 

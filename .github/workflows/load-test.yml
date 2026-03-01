@@ -15,12 +15,16 @@ jobs:
           - 6379:6379
     steps:
       - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-      - run: npm ci
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
       - name: Start app
-        run: npm run build && npm start &
+        run: pnpm exec next build && pnpm exec next start &
         env:
           REDIS_URL: redis://localhost:6379
       - name: Wait for app

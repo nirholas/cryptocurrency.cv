@@ -9,15 +9,22 @@ Free Crypto News is a Next.js application built with the App Router, TypeScript,
 | Layer | Technology |
 |-------|-----------|
 | Framework | Next.js 16 (App Router) |
-| Language | TypeScript 5 |
-| UI | React 19 + Tailwind CSS 3 |
+| Language | TypeScript 5.9 |
+| UI | React 19 + Tailwind CSS 4 |
 | Styling | next-themes (dark mode), Framer Motion |
 | API Runtime | Vercel Edge Runtime (82% of routes) |
+| Database | Drizzle ORM + Neon (serverless Postgres) |
 | Caching | Vercel KV / Upstash Redis (in-memory fallback) |
+| Background Jobs | Inngest (event-driven functions) |
+| Observability | OpenTelemetry (traces + metrics via OTLP HTTP), Pino (structured logging) |
 | Archive | Static JSON files — `archive/` |
-| Search | `archive/indexes/` + full-text route |
-| Internationalisation | `next-intl` (40+ locales) |
-| Testing | Vitest + Playwright |
+| Search | `archive/indexes/` + full-text route + RAG vector search |
+| Internationalisation | `next-intl` (42 locales) |
+| AI | Google Gemini, OpenAI, Anthropic, Groq (pluggable providers) |
+| Payments | x402 (crypto-native HTTP 402 payments) |
+| Testing | Vitest (unit), Playwright (E2E), Storybook 10 (visual) |
+| Package manager | pnpm (install) + Bun (scripts) |
+| Docs site | MkDocs (Material theme) |
 
 ---
 

@@ -43,7 +43,8 @@ export async function GET(request: NextRequest) {
   const tone = (VALID_TONES.includes(params.get('tone') as CommentaryTone)
     ? params.get('tone')
     : 'anchor') as CommentaryTone;
-  const intervalSec = Math.max(30, parseInt(params.get('interval') || '60', 10));
+  const intervalRaw = parseInt(params.get('interval') || '60', 10);
+  const intervalSec = Math.max(30, Number.isNaN(intervalRaw) ? 60 : Math.min(intervalRaw, 300));
   const format = params.get('format') || 'sse'; // sse or json
 
   // JSON mode: return a single batch

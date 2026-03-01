@@ -1,9 +1,24 @@
 # User Guide
 
-Welcome to Free Crypto News! This guide covers all the features available to help you get the most out of your crypto news experience.
+Welcome to Free Crypto News! This guide covers everything you need to know to get the most out of the web application as a reader and user.
+
+> **Looking for the API instead?** See the [Quick Start](./QUICKSTART.md) or the [API Reference](./API.md).
+
+## What You Can Do
+
+Free Crypto News gives you:
+
+- 📰 **Read aggregated news** from 200+ professional crypto sources in one place
+- 🔍 **Search** across all articles with instant results
+- 🌙 **Dark mode** for comfortable reading
+- 🔖 **Bookmark** articles to read later (no account needed)
+- ⌨️ **Keyboard shortcuts** for power users
+- 📱 **Install as an app** on your phone or desktop (PWA)
+- 📴 **Read offline** — cached articles work without internet
 
 ## Table of Contents
 
+- [Getting Started](#getting-started)
 - [Keyboard Shortcuts](#keyboard-shortcuts)
 - [Dark Mode](#dark-mode)
 - [Reading Progress](#reading-progress)
@@ -12,6 +27,20 @@ Welcome to Free Crypto News! This guide covers all the features available to hel
 - [Reading Time Estimates](#reading-time-estimates)
 - [PWA Installation](#pwa-installation)
 - [Offline Mode](#offline-mode)
+- [Tips & Tricks](#tips--tricks)
+- [FAQ](#faq)
+
+---
+
+## 🏁 Getting Started
+
+1. **Visit** [cryptocurrency.cv](https://cryptocurrency.cv)
+2. **Browse** the latest headlines on the homepage
+3. **Filter** by category (Bitcoin, DeFi, Ethereum, NFTs...) using the navigation
+4. **Click** any article to read it in the distraction-free reader
+5. **Search** for specific topics using `/` or the search icon
+
+That's it — no account needed. Everything works immediately.
 
 ---
 
@@ -225,9 +254,9 @@ When offline, you'll see:
 
 ### Stay Updated
 
-- **Breaking news banner** - Urgent news appears at the top
-- **Trending section** - See what's hot in the last 24h
-- **Source variety** - News from 7 different outlets
+- **Breaking news banner** — Urgent news appears at the top
+- **Trending section** — See what's hot in the last 24h
+- **Source variety** — News aggregated from 200+ professional outlets
 
 ### Efficient Reading
 
@@ -244,13 +273,21 @@ When offline, you'll see:
 
 ---
 
+## 📱 Mobile
+
+The web app is fully responsive and works great on mobile devices. For the best experience, install it as a PWA (see [PWA Installation](#pwa-installation) above).
+
+For the dedicated mobile app, see the [Mobile App docs](./integrations/mobile.md).
+
+---
+
 ## ❓ FAQ
 
 ### Q: Do I need an account?
-**A:** No! Everything works without signing up. Bookmarks are saved locally.
+**A:** No! Everything works without signing up. Bookmarks are saved locally in your browser.
 
 ### Q: Is there an API?
-**A:** Yes! See the [API Documentation](API.md) for full details.
+**A:** Yes! It's 100% free with no API key required. See the [API Reference](API.md) for full details or the [Quick Start](QUICKSTART.md) to get started in 2 minutes.
 
 ### Q: How often is news updated?
 **A:** Every few minutes. Breaking news appears within minutes of publication.
@@ -261,10 +298,14 @@ When offline, you'll see:
 ### Q: Does it work on mobile?
 **A:** Absolutely! Fully responsive and installable as a PWA.
 
+### Q: Where does the news come from?
+**A:** We aggregate from 200+ professional crypto news outlets, including CoinDesk, The Block, Decrypt, Cointelegraph, Bitcoin Magazine, CryptoSlate, and many more. See [Sources](./SOURCES.md) for the full list.
+
 ---
 
 ## 🆘 Getting Help
 
 - **GitHub Issues**: [Report bugs or request features](https://github.com/nirholas/free-crypto-news/issues)
+- **Discussions**: [Ask questions](https://github.com/nirholas/free-crypto-news/discussions)
 - **API Docs**: See [API.md](API.md)
 - **Contributing**: See [CONTRIBUTING.md](CONTRIBUTING.md)

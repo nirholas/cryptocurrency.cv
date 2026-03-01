@@ -21,6 +21,7 @@
  */
 
 import { initProviders, isProvidersInitialized, getProvidersSummary } from './registry-init';
+import { logger } from '@/lib/logger';
 
 export { initProviders, isProvidersInitialized, getProvidersSummary };
 
@@ -47,7 +48,7 @@ export async function bootstrapProviders(
   initProviders();
 
   if (!silent) {
-    console.log('[bootstrap] Provider system initialized');
+    logger.info('[bootstrap] Provider system initialized');
   }
 
   // Step 2: Optional health checks
@@ -59,13 +60,13 @@ export async function bootstrapProviders(
       const down = summary.filter((s) => s.status !== 'healthy' && s.status !== 'degraded').length;
 
       if (!silent) {
-        console.log(
+        logger.info(
           `[bootstrap] Health: ${healthy} healthy, ${degraded} degraded, ${down} down / ${summary.length} total`,
         );
       }
     } catch (err) {
       if (!silent) {
-        console.warn('[bootstrap] Health check failed:', err);
+        logger.warn('[bootstrap] Health check failed', err instanceof Error ? err : undefined);
       }
     }
   }

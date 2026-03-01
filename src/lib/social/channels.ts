@@ -6,6 +6,7 @@
  */
 
 import { EventEmitter } from 'events';
+import { logger } from '@/lib/logger';
 
 // Types
 export interface ChannelMessage {
@@ -105,7 +106,7 @@ const alertEmitter = new EventEmitter();
  */
 export function registerChannel(config: ChannelConfig): void {
   channelRegistry.set(config.id, config);
-  console.log(`Registered ${config.platform} channel: ${config.name}`);
+  logger.info(`Registered ${config.platform} channel: ${config.name}`);
 }
 
 /**

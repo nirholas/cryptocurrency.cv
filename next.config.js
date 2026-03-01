@@ -272,9 +272,6 @@ const nextConfig = {
   // Note: recharts is intentionally excluded — its /es6/ subpath is not
   // resolvable by Turbopack; import directly from 'recharts' instead.
   modularizeImports: {
-    'lodash': {
-      transform: 'lodash/{{member}}',
-    },
     'lucide-react': {
       transform: 'lucide-react/dist/esm/icons/{{kebabCase member}}',
     },

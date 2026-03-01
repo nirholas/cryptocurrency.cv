@@ -668,7 +668,18 @@ export async function runBacktest(config: BacktestConfig): Promise<BacktestResul
   const performance: PerformanceMetrics = {
     totalReturn: ((equity - config.initialCapital) / config.initialCapital) * 100,
     totalReturnUSD: equity - config.initialCapital,
-    annualizedReturn: 0, // Would need actual date range calculation
+    annualizedReturn: (() => {
+      const totalReturnFrac = (equity - config.initialCapital) / config.initialCapital;
+      if (equityCurve.length < 2) return 0;
+      const startMs = new Date(equityCurve[0].timestamp).getTime();
+      const endMs = new Date(equityCurve[equityCurve.length - 1].timestamp).getTime();
+      const durationYears = (endMs - startMs) / (365.25 * 24 * 3600 * 1000);
+      if (durationYears <= 0) return 0;
+      // CAGR formula: (endValue/startValue)^(1/years) - 1
+      const growthFactor = 1 + totalReturnFrac;
+      if (growthFactor <= 0) return -100; // total loss or worse
+      return (Math.pow(growthFactor, 1 / durationYears) - 1) * 100;
+    })(),
     finalEquity: equity,
     peakEquity,
     

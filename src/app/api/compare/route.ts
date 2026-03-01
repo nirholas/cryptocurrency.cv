@@ -1,8 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { COINGECKO_BASE } from '@/lib/constants';
+import { ApiError } from '@/lib/api-error';
 
 export const runtime = 'edge';
 export const revalidate = 60;
+
+const COIN_ID_PATTERN = /^[a-z0-9][a-z0-9-]{0,63}$/;
 
 /**
  * GET /api/compare
@@ -14,13 +17,14 @@ export async function GET(request: NextRequest) {
   const coinsParam = searchParams.get('coins');
 
   if (!coinsParam) {
-    return NextResponse.json(
-      { error: 'Missing coins parameter. Use ?coins=bitcoin,ethereum,solana' },
-      { status: 400 }
-    );
+    return ApiError.badRequest('Missing coins parameter. Use ?coins=bitcoin,ethereum,solana');
   }
 
-  const coins = coinsParam.split(',').map(c => c.trim().toLowerCase()).slice(0, 10);
+  const coins = coinsParam.split(',').map(c => c.trim().toLowerCase()).filter(c => COIN_ID_PATTERN.test(c)).slice(0, 10);
+
+  if (coins.length === 0) {
+    return ApiError.badRequest('No valid coin IDs provided');
+  }
 
   try {
     // Fetch from CoinGecko
@@ -108,9 +112,6 @@ export async function GET(request: NextRequest) {
     });
   } catch (error) {
     console.error('Compare API error:', error);
-    return NextResponse.json(
-      { error: 'Failed to compare coins' },
-      { status: 500 }
-    );
+    return ApiError.internal('Failed to compare coins');
   }
 }

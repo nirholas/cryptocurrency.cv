@@ -246,7 +246,7 @@ interface RawL2Project {
  * Get TVL for all protocols, ranked by size
  */
 export async function getProtocolsTVL(limit = 100): Promise<ProtocolTVL[]> {
-  const data = await defillama.fetch('/protocols') as any[];
+  const data = await defillama.fetch('/protocols') as RawProtocol[];
   return data
     .slice(0, limit)
     .map((p) => ({
@@ -266,8 +266,8 @@ export async function getProtocolsTVL(limit = 100): Promise<ProtocolTVL[]> {
  * Get TVL by chain
  */
 export async function getChainsTVL(): Promise<ChainTVL[]> {
-  const data = await defillama.fetch('/v2/chains') as any[];
-  return data.map((c: any) => ({
+  const data = await defillama.fetch('/v2/chains') as RawChain[];
+  return data.map((c) => ({
     name: c.name,
     tvl: c.tvl || 0,
     tokenSymbol: c.tokenSymbol,
@@ -280,15 +280,15 @@ export async function getChainsTVL(): Promise<ChainTVL[]> {
 /**
  * Get TVL for a specific protocol
  */
-export async function getProtocolDetail(slug: string): Promise<any> {
-  return defillama.fetch(`/protocol/${slug}`);
+export async function getProtocolDetail(slug: string): Promise<Record<string, unknown>> {
+  return defillama.fetch(`/protocol/${slug}`) as Promise<Record<string, unknown>>;
 }
 
 /**
  * Get TVL for a specific chain
  */
-export async function getChainDetail(chain: string): Promise<any> {
-  return defillama.fetch(`/v2/historicalChainTvl/${chain}`);
+export async function getChainDetail(chain: string): Promise<Record<string, unknown>> {
+  return defillama.fetch(`/v2/historicalChainTvl/${chain}`) as Promise<Record<string, unknown>>;
 }
 
 /**
@@ -314,31 +314,31 @@ export async function getYieldPools(options?: {
   maxApy?: number;
   limit?: number;
 }): Promise<YieldPool[]> {
-  const response = await defillamaYields.fetch('/pools') as { status: string; data: any[] };
+  const response = await defillamaYields.fetch('/pools') as { status: string; data: RawYieldPool[] };
   let pools = response.data || [];
 
   if (options?.chain) {
-    pools = pools.filter((p: any) => p.chain?.toLowerCase() === options.chain!.toLowerCase());
+    pools = pools.filter((p) => p.chain?.toLowerCase() === options.chain!.toLowerCase());
   }
   if (options?.project) {
-    pools = pools.filter((p: any) => p.project?.toLowerCase() === options.project!.toLowerCase());
+    pools = pools.filter((p) => p.project?.toLowerCase() === options.project!.toLowerCase());
   }
   if (options?.stableOnly) {
-    pools = pools.filter((p: any) => p.stablecoin);
+    pools = pools.filter((p) => p.stablecoin);
   }
   if (options?.minTvl) {
-    pools = pools.filter((p: any) => (p.tvlUsd || 0) >= options.minTvl!);
+    pools = pools.filter((p) => (p.tvlUsd || 0) >= options.minTvl!);
   }
   if (options?.minApy !== undefined) {
-    pools = pools.filter((p: any) => (p.apy || 0) >= options.minApy!);
+    pools = pools.filter((p) => (p.apy || 0) >= options.minApy!);
   }
   if (options?.maxApy !== undefined) {
-    pools = pools.filter((p: any) => (p.apy || 0) <= options.maxApy!);
+    pools = pools.filter((p) => (p.apy || 0) <= options.maxApy!);
   }
 
   const limit = options?.limit || 100;
 
-  return pools.slice(0, limit).map((p: any) => ({
+  return pools.slice(0, limit).map((p) => ({
     pool: p.pool,
     chain: p.chain,
     project: p.project,
@@ -362,10 +362,10 @@ export async function getYieldPools(options?: {
  */
 export async function getStablecoins(): Promise<StablecoinData[]> {
   const data = await defillamaStablecoins.fetch('/stablecoins?includePrices=true') as {
-    peggedAssets: any[];
+    peggedAssets: RawStablecoin[];
   };
 
-  return (data.peggedAssets || []).map((s: any) => ({
+  return (data.peggedAssets || []).map((s) => ({
     id: s.id,
     name: s.name,
     symbol: s.symbol,
@@ -397,8 +397,8 @@ export async function getStablecoinCharts(
  * Get bridge volumes
  */
 export async function getBridges(): Promise<BridgeVolume[]> {
-  const data = await defillamaBridges.fetch('/bridges?includeChains=true') as { bridges: any[] };
-  return (data.bridges || []).map((b: any) => ({
+  const data = await defillamaBridges.fetch('/bridges?includeChains=true') as { bridges: RawBridge[] };
+  return (data.bridges || []).map((b) => ({
     id: b.id,
     name: b.name,
     displayName: b.displayName,
@@ -418,10 +418,10 @@ export async function getBridges(): Promise<BridgeVolume[]> {
  * Get protocol fees and revenue rankings
  */
 export async function getProtocolFees(limit = 50): Promise<ProtocolRevenue[]> {
-  const data = await defillamaFees.fetch('/overview/fees?excludeTotalDataChart=true&excludeTotalDataChartBreakdown=true') as { protocols: any[] };
-  return (data.protocols || []).slice(0, limit).map((p: any) => ({
+  const data = await defillamaFees.fetch('/overview/fees?excludeTotalDataChart=true&excludeTotalDataChartBreakdown=true') as { protocols: RawFeeProtocol[] };
+  return (data.protocols || []).slice(0, limit).map((p) => ({
     name: p.name,
-    slug: p.slug || p.module,
+    slug: p.slug || p.module || '',
     totalFees24h: p.total24h || 0,
     totalRevenue24h: p.totalRevenue24h || 0,
     totalFees7d: p.total7d || 0,
@@ -433,14 +433,25 @@ export async function getProtocolFees(limit = 50): Promise<ProtocolRevenue[]> {
   }));
 }
 
+export interface DEXVolume {
+  name: string;
+  slug: string;
+  volume24h: number;
+  volume7d: number;
+  volume30d: number;
+  change1d: number;
+  change7d: number;
+  chains: string[];
+}
+
 /**
  * Get DEX volume rankings
  */
-export async function getDEXVolumes(limit = 50): Promise<any[]> {
-  const data = await defillamaVolumes.fetch('/overview/dexs?excludeTotalDataChart=true&excludeTotalDataChartBreakdown=true') as { protocols: any[] };
-  return (data.protocols || []).slice(0, limit).map((p: any) => ({
+export async function getDEXVolumes(limit = 50): Promise<DEXVolume[]> {
+  const data = await defillamaVolumes.fetch('/overview/dexs?excludeTotalDataChart=true&excludeTotalDataChartBreakdown=true') as { protocols: RawDEXVolumeProtocol[] };
+  return (data.protocols || []).slice(0, limit).map((p) => ({
     name: p.name,
-    slug: p.slug || p.module,
+    slug: p.slug || p.module || '',
     volume24h: p.total24h || 0,
     volume7d: p.total7d || 0,
     volume30d: p.total30d || 0,
@@ -458,7 +469,7 @@ export async function getDEXVolumes(limit = 50): Promise<any[]> {
  * Search pairs by token name or symbol
  */
 export async function searchDEXPairs(query: string): Promise<DEXPair[]> {
-  const data = await dexscreener.fetch(`/dex/search/?q=${encodeURIComponent(query)}`) as { pairs: any[] };
+  const data = await dexscreener.fetch(`/dex/search/?q=${encodeURIComponent(query)}`) as { pairs: RawDexPair[] };
   return (data.pairs || []).map(normalizeDexPair);
 }
 
@@ -466,7 +477,7 @@ export async function searchDEXPairs(query: string): Promise<DEXPair[]> {
  * Get pair data by chain and pair address
  */
 export async function getDEXPairByAddress(chain: string, pairAddress: string): Promise<DEXPair | null> {
-  const data = await dexscreener.fetch(`/dex/pairs/${chain}/${pairAddress}`) as { pairs: any[] };
+  const data = await dexscreener.fetch(`/dex/pairs/${chain}/${pairAddress}`) as { pairs: RawDexPair[] };
   if (!data.pairs?.length) return null;
   return normalizeDexPair(data.pairs[0]);
 }
@@ -475,11 +486,11 @@ export async function getDEXPairByAddress(chain: string, pairAddress: string): P
  * Get token info from multiple DEX sources
  */
 export async function getTokenDEXData(tokenAddress: string): Promise<DEXPair[]> {
-  const data = await dexscreener.fetch(`/dex/tokens/${tokenAddress}`) as { pairs: any[] };
+  const data = await dexscreener.fetch(`/dex/tokens/${tokenAddress}`) as { pairs: RawDexPair[] };
   return (data.pairs || []).map(normalizeDexPair);
 }
 
-function normalizeDexPair(p: any): DEXPair {
+function normalizeDexPair(p: RawDexPair): DEXPair {
   return {
     chainId: p.chainId,
     dexId: p.dexId,

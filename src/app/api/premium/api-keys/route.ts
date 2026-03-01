@@ -114,7 +114,10 @@ function generateAPIKey(): string {
  * Generate a unique ID
  */
 function generateId(): string {
-  return `key_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`;
+  const bytes = new Uint8Array(8);
+  crypto.getRandomValues(bytes);
+  const hex = Array.from(bytes).map(b => b.toString(36)).join('');
+  return `key_${Date.now()}_${hex.slice(0, 9)}`;
 }
 
 /**

@@ -383,21 +383,39 @@ export class EdgeCache {
    * Invalidate all keys matching a pattern.
    */
   invalidatePattern(pattern: string): number {
-    // This is O(n) but acceptable for operational use
     let count = 0;
-    const regex = new RegExp(pattern);
-    // We can't iterate and delete directly from LRU, so track keys first
-    // In production, use Redis SCAN + DEL for this
-    // For now, just clear all (nuclear option for patterns)
+
+    // Wildcard: clear everything
     if (pattern === '*') {
       const stats = this._l1.stats;
       this._l1.clear();
       return stats.entries;
     }
-    // For specific patterns, we'd need to expose LRU keys
-    void regex;
-    void count;
-    return 0;
+
+    // Convert glob-like pattern to regex
+    // Supports: * (any chars), ? (single char)
+    const regexStr = pattern
+      .replace(/[.+^${}()|[\]\\]/g, '\\$&') // Escape special regex chars except * and ?
+      .replace(/\*/g, '.*')
+      .replace(/\?/g, '.');
+    const regex = new RegExp(`^${regexStr}$`);
+
+    // Collect matching keys first to avoid mutation during iteration
+    const keysToDelete: string[] = [];
+    for (const key of this._l1.keys()) {
+      if (regex.test(key)) {
+        keysToDelete.push(key);
+      }
+    }
+
+    // Delete matching keys
+    for (const key of keysToDelete) {
+      if (this._l1.delete(key)) {
+        count++;
+      }
+    }
+
+    return count;
   }
 
   /**

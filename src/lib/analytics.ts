@@ -212,7 +212,20 @@ export function trackAPICall(data: {
   ip?: string;
   timestamp?: Date;
 }): void {
-  // Server-side tracking - would typically send to monitoring service
+  // Accumulate metrics
+  apiMetrics.totalRequests++;
+  apiMetrics.totalResponseTime += data.responseTime;
+  if (data.statusCode >= 400) {
+    apiMetrics.totalErrors++;
+  }
+  if (data.userAgent) {
+    apiMetrics.uniqueUserAgents.add(data.userAgent);
+  }
+
+  const epKey = `${data.method} ${data.endpoint}`;
+  apiMetrics.endpointCounts.set(epKey, (apiMetrics.endpointCounts.get(epKey) || 0) + 1);
+  apiMetrics.statusCounts.set(data.statusCode, (apiMetrics.statusCounts.get(data.statusCode) || 0) + 1);
+
   if (process.env.NODE_ENV === 'development') {
     console.log('[API]', data.method, data.endpoint, `${data.responseTime}ms`, data.statusCode);
   }
@@ -222,13 +235,45 @@ export function trackAPICall(data: {
  * Get dashboard stats (server-side)
  */
 export function getDashboardStats(): Record<string, number | string> {
-  // In production, this would query actual metrics
+  const uptimeMs = Date.now() - apiMetrics.startTime;
+  const uptimeHours = uptimeMs / (1000 * 60 * 60);
+  const avgResponseTime = apiMetrics.totalRequests > 0
+    ? Math.round(apiMetrics.totalResponseTime / apiMetrics.totalRequests)
+    : 0;
+  const errorRate = apiMetrics.totalRequests > 0
+    ? parseFloat(((apiMetrics.totalErrors / apiMetrics.totalRequests) * 100).toFixed(2))
+    : 0;
+
+  // Format uptime
+  let uptime: string;
+  if (uptimeHours < 1) {
+    uptime = `${Math.round(uptimeMs / 60000)}m`;
+  } else if (uptimeHours < 24) {
+    uptime = `${uptimeHours.toFixed(1)}h`;
+  } else {
+    uptime = `${(uptimeHours / 24).toFixed(1)}d`;
+  }
+
+  // Top endpoint
+  let topEndpoint = 'none';
+  let topCount = 0;
+  for (const [ep, count] of apiMetrics.endpointCounts) {
+    if (count > topCount) {
+      topEndpoint = ep;
+      topCount = count;
+    }
+  }
+
   return {
-    totalRequests: 0,
-    uniqueUsers: 0,
-    avgResponseTime: 0,
-    errorRate: 0,
-    uptime: '100%',
+    totalRequests: apiMetrics.totalRequests,
+    uniqueUsers: apiMetrics.uniqueUserAgents.size,
+    avgResponseTime,
+    errorRate,
+    totalErrors: apiMetrics.totalErrors,
+    uptime,
+    requestsPerHour: uptimeHours > 0 ? Math.round(apiMetrics.totalRequests / uptimeHours) : 0,
+    topEndpoint,
+    topEndpointHits: topCount,
     lastUpdated: new Date().toISOString(),
   };
 }
@@ -237,17 +282,70 @@ export function getDashboardStats(): Record<string, number | string> {
  * Get system health (server-side)
  */
 export async function getSystemHealth(): Promise<Record<string, unknown>> {
-  // In production, this would check actual system health
+  const memUsage = process.memoryUsage?.();
+  const heapUsed = memUsage?.heapUsed || 0;
+  const heapTotal = memUsage?.heapTotal || 0;
+  const rss = memUsage?.rss || 0;
+  const heapUsedPct = heapTotal > 0 ? (heapUsed / heapTotal) * 100 : 0;
+
+  // Calculate process uptime and CPU
+  const processUptimeSecs = process.uptime?.() || 0;
+  const cpuUsage = process.cpuUsage?.();
+
+  // Determine API health from recent error rate
+  const errorRate = apiMetrics.totalRequests > 0
+    ? apiMetrics.totalErrors / apiMetrics.totalRequests
+    : 0;
+  const apiStatus = errorRate > 0.3 ? 'degraded'
+    : errorRate > 0.05 ? 'warning'
+    : 'up';
+
+  // Memory health
+  const memoryStatus = heapUsedPct > 90 ? 'critical'
+    : heapUsedPct > 70 ? 'warning'
+    : 'up';
+
+  // Overall status
+  const overallStatus = apiStatus === 'degraded' || memoryStatus === 'critical'
+    ? 'unhealthy'
+    : apiStatus === 'warning' || memoryStatus === 'warning'
+    ? 'degraded'
+    : 'healthy';
+
+  // Status codes breakdown
+  const statusBreakdown: Record<string, number> = {};
+  for (const [code, count] of apiMetrics.statusCounts) {
+    statusBreakdown[String(code)] = count;
+  }
+
   return {
-    status: 'healthy',
+    status: overallStatus,
     services: {
-      api: 'up',
-      database: 'up',
-      cache: 'up',
+      api: apiStatus,
+      memory: memoryStatus,
     },
     memory: {
-      used: process.memoryUsage?.().heapUsed || 0,
-      total: process.memoryUsage?.().heapTotal || 0,
+      heapUsed,
+      heapTotal,
+      rss,
+      heapUsedPercent: parseFloat(heapUsedPct.toFixed(1)),
+      external: memUsage?.external || 0,
+    },
+    process: {
+      uptimeSeconds: Math.round(processUptimeSecs),
+      pid: process.pid,
+      nodeVersion: process.version,
+      platform: process.platform,
+      ...(cpuUsage ? { cpuUser: cpuUsage.user, cpuSystem: cpuUsage.system } : {}),
+    },
+    api: {
+      totalRequests: apiMetrics.totalRequests,
+      totalErrors: apiMetrics.totalErrors,
+      errorRate: parseFloat((errorRate * 100).toFixed(2)),
+      avgResponseTime: apiMetrics.totalRequests > 0
+        ? Math.round(apiMetrics.totalResponseTime / apiMetrics.totalRequests)
+        : 0,
+      statusCodes: statusBreakdown,
     },
     timestamp: new Date().toISOString(),
   };
