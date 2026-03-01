@@ -21,7 +21,39 @@ import { SITE_URL } from "@/lib/constants";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StatusAutoRefresh from "@/components/StatusAutoRefresh";
+import { Badge } from "@/components/ui/Badge";
+import { Button } from "@/components/ui/Button";
+import { Card, CardContent } from "@/components/ui/Card";
+import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
+import {
+  Activity,
+  ArrowRight,
+  BarChart3,
+  Bug,
+  CheckCircle,
+  Clock,
+  Cloud,
+  Cpu,
+  Database,
+  ExternalLink,
+  Globe,
+  HardDrive,
+  Headphones,
+  MessageSquare,
+  Newspaper,
+  Radio,
+  Rss,
+  Server,
+  Shield,
+  Star,
+  TrendingUp,
+  Wifi,
+  Zap,
+  AlertTriangle,
+  XCircle,
+} from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 
 export const metadata = generateSEOMetadata({
   title: "System Status",
