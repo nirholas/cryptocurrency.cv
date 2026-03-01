@@ -86,8 +86,11 @@ services:
   redis:
     image: redis:7-alpine
     container_name: crypto-news-redis
-    ports:
-      - "6379:6379"
+    expose:
+      - "6379"
+    # Do NOT expose port 6379 to host in production — only internal traffic.
+    # Uncomment the next line for local debugging only:
+    # ports: ["6379:6379"]
     volumes:
       - redis_data:/data
     command: >
@@ -159,7 +162,8 @@ services:
     ports:
       - "3001:3000"
     environment:
-      - GF_SECURITY_ADMIN_PASSWORD=admin
+      - GF_SECURITY_ADMIN_PASSWORD=${GRAFANA_ADMIN_PASSWORD:?GRAFANA_ADMIN_PASSWORD must be set}
+      - GF_USERS_ALLOW_SIGN_UP=false
       - GF_DASHBOARDS_DEFAULT_HOME_DASHBOARD_PATH=/var/lib/grafana/dashboards/api-overview.json
     depends_on:
       - prometheus

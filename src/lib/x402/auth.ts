@@ -20,6 +20,7 @@ import { createRoutes, getRoutePrice } from './routes';
 import { validateApiKey, checkRateLimit as checkKvRateLimit, type ApiKeyData } from '@/lib/api-keys';
 import { API_TIERS, API_PRICING, PREMIUM_PRICING, type PremiumEndpoint } from './pricing';
 import { PAYMENT_ADDRESS, CURRENT_NETWORK, getAcceptedAssets, IS_PRODUCTION, IS_BUILD_TIME } from './config';
+import { logger } from '@/lib/logger';
 
 // =============================================================================
 // TYPE DEFINITIONS
@@ -96,7 +97,7 @@ export async function handleProtectedRequest(
   // No API key - continue to x402 payment verification
   if (!apiKey) {
     if (!IS_PRODUCTION) {
-      console.log('[x402] No API key provided, falling through to payment verification');
+      logger.debug('[x402] No API key provided, falling through to payment verification');
     }
     return; // void = continue to x402 payment
   }
@@ -134,7 +135,7 @@ export async function handleProtectedRequest(
 
   // Valid API key with available rate limit - grant access
   if (!IS_PRODUCTION) {
-    console.log('[x402] API key authenticated:', {
+    logger.debug('[x402] API key authenticated', {
       tier: keyData.tier,
       remaining: rateLimit.remaining,
       keyPrefix: keyData.keyPrefix,

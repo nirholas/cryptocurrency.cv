@@ -96,7 +96,7 @@ export async function GET(request: NextRequest) {
 
         if (success) {
           results.downgraded++;
-          console.log(`[Cron] Downgraded key ${keyId} from ${previousTier} to free`);
+          console.info(`[Cron] Downgraded key ${keyId.substring(0, 8)}… from ${previousTier} to free`);
         } else {
           results.failed++;
           results.errors.push(`Failed to downgrade ${keyId}`);

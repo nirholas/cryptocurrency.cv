@@ -261,6 +261,7 @@ if (typeof window === 'undefined' && !IS_BUILD_TIME && !_httpServerLogged) {
   }
 
   if (validation.valid) {
-    console.log('[x402 HTTP Server] ✅ Initialized with hybrid auth (API key + x402 payments)');
+    // Startup confirmation — safe, no sensitive data
+    console.info('[x402 HTTP Server] Initialized with hybrid auth (API key + x402 payments)');
   }
 }
