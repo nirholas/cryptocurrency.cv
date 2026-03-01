@@ -16,8 +16,119 @@ interface ExtractedArticle {
   content: string;
   author?: string;
   published_date?: string;
+  description?: string;
+  image?: string;
   word_count: number;
   reading_time_minutes: number;
+}
+
+// =============================================================================
+// Content Extraction Helpers
+// =============================================================================
+
+/** Remove non-content HTML elements (scripts, styles, nav, ads, etc.) */
+function stripNonContentElements(html: string): string {
+  return html
+    .replace(/<script[^>]*>[\s\S]*?<\/script>/gi, '')
+    .replace(/<style[^>]*>[\s\S]*?<\/style>/gi, '')
+    .replace(/<noscript[^>]*>[\s\S]*?<\/noscript>/gi, '')
+    .replace(/<iframe[^>]*>[\s\S]*?<\/iframe>/gi, '')
+    .replace(/<svg[^>]*>[\s\S]*?<\/svg>/gi, '')
+    .replace(/<nav[^>]*>[\s\S]*?<\/nav>/gi, '')
+    .replace(/<header[^>]*>[\s\S]*?<\/header>/gi, '')
+    .replace(/<footer[^>]*>[\s\S]*?<\/footer>/gi, '')
+    .replace(/<aside[^>]*>[\s\S]*?<\/aside>/gi, '')
+    .replace(/<form[^>]*>[\s\S]*?<\/form>/gi, '')
+    .replace(/<button[^>]*>[\s\S]*?<\/button>/gi, '')
+    // Remove common ad/sidebar divs
+    .replace(/<div[^>]*class="[^"]*(?:sidebar|widget|ad-|advertisement|social-share|related-posts|comment)[^"]*"[^>]*>[\s\S]*?<\/div>/gi, '')
+    // Remove HTML comments
+    .replace(/<!--[\s\S]*?-->/g, '');
+}
+
+/** Convert cleaned HTML to plain text, preserving paragraph structure. */
+function cleanHTMLToText(html: string): string {
+  let cleaned = stripNonContentElements(html);
+  
+  // Convert block elements to newlines for paragraph structure
+  cleaned = cleaned
+    .replace(/<\/?(p|div|br|h[1-6]|blockquote|li|tr)[^>]*>/gi, '\n')
+    .replace(/<\/?(ul|ol|table|thead|tbody|section|article|main)[^>]*>/gi, '\n')
+    // Strip remaining tags
+    .replace(/<[^>]+>/g, ' ')
+    // Decode common HTML entities
+    .replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/&nbsp;/g, ' ')
+    .replace(/&#x27;/g, "'")
+    .replace(/&#x2F;/g, '/')
+    // Collapse whitespace
+    .replace(/[ \t]+/g, ' ')
+    .replace(/\n[ \t]+/g, '\n')
+    .replace(/\n{3,}/g, '\n\n')
+    .trim();
+
+  return cleaned;
+}
+
+/**
+ * Extract main article content using a multi-strategy approach:
+ * 1. Try semantic elements: <article>, <main>, [role="main"]
+ * 2. Try common content container class patterns
+ * 3. Score candidate blocks by text density (text chars vs tag chars)
+ */
+function extractContentFromHTML(html: string): string {
+  // Candidate patterns ordered by specificity/reliability
+  const patterns: RegExp[] = [
+    // Semantic article elements (support nested content properly with greedy match)
+    /<article[^>]*>([\s\S]+)<\/article>/i,
+    // Role-based
+    /<[^>]+role="main"[^>]*>([\s\S]+?)<\/[a-z]+>/i,
+    /<main[^>]*>([\s\S]+)<\/main>/i,
+    // Common CMS content classes
+    /<div[^>]*class="[^"]*(?:post-content|article-content|entry-content|article-body|post-body|story-body|content-body)[^"]*"[^>]*>([\s\S]+?)<\/div>/i,
+    /<div[^>]*class="[^"]*(?:article__body|article__content|post__content|story__content)[^"]*"[^>]*>([\s\S]+?)<\/div>/i,
+    // WordPress / Ghost / Medium patterns
+    /<div[^>]*class="[^"]*(?:wp-content|ghost-content|medium-feed)[^"]*"[^>]*>([\s\S]+?)<\/div>/i,
+    // Data attribute patterns
+    /<div[^>]*data-(?:article|content|body)[^>]*>([\s\S]+?)<\/div>/i,
+    // Generic content containers (less reliable)
+    /<div[^>]*(?:id|class)="[^"]*content[^"]*"[^>]*>([\s\S]+?)<\/div>/i,
+  ];
+
+  interface Candidate {
+    text: string;
+    score: number;
+  }
+
+  const candidates: Candidate[] = [];
+
+  for (const pattern of patterns) {
+    const match = html.match(pattern);
+    if (match?.[1]) {
+      const text = cleanHTMLToText(match[1]);
+      if (text.length > 100) {
+        // Score: text length, penalized by link density
+        const linkTextLen = (match[1].match(/<a[^>]*>[\s\S]*?<\/a>/gi) || [])
+          .map(a => a.replace(/<[^>]+>/g, '').length)
+          .reduce((s, l) => s + l, 0);
+        const textDensity = text.length > 0 ? 1 - (linkTextLen / text.length) : 0;
+        const score = text.length * Math.max(textDensity, 0.1);
+        candidates.push({ text, score });
+      }
+    }
+  }
+
+  // Return the highest-scoring candidate
+  if (candidates.length > 0) {
+    candidates.sort((a, b) => b.score - a.score);
+    return candidates[0].text;
+  }
+
+  return '';
 }
 
 /**
