@@ -99,7 +99,7 @@ export function PortfolioProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     if (holdings.length === 0) return;
 
-    const coinIds = [...new Set(holdings.map((h) => h.coinId))];
+    const coinIds = Array.from(new Set(holdings.map((h) => h.coinId)));
 
     async function fetchPrices() {
       try {
