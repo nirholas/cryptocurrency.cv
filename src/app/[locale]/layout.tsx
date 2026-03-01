@@ -69,11 +69,11 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: {
-    default: "Free Crypto News",
-    template: "%s | Free Crypto News",
+    default: "Crypto Vision News — Free Real-Time Crypto News API",
+    template: "%s | Crypto Vision News",
   },
   description:
-    "100% FREE crypto news API. No API keys. No rate limits. Real-time cryptocurrency news aggregation from 300+ sources.",
+    "Free real-time crypto news API by Crypto Vision. No API keys. No rate limits. 300+ sources. Bitcoin, Ethereum, DeFi & altcoins.",
   keywords: [
     "crypto",
     "cryptocurrency",
@@ -85,24 +85,25 @@ export const metadata: Metadata = {
     "blockchain",
     "defi",
     "trading",
+    "crypto vision",
   ],
-  authors: [{ name: "Free Crypto News" }],
-  creator: "Free Crypto News",
-  publisher: "Free Crypto News",
+  authors: [{ name: "Crypto Vision" }],
+  creator: "Crypto Vision",
+  publisher: "Crypto Vision",
   metadataBase: new URL("https://cryptocurrency.cv"),
   alternates: {
     types: {
       "application/rss+xml": [
-        { url: "/api/rss", title: "Free Crypto News RSS Feed" },
+        { url: "/api/rss", title: "Crypto Vision News RSS Feed" },
       ],
     },
   },
   openGraph: {
-    title: "Free Crypto News",
+    title: "Crypto Vision News",
     description:
-      "100% FREE crypto news API. Real-time news from 300+ sources.",
+      "Free real-time crypto news API by Crypto Vision. 300+ sources. No API key required.",
     url: "https://cryptocurrency.cv",
-    siteName: "Free Crypto News",
+    siteName: "Crypto Vision",
     type: "website",
     locale: "en_US",
     images: [
@@ -110,15 +111,15 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Free Crypto News",
+        alt: "Crypto Vision News",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Free Crypto News",
+    title: "Crypto Vision News",
     description:
-      "100% FREE crypto news API. Real-time news from 300+ sources.",
+      "Free real-time crypto news API by Crypto Vision. 300+ sources. No API key required.",
     images: ["/og-image.png"],
   },
   robots: {
@@ -150,7 +151,7 @@ export const metadata: Metadata = {
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
-    title: "CryptoNews",
+    title: "Crypto Vision",
   },
   category: "news",
 };

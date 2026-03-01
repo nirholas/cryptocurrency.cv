@@ -1,7 +1,7 @@
 {
   "schema_version": "v1",
   "name_for_model": "free_crypto_news",
-  "name_for_human": "Free Crypto News",
+  "name_for_human": "Crypto Vision News",
   "description_for_model": "Free cryptocurrency news API. Fetch real-time news from 130+ crypto sources including CoinDesk, Decrypt, The Block, CoinTelegraph. No API key needed. Search news, get Bitcoin/DeFi/breaking news, trending topics, market sentiment, Fear & Greed index, and AI analysis. Use this to answer questions about current crypto news, market sentiment, and trending topics.",
   "description_for_human": "Real-time crypto news from 130+ sources. No API key required. Get latest news, search topics, sentiment analysis, Fear & Greed index, and trending topics.",
   "auth": {

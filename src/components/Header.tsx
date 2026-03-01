@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { useTheme } from "@/components/ThemeProvider";
@@ -14,6 +14,9 @@ import {
   ChevronDown,
   Star,
   Briefcase,
+  TrendingUp,
+  TrendingDown,
+  Activity,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -26,7 +29,13 @@ interface TickerCoin {
   name: string;
   symbol: string;
   price: number;
+  prevPrice: number;
   change24h: number;
+}
+
+interface FearGreedData {
+  value: number;
+  classification: string;
 }
 
 const TICKER_COINS = [
@@ -61,12 +70,54 @@ function formatPrice(price: number): string {
   return `$${price.toLocaleString("en-US", { minimumFractionDigits: 4, maximumFractionDigits: 4 })}`;
 }
 
+function fearGreedColor(value: number): string {
+  if (value <= 25) return "text-red-500";
+  if (value <= 45) return "text-orange-500";
+  if (value <= 55) return "text-yellow-500";
+  if (value <= 75) return "text-lime-500";
+  return "text-emerald-500";
+}
+
+function fearGreedBg(value: number): string {
+  if (value <= 25) return "bg-red-500/10";
+  if (value <= 45) return "bg-orange-500/10";
+  if (value <= 55) return "bg-yellow-500/10";
+  if (value <= 75) return "bg-lime-500/10";
+  return "bg-emerald-500/10";
+}
+
 /* ------------------------------------------------------------------ */
-/*  Price Ticker Strip                                                */
+/*  Ticker Skeleton (loading state)                                   */
+/* ------------------------------------------------------------------ */
+
+function TickerSkeleton() {
+  return (
+    <div
+      className="h-[40px] overflow-hidden border-b border-[var(--color-border)] bg-[var(--color-surface)]"
+    >
+      <div className="flex h-full items-center gap-8 px-4">
+        {Array.from({ length: 8 }).map((_, i) => (
+          <span key={i} className="inline-flex items-center gap-1.5">
+            <span className="h-3 w-8 rounded bg-[var(--color-border)] animate-pulse" />
+            <span className="h-3 w-14 rounded bg-[var(--color-border)] animate-pulse" />
+            <span className="h-3 w-10 rounded bg-[var(--color-border)] animate-pulse" />
+          </span>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+/* ------------------------------------------------------------------ */
+/*  Price Ticker Strip (enhanced)                                     */
 /* ------------------------------------------------------------------ */
 
 function PriceTickerStrip() {
   const [coins, setCoins] = useState<TickerCoin[]>([]);
+  const [fearGreed, setFearGreed] = useState<FearGreedData | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [flashIds, setFlashIds] = useState<Set<string>>(new Set());
+  const prevPricesRef = useRef<Map<string, number>>(new Map());
 
   const fetchPrices = useCallback(async () => {
     try {
@@ -74,29 +125,70 @@ function PriceTickerStrip() {
       if (!res.ok) return;
       const data = await res.json();
 
+      const prevPrices = prevPricesRef.current;
+      const newFlashIds = new Set<string>();
+
       const parsed: TickerCoin[] = TICKER_COINS.map((id) => {
         const coin = data[id];
+        const price = coin?.usd ?? 0;
+        const prev = prevPrices.get(id) ?? price;
+
+        if (prev !== price && prevPrices.size > 0) {
+          newFlashIds.add(id);
+        }
+        prevPrices.set(id, price);
+
         return {
           id,
           name: id.charAt(0).toUpperCase() + id.slice(1),
           symbol: COIN_SYMBOLS[id] || id.toUpperCase(),
-          price: coin?.usd ?? 0,
+          price,
+          prevPrice: prev,
           change24h: coin?.usd_24h_change ?? 0,
         };
       }).filter((c) => c.price > 0);
 
       setCoins(parsed);
+      setLoading(false);
+
+      if (newFlashIds.size > 0) {
+        setFlashIds(newFlashIds);
+        setTimeout(() => setFlashIds(new Set()), 1500);
+      }
     } catch {
-      // silently fail — ticker is non-critical
+      setLoading(false);
+    }
+  }, []);
+
+  // Fetch Fear & Greed index
+  const fetchFearGreed = useCallback(async () => {
+    try {
+      const res = await fetch("/api/fear-greed");
+      if (!res.ok) return;
+      const data = await res.json();
+      if (data.current) {
+        setFearGreed({
+          value: data.current.value,
+          classification: data.current.valueClassification,
+        });
+      }
+    } catch {
+      // non-critical
     }
   }, []);
 
   useEffect(() => {
     fetchPrices();
-    const interval = setInterval(fetchPrices, 60_000);
-    return () => clearInterval(interval);
-  }, [fetchPrices]);
+    fetchFearGreed();
+    const priceInterval = setInterval(fetchPrices, 30_000);
+    const fgInterval = setInterval(fetchFearGreed, 300_000);
+    return () => {
+      clearInterval(priceInterval);
+      clearInterval(fgInterval);
+    };
+  }, [fetchPrices, fetchFearGreed]);
 
+  if (loading) return <TickerSkeleton />;
   if (coins.length === 0) return null;
 
   // Duplicate items for seamless looping
@@ -104,51 +196,98 @@ function PriceTickerStrip() {
 
   return (
     <div
-      className="h-[var(--ticker-height,40px)] overflow-hidden border-b border-[var(--color-border)] bg-[var(--color-surface)]"
-      style={{ ["--ticker-height" as string]: "40px" }}
+      className="h-[40px] overflow-hidden border-b border-[var(--color-border)] bg-[var(--color-surface)]"
     >
-      <div className="group relative flex h-full items-center overflow-hidden">
-        <div className="ticker-track flex items-center gap-8 whitespace-nowrap group-hover:[animation-play-state:paused]">
-          {tickerItems.map((coin, i) => {
-            const isPositive = coin.change24h >= 0;
-            return (
-              <span
-                key={`${coin.id}-${i}`}
-                className="inline-flex items-center gap-1.5 text-xs font-medium"
-              >
-                <span className="font-semibold text-[var(--color-text-primary)]">
-                  {coin.symbol}
-                </span>
-                <span className="text-[var(--color-text-secondary)]">
-                  {formatPrice(coin.price)}
-                </span>
-                <span
+      <div className="flex h-full items-center">
+        {/* Fear & Greed badge (left pinned) */}
+        {fearGreed && (
+          <Link
+            href="/fear-greed"
+            className={cn(
+              "hidden md:flex items-center gap-1.5 px-3 h-full border-r border-[var(--color-border)] text-xs font-medium shrink-0 transition-colors hover:bg-[var(--color-surface-secondary)]",
+              fearGreedBg(fearGreed.value),
+            )}
+          >
+            <Activity className={cn("h-3.5 w-3.5", fearGreedColor(fearGreed.value))} />
+            <span className={cn("font-bold tabular-nums", fearGreedColor(fearGreed.value))}>
+              {fearGreed.value}
+            </span>
+            <span className="text-[var(--color-text-tertiary)] hidden lg:inline">
+              {fearGreed.classification}
+            </span>
+          </Link>
+        )}
+
+        {/* Scrolling ticker */}
+        <div className="group relative flex-1 flex h-full items-center overflow-hidden">
+          <div className="ticker-track flex items-center gap-8 whitespace-nowrap group-hover:[animation-play-state:paused]">
+            {tickerItems.map((coin, i) => {
+              const isPositive = coin.change24h >= 0;
+              const isFlashing = flashIds.has(coin.id);
+              const flashUp = isFlashing && coin.price > coin.prevPrice;
+              const flashDown = isFlashing && coin.price < coin.prevPrice;
+
+              return (
+                <Link
+                  key={`${coin.id}-${i}`}
+                  href={`/coin/${coin.id}`}
                   className={cn(
-                    "text-[11px] font-mono",
-                    isPositive ? "text-emerald-500" : "text-red-500"
+                    "inline-flex items-center gap-1.5 text-xs font-medium px-2 py-1 rounded transition-all hover:bg-[var(--color-surface-secondary)]",
+                    flashUp && "ticker-flash-up",
+                    flashDown && "ticker-flash-down",
                   )}
                 >
-                  {isPositive ? "▲" : "▼"}{" "}
-                  {Math.abs(coin.change24h).toFixed(2)}%
-                </span>
-              </span>
-            );
-          })}
+                  <span className="font-semibold text-[var(--color-text-primary)]">
+                    {coin.symbol}
+                  </span>
+                  <span className="text-[var(--color-text-secondary)] tabular-nums">
+                    {formatPrice(coin.price)}
+                  </span>
+                  <span
+                    className={cn(
+                      "inline-flex items-center gap-0.5 text-[11px] font-mono tabular-nums",
+                      isPositive ? "text-emerald-500" : "text-red-500"
+                    )}
+                  >
+                    {isPositive ? (
+                      <TrendingUp className="h-3 w-3" />
+                    ) : (
+                      <TrendingDown className="h-3 w-3" />
+                    )}
+                    {Math.abs(coin.change24h).toFixed(2)}%
+                  </span>
+                </Link>
+              );
+            })}
+          </div>
         </div>
       </div>
 
-      {/* Marquee animation via CSS */}
+      {/* Marquee + flash animations */}
       <style jsx>{`
         .ticker-track {
-          animation: ticker-scroll 40s linear infinite;
+          animation: ticker-scroll 45s linear infinite;
+        }
+        .ticker-track:hover {
+          animation-play-state: paused;
         }
         @keyframes ticker-scroll {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-50%);
-          }
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+        .ticker-flash-up {
+          animation: flash-green 1.5s ease-out;
+        }
+        .ticker-flash-down {
+          animation: flash-red 1.5s ease-out;
+        }
+        @keyframes flash-green {
+          0%, 100% { background: transparent; }
+          15% { background: rgba(16, 185, 129, 0.2); }
+        }
+        @keyframes flash-red {
+          0%, 100% { background: transparent; }
+          15% { background: rgba(239, 68, 68, 0.2); }
         }
       `}</style>
     </div>
@@ -245,11 +384,11 @@ export default function Header() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 shrink-0">
           <span className="text-xl font-bold tracking-tight">
-            <span className="text-[#f7931a]">F</span>
-            <span>CN</span>
+            <span className="text-[#3b82f6]">C</span>
+            <span>V</span>
           </span>
           <span className="hidden sm:block text-xs font-medium text-[var(--color-text-tertiary)] border-l border-[var(--color-border)] pl-2 ml-1">
-            Free Crypto News
+            Crypto Vision News
           </span>
         </Link>
 

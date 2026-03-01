@@ -90,13 +90,13 @@ function FooterStructuredData() {
     "@type": "WPFooter",
     isPartOf: {
       "@type": "WebSite",
-      name: "Free Crypto News",
+      name: "Crypto Vision",
       url: "https://cryptocurrency.cv",
     },
     copyrightYear: new Date().getFullYear(),
     copyrightHolder: {
       "@type": "Organization",
-      name: "Free Crypto News",
+      name: "Crypto Vision",
       url: "https://cryptocurrency.cv",
       sameAs: [
         "https://github.com/nirholas/free-crypto-news",
@@ -124,7 +124,7 @@ export default function Footer() {
           {/* Brand + Newsletter */}
           <div className="col-span-2 mb-4 lg:mb-0">
             <Link href="/" className="text-xl font-bold tracking-tight">
-              <span className="text-[#f7931a]">F</span>CN
+              <span className="text-[#3b82f6]">C</span>V
             </Link>
             <p className="mt-3 text-sm text-[var(--color-text-secondary)] max-w-xs">
               Free, real-time crypto news aggregation from 300+ sources.
@@ -204,7 +204,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="mt-6 pt-6 border-t border-[var(--color-border)] flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-[var(--color-text-tertiary)]">
-            &copy; {new Date().getFullYear()} Free Crypto News. Open source under MIT license.
+            &copy; {new Date().getFullYear()} Crypto Vision. Open source under MIT license.
           </p>
           <p className="text-xs text-[var(--color-text-tertiary)]">
             Data from 300+ sources &middot; No API key required

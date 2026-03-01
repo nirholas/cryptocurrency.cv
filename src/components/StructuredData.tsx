@@ -2,7 +2,8 @@ export function WebsiteStructuredData() {
   const data = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "Free Crypto News",
+    name: "Crypto Vision News",
+    alternateName: ["CV News", "Free Crypto News", "cryptocurrency.cv"],
     url: "https://cryptocurrency.cv",
     potentialAction: {
       "@type": "SearchAction",
@@ -22,7 +23,7 @@ export function OrganizationStructuredData() {
   const data = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "Free Crypto News",
+    name: "Crypto Vision",
     url: "https://cryptocurrency.cv",
     logo: "https://cryptocurrency.cv/icons/icon-512x512.png",
     sameAs: [

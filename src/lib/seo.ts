@@ -45,7 +45,7 @@ export function generateSEOMetadata({
   type = 'website',
   publishedTime,
   modifiedTime,
-  authors = ['Free Crypto News'],
+  authors = ['Crypto Vision'],
   tags = [],
   noindex = false,
 }: SEOConfig): Metadata {
@@ -70,7 +70,7 @@ export function generateSEOMetadata({
       title,
       description: truncatedDescription,
       url,
-      siteName: 'Free Crypto News',
+      siteName: 'Crypto Vision',
       type,
       locale: locale.replace('-', '_'),
       images: [
@@ -135,7 +135,7 @@ export function generateArticleMetadata({
   tags?: string[];
 }): Metadata {
   return generateSEOMetadata({
-    title: `${title} | Free Crypto News`,
+    title: `${title} | Crypto Vision News`,
     description,
     path: `/blog/${slug}`,
     locale,
@@ -143,7 +143,7 @@ export function generateArticleMetadata({
     type: 'article',
     publishedTime,
     modifiedTime: modifiedTime || publishedTime,
-    authors: author ? [author] : ['Free Crypto News'],
+    authors: author ? [author] : ['Crypto Vision'],
     tags: [...tags, category].filter(Boolean) as string[],
   });
 }
@@ -171,7 +171,7 @@ export function generateCoinMetadata({
   
   return generateSEOMetadata({
     title: `${name} (${symbol.toUpperCase()}) Price${priceStr}${changeStr}`,
-    description: `Get the latest ${name} (${symbol.toUpperCase()}) price, news, charts, and market data. Real-time updates from Free Crypto News.`,
+    description: `Get the latest ${name} (${symbol.toUpperCase()}) price, news, charts, and market data. Real-time updates from Crypto Vision News.`,
     path: `/coin/${name.toLowerCase().replace(/\s+/g, '-')}`,
     locale,
     tags: [name, symbol, 'cryptocurrency', 'crypto', 'price', 'news', 'market data'],
@@ -196,7 +196,7 @@ export function generateCategoryMetadata({
   
   return generateSEOMetadata({
     title: `${category} Crypto News${countStr}`,
-    description: description || `Latest ${category} cryptocurrency news and updates. Stay informed with Free Crypto News.`,
+    description: description || `Latest ${category} cryptocurrency news and updates. Stay informed with Crypto Vision News.`,
     path: `/category/${category.toLowerCase().replace(/\s+/g, '-')}`,
     locale,
     tags: [category, 'cryptocurrency', 'crypto news', 'blockchain'],
@@ -211,7 +211,7 @@ export function generateCategoryMetadata({
  */
 export function optimizeTitle(title: string, includeBrand = true): string {
   const cleaned = title.trim().replace(/\s+/g, ' ');
-  const brand = ' | Free Crypto News';
+  const brand = ' | Crypto Vision News';
   const maxLength = includeBrand ? 60 - brand.length : 60;
   
   if (cleaned.length <= maxLength) {
