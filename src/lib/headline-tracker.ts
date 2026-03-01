@@ -65,6 +65,25 @@ interface TrackedArticle {
 
 // Store tracked articles by URL (use URL as unique identifier)
 const trackedHeadlines = new Map<string, TrackedArticle>();
+const MAX_TRACKED = 10_000;
+const MAX_AGE_MS = 7 * 24 * 60 * 60 * 1000; // 7 days
+
+/** Remove stale/excess entries to prevent unbounded growth */
+function cleanupTrackedHeadlines(): void {
+  if (trackedHeadlines.size <= MAX_TRACKED) return;
+  const now = Date.now();
+  for (const [url, article] of trackedHeadlines) {
+    if (now - new Date(article.lastChecked).getTime() > MAX_AGE_MS) {
+      trackedHeadlines.delete(url);
+    }
+  }
+  // Hard cap if still over limit
+  if (trackedHeadlines.size > MAX_TRACKED) {
+    const excess = trackedHeadlines.size - MAX_TRACKED;
+    const keys = [...trackedHeadlines.keys()].slice(0, excess);
+    keys.forEach(k => trackedHeadlines.delete(k));
+  }
+}
 
 // ═══════════════════════════════════════════════════════════════
 // HELPER FUNCTIONS
@@ -200,6 +219,7 @@ export function trackArticle(
   title: string,
   source: string
 ): { isNew: boolean; hasChanged: boolean; evolution?: HeadlineEvolution } {
+  cleanupTrackedHeadlines();
   const now = new Date().toISOString();
   const articleId = generateArticleId(url);
   

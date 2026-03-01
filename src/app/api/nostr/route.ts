@@ -52,6 +52,7 @@ interface NostrEvent {
 }
 
 // Session-local published events (persists within one serverless container lifetime)
+const MAX_EVENTS = 1000;
 const publishedEvents: NostrEvent[] = [];
 
 /**
@@ -176,6 +177,13 @@ export async function GET(request: NextRequest) {
 
 // POST - Publish news to Nostr
 export async function POST(request: NextRequest) {
+  // Publishing requires admin authentication
+  const token = request.headers.get('authorization')?.replace('Bearer ', '');
+  const expected = process.env.ADMIN_TOKEN || process.env.CRON_SECRET;
+  if (!expected || token !== expected) {
+    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+  }
+
   try {
     const body = await request.json();
     const { action, articles } = body;
@@ -212,6 +220,9 @@ export async function POST(request: NextRequest) {
         );
         events.push(event);
         publishedEvents.push(event);
+        if (publishedEvents.length > MAX_EVENTS) {
+          publishedEvents.splice(0, publishedEvents.length - MAX_EVENTS);
+        }
       }
 
       return NextResponse.json({
@@ -251,6 +262,9 @@ export async function POST(request: NextRequest) {
         keypair.privkey
       );
       publishedEvents.push(event);
+      if (publishedEvents.length > MAX_EVENTS) {
+        publishedEvents.splice(0, publishedEvents.length - MAX_EVENTS);
+      }
 
       // NIP-19 naddr: requires bech32 encoding of kind + pubkey + d-tag
       // Full encoding: use @scure/base + TLV. Providing hex ID for now.

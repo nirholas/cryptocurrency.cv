@@ -63,10 +63,9 @@ let archiveSession: ArchiveSession | null = null;
 function verifyCronAuth(request: NextRequest): boolean {
   const cronSecret = process.env.CRON_SECRET;
 
-  // ZERO-CONFIG MODE: If no secret configured, allow all requests
-  // This makes it easy to get started without any configuration
   if (!cronSecret) {
-    return true;
+    // In production, require CRON_SECRET to be set
+    return process.env.NODE_ENV !== 'production';
   }
 
   // Check Authorization header

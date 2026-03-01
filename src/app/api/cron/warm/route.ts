@@ -29,11 +29,17 @@ const WARM_ROUTES = [
 ];
 
 export async function GET(request: NextRequest) {
-  // Verify cron secret to prevent abuse (Vercel sets this automatically)
-  const authHeader = request.headers.get('authorization');
+  // Verify cron secret — deny in production when CRON_SECRET is unset
   const cronSecret = process.env.CRON_SECRET;
-  if (cronSecret && authHeader !== `Bearer ${cronSecret}`) {
-    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+  if (!cronSecret) {
+    if (process.env.NODE_ENV === 'production') {
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    }
+  } else {
+    const authHeader = request.headers.get('authorization');
+    if (authHeader !== `Bearer ${cronSecret}`) {
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    }
   }
 
   const start = Date.now();

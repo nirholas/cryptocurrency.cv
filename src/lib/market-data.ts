@@ -637,6 +637,7 @@ interface CacheEntry<T> {
 }
 
 const cache = new Map<string, CacheEntry<unknown>>();
+const MAX_CACHE_ENTRIES = 500;
 
 /**
  * Get cached data with stale-while-revalidate support
@@ -671,6 +672,18 @@ function setCache<T>(
   data: T,
   ttlSeconds: number = CACHE_TTL.prices,
 ): void {
+  // Evict oldest entry if at capacity
+  if (cache.size >= MAX_CACHE_ENTRIES) {
+    let oldest = Infinity;
+    let oldestKey = '';
+    for (const [k, v] of cache) {
+      if (v.timestamp < oldest) {
+        oldest = v.timestamp;
+        oldestKey = k;
+      }
+    }
+    if (oldestKey) cache.delete(oldestKey);
+  }
   cache.set(key, {
     data,
     timestamp: Date.now(),

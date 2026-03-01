@@ -227,9 +227,25 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
     let userId = validation.data.userId;
 
     if (apiKey?.startsWith('cda_')) {
-      // Valid API key format - consider authenticated
-      isAuthenticated = true;
-      userId = userId || `api_${apiKey.substring(0, 12)}`;
+      // Validate API key against KV store
+      const kvUrl = process.env.KV_REST_API_URL ?? process.env.UPSTASH_REDIS_REST_URL;
+      const kvToken = process.env.KV_REST_API_TOKEN ?? process.env.UPSTASH_REDIS_REST_TOKEN;
+      if (kvUrl && kvToken) {
+        try {
+          const { Redis } = await import('@upstash/redis');
+          const redis = new Redis({ url: kvUrl, token: kvToken });
+          const msgBuffer = new TextEncoder().encode(apiKey);
+          const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+          const hashHex = Array.from(new Uint8Array(hashBuffer)).map(b => b.toString(16).padStart(2, '0')).join('');
+          const keyData = await redis.get<{ active?: boolean }>(`apikey:${hashHex}`);
+          if (keyData?.active === true) {
+            isAuthenticated = true;
+            userId = userId || `api_${apiKey.substring(0, 12)}`;
+          }
+        } catch {
+          // KV lookup failed — fall through to anonymous rate limit
+        }
+      }
     }
 
     // Rate limiting

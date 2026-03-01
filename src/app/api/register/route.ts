@@ -5,6 +5,7 @@
  * GET /api/register - Get registration info
  *
  * Public endpoint - no payment required
+ * Rate limited per IP to prevent abuse
  */
 
 import { type NextRequest, NextResponse } from 'next/server';
@@ -12,16 +13,83 @@ import {
   createApiKey,
   getKeysByEmail,
   revokeApiKey,
+  validateApiKey,
   API_KEY_TIERS,
   isKvConfigured,
 } from '@/lib/api-keys';
 
 export const runtime = 'nodejs';
 
+// --- IP-based rate limiting for registration ---
+const registrationAttempts = new Map<string, { count: number; resetAt: number }>();
+const REG_RATE_LIMIT = 3; // max registrations per window
+const REG_WINDOW_MS = 3_600_000; // 1 hour
+let regRequestCounter = 0;
+
+function cleanupExpiredEntries() {
+  const now = Date.now();
+  for (const [ip, entry] of registrationAttempts) {
+    if (now > entry.resetAt) {
+      registrationAttempts.delete(ip);
+    }
+  }
+}
+
+function checkRegRateLimit(ip: string): boolean {
+  // Cleanup expired entries every 100 requests to prevent unbounded growth
+  regRequestCounter++;
+  if (regRequestCounter % 100 === 0) {
+    cleanupExpiredEntries();
+  }
+
+  const now = Date.now();
+  const entry = registrationAttempts.get(ip);
+  if (!entry || now > entry.resetAt) {
+    registrationAttempts.set(ip, { count: 1, resetAt: now + REG_WINDOW_MS });
+    return true;
+  }
+  if (entry.count >= REG_RATE_LIMIT) return false;
+  entry.count++;
+  return true;
+}
+
 // Simple email validation
 function isValidEmail(email: string): boolean {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return emailRegex.test(email);
+}
+
+/**
+ * Verify that a provided API key belongs to the given email.
+ * Used to authenticate list and revoke actions.
+ */
+async function verifyKeyOwnership(
+  request: NextRequest,
+  email: string
+): Promise<NextResponse | null> {
+  const authKey =
+    request.headers.get('x-api-key') || request.headers.get('authorization')?.replace('Bearer ', '');
+
+  if (!authKey) {
+    return NextResponse.json(
+      { error: 'Authentication required. Provide your API key via X-API-Key header.' },
+      { status: 401 }
+    );
+  }
+
+  const keyData = await validateApiKey(authKey);
+  if (!keyData) {
+    return NextResponse.json({ error: 'Invalid API key' }, { status: 401 });
+  }
+
+  if (keyData.email !== email) {
+    return NextResponse.json(
+      { error: 'API key does not belong to the provided email' },
+      { status: 403 }
+    );
+  }
+
+  return null; // ownership verified
 }
 
 /**
@@ -65,6 +133,7 @@ export async function GET() {
       'Maximum 3 keys per email',
       'Keep your API key secret',
       'Upgrade via /api/keys/upgrade with x402 USDC payment on Base',
+      'List and revoke actions require authentication via X-API-Key header',
     ],
 
     configured: isKvConfigured(),
@@ -75,15 +144,27 @@ export async function GET() {
  * POST /api/register - Create a new API key
  */
 export async function POST(request: NextRequest) {
+  // IP-based rate limiting (this route is exempt from middleware rate limiting)
+  const ip = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || 'unknown';
+  if (!checkRegRateLimit(ip)) {
+    return NextResponse.json(
+      { error: 'Too many registration attempts. Try again later.' },
+      { status: 429, headers: { 'Retry-After': '3600' } }
+    );
+  }
+
   try {
     const body = await request.json();
     const { email, name, action, keyId } = body;
 
-    // Handle key revocation
+    // Handle key revocation (requires key ownership proof)
     if (action === 'revoke' && keyId && email) {
       if (!isValidEmail(email)) {
         return NextResponse.json({ error: 'Invalid email address' }, { status: 400 });
       }
+
+      const authError = await verifyKeyOwnership(request, email);
+      if (authError) return authError;
 
       const success = await revokeApiKey(keyId, email);
       if (success) {
@@ -95,11 +176,14 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Handle key listing
+    // Handle key listing (requires key ownership proof)
     if (action === 'list' && email) {
       if (!isValidEmail(email)) {
         return NextResponse.json({ error: 'Invalid email address' }, { status: 400 });
       }
+
+      const authError = await verifyKeyOwnership(request, email);
+      if (authError) return authError;
 
       const keys = await getKeysByEmail(email);
       return NextResponse.json({

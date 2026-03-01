@@ -20,6 +20,16 @@ export const maxDuration = 60;
 export async function GET(request: NextRequest) {
   const params = request.nextUrl.searchParams;
   const action = params.get('action') || 'status';
+
+  // Read-only 'status' action is public; all mutations require admin auth
+  if (action !== 'status') {
+    const token = request.headers.get('authorization')?.replace('Bearer ', '');
+    const expected = process.env.ADMIN_TOKEN || process.env.CRON_SECRET;
+    if (!expected || token !== expected) {
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    }
+  }
+
   const monitor = getMarketMonitor();
 
   try {

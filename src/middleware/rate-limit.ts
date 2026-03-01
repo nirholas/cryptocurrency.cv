@@ -105,44 +105,43 @@ function getRedisCredentials() {
   return url && token ? { url, token } : null;
 }
 
-function createEphemeralRedis(limit: number, windowMs: number) {
-  const ephemeralStore = new Map();
-  return {
-    redis: {
-      sadd: async () => 1 as any,
-      eval: async () => [limit, Math.floor(Date.now() / 1000) + Math.floor(windowMs / 1000)] as any,
-      evalsha: async () => [limit, Math.floor(Date.now() / 1000) + Math.floor(windowMs / 1000)] as any,
-      scriptLoad: async () => '' as any,
-    } as unknown as InstanceType<typeof Redis>,
-    ephemeralCache: ephemeralStore,
-  };
+// In-memory rate limiting — used when Redis/Upstash is not configured
+function inMemoryRateCheck(
+  key: string,
+  maxRequests: number,
+  windowMs: number,
+): { allowed: boolean; remaining: number; resetAt: number } {
+  const now = Date.now();
+  pruneFallbackEntries(now);
+  const entry = inMemoryFallbackMap.get(key);
+  if (!entry || entry.resetAt <= now) {
+    inMemoryFallbackMap.set(key, { count: 1, resetAt: now + windowMs });
+    return { allowed: true, remaining: maxRequests - 1, resetAt: now + windowMs };
+  }
+  entry.count++;
+  if (entry.count > maxRequests) {
+    return { allowed: false, remaining: 0, resetAt: entry.resetAt };
+  }
+  return { allowed: true, remaining: maxRequests - entry.count, resetAt: entry.resetAt };
 }
 
-function getRateLimiter(tier: 'public' | 'api' = 'public'): Ratelimit {
+function getRateLimiter(tier: 'public' | 'api' = 'public'): Ratelimit | null {
+  const creds = getRedisCredentials();
+  if (!creds) return null; // Use in-memory path instead
+
   const existing = tier === 'api' ? _apiRateLimiter : _rateLimiter;
   if (existing) return existing;
 
   const limit = tier === 'api' ? API_CLIENT_RATE_LIMIT : PUBLIC_RATE_LIMIT;
   const prefix = tier === 'api' ? 'mw:rl:api' : 'mw:rl';
-  const creds = getRedisCredentials();
 
-  let limiter: Ratelimit;
-  if (creds) {
-    limiter = new Ratelimit({
-      redis: new Redis(creds),
-      limiter: Ratelimit.slidingWindow(limit.requests, `${limit.windowMs}ms`),
-      prefix,
-      analytics: true,
-      enableProtection: true,
-    });
-  } else {
-    const ephemeral = createEphemeralRedis(limit.requests, limit.windowMs);
-    limiter = new Ratelimit({
-      ...ephemeral,
-      limiter: Ratelimit.slidingWindow(limit.requests, `${limit.windowMs}ms`),
-      prefix,
-    });
-  }
+  const limiter = new Ratelimit({
+    redis: new Redis(creds),
+    limiter: Ratelimit.slidingWindow(limit.requests, `${limit.windowMs}ms`),
+    prefix,
+    analytics: true,
+    enableProtection: true,
+  });
 
   if (tier === 'api') _apiRateLimiter = limiter;
   else _rateLimiter = limiter;
@@ -154,25 +153,22 @@ export async function checkRateLimit(
   tier: 'public' | 'api' = 'public',
 ): Promise<{ allowed: boolean; remaining: number; resetAt: number; limit: number }> {
   const limit = tier === 'api' ? API_CLIENT_RATE_LIMIT : PUBLIC_RATE_LIMIT;
+  const limiter = getRateLimiter(tier);
+
+  // No Redis configured — use proper in-memory rate limiting
+  if (!limiter) {
+    const result = inMemoryRateCheck(key, limit.requests, limit.windowMs);
+    return { ...result, limit: limit.requests };
+  }
+
   try {
-    const limiter = getRateLimiter(tier);
     const { success, remaining, reset } = await limiter.limit(key);
     return { allowed: success, remaining, resetAt: reset, limit: limit.requests };
   } catch {
-    // Conservative in-memory fallback at 50% quota during Redis outages
+    // Redis error — conservative in-memory fallback at 50% quota
     const fallbackLimit = Math.max(1, Math.floor(limit.requests * 0.5));
-    const now = Date.now();
-    const windowKey = `fallback:${key}`;
-    const entry = inMemoryFallbackMap.get(windowKey);
-    if (!entry || entry.resetAt <= now) {
-      inMemoryFallbackMap.set(windowKey, { count: 1, resetAt: now + limit.windowMs });
-      return { allowed: true, remaining: fallbackLimit - 1, resetAt: now + limit.windowMs, limit: fallbackLimit };
-    }
-    entry.count++;
-    if (entry.count > fallbackLimit) {
-      return { allowed: false, remaining: 0, resetAt: entry.resetAt, limit: fallbackLimit };
-    }
-    return { allowed: true, remaining: fallbackLimit - entry.count, resetAt: entry.resetAt, limit: fallbackLimit };
+    const result = inMemoryRateCheck(`fallback:${key}`, fallbackLimit, limit.windowMs);
+    return { ...result, limit: fallbackLimit };
   }
 }
 
@@ -182,30 +178,21 @@ export async function checkRateLimit(
 
 const _tierLimiters = new Map<string, Ratelimit>();
 
-function getTierRateLimiter(tier: string, dailyLimit: number): Ratelimit {
+function getTierRateLimiter(tier: string, dailyLimit: number): Ratelimit | null {
+  const creds = getRedisCredentials();
+  if (!creds) return null; // Use in-memory path instead
+
   const cacheKey = `tier:${tier}:${dailyLimit}`;
   const existing = _tierLimiters.get(cacheKey);
   if (existing) return existing;
 
-  const creds = getRedisCredentials();
-
-  let limiter: Ratelimit;
-  if (creds) {
-    limiter = new Ratelimit({
-      redis: new Redis(creds),
-      limiter: Ratelimit.slidingWindow(dailyLimit, '1 d'),
-      prefix: `mw:tier:${tier}`,
-      analytics: true,
-      enableProtection: true,
-    });
-  } else {
-    const ephemeral = createEphemeralRedis(dailyLimit, 86400000);
-    limiter = new Ratelimit({
-      ...ephemeral,
-      limiter: Ratelimit.slidingWindow(dailyLimit, '1 d'),
-      prefix: `mw:tier:${tier}`,
-    });
-  }
+  const limiter = new Ratelimit({
+    redis: new Redis(creds),
+    limiter: Ratelimit.slidingWindow(dailyLimit, '1 d'),
+    prefix: `mw:tier:${tier}`,
+    analytics: true,
+    enableProtection: true,
+  });
 
   _tierLimiters.set(cacheKey, limiter);
   return limiter;
@@ -216,23 +203,19 @@ export async function checkTierRateLimit(
   dailyLimit: number,
 ): Promise<{ allowed: boolean; remaining: number; resetAt: number }> {
   const tierName = dailyLimit >= 500_000 ? 'enterprise' : dailyLimit >= 50_000 ? 'pro' : 'free';
+  const limiter = getTierRateLimiter(tierName, dailyLimit);
+
+  // No Redis configured — use proper in-memory rate limiting
+  if (!limiter) {
+    return inMemoryRateCheck(`tier:${keyId}`, dailyLimit, 86400000);
+  }
+
   try {
-    const limiter = getTierRateLimiter(tierName, dailyLimit);
     const { success, remaining, reset } = await limiter.limit(keyId);
     return { allowed: success, remaining, resetAt: reset };
   } catch {
+    // Redis error — conservative in-memory fallback at 50% quota
     const fallbackLimit = Math.max(1, Math.floor(dailyLimit * 0.5));
-    const now = Date.now();
-    const windowKey = `tier-fallback:${keyId}`;
-    const entry = inMemoryFallbackMap.get(windowKey);
-    if (!entry || entry.resetAt <= now) {
-      inMemoryFallbackMap.set(windowKey, { count: 1, resetAt: now + 86400000 });
-      return { allowed: true, remaining: fallbackLimit - 1, resetAt: now + 86400000 };
-    }
-    entry.count++;
-    if (entry.count > fallbackLimit) {
-      return { allowed: false, remaining: 0, resetAt: entry.resetAt };
-    }
-    return { allowed: true, remaining: fallbackLimit - entry.count, resetAt: entry.resetAt };
+    return inMemoryRateCheck(`tier-fallback:${keyId}`, fallbackLimit, 86400000);
   }
 }

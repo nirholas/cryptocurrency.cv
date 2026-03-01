@@ -8,6 +8,7 @@ import { type Locale, locales, defaultLocale, localeNames, rtlLocales } from '@/
 // Cache for translated content
 const translationCache = new Map<string, { translation: string; timestamp: number }>();
 const CACHE_TTL = 60 * 60 * 1000; // 1 hour
+const MAX_TRANSLATION_CACHE = 5000;
 
 // Generate cache key
 function getCacheKey(text: string, targetLocale: Locale): string {
@@ -33,6 +34,23 @@ export function getCachedTranslation(text: string, locale: Locale): string | nul
 
 // Cache a translation
 export function cacheTranslation(text: string, translation: string, locale: Locale): void {
+  // Evict expired entries when over capacity
+  if (translationCache.size > MAX_TRANSLATION_CACHE) {
+    const now = Date.now();
+    for (const [k, entry] of translationCache) {
+      if (now - entry.timestamp > CACHE_TTL) translationCache.delete(k);
+    }
+    // If still over limit, evict oldest entries with headroom
+    if (translationCache.size > MAX_TRANSLATION_CACHE) {
+      const toDelete = translationCache.size - MAX_TRANSLATION_CACHE + 500;
+      let deleted = 0;
+      for (const k of translationCache.keys()) {
+        if (deleted >= toDelete) break;
+        translationCache.delete(k);
+        deleted++;
+      }
+    }
+  }
   const key = getCacheKey(text, locale);
   translationCache.set(key, { translation, timestamp: Date.now() });
 }
