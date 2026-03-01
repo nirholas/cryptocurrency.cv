@@ -4,8 +4,9 @@ const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts');
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Enable standalone output for Docker deployment
-  output: 'standalone',
+  // Enable standalone output only for Docker builds; Vercel ignores it but it
+  // increases build time and conflicts with edge routes.
+  ...(process.env.DOCKER_BUILD === '1' ? { output: 'standalone' } : {}),
   // Compress responses
   compress: true,
   
@@ -30,7 +31,7 @@ const nextConfig = {
           },
           {
             key: 'X-Frame-Options',
-            value: 'DENY',
+            value: 'SAMEORIGIN', // Changed from DENY to allow PWA features
           },
           {
             key: 'Referrer-Policy',
@@ -57,7 +58,7 @@ const nextConfig = {
               "object-src 'none'",
               "base-uri 'self'",
               "form-action 'self'",
-              "frame-ancestors 'none'",
+              "frame-ancestors 'self'", // Changed from 'none' to match SAMEORIGIN
               "upgrade-insecure-requests",
             ].join('; '),
           },

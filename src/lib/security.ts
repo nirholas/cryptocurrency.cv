@@ -294,7 +294,7 @@ export function validateOrigin(
  */
 export const SECURITY_HEADERS = {
   'X-Content-Type-Options': 'nosniff',
-  'X-Frame-Options': 'DENY',
+  'X-Frame-Options': 'SAMEORIGIN', // Changed from DENY to allow PWA features
   'X-XSS-Protection': '0', // Disabled — CSP is the modern replacement; legacy XSS auditors can cause issues
   'Referrer-Policy': 'strict-origin-when-cross-origin',
   'Permissions-Policy': 'geolocation=(), microphone=(), camera=(), interest-cohort=()',
