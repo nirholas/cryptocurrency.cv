@@ -317,6 +317,12 @@ const NAV_ITEMS = [
       { label: "Screener", href: "/screener" },
       { label: "Gas Tracker", href: "/gas" },
       { label: "Token Unlocks", href: "/unlocks" },
+      { label: "Derivatives", href: "/derivatives" },
+      { label: "Stablecoins", href: "/stablecoins" },
+      { label: "L2 / Rollups", href: "/l2" },
+      { label: "Whales", href: "/whales" },
+      { label: "Macro", href: "/macro" },
+      { label: "Exchanges", href: "/exchanges" },
     ],
   },
   {
@@ -343,6 +349,9 @@ const NAV_ITEMS = [
       { label: "Compare", href: "/compare" },
       { label: "Gas Tracker", href: "/gas" },
       { label: "Sources", href: "/sources" },
+      { label: "Explore", href: "/explore" },
+      { label: "Sentiment", href: "/sentiment" },
+      { label: "Archive", href: "/archive" },
     ],
   },
   {

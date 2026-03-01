@@ -28,6 +28,11 @@ const FOOTER_SECTIONS = [
       { label: "Screener", href: "/screener" },
       { label: "Gas Tracker", href: "/gas" },
       { label: "Token Unlocks", href: "/unlocks" },
+      { label: "Derivatives", href: "/derivatives" },
+      { label: "Stablecoins", href: "/stablecoins" },
+      { label: "L2 / Rollups", href: "/l2" },
+      { label: "Whales", href: "/whales" },
+      { label: "Exchanges", href: "/exchanges" },
     ],
   },
   {
@@ -41,6 +46,9 @@ const FOOTER_SECTIONS = [
       { label: "Watchlist", href: "/watchlist" },
       { label: "Portfolio", href: "/portfolio" },
       { label: "Settings", href: "/settings" },
+      { label: "Explore", href: "/explore" },
+      { label: "Sentiment", href: "/sentiment" },
+      { label: "Archive", href: "/archive" },
     ],
   },
   {
@@ -52,6 +60,8 @@ const FOOTER_SECTIONS = [
       { label: "Privacy", href: "/privacy" },
       { label: "Terms", href: "/terms" },
       { label: "Learn", href: "/learn" },
+      { label: "Blog", href: "/blog" },
+      { label: "Status", href: "/status" },
     ],
   },
 ];
