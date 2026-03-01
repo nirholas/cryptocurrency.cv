@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { getLatestNews, getSources } from '@/lib/crypto-news';
+import { staleCache } from '@/lib/cache';
 
 export const runtime = 'edge';
 export const revalidate = 300; // 5 minutes
@@ -87,7 +88,7 @@ export async function GET() {
     // Active sources count
     const activeSources = sourcesData.sources.filter(s => s.status === 'active').length;
     
-    return NextResponse.json({
+    const responseData = {
       summary: {
         totalArticles: totalArticleCount,
         activeSources,
@@ -99,13 +100,32 @@ export async function GET() {
       byCategory,
       hourlyDistribution,
       fetchedAt: new Date().toISOString(),
-    }, {
+    };
+
+    // Persist into stale cache for fallback on future errors
+    staleCache.set('stats:default', responseData, 3600);
+
+    return NextResponse.json(responseData, {
       headers: {
         'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=600',
         'Access-Control-Allow-Origin': '*',
       },
     });
   } catch (error) {
+    // Stale-on-error: serve last-known-good data
+    const stale = staleCache.get<Record<string, unknown>>('stats:default');
+    if (stale) {
+      return NextResponse.json(
+        { ...stale, _stale: true },
+        {
+          headers: {
+            'Cache-Control': 'public, s-maxage=60, stale-while-revalidate=120',
+            'Access-Control-Allow-Origin': '*',
+          },
+        }
+      );
+    }
+
     return NextResponse.json(
       { error: 'Failed to get stats', message: String(error) },
       { status: 500 }

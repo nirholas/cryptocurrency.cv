@@ -1,6 +1,27 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "functions": {
+    "src/app/api/news/route.ts": {
+      "maxDuration": 60
+    },
+    "src/app/api/search/route.ts": {
+      "maxDuration": 25
+    },
+    "src/app/api/breaking/route.ts": {
+      "maxDuration": 25
+    },
+    "src/app/api/trending/route.ts": {
+      "maxDuration": 25
+    },
+    "src/app/api/clickbait/route.ts": {
+      "maxDuration": 25
+    },
+    "src/app/api/stats/route.ts": {
+      "maxDuration": 25
+    },
+    "src/app/api/sse/route.ts": {
+      "maxDuration": 60
+    },
     "src/app/api/social/x/sentiment/route.ts": {
       "maxDuration": 60
     }

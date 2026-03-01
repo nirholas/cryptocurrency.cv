@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { getLatestNews } from '@/lib/crypto-news';
 import { ApiError } from '@/lib/api-error';
 import { createRequestLogger } from '@/lib/logger';
+import { staleCache, generateCacheKey } from '@/lib/cache';
 
 export const runtime = 'edge';
 export const revalidate = 60; // 1 minute for fresher content
@@ -109,12 +110,19 @@ export async function GET(request: NextRequest) {
     
     logger.request(request.method, request.nextUrl.pathname, 200, Date.now() - startTime);
     
-    return NextResponse.json({
+    const responseData = {
       trending,
       timeWindow: `${hours}h`,
       articlesAnalyzed: recentArticles.length,
       fetchedAt: new Date().toISOString(),
-    }, {
+      _timing: { durationMs: Date.now() - startTime },
+    };
+
+    // Persist into stale cache for fallback on future errors
+    const staleCacheKey = generateCacheKey('trending', { limit, hours });
+    staleCache.set(staleCacheKey, responseData, 3600);
+
+    return NextResponse.json(responseData, {
       headers: {
         'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=600',
         'Access-Control-Allow-Origin': '*',
@@ -122,6 +130,23 @@ export async function GET(request: NextRequest) {
     });
   } catch (error) {
     logger.error('Failed to get trending topics', error);
+
+    // Stale-on-error: serve last-known-good data
+    const staleCacheKey = generateCacheKey('trending', { limit, hours });
+    const stale = staleCache.get<Record<string, unknown>>(staleCacheKey);
+    if (stale) {
+      logger.info('Serving stale trending data after upstream failure');
+      return NextResponse.json(
+        { ...stale, _stale: true },
+        {
+          headers: {
+            'Cache-Control': 'public, s-maxage=60, stale-while-revalidate=120',
+            'Access-Control-Allow-Origin': '*',
+          },
+        }
+      );
+    }
+
     return ApiError.internal('Failed to get trending topics', error);
   }
 }

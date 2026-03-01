@@ -1186,6 +1186,7 @@ const RSS_SOURCES = {
     name: 'Ocean Protocol Blog',
     url: 'https://blog.oceanprotocol.com/feed',
     category: 'altl1',
+    disabled: true, // Feed returning persistent 500s — 2026-03-01
   },
   render_blog: {
     name: 'Render Network Blog',
@@ -1258,6 +1259,7 @@ const RSS_SOURCES = {
     name: 'Unchained Podcast',
     url: 'https://feeds.simplecast.com/JGE3yC0V',
     category: 'journalism',
+    noDataCache: true, // 11.9MB feed exceeds Next.js 2MB data cache limit
   },
   what_bitcoin_did: {
     name: 'What Bitcoin Did',
@@ -1514,6 +1516,7 @@ interface ApiSource {
   name: string;
   url: string;
   category: string;
+  noDataCache?: boolean;
   parser: (data: unknown) => NewsArticle[];
 }
 
@@ -1928,6 +1931,7 @@ const API_SOURCES: Record<string, ApiSource> = {
     name: 'DeFiLlama Raises',
     url: 'https://api.llama.fi/raises',
     category: 'institutional',
+    noDataCache: true, // 3.78MB response exceeds Next.js 2MB data cache limit
     parser: (data: unknown) => {
       const response = data as { raises?: Array<{
         name: string;
@@ -2119,15 +2123,20 @@ async function fetchApiSource(sourceKey: string): Promise<NewsArticle[]> {
     
     try {
       const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), 8000);
+      const timeoutId = setTimeout(() => controller.abort(), 4000); // 4s timeout (reduced from 8s for faster cold starts)
       
+      // Sources with noDataCache skip the Next.js data cache (responses > 2MB)
+      // and rely solely on the in-memory withCache layer (5-min TTL).
       const response = await fetch(source.url, {
         headers: {
           'Accept': 'application/json',
           'User-Agent': 'FreeCryptoNews/1.0',
         },
         signal: controller.signal,
-        next: { revalidate: 300 },
+        ...(source.noDataCache
+          ? { cache: 'no-store' as RequestCache }
+          : { next: { revalidate: 300 } }
+        ),
       });
       
       clearTimeout(timeoutId);
@@ -2176,18 +2185,23 @@ async function fetchFeed(sourceKey: SourceKey): Promise<NewsArticle[]> {
     
     try {
       const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), 5000); // 5s timeout
+      const timeoutId = setTimeout(() => controller.abort(), 3000); // 3s timeout (reduced from 5s for faster cold starts)
       
       // force-cache ensures origin server Cache-Control headers (e.g. no-store)
-      // don't break static generation; revalidate: 300 adds ISR on top
+      // don't break static generation; revalidate: 300 adds ISR on top.
+      // Sources with noDataCache skip the Next.js data cache (responses > 2MB)
+      // and rely solely on the in-memory withCache layer (5-min TTL).
+      const skipDataCache = 'noDataCache' in source && source.noDataCache;
       const fetchOptions: RequestInit & { next?: { revalidate: number } } = {
         headers: {
           'Accept': 'application/rss+xml, application/xml, text/xml',
           'User-Agent': 'FreeCryptoNews/1.0 (github.com/nirholas/free-crypto-news)',
         },
         signal: controller.signal,
-        cache: 'force-cache' as RequestCache,
-        next: { revalidate: 300 }, // 5 min ISR
+        ...(skipDataCache
+          ? { cache: 'no-store' as RequestCache }
+          : { cache: 'force-cache' as RequestCache, next: { revalidate: 300 } }
+        ),
       };
       const response = await fetch(source.url, fetchOptions);
       
@@ -2286,36 +2300,63 @@ async function fetchWithConcurrency<T>(
 }
 
 /**
- * Fetch from multiple sources in parallel with concurrency limit
- * Now includes both RSS feeds and API sources for better reliability
+ * Fetch from multiple sources in parallel with concurrency limit.
+ * Now includes both RSS feeds and API sources for better reliability.
+ *
+ * Aggregate-level caching: the combined result is cached for 90 seconds
+ * so that all API routes (/news, /breaking, /trending, /stats, /clickbait,
+ * /search) that hit the same source set share one fetch cycle instead of
+ * each triggering 160+ individual RSS requests on every call.
  */
 async function fetchMultipleSources(sourceKeys: SourceKey[], includeApiSources: boolean = true): Promise<NewsArticle[]> {
-  // Fetch RSS and optionally API sources in parallel
-  const [rssArticles, apiArticles] = await Promise.all([
-    // RSS feeds with concurrency limit
-    fetchWithConcurrency(sourceKeys, fetchFeed, 15),
-    // Only fetch API sources if not filtering by specific RSS source
-    includeApiSources ? fetchAllApiSources() : Promise.resolve([]),
-  ]);
-  
-  // Combine and deduplicate by title similarity
-  const allArticles = [...rssArticles, ...apiArticles];
-  const seen = new Set<string>();
-  const deduped = allArticles.filter(article => {
-    // Normalize title for dedup
-    const normalized = article.title.toLowerCase().replace(/[^a-z0-9]/g, '').slice(0, 50);
-    if (seen.has(normalized)) return false;
-    seen.add(normalized);
-    return true;
-  });
-  
-  const now = Date.now();
-  return deduped
-    // Exclude future-dated articles (scheduled events, upcoming webinars, etc.)
-    .filter(a => new Date(a.pubDate).getTime() <= now)
-    .sort((a, b) => 
-      new Date(b.pubDate).getTime() - new Date(a.pubDate).getTime()
+  // Build a stable aggregate cache key from the source set
+  const isAllSources = sourceKeys.length === Object.keys(RSS_SOURCES).length;
+  const aggregateKey = `aggregate:${isAllSources ? 'all' : sourceKeys.slice().sort().join(',')}:api=${includeApiSources}`;
+
+  return withCache(newsCache, aggregateKey, 90, async () => {
+    // Overall timeout guard: return whatever results are available within 20s
+    // to stay under Vercel's function timeout (25s default, 60s Pro)
+    const AGGREGATION_TIMEOUT_MS = 20_000;
+
+    const aggregationPromise = (async () => {
+      // Fetch RSS and optionally API sources in parallel
+      const [rssArticles, apiArticles] = await Promise.all([
+        // RSS feeds with concurrency limit to reduce cold-start latency
+        fetchWithConcurrency(sourceKeys, fetchFeed, 20),
+        // Only fetch API sources if not filtering by specific RSS source
+        includeApiSources ? fetchAllApiSources() : Promise.resolve([]),
+      ]);
+      return [...rssArticles, ...apiArticles];
+    })();
+
+    // Race against a timeout — on timeout, return empty and let cache fill next time
+    const timeoutPromise = new Promise<NewsArticle[]>((resolve) =>
+      setTimeout(() => {
+        console.warn(`[fetchMultipleSources] Aggregation exceeded ${AGGREGATION_TIMEOUT_MS}ms — returning partial results`);
+        resolve([]);
+      }, AGGREGATION_TIMEOUT_MS)
     );
+
+    const allArticles = await Promise.race([aggregationPromise, timeoutPromise]);
+
+    // Deduplicate by title similarity
+    const seen = new Set<string>();
+    const deduped = allArticles.filter(article => {
+      // Normalize title for dedup
+      const normalized = article.title.toLowerCase().replace(/[^a-z0-9]/g, '').slice(0, 50);
+      if (seen.has(normalized)) return false;
+      seen.add(normalized);
+      return true;
+    });
+
+    const now = Date.now();
+    return deduped
+      // Exclude future-dated articles (scheduled events, upcoming webinars, etc.)
+      .filter(a => new Date(a.pubDate).getTime() <= now)
+      .sort((a, b) =>
+        new Date(b.pubDate).getTime() - new Date(a.pubDate).getTime()
+      );
+  });
 }
 
 // ═══════════════════════════════════════════════════════════════

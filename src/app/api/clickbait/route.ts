@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { getLatestNews } from '@/lib/crypto-news';
 import { promptGroqJson, isGroqConfigured } from '@/lib/groq';
 import { groqNotConfiguredResponse } from '@/app/api/_utils';
+import { staleCache, generateCacheKey } from '@/lib/cache';
 
 export const runtime = 'edge';
 export const revalidate = 300;
@@ -86,8 +87,7 @@ ${JSON.stringify(headlines, null, 2)}`;
     const highClickbait = analysis.filter(a => a.clickbaitScore >= 70).length;
     const lowClickbait = analysis.filter(a => a.clickbaitScore <= 30).length;
 
-    return NextResponse.json(
-      {
+    const responseData = {
         analysis,
         stats: {
           total: analysis.length,
@@ -99,8 +99,13 @@ ${JSON.stringify(headlines, null, 2)}`;
             : 100,
         },
         analyzedAt: new Date().toISOString(),
-      },
-      {
+      };
+
+    // Persist into stale cache for fallback on future errors
+    const staleCacheKey = generateCacheKey('clickbait', { limit, threshold });
+    staleCache.set(staleCacheKey, responseData, 3600);
+
+    return NextResponse.json(responseData, {
         headers: {
           'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=600',
           'Access-Control-Allow-Origin': '*',
@@ -109,6 +114,22 @@ ${JSON.stringify(headlines, null, 2)}`;
     );
   } catch (error) {
     console.error('Clickbait analysis error:', error);
+
+    // Stale-on-error: serve last-known-good data
+    const staleCacheKey = generateCacheKey('clickbait', { limit, threshold });
+    const stale = staleCache.get<Record<string, unknown>>(staleCacheKey);
+    if (stale) {
+      return NextResponse.json(
+        { ...stale, _stale: true },
+        {
+          headers: {
+            'Cache-Control': 'public, s-maxage=60, stale-while-revalidate=120',
+            'Access-Control-Allow-Origin': '*',
+          },
+        }
+      );
+    }
+
     return NextResponse.json(
       { error: 'Failed to analyze headlines', details: String(error) },
       { status: 500 }
