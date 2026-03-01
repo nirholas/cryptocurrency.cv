@@ -1,241 +1,126 @@
-/**
- * @copyright 2024-2026 nirholas. All rights reserved.
- * @license SPDX-License-Identifier: SEE LICENSE IN LICENSE
- * @see https://github.com/nirholas/free-crypto-news
- *
- * This file is part of free-crypto-news.
- * Unauthorized copying, modification, or distribution is strictly prohibited.
- * For licensing inquiries: nirholas@users.noreply.github.com
- */
-
-import { getTranslations, setRequestLocale } from 'next-intl/server';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
-import { Link } from '@/i18n/navigation';
-import type { Metadata } from 'next';
-import { generateSEOMetadata } from '@/lib/seo';
-
-export function generateMetadata(): Metadata {
-  return generateSEOMetadata({
-    title: 'About Free Crypto News',
-    description: 'Free crypto news API aggregating real-time headlines from 300+ trusted sources. No API key required. Open source and community-driven.',
-    path: '/about',
-    tags: ['about', 'crypto news API', 'free API', 'cryptocurrency news aggregator', 'open source'],
-  });
-}
-
-// Featured sources - highlighting key sources from 300+ total
-const sources = [
-  { name: 'CoinDesk', url: 'https://coindesk.com', description: 'Leading crypto news and analysis', category: 'Crypto-Native' },
-  { name: 'The Block', url: 'https://theblock.co', description: 'Institutional-grade crypto research', category: 'Crypto-Native' },
-  { name: 'Bloomberg', url: 'https://bloomberg.com', description: 'Global financial news leader', category: 'Mainstream' },
-  { name: 'Reuters', url: 'https://reuters.com', description: 'International news agency', category: 'Mainstream' },
-  { name: 'CoinTelegraph', url: 'https://cointelegraph.com', description: 'Independent crypto media', category: 'Crypto-Native' },
-  { name: 'Decrypt', url: 'https://decrypt.co', description: 'Web3 and crypto news for everyone', category: 'Crypto-Native' },
-  { name: 'Bitcoin Magazine', url: 'https://bitcoinmagazine.com', description: 'Original Bitcoin publication', category: 'Bitcoin' },
-  { name: 'Blockworks', url: 'https://blockworks.co', description: 'Financial news meets crypto', category: 'Crypto-Native' },
-  { name: 'The Defiant', url: 'https://thedefiant.io', description: 'DeFi-focused news and analysis', category: 'DeFi' },
-  { name: 'TechCrunch', url: 'https://techcrunch.com', description: 'Tech news with crypto coverage', category: 'Mainstream' },
-  { name: 'CNBC', url: 'https://cnbc.com', description: 'Business and financial news', category: 'Mainstream' },
-  { name: 'Forbes', url: 'https://forbes.com', description: 'Business news and insights', category: 'Mainstream' },
-  { name: 'Messari', url: 'https://messari.io', description: 'Crypto research and data', category: 'Research' },
-  { name: 'Nansen', url: 'https://nansen.ai', description: 'On-chain analytics platform', category: 'Research' },
-  { name: 'Coin Center', url: 'https://coincenter.org', description: 'Crypto policy and regulation', category: 'Policy' },
-];
-
-const sourceCategories = [
-  { name: 'Crypto-Native', count: 44, description: 'CoinDesk, The Block, Decrypt, WatcherGuru, and more' },
-  { name: 'Mainstream', count: 26, description: 'Bloomberg, Reuters, CNBC, Guardian, Fortune, Axios, BBC' },
-  { name: 'DeFi', count: 31, description: 'The Defiant, dYdX, GMX, Jupiter, Balancer, and protocol feeds' },
-  { name: 'Research', count: 18, description: 'Messari, Delphi Digital, Nansen, Dune, Artemis, Santiment' },
-  { name: 'Layer 2', count: 11, description: 'Optimism, Arbitrum, Base, zkSync, Scroll, Polygon zkEVM' },
-  { name: 'Bitcoin', count: 11, description: 'Bitcoin Magazine, Stacker News, Lightning Labs, Optech' },
-  { name: 'Solana', count: 13, description: 'Helius, Phantom, Jupiter, Marinade, Jito, Metaplex, Squads' },
-  { name: 'Exchanges', count: 25, description: 'Binance, Coinbase, Kraken, CoinMarketCap, CoinGecko' },
-  { name: 'Geopolitical', count: 15, description: 'SEC, Fed, BIS, IMF, ECB, Coin Center, Atlantic Council' },
-  { name: 'Security', count: 13, description: 'SlowMist, CertiK, OpenZeppelin, samczsun, Immunefi' },
-  { name: 'More', count: 100, description: 'VCs, ETFs, NFTs, gaming, social, derivatives, RWA, mining, macro' },
-];
-
-const features = [
-  { icon: '🆓', title: 'Completely Free', description: 'No API keys, no rate limits, no hidden costs' },
-  { icon: '⚡', title: 'Real-time Updates', description: 'News aggregated every 5 minutes from all sources' },
-  { icon: '🔍', title: 'Smart Search', description: 'Search across all sources with keyword matching' },
-  { icon: '📊', title: 'Market Data', description: 'Live prices, fear & greed index, and market stats' },
-  { icon: '🤖', title: 'AI Summaries', description: 'Get AI-powered article summaries and analysis' },
-  { icon: '🔧', title: 'Developer Friendly', description: 'REST API, RSS feeds, and SDK libraries' },
-];
+import { setRequestLocale } from "next-intl/server";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import { Link } from "@/i18n/navigation";
+import { generateSEOMetadata } from "@/lib/seo";
+import type { Metadata } from "next";
 
 type Props = {
   params: Promise<{ locale: string }>;
 };
 
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  return generateSEOMetadata({
+    title: "About Free Crypto News",
+    description:
+      "Free crypto news API aggregating real-time headlines from 300+ trusted sources. No API key required. Open source and community-driven.",
+    path: "/about",
+    locale,
+    tags: ["about", "crypto news API", "free API", "cryptocurrency news aggregator", "open source"],
+  });
+}
+
+const features = [
+  { icon: "🆓", title: "Completely Free", description: "No API keys, no rate limits, no hidden costs." },
+  { icon: "⚡", title: "Real-time Updates", description: "News aggregated every 5 minutes from 300+ sources." },
+  { icon: "🔍", title: "Smart Search", description: "Search across all sources with keyword matching." },
+  { icon: "📊", title: "Market Context", description: "Live prices, fear & greed index, and market stats." },
+  { icon: "🤖", title: "AI/LLM Ready", description: "ChatGPT plugin, Claude MCP server, and structured JSON." },
+  { icon: "🔧", title: "Developer Friendly", description: "REST API, RSS feeds, SDKs for Python, TS, Go, PHP." },
+];
+
 export default async function AboutPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
-  const t = await getTranslations('nav');
 
   return (
-    <div className="min-h-screen bg-white dark:bg-black">
-      <div className="max-w-7xl mx-auto">
-        <Header />
+    <>
+      <Header />
+      <main className="container-main py-10">
+        {/* Hero */}
+        <section className="text-center mb-14">
+          <h1 className="font-serif text-4xl md:text-5xl font-bold mb-4 text-[var(--color-text-primary)]">
+            About Free Crypto News
+          </h1>
+          <p className="text-lg text-[var(--color-text-secondary)] max-w-3xl mx-auto">
+            The only 100% free crypto news aggregator API. No API keys required.
+            No rate limits. Real-time crypto news from 300+ sources — open source
+            and community-driven.
+          </p>
+        </section>
 
-        <main className="px-4 py-12">
-          {/* Hero */}
-          <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold mb-4 text-gray-900 dark:text-white">About Free Crypto News</h1>
-            <p className="text-xl text-gray-600 dark:text-slate-400 max-w-3xl mx-auto">
-              The only 100% free crypto news aggregator API. No API keys required.
-              No rate limits. Just pure, real-time crypto news from 300+ sources.
-            </p>
-          </div>
+        {/* Mission */}
+        <section className="mb-14 max-w-3xl mx-auto">
+          <h2 className="font-serif text-2xl font-bold mb-4 text-[var(--color-text-primary)]">
+            Our Mission
+          </h2>
+          <p className="text-[var(--color-text-secondary)] mb-4">
+            Free Crypto News (FCN) exists to democratize access to cryptocurrency
+            information. We believe everyone — developers, researchers, traders,
+            and enthusiasts — deserves free, instant access to aggregated crypto
+            news without barriers.
+          </p>
+          <p className="text-[var(--color-text-secondary)]">
+            We aggregate headlines from 300+ trusted sources including CoinDesk,
+            The Block, Bloomberg, Reuters, CoinTelegraph, Decrypt, and many more,
+            covering Bitcoin, Ethereum, DeFi, Solana, altcoins, regulation,
+            security, and every corner of the crypto ecosystem.
+          </p>
+        </section>
 
-          {/* Features Grid */}
-          <div className="mb-16">
-            <h2 className="text-2xl font-bold text-center mb-8 text-gray-900 dark:text-white">Why Free Crypto News?</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {features.map((feature) => (
-                <div key={feature.title} className="p-6 rounded-xl border border-gray-200 dark:border-neutral-800 bg-white dark:bg-black hover:shadow-lg transition">
-                  <div className="text-4xl mb-3">{feature.icon}</div>
-                  <h3 className="font-bold text-lg mb-2 text-gray-900 dark:text-white">{feature.title}</h3>
-                  <p className="text-gray-600 dark:text-slate-400">{feature.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Sources */}
-          <div className="mb-16">
-            <h2 className="text-2xl font-bold text-center mb-4 text-gray-900 dark:text-white">300+ Sources</h2>
-            <p className="text-center text-gray-600 dark:text-slate-400 mb-8">
-              News aggregated from across the crypto ecosystem
-            </p>
-            
-            {/* Category Overview */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
-              {sourceCategories.map((cat) => (
-                <div key={cat.name} className="p-4 rounded-lg bg-gray-100 dark:bg-black text-center">
-                  <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">{cat.count}+</div>
-                  <div className="text-sm font-medium text-gray-900 dark:text-white">{cat.name}</div>
-                  <div className="text-xs text-gray-500 dark:text-slate-500 mt-1">{cat.description}</div>
-                </div>
-              ))}
-            </div>
-
-            {/* Featured Sources */}
-            <h3 className="text-lg font-semibold text-center mb-4 text-gray-700 dark:text-slate-300">Featured Sources</h3>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {sources.map((source) => (
-                <a
-                  key={source.name}
-                  href={source.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-5 rounded-xl border border-gray-200 dark:border-neutral-800 bg-white dark:bg-black hover:border-gray-300 dark:hover:border-slate-600 hover:shadow-md transition group"
-                >
-                  <div className="flex justify-between items-start">
-                    <h3 className="font-bold text-lg mb-1 group-hover:text-blue-600 dark:group-hover:text-blue-400 text-gray-900 dark:text-white">{source.name}</h3>
-                    <span className="text-xs px-2 py-1 rounded bg-gray-100 dark:bg-black text-gray-500 dark:text-slate-400">{source.category}</span>
-                  </div>
-                  <p className="text-gray-600 dark:text-slate-400 text-sm">{source.description}</p>
-                </a>
-              ))}
-            </div>
-          </div>
-
-          {/* API Section */}
-          <div className="mb-16 bg-gray-900 rounded-2xl p-8 text-white">
-            <div className="max-w-3xl mx-auto">
-              <h2 className="text-2xl font-bold mb-4">🚀 Quick Start</h2>
-              <p className="text-gray-300 mb-6">
-                Start fetching crypto news in seconds. No signup required.
-              </p>
-
-              <div className="space-y-4">
-                <div>
-                  <p className="text-gray-400 text-sm mb-2">Get latest news:</p>
-                  <code className="block bg-gray-800 p-3 rounded-lg text-green-400 text-sm overflow-x-auto">
-                    curl https://cryptocurrency.cv/api/news?limit=10
-                  </code>
-                </div>
-
-                <div>
-                  <p className="text-gray-400 text-sm mb-2">Search news:</p>
-                  <code className="block bg-gray-800 p-3 rounded-lg text-green-400 text-sm overflow-x-auto">
-                    curl https://cryptocurrency.cv/api/search?q=bitcoin
-                  </code>
-                </div>
-
-                <div>
-                  <p className="text-gray-400 text-sm mb-2">Get Bitcoin news:</p>
-                  <code className="block bg-gray-800 p-3 rounded-lg text-green-400 text-sm overflow-x-auto">
-                    curl https://cryptocurrency.cv/api/bitcoin?limit=5
-                  </code>
-                </div>
-              </div>
-
-              <div className="mt-6 flex gap-4">
-                <Link href="/examples" className="px-6 py-3 bg-white text-black rounded-full font-medium hover:bg-gray-100 transition">
-                  View All Examples →
-                </Link>
-                <a
-                  href="https://github.com/nirholas/free-crypto-news"
-                  className="px-6 py-3 border border-gray-600 rounded-full font-medium hover:border-white transition"
-                >
-                  GitHub Docs
-                </a>
-              </div>
-            </div>
-          </div>
-
-          {/* Endpoints */}
-          <div className="mb-16">
-            <h2 className="text-2xl font-bold text-center mb-8 text-gray-900 dark:text-white">API Endpoints</h2>
-            <div className="max-w-3xl mx-auto overflow-x-auto">
-              <table className="w-full text-left">
-                <thead className="bg-gray-100 dark:bg-black">
-                  <tr>
-                    <th className="px-4 py-3 font-semibold text-gray-900 dark:text-white">Endpoint</th>
-                    <th className="px-4 py-3 font-semibold text-gray-900 dark:text-white">Description</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-gray-200 dark:divide-neutral-800">
-                  <tr className="dark:bg-black/50"><td className="px-4 py-3 font-mono text-sm text-gray-900 dark:text-white">/api/news</td><td className="px-4 py-3 text-gray-700 dark:text-slate-300">Latest news from all sources</td></tr>
-                  <tr className="dark:bg-black/50"><td className="px-4 py-3 font-mono text-sm text-gray-900 dark:text-white">/api/search?q=</td><td className="px-4 py-3 text-gray-700 dark:text-slate-300">Search news by keywords</td></tr>
-                  <tr className="dark:bg-black/50"><td className="px-4 py-3 font-mono text-sm text-gray-900 dark:text-white">/api/bitcoin</td><td className="px-4 py-3 text-gray-700 dark:text-slate-300">Bitcoin-specific news</td></tr>
-                  <tr className="dark:bg-black/50"><td className="px-4 py-3 font-mono text-sm text-gray-900 dark:text-white">/api/defi</td><td className="px-4 py-3 text-gray-700 dark:text-slate-300">DeFi news and updates</td></tr>
-                  <tr className="dark:bg-black/50"><td className="px-4 py-3 font-mono text-sm text-gray-900 dark:text-white">/api/breaking</td><td className="px-4 py-3 text-gray-700 dark:text-slate-300">Breaking news (last 2 hours)</td></tr>
-                  <tr className="dark:bg-black/50"><td className="px-4 py-3 font-mono text-sm text-gray-900 dark:text-white">/api/trending</td><td className="px-4 py-3 text-gray-700 dark:text-slate-300">Trending topics analysis</td></tr>
-                  <tr className="dark:bg-black/50"><td className="px-4 py-3 font-mono text-sm text-gray-900 dark:text-white">/api/sources</td><td className="px-4 py-3 text-gray-700 dark:text-slate-300">List of news sources</td></tr>
-                  <tr className="dark:bg-black/50"><td className="px-4 py-3 font-mono text-sm text-gray-900 dark:text-white">/api/rss</td><td className="px-4 py-3 text-gray-700 dark:text-slate-300">RSS feed output</td></tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-
-          {/* CTA */}
-          <div className="text-center">
-            <h2 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Ready to Get Started?</h2>
-            <p className="text-gray-600 dark:text-slate-400 mb-6">Deploy your own instance or use our free public API</p>
-            <div className="flex justify-center gap-4 flex-wrap">
-              <a
-                href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fnirholas%2Ffree-crypto-news"
-                className="px-6 py-3 bg-black dark:bg-white text-white dark:text-black rounded-full font-medium hover:bg-gray-800 dark:hover:bg-neutral-900 transition"
+        {/* Features grid */}
+        <section className="mb-14">
+          <h2 className="font-serif text-2xl font-bold text-center mb-8 text-[var(--color-text-primary)]">
+            Why Free Crypto News?
+          </h2>
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {features.map((f) => (
+              <div
+                key={f.title}
+                className="rounded-lg border border-[var(--color-border)] bg-[var(--color-surface-secondary)] p-6 hover:shadow-md transition"
               >
-                ▲ Deploy on Vercel
-              </a>
-              <a
-                href="https://github.com/nirholas/free-crypto-news"
-                className="px-6 py-3 border border-black dark:border-white text-gray-900 dark:text-white rounded-full font-medium hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition"
-              >
-                ⭐ Star on GitHub
-              </a>
-            </div>
+                <div className="text-3xl mb-3">{f.icon}</div>
+                <h3 className="font-bold text-lg mb-1 text-[var(--color-text-primary)]">
+                  {f.title}
+                </h3>
+                <p className="text-sm text-[var(--color-text-secondary)]">
+                  {f.description}
+                </p>
+              </div>
+            ))}
           </div>
-        </main>
+        </section>
 
-        <Footer />
-      </div>
-    </div>
+        {/* Open source */}
+        <section className="mb-14 max-w-3xl mx-auto">
+          <h2 className="font-serif text-2xl font-bold mb-4 text-[var(--color-text-primary)]">
+            Open Source
+          </h2>
+          <p className="text-[var(--color-text-secondary)] mb-4">
+            FCN is open source — inspect the code, self-host your own instance,
+            or contribute new features. We welcome pull requests, translations,
+            and community feedback.
+          </p>
+          <div className="flex gap-4 flex-wrap">
+            <a
+              href="https://github.com/nirholas/free-crypto-news"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-lg border border-[var(--color-border)] px-5 py-2.5 text-sm font-medium text-[var(--color-text-primary)] hover:bg-[var(--color-surface-tertiary)] transition"
+            >
+              ⭐ Star on GitHub
+            </a>
+            <Link
+              href="/developers"
+              className="inline-flex items-center gap-2 rounded-lg bg-[var(--color-accent)] px-5 py-2.5 text-sm font-medium text-white hover:opacity-90 transition-opacity"
+            >
+              API Docs →
+            </Link>
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </>
   );
 }
