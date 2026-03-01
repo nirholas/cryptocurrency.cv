@@ -1,11 +1,12 @@
-import { type Metadata } from 'next';
+import { generateSEOMetadata } from '@/lib/seo';
 import AdminDashboard from './AdminDashboard';
 
-export const metadata: Metadata = {
-  title: 'Admin Dashboard | Crypto News',
-  description: 'Admin dashboard for monitoring API usage and system health',
-  robots: 'noindex, nofollow',
-};
+export const metadata = generateSEOMetadata({
+  title: 'Admin Dashboard',
+  description: 'Admin dashboard for monitoring API usage and system health.',
+  path: '/admin',
+  noindex: true,
+});
 
 export default function AdminPage() {
   return <AdminDashboard />;

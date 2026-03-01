@@ -430,7 +430,20 @@ export async function analyzeWallet(request: NextRequest): Promise<NextResponse>
         chain,
         label: knownLabel,
         isExchange,
-        isContract: false, // Would need separate API call to check
+        isContract: await (async () => {
+          // Check if address is a contract by fetching code size via Etherscan
+          try {
+            const codeRes = await fetch(
+              `https://api.etherscan.io/api?module=proxy&action=eth_getCode&address=${address}&tag=latest${etherscanKey ? `&apikey=${etherscanKey}` : ''}`
+            );
+            if (codeRes.ok) {
+              const codeData = await codeRes.json();
+              // '0x' means EOA (no code), anything longer is a contract
+              return codeData?.result && codeData.result !== '0x' && codeData.result.length > 2;
+            }
+          } catch { /* code check failed */ }
+          return false;
+        })(),
 
         balance: {
           total_usd: balanceUsd,

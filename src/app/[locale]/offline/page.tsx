@@ -1,15 +1,13 @@
 import Link from 'next/link';
-import type { Metadata } from 'next';
 import RefreshButton from '@/components/RefreshButton';
+import { generateSEOMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata = generateSEOMetadata({
   title: 'Offline',
   description: 'You are currently offline. Please check your internet connection.',
-  robots: {
-    index: false,
-    follow: false,
-  },
-};
+  path: '/offline',
+  noindex: true,
+});
 
 export default function OfflinePage() {
   return (

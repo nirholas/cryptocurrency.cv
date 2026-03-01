@@ -567,7 +567,7 @@ const RSS_SOURCES = {
   ft_crypto: {
     name: 'Financial Times Crypto',
     url: 'https://www.ft.com/cryptocurrencies?format=rss',
-    category: 'mainstream'
+    category: 'mainstream',
     disabled: true, // Perf: FT paywall blocks RSS; non-crypto-specific feed
   },
   
@@ -777,19 +777,19 @@ const RSS_SOURCES = {
   finextra: {
     name: 'Finextra',
     url: 'https://www.finextra.com/rss/headlines.aspx',
-    category: 'fintech'
+    category: 'fintech',
     disabled: true, // Perf: Banking/fintech news, not crypto-specific
   },
   pymnts_crypto: {
     name: 'PYMNTS Crypto',
     url: 'https://www.pymnts.com/cryptocurrency/feed/',
-    category: 'fintech'
+    category: 'fintech',
     disabled: true, // Perf: Payments news, not crypto-specific
   },
   fintech_futures: {
     name: 'Fintech Futures',
     url: 'https://www.fintechfutures.com/feed/',
-    category: 'fintech'
+    category: 'fintech',
     disabled: true, // Perf: Fintech news, not crypto-specific
   },
   
@@ -799,13 +799,13 @@ const RSS_SOURCES = {
   lyn_alden: {
     name: 'Lyn Alden',
     url: 'https://www.lynalden.com/feed/',
-    category: 'macro'
+    category: 'macro',
     disabled: true, // Perf: Macro commentary, not crypto-specific
   },
   alhambra_partners: {
     name: 'Alhambra Partners',
     url: 'https://www.alhambrapartners.com/feed/',
-    category: 'macro'
+    category: 'macro',
     disabled: true, // Perf: Macro economics, not crypto-specific
   },
   macro_voices: {
@@ -821,13 +821,13 @@ const RSS_SOURCES = {
   aqr_insights: {
     name: 'AQR Insights',
     url: 'https://www.aqr.com/Insights/feed',
-    category: 'quant'
+    category: 'quant',
     disabled: true, // Perf: Quant research, zero crypto content
   },
   two_sigma_insights: {
     name: 'Two Sigma Insights',
     url: 'https://www.twosigma.com/insights/rss/',
-    category: 'quant'
+    category: 'quant',
     disabled: true, // Perf: Quant research, zero crypto content
   },
   man_institute: {
@@ -839,7 +839,7 @@ const RSS_SOURCES = {
   alpha_architect: {
     name: 'Alpha Architect',
     url: 'https://alphaarchitect.com/feed/',
-    category: 'quant'
+    category: 'quant',
     disabled: true, // Perf: Quant research, zero crypto content
   },
   quantstart: {
@@ -897,7 +897,7 @@ const RSS_SOURCES = {
   bny_mellon: {
     name: 'BNY Mellon Aerial View',
     url: 'https://www.bnymellon.com/us/en/insights/aerial-view-magazine.rss',
-    category: 'tradfi'
+    category: 'tradfi',
     disabled: true, // Perf: Traditional finance, not crypto-specific
   },
   
@@ -963,13 +963,13 @@ const RSS_SOURCES = {
   wsj_business: {
     name: 'Wall Street Journal',
     url: 'https://feeds.a.dj.com/rss/RSSMarketsMain.xml',
-    category: 'mainstream'
+    category: 'mainstream',
     disabled: true, // Perf: Generic finance, not crypto-specific
   },
   nyt_business: {
     name: 'New York Times Business',
     url: 'https://rss.nytimes.com/services/xml/rss/nyt/Business.xml',
-    category: 'mainstream'
+    category: 'mainstream',
     disabled: true, // Perf: Generic business news, not crypto-specific
   },
   washingtonpost_biz: {
@@ -981,13 +981,13 @@ const RSS_SOURCES = {
   economist: {
     name: 'The Economist',
     url: 'https://www.economist.com/sections/economics/rss.xml',
-    category: 'mainstream'
+    category: 'mainstream',
     disabled: true, // Perf: General economics, not crypto-specific
   },
   marketwatch: {
     name: 'MarketWatch',
     url: 'https://feeds.marketwatch.com/marketwatch/topstories/',
-    category: 'mainstream'
+    category: 'mainstream',
     disabled: true, // Perf: Generic stock market, not crypto-specific
   },
   investopedia: {
@@ -999,19 +999,19 @@ const RSS_SOURCES = {
   seekingalpha: {
     name: 'Seeking Alpha',
     url: 'https://seekingalpha.com/market_currents.xml',
-    category: 'mainstream'
+    category: 'mainstream',
     disabled: true, // Perf: Generic stock market, not crypto-specific
   },
   nikkei_asia: {
     name: 'Nikkei Asia',
     url: 'https://asia.nikkei.com/rss/feed/nar',
-    category: 'mainstream'
+    category: 'mainstream',
     disabled: true, // Perf: Asian business news, not crypto-specific
   },
   economic_times_india: {
     name: 'Economic Times India Markets',
     url: 'https://economictimes.indiatimes.com/markets/rssfeeds/1977021501.cms',
-    category: 'mainstream'
+    category: 'mainstream',
     disabled: true, // Perf: Indian markets, not crypto-specific
   },
 
@@ -1024,7 +1024,7 @@ const RSS_SOURCES = {
   bbc_world: {
     name: 'BBC World',
     url: 'https://feeds.bbci.co.uk/news/world/rss.xml',
-    category: 'geopolitical'
+    category: 'geopolitical',
     disabled: true, // Perf: General world news, not crypto-specific
   },
   reuters_world: {
@@ -1036,7 +1036,7 @@ const RSS_SOURCES = {
   ap_news: {
     name: 'AP News',
     url: 'https://rsshub.app/apnews/topics/apf-business',
-    category: 'geopolitical'
+    category: 'geopolitical',
     disabled: true, // Perf: General news wire, not crypto-specific
   },
   federal_reserve: {
@@ -1052,19 +1052,19 @@ const RSS_SOURCES = {
   dw_news: {
     name: 'DW News',
     url: 'https://rss.dw.com/xml/rss-en-all',
-    category: 'geopolitical'
+    category: 'geopolitical',
     disabled: true, // Perf: German news, not crypto-specific
   },
   cbc_news: {
     name: 'CBC News',
     url: 'https://www.cbc.ca/cmlink/1.1244475',
-    category: 'geopolitical'
+    category: 'geopolitical',
     disabled: true, // Perf: Canadian news, not crypto-specific
   },
   al_jazeera: {
     name: 'Al Jazeera',
     url: 'https://www.aljazeera.com/xml/rss/all.xml',
-    category: 'geopolitical'
+    category: 'geopolitical',
     disabled: true, // Perf: General world news, not crypto-specific
   },
 
@@ -2025,31 +2025,31 @@ const RSS_SOURCES = {
   federal_reserve_notes: {
     name: 'Federal Reserve FEDS Notes',
     url: 'https://www.federalreserve.gov/feeds/feds_notes.xml',
-    category: 'macro'
+    category: 'macro',
     disabled: true, // Perf: Academic Fed research notes, not breaking news
   },
   bis_speeches: {
     name: 'BIS Speeches',
     url: 'https://www.bis.org/doclist/cbspeeches.rss',
-    category: 'macro'
+    category: 'macro',
     disabled: true, // Perf: Central bank speeches, not crypto-specific
   },
   ecb_press: {
     name: 'ECB Press Releases',
     url: 'https://www.ecb.europa.eu/rss/press.html',
-    category: 'macro'
+    category: 'macro',
     disabled: true, // Perf: Central bank press, not crypto-specific
   },
   imf_blog: {
     name: 'IMF Blog',
     url: 'https://www.imf.org/en/Blogs/rss',
-    category: 'macro'
+    category: 'macro',
     disabled: true, // Perf: IMF commentary, not crypto-specific
   },
   boe_speeches: {
     name: 'Bank of England Speeches',
     url: 'https://www.bankofengland.co.uk/rss/speeches',
-    category: 'macro'
+    category: 'macro',
     disabled: true, // Perf: Central bank speeches, not crypto-specific
   },
 

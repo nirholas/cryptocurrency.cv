@@ -2,13 +2,14 @@ import { setRequestLocale } from 'next-intl/server';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import BookmarksPageContent from '@/components/BookmarksPageContent';
-import type { Metadata } from 'next';
+import { generateSEOMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
-  title: 'Saved Articles - Free Crypto News',
+export const metadata = generateSEOMetadata({
+  title: 'Saved Articles',
   description: 'Your saved crypto news articles. Read later or share with others.',
-  robots: { index: false, follow: false },
-};
+  path: '/bookmarks',
+  noindex: true,
+});
 
 type Props = {
   params: Promise<{ locale: string }>;

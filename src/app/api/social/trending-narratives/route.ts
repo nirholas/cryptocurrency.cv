@@ -11,7 +11,7 @@
 
 import { NextResponse } from 'next/server';
 import { getLatestNews } from '@/lib/crypto-news';
-import { detectNarratives, getNarrativeSummary, type Narrative } from '@/lib/narrativeDetector';
+import { detectNarratives, getNarrativeSummary, type Narrative } from '@/lib/narrative-detector';
 
 export const dynamic = 'force-dynamic';
 

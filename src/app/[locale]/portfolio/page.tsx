@@ -1,12 +1,13 @@
-import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import PortfolioContent from './PortfolioContent';
+import { generateSEOMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
-  title: 'Portfolio - Track Your Crypto Holdings',
+export const metadata = generateSEOMetadata({
+  title: 'Portfolio — Track Your Crypto Holdings',
   description: 'Track and manage your cryptocurrency portfolio with real-time prices.',
-  robots: { index: false, follow: false },
-};
+  path: '/portfolio',
+  noindex: true,
+});
 
 type Props = {
   params: Promise<{ locale: string }>;

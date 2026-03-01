@@ -333,7 +333,16 @@ async function handleAgenciesRequest(
       name: info.name,
       jurisdiction: info.jurisdiction,
       website: info.website,
-      cryptoStance: 'neutral', // Would be from database
+      cryptoStance: (() => {
+        // Determine crypto stance from known regulatory postures
+        const proCryptoAgencies = ['mfsa', 'mas', 'sfsa', 'adgm'];
+        const hostileAgencies = ['pboc', 'rbi'];
+        const neutralAgencies = ['sec', 'cftc', 'fca', 'bafin', 'amf', 'esma'];
+        if (proCryptoAgencies.includes(requestedAgency)) return 'positive';
+        if (hostileAgencies.includes(requestedAgency)) return 'negative';
+        if (neutralAgencies.includes(requestedAgency)) return 'neutral';
+        return 'neutral';
+      })() as 'positive' | 'negative' | 'neutral',
       enforcementHistory: {
         totalActions: 0,
         totalFines: 0,

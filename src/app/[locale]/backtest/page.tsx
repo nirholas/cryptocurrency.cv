@@ -1,26 +1,16 @@
-import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import BacktestDashboard from './BacktestDashboard';
+import { generateSEOMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata = generateSEOMetadata({
   title: 'Backtest | News-Based Trading Strategy Testing',
-  description:
-    'Backtest trading strategies based on crypto news signals. Historical performance analysis.',
-  robots: { index: false, follow: false },
-  openGraph: {
-    title: 'Backtest | News-Based Trading Strategy Testing',
-    description: 'Test trading strategies against historical news data.',
-  },
-  keywords: [
-    'crypto backtest',
-    'trading strategy',
-    'news trading',
-    'historical analysis',
-    'strategy testing',
-  ],
-};
+  description: 'Backtest trading strategies based on crypto news signals. Historical performance analysis.',
+  path: '/backtest',
+  tags: ['crypto backtest', 'trading strategy', 'news trading', 'historical analysis', 'strategy testing'],
+  noindex: true,
+});
 
 type Props = {
   params: Promise<{ locale: string }>;

@@ -72,17 +72,10 @@ describe('Critical Agent Fixes', () => {
       expect(rateLimitResponse).toBe(getRateLimitErrorResponse);
     });
 
-    it('should warn when using deprecated rate-limit.ts', async () => {
-      const consoleSpy = vi.spyOn(console, 'warn').mockImplementation(() => {});
-      
-      // Import should trigger deprecation warning
-      await import('@/lib/rate-limit');
-      
-      expect(consoleSpy).toHaveBeenCalledWith(
-        expect.stringContaining('[DEPRECATED] rate-limit.ts is deprecated')
-      );
-      
-      consoleSpy.mockRestore();
+    it('should have fully removed deprecated rate-limit.ts', async () => {
+      // The deprecated rate-limit.ts shim has been deleted.
+      // Importing it should fail, confirming the migration is complete.
+      await expect(import('@/lib/rate-limit')).rejects.toThrow();
     });
   });
 

@@ -1,10 +1,12 @@
 import { redirect } from 'next/navigation';
-import type { Metadata } from 'next';
+import { generateSEOMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata = generateSEOMetadata({
   title: 'Share',
-  robots: { index: false, follow: false },
-};
+  description: 'Share crypto news articles with your network.',
+  path: '/share',
+  noindex: true,
+});
 
 interface SharePageProps {
   searchParams: Promise<{

@@ -532,7 +532,19 @@ export async function getTrendingTopics(limit: number = 10): Promise<TrendingTop
       topic,
       mentions: data.mentions,
       sentiment: data.mentions > 0 ? data.sentiment / data.mentions : 0,
-      momentum: 0, // Would need historical data
+      momentum: (() => {
+        // Calculate momentum: compare recent article density vs older
+        // Split articles by timestamp, compare first half vs second half
+        if (data.articles.length < 2) return 0;
+        const sorted = [...data.articles].sort((a, b) =>
+          new Date(b.publishedAt || 0).getTime() - new Date(a.publishedAt || 0).getTime()
+        );
+        const half = Math.floor(sorted.length / 2);
+        const recentCount = half;
+        const olderCount = sorted.length - half;
+        // Momentum: ratio of recent to older, normalized to -1..1
+        return olderCount > 0 ? Math.round(((recentCount / olderCount) - 1) * 100) / 100 : 0;
+      })(),
       relatedArticles: data.articles.slice(0, 5),
     }))
     .sort((a, b) => b.mentions - a.mentions)

@@ -719,10 +719,18 @@ export async function analyzeCausality(
   const isSignificant = pValue < (request.confidence || SIGNIFICANCE_LEVEL);
   
   // Build causal effect
+  // Get current price for absolute change calculation
+  let absoluteChange = 0;
+  const historicalPricesForAsset = await getHistoricalPrices(primaryAsset.toLowerCase(), 7);
+  if (historicalPricesForAsset?.prices && historicalPricesForAsset.prices.length >= 2) {
+    const latestPrice = historicalPricesForAsset.prices[historicalPricesForAsset.prices.length - 1][1];
+    absoluteChange = latestPrice * (effect / 100); // Convert percentage effect to absolute USD change
+  }
+
   const causalEffect: CausalEffect = {
     direction: effect > 0.5 ? 'positive' : effect < -0.5 ? 'negative' : 'neutral',
     magnitude: Math.abs(effect),
-    absoluteChange: 0, // Would need current price
+    absoluteChange,
     peakEffect: Math.abs(effect) * 1.2, // Estimate
     peakTime: new Date(new Date(event.timestamp).getTime() + 3600000).toISOString(),
     halfLife: request.windowAfter / 2,

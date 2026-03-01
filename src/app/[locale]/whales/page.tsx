@@ -1,29 +1,15 @@
-import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { WhaleAlertsDashboard } from './WhaleAlertsDashboardClient';
+import { generateSEOMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata = generateSEOMetadata({
   title: 'Whale Alerts | Large Crypto Transactions Tracker',
-  description:
-    'Real-time whale transaction monitoring across Bitcoin, Ethereum, and major blockchains. Track exchange deposits, withdrawals, and whale movements.',
-  openGraph: {
-    title: 'Whale Alerts | Large Crypto Transactions Tracker',
-    description:
-      'Real-time whale transaction monitoring. See what the big players are doing.',
-  },
-  keywords: [
-    'whale alerts',
-    'crypto whales',
-    'large transactions',
-    'bitcoin whale',
-    'ethereum whale',
-    'exchange deposits',
-    'whale watching',
-    'blockchain transactions',
-  ],
-};
+  description: 'Real-time whale transaction monitoring across Bitcoin, Ethereum, and major blockchains. Track exchange deposits, withdrawals, and whale movements.',
+  path: '/whales',
+  tags: ['whale alerts', 'crypto whales', 'large transactions', 'bitcoin whale', 'ethereum whale', 'exchange deposits', 'whale watching'],
+});
 
 type Props = {
   params: Promise<{ locale: string }>;

@@ -13,6 +13,9 @@ import { type NextRequest, NextResponse } from 'next/server';
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://cryptocurrency.cv';
 const API_BASE = `${BASE_URL}/api`;
 
+// In-memory vote storage (process-scoped)
+const frameVotes = new Map<string, { bullish: number; bearish: number }>();
+
 interface FrameAction {
   untrustedData: {
     fid: number;
@@ -240,12 +243,20 @@ export async function POST(request: NextRequest) {
       }
       if (buttonIndex === 3) {
         // Vote bullish - record and show result
-        // In production, store this vote
+        // Store vote in memory (process-scoped)
+        const voteKey = `vote:${state.index}`;
+        if (!frameVotes.has(voteKey)) {
+          frameVotes.set(voteKey, { bullish: 0, bearish: 0 });
+        }
+        const votes = frameVotes.get(voteKey)!;
+        votes.bullish++;
+        const total = votes.bullish + votes.bearish;
+
         const html = generateFrameHtml({
           title: '✅ Vote Recorded!',
           image: generateImageUrl({ 
             type: 'vote-result', 
-            data: { vote: 'bullish', total: 1234 } 
+            data: { vote: 'bullish', total } 
           }),
           buttons: [
             { label: '📰 Back to News' },

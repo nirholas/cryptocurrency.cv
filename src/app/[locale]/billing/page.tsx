@@ -1,16 +1,16 @@
-import { type Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
 import { Zap, ExternalLink, Code2, ShieldCheck } from 'lucide-react';
+import { generateSEOMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata = generateSEOMetadata({
   title: 'Premium API Access — x402 Micropayments',
-  description:
-    'Access premium crypto data endpoints by paying per request in USDC on Base. No subscription. No account. No API key required.',
-  robots: 'noindex, nofollow',
-};
+  description: 'Access premium crypto data endpoints by paying per request in USDC on Base. No subscription. No account. No API key required.',
+  path: '/billing',
+  noindex: true,
+});
 
 type Props = {
   params: Promise<{ locale: string }>;

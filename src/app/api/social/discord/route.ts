@@ -200,10 +200,25 @@ async function fetchChannelMessages(
   
   const rawMessages: DiscordApiMessage[] = await response.json();
   
+  // Fetch channel info for name resolution
+  const channelIds = [...new Set(rawMessages.map(m => m.channel_id))];
+  const channelNames = new Map<string, string>();
+  for (const chId of channelIds) {
+    try {
+      const chRes = await fetch(`https://discord.com/api/v10/channels/${chId}`, {
+        headers: { Authorization: `Bot ${token}` },
+      });
+      if (chRes.ok) {
+        const chData = await chRes.json();
+        channelNames.set(chId, chData.name || '');
+      }
+    } catch { /* channel name lookup failed */ }
+  }
+
   return rawMessages.map(msg => ({
     id: msg.id,
     channelId: msg.channel_id,
-    channelName: '', // Would need additional call
+    channelName: channelNames.get(msg.channel_id) || '',
     guildId: msg.guild_id || '',
     guildName: '',
     authorId: msg.author.id,
@@ -283,7 +298,11 @@ function processIntelligence(messages: DiscordMessage[]): DiscordIntelligence {
     .map(([ticker, mentions]) => ({ 
       ticker, 
       mentions,
-      sentiment: 'neutral', // Would need NLP
+      sentiment: (() => {
+        // Analyze sentiment for messages mentioning this ticker
+        const tickerMsgs = messages.filter(m => m.mentions.tickers.includes(ticker));
+        return analyzeSentiment(tickerMsgs);
+      })(),
     }))
     .sort((a, b) => b.mentions - a.mentions)
     .slice(0, 20);
@@ -296,7 +315,28 @@ function processIntelligence(messages: DiscordMessage[]): DiscordIntelligence {
     channelStats,
     trending: {
       tickers: trendingTickers,
-      topics: [], // Would need topic modeling
+      topics: (() => {
+        // Extract topics from message content using keyword frequency
+        const topicKeywords = [
+          'defi', 'nft', 'airdrop', 'staking', 'yield', 'farming', 'bridge',
+          'hack', 'exploit', 'regulation', 'etf', 'halving', 'merge',
+          'layer2', 'l2', 'rollup', 'governance', 'dao', 'lending', 'dex',
+          'cefi', 'liquidation', 'whale', 'meme', 'metaverse', 'gamefi',
+        ];
+        const topicCounts = new Map<string, number>();
+        for (const msg of messages) {
+          const content = msg.content.toLowerCase();
+          for (const topic of topicKeywords) {
+            if (content.includes(topic)) {
+              topicCounts.set(topic, (topicCounts.get(topic) || 0) + 1);
+            }
+          }
+        }
+        return Array.from(topicCounts.entries())
+          .map(([topic, count]) => ({ topic, mentions: count }))
+          .sort((a, b) => b.mentions - a.mentions)
+          .slice(0, 10);
+      })(),
     },
     alerts,
   };
