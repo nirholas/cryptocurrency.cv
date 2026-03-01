@@ -323,7 +323,7 @@ function MarketContext({
               <span className="text-[var(--color-text-secondary)]">{t("btcDominance")}:</span>
               <span className="font-semibold">{market.btc_dominance.toFixed(1)}%</span>
               <span className="text-[var(--color-text-secondary)]">{t("fearGreed")}:</span>
-              <Badge variant={market.fear_greed_index < 30 ? "default" : market.fear_greed_index > 70 ? "default" : "default"}>
+              <Badge variant="default">
                 {market.fear_greed_index}
               </Badge>
             </div>
