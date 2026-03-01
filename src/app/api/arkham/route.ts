@@ -15,7 +15,7 @@ import {
   getSmartMoneyFlows,
 } from '@/lib/apis/arkham';
 
-export const runtime = 'edge';
+export const runtime = 'nodejs';
 export const revalidate = 60;
 
 /**

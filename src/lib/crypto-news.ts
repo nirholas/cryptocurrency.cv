@@ -2720,7 +2720,7 @@ const HOMEPAGE_SOURCE_KEYS = new Set<SourceKey>([
   'bloomberg_crypto', 'forbes_crypto', 'guardian_tech', 'fortune_crypto', 'axios_crypto',
 
   // Geopolitical / Central Banks
-  'bis_innovation', 'imf_fintech', 'ecb_digital', 'us_treasury', 'atlantic_council',
+  'bis_speeches', 'imf_blog', 'ecb_press', 'treasury_press', 'atlantic_council_crypto',
 
   // Developer Tools
   'alchemy_blog', 'chainlink_blog', 'infura_blog', 'thegraph_blog', 'hardhat_blog', 'foundry_blog',
@@ -2753,25 +2753,25 @@ const HOMEPAGE_SOURCE_KEYS = new Set<SourceKey>([
   'ef_blog', 'flashbots_blog', 'lido_blog', 'ens_blog',
 
   // Gaming
-  'immutable_blog', 'beam_blog',
+  'immutable_blog', 'beam_gaming_blog',
 
   // Journalism
-  'milkroad', 'coffeezilla', 'molly_white',
+  'milkroad', 'coffeezilla_pod', 'molly_white',
 
   // Social
   'farcaster_blog', 'lens_blog',
 
   // TradFi / RWA
-  'securitize_blog', 'blackrock_digital', 'franklin_templeton',
+  'securitize_blog', 'blackrock_digital', 'franklin_templeton_digital',
 
   // ETF Wave 4
-  'fidelity_digital', 'hashdex_blog',
+  'fidelity_digital', 'hashdex_research',
 
   // Asia
-  'blocktempo', 'coinpost',
+  'blocktempo', 'coinpost_en',
 
   // Stablecoin Extended
-  'paxos_blog', 'makerdao_governance',
+  'paxos_blog', 'makerdao_gov',
 ]);
 
 export interface NewsArticle {

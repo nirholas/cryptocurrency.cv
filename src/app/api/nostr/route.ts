@@ -20,8 +20,8 @@
 
 import { type NextRequest, NextResponse } from 'next/server';
 import { createHash } from 'crypto';
-import { schnorr } from '@noble/curves/secp256k1';
-import { bytesToHex } from '@noble/curves/abstract/utils';
+import { schnorr } from '@noble/curves/secp256k1.js';
+import { bytesToHex } from '@noble/curves/utils.js';
 
 export const runtime = 'nodejs';
 
