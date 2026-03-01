@@ -6,6 +6,22 @@
 
 export type AIProvider = 'openai' | 'anthropic' | 'groq' | 'openrouter' | 'gemini';
 
+/**
+ * Typed error for AI provider authentication failures (401).
+ * Thrown when a provider rejects the API key so callers can
+ * distinguish auth errors from transient / other failures.
+ */
+export class AIAuthError extends Error {
+  public readonly statusCode: number;
+  public readonly provider: AIProvider;
+  constructor(provider: AIProvider, statusCode: number, message: string) {
+    super(message);
+    this.name = 'AIAuthError';
+    this.provider = provider;
+    this.statusCode = statusCode;
+  }
+}
+
 export interface AIConfig {
   provider: AIProvider;
   model: string;
@@ -65,6 +81,48 @@ export function getAIConfigOrNull(preferGroq = false): AIConfig | null {
     if (cfg) return cfg;
   }
   return null;
+}
+
+/**
+ * Returns ALL configured AI providers in priority order.
+ * Used by aiComplete to fall back through providers on auth errors.
+ */
+export function getAllAIConfigs(preferGroq = false): AIConfig[] {
+  const openai = (): AIConfig | null =>
+    process.env.OPENAI_API_KEY
+      ? { provider: 'openai', model: process.env.OPENAI_MODEL || 'gpt-4o', apiKey: process.env.OPENAI_API_KEY }
+      : null;
+
+  const anthropic = (): AIConfig | null =>
+    process.env.ANTHROPIC_API_KEY
+      ? { provider: 'anthropic', model: process.env.ANTHROPIC_MODEL || 'claude-3-5-sonnet-20241022', apiKey: process.env.ANTHROPIC_API_KEY }
+      : null;
+
+  const groq = (): AIConfig | null =>
+    process.env.GROQ_API_KEY
+      ? { provider: 'groq', model: process.env.GROQ_MODEL || 'llama-3.3-70b-versatile', apiKey: process.env.GROQ_API_KEY, baseUrl: 'https://api.groq.com/openai/v1' }
+      : null;
+
+  const openrouter = (): AIConfig | null =>
+    process.env.OPENROUTER_API_KEY
+      ? { provider: 'openrouter', model: process.env.OPENROUTER_MODEL || 'meta-llama/llama-3.3-70b-instruct', apiKey: process.env.OPENROUTER_API_KEY, baseUrl: 'https://openrouter.ai/api/v1' }
+      : null;
+
+  const gemini = (): AIConfig | null =>
+    (process.env.GEMINI_API_KEY || process.env.GOOGLE_AI_API_KEY)
+      ? { provider: 'gemini', model: process.env.GEMINI_MODEL || 'gemini-2.5-pro', apiKey: (process.env.GEMINI_API_KEY || process.env.GOOGLE_AI_API_KEY)! }
+      : null;
+
+  const order = preferGroq
+    ? [groq, openai, anthropic, gemini, openrouter]
+    : [openai, anthropic, gemini, groq, openrouter];
+
+  const configs: AIConfig[] = [];
+  for (const fn of order) {
+    const cfg = fn();
+    if (cfg) configs.push(cfg);
+  }
+  return configs;
 }
 
 /**
@@ -194,6 +252,7 @@ export function aiCompleteStream(
 
 /**
  * Generic AI completion request compatible with all supported providers.
+ * Automatically falls back to the next configured provider on auth errors (401).
  */
 export async function aiComplete(
   systemPrompt: string,
@@ -201,7 +260,53 @@ export async function aiComplete(
   options: AICompleteOptions = {},
   preferGroq = false
 ): Promise<string> {
-  const config = getAIConfigOrThrow(preferGroq);
+  const configs = getAllAIConfigs(preferGroq);
+  if (configs.length === 0) {
+    throw new Error(
+      'No AI provider configured. Set OPENAI_API_KEY, ANTHROPIC_API_KEY, GROQ_API_KEY, or OPENROUTER_API_KEY'
+    );
+  }
+
+  const authErrors: AIAuthError[] = [];
+
+  for (const config of configs) {
+    try {
+      return await aiCompleteWithConfig(config, systemPrompt, userPrompt, options);
+    } catch (err) {
+      // Auth errors → try next provider
+      if (err instanceof AIAuthError) {
+        console.warn(`AI provider ${config.provider} auth failed, trying next provider...`, err.message);
+        authErrors.push(err);
+        continue;
+      }
+      // Import and check GroqAuthError dynamically to avoid circular deps
+      if ((err as Error).name === 'GroqAuthError') {
+        const authErr = new AIAuthError(config.provider, 401, (err as Error).message);
+        console.warn(`AI provider ${config.provider} auth failed, trying next provider...`, authErr.message);
+        authErrors.push(authErr);
+        continue;
+      }
+      throw err; // non-auth errors propagate immediately
+    }
+  }
+
+  // All providers failed with auth errors
+  throw new AIAuthError(
+    authErrors[0]?.provider ?? 'groq',
+    401,
+    `All configured AI providers failed authentication: ${authErrors.map(e => `${e.provider}: ${e.message}`).join('; ')}`
+  );
+}
+
+/**
+ * Internal: execute a completion against a specific provider config.
+ */
+async function aiCompleteWithConfig(
+  config: AIConfig,
+  systemPrompt: string,
+  userPrompt: string,
+  options: AICompleteOptions = {}
+): Promise<string> {
   const { maxTokens = 1000, temperature = 0.3, jsonMode = false, title = 'Crypto News AI' } = options;
 
   if (config.provider === 'anthropic') {
@@ -221,6 +326,9 @@ export async function aiComplete(
     });
 
     if (!response.ok) {
+      if (response.status === 401) {
+        throw new AIAuthError('anthropic', 401, `Anthropic API authentication failed: ${response.status}`);
+      }
       throw new Error(`Anthropic API error: ${response.status}`);
     }
 
@@ -272,6 +380,9 @@ export async function aiComplete(
 
   if (!response.ok) {
     const error = await response.text();
+    if (response.status === 401) {
+      throw new AIAuthError(config.provider, 401, `${config.provider} API authentication failed: ${error}`);
+    }
     throw new Error(`AI API error: ${response.status} - ${error}`);
   }
 

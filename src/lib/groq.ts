@@ -45,6 +45,19 @@ export interface GroqResponse {
 }
 
 /**
+ * Typed error for Groq authentication failures (401).
+ * Callers can catch this to distinguish auth errors from other failures
+ * and fall back to alternative AI providers.
+ */
+export class GroqAuthError extends Error {
+  public readonly statusCode = 401;
+  constructor(message: string) {
+    super(message);
+    this.name = 'GroqAuthError';
+  }
+}
+
+/**
  * Check if Groq API is configured
  */
 export function isGroqConfigured(): boolean {
@@ -93,6 +106,9 @@ export async function callGroq(
 
   if (!response.ok) {
     const error = await response.text();
+    if (response.status === 401) {
+      throw new GroqAuthError(`Groq API authentication failed: ${error}`);
+    }
     throw new Error(`Groq API error: ${response.status} - ${error}`);
   }
 
@@ -159,6 +175,10 @@ export function callGroqStream(
 
       if (!response.ok || !response.body) {
         const msg = await response.text().catch(() => String(response.status));
+        if (response.status === 401) {
+          controller.error(new GroqAuthError(`Groq stream authentication failed: ${msg}`));
+          return;
+        }
         controller.error(new Error(`Groq stream error: ${msg}`));
         return;
       }
@@ -325,6 +345,9 @@ export async function* streamGroq(
 
   if (!response.ok) {
     const error = await response.text();
+    if (response.status === 401) {
+      throw new GroqAuthError(`Groq API authentication failed: ${error}`);
+    }
     throw new Error(`Groq API error: ${response.status} - ${error}`);
   }
 

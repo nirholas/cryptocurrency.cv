@@ -1,8 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getLatestNews, NewsArticle } from '@/lib/crypto-news';
-import { promptGroqJson, isGroqConfigured } from '@/lib/groq';
+import { promptGroqJson, isGroqConfigured, GroqAuthError, parseGroqJson } from '@/lib/groq';
 import { groqNotConfiguredResponse } from '@/app/api/_utils';
-import { aiComplete, getAIConfigOrNull } from '@/lib/ai-provider';
+import { aiComplete, getAIConfigOrNull, AIAuthError } from '@/lib/ai-provider';
 
 export const runtime = 'edge';
 export const revalidate = 300; // 5 minute cache
@@ -256,6 +256,18 @@ export async function GET(request: NextRequest) {
       });
     } catch (error) {
       console.error('AI digest error:', error);
+
+      // If all AI providers failed with auth errors, return 503
+      if (error instanceof AIAuthError || (error as Error).name === 'AIAuthError') {
+        return NextResponse.json(
+          {
+            error: 'AI service temporarily unavailable',
+            details: 'All configured AI providers failed authentication. Please check API keys.',
+          },
+          { status: 503 }
+        );
+      }
+
       return NextResponse.json(
         { error: 'Failed to generate AI digest', details: String(error) },
         { status: 500 }
@@ -264,7 +276,9 @@ export async function GET(request: NextRequest) {
   }
 
   // --- Original Groq-based formats ---
-  if (!isGroqConfigured()) return groqNotConfiguredResponse();
+  // Check if any AI provider is available (Groq or fallback)
+  const hasAnyAI = getAIConfigOrNull(true) !== null;
+  if (!isGroqConfigured() && !hasAnyAI) return groqNotConfiguredResponse();
 
   try {
     // Fetch articles based on period
@@ -307,11 +321,29 @@ Total articles: ${articlesForDigest.length}
 Articles:
 ${articlesText}`;
 
-    const digest = await promptGroqJson<DigestResponse>(
-      SYSTEM_PROMPT,
-      userPrompt,
-      { maxTokens: 3000, temperature: 0.5 }
-    );
+    let digest: DigestResponse;
+    try {
+      // Try Groq first if configured
+      if (isGroqConfigured()) {
+        digest = await promptGroqJson<DigestResponse>(
+          SYSTEM_PROMPT,
+          userPrompt,
+          { maxTokens: 3000, temperature: 0.5 }
+        );
+      } else {
+        throw new GroqAuthError('Groq not configured, falling back to other providers');
+      }
+    } catch (groqError) {
+      // On Groq auth failure, fall back to aiComplete (tries all providers)
+      if (groqError instanceof GroqAuthError || (groqError as Error).name === 'GroqAuthError') {
+        console.warn('Groq auth failed for digest, falling back to aiComplete:', (groqError as Error).message);
+        const systemWithJson = SYSTEM_PROMPT + '\n\nAlways respond with valid JSON only, no markdown.';
+        const raw = await aiComplete(systemWithJson, userPrompt, { maxTokens: 3000, temperature: 0.5, jsonMode: true }, false);
+        digest = parseGroqJson<DigestResponse>(raw);
+      } else {
+        throw groqError;
+      }
+    }
 
     return NextResponse.json(
       {
@@ -332,6 +364,18 @@ ${articlesText}`;
     );
   } catch (error) {
     console.error('Digest error:', error);
+
+    // If all AI providers failed with auth errors, return 503
+    if (error instanceof AIAuthError || (error as Error).name === 'AIAuthError') {
+      return NextResponse.json(
+        {
+          error: 'AI service temporarily unavailable',
+          details: 'All configured AI providers failed authentication. Please check API keys.',
+        },
+        { status: 503 }
+      );
+    }
+
     return NextResponse.json(
       { error: 'Failed to generate digest', details: String(error) },
       { status: 500 }
