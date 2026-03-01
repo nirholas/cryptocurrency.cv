@@ -268,18 +268,25 @@ export async function POST(request: NextRequest) {
     // Subscribe to relay for crypto news
     if (action === 'subscribe') {
       const { relay, filters } = body;
-      
-      // In production, would set up WebSocket subscription
+      const targetRelay = relay || DEFAULT_RELAYS[0];
+      const subFilters = filters || {
+        kinds: [EVENT_KINDS.TEXT_NOTE, EVENT_KINDS.ARTICLE],
+        '#t': ['crypto', 'bitcoin', 'ethereum'],
+        limit: 50,
+      };
+      const subscriptionId = `sub_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`;
+
+      // Build the REQ message clients should send to the relay
+      const reqMessage = JSON.stringify(['REQ', subscriptionId, subFilters]);
+
       return NextResponse.json({
         success: true,
-        message: 'Subscription created',
-        relay: relay || DEFAULT_RELAYS[0],
-        filters: filters || {
-          kinds: [EVENT_KINDS.TEXT_NOTE, EVENT_KINDS.ARTICLE],
-          '#t': ['crypto', 'bitcoin', 'ethereum'],
-          limit: 50,
-        },
-        subscriptionId: `sub_${Date.now()}`,
+        message: 'Subscription created — connect to relay WebSocket and send the REQ message',
+        relay: targetRelay,
+        filters: subFilters,
+        subscriptionId,
+        reqMessage,
+        usage: `Connect to ${targetRelay} via WebSocket and send: ${reqMessage}`,
       });
     }
     

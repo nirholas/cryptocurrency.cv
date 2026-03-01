@@ -2,6 +2,7 @@ import React from 'react';
 import { type Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
+import { generateSEOMetadata } from '@/lib/seo';
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -9,10 +10,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations();
-  return {
+  return generateSEOMetadata({
     title: t('ai.title', { defaultValue: 'AI Intelligence Hub' }),
     description: t('ai.description', { defaultValue: 'AI-powered crypto analysis, market intelligence, and insights' }),
-  };
+    path: '/ai',
+    locale,
+    tags: ['crypto AI', 'market intelligence', 'AI analysis', 'crypto insights', 'machine learning'],
+  });
 }
 
 const aiFeatures = [

@@ -1,18 +1,16 @@
 import { getTranslations } from 'next-intl/server';
 import CoverageGapDashboard from './CoverageGapDashboard';
+import { generateSEOMetadata } from '@/lib/seo';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'metadata' });
-  
-  return {
-    title: `Coverage Gap Analysis | ${t('title')}`,
+  return generateSEOMetadata({
+    title: 'Coverage Gap Analysis',
     description: 'Identify under-covered crypto topics and stories. Find news coverage gaps and opportunities.',
-    openGraph: {
-      title: `Coverage Gap Analysis | ${t('title')}`,
-      description: 'Identify under-covered crypto topics and stories. Find news coverage gaps and opportunities.',
-    },
-  };
+    path: '/coverage-gap',
+    locale,
+    tags: ['coverage gap', 'under-reported news', 'crypto media', 'news analysis', 'media coverage'],
+  });
 }
 
 export default async function CoverageGapPage() {

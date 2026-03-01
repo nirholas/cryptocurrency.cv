@@ -1,8 +1,10 @@
 /**
  * Trusted Origin Detection
  *
- * Checks whether a request comes from a trusted Sperax origin.
- * Trusted origins bypass x402 payment and rate limiting.
+ * Determines whether a request is from a trusted SperaxOS source.
+ * Only the `x-speraxos-token` secret header is used for authorization;
+ * the Origin header is NOT trusted (trivially spoofable by non-browser clients).
+ * `isTrustedOrigin()` is retained for safe CORS `Access-Control-Allow-Origin` use.
  *
  * @module middleware/trusted-origins
  */
@@ -34,13 +36,13 @@ function isTrustedOrigin(origin: string): boolean {
 /**
  * Determines whether a request is from a trusted SperaxOS origin.
  *
- * Checks the `Origin` header and the `x-speraxos-token` header.
- * The `Referer` header is intentionally NOT checked as it's trivially spoofable.
+ * Only trusts the `x-speraxos-token` secret header (constant-time comparison).
+ * The `Origin` header is NOT used for authorization — it's trivially spoofable
+ * by any programmatic HTTP client. `isTrustedOrigin()` is retained for CORS
+ * `Access-Control-Allow-Origin` responses, which is a separate (safe) use.
  */
 export async function isSperaxOSRequest(request: NextRequest): Promise<boolean> {
-  const origin = request.headers.get('origin') ?? '';
-  if (origin && isTrustedOrigin(origin)) return true;
-
+  // Only trust the secret token header — Origin/Referer are spoofable
   const token = request.headers.get('x-speraxos-token') ?? '';
   if (token && process.env.SPERAXOS_API_SECRET) {
     try {

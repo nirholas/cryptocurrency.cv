@@ -1143,7 +1143,87 @@ n        // Use change magnitudes and direction alignment for a more robust esti
     return levels;
   }
 
-  private async fetchUpcomingCatalysts(): Promise<Catalyst[]> {\n    const catalysts: Catalyst[] = [];\n\n    // Fetch real macro economic events from public calendars\n    try {\n      // Use FRED API or similar for FOMC dates\n      const fomcRes = await fetch(\n        'https://www.federalreserve.gov/json/ne-press.json',\n        { signal: AbortSignal.timeout(5000), next: { revalidate: 86400 } }\n      );\n      if (fomcRes.ok) {\n        const fomcData = await fomcRes.json();\n        const now = Date.now();\n        const futureEvents = (fomcData || []).filter((e: { d: string; t: string }) => {\n          const eventDate = new Date(e.d).getTime();\n          return eventDate > now && eventDate < now + 90 * 24 * 60 * 60 * 1000;\n        }).slice(0, 3);\n\n        for (const event of futureEvents) {\n          catalysts.push({\n            id: `macro-${event.d}`,\n            title: event.t || 'FOMC / Fed Event',\n            expectedDate: new Date(event.d),\n            assets: ['BTC', 'ETH'],\n            potentialImpact: 'high',\n            direction: 'neutral',\n            type: 'macro',\n            description: `Federal Reserve event: ${event.t || 'policy announcement'} — high volatility expected`,\n          });\n        }\n      }\n    } catch { /* Fed calendar unavailable */ }\n\n    // Fetch upcoming crypto events from CoinGecko events or CoinMarketCal\n    try {\n      const eventsRes = await fetch(\n        'https://api.coingecko.com/api/v3/events',\n        { signal: AbortSignal.timeout(5000), next: { revalidate: 3600 } }\n      );\n      if (eventsRes.ok) {\n        const eventsData = await eventsRes.json();\n        const events = (eventsData?.data || []).slice(0, 5);\n        for (const event of events) {\n          catalysts.push({\n            id: `crypto-event-${event.title?.replace(/\\s+/g, '-')?.toLowerCase() || Date.now()}`,\n            title: event.title || 'Crypto Event',\n            expectedDate: new Date(event.start_date || Date.now() + 7 * 24 * 3600 * 1000),\n            assets: (event.coins || []).map((c: { symbol: string }) => c.symbol?.toUpperCase()).filter(Boolean).slice(0, 5),\n            potentialImpact: event.type === 'hard-fork' || event.type === 'mainnet-launch' ? 'high'\n              : event.type === 'airdrop' || event.type === 'token-burn' ? 'medium'\n              : 'low',\n            direction: event.type === 'airdrop' || event.type === 'mainnet-launch' ? 'bullish' : 'neutral',\n            type: event.type === 'hard-fork' || event.type === 'mainnet-launch' ? 'upgrade'\n              : event.type === 'conference' ? 'macro'\n              : 'other',\n            description: event.description || `${event.title} — ${event.type || 'upcoming crypto event'}`,\n          });\n        }\n      }\n    } catch { /* CoinGecko events unavailable */ }\n\n    // If we couldn't fetch any real events, provide a minimal structural placeholder\n    if (catalysts.length === 0) {\n      // Use deterministic dates based on known recurring events\n      // FOMC meetings happen ~8 times/year on predictable dates\n      const nextWednesday = new Date();\n      nextWednesday.setDate(nextWednesday.getDate() + ((3 - nextWednesday.getDay() + 7) % 7 || 7));\n      catalysts.push({\n        id: 'cat-fomc-next',\n        title: 'Next FOMC Meeting (estimated)',\n        expectedDate: nextWednesday,\n        assets: ['BTC', 'ETH'],\n        potentialImpact: 'high',\n        direction: 'neutral',\n        type: 'macro',\n        description: 'Estimated next Federal Reserve activity — verify against official FOMC calendar',\n      });\n    }\n\n    return catalysts;\n  }
+  private async fetchUpcomingCatalysts(): Promise<Catalyst[]> {
+    const catalysts: Catalyst[] = [];
+
+    // Fetch real macro economic events from public calendars
+    try {
+      // Use FRED API or similar for FOMC dates
+      const fomcRes = await fetch(
+        'https://www.federalreserve.gov/json/ne-press.json',
+        { signal: AbortSignal.timeout(5000), next: { revalidate: 86400 } }
+      );
+      if (fomcRes.ok) {
+        const fomcData = await fomcRes.json();
+        const now = Date.now();
+        const futureEvents = (fomcData || []).filter((e: { d: string; t: string }) => {
+          const eventDate = new Date(e.d).getTime();
+          return eventDate > now && eventDate < now + 90 * 24 * 60 * 60 * 1000;
+        }).slice(0, 3);
+
+        for (const event of futureEvents) {
+          catalysts.push({
+            id: `macro-${event.d}`,
+            title: event.t || 'FOMC / Fed Event',
+            expectedDate: new Date(event.d),
+            assets: ['BTC', 'ETH'],
+            potentialImpact: 'high',
+            direction: 'neutral',
+            type: 'macro',
+            description: `Federal Reserve event: ${event.t || 'policy announcement'} - high volatility expected`,
+          });
+        }
+      }
+    } catch { /* Fed calendar unavailable */ }
+
+    // Fetch upcoming crypto events from CoinGecko events or CoinMarketCal
+    try {
+      const eventsRes = await fetch(
+        'https://api.coingecko.com/api/v3/events',
+        { signal: AbortSignal.timeout(5000), next: { revalidate: 3600 } }
+      );
+      if (eventsRes.ok) {
+        const eventsData = await eventsRes.json();
+        const events = (eventsData?.data || []).slice(0, 5);
+        for (const event of events) {
+          catalysts.push({
+            id: `crypto-event-${event.title?.replace(/\s+/g, '-')?.toLowerCase() || Date.now()}`,
+            title: event.title || 'Crypto Event',
+            expectedDate: new Date(event.start_date || Date.now() + 7 * 24 * 3600 * 1000),
+            assets: (event.coins || []).map((c: { symbol: string }) => c.symbol?.toUpperCase()).filter(Boolean).slice(0, 5),
+            potentialImpact: event.type === 'hard-fork' || event.type === 'mainnet-launch' ? 'high'
+              : event.type === 'airdrop' || event.type === 'token-burn' ? 'medium'
+              : 'low',
+            direction: event.type === 'airdrop' || event.type === 'mainnet-launch' ? 'bullish' : 'neutral',
+            type: event.type === 'hard-fork' || event.type === 'mainnet-launch' ? 'upgrade'
+              : event.type === 'conference' ? 'macro'
+              : 'other',
+            description: event.description || `${event.title} - ${event.type || 'upcoming crypto event'}`,
+          });
+        }
+      }
+    } catch { /* CoinGecko events unavailable */ }
+
+    // If we couldn't fetch any real events, provide a minimal structural placeholder
+    if (catalysts.length === 0) {
+      // Use deterministic dates based on known recurring events
+      // FOMC meetings happen ~8 times/year on predictable dates
+      const nextWednesday = new Date();
+      nextWednesday.setDate(nextWednesday.getDate() + ((3 - nextWednesday.getDay() + 7) % 7 || 7));
+      catalysts.push({
+        id: 'cat-fomc-next',
+        title: 'Next FOMC Meeting (estimated)',
+        expectedDate: nextWednesday,
+        assets: ['BTC', 'ETH'],
+        potentialImpact: 'high',
+        direction: 'neutral',
+        type: 'macro',
+        description: 'Estimated next Federal Reserve activity - verify against official FOMC calendar',
+      });
+    }
+
+    return catalysts;
+  }
 
   private identifyDominantNarrative(
     signals: MarketSignal[],

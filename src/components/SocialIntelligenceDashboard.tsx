@@ -97,7 +97,7 @@ interface SocialIntelligenceDashboardProps {
   onTickerClick?: (ticker: string) => void;
 }
 
-// Narrative type (mirrors src/lib/narrativeDetector.ts)
+// Narrative type (mirrors src/lib/narrative-detector.ts)
 interface NarrativeItem {
   id: string;
   label: string;

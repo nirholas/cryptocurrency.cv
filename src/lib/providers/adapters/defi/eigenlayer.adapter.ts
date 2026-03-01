@@ -104,7 +104,19 @@ async function fetchEigenStrategies(): Promise<EigenStrategy[]> {
         name: 'EigenLayer Restaking',
         symbol: 'ETH',
         tvl,
-        apy: 0, // Would need separate data source
+        apy: (() => {
+          // Estimate APY from TVL growth if historical data available
+          const tvlHistory: Array<{ totalLiquidityUSD: number; date: number }> = data?.tvl ?? [];
+          if (tvlHistory.length >= 30) {
+            const recent = tvlHistory[tvlHistory.length - 1].totalLiquidityUSD;
+            const monthAgo = tvlHistory[tvlHistory.length - 30].totalLiquidityUSD;
+            if (monthAgo > 0) {
+              const monthlyGrowth = (recent - monthAgo) / monthAgo;
+              return Math.round(monthlyGrowth * 12 * 100 * 100) / 100; // Annualize
+            }
+          }
+          return 0;
+        })(),
         restakers: 0,
       }];
     }

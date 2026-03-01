@@ -19,6 +19,15 @@ import {
 export const runtime = 'edge';
 export const revalidate = 30;
 
+// In-memory subscription storage (process-scoped)
+const fundingSubscriptions = new Map<string, {
+  webhookUrl: string;
+  symbols: string | string[];
+  threshold: number;
+  exchange: string;
+  createdAt: string;
+}>();
+
 /**
  * GET /api/funding
  * 
@@ -162,9 +171,15 @@ export async function POST(request: NextRequest) {
         }, { status: 400 });
       }
 
-      // In production, store subscription in database
-      // For now, return subscription confirmation
+      // Store subscription in memory for this process
       const subscriptionId = crypto.randomUUID();
+      fundingSubscriptions.set(subscriptionId, {
+        webhookUrl: webhook_url,
+        symbols: symbols || 'all',
+        threshold: threshold || 0.1,
+        exchange: exchange || 'all',
+        createdAt: new Date().toISOString(),
+      });
 
       return NextResponse.json({
         success: true,

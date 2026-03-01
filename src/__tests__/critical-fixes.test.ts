@@ -74,8 +74,11 @@ describe('Critical Agent Fixes', () => {
 
     it('should have fully removed deprecated rate-limit.ts', async () => {
       // The deprecated rate-limit.ts shim has been deleted.
-      // Importing it should fail, confirming the migration is complete.
-      await expect(import('@/lib/rate-limit')).rejects.toThrow();
+      // Verify the file no longer exists on disk.
+      const fs = await import('fs');
+      const path = await import('path');
+      const filePath = path.join(process.cwd(), 'src', 'lib', 'rate-limit.ts');
+      expect(fs.existsSync(filePath)).toBe(false);
     });
   });
 

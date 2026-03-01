@@ -842,24 +842,16 @@ Works with Vercel KV when configured, falls back to in-memory cache.
 
 ---
 
-### rate-limit.ts
+### ratelimit.ts
 
-Rate limiting with sliding window.
+Enterprise-grade rate limiting with Upstash (distributed, atomic, sliding window).
 
 ```typescript
-import { rateLimit, RateLimitError } from '@/lib/rate-limit';
+import { checkRateLimitByRequest, rateLimitResponse, addRateLimitHeaders } from '@/lib/ratelimit';
 
-const limiter = rateLimit({
-  interval: 60000,    // 1 minute
-  uniqueTokenPerInterval: 500,
-});
-
-try {
-  await limiter.check(req, 100); // 100 requests/min limit
-} catch (e) {
-  if (e instanceof RateLimitError) {
-    return new Response('Too many requests', { status: 429 });
-  }
+const result = await checkRateLimitByRequest(request);
+if (!result.allowed) {
+  return rateLimitResponse(result);
 }
 ```
 

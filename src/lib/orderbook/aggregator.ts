@@ -745,7 +745,11 @@ function checkArbitrageDirection(
   const sellFee = sellPrice * sellConfig.takerFee;
   const baseAsset = symbol.replace(/USD[T]?$|USDC$/i, '');
   const withdrawFee = buyConfig.withdrawFees[baseAsset] || 0.001;
-  const networkFee = 0; // Would need real-time gas estimation
+  // Estimate network fee from average gas cost (21000 gas * ~30 gwei for ETH, or network-specific)
+  const gasGwei = 30; // Conservative mainnet gas estimate
+  const networkFee = baseAsset === 'BTC' ? 0.0001 * buyPrice  // ~10k sats
+    : baseAsset === 'ETH' ? 21000 * gasGwei * 1e-9 * buyPrice
+    : 0.001 * buyPrice; // Default: 0.1% of price for other chains
   
   const totalFees = buyFee + sellFee + (withdrawFee * buyPrice);
   const potentialProfit = spread - totalFees;

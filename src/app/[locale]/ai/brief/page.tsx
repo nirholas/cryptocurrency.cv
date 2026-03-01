@@ -3,13 +3,16 @@ import Footer from '@/components/Footer';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
+import { generateSEOMetadata } from '@/lib/seo';
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations('ai');
-  return {
-    title: `${t('brief.title')} - Free Crypto News`,
+  return generateSEOMetadata({
+    title: t('brief.title'),
     description: t('brief.description'),
-  };
+    path: '/ai/brief',
+    tags: ['daily brief', 'AI summary', 'crypto daily', 'market brief', 'morning brief'],
+  });
 }
 
 export const dynamic = 'force-dynamic';

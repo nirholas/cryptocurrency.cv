@@ -206,12 +206,23 @@ function parseProtocolData(
       volume24h: parseFloat(proto.totalBorrowBalanceUSD || '0'), // Use borrow as proxy
       fees24h: 0,
       users24h: parseInt(proto.cumulativeUniqueUsers || '0', 10),
-      topPools: markets.map((m) => ({
-        name: (m.name as string) || (m.inputToken as Record<string, string>)?.symbol || '',
-        tvl: parseFloat((m.totalValueLockedUSD as string) || '0'),
-        volume24h: parseFloat((m.totalDepositBalanceUSD as string) || '0'),
-        apy: 0,
-      })),
+      topPools: markets.map((m) => {
+        const mTvl = parseFloat((m.totalValueLockedUSD as string) || '0');
+        const mDeposits = parseFloat((m.totalDepositBalanceUSD as string) || '0');
+        const mBorrows = parseFloat((m.totalBorrowBalanceUSD as string) || '0');
+        // Aave APY from supply + borrow rates if available
+        const supplyRate = parseFloat((m.rates as Record<string, string>)?.supply || '0');
+        const borrowRate = parseFloat((m.rates as Record<string, string>)?.borrow || '0');
+        // If no rates directly, estimate from utilization: borrow/deposit * borrowSpread
+        const utilization = mDeposits > 0 ? mBorrows / mDeposits : 0;
+        const estimatedApy = supplyRate > 0 ? supplyRate : utilization * 5; // ~5% base borrow cost
+        return {
+          name: (m.name as string) || (m.inputToken as Record<string, string>)?.symbol || '',
+          tvl: mTvl,
+          volume24h: mDeposits,
+          apy: Math.round(estimatedApy * 100) / 100,
+        };
+      }),
       source: 'thegraph',
       timestamp,
     };
