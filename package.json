@@ -14,6 +14,8 @@
     "lint:css": "stylelint src/**/*.css",
     "test:a11y": "playwright test e2e/accessibility.spec.ts",
     "test:a11y:headed": "playwright test e2e/accessibility.spec.ts --headed",
+    "test:errors": "playwright test e2e/console-errors.spec.ts --config=playwright.errors.config.ts --project=chromium",
+    "test:errors:page": "playwright test e2e/console-errors.spec.ts --config=playwright.errors.config.ts --project=chromium -g",
     "audit:a11y": "npx pa11y https://cryptocurrency.cv",
     "audit:a11y:local": "node scripts/a11y-audit.js http://localhost:3000",
     "audit:a11y:prod": "node scripts/a11y-audit.js https://cryptocurrency.cv",
