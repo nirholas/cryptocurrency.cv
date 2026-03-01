@@ -11,20 +11,19 @@
  *     ├─ 1. In-memory cache (60 s)          ← fastest, lost on restart
  *     ├─ 2. Live upstream fetch              ← real-time data
  *     ├─ 3. In-memory stale cache (1 hr)     ← recent-ish, lost on restart
- *     ├─ 4. Disk fallback via static file    ← survives restarts + deploys
- *     │     GET /fallback/news.json
- *     │     GET /fallback/prices.json
+ *     ├─ 4. Snapshot via API / KV / /tmp     ← survives within instance
+ *     │     GET /api/internal/snapshot?type=news
+ *     │     GET /api/internal/snapshot?type=prices
  *     └─ 5. Hardcoded emergency payload      ← always available, never fails
  *
- * ## How disk fallback stays fresh
+ * ## How snapshots stay fresh
  *
- * - The `POST /api/internal/snapshot` route (Node runtime) writes to
- *   `public/fallback/*.json` whenever fresh data is obtained.
- * - Because these are in `public/`, they are served as static files by
- *   Next.js and cached by the CDN — zero compute cost to read.
- * - Edge routes can read them via `fetch(origin + '/fallback/news.json')`.
- * - Even if the write mechanism fails, the *previous* build's fallback
- *   files are already deployed and available.
+ * - The `POST /api/internal/snapshot` route writes to Vercel KV (when
+ *   `KV_REST_API_URL` is configured) and to `/tmp/fallback/*.json`.
+ * - The `GET /api/internal/snapshot?type=…` route reads from KV first,
+ *   then `/tmp`, providing a single read endpoint for the fallback layer.
+ * - Edge routes can read via `fetch(origin + '/api/internal/snapshot?type=news')`.
+ * - `/tmp` is ephemeral and per-instance. KV is durable and shared.
  *
  * ## Emergency payloads
  *
@@ -61,7 +60,7 @@ export const EMERGENCY_PRICES: Record<string, unknown> = {
   _fallbackTimestamp: new Date().toISOString(),
 };
 
-// ─── Disk Fallback Reader (works from Edge via fetch) ────────────────────────
+// ─── Snapshot Fallback Reader (works from Edge via fetch) ────────────────────
 
 export interface FallbackResult<T> {
   data: T;
@@ -70,13 +69,14 @@ export interface FallbackResult<T> {
 }
 
 /**
- * Read a fallback file from the static public/ directory.
+ * Read a fallback snapshot via the internal snapshot API.
  *
  * Works from both Edge and Node runtimes because it uses `fetch()` against
- * the app's own origin.
+ * the app's own `/api/internal/snapshot` endpoint, which reads from KV
+ * or `/tmp` as available.
  *
  * @param origin  - The request's origin, e.g. `request.nextUrl.origin`
- * @param file    - Filename under /fallback/, e.g. "news.json"
+ * @param file    - Filename like "news.json" or "prices.json"
  * @param timeout - Max ms to wait (default 3 000)
  */
 export async function readDiskFallback<T>(
@@ -84,12 +84,14 @@ export async function readDiskFallback<T>(
   file: string,
   timeout = 3_000,
 ): Promise<T | null> {
+  // Derive type from filename (e.g. "news.json" → "news")
+  const type = file.replace(/\.json$/, '');
   try {
     const controller = new AbortController();
     const timer = setTimeout(() => controller.abort(), timeout);
-    const res = await fetch(`${origin}/fallback/${file}`, {
+    const res = await fetch(`${origin}/api/internal/snapshot?type=${type}`, {
       signal: controller.signal,
-      headers: { 'x-fallback-read': '1' }, // marker for logging
+      headers: { 'x-fallback-read': '1' },
     });
     clearTimeout(timer);
     if (!res.ok) return null;
