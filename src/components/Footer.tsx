@@ -179,7 +179,8 @@ export default function Footer() {
                 </Link>
               ))}
             </div>
-          </nav>          {/* Top section */}
+          </nav>
+          {/* Top section */}
           <div className="grid grid-cols-1 gap-8 md:grid-cols-4 lg:grid-cols-6">
             {/* Brand + Newsletter */}
             <div className="col-span-1 md:col-span-2 mb-4 lg:mb-0">

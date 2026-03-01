@@ -222,4 +222,7 @@ export function TrendingTopics({ className }: { className?: string }) {
   );
 }
 
+/** Sidebar alias for homepage integration */
+export const TrendingTopicsWidget = TrendingTopics;
+
 export default TrendingTopics;

@@ -9,7 +9,7 @@
  */
 
 /**
- * Free Crypto News - RSS Feed Aggregator
+ * Crypto Vision News - RSS Feed Aggregator
  * 
  * 100% FREE - no API keys required!
  * Aggregates news from 300+ major English crypto sources across 26 categories:

@@ -129,8 +129,17 @@ function timeAgo(ts: string): string {
 /*  LiveActivityFeed component                                        */
 /* ------------------------------------------------------------------ */
 
-export function LiveActivityFeed({ className }: { className?: string }) {
-  const { events, loading, newEventIds } = useLiveActivity();
+export function LiveActivityFeed({
+  className,
+  maxItems,
+  compact = false,
+}: {
+  className?: string;
+  maxItems?: number;
+  compact?: boolean;
+}) {
+  const { events: allEvents, loading, newEventIds } = useLiveActivity();
+  const events = maxItems ? allEvents.slice(0, maxItems) : allEvents;
   const [paused, setPaused] = useState(false);
 
   if (loading) {
@@ -207,7 +216,7 @@ export function LiveActivityFeed({ className }: { className?: string }) {
                   {timeAgo(event.timestamp)}
                 </span>
               </div>
-              <p className="text-[11px] text-[var(--color-text-tertiary)] mt-0.5 line-clamp-1">
+              <p className={cn("text-[11px] text-[var(--color-text-tertiary)] mt-0.5 line-clamp-1", compact && "hidden")}>
                 {event.description}
               </p>
               {event.amount && (

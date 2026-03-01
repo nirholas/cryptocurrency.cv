@@ -154,6 +154,34 @@ interface SentimentDistProps {
   className?: string;
 }
 
+/* ------------------------------------------------------------------ */
+/*  SentimentBanner — Compact banner for homepage market mood          */
+/* ------------------------------------------------------------------ */
+
+export function SentimentBanner({ className }: { className?: string }) {
+  // Default to neutral - in production this would come from API
+  const sentiment = "neutral" as const;
+  const config = getSentimentConfig(sentiment);
+
+  return (
+    <section className={cn("border-b border-[var(--color-border)]", className)}>
+      <div className="container-main py-3">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <span className="text-sm font-semibold text-[var(--color-text-secondary)]">
+              Market Mood
+            </span>
+            <span className={cn("px-2.5 py-0.5 rounded-full text-xs font-bold", config.bgColor, config.color)}>
+              {config.emoji} {config.label}
+            </span>
+          </div>
+          <SentimentMeter sentiment={sentiment} className="hidden sm:flex w-48" />
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export function SentimentDistribution({ counts, className }: SentimentDistProps) {
   const total = Object.values(counts).reduce((a, b) => a + (b ?? 0), 0);
   if (total === 0) return null;

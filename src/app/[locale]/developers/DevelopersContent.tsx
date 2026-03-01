@@ -1427,7 +1427,7 @@ export default function DevelopersContent() {
                 <ApiStatusBadge />
               </div>
               <h1 className="font-serif text-4xl md:text-5xl font-bold mb-4 text-[var(--color-text-primary)]">
-                Free Crypto News API
+                Crypto Vision News API
               </h1>
               <p className="text-lg text-[var(--color-text-secondary)] mb-6 max-w-2xl">
                 Access real-time cryptocurrency news, market data, DeFi analytics,

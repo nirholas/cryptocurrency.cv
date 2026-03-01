@@ -280,6 +280,40 @@ export default async function HomePage({ params }: Props) {
                   View API Docs →
                 </Link>
               </div>
+
+              {/* Trending Coins */}
+              <Suspense fallback={<Skeleton className="h-64 w-full rounded-lg" />}>
+                <TrendingCoins />
+              </Suspense>
+
+              {/* Market Movers */}
+              <Suspense fallback={<Skeleton className="h-48 w-full rounded-lg" />}>
+                <MarketMovers />
+              </Suspense>
+
+              {/* Quick Links */}
+              <div className="rounded-lg border border-[var(--color-border)] p-5 bg-[var(--color-surface-secondary)]">
+                <h3 className="text-base font-bold font-serif mb-3">
+                  Explore
+                </h3>
+                <div className="space-y-1.5">
+                  {[
+                    { label: "Market Intelligence", href: "/intelligence" },
+                    { label: "Token Unlocks", href: "/unlocks" },
+                    { label: "DeFi Dashboard", href: "/defi" },
+                    { label: "Fear & Greed Index", href: "/fear-greed" },
+                    { label: "Market Heatmap", href: "/heatmap" },
+                  ].map((item) => (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      className="block text-sm text-[var(--color-text-secondary)] hover:text-[var(--color-accent)] transition-colors py-1"
+                    >
+                      {item.label} →
+                    </Link>
+                  ))}
+                </div>
+              </div>
             </aside>
           </div>
         </section>

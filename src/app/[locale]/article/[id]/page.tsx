@@ -1,6 +1,7 @@
 import { setRequestLocale } from "next-intl/server";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { ReadingProgressBar } from "@/components/ReadingProgress";
 import { getArticleById, getRelatedArticles, toNewsArticle, type EnrichedArticle } from "@/lib/archive-v2";
 import { generateArticleMetadata } from "@/lib/seo";
 import { Link } from "@/i18n/navigation";
@@ -114,6 +115,7 @@ export default async function ArticlePage({ params }: Props) {
 
   return (
     <>
+      <ReadingProgressBar />
       <Header />
       <main className="container-main py-10">
         {/* Breadcrumbs */}
