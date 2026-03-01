@@ -17,6 +17,7 @@ import Footer from '@/components/Footer';
 import Posts from '@/components/Posts';
 import { getLatestNews } from '@/lib/crypto-news';
 import type { Metadata } from 'next';
+import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { SITE_URL } from '@/lib/constants';
