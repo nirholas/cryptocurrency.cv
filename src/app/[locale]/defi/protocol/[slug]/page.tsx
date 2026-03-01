@@ -18,6 +18,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { SITE_URL } from '@/lib/constants';
+import { locales } from '@/i18n/config';
 
 // Enable on-demand ISR for protocols not pre-rendered
 export const dynamicParams = true;

@@ -192,6 +192,12 @@ const TOP_RSS_FEEDS = [
   'https://blog.coinmarketcap.com/feed/',
   'https://blog.coingecko.com/feed/',
   'https://cryptoslate.com/feed/',
+  // Wave 4 high-signal sources
+  'https://www.theguardian.com/technology/rss',
+  'https://fortune.com/section/crypto/feed/',
+  'https://www.axios.com/pro/crypto-deals/feed',
+  'https://santiment.net/blog/feed/',
+  'https://www.fidelitydigitalassets.com/blog/rss.xml',
 ];
 
 // ─── Default Coins for Price Pipeline ──────────────────────────────────────

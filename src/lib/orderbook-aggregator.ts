@@ -47,6 +47,7 @@ export interface ExchangeOrderBook {
   bidDepthUsd: number;
   askDepthUsd: number;
   lastUpdate: string;
+  fetchLatencyMs?: number;
 }
 
 export interface AggregatedOrderBook {

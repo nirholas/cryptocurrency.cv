@@ -60,9 +60,47 @@ export function initAnalytics(): void {
   } catch {
     // Ignore
   }
+
+  // Flush queued events when the browser comes back online
+  window.addEventListener('online', flushEventQueue);
+  // Also flush on visibilitychange (user switches back to tab)
+  document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'visible' && navigator.onLine) {
+      flushEventQueue();
+    }
+  });
   
   // Track page view
   trackPageView();
+}
+
+/**
+ * Flush queued analytics events that were captured while offline.
+ */
+function flushEventQueue(): void {
+  if (eventQueue.length === 0 || !navigator.onLine) return;
+  const events = eventQueue.splice(0, eventQueue.length);
+  for (const payload of events) {
+    try {
+      const sent = navigator.sendBeacon?.(
+        '/api/analytics/events',
+        JSON.stringify(payload),
+      );
+      if (!sent) {
+        fetch('/api/analytics/events', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+          keepalive: true,
+        }).catch(() => {
+          // Re-queue failed events
+          eventQueue.push(payload);
+        });
+      }
+    } catch {
+      eventQueue.push(payload);
+    }
+  }
 }
 
 /**
@@ -334,18 +372,8 @@ export async function getSystemHealth(): Promise<Record<string, unknown>> {
     ? 'degraded'
     : 'healthy';
 
-  // Status codes breakdown
-  const statusBreakdown: Record<string, number> = {};
-  for (const [code, count] of apiMetrics.statusCounts) {
-    statusBreakdown[String(code)] = count;
-  }
-
   return {
     status: overallStatus,
-    services: {
-      api: apiStatus,
-      memory: memoryStatus,
-    },
     memory: {
       heapUsed,
       heapTotal,

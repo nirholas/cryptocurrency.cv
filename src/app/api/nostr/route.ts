@@ -15,6 +15,116 @@ import { bytesToHex } from '@noble/curves/abstract/utils';
 
 export const runtime = 'nodejs';
 
+// =============================================================================
+// BECH32 ENCODER (NIP-19)
+// =============================================================================
+
+const BECH32_CHARSET = 'qpzry9x8gf2tvdw0s3jn54khce6mua7l';
+
+function bech32Polymod(values: number[]): number {
+  const GEN = [0x3b6a57b2, 0x26508e6d, 0x1ea119fa, 0x3d4233dd, 0x2a1462b3];
+  let chk = 1;
+  for (const v of values) {
+    const b = chk >> 25;
+    chk = ((chk & 0x1ffffff) << 5) ^ v;
+    for (let i = 0; i < 5; i++) {
+      if ((b >> i) & 1) chk ^= GEN[i];
+    }
+  }
+  return chk;
+}
+
+function bech32HrpExpand(hrp: string): number[] {
+  const ret: number[] = [];
+  for (let i = 0; i < hrp.length; i++) ret.push(hrp.charCodeAt(i) >> 5);
+  ret.push(0);
+  for (let i = 0; i < hrp.length; i++) ret.push(hrp.charCodeAt(i) & 31);
+  return ret;
+}
+
+function bech32CreateChecksum(hrp: string, data: number[]): number[] {
+  const values = bech32HrpExpand(hrp).concat(data).concat([0, 0, 0, 0, 0, 0]);
+  const polymod = bech32Polymod(values) ^ 1;
+  const ret: number[] = [];
+  for (let i = 0; i < 6; i++) ret.push((polymod >> (5 * (5 - i))) & 31);
+  return ret;
+}
+
+function convertBits(data: Uint8Array, fromBits: number, toBits: number, pad: boolean): number[] {
+  let acc = 0;
+  let bits = 0;
+  const ret: number[] = [];
+  const maxv = (1 << toBits) - 1;
+  for (const value of data) {
+    acc = (acc << fromBits) | value;
+    bits += fromBits;
+    while (bits >= toBits) {
+      bits -= toBits;
+      ret.push((acc >> bits) & maxv);
+    }
+  }
+  if (pad) {
+    if (bits > 0) ret.push((acc << (toBits - bits)) & maxv);
+  }
+  return ret;
+}
+
+function bech32Encode(hrp: string, data: Uint8Array): string {
+  const fiveBit = convertBits(data, 8, 5, true);
+  const checksum = bech32CreateChecksum(hrp, fiveBit);
+  let result = hrp + '1';
+  for (const d of fiveBit.concat(checksum)) result += BECH32_CHARSET[d];
+  return result;
+}
+
+/**
+ * Encode an naddr per NIP-19:
+ * TLV: 0=d-tag, 1=relay, 2=author(32 bytes), 3=kind(4 bytes BE)
+ */
+function encodeNaddr(dTag: string, relay: string, pubkeyHex: string, kind: number): string {
+  const parts: Uint8Array[] = [];
+
+  // TLV type 0: d-tag (identifier)
+  const dTagBytes = new TextEncoder().encode(dTag);
+  parts.push(new Uint8Array([0, dTagBytes.length]));
+  parts.push(dTagBytes);
+
+  // TLV type 1: relay hint
+  const relayBytes = new TextEncoder().encode(relay);
+  parts.push(new Uint8Array([1, relayBytes.length]));
+  parts.push(relayBytes);
+
+  // TLV type 2: author pubkey (32 bytes)
+  const pubkeyBytes = hexToBytes(pubkeyHex);
+  parts.push(new Uint8Array([2, 32]));
+  parts.push(pubkeyBytes);
+
+  // TLV type 3: kind (4 bytes big-endian)
+  const kindBytes = new Uint8Array(4);
+  new DataView(kindBytes.buffer).setUint32(0, kind, false);
+  parts.push(new Uint8Array([3, 4]));
+  parts.push(kindBytes);
+
+  // Concatenate all TLV parts
+  const totalLen = parts.reduce((s, p) => s + p.length, 0);
+  const tlv = new Uint8Array(totalLen);
+  let offset = 0;
+  for (const part of parts) {
+    tlv.set(part, offset);
+    offset += part.length;
+  }
+
+  return bech32Encode('naddr', tlv);
+}
+
+function hexToBytes(hex: string): Uint8Array {
+  const bytes = new Uint8Array(hex.length / 2);
+  for (let i = 0; i < hex.length; i += 2) {
+    bytes[i / 2] = parseInt(hex.substring(i, i + 2), 16);
+  }
+  return bytes;
+}
+
 // Nostr event kinds
 const EVENT_KINDS = {
   TEXT_NOTE: 1,
@@ -266,22 +376,20 @@ export async function POST(request: NextRequest) {
         publishedEvents.splice(0, publishedEvents.length - MAX_EVENTS);
       }
 
-      // NIP-19 naddr: requires bech32 encoding of kind + pubkey + d-tag
-      // Full encoding: use @scure/base + TLV. Providing hex ID for now.
-      const naddr = `${keypair.pubkey}:${EVENT_KINDS.ARTICLE}:${dTag}`;
+      // NIP-19 naddr: bech32-encoded TLV of kind + pubkey + d-tag + relay
+      const naddr = encodeNaddr(dTag, DEFAULT_RELAYS[0], keypair.pubkey, EVENT_KINDS.ARTICLE);
 
       return NextResponse.json({
         success: true,
         event,
         event_id: event.id,
         naddr,
-        naddr_format: 'pubkey:kind:d-tag (NIP-19 bech32 encoding requires @scure/base)',
       });
     }
     
-    // Subscribe to relay for crypto news
+    // Subscribe to relay for crypto news — fetch recent events via WebSocket
     if (action === 'subscribe') {
-      const { relay, filters } = body;
+      const { relay, filters, timeout } = body;
       const targetRelay = relay || DEFAULT_RELAYS[0];
       const subFilters = filters || {
         kinds: [EVENT_KINDS.TEXT_NOTE, EVENT_KINDS.ARTICLE],
@@ -289,18 +397,74 @@ export async function POST(request: NextRequest) {
         limit: 50,
       };
       const subscriptionId = `sub_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`;
+      const wsTimeout = Math.min(timeout || 5000, 15000);
 
-      // Build the REQ message clients should send to the relay
+      // Build the REQ message
       const reqMessage = JSON.stringify(['REQ', subscriptionId, subFilters]);
+
+      // Attempt to connect to the relay and fetch events
+      let fetchedEvents: Array<Record<string, unknown>> = [];
+      let relayConnected = false;
+      let relayError: string | null = null;
+
+      try {
+        // Use dynamic import for ws in Node.js runtime
+        const { WebSocket: WS } = await import('ws');
+        fetchedEvents = await new Promise<Array<Record<string, unknown>>>((resolve) => {
+          const events: Array<Record<string, unknown>> = [];
+          const ws = new WS(targetRelay);
+          const timer = setTimeout(() => {
+            ws.close();
+            resolve(events);
+          }, wsTimeout);
+
+          ws.on('open', () => {
+            relayConnected = true;
+            ws.send(reqMessage);
+          });
+
+          ws.on('message', (data: Buffer | string) => {
+            try {
+              const msg = JSON.parse(data.toString());
+              if (Array.isArray(msg)) {
+                if (msg[0] === 'EVENT' && msg[2]) {
+                  events.push(msg[2]);
+                } else if (msg[0] === 'EOSE') {
+                  // End-of-stored-events: we have all historical matches
+                  clearTimeout(timer);
+                  ws.close();
+                  resolve(events);
+                }
+              }
+            } catch { /* skip malformed */ }
+          });
+
+          ws.on('error', (err: Error) => {
+            relayError = err.message;
+            clearTimeout(timer);
+            resolve(events);
+          });
+
+          ws.on('close', () => {
+            clearTimeout(timer);
+            resolve(events);
+          });
+        });
+      } catch (wsErr) {
+        relayError = wsErr instanceof Error ? wsErr.message : 'WebSocket unavailable';
+      }
 
       return NextResponse.json({
         success: true,
-        message: 'Subscription created — connect to relay WebSocket and send the REQ message',
         relay: targetRelay,
+        connected: relayConnected,
         filters: subFilters,
         subscriptionId,
+        events: fetchedEvents.slice(0, 100),
+        eventCount: fetchedEvents.length,
+        ...(relayError ? { warning: `Relay connection issue: ${relayError}` } : {}),
         reqMessage,
-        usage: `Connect to ${targetRelay} via WebSocket and send: ${reqMessage}`,
+        usage: `Events fetched from ${targetRelay}. To stream live, connect via WebSocket and send: ${reqMessage}`,
       });
     }
     

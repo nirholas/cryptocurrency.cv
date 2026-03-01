@@ -2782,7 +2782,10 @@ const HOMEPAGE_SOURCE_KEYS = new Set<SourceKey>([
   'grayscale_insights', 'bitwise_research', 'vaneck_blog', 'coinshares_research', 'ark_invest', 'twentyone_shares', 'wisdomtree_blog',
 
   // Mainstream — selected
-  'bloomberg_crypto', 'forbes_crypto',
+  'bloomberg_crypto', 'forbes_crypto', 'guardian_tech', 'fortune_crypto', 'axios_crypto', 'barrons_crypto',
+
+  // Geopolitical / Central Banks
+  'bis_innovation', 'imf_fintech', 'ecb_digital', 'us_treasury', 'atlantic_council',
 
   // Developer Tools
   'alchemy_blog', 'chainlink_blog', 'infura_blog', 'thegraph_blog', 'hardhat_blog', 'foundry_blog',
@@ -2803,22 +2806,37 @@ const HOMEPAGE_SOURCE_KEYS = new Set<SourceKey>([
   'coincenter', 'cftc_press',
 
   // On-chain Analytics
-  'nansen_blog', 'artemis_blog',
+  'nansen_blog', 'artemis_blog', 'santiment_blog',
 
   // Derivatives
-  'deribit_insights', 'hyperliquid_blog',
+  'deribit_insights', 'hyperliquid_blog', 'laevitas_blog',
 
   // Bitcoin Extended
   'bitcoinops', 'blockstream_blog',
 
   // Ethereum Extended
-  'ef_blog', 'flashbots_blog',
+  'ef_blog', 'flashbots_blog', 'lido_blog', 'ens_blog',
 
   // Gaming
-  'immutable_blog',
+  'immutable_blog', 'beam_blog',
 
   // Journalism
-  'milkroad',
+  'milkroad', 'coffeezilla', 'molly_white',
+
+  // Social
+  'farcaster_blog', 'lens_blog',
+
+  // TradFi / RWA
+  'securitize_blog', 'blackrock_digital', 'franklin_templeton',
+
+  // ETF Wave 4
+  'fidelity_digital', 'hashdex_blog',
+
+  // Asia
+  'blocktempo', 'coinpost',
+
+  // Stablecoin Extended
+  'paxos_blog', 'makerdao_governance',
 ]);
 
 export interface NewsArticle {

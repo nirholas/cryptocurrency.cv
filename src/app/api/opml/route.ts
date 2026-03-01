@@ -46,6 +46,25 @@ const RSS_SOURCES = [
   // Policy
   { name: 'Coin Center', url: 'https://www.coincenter.org/feed/', htmlUrl: 'https://coincenter.org', category: 'Policy' },
   { name: 'SEC Press Releases', url: 'https://www.sec.gov/news/pressreleases.rss', htmlUrl: 'https://sec.gov', category: 'Policy' },
+  // Wave 4 — Mainstream
+  { name: 'The Guardian Tech', url: 'https://www.theguardian.com/technology/rss', htmlUrl: 'https://theguardian.com', category: 'Mainstream' },
+  { name: 'BBC Business', url: 'https://feeds.bbci.co.uk/news/business/rss.xml', htmlUrl: 'https://bbc.co.uk', category: 'Mainstream' },
+  { name: 'Fortune Crypto', url: 'https://fortune.com/section/crypto/feed/', htmlUrl: 'https://fortune.com', category: 'Mainstream' },
+  { name: "Barron's", url: 'https://www.barrons.com/feed', htmlUrl: 'https://barrons.com', category: 'Mainstream' },
+  { name: 'Axios Crypto', url: 'https://www.axios.com/pro/crypto-deals/feed', htmlUrl: 'https://axios.com', category: 'Mainstream' },
+  // Wave 4 — Geopolitical / Central Banks
+  { name: 'BIS Innovation Hub', url: 'https://www.bis.org/doclist/bis_fsi_publs.rss', htmlUrl: 'https://bis.org', category: 'Policy' },
+  { name: 'IMF Fintech Notes', url: 'https://www.imf.org/en/Publications/RSS?type=Fintech%20Notes', htmlUrl: 'https://imf.org', category: 'Policy' },
+  { name: 'Atlantic Council', url: 'https://www.atlanticcouncil.org/category/programs/geoeconomics/feed/', htmlUrl: 'https://atlanticcouncil.org', category: 'Policy' },
+  // Wave 4 — On-chain
+  { name: 'Santiment Blog', url: 'https://santiment.net/blog/feed/', htmlUrl: 'https://santiment.net', category: 'Research' },
+  // Wave 4 — Social
+  { name: 'Farcaster Blog', url: 'https://www.farcaster.xyz/blog/rss.xml', htmlUrl: 'https://farcaster.xyz', category: 'Social' },
+  { name: 'Lens Protocol Blog', url: 'https://lens.xyz/blog/rss.xml', htmlUrl: 'https://lens.xyz', category: 'Social' },
+  // Wave 4 — TradFi / RWA
+  { name: 'Securitize Blog', url: 'https://securitize.io/blog/rss.xml', htmlUrl: 'https://securitize.io', category: 'TradFi' },
+  // Wave 4 — ETF
+  { name: 'Fidelity Digital Assets', url: 'https://www.fidelitydigitalassets.com/blog/rss.xml', htmlUrl: 'https://fidelitydigitalassets.com', category: 'ETF' },
 ];
 
 function escapeXml(str: string): string {

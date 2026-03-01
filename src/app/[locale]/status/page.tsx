@@ -7,8 +7,7 @@
  */
 
 import { generateSEOMetadata } from '@/lib/seo';
-
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || process.env.SITE_URL || 'https://cryptocurrency.cv';
+import { SITE_URL } from '@/lib/constants';
 
 export const metadata = generateSEOMetadata({
   title: 'System Status',

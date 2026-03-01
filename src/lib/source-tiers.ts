@@ -104,6 +104,57 @@ export const SOURCE_TIERS: Record<string, SourceTierEntry> = {
   fintechfutures: { tier: 'fintech', displayName: 'Fintech Futures',   credibility: 0.40, reputation: 30 },
 
   // ═══════════════════════════════════════════════════════════════
+  // Tier 1 — Wave 4 mainstream additions
+  // ═══════════════════════════════════════════════════════════════
+  guardian_tech:    { tier: 'tier1', displayName: 'The Guardian Tech',   credibility: 0.95, reputation: 96 },
+  bbc_business:    { tier: 'tier1', displayName: 'BBC Business',        credibility: 0.96, reputation: 97 },
+  cnn_business:    { tier: 'tier1', displayName: 'CNN Business',        credibility: 0.92, reputation: 93 },
+  barrons_crypto:  { tier: 'tier1', displayName: "Barron's Crypto",     credibility: 0.94, reputation: 95 },
+  fortune_crypto:  { tier: 'tier1', displayName: 'Fortune Crypto',      credibility: 0.92, reputation: 93 },
+  axios_crypto:    { tier: 'tier1', displayName: 'Axios Crypto',        credibility: 0.91, reputation: 92 },
+  business_insider_crypto: { tier: 'tier1', displayName: 'Business Insider', credibility: 0.88, reputation: 88 },
+
+  // ═══════════════════════════════════════════════════════════════
+  // Tier 1 — Wave 4 geopolitical/institutional additions
+  // ═══════════════════════════════════════════════════════════════
+  bis_innovation:  { tier: 'tier1', displayName: 'BIS Innovation Hub',  credibility: 0.97, reputation: 98 },
+  imf_fintech:     { tier: 'tier1', displayName: 'IMF Fintech Notes',   credibility: 0.97, reputation: 98 },
+  ecb_digital:     { tier: 'tier1', displayName: 'ECB Digital Euro',    credibility: 0.97, reputation: 98 },
+  us_treasury:     { tier: 'tier1', displayName: 'US Treasury',         credibility: 0.98, reputation: 99 },
+  boe_fintech:     { tier: 'tier1', displayName: 'Bank of England',     credibility: 0.97, reputation: 98 },
+  atlantic_council: { tier: 'tier1', displayName: 'Atlantic Council',   credibility: 0.93, reputation: 94 },
+
+  // ═══════════════════════════════════════════════════════════════
+  // Research — Wave 4 on-chain/research additions
+  // ═══════════════════════════════════════════════════════════════
+  santiment_blog:  { tier: 'research', displayName: 'Santiment',        credibility: 0.90, reputation: 70 },
+  messari_research: { tier: 'research', displayName: 'Messari Research', credibility: 0.92, reputation: 72 },
+
+  // ═══════════════════════════════════════════════════════════════
+  // Tier 2 — Wave 4 notable additions
+  // ═══════════════════════════════════════════════════════════════
+  fidelity_digital: { tier: 'tier2', displayName: 'Fidelity Digital',   credibility: 0.92, reputation: 88 },
+  securitize_blog: { tier: 'tier2', displayName: 'Securitize',          credibility: 0.85, reputation: 72 },
+  blackrock_digital: { tier: 'tier2', displayName: 'BlackRock Digital', credibility: 0.95, reputation: 95 },
+  franklin_templeton: { tier: 'tier2', displayName: 'Franklin Templeton', credibility: 0.93, reputation: 92 },
+  coinbase_institutional: { tier: 'tier2', displayName: 'Coinbase Institutional', credibility: 0.90, reputation: 85 },
+  ripple_insights: { tier: 'tier2', displayName: 'Ripple Insights',     credibility: 0.85, reputation: 75 },
+  coffeezilla:     { tier: 'tier2', displayName: 'Coffeezilla',         credibility: 0.88, reputation: 78 },
+  molly_white:     { tier: 'tier2', displayName: 'Molly White',         credibility: 0.86, reputation: 75 },
+
+  // ═══════════════════════════════════════════════════════════════
+  // Tier 3 — Wave 4 additions
+  // ═══════════════════════════════════════════════════════════════
+  farcaster_blog:  { tier: 'tier3', displayName: 'Farcaster',           credibility: 0.78, reputation: 70 },
+  lens_blog:       { tier: 'tier3', displayName: 'Lens Protocol',       credibility: 0.78, reputation: 68 },
+  thestreet_crypto: { tier: 'tier3', displayName: 'TheStreet Crypto',   credibility: 0.80, reputation: 72 },
+  benzinga_crypto: { tier: 'tier3', displayName: 'Benzinga Crypto',     credibility: 0.78, reputation: 70 },
+  kitco_crypto:    { tier: 'tier3', displayName: 'Kitco Crypto',        credibility: 0.78, reputation: 70 },
+  blocktempo:      { tier: 'tier3', displayName: 'BlockTempo',          credibility: 0.75, reputation: 65 },
+  coinpost:        { tier: 'tier3', displayName: 'CoinPost',            credibility: 0.75, reputation: 65 },
+  chaincatcher:    { tier: 'tier3', displayName: 'Chain Catcher',       credibility: 0.72, reputation: 62 },
+
+  // ═══════════════════════════════════════════════════════════════
   // Tier 3 — Notable new sources
   // ═══════════════════════════════════════════════════════════════
   protos:         { tier: 'tier3', displayName: 'Protos',              credibility: 0.75, reputation: 68 },
