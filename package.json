@@ -6,7 +6,7 @@
   "private": false,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "NODE_OPTIONS='--max-old-space-size=4096' CI=true next build",
     "start": "next start",
     "lint": "eslint --config eslint.config.mjs src/",
     "typecheck": "tsc --noEmit",
