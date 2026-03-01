@@ -49,16 +49,21 @@ function getAdminToken(): string | null {
 // ============================================================================
 
 /**
- * Constant-time string comparison to prevent timing attacks
+ * Constant-time string comparison to prevent timing attacks.
+ * Does NOT short-circuit on length mismatch — an attacker cannot
+ * learn the token length from response timing.
  */
 function secureCompare(a: string, b: string): boolean {
-  if (a.length !== b.length) {
-    return false;
-  }
-
-  let result = 0;
-  for (let i = 0; i < a.length; i++) {
-    result |= a.charCodeAt(i) ^ b.charCodeAt(i);
+  const encoder = new TextEncoder();
+  const bufA = encoder.encode(a);
+  const bufB = encoder.encode(b);
+  // Always compare against the longer buffer length to avoid
+  // leaking length information through timing.
+  const maxLen = Math.max(bufA.byteLength, bufB.byteLength);
+  if (maxLen === 0) return false;
+  let result = bufA.byteLength ^ bufB.byteLength; // non-zero if lengths differ
+  for (let i = 0; i < maxLen; i++) {
+    result |= (bufA[i % bufA.byteLength] ?? 0) ^ (bufB[i % bufB.byteLength] ?? 0);
   }
   return result === 0;
 }

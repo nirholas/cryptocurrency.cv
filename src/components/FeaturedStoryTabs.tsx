@@ -12,11 +12,13 @@
 import { useState, useMemo } from 'react';
 import { Link } from '@/i18n/navigation';
 import { generateArticleSlug } from '@/lib/archive-v2';
+import CardImage from './cards/CardImage';
 
 interface Article {
   title: string;
   link: string;
   description?: string;
+  imageUrl?: string;
   pubDate: string;
   source: string;
   timeAgo: string;
@@ -121,6 +123,16 @@ export default function FeaturedStoryTabs({ articles, maxArticles = 6 }: Feature
           className="group block"
         >
           <div className="bg-white dark:bg-slate-800 rounded-2xl border border-gray-100 dark:border-slate-700 overflow-hidden h-full hover:shadow-xl dark:hover:shadow-2xl hover:border-gray-300 dark:hover:border-slate-500 transition-all duration-300">
+            {/* Featured hero image */}
+            <div className="relative aspect-[16/9] overflow-hidden">
+              <CardImage
+                src={hero.imageUrl}
+                alt={hero.title}
+                source={hero.source}
+                size="lg"
+                className="absolute inset-0 group-hover:scale-105 transition-transform duration-500"
+              />
+            </div>
             <div className="p-6 md:p-8 flex flex-col h-full">
               {/* Source & Category */}
               <div className="flex items-center gap-3 mb-4">
@@ -167,10 +179,16 @@ export default function FeaturedStoryTabs({ articles, maxArticles = 6 }: Feature
                   href={`/article/${slug}`}
                   className="group flex items-start gap-4 p-5 hover:bg-gray-50 dark:hover:bg-slate-700/50 transition-colors"
                 >
-                  {/* Number */}
-                  <span className="flex-shrink-0 w-8 h-8 rounded-lg bg-gray-100 dark:bg-slate-700 text-gray-500 dark:text-slate-400 font-bold text-sm flex items-center justify-center group-hover:bg-brand-100 dark:group-hover:bg-amber-900/30 group-hover:text-brand-600 dark:group-hover:text-amber-400 transition-colors">
-                    {i + 2}
-                  </span>
+                  {/* Thumbnail */}
+                  <div className="relative w-16 h-16 rounded-lg overflow-hidden flex-shrink-0">
+                    <CardImage
+                      src={article.imageUrl}
+                      alt={article.title}
+                      source={article.source}
+                      size="sm"
+                      className="absolute inset-0 group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2 mb-1.5">
                       <span className={`w-2 h-2 rounded-full ${color} flex-shrink-0`} />

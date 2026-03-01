@@ -10,11 +10,13 @@
 
 import { Link } from '@/i18n/navigation';
 import { generateArticleSlug } from '@/lib/archive-v2';
+import CardImage from './cards/CardImage';
 
 interface Article {
   title: string;
   link: string;
   description?: string;
+  imageUrl?: string;
   pubDate: string;
   source: string;
   timeAgo: string;
@@ -80,6 +82,17 @@ export default function MostRead({ articles, maxArticles = 7 }: MostReadProps) {
               <span className="flex-shrink-0 text-3xl font-black text-gray-200 dark:text-slate-700 group-hover:text-brand-300 dark:group-hover:text-amber-600 transition-colors tabular-nums leading-none pt-1 w-8 text-center">
                 {index + 1}
               </span>
+
+              {/* Thumbnail */}
+              <div className="relative w-16 h-16 rounded-lg overflow-hidden flex-shrink-0 hidden sm:block">
+                <CardImage
+                  src={article.imageUrl}
+                  alt={article.title}
+                  source={article.source}
+                  size="sm"
+                  className="absolute inset-0 group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
 
               <div className="flex-1 min-w-0">
                 <h3 className="text-sm font-bold text-gray-900 dark:text-white group-hover:text-brand-700 dark:group-hover:text-amber-400 transition-colors leading-snug line-clamp-2 mb-1.5">

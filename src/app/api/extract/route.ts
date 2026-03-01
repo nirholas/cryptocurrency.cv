@@ -24,6 +24,44 @@ interface ExtractionResult {
 }
 
 /**
+ * Validate a URL is safe to fetch (prevents SSRF attacks)
+ * Blocks private/internal IPs, localhost, cloud metadata endpoints, and non-HTTP schemes.
+ */
+function isSafeUrl(urlStr: string): boolean {
+  try {
+    const parsed = new URL(urlStr);
+    if (!['http:', 'https:'].includes(parsed.protocol)) return false;
+    const hostname = parsed.hostname.toLowerCase();
+    // Block localhost
+    if (hostname === 'localhost' || hostname === '127.0.0.1' || hostname === '::1' || hostname === '[::1]') return false;
+    // Block cloud metadata endpoints
+    if (hostname === '169.254.169.254' || hostname === 'metadata.google.internal') return false;
+    // Block private/reserved IP ranges
+    if (
+      hostname.startsWith('10.') ||
+      hostname.startsWith('192.168.') ||
+      hostname.startsWith('0.') ||
+      hostname === '0.0.0.0'
+    ) return false;
+    // Block 172.16.0.0 - 172.31.255.255
+    if (hostname.startsWith('172.')) {
+      const second = parseInt(hostname.split('.')[1], 10);
+      if (second >= 16 && second <= 31) return false;
+    }
+    // Block internal/local domains
+    if (
+      hostname.endsWith('.internal') ||
+      hostname.endsWith('.local') ||
+      hostname.endsWith('.localhost') ||
+      hostname.endsWith('.svc.cluster.local')
+    ) return false;
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+/**
  * Extract full article content from a URL
  */
 export async function GET(request: NextRequest) {
@@ -38,20 +76,27 @@ export async function GET(request: NextRequest) {
   }
 
   try {
-    // Validate URL
+    // Validate URL format
     new URL(url);
   } catch {
     return NextResponse.json({ error: 'Invalid URL' }, { status: 400 });
   }
 
+  // SSRF protection: block private/internal/metadata URLs
+  if (!isSafeUrl(url)) {
+    return NextResponse.json(
+      { error: 'URL not allowed — private, internal, and metadata URLs are blocked' },
+      { status: 400 }
+    );
+  }
+
   try {
     const result = await extractArticle(url);
     return NextResponse.json(result);
-  } catch (error) {
+  } catch {
     return NextResponse.json(
       {
         error: 'Extraction failed',
-        message: error instanceof Error ? error.message : 'Unknown error',
         url,
       },
       { status: 500 }

@@ -114,18 +114,32 @@ function isSperaxOSRequest(request: NextRequest): boolean {
   const origin = request.headers.get('origin') ?? '';
   if (origin && isTrustedOrigin(origin)) return true;
 
-  const referer = request.headers.get('referer') ?? '';
-  if (referer) {
-    try {
-      if (isTrustedOrigin(new URL(referer).origin)) return true;
-    } catch {
-      // malformed referer — ignore
-    }
-  }
+  // NOTE: Referer header is NOT checked — it is trivially spoofable and
+  // would allow anyone to bypass rate limiting and x402 payment by setting
+  // Referer: https://sperax.live/.  Only Origin (set by browsers on
+  // cross-origin requests) and the secret token header are trusted.
 
   const token = request.headers.get('x-speraxos-token') ?? '';
-  if (token && process.env.SPERAXOS_API_SECRET && token === process.env.SPERAXOS_API_SECRET) {
-    return true;
+  if (token && process.env.SPERAXOS_API_SECRET) {
+    // Constant-time comparison to prevent timing attacks on the bypass token
+    try {
+      const enc = new TextEncoder();
+      const a = enc.encode(token);
+      const b = enc.encode(process.env.SPERAXOS_API_SECRET);
+      if (a.byteLength === b.byteLength && crypto.subtle) {
+        const result = await crypto.subtle.timingSafeEqual?.(a, b);
+        // timingSafeEqual is available in Node 20+ and some Edge runtimes
+        if (result) return true;
+      }
+      // Fallback: XOR-based constant-time compare
+      if (a.byteLength === b.byteLength) {
+        let diff = 0;
+        for (let i = 0; i < a.byteLength; i++) diff |= a[i] ^ b[i];
+        if (diff === 0) return true;
+      }
+    } catch {
+      // Comparison failed, deny
+    }
   }
 
   return false;
@@ -445,8 +459,50 @@ async function checkTierRateLimit(
 const SECURITY_HEADERS: Record<string, string> = {
   'X-Content-Type-Options': 'nosniff',
   'X-Frame-Options': 'DENY',
+  'X-XSS-Protection': '0', // Disabled in favour of CSP; avoids legacy XSS-auditor quirks
   'Referrer-Policy': 'strict-origin-when-cross-origin',
+  'X-Permitted-Cross-Domain-Policies': 'none',
+  'Permissions-Policy': 'camera=(), microphone=(), geolocation=(), interest-cohort=()',
+  // Prevent browsers from caching authenticated API responses on shared caches
+  'Pragma': 'no-cache',
 };
+
+// =============================================================================
+// SUSPICIOUS PAYLOAD DETECTION
+// =============================================================================
+
+/**
+ * Lightweight check for common injection payloads in query strings and
+ * path segments.  This does NOT replace server-side input validation but
+ * provides an early-reject at the edge to cut down on noise.
+ */
+const SUSPICIOUS_PATTERNS = [
+  /<script[\s>]/i,                         // XSS probes
+  /javascript:/i,                          // javascript: protocol
+  /\bon\w+\s*=/i,                          // inline event handlers: onerror=, onclick=
+  /union\s+select/i,                       // SQL injection
+  /;\s*(drop|alter|delete|insert|update)\s/i, // SQL injection
+  /\.\.\//,                                // Path traversal
+  /%2e%2e%2f/i,                           // URL-encoded path traversal
+  /%00/,                                   // Null byte injection
+  /\0/,                                    // Literal null byte
+];
+
+function isSuspiciousRequest(request: NextRequest): string | null {
+  const url = request.nextUrl;
+  const searchString = url.search;
+  const pathString = url.pathname;
+
+  for (const pattern of SUSPICIOUS_PATTERNS) {
+    if (pattern.test(searchString)) return 'query';
+    if (pattern.test(pathString)) return 'path';
+  }
+
+  // Check for excessively long query parameters (common in fuzzing/overflow attacks)
+  if (searchString.length > 2048) return 'query-length';
+
+  return null;
+}
 
 // =============================================================================
 // HELPERS
@@ -497,6 +553,20 @@ export default async function middleware(request: NextRequest) {
     headers['Vary'] = 'Origin';
   }
 
+  // Suspicious payload detection — reject likely injection attempts early
+  const suspiciousLocation = isSuspiciousRequest(request);
+  if (suspiciousLocation) {
+    return NextResponse.json(
+      {
+        error: 'Bad Request',
+        code: 'SUSPICIOUS_INPUT',
+        message: 'Request contains potentially malicious content',
+        requestId,
+      },
+      { status: 400, headers },
+    );
+  }
+
   // Bot check — x402 clients are explicitly allowed via BOT_ALLOWLIST
   const ua = request.headers.get('user-agent') || '';
   if (
@@ -526,10 +596,22 @@ export default async function middleware(request: NextRequest) {
     );
   }
 
-  // Admin auth
+  // Admin auth — constant-time comparison to prevent timing attacks
   if (pathname.startsWith('/api/admin') || pathname.startsWith('/admin')) {
-    const token = request.headers.get('Authorization')?.replace('Bearer ', '');
-    if (!process.env.ADMIN_TOKEN || token !== process.env.ADMIN_TOKEN) {
+    const adminToken = request.headers.get('Authorization')?.replace('Bearer ', '');
+    const expected = process.env.ADMIN_TOKEN;
+    let adminAuthed = false;
+    if (expected && adminToken) {
+      const enc = new TextEncoder();
+      const a = enc.encode(adminToken);
+      const b = enc.encode(expected);
+      if (a.byteLength === b.byteLength) {
+        let diff = 0;
+        for (let i = 0; i < a.byteLength; i++) diff |= a[i] ^ b[i];
+        adminAuthed = diff === 0;
+      }
+    }
+    if (!adminAuthed) {
       return NextResponse.json(
         { error: 'Unauthorized', code: 'ADMIN_AUTH_REQUIRED', requestId },
         { status: 401, headers },

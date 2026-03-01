@@ -9,11 +9,13 @@
 
 import { Link } from '@/i18n/navigation';
 import { generateArticleSlug } from '@/lib/archive-v2';
+import CardImage from './cards/CardImage';
 
 interface Article {
   title: string;
   link: string;
   description?: string;
+  imageUrl?: string;
   pubDate: string;
   source: string;
   timeAgo?: string;
@@ -87,8 +89,18 @@ export default function NewsCluster({ clusters, maxClusters = 4 }: NewsClusterPr
           return (
             <div
               key={primary.link}
-              className="bg-white dark:bg-slate-800 rounded-xl border border-gray-100 dark:border-slate-700 overflow-hidden hover:shadow-md transition-shadow duration-200"
+              className="group bg-white dark:bg-slate-800 rounded-xl border border-gray-100 dark:border-slate-700 overflow-hidden hover:shadow-md transition-shadow duration-200"
             >
+              {/* Primary article image */}
+              <div className="relative aspect-[2/1] overflow-hidden">
+                <CardImage
+                  src={primary.imageUrl}
+                  alt={primary.title}
+                  source={primary.source}
+                  className="absolute inset-0 group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+
               {/* Primary article */}
               <div className="p-5">
                 <div className="flex items-center gap-2 mb-3">

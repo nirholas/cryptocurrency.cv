@@ -2,22 +2,23 @@
  * Free Crypto News - RSS Feed Aggregator
  * 
  * 100% FREE - no API keys required!
- * Aggregates news from 160+ major English crypto sources across 24 categories:
- * - General: 30 sources (CoinDesk, The Block, Decrypt, CoinTelegraph, Blockworks, DailyCoin, etc.)
- * - DeFi: 12 sources (The Defiant, Bankless, Uniswap, Aave, Compound, etc.)
- * - Mainstream: 17 sources (Bloomberg, Reuters, Forbes, CNBC, WSJ, NYT, Economist, etc.)
+ * Aggregates news from 200+ major English crypto sources across 26 categories:
+ * - General: 37 sources (CoinDesk, The Block, Decrypt, CoinTelegraph, Blockworks, WatcherGuru, Cryptopolitan, etc.)
+ * - DeFi: 19 sources (The Defiant, Bankless, Uniswap, Aave, dYdX, GMX, Jupiter, Morpho, etc.)
+ * - Mainstream: 20 sources (Bloomberg, Reuters, Forbes, CNBC, WSJ, NYT, TechCrunch, Wired, etc.)
  * - Research: 8 sources (Messari, Paradigm, Delphi Digital, a16z Crypto, etc.)
- * - Institutional: 8 sources (Galaxy Digital, Pantera Capital, Multicoin, etc.)
- * - Geopolitical: 8 sources (BBC, Reuters, AP, Federal Reserve, SEC, Al Jazeera, etc.)
+ * - Institutional: 13 sources (Galaxy Digital, Pantera, CoinMarketCap, CoinGecko, Bitget, KuCoin, etc.)
+ * - Geopolitical: 11 sources (BBC, Reuters, AP, Federal Reserve, SEC, CFTC, Coin Center, etc.)
  * - Layer 2: 7 sources (L2BEAT, Optimism, Arbitrum, Polygon, zkSync, Base, etc.)
  * - ETF/Asset Managers: 7 sources (Grayscale, Bitwise, VanEck, ARK, 21Shares, etc.)
- * - Alt L1: 7 sources (NEAR, Cosmos, Avalanche, Sui, Aptos, Cardano, Polkadot)
+ * - Alt L1: 10 sources (NEAR, Cosmos, Avalanche, Sui, Aptos, TON, Bittensor, Akash, etc.)
  * - Trading: 6 sources (BeInCrypto, AMBCrypto, FXStreet, TradingView, etc.)
  * - Security: 6 sources (SlowMist, CertiK, OpenZeppelin, Trail of Bits, samczsun, Immunefi)
- * - Developer: 6 sources (Alchemy, Chainlink, Infura, The Graph, Hardhat, Foundry)
+ * - Developer: 8 sources (Alchemy, Chainlink, Infura, The Graph, Wormhole, LayerZero, etc.)
  * - Bitcoin: 6 sources (Bitcoin Magazine, Bitcoinist, Bitcoin.com, BTC Times, Lightning Labs, Stacker News)
+ * - Solana: 5 sources (Solana News, Helius, Phantom, Marinade, Jito)
+ * - On-Chain: 7 sources (Glassnode, IntoTheBlock, Coin Metrics, Nansen, Dune, Artemis, etc.)
  * - Quant: 5 sources (AQR, Two Sigma, Man Institute, Alpha Architect, QuantStart)
- * - On-Chain: 4 sources (Glassnode, IntoTheBlock, Coin Metrics, Willy Woo)
  * - NFT: 4 sources (NFT Now, NFT Evening, NFT Plazas, DappRadar)
  * - Ethereum: 4 sources (Week in Ethereum, Etherscan, Daily Gwei)
  * - Mining: 3 sources (Bitcoin Mining News, Hashrate Index, Compass Mining)
@@ -26,7 +27,7 @@
  * - Fintech: 3 sources (Finextra, PYMNTS, Fintech Futures)
  * - Stablecoin: 2 sources (Circle, Tether)
  * - TradFi: 2 sources (Goldman Sachs, BNY Mellon)
- * - Other: Solana, Gaming, Derivatives, Asia
+ * - Other: Gaming, Derivatives, Asia
  */
 
 import sanitizeHtml from 'sanitize-html';
@@ -35,7 +36,7 @@ import {
   isFintechSource,
 } from './source-tiers';
 
-// RSS Feed URLs for crypto news sources (130+ sources)
+// RSS Feed URLs for crypto news sources (200+ sources)
 const RSS_SOURCES = {
   // ═══════════════════════════════════════════════════════════════
   // TIER 1: Major News Outlets
@@ -1276,6 +1277,227 @@ const RSS_SOURCES = {
     name: 'Epicenter Podcast',
     url: 'https://feeds.simplecast.com/0E5u4F_4',
     category: 'general',
+  },
+
+  // =========================================================================
+  // CRYPTO MEDIA — High-Volume News Sources
+  // =========================================================================
+  watcherguru: {
+    name: 'Watcher Guru',
+    url: 'https://watcher.guru/news/feed',
+    category: 'general',
+  },
+  cryptopolitan: {
+    name: 'Cryptopolitan',
+    url: 'https://www.cryptopolitan.com/feed/',
+    category: 'general',
+  },
+  coinedition: {
+    name: 'CoinEdition',
+    url: 'https://coinedition.com/feed/',
+    category: 'general',
+  },
+  bitcoinworld: {
+    name: 'BitcoinWorld',
+    url: 'https://bitcoinworld.co.in/feed/',
+    category: 'general',
+  },
+  coincodex_blog: {
+    name: 'CoinCodex Blog',
+    url: 'https://coincodex.com/blog/feed/',
+    category: 'general',
+  },
+  invezz_crypto: {
+    name: 'Invezz Crypto',
+    url: 'https://invezz.com/cryptocurrency/feed/',
+    category: 'general',
+  },
+  ibtimes_crypto: {
+    name: 'IBTimes Crypto',
+    url: 'https://www.ibtimes.com/cryptocurrency/feed',
+    category: 'general',
+  },
+
+  // =========================================================================
+  // EXCHANGE & PLATFORM BLOGS
+  // =========================================================================
+  coinmarketcap_blog: {
+    name: 'CoinMarketCap Blog',
+    url: 'https://blog.coinmarketcap.com/feed/',
+    category: 'institutional',
+  },
+  coingecko_blog: {
+    name: 'CoinGecko Blog',
+    url: 'https://blog.coingecko.com/feed/',
+    category: 'institutional',
+  },
+  kucoin_blog: {
+    name: 'KuCoin Blog',
+    url: 'https://www.kucoin.com/blog/rss.xml',
+    category: 'institutional',
+  },
+  cryptocom_blog: {
+    name: 'Crypto.com Blog',
+    url: 'https://crypto.com/company-news/feed',
+    category: 'institutional',
+  },
+  bitget_blog: {
+    name: 'Bitget Blog',
+    url: 'https://www.bitget.com/blog/feed',
+    category: 'institutional',
+  },
+
+  // =========================================================================
+  // DEFI PROTOCOLS — Major DEX/Lending/Yield
+  // =========================================================================
+  dydx_blog: {
+    name: 'dYdX Blog',
+    url: 'https://dydx.exchange/blog/feed',
+    category: 'defi',
+  },
+  synthetix_blog: {
+    name: 'Synthetix Blog',
+    url: 'https://blog.synthetix.io/rss/',
+    category: 'defi',
+  },
+  oneinch_blog: {
+    name: '1inch Blog',
+    url: 'https://blog.1inch.io/feed',
+    category: 'defi',
+  },
+  yearn_blog: {
+    name: 'Yearn Finance Blog',
+    url: 'https://blog.yearn.fi/feed',
+    category: 'defi',
+  },
+  gmx_blog: {
+    name: 'GMX Blog',
+    url: 'https://medium.com/feed/@gmx.io',
+    category: 'defi',
+  },
+  jupiter_blog: {
+    name: 'Jupiter Blog',
+    url: 'https://station.jup.ag/blog/rss.xml',
+    category: 'defi',
+  },
+  morpho_blog: {
+    name: 'Morpho Blog',
+    url: 'https://medium.com/feed/morpho-labs',
+    category: 'defi',
+  },
+
+  // =========================================================================
+  // CROSS-CHAIN & INTEROPERABILITY
+  // =========================================================================
+  wormhole_blog: {
+    name: 'Wormhole Blog',
+    url: 'https://wormhole.com/blog/feed',
+    category: 'developer',
+  },
+  layerzero_blog: {
+    name: 'LayerZero Blog',
+    url: 'https://medium.com/feed/layerzero-official',
+    category: 'developer',
+  },
+
+  // =========================================================================
+  // TECH / MAINSTREAM — Crypto Coverage
+  // =========================================================================
+  techcrunch_crypto: {
+    name: 'TechCrunch Crypto',
+    url: 'https://techcrunch.com/category/cryptocurrency/feed/',
+    category: 'mainstream',
+  },
+  wired_crypto: {
+    name: 'Wired Crypto',
+    url: 'https://www.wired.com/feed/tag/cryptocurrency/latest/rss',
+    category: 'mainstream',
+  },
+  theregister_crypto: {
+    name: 'The Register',
+    url: 'https://www.theregister.com/offbeat/geek/headlines.atom',
+    category: 'mainstream',
+  },
+
+  // =========================================================================
+  // POLICY & REGULATION
+  // =========================================================================
+  coincenter: {
+    name: 'Coin Center',
+    url: 'https://www.coincenter.org/feed/',
+    category: 'geopolitical',
+  },
+  cftc_press: {
+    name: 'CFTC Press Releases',
+    url: 'https://www.cftc.gov/PressRoom/PressReleases/RSS',
+    category: 'geopolitical',
+  },
+  mica_crypto: {
+    name: 'EU Blockchain Observatory',
+    url: 'https://blockchain-observatory.ec.europa.eu/feed',
+    category: 'geopolitical',
+  },
+
+  // =========================================================================
+  // SOLANA ECOSYSTEM
+  // =========================================================================
+  helius_blog: {
+    name: 'Helius Blog',
+    url: 'https://www.helius.dev/blog/feed',
+    category: 'solana',
+  },
+  phantom_blog: {
+    name: 'Phantom Blog',
+    url: 'https://phantom.app/blog/feed',
+    category: 'solana',
+  },
+  marinade_blog: {
+    name: 'Marinade Finance Blog',
+    url: 'https://medium.com/feed/marinade-finance',
+    category: 'solana',
+  },
+  jito_blog: {
+    name: 'Jito Blog',
+    url: 'https://www.jito.network/blog/rss.xml',
+    category: 'solana',
+  },
+
+  // =========================================================================
+  // AI x CRYPTO — Emerging Narrative
+  // =========================================================================
+  bittensor_blog: {
+    name: 'Bittensor Blog',
+    url: 'https://blog.bittensor.com/feed',
+    category: 'altl1',
+  },
+  akash_blog: {
+    name: 'Akash Network Blog',
+    url: 'https://akash.network/blog/feed/',
+    category: 'altl1',
+  },
+  ritual_blog: {
+    name: 'Ritual Blog',
+    url: 'https://ritual.net/blog/feed',
+    category: 'altl1',
+  },
+
+  // =========================================================================
+  // DATA ANALYTICS PLATFORMS
+  // =========================================================================
+  nansen_blog: {
+    name: 'Nansen Blog',
+    url: 'https://www.nansen.ai/research/feed',
+    category: 'onchain',
+  },
+  dune_blog: {
+    name: 'Dune Analytics Blog',
+    url: 'https://dune.com/blog/feed',
+    category: 'onchain',
+  },
+  artemis_blog: {
+    name: 'Artemis Blog',
+    url: 'https://www.artemis.xyz/blog/feed',
+    category: 'onchain',
   },
 } as const;
 

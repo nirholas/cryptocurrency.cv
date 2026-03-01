@@ -111,18 +111,35 @@ export function getClientIp(request: NextRequest): string {
  * Validate if string is a valid IP address (IPv4 or IPv6)
  */
 function isValidIp(ip: string): boolean {
-  // IPv4 pattern
-  const ipv4Pattern = /^(\d{1,3}\.){3}\d{1,3}$/;
-  // IPv6 pattern (simplified)
-  const ipv6Pattern = /^([0-9a-fA-F]{0,4}:){2,7}[0-9a-fA-F]{0,4}$/;
+  // Reject obviously bogus values
+  if (!ip || ip.length > 45) return false;
 
+  // IPv4
+  const ipv4Pattern = /^(\d{1,3}\.){3}\d{1,3}$/;
   if (ipv4Pattern.test(ip)) {
-    // Validate each octet is <= 255
     const octets = ip.split('.');
-    return octets.every((octet) => parseInt(octet, 10) <= 255);
+    return octets.every((octet) => {
+      const n = parseInt(octet, 10);
+      // Reject leading zeros (octal ambiguity: "010" !== "10")
+      return n >= 0 && n <= 255 && octet === n.toString();
+    });
   }
 
-  return ipv6Pattern.test(ip);
+  // IPv6 (full, compressed, and mixed notation)
+  // RFC 5952 — up to 8 groups of 4 hex digits separated by ':'
+  // Allows one '::' for zero-group compression and optional IPv4 suffix
+  const ipv6Full = /^([0-9a-fA-F]{1,4}:){7}[0-9a-fA-F]{1,4}$/;
+  const ipv6Compressed = /^(([0-9a-fA-F]{1,4}:)*[0-9a-fA-F]{1,4})?::((([0-9a-fA-F]{1,4}:)*[0-9a-fA-F]{1,4})?)$/;
+  const ipv6Mixed = /^(([0-9a-fA-F]{1,4}:){5}[0-9a-fA-F]{1,4}|(([0-9a-fA-F]{1,4}:)*)?::([0-9a-fA-F]{1,4}:)*)((\d{1,3}\.){3}\d{1,3})$/;
+
+  if (ipv6Full.test(ip) || ipv6Compressed.test(ip) || ipv6Mixed.test(ip)) {
+    // Count total groups to ensure ≤ 8
+    const expanded = ip.replace('::', ':PLACEHOLDER:');
+    const groups = expanded.split(':').filter(Boolean);
+    return groups.length <= 8;
+  }
+
+  return false;
 }
 
 // =============================================================================
@@ -253,7 +270,15 @@ export function validateOrigin(
 
     if (allowed.startsWith('*.')) {
       const domain = allowed.slice(2);
-      return origin.endsWith(domain) || origin.endsWith(`.${domain}`);
+      try {
+        const hostname = new URL(origin).hostname;
+        // Strict subdomain match: must be exact domain or a proper subdomain
+        // e.g. *.example.com matches sub.example.com and example.com
+        // but NOT evil-example.com
+        return hostname === domain || hostname.endsWith('.' + domain);
+      } catch {
+        return false;
+      }
     }
 
     return origin === allowed;
@@ -270,10 +295,13 @@ export function validateOrigin(
 export const SECURITY_HEADERS = {
   'X-Content-Type-Options': 'nosniff',
   'X-Frame-Options': 'DENY',
-  'X-XSS-Protection': '1; mode=block',
+  'X-XSS-Protection': '0', // Disabled — CSP is the modern replacement; legacy XSS auditors can cause issues
   'Referrer-Policy': 'strict-origin-when-cross-origin',
-  'Permissions-Policy': 'geolocation=(), microphone=(), camera=()',
+  'Permissions-Policy': 'geolocation=(), microphone=(), camera=(), interest-cohort=()',
   'Content-Security-Policy': "default-src 'self'",
+  'Cross-Origin-Opener-Policy': 'same-origin',
+  'Cross-Origin-Resource-Policy': 'same-origin',
+  'X-Permitted-Cross-Domain-Policies': 'none',
 } as const;
 
 /**
@@ -315,19 +343,51 @@ export function applySecurityHeaders(response: Response): Response {
 // =============================================================================
 
 /**
+ * HTML entity map for encoding dangerous characters
+ */
+const HTML_ENTITIES: Record<string, string> = {
+  '&': '&amp;',
+  '<': '&lt;',
+  '>': '&gt;',
+  '"': '&quot;',
+  "'": '&#x27;',
+  '/': '&#x2F;',
+  '`': '&#96;',
+};
+
+/**
+ * Encode HTML entities to prevent XSS
+ *
+ * @param input - Raw user input
+ * @returns HTML-entity-encoded string
+ */
+export function encodeHtmlEntities(input: string): string {
+  return input.replace(/[&<>"'`/]/g, (char) => HTML_ENTITIES[char] || char);
+}
+
+/**
  * Sanitize user input to prevent XSS
- * Removes HTML tags and dangerous protocols
+ * Uses a multi-layered approach:
+ * 1. Removes null bytes
+ * 2. Strips HTML tags (including malformed ones)
+ * 3. Removes dangerous URI protocols
+ * 4. Removes inline event handlers
+ * 5. Normalises whitespace
  *
  * @param input - User input string
  * @returns Sanitized string
  */
 export function sanitizeInput(input: string): string {
   return input
-    .replace(/<[^>]*>/g, '') // Remove HTML tags
-    .replace(/javascript:/gi, '') // Remove javascript: protocol
-    .replace(/data:/gi, '') // Remove data: protocol
-    .replace(/vbscript:/gi, '') // Remove vbscript: protocol
-    .replace(/on\w+\s*=/gi, '') // Remove event handlers
+    .replace(/\0/g, '')                     // Strip null bytes
+    .replace(/<\/?[^>]*>/g, '')              // Remove HTML tags (including self-closing)
+    .replace(/javascript\s*:/gi, '')         // Remove javascript: protocol (with optional spaces)
+    .replace(/data\s*:/gi, '')               // Remove data: protocol
+    .replace(/vbscript\s*:/gi, '')           // Remove vbscript: protocol
+    .replace(/on\w+\s*=/gi, '')              // Remove event handlers (onerror=, onclick=, …)
+    .replace(/expression\s*\(/gi, '')        // Remove CSS expression()
+    .replace(/url\s*\(/gi, '')               // Remove CSS url()
+    .replace(/[\x00-\x08\x0B\x0C\x0E-\x1F]/g, '') // Strip control characters
     .trim();
 }
 
@@ -457,4 +517,99 @@ export function getRateLimitKey(request: NextRequest, prefix = 'free'): string {
   const clientIp = getClientIp(request);
   const pathname = request.nextUrl.pathname;
   return `${prefix}:${clientIp}:${pathname}`;
+}
+
+// =============================================================================
+// CSRF TOKEN UTILITIES
+// =============================================================================
+
+/**
+ * Generate a cryptographically secure CSRF token
+ * Uses Web Crypto API for Edge runtime compatibility
+ *
+ * @returns Base64url-encoded CSRF token (32 bytes of entropy)
+ */
+export function generateCsrfToken(): string {
+  return generateSecureRandom(32);
+}
+
+/**
+ * Validate a CSRF token via double-submit cookie pattern.
+ * Compares the token from a request header (`X-CSRF-Token`)
+ * against the token stored in a cookie (`__csrf`).
+ *
+ * @param request - Next.js request object
+ * @returns true if tokens match
+ */
+export function validateCsrfToken(request: NextRequest): boolean {
+  const headerToken = request.headers.get('x-csrf-token');
+  const cookieToken = request.cookies.get('__csrf')?.value;
+
+  if (!headerToken || !cookieToken) return false;
+  if (headerToken.length !== cookieToken.length) return false;
+
+  // Constant-time comparison to prevent timing attacks
+  return timingSafeEqual(headerToken, cookieToken);
+}
+
+/**
+ * Constant-time string comparison to prevent timing attacks.
+ * Uses XOR comparison of char codes to ensure consistent execution time.
+ *
+ * @param a - First string
+ * @param b - Second string
+ * @returns true if strings are equal
+ */
+export function timingSafeEqual(a: string, b: string): boolean {
+  if (a.length !== b.length) return false;
+
+  let mismatch = 0;
+  for (let i = 0; i < a.length; i++) {
+    mismatch |= a.charCodeAt(i) ^ b.charCodeAt(i);
+  }
+  return mismatch === 0;
+}
+
+// =============================================================================
+// PAYLOAD SIZE VALIDATION
+// =============================================================================
+
+/**
+ * Maximum allowed payload sizes by content type (in bytes)
+ */
+export const MAX_PAYLOAD_SIZES = {
+  json: 1 * 1024 * 1024,    // 1 MB for JSON bodies
+  form: 2 * 1024 * 1024,    // 2 MB for form data
+  default: 10 * 1024 * 1024, // 10 MB general fallback
+} as const;
+
+/**
+ * Validate request payload size based on content type
+ *
+ * @param request - Next.js request object
+ * @returns Error message if payload is too large, null if OK
+ */
+export function validatePayloadSize(request: NextRequest): string | null {
+  const contentLength = request.headers.get('content-length');
+  if (!contentLength) return null;
+
+  const size = parseInt(contentLength, 10);
+  if (isNaN(size)) return 'Invalid content-length header';
+
+  const contentType = request.headers.get('content-type') ?? '';
+
+  let maxSize: number;
+  if (contentType.includes('application/json')) {
+    maxSize = MAX_PAYLOAD_SIZES.json;
+  } else if (contentType.includes('multipart/form-data') || contentType.includes('application/x-www-form-urlencoded')) {
+    maxSize = MAX_PAYLOAD_SIZES.form;
+  } else {
+    maxSize = MAX_PAYLOAD_SIZES.default;
+  }
+
+  if (size > maxSize) {
+    return `Payload too large: ${size} bytes exceeds ${maxSize} byte limit`;
+  }
+
+  return null;
 }
