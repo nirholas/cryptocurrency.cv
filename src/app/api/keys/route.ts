@@ -44,25 +44,26 @@ interface StoredKey {
 
 const keyStore = new Map<string, StoredKey>();
 /**
- * Generate a secure random API key
+ * Generate a cryptographically secure API key
  */
 function generateApiKey(): string {
-  const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-  const keyLength = 32;
-  let key = 'cda_';
-  
-  for (let i = 0; i < keyLength; i++) {
-    key += chars.charAt(Math.floor(Math.random() * chars.length));
-  }
-  
-  return key;
+  const bytes = new Uint8Array(24);
+  crypto.getRandomValues(bytes);
+  const base64 = btoa(String.fromCharCode(...bytes))
+    .replace(/\+/g, '-')
+    .replace(/\//g, '_')
+    .replace(/=+$/, '');
+  return `cda_${base64}`;
 }
 
 /**
  * Generate a unique key ID
  */
 function generateKeyId(): string {
-  return `key_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`;
+  const bytes = new Uint8Array(8);
+  crypto.getRandomValues(bytes);
+  const hex = Array.from(bytes).map(b => b.toString(16).padStart(2, '0')).join('');
+  return `key_${Date.now()}_${hex}`;
 }
 
 /**

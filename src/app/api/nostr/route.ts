@@ -195,10 +195,11 @@ function computeEventId(event: Omit<NostrEvent, 'id' | 'sig'>): string {
  * Derive the Nostr pubkey (x-only 32-byte hex) from a private key.
  * Returns null if the private key is invalid or missing.
  */
-function getNostrKeypair(): { pubkey: string; privkey: string } | null {
+async function getNostrKeypair(): Promise<{ pubkey: string; privkey: string } | null> {
   const privkey = process.env.NOSTR_PRIVATE_KEY;
   if (privkey?.length !== 64) return null;
   try {
+    const { schnorr, bytesToHex } = await loadNobleCurves();
     const pubkeyBytes = schnorr.getPublicKey(privkey);
     return { pubkey: bytesToHex(pubkeyBytes), privkey };
   } catch {
@@ -210,7 +211,8 @@ function getNostrKeypair(): { pubkey: string; privkey: string } | null {
  * Sign a Nostr event with secp256k1 Schnorr (NIP-01).
  * Returns a fully signed NostrEvent.
  */
-function signEvent(base: Omit<NostrEvent, 'id' | 'sig'>, privkey: string): NostrEvent {
+async function signEvent(base: Omit<NostrEvent, 'id' | 'sig'>, privkey: string): Promise<NostrEvent> {
+  const { schnorr, bytesToHex } = await loadNobleCurves();
   const id = computeEventId(base);
   const sig = bytesToHex(schnorr.sign(id, privkey));
   return { ...base, id, sig };

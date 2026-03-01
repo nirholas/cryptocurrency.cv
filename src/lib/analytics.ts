@@ -423,7 +423,7 @@ export async function getSystemHealth(): Promise<Record<string, unknown>> {
       avgResponseTime: apiMetrics.totalRequests > 0
         ? Math.round(apiMetrics.totalResponseTime / apiMetrics.totalRequests)
         : 0,
-      statusCodes: statusBreakdown,
+      statusCodes: Object.fromEntries(apiMetrics.statusCounts),
     },
     timestamp: new Date().toISOString(),
   };

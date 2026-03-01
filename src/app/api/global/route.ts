@@ -23,21 +23,29 @@ import { COINGECKO_BASE } from '@/lib/constants';
 export const revalidate = 120; // ISR: revalidate every 2 minutes
 
 export async function GET() {
-  const json = await fetchCoinGecko<{ data: unknown }>(
-    `${COINGECKO_BASE}/global`,
-    { revalidate: 120 }
-  );
+  try {
+    const json = await fetchCoinGecko<{ data: unknown }>(
+      `${COINGECKO_BASE}/global`,
+      { revalidate: 120 }
+    );
 
-  if (!json?.data) {
+    if (!json?.data) {
+      return NextResponse.json(
+        { error: 'Failed to fetch global market data' },
+        { status: 502 }
+      );
+    }
+
+    return NextResponse.json(json.data, {
+      headers: {
+        'Cache-Control': 'public, s-maxage=120, stale-while-revalidate=300',
+      },
+    });
+  } catch (error) {
+    console.error('Global market data error:', error);
     return NextResponse.json(
       { error: 'Failed to fetch global market data' },
       { status: 502 }
     );
   }
-
-  return NextResponse.json(json.data, {
-    headers: {
-      'Cache-Control': 'public, s-maxage=120, stale-while-revalidate=300',
-    },
-  });
 }

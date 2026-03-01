@@ -30,76 +30,166 @@ import {
 
 export const runtime = 'nodejs';
 
+// ---------------------------------------------------------------------------
+// Constants
+// ---------------------------------------------------------------------------
+const MAX_EMAIL_LENGTH = 254; // RFC 5321
+const MAX_NAME_LENGTH = 64;
+
 // --- IP-based rate limiting for registration ---
 const registrationAttempts = new Map<string, { count: number; resetAt: number }>();
 const REG_RATE_LIMIT = 3; // max registrations per window
 const REG_WINDOW_MS = 3_600_000; // 1 hour
-let regRequestCounter = 0;
+
+// --- Separate rate limit for authenticated actions (list / revoke) ---
+const actionAttempts = new Map<string, { count: number; resetAt: number }>();
+const ACTION_RATE_LIMIT = 10; // max list/revoke calls per window per IP
+const ACTION_WINDOW_MS = 60_000; // 1 minute
+
+let globalRequestCounter = 0;
+
+// --- Disposable / temporary email domain blocklist ---
+const DISPOSABLE_EMAIL_DOMAINS = new Set([
+  'mailinator.com', 'tempmail.com', 'throwaway.email', 'guerrillamail.com',
+  'guerrillamail.net', 'guerrillamail.org', 'sharklasers.com', 'grr.la',
+  'guerrillamailblock.com', 'pokemail.net', 'spam4.me', 'dispostable.com',
+  'yopmail.com', 'yopmail.fr', 'trashmail.com', 'trashmail.me', 'trashmail.net',
+  'mailnesia.com', 'maildrop.cc', 'discard.email', 'fakeinbox.com',
+  'getnada.com', 'tempail.com', 'temp-mail.org', 'temp-mail.io',
+  'mohmal.com', 'burnermail.io', 'mailcatch.com', 'mintemail.com',
+  'mytemp.email', 'harakirimail.com', 'mailsac.com', 'inboxbear.com',
+  '10minutemail.com', '10minutemail.net', 'minutemail.com', 'emailondeck.com',
+  'crazymailing.com', 'tempinbox.com', 'tempr.email', 'throwaway.email',
+  'mailforspam.com', 'safetymail.info', 'filzmail.com', 'spamgourmet.com',
+  'trashymail.com', 'receiveee.com', 'tmail.ws', 'tmpmail.net',
+  'tmpmail.org', 'bupmail.com', 'mailnator.com', 'spambox.us',
+  'jetable.org', 'trash-mail.com', 'getairmail.com', 'mailexpire.com',
+  'tempmailer.com', 'throwam.com', 'tempomail.fr', 'ephemail.net',
+  'disposableemailaddresses.emailmiser.com', 'mailzilla.com',
+  'anonymousemail.me', 'wegwerfmail.de', 'wegwerfmail.net',
+  'spamfree24.org', 'rmqkr.net', 'mobi.web.id', 'mozmail.com',
+  'emailfake.com', 'emkei.cz', 'deadfake.com', 'fakemailgenerator.com',
+  'armyspy.com', 'cuvox.de', 'dayrep.com', 'einrot.com', 'fleckens.hu',
+  'gustr.com', 'jourrapide.com', 'rhyta.com', 'superrito.com', 'teleworm.us',
+]);
+
+// ---------------------------------------------------------------------------
+// Helpers
+// ---------------------------------------------------------------------------
 
 function cleanupExpiredEntries() {
   const now = Date.now();
-  for (const [ip, entry] of registrationAttempts) {
-    if (now > entry.resetAt) {
-      registrationAttempts.delete(ip);
-    }
+  for (const [key, entry] of registrationAttempts) {
+    if (now > entry.resetAt) registrationAttempts.delete(key);
+  }
+  for (const [key, entry] of actionAttempts) {
+    if (now > entry.resetAt) actionAttempts.delete(key);
   }
 }
 
-function checkRegRateLimit(ip: string): boolean {
+function checkRateLimit(
+  map: Map<string, { count: number; resetAt: number }>,
+  key: string,
+  limit: number,
+  windowMs: number
+): boolean {
   // Cleanup expired entries every 100 requests to prevent unbounded growth
-  regRequestCounter++;
-  if (regRequestCounter % 100 === 0) {
+  globalRequestCounter++;
+  if (globalRequestCounter % 100 === 0) {
     cleanupExpiredEntries();
   }
 
   const now = Date.now();
-  const entry = registrationAttempts.get(ip);
+  const entry = map.get(key);
   if (!entry || now > entry.resetAt) {
-    registrationAttempts.set(ip, { count: 1, resetAt: now + REG_WINDOW_MS });
+    map.set(key, { count: 1, resetAt: now + windowMs });
     return true;
   }
-  if (entry.count >= REG_RATE_LIMIT) return false;
+  if (entry.count >= limit) return false;
   entry.count++;
   return true;
 }
 
-// Simple email validation
+// Email validation — RFC-ish, rejects obviously bad inputs
 function isValidEmail(email: string): boolean {
+  if (!email || email.length > MAX_EMAIL_LENGTH) return false;
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return emailRegex.test(email);
 }
 
 /**
+ * Normalize an email for deduplication:
+ *  - lowercase
+ *  - strip Gmail-style dots in local part (only for gmail/googlemail)
+ *  - strip +tag aliases
+ */
+function normalizeEmail(email: string): string {
+  const lower = email.toLowerCase().trim();
+  const [localRaw, domain] = lower.split('@');
+  if (!localRaw || !domain) return lower;
+
+  // Strip +tag aliases (user+promo@… → user@…)
+  const local = localRaw.split('+')[0];
+
+  // Gmail ignores dots in local part
+  if (domain === 'gmail.com' || domain === 'googlemail.com') {
+    return `${local.replace(/\./g, '')}@gmail.com`;
+  }
+
+  return `${local}@${domain}`;
+}
+
+function isDisposableEmail(email: string): boolean {
+  const domain = email.toLowerCase().split('@')[1];
+  return !!domain && DISPOSABLE_EMAIL_DOMAINS.has(domain);
+}
+
+function getClientIp(request: NextRequest): string {
+  return request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || 'unknown';
+}
+
+function getAuthKey(request: NextRequest): string | null {
+  return (
+    request.headers.get('x-api-key') ||
+    request.headers.get('authorization')?.replace('Bearer ', '') ||
+    null
+  );
+}
+
+/**
  * Verify that a provided API key belongs to the given email.
- * Used to authenticate list and revoke actions.
+ * Returns [null, keyData] on success, [NextResponse, null] on failure.
+ * Uses generic error messages to prevent information leakage.
  */
 async function verifyKeyOwnership(
   request: NextRequest,
   email: string
-): Promise<NextResponse | null> {
-  const authKey =
-    request.headers.get('x-api-key') || request.headers.get('authorization')?.replace('Bearer ', '');
+): Promise<[NextResponse, null] | [null, { id: string; email: string }]> {
+  const authKey = getAuthKey(request);
 
   if (!authKey) {
-    return NextResponse.json(
-      { error: 'Authentication required. Provide your API key via X-API-Key header.' },
-      { status: 401 }
-    );
+    return [
+      NextResponse.json(
+        { error: 'Authentication required. Provide your API key via X-API-Key header.' },
+        { status: 401 }
+      ),
+      null,
+    ];
   }
 
   const keyData = await validateApiKey(authKey);
-  if (!keyData) {
-    return NextResponse.json({ error: 'Invalid API key' }, { status: 401 });
+  if (!keyData || keyData.email !== email) {
+    // Generic error — don't reveal whether the key is invalid vs wrong email
+    return [
+      NextResponse.json(
+        { error: 'Authentication failed' },
+        { status: 403 }
+      ),
+      null,
+    ];
   }
 
-  if (keyData.email !== email) {
-    return NextResponse.json(
-      { error: 'API key does not belong to the provided email' },
-      { status: 403 }
-    );
-  }
-
-  return null; // ownership verified
+  return [null, { id: keyData.id, email: keyData.email }];
 }
 
 /**
@@ -154,9 +244,19 @@ export async function GET() {
  * POST /api/register - Create a new API key
  */
 export async function POST(request: NextRequest) {
+  // --- Enforce Content-Type ---
+  const contentType = request.headers.get('content-type');
+  if (!contentType?.includes('application/json')) {
+    return NextResponse.json(
+      { error: 'Content-Type must be application/json' },
+      { status: 415 }
+    );
+  }
+
+  const ip = getClientIp(request);
+
   // IP-based rate limiting (this route is exempt from middleware rate limiting)
-  const ip = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || 'unknown';
-  if (!checkRegRateLimit(ip)) {
+  if (!checkRateLimit(registrationAttempts, ip, REG_RATE_LIMIT, REG_WINDOW_MS)) {
     return NextResponse.json(
       { error: 'Too many registration attempts. Try again later.' },
       { status: 429, headers: { 'Retry-After': '3600' } }
@@ -167,32 +267,57 @@ export async function POST(request: NextRequest) {
     const body = await request.json();
     const { email, name, action, keyId } = body;
 
-    // Handle key revocation (requires key ownership proof)
+    // --- Handle key revocation (requires key ownership proof) ---
     if (action === 'revoke' && keyId && email) {
       if (!isValidEmail(email)) {
         return NextResponse.json({ error: 'Invalid email address' }, { status: 400 });
       }
 
-      const authError = await verifyKeyOwnership(request, email);
+      // Rate limit authenticated actions separately
+      if (!checkRateLimit(actionAttempts, ip, ACTION_RATE_LIMIT, ACTION_WINDOW_MS)) {
+        return NextResponse.json(
+          { error: 'Too many requests. Try again later.' },
+          { status: 429, headers: { 'Retry-After': '60' } }
+        );
+      }
+
+      const [authError, authedKey] = await verifyKeyOwnership(request, email);
       if (authError) return authError;
+
+      // Prevent self-revocation — don't let the user revoke the key they authenticated with
+      if (authedKey.id === keyId) {
+        return NextResponse.json(
+          { error: 'Cannot revoke the API key used for authentication. Use a different key.' },
+          { status: 400 }
+        );
+      }
 
       const success = await revokeApiKey(keyId, email);
       if (success) {
         return NextResponse.json({ success: true, message: 'API key revoked' });
       }
+      // Generic error — don't reveal whether keyId exists
       return NextResponse.json(
-        { error: 'Failed to revoke key. Check keyId and email.' },
+        { error: 'Operation failed' },
         { status: 400 }
       );
     }
 
-    // Handle key listing (requires key ownership proof)
+    // --- Handle key listing (requires key ownership proof) ---
     if (action === 'list' && email) {
       if (!isValidEmail(email)) {
         return NextResponse.json({ error: 'Invalid email address' }, { status: 400 });
       }
 
-      const authError = await verifyKeyOwnership(request, email);
+      // Rate limit authenticated actions separately
+      if (!checkRateLimit(actionAttempts, ip, ACTION_RATE_LIMIT, ACTION_WINDOW_MS)) {
+        return NextResponse.json(
+          { error: 'Too many requests. Try again later.' },
+          { status: 429, headers: { 'Retry-After': '60' } }
+        );
+      }
+
+      const [authError] = await verifyKeyOwnership(request, email);
       if (authError) return authError;
 
       const keys = await getKeysByEmail(email);
@@ -210,7 +335,7 @@ export async function POST(request: NextRequest) {
       });
     }
 
-    // Create new key
+    // --- Create new key ---
     if (!email) {
       return NextResponse.json({ error: 'Email is required' }, { status: 400 });
     }
@@ -219,9 +344,22 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Invalid email address' }, { status: 400 });
     }
 
+    if (isDisposableEmail(email)) {
+      return NextResponse.json(
+        { error: 'Disposable email addresses are not allowed. Please use a permanent email.' },
+        { status: 400 }
+      );
+    }
+
+    // Enforce name length limit
+    const sanitizedName = name ? String(name).slice(0, MAX_NAME_LENGTH) : 'Default';
+
+    // Normalize email for dedup (lowercase, strip dots/aliases)
+    const normalizedEmail = normalizeEmail(email);
+
     const result = await createApiKey({
-      email,
-      name: name || 'Default',
+      email: normalizedEmail,
+      name: sanitizedName,
       tier: 'free',
     });
 
