@@ -49,7 +49,7 @@ const bot = new Bot(BOT_TOKEN);
 // /start & /help
 // ---------------------------------------------------------------------------
 
-const HELP_TEXT = `
+const HELP_TEMPLATE = `
 📰 <b>Free Crypto News Bot</b> v${VERSION}
 
 Real-time crypto news, prices, sentiment & market data from 200+ sources.
@@ -84,20 +84,25 @@ Real-time crypto news, prices, sentiment & market data from 200+ sources.
   /search ethereum upgrade
 
 <b>Inline Mode:</b>
-Type <code>@${bot.botInfo?.username ?? 'YourBot'} bitcoin</code> in any chat to share headlines!
+Type <code>@FCN_BOT bitcoin</code> in any chat to share headlines!
 
 <i>Powered by cryptocurrency.cv · 200+ sources · No API key needed</i>
-`.trim();
+`;
+
+function getHelpText(): string {
+  const username = bot.isInited() ? bot.botInfo.username : 'FCN_BOT';
+  return HELP_TEMPLATE.replace('@FCN_BOT', `@${username}`).trim();
+}
 
 bot.command('start', async (ctx) => {
-  await ctx.reply(HELP_TEXT, {
+  await ctx.reply(getHelpText(), {
     parse_mode: 'HTML',
     link_preview_options: { is_disabled: true },
   });
 });
 
 bot.command('help', async (ctx) => {
-  await ctx.reply(HELP_TEXT, {
+  await ctx.reply(getHelpText(), {
     parse_mode: 'HTML',
     link_preview_options: { is_disabled: true },
   });
@@ -141,6 +146,9 @@ bot.catch((err) => {
 // ---------------------------------------------------------------------------
 
 async function main(): Promise<void> {
+  // Initialize bot (fetches bot info from Telegram)
+  await bot.init();
+
   // Set bot command menu
   await bot.api.setMyCommands([
     { command: 'news', description: 'Latest crypto news headlines' },
@@ -161,7 +169,7 @@ async function main(): Promise<void> {
 
   // Start polling
   console.log(`🤖 Free Crypto News Telegram Bot v${VERSION}`);
-  console.log(`   Bot: @${bot.botInfo?.username ?? '...'}`);
+  console.log(`   Bot: @${bot.botInfo.username}`);
   console.log('   Listening for messages...');
   console.log('');
 
