@@ -434,7 +434,7 @@ export async function analyzeWallet(request: NextRequest): Promise<NextResponse>
           // Check if address is a contract by fetching code size via Etherscan
           try {
             const codeRes = await fetch(
-              `https://api.etherscan.io/api?module=proxy&action=eth_getCode&address=${address}&tag=latest${etherscanKey ? `&apikey=${etherscanKey}` : ''}`
+              `https://api.etherscan.io/api?module=proxy&action=eth_getCode&address=${address}&tag=latest${ETHERSCAN_API_KEY ? `&apikey=${ETHERSCAN_API_KEY}` : ''}`
             );
             if (codeRes.ok) {
               const codeData = await codeRes.json();

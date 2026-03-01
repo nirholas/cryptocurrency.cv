@@ -8,6 +8,8 @@
 
 import { generateSEOMetadata } from '@/lib/seo';
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || process.env.SITE_URL || 'https://cryptocurrency.cv';
+
 export const metadata = generateSEOMetadata({
   title: 'System Status',
   description: 'Real-time status of Free Crypto News API services, endpoints, and news sources.',

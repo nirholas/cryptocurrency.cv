@@ -68,7 +68,7 @@ export async function GET(
   } catch (error) {
     console.error('Error in category coins route:', error);
     return NextResponse.json(
-      { error: 'Failed to fetch category coins' },
+      { error: 'Failed to fetch category coins', message: 'An unexpected error occurred' },
       { status: 500 }
     );
   }

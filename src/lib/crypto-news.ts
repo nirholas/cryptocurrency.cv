@@ -2,33 +2,36 @@
  * Free Crypto News - RSS Feed Aggregator
  * 
  * 100% FREE - no API keys required!
- * Aggregates news from 260+ major English crypto sources across 26 categories:
- * - General: 44 sources (CoinDesk, The Block, Decrypt, CoinTelegraph, Blockworks, WatcherGuru, Cryptopolitan, BlockTempo, etc.)
- * - DeFi: 31 sources (The Defiant, Bankless, Uniswap, Aave, dYdX, GMX, Jupiter, Balancer, Frax, Liquity, SushiSwap, etc.)
- * - Mainstream: 20 sources (Bloomberg, Reuters, Forbes, CNBC, WSJ, NYT, TechCrunch, Wired, etc.)
- * - Research: 8 sources (Messari, Paradigm, Delphi Digital, a16z Crypto, etc.)
- * - Institutional: 17 sources (Galaxy Digital, Pantera, CoinMarketCap, CoinGecko, Fireblocks, HashKey, Polychain, etc.)
- * - Geopolitical: 13 sources (BBC, Reuters, AP, Federal Reserve, SEC, CFTC, Coin Center, TRM Labs, etc.)
- * - Layer 2: 10 sources (L2BEAT, Optimism, Arbitrum, Polygon, zkSync, Base, Scroll, Espresso, etc.)
- * - ETF/Asset Managers: 7 sources (Grayscale, Bitwise, VanEck, ARK, 21Shares, etc.)
- * - Alt L1: 16 sources (NEAR, Cosmos, Avalanche, Sui, Aptos, TON, Bittensor, Akash, Osmosis, Stride, etc.)
- * - Trading: 6 sources (BeInCrypto, AMBCrypto, FXStreet, TradingView, etc.)
- * - Security: 11 sources (SlowMist, CertiK, OpenZeppelin, Trail of Bits, samczsun, Immunefi, Ledger, Trezor, Safe, etc.)
- * - Developer: 10 sources (Alchemy, Chainlink, Infura, The Graph, Wormhole, LayerZero, MetaMask, Biconomy, etc.)
- * - Bitcoin: 11 sources (Bitcoin Magazine, Bitcoinist, Bitcoin.com, BTC Times, Lightning Labs, Bitcoin Optech, River, Swan, Casa, etc.)
- * - Solana: 10 sources (Solana News, Helius, Phantom, Marinade, Jito, Orca, Raydium, Tensor, Drift, Solflare)
- * - On-Chain: 7 sources (Glassnode, IntoTheBlock, Coin Metrics, Nansen, Dune, Artemis, etc.)
- * - Ethereum: 7 sources (Week in Ethereum, Etherscan, Daily Gwei, Rocket Pool, SSV Network, Flashbots)
+ * Aggregates news from 300+ major English crypto sources across 26 categories:
+ * - General: 44 sources (CoinDesk, The Block, Decrypt, CoinTelegraph, Blockworks, WatcherGuru, Cryptopolitan, etc.)
+ * - DeFi: 31 sources (The Defiant, Bankless, Uniswap, Aave, dYdX, GMX, Jupiter, Balancer, etc.)
+ * - Mainstream: 16+ sources (Bloomberg, Reuters, Forbes, CNBC, WSJ, NYT, TechCrunch, Wired, Guardian, Barrons, Fortune, Axios, etc.)
+ * - Research: 11 sources (Messari, Paradigm, Delphi Digital, a16z Crypto, Nansen, Dune, Artemis, etc.)
+ * - Institutional: 17 sources (Galaxy Digital, Pantera, CoinMarketCap, CoinGecko, Fireblocks, etc.)
+ * - Geopolitical: 10+ sources (BBC, Reuters, AP, Federal Reserve, SEC, CFTC, Coin Center, BIS, IMF, ECB, etc.)
+ * - Layer 2: 11 sources (L2BEAT, Optimism, Arbitrum, Polygon, Polygon zkEVM, zkSync, Base, Scroll, etc.)
+ * - ETF/Asset Managers: 10 sources (Grayscale, Bitwise, ARK, 21Shares, Fidelity, Hashdex, etc.)
+ * - Alt L1: 16 sources (NEAR, Cosmos, Avalanche, Sui, Aptos, TON, Bittensor, Akash, Mina, etc.)
+ * - Trading: 10 sources (BeInCrypto, AMBCrypto, FXStreet, TradingView, CryptoQuant, etc.)
+ * - Security: 13 sources (SlowMist, CertiK, OpenZeppelin, Trail of Bits, samczsun, Immunefi, Mina, etc.)
+ * - Developer: 12 sources (Alchemy, Chainlink, Infura, The Graph, Wormhole, LayerZero, RISC Zero, Noir, etc.)
+ * - Bitcoin: 11 sources (Bitcoin Magazine, Bitcoinist, Bitcoin.com, BTC Times, Lightning Labs, Bitcoin Optech, etc.)
+ * - Solana: 13 sources (Solana News, Helius, Phantom, Marinade, Jito, Metaplex, Squads, marginfi, etc.)
+ * - On-Chain: 10+ sources (Glassnode, IntoTheBlock, Coin Metrics, Nansen, Dune, Artemis, Santiment, Parsec, etc.)
+ * - Ethereum: 11 sources (EF Blog, Flashbots, EigenDA, Lido DAO, Safe, ENS, Etherscan, Daily Gwei, etc.)
  * - Quant: 5 sources (AQR, Two Sigma, Man Institute, Alpha Architect, QuantStart)
- * - NFT: 4 sources (NFT Now, NFT Evening, NFT Plazas, DappRadar)
- * - Gaming: 5 sources (PlayToEarn, Yield Guild Games, Immutable, Ronin, Gala Games)
- * - Mining: 3 sources (Bitcoin Mining News, Hashrate Index, Compass Mining)
- * - Macro: 3 sources (Lyn Alden, Alhambra Partners, Macro Voices)
- * - Journalism: 3 sources (Unchained, DL News, Protos)
- * - Fintech: 3 sources (Finextra, PYMNTS, Fintech Futures)
- * - Stablecoin: 2 sources (Circle, Tether)
- * - TradFi: 2 sources (Goldman Sachs, BNY Mellon)
- * - Other: Derivatives, Asia, Podcasts
+ * - NFT: 8 sources (NFT Now, NFT Plazas, SuperRare, Art Blocks, Mirror, Nifty Gateway, etc.)
+ * - Gaming: 9 sources (PlayToEarn, Immutable, Ronin, STEPN, Mythical Games, Animoca, Beam, etc.)
+ * - Mining: 6 sources (Bitcoin Mining News, Hashrate Index, Compass Mining, Blockware, Luxor, etc.)
+ * - Macro: 6 sources (Lyn Alden, Alhambra Partners, Macro Voices, FRED Blog, Wolf Street, ZeroHedge)
+ * - Journalism: 5 sources (Unchained, DL News, Protos, Coffeezilla, Molly White)
+ * - Fintech: 5 sources (Finextra, PYMNTS, Ripple, Stellar, Coinbase Institutional)
+ * - Stablecoin: 7 sources (Circle, Tether, Paxos, MakerDAO, Frax Finance, etc.)
+ * - TradFi: 6 sources (Goldman Sachs, BNY Mellon, Securitize, BlackRock, Franklin Templeton, etc.)
+ * - Social: 5 sources (Farcaster, Lens Protocol, Paragraph, Steemit, etc.)
+ * - Derivatives: 11 sources (Deribit, Hyperliquid, Laevitas, Amberdata, Paradigm Trading, etc.)
+ * - Asia: 10 sources (Forkast, Wu Blockchain, BlockTempo, CoinPost, Chain Catcher, etc.)
+ * - Other: Podcasts
  */
 
 import sanitizeHtml from 'sanitize-html';
@@ -2312,6 +2315,433 @@ const RSS_SOURCES = {
     url: 'https://medium.com/feed/@DeBank_',
     category: 'onchain',
     disabled: true, // 404 Not Found — 2026-03-01
+  },
+
+  // =========================================================================
+  // WAVE 4 — MAINSTREAM MEDIA (rebuilding from 14 disabled)
+  // =========================================================================
+  guardian_tech: {
+    name: 'The Guardian Tech',
+    url: 'https://www.theguardian.com/technology/rss',
+    category: 'mainstream',
+  },
+  bbc_business: {
+    name: 'BBC Business',
+    url: 'https://feeds.bbci.co.uk/news/business/rss.xml',
+    category: 'mainstream',
+  },
+  cnn_business: {
+    name: 'CNN Business',
+    url: 'https://rss.cnn.com/rss/money_news_international.rss',
+    category: 'mainstream',
+  },
+  barrons: {
+    name: 'Barrons',
+    url: 'https://www.barrons.com/feed',
+    category: 'mainstream',
+  },
+  business_insider_markets: {
+    name: 'Business Insider Markets',
+    url: 'https://www.businessinsider.com/sai/rss',
+    category: 'mainstream',
+  },
+  fortune_crypto: {
+    name: 'Fortune Crypto',
+    url: 'https://fortune.com/section/crypto/feed/',
+    category: 'mainstream',
+  },
+  vice_tech: {
+    name: 'Vice Motherboard',
+    url: 'https://www.vice.com/en/rss/topic/tech',
+    category: 'mainstream',
+  },
+  axios_crypto: {
+    name: 'Axios Crypto',
+    url: 'https://api.axios.com/feed/newsletters/axios-crypto',
+    category: 'mainstream',
+  },
+  thestreet_crypto: {
+    name: 'TheStreet Crypto',
+    url: 'https://www.thestreet.com/cryptocurrency/feed',
+    category: 'mainstream',
+  },
+  benzinga_crypto: {
+    name: 'Benzinga Crypto',
+    url: 'https://www.benzinga.com/feed/cryptocurrency',
+    category: 'mainstream',
+  },
+  kitco_crypto: {
+    name: 'Kitco Crypto',
+    url: 'https://www.kitco.com/feed/crypto-news.rss',
+    category: 'mainstream',
+  },
+
+  // =========================================================================
+  // WAVE 4 — GEOPOLITICAL & REGULATION (rebuilding from 9 disabled)
+  // =========================================================================
+  bis_speeches: {
+    name: 'BIS Speeches',
+    url: 'https://www.bis.org/doclist/cbspeeches.rss',
+    category: 'geopolitical',
+  },
+  imf_blog: {
+    name: 'IMF Blog',
+    url: 'https://www.imf.org/en/Blogs/rss',
+    category: 'geopolitical',
+  },
+  ecb_press: {
+    name: 'ECB Press',
+    url: 'https://www.ecb.europa.eu/rss/press.html',
+    category: 'geopolitical',
+  },
+  treasury_press: {
+    name: 'US Treasury Press',
+    url: 'https://home.treasury.gov/system/files/136/rss-press-releases.xml',
+    category: 'geopolitical',
+  },
+  boe_speeches: {
+    name: 'Bank of England Speeches',
+    url: 'https://www.bankofengland.co.uk/rss/speeches',
+    category: 'geopolitical',
+  },
+  atlantic_council_crypto: {
+    name: 'Atlantic Council Crypto',
+    url: 'https://www.atlanticcouncil.org/category/programs/geoeconomics-center/digital-currencies/feed/',
+    category: 'geopolitical',
+  },
+
+  // =========================================================================
+  // WAVE 4 — ON-CHAIN ANALYTICS (5→10+)
+  // =========================================================================
+  santiment_blog: {
+    name: 'Santiment Blog',
+    url: 'https://santiment.net/blog/feed/',
+    category: 'onchain',
+  },
+  messari_research: {
+    name: 'Messari Protocol Services',
+    url: 'https://messari.io/research/feed',
+    category: 'onchain',
+  },
+  blockchair_news: {
+    name: 'Blockchair News',
+    url: 'https://blockchair.com/news/feed',
+    category: 'onchain',
+  },
+  defined_fi_blog: {
+    name: 'Defined.fi Blog',
+    url: 'https://www.defined.fi/blog/feed',
+    category: 'onchain',
+  },
+  parsec_blog: {
+    name: 'Parsec Finance Blog',
+    url: 'https://parsec.fi/blog/rss.xml',
+    category: 'onchain',
+  },
+
+  // =========================================================================
+  // WAVE 4 — NFT & METAVERSE (rebuilding from 6 disabled)
+  // =========================================================================
+  nifty_gateway_blog: {
+    name: 'Nifty Gateway Blog',
+    url: 'https://medium.com/feed/nifty-gateway',
+    category: 'nft',
+  },
+  superrare_blog: {
+    name: 'SuperRare Blog',
+    url: 'https://superrare.com/magazine/feed/',
+    category: 'nft',
+  },
+  artblocks_blog: {
+    name: 'Art Blocks Blog',
+    url: 'https://medium.com/feed/the-link-art-blocks',
+    category: 'nft',
+  },
+  mirror_xyz_blog: {
+    name: 'Mirror Blog',
+    url: 'https://dev.mirror.xyz/feed/atom',
+    category: 'nft',
+  },
+
+  // =========================================================================
+  // WAVE 4 — GAMING & GAMEFI
+  // =========================================================================
+  stepn_blog: {
+    name: 'STEPN Blog',
+    url: 'https://medium.com/feed/@aspect_build',
+    category: 'gaming',
+  },
+  mythical_games_blog: {
+    name: 'Mythical Games Blog',
+    url: 'https://mythicalgames.com/blog/feed',
+    category: 'gaming',
+  },
+  animoca_blog: {
+    name: 'Animoca Brands Blog',
+    url: 'https://www.animocabrands.com/blog-feed.xml',
+    category: 'gaming',
+  },
+  beam_gaming_blog: {
+    name: 'Beam Blog',
+    url: 'https://medium.com/feed/onbeam',
+    category: 'gaming',
+  },
+
+  // =========================================================================
+  // WAVE 4 — SOCIAL & COMMUNITY PLATFORMS
+  // =========================================================================
+  farcaster_blog: {
+    name: 'Farcaster Blog',
+    url: 'https://www.farcaster.xyz/blog/feed',
+    category: 'social',
+  },
+  lens_blog: {
+    name: 'Lens Protocol Blog',
+    url: 'https://lens.xyz/blog/feed',
+    category: 'social',
+  },
+  steemit_crypto: {
+    name: 'Steemit Crypto',
+    url: 'https://steemit.com/created/cryptocurrency.rss',
+    category: 'social',
+  },
+  paragraph_xyz: {
+    name: 'Paragraph Blog',
+    url: 'https://paragraph.xyz/blog/feed',
+    category: 'social',
+  },
+
+  // =========================================================================
+  // WAVE 4 — FINTECH EXPANDED
+  // =========================================================================
+  coinbase_institutional: {
+    name: 'Coinbase Institutional',
+    url: 'https://www.coinbase.com/institutional/research/feed',
+    category: 'fintech',
+  },
+  ripple_blog: {
+    name: 'Ripple Blog',
+    url: 'https://ripple.com/insights/feed/',
+    category: 'fintech',
+  },
+  stellar_blog: {
+    name: 'Stellar Blog',
+    url: 'https://stellar.org/blog/feed',
+    category: 'fintech',
+  },
+
+  // =========================================================================
+  // WAVE 4 — PRIVACY & ZK
+  // =========================================================================
+  mina_blog: {
+    name: 'Mina Protocol Blog',
+    url: 'https://minaprotocol.com/blog/feed',
+    category: 'security',
+  },
+  polygon_zkevm_blog: {
+    name: 'Polygon zkEVM Blog',
+    url: 'https://polygon.technology/blog/tag/zkevm/feed',
+    category: 'layer2',
+  },
+  noir_blog: {
+    name: 'Noir Lang Blog',
+    url: 'https://blog.noir-lang.org/feed',
+    category: 'developer',
+  },
+  risc_zero_blog: {
+    name: 'RISC Zero Blog',
+    url: 'https://www.risczero.com/blog/rss.xml',
+    category: 'developer',
+  },
+
+  // =========================================================================
+  // WAVE 4 — RWA / TOKENIZATION
+  // =========================================================================
+  securitize_blog: {
+    name: 'Securitize Blog',
+    url: 'https://securitize.io/blog/feed',
+    category: 'tradfi',
+  },
+  polymesh_blog: {
+    name: 'Polymesh Blog',
+    url: 'https://polymesh.network/blog/feed',
+    category: 'tradfi',
+  },
+  blackrock_digital: {
+    name: 'BlackRock Digital Assets',
+    url: 'https://www.blackrock.com/corporate/insights/digital-assets/rss',
+    category: 'tradfi',
+  },
+  franklin_templeton_digital: {
+    name: 'Franklin Templeton Digital',
+    url: 'https://www.franklintempleton.com/articles/digital-assets/feed',
+    category: 'tradfi',
+  },
+
+  // =========================================================================
+  // WAVE 4 — MACRO & ECONOMICS EXPANDED
+  // =========================================================================
+  fred_blog: {
+    name: 'FRED Blog (St. Louis Fed)',
+    url: 'https://fredblog.stlouisfed.org/feed/',
+    category: 'macro',
+  },
+  wolf_street: {
+    name: 'Wolf Street',
+    url: 'https://wolfstreet.com/feed/',
+    category: 'macro',
+  },
+  zerohedge: {
+    name: 'ZeroHedge',
+    url: 'https://cms.zerohedge.com/fullrss2.xml',
+    category: 'macro',
+  },
+
+  // =========================================================================
+  // WAVE 4 — ETF / ASSET MGMT EXPANDED
+  // =========================================================================
+  fidelity_digital: {
+    name: 'Fidelity Digital Assets',
+    url: 'https://www.fidelitydigitalassets.com/research/feed',
+    category: 'etf',
+  },
+  hashdex_research: {
+    name: 'Hashdex Research',
+    url: 'https://hashdex.com/en/research/feed',
+    category: 'etf',
+  },
+  osprey_funds_blog: {
+    name: 'Osprey Funds Blog',
+    url: 'https://ospreyfunds.io/blog/feed/',
+    category: 'etf',
+  },
+
+  // =========================================================================
+  // WAVE 4 — ASIA-PACIFIC EXPANDED
+  // =========================================================================
+  blocktempo: {
+    name: 'BlockTempo (EN)',
+    url: 'https://www.blocktempo.com/feed/',
+    category: 'asia',
+  },
+  coinpost_en: {
+    name: 'CoinPost (EN)',
+    url: 'https://coinpost.jp/?feed=rss2',
+    category: 'asia',
+  },
+  kr_crypto: {
+    name: 'Chain Catcher',
+    url: 'https://www.chaincatcher.com/rss',
+    category: 'asia',
+  },
+
+  // =========================================================================
+  // WAVE 4 — DERIVATIVES & STRUCTURED PRODUCTS
+  // =========================================================================
+  laevitas_blog: {
+    name: 'Laevitas Blog',
+    url: 'https://laevitas.ch/blog/feed',
+    category: 'derivatives',
+  },
+  paradigm_trading: {
+    name: 'Paradigm (Trading)',
+    url: 'https://www.paradigm.co/blog/rss.xml',
+    category: 'derivatives',
+  },
+  amberdata_blog: {
+    name: 'Amberdata Blog',
+    url: 'https://blog.amberdata.io/rss/',
+    category: 'derivatives',
+  },
+
+  // =========================================================================
+  // WAVE 4 — ETHEREUM ECOSYSTEM EXPANDED
+  // =========================================================================
+  eigenda_blog: {
+    name: 'EigenDA Blog',
+    url: 'https://www.blog.eigenda.xyz/rss/',
+    category: 'ethereum',
+  },
+  lido_dao_blog: {
+    name: 'Lido DAO Governance',
+    url: 'https://research.lido.fi/latest.rss',
+    category: 'ethereum',
+  },
+  safe_blog: {
+    name: 'Safe Blog',
+    url: 'https://safe.mirror.xyz/feed/atom',
+    category: 'ethereum',
+  },
+  ens_blog: {
+    name: 'ENS Blog',
+    url: 'https://blog.ens.domains/feed',
+    category: 'ethereum',
+  },
+
+  // =========================================================================
+  // WAVE 4 — SOLANA ECOSYSTEM EXPANDED
+  // =========================================================================
+  metaplex_blog: {
+    name: 'Metaplex Blog',
+    url: 'https://www.metaplex.com/blog/feed',
+    category: 'solana',
+  },
+  squads_blog: {
+    name: 'Squads Blog',
+    url: 'https://squads.so/blog/feed',
+    category: 'solana',
+  },
+  marginfi_blog: {
+    name: 'marginfi Blog',
+    url: 'https://medium.com/feed/marginfi',
+    category: 'solana',
+  },
+
+  // =========================================================================
+  // WAVE 4 — STABLECOINS EXPANDED
+  // =========================================================================
+  paxos_blog: {
+    name: 'Paxos Blog',
+    url: 'https://paxos.com/blog/feed/',
+    category: 'stablecoin',
+  },
+  makerdao_gov: {
+    name: 'MakerDAO Governance',
+    url: 'https://forum.makerdao.com/latest.rss',
+    category: 'stablecoin',
+  },
+  frax_blog: {
+    name: 'Frax Finance Blog',
+    url: 'https://medium.com/feed/frax-finance',
+    category: 'stablecoin',
+  },
+
+  // =========================================================================
+  // WAVE 4 — MINING EXPANDED
+  // =========================================================================
+  blockware_research: {
+    name: 'Blockware Solutions Research',
+    url: 'https://www.blockwaresolutions.com/research-and-publications/feed',
+    category: 'mining',
+  },
+  luxor_tech_blog: {
+    name: 'Luxor Technology Blog',
+    url: 'https://luxor.tech/blog/feed',
+    category: 'mining',
+  },
+
+  // =========================================================================
+  // WAVE 4 — JOURNALISM / INVESTIGATIVE
+  // =========================================================================
+  coffeezilla_pod: {
+    name: 'Coffeezilla',
+    url: 'https://www.youtube.com/feeds/videos.xml?channel_id=UCFQMnBA3CS502aghlcr0_aw',
+    category: 'journalism',
+  },
+  molly_white: {
+    name: 'Molly White Blog',
+    url: 'https://www.citationneeded.news/rss/',
+    category: 'journalism',
   },
 } as const;
 

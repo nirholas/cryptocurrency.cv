@@ -57,8 +57,8 @@ export const defillamaStablecoinsAdapter: DataProvider<StablecoinFlow[]> = {
       const totalCirc = (typeof circUsd === 'number' ? circUsd : 0) || (typeof circEur === 'number' ? circEur : 0);
 
       // Extract 24h and 7d circulating changes from DefiLlama's circulatingPrevDay/Week fields
-      const circPrevDay = (a as Record<string, unknown>).circulatingPrevDay as Record<string, number> | undefined;
-      const circPrevWeek = (a as Record<string, unknown>).circulatingPrevWeek as Record<string, number> | undefined;
+      const circPrevDay = (a as unknown as Record<string, unknown>).circulatingPrevDay as Record<string, number> | undefined;
+      const circPrevWeek = (a as unknown as Record<string, unknown>).circulatingPrevWeek as Record<string, number> | undefined;
       const prevDayUsd = circPrevDay?.peggedUSD ?? 0;
       const prevWeekUsd = circPrevWeek?.peggedUSD ?? 0;
       const change24h = prevDayUsd > 0 ? totalCirc - prevDayUsd : 0;

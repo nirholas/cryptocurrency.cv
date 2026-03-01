@@ -903,7 +903,7 @@ export class AIMarketAgent {
       
       if (price1 && price2) {
         // Estimate instantaneous correlation using price returns and spread
-n        // Use change magnitudes and direction alignment for a more robust estimate
+        // Use change magnitudes and direction alignment for a more robust estimate
         const r1 = price1.change24h / 100;
         const r2 = price2.change24h / 100;
         const sameDirection = (r1 > 0) === (r2 > 0);
@@ -1197,7 +1197,7 @@ n        // Use change magnitudes and direction alignment for a more robust esti
             direction: event.type === 'airdrop' || event.type === 'mainnet-launch' ? 'bullish' : 'neutral',
             type: event.type === 'hard-fork' || event.type === 'mainnet-launch' ? 'upgrade'
               : event.type === 'conference' ? 'macro'
-              : 'other',
+              : 'governance',
             description: event.description || `${event.title} - ${event.type || 'upcoming crypto event'}`,
           });
         }

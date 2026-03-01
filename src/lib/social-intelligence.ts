@@ -1196,11 +1196,10 @@ export async function getSocialTrends(): Promise<SocialTrend[]> {
       // Use source distribution as a proxy for channel activity
       const channelSources = ['twitter', 'reddit', 'telegram', 'discord', 'youtube'];
       return channelSources
-        .map(ch => ({ name: ch, mentions: Math.round(Math.random() * trend.mentions * 0.3) }))
+        .map(ch => ({ name: ch, platform: ch, mentions: Math.round(Math.random() * metric.socialVolume * 0.3) }))
         .filter(c => c.mentions > 0)
         .sort((a, b) => b.mentions - a.mentions)
-        .slice(0, 3)
-        .map(c => c.name);
+        .slice(0, 3);
     })(),
     topInfluencers: [],
     relatedTickers: [],

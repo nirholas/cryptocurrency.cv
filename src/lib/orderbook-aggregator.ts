@@ -688,7 +688,7 @@ export async function getAggregatedOrderBook(
     bidPercent: totalBidDepth > 0 ? (ob.bidDepthUsd / totalBidDepth) * 100 : 0,
     askPercent: totalAskDepth > 0 ? (ob.askDepthUsd / totalAskDepth) * 100 : 0,
     spread: ob.spread,
-    latency: ob.fetchLatencyMs ?? 0,
+    latency: (ob as ExchangeOrderBook & { fetchLatencyMs?: number }).fetchLatencyMs ?? 0,
   }));
 
   return {

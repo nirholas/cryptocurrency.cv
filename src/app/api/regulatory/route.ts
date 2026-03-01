@@ -338,11 +338,11 @@ async function handleAgenciesRequest(
         const proCryptoAgencies = ['mfsa', 'mas', 'sfsa', 'adgm'];
         const hostileAgencies = ['pboc', 'rbi'];
         const neutralAgencies = ['sec', 'cftc', 'fca', 'bafin', 'amf', 'esma'];
-        if (proCryptoAgencies.includes(requestedAgency)) return 'positive';
-        if (hostileAgencies.includes(requestedAgency)) return 'negative';
-        if (neutralAgencies.includes(requestedAgency)) return 'neutral';
-        return 'neutral';
-      })() as 'positive' | 'negative' | 'neutral',
+        if (proCryptoAgencies.includes(requestedAgency)) return 'progressive' as const;
+        if (hostileAgencies.includes(requestedAgency)) return 'restrictive' as const;
+        if (neutralAgencies.includes(requestedAgency)) return 'neutral' as const;
+        return 'neutral' as const;
+      })(),
       enforcementHistory: {
         totalActions: 0,
         totalFines: 0,

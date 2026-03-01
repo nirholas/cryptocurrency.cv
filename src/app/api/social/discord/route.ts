@@ -333,7 +333,7 @@ function processIntelligence(messages: DiscordMessage[]): DiscordIntelligence {
           }
         }
         return Array.from(topicCounts.entries())
-          .map(([topic, count]) => ({ topic, mentions: count }))
+          .map(([topic, count]) => ({ topic, count }))
           .sort((a, b) => b.mentions - a.mentions)
           .slice(0, 10);
       })(),
