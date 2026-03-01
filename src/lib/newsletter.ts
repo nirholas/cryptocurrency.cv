@@ -163,7 +163,7 @@ async function sendVerificationEmail(subscriber: Subscriber, token: string): Pro
 <body style="margin: 0; padding: 20px; background-color: #f5f5f5; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
   <div style="max-width: 600px; margin: 0 auto; background-color: #ffffff; border-radius: 8px; overflow: hidden;">
     <div style="padding: 32px; background: #000000; text-align: center;">
-      <h1 style="margin: 0; color: #000; font-size: 24px;">📰 Crypto Vision News</h1>
+      <h1 style="margin: 0; color: #000; font-size: 24px;">📰 Free Crypto News</h1>
     </div>
     <div style="padding: 32px;">
       <h2 style="margin: 0 0 16px; color: #1a1a1a;">Verify Your Email</h2>
@@ -177,7 +177,7 @@ async function sendVerificationEmail(subscriber: Subscriber, token: string): Pro
         </a>
       </div>
       <p style="color: #999; font-size: 12px;">
-        If you didn't subscribe to Crypto Vision News, you can safely ignore this email.
+        If you didn't subscribe to Free Crypto News, you can safely ignore this email.
       </p>
     </div>
   </div>
@@ -186,7 +186,7 @@ async function sendVerificationEmail(subscriber: Subscriber, token: string): Pro
   `.trim();
 
   const text = `
-Verify Your Email - Crypto Vision News
+Verify Your Email - Free Crypto News
 
 Thanks for subscribing to the ${subscriber.frequency} crypto news digest!
 Click the link below to verify your email address:
@@ -199,7 +199,7 @@ If you didn't subscribe, you can safely ignore this email.
   // Try different email providers in order
   const sent = await sendEmail({
     to: subscriber.email,
-    subject: 'Verify Your Email - Crypto Vision News',
+    subject: 'Verify Your Email - Free Crypto News',
     html,
     text,
   });
@@ -411,7 +411,7 @@ export function generateDigestHtml(
     <tr>
       <td style="padding: 24px; background-color: #f9f9f9; text-align: center; border-top: 1px solid #eee;">
         <p style="margin: 0; color: #666; font-size: 12px;">
-          You're receiving this because you subscribed to Crypto Vision News.
+          You're receiving this because you subscribed to Free Crypto News.
         </p>
         <p style="margin: 8px 0 0;">
           <a href="https://cryptocurrency.cv/unsubscribe?token=${subscriber.unsubscribeToken}" 

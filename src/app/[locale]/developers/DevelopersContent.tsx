@@ -520,7 +520,7 @@ const endpointCategories: EndpointCategory[] = [
         response: `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
   <channel>
-    <title>Crypto Vision News</title>
+    <title>Free Crypto News</title>
     <link>https://cryptocurrency.cv</link>
     <item>
       <title>Bitcoin Hits New High</title>
@@ -540,7 +540,7 @@ const endpointCategories: EndpointCategory[] = [
         ],
         response: `<?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Crypto Vision News</title>
+  <title>Free Crypto News</title>
   <entry>
     <title>Bitcoin Hits New High</title>
     <link href="https://..." />
@@ -788,7 +788,7 @@ interface Integration {
 const integrations: Integration[] = [
   {
     name: "ChatGPT Plugin",
-    description: "Use Crypto Vision News directly within ChatGPT. Ask about latest crypto news, prices, and trends.",
+    description: "Use Free Crypto News directly within ChatGPT. Ask about latest crypto news, prices, and trends.",
     link: "https://github.com/nirholas/free-crypto-news/tree/main/chatgpt",
     icon: "🤖",
     badge: "OpenAI",
@@ -1427,7 +1427,7 @@ export default function DevelopersContent() {
                 <ApiStatusBadge />
               </div>
               <h1 className="font-serif text-4xl md:text-5xl font-bold mb-4 text-[var(--color-text-primary)]">
-                Crypto Vision News API
+                Free Crypto News API
               </h1>
               <p className="text-lg text-[var(--color-text-secondary)] mb-6 max-w-2xl">
                 Access real-time cryptocurrency news, market data, DeFi analytics,
@@ -1692,7 +1692,7 @@ export default function DevelopersContent() {
                 Integrations
               </h2>
               <p className="text-[var(--color-text-secondary)] mb-8">
-                Use Crypto Vision News with your favorite tools and platforms.
+                Use Free Crypto News with your favorite tools and platforms.
               </p>
 
               <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

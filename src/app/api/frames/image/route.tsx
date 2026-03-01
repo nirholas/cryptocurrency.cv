@@ -48,7 +48,7 @@ export async function GET(request: NextRequest) {
           {/* Header */}
           <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '20px' }}>
             <div style={{ display: 'flex', alignItems: 'center', color: '#22c55e', fontSize: '24px', fontWeight: 'bold' }}>
-              Crypto Vision News
+              Free Crypto News
             </div>
             <div style={{ color: '#64748b', fontSize: '20px' }}>
               {data.index || 1}/{data.total || 5}

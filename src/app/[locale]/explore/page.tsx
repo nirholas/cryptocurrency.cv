@@ -109,7 +109,7 @@ async function fetchTrendingConnections(): Promise<TrendingPair[]> {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   return generateSEOMetadata({
-    title: 'Knowledge Graph Explorer — Crypto Vision News',
+    title: 'Knowledge Graph Explorer — Free Crypto News',
     description:
       'Explore entity relationships across crypto news — interactive force-directed knowledge graph showing connections between coins, people, companies, and protocols.',
     path: '/explore',

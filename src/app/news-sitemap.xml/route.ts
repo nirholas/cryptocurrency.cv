@@ -87,7 +87,7 @@ export async function GET() {
     <loc>${escapeXml(url)}</loc>
     <news:news>
       <news:publication>
-        <news:name>Crypto Vision News</news:name>
+        <news:name>Free Crypto News</news:name>
         <news:language>${lang}</news:language>
       </news:publication>
       <news:publication_date>${formattedDate}</news:publication_date>

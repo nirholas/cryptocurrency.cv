@@ -83,7 +83,7 @@ async function fetchJSON<T>(path: string): Promise<T | null> {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   return generateSEOMetadata({
-    title: "Layer 2 Analytics — TVL, TPS, Fees & Bridge Data | Crypto Vision",
+    title: "Layer 2 Analytics — TVL, TPS, Fees & Bridge Data | Free Crypto News",
     description:
       "Compare Ethereum Layer 2 scaling solutions including Arbitrum, Optimism, Base, zkSync, and more. Track TVL, transaction throughput, fees, and bridge volumes.",
     path: "/l2",

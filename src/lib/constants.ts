@@ -9,7 +9,7 @@
  */
 
 /**
- * Centralized constants for Crypto Vision News
+ * Centralized constants for Free Crypto News
  *
  * Single source of truth for base URLs, API endpoints, and cache durations.
  * Import from here instead of hardcoding values across the codebase.

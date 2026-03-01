@@ -93,16 +93,16 @@ export async function GET() {
   const opml = `<?xml version="1.0" encoding="UTF-8"?>
 <opml version="2.0">
   <head>
-    <title>Crypto Vision News - All Sources</title>
+    <title>Free Crypto News - All Sources</title>
     <dateCreated>${new Date().toUTCString()}</dateCreated>
-    <ownerName>Crypto Vision News</ownerName>
+    <ownerName>Free Crypto News</ownerName>
     <docs>https://github.com/nirholas/free-crypto-news</docs>
   </head>
   <body>
     <outline text="Crypto News Sources" title="Crypto News Sources">
 ${outlines}
     </outline>
-    <outline text="Crypto Vision News Aggregated Feeds" title="Aggregated Feeds">
+    <outline text="Free Crypto News Aggregated Feeds" title="Aggregated Feeds">
       <outline text="All News" title="All News" type="rss" xmlUrl="https://cryptocurrency.cv/api/rss" htmlUrl="https://cryptocurrency.cv"/>
       <outline text="DeFi News" title="DeFi News" type="rss" xmlUrl="https://cryptocurrency.cv/api/rss?feed=defi" htmlUrl="https://cryptocurrency.cv"/>
       <outline text="Bitcoin News" title="Bitcoin News" type="rss" xmlUrl="https://cryptocurrency.cv/api/rss?feed=bitcoin" htmlUrl="https://cryptocurrency.cv"/>

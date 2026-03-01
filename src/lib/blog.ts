@@ -127,7 +127,7 @@ export const AUTHORS: Record<string, BlogAuthor> = {
     name: 'FCN Team',
     avatar: '/images/authors/team.png',
     twitter: 'freecryptonews',
-    bio: 'The Crypto Vision News editorial team covering the latest in cryptocurrency and blockchain.',
+    bio: 'The Free Crypto News editorial team covering the latest in cryptocurrency and blockchain.',
   },
   ai: {
     name: 'AI Research',
@@ -276,7 +276,7 @@ Getting started with Bitcoin is easier than ever:
 
 Bitcoin remains the foundational cryptocurrency and a significant technological innovation. Whether you're interested in it as an investment, a payment system, or the underlying technology, understanding Bitcoin is essential for anyone interested in the future of finance.
 
-*Stay updated with the latest Bitcoin news on [Crypto Vision News](/).*
+*Stay updated with the latest Bitcoin news on [Free Crypto News](/).*
 `,
 
   'ethereum-vs-bitcoin': `---
@@ -375,7 +375,7 @@ Both have Layer 2 solutions:
 
 Bitcoin and Ethereum aren't competitors - they serve different purposes. Many investors hold both as complementary assets in a diversified crypto portfolio.
 
-*Track both BTC and ETH prices on [Crypto Vision News](/coin/bitcoin).*
+*Track both BTC and ETH prices on [Free Crypto News](/coin/bitcoin).*
 `,
 
   'defi-beginners-guide': `---
@@ -509,7 +509,7 @@ In 2026, DeFi is evolving:
 
 DeFi offers unprecedented financial access and opportunity, but comes with unique risks. Start slow, keep learning, and never invest more than you can afford to lose.
 
-*Track DeFi protocols and yields on [Crypto Vision News](/defi).*
+*Track DeFi protocols and yields on [Free Crypto News](/defi).*
 `,
 
   'crypto-security-guide': `---
@@ -671,7 +671,7 @@ Scammers impersonating projects, influencers, or support.
 
 In crypto, you are your own bank. This comes with great responsibility. Follow these practices consistently, stay vigilant, and remember: if something seems too good to be true, it probably is.
 
-*Stay safe and informed with [Crypto Vision News](/).*
+*Stay safe and informed with [Free Crypto News](/).*
 `,
 
   'how-to-read-crypto-charts': `---
@@ -824,7 +824,7 @@ Different timeframes serve different purposes:
 
 Technical analysis is a skill that takes practice. Start with the basics, keep a trading journal, and remember that no strategy works 100% of the time. Combine TA with fundamental analysis and proper risk management for best results.
 
-*View real-time charts on [Crypto Vision News](/charts).*
+*View real-time charts on [Free Crypto News](/charts).*
 `,
 
   'layer-2-explained': `---
@@ -971,7 +971,7 @@ Chains built on top of L2s for specific applications:
 
 Layer 2 solutions make Ethereum usable for everyday transactions while maintaining security. As the technology matures, the user experience will continue to improve, making L2s the default for most users.
 
-*Track L2 activity on [Crypto Vision News](/defi).*
+*Track L2 activity on [Free Crypto News](/defi).*
 `,
 };
 

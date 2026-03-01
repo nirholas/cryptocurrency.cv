@@ -37,7 +37,7 @@ const apiRoutes: Record<string, RouteConfig> = {
         network: NETWORK,
       },
     ],
-    description: 'Crypto Vision News API — pay per request in USDC on Base',
+    description: 'Free Crypto News API — pay per request in USDC on Base',
   },
 };
 

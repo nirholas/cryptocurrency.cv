@@ -338,7 +338,7 @@ export default async function SourceProfilePage({ params }: Props) {
                     </p>
                   ) : (
                     <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed mb-4">
-                      {sourceInfo.name} is a {sourceInfo.category} cryptocurrency news source aggregated by Crypto Vision News.
+                      {sourceInfo.name} is a {sourceInfo.category} cryptocurrency news source aggregated by Free Crypto News.
                     </p>
                   )}
                   <dl className="space-y-2 text-sm">

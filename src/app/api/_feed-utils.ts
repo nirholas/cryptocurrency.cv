@@ -49,7 +49,7 @@ export async function resolveFeed(
       return {
         articles: data.articles,
         meta: {
-          title: 'Crypto Vision News - DeFi Feed',
+          title: 'Free Crypto News - DeFi Feed',
           description: 'DeFi news aggregated from top crypto sources',
           feedUrl: `${BASE_URL}${path}?feed=defi`,
         },
@@ -60,7 +60,7 @@ export async function resolveFeed(
       return {
         articles: data.articles,
         meta: {
-          title: 'Crypto Vision News - Bitcoin Feed',
+          title: 'Free Crypto News - Bitcoin Feed',
           description: 'Bitcoin news aggregated from top crypto sources',
           feedUrl: `${BASE_URL}${path}?feed=bitcoin`,
         },
@@ -71,7 +71,7 @@ export async function resolveFeed(
       return {
         articles: data.articles,
         meta: {
-          title: 'Crypto Vision News - All Sources',
+          title: 'Free Crypto News - All Sources',
           description: 'Crypto news aggregated from 200+ top sources - 100% FREE',
           feedUrl: `${BASE_URL}${path}`,
         },

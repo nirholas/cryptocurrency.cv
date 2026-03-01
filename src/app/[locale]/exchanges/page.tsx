@@ -12,7 +12,7 @@ type Props = { params: Promise<{ locale: string }> };
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   return generateSEOMetadata({
-    title: "Cryptocurrency Exchanges — Rankings, Volume & Comparison | Crypto Vision News",
+    title: "Cryptocurrency Exchanges — Rankings, Volume & Comparison | Free Crypto News",
     description:
       "Compare cryptocurrency exchanges by volume, trust score, fees, and supported markets. Rankings for centralized (CEX) and decentralized (DEX) exchanges.",
     path: "/exchanges",

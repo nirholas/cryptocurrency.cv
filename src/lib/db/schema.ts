@@ -471,3 +471,88 @@ export const newsArticles = pgTable(
     index('idx_news_sentiment').on(table.sentiment),
   ]
 );
+
+// ────────────────────────────────────────────────────────────────────────────
+// users — user accounts for auth & dashboard
+// ────────────────────────────────────────────────────────────────────────────
+
+export const users = pgTable(
+  'users',
+  {
+    id: uuid('id').defaultRandom().primaryKey(),
+    email: varchar('email', { length: 255 }).notNull(),
+    name: varchar('name', { length: 128 }),
+    avatarUrl: text('avatar_url'),
+    role: varchar('role', { length: 32 }).notNull().default('developer'),
+    /** OAuth provider: 'email' (magic link), 'github', 'google' */
+    provider: varchar('provider', { length: 32 }).notNull().default('email'),
+    providerId: varchar('provider_id', { length: 255 }),
+    emailVerified: boolean('email_verified').default(false),
+    lastLoginAt: timestamp('last_login_at', { withTimezone: true }),
+    createdAt: timestamp('created_at', { withTimezone: true }).defaultNow(),
+    updatedAt: timestamp('updated_at', { withTimezone: true }).defaultNow(),
+  },
+  (table) => [
+    uniqueIndex('idx_users_email').on(table.email),
+    index('idx_users_provider').on(table.provider),
+    index('idx_users_role').on(table.role),
+  ]
+);
+
+// ────────────────────────────────────────────────────────────────────────────
+// api_keys — persistent API key storage (mirrors Redis/KV for durability)
+// ────────────────────────────────────────────────────────────────────────────
+
+export const apiKeys = pgTable(
+  'api_keys',
+  {
+    id: varchar('id', { length: 64 }).primaryKey(),
+    userId: uuid('user_id').references(() => users.id, { onDelete: 'cascade' }),
+    /** SHA-256 hash of the raw key — never store plaintext */
+    keyHash: varchar('key_hash', { length: 128 }).notNull(),
+    /** First 12 chars of key for display (e.g. cda_pro_xxxx) */
+    keyPrefix: varchar('key_prefix', { length: 16 }).notNull(),
+    name: varchar('name', { length: 128 }).notNull().default('Default'),
+    tier: varchar('tier', { length: 32 }).notNull().default('pro'),
+    permissions: text('permissions').array().default(sql`'{}'::text[]`),
+    rateLimitDay: integer('rate_limit_day').notNull().default(50000),
+    active: boolean('active').notNull().default(true),
+    expiresAt: timestamp('expires_at', { withTimezone: true }),
+    lastUsedAt: timestamp('last_used_at', { withTimezone: true }),
+    createdAt: timestamp('created_at', { withTimezone: true }).defaultNow(),
+    revokedAt: timestamp('revoked_at', { withTimezone: true }),
+  },
+  (table) => [
+    index('idx_apikeys_user').on(table.userId),
+    uniqueIndex('idx_apikeys_hash').on(table.keyHash),
+    index('idx_apikeys_tier').on(table.tier),
+    index('idx_apikeys_active').on(table.active),
+  ]
+);
+
+// ────────────────────────────────────────────────────────────────────────────
+// auth_tokens — magic link tokens & refresh tokens
+// ────────────────────────────────────────────────────────────────────────────
+
+export const authTokens = pgTable(
+  'auth_tokens',
+  {
+    id: uuid('id').defaultRandom().primaryKey(),
+    userId: uuid('user_id').references(() => users.id, { onDelete: 'cascade' }),
+    /** 'magic_link' | 'refresh' */
+    type: varchar('type', { length: 32 }).notNull(),
+    /** SHA-256 hash of the token */
+    tokenHash: varchar('token_hash', { length: 128 }).notNull(),
+    expiresAt: timestamp('expires_at', { withTimezone: true }).notNull(),
+    usedAt: timestamp('used_at', { withTimezone: true }),
+    createdAt: timestamp('created_at', { withTimezone: true }).defaultNow(),
+    /** IP address for security logging */
+    ipAddress: varchar('ip_address', { length: 45 }),
+  },
+  (table) => [
+    index('idx_authtokens_hash').on(table.tokenHash),
+    index('idx_authtokens_user').on(table.userId),
+    index('idx_authtokens_type').on(table.type),
+    index('idx_authtokens_expires').on(table.expiresAt),
+  ]
+);

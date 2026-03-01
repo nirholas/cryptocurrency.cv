@@ -11,7 +11,7 @@ import { ImageResponse } from 'next/og';
 import { getArticleById } from '@/lib/archive-v2';
 
 export const runtime = 'edge';
-export const alt = 'Crypto Vision News Article';
+export const alt = 'Free Crypto News Article';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 
@@ -234,7 +234,7 @@ export default async function Image({ params }: { params: { locale: string; id: 
             </span>
           </div>
           <span style={{ color: '#334155', fontSize: '13px' }}>
-            Crypto Vision News
+            Free Crypto News
           </span>
         </div>
 

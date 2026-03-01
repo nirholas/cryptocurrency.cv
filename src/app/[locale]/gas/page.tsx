@@ -191,7 +191,7 @@ async function fetchGas(): Promise<GasData | null> {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   return generateSEOMetadata({
-    title: "Ethereum Gas Tracker — Crypto Vision News",
+    title: "Ethereum Gas Tracker — Free Crypto News",
     description:
       "Live Ethereum gas prices in gwei with estimated USD costs for transfers, swaps, NFT mints, and contract deployments. Layer 2 fee comparison included.",
     path: "/gas",

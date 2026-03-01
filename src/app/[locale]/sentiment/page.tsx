@@ -78,7 +78,7 @@ async function fetchJSON<T>(path: string): Promise<T | null> {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   return generateSEOMetadata({
-    title: "Sentiment & Social Intelligence — Crypto Vision News",
+    title: "Sentiment & Social Intelligence — Free Crypto News",
     description:
       "Real-time crypto market sentiment analysis, trending narratives, influencer insights, and social buzz — all in one place.",
     path: "/sentiment",

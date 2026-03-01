@@ -93,7 +93,7 @@ export async function GET() {
     const rssFeed = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Crypto Vision News</title>
+    <title>Free Crypto News</title>
     <link>${SITE_URL}</link>
     <description>Real-time cryptocurrency news from 200+ trusted sources. 100% FREE - No API keys required.</description>
     <language>en-us</language>
@@ -103,14 +103,14 @@ export async function GET() {
     <atom:link href="${SITE_URL}/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>${SITE_URL}/icons/icon-192x192.png</url>
-      <title>Crypto Vision News</title>
+      <title>Free Crypto News</title>
       <link>${SITE_URL}</link>
       <width>192</width>
       <height>192</height>
     </image>
-    <copyright>MIT License - Crypto Vision ${new Date().getFullYear()}</copyright>
-    <managingEditor>noreply@cryptocurrency.cv (Crypto Vision News)</managingEditor>
-    <webMaster>noreply@cryptocurrency.cv (Crypto Vision News)</webMaster>
+    <copyright>MIT License - Free Crypto News ${new Date().getFullYear()}</copyright>
+    <managingEditor>noreply@cryptocurrency.cv (Free Crypto News)</managingEditor>
+    <webMaster>noreply@cryptocurrency.cv (Free Crypto News)</webMaster>
     <category>Technology</category>
     <category>Finance</category>
     <category>Cryptocurrency</category>

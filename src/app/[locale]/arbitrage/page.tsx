@@ -12,7 +12,7 @@ type Props = { params: Promise<{ locale: string }> };
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   return generateSEOMetadata({
-    title: "Arbitrage Scanner — Live Cross-Exchange Opportunities | Crypto Vision News",
+    title: "Arbitrage Scanner — Live Cross-Exchange Opportunities | Free Crypto News",
     description:
       "Find real-time cryptocurrency arbitrage opportunities across exchanges. Compare buy and sell prices, spread percentages, and estimated profits for BTC, ETH, and altcoins.",
     path: "/arbitrage",

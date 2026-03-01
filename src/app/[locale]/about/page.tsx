@@ -38,7 +38,7 @@ type Props = {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   return generateSEOMetadata({
-    title: "About Crypto Vision News",
+    title: "About Free Crypto News",
     description:
       "Free crypto news API aggregating real-time headlines from 300+ trusted sources. No API key required. Open source and community-driven.",
     path: "/about",
@@ -420,7 +420,7 @@ export default async function AboutPage({ params }: Props) {
             Built by the Community
           </h2>
           <p className="text-[var(--color-text-secondary)] mb-6 leading-relaxed">
-            Crypto Vision News is maintained by a global community of open source
+            Free Crypto News is maintained by a global community of open source
             contributors. Whether you&apos;re fixing a bug, adding a new source,
             translating the interface, or improving documentation — every
             contribution matters.

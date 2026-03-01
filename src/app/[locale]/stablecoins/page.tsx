@@ -56,7 +56,7 @@ async function fetchJSON<T>(path: string): Promise<T | null> {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   return generateSEOMetadata({
-    title: "Stablecoin Analytics — Market Cap, Peg Health & Supply | Crypto Vision",
+    title: "Stablecoin Analytics — Market Cap, Peg Health & Supply | Free Crypto News",
     description:
       "Track stablecoin market data including USDT, USDC, DAI, and more. Monitor peg health, market cap rankings, supply changes, and de-peg alerts in real time.",
     path: "/stablecoins",

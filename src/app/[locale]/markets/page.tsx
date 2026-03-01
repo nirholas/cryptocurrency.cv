@@ -60,7 +60,7 @@ async function fetchJSON<T>(path: string): Promise<T | null> {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   return generateSEOMetadata({
-    title: "Markets — Crypto Vision News",
+    title: "Markets — Free Crypto News",
     description:
       "Live cryptocurrency market data, prices, and trends. Track Bitcoin, Ethereum, and top altcoins in real time.",
     path: "/markets",

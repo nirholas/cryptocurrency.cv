@@ -132,7 +132,7 @@ export async function GET(request: NextRequest) {
   // Home frame
   if (frame === 'home') {
     const html = generateFrameHtml({
-      title: 'Crypto Vision News',
+      title: 'Free Crypto News',
       image: generateImageUrl({ type: 'news' }),
       buttons: [
         { label: '📰 Latest News' },

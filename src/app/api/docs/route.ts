@@ -21,7 +21,7 @@ export async function GET(request: NextRequest) {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Crypto Vision News API Documentation</title>
+  <title>Free Crypto News API Documentation</title>
   <link rel="stylesheet" type="text/css" href="https://unpkg.com/swagger-ui-dist@5/swagger-ui.css">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -54,7 +54,7 @@ export async function GET(request: NextRequest) {
 </head>
 <body>
   <div class="header-banner">
-    <h1>Crypto Vision News API</h1>
+    <h1>Free Crypto News API</h1>
     <p>100% FREE • No API Keys • No Rate Limits</p>
     <span class="badge">200+ Sources • Real-time News</span>
   </div>

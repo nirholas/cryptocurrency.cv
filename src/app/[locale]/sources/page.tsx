@@ -8,7 +8,7 @@ import SourcesPageClient from "@/components/SourcesPageClient";
 export const metadata = generateSEOMetadata({
   title: "News Sources",
   description:
-    "Browse 300+ cryptocurrency news sources aggregated by Crypto Vision News. Covering Bitcoin, Ethereum, DeFi, NFTs, trading, and more.",
+    "Browse 300+ cryptocurrency news sources aggregated by Free Crypto News. Covering Bitcoin, Ethereum, DeFi, NFTs, trading, and more.",
   path: "/sources",
   tags: ["crypto sources", "news sources", "bitcoin news", "crypto feeds"],
 });

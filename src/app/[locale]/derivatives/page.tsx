@@ -64,7 +64,7 @@ interface HyperliquidResponse {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   return generateSEOMetadata({
-    title: "Derivatives & Liquidations Dashboard — Crypto Vision News",
+    title: "Derivatives & Liquidations Dashboard — Free Crypto News",
     description:
       "Live cryptocurrency derivatives dashboard: liquidation feed, funding rates, open interest, and options data for BTC, ETH, SOL and more.",
     path: "/derivatives",

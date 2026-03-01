@@ -11,7 +11,7 @@ import { ImageResponse } from 'next/og';
 import { COINGECKO_BASE } from '@/lib/constants';
 
 export const runtime = 'edge';
-export const alt = 'Crypto Vision News — Coin Price';
+export const alt = 'Free Crypto News — Coin Price';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 

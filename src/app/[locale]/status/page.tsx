@@ -58,7 +58,7 @@ import type { LucideIcon } from "lucide-react";
 export const metadata = generateSEOMetadata({
   title: "System Status",
   description:
-    "Real-time status of Crypto Vision News API services, endpoints, and news sources.",
+    "Real-time status of Free Crypto News API services, endpoints, and news sources.",
   path: "/status",
   tags: ["system status", "API status", "service health", "uptime"],
 });

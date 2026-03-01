@@ -36,7 +36,7 @@ export async function GET() {
   xmlns:atom="http://www.w3.org/2005/Atom"
   xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Crypto Vision News Blog</title>
+    <title>Free Crypto News Blog</title>
     <description>Learn about cryptocurrency, blockchain, DeFi, and trading with our comprehensive guides and expert analysis.</description>
     <link>${SITE_URL}/blog</link>
     <language>en</language>
@@ -44,7 +44,7 @@ export async function GET() {
     <atom:link href="${SITE_URL}/blog/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>${SITE_URL}/icons/icon-192x192.png</url>
-      <title>Crypto Vision News Blog</title>
+      <title>Free Crypto News Blog</title>
       <link>${SITE_URL}/blog</link>
     </image>
     ${rssItems}

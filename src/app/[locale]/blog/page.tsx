@@ -91,7 +91,7 @@ function getBlogPosts(): BlogPost[] {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   return generateSEOMetadata({
-    title: "Blog — Crypto Vision News",
+    title: "Blog — Free Crypto News",
     description:
       "In-depth articles, guides, and analysis on Bitcoin, Ethereum, DeFi, trading strategies, and the crypto ecosystem.",
     path: "/blog",
@@ -184,7 +184,7 @@ export default async function BlogPage({ params }: Props) {
         </div>
       </main>
       <PageShareSection
-        title="Crypto Vision Blog — Insights & Analysis"
+        title="Free Crypto News Blog — Insights & Analysis"
         description="In-depth crypto insights, market analysis, and project deep-dives."
         url={`https://cryptocurrency.cv/${locale}/blog`}
       />

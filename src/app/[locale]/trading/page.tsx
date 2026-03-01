@@ -14,7 +14,7 @@ type Props = {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   return generateSEOMetadata({
-    title: "Trading & Charts — TradingView Charts — Crypto Vision News",
+    title: "Trading & Charts — TradingView Charts — Free Crypto News",
     description:
       "Advanced cryptocurrency charts powered by TradingView with candlestick views, AI-powered chart analysis, crypto heatmap, live order book depth, and real-time trading signals.",
     path: "/trading",

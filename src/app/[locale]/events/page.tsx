@@ -19,7 +19,7 @@ type Props = {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   return generateSEOMetadata({
-    title: "Crypto Events Calendar — Crypto Vision News",
+    title: "Crypto Events Calendar — Free Crypto News",
     description:
       "Stay up to date with upcoming crypto conferences, network upgrades, token launches, AMAs, and community events. Never miss an important date in crypto.",
     path: "/events",

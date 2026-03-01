@@ -39,7 +39,7 @@ function generateAtom(articles: any[], title: string, subtitle: string, feedUrl:
   <link href="https://cryptocurrency.cv" rel="alternate" type="text/html"/>
   <id>https://cryptocurrency.cv/</id>
   <updated>${updated}</updated>
-  <generator uri="https://github.com/nirholas/free-crypto-news" version="1.0">Crypto Vision News</generator>
+  <generator uri="https://github.com/nirholas/free-crypto-news" version="1.0">Free Crypto News</generator>
   <icon>https://cryptocurrency.cv/icon.png</icon>
   ${entries}
 </feed>`;

@@ -247,7 +247,7 @@ function AppearanceTab({
       <div>
         <SectionHeader
           title="Theme"
-          description="Choose how Crypto Vision News looks to you."
+          description="Choose how Free Crypto News looks to you."
         />
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
           <RadioOption
@@ -902,7 +902,7 @@ export default function SettingsPanel({
           Settings
         </h1>
         <p className="text-[var(--color-text-secondary)] mt-2">
-          Customize your Crypto Vision News experience
+          Customize your Free Crypto News experience
         </p>
       </div>
 

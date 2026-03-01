@@ -35,7 +35,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return generateSEOMetadata({
     title: "Crypto Digest — Daily & Weekly Newsletter Archive",
     description:
-      "Browse the Crypto Vision daily and weekly digests. AI-powered summaries of the most important crypto news, market movers, DeFi updates, and regulatory developments.",
+      "Browse the Free Crypto News daily and weekly digests. AI-powered summaries of the most important crypto news, market movers, DeFi updates, and regulatory developments.",
     path: "/digest",
     locale,
     tags: [

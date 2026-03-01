@@ -10,7 +10,7 @@
 import { ImageResponse } from 'next/og';
 
 export const runtime = 'edge';
-export const alt = 'Crypto Vision News — Free Real-Time Crypto News API';
+export const alt = 'Free Crypto News — Free Real-Time Crypto News API';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 
@@ -121,7 +121,7 @@ export default async function Image({ params }: { params: { locale: string } }) 
               marginBottom: '20px',
             }}
           >
-            Crypto Vision News
+            Free Crypto News
           </span>
 
           <span

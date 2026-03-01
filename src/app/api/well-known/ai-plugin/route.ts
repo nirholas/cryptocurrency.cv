@@ -23,7 +23,7 @@ export const runtime = 'edge';
 export async function GET() {
   const plugin = {
     schema_version: 'v1',
-    name_for_human: 'Crypto Vision News',
+    name_for_human: 'Free Crypto News',
     name_for_model: 'free_crypto_news',
     description_for_human: 'Get real-time cryptocurrency news, market data, AI analysis, and trading signals from 200+ sources.',
     description_for_model: 'Use this plugin to access real-time cryptocurrency news, market data, sentiment analysis, and trading signals. The API aggregates news from 200+ sources including CoinDesk, CoinTelegraph, and international outlets. You can search for news about specific cryptocurrencies, get market data for coins, check the Fear & Greed Index, and access AI-generated sentiment analysis. No API key required.',

@@ -12,9 +12,9 @@ type Props = {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   return generateSEOMetadata({
-    title: "Privacy Policy — Crypto Vision News",
+    title: "Privacy Policy — Free Crypto News",
     description:
-      "Privacy policy for Crypto Vision News (cryptocurrency.cv). Learn how we handle your data — we collect minimal information and respect your privacy.",
+      "Privacy policy for Free Crypto News (cryptocurrency.cv). Learn how we handle your data — we collect minimal information and respect your privacy.",
     path: "/privacy",
     locale,
     tags: ["privacy policy", "data protection", "GDPR", "CCPA", "crypto news privacy"],
@@ -68,7 +68,7 @@ export default async function PrivacyPage({ params }: Props) {
           <div className="flex-1 min-w-0">
             <div className="prose dark:prose-invert max-w-none text-[var(--color-text-secondary)] leading-relaxed [&_a]:text-[var(--color-accent)] [&_a]:underline [&_a]:hover:opacity-80 [&_h2]:text-[var(--color-text-primary)] [&_h3]:text-[var(--color-text-primary)] [&_strong]:text-[var(--color-text-primary)] print:text-black">
               <p className="text-lg mb-8">
-                Crypto Vision, operating at{" "}
+                Free Crypto News, operating at{" "}
                 <strong>cryptocurrency.cv</strong> (&ldquo;FCN&rdquo;,
                 &ldquo;we&rdquo;, &ldquo;us&rdquo;, &ldquo;our&rdquo;), is
                 committed to protecting your privacy. This Privacy Policy

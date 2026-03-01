@@ -646,7 +646,7 @@ export function exportToParquetBinary<T extends Record<string, unknown>>(
 
   // field 5: created_by (string)
   fm.writeFieldBegin(CT.BINARY, 5);
-  fm.writeString('Crypto Vision News Export v1.0');
+  fm.writeString('Free Crypto News Export v1.0');
 
   fm.writeStop(); // end FileMetaData
 
@@ -726,7 +726,7 @@ export function exportToParquetJSON<T extends Record<string, unknown>>(
       })),
     }],
     numRows: data.length,
-    createdBy: 'Crypto Vision News Export v1.0',
+    createdBy: 'Free Crypto News Export v1.0',
   };
 
   const columnarData: Record<string, unknown[]> = {};
@@ -858,7 +858,7 @@ export function exportToSQLite<T extends Record<string, unknown>>(
   ].filter(Boolean);
 
   const sql = [
-    '-- Crypto Vision News Data Export',
+    '-- Free Crypto News Data Export',
     `-- Generated: ${new Date().toISOString()}`,
     `-- Schema: ${schema.name} v${schema.version}`,
     `-- Rows: ${data.length}`,

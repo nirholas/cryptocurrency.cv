@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return generateSEOMetadata({
     title: "Settings — Preferences & Configuration",
     description:
-      "Customize your Crypto Vision News experience. Configure notifications, display preferences, feed settings, and more.",
+      "Customize your Free Crypto News experience. Configure notifications, display preferences, feed settings, and more.",
     path: "/settings",
     locale,
     tags: ["settings", "preferences", "configuration"],
