@@ -43,6 +43,18 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
 });
 
+/**
+ * Force dynamic rendering for all pages under [locale].
+ *
+ * The layout reads the CSP nonce via `headers()` which requires a live
+ * request.  Without this flag Next.js tries to statically generate the
+ * pages (driven by `generateStaticParams`) and crashes with
+ * DYNAMIC_SERVER_USAGE because `headers()` is unavailable during SSG.
+ *
+ * @see https://github.com/nirholas/free-crypto-news/issues/15
+ */
+export const dynamic = "force-dynamic";
+
 export const viewport: Viewport = {
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "#ffffff" },
