@@ -215,6 +215,13 @@ export default function Header() {
     return () => document.removeEventListener("keydown", handler);
   }, []);
 
+  // Listen for fcn:open-search custom event (from KeyboardShortcuts `/` key)
+  useEffect(() => {
+    const handler = () => setSearchOpen(true);
+    document.addEventListener("fcn:open-search", handler);
+    return () => document.removeEventListener("fcn:open-search", handler);
+  }, []);
+
   return (
     <>
       {/* Live Price Ticker */}
