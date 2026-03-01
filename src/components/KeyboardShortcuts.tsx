@@ -10,7 +10,7 @@ import {
   type ReactNode,
 } from "react";
 import * as Dialog from "@radix-ui/react-dialog";
-import { useRouter } from "@/i18n/navigation";
+import { useRouter, usePathname } from "@/i18n/navigation";
 import { Keyboard, X, ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -90,7 +90,6 @@ export function KeyboardShortcutsProvider({ children }: { children: ReactNode })
   const [lastAction, setLastAction] = useState<string | null>(null);
   const [searchFilter, setSearchFilter] = useState("");
   const router = useRouter();
-  const pathname = usePathname();
   const pendingKey = useRef<string | null>(null);
   const pendingTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const actionTimer = useRef<ReturnType<typeof setTimeout> | null>(null);

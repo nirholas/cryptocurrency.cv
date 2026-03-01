@@ -88,7 +88,7 @@ export default function NotificationCenter() {
   const [soundEnabled, setSoundEnabled] = useState(true);
   const [filter, setFilter] = useState<"all" | "unread">("all");
   const panelRef = useRef<HTMLDivElement>(null);
-  const { triggeredAlerts } = useAlerts();
+  const { triggered: triggeredAlerts } = useAlerts();
   const prevTriggeredCountRef = useRef(0);
 
   // Load from localStorage

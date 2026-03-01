@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback, useRef } from "react";
 import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/navigation";
+import { Link, usePathname } from "@/i18n/navigation";
 import { useTheme } from "@/components/ThemeProvider";
 import { GlobalSearch } from "@/components/GlobalSearch";
 import {
@@ -14,9 +14,11 @@ import {
   ChevronDown,
   Star,
   Briefcase,
+  Bell,
   TrendingUp,
   TrendingDown,
   Activity,
+  Zap,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 

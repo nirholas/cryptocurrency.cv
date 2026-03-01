@@ -91,6 +91,17 @@ const SOCIAL_LINKS = [
   },
 ];
 
+const TRENDING_TOPICS = [
+  { label: "Bitcoin ETF", href: "/search?q=bitcoin+etf" },
+  { label: "Ethereum L2", href: "/search?q=ethereum+layer+2" },
+  { label: "Solana DeFi", href: "/search?q=solana+defi" },
+  { label: "AI Crypto", href: "/search?q=ai+crypto" },
+  { label: "Stablecoin", href: "/search?q=stablecoin" },
+  { label: "RWA", href: "/search?q=real+world+assets" },
+  { label: "Halving", href: "/search?q=bitcoin+halving" },
+  { label: "Regulation", href: "/search?q=crypto+regulation" },
+];
+
 function FooterStructuredData() {
   const structuredData = {
     "@context": "https://schema.org",
@@ -99,15 +110,23 @@ function FooterStructuredData() {
       "@type": "WebSite",
       name: "Crypto Vision",
       url: "https://cryptocurrency.cv",
+      potentialAction: {
+        "@type": "SearchAction",
+        target: "https://cryptocurrency.cv/search?q={search_term_string}",
+        "query-input": "required name=search_term_string",
+      },
     },
     copyrightYear: new Date().getFullYear(),
     copyrightHolder: {
       "@type": "Organization",
       name: "Crypto Vision",
       url: "https://cryptocurrency.cv",
+      logo: "https://cryptocurrency.cv/logo.png",
       sameAs: [
         "https://github.com/nirholas/free-crypto-news",
         "https://twitter.com/cryptocurrencycv",
+        "https://discord.gg/freecryptonews",
+        "https://t.me/freecryptonews",
       ],
     },
   };
@@ -120,104 +139,180 @@ function FooterStructuredData() {
   );
 }
 
+function ApiStatusBadge() {
+  return (
+    <div className="inline-flex items-center gap-2 rounded-full border border-green-500/20 bg-green-500/10 px-3 py-1">
+      <span className="relative flex h-2 w-2">
+        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75" />
+        <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500" />
+      </span>
+      <span className="text-xs font-medium text-green-600 dark:text-green-400">
+        API Operational
+      </span>
+    </div>
+  );
+}
+
 export default function Footer() {
   return (
-    <footer className="border-t border-[var(--color-border)] bg-[var(--color-surface-secondary)]">
-      <FooterStructuredData />
+    <>
+      <footer className="border-t border-[var(--color-border)] bg-[var(--color-surface-secondary)]">
+        <FooterStructuredData />
 
-      <div className="container-main py-12">
-        {/* Top section */}
-        <div className="grid grid-cols-2 gap-8 md:grid-cols-4 lg:grid-cols-6">
-          {/* Brand + Newsletter */}
-          <div className="col-span-2 mb-4 lg:mb-0">
-            <Link href="/" className="text-xl font-bold tracking-tight">
-              <span className="text-[#3b82f6]">C</span>V
-            </Link>
-            <p className="mt-3 text-sm text-[var(--color-text-secondary)] max-w-xs">
-              Free, real-time crypto news aggregation from 300+ sources.
-              No API keys required.
-            </p>
-
-            {/* Mini newsletter */}
-            <div className="mt-4">
-              <p className="text-xs font-semibold text-[var(--color-text-primary)] mb-2">
-                Subscribe to updates
-              </p>
-              <FooterNewsletter />
-            </div>
-
-            {/* Social links */}
-            <div className="mt-5 flex gap-3">
-              {SOCIAL_LINKS.map((social) => (
-                <a
-                  key={social.label}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[var(--color-text-tertiary)] hover:text-[var(--color-text-primary)] transition-colors"
-                  aria-label={social.label}
+        <div className="container-main py-12">
+          {/* Trending Topics Bar */}
+          <div className="mb-10 rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] p-4">
+            <div className="flex flex-wrap items-center gap-2">
+              <span className="mr-1 text-xs font-semibold uppercase tracking-wider text-[var(--color-text-tertiary)]">
+                Trending:
+              </span>
+              {TRENDING_TOPICS.map((topic) => (
+                <Link
+                  key={topic.label}
+                  href={topic.href}
+                  className="rounded-full border border-[var(--color-border)] bg-[var(--color-surface-secondary)] px-3 py-1 text-xs text-[var(--color-text-secondary)] transition-all hover:border-[#3b82f6]/40 hover:bg-[#3b82f6]/10 hover:text-[#3b82f6]"
                 >
-                  {social.icon}
-                </a>
+                  {topic.label}
+                </Link>
               ))}
             </div>
           </div>
 
-          {/* Link sections */}
-          {FOOTER_SECTIONS.map((section) => (
-            <div key={section.title}>
-              <h3 className="text-sm font-semibold text-[var(--color-text-primary)] uppercase tracking-wider mb-3">
-                {section.title}
-              </h3>
-              <ul className="space-y-2">
-                {section.links.map((link) => (
-                  <li key={link.href}>
-                    <Link
-                      href={link.href}
-                      className="text-sm text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] transition-colors"
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
+          {/* Top section */}
+          <div className="grid grid-cols-2 gap-8 md:grid-cols-4 lg:grid-cols-6">
+            {/* Brand + Newsletter */}
+            <div className="col-span-2 mb-4 lg:mb-0">
+              <Link href="/" className="text-xl font-bold tracking-tight">
+                <span className="text-[#3b82f6]">C</span>V
+              </Link>
+              <p className="mt-3 max-w-xs text-sm text-[var(--color-text-secondary)]">
+                Free, real-time crypto news aggregation from 300+ sources. No
+                API keys required.
+              </p>
 
-        {/* Download App + Language */}
-        <div className="mt-10 pt-6 border-t border-[var(--color-border)] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
-          {/* Download App */}
-          <div>
-            <p className="text-xs font-semibold text-[var(--color-text-primary)] mb-2">
-              Download App
-            </p>
-            <div className="flex gap-3">
-              <span className="inline-flex items-center gap-1.5 rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] px-3 py-1.5 text-xs text-[var(--color-text-secondary)]">
-                <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-                Coming Soon
-              </span>
-              <span className="inline-flex items-center gap-1.5 rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] px-3 py-1.5 text-xs text-[var(--color-text-secondary)]">
-                <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M3.609 1.814L13.792 12 3.609 22.186a.996.996 0 0 1-.609-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-1.6l2.573 1.49c.906.524.906 1.282 0 1.806l-2.573 1.49-2.573-2.393 2.573-2.393zM5.864 2.658L16.8 8.991l-2.302 2.302-8.634-8.635z"/></svg>
-                Coming Soon
-              </span>
+              {/* API status */}
+              <div className="mt-3">
+                <ApiStatusBadge />
+              </div>
+
+              {/* Mini newsletter */}
+              <div className="mt-4">
+                <p className="mb-2 text-xs font-semibold text-[var(--color-text-primary)]">
+                  Subscribe to updates
+                </p>
+                <FooterNewsletter />
+              </div>
+
+              {/* Social links */}
+              <div className="mt-5 flex gap-3">
+                {SOCIAL_LINKS.map((social) => (
+                  <a
+                    key={social.label}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="rounded-lg border border-transparent p-2 text-[var(--color-text-tertiary)] transition-all hover:border-[var(--color-border)] hover:bg-[var(--color-surface)] hover:text-[var(--color-text-primary)] hover:shadow-sm"
+                    aria-label={social.label}
+                  >
+                    {social.icon}
+                  </a>
+                ))}
+              </div>
             </div>
+
+            {/* Link sections */}
+            {FOOTER_SECTIONS.map((section) => (
+              <div key={section.title}>
+                <h3 className="mb-3 text-sm font-semibold uppercase tracking-wider text-[var(--color-text-primary)]">
+                  {section.title}
+                </h3>
+                <ul className="space-y-2">
+                  {section.links.map((link) => (
+                    <li key={link.href}>
+                      <Link
+                        href={link.href}
+                        className="group flex items-center gap-1 text-sm text-[var(--color-text-secondary)] transition-colors hover:text-[var(--color-text-primary)]"
+                      >
+                        <span className="inline-block w-0 overflow-hidden text-[#3b82f6] transition-all group-hover:w-3">
+                          →
+                        </span>
+                        {link.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
 
-          {/* Language Selector */}
-          <LanguageSelector />
-        </div>
+          {/* Download App + Language */}
+          <div className="mt-10 flex flex-col items-start justify-between gap-6 border-t border-[var(--color-border)] pt-6 sm:flex-row sm:items-center">
+            {/* Download App */}
+            <div>
+              <p className="mb-2 text-xs font-semibold text-[var(--color-text-primary)]">
+                Download App
+              </p>
+              <div className="flex gap-3">
+                <span className="inline-flex items-center gap-1.5 rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] px-3 py-1.5 text-xs text-[var(--color-text-secondary)]">
+                  <svg
+                    className="h-4 w-4"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
+                  </svg>
+                  Coming Soon
+                </span>
+                <span className="inline-flex items-center gap-1.5 rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] px-3 py-1.5 text-xs text-[var(--color-text-secondary)]">
+                  <svg
+                    className="h-4 w-4"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M3.609 1.814L13.792 12 3.609 22.186a.996.996 0 0 1-.609-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-1.6l2.573 1.49c.906.524.906 1.282 0 1.806l-2.573 1.49-2.573-2.393 2.573-2.393zM5.864 2.658L16.8 8.991l-2.302 2.302-8.634-8.635z" />
+                  </svg>
+                  Coming Soon
+                </span>
+              </div>
+            </div>
 
-        {/* Bottom bar */}
-        <div className="mt-6 pt-6 border-t border-[var(--color-border)] flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-[var(--color-text-tertiary)]">
-            &copy; {new Date().getFullYear()} Crypto Vision. Open source under MIT license.
-          </p>
-          <p className="text-xs text-[var(--color-text-tertiary)]">
-            Data from 300+ sources &middot; No API key required
-          </p>
+            {/* Language Selector */}
+            <LanguageSelector />
+          </div>
+
+          {/* Bottom bar */}
+          <div className="mt-6 flex flex-col items-center justify-between gap-4 border-t border-[var(--color-border)] pt-6 sm:flex-row">
+            <p className="text-xs text-[var(--color-text-tertiary)]">
+              &copy; {new Date().getFullYear()} Crypto Vision. Open source under
+              MIT license.
+            </p>
+            <div className="flex items-center gap-3 text-xs text-[var(--color-text-tertiary)]">
+              <span>300+ sources</span>
+              <span className="text-[var(--color-border)]">|</span>
+              <span>No API key</span>
+              <span className="text-[var(--color-border)]">|</span>
+              <a
+                href="https://github.com/nirholas/free-crypto-news"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 transition-colors hover:text-[var(--color-text-primary)]"
+              >
+                <svg
+                  className="h-3.5 w-3.5"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                </svg>
+                Star on GitHub
+              </a>
+            </div>
+          </div>
         </div>
-      </div>
-    </footer>
+      </footer>
+
+      {/* Back to top button */}
+      <BackToTop />
+    </>
   );
 }
