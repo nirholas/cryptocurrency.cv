@@ -3545,6 +3545,9 @@ async function fetchApiSource(sourceKey: string): Promise<NewsArticle[]> {
       
       // Sources with noDataCache skip the Next.js data cache (responses > 2MB)
       // and rely solely on the in-memory withCache layer (5-min TTL).
+      // Use short ISR (60s) instead of no-store to avoid tainting routes as
+      // fully dynamic during static generation (Turbopack treats no-store as
+      // revalidate: 0 which blocks SSG).
       const response = await fetch(source.url, {
         headers: {
           'Accept': 'application/json',
@@ -3552,7 +3555,7 @@ async function fetchApiSource(sourceKey: string): Promise<NewsArticle[]> {
         },
         signal: controller.signal,
         ...(source.noDataCache
-          ? { cache: 'no-store' as RequestCache }
+          ? { next: { revalidate: 60 } }
           : { next: { revalidate: 300 } }
         ),
       });
@@ -3613,6 +3616,8 @@ async function fetchFeed(sourceKey: SourceKey): Promise<NewsArticle[]> {
       // don't break static generation; revalidate: 300 adds ISR on top.
       // Sources with noDataCache skip the Next.js data cache (responses > 2MB)
       // and rely solely on the in-memory withCache layer (5-min TTL).
+      // Use short ISR (60s) instead of no-store to avoid tainting routes as
+      // fully dynamic during static generation.
       const skipDataCache = 'noDataCache' in source && source.noDataCache;
       const fetchOptions: RequestInit & { next?: { revalidate: number } } = {
         headers: {
@@ -3622,7 +3627,7 @@ async function fetchFeed(sourceKey: SourceKey): Promise<NewsArticle[]> {
         signal: controller.signal,
         redirect: 'manual', // Prevent redirect loops hitting own domain
         ...(skipDataCache
-          ? { cache: 'no-store' as RequestCache }
+          ? { next: { revalidate: 60 } }
           : { cache: 'force-cache' as RequestCache, next: { revalidate: 300 } }
         ),
       };
