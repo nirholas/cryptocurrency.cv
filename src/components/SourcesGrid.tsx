@@ -140,6 +140,13 @@ export default function SourcesGrid({ sources }: SourcesGridProps) {
     setTimeout(() => setCopiedUrl(null), 2000);
   }, []);
 
+  const statusOptions = [
+    { key: "all" as StatusFilter, label: "All", count: sources.length, dotColor: undefined },
+    { key: "active" as StatusFilter, label: "Active", count: statusCounts.active, dotColor: "bg-green-500" },
+    { key: "unavailable" as StatusFilter, label: "Down", count: statusCounts.unavailable, dotColor: "bg-red-500" },
+    { key: "unknown" as StatusFilter, label: "Unknown", count: statusCounts.unknown, dotColor: "bg-yellow-500" },
+  ];
+
   return (
     <div>
       {/* Toolbar */}
@@ -223,17 +230,7 @@ export default function SourcesGrid({ sources }: SourcesGridProps) {
 
         {/* Status Filter Pills */}
         <div className="flex flex-wrap gap-2">
-          {(
-            [
-              { key: "all" as StatusFilter, label: "All", count: sources.length },
-              { key: "active" as StatusFilter, label: "Active", count: statusCounts.active, dotColor: "bg-green-500" },
-              { key: "unavailable" as StatusFilter, label: "Down", count: statusCounts.unavailable, dotColor: "bg-red-500" },
-              { key: "unknown" as StatusFilter, label: "Unknown", count: statusCounts.unknown, dotColor: "bg-yellow-500" },
-            ] as const
-          ).map((status) => {
-            const { key, label, count } = status;
-            const dotColor = 'dotColor' in status ? status.dotColor : undefined;
-            return (
+          {statusOptions.map(({ key, label, count, dotColor }) => (
             <button
               key={key}
               onClick={() => setStatusFilter(key)}
@@ -247,8 +244,7 @@ export default function SourcesGrid({ sources }: SourcesGridProps) {
               {dotColor && <span className={cn("h-1.5 w-1.5 rounded-full", dotColor)} />}
               {label} ({count})
             </button>
-            );
-          })}
+          ))}
         </div>
 
         {/* Category Filter Pills */}
