@@ -9,7 +9,8 @@
  */
 
 import { type NextRequest, NextResponse } from 'next/server';
-import { getDashboardStats, getSystemHealth, trackAPICall } from '@/lib/analytics';
+import { getDashboardStats, trackAPICall } from '@/lib/analytics';
+import { getSystemHealth } from '@/lib/system-health';
 import { requireAdminAuth } from '@/lib/admin-auth';
 
 export const runtime = 'nodejs';

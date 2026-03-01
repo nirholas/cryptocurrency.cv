@@ -15,7 +15,7 @@ import {
   getWalletProfiler,
 } from '@/lib/apis/nansen';
 
-export const runtime = 'edge';
+export const runtime = 'nodejs';
 export const revalidate = 60;
 
 /**

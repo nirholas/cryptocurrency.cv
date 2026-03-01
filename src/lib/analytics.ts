@@ -367,67 +367,12 @@ export function getDashboardStats(): Record<string, number | string> {
 }
 
 /**
- * Get system health (server-side)
+ * Get system health (server-side, Node.js only)
+ *
+ * Re-exported from system-health.ts for backward compatibility.
+ * Prefer importing directly from '@/lib/system-health' in Node.js routes.
  */
-export async function getSystemHealth(): Promise<Record<string, unknown>> {
-  const memUsage = process.memoryUsage?.();
-  const heapUsed = memUsage?.heapUsed || 0;
-  const heapTotal = memUsage?.heapTotal || 0;
-  const rss = memUsage?.rss || 0;
-  const heapUsedPct = heapTotal > 0 ? (heapUsed / heapTotal) * 100 : 0;
-
-  // Calculate process uptime and CPU
-  const processUptimeSecs = process.uptime?.() || 0;
-  const cpuUsage = process.cpuUsage?.();
-
-  // Determine API health from recent error rate
-  const errorRate = apiMetrics.totalRequests > 0
-    ? apiMetrics.totalErrors / apiMetrics.totalRequests
-    : 0;
-  const apiStatus = errorRate > 0.3 ? 'degraded'
-    : errorRate > 0.05 ? 'warning'
-    : 'up';
-
-  // Memory health
-  const memoryStatus = heapUsedPct > 90 ? 'critical'
-    : heapUsedPct > 70 ? 'warning'
-    : 'up';
-
-  // Overall status
-  const overallStatus = apiStatus === 'degraded' || memoryStatus === 'critical'
-    ? 'unhealthy'
-    : apiStatus === 'warning' || memoryStatus === 'warning'
-    ? 'degraded'
-    : 'healthy';
-
-  return {
-    status: overallStatus,
-    memory: {
-      heapUsed,
-      heapTotal,
-      rss,
-      heapUsedPercent: parseFloat(heapUsedPct.toFixed(1)),
-      external: memUsage?.external || 0,
-    },
-    process: {
-      uptimeSeconds: Math.round(processUptimeSecs),
-      pid: process.pid,
-      nodeVersion: process.version,
-      platform: process.platform,
-      ...(cpuUsage ? { cpuUser: cpuUsage.user, cpuSystem: cpuUsage.system } : {}),
-    },
-    api: {
-      totalRequests: apiMetrics.totalRequests,
-      totalErrors: apiMetrics.totalErrors,
-      errorRate: parseFloat((errorRate * 100).toFixed(2)),
-      avgResponseTime: apiMetrics.totalRequests > 0
-        ? Math.round(apiMetrics.totalResponseTime / apiMetrics.totalRequests)
-        : 0,
-      statusCodes: Object.fromEntries(apiMetrics.statusCounts),
-    },
-    timestamp: new Date().toISOString(),
-  };
-}
+export { getSystemHealth } from './system-health';
 
 // Flush queue when back online
 if (typeof window !== 'undefined') {
