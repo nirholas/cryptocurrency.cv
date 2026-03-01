@@ -114,34 +114,28 @@ curl -s "$API/api/stablecoins" | jq '.'
 # ──────────────────────────────────────────────
 
 echo -e "\n📊 Arbitrage Opportunities"
-curl -s "$API/api/arbitrage" | jq '.'
+curl -s "$API/api/arbitrage?min_spread=0.5&limit=10" | jq '.'
 
 echo -e "\n📡 Trading Signals"
-curl -s "$API/api/signals" | jq '.'
+curl -s "$API/api/signals?asset=BTC&timeframe=4h" | jq '.'
 
 echo -e "\n💰 Funding Rates"
 curl -s "$API/api/funding" | jq '.'
 
 echo -e "\n💥 Liquidations"
-curl -s "$API/api/liquidations" | jq '.'
+curl -s "$API/api/liquidations?timeframe=24h" | jq '.'
 
 echo -e "\n🐋 Whale Alerts"
-curl -s "$API/api/whale-alerts" | jq '.'
+curl -s "$API/api/whale-alerts?min_value=5000000&limit=10" | jq '.'
 
 echo -e "\n📖 Orderbook"
-curl -s "$API/api/orderbook?pair=BTC/USDT" | jq '.'
+curl -s "$API/api/orderbook?symbol=BTCUSDT&exchange=binance&depth=10" | jq '.'
 
 echo -e "\n📈 Derivatives"
 curl -s "$API/api/derivatives" | jq '.'
 
 echo -e "\n📊 Options"
-curl -s "$API/api/options" | jq '.'
-
-echo -e "\n💱 Exchange Rates"
-curl -s "$API/api/exchange-rates" | jq '.'
-
-echo -e "\n🔄 Convert Currency"
-curl -s "$API/api/exchange-rates/convert?from=BTC&to=USD&amount=1" | jq '.'
+curl -s "$API/api/options?asset=BTC" | jq '.'
 
 # ──────────────────────────────────────────────
 # BLOCKCHAIN ENDPOINTS
@@ -212,6 +206,9 @@ curl -s "$API/api/ask?q=What%20is%20happening%20with%20Bitcoin%20ETFs?" | jq '.'
 echo -e "\n📝 AI Daily Brief"
 curl -s "$API/api/ai/brief?format=detailed" | jq '.'
 
+echo -e "\n⚡ AI Flash Briefing"
+curl -s "$API/api/ai/flash-briefing" | jq '.'
+
 echo -e "\n📰 Narratives"
 curl -s "$API/api/narratives" | jq '.'
 
@@ -219,16 +216,31 @@ echo -e "\n🏷️ Entities"
 curl -s "$API/api/entities" | jq '.'
 
 echo -e "\n🔍 Fact Check"
-curl -s "$API/api/factcheck" | jq '.'
+curl -s "$API/api/factcheck?claim=Bitcoin%20uses%20more%20energy%20than%20Argentina" | jq '.'
 
 echo -e "\n📈 Predictions"
 curl -s "$API/api/predictions" | jq '.'
+
+echo -e "\n🔮 AI Oracle"
+curl -s "$API/api/ai/oracle?asset=BTC" | jq '.'
 
 echo -e "\n⚖️ Regulatory Updates"
 curl -s "$API/api/regulatory" | jq '.'
 
 echo -e "\n🌍 Macro Data"
 curl -s "$API/api/macro" | jq '.'
+
+echo -e "\n📊 Macro Indicators"
+curl -s "$API/api/macro/indicators" | jq '.'
+
+echo -e "\n🧠 Knowledge Graph"
+curl -s "$API/api/knowledge-graph" | jq '.'
+
+echo -e "\n📖 Glossary"
+curl -s "$API/api/glossary" | jq '.'
+
+echo -e "\n🎯 Clickbait Detection"
+curl -s "$API/api/clickbait?title=You%20WONT%20BELIEVE%20what%20Bitcoin%20did" | jq '.'
 
 echo -e "\n🤖 AI Analysis (POST)"
 curl -s -X POST "$API/api/ai" \
@@ -245,10 +257,90 @@ curl -s -X POST "$API/api/ai/debate" \
   -H "Content-Type: application/json" \
   -d '{"topic": "Will Bitcoin reach $200k in 2026?"}' | jq '.'
 
+echo -e "\n🔄 AI Counter Arguments (POST)"
+curl -s -X POST "$API/api/ai/counter" \
+  -H "Content-Type: application/json" \
+  -d '{"claim": "Bitcoin is too volatile for institutional adoption"}' | jq '.'
+
 echo -e "\n🔎 AI Content Detection (POST)"
 curl -s -X POST "$API/api/detect/ai-content" \
   -H "Content-Type: application/json" \
   -d '{"content": "Bitcoin is the future of finance."}' | jq '.'
+
+# ──────────────────────────────────────────────
+# DeFi ENDPOINTS
+# ──────────────────────────────────────────────
+
+echo -e "\n📊 DeFi Protocol Health"
+curl -s "$API/api/defi/protocol-health" | jq '.'
+
+echo -e "\n📈 Yield Stats"
+curl -s "$API/api/defi/yields/stats" | jq '.'
+
+echo -e "\n🔗 DeFi Yield Chains"
+curl -s "$API/api/defi/yields/chains" | jq '.'
+
+echo -e "\n🪙 Stablecoin Depeg Monitor"
+curl -s "$API/api/stablecoins/depeg" | jq '.'
+
+echo -e "\n📊 Stablecoin Dominance"
+curl -s "$API/api/stablecoins/dominance" | jq '.'
+
+# ──────────────────────────────────────────────
+# BLOCKCHAIN ENDPOINTS (extended)
+# ──────────────────────────────────────────────
+
+echo -e "\n⛏️ Bitcoin Difficulty"
+curl -s "$API/api/bitcoin/difficulty" | jq '.'
+
+echo -e "\n📦 Bitcoin Blocks"
+curl -s "$API/api/bitcoin/blocks" | jq '.'
+
+echo -e "\n📊 Bitcoin Block Height"
+curl -s "$API/api/bitcoin/block-height" | jq '.'
+
+echo -e "\n⛽ Gas Estimation"
+curl -s "$API/api/gas/estimate" | jq '.'
+
+echo -e "\n📊 Gas History"
+curl -s "$API/api/gas/history" | jq '.'
+
+echo -e "\n🔗 L2 Projects"
+curl -s "$API/api/l2/projects" | jq '.'
+
+echo -e "\n📊 L2 Activity"
+curl -s "$API/api/l2/activity" | jq '.'
+
+echo -e "\n☀️ Solana Tokens"
+curl -s "$API/api/solana/tokens" | jq '.'
+
+echo -e "\n🪂 Token Unlocks"
+curl -s "$API/api/token-unlocks" | jq '.'
+
+echo -e "\n🐋 Whale Alerts with Context"
+curl -s "$API/api/whale-alerts/context" | jq '.'
+
+echo -e "\n📊 NFT Market"
+curl -s "$API/api/nft/market" | jq '.'
+
+echo -e "\n💰 NFT Recent Sales"
+curl -s "$API/api/nft/sales/recent" | jq '.'
+
+# ──────────────────────────────────────────────
+# TRADING ENDPOINTS (extended)
+# ──────────────────────────────────────────────
+
+echo -e "\n💰 Funding Dashboard"
+curl -s "$API/api/funding/dashboard" | jq '.'
+
+echo -e "\n📊 Funding History (BTCUSDT)"
+curl -s "$API/api/funding/history/BTCUSDT" | jq '.'
+
+echo -e "\n📊 Derivatives Opportunities"
+curl -s "$API/api/derivatives/opportunities" | jq '.'
+
+echo -e "\n🔙 Backtest Strategy"
+curl -s "$API/api/backtest?strategy=sma_crossover&asset=BTC&period=30d" | jq '.'
 
 # ──────────────────────────────────────────────
 # FEEDS & EXPORT ENDPOINTS
@@ -266,14 +358,17 @@ curl -s "$API/api/atom?limit=3" | head -50
 echo -e "\n📋 OPML"
 curl -s "$API/api/opml" | head -20
 
-echo -e "\n📤 Export CSV"
-curl -s "$API/api/export?format=csv&from=2025-01-01&to=2025-01-31" | head -5
+echo -e "\n📤 Export"
+curl -s "$API/api/export?format=json&limit=5" | jq '.'
 
 echo -e "\n📦 Archive"
 curl -s "$API/api/archive?date=2025-01-01&limit=3" | jq '.'
 
 echo -e "\n🤖 LLMs.txt"
 curl -s "$API/api/llms.txt" | head -20
+
+echo -e "\n📄 OpenAPI Spec"
+curl -s "$API/api/openapi.json" | jq '.info'
 
 # ──────────────────────────────────────────────
 # UTILITY ENDPOINTS
@@ -284,5 +379,14 @@ curl -s "$API/api/health" | jq '.'
 
 echo -e "\n📊 Statistics"
 curl -s "$API/api/stats" | jq '.'
+
+echo -e "\n📊 Global Data"
+curl -s "$API/api/global" | jq '.'
+
+echo -e "\n💱 Exchange Rates"
+curl -s "$API/api/exchange-rates" | jq '.'
+
+echo -e "\n🔄 Convert BTC to USD"
+curl -s "$API/api/exchange-rates/convert?from=BTC&to=USD&amount=1" | jq '.'
 
 echo -e "\n✅ Done! All endpoints tested."
