@@ -539,8 +539,23 @@ export function isLegacyId(identifier: string): boolean {
  * Uses KV archive as primary source, live RSS as fallback for new articles
  */
 export async function getArticleById(idOrSlug: string): Promise<EnrichedArticle | null> {
+  // Helper: search articles array for matching slug or ID
+  const findInArticles = (articles: NewsArticle[]): EnrichedArticle | null => {
+    const seen = new Set<string>();
+    for (const rssArticle of articles) {
+      if (seen.has(rssArticle.link)) continue;
+      seen.add(rssArticle.link);
+      const slug = generateArticleSlug(rssArticle.title, rssArticle.pubDate);
+      const id = generateArticleId(rssArticle.link);
+      if (slug === idOrSlug || id === idOrSlug) {
+        return newsArticleToEnriched(rssArticle);
+      }
+    }
+    return null;
+  };
+
+  // 1. Primary: KV-based archive service
   try {
-    // Primary: KV-based archive service
     const { getArticleById: kvGetById, getArticleBySlug: kvGetBySlug } = await import('./archive-service');
     
     const isLegacy = isLegacyId(idOrSlug);
@@ -549,7 +564,6 @@ export async function getArticleById(idOrSlug: string): Promise<EnrichedArticle 
       : await kvGetBySlug(idOrSlug);
     
     if (kvArticle) {
-      // Convert ArchivedArticle to EnrichedArticle format
       return {
         id: kvArticle.id,
         slug: kvArticle.slug,
@@ -583,71 +597,34 @@ export async function getArticleById(idOrSlug: string): Promise<EnrichedArticle 
         },
       };
     }
-    
-    // Fallback: search live RSS feeds (usually cached by Next.js from homepage)
-    // This handles the case where KV is not configured or article hasn't been archived yet
-    // Uses getHomepageNews() to search the same articles the user sees on the homepage
-    try {
-      const homepageData = await getHomepageNews();
-      // Combine all article pools — latest, breaking, and trending
-      const allHomepageArticles = [
-        ...homepageData.latest.articles,
-        ...homepageData.breaking.articles,
-        ...homepageData.trending.articles,
-      ];
-      
-      // Deduplicate by link
-      const seen = new Set<string>();
-      const uniqueArticles = allHomepageArticles.filter(a => {
-        if (seen.has(a.link)) return false;
-        seen.add(a.link);
-        return true;
-      });
-      
-      for (const rssArticle of uniqueArticles) {
-        const slug = generateArticleSlug(rssArticle.title, rssArticle.pubDate);
-        const id = generateArticleId(rssArticle.link);
-        
-        if (slug === idOrSlug || id === idOrSlug) {
-          return newsArticleToEnriched(rssArticle);
-        }
-      }
-    } catch {
-      // RSS fallback failed too — return null below
-    }
-    
-    return null;
-  } catch {
-    // Primary KV lookup failed — try RSS fallback
-    try {
-      const homepageData = await getHomepageNews();
-      const allHomepageArticles = [
-        ...homepageData.latest.articles,
-        ...homepageData.breaking.articles,
-        ...homepageData.trending.articles,
-      ];
-      
-      const seen = new Set<string>();
-      const uniqueArticles = allHomepageArticles.filter(a => {
-        if (seen.has(a.link)) return false;
-        seen.add(a.link);
-        return true;
-      });
-      
-      for (const rssArticle of uniqueArticles) {
-        const slug = generateArticleSlug(rssArticle.title, rssArticle.pubDate);
-        const id = generateArticleId(rssArticle.link);
-        
-        if (slug === idOrSlug || id === idOrSlug) {
-          return newsArticleToEnriched(rssArticle);
-        }
-      }
-    } catch {
-      // Both KV and RSS failed
-    }
-    
-    return null;
+  } catch (err) {
+    console.warn('[getArticleById] KV lookup failed:', err instanceof Error ? err.message : err);
   }
+
+  // 2. Fallback: search homepage RSS feeds (same articles the user sees)
+  try {
+    const homepageData = await getHomepageNews();
+    const allArticles = [
+      ...homepageData.latest.articles,
+      ...homepageData.breaking.articles,
+      ...homepageData.trending.articles,
+    ];
+    const found = findInArticles(allArticles);
+    if (found) return found;
+  } catch (err) {
+    console.warn('[getArticleById] Homepage RSS fallback failed:', err instanceof Error ? err.message : err);
+  }
+
+  // 3. Last resort: search all sources (covers category/reader pages)
+  try {
+    const { articles } = await getLatestNews(50);
+    const found = findInArticles(articles);
+    if (found) return found;
+  } catch (err) {
+    console.warn('[getArticleById] Global RSS fallback failed:', err instanceof Error ? err.message : err);
+  }
+
+  return null;
 }
 
 /**
