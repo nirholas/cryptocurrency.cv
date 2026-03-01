@@ -26,6 +26,10 @@ import { searchCommand } from './commands/search.js';
 // Inline mode
 import { handleInlineQuery } from './inline.js';
 
+// Menus & callback handler
+import { mainMenu, MENU_TEXT } from './menus.js';
+import { handleCallbackQuery } from './callbacks.js';
+
 // Channel broadcast
 import { startBroadcast, stopBroadcast } from './broadcast.js';
 
@@ -98,6 +102,7 @@ bot.command('start', async (ctx) => {
   await ctx.reply(getHelpText(), {
     parse_mode: 'HTML',
     link_preview_options: { is_disabled: true },
+    reply_markup: mainMenu(),
   });
 });
 
@@ -105,6 +110,14 @@ bot.command('help', async (ctx) => {
   await ctx.reply(getHelpText(), {
     parse_mode: 'HTML',
     link_preview_options: { is_disabled: true },
+    reply_markup: mainMenu(),
+  });
+});
+
+bot.command('menu', async (ctx) => {
+  await ctx.reply(MENU_TEXT.main, {
+    parse_mode: 'HTML',
+    reply_markup: mainMenu(),
   });
 });
 
@@ -126,6 +139,12 @@ bot.command('whales', whalesCommand);
 bot.command('whale', whalesCommand); // alias
 bot.command('ask', askCommand);
 bot.command('search', searchCommand);
+
+// ---------------------------------------------------------------------------
+// Callback queries (button presses)
+// ---------------------------------------------------------------------------
+
+bot.on('callback_query:data', handleCallbackQuery);
 
 // ---------------------------------------------------------------------------
 // Inline mode
@@ -161,6 +180,7 @@ async function main(): Promise<void> {
     { command: 'whales', description: 'Whale transaction alerts' },
     { command: 'ask', description: 'Ask AI about crypto news' },
     { command: 'search', description: 'Search news articles' },
+    { command: 'menu', description: 'Open interactive menu' },
     { command: 'help', description: 'Show all commands' },
   ]);
 
