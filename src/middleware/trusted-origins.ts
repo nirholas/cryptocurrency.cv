@@ -23,9 +23,7 @@ import type { NextRequest } from 'next/server';
 
 // Exact-match origins that bypass x402 and rate limiting entirely
 const TRUSTED_EXACT_ORIGINS = new Set([
-  'https://sperax.live',
-  'https://www.sperax.live',
-  'https://speraxos.vercel.app',
+  'https://chat.sperax.io',
   ...(process.env.X402_BYPASS_ORIGINS?.split(',').map((s) => s.trim()).filter(Boolean) ?? []),
 ]);
 

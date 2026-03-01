@@ -242,7 +242,6 @@ const nextConfig = {
       { protocol: 'https', hostname: '*.theblock.co' },
       { protocol: 'https', hostname: '*.cryptonews.com' },
       { protocol: 'https', hostname: '*.githubusercontent.com' },
-      { protocol: 'https', hostname: '*.sperax.live' },
       { protocol: 'https', hostname: '*.sperax.io' },
       { protocol: 'https', hostname: 'images.unsplash.com' },
       { protocol: 'https', hostname: '*.googleusercontent.com' },

@@ -3052,34 +3052,6 @@ const API_SOURCES: Record<string, ApiSource> = {
     },
   },
   
-  // Messari News (free, no API key for public endpoints)
-  messari: {
-    name: 'Messari',
-    url: 'https://data.messari.io/api/v1/news',
-    category: 'research',
-    parser: (data: unknown) => {
-      const response = data as { data?: Array<{
-        title: string;
-        url: string;
-        content: string;
-        published_at: string;
-        author: { name: string };
-        tags: Array<{ name: string }>;
-      }> };
-      if (!response.data) return [];
-      return response.data.slice(0, 20).map(item => ({
-        title: decodeHTMLEntities(item.title),
-        link: item.url,
-        description: item.content?.slice(0, 200),
-        pubDate: safeDate(item.published_at).toISOString(),
-        source: 'Messari',
-        sourceKey: 'messari',
-        category: item.tags?.[0]?.name?.toLowerCase() || 'research',
-        timeAgo: getTimeAgo(safeDate(item.published_at)),
-      }));
-    },
-  },
-  
   // CoinCap News (free)
   coincap: {
     name: 'CoinCap',

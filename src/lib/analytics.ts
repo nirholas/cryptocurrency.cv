@@ -302,6 +302,24 @@ export function trackAPICall(data: {
 }
 
 /**
+ * Track an API request (convenience wrapper around trackAPICall)
+ */
+export function trackAPIRequest(
+  endpoint: string,
+  statusCode: number,
+  responseTime: number,
+  userAgent: string,
+): void {
+  trackAPICall({
+    endpoint,
+    method: 'POST',
+    statusCode,
+    responseTime,
+    userAgent,
+  });
+}
+
+/**
  * Get dashboard stats (server-side)
  */
 export function getDashboardStats(): Record<string, number | string> {

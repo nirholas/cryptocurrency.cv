@@ -9,6 +9,7 @@
  */
 
 import { type NextRequest, NextResponse } from 'next/server';
+import { logger } from '@/lib/logger';
 
 /**
  * Contact Form API
@@ -47,12 +48,11 @@ export async function POST(request: NextRequest) {
     }
 
     // Log the contact submission (in production, send email or create ticket)
-    console.log('[Contact Form]', {
+    logger.info('[Contact Form]', {
       name,
       email,
       subject: subject || 'general',
       messageLength: message.length,
-      timestamp: new Date().toISOString(),
     });
 
     return NextResponse.json(
