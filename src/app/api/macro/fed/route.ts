@@ -24,6 +24,7 @@ import { NextResponse } from 'next/server';
 import { macroChain } from '@/lib/providers/adapters/macro';
 
 export const revalidate = 900; // 15min cache — Fed data changes infrequently
+export const dynamic = 'force-dynamic';
 
 const FED_SERIES = ['FEDFUNDS', 'DFF', 'DGS2', 'DGS5', 'DGS10', 'DGS30', 'WALCL'];
 

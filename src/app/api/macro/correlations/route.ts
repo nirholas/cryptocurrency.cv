@@ -19,6 +19,7 @@ import { NextResponse } from 'next/server';
 import { computeCorrelations, type TimeSeries } from '@/lib/macro/correlation';
 
 export const revalidate = 3600; // 1 hour
+export const dynamic = 'force-dynamic';
 
 export async function GET() {
   try {

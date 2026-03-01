@@ -19,6 +19,7 @@ import { NextResponse } from 'next/server';
 import { gamingDataChain } from '@/lib/providers/adapters/gaming-data';
 
 export const revalidate = 300;
+export const dynamic = 'force-dynamic';
 
 export async function GET(request: Request) {
   try {

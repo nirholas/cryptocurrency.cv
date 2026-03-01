@@ -1326,6 +1326,7 @@ const RSS_SOURCES = {
     url: 'https://feeds.simplecast.com/JGE3yC0V',
     category: 'journalism',
     noDataCache: true, // 11.9MB feed exceeds Next.js 2MB data cache limit
+    disabled: true, // revalidate:0 fetch breaks static generation — 2026-03-01
   },
   what_bitcoin_did: {
     name: 'What Bitcoin Did',
@@ -2344,6 +2345,7 @@ const RSS_SOURCES = {
     name: 'CNN Business',
     url: 'https://rss.cnn.com/rss/money_news_international.rss',
     category: 'mainstream',
+    disabled: true, // ECONNRESET — 2026-03-01
   },
   barrons: {
     name: 'Barrons',
@@ -2507,6 +2509,7 @@ const RSS_SOURCES = {
     name: 'Noir Lang Blog',
     url: 'https://blog.noir-lang.org/feed',
     category: 'developer',
+    disabled: true, // ENOTFOUND — 2026-03-01
   },
 
   // =========================================================================
@@ -2606,6 +2609,7 @@ const RSS_SOURCES = {
     name: 'EigenDA Blog',
     url: 'https://www.blog.eigenda.xyz/rss/',
     category: 'ethereum',
+    disabled: true, // ENOTFOUND — 2026-03-01
   },
   lido_dao_blog: {
     name: 'Lido DAO Governance',
