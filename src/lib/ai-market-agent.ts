@@ -1207,7 +1207,7 @@ export class AIMarketAgent {
             direction: event.type === 'airdrop' || event.type === 'mainnet-launch' ? 'bullish' : 'neutral',
             type: event.type === 'hard-fork' || event.type === 'mainnet-launch' ? 'upgrade'
               : event.type === 'conference' ? 'macro'
-              : 'governance',
+              : 'regulatory',
             description: event.description || `${event.title} - ${event.type || 'upcoming crypto event'}`,
           });
         }

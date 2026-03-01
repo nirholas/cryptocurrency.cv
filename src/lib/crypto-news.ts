@@ -2717,7 +2717,7 @@ const HOMEPAGE_SOURCE_KEYS = new Set<SourceKey>([
   'grayscale_insights', 'bitwise_research', 'vaneck_blog', 'coinshares_research', 'ark_invest', 'twentyone_shares', 'wisdomtree_blog',
 
   // Mainstream — selected
-  'bloomberg_crypto', 'forbes_crypto', 'guardian_tech', 'fortune_crypto', 'axios_crypto', 'barrons_crypto',
+  'bloomberg_crypto', 'forbes_crypto', 'guardian_tech', 'fortune_crypto', 'axios_crypto',
 
   // Geopolitical / Central Banks
   'bis_innovation', 'imf_fintech', 'ecb_digital', 'us_treasury', 'atlantic_council',
@@ -3037,6 +3037,7 @@ const API_SOURCES: Record<string, ApiSource> = {
         name: string;
         description: string;
         link: string;
+        date: string;
       }>;
       if (!Array.isArray(events)) return [];
       return events.slice(0, 10).map(item => ({

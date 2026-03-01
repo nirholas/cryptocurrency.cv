@@ -31,6 +31,11 @@ export const SECURITY_HEADERS: Record<string, string> = {
   'Permissions-Policy': 'camera=(), microphone=(), geolocation=(), interest-cohort=()',
   'Strict-Transport-Security': 'max-age=63072000; includeSubDomains; preload',
   'Pragma': 'no-cache',
+  // ── Anti-poaching / origin fingerprinting ──────────────────────────────
+  'X-Source': 'cryptocurrency.cv',
+  'X-Source-Repo': 'https://github.com/nirholas/free-crypto-news',
+  'X-License': 'SEE LICENSE IN LICENSE',
+  'X-Copyright': '2024-2026 nirholas',
 };
 
 // =============================================================================
