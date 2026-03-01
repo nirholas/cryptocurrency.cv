@@ -280,8 +280,8 @@ export default async function LocaleLayout({ children, params }: Props) {
           </ThemeProvider>
         </NextIntlClientProvider>
         {/* Vercel Analytics - privacy-friendly, no-cookie tracking */}
-        <Analytics />
-        <SpeedInsights />
+        <Analytics nonce={nonce} />
+        <SpeedInsights nonce={nonce} />
         {/* Google Analytics 4 — free, works on any host. Set NEXT_PUBLIC_GA_ID to enable. */}
         {process.env.NEXT_PUBLIC_GA_ID && (
           <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} nonce={nonce} />
