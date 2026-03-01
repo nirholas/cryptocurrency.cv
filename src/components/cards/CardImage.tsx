@@ -129,6 +129,9 @@ export default function CardImage({
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 400px"
           onLoad={handleLoad}
           onError={handleError}
+          // Skip Next.js image optimization for Unsplash URLs (already CDN-optimised)
+          // and avoid double-proxy failures for external article images.
+          unoptimized
           className={`object-cover transition-opacity duration-300 ${
             isLoaded ? 'opacity-100' : 'opacity-0'
           }`}

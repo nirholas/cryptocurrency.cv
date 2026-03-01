@@ -179,6 +179,7 @@ export default function HeroArticle({ article, sidebarArticles = [] }: HeroArtic
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 800px"
               className="object-cover"
               priority
+              unoptimized
               onError={() => {
                 if (heroImgSrc !== unsplashSrc) {
                   setHeroImgSrc(unsplashSrc);

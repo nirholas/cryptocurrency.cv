@@ -22,23 +22,23 @@ const CRYPTO_PHOTOS = [
   '1518546305927-5a555bb7020d', // Bitcoin coins on a surface
   '1639762681485-074b7f938ba0', // Crypto chart glow
   '1611974789855-9c2a0a7236a3', // Trading monitors
-  '1621416894569-0e4bfef8e3c6', // Blockchain / tech abstract
+  '1516245834210-c4c142787335', // Circuit board / tech
   '1559526324-4b87b5e36e44', // Network data streams
   '1488590528505-98d2b5aba04b', // Laptop / developer
   '1526374965328-7f61d4dc18c5', // Matrix green code
   '1451187580459-43490279c0fa', // Globe with data lines
   '1504711434969-e33886168f5c', // City skyline / finance
   '1543699565-003b8adda5fc', // Abstract circuit board
-  '1567427017947-545c5f8d49d6', // Blockchain node network
+  '1563013544-824ae1b704d3',     // Data network flow
   '1639322537228-f710d846310a', // Crypto coin stack
-  '1640340434855-6a53de7f41fe', // DeFi / Ethereum glow
+  '1605792657660-596af9009e82', // Ethereum concept
   '1642790106117-e829e14a795f', // Crypto trading signals
   '1580048915913-4f8f5cb481c4', // Gold / wealth / finance
   '1551288049-bebda4e38f71', // Data dashboard / charts
   '1614028674026-a65e31bfd27c', // Bitcoin close-up
   '1601597111158-2fceff292cdc', // Digital currency concept
-  '1622473590773-f588134b6d7e', // NFT / digital art glow
-  '1672345332073-3b3c6b15e38a', // Crypto wallet / smartphone
+  '1550751827-4bd374c3f58b',     // Digital finance abstract
+  '1634704784915-aacf363b021f', // Bitcoin physical coin
 ];
 
 /**
@@ -56,12 +56,12 @@ const NATURE_PHOTOS = [
   '1447752875215-b2761acb3c5d', // Autumn forest
   '1518020382113-a7e8fc38eac9', // Snow-capped peaks
   '1507003211169-0a1dd7228f2d', // Desert sand dunes
-  '1490750967868-88df5691cc7' , // Cherry blossom trees
+  '1470071459604-3b5ec3a7fe05', // Foggy mountain lake
   '1465146344425-f00d5f5c8f07', // Wildflower meadow
   '1501854140801-50d01698950b', // Northern lights aurora
   '1540390769625-2fc3f8b1d50c', // Tropical beach paradise
   '1475924156734-496f6cac6ec1', // Mountain lake reflection
-  '1510797215324-721bb9dbd060', // Autumn river
+  '1506905925346-21bda4d32df4', // Golden lake sunset
   '1519681393784-d120267933ba', // Starry mountain night
   '1502472584811-0a2f2feb8968', // Coastal sea cliffs
   '1508739773434-c26b3d09e071', // Rolling lavender fields

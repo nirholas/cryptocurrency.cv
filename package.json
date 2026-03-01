@@ -72,7 +72,7 @@
     "docs:dev": "mkdocs serve -a localhost:8000",
     "docs:build": "mkdocs build",
     "docs:deploy": "mkdocs gh-deploy --force",
-    "postinstall": "node -e \"const fs=require('fs');const p='node_modules/tsconfig.base.json';if(!fs.existsSync(p))fs.writeFileSync(p,JSON.stringify({compilerOptions:{strict:true,esModuleInterop:true,skipLibCheck:true,moduleResolution:'bundler',module:'esnext',target:'es2021',lib:['es2021','dom']}},null,2))\" && node patch-next-write-atomic.js"
+    "postinstall": "node -e \"const fs=require('fs');const c=JSON.stringify({compilerOptions:{strict:true,esModuleInterop:true,skipLibCheck:true,moduleResolution:'bundler',module:'esnext',target:'es2021',lib:['es2021','dom']}},null,2);['node_modules/tsconfig.base.json','node_modules/tsconfig.json'].forEach(p=>{if(!fs.existsSync(p))fs.writeFileSync(p,c)})\" && node patch-next-write-atomic.js"
   },
   "keywords": [
     "crypto",
