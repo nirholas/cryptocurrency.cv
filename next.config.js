@@ -222,27 +222,9 @@ const nextConfig = {
     formats: ['image/avif', 'image/webp'],
     minimumCacheTTL: 60 * 60 * 24 * 30, // 30 days
     remotePatterns: [
-      // Restrict to known image domains instead of wildcard (**)
-      // Add more patterns as needed for new RSS/article image domains
-      { protocol: 'https', hostname: '*.coingecko.com' },
-      { protocol: 'https', hostname: '*.coinmarketcap.com' },
-      { protocol: 'https', hostname: '*.cointelegraph.com' },
-      { protocol: 'https', hostname: '*.coindesk.com' },
-      { protocol: 'https', hostname: '*.decrypt.co' },
-      { protocol: 'https', hostname: '*.theblock.co' },
-      { protocol: 'https', hostname: '*.cryptonews.com' },
-      { protocol: 'https', hostname: '*.githubusercontent.com' },
-      { protocol: 'https', hostname: '*.sperax.io' },
-      { protocol: 'https', hostname: 'images.unsplash.com' },
-      { protocol: 'https', hostname: '*.googleusercontent.com' },
-      { protocol: 'https', hostname: '*.wp.com' },
-      { protocol: 'https', hostname: '*.medium.com' },
-      { protocol: 'https', hostname: '*.cryptoglobe.com' },
-      { protocol: 'https', hostname: '*.cryptopolitan.com' },
-      { protocol: 'https', hostname: '*.blockworks.co' },
-      { protocol: 'https', hostname: '*.defipulse.com' },
-      { protocol: 'https', hostname: '*.cloudinary.com' },
-      { protocol: 'https', hostname: '*.imgix.net' },
+      // Allow all HTTPS images — this aggregator pulls from 100+ RSS feed
+      // domains whose image CDNs cannot be exhaustively enumerated.
+      { protocol: 'https', hostname: '**' },
     ],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048],
     imageSizes: [16, 32, 48, 64, 96, 128, 256],
