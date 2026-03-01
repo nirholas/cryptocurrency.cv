@@ -31,8 +31,10 @@ const BOT_ALLOWLIST = [
   'Slurp',
   'DuckDuckBot',
   'facebookexternalhit',
-  'x402',      // x402 payment clients
-  'coinbase',  // Coinbase Wallet SDK
+  'x402',              // x402 payment clients
+  'coinbase',          // Coinbase Wallet SDK
+  'fcn-telegram-bot',  // Our own Telegram bot
+  'fcn-discord-bot',   // Our own Discord bot
 ];
 
 // SDK / programmatic client User-Agent patterns
