@@ -3,289 +3,146 @@
  * @license SPDX-License-Identifier: SEE LICENSE IN LICENSE
  * @see https://github.com/nirholas/free-crypto-news
  *
- * This file is part of free-crypto-news.
- * Unauthorized copying, modification, or distribution is strictly prohibited.
+ * Design System — The Block-inspired editorial crypto news
  */
 
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
 /* ============================================
-   DESIGN SYSTEM — Tailwind v4 theme overrides
+   THEME — Tailwind v4 overrides
    ============================================ */
 
 @theme {
-  /* Sharpen border radii globally */
+  /* Tighter radii for editorial feel */
   --radius-xs: 2px;
-  --radius-sm: 3px;
-  --radius-DEFAULT: 4px;
-  --radius-md: 6px;
-  --radius-lg: 8px;
-  --radius-xl: 8px;
-  --radius-2xl: 10px;
-  --radius-3xl: 12px;
-  --radius-4xl: 12px;
-  /* rounded-full (9999px) intentionally NOT overridden */
+  --radius-sm: 4px;
+  --radius-DEFAULT: 6px;
+  --radius-md: 8px;
+  --radius-lg: 10px;
+  --radius-xl: 12px;
+  --radius-2xl: 16px;
 
-  /* Tighter shadows */
-  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.08);
-  --shadow-DEFAULT: 0 1px 3px 0 rgb(0 0 0 / 0.12), 0 1px 2px -1px rgb(0 0 0 / 0.08);
-  --shadow-md: 0 2px 6px -1px rgb(0 0 0 / 0.15), 0 1px 3px -1px rgb(0 0 0 / 0.1);
-  --shadow-lg: 0 4px 12px -2px rgb(0 0 0 / 0.15), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  --shadow-xl: 0 8px 20px -4px rgb(0 0 0 / 0.2), 0 4px 8px -4px rgb(0 0 0 / 0.1);
-  --shadow-2xl: 0 16px 40px -8px rgb(0 0 0 / 0.25);
+  /* Subtle shadows */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-DEFAULT: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
 
-  /* Font stacks — variables injected by next/font/google */
-  --font-sans: var(--font-roboto, 'Google Sans', Roboto, system-ui, -apple-system, sans-serif);
-  --font-mono: var(--font-jetbrains-mono, 'SF Mono', 'Fira Code', 'Cascadia Code', ui-monospace, monospace);
+  /* Font stacks */
+  --font-sans: var(--font-inter, 'Inter', system-ui, -apple-system, sans-serif);
+  --font-serif: var(--font-source-serif, 'Source Serif 4', Georgia, 'Times New Roman', serif);
+  --font-mono: var(--font-jetbrains-mono, 'JetBrains Mono', ui-monospace, monospace);
+
+  /* Custom colors */
+  --color-primary: #1a1a2e;
+  --color-accent: #3b82f6;
+  --color-accent-hover: #2563eb;
+  --color-surface: #ffffff;
+  --color-surface-secondary: #f8fafc;
+  --color-surface-tertiary: #f1f5f9;
+  --color-border: #e2e8f0;
+  --color-border-hover: #cbd5e1;
+  --color-text-primary: #0f172a;
+  --color-text-secondary: #475569;
+  --color-text-tertiary: #94a3b8;
+  --color-text-inverse: #ffffff;
 }
 
 /* ============================================
-   DESIGN TOKENS
+   BASE TOKENS
    ============================================ */
 
 :root {
-  /* Brand */
-  --color-brand-50: #ffffff;
-  --color-brand-100: #ffffff;
-  --color-brand-200: #ffffff;
-  --color-brand-300: #ffffff;
-  --color-brand-400: #ffffff;
-  --color-brand-500: #ffffff;
-  --color-brand-600: #000000;
-  --color-brand-700: #000000;
-  --color-brand-800: #000000;
-  --color-brand-900: #000000;
-
-  /* Timing */
-  --duration-fast: 150ms;
-  --duration-normal: 200ms;
-  --duration-slow: 300ms;
-
-  /* Neural Mist accent */
-  --color-mist: #6db8d4;
-  --color-mist-glow: rgba(109, 184, 212, 0.12);
-  --color-mist-border: rgba(109, 184, 212, 0.25);
-  --gradient-mist-azure-hover: linear-gradient(135deg,
-    rgba(168, 212, 240, 0.12) 0%,
-    rgba(107, 163, 214, 0.10) 50%,
-    rgba(61, 107, 153, 0.08) 100%);
-
-  /* Reading progress */
-  --progress-height: 3px;
-  --progress-bg: rgba(109, 184, 212, 0.15);
-  --progress-fill: #6db8d4;
-
-  /* Card hover */
-  --card-hover-shadow: 0 4px 16px -4px rgb(0 0 0 / 0.2);
-
-  /* Safe area insets (notched devices) */
-  --safe-area-inset-top: env(safe-area-inset-top, 0px);
-  --safe-area-inset-right: env(safe-area-inset-right, 0px);
-  --safe-area-inset-bottom: env(safe-area-inset-bottom, 0px);
-  --safe-area-inset-left: env(safe-area-inset-left, 0px);
+  --header-height: 64px;
+  --ticker-height: 40px;
+  --max-width: 1280px;
+  --content-padding: 1rem;
+  color-scheme: light;
 }
 
+@media (min-width: 768px) {
+  :root {
+    --content-padding: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --content-padding: 2rem;
+  }
+}
+
+/* Dark mode overrides */
 .dark {
-  --card-hover-shadow: 0 4px 16px -4px rgb(255 255 255 / 0.1);
-  --progress-bg: rgba(255, 255, 255, 0.2);
-  --progress-fill: #ffffff;
   color-scheme: dark;
-
-  /* =============================================
-     FORCE BLACK BACKGROUNDS
-     Override ALL color palette tokens used for
-     backgrounds to pure black (#000). This ensures
-     every bg-*, dark:bg-*, and paired light/dark
-     class resolves to black in dark mode.
-     ============================================= */
-
-  /* Slate palette — all shades */
-  --color-slate-50: #000000;
-  --color-slate-100: #000000;
-  --color-slate-200: #000000;
-  --color-slate-300: #000000;
-  --color-slate-400: #000000;
-  --color-slate-500: #000000;
-  --color-slate-600: #000000;
-  --color-slate-700: #000000;
-  --color-slate-800: #000000;
-  --color-slate-900: #000000;
-  --color-slate-950: #000000;
-
-  /* Gray palette — all shades */
-  --color-gray-50: #000000;
-  --color-gray-100: #000000;
-  --color-gray-200: #000000;
-  --color-gray-300: #000000;
-  --color-gray-400: #000000;
-  --color-gray-500: #000000;
-  --color-gray-600: #000000;
-  --color-gray-700: #000000;
-  --color-gray-800: #000000;
-  --color-gray-900: #000000;
-  --color-gray-950: #000000;
-
-  /* Neutral palette — all shades */
-  --color-neutral-50: #000000;
-  --color-neutral-100: #000000;
-  --color-neutral-200: #000000;
-  --color-neutral-300: #000000;
-  --color-neutral-400: #000000;
-  --color-neutral-500: #000000;
-  --color-neutral-600: #000000;
-  --color-neutral-700: #000000;
-  --color-neutral-800: #000000;
-  --color-neutral-900: #000000;
-  --color-neutral-950: #000000;
-
-  /* Zinc palette — all shades */
-  --color-zinc-50: #000000;
-  --color-zinc-100: #000000;
-  --color-zinc-200: #000000;
-  --color-zinc-300: #000000;
-  --color-zinc-400: #000000;
-  --color-zinc-500: #000000;
-  --color-zinc-600: #000000;
-  --color-zinc-700: #000000;
-  --color-zinc-800: #000000;
-  --color-zinc-900: #000000;
-  --color-zinc-950: #000000;
+  --color-primary: #e2e8f0;
+  --color-accent: #60a5fa;
+  --color-accent-hover: #93bbfc;
+  --color-surface: #0a0a0a;
+  --color-surface-secondary: #141414;
+  --color-surface-tertiary: #1e1e1e;
+  --color-border: #262626;
+  --color-border-hover: #404040;
+  --color-text-primary: #f5f5f5;
+  --color-text-secondary: #a3a3a3;
+  --color-text-tertiary: #737373;
+  --color-text-inverse: #0a0a0a;
 }
 
 /* ============================================
    BASE STYLES
    ============================================ */
 
+* {
+  box-sizing: border-box;
+}
+
 html {
-  scroll-behavior: smooth;
-  background-color: #000000;
-  color-scheme: dark;
-  -webkit-text-size-adjust: 100%;
-  text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 body {
   font-family: var(--font-sans);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: #000000;
-  color: #ffffff;
-}
-
-/* Force ALL text white — every element, pseudo-element, placeholder */
-*,
-*::before,
-*::after {
-  color: #ffffff !important;
-}
-
-::placeholder {
-  color: rgba(255, 255, 255, 0.5) !important;
-}
-
-/* Belt-and-suspenders: also override in @layer base for Tailwind v4 layer cascade */
-@layer base {
-  *,
-  *::before,
-  *::after {
-    color: #ffffff !important;
-  }
-  ::placeholder {
-    color: rgba(255, 255, 255, 0.5) !important;
-  }
-}
-
-/* Neural mist — faint atmospheric glow at the top of the viewport */
-body::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 60vh;
-  background: radial-gradient(
-    ellipse 90% 40% at 60% -5%,
-    rgba(109, 184, 212, 0.07) 0%,
-    transparent 70%
-  );
-  pointer-events: none;
-  z-index: 0;
-}
-
-/* Images and media → black and white */
-img,
-video,
-canvas {
-  filter: grayscale(100%) contrast(1.05);
+  background-color: var(--color-surface);
+  color: var(--color-text-primary);
+  line-height: 1.6;
+  min-height: 100vh;
 }
 
 /* ============================================
-   ACCESSIBILITY
+   TYPOGRAPHY
    ============================================ */
 
-:focus-visible {
-  outline: 2px solid var(--color-brand-500);
-  outline-offset: 2px;
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--color-text-primary);
 }
 
-.dark :focus-visible {
-  outline-color: #ffffff;
-}
+/* ============================================
+   SKIP LINK (A11y)
+   ============================================ */
 
 .skip-link {
   position: absolute;
   top: -100%;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #000000;
-  border: 1px solid #ffffff;
-  color: #ffffff;
+  left: 0;
   padding: 0.75rem 1.5rem;
-  border-radius: 0 0 0.5rem 0.5rem;
+  background: var(--color-accent);
+  color: #fff;
   font-weight: 600;
   z-index: 9999;
-  transition: top var(--duration-fast) ease;
+  transition: top 0.2s;
 }
 
 .skip-link:focus {
   top: 0;
-}
-
-.focus-ring:focus {
-  outline: none;
-}
-
-.focus-ring:focus-visible {
-  outline: none;
-  box-shadow: 0 0 0 2px #000000, 0 0 0 4px #ffffff;
-}
-
-/* Minimum 44×44px tap targets on mobile (Apple HIG) */
-@media (max-width: 768px) {
-  button,
-  a,
-  [role="button"],
-  input[type="checkbox"],
-  input[type="radio"],
-  select {
-    min-height: 44px;
-  }
-}
-
-/* ============================================
-   REDUCED MOTION
-   ============================================ */
-
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
 }
 
 /* ============================================
@@ -293,26 +150,25 @@ canvas {
    ============================================ */
 
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #000000;
-  border-radius: 4px;
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #ffffff;
-  border-radius: 4px;
+  background: var(--color-border);
+  border-radius: 999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #cccccc;
+  background: var(--color-border-hover);
 }
 
 /* ============================================
-   KEYFRAMES
+   ANIMATIONS
    ============================================ */
 
 @keyframes fadeIn {
@@ -320,242 +176,106 @@ canvas {
   to { opacity: 1; }
 }
 
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(10px); }
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(12px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-@keyframes skeleton-shimmer {
+@keyframes shimmer {
   0% { background-position: -200% 0; }
   100% { background-position: 200% 0; }
 }
 
-@keyframes menuFadeIn {
-  from { opacity: 0; transform: scale(0.95) translateY(-4px); }
-  to { opacity: 1; transform: scale(1) translateY(0); }
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
 }
 
-@keyframes live-pulse {
-  0%, 100% {
-    opacity: 1;
-    transform: scale(1);
-    box-shadow: 0 0 0 0 rgba(109, 184, 212, 0.7);
-  }
-  50% {
-    opacity: 0.9;
-    transform: scale(1.1);
-    box-shadow: 0 0 0 4px rgba(109, 184, 212, 0);
-  }
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
 }
 
-@keyframes haptic-tap {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(0.97); }
-}
-
-@keyframes spin {
-  to { transform: rotate(360deg); }
+.animate-slide-up {
+  animation: slideUp 0.5s ease-out forwards;
 }
 
 /* ============================================
-   UTILITY CLASSES (used by components)
+   SKELETON LOADER
    ============================================ */
 
-/* Animation */
-.animate-fade-in-up {
-  animation: fadeInUp var(--duration-slow) ease-out;
-}
-
-/* Skeleton loading */
 .skeleton {
-  background: linear-gradient(90deg, #000000 25%, #111111 50%, #000000 75%);
+  background: linear-gradient(
+    90deg,
+    var(--color-surface-tertiary) 25%,
+    var(--color-surface-secondary) 50%,
+    var(--color-surface-tertiary) 75%
+  );
   background-size: 200% 100%;
-  animation: skeleton-shimmer 1.5s infinite;
-  border-radius: 0.375rem;
-}
-
-/* Card hover — Misty Azure gradient reveal */
-.card-hover {
-  position: relative;
-  transition: box-shadow var(--duration-fast) ease, border-color var(--duration-fast) ease;
-}
-
-.card-hover::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  background: var(--gradient-mist-azure-hover);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  pointer-events: none;
-  z-index: 0;
-}
-
-.card-hover:hover::before {
-  opacity: 1;
-}
-
-.card-hover:hover {
-  box-shadow: 0 0 0 1px var(--color-mist-border), 0 4px 20px -4px rgba(109, 184, 212, 0.15);
-}
-
-.dark .card-hover:hover {
-  box-shadow: 0 0 0 1px var(--color-mist-border), 0 4px 20px -4px rgba(109, 184, 212, 0.2);
-}
-
-/* Tabular numbers for financial data */
-.tabular-nums {
-  font-variant-numeric: tabular-nums;
-}
-
-/* Hide scrollbar but keep scroll */
-.scrollbar-hide {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-.scrollbar-hide::-webkit-scrollbar {
-  display: none;
-}
-
-/* Staggered list entrance */
-.stagger-children > * {
-  animation: fadeInUp var(--duration-slow) ease-out backwards;
-}
-
-.stagger-children > *:nth-child(1) { animation-delay: 0ms; }
-.stagger-children > *:nth-child(2) { animation-delay: 50ms; }
-.stagger-children > *:nth-child(3) { animation-delay: 100ms; }
-.stagger-children > *:nth-child(4) { animation-delay: 150ms; }
-.stagger-children > *:nth-child(5) { animation-delay: 200ms; }
-.stagger-children > *:nth-child(6) { animation-delay: 250ms; }
-.stagger-children > *:nth-child(7) { animation-delay: 300ms; }
-.stagger-children > *:nth-child(8) { animation-delay: 350ms; }
-.stagger-children > *:nth-child(9) { animation-delay: 400ms; }
-
-/* Live dot indicator */
-.live-dot {
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  background-color: var(--color-mist);
-  border-radius: 50%;
-  animation: live-pulse 2s ease-in-out infinite;
-}
-
-/* Smooth scrolling with momentum on iOS */
-.scroll-smooth {
-  -webkit-overflow-scrolling: touch;
-  scroll-behavior: smooth;
-}
-
-/* Swipe gestures */
-.swipeable {
-  touch-action: pan-y pinch-zoom;
-  user-select: none;
-  -webkit-user-select: none;
-}
-
-.swipeable.swiping {
-  transition: none !important;
-}
-
-/* Haptic-tap visual feedback */
-.haptic-tap:active {
-  animation: haptic-tap 0.1s ease-out;
+  animation: shimmer 1.5s infinite;
+  border-radius: var(--radius-sm);
 }
 
 /* ============================================
-   MOBILE COMPONENTS
+   UTILITY CLASSES
    ============================================ */
 
-/* Bottom navigation bar */
-.bottom-nav {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 50;
-  background: #000000;
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
-  padding-bottom: var(--safe-area-inset-bottom);
-  display: none;
-}
-
-@media (max-width: 768px) {
-  .bottom-nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 0.5rem 0;
-  }
-
-  .main-content-with-bottom-nav {
-    padding-bottom: calc(60px + var(--safe-area-inset-bottom));
-  }
-}
-
-/* Floating action button */
-.fab {
-  position: fixed;
-  bottom: calc(1rem + var(--safe-area-inset-bottom));
-  right: 1rem;
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  background: #000000;
-  border: 1px solid #ffffff;
-  color: #ffffff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: var(--shadow-lg);
-  z-index: 40;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.fab:active {
-  transform: scale(0.95);
-}
-
-@media (max-width: 768px) {
-  .fab {
-    bottom: calc(70px + var(--safe-area-inset-bottom));
-  }
-}
-
-/* Pull-to-refresh */
-.pull-to-refresh {
-  position: relative;
-  overflow: hidden;
-}
-
-.pull-to-refresh::before {
-  content: "";
-  position: absolute;
-  top: -40px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 24px;
-  height: 24px;
-  border: 2px solid #ffffff;
-  border-top-color: transparent;
-  border-radius: 50%;
-  opacity: 0;
-  transition: opacity 0.2s, top 0.2s;
-}
-
-.pull-to-refresh.pulling::before {
-  opacity: 1;
-  top: 16px;
-  animation: spin 0.8s linear infinite;
-}
-
-/* Prevent body scroll when modal is open */
-body.modal-open {
-  overflow: hidden;
-  position: fixed;
+.container-main {
   width: 100%;
-  height: 100%;
+  max-width: var(--max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--content-padding);
+  padding-right: var(--content-padding);
+}
+
+.divider {
+  height: 1px;
+  background: var(--color-border);
+  width: 100%;
+}
+
+/* Live indicator dot */
+.live-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #ef4444;
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+/* Category badge colors */
+.cat-bitcoin { background: #fef3c7; color: #92400e; }
+.cat-ethereum { background: #ede9fe; color: #5b21b6; }
+.cat-defi { background: #d1fae5; color: #065f46; }
+.cat-nft { background: #f3e8ff; color: #6b21a8; }
+.cat-regulation { background: #fee2e2; color: #991b1b; }
+.cat-altcoins { background: #cffafe; color: #155e75; }
+.cat-trading { background: #fef9c3; color: #854d0e; }
+.cat-mining { background: #f3f4f6; color: #374151; }
+.cat-web3 { background: #fce7f3; color: #9d174d; }
+
+.dark .cat-bitcoin { background: #78350f; color: #fde68a; }
+.dark .cat-ethereum { background: #4c1d95; color: #c4b5fd; }
+.dark .cat-defi { background: #064e3b; color: #6ee7b7; }
+.dark .cat-nft { background: #581c87; color: #d8b4fe; }
+.dark .cat-regulation { background: #7f1d1d; color: #fca5a5; }
+.dark .cat-altcoins { background: #164e63; color: #67e8f9; }
+.dark .cat-trading { background: #713f12; color: #fde047; }
+.dark .cat-mining { background: #374151; color: #d1d5db; }
+.dark .cat-web3 { background: #831843; color: #f9a8d4; }
+
+/* Focus ring */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* ============================================
+   SAFE AREA (notched devices)
+   ============================================ */
+
+@supports (padding: env(safe-area-inset-bottom)) {
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
 }
