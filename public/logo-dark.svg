@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 120" width="800" height="120">
+  <defs>
+    <linearGradient id="accent-dark" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#F7931A"/>
+      <stop offset="100%" stop-color="#FFAD42"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Accent bar — left side -->
+  <rect x="18" y="14" width="530" height="4" rx="2" fill="url(#accent-dark)"/>
+
+  <!-- "FREE CRYPTO " -->
+  <text x="20" y="80"
+        font-family="Georgia,'Times New Roman','Playfair Display',serif"
+        font-size="62" font-weight="700" letter-spacing="2" fill="#F0F0F0">FREE CRYPTO </text>
+
+  <!-- Oversized "N" in Bitcoin orange -->
+  <text x="498" y="80"
+        font-family="Georgia,'Times New Roman','Playfair Display',serif"
+        font-size="82" font-weight="700" fill="#F7931A">N</text>
+
+  <!-- "EWS" -->
+  <text x="554" y="80"
+        font-family="Georgia,'Times New Roman','Playfair Display',serif"
+        font-size="62" font-weight="700" letter-spacing="2" fill="#F0F0F0">EWS</text>
+
+  <!-- Accent bar — right side -->
+  <rect x="498" y="14" width="284" height="4" rx="2" fill="url(#accent-dark)"/>
+
+  <!-- Thin rule beneath -->
+  <rect x="18" y="96" width="764" height="1.5" fill="#333333"/>
+
+  <!-- Tagline -->
+  <text x="20" y="113"
+        font-family="Georgia,'Times New Roman',serif"
+        font-size="11" font-weight="400" letter-spacing="4" fill="#777777">REAL-TIME CRYPTO INTELLIGENCE</text>
+</svg>

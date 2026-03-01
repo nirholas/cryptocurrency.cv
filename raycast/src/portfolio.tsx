@@ -110,7 +110,7 @@ export default function Portfolio() {
         const symbols = holdings.map((h) => h.symbol).join(",");
         const res = await fetch(`${API_BASE}/prices?coins=${encodeURIComponent(symbols)}`);
         if (res.ok) {
-          const data = await res.json();
+          const data = (await res.json()) as { prices?: Record<string, PriceEntry> };
           setPrices(data.prices || {});
         }
       } catch {
