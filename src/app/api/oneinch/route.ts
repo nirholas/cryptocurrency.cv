@@ -16,7 +16,7 @@ import {
 } from '@/lib/apis/oneinch';
 import type { ChainId } from '@/lib/apis/oneinch';
 
-export const runtime = 'edge';
+export const runtime = 'nodejs';
 export const revalidate = 30;
 
 /**

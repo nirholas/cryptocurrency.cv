@@ -419,6 +419,7 @@ export async function POST(request: NextRequest) {
 
       try {
         // Use dynamic import for ws in Node.js runtime
+        // @ts-ignore ws types may not resolve under strict pnpm hoisting
         const { default: WS } = await import('ws');
         fetchedEvents = await new Promise<Array<Record<string, unknown>>>((resolve) => {
           const events: Array<Record<string, unknown>> = [];

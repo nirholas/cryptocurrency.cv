@@ -286,6 +286,7 @@ const nextConfig = {
     'redis',
     'sanitize-html',
     'dompurify',
+    'ws',
   ],
 
   // Experimental features for better performance
