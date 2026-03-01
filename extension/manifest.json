@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "Free Crypto News",
-  "version": "2.0.0",
-  "description": "Real-time crypto news from 130+ trusted sources with live prices. 100% FREE — No API keys required.",
+  "version": "2.1.0",
+  "description": "Real-time crypto news and live prices from 130+ trusted sources. 100% FREE — No API keys required.",
   "permissions": [
     "storage",
     "alarms",
