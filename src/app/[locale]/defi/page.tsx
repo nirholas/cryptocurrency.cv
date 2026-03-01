@@ -3,6 +3,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import PageShareSection from "@/components/PageShareSection";
 import { NewsCardCompact } from "@/components/NewsCard";
 import DefiTable, { type DefiProtocol } from "@/components/DefiTable";
 import {
@@ -519,6 +520,11 @@ export default async function DefiPage({ params }: Props) {
           </Card>
         </section>
       </main>
+      <PageShareSection
+        title="DeFi Dashboard — Protocols, TVL & Yields"
+        description="Track DeFi protocols, total value locked, yields, and DEX volumes."
+        url={`https://cryptocurrency.cv/${locale}/defi`}
+      />
       <Footer />
     </>
   );

@@ -1,6 +1,7 @@
 import { setRequestLocale } from "next-intl/server";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import PageShareSection from "@/components/PageShareSection";
 import { Link } from "@/i18n/navigation";
 import { generateSEOMetadata } from "@/lib/seo";
 import { Badge } from "@/components/ui/Badge";
@@ -182,6 +183,11 @@ export default async function BlogPage({ params }: Props) {
           </div>
         </div>
       </main>
+      <PageShareSection
+        title="Crypto Vision Blog — Insights & Analysis"
+        description="In-depth crypto insights, market analysis, and project deep-dives."
+        url={`https://cryptocurrency.cv/${locale}/blog`}
+      />
       <Footer />
     </>
   );

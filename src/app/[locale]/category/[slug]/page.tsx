@@ -1,6 +1,7 @@
 import { setRequestLocale } from "next-intl/server";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import PageShareSection from "@/components/PageShareSection";
 import { FeaturedCard, NewsCardDefault } from "@/components/NewsCard";
 import { getNewsByCategory, type NewsResponse } from "@/lib/crypto-news";
 import { getCategoryBySlug, categories } from "@/lib/categories";
@@ -156,6 +157,11 @@ export default async function CategoryPage({ params }: Props) {
           </div>
         )}
       </main>
+      <PageShareSection
+        title={`${name} Crypto News`}
+        description={`Latest ${name} cryptocurrency news and updates.`}
+        url={`https://cryptocurrency.cv/${locale}/category/${slug}`}
+      />
       <Footer />
     </>
   );

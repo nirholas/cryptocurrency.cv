@@ -2,6 +2,7 @@ import { Suspense } from "react";
 import { setRequestLocale } from "next-intl/server";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import PageShareSection from "@/components/PageShareSection";
 import { generateSEOMetadata } from "@/lib/seo";
 import { Skeleton } from "@/components/ui";
 import type { Metadata } from "next";
@@ -474,6 +475,11 @@ export default async function FearGreedPage({ params }: Props) {
           <FearGreedContent />
         </Suspense>
       </main>
+      <PageShareSection
+        title="Crypto Fear & Greed Index"
+        description="Real-time market sentiment gauge — from extreme fear to extreme greed."
+        url={`https://cryptocurrency.cv/${locale}/fear-greed`}
+      />
       <Footer />
     </>
   );

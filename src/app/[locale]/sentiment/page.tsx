@@ -2,6 +2,7 @@ import { Suspense } from "react";
 import { setRequestLocale } from "next-intl/server";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import PageShareSection from "@/components/PageShareSection";
 import { generateSEOMetadata } from "@/lib/seo";
 import { SITE_URL } from "@/lib/constants";
 import { Card } from "@/components/ui/Card";
@@ -545,6 +546,11 @@ export default async function SentimentPage({ params }: Props) {
           </Card>
         </section>
       </main>
+      <PageShareSection
+        title="Crypto Market Sentiment — Fear & Greed, Social Buzz"
+        description="Real-time crypto sentiment analysis with Fear & Greed Index, social trends, and influencer signals."
+        url={`https://cryptocurrency.cv/${locale}/sentiment`}
+      />
       <Footer />
     </>
   );
