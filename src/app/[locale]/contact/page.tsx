@@ -13,9 +13,9 @@ type Props = {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   return generateSEOMetadata({
-    title: "Contact — Free Crypto News",
+    title: "Contact — Crypto Vision News",
     description:
-      "Get in touch with Free Crypto News. Report issues, request features, or ask questions via GitHub.",
+      "Get in touch with Crypto Vision News. Report issues, request features, or ask questions via GitHub.",
     path: "/contact",
     locale,
     tags: ["contact", "support", "feedback", "github"],
@@ -48,7 +48,7 @@ const contactMethods = [
 
 const faqs = [
   {
-    question: "Is Free Crypto News really free?",
+    question: "Is Crypto Vision News really free?",
     answer:
       "Yes, 100% free. No API keys, no rate limits, no hidden costs. Our core API will always be free and open source.",
   },
@@ -63,9 +63,9 @@ const faqs = [
       "News is aggregated every 5 minutes from 300+ trusted sources. Breaking news is processed in near real-time.",
   },
   {
-    question: "Can I self-host Free Crypto News?",
+    question: "Can I self-host Crypto Vision News?",
     answer:
-      "Yes! Free Crypto News is open source under the MIT license. You can deploy your own instance using Docker or Vercel.",
+      "Yes! Crypto Vision News is open source under the MIT license. You can deploy your own instance using Docker or Vercel.",
   },
   {
     question: "How can I contribute?",

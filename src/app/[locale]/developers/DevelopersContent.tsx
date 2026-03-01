@@ -472,7 +472,7 @@ const endpointCategories: EndpointCategory[] = [
         response: `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
   <channel>
-    <title>Free Crypto News</title>
+    <title>Crypto Vision News</title>
     <link>https://cryptocurrency.cv</link>
     <item>
       <title>Bitcoin Hits New High</title>
@@ -492,7 +492,7 @@ const endpointCategories: EndpointCategory[] = [
         ],
         response: `<?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Free Crypto News</title>
+  <title>Crypto Vision News</title>
   <entry>
     <title>Bitcoin Hits New High</title>
     <link href="https://..." />
@@ -590,7 +590,7 @@ interface Integration {
 const integrations: Integration[] = [
   {
     name: "ChatGPT Plugin",
-    description: "Use Free Crypto News directly within ChatGPT. Ask about latest crypto news, prices, and trends.",
+    description: "Use Crypto Vision News directly within ChatGPT. Ask about latest crypto news, prices, and trends.",
     link: "https://github.com/nirholas/free-crypto-news/tree/main/chatgpt",
     icon: "🤖",
   },
@@ -679,7 +679,7 @@ export default function DevelopersContent() {
           <section className="mb-16">
             <Badge className="mb-4">No API Key Required</Badge>
             <h1 className="font-serif text-4xl md:text-5xl font-bold mb-4 text-[var(--color-text-primary)]">
-              Free Crypto News API
+              Crypto Vision News API
             </h1>
             <p className="text-lg text-[var(--color-text-secondary)] mb-6 max-w-2xl">
               Access real-time cryptocurrency news, market data, DeFi analytics,
@@ -936,7 +936,7 @@ export default function DevelopersContent() {
               Integrations
             </h2>
             <p className="text-[var(--color-text-secondary)] mb-8">
-              Use Free Crypto News with your favorite tools and platforms.
+              Use Crypto Vision News with your favorite tools and platforms.
             </p>
 
             <div className="grid gap-6 sm:grid-cols-2">
@@ -983,7 +983,7 @@ export default function DevelopersContent() {
                     <span className="text-green-500">✓</span> Free Tier — No API Key Required
                   </h3>
                   <p className="text-[var(--color-text-secondary)] mb-4">
-                    The Free Crypto News API is completely free to use. No registration,
+                    The Crypto Vision News API is completely free to use. No registration,
                     no API keys, no authentication required. Just make HTTP requests
                     and get data back.
                   </p>

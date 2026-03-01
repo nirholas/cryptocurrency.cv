@@ -5,11 +5,29 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { NewsCardCompact } from "@/components/NewsCard";
 import DefiTable, { type DefiProtocol } from "@/components/DefiTable";
+import {
+  ChainDistributionChart,
+  CategoryBreakdown,
+  YieldRiskTable,
+  DexVolumeGrid,
+  BridgeVolumeTable,
+  StablecoinDominance,
+  type YieldPoolData,
+  type DexVolumeData,
+  type BridgeVolumeData,
+  type StablecoinEntry,
+} from "@/components/DefiCharts";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { getDefiNews, type NewsResponse } from "@/lib/crypto-news";
-import { getDefiSummary, type DefiSummary } from "@/lib/apis/defillama";
+import {
+  getDefiSummary,
+  getDexVolumes,
+  getStablecoins,
+  getBridges,
+  type DefiSummary,
+} from "@/lib/apis/defillama";
 import { getTopYields } from "@/lib/defi-yields";
 import { generateSEOMetadata } from "@/lib/seo";
 import { cn } from "@/lib/utils";
@@ -23,9 +41,9 @@ type Props = {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   return generateSEOMetadata({
-    title: "DeFi Dashboard — TVL, Yields, Protocols & News",
+    title: "DeFi Dashboard — TVL, Yields, Protocols, DEX & Bridge Data",
     description:
-      "Live DeFi dashboard with Total Value Locked, top yield opportunities, protocol rankings, DEX volumes, stablecoin data, and the latest DeFi news.",
+      "Comprehensive DeFi dashboard with live TVL rankings, yield risk scoring, protocol analytics, DEX volumes, bridge stats, stablecoin dominance, chain distribution, and the latest DeFi news.",
     path: "/defi",
     locale,
     tags: [
@@ -35,7 +53,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       "dex",
       "stablecoins",
       "protocols",
+      "bridges",
       "crypto",
+      "risk scoring",
     ],
   });
 }
@@ -61,17 +81,29 @@ function StatCard({
   label,
   value,
   sub,
+  icon,
+  accent,
 }: {
   label: string;
   value: string;
   sub?: string;
+  icon?: string;
+  accent?: boolean;
 }) {
   return (
-    <Card>
+    <Card
+      className={cn(
+        accent &&
+          "ring-1 ring-[var(--color-accent)]/20 bg-[var(--color-accent)]/[0.03]"
+      )}
+    >
       <CardContent className="p-4 md:p-5">
-        <p className="text-xs font-semibold uppercase tracking-wider text-[var(--color-text-tertiary)] mb-1">
-          {label}
-        </p>
+        <div className="flex items-start justify-between gap-2">
+          <p className="text-[10px] font-semibold uppercase tracking-wider text-[var(--color-text-tertiary)] mb-1">
+            {label}
+          </p>
+          {icon && <span className="text-lg">{icon}</span>}
+        </div>
         <p className="text-xl md:text-2xl font-bold tabular-nums text-[var(--color-text-primary)]">
           {value}
         </p>
@@ -85,79 +117,45 @@ function StatCard({
   );
 }
 
-/* ── yield card ── */
+/* ── section heading ── */
 
-interface YieldCardProps {
-  symbol: string;
-  project: string;
-  chain: string;
-  apy: number;
-  tvlUsd: number;
-}
-
-const CHAIN_BADGE: Record<string, string> = {
-  Ethereum: "bg-blue-500/15 text-blue-400",
-  BSC: "bg-yellow-500/15 text-yellow-400",
-  Solana: "bg-purple-500/15 text-purple-400",
-  Arbitrum: "bg-sky-500/15 text-sky-400",
-  Polygon: "bg-violet-500/15 text-violet-400",
-  Avalanche: "bg-red-500/15 text-red-400",
-  Optimism: "bg-rose-500/15 text-rose-400",
-  Base: "bg-blue-500/15 text-blue-300",
-};
-
-function YieldCard({ symbol, project, chain, apy, tvlUsd }: YieldCardProps) {
+function SectionHeading({
+  title,
+  subtitle,
+  icon,
+}: {
+  title: string;
+  subtitle?: string;
+  icon?: string;
+}) {
   return (
-    <Card>
-      <CardContent className="p-4 md:p-5 flex flex-col gap-2">
-        <div className="flex items-start justify-between gap-2">
-          <div className="min-w-0">
-            <p className="font-semibold text-[var(--color-text-primary)] truncate">
-              {symbol}
-            </p>
-            <p className="text-xs text-[var(--color-text-secondary)]">
-              {project}
-            </p>
-          </div>
-          <div className="text-right shrink-0">
-            <p className="text-lg font-bold tabular-nums text-green-500">
-              {apy.toFixed(2)}%
-            </p>
-            <p className="text-[10px] uppercase tracking-wider text-[var(--color-text-tertiary)]">
-              APY
-            </p>
-          </div>
-        </div>
-        <div className="flex items-center gap-2 flex-wrap">
-          <span
-            className={cn(
-              "inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-medium",
-              CHAIN_BADGE[chain] ?? "bg-gray-500/15 text-gray-400"
-            )}
-          >
-            {chain}
-          </span>
-          <span className="text-xs text-[var(--color-text-tertiary)] tabular-nums">
-            TVL {formatLargeNumber(tvlUsd)}
-          </span>
-          {apy > 100 && (
-            <Badge variant="breaking" className="text-[10px]">
-              ⚠ High Risk
-            </Badge>
-          )}
-        </div>
-      </CardContent>
-    </Card>
+    <div className="flex items-center gap-2 mb-4">
+      {icon && <span className="text-xl">{icon}</span>}
+      <div>
+        <h2 className="font-serif text-2xl font-bold text-[var(--color-text-primary)]">
+          {title}
+        </h2>
+        {subtitle && (
+          <p className="text-xs text-[var(--color-text-tertiary)] mt-0.5">
+            {subtitle}
+          </p>
+        )}
+      </div>
+    </div>
   );
 }
 
 /* ── quick links ── */
 
 const QUICK_LINKS = [
-  { label: "DEX Volumes", href: "/api/defi/dex-volumes", icon: "📊" },
-  { label: "Bridge Stats", href: "/api/defi/bridges", icon: "🌉" },
-  { label: "Stablecoin Data", href: "/api/defi/stablecoins", icon: "💵" },
+  { label: "Full Yield Explorer", href: "/api/defi/yields", icon: "🌾" },
+  { label: "DEX Volumes API", href: "/api/defi/dex-volumes", icon: "📊" },
+  { label: "Bridge Data API", href: "/api/defi/bridges", icon: "🌉" },
+  { label: "Stablecoin API", href: "/api/defi/stablecoins", icon: "💵" },
+  { label: "Protocol Health", href: "/api/defi/protocol-health", icon: "🩺" },
   { label: "Gas Tracker", href: "/gas", icon: "⛽" },
+  { label: "DeFi News Feed", href: "/api/defi", icon: "📰" },
+  { label: "DeFi Summary API", href: "/api/defi/summary", icon: "📋" },
 ];
 
 /* ── page ── */
@@ -166,11 +164,21 @@ export default async function DefiPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
 
-  /* fetch all data in parallel */
-  const [summaryResult, yieldsResult, newsResult] = await Promise.allSettled([
+  /* ── fetch all data in parallel ── */
+  const [
+    summaryResult,
+    yieldsResult,
+    newsResult,
+    dexResult,
+    stableResult,
+    bridgeResult,
+  ] = await Promise.allSettled([
     getDefiSummary(),
-    getTopYields({ limit: 10 }),
-    getDefiNews(6),
+    getTopYields({ limit: 20 }),
+    getDefiNews(9),
+    getDexVolumes(),
+    getStablecoins(),
+    getBridges(),
   ]);
 
   const summary: DefiSummary | null =
@@ -182,46 +190,89 @@ export default async function DefiPage({ params }: Props) {
   const newsData: NewsResponse | null =
     newsResult.status === "fulfilled" ? newsResult.value : null;
 
+  const dexVolumes =
+    dexResult.status === "fulfilled" ? dexResult.value : [];
+
+  const stablecoins =
+    stableResult.status === "fulfilled" ? stableResult.value : [];
+
+  const bridges =
+    bridgeResult.status === "fulfilled" ? bridgeResult.value : [];
+
   const articles = newsData?.articles ?? [];
 
-  /* derive stats */
-  const stats = summary
-    ? [
-        {
-          label: "Total DeFi TVL",
-          value: formatLargeNumber(summary.totalTvl),
-          sub: `${formatPct(summary.totalTvlChange24h)} (24h)`,
-        },
-        {
-          label: "DEX Volume (24h)",
-          value: formatLargeNumber(summary.dexVolume24h),
-        },
-        {
-          label: "Stablecoin Market Cap",
-          value: formatLargeNumber(summary.stablecoinSupply),
-        },
-        {
-          label: "Active Protocols",
-          value: summary.totalProtocols.toLocaleString(),
-        },
-        {
-          label: "Top Yield %",
-          value:
-            yields.length > 0
-              ? `${yields[0].apy.toFixed(1)}%`
-              : "—",
-          sub: yields.length > 0 ? yields[0].symbol : undefined,
-        },
-        {
-          label: "Number of Chains",
-          value: Object.keys(summary.chainDistribution).length.toString(),
-        },
-      ]
-    : [];
+  /* ── derive stats ── */
+  const totalStablecoinMcap = stablecoins.reduce((sum, s) => {
+    const circulating = Object.values(s.circulating ?? {}).reduce(
+      (a, b) => a + b,
+      0
+    );
+    return sum + circulating;
+  }, 0);
 
-  /* protocols for table */
+  const totalDexVol24h = dexVolumes.reduce((s, d) => s + d.total24h, 0);
+  const totalBridgeVol24h = bridges.reduce(
+    (s, b) => s + b.lastDailyVolume,
+    0
+  );
+
+  const stats = [
+    {
+      label: "Total DeFi TVL",
+      value: summary ? formatLargeNumber(summary.totalTvl) : "—",
+      sub: summary ? `${formatPct(summary.totalTvlChange24h)} (24h)` : undefined,
+      icon: "🏦",
+      accent: true,
+    },
+    {
+      label: "DEX Volume (24h)",
+      value:
+        summary?.dexVolume24h
+          ? formatLargeNumber(summary.dexVolume24h)
+          : totalDexVol24h > 0
+            ? formatLargeNumber(totalDexVol24h)
+            : "—",
+      icon: "📊",
+    },
+    {
+      label: "Stablecoin Supply",
+      value:
+        summary?.stablecoinSupply
+          ? formatLargeNumber(summary.stablecoinSupply)
+          : totalStablecoinMcap > 0
+            ? formatLargeNumber(totalStablecoinMcap)
+            : "—",
+      icon: "💵",
+    },
+    {
+      label: "Active Protocols",
+      value: summary
+        ? summary.totalProtocols.toLocaleString()
+        : "—",
+      icon: "🔗",
+    },
+    {
+      label: "Bridge Volume (24h)",
+      value:
+        summary?.bridgeVolume24h
+          ? formatLargeNumber(summary.bridgeVolume24h)
+          : totalBridgeVol24h > 0
+            ? formatLargeNumber(totalBridgeVol24h)
+            : "—",
+      icon: "🌉",
+    },
+    {
+      label: "Chains Tracked",
+      value: summary
+        ? Object.keys(summary.chainDistribution).length.toString()
+        : "—",
+      icon: "⛓️",
+    },
+  ];
+
+  /* ── protocols for table ── */
   const protocols: DefiProtocol[] = (summary?.topProtocols ?? [])
-    .slice(0, 20)
+    .slice(0, 25)
     .map((p) => ({
       id: p.id,
       name: p.name,
@@ -231,78 +282,209 @@ export default async function DefiPage({ params }: Props) {
       category: p.category,
       tvl: p.tvl,
       tvlChange24h: p.tvlChange24h,
+      tvlChange7d: p.tvlChange7d,
+      mcap: p.mcap,
+      symbol: p.symbol,
       logo: p.logo,
       url: p.url,
+      twitter: p.twitter,
+      description: p.description,
+      audits: p.audits,
     }));
 
-  /* sort yields by apy desc */
-  const topYields = [...yields]
+  /* ── yields data for risk table ── */
+  const yieldPoolData: YieldPoolData[] = yields
     .sort((a, b) => b.apy - a.apy)
-    .slice(0, 10);
+    .slice(0, 20)
+    .map((y) => ({
+      pool: y.pool,
+      chain: y.chain,
+      project: y.project,
+      symbol: y.symbol,
+      tvlUsd: y.tvlUsd,
+      apy: y.apy,
+      apyBase: y.apyBase,
+      apyReward: y.apyReward,
+      stablecoin: y.stablecoin,
+      ilRisk: y.ilRisk,
+      exposure: y.exposure,
+      predictions: y.predictions ?? null,
+      sigma: y.sigma,
+      apyMean30d: y.apyMean30d,
+      volumeUsd1d: y.volumeUsd1d,
+    }));
+
+  /* ── DEX volume data ── */
+  const dexData: DexVolumeData[] = dexVolumes.map((d) => ({
+    name: d.name,
+    total24h: d.total24h,
+    total7d: d.total7d,
+    change_1d: d.change_1d,
+    change_7d: d.change_7d,
+    category: d.category,
+  }));
+
+  /* ── Bridge data ── */
+  const bridgeData: BridgeVolumeData[] = bridges.map((b) => ({
+    name: b.name,
+    displayName: b.displayName,
+    lastDailyVolume: b.lastDailyVolume,
+    weeklyVolume: b.weeklyVolume,
+    monthlyVolume: b.monthlyVolume,
+    chains: b.chains,
+  }));
+
+  /* ── Stablecoin data ── */
+  const stablecoinData: StablecoinEntry[] = stablecoins
+    .filter((s) => !s.delisted)
+    .map((s) => {
+      const marketCap = Object.values(s.circulating ?? {}).reduce(
+        (a, b) => a + b,
+        0
+      );
+      return {
+        name: s.name,
+        symbol: s.symbol,
+        marketCap,
+        price: s.price,
+        pegType: s.pegType,
+      };
+    })
+    .filter((s) => s.marketCap > 0)
+    .sort((a, b) => b.marketCap - a.marketCap);
+
+  /* ── data freshness ── */
+  const lastUpdated = summary?.timestamp
+    ? new Date(summary.timestamp).toLocaleString("en-US", {
+        month: "short",
+        day: "numeric",
+        hour: "2-digit",
+        minute: "2-digit",
+      })
+    : null;
 
   return (
     <>
       <Header />
-      <main className="container-main py-10 space-y-12">
-        {/* ── Hero ── */}
+      <main className="container-main py-10 space-y-14">
+        {/* ══════════ Hero ══════════ */}
         <section>
           <h1 className="font-serif text-3xl md:text-4xl font-bold mb-2 text-[var(--color-text-primary)]">
             🏦 DeFi Dashboard
           </h1>
-          <p className="text-[var(--color-text-secondary)] mb-8 max-w-2xl">
-            Real-time decentralized finance overview — Total Value Locked,
-            protocol rankings, top yield opportunities, DEX volumes, and the
-            latest DeFi news.
+          <p className="text-[var(--color-text-secondary)] max-w-2xl">
+            Comprehensive decentralized finance analytics — protocol rankings,
+            yield risk scoring, DEX volumes, bridge activity, stablecoin
+            dominance, and real-time DeFi news.
           </p>
+          {lastUpdated && (
+            <p className="text-[10px] text-[var(--color-text-tertiary)] mt-2">
+              Last updated: {lastUpdated} UTC
+            </p>
+          )}
         </section>
 
-        {/* ── 1. Stats Row ── */}
-        {stats.length > 0 && (
+        {/* ══════════ 1. Stats Row ══════════ */}
+        <section>
+          <div className="grid gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
+            {stats.map((s) => (
+              <StatCard key={s.label} {...s} />
+            ))}
+          </div>
+        </section>
+
+        {/* ══════════ 2. Chain & Category Distribution ══════════ */}
+        {summary && (
           <section>
-            <div className="grid gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
-              {stats.map((s) => (
-                <StatCard key={s.label} {...s} />
-              ))}
+            <SectionHeading
+              title="Market Breakdown"
+              subtitle="TVL distribution across chains and protocol categories"
+              icon="🗺️"
+            />
+            <div className="grid gap-6 lg:grid-cols-2">
+              {Object.keys(summary.chainDistribution).length > 0 && (
+                <ChainDistributionChart
+                  distribution={summary.chainDistribution}
+                />
+              )}
+              {Object.keys(summary.categoryDistribution).length > 0 && (
+                <CategoryBreakdown
+                  distribution={summary.categoryDistribution}
+                />
+              )}
             </div>
           </section>
         )}
 
-        {/* ── 2. Top Protocols Table ── */}
+        {/* ══════════ 3. Top Protocols Table ══════════ */}
         {protocols.length > 0 && (
           <section>
-            <h2 className="font-serif text-2xl font-bold mb-4 text-[var(--color-text-primary)]">
-              Top Protocols by TVL
-            </h2>
+            <SectionHeading
+              title="Top Protocols by TVL"
+              subtitle={`${protocols.length} protocols · Click a row to expand details`}
+              icon="🏆"
+            />
             <DefiTable protocols={protocols} />
           </section>
         )}
 
-        {/* ── 3. Top Yields ── */}
-        {topYields.length > 0 && (
+        {/* ══════════ 4. Yield Risk Table ══════════ */}
+        {yieldPoolData.length > 0 && (
           <section>
-            <h2 className="font-serif text-2xl font-bold mb-4 text-[var(--color-text-primary)]">
-              Top Yield Opportunities
-            </h2>
-            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
-              {topYields.map((y) => (
-                <YieldCard
-                  key={y.pool}
-                  symbol={y.symbol}
-                  project={y.project}
-                  chain={y.chain}
-                  apy={y.apy}
-                  tvlUsd={y.tvlUsd}
-                />
-              ))}
+            <SectionHeading
+              title="Yield Opportunities & Risk"
+              subtitle="AI-scored risk analysis across DeFi yield pools"
+              icon="🌾"
+            />
+            <YieldRiskTable pools={yieldPoolData} />
+          </section>
+        )}
+
+        {/* ══════════ 5. DEX Volumes ══════════ */}
+        {dexData.length > 0 && (
+          <section>
+            <SectionHeading
+              title="DEX Trading Volume"
+              subtitle="Top decentralized exchanges by 24-hour volume"
+              icon="📊"
+            />
+            <DexVolumeGrid dexes={dexData} />
+          </section>
+        )}
+
+        {/* ══════════ 6. Bridge Activity ══════════ */}
+        {bridgeData.length > 0 && (
+          <section>
+            <SectionHeading
+              title="Cross-Chain Bridges"
+              subtitle="Volume flowing between chains in the last 24 hours"
+              icon="🌉"
+            />
+            <BridgeVolumeTable bridges={bridgeData} />
+          </section>
+        )}
+
+        {/* ══════════ 7. Stablecoin Dominance ══════════ */}
+        {stablecoinData.length > 0 && (
+          <section>
+            <SectionHeading
+              title="Stablecoin Market"
+              subtitle="Market cap distribution and peg health"
+              icon="💵"
+            />
+            <div className="max-w-2xl">
+              <StablecoinDominance stablecoins={stablecoinData} />
             </div>
           </section>
         )}
 
-        {/* ── 4. DeFi News ── */}
+        {/* ══════════ 8. DeFi News ══════════ */}
         <section>
-          <h2 className="font-serif text-2xl font-bold mb-4 text-[var(--color-text-primary)]">
-            Latest DeFi News
-          </h2>
+          <SectionHeading
+            title="Latest DeFi News"
+            subtitle="Real-time news from top DeFi sources"
+            icon="📰"
+          />
           {articles.length === 0 ? (
             <p className="text-[var(--color-text-tertiary)] py-8 text-center">
               No DeFi articles available right now. Check back soon.
@@ -316,12 +498,12 @@ export default async function DefiPage({ params }: Props) {
           )}
         </section>
 
-        {/* ── 5. Quick Links ── */}
+        {/* ══════════ 9. Quick Links & API Explorer ══════════ */}
         <section>
           <Card>
             <CardHeader>
               <CardTitle className="font-serif text-lg">
-                Quick Links
+                🔗 Quick Links & API Explorer
               </CardTitle>
             </CardHeader>
             <CardContent className="flex flex-wrap gap-3">

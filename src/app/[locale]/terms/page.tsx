@@ -12,9 +12,9 @@ type Props = {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   return generateSEOMetadata({
-    title: "Terms of Service — Free Crypto News",
+    title: "Terms of Service — Crypto Vision News",
     description:
-      "Terms of service for Free Crypto News (cryptocurrency.cv). Usage guidelines for our free crypto news API, RSS feeds, and website.",
+      "Terms of service for Crypto Vision News (cryptocurrency.cv). Usage guidelines for our free crypto news API, RSS feeds, and website.",
     path: "/terms",
     locale,
     tags: ["terms of service", "usage policy", "legal", "API terms", "crypto news terms"],
@@ -70,7 +70,7 @@ export default async function TermsPage({ params }: Props) {
             <div className="prose dark:prose-invert max-w-none text-[var(--color-text-secondary)] leading-relaxed [&_a]:text-[var(--color-accent)] [&_a]:underline [&_a]:hover:opacity-80 [&_h2]:text-[var(--color-text-primary)] [&_h3]:text-[var(--color-text-primary)] [&_strong]:text-[var(--color-text-primary)] print:text-black">
               <p className="text-lg mb-8">
                 These Terms of Service (&ldquo;Terms&rdquo;) govern your access
-                to and use of Free Crypto News, operating at{" "}
+                to and use of Crypto Vision, operating at{" "}
                 <strong>cryptocurrency.cv</strong> (&ldquo;FCN&rdquo;,
                 &ldquo;we&rdquo;, &ldquo;us&rdquo;, &ldquo;our&rdquo;),
                 including our website, API, RSS feeds, widgets, SDKs, and all
@@ -202,7 +202,7 @@ export default async function TermsPage({ params }: Props) {
                 </h3>
                 <p>
                   When using our API data in public-facing applications, we
-                  appreciate (but do not require) attribution to Free Crypto News
+                  appreciate (but do not require) attribution to Crypto Vision News
                   (cryptocurrency.cv). Original news content must be attributed
                   to its respective publisher.
                 </p>
@@ -284,7 +284,7 @@ export default async function TermsPage({ params }: Props) {
                   Trademarks
                 </h3>
                 <p>
-                  &ldquo;Free Crypto News&rdquo;, &ldquo;cryptocurrency.cv&rdquo;,
+                  &ldquo;Crypto Vision News&rdquo;, &ldquo;cryptocurrency.cv&rdquo;,
                   and our logo are service marks of FCN. You may not use these
                   marks in a way that suggests endorsement or affiliation
                   without our written consent.

@@ -1,6 +1,7 @@
 import { Link } from "@/i18n/navigation";
 import FooterNewsletter from "@/components/FooterNewsletter";
 import LanguageSelector from "@/components/LanguageSelector";
+import BackToTop from "@/components/BackToTop";
 
 const FOOTER_SECTIONS = [
   {
@@ -12,6 +13,7 @@ const FOOTER_SECTIONS = [
       { label: "NFTs", href: "/category/nft" },
       { label: "Regulation", href: "/category/regulation" },
       { label: "Altcoins", href: "/category/altcoins" },
+      { label: "Solana", href: "/category/solana" },
     ],
   },
   {
@@ -22,16 +24,19 @@ const FOOTER_SECTIONS = [
       { label: "Heatmap", href: "/heatmap" },
       { label: "Screener", href: "/screener" },
       { label: "Gas Tracker", href: "/gas" },
+      { label: "Calculator", href: "/calculator" },
+      { label: "Compare", href: "/compare" },
     ],
   },
   {
     title: "Tools",
     links: [
       { label: "API Documentation", href: "/developers" },
-      { label: "Calculator", href: "/calculator" },
-      { label: "Compare", href: "/compare" },
       { label: "Sources", href: "/sources" },
       { label: "RSS Feed", href: "/api/rss" },
+      { label: "Watchlist", href: "/watchlist" },
+      { label: "Portfolio", href: "/portfolio" },
+      { label: "Bookmarks", href: "/bookmarks" },
     ],
   },
   {
@@ -39,8 +44,10 @@ const FOOTER_SECTIONS = [
     links: [
       { label: "About", href: "/about" },
       { label: "Contact", href: "/contact" },
+      { label: "Pricing", href: "/pricing" },
       { label: "Privacy", href: "/privacy" },
       { label: "Terms", href: "/terms" },
+      { label: "Learn", href: "/learn" },
     ],
   },
 ];

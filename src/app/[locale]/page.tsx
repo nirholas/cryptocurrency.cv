@@ -46,7 +46,7 @@ type Props = {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   return generateSEOMetadata({
-    title: "Free Crypto News — Real-Time Cryptocurrency News Aggregator",
+    title: "Crypto Vision News — Free Real-Time Crypto News API",
     description:
       "100% free crypto news API. No API keys. No rate limits. Real-time cryptocurrency news aggregation from 200+ sources covering Bitcoin, Ethereum, DeFi, Solana & altcoins.",
     path: "",

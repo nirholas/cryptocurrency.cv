@@ -1,19 +1,47 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useCallback, useEffect, useRef } from "react";
 import { Badge, categoryToBadgeVariant } from "@/components/ui/Badge";
 import { cn } from "@/lib/utils";
 import type { SourceInfo } from "@/lib/crypto-news";
 
+/* ─── Types ─── */
 interface SourcesGridProps {
   sources: SourceInfo[];
 }
 
+type ViewMode = "grid" | "list";
+type SortMode = "alpha" | "status" | "category";
+type StatusFilter = "all" | "active" | "unavailable" | "unknown";
+
 const ALL_CATEGORY = "all";
 
+/* ─── Main Component ─── */
 export default function SourcesGrid({ sources }: SourcesGridProps) {
   const [search, setSearch] = useState("");
   const [activeCategory, setActiveCategory] = useState(ALL_CATEGORY);
+  const [viewMode, setViewMode] = useState<ViewMode>("grid");
+  const [sortMode, setSortMode] = useState<SortMode>("alpha");
+  const [statusFilter, setStatusFilter] = useState<StatusFilter>("all");
+  const [collapsedSections, setCollapsedSections] = useState<Set<string>>(new Set());
+  const [copiedUrl, setCopiedUrl] = useState<string | null>(null);
+  const searchRef = useRef<HTMLInputElement>(null);
+
+  // Keyboard shortcut: Cmd/Ctrl+F to focus search
+  useEffect(() => {
+    const handler = (e: KeyboardEvent) => {
+      if ((e.metaKey || e.ctrlKey) && e.key === "f") {
+        e.preventDefault();
+        searchRef.current?.focus();
+      }
+      if (e.key === "Escape") {
+        setSearch("");
+        searchRef.current?.blur();
+      }
+    };
+    window.addEventListener("keydown", handler);
+    return () => window.removeEventListener("keydown", handler);
+  }, []);
 
   // Derive unique sorted categories
   const categories = useMemo(() => {
@@ -21,25 +49,61 @@ export default function SourcesGrid({ sources }: SourcesGridProps) {
     return Array.from(cats).sort();
   }, [sources]);
 
-  // Filter sources by search + category
+  // Status counts
+  const statusCounts = useMemo(() => {
+    const counts = { active: 0, unavailable: 0, unknown: 0 };
+    for (const s of sources) {
+      if (s.status === "active") counts.active++;
+      else if (s.status === "unavailable") counts.unavailable++;
+      else counts.unknown++;
+    }
+    return counts;
+  }, [sources]);
+
+  // Filter & sort sources
   const filtered = useMemo(() => {
     let result = sources;
+
+    // Status filter
+    if (statusFilter !== "all") {
+      result = result.filter((s) => s.status === statusFilter);
+    }
+
+    // Category filter
     if (activeCategory !== ALL_CATEGORY) {
       result = result.filter(
         (s) => (s.category || "other") === activeCategory
       );
     }
+
+    // Search filter
     if (search.trim()) {
       const q = search.toLowerCase();
       result = result.filter(
         (s) =>
           s.name.toLowerCase().includes(q) ||
           s.url.toLowerCase().includes(q) ||
-          s.key.toLowerCase().includes(q)
+          s.key.toLowerCase().includes(q) ||
+          s.category.toLowerCase().includes(q)
       );
     }
+
+    // Sort
+    result = [...result].sort((a, b) => {
+      if (sortMode === "status") {
+        const order = { active: 0, unknown: 1, unavailable: 2 };
+        const diff = order[a.status] - order[b.status];
+        if (diff !== 0) return diff;
+      }
+      if (sortMode === "category") {
+        const diff = (a.category || "other").localeCompare(b.category || "other");
+        if (diff !== 0) return diff;
+      }
+      return a.name.localeCompare(b.name);
+    });
+
     return result;
-  }, [sources, activeCategory, search]);
+  }, [sources, activeCategory, search, statusFilter, sortMode]);
 
   // Group filtered sources by category
   const grouped = useMemo(() => {
@@ -54,32 +118,179 @@ export default function SourcesGrid({ sources }: SourcesGridProps) {
 
   const sortedGroups = Object.keys(grouped).sort();
 
+  const toggleSection = useCallback((cat: string) => {
+    setCollapsedSections((prev) => {
+      const next = new Set(prev);
+      if (next.has(cat)) next.delete(cat);
+      else next.add(cat);
+      return next;
+    });
+  }, []);
+
+  const expandAll = useCallback(() => setCollapsedSections(new Set()), []);
+  const collapseAll = useCallback(
+    () => setCollapsedSections(new Set(sortedGroups)),
+    [sortedGroups]
+  );
+
+  const copyUrl = useCallback((url: string) => {
+    const fullUrl = url.startsWith("http") ? url : `https://${url}`;
+    navigator.clipboard.writeText(fullUrl);
+    setCopiedUrl(url);
+    setTimeout(() => setCopiedUrl(null), 2000);
+  }, []);
+
+  // Export as JSON
+  const exportJSON = useCallback(() => {
+    const data = filtered.map(({ key, name, url, category, status }) => ({
+      key, name, url, category, status,
+    }));
+    const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = "crypto-news-sources.json";
+    a.click();
+    URL.revokeObjectURL(a.href);
+  }, [filtered]);
+
+  // Export as CSV
+  const exportCSV = useCallback(() => {
+    const header = "Key,Name,URL,Category,Status\n";
+    const rows = filtered
+      .map((s) => `"${s.key}","${s.name}","${s.url}","${s.category}","${s.status}"`)
+      .join("\n");
+    const blob = new Blob([header + rows], { type: "text/csv" });
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = "crypto-news-sources.csv";
+    a.click();
+    URL.revokeObjectURL(a.href);
+  }, [filtered]);
+
   return (
     <div>
-      {/* Search + Filter Bar */}
-      <div className="mb-8 space-y-4">
-        {/* Search Input */}
-        <div className="relative max-w-md">
-          <svg
-            className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-[var(--color-text-tertiary)]"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            strokeWidth={2}
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+      {/* Toolbar */}
+      <div className="mb-6 space-y-4">
+        {/* Search + Controls Row */}
+        <div className="flex flex-col sm:flex-row gap-3">
+          {/* Search Input */}
+          <div className="relative flex-1 max-w-lg">
+            <svg
+              className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-[var(--color-text-tertiary)]"
+              fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+            <input
+              ref={searchRef}
+              type="text"
+              placeholder="Search sources... (⌘F)"
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              className="w-full rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] py-2.5 pl-10 pr-10 text-sm text-[var(--color-text-primary)] placeholder-[var(--color-text-tertiary)] outline-none focus:border-[var(--color-accent)] focus:ring-1 focus:ring-[var(--color-accent)] transition-colors"
             />
-          </svg>
-          <input
-            type="text"
-            placeholder="Search sources..."
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-            className="w-full rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] py-2.5 pl-10 pr-4 text-sm text-[var(--color-text-primary)] placeholder-[var(--color-text-tertiary)] outline-none focus:border-[var(--color-accent)] focus:ring-1 focus:ring-[var(--color-accent)] transition-colors"
-          />
+            {search && (
+              <button
+                onClick={() => setSearch("")}
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-[var(--color-text-tertiary)] hover:text-[var(--color-text-primary)] transition-colors"
+              >
+                <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            )}
+          </div>
+
+          {/* View / Sort / Export Controls */}
+          <div className="flex items-center gap-2">
+            {/* View Toggle */}
+            <div className="flex rounded-lg border border-[var(--color-border)] overflow-hidden">
+              <button
+                onClick={() => setViewMode("grid")}
+                className={cn(
+                  "p-2 transition-colors",
+                  viewMode === "grid"
+                    ? "bg-[var(--color-accent)] text-white"
+                    : "bg-[var(--color-surface)] text-[var(--color-text-tertiary)] hover:text-[var(--color-text-primary)]"
+                )}
+                title="Grid view"
+              >
+                <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+                </svg>
+              </button>
+              <button
+                onClick={() => setViewMode("list")}
+                className={cn(
+                  "p-2 transition-colors",
+                  viewMode === "list"
+                    ? "bg-[var(--color-accent)] text-white"
+                    : "bg-[var(--color-surface)] text-[var(--color-text-tertiary)] hover:text-[var(--color-text-primary)]"
+                )}
+                title="List view"
+              >
+                <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              </button>
+            </div>
+
+            {/* Sort Dropdown */}
+            <select
+              value={sortMode}
+              onChange={(e) => setSortMode(e.target.value as SortMode)}
+              className="rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] px-3 py-2 text-xs text-[var(--color-text-secondary)] outline-none focus:border-[var(--color-accent)]"
+            >
+              <option value="alpha">A → Z</option>
+              <option value="status">By Status</option>
+              <option value="category">By Category</option>
+            </select>
+
+            {/* Export */}
+            <div className="relative group">
+              <button className="rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] p-2 text-[var(--color-text-tertiary)] hover:text-[var(--color-text-primary)] transition-colors" title="Export sources">
+                <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                </svg>
+              </button>
+              <div className="absolute right-0 top-full mt-1 hidden group-hover:block z-20">
+                <div className="rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] shadow-lg py-1 min-w-[120px]">
+                  <button onClick={exportJSON} className="block w-full text-left px-4 py-2 text-xs text-[var(--color-text-secondary)] hover:bg-[var(--color-surface-secondary)] transition-colors">
+                    Export JSON
+                  </button>
+                  <button onClick={exportCSV} className="block w-full text-left px-4 py-2 text-xs text-[var(--color-text-secondary)] hover:bg-[var(--color-surface-secondary)] transition-colors">
+                    Export CSV
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Status Filter Pills */}
+        <div className="flex flex-wrap gap-2">
+          {(
+            [
+              { key: "all" as StatusFilter, label: "All", count: sources.length },
+              { key: "active" as StatusFilter, label: "Active", count: statusCounts.active, dotColor: "bg-green-500" },
+              { key: "unavailable" as StatusFilter, label: "Down", count: statusCounts.unavailable, dotColor: "bg-red-500" },
+              { key: "unknown" as StatusFilter, label: "Unknown", count: statusCounts.unknown, dotColor: "bg-yellow-500" },
+            ] as const
+          ).map(({ key, label, count, dotColor }) => (
+            <button
+              key={key}
+              onClick={() => setStatusFilter(key)}
+              className={cn(
+                "rounded-full px-3 py-1 text-xs font-medium transition-colors border flex items-center gap-1.5",
+                statusFilter === key
+                  ? "bg-[var(--color-accent)] text-white border-[var(--color-accent)]"
+                  : "bg-[var(--color-surface-secondary)] text-[var(--color-text-secondary)] border-[var(--color-border)] hover:border-[var(--color-border-hover)]"
+              )}
+            >
+              {dotColor && <span className={cn("h-1.5 w-1.5 rounded-full", dotColor)} />}
+              {label} ({count})
+            </button>
+          ))}
         </div>
 
         {/* Category Filter Pills */}
@@ -93,7 +304,7 @@ export default function SourcesGrid({ sources }: SourcesGridProps) {
                 : "bg-[var(--color-surface-secondary)] text-[var(--color-text-secondary)] border-[var(--color-border)] hover:border-[var(--color-border-hover)]"
             )}
           >
-            All ({sources.length})
+            All Categories
           </button>
           {categories.map((cat) => {
             const count = sources.filter(
@@ -117,127 +328,283 @@ export default function SourcesGrid({ sources }: SourcesGridProps) {
         </div>
       </div>
 
-      {/* Results Count */}
-      <p className="text-sm text-[var(--color-text-tertiary)] mb-6">
-        Showing {filtered.length} of {sources.length} sources
-      </p>
+      {/* Results Info Bar */}
+      <div className="flex items-center justify-between mb-6">
+        <p className="text-sm text-[var(--color-text-tertiary)]">
+          Showing <span className="font-semibold text-[var(--color-text-primary)]">{filtered.length}</span> of {sources.length} sources
+          {search && (
+            <> matching &quot;<span className="text-[var(--color-accent)]">{search}</span>&quot;</>
+          )}
+        </p>
+        {sortedGroups.length > 1 && (
+          <div className="flex items-center gap-2 text-xs">
+            <button onClick={expandAll} className="text-[var(--color-accent)] hover:underline">
+              Expand all
+            </button>
+            <span className="text-[var(--color-text-tertiary)]">·</span>
+            <button onClick={collapseAll} className="text-[var(--color-accent)] hover:underline">
+              Collapse all
+            </button>
+          </div>
+        )}
+      </div>
 
-      {/* Sources Grid */}
+      {/* Sources Grid / List */}
       {filtered.length === 0 ? (
-        <div className="py-16 text-center">
+        <div className="py-16 text-center rounded-xl border border-dashed border-[var(--color-border)] bg-[var(--color-surface-secondary)]">
+          <svg className="mx-auto h-10 w-10 text-[var(--color-text-tertiary)] mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
           <p className="text-[var(--color-text-tertiary)] text-lg">
-            No sources match your search.
+            No sources match your filters.
           </p>
           <button
-            onClick={() => {
-              setSearch("");
-              setActiveCategory(ALL_CATEGORY);
-            }}
-            className="mt-3 text-sm text-[var(--color-accent)] hover:underline"
+            onClick={() => { setSearch(""); setActiveCategory(ALL_CATEGORY); setStatusFilter("all"); }}
+            className="mt-3 inline-flex items-center gap-1.5 text-sm text-[var(--color-accent)] hover:underline"
           >
-            Clear filters
+            <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+            </svg>
+            Reset all filters
           </button>
         </div>
       ) : (
-        <div className="space-y-10">
-          {sortedGroups.map((cat) => (
-            <section key={cat}>
-              <h2 className="font-serif text-xl font-bold mb-4 text-[var(--color-text-primary)] capitalize flex items-center gap-2">
-                {cat}
-                <span className="text-sm font-normal text-[var(--color-text-tertiary)]">
-                  ({grouped[cat].length})
-                </span>
-              </h2>
-              <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-                {grouped[cat].map((source) => (
-                  <SourceCard key={source.key} source={source} />
-                ))}
-              </div>
-            </section>
-          ))}
+        <div className="space-y-8">
+          {sortedGroups.map((cat) => {
+            const isCollapsed = collapsedSections.has(cat);
+            const catSources = grouped[cat];
+            const activeInCat = catSources.filter((s) => s.status === "active").length;
+
+            return (
+              <section key={cat}>
+                {/* Category Header (collapsible) */}
+                <button
+                  onClick={() => toggleSection(cat)}
+                  className="w-full flex items-center gap-3 mb-4 group cursor-pointer"
+                >
+                  <h2 className="font-serif text-xl font-bold text-[var(--color-text-primary)] capitalize">
+                    {cat}
+                  </h2>
+                  <span className="text-sm font-normal text-[var(--color-text-tertiary)]">
+                    {catSources.length} sources · {activeInCat} active
+                  </span>
+                  {/* Health bar mini */}
+                  <div className="hidden sm:flex items-center gap-1 ml-2">
+                    <div className="h-1.5 rounded-full bg-[var(--color-surface-tertiary)] w-20 overflow-hidden">
+                      <div
+                        className="h-full bg-green-500 rounded-full transition-all"
+                        style={{ width: `${catSources.length > 0 ? (activeInCat / catSources.length) * 100 : 0}%` }}
+                      />
+                    </div>
+                    <span className="text-[10px] text-[var(--color-text-tertiary)]">
+                      {catSources.length > 0 ? Math.round((activeInCat / catSources.length) * 100) : 0}%
+                    </span>
+                  </div>
+                  <span className="ml-auto">
+                    <svg
+                      className={cn("h-4 w-4 text-[var(--color-text-tertiary)] transition-transform", isCollapsed ? "" : "rotate-180")}
+                      fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </span>
+                </button>
+
+                {/* Collapsible Content */}
+                {!isCollapsed && (
+                  viewMode === "grid" ? (
+                    <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                      {catSources.map((source) => (
+                        <SourceCard key={source.key} source={source} onCopy={copyUrl} copiedUrl={copiedUrl} />
+                      ))}
+                    </div>
+                  ) : (
+                    <div className="rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] overflow-hidden">
+                      <div className="divide-y divide-[var(--color-border)]">
+                        {catSources.map((source) => (
+                          <SourceListRow key={source.key} source={source} onCopy={copyUrl} copiedUrl={copiedUrl} />
+                        ))}
+                      </div>
+                    </div>
+                  )
+                )}
+              </section>
+            );
+          })}
         </div>
       )}
     </div>
   );
 }
 
-function SourceCard({ source }: { source: SourceInfo }) {
-  const domain = (() => {
-    try {
-      return new URL(
-        source.url.startsWith("http") ? source.url : `https://${source.url}`
-      ).hostname;
-    } catch {
-      return source.url;
-    }
-  })();
-
-  const href = source.url.startsWith("http")
-    ? source.url
-    : `https://${source.url}`;
+/* ─── Source Card (Grid View) ─── */
+function SourceCard({
+  source, onCopy, copiedUrl,
+}: {
+  source: SourceInfo;
+  onCopy: (url: string) => void;
+  copiedUrl: string | null;
+}) {
+  const [imgError, setImgError] = useState(false);
+  const domain = getDomain(source.url);
+  const href = getHref(source.url);
+  const isCopied = copiedUrl === source.url;
 
   return (
-    <a
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="group flex items-start gap-3 rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] px-4 py-3.5 transition-all hover:border-[var(--color-border-hover)] hover:shadow-md"
-    >
-      {/* Favicon */}
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        src={`https://www.google.com/s2/favicons?domain=${domain}&sz=32`}
-        alt=""
-        width={20}
-        height={20}
-        className="mt-0.5 shrink-0 rounded"
-        loading="lazy"
-      />
-
-      <div className="min-w-0 flex-1">
-        <div className="flex items-center gap-2">
-          {/* Status indicator */}
-          <span
-            className={cn(
-              "h-2 w-2 shrink-0 rounded-full",
-              source.status === "active"
-                ? "bg-green-500"
-                : source.status === "unavailable"
-                  ? "bg-red-500"
-                  : "bg-yellow-500"
-            )}
+    <div className="group relative rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] px-4 py-3.5 transition-all hover:border-[var(--color-border-hover)] hover:shadow-md">
+      <a href={href} target="_blank" rel="noopener noreferrer" className="flex items-start gap-3">
+        {imgError ? (
+          <FaviconFallback name={source.name} />
+        ) : (
+          /* eslint-disable-next-line @next/next/no-img-element */
+          <img
+            src={`https://www.google.com/s2/favicons?domain=${domain}&sz=32`}
+            alt="" width={20} height={20}
+            className="mt-0.5 shrink-0 rounded" loading="lazy"
+            onError={() => setImgError(true)}
           />
-          <p className="text-sm font-medium text-[var(--color-text-primary)] truncate group-hover:text-[var(--color-accent)] transition-colors">
-            {source.name}
-          </p>
+        )}
+        <div className="min-w-0 flex-1">
+          <div className="flex items-center gap-2">
+            <span
+              className={cn(
+                "h-2 w-2 shrink-0 rounded-full",
+                source.status === "active" ? "bg-green-500" : source.status === "unavailable" ? "bg-red-500" : "bg-yellow-500"
+              )}
+              title={source.status}
+            />
+            <p className="text-sm font-medium text-[var(--color-text-primary)] truncate group-hover:text-[var(--color-accent)] transition-colors">
+              {source.name}
+            </p>
+          </div>
+          <p className="text-xs text-[var(--color-text-tertiary)] truncate mt-0.5">{domain}</p>
         </div>
-        <p className="text-xs text-[var(--color-text-tertiary)] truncate mt-0.5">
-          {domain}
-        </p>
+        <Badge variant={categoryToBadgeVariant(source.category)} className="shrink-0 mt-0.5">
+          {source.category}
+        </Badge>
+      </a>
+
+      {/* Hover action buttons */}
+      <div className="absolute right-2 top-2 hidden group-hover:flex items-center gap-1">
+        <button
+          onClick={(e) => { e.preventDefault(); onCopy(source.url); }}
+          className="rounded-md p-1 bg-[var(--color-surface-secondary)] border border-[var(--color-border)] text-[var(--color-text-tertiary)] hover:text-[var(--color-text-primary)] transition-colors"
+          title={isCopied ? "Copied!" : "Copy URL"}
+        >
+          {isCopied ? (
+            <svg className="h-3 w-3 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+            </svg>
+          ) : (
+            <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+            </svg>
+          )}
+        </button>
+        <a
+          href={href} target="_blank" rel="noopener noreferrer"
+          className="rounded-md p-1 bg-[var(--color-surface-secondary)] border border-[var(--color-border)] text-[var(--color-text-tertiary)] hover:text-[var(--color-text-primary)] transition-colors"
+          title="Open in new tab"
+        >
+          <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+          </svg>
+        </a>
       </div>
-
-      {/* Category Badge */}
-      <Badge
-        variant={categoryToBadgeVariant(source.category)}
-        className="shrink-0 mt-0.5"
-      >
-        {source.category}
-      </Badge>
-
-      {/* External link icon */}
-      <svg
-        className="h-3.5 w-3.5 shrink-0 mt-1 text-[var(--color-text-tertiary)] opacity-0 group-hover:opacity-100 transition-opacity"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-        strokeWidth={2}
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-        />
-      </svg>
-    </a>
+    </div>
   );
+}
+
+/* ─── Source List Row (List View) ─── */
+function SourceListRow({
+  source, onCopy, copiedUrl,
+}: {
+  source: SourceInfo;
+  onCopy: (url: string) => void;
+  copiedUrl: string | null;
+}) {
+  const [imgError, setImgError] = useState(false);
+  const domain = getDomain(source.url);
+  const href = getHref(source.url);
+  const isCopied = copiedUrl === source.url;
+
+  return (
+    <div className="group flex items-center gap-4 px-4 py-3 hover:bg-[var(--color-surface-secondary)] transition-colors">
+      <span
+        className={cn(
+          "h-2 w-2 shrink-0 rounded-full",
+          source.status === "active" ? "bg-green-500" : source.status === "unavailable" ? "bg-red-500" : "bg-yellow-500"
+        )}
+        title={source.status}
+      />
+      {imgError ? (
+        <FaviconFallback name={source.name} />
+      ) : (
+        /* eslint-disable-next-line @next/next/no-img-element */
+        <img
+          src={`https://www.google.com/s2/favicons?domain=${domain}&sz=32`}
+          alt="" width={16} height={16}
+          className="shrink-0 rounded" loading="lazy"
+          onError={() => setImgError(true)}
+        />
+      )}
+      <a
+        href={href} target="_blank" rel="noopener noreferrer"
+        className="text-sm font-medium text-[var(--color-text-primary)] hover:text-[var(--color-accent)] transition-colors truncate min-w-0 flex-1"
+      >
+        {source.name}
+      </a>
+      <span className="hidden md:block text-xs text-[var(--color-text-tertiary)] truncate max-w-[200px]">{domain}</span>
+      <Badge variant={categoryToBadgeVariant(source.category)} className="shrink-0">{source.category}</Badge>
+      <div className="flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+        <button
+          onClick={() => onCopy(source.url)}
+          className="rounded p-1 text-[var(--color-text-tertiary)] hover:text-[var(--color-text-primary)] transition-colors"
+          title={isCopied ? "Copied!" : "Copy URL"}
+        >
+          {isCopied ? (
+            <svg className="h-3.5 w-3.5 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+            </svg>
+          ) : (
+            <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+            </svg>
+          )}
+        </button>
+        <a
+          href={href} target="_blank" rel="noopener noreferrer"
+          className="rounded p-1 text-[var(--color-text-tertiary)] hover:text-[var(--color-text-primary)] transition-colors"
+          title="Open"
+        >
+          <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  );
+}
+
+/* ─── Favicon Fallback ─── */
+function FaviconFallback({ name }: { name: string }) {
+  const letter = name.charAt(0).toUpperCase();
+  return (
+    <div className="mt-0.5 flex h-5 w-5 items-center justify-center rounded bg-[var(--color-surface-tertiary)] text-[10px] font-bold text-[var(--color-text-secondary)] shrink-0">
+      {letter}
+    </div>
+  );
+}
+
+/* ─── Helpers ─── */
+function getDomain(url: string): string {
+  try {
+    return new URL(url.startsWith("http") ? url : `https://${url}`).hostname;
+  } catch {
+    return url;
+  }
+}
+
+function getHref(url: string): string {
+  return url.startsWith("http") ? url : `https://${url}`;
 }
