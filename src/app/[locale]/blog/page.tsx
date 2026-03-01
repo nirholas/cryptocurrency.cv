@@ -90,7 +90,7 @@ function getBlogPosts(): BlogPost[] {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   return generateSEOMetadata({
-    title: "Blog — Free Crypto News",
+    title: "Blog — Crypto Vision News",
     description:
       "In-depth articles, guides, and analysis on Bitcoin, Ethereum, DeFi, trading strategies, and the crypto ecosystem.",
     path: "/blog",

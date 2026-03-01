@@ -22,7 +22,7 @@ type Props = {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   return generateSEOMetadata({
-    title: "Learn Crypto — Free Crypto News",
+    title: "Learn Crypto — Crypto Vision News",
     description:
       "Learn the basics of cryptocurrency, blockchain, Bitcoin, Ethereum, DeFi, and Web3. Beginner-friendly guides and educational content.",
     path: "/learn",

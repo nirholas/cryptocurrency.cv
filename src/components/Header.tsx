@@ -350,10 +350,19 @@ export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [searchOpen, setSearchOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const { resolvedTheme, setTheme } = useTheme();
 
   const toggleTheme = () =>
     setTheme(resolvedTheme === "dark" ? "light" : "dark");
+
+  // Scroll-aware header
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 10);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   // Cmd+K / Ctrl+K global shortcut
   useEffect(() => {
@@ -374,26 +383,44 @@ export default function Header() {
     return () => document.removeEventListener("fcn:open-search", handler);
   }, []);
 
+  // Close mobile menu on window resize past lg breakpoint
+  useEffect(() => {
+    const handler = () => { if (window.innerWidth >= 1024) setMobileOpen(false); };
+    window.addEventListener("resize", handler);
+    return () => window.removeEventListener("resize", handler);
+  }, []);
+
   return (
     <>
       {/* Live Price Ticker */}
       <PriceTickerStrip />
 
-      <header className="sticky top-0 z-50 border-b border-[var(--color-border)] bg-[var(--color-surface)]/95 backdrop-blur-sm">
-      <div className="container-main flex h-16 items-center justify-between gap-4">
+      <header
+        className={cn(
+          "sticky top-0 z-50 border-b border-[var(--color-border)] bg-[var(--color-surface)]/95 backdrop-blur-sm transition-all duration-200",
+          scrolled && "shadow-sm",
+        )}
+      >
+      <div className={cn(
+        "container-main flex items-center justify-between gap-4 transition-all duration-200",
+        scrolled ? "h-14" : "h-16",
+      )}>
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 shrink-0">
-          <span className="text-xl font-bold tracking-tight">
-            <span className="text-[#3b82f6]">C</span>
-            <span>V</span>
+        <Link href="/" className="flex items-center gap-2 shrink-0 group">
+          <span className={cn(
+            "font-bold tracking-tight transition-all duration-200",
+            scrolled ? "text-lg" : "text-xl",
+          )}>
+            <span className="text-[#f7931a] group-hover:text-[#e8850f] transition-colors">F</span>
+            <span>CN</span>
           </span>
           <span className="hidden sm:block text-xs font-medium text-[var(--color-text-tertiary)] border-l border-[var(--color-border)] pl-2 ml-1">
-            Crypto Vision News
+            Free Crypto News
           </span>
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden lg:flex items-center gap-1">
+        <nav className="hidden lg:flex items-center gap-0.5">
           {NAV_ITEMS.map((item) => (
             <div
               key={item.label}
@@ -412,19 +439,22 @@ export default function Header() {
               >
                 {item.label}
                 {"children" in item && (
-                  <ChevronDown className="h-3.5 w-3.5 opacity-50" />
+                  <ChevronDown className={cn(
+                    "h-3.5 w-3.5 opacity-50 transition-transform duration-200",
+                    openDropdown === item.label && "rotate-180",
+                  )} />
                 )}
               </Link>
 
-              {/* Dropdown */}
+              {/* Dropdown with animation */}
               {"children" in item && openDropdown === item.label && (
                 <div className="absolute top-full left-0 pt-1 z-50">
-                  <div className="bg-[var(--color-surface)] border border-[var(--color-border)] rounded-lg shadow-lg py-1 min-w-[180px]">
+                  <div className="bg-[var(--color-surface)] border border-[var(--color-border)] rounded-lg shadow-lg py-1 min-w-[200px] animate-dropdown">
                     {item.children.map((child) => (
                       <Link
                         key={child.href}
                         href={child.href}
-                        className="block px-4 py-2 text-sm text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] hover:bg-[var(--color-surface-secondary)] transition-colors"
+                        className="flex items-center gap-2 px-4 py-2.5 text-sm text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] hover:bg-[var(--color-surface-secondary)] transition-colors"
                       >
                         {child.label}
                       </Link>
@@ -437,27 +467,32 @@ export default function Header() {
         </nav>
 
         {/* Right actions */}
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-1">
           <Link
             href="/watchlist"
             className="hidden sm:flex p-2 rounded-md hover:bg-[var(--color-surface-secondary)] text-[var(--color-text-secondary)] transition-colors"
             aria-label="Watchlist"
+            title="Watchlist"
           >
             <Star className="h-4.5 w-4.5" />
           </Link>
 
           <Link
             href="/portfolio"
-            className="hidden sm:flex p-2 rounded-md hover:bg-[var(--color-surface-secondary)] text-[var(--color-text-secondary)] transition-colors"
+            className="hidden md:flex p-2 rounded-md hover:bg-[var(--color-surface-secondary)] text-[var(--color-text-secondary)] transition-colors"
             aria-label="Portfolio"
+            title="Portfolio"
           >
             <Briefcase className="h-4.5 w-4.5" />
           </Link>
+
+          <div className="hidden sm:block w-px h-5 bg-[var(--color-border)] mx-1" />
 
           <button
             onClick={() => setSearchOpen(true)}
             className="flex items-center gap-2 p-2 rounded-md hover:bg-[var(--color-surface-secondary)] text-[var(--color-text-secondary)] transition-colors cursor-pointer"
             aria-label="Search (Cmd+K)"
+            title="Search"
           >
             <Search className="h-4.5 w-4.5" />
             <kbd className="hidden sm:inline-flex items-center gap-0.5 rounded border border-[var(--color-border)] bg-[var(--color-surface-secondary)] px-1.5 py-0.5 text-[10px] font-mono text-[var(--color-text-tertiary)]">
@@ -469,6 +504,7 @@ export default function Header() {
             onClick={toggleTheme}
             className="p-2 rounded-md hover:bg-[var(--color-surface-secondary)] text-[var(--color-text-secondary)] transition-colors cursor-pointer"
             aria-label="Toggle theme"
+            title={resolvedTheme === "dark" ? "Light mode" : "Dark mode"}
           >
             {resolvedTheme === "dark" ? (
               <Sun className="h-4.5 w-4.5" />
@@ -483,30 +519,54 @@ export default function Header() {
             className="lg:hidden p-2 rounded-md hover:bg-[var(--color-surface-secondary)] text-[var(--color-text-secondary)] transition-colors cursor-pointer"
             aria-label="Toggle menu"
           >
-            {mobileOpen ? (
-              <X className="h-5 w-5" />
-            ) : (
-              <Menu className="h-5 w-5" />
-            )}
+            <div className="relative h-5 w-5">
+              <Menu className={cn(
+                "absolute inset-0 h-5 w-5 transition-all duration-200",
+                mobileOpen ? "opacity-0 rotate-90 scale-50" : "opacity-100 rotate-0 scale-100",
+              )} />
+              <X className={cn(
+                "absolute inset-0 h-5 w-5 transition-all duration-200",
+                mobileOpen ? "opacity-100 rotate-0 scale-100" : "opacity-0 -rotate-90 scale-50",
+              )} />
+            </div>
           </button>
         </div>
       </div>
 
-      {/* Mobile Nav */}
-      {mobileOpen && (
-        <div className="lg:hidden border-t border-[var(--color-border)] bg-[var(--color-surface)]">
-          <nav className="container-main py-4 space-y-1">
+      {/* Mobile Nav — animated slide */}
+      <div
+        className={cn(
+          "lg:hidden overflow-hidden transition-all duration-300 ease-in-out",
+          mobileOpen ? "max-h-[80vh] opacity-100 border-t border-[var(--color-border)]" : "max-h-0 opacity-0",
+        )}
+      >
+        <div className="bg-[var(--color-surface)]">
+          {/* Mobile search bar */}
+          <div className="container-main pt-3 pb-2">
+            <button
+              onClick={() => { setSearchOpen(true); setMobileOpen(false); }}
+              className="flex items-center gap-3 w-full px-3 py-2.5 rounded-lg border border-[var(--color-border)] bg-[var(--color-surface-secondary)] text-sm text-[var(--color-text-tertiary)] transition-colors cursor-pointer"
+            >
+              <Search className="h-4 w-4" />
+              Search news, topics, coins…
+            </button>
+          </div>
+
+          <nav className="container-main py-3 space-y-0.5">
             {NAV_ITEMS.map((item) => (
               <div key={item.label}>
                 <Link
                   href={item.href}
                   onClick={() => setMobileOpen(false)}
-                  className="block px-3 py-2.5 text-sm font-medium rounded-md text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] hover:bg-[var(--color-surface-secondary)] transition-colors"
+                  className="flex items-center justify-between px-3 py-2.5 text-sm font-medium rounded-md text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] hover:bg-[var(--color-surface-secondary)] transition-colors"
                 >
                   {item.label}
+                  {"children" in item && (
+                    <ChevronDown className="h-3.5 w-3.5 opacity-40" />
+                  )}
                 </Link>
                 {"children" in item && (
-                  <div className="ml-4 mt-1 space-y-0.5">
+                  <div className="ml-4 mt-0.5 space-y-0.5 border-l-2 border-[var(--color-border)] pl-3">
                     {item.children.map((child) => (
                       <Link
                         key={child.href}
@@ -521,9 +581,40 @@ export default function Header() {
                 )}
               </div>
             ))}
+
+            {/* Mobile-only quick links */}
+            <div className="pt-3 mt-3 border-t border-[var(--color-border)] flex gap-2">
+              <Link
+                href="/watchlist"
+                onClick={() => setMobileOpen(false)}
+                className="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-md border border-[var(--color-border)] text-sm text-[var(--color-text-secondary)] hover:bg-[var(--color-surface-secondary)] transition-colors"
+              >
+                <Star className="h-4 w-4" />
+                Watchlist
+              </Link>
+              <Link
+                href="/portfolio"
+                onClick={() => setMobileOpen(false)}
+                className="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-md border border-[var(--color-border)] text-sm text-[var(--color-text-secondary)] hover:bg-[var(--color-surface-secondary)] transition-colors"
+              >
+                <Briefcase className="h-4 w-4" />
+                Portfolio
+              </Link>
+            </div>
           </nav>
         </div>
-      )}
+      </div>
+
+      {/* Dropdown animation */}
+      <style jsx>{`
+        @keyframes dropdown-in {
+          from { opacity: 0; transform: translateY(-4px) scale(0.97); }
+          to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+        .animate-dropdown {
+          animation: dropdown-in 0.15s ease-out;
+        }
+      `}</style>
     </header>
 
     {/* Global Search Modal */}
