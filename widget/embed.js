@@ -14,7 +14,7 @@
  *     data-width="100%"
  *   ></script>
  *
- * Supported data-type values: ticker, news, coin, market, fear-greed
+ * Supported data-type values: ticker, news, coin, market, fear-greed, chart
  *
  * @copyright 2024-2026 nirholas. All rights reserved.
  * @license SPDX-License-Identifier: SEE LICENSE IN LICENSE
@@ -24,7 +24,7 @@
   "use strict";
 
   var BASE_URL = "https://cryptocurrency.cv";
-  var VALID_TYPES = ["ticker", "news", "coin", "market", "fear-greed"];
+  var VALID_TYPES = ["ticker", "news", "coin", "market", "fear-greed", "chart"];
   var VALID_THEMES = ["dark", "light", "auto"];
 
   // Default heights per widget type
@@ -34,6 +34,7 @@
     coin: 320,
     market: 380,
     "fear-greed": 280,
+    chart: 500,
   };
 
   /**
@@ -65,6 +66,8 @@
     var title = script.getAttribute("data-title");
     var branding = script.getAttribute("data-branding");
     var width = script.getAttribute("data-width") || "100%";
+    var symbol = script.getAttribute("data-symbol") || "BINANCE:BTCUSDT";
+    var interval = script.getAttribute("data-interval") || "D";
 
     return {
       type: type,
@@ -74,6 +77,8 @@
       showTitle: title !== "false",
       showBranding: branding !== "false",
       width: width,
+      symbol: symbol,
+      interval: interval,
     };
   }
 
@@ -95,6 +100,10 @@
     }
     if (!config.showBranding) {
       params.push("branding=false");
+    }
+    if (config.type === "chart") {
+      params.push("symbol=" + encodeURIComponent(config.symbol));
+      params.push("interval=" + encodeURIComponent(config.interval));
     }
 
     return BASE_URL + "/embed/" + config.type + "?" + params.join("&");

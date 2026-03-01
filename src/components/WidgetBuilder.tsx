@@ -2,7 +2,7 @@
 
 import { useState, useCallback, useMemo } from "react";
 
-type WidgetType = "ticker" | "news" | "coin" | "market" | "fear-greed";
+type WidgetType = "ticker" | "news" | "coin" | "market" | "fear-greed" | "chart";
 type ThemeOption = "dark" | "light" | "auto";
 type WidthOption = "responsive" | "fixed";
 
@@ -16,6 +16,8 @@ interface WidgetConfig {
   showTitle: boolean;
   showBranding: boolean;
   showTimestamp: boolean;
+  symbol: string;
+  interval: string;
 }
 
 const WIDGET_TYPES: { id: WidgetType; name: string; icon: string; description: string }[] = [
@@ -24,6 +26,7 @@ const WIDGET_TYPES: { id: WidgetType; name: string; icon: string; description: s
   { id: "coin", name: "Single Coin", icon: "🪙", description: "Detailed price card for a specific coin" },
   { id: "market", name: "Market Overview", icon: "📊", description: "Mini dashboard with top 5 coins" },
   { id: "fear-greed", name: "Fear & Greed", icon: "🎯", description: "Market sentiment gauge widget" },
+  { id: "chart", name: "TradingView Chart", icon: "📉", description: "Interactive TradingView chart with technical analysis" },
 ];
 
 const POPULAR_COINS = [
@@ -54,6 +57,8 @@ export default function WidgetBuilder() {
     showTitle: true,
     showBranding: true,
     showTimestamp: true,
+    symbol: "BINANCE:BTCUSDT",
+    interval: "D",
   });
 
   const [copied, setCopied] = useState<"iframe" | "script" | null>(null);
@@ -71,6 +76,10 @@ export default function WidgetBuilder() {
     if (config.type === "coin") {
       params.set("coin", config.coin);
     }
+    if (config.type === "chart") {
+      params.set("symbol", config.symbol);
+      params.set("interval", config.interval);
+    }
     if (!config.showTitle) params.set("title", "false");
     if (!config.showBranding) params.set("branding", "false");
     return `${BASE_URL}/embed/${config.type}?${params.toString()}`;
@@ -83,6 +92,7 @@ export default function WidgetBuilder() {
       case "coin": return 320;
       case "market": return 380;
       case "fear-greed": return 280;
+      case "chart": return 500;
       default: return 400;
     }
   }, [config]);
@@ -91,7 +101,7 @@ export default function WidgetBuilder() {
 
   const iframeCode = `<iframe src="${embedUrl}" width="${config.width === "fixed" ? config.fixedWidth : "100%"}" height="${iframeHeight}" style="border:none;border-radius:8px;overflow:hidden;" loading="lazy" title="Free Crypto News Widget"></iframe>`;
 
-  const scriptCode = `<script src="${BASE_URL}/widget/embed.js" data-type="${config.type}" data-theme="${config.theme}"${config.type === "news" ? ` data-count="${config.count}"` : ""}${config.type === "coin" ? ` data-coin="${config.coin}"` : ""}${!config.showTitle ? ' data-title="false"' : ""}${!config.showBranding ? ' data-branding="false"' : ""}></script>`;
+  const scriptCode = `<script src="${BASE_URL}/widget/embed.js" data-type="${config.type}" data-theme="${config.theme}"${config.type === "news" ? ` data-count="${config.count}"` : ""}${config.type === "coin" ? ` data-coin="${config.coin}"` : ""}${config.type === "chart" ? ` data-symbol="${config.symbol}" data-interval="${config.interval}"` : ""}${!config.showTitle ? ' data-title="false"' : ""}${!config.showBranding ? ' data-branding="false"' : ""}></script>`;
 
   const copyToClipboard = useCallback(async (text: string, type: "iframe" | "script") => {
     try {
@@ -213,7 +223,7 @@ export default function WidgetBuilder() {
             </div>
 
             {/* Widget-specific Options */}
-            {(config.type === "news" || config.type === "coin") && (
+            {(config.type === "news" || config.type === "coin" || config.type === "chart") && (
               <div className="rounded-xl border border-border bg-card p-6">
                 <h2 className="text-lg font-semibold mb-4">Widget Options</h2>
                 <div className="space-y-4">
@@ -251,6 +261,56 @@ export default function WidgetBuilder() {
                         ))}
                       </select>
                     </div>
+                  )}
+
+                  {config.type === "chart" && (
+                    <>
+                      <div>
+                        <label className="text-sm font-medium mb-2 block">Trading Pair</label>
+                        <select
+                          value={config.symbol}
+                          onChange={(e) => updateConfig("symbol", e.target.value)}
+                          className="w-full p-2.5 rounded-lg border border-border bg-muted text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        >
+                          <option value="BINANCE:BTCUSDT">BTC / USDT</option>
+                          <option value="BINANCE:ETHUSDT">ETH / USDT</option>
+                          <option value="BINANCE:SOLUSDT">SOL / USDT</option>
+                          <option value="BINANCE:XRPUSDT">XRP / USDT</option>
+                          <option value="BINANCE:ADAUSDT">ADA / USDT</option>
+                          <option value="BINANCE:DOGEUSDT">DOGE / USDT</option>
+                          <option value="BINANCE:AVAXUSDT">AVAX / USDT</option>
+                          <option value="BINANCE:BNBUSDT">BNB / USDT</option>
+                          <option value="BINANCE:DOTUSDT">DOT / USDT</option>
+                          <option value="BINANCE:LINKUSDT">LINK / USDT</option>
+                        </select>
+                      </div>
+                      <div>
+                        <label className="text-sm font-medium mb-2 block">Default Interval</label>
+                        <div className="flex flex-wrap gap-2">
+                          {[
+                            { label: "1m", value: "1" },
+                            { label: "5m", value: "5" },
+                            { label: "15m", value: "15" },
+                            { label: "1H", value: "60" },
+                            { label: "4H", value: "240" },
+                            { label: "1D", value: "D" },
+                            { label: "1W", value: "W" },
+                          ].map((i) => (
+                            <button
+                              key={i.value}
+                              onClick={() => updateConfig("interval", i.value)}
+                              className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-all ${
+                                config.interval === i.value
+                                  ? "bg-blue-500 text-white"
+                                  : "bg-muted hover:bg-muted/80 text-foreground"
+                              }`}
+                            >
+                              {i.label}
+                            </button>
+                          ))}
+                        </div>
+                      </div>
+                    </>
                   )}
                 </div>
               </div>
