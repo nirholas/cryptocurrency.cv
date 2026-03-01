@@ -176,7 +176,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     : "";
 
   // Collect top-3 tags (tickers first, then article tags)
-  const ogTags = [...(article.tickers ?? []), ...(article.tags ?? "")]
+  const ogTags = [...(article.tickers ?? []), ...(Array.isArray(article.tags) ? article.tags : [])]
     .filter(Boolean)
     .slice(0, 3)
     .join(",");
@@ -208,7 +208,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       publishedTime: article.pub_date || article.first_seen,
       modifiedTime: article.last_seen || article.pub_date || article.first_seen,
       authors: [article.source],
-      tags: [...article.tickers, ...article.tags],
+      tags: [...(article.tickers ?? []), ...(Array.isArray(article.tags) ? article.tags : [])],
       section: "Cryptocurrency",
       images: [
         {

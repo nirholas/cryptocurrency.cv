@@ -154,15 +154,28 @@ export async function GET(request: Request) {
     );
   }
 
+  // Strip CDATA wrappers that may leak from RSS feed XML
+  const cleanUrl = url.replace(/^<!\[CDATA\[/, '').replace(/\]\]>$/, '').trim();
+
+  // Validate the cleaned URL
+  try {
+    new URL(cleanUrl);
+  } catch {
+    return NextResponse.json(
+      { error: 'Invalid url parameter' },
+      { status: 400 }
+    );
+  }
+
   try {
     // Fetch article content
-    const content = await fetchArticleContent(url);
+    const content = await fetchArticleContent(cleanUrl);
 
     // Analyze with Groq
     const analysis = await analyzeWithGroq(content, title, source);
 
     const articleContent: ArticleContent = {
-      url,
+      url: cleanUrl,
       title,
       source,
       content: content.slice(0, 3000), // Include some raw content

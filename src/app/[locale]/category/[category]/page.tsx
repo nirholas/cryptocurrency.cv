@@ -125,7 +125,13 @@ export default async function CategoryPage({ params }: Props) {
   };
 
   // Get news filtered by category
-  const data = await getNewsByCategory(category, 50);
+  let data;
+  try {
+    data = await getNewsByCategory(category, 50);
+  } catch (err) {
+    console.error(`[CategoryPage] Failed to fetch category "${category}":`, err);
+    data = { articles: [], totalCount: 0, sources: [], fetchedAt: new Date().toISOString() };
+  }
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-black">

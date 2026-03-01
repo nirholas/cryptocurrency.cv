@@ -2825,6 +2825,15 @@ export interface SourceInfo {
 }
 
 /**
+ * Strip CDATA wrapper from a string if present
+ * e.g. <![CDATA[https://example.com]]> → https://example.com
+ */
+function stripCDATA(text: string): string {
+  const match = text.match(/^<!\[CDATA\[([\s\S]*?)\]\]>$/);
+  return match ? match[1].trim() : text;
+}
+
+/**
  * Decode HTML entities in a string (e.g. &#39; → ', &amp; → &)
  */
 function decodeHTMLEntities(text: string): string {
@@ -2887,7 +2896,7 @@ function parseRSSFeed(xml: string, sourceKey: string, sourceName: string, catego
   
   const itemRegex = /<item>([\s\S]*?)<\/item>/gi;
   const titleRegex = /<title><!\[CDATA\[(.*?)\]\]>|<title>(.*?)<\/title>/i;
-  const linkRegex = /<link>(.*?)<\/link>|<link><!\[CDATA\[(.*?)\]\]>/i;
+  const linkRegex = /<link><!\[CDATA\[(.*?)\]\]>(?:<\/link>)?|<link>(.*?)<\/link>/i;
   const descRegex = /<description><!\[CDATA\[([\s\S]*?)\]\]>|<description>([\s\S]*?)<\/description>/i;
   const pubDateRegex = /<pubDate>(.*?)<\/pubDate>/i;
   
@@ -2905,7 +2914,7 @@ function parseRSSFeed(xml: string, sourceKey: string, sourceName: string, catego
     const imageUrl = extractImageUrl(itemXml, rawDesc);
     
     const title = decodeHTMLEntities((titleMatch?.[1] || titleMatch?.[2] || '').trim());
-    const link = (linkMatch?.[1] || linkMatch?.[2] || '').trim();
+    const link = stripCDATA((linkMatch?.[1] || linkMatch?.[2] || '').trim());
     const description = sanitizeDescription(rawDesc);
     const pubDateStr = pubDateMatch?.[1] || '';
     

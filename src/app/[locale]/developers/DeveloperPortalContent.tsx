@@ -350,7 +350,7 @@ export default function DeveloperPortalContent() {
             ))}
             <div className="flex-1" />
             <Link 
-              href="/docs/API" 
+              href="/docs/api" 
               className="px-4 py-2 text-sm font-medium text-gray-400 hover:text-white flex items-center gap-1"
             >
               Full Docs <span className="text-xs">↗</span>
@@ -552,9 +552,9 @@ function QuickStartSection({
       {/* Quick Links */}
       <div className="grid md:grid-cols-3 gap-4">
         {[
-          { icon: '📖', title: 'Full API Reference', desc: 'Complete endpoint documentation', href: '/docs/API' },
-          { icon: '⚡', title: 'Real-time Streaming', desc: 'SSE and WebSocket docs', href: '/docs/REALTIME' },
-          { icon: '🤖', title: 'AI Features', desc: 'Sentiment, summaries, entities', href: '/docs/AI-FEATURES' },
+          { icon: '📖', title: 'Full API Reference', desc: 'Complete endpoint documentation', href: '/docs/api' },
+          { icon: '⚡', title: 'Real-time Streaming', desc: 'SSE and WebSocket docs', href: '/docs/api' },
+          { icon: '🤖', title: 'AI Features', desc: 'Sentiment, summaries, entities', href: '/docs/api' },
         ].map((card) => (
           <Link
             key={card.title}
@@ -664,7 +664,7 @@ function EndpointsSection({ copiedText, copyToClipboard }: { copiedText: string 
       </div>
 
       <div className="text-center">
-        <Link href="/docs/API" className="text-gray-300 hover:text-white font-medium">
+        <Link href="/docs/api" className="text-gray-300 hover:text-white font-medium">
           View all 100+ endpoints in full documentation →
         </Link>
       </div>

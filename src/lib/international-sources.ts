@@ -947,6 +947,15 @@ function getTimeAgo(date: Date): string {
 }
 
 /**
+ * Strip CDATA wrapper from a string if present
+ * e.g. <![CDATA[https://example.com]]> → https://example.com
+ */
+function stripCDATA(text: string): string {
+  const match = text.match(/^<!\[CDATA\[([\s\S]*?)\]\]>$/);
+  return match ? match[1].trim() : text;
+}
+
+/**
  * Sanitize and truncate description
  */
 function sanitizeDescription(raw: string): string {
@@ -1003,7 +1012,7 @@ export function parseInternationalRSSFeed(
   // Regex patterns for RSS item extraction
   const itemRegex = /<item>([\s\S]*?)<\/item>/gi;
   const titleRegex = /<title><!\[CDATA\[(.*?)\]\]>|<title>(.*?)<\/title>/i;
-  const linkRegex = /<link>(.*?)<\/link>|<link><!\[CDATA\[(.*?)\]\]>|<link[^>]*href="([^"]*)"[^>]*\/?>/i;
+  const linkRegex = /<link><!\[CDATA\[(.*?)\]\]>(?:<\/link>)?|<link>(.*?)<\/link>|<link[^>]*href="([^"]*)"[^>]*\/?>/i;
   const descRegex = /<description><!\[CDATA\[([\s\S]*?)\]\]>|<description>([\s\S]*?)<\/description>/i;
   const pubDateRegex = /<pubDate>(.*?)<\/pubDate>|<dc:date>(.*?)<\/dc:date>|<published>(.*?)<\/published>/i;
   const contentRegex = /<content:encoded><!\[CDATA\[([\s\S]*?)\]\]>|<content:encoded>([\s\S]*?)<\/content:encoded>/i;
@@ -1019,7 +1028,7 @@ export function parseInternationalRSSFeed(
     const contentMatch = itemXml.match(contentRegex);
 
     let title = (titleMatch?.[1] || titleMatch?.[2] || '').trim();
-    const link = (linkMatch?.[1] || linkMatch?.[2] || linkMatch?.[3] || '').trim();
+    const link = stripCDATA((linkMatch?.[1] || linkMatch?.[2] || linkMatch?.[3] || '').trim());
     let description = sanitizeDescription(
       descMatch?.[1] || descMatch?.[2] || contentMatch?.[1] || contentMatch?.[2] || ''
     );

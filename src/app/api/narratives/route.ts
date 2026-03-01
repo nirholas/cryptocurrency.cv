@@ -69,7 +69,16 @@ export async function GET(request: NextRequest) {
   if (!isAIConfigured()) return aiNotConfiguredResponse();
 
   try {
-    const data = await getLatestNews(limit);
+    let data;
+    try {
+      data = await getLatestNews(limit);
+    } catch (fetchErr) {
+      console.error('Failed to fetch latest news for narratives:', fetchErr);
+      return NextResponse.json(
+        { error: 'News fetch temporarily unavailable', narratives: [] },
+        { status: 503, headers: { 'Retry-After': '60' } }
+      );
+    }
     
     if (data.articles.length === 0) {
       return NextResponse.json({

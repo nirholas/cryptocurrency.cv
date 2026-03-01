@@ -157,6 +157,8 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
         const dashboard = await getOrderBookDashboard(symbol, market);
         
         return NextResponse.json({
+          success: true,
+          data: {
           symbol,
           market,
           timestamp: new Date().toISOString(),
@@ -198,6 +200,7 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
             askShare: Math.round(ex.askPercent * 100) / 100,
             spread: Math.round(ex.spread * 100) / 100,
           })),
+          },
         });
       }
 
@@ -245,6 +248,7 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
     console.error('Order book API error:', error);
     return NextResponse.json(
       {
+        success: false,
         error: 'Failed to fetch order book data',
         message: error instanceof Error ? error.message : 'Unknown error',
       },
