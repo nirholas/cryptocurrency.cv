@@ -177,21 +177,27 @@ function ApiStatusBadge() {
 export default function Footer() {
   return (
     <>
-      <footer className="border-t border-[var(--color-border)] bg-[var(--color-surface-secondary)]" role="contentinfo">
+      <footer
+        className="border-t border-border bg-surface-secondary"
+        role="contentinfo"
+      >
         <FooterStructuredData />
 
         <div className="container-main py-14">
           {/* Trending Topics Bar */}
-          <nav className="mb-12 rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] p-5 shadow-[var(--shadow-card)]" aria-label="Trending topics">
+          <nav
+            className="mb-12 rounded-xl border border-border bg-(--color-surface) p-5 shadow-(--shadow-card)"
+            aria-label="Trending topics"
+          >
             <div className="flex flex-wrap items-center gap-2">
-              <span className="mr-2 inline-flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-[0.15em] text-[var(--color-text-tertiary)]">
+              <span className="mr-2 inline-flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-[0.15em] text-text-tertiary">
                 <TrendingUp className="h-3.5 w-3.5" /> Trending
               </span>
               {TRENDING_TOPICS.map((topic) => (
                 <Link
                   key={topic.label}
                   href={topic.href}
-                  className="rounded-full border border-[var(--color-border)] bg-[var(--color-surface-secondary)] px-3 py-1.5 text-xs font-medium text-[var(--color-text-secondary)] transition-all duration-200 hover:border-[var(--color-accent)]/40 hover:bg-[var(--color-accent)]/8 hover:text-[var(--color-accent)]"
+                  className="rounded-full border border-border bg-surface-secondary px-3 py-1.5 text-xs font-medium text-text-secondary transition-all duration-200 hover:border-accent/40 hover:bg-accent/8 hover:text-accent"
                 >
                   {topic.label}
                 </Link>
@@ -205,7 +211,7 @@ export default function Footer() {
               <Link href="/" aria-label="Free Crypto News home">
                 <Logo size="md" />
               </Link>
-              <p className="mt-4 max-w-xs text-sm leading-relaxed text-[var(--color-text-secondary)]">
+              <p className="mt-4 max-w-xs text-sm leading-relaxed text-text-secondary">
                 Free, real-time crypto news aggregation from 300+ sources. No
                 API keys required.
               </p>
@@ -217,21 +223,25 @@ export default function Footer() {
 
               {/* Mini newsletter */}
               <div className="mt-4">
-                <p className="mb-2 text-xs font-semibold text-[var(--color-text-primary)]">
+                <p className="mb-2 text-xs font-semibold text-text-primary">
                   Subscribe to updates
                 </p>
                 <FooterNewsletter />
               </div>
 
               {/* Social links */}
-              <div className="mt-5 flex gap-3" role="list" aria-label="Social media links">
+              <div
+                className="mt-5 flex gap-3"
+                role="list"
+                aria-label="Social media links"
+              >
                 {SOCIAL_LINKS.map((social) => (
                   <a
                     key={social.label}
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="rounded-lg border border-transparent p-2 text-[var(--color-text-tertiary)] transition-all hover:border-[var(--color-border)] hover:bg-[var(--color-surface)] hover:text-[var(--color-text-primary)] hover:shadow-sm"
+                    className="rounded-lg border border-transparent p-2 text-text-tertiary transition-all hover:border-border hover:bg-(--color-surface) hover:text-text-primary hover:shadow-sm"
                     aria-label={social.label}
                   >
                     {social.icon}
@@ -251,14 +261,14 @@ export default function Footer() {
           </div>
 
           {/* Download App + Language */}
-          <div className="mt-12 flex flex-col items-start justify-between gap-6 border-t border-[var(--color-border)] pt-8 sm:flex-row sm:items-center">
+          <div className="mt-12 flex flex-col items-start justify-between gap-6 border-t border-border pt-8 sm:flex-row sm:items-center">
             {/* Download App */}
             <div>
-              <p className="mb-2 text-xs font-semibold text-[var(--color-text-primary)] flex items-center gap-1">
+              <p className="mb-2 text-xs font-semibold text-text-primary flex items-center gap-1">
                 <Smartphone className="h-3 w-3" /> Download App
               </p>
               <div className="flex gap-3">
-                <span className="inline-flex items-center gap-1.5 rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] px-3 py-1.5 text-xs text-[var(--color-text-secondary)]">
+                <span className="inline-flex items-center gap-1.5 rounded-lg border border-border bg-(--color-surface) px-3 py-1.5 text-xs text-text-secondary">
                   <svg
                     className="h-4 w-4"
                     fill="currentColor"
@@ -268,7 +278,7 @@ export default function Footer() {
                   </svg>
                   Coming Soon
                 </span>
-                <span className="inline-flex items-center gap-1.5 rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] px-3 py-1.5 text-xs text-[var(--color-text-secondary)]">
+                <span className="inline-flex items-center gap-1.5 rounded-lg border border-border bg-(--color-surface) px-3 py-1.5 text-xs text-text-secondary">
                   <svg
                     className="h-4 w-4"
                     fill="currentColor"
@@ -286,21 +296,21 @@ export default function Footer() {
           </div>
 
           {/* Bottom bar */}
-          <div className="mt-8 flex flex-col items-center justify-between gap-4 border-t border-[var(--color-border)] pt-8 sm:flex-row">
-            <p className="text-xs text-[var(--color-text-tertiary)] tracking-wide">
-              &copy; {new Date().getFullYear()} Free Crypto News. Open source under
-              MIT license.
+          <div className="mt-8 flex flex-col items-center justify-between gap-4 border-t border-border pt-8 sm:flex-row">
+            <p className="text-xs text-text-tertiary tracking-wide">
+              &copy; {new Date().getFullYear()} Free Crypto News. Open source
+              under MIT license.
             </p>
-            <div className="flex items-center gap-3 text-xs text-[var(--color-text-tertiary)]">
+            <div className="flex items-center gap-3 text-xs text-text-tertiary">
               <span>300+ sources</span>
-              <span className="text-[var(--color-border)]">|</span>
+              <span className="text-border">|</span>
               <span>No API key</span>
-              <span className="text-[var(--color-border)]">|</span>
+              <span className="text-border">|</span>
               <a
                 href="https://github.com/nirholas/free-crypto-news"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1 transition-colors hover:text-[var(--color-text-primary)]"
+                className="inline-flex items-center gap-1 transition-colors hover:text-text-primary"
               >
                 <Github className="h-3.5 w-3.5" />
                 Star on GitHub
