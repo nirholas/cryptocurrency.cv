@@ -201,7 +201,7 @@ export function SmartFeed({ initialArticles, className }: SmartFeedProps) {
     if (isRefreshing) return;
     setIsRefreshing(true);
     try {
-      const res = await fetch("/api/news?limit=10&fresh=true", {
+      const res = await fetch("/api/news?limit=10&fresh=true&sources=homepage", {
         cache: "no-store",
       });
       if (!res.ok) throw new Error("Failed to fetch");
@@ -243,7 +243,7 @@ export function SmartFeed({ initialArticles, className }: SmartFeedProps) {
     setLoadingMore(true);
     try {
       const nextPage = page + 1;
-      const res = await fetch(`/api/news?limit=20&page=${nextPage}`);
+      const res = await fetch(`/api/news?limit=20&page=${nextPage}&sources=homepage`);
       if (!res.ok) throw new Error("Failed");
       const data = await res.json();
       const moreArticles: NewsArticle[] = data.articles ?? [];

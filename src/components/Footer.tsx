@@ -123,7 +123,7 @@ function FooterStructuredData() {
     "@type": "WPFooter",
     isPartOf: {
       "@type": "WebSite",
-      name: "Crypto Vision",
+      name: "Free Crypto News",
       url: "https://cryptocurrency.cv",
       potentialAction: {
         "@type": "SearchAction",
@@ -134,7 +134,7 @@ function FooterStructuredData() {
     copyrightYear: new Date().getFullYear(),
     copyrightHolder: {
       "@type": "Organization",
-      name: "Crypto Vision",
+      name: "Free Crypto News",
       url: "https://cryptocurrency.cv",
       logo: "https://cryptocurrency.cv/logo.png",
       sameAs: [
@@ -201,7 +201,7 @@ export default function Footer() {
           <div className="grid grid-cols-1 gap-8 md:grid-cols-4 lg:grid-cols-6">
             {/* Brand + Newsletter */}
             <div className="col-span-1 md:col-span-2 mb-4 lg:mb-0">
-              <Link href="/" aria-label="Crypto Vision home">
+              <Link href="/" aria-label="Free Crypto News home">
                 <Logo size="md" />
               </Link>
               <p className="mt-4 max-w-xs text-sm leading-relaxed text-[var(--color-text-secondary)]">
@@ -287,7 +287,7 @@ export default function Footer() {
           {/* Bottom bar */}
           <div className="mt-8 flex flex-col items-center justify-between gap-4 border-t border-[var(--color-border)] pt-8 sm:flex-row">
             <p className="text-xs text-[var(--color-text-tertiary)] tracking-wide">
-              &copy; {new Date().getFullYear()} Crypto Vision. Open source under
+              &copy; {new Date().getFullYear()} Free Crypto News. Open source under
               MIT license.
             </p>
             <div className="flex items-center gap-3 text-xs text-[var(--color-text-tertiary)]">

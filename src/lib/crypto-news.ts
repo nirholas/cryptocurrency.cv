@@ -3891,6 +3891,8 @@ export interface NewsQueryOptions {
   to?: Date | string;
   page?: number;
   perPage?: number;
+  /** When true, restrict to HOMEPAGE_SOURCE_KEYS (curated T1/T2 sources) */
+  homepageOnly?: boolean;
 }
 
 function filterByDateRange(articles: NewsArticle[], from?: Date | string, to?: Date | string): NewsArticle[] {
@@ -3948,6 +3950,9 @@ export async function getLatestNews(
         category: options.category,
       } as NewsResponse;
     }
+  } else if (options?.homepageOnly) {
+    // Restrict to curated homepage sources (T1/T2 only)
+    sourceKeys = (Object.keys(RSS_SOURCES) as SourceKey[]).filter(k => HOMEPAGE_SOURCE_KEYS.has(k));
   } else {
     sourceKeys = Object.keys(RSS_SOURCES) as SourceKey[];
   }
