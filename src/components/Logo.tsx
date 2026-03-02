@@ -2,28 +2,28 @@ import { cn } from "@/lib/utils";
 
 interface LogoProps {
   size?: "sm" | "md" | "lg";
-  /** Show the full wordmark (true) or just the N icon mark (false). */
+  /** Show the full wordmark (true) or just the V icon mark (false). */
   showText?: boolean;
   className?: string;
 }
 
 /**
- * Free Crypto News brand logo.
+ * Crypto Vision brand logo.
  *
- * Full mode: wordmark "FREE CRYPTO NEWS" with oversized orange N.
- * Icon mode (showText=false): the "N" mark on a black rounded square.
+ * Full mode: serif wordmark "cryptoVision" with oversized V.
+ * Icon mode (showText=false): the "V" mark on a dark-blue rounded square.
  *
  * Used in Header, Footer, and anywhere the brand mark is needed.
  */
 export default function Logo({ size = "md", showText = true, className }: LogoProps) {
   const cfg = {
-    sm: { wordmarkW: 160, wordmarkH: 24, icon: 24, text: "text-base" },
-    md: { wordmarkW: 200, wordmarkH: 30, icon: 28, text: "text-lg" },
-    lg: { wordmarkW: 260, wordmarkH: 39, icon: 36, text: "text-2xl" },
+    sm: { icon: 24, crypto: "text-sm", v: "text-xl", ision: "text-sm" },
+    md: { icon: 28, crypto: "text-base", v: "text-2xl", ision: "text-base" },
+    lg: { icon: 36, crypto: "text-xl", v: "text-3xl", ision: "text-xl" },
   }[size];
 
   if (!showText) {
-    /* Icon‑only — the oversized "N" on black rounded square */
+    /* Icon‑only — the stylized "V" on dark-blue rounded square */
     return (
       <span className={cn("inline-flex items-center", className)}>
         <svg
@@ -32,99 +32,45 @@ export default function Logo({ size = "md", showText = true, className }: LogoPr
           viewBox="0 0 512 512"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          aria-label="Free Crypto News"
+          aria-label="Crypto Vision"
           className="shrink-0"
         >
-          <rect width="512" height="512" rx="96" fill="#000000" />
-          <text
-            x="256"
-            y="380"
-            fontFamily="Georgia,'Times New Roman',serif"
-            fontSize="360"
-            fontWeight="900"
-            fill="#F7931A"
-            textAnchor="middle"
-          >
-            N
-          </text>
-          <rect x="56" y="56" width="400" height="6" rx="3" fill="#F7931A" opacity="0.6" />
+          <rect width="512" height="512" rx="96" fill="var(--color-accent, #1e3a5f)" />
+          <path
+            d="M144 128h72l8 16-56 232h-16L144 128Zm224 0h-72l-8 16 56 232h16L368 128Z"
+            fill="#ffffff"
+          />
+          <rect x="112" y="128" width="128" height="14" rx="7" fill="#ffffff" />
+          <rect x="272" y="128" width="128" height="14" rx="7" fill="#ffffff" />
         </svg>
       </span>
     );
   }
 
-  /* Full wordmark — "FREE CRYPTO NEWS" */
+  /* Full wordmark — "cryptoVision" with oversized V */
   return (
-    <span className={cn("inline-flex items-center", className)}>
-      <svg
-        width={cfg.wordmarkW}
-        height={cfg.wordmarkH}
-        viewBox="0 0 800 120"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        aria-label="Free Crypto News"
-        className="shrink-0"
+    <span
+      className={cn("inline-flex items-baseline", className)}
+      aria-label="Crypto Vision News"
+    >
+      <span
+        className={cn(cfg.crypto, "font-normal tracking-wide")}
+        style={{ fontFamily: "Georgia, 'Times New Roman', serif", color: "var(--color-text-primary)" }}
       >
-        <defs>
-          <linearGradient id="logo-accent" x1="0" y1="0" x2="1" y2="0">
-            <stop offset="0%" stopColor="#F7931A" />
-            <stop offset="100%" stopColor="#E8820F" />
-          </linearGradient>
-        </defs>
-        {/* Top accent bar */}
-        <rect x="18" y="14" width="530" height="4" rx="2" fill="url(#logo-accent)" />
-        <rect x="498" y="14" width="284" height="4" rx="2" fill="url(#logo-accent)" />
-        {/* FREE CRYPTO */}
-        <text
-          x="20"
-          y="80"
-          fontFamily="Georgia,'Times New Roman',serif"
-          fontSize="62"
-          fontWeight="900"
-          letterSpacing="2"
-          fill="currentColor"
-        >
-          FREE CRYPTO{" "}
-        </text>
-        {/* Oversized N in Bitcoin orange */}
-        <text
-          x="498"
-          y="80"
-          fontFamily="Georgia,'Times New Roman',serif"
-          fontSize="82"
-          fontWeight="900"
-          fill="#F7931A"
-        >
-          N
-        </text>
-        {/* EWS */}
-        <text
-          x="556"
-          y="80"
-          fontFamily="Georgia,'Times New Roman',serif"
-          fontSize="62"
-          fontWeight="900"
-          letterSpacing="2"
-          fill="currentColor"
-        >
-          EWS
-        </text>
-        {/* Rule */}
-        <rect x="18" y="96" width="764" height="1.5" fill="currentColor" opacity="0.2" />
-        {/* Tagline */}
-        <text
-          x="20"
-          y="113"
-          fontFamily="Georgia,'Times New Roman',serif"
-          fontSize="11"
-          fontWeight="400"
-          letterSpacing="4"
-          fill="currentColor"
-          opacity="0.5"
-        >
-          REAL-TIME CRYPTO INTELLIGENCE
-        </text>
-      </svg>
+        crypto
+      </span>
+      <span
+        className={cn(cfg.v, "font-bold")}
+        style={{ fontFamily: "Georgia, 'Times New Roman', serif", color: "var(--color-text-primary)" }}
+      >
+        V
+      </span>
+      <span
+        className={cn(cfg.ision, "font-normal tracking-wide")}
+        style={{ fontFamily: "Georgia, 'Times New Roman', serif", color: "var(--color-text-primary)" }}
+      >
+        ision
+      </span>
     </span>
   );
 }
