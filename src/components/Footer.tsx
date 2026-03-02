@@ -123,7 +123,7 @@ function FooterStructuredData() {
     "@type": "WPFooter",
     isPartOf: {
       "@type": "WebSite",
-      name: "Crypto Vision News",
+      name: "Crypto Vision",
       url: "https://cryptocurrency.cv",
       potentialAction: {
         "@type": "SearchAction",
@@ -134,7 +134,7 @@ function FooterStructuredData() {
     copyrightYear: new Date().getFullYear(),
     copyrightHolder: {
       "@type": "Organization",
-      name: "Crypto Vision News",
+      name: "Crypto Vision",
       url: "https://cryptocurrency.cv",
       logo: "https://cryptocurrency.cv/logo.png",
       sameAs: [
@@ -201,7 +201,7 @@ export default function Footer() {
           <div className="grid grid-cols-1 gap-8 md:grid-cols-4 lg:grid-cols-6">
             {/* Brand + Newsletter */}
             <div className="col-span-1 md:col-span-2 mb-4 lg:mb-0">
-              <Link href="/" aria-label="Crypto Vision News home">
+              <Link href="/" aria-label="Crypto Vision home">
                 <Logo size="md" />
               </Link>
               <p className="mt-4 max-w-xs text-sm leading-relaxed text-[var(--color-text-secondary)]">

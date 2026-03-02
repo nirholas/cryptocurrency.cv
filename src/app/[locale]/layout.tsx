@@ -76,7 +76,7 @@ export const metadata: Metadata = {
     template: "%s | Crypto Vision News",
   },
   description:
-    "Free real-time crypto news API by Crypto Vision News. No API keys. No rate limits. 300+ sources. Bitcoin, Ethereum, DeFi & altcoins.",
+    "Free real-time crypto news API by Crypto Vision. No API keys. No rate limits. 300+ sources. Bitcoin, Ethereum, DeFi & altcoins.",
   keywords: [
     "crypto",
     "cryptocurrency",
@@ -105,7 +105,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Crypto Vision News",
     description:
-      "Free real-time crypto news API by Crypto Vision News. 300+ sources. No API key required.",
+      "Free real-time crypto news API by Crypto Vision. 300+ sources. No API key required.",
     url: "https://cryptocurrency.cv",
     siteName: "Crypto Vision",
     type: "website",
@@ -123,7 +123,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Crypto Vision News",
     description:
-      "Free real-time crypto news API by Crypto Vision News. 300+ sources. No API key required.",
+      "Free real-time crypto news API by Crypto Vision. 300+ sources. No API key required.",
     images: ["/og-image.png"],
     site: "@nichxbt",
     creator: "@nichxbt",
@@ -157,7 +157,7 @@ export const metadata: Metadata = {
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
-    title: "Crypto Vision News",
+    title: "Crypto Vision",
   },
   category: "news",
 };

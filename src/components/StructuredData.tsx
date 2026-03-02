@@ -3,7 +3,7 @@ export function WebsiteStructuredData() {
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: "Crypto Vision News",
-    alternateName: ["CV News", "Crypto Vision News", "cryptocurrency.cv"],
+    alternateName: ["CV News", "Free Crypto News", "cryptocurrency.cv"],
     url: "https://cryptocurrency.cv",
     potentialAction: {
       "@type": "SearchAction",
@@ -23,7 +23,7 @@ export function OrganizationStructuredData() {
   const data = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "Crypto Vision News",
+    name: "Crypto Vision",
     url: "https://cryptocurrency.cv",
     logo: "https://cryptocurrency.cv/icons/icon-512x512.png",
     sameAs: [
@@ -206,7 +206,7 @@ export function SoftwareApplicationStructuredData() {
     },
     creator: {
       "@type": "Organization",
-      name: "Crypto Vision News",
+      name: "Crypto Vision",
       url: "https://cryptocurrency.cv",
     },
     featureList: [
