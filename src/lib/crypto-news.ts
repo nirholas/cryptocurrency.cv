@@ -2688,11 +2688,16 @@ type SourceKey = keyof typeof RSS_SOURCES;
 
 /**
  * Sources shown on the homepage feed.
- * Restricted to Tier 1 (mainstream / institutional) and Tier 2
- * (premium crypto-native) sources only — keeps the homepage
+ * Restricted to Tier 1 and Tier 2 sources — keeps the homepage
  * focused, credible, and high-signal.
  */
 const HOMEPAGE_SOURCE_KEYS = new Set([
+  // ═══════════════════════════════════════════════════════════════
+  // Tier 1 — Major crypto news outlets
+  // ═══════════════════════════════════════════════════════════════
+  'coindesk', 'theblock', 'decrypt', 'cointelegraph',
+  'bitcoinmagazine', 'blockworks', 'defiant',
+
   // ═══════════════════════════════════════════════════════════════
   // Tier 1 — Mainstream / institutional media
   // ═══════════════════════════════════════════════════════════════
@@ -2707,9 +2712,9 @@ const HOMEPAGE_SOURCE_KEYS = new Set([
   'boe_speeches', 'atlantic_council_crypto',
 
   // ═══════════════════════════════════════════════════════════════
-  // Tier 2 — Premium crypto-native outlets
+  // Tier 2 — Established crypto news sources
   // ═══════════════════════════════════════════════════════════════
-  'coindesk', 'theblock', 'blockworks', 'decrypt', 'defiant',
+  'bitcoinist', 'cryptoslate', 'newsbtc', 'cryptonews', 'cryptopotato',
   'dl_news', 'unchained_crypto',
   // Institutional (Tier 2)
   'fidelity_digital', 'securitize_blog', 'blackrock_digital',
