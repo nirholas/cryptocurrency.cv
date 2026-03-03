@@ -64,7 +64,9 @@ export async function pgFullTextSearch(
     conditions.push(sql`${ticker.toUpperCase()} = ANY(${articles.tickers})`);
   }
   if (source) {
-    conditions.push(ilike(articles.sourceKey, `%${source}%`));
+    // Escape LIKE wildcards in user input to prevent wildcard injection
+    const escapedSource = source.replace(/%/g, '\\%').replace(/_/g, '\\_');
+    conditions.push(ilike(articles.sourceKey, `%${escapedSource}%`));
   }
 
   const where = and(...conditions);

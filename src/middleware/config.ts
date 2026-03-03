@@ -72,6 +72,7 @@ export const API_CLIENT_RATE_LIMIT = { requests: 20, windowMs: 3_600_000 };
  * Free keys are no longer issued. Existing free keys are rejected.
  */
 export const TIER_LIMITS: Record<string, { daily: number; perMinute: number }> = {
+  free:       { daily: 100,     perMinute: 10 },
   pro:        { daily: 50_000,  perMinute: 500 },
   enterprise: { daily: 500_000, perMinute: 2_000 },
 };

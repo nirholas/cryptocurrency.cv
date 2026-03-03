@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import PriceChart from "@/components/PriceChart";
 import { NewsCardCompact } from "@/components/NewsCard";
 import { generateCoinMetadata } from "@/lib/seo";
+import { sanitizeMarkdown } from "@/lib/sanitize";
 import { COINGECKO_BASE } from "@/lib/constants";
 import { Link } from "@/i18n/navigation";
 import { ChevronRight } from "lucide-react";
@@ -303,7 +304,7 @@ export default async function CoinPage({ params }: Props) {
             <div
               className="prose prose-sm max-w-none text-[var(--color-text-secondary)] [&_a]:text-blue-500 [&_a]:underline"
               dangerouslySetInnerHTML={{
-                __html: coin.description.en.slice(0, 2000),
+                __html: sanitizeMarkdown(coin.description.en.slice(0, 2000)),
               }}
             />
           </div>

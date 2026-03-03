@@ -125,19 +125,6 @@ const RSS_SOURCES = {
     url: "https://defirate.com/feed/",
     category: "defi",
   },
-  dailydefi: {
-    name: "Daily DeFi",
-    url: "https://dailydefi.org/feed/",
-    category: "defi",
-    disabled: true, // 404 Not Found — 2026-03-01
-  },
-  rekt: {
-    name: "Rekt News",
-    url: "https://rekt.news/rss.xml",
-    category: "defi",
-    disabled: true, // 500 Server Error — 2026-03-01
-  },
-
   // ═══════════════════════════════════════════════════════════════
   // NEW: NFT & Metaverse Sources
   // ═══════════════════════════════════════════════════════════════
@@ -150,7 +137,6 @@ const RSS_SOURCES = {
     name: "NFT Evening",
     url: "https://nftevening.com/feed/",
     category: "nft",
-    disabled: true, // Disabled: feed exceeds Vercel 2MB cache limit (2.2MB)
   },
 
   // ═══════════════════════════════════════════════════════════════
@@ -203,12 +189,6 @@ const RSS_SOURCES = {
   // ═══════════════════════════════════════════════════════════════
   // NEW: Ethereum-Focused Sources
   // ═══════════════════════════════════════════════════════════════
-  weekinethereumnews: {
-    name: "Week in Ethereum",
-    url: "https://weekinethereumnews.com/feed/",
-    category: "ethereum",
-    disabled: true, // Disabled: SSL certificate error
-  },
   etherscan: {
     name: "Etherscan Blog",
     url: "https://etherscan.io/blog?rss",
@@ -218,13 +198,6 @@ const RSS_SOURCES = {
   // ═══════════════════════════════════════════════════════════════
   // NEW: Layer 2 & Scaling Solutions
   // ═══════════════════════════════════════════════════════════════
-  l2beat: {
-    name: "L2BEAT Blog",
-    url: "https://l2beat.com/blog/rss.xml",
-    category: "layer2",
-    disabled: true, // 404 Not Found — 2026-03-01
-  },
-
   // ═══════════════════════════════════════════════════════════════
   // NEW: Regulatory & Institutional
   // ═══════════════════════════════════════════════════════════════
@@ -307,7 +280,6 @@ const RSS_SOURCES = {
     name: "Crypto Daily",
     url: "https://cryptodaily.co.uk/feed",
     category: "general",
-    disabled: true, // Disabled: feed exceeds Vercel 2MB cache limit (2.4MB)
   },
   blockonomi: {
     name: "Blockonomi",
@@ -342,12 +314,6 @@ const RSS_SOURCES = {
     name: "DeFi Pulse Blog",
     url: "https://defipulse.com/blog/feed/",
     category: "defi",
-  },
-  bankless: {
-    name: "Bankless",
-    url: "https://newsletter.banklesshq.com/feed",
-    category: "defi",
-    disabled: true, // Disabled: SSL certificate alt-name mismatch
   },
   defillama_news: {
     name: "DefiLlama News",
@@ -388,12 +354,6 @@ const RSS_SOURCES = {
     url: "https://arbitrum.io/blog/rss.xml",
     category: "layer2",
   },
-  polygon_blog: {
-    name: "Polygon Blog",
-    url: "https://polygon.technology/blog/feed",
-    category: "layer2",
-    disabled: true, // 404 Not Found — 2026-03-01
-  },
   starknet_blog: {
     name: "StarkNet Blog",
     url: "https://starkware.medium.com/feed",
@@ -423,18 +383,6 @@ const RSS_SOURCES = {
     url: "https://members.delphidigital.io/feed",
     category: "research",
   },
-  paradigm_research: {
-    name: "Paradigm Research",
-    url: "https://www.paradigm.xyz/feed.xml",
-    category: "research",
-    disabled: true, // 404 Not Found — 2026-03-01
-  },
-  a16z_crypto: {
-    name: "a16z Crypto",
-    url: "https://a16zcrypto.com/feed/",
-    category: "research",
-    disabled: true, // 404 Not Found — 2026-03-01
-  },
   theblockresearch: {
     name: "The Block Research",
     url: "https://www.theblock.co/research/feed",
@@ -444,12 +392,6 @@ const RSS_SOURCES = {
   // ═══════════════════════════════════════════════════════════════
   // NEW: Developer & Tech Sources
   // ═══════════════════════════════════════════════════════════════
-  alchemy_blog: {
-    name: "Alchemy Blog",
-    url: "https://www.alchemy.com/blog/rss",
-    category: "developer",
-    disabled: true, // 404 Not Found — 2026-03-01
-  },
   chainlink_blog: {
     name: "Chainlink Blog",
     url: "https://blog.chain.link/feed/",
@@ -464,12 +406,6 @@ const RSS_SOURCES = {
     name: "The Graph Blog",
     url: "https://thegraph.com/blog/feed",
     category: "developer",
-  },
-  hardhat_blog: {
-    name: "Hardhat Blog",
-    url: "https://hardhat.org/blog/rss.xml",
-    category: "developer",
-    disabled: true, // 404 Not Found — 2026-03-01
   },
   foundry_blog: {
     name: "Foundry Blog",
@@ -547,18 +483,6 @@ const RSS_SOURCES = {
     url: "https://www.bloomberg.com/crypto/feed",
     category: "mainstream",
   },
-  reuters_crypto: {
-    name: "Reuters Crypto",
-    url: "https://www.reuters.com/technology/cryptocurrency/rss",
-    category: "mainstream",
-    disabled: true, // 401 Unauthorized — 2026-03-01
-  },
-  forbes_crypto: {
-    name: "Forbes Crypto",
-    url: "https://www.forbes.com/crypto-blockchain/feed/",
-    category: "mainstream",
-    disabled: true, // 404 Not Found — 2026-03-01
-  },
   entrepreneur_crypto: {
     name: "Entrepreneur",
     url: "https://www.entrepreneur.com/topic/cryptocurrency/feed",
@@ -583,7 +507,6 @@ const RSS_SOURCES = {
     name: "Financial Times Crypto",
     url: "https://www.ft.com/cryptocurrencies?format=rss",
     category: "mainstream",
-    disabled: true, // Perf: FT paywall blocks RSS; non-crypto-specific feed
   },
 
   // ═══════════════════════════════════════════════════════════════
@@ -603,18 +526,11 @@ const RSS_SOURCES = {
     name: "DappRadar Blog",
     url: "https://dappradar.com/blog/feed",
     category: "nft",
-    disabled: true, // Disabled: feed exceeds Vercel 2MB cache limit (3MB)
   },
 
   // ═══════════════════════════════════════════════════════════════
   // NEW: Bitcoin Ecosystem Extended
   // ═══════════════════════════════════════════════════════════════
-  lightninglabs_blog: {
-    name: "Lightning Labs Blog",
-    url: "https://lightning.engineering/feed",
-    category: "bitcoin",
-    disabled: true, // 404 Not Found — 2026-03-01
-  },
   stackernews: {
     name: "Stacker News",
     url: "https://stacker.news/rss",
@@ -628,12 +544,6 @@ const RSS_SOURCES = {
     name: "NEAR Protocol Blog",
     url: "https://near.org/blog/feed/",
     category: "altl1",
-  },
-  cosmos_blog: {
-    name: "Cosmos Blog",
-    url: "https://blog.cosmos.network/feed",
-    category: "altl1",
-    disabled: true, // Disabled: SSL unable to verify leaf certificate
   },
   avalanche_blog: {
     name: "Avalanche Blog",
@@ -659,18 +569,11 @@ const RSS_SOURCES = {
     name: "Polkadot Blog",
     url: "https://polkadot.network/blog/feed/",
     category: "altl1",
-    disabled: true, // Disabled: DNS resolution failure (ENOTFOUND)
   },
 
   // ═══════════════════════════════════════════════════════════════
   // NEW: Stablecoin & CBDC News
   // ═══════════════════════════════════════════════════════════════
-  circle_blog: {
-    name: "Circle Blog",
-    url: "https://www.circle.com/blog/feed",
-    category: "stablecoin",
-    disabled: true, // 404 Not Found — 2026-03-01
-  },
   tether_news: {
     name: "Tether News",
     url: "https://tether.to/en/news/feed/",
@@ -689,12 +592,6 @@ const RSS_SOURCES = {
     name: "Pantera Capital",
     url: "https://panteracapital.com/feed/",
     category: "institutional",
-  },
-  multicoin_capital: {
-    name: "Multicoin Capital",
-    url: "https://multicoin.capital/feed/",
-    category: "institutional",
-    disabled: true, // 404 Not Found — 2026-03-01
   },
   placeholder_vc: {
     name: "Placeholder VC",
@@ -724,12 +621,6 @@ const RSS_SOURCES = {
     name: "Bitwise Research",
     url: "https://bitwiseinvestments.com/feed/",
     category: "etf",
-  },
-  vaneck_blog: {
-    name: "VanEck Blog",
-    url: "https://www.vaneck.com/us/en/blogs/rss/",
-    category: "etf",
-    disabled: true, // Disabled: feed exceeds Vercel 2MB cache limit (18MB)
   },
   coinshares_research: {
     name: "CoinShares Research",
@@ -774,12 +665,6 @@ const RSS_SOURCES = {
     url: "https://coinmetrics.substack.com/feed",
     category: "onchain",
   },
-  thetie_research: {
-    name: "The Tie Research",
-    url: "https://blog.thetie.io/feed/",
-    category: "onchain",
-    disabled: true, // Disabled: SSL certificate alt-name mismatch
-  },
   woobull: {
     name: "Willy Woo (Woobull)",
     url: "https://woobull.com/feed/",
@@ -793,21 +678,12 @@ const RSS_SOURCES = {
     name: "Finextra",
     url: "https://www.finextra.com/rss/headlines.aspx",
     category: "fintech",
-    disabled: true, // Perf: Banking/fintech news, not crypto-specific
   },
   pymnts_crypto: {
     name: "PYMNTS Crypto",
     url: "https://www.pymnts.com/cryptocurrency/feed/",
     category: "fintech",
-    disabled: true, // Perf: Payments news, not crypto-specific
   },
-  fintech_futures: {
-    name: "Fintech Futures",
-    url: "https://www.fintechfutures.com/feed/",
-    category: "fintech",
-    disabled: true, // Perf: Fintech news, not crypto-specific
-  },
-
   // ═══════════════════════════════════════════════════════════════
   // MACRO ANALYSIS & INDEPENDENT RESEARCHERS
   // ═══════════════════════════════════════════════════════════════
@@ -815,21 +691,12 @@ const RSS_SOURCES = {
     name: "Lyn Alden",
     url: "https://www.lynalden.com/feed/",
     category: "macro",
-    disabled: true, // Perf: Macro commentary, not crypto-specific
   },
   alhambra_partners: {
     name: "Alhambra Partners",
     url: "https://www.alhambrapartners.com/feed/",
     category: "macro",
-    disabled: true, // Perf: Macro economics, not crypto-specific
   },
-  macro_voices: {
-    name: "Macro Voices",
-    url: "https://www.macrovoices.com/feed",
-    category: "macro",
-    disabled: true, // 404 Not Found — 2026-03-01
-  },
-
   // ═══════════════════════════════════════════════════════════════
   // QUANT & SYSTEMATIC TRADING RESEARCH
   // ═══════════════════════════════════════════════════════════════
@@ -837,33 +704,12 @@ const RSS_SOURCES = {
     name: "AQR Insights",
     url: "https://www.aqr.com/Insights/feed",
     category: "quant",
-    disabled: true, // Perf: Quant research, zero crypto content
-  },
-  two_sigma_insights: {
-    name: "Two Sigma Insights",
-    url: "https://www.twosigma.com/insights/rss/",
-    category: "quant",
-    disabled: true, // Perf: Quant research, zero crypto content
-  },
-  man_institute: {
-    name: "Man Institute",
-    url: "https://www.man.com/maninstitute/feed",
-    category: "quant",
-    disabled: true, // 404 Not Found — 2026-03-01
   },
   alpha_architect: {
     name: "Alpha Architect",
     url: "https://alphaarchitect.com/feed/",
     category: "quant",
-    disabled: true, // Perf: Quant research, zero crypto content
   },
-  quantstart: {
-    name: "QuantStart",
-    url: "https://www.quantstart.com/articles/rss/",
-    category: "quant",
-    disabled: true, // 404 Not Found — 2026-03-01
-  },
-
   // ═══════════════════════════════════════════════════════════════
   // ADDITIONAL CRYPTO JOURNALISM
   // ═══════════════════════════════════════════════════════════════
@@ -871,12 +717,6 @@ const RSS_SOURCES = {
     name: "Unchained Crypto",
     url: "https://unchainedcrypto.com/feed/",
     category: "journalism",
-  },
-  dl_news: {
-    name: "DL News",
-    url: "https://www.dlnews.com/feed/",
-    category: "journalism",
-    disabled: true, // 404 Not Found — 2026-03-01
   },
   protos: {
     name: "Protos",
@@ -888,12 +728,6 @@ const RSS_SOURCES = {
     url: "https://thedailygwei.substack.com/feed",
     category: "ethereum",
   },
-  week_in_ethereum: {
-    name: "Week in Ethereum",
-    url: "https://weekinethereumnews.com/feed/",
-    category: "ethereum",
-    disabled: true, // Disabled: SSL certificate alt-name mismatch (duplicate of weekinethereumnews)
-  },
   wu_blockchain: {
     name: "Wu Blockchain",
     url: "https://wublock.substack.com/feed",
@@ -903,19 +737,6 @@ const RSS_SOURCES = {
   // ═══════════════════════════════════════════════════════════════
   // TRADITIONAL FINANCE BLOGS
   // ═══════════════════════════════════════════════════════════════
-  goldman_insights: {
-    name: "Goldman Sachs Insights",
-    url: "https://www.goldmansachs.com/insights/feed.rss",
-    category: "tradfi",
-    disabled: true, // 404 Not Found — 2026-03-01
-  },
-  bny_mellon: {
-    name: "BNY Mellon Aerial View",
-    url: "https://www.bnymellon.com/us/en/insights/aerial-view-magazine.rss",
-    category: "tradfi",
-    disabled: true, // Perf: Traditional finance, not crypto-specific
-  },
-
   // ═══════════════════════════════════════════════════════════════
   // ADDITIONAL CRYPTO NEWS (from HQ DeFi Dashboard)
   // ═══════════════════════════════════════════════════════════════
@@ -979,55 +800,36 @@ const RSS_SOURCES = {
     name: "Wall Street Journal",
     url: "https://feeds.a.dj.com/rss/RSSMarketsMain.xml",
     category: "mainstream",
-    disabled: true, // Perf: Generic finance, not crypto-specific
   },
   nyt_business: {
     name: "New York Times Business",
     url: "https://rss.nytimes.com/services/xml/rss/nyt/Business.xml",
     category: "mainstream",
-    disabled: true, // Perf: Generic business news, not crypto-specific
-  },
-  washingtonpost_biz: {
-    name: "Washington Post Business",
-    url: "https://feeds.washingtonpost.com/rss/business",
-    category: "mainstream",
-    disabled: true, // DNS resolution failure — 2026-03-01
   },
   economist: {
     name: "The Economist",
     url: "https://www.economist.com/sections/economics/rss.xml",
     category: "mainstream",
-    disabled: true, // Perf: General economics, not crypto-specific
   },
   marketwatch: {
     name: "MarketWatch",
     url: "https://feeds.marketwatch.com/marketwatch/topstories/",
     category: "mainstream",
-    disabled: true, // Perf: Generic stock market, not crypto-specific
-  },
-  investopedia: {
-    name: "Investopedia",
-    url: "https://www.investopedia.com/feedbuilder/feed/getfeed/?feedName=rss_headline",
-    category: "mainstream",
-    disabled: true, // Feed URL discontinued (404) — 2026-03-01
   },
   seekingalpha: {
     name: "Seeking Alpha",
     url: "https://seekingalpha.com/market_currents.xml",
     category: "mainstream",
-    disabled: true, // Perf: Generic stock market, not crypto-specific
   },
   nikkei_asia: {
     name: "Nikkei Asia",
     url: "https://asia.nikkei.com/rss/feed/nar",
     category: "mainstream",
-    disabled: true, // Perf: Asian business news, not crypto-specific
   },
   economic_times_india: {
     name: "Economic Times India Markets",
     url: "https://economictimes.indiatimes.com/markets/rssfeeds/1977021501.cms",
     category: "mainstream",
-    disabled: true, // Perf: Indian markets, not crypto-specific
   },
 
   // ═══════════════════════════════════════════════════════════════
@@ -1040,19 +842,6 @@ const RSS_SOURCES = {
     name: "BBC World",
     url: "https://feeds.bbci.co.uk/news/world/rss.xml",
     category: "geopolitical",
-    disabled: true, // Perf: General world news, not crypto-specific
-  },
-  reuters_world: {
-    name: "Reuters",
-    url: "https://www.reuters.com/rssFeed/worldNews/",
-    category: "geopolitical",
-    disabled: true, // 401 Unauthorized — 2026-03-01
-  },
-  ap_news: {
-    name: "AP News",
-    url: "https://rsshub.app/apnews/topics/apf-business",
-    category: "geopolitical",
-    disabled: true, // Perf: General news wire, not crypto-specific
   },
   federal_reserve: {
     name: "Federal Reserve",
@@ -1068,19 +857,16 @@ const RSS_SOURCES = {
     name: "DW News",
     url: "https://rss.dw.com/xml/rss-en-all",
     category: "geopolitical",
-    disabled: true, // Perf: German news, not crypto-specific
   },
   cbc_news: {
     name: "CBC News",
     url: "https://www.cbc.ca/cmlink/1.1244475",
     category: "geopolitical",
-    disabled: true, // Perf: Canadian news, not crypto-specific
   },
   al_jazeera: {
     name: "Al Jazeera",
     url: "https://www.aljazeera.com/xml/rss/all.xml",
     category: "geopolitical",
-    disabled: true, // Perf: General world news, not crypto-specific
   },
 
   // =========================================================================
@@ -1152,12 +938,6 @@ const RSS_SOURCES = {
     url: "https://linea.mirror.xyz/feed/atom",
     category: "layer2",
   },
-  mantle_blog: {
-    name: "Mantle Blog",
-    url: "https://www.mantle.xyz/blog/feed",
-    category: "layer2",
-    disabled: true, // 404 Not Found — 2026-03-01
-  },
   blast_blog: {
     name: "Blast Blog",
     url: "https://mirror.xyz/blastofficial.eth/feed/atom",
@@ -1165,12 +945,6 @@ const RSS_SOURCES = {
   },
 
   // Alt L1 Ecosystem Extended
-  ton_blog: {
-    name: "TON Blog",
-    url: "https://blog.ton.org/rss.xml",
-    category: "altl1",
-    disabled: true, // 404 Not Found — 2026-03-01
-  },
   sei_blog: {
     name: "Sei Blog",
     url: "https://blog.sei.io/rss/",
@@ -1181,12 +955,6 @@ const RSS_SOURCES = {
     url: "https://blog.injective.com/feed/",
     category: "altl1",
   },
-  monad_blog: {
-    name: "Monad Blog",
-    url: "https://www.monad.xyz/blog/feed",
-    category: "altl1",
-    disabled: true, // 404 Not Found — 2026-03-01
-  },
   celestia_blog: {
     name: "Celestia Blog",
     url: "https://blog.celestia.org/rss/",
@@ -1194,18 +962,6 @@ const RSS_SOURCES = {
   },
 
   // Bitcoin Ecosystem Extended
-  bisq_blog: {
-    name: "Bisq Blog",
-    url: "https://bisq.network/blog/feed.xml",
-    category: "bitcoin",
-    disabled: true, // 404 Not Found — 2026-03-01
-  },
-  rgb_blog: {
-    name: "RGB Blog",
-    url: "https://rgb.tech/blog/feed",
-    category: "bitcoin",
-    disabled: true, // 404 Not Found — 2026-03-01
-  },
   nostr_blog: {
     name: "Nostr Protocol",
     url: "https://nostr.com/feed.xml",
@@ -1225,12 +981,6 @@ const RSS_SOURCES = {
   },
 
   // RWA (Real World Assets)
-  maple_finance: {
-    name: "Maple Finance Blog",
-    url: "https://maple.finance/blog/rss.xml",
-    category: "defi",
-    disabled: true, // 404 Not Found — 2026-03-01
-  },
   centrifuge_blog: {
     name: "Centrifuge Blog",
     url: "https://medium.com/feed/centrifuge",
@@ -1247,12 +997,6 @@ const RSS_SOURCES = {
     name: "Fetch.ai Blog",
     url: "https://fetch.ai/blog/feed",
     category: "altl1",
-  },
-  ocean_protocol: {
-    name: "Ocean Protocol Blog",
-    url: "https://blog.oceanprotocol.com/feed",
-    category: "altl1",
-    disabled: true, // Feed returning persistent 500s — 2026-03-01
   },
   render_blog: {
     name: "Render Network Blog",
@@ -1295,13 +1039,6 @@ const RSS_SOURCES = {
     url: "https://www.elliptic.co/blog/rss.xml",
     category: "security",
   },
-  hacken_blog: {
-    name: "Hacken Blog",
-    url: "https://hacken.io/blog/feed/",
-    category: "security",
-    disabled: true, // 404 Not Found — 2026-03-01
-  },
-
   // Payments & Stablecoins Extended
   stripe_crypto: {
     name: "Stripe Blog (Crypto)",
@@ -1315,43 +1052,13 @@ const RSS_SOURCES = {
   },
 
   // Derivatives Extended
-  coinglass_blog: {
-    name: "CoinGlass Blog",
-    url: "https://www.coinglass.com/blog/feed",
-    category: "derivatives",
-    disabled: true, // 404 Not Found — 2026-03-01
-  },
-
   // Podcasts (show notes via RSS)
   unchained_podcast: {
     name: "Unchained Podcast",
     url: "https://feeds.simplecast.com/JGE3yC0V",
     category: "journalism",
     noDataCache: true, // 11.9MB feed exceeds Next.js 2MB data cache limit
-    disabled: true, // revalidate:0 fetch breaks static generation — 2026-03-01
   },
-  what_bitcoin_did: {
-    name: "What Bitcoin Did",
-    url: "https://feeds.simplecast.com/dsMGZxro",
-    category: "bitcoin",
-    noDataCache: true, // Simplecast feeds exceed Next.js 2MB data cache limit
-    disabled: true, // 404 Not Found — 2026-03-01
-  },
-  bankless_podcast: {
-    name: "Bankless Podcast",
-    url: "https://feeds.simplecast.com/lKmQdc05",
-    category: "defi",
-    noDataCache: true, // Simplecast feeds exceed Next.js 2MB data cache limit
-    disabled: true, // 404 Not Found — 2026-03-01
-  },
-  epicenter_podcast: {
-    name: "Epicenter Podcast",
-    url: "https://feeds.simplecast.com/0E5u4F_4",
-    category: "general",
-    noDataCache: true, // Simplecast feeds exceed Next.js 2MB data cache limit
-    disabled: true, // 404 Not Found — 2026-03-01
-  },
-
   // =========================================================================
   // CRYPTO MEDIA — High-Volume News Sources
   // =========================================================================
@@ -1375,25 +1082,6 @@ const RSS_SOURCES = {
     url: "https://bitcoinworld.co.in/feed/",
     category: "general",
   },
-  coincodex_blog: {
-    name: "CoinCodex Blog",
-    url: "https://coincodex.com/blog/feed/",
-    category: "general",
-    disabled: true, // 404 Not Found — 2026-03-01
-  },
-  invezz_crypto: {
-    name: "Invezz Crypto",
-    url: "https://invezz.com/cryptocurrency/feed/",
-    category: "general",
-    disabled: true, // 404 Not Found — 2026-03-01
-  },
-  ibtimes_crypto: {
-    name: "IBTimes Crypto",
-    url: "https://www.ibtimes.com/cryptocurrency/feed",
-    category: "general",
-    disabled: true, // 404 Not Found — 2026-03-01
-  },
-
   // =========================================================================
   // EXCHANGE & PLATFORM BLOGS
   // =========================================================================
@@ -1426,12 +1114,6 @@ const RSS_SOURCES = {
   // =========================================================================
   // DEFI PROTOCOLS — Major DEX/Lending/Yield
   // =========================================================================
-  dydx_blog: {
-    name: "dYdX Blog",
-    url: "https://dydx.exchange/blog/feed",
-    category: "defi",
-    disabled: true, // 500 Server Error — 2026-03-01
-  },
   synthetix_blog: {
     name: "Synthetix Blog",
     url: "https://blog.synthetix.io/rss/",
@@ -1466,12 +1148,6 @@ const RSS_SOURCES = {
   // =========================================================================
   // CROSS-CHAIN & INTEROPERABILITY
   // =========================================================================
-  wormhole_blog: {
-    name: "Wormhole Blog",
-    url: "https://wormhole.com/blog/feed",
-    category: "developer",
-    disabled: true, // 404 Not Found — 2026-03-01
-  },
   layerzero_blog: {
     name: "LayerZero Blog",
     url: "https://medium.com/feed/layerzero-official",
@@ -1486,19 +1162,6 @@ const RSS_SOURCES = {
     url: "https://techcrunch.com/category/cryptocurrency/feed/",
     category: "mainstream",
   },
-  wired_crypto: {
-    name: "Wired Crypto",
-    url: "https://www.wired.com/feed/tag/cryptocurrency/latest/rss",
-    category: "mainstream",
-    disabled: true, // 404 Not Found — 2026-03-01
-  },
-  theregister_crypto: {
-    name: "The Register",
-    url: "https://www.theregister.com/offbeat/geek/headlines.atom",
-    category: "mainstream",
-    disabled: true, // 404 Not Found — 2026-03-01
-  },
-
   // =========================================================================
   // POLICY & REGULATION
   // =========================================================================
@@ -1512,22 +1175,9 @@ const RSS_SOURCES = {
     url: "https://www.cftc.gov/PressRoom/PressReleases/RSS",
     category: "geopolitical",
   },
-  mica_crypto: {
-    name: "EU Blockchain Observatory",
-    url: "https://blockchain-observatory.ec.europa.eu/feed",
-    category: "geopolitical",
-    disabled: true, // 404 Not Found — 2026-03-01
-  },
-
   // =========================================================================
   // SOLANA ECOSYSTEM
   // =========================================================================
-  helius_blog: {
-    name: "Helius Blog",
-    url: "https://www.helius.dev/blog/feed",
-    category: "solana",
-    disabled: true, // 404 Not Found — 2026-03-01
-  },
   phantom_blog: {
     name: "Phantom Blog",
     url: "https://phantom.app/blog/feed",
@@ -1552,28 +1202,9 @@ const RSS_SOURCES = {
     url: "https://blog.bittensor.com/feed",
     category: "altl1",
   },
-  akash_blog: {
-    name: "Akash Network Blog",
-    url: "https://akash.network/blog/feed/",
-    category: "altl1",
-    disabled: true, // 404 Not Found — 2026-03-01
-  },
-  ritual_blog: {
-    name: "Ritual Blog",
-    url: "https://ritual.net/blog/feed",
-    category: "altl1",
-    disabled: true, // 404 Not Found — 2026-03-01
-  },
-
   // =========================================================================
   // DATA ANALYTICS PLATFORMS
   // =========================================================================
-  nansen_blog: {
-    name: "Nansen Blog",
-    url: "https://www.nansen.ai/research/feed",
-    category: "onchain",
-    disabled: true, // 404 Not Found — 2026-03-01
-  },
   dune_blog: {
     name: "Dune Analytics Blog",
     url: "https://dune.com/blog/feed",
@@ -1588,33 +1219,15 @@ const RSS_SOURCES = {
   // =========================================================================
   // GENERAL CRYPTO NEWS — Extended Coverage
   // =========================================================================
-  cryptopress: {
-    name: "Crypto.Press",
-    url: "https://crypto.press/feed/",
-    category: "general",
-    disabled: true, // DNS resolution failure — 2026-03-01
-  },
   cryptoslam: {
     name: "CryptoSlam Blog",
     url: "https://www.cryptoslam.io/blog/feed/",
     category: "general",
   },
-  coinpaprika_blog: {
-    name: "CoinPaprika Blog",
-    url: "https://coinpaprika.com/blog/feed/",
-    category: "general",
-    disabled: true, // 404 Not Found — 2026-03-01
-  },
   thecoinrepublic: {
     name: "The Coin Republic",
     url: "https://www.thecoinrepublic.com/feed/",
     category: "general",
-  },
-  bitdegree_news: {
-    name: "BitDegree News",
-    url: "https://www.bitdegree.org/crypto/news/feed",
-    category: "general",
-    disabled: true, // 404 Not Found — 2026-03-01
   },
   cryptotvplus: {
     name: "CryptoTvPlus",
@@ -1635,18 +1248,6 @@ const RSS_SOURCES = {
     url: "https://medium.com/feed/balancer-protocol",
     category: "defi",
   },
-  frax_blog: {
-    name: "Frax Finance Blog",
-    url: "https://medium.com/feed/frax-finance",
-    category: "defi",
-    disabled: true, // 404 Not Found — 2026-03-01
-  },
-  convex_blog: {
-    name: "Convex Finance Blog",
-    url: "https://medium.com/feed/convex-finance",
-    category: "defi",
-    disabled: true, // 404 Not Found — 2026-03-01
-  },
   radiant_blog: {
     name: "Radiant Capital Blog",
     url: "https://medium.com/feed/@radiantcapital",
@@ -1656,18 +1257,6 @@ const RSS_SOURCES = {
     name: "Instadapp Blog",
     url: "https://blog.instadapp.io/rss/",
     category: "defi",
-  },
-  sommelier_blog: {
-    name: "Sommelier Finance Blog",
-    url: "https://medium.com/feed/sommelier-finance",
-    category: "defi",
-    disabled: true, // 404 Not Found — 2026-03-01
-  },
-  liquity_blog: {
-    name: "Liquity Blog",
-    url: "https://www.liquity.org/blog/feed",
-    category: "defi",
-    disabled: true, // 404 Not Found — 2026-03-01
   },
   sushi_blog: {
     name: "SushiSwap Blog",
@@ -1682,12 +1271,6 @@ const RSS_SOURCES = {
     name: "Yield Guild Games Blog",
     url: "https://medium.com/feed/yield-guild-games",
     category: "gaming",
-  },
-  immutable_blog: {
-    name: "Immutable Blog",
-    url: "https://www.immutable.com/blog/feed",
-    category: "gaming",
-    disabled: true, // 404 Not Found — 2026-03-01
   },
   ronin_blog: {
     name: "Ronin Blog",
@@ -1713,13 +1296,6 @@ const RSS_SOURCES = {
     url: "https://medium.com/feed/espresso-systems",
     category: "layer2",
   },
-  polygon_zkevm_blog: {
-    name: "Polygon zkEVM Blog",
-    url: "https://polygon.technology/blog/polygon-zkevm/feed",
-    category: "layer2",
-    disabled: true, // 404 Not Found — 2026-03-01
-  },
-
   // =========================================================================
   // SOLANA ECOSYSTEM — Extended
   // =========================================================================
@@ -1733,18 +1309,6 @@ const RSS_SOURCES = {
     url: "https://medium.com/feed/@raydium",
     category: "solana",
   },
-  tensor_blog: {
-    name: "Tensor Blog",
-    url: "https://medium.com/feed/@tensor_hq",
-    category: "solana",
-    disabled: true, // 404 Not Found — 2026-03-01
-  },
-  drift_blog: {
-    name: "Drift Protocol Blog",
-    url: "https://medium.com/feed/drift-protocol",
-    category: "solana",
-    disabled: true, // 404 Not Found — 2026-03-01
-  },
   solflare_blog: {
     name: "Solflare Blog",
     url: "https://medium.com/feed/solflare",
@@ -1754,28 +1318,10 @@ const RSS_SOURCES = {
   // =========================================================================
   // BITCOIN ECOSYSTEM — Extended
   // =========================================================================
-  ordinals_blog: {
-    name: "Ordinals Blog",
-    url: "https://ordinalsbot.com/blog/feed",
-    category: "bitcoin",
-    disabled: true, // 404 Not Found — 2026-03-01
-  },
   bitcoinops: {
     name: "Bitcoin Optech",
     url: "https://bitcoinops.org/feed.xml",
     category: "bitcoin",
-  },
-  river_blog: {
-    name: "River Financial Blog",
-    url: "https://river.com/learn/feed/",
-    category: "bitcoin",
-    disabled: true, // 404 Not Found — 2026-03-01
-  },
-  swan_blog: {
-    name: "Swan Bitcoin Blog",
-    url: "https://www.swanbitcoin.com/feed/",
-    category: "bitcoin",
-    disabled: true, // 404 Not Found — 2026-03-01
   },
   casa_blog: {
     name: "Casa Blog",
@@ -1786,18 +1332,6 @@ const RSS_SOURCES = {
   // =========================================================================
   // REGULATION & COMPLIANCE
   // =========================================================================
-  elliptic_compliance: {
-    name: "Elliptic Compliance Blog",
-    url: "https://www.elliptic.co/blog/category/compliance/rss.xml",
-    category: "geopolitical",
-    disabled: true, // 404 Not Found — 2026-03-01
-  },
-  trminsights: {
-    name: "TRM Labs Insights",
-    url: "https://www.trmlabs.com/insights/feed",
-    category: "geopolitical",
-    disabled: true, // 404 Not Found — 2026-03-01
-  },
   fireblocks_blog: {
     name: "Fireblocks Blog",
     url: "https://www.fireblocks.com/blog/feed/",
@@ -1807,12 +1341,6 @@ const RSS_SOURCES = {
   // =========================================================================
   // VENTURE & INSTITUTIONAL — Extended
   // =========================================================================
-  hashkey_capital: {
-    name: "HashKey Capital Blog",
-    url: "https://medium.com/feed/hashkey-capital",
-    category: "institutional",
-    disabled: true, // 404 Not Found — 2026-03-01
-  },
   polychain_blog: {
     name: "Polychain Capital Blog",
     url: "https://medium.com/feed/@polychain",
@@ -1832,18 +1360,6 @@ const RSS_SOURCES = {
   // =========================================================================
   // INFRASTRUCTURE & WALLETS
   // =========================================================================
-  metamask_blog: {
-    name: "MetaMask Blog",
-    url: "https://metamask.io/news/feed",
-    category: "developer",
-    disabled: true, // 404 Not Found — 2026-03-01
-  },
-  ledger_blog: {
-    name: "Ledger Blog",
-    url: "https://www.ledger.com/blog/feed",
-    category: "security",
-    disabled: true, // 401 Unauthorized — 2026-03-01
-  },
   trezor_blog: {
     name: "Trezor Blog",
     url: "https://blog.trezor.io/feed",
@@ -1892,13 +1408,6 @@ const RSS_SOURCES = {
     url: "https://medium.com/feed/across-protocol",
     category: "defi",
   },
-  flashbots_blog: {
-    name: "Flashbots Blog",
-    url: "https://writings.flashbots.net/feed",
-    category: "ethereum",
-    disabled: true, // 404 Not Found — 2026-03-01
-  },
-
   // =========================================================================
   // COSMOS ECOSYSTEM
   // =========================================================================
@@ -1906,12 +1415,6 @@ const RSS_SOURCES = {
     name: "Osmosis Blog",
     url: "https://medium.com/feed/osmosis",
     category: "altl1",
-  },
-  dydx_chain_blog: {
-    name: "dYdX Chain Blog",
-    url: "https://www.dydx.foundation/blog/feed",
-    category: "altl1",
-    disabled: true, // 404 Not Found — 2026-03-01
   },
   stride_blog: {
     name: "Stride Blog",
@@ -1990,12 +1493,6 @@ const RSS_SOURCES = {
     url: "https://blockhead.co/feed/",
     category: "asia",
   },
-  tokenpost_en: {
-    name: "TokenPost EN",
-    url: "https://tokenpost.com/rss/feed/",
-    category: "asia",
-    disabled: true, // 404 Not Found — 2026-03-01
-  },
   bitpinas: {
     name: "BitPinas",
     url: "https://bitpinas.com/feed/",
@@ -2010,31 +1507,6 @@ const RSS_SOURCES = {
   // =========================================================================
   // TRADFI & INSTITUTIONAL — Expanding Coverage
   // =========================================================================
-  jpmorgan_insights: {
-    name: "JPMorgan Insights",
-    url: "https://www.jpmorgan.com/insights/feed",
-    category: "tradfi",
-    disabled: true, // 404 Not Found — 2026-03-01
-  },
-  citi_blog: {
-    name: "Citi GPS",
-    url: "https://www.citigroup.com/global/insights/feed",
-    category: "tradfi",
-    disabled: true, // 404 Not Found — 2026-03-01
-  },
-  fidelity_digital: {
-    name: "Fidelity Digital Assets",
-    url: "https://www.fidelitydigitalassets.com/research/feed",
-    category: "tradfi",
-    disabled: true, // 404 Not Found — 2026-03-01
-  },
-  standard_chartered_crypto: {
-    name: "Standard Chartered Crypto",
-    url: "https://www.sc.com/en/feature/crypto-insights/feed/",
-    category: "tradfi",
-    disabled: true, // 404 Not Found — 2026-03-01
-  },
-
   // =========================================================================
   // MACRO & CENTRAL BANKS — Expanding Coverage
   // =========================================================================
@@ -2042,31 +1514,21 @@ const RSS_SOURCES = {
     name: "Federal Reserve FEDS Notes",
     url: "https://www.federalreserve.gov/feeds/feds_notes.xml",
     category: "macro",
-    disabled: true, // Perf: Academic Fed research notes, not breaking news
   },
   bis_speeches: {
     name: "BIS Speeches",
     url: "https://www.bis.org/doclist/cbspeeches.rss",
     category: "macro",
-    disabled: true, // Perf: Central bank speeches, not crypto-specific
   },
   ecb_press: {
     name: "ECB Press Releases",
     url: "https://www.ecb.europa.eu/rss/press.html",
     category: "macro",
-    disabled: true, // Perf: Central bank press, not crypto-specific
-  },
-  imf_blog: {
-    name: "IMF Blog",
-    url: "https://www.imf.org/en/Blogs/rss",
-    category: "macro",
-    disabled: true, // Perf: IMF commentary, not crypto-specific
   },
   boe_speeches: {
     name: "Bank of England Speeches",
     url: "https://www.bankofengland.co.uk/rss/speeches",
     category: "macro",
-    disabled: true, // Perf: Central bank speeches, not crypto-specific
   },
 
   // =========================================================================
@@ -2077,19 +1539,6 @@ const RSS_SOURCES = {
     url: "https://www.theminermag.com/feed/",
     category: "mining",
   },
-  luxor_blog: {
-    name: "Luxor Mining Blog",
-    url: "https://luxor.tech/blog/feed",
-    category: "mining",
-    disabled: true, // 404 Not Found — 2026-03-01
-  },
-  foundation_mining: {
-    name: "Foundation Mining",
-    url: "https://foundationmining.com/blog/feed/",
-    category: "mining",
-    disabled: true, // DNS resolution failure — 2026-03-01
-  },
-
   // =========================================================================
   // CRYPTO JOURNALISM & NEWSLETTERS — Expanding Coverage
   // =========================================================================
@@ -2117,7 +1566,6 @@ const RSS_SOURCES = {
     name: "Crypto Weekly",
     url: "https://cryptoweekly.co/feed/",
     category: "journalism",
-    disabled: true, // DNS resolution failure — 2026-03-01
   },
   metaversal: {
     name: "Metaversal",
@@ -2128,41 +1576,16 @@ const RSS_SOURCES = {
   // =========================================================================
   // NFT & DIGITAL ART — Expanding Coverage
   // =========================================================================
-  artblocks_blog: {
-    name: "Art Blocks Blog",
-    url: "https://medium.com/feed/the-art-blocks-blog",
-    category: "nft",
-    disabled: true, // 404 Not Found — 2026-03-01
-  },
   superrare_blog: {
     name: "SuperRare Blog",
     url: "https://medium.com/feed/superrare",
     category: "nft",
-  },
-  opensea_blog: {
-    name: "OpenSea Blog",
-    url: "https://opensea.io/blog/feed",
-    category: "nft",
-    disabled: true, // 404 Not Found — 2026-03-01
   },
   blur_blog: {
     name: "Blur Blog",
     url: "https://mirror.xyz/blurdao.eth/feed/atom",
     category: "nft",
   },
-  zora_blog: {
-    name: "Zora Blog",
-    url: "https://zora.co/blog/feed",
-    category: "nft",
-    disabled: true, // 404 Not Found — 2026-03-01
-  },
-  foundation_blog: {
-    name: "Foundation Blog",
-    url: "https://foundation.app/blog/feed",
-    category: "nft",
-    disabled: true, // 404 Not Found — 2026-03-01
-  },
-
   // =========================================================================
   // TRADING & MARKET ANALYSIS — Expanding Coverage
   // =========================================================================
@@ -2170,12 +1593,6 @@ const RSS_SOURCES = {
     name: "Santiment Blog",
     url: "https://santiment.net/blog/feed/",
     category: "trading",
-  },
-  kaiko_research: {
-    name: "Kaiko Research",
-    url: "https://www.kaiko.com/research/feed",
-    category: "trading",
-    disabled: true, // 404 Not Found — 2026-03-01
   },
   ccdata_research: {
     name: "CCData Research",
@@ -2205,12 +1622,6 @@ const RSS_SOURCES = {
   // =========================================================================
   // SOCIALFI & DECENTRALIZED SOCIAL
   // =========================================================================
-  lens_blog: {
-    name: "Lens Protocol Blog",
-    url: "https://lens.xyz/blog/feed",
-    category: "social",
-    disabled: true, // 404 Not Found — 2026-03-01
-  },
   farcaster_blog: {
     name: "Farcaster Blog",
     url: "https://www.farcaster.xyz/blog/feed",
@@ -2220,49 +1631,6 @@ const RSS_SOURCES = {
   // =========================================================================
   // ADDITIONAL PODCASTS
   // =========================================================================
-  bell_curve_podcast: {
-    name: "Bell Curve Podcast",
-    url: "https://feeds.simplecast.com/ePJmCHr3",
-    category: "defi",
-    disabled: true, // 404 Not Found — 2026-03-01
-  },
-  the_chopping_block: {
-    name: "The Chopping Block",
-    url: "https://feeds.simplecast.com/2LYbgm7h",
-    category: "general",
-    disabled: true, // 404 Not Found — 2026-03-01
-  },
-  empire_podcast: {
-    name: "Empire Podcast",
-    url: "https://feeds.simplecast.com/lKRGWp6K",
-    category: "general",
-    disabled: true, // 404 Not Found — 2026-03-01
-  },
-  lightspeed_podcast: {
-    name: "Lightspeed Podcast",
-    url: "https://feeds.simplecast.com/V3RQUAFM",
-    category: "solana",
-    disabled: true, // 404 Not Found — 2026-03-01
-  },
-  on_the_margin_podcast: {
-    name: "On The Margin",
-    url: "https://feeds.simplecast.com/I1bKBJmR",
-    category: "trading",
-    disabled: true, // 404 Not Found — 2026-03-01
-  },
-  zero_knowledge_podcast: {
-    name: "Zero Knowledge Podcast",
-    url: "https://feeds.simplecast.com/BBRRTZZP",
-    category: "developer",
-    disabled: true, // 404 Not Found — 2026-03-01
-  },
-  into_the_bytecode: {
-    name: "Into the Bytecode",
-    url: "https://feeds.simplecast.com/wN3UNzZa",
-    category: "ethereum",
-    disabled: true, // 404 Not Found — 2026-03-01
-  },
-
   // =========================================================================
   // ETHEREUM ECOSYSTEM — Expanding Coverage
   // =========================================================================
@@ -2276,13 +1644,6 @@ const RSS_SOURCES = {
     url: "https://medium.com/feed/ethereum-cat-herders",
     category: "ethereum",
   },
-  nethermind_blog: {
-    name: "Nethermind Blog",
-    url: "https://www.nethermind.io/blog/feed",
-    category: "ethereum",
-    disabled: true, // 404 Not Found — 2026-03-01
-  },
-
   // =========================================================================
   // BITCOIN ECOSYSTEM — Expanding Coverage
   // =========================================================================
@@ -2305,31 +1666,6 @@ const RSS_SOURCES = {
   // =========================================================================
   // RESEARCH & ON-CHAIN — Expanding Coverage
   // =========================================================================
-  token_terminal_blog: {
-    name: "Token Terminal Blog",
-    url: "https://tokenterminal.com/blog/feed",
-    category: "research",
-    disabled: true, // 404 Not Found — 2026-03-01
-  },
-  cryptorank_blog: {
-    name: "CryptoRank Blog",
-    url: "https://cryptorank.io/blog/feed",
-    category: "research",
-    disabled: true, // 404 Not Found — 2026-03-01
-  },
-  flipside_blog: {
-    name: "Flipside Crypto Blog",
-    url: "https://flipsidecrypto.xyz/blog/feed",
-    category: "onchain",
-    disabled: true, // 404 Not Found — 2026-03-01
-  },
-  debank_blog: {
-    name: "DeBank Blog",
-    url: "https://medium.com/feed/@DeBank_",
-    category: "onchain",
-    disabled: true, // 404 Not Found — 2026-03-01
-  },
-
   // =========================================================================
   // WAVE 4 — MAINSTREAM MEDIA (rebuilding from 14 disabled)
   // =========================================================================
@@ -2342,12 +1678,6 @@ const RSS_SOURCES = {
     name: "BBC Business",
     url: "https://feeds.bbci.co.uk/news/business/rss.xml",
     category: "mainstream",
-  },
-  cnn_business: {
-    name: "CNN Business",
-    url: "https://rss.cnn.com/rss/money_news_international.rss",
-    category: "mainstream",
-    disabled: true, // ECONNRESET — 2026-03-01
   },
   barrons: {
     name: "Barrons",
@@ -2507,13 +1837,6 @@ const RSS_SOURCES = {
     url: "https://minaprotocol.com/blog/feed",
     category: "security",
   },
-  noir_blog: {
-    name: "Noir Lang Blog",
-    url: "https://blog.noir-lang.org/feed",
-    category: "developer",
-    disabled: true, // ENOTFOUND — 2026-03-01
-  },
-
   // =========================================================================
   // WAVE 4 — RWA / TOKENIZATION
   // =========================================================================
@@ -2607,12 +1930,6 @@ const RSS_SOURCES = {
   // =========================================================================
   // WAVE 4 — ETHEREUM ECOSYSTEM EXPANDED
   // =========================================================================
-  eigenda_blog: {
-    name: "EigenDA Blog",
-    url: "https://www.blog.eigenda.xyz/rss/",
-    category: "ethereum",
-    disabled: true, // ENOTFOUND — 2026-03-01
-  },
   lido_dao_blog: {
     name: "Lido DAO Governance",
     url: "https://research.lido.fi/latest.rss",
@@ -2683,6 +2000,355 @@ const RSS_SOURCES = {
     name: "Molly White Blog",
     url: "https://www.citationneeded.news/rss/",
     category: "journalism",
+  },
+
+  // =========================================================================
+  // WAVE 5 — DePIN (Decentralized Physical Infrastructure Networks)
+  // Hot 2025-2026 narrative. Real-world infrastructure meets crypto.
+  // =========================================================================
+  helium_blog: {
+    name: "Helium Blog",
+    url: "https://blog.helium.com/feed",
+    category: "depin",
+  },
+  hivemapper_blog: {
+    name: "Hivemapper Blog",
+    url: "https://blog.hivemapper.com/feed",
+    category: "depin",
+  },
+  iotex_blog: {
+    name: "IoTeX Blog",
+    url: "https://iotex.io/blog/feed",
+    category: "depin",
+  },
+  dimo_blog: {
+    name: "DIMO Blog",
+    url: "https://dimo.co/blog/feed",
+    category: "depin",
+  },
+  peaq_blog: {
+    name: "peaq Network Blog",
+    url: "https://www.peaq.network/blog/feed",
+    category: "depin",
+  },
+  geodnet_blog: {
+    name: "GEODNET Blog",
+    url: "https://medium.com/feed/@geodnet",
+    category: "depin",
+  },
+  xnet_blog: {
+    name: "XNET Blog",
+    url: "https://medium.com/feed/@xaboratory",
+    category: "depin",
+  },
+
+  // =========================================================================
+  // WAVE 5 — AI x CRYPTO (Expanded 2025-2026 Narrative)
+  // =========================================================================
+  virtuals_protocol: {
+    name: "Virtuals Protocol Blog",
+    url: "https://medium.com/feed/@virtuals-protocol",
+    category: "ai_crypto",
+  },
+  near_ai_blog: {
+    name: "NEAR AI Blog",
+    url: "https://pages.near.org/blog/feed/",
+    category: "ai_crypto",
+  },
+  zero_gravity_blog: {
+    name: "0G Labs Blog",
+    url: "https://0g.ai/blog/feed",
+    category: "ai_crypto",
+  },
+  sentient_blog: {
+    name: "Sentient Blog",
+    url: "https://medium.com/feed/@sentientAGI",
+    category: "ai_crypto",
+  },
+  morpheus_blog: {
+    name: "Morpheus AI Blog",
+    url: "https://medium.com/feed/@morpheusai",
+    category: "ai_crypto",
+  },
+  gensyn_blog: {
+    name: "Gensyn Blog",
+    url: "https://medium.com/feed/@gensyn",
+    category: "ai_crypto",
+  },
+
+  // =========================================================================
+  // WAVE 5 — BITCOIN L2s & BITCOIN DeFi
+  // Exploding category in 2025: programmable bitcoin layers.
+  // =========================================================================
+  stacks_blog: {
+    name: "Stacks Blog",
+    url: "https://www.stacks.org/blog/feed",
+    category: "bitcoin",
+  },
+  bob_bitcoin_blog: {
+    name: "BOB (Build on Bitcoin) Blog",
+    url: "https://blog.gobob.xyz/rss/",
+    category: "bitcoin",
+  },
+  babylonchain_blog: {
+    name: "Babylon Chain Blog",
+    url: "https://medium.com/feed/@babylonchain",
+    category: "bitcoin",
+  },
+  alex_lab_blog: {
+    name: "ALEX Lab Blog",
+    url: "https://medium.com/feed/alexgobtc",
+    category: "bitcoin",
+  },
+
+  // =========================================================================
+  // WAVE 5 — RESTAKING & AVS (Active Validator Services)
+  // =========================================================================
+  symbiotic_blog: {
+    name: "Symbiotic Blog",
+    url: "https://medium.com/feed/@symbiotic-fi",
+    category: "ethereum",
+  },
+  karak_blog: {
+    name: "Karak Blog",
+    url: "https://blog.karak.network/feed",
+    category: "ethereum",
+  },
+  puffer_finance_blog: {
+    name: "Puffer Finance Blog",
+    url: "https://medium.com/feed/@paborman",
+    category: "ethereum",
+  },
+  renzo_blog: {
+    name: "Renzo Protocol Blog",
+    url: "https://medium.com/feed/@renzoprotocol",
+    category: "ethereum",
+  },
+
+  // =========================================================================
+  // WAVE 5 — INTENT & CHAIN ABSTRACTION
+  // "Chain abstraction" is a top 2025-2026 infrastructure narrative.
+  // =========================================================================
+  particle_network_blog: {
+    name: "Particle Network Blog",
+    url: "https://blog.particle.network/rss/",
+    category: "developer",
+  },
+  socket_blog: {
+    name: "Socket Protocol Blog",
+    url: "https://mirror.xyz/nichanank.eth/feed/atom",
+    category: "developer",
+  },
+  connext_blog: {
+    name: "Connext Blog",
+    url: "https://medium.com/feed/connext",
+    category: "developer",
+  },
+
+  // =========================================================================
+  // WAVE 5 — APPCHAINS & MODULAR INFRA
+  // =========================================================================
+  dymension_blog: {
+    name: "Dymension Blog",
+    url: "https://medium.com/feed/@dymension",
+    category: "altl1",
+  },
+  saga_blog: {
+    name: "Saga Blog",
+    url: "https://medium.com/feed/@sagaxyz",
+    category: "altl1",
+  },
+  avail_blog: {
+    name: "Avail Blog",
+    url: "https://blog.availproject.org/rss/",
+    category: "altl1",
+  },
+  altlayer_blog: {
+    name: "AltLayer Blog",
+    url: "https://blog.altlayer.io/feed",
+    category: "layer2",
+  },
+  caldera_blog: {
+    name: "Caldera Blog",
+    url: "https://caldera.mirror.xyz/feed/atom",
+    category: "layer2",
+  },
+  conduit_blog: {
+    name: "Conduit Blog",
+    url: "https://conduit.mirror.xyz/feed/atom",
+    category: "layer2",
+  },
+
+  // =========================================================================
+  // WAVE 5 — DATA AVAILABILITY & PARALLEL EXECUTION
+  // =========================================================================
+  megaeth_blog: {
+    name: "MegaETH Blog",
+    url: "https://mirror.xyz/megaeth.eth/feed/atom",
+    category: "layer2",
+  },
+  eclipse_blog: {
+    name: "Eclipse Blog",
+    url: "https://mirror.xyz/eclipsemainnet.eth/feed/atom",
+    category: "layer2",
+  },
+  movement_blog: {
+    name: "Movement Labs Blog",
+    url: "https://medium.com/feed/@movementlabsxyz",
+    category: "altl1",
+  },
+
+  // =========================================================================
+  // WAVE 5 — ACCOUNT ABSTRACTION / SMART WALLETS
+  // =========================================================================
+  pimlico_blog: {
+    name: "Pimlico Blog",
+    url: "https://www.pimlico.io/blog/feed",
+    category: "developer",
+  },
+  zerodev_blog: {
+    name: "ZeroDev Blog",
+    url: "https://docs.zerodev.app/blog/atom.xml",
+    category: "developer",
+  },
+  rhinestone_blog: {
+    name: "Rhinestone Blog",
+    url: "https://blog.rhinestone.wtf/feed",
+    category: "developer",
+  },
+
+  // =========================================================================
+  // WAVE 5 — GLOBAL REGULATORS & POLICY (beyond US)
+  // =========================================================================
+  uk_fca_crypto: {
+    name: "UK FCA Crypto",
+    url: "https://www.fca.org.uk/news/rss.xml",
+    category: "geopolitical",
+  },
+  mas_singapore: {
+    name: "MAS Singapore Fintech",
+    url: "https://www.mas.gov.sg/rss/fintech",
+    category: "geopolitical",
+  },
+  rba_speeches: {
+    name: "RBA Speeches (Australia)",
+    url: "https://www.rba.gov.au/rss/rss-cb-speeches.xml",
+    category: "geopolitical",
+  },
+  eba_news: {
+    name: "EBA News (EU Banking)",
+    url: "https://www.eba.europa.eu/rss.xml",
+    category: "geopolitical",
+  },
+
+  // =========================================================================
+  // WAVE 5 — TOP CRYPTO NEWSLETTERS (Substack)
+  // =========================================================================
+  the_rollup_newsletter: {
+    name: "The Rollup",
+    url: "https://therollup.substack.com/feed",
+    category: "journalism",
+  },
+  token_dispatch: {
+    name: "Token Dispatch",
+    url: "https://tokendispatch.substack.com/feed",
+    category: "journalism",
+  },
+  onchain_times: {
+    name: "Onchain Times",
+    url: "https://onchaintimes.substack.com/feed",
+    category: "journalism",
+  },
+  defi_weekly: {
+    name: "DeFi Weekly",
+    url: "https://defiweekly.substack.com/feed",
+    category: "journalism",
+  },
+  blocmates: {
+    name: "Blocmates",
+    url: "https://blocmates.com/feed/",
+    category: "journalism",
+  },
+
+  // =========================================================================
+  // WAVE 5 — VIDEO/YOUTUBE RSS (crypto educators)
+  // =========================================================================
+  coin_bureau_yt: {
+    name: "Coin Bureau",
+    url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCqK_GSMbpiV8spgD3ZGloSw",
+    category: "journalism",
+  },
+  benjamin_cowen_yt: {
+    name: "Benjamin Cowen",
+    url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCRvqjQPSeaWn-uEx-w0XOIg",
+    category: "journalism",
+  },
+  raoul_pal_yt: {
+    name: "Raoul Pal (Real Vision)",
+    url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCBH5VZE_Y4F3CMcPIzPEB5A",
+    category: "journalism",
+  },
+
+  // =========================================================================
+  // WAVE 5 — PERPETUAL/DERIVATIVES EXCHANGES (new entrants)
+  // =========================================================================
+  rabbitx_blog: {
+    name: "RabbitX Blog",
+    url: "https://medium.com/feed/@rabbitx_io",
+    category: "derivatives",
+  },
+  bluefin_blog: {
+    name: "Bluefin Blog",
+    url: "https://medium.com/feed/@bluefinapp",
+    category: "derivatives",
+  },
+
+  // =========================================================================
+  // WAVE 5 — TOKENIZATION / RWA EXPANDED
+  // =========================================================================
+  tokeny_blog: {
+    name: "Tokeny Blog",
+    url: "https://tokeny.com/blog/feed/",
+    category: "tradfi",
+  },
+  backed_finance_blog: {
+    name: "Backed Finance Blog",
+    url: "https://medium.com/feed/@backedfi",
+    category: "tradfi",
+  },
+  superstate_blog: {
+    name: "Superstate Blog",
+    url: "https://medium.com/feed/@superstatefunds",
+    category: "tradfi",
+  },
+  maple_v2_blog: {
+    name: "Maple Finance V2 Blog",
+    url: "https://medium.com/feed/@maplefinance",
+    category: "defi",
+  },
+
+  // =========================================================================
+  // WAVE 5 — ADDITIONAL CRYPTO MEDIA (high quality, recently launched)
+  // =========================================================================
+  thevrsoldier: {
+    name: "The VR Soldier",
+    url: "https://thevrsoldier.com/feed/",
+    category: "general",
+  },
+  blockhead_news: {
+    name: "Blockhead News",
+    url: "https://blockhead.co/feed/",
+    category: "general",
+  },
+  cryptodnes: {
+    name: "CryptoDnes",
+    url: "https://www.cryptodnes.bg/en/feed/",
+    category: "general",
+  },
+  cypherhunter_blog: {
+    name: "CypherHunter Blog",
+    url: "https://www.cypherhunter.com/blog/feed/",
+    category: "general",
   },
 } as const;
 

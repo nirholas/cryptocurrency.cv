@@ -15,8 +15,28 @@ export const runtime = 'nodejs';
 const loginAttempts = new Map<string, { count: number; resetAt: number }>();
 const RATE_LIMIT = 5;
 const WINDOW_MS = 15 * 60 * 1000;
+const MAX_MAP_SIZE = 10_000;
+let loginRequestCounter = 0;
+
+function cleanupExpiredLoginEntries() {
+  const now = Date.now();
+  for (const [key, entry] of loginAttempts) {
+    if (now > entry.resetAt) loginAttempts.delete(key);
+  }
+}
 
 function checkRateLimit(ip: string): boolean {
+  // Periodic cleanup to prevent unbounded map growth
+  loginRequestCounter++;
+  if (loginRequestCounter % 100 === 0) {
+    cleanupExpiredLoginEntries();
+  }
+  // Hard cap to prevent memory exhaustion under heavy attack
+  if (loginAttempts.size >= MAX_MAP_SIZE) {
+    cleanupExpiredLoginEntries();
+    if (loginAttempts.size >= MAX_MAP_SIZE) return false;
+  }
+
   const now = Date.now();
   const entry = loginAttempts.get(ip);
   if (!entry || now > entry.resetAt) {

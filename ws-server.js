@@ -729,6 +729,21 @@ function startHeartbeat() {
         console.log(
           `[heartbeat] Client ${clientId} failed ping/pong — terminating`,
         );
+        // Send error with reconnection guidance before terminating
+        try {
+          if (client.ws.readyState === WebSocket.OPEN) {
+            client.ws.send(
+              JSON.stringify({
+                type: WS_MSG_TYPES.ERROR,
+                payload: {
+                  message: "Heartbeat timeout — no pong received",
+                  code: 4008,
+                  reconnect: reconnectGuidance(4008),
+                },
+              }),
+            );
+          }
+        } catch { /* ignore send errors on dying socket */ }
         client.ws.terminate();
         return;
       }
@@ -960,26 +975,73 @@ function generateClientId() {
   return `ws_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
 }
 
-// Handle new connection
-wss.on("connection", (ws, req) => {
+// Handle new connection — async for API key validation
+wss.on("connection", async (ws, req) => {
   // Reject during shutdown
   if (isShuttingDown) {
-    ws.close(1001, "Server shutting down");
+    const guidance = reconnectGuidance(1001);
+    ws.close(1001, JSON.stringify({ reason: "Server shutting down", reconnect: guidance }));
     return;
   }
 
-  // Enforce connection cap
+  // Enforce global connection cap
   if (clients.size >= MAX_CONNECTIONS) {
-    ws.close(1013, "Server at capacity");
+    metricsCounters.connectionLimitHits++;
+    const guidance = reconnectGuidance(4003);
+    ws.close(4003, JSON.stringify({ reason: "Server at capacity", reconnect: guidance }));
     return;
   }
 
   const clientId = generateClientId();
   const ip = req.headers["x-forwarded-for"] || req.socket.remoteAddress;
 
+  // ── API Key Authentication ──
+  const url = new URL(req.url, `http://${req.headers.host || "localhost"}`);
+  const apiKey = url.searchParams.get("apiKey") || null;
+
+  const authResult = await validateApiKey(apiKey);
+  if (!authResult.valid) {
+    metricsCounters.authFailures++;
+    const guidance = reconnectGuidance(4001);
+    ws.close(
+      4001,
+      JSON.stringify({
+        reason: authResult.reason || "Authentication failed",
+        reconnect: guidance,
+      }),
+    );
+    console.log(
+      `[${new Date().toISOString()}] Auth rejected from ${ip}: ${authResult.reason}`,
+    );
+    return;
+  }
+
+  // ── Per-Key / Per-IP Connection Limits ──
+  const effectiveKey = apiKey || "__anonymous__";
+  if (!checkConnectionLimit(effectiveKey, ip)) {
+    metricsCounters.connectionLimitHits++;
+    const guidance = reconnectGuidance(4002);
+    ws.close(
+      4002,
+      JSON.stringify({
+        reason: "Connection limit reached for your API key / IP.",
+        reconnect: guidance,
+      }),
+    );
+    console.log(
+      `[${new Date().toISOString()}] Connection limit hit for ${effectiveKey} from ${ip}`,
+    );
+    return;
+  }
+
+  // ── Register client ──
+  trackConnection(clientId, effectiveKey, ip);
+
   clients.set(clientId, {
     ws,
     ip,
+    apiKey: effectiveKey,
+    tier: authResult.tier || "anonymous",
     subscription: {
       sources: [],
       categories: [],
@@ -987,6 +1049,7 @@ wss.on("connection", (ws, req) => {
       coins: [],
     },
     channels: new Set(), // Topic channels
+    topics: new Set(), // Fine-grained topic subscriptions (prices:BTC, news:breaking, etc.)
     alertSubscriptions: new Set(), // Alert rule IDs or '*' for all
     streamPrices: false, // Subscribe to price updates
     streamWhales: false, // Subscribe to whale alerts
@@ -995,13 +1058,14 @@ wss.on("connection", (ws, req) => {
     lastPing: Date.now(),
     messageCount: 0,
     lastMessageReset: Date.now(),
+    _pongReceived: true, // Heartbeat: assume alive on connect
   });
 
   // Track connection in Redis
   redisTrackConnect();
 
   console.log(
-    `[${new Date().toISOString()}] Client connected: ${clientId} from ${ip} (total: ${clients.size})`,
+    `[${new Date().toISOString()}] Client connected: ${clientId} from ${ip} tier=${authResult.tier} (total: ${clients.size})`,
   );
 
   // Send welcome message with available features
@@ -1010,8 +1074,9 @@ wss.on("connection", (ws, req) => {
       type: WS_MSG_TYPES.CONNECTED,
       payload: {
         clientId,
-        message: "Connected to Free Crypto News WebSocket v3.0",
+        message: "Connected to Free Crypto News WebSocket v4.0",
         serverTime: new Date().toISOString(),
+        tier: authResult.tier,
         features: [
           "news",
           "breaking",
@@ -1020,12 +1085,34 @@ wss.on("connection", (ws, req) => {
           "whales",
           "sentiment",
           "channels",
+          "topics",
+          "heartbeat",
+          "compression",
         ],
         availableChannels: Object.keys(CHANNELS),
+        availableTopics: [
+          "prices:BTC", "prices:ETH", "prices:SOL", "prices:*",
+          "news:breaking", "news:bitcoin", "news:defi", "news:*",
+          "sentiment:global", "sentiment:*",
+          "whales:BTC", "whales:*",
+          "alerts:*",
+        ],
         rateLimit: RATE_LIMIT,
+        heartbeat: { interval: HEARTBEAT_INTERVAL, timeout: HEARTBEAT_TIMEOUT },
+        reconnect: reconnectGuidance(1000),
       },
     }),
   );
+
+  // ── WebSocket protocol-level pong handler (response to server ping) ──
+  ws.on("pong", () => {
+    const client = clients.get(clientId);
+    if (client) {
+      client._pongReceived = true;
+      client.lastPing = Date.now();
+      redisRefreshConnectionTTL(clientId);
+    }
+  });
 
   // Handle messages
   ws.on("message", (data) => {
@@ -1068,7 +1155,7 @@ wss.on("connection", (ws, req) => {
     }
   });
 
-  // Handle close
+  // Handle close — include reconnection guidance
   ws.on("close", (code, reason) => {
     console.log(
       `[${new Date().toISOString()}] Client disconnected: ${clientId} (code: ${code})`,
@@ -1085,12 +1172,14 @@ wss.on("connection", (ws, req) => {
       if (client.streamPrices) redisTrackStreamUnsubscribe("prices");
       if (client.streamWhales) redisTrackStreamUnsubscribe("whales");
       if (client.streamSentiment) redisTrackStreamUnsubscribe("sentiment");
+      // Untrack per-key / per-IP connection
+      untrackConnection(clientId, client.apiKey, client.ip);
     }
     clients.delete(clientId);
     redisTrackDisconnect();
   });
 
-  // Handle errors
+  // Handle errors — include reconnection guidance
   ws.on("error", (error) => {
     console.error(`Client ${clientId} error:`, error.message);
     const client = clients.get(clientId);
@@ -1101,6 +1190,7 @@ wss.on("connection", (ws, req) => {
       if (client.streamPrices) redisTrackStreamUnsubscribe("prices");
       if (client.streamWhales) redisTrackStreamUnsubscribe("whales");
       if (client.streamSentiment) redisTrackStreamUnsubscribe("sentiment");
+      untrackConnection(clientId, client.apiKey, client.ip);
     }
     clients.delete(clientId);
     redisTrackDisconnect();
@@ -1216,6 +1306,13 @@ function handleMessage(clientId, message) {
       break;
     }
     default:
+    // ── Topic-based subscriptions (prices:BTC, news:breaking, etc.) ──
+    case "subscribe_topics":
+      handleSubscribeTopics(clientId, message.payload);
+      break;
+    case "unsubscribe_topics":
+      handleUnsubscribeTopics(clientId, message.payload);
+      break;
       // Handle reconnection restore: client sends previous clientId to restore state
       if (message.type === "restore" && message.payload?.previousClientId) {
         handleRestore(clientId, message.payload.previousClientId);
@@ -1223,6 +1320,119 @@ function handleMessage(clientId, message) {
       }
       console.log(`Unknown message type: ${message.type}`);
   }
+}
+
+// =============================================================================
+// TOPIC SUBSCRIPTION HANDLERS (prices:BTC, news:breaking, sentiment:global)
+// =============================================================================
+
+function handleSubscribeTopics(clientId, payload) {
+  const client = clients.get(clientId);
+  if (!client) return;
+
+  const topics = payload?.topics;
+  if (!Array.isArray(topics) || topics.length === 0) {
+    client.ws.send(
+      JSON.stringify({
+        type: WS_MSG_TYPES.ERROR,
+        payload: { message: "topics must be a non-empty array" },
+      }),
+    );
+    return;
+  }
+
+  const subscribed = [];
+  const invalid = [];
+
+  for (const topic of topics) {
+    if (typeof topic !== "string") {
+      invalid.push(topic);
+      continue;
+    }
+    if (!isValidTopic(topic)) {
+      invalid.push(topic);
+      continue;
+    }
+    if (client.topics.size >= RATE_LIMIT.subscriptionsMax) {
+      client.ws.send(
+        JSON.stringify({
+          type: WS_MSG_TYPES.ERROR,
+          payload: {
+            message: `Maximum ${RATE_LIMIT.subscriptionsMax} topic subscriptions reached`,
+          },
+        }),
+      );
+      break;
+    }
+    client.topics.add(topic);
+    subscribed.push(topic);
+
+    // Auto-enable the relevant stream when subscribing to a topic
+    const [prefix] = topic.split(":");
+    if (prefix === "prices" && !client.streamPrices) {
+      client.streamPrices = true;
+      redisTrackStreamSubscribe("prices");
+    } else if (prefix === "whales" && !client.streamWhales) {
+      client.streamWhales = true;
+      redisTrackStreamSubscribe("whales");
+    } else if (prefix === "sentiment" && !client.streamSentiment) {
+      client.streamSentiment = true;
+      redisTrackStreamSubscribe("sentiment");
+    } else if (prefix === "news") {
+      // Map news topics to channels where applicable
+      const [, suffix] = topic.split(":");
+      if (suffix && suffix !== "breaking" && suffix !== "*" && CHANNELS[suffix]) {
+        client.channels.add(suffix);
+        redisTrackChannelJoin(suffix);
+      }
+    }
+  }
+
+  client.ws.send(
+    JSON.stringify({
+      type: "topics_subscribed",
+      payload: {
+        subscribed,
+        invalid: invalid.length > 0 ? invalid : undefined,
+        activeTopics: Array.from(client.topics),
+      },
+      timestamp: new Date().toISOString(),
+    }),
+  );
+
+  if (subscribed.length > 0) {
+    console.log(
+      `[${new Date().toISOString()}] Client ${clientId} subscribed to topics:`,
+      subscribed,
+    );
+  }
+  redisSaveConnectionState(clientId, client);
+}
+
+function handleUnsubscribeTopics(clientId, payload) {
+  const client = clients.get(clientId);
+  if (!client) return;
+
+  const topics = payload?.topics;
+  if (!Array.isArray(topics) || topics.length === 0) {
+    // Unsubscribe from all topics
+    client.topics.clear();
+  } else {
+    for (const topic of topics) {
+      client.topics.delete(topic);
+    }
+  }
+
+  client.ws.send(
+    JSON.stringify({
+      type: "topics_unsubscribed",
+      payload: {
+        activeTopics: Array.from(client.topics),
+      },
+      timestamp: new Date().toISOString(),
+    }),
+  );
+  redisSaveConnectionState(clientId, client);
 }
 
 // Handle restore (reconnect to previous session)
@@ -1664,11 +1874,31 @@ function broadcastToChannel(channelId, articles) {
   );
 }
 
-// Local news broadcast (called from localBroadcastRaw)
+// Local news broadcast (called from localBroadcastRaw) — also deliver to topic subscribers
 function localBroadcastNews(articles, isBreaking = false) {
   const type = isBreaking ? WS_MSG_TYPES.BREAKING : WS_MSG_TYPES.NEWS;
 
   clients.forEach((client, clientId) => {
+    // ── Topic-based news filtering ──
+    // If client has news:breaking topic and this IS breaking → deliver all
+    if (isBreaking && (client.topics.has("news:breaking") || client.topics.has("news:*"))) {
+      safeSend(client, clientId, {
+        type,
+        payload: { articles },
+        timestamp: new Date().toISOString(),
+      });
+      return;
+    }
+    // news:* wildcard gets everything
+    if (client.topics.has("news:*")) {
+      safeSend(client, clientId, {
+        type,
+        payload: { articles },
+        timestamp: new Date().toISOString(),
+      });
+      return;
+    }
+
     const sub = client.subscription;
     const filteredArticles = articles.filter((article) => {
       if (
@@ -1757,33 +1987,98 @@ function broadcastAlerts(alertEvents) {
   }
 }
 
-// Local price broadcast
+// Local price broadcast — also deliver to topic subscribers
 function localBroadcastPrices(prices) {
-  const msg = JSON.stringify({
+  const ts = new Date().toISOString();
+  // Full prices message for stream subscribers
+  const fullMsg = JSON.stringify({
     type: WS_MSG_TYPES.PRICES,
     payload: { prices },
-    timestamp: new Date().toISOString(),
+    timestamp: ts,
   });
+
   clients.forEach((client, clientId) => {
-    if (!client.streamPrices) return;
-    safeSend(client, clientId, msg);
+    // Legacy stream subscribers get everything
+    if (client.streamPrices && client.topics.size === 0) {
+      safeSend(client, clientId, fullMsg);
+      return;
+    }
+
+    // Topic-based subscribers: check for specific coin topics
+    if (client.topics.size > 0) {
+      const hasWild = client.topics.has("prices:*");
+      if (hasWild) {
+        safeSend(client, clientId, fullMsg);
+        return;
+      }
+      // Filter to only subscribed coins
+      const filtered = {};
+      let hasAny = false;
+      for (const [coinId, data] of Object.entries(prices)) {
+        // Find symbol for this coinId
+        const sym = Object.entries(COIN_TO_ID).find(([, id]) => id === coinId)?.[0];
+        if (sym && client.topics.has(`prices:${sym}`)) {
+          filtered[coinId] = data;
+          hasAny = true;
+        }
+      }
+      if (hasAny) {
+        safeSend(client, clientId, JSON.stringify({
+          type: WS_MSG_TYPES.PRICES,
+          payload: { prices: filtered },
+          timestamp: ts,
+        }));
+      } else if (client.streamPrices) {
+        // Fallback: stream enabled but no topic match — send all
+        safeSend(client, clientId, fullMsg);
+      }
+    } else if (client.streamPrices) {
+      safeSend(client, clientId, fullMsg);
+    }
   });
 }
 
-// Local whale broadcast
+// Local whale broadcast — also deliver to topic subscribers
 function localBroadcastWhales(payload) {
-  const msg = JSON.stringify({
+  const ts = new Date().toISOString();
+  const fullMsg = JSON.stringify({
     type: WS_MSG_TYPES.WHALES,
     payload,
-    timestamp: new Date().toISOString(),
+    timestamp: ts,
   });
   clients.forEach((client, clientId) => {
-    if (!client.streamWhales) return;
-    safeSend(client, clientId, msg);
+    if (client.streamWhales && client.topics.size === 0) {
+      safeSend(client, clientId, fullMsg);
+      return;
+    }
+    // Topic-based: whales:* or whales:BTC etc.
+    if (client.topics.has("whales:*")) {
+      safeSend(client, clientId, fullMsg);
+      return;
+    }
+    // Check for specific coin whale topics
+    if (client.topics.size > 0) {
+      const alerts = payload.alerts || [];
+      const filtered = alerts.filter((alert) => {
+        const sym = (alert.symbol || "").toUpperCase();
+        return sym && client.topics.has(`whales:${sym}`);
+      });
+      if (filtered.length > 0) {
+        safeSend(client, clientId, JSON.stringify({
+          type: WS_MSG_TYPES.WHALES,
+          payload: { ...payload, alerts: filtered },
+          timestamp: ts,
+        }));
+      } else if (client.streamWhales) {
+        safeSend(client, clientId, fullMsg);
+      }
+    } else if (client.streamWhales) {
+      safeSend(client, clientId, fullMsg);
+    }
   });
 }
 
-// Local sentiment broadcast
+// Local sentiment broadcast — also deliver to topic subscribers
 function localBroadcastSentiment(payload) {
   const msg = JSON.stringify({
     type: WS_MSG_TYPES.SENTIMENT,
@@ -1791,8 +2086,14 @@ function localBroadcastSentiment(payload) {
     timestamp: new Date().toISOString(),
   });
   clients.forEach((client, clientId) => {
-    if (!client.streamSentiment) return;
-    safeSend(client, clientId, msg);
+    if (client.streamSentiment) {
+      safeSend(client, clientId, msg);
+      return;
+    }
+    // Topic-based: sentiment:global or sentiment:*
+    if (client.topics.has("sentiment:global") || client.topics.has("sentiment:*")) {
+      safeSend(client, clientId, msg);
+    }
   });
 }
 
@@ -1840,7 +2141,7 @@ async function getStats() {
   const globalStats = await redisGetGlobalStats();
 
   return {
-    version: "3.0.0",
+    version: "4.0.0",
     instanceId: INSTANCE_ID,
     isLeader,
     redis: redisPub ? "connected" : "unavailable",
@@ -2066,7 +2367,7 @@ async function evaluateAndBroadcastAlerts() {
 server.listen(PORT, () => {
   console.log(`
 ╔══════════════════════════════════════════════════════════════════╗
-║     Free Crypto News WebSocket Server v3.0                       ║
+║     Free Crypto News WebSocket Server v4.0                       ║
 ╠══════════════════════════════════════════════════════════════════╣
 ║  WebSocket: ws://localhost:${PORT}                                  ║
 ║  Health:    http://localhost:${PORT}/health                         ║
@@ -2085,8 +2386,15 @@ server.listen(PORT, () => {
 ║    🔔 Custom alert subscriptions                                 ║
 ║    ⚡ WebSocket compression                                      ║
 ║    🛡️  Rate limiting protection                                  ║
+║    🔑 API key authentication                                     ║
+║    💓 Server-initiated heartbeat (ping/pong)                     ║
+║    🔄 Auto-reconnection guidance                                 ║
+║    📊 Topic subscriptions (prices:BTC, news:breaking, etc.)      ║
 ╚══════════════════════════════════════════════════════════════════╝
   `);
+
+  // Start server-initiated WebSocket ping/pong heartbeat
+  startHeartbeat();
 
   // Initialize Redis pub/sub for horizontal scaling (non-blocking)
   initRedis().then(async () => {
@@ -2163,16 +2471,21 @@ async function gracefulShutdown(signal) {
     console.log(`[${new Date().toISOString()}] Leadership released`);
   }
 
-  // 3. Notify clients to reconnect, then send close frame
+  // 3. Notify clients to reconnect with guidance, then send close frame
   const clientCount = clients.size;
   console.log(
     `[${new Date().toISOString()}] Draining ${clientCount} connections...`,
   );
+  const shutdownGuidance = reconnectGuidance(1001);
   wss.clients.forEach((ws) => {
     try {
       if (ws.readyState === WebSocket.OPEN) {
         ws.send(
-          JSON.stringify({ type: "reconnect", reason: "server-shutdown" }),
+          JSON.stringify({
+            type: "reconnect",
+            reason: "server-shutdown",
+            reconnect: shutdownGuidance,
+          }),
         );
       }
       ws.close(1001, "Server shutting down");

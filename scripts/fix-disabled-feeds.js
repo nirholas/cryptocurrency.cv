@@ -119,12 +119,18 @@ function parseDisabledBlocks(src) {
 }
 
 async function main() {
-  console.log(APPLY ? "🔧 APPLY MODE — changes will be written to file\n" : "👀 DRY-RUN MODE — use --apply to write changes\n");
+  console.log(
+    APPLY
+      ? "🔧 APPLY MODE — changes will be written to file\n"
+      : "👀 DRY-RUN MODE — use --apply to write changes\n",
+  );
 
   const src = fs.readFileSync(FILE_PATH, "utf-8");
   const blocks = parseDisabledBlocks(src);
 
-  console.log(`Found ${blocks.length} disabled source blocks. Checking URLs...\n`);
+  console.log(
+    `Found ${blocks.length} disabled source blocks. Checking URLs...\n`,
+  );
 
   // Check all URLs
   const results = [];
@@ -134,7 +140,7 @@ async function main() {
       batch.map(async (block) => {
         const result = await checkUrl(block.url);
         return { ...block, ...result };
-      })
+      }),
     );
     results.push(...batchResults);
     process.stderr.write(`\r  Checked ${results.length}/${blocks.length}...`);
@@ -222,7 +228,9 @@ async function main() {
   const originalLines = src.split("\n").length;
   const newLineCount = cleaned.length;
   console.log(`\n✅ Done! File updated.`);
-  console.log(`   Lines: ${originalLines} → ${newLineCount} (removed ${originalLines - newLineCount})`);
+  console.log(
+    `   Lines: ${originalLines} → ${newLineCount} (removed ${originalLines - newLineCount})`,
+  );
   console.log(`   Re-enabled: ${recovered.length} feeds`);
   console.log(`   Removed: ${broken.length} feeds`);
 }

@@ -98,6 +98,12 @@ function checkRateLimit(
   if (globalRequestCounter % 100 === 0) {
     cleanupExpiredEntries();
   }
+  // Hard cap to prevent memory exhaustion under heavy distributed attack
+  const MAX_MAP_SIZE = 10_000;
+  if (map.size >= MAX_MAP_SIZE) {
+    cleanupExpiredEntries();
+    if (map.size >= MAX_MAP_SIZE) return false;
+  }
 
   const now = Date.now();
   const entry = map.get(key);

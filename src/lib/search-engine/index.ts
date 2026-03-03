@@ -217,10 +217,12 @@ export class PostgresSearchEngine implements SearchEngine {
       const db = getDb();
       if (!db) return [];
 
+      // Escape LIKE wildcards in user input to prevent wildcard injection
+      const escapedPrefix = prefix.replace(/%/g, '\\%').replace(/_/g, '\\_');
       const rows = await db
         .selectDistinct({ title: articles.title })
         .from(articles)
-        .where(ilike(articles.title, `%${prefix}%`))
+        .where(ilike(articles.title, `%${escapedPrefix}%`))
         .limit(limit);
 
       return rows.map((r) => r.title);
