@@ -24,7 +24,7 @@ function timeAgo(dateStr: string): string {
   return `${Math.floor(diff / 86400)}d ago`;
 }
 
-function escapeHtml(text: string): string {
+function _escapeHtml(text: string): string {
   const div = document.createElement("div");
   div.textContent = text;
   return div.innerHTML;
@@ -51,7 +51,11 @@ export default function NewsWidget() {
         const res = await fetch(`${BASE_URL}/api/news?limit=${count}`);
         if (!res.ok) throw new Error("Failed to fetch");
         const data = await res.json();
-        setNews(Array.isArray(data) ? data.slice(0, count) : (data.articles || data.data || []).slice(0, count));
+        setNews(
+          Array.isArray(data)
+            ? data.slice(0, count)
+            : (data.articles || data.data || []).slice(0, count),
+        );
       } catch {
         setNews([]);
       } finally {
@@ -73,10 +77,30 @@ export default function NewsWidget() {
   const accentBlue = "#3b82f6";
 
   return (
-    <div style={{ background: bg, padding: 16, fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", minHeight: "100%", maxWidth: 600 }}>
+    <div
+      style={{
+        background: bg,
+        padding: 16,
+        fontFamily:
+          "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+        minHeight: "100%",
+        maxWidth: 600,
+      }}
+    >
       {showTitle && (
-        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 12, paddingBottom: 8, borderBottom: `1px solid ${border}` }}>
-          <h2 style={{ color: text, fontSize: 16, fontWeight: 700, margin: 0 }}>📰 Crypto News</h2>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+            marginBottom: 12,
+            paddingBottom: 8,
+            borderBottom: `1px solid ${border}`,
+          }}
+        >
+          <h2 style={{ color: text, fontSize: 16, fontWeight: 700, margin: 0 }}>
+            📰 Crypto News
+          </h2>
           <span style={{ color: mutedText, fontSize: 11 }}>Live</span>
         </div>
       )}
@@ -84,12 +108,23 @@ export default function NewsWidget() {
       {loading ? (
         <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
           {Array.from({ length: 3 }).map((_, i) => (
-            <div key={i} style={{ background: cardBg, borderRadius: 8, padding: 12, height: 72, animation: "pulse 1.5s infinite" }} />
+            <div
+              key={i}
+              style={{
+                background: cardBg,
+                borderRadius: 8,
+                padding: 12,
+                height: 72,
+                animation: "pulse 1.5s infinite",
+              }}
+            />
           ))}
           <style>{`@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }`}</style>
         </div>
       ) : news.length === 0 ? (
-        <p style={{ color: mutedText, textAlign: "center", padding: 24 }}>No news available</p>
+        <p style={{ color: mutedText, textAlign: "center", padding: 24 }}>
+          No news available
+        </p>
       ) : (
         <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
           {news.map((item, i) => (
@@ -107,20 +142,47 @@ export default function NewsWidget() {
                 border: `1px solid ${border}`,
                 transition: "background 0.15s",
               }}
-              onMouseEnter={(e) => (e.currentTarget.style.background = cardHover)}
+              onMouseEnter={(e) =>
+                (e.currentTarget.style.background = cardHover)
+              }
               onMouseLeave={(e) => (e.currentTarget.style.background = cardBg)}
             >
-              <div style={{ color: text, fontSize: 14, fontWeight: 600, lineHeight: 1.4, marginBottom: 6 }}>
+              <div
+                style={{
+                  color: text,
+                  fontSize: 14,
+                  fontWeight: 600,
+                  lineHeight: 1.4,
+                  marginBottom: 6,
+                }}
+              >
                 {item.title}
               </div>
-              <div style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 11, color: mutedText }}>
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 8,
+                  fontSize: 11,
+                  color: mutedText,
+                }}
+              >
                 <span>{item.source}</span>
                 <span>·</span>
                 <span>{timeAgo(item.publishedAt)}</span>
                 {item.category && (
                   <>
                     <span>·</span>
-                    <span style={{ background: isDark ? "#1e3a5f" : "#dbeafe", color: isDark ? "#60a5fa" : "#2563eb", padding: "1px 6px", borderRadius: 4, fontSize: 10, fontWeight: 600 }}>
+                    <span
+                      style={{
+                        background: isDark ? "#1e3a5f" : "#dbeafe",
+                        color: isDark ? "#60a5fa" : "#2563eb",
+                        padding: "1px 6px",
+                        borderRadius: 4,
+                        fontSize: 10,
+                        fontWeight: 600,
+                      }}
+                    >
                       {item.category}
                     </span>
                   </>
@@ -131,14 +193,24 @@ export default function NewsWidget() {
         </div>
       )}
 
-      <div style={{ textAlign: "center", marginTop: 12, paddingTop: 8, borderTop: `1px solid ${border}` }}>
+      <div
+        style={{
+          textAlign: "center",
+          marginTop: 12,
+          paddingTop: 8,
+          borderTop: `1px solid ${border}`,
+        }}
+      >
         <a
           href={BASE_URL}
           target="_blank"
           rel="noopener noreferrer"
           style={{ color: mutedText, fontSize: 11, textDecoration: "none" }}
         >
-          Powered by <span style={{ color: accentBlue, fontWeight: 600 }}>Crypto Vision News</span>
+          Powered by{" "}
+          <span style={{ color: accentBlue, fontWeight: 600 }}>
+            Crypto Vision News
+          </span>
         </a>
       </div>
     </div>

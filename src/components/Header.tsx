@@ -173,8 +173,7 @@ export default function Header() {
       <header
         className={cn(
           "sticky top-0 z-50 border-b border-border bg-(--color-surface)/80 backdrop-blur-xl backdrop-saturate-150 transition-all duration-300",
-          scrolled &&
-            "shadow-(--shadow-md) border-border/60",
+          scrolled && "shadow-(--shadow-md) border-border/60",
           !headerVisible && "-translate-y-full",
         )}
       >
@@ -440,7 +439,7 @@ export default function Header() {
                           key={child.href}
                           href={child.href}
                           onClick={() => setMobileOpen(false)}
-                          className="block px-3 py-2.5 text-sm text-text-tertiary hover:text-text-primary transition-colors min-h-11 flex items-center"
+                          className="flex px-3 py-2.5 text-sm text-text-tertiary hover:text-text-primary transition-colors min-h-11 items-center"
                         >
                           {child.label}
                         </Link>

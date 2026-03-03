@@ -9,7 +9,7 @@ export default function ChartWidget() {
   const [symbol, setSymbol] = useState("BINANCE:BTCUSDT");
   const [theme, setTheme] = useState<"dark" | "light">("dark");
   const [interval, setInterval] = useState("D");
-  const [height, setHeight] = useState("100%");
+  const [_height, setHeight] = useState("100%");
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);

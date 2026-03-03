@@ -105,7 +105,7 @@ function HighlightText({ text, query }: { text: string; query: string }) {
     <>
       {parts.map((part, i) =>
         pattern.test(part) ? (
-          <mark key={i} className="bg-[var(--color-accent)]/20 text-[var(--color-accent)] rounded-sm px-0.5">
+          <mark key={i} className="bg-accent/20 text-accent rounded-sm px-0.5">
             {part}
           </mark>
         ) : (
@@ -277,27 +277,27 @@ export function GlobalSearch({ open, onOpenChange }: GlobalSearchProps) {
   const sentimentColor = (s: string) => {
     if (s === 'bullish') return 'text-emerald-500';
     if (s === 'bearish') return 'text-red-500';
-    return 'text-[var(--color-text-tertiary)]';
+    return 'text-text-tertiary';
   };
 
   return (
     <Dialog.Root open={open} onOpenChange={onOpenChange}>
       <Dialog.Portal>
-        <Dialog.Overlay className="fixed inset-0 z-[100] bg-black/50 backdrop-blur-sm transition-opacity duration-150" />
+        <Dialog.Overlay className="fixed inset-0 z-100 bg-black/50 backdrop-blur-sm transition-opacity duration-150" />
         <Dialog.Content
-          className="fixed left-1/2 top-[12%] z-[101] w-[calc(100%-2rem)] max-w-2xl -translate-x-1/2 rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] shadow-2xl transition-all duration-150 flex flex-col max-h-[75vh]"
+          className="fixed left-1/2 top-[12%] z-101 w-[calc(100%-2rem)] max-w-2xl -translate-x-1/2 rounded-xl border border-border bg-(--color-surface) shadow-2xl transition-all duration-150 flex flex-col max-h-[75vh]"
           onKeyDown={handleKeyDown}
           aria-label="Search news, topics, and coins"
         >
           {/* Search input */}
-          <div className="flex items-center gap-3 border-b border-[var(--color-border)] px-4 py-3 shrink-0">
-            <Search className="h-5 w-5 shrink-0 text-[var(--color-text-tertiary)]" aria-hidden="true" />
+          <div className="flex items-center gap-3 border-b border-border px-4 py-3 shrink-0">
+            <Search className="h-5 w-5 shrink-0 text-text-tertiary" aria-hidden="true" />
             <input
               ref={inputRef}
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               placeholder="Search news, topics, coins…"
-              className="flex-1 bg-transparent text-base text-[var(--color-text-primary)] placeholder:text-[var(--color-text-tertiary)] outline-none"
+              className="flex-1 bg-transparent text-base text-text-primary placeholder:text-text-tertiary outline-none"
               autoFocus
               aria-label="Search"
               aria-autocomplete="list"
@@ -306,12 +306,12 @@ export function GlobalSearch({ open, onOpenChange }: GlobalSearchProps) {
               aria-expanded={results.length > 0}
             />
             {loading && (
-              <Loader2 className="h-4 w-4 animate-spin text-[var(--color-text-tertiary)]" aria-hidden="true" />
+              <Loader2 className="h-4 w-4 animate-spin text-text-tertiary" aria-hidden="true" />
             )}
             {query && (
               <button
                 onClick={() => setQuery('')}
-                className="rounded p-0.5 text-[var(--color-text-tertiary)] hover:text-[var(--color-text-primary)] transition-colors cursor-pointer"
+                className="rounded p-0.5 text-text-tertiary hover:text-text-primary transition-colors cursor-pointer"
                 aria-label="Clear"
               >
                 <X className="h-3.5 w-3.5" />
@@ -319,7 +319,7 @@ export function GlobalSearch({ open, onOpenChange }: GlobalSearchProps) {
             )}
             <Dialog.Close asChild>
               <button
-                className="rounded-md px-2 py-1 text-xs text-[var(--color-text-tertiary)] hover:text-[var(--color-text-primary)] border border-[var(--color-border)] transition-colors cursor-pointer"
+                className="rounded-md px-2 py-1 text-xs text-text-tertiary hover:text-text-primary border border-border transition-colors cursor-pointer"
                 aria-label="Close search"
               >
                 esc
@@ -329,7 +329,7 @@ export function GlobalSearch({ open, onOpenChange }: GlobalSearchProps) {
 
           {/* Category filter tabs */}
           {debouncedQuery.trim() && (
-            <div className="flex items-center gap-1 px-4 py-2 border-b border-[var(--color-border)] overflow-x-auto shrink-0">
+            <div className="flex items-center gap-1 px-4 py-2 border-b border-border overflow-x-auto shrink-0">
               {CATEGORY_FILTERS.map((cat) => (
                 <button
                   key={cat.value}
@@ -337,14 +337,14 @@ export function GlobalSearch({ open, onOpenChange }: GlobalSearchProps) {
                   className={cn(
                     'shrink-0 px-3 py-1 rounded-full text-xs font-medium transition-colors cursor-pointer',
                     category === cat.value
-                      ? 'bg-[var(--color-accent)] text-white'
-                      : 'text-[var(--color-text-tertiary)] hover:text-[var(--color-text-primary)] hover:bg-[var(--color-surface-secondary)]',
+                      ? 'bg-accent text-white'
+                      : 'text-text-tertiary hover:text-text-primary hover:bg-surface-secondary',
                   )}
                 >
                   {cat.label}
                 </button>
               ))}
-              <span className="ml-auto text-[10px] text-[var(--color-text-tertiary)] shrink-0 hidden sm:inline">
+              <span className="ml-auto text-[10px] text-text-tertiary shrink-0 hidden sm:inline">
                 Tab to switch
               </span>
             </div>
@@ -365,8 +365,8 @@ export function GlobalSearch({ open, onOpenChange }: GlobalSearchProps) {
                 {trending.length > 0 && (
                   <div className="px-4 py-2">
                     <div className="flex items-center gap-2 mb-2">
-                      <TrendingUp className="h-3.5 w-3.5 text-[var(--color-text-tertiary)]" />
-                      <span className="text-xs font-semibold uppercase tracking-wider text-[var(--color-text-tertiary)]">
+                      <TrendingUp className="h-3.5 w-3.5 text-text-tertiary" />
+                      <span className="text-xs font-semibold uppercase tracking-wider text-text-tertiary">
                         Trending
                       </span>
                     </div>
@@ -379,8 +379,8 @@ export function GlobalSearch({ open, onOpenChange }: GlobalSearchProps) {
                           className={cn(
                             'inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs font-medium transition-colors cursor-pointer border',
                             i === activeIndex
-                              ? 'border-[var(--color-accent)] bg-[var(--color-accent)]/10 text-[var(--color-accent)]'
-                              : 'border-[var(--color-border)] text-[var(--color-text-secondary)] hover:border-[var(--color-accent)]/50',
+                              ? 'border-accent bg-accent/10 text-accent'
+                              : 'border-border text-text-secondary hover:border-accent/50',
                           )}
                         >
                           <Hash className="h-3 w-3 opacity-50" />
@@ -401,14 +401,14 @@ export function GlobalSearch({ open, onOpenChange }: GlobalSearchProps) {
                   <div className="px-4 py-2 mt-1">
                     <div className="flex items-center justify-between mb-2">
                       <div className="flex items-center gap-2">
-                        <Clock className="h-3.5 w-3.5 text-[var(--color-text-tertiary)]" />
-                        <span className="text-xs font-semibold uppercase tracking-wider text-[var(--color-text-tertiary)]">
+                        <Clock className="h-3.5 w-3.5 text-text-tertiary" />
+                        <span className="text-xs font-semibold uppercase tracking-wider text-text-tertiary">
                           Recent
                         </span>
                       </div>
                       <button
                         onClick={() => { clearRecentSearches(); setRecentSearches([]); }}
-                        className="text-[10px] text-[var(--color-text-tertiary)] hover:text-[var(--color-text-primary)] transition-colors cursor-pointer"
+                        className="text-[10px] text-text-tertiary hover:text-text-primary transition-colors cursor-pointer"
                       >
                         Clear
                       </button>
@@ -424,8 +424,8 @@ export function GlobalSearch({ open, onOpenChange }: GlobalSearchProps) {
                             className={cn(
                               'flex items-center gap-2 w-full px-2.5 py-2 rounded-md text-sm text-left transition-colors cursor-pointer',
                               idx === activeIndex
-                                ? 'bg-[var(--color-accent)]/10 text-[var(--color-accent)]'
-                                : 'text-[var(--color-text-secondary)] hover:bg-[var(--color-surface-secondary)]',
+                                ? 'bg-accent/10 text-accent'
+                                : 'text-text-secondary hover:bg-surface-secondary',
                             )}
                           >
                             <Clock className="h-3.5 w-3.5 opacity-40 shrink-0" />
@@ -440,29 +440,29 @@ export function GlobalSearch({ open, onOpenChange }: GlobalSearchProps) {
 
                 {/* Empty idle state */}
                 {trending.length === 0 && recentSearches.length === 0 && (
-                  <div className="flex flex-col items-center justify-center py-12 text-[var(--color-text-tertiary)]">
+                  <div className="flex flex-col items-center justify-center py-12 text-text-tertiary">
                     <Search className="h-8 w-8 mb-2 opacity-40" />
                     <p className="text-sm">Start typing to search…</p>
                   </div>
                 )}
 
                 {/* Shortcuts hint */}
-                <div className="px-4 pt-3 pb-2 mt-1 border-t border-[var(--color-border)]">
-                  <div className="flex items-center gap-4 text-[10px] text-[var(--color-text-tertiary)]">
+                <div className="px-4 pt-3 pb-2 mt-1 border-t border-border">
+                  <div className="flex items-center gap-4 text-[10px] text-text-tertiary">
                     <span className="inline-flex items-center gap-1">
-                      <kbd className="px-1 py-0.5 rounded border border-[var(--color-border)] bg-[var(--color-surface-secondary)] font-mono">↑↓</kbd>
+                      <kbd className="px-1 py-0.5 rounded border border-border bg-surface-secondary font-mono">↑↓</kbd>
                       navigate
                     </span>
                     <span className="inline-flex items-center gap-1">
-                      <kbd className="px-1 py-0.5 rounded border border-[var(--color-border)] bg-[var(--color-surface-secondary)] font-mono">↵</kbd>
+                      <kbd className="px-1 py-0.5 rounded border border-border bg-surface-secondary font-mono">↵</kbd>
                       select
                     </span>
                     <span className="inline-flex items-center gap-1">
-                      <kbd className="px-1 py-0.5 rounded border border-[var(--color-border)] bg-[var(--color-surface-secondary)] font-mono">Tab</kbd>
+                      <kbd className="px-1 py-0.5 rounded border border-border bg-surface-secondary font-mono">Tab</kbd>
                       filter
                     </span>
                     <span className="inline-flex items-center gap-1">
-                      <kbd className="px-1 py-0.5 rounded border border-[var(--color-border)] bg-[var(--color-surface-secondary)] font-mono">esc</kbd>
+                      <kbd className="px-1 py-0.5 rounded border border-border bg-surface-secondary font-mono">esc</kbd>
                       close
                     </span>
                   </div>
@@ -472,7 +472,7 @@ export function GlobalSearch({ open, onOpenChange }: GlobalSearchProps) {
 
             {/* ---- No results ---- */}
             {debouncedQuery.trim() && !loading && results.length === 0 && (
-              <div className="flex flex-col items-center justify-center py-12 text-[var(--color-text-tertiary)]">
+              <div className="flex flex-col items-center justify-center py-12 text-text-tertiary">
                 <Search className="h-8 w-8 mb-2 opacity-20" />
                 <p className="text-sm">No results for &ldquo;{debouncedQuery}&rdquo;</p>
                 <p className="text-xs mt-1 opacity-60">
@@ -487,8 +487,8 @@ export function GlobalSearch({ open, onOpenChange }: GlobalSearchProps) {
                 {Array.from({ length: 5 }).map((_, i) => (
                   <div key={i} className="flex items-start gap-3">
                     <div className="flex-1 space-y-2">
-                      <div className="h-4 w-full rounded bg-[var(--color-border)] animate-pulse" />
-                      <div className="h-3 w-2/3 rounded bg-[var(--color-border)] animate-pulse" />
+                      <div className="h-4 w-full rounded bg-border animate-pulse" />
+                      <div className="h-3 w-2/3 rounded bg-border animate-pulse" />
                     </div>
                   </div>
                 ))}
@@ -503,8 +503,8 @@ export function GlobalSearch({ open, onOpenChange }: GlobalSearchProps) {
                 className={cn(
                   'flex w-full items-start gap-3 px-4 py-3 text-left transition-colors cursor-pointer group',
                   i === activeIndex
-                    ? 'bg-[var(--color-accent)]/10'
-                    : 'hover:bg-[var(--color-surface-secondary)]',
+                    ? 'bg-accent/10'
+                    : 'hover:bg-surface-secondary',
                 )}
                 onMouseEnter={() => setActiveIndex(i)}
                 role="option"
@@ -515,18 +515,18 @@ export function GlobalSearch({ open, onOpenChange }: GlobalSearchProps) {
                     className={cn(
                       'text-sm font-medium leading-snug line-clamp-2',
                       i === activeIndex
-                        ? 'text-[var(--color-accent)]'
-                        : 'text-[var(--color-text-primary)]',
+                        ? 'text-accent'
+                        : 'text-text-primary',
                     )}
                   >
                     <HighlightText text={result.title} query={debouncedQuery} />
                   </p>
                   {result.description && (
-                    <p className="mt-0.5 text-xs text-[var(--color-text-tertiary)] line-clamp-1">
+                    <p className="mt-0.5 text-xs text-text-tertiary line-clamp-1">
                       <HighlightText text={result.description} query={debouncedQuery} />
                     </p>
                   )}
-                  <div className="mt-1.5 flex items-center gap-2 text-xs text-[var(--color-text-tertiary)]">
+                  <div className="mt-1.5 flex items-center gap-2 text-xs text-text-tertiary">
                     <span className="font-medium">{result.source}</span>
                     <span className="opacity-30">·</span>
                     <span>{result.timeAgo || formatTimeAgo(result.pubDate)}</span>
@@ -537,11 +537,11 @@ export function GlobalSearch({ open, onOpenChange }: GlobalSearchProps) {
                 </div>
                 <div className="flex items-center gap-1">
                   {result.link.startsWith('http') && (
-                    <ExternalLink className="h-3.5 w-3.5 mt-1 shrink-0 text-[var(--color-text-tertiary)] opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <ExternalLink className="h-3.5 w-3.5 mt-1 shrink-0 text-text-tertiary opacity-0 group-hover:opacity-100 transition-opacity" />
                   )}
                   <ArrowRight className={cn(
                     'h-3.5 w-3.5 mt-1 shrink-0 transition-all',
-                    i === activeIndex ? 'opacity-100 text-[var(--color-accent)] translate-x-0' : 'opacity-0 -translate-x-1',
+                    i === activeIndex ? 'opacity-100 text-accent translate-x-0' : 'opacity-0 -translate-x-1',
                   )} />
                 </div>
               </button>
@@ -550,7 +550,7 @@ export function GlobalSearch({ open, onOpenChange }: GlobalSearchProps) {
 
           {/* Footer */}
           {results.length > 0 && (
-            <div className="border-t border-[var(--color-border)] px-4 py-2 flex items-center justify-between text-xs text-[var(--color-text-tertiary)] shrink-0">
+            <div className="border-t border-border px-4 py-2 flex items-center justify-between text-xs text-text-tertiary shrink-0">
               <span aria-live="polite" aria-atomic="true">
                 {results.length} result{results.length !== 1 ? 's' : ''}
                 {category && (
@@ -558,7 +558,7 @@ export function GlobalSearch({ open, onOpenChange }: GlobalSearchProps) {
                 )}
               </span>
               <span className="inline-flex items-center gap-1" aria-hidden="true">
-                <kbd className="px-1 py-0.5 rounded border border-[var(--color-border)] bg-[var(--color-surface-secondary)] font-mono text-[10px]">↵</kbd>
+                <kbd className="px-1 py-0.5 rounded border border-border bg-surface-secondary font-mono text-[10px]">↵</kbd>
                 to open
               </span>
             </div>

@@ -226,16 +226,16 @@ export function AIChatInterface() {
   const isEmpty = messages.length === 0 && !loading;
 
   return (
-    <div className="flex flex-col h-[calc(100vh-12rem)] max-h-[800px] min-h-[500px]">
+    <div className="flex flex-col h-[calc(100vh-12rem)] max-h-200 min-h-125">
       {/* Header bar */}
-      <div className="flex items-center justify-between border-b border-[var(--color-border)] pb-3 mb-4">
+      <div className="flex items-center justify-between border-b border-border pb-3 mb-4">
         <div className="flex items-center gap-2">
-          <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-[var(--color-accent)]/10">
-            <Sparkles className="w-4 h-4 text-[var(--color-accent)]" />
+          <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-accent/10">
+            <Sparkles className="w-4 h-4 text-accent" />
           </div>
           <div>
             <h2 className="font-serif text-lg font-bold">Ask AI</h2>
-            <p className="text-xs text-[var(--color-text-tertiary)]">
+            <p className="text-xs text-text-tertiary">
               Powered by crypto news intelligence
             </p>
           </div>
@@ -284,7 +284,7 @@ export function AIChatInterface() {
             {loading && streamedText && (
               <div className="flex gap-3">
                 <AvatarIcon role="assistant" />
-                <div className="flex-1 max-w-[85%] rounded-xl bg-[var(--color-surface-secondary)] p-4">
+                <div className="flex-1 max-w-[85%] rounded-xl bg-surface-secondary p-4">
                   <MarkdownRenderer content={streamedText} />
                   <StreamingDots />
                 </div>
@@ -295,7 +295,7 @@ export function AIChatInterface() {
             {loading && !streamedText && (
               <div className="flex gap-3">
                 <AvatarIcon role="assistant" />
-                <div className="rounded-xl bg-[var(--color-surface-secondary)] p-4">
+                <div className="rounded-xl bg-surface-secondary p-4">
                   <StreamingDots />
                 </div>
               </div>
@@ -310,7 +310,7 @@ export function AIChatInterface() {
         <div className="flex justify-center -mt-10 relative z-10">
           <button
             onClick={scrollToBottom}
-            className="rounded-full bg-[var(--color-surface-secondary)] border border-[var(--color-border)] p-2 shadow-md hover:bg-[var(--color-surface-tertiary)] transition-colors"
+            className="rounded-full bg-surface-secondary border border-border p-2 shadow-md hover:bg-surface-tertiary transition-colors"
           >
             <ArrowDown className="w-4 h-4" />
           </button>
@@ -318,7 +318,7 @@ export function AIChatInterface() {
       )}
 
       {/* Input area */}
-      <div className="mt-4 border-t border-[var(--color-border)] pt-4">
+      <div className="mt-4 border-t border-border pt-4">
         <div className="flex items-end gap-2">
           <div className="flex-1 relative">
             <textarea
@@ -330,9 +330,9 @@ export function AIChatInterface() {
               disabled={loading}
               rows={1}
               className={cn(
-                "w-full resize-none rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] px-4 py-3 text-sm",
-                "placeholder:text-[var(--color-text-tertiary)]",
-                "focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)] focus:border-transparent",
+                "w-full resize-none rounded-xl border border-border bg-(--color-surface) px-4 py-3 text-sm",
+                "placeholder:text-text-tertiary",
+                "focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent",
                 "disabled:opacity-50 disabled:cursor-not-allowed",
                 "transition-all"
               )}
@@ -344,14 +344,14 @@ export function AIChatInterface() {
             onClick={() => sendMessage()}
             disabled={!input.trim() || loading}
             title="Send message"
-            className="shrink-0 rounded-xl h-[46px] w-[46px]"
+            className="shrink-0 rounded-xl h-11.5 w-11.5"
           >
             <Send className="w-4 h-4" />
           </Button>
         </div>
 
         {/* Disclaimer */}
-        <p className="text-[10px] text-[var(--color-text-tertiary)] text-center mt-2">
+        <p className="text-[10px] text-text-tertiary text-center mt-2">
           AI responses are generated from recent crypto news. Not financial advice.
         </p>
       </div>
@@ -364,11 +364,11 @@ export function AIChatInterface() {
 function EmptyState({ onSelectQuestion }: { onSelectQuestion: (q: string) => void }) {
   return (
     <div className="flex flex-col items-center justify-center h-full py-12">
-      <div className="flex items-center justify-center w-16 h-16 rounded-2xl bg-[var(--color-accent)]/10 mb-6">
-        <MessageSquare className="w-8 h-8 text-[var(--color-accent)]" />
+      <div className="flex items-center justify-center w-16 h-16 rounded-2xl bg-accent/10 mb-6">
+        <MessageSquare className="w-8 h-8 text-accent" />
       </div>
       <h3 className="font-serif text-xl font-bold mb-2">Ask anything about crypto</h3>
-      <p className="text-sm text-[var(--color-text-secondary)] mb-8 text-center max-w-md">
+      <p className="text-sm text-text-secondary mb-8 text-center max-w-md">
         Get AI-powered answers based on the latest crypto news from 300+ sources.
       </p>
 
@@ -378,14 +378,14 @@ function EmptyState({ onSelectQuestion }: { onSelectQuestion: (q: string) => voi
             key={q}
             onClick={() => onSelectQuestion(q)}
             className={cn(
-              "text-left px-4 py-3 rounded-xl border border-[var(--color-border)]",
-              "bg-[var(--color-surface)] hover:bg-[var(--color-surface-secondary)]",
-              "text-sm text-[var(--color-text-primary)]",
+              "text-left px-4 py-3 rounded-xl border border-border",
+              "bg-(--color-surface) hover:bg-surface-secondary",
+              "text-sm text-text-primary",
               "transition-colors cursor-pointer",
               "flex items-center gap-3"
             )}
           >
-            <Sparkles className="w-4 h-4 text-[var(--color-accent)] shrink-0" />
+            <Sparkles className="w-4 h-4 text-accent shrink-0" />
             {q}
           </button>
         ))}
@@ -404,8 +404,8 @@ function MessageBubble({ message }: { message: ChatMessage }) {
         className={cn(
           "max-w-[85%] rounded-xl p-4",
           isUser
-            ? "bg-[var(--color-accent)] text-white"
-            : "bg-[var(--color-surface-secondary)]"
+            ? "bg-accent text-white"
+            : "bg-surface-secondary"
         )}
       >
         {isUser ? (
@@ -416,7 +416,7 @@ function MessageBubble({ message }: { message: ChatMessage }) {
 
         {/* Citations */}
         {message.citations && message.citations.length > 0 && (
-          <div className="flex flex-wrap gap-1.5 mt-3 pt-3 border-t border-[var(--color-border)]/30">
+          <div className="flex flex-wrap gap-1.5 mt-3 pt-3 border-t border-border/30">
             {message.citations.map((cite, i) => (
               <a
                 key={i}
@@ -443,8 +443,8 @@ function AvatarIcon({ role }: { role: "user" | "assistant" }) {
       className={cn(
         "flex items-center justify-center w-7 h-7 rounded-lg shrink-0 mt-1",
         role === "assistant"
-          ? "bg-[var(--color-accent)]/10 text-[var(--color-accent)]"
-          : "bg-[var(--color-surface-tertiary)] text-[var(--color-text-secondary)]"
+          ? "bg-accent/10 text-accent"
+          : "bg-surface-tertiary text-text-secondary"
       )}
     >
       {role === "assistant" ? (
@@ -459,9 +459,9 @@ function AvatarIcon({ role }: { role: "user" | "assistant" }) {
 function StreamingDots() {
   return (
     <span className="inline-flex items-center gap-1 ml-1">
-      <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-text-tertiary)] animate-bounce [animation-delay:0ms]" />
-      <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-text-tertiary)] animate-bounce [animation-delay:150ms]" />
-      <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-text-tertiary)] animate-bounce [animation-delay:300ms]" />
+      <span className="w-1.5 h-1.5 rounded-full bg-text-tertiary animate-bounce [animation-delay:0ms]" />
+      <span className="w-1.5 h-1.5 rounded-full bg-text-tertiary animate-bounce [animation-delay:150ms]" />
+      <span className="w-1.5 h-1.5 rounded-full bg-text-tertiary animate-bounce [animation-delay:300ms]" />
     </span>
   );
 }

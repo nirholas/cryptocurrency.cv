@@ -16,21 +16,21 @@ export default function FooterSection({ title, links }: FooterSectionProps) {
   return (
     <nav aria-label={`${title} links`}>
       {/* Desktop: always-visible heading */}
-      <h3 className="hidden md:block mb-3 text-sm font-semibold uppercase tracking-wider text-[var(--color-text-primary)]">
+      <h3 className="hidden md:block mb-3 text-sm font-semibold uppercase tracking-wider text-text-primary">
         {title}
       </h3>
 
       {/* Mobile: tap-to-expand accordion */}
       <button
         onClick={() => setOpen((v) => !v)}
-        className="md:hidden flex w-full items-center justify-between py-3 text-sm font-semibold uppercase tracking-wider text-[var(--color-text-primary)] cursor-pointer min-h-[44px]"
+        className="md:hidden flex w-full items-center justify-between py-3 text-sm font-semibold uppercase tracking-wider text-text-primary cursor-pointer min-h-11"
         aria-expanded={open}
         aria-label={`${title} section`}
       >
         {title}
         <ChevronDown
           className={cn(
-            "h-4 w-4 text-[var(--color-text-tertiary)] transition-transform duration-200",
+            "h-4 w-4 text-text-tertiary transition-transform duration-200",
             open && "rotate-180",
           )}
           aria-hidden="true"
@@ -48,9 +48,9 @@ export default function FooterSection({ title, links }: FooterSectionProps) {
           <li key={link.href}>
             <Link
               href={link.href}
-              className="group flex items-center gap-1 text-sm text-[var(--color-text-secondary)] transition-colors hover:text-[var(--color-text-primary)] min-h-[44px] md:min-h-0"
+              className="group flex items-center gap-1 text-sm text-text-secondary transition-colors hover:text-text-primary min-h-11 md:min-h-0"
             >
-              <span className="inline-block w-0 overflow-hidden text-[#3b82f6] transition-all group-hover:w-3">
+              <span className="inline-block w-0 overflow-hidden text-accent transition-all group-hover:w-3">
                 →
               </span>
               {link.label}

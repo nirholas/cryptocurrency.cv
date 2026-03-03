@@ -78,7 +78,7 @@ const tiers: Tier[] = [
     period: "forever",
     description: "Everything you need to get started — no strings attached.",
     highlight: true,
-    color: "text-[var(--color-accent)]",
+    color: "text-accent",
     features: [
       { text: "No API key required", icon: Shield, included: true },
       { text: "300+ news sources", icon: Globe, included: true },
@@ -170,7 +170,7 @@ function ComparisonCellValue({ cell }: { cell: ComparisonCell }) {
     return <X className="h-4 w-4 text-red-400 mx-auto" />;
   }
   if (cell.type === "dash") {
-    return <Minus className="h-4 w-4 text-[var(--color-text-tertiary)] mx-auto" />;
+    return <Minus className="h-4 w-4 text-text-tertiary mx-auto" />;
   }
   return <span>{cell.value}</span>;
 }
@@ -233,10 +233,10 @@ export default async function PricingPage({ params }: Props) {
           <Badge className="mb-4">
             <Zap className="h-3 w-3 mr-1" /> Simple Pricing
           </Badge>
-          <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-[var(--color-text-primary)]">
+          <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-text-primary">
             Start free. Scale when you&apos;re ready.
           </h1>
-          <p className="text-lg text-[var(--color-text-secondary)] max-w-2xl mx-auto">
+          <p className="text-lg text-text-secondary max-w-2xl mx-auto">
             No tricks, no paywalls. Our core API is free forever — upgrade only
             when you need advanced features.
           </p>
@@ -246,10 +246,10 @@ export default async function PricingPage({ params }: Props) {
             {trustPoints.map((point) => {
               const Icon = point.icon;
               return (
-                <div key={point.label} className="flex items-center gap-2 text-xs text-[var(--color-text-secondary)]">
-                  <Icon className="h-4 w-4 text-[var(--color-accent)]" />
+                <div key={point.label} className="flex items-center gap-2 text-xs text-text-secondary">
+                  <Icon className="h-4 w-4 text-accent" />
                   <div className="text-left">
-                    <div className="font-semibold text-[var(--color-text-primary)]">{point.label}</div>
+                    <div className="font-semibold text-text-primary">{point.label}</div>
                     <div className="text-[10px]">{point.description}</div>
                   </div>
                 </div>
@@ -269,42 +269,42 @@ export default async function PricingPage({ params }: Props) {
                   className={cn(
                     "flex flex-col relative overflow-hidden",
                     tier.highlight
-                      ? "border-[var(--color-accent)] ring-2 ring-[var(--color-accent)]"
+                      ? "border-accent ring-2 ring-accent"
                       : ""
                   )}
                 >
                   {tier.highlight && (
-                    <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-blue-500 via-[var(--color-accent)] to-blue-400" />
+                    <div className="absolute top-0 inset-x-0 h-1 bg-linear-to-r from-blue-500 via-accent to-blue-400" />
                   )}
                   <CardContent className="p-8 flex flex-col flex-1">
                     {tier.badge && (
-                      <Badge className="absolute -top-0 right-4 top-3 bg-amber-500/10 text-amber-600 dark:text-amber-400 border-amber-500/20">
+                      <Badge className="absolute right-4 top-3 bg-amber-500/10 text-amber-600 dark:text-amber-400 border-amber-500/20">
                         {tier.badge}
                       </Badge>
                     )}
                     {tier.highlight && (
-                      <Badge className="absolute top-3 left-4 bg-[var(--color-accent)] text-white">
+                      <Badge className="absolute top-3 left-4 bg-accent text-white">
                         Most Popular
                       </Badge>
                     )}
 
-                    <div className={cn("h-10 w-10 rounded-lg bg-[var(--color-surface-secondary)] flex items-center justify-center mb-4 mt-4", tier.color)}>
+                    <div className={cn("h-10 w-10 rounded-lg bg-surface-secondary flex items-center justify-center mb-4 mt-4", tier.color)}>
                       <TierIcon className="h-5 w-5" />
                     </div>
 
-                    <h2 className="font-serif text-2xl font-bold mb-1 text-[var(--color-text-primary)]">
+                    <h2 className="font-serif text-2xl font-bold mb-1 text-text-primary">
                       {tier.name}
                     </h2>
-                    <p className="text-sm text-[var(--color-text-secondary)] mb-5">
+                    <p className="text-sm text-text-secondary mb-5">
                       {tier.description}
                     </p>
 
                     <div className="mb-6">
-                      <span className="text-4xl font-bold text-[var(--color-text-primary)]">
+                      <span className="text-4xl font-bold text-text-primary">
                         {tier.price}
                       </span>
                       {tier.period && (
-                        <span className="text-sm text-[var(--color-text-tertiary)] ml-1">
+                        <span className="text-sm text-text-tertiary ml-1">
                           / {tier.period}
                         </span>
                       )}
@@ -316,9 +316,9 @@ export default async function PricingPage({ params }: Props) {
                         return (
                           <li
                             key={f.text}
-                            className="flex items-start gap-2.5 text-sm text-[var(--color-text-secondary)]"
+                            className="flex items-start gap-2.5 text-sm text-text-secondary"
                           >
-                            <FeatIcon className={cn("h-4 w-4 mt-0.5 shrink-0", f.included ? "text-green-500" : "text-[var(--color-text-tertiary)]")} />
+                            <FeatIcon className={cn("h-4 w-4 mt-0.5 shrink-0", f.included ? "text-green-500" : "text-text-tertiary")} />
                             {f.text}
                           </li>
                         );
@@ -351,16 +351,16 @@ export default async function PricingPage({ params }: Props) {
 
         {/* Free Forever Guarantee */}
         <section className="mb-16">
-          <div className="rounded-xl border border-[var(--color-accent)]/30 bg-[var(--color-accent)]/5 p-8 md:p-10 max-w-3xl mx-auto">
+          <div className="rounded-xl border border-accent/30 bg-accent/5 p-8 md:p-10 max-w-3xl mx-auto">
             <div className="flex flex-col sm:flex-row items-center gap-5">
-              <div className="h-14 w-14 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center shrink-0">
-                <Shield className="h-7 w-7 text-[var(--color-accent)]" />
+              <div className="h-14 w-14 rounded-full bg-accent/10 flex items-center justify-center shrink-0">
+                <Shield className="h-7 w-7 text-accent" />
               </div>
               <div className="text-center sm:text-left">
-                <h2 className="font-serif text-xl font-bold mb-2 text-[var(--color-text-primary)]">
+                <h2 className="font-serif text-xl font-bold mb-2 text-text-primary">
                   Free Forever Guarantee
                 </h2>
-                <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
+                <p className="text-sm text-text-secondary leading-relaxed">
                   Our Free tier will never be taken away, degraded, or restricted.
                   We&apos;re committed to keeping crypto news accessible to everyone.
                   The project is open source — if anything changes, fork it and run your own instance.
@@ -373,11 +373,11 @@ export default async function PricingPage({ params }: Props) {
         {/* Feature Comparison Table */}
         <section className="mb-16 max-w-4xl mx-auto">
           <div className="text-center mb-8">
-            <BarChart3 className="h-6 w-6 text-[var(--color-accent)] mx-auto mb-3" />
-            <h2 className="font-serif text-2xl md:text-3xl font-bold text-[var(--color-text-primary)]">
+            <BarChart3 className="h-6 w-6 text-accent mx-auto mb-3" />
+            <h2 className="font-serif text-2xl md:text-3xl font-bold text-text-primary">
               Feature Comparison
             </h2>
-            <p className="text-sm text-[var(--color-text-secondary)] mt-2">
+            <p className="text-sm text-text-secondary mt-2">
               See exactly what&apos;s included in each plan.
             </p>
           </div>
@@ -385,21 +385,21 @@ export default async function PricingPage({ params }: Props) {
             <CardContent className="p-0 overflow-x-auto">
               <table className="w-full text-sm">
                 <thead>
-                  <tr className="border-b-2 border-[var(--color-border)]">
-                    <th className="py-4 px-5 text-left font-medium text-[var(--color-text-secondary)]">
+                  <tr className="border-b-2 border-border">
+                    <th className="py-4 px-5 text-left font-medium text-text-secondary">
                       Feature
                     </th>
                     <th className="py-4 px-5 text-center">
-                      <div className="font-bold text-[var(--color-accent)]">Free</div>
-                      <div className="text-[10px] text-[var(--color-text-tertiary)] font-normal">$0/forever</div>
+                      <div className="font-bold text-accent">Free</div>
+                      <div className="text-[10px] text-text-tertiary font-normal">$0/forever</div>
                     </th>
                     <th className="py-4 px-5 text-center">
                       <div className="font-bold text-violet-500">Pro</div>
-                      <div className="text-[10px] text-[var(--color-text-tertiary)] font-normal">$29/mo</div>
+                      <div className="text-[10px] text-text-tertiary font-normal">$29/mo</div>
                     </th>
                     <th className="py-4 px-5 text-center">
                       <div className="font-bold text-amber-500">Enterprise</div>
-                      <div className="text-[10px] text-[var(--color-text-tertiary)] font-normal">Custom</div>
+                      <div className="text-[10px] text-text-tertiary font-normal">Custom</div>
                     </th>
                   </tr>
                 </thead>
@@ -410,23 +410,23 @@ export default async function PricingPage({ params }: Props) {
                       <tr
                         key={row.name}
                         className={cn(
-                          "border-b border-[var(--color-border)] transition-colors hover:bg-[var(--color-surface-tertiary)]",
-                          i % 2 === 0 && "bg-[var(--color-surface-secondary)]"
+                          "border-b border-border transition-colors hover:bg-surface-tertiary",
+                          i % 2 === 0 && "bg-surface-secondary"
                         )}
                       >
-                        <td className="py-3 px-5 text-[var(--color-text-primary)] font-medium">
+                        <td className="py-3 px-5 text-text-primary font-medium">
                           <div className="flex items-center gap-2">
-                            <RowIcon className="h-3.5 w-3.5 text-[var(--color-text-tertiary)]" />
+                            <RowIcon className="h-3.5 w-3.5 text-text-tertiary" />
                             {row.name}
                           </div>
                         </td>
-                        <td className="py-3 px-5 text-center text-[var(--color-text-secondary)]">
+                        <td className="py-3 px-5 text-center text-text-secondary">
                           <ComparisonCellValue cell={row.free} />
                         </td>
-                        <td className="py-3 px-5 text-center text-[var(--color-text-secondary)]">
+                        <td className="py-3 px-5 text-center text-text-secondary">
                           <ComparisonCellValue cell={row.pro} />
                         </td>
-                        <td className="py-3 px-5 text-center text-[var(--color-text-secondary)]">
+                        <td className="py-3 px-5 text-center text-text-secondary">
                           <ComparisonCellValue cell={row.enterprise} />
                         </td>
                       </tr>
@@ -441,11 +441,11 @@ export default async function PricingPage({ params }: Props) {
         {/* What You Get for Free */}
         <section className="mb-16 max-w-5xl mx-auto">
           <div className="text-center mb-8">
-            <Sparkles className="h-6 w-6 text-[var(--color-accent)] mx-auto mb-3" />
-            <h2 className="font-serif text-2xl md:text-3xl font-bold text-[var(--color-text-primary)]">
+            <Sparkles className="h-6 w-6 text-accent mx-auto mb-3" />
+            <h2 className="font-serif text-2xl md:text-3xl font-bold text-text-primary">
               All This, Completely Free
             </h2>
-            <p className="text-sm text-[var(--color-text-secondary)] mt-2">
+            <p className="text-sm text-text-secondary mt-2">
               No sign-up, no API key, no credit card. Start building in seconds.
             </p>
           </div>
@@ -462,10 +462,10 @@ export default async function PricingPage({ params }: Props) {
             ].map((item) => {
               const Icon = item.icon;
               return (
-                <div key={item.title} className="rounded-lg border border-[var(--color-border)] bg-[var(--color-surface-secondary)] p-4 hover:border-[var(--color-accent)]/40 transition-colors">
-                  <Icon className="h-5 w-5 text-[var(--color-accent)] mb-2" />
-                  <h3 className="font-bold text-sm text-[var(--color-text-primary)] mb-1">{item.title}</h3>
-                  <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">{item.desc}</p>
+                <div key={item.title} className="rounded-lg border border-border bg-surface-secondary p-4 hover:border-accent/40 transition-colors">
+                  <Icon className="h-5 w-5 text-accent mb-2" />
+                  <h3 className="font-bold text-sm text-text-primary mb-1">{item.title}</h3>
+                  <p className="text-xs text-text-secondary leading-relaxed">{item.desc}</p>
                 </div>
               );
             })}
@@ -475,11 +475,11 @@ export default async function PricingPage({ params }: Props) {
         {/* FAQ */}
         <section className="max-w-3xl mx-auto mb-14">
           <div className="text-center mb-8">
-            <HelpCircle className="h-6 w-6 text-[var(--color-accent)] mx-auto mb-3" />
-            <h2 className="font-serif text-2xl md:text-3xl font-bold text-[var(--color-text-primary)]">
+            <HelpCircle className="h-6 w-6 text-accent mx-auto mb-3" />
+            <h2 className="font-serif text-2xl md:text-3xl font-bold text-text-primary">
               Frequently Asked Questions
             </h2>
-            <p className="text-sm text-[var(--color-text-secondary)] mt-2">
+            <p className="text-sm text-text-secondary mt-2">
               Everything you need to know about our pricing.
             </p>
           </div>
@@ -487,13 +487,13 @@ export default async function PricingPage({ params }: Props) {
             {faqs.map((faq) => (
               <details
                 key={faq.question}
-                className="group rounded-lg border border-[var(--color-border)] bg-[var(--color-surface-secondary)]"
+                className="group rounded-lg border border-border bg-surface-secondary"
               >
-                <summary className="flex cursor-pointer items-center justify-between p-5 text-sm font-medium text-[var(--color-text-primary)] hover:bg-[var(--color-surface-tertiary)] rounded-lg transition select-none">
+                <summary className="flex cursor-pointer items-center justify-between p-5 text-sm font-medium text-text-primary hover:bg-surface-tertiary rounded-lg transition select-none">
                   {faq.question}
-                  <ChevronDown className="h-4 w-4 shrink-0 text-[var(--color-text-tertiary)] transition-transform group-open:rotate-180 ml-4" />
+                  <ChevronDown className="h-4 w-4 shrink-0 text-text-tertiary transition-transform group-open:rotate-180 ml-4" />
                 </summary>
-                <div className="px-5 pb-5 text-sm text-[var(--color-text-secondary)] leading-relaxed">
+                <div className="px-5 pb-5 text-sm text-text-secondary leading-relaxed">
                   {faq.answer}
                 </div>
               </details>
@@ -503,11 +503,11 @@ export default async function PricingPage({ params }: Props) {
 
         {/* Bottom CTA */}
         <section className="mb-10">
-          <div className="rounded-xl bg-[var(--color-accent)]/5 border border-[var(--color-accent)]/20 p-8 md:p-10 text-center max-w-3xl mx-auto">
-            <h2 className="font-serif text-xl md:text-2xl font-bold mb-3 text-[var(--color-text-primary)]">
+          <div className="rounded-xl bg-accent/5 border border-accent/20 p-8 md:p-10 text-center max-w-3xl mx-auto">
+            <h2 className="font-serif text-xl md:text-2xl font-bold mb-3 text-text-primary">
               Ready to get started?
             </h2>
-            <p className="text-sm text-[var(--color-text-secondary)] mb-6">
+            <p className="text-sm text-text-secondary mb-6">
               No sign-up required. Start making API requests in under 30 seconds.
             </p>
             <div className="flex gap-3 justify-center flex-wrap">

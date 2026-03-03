@@ -116,20 +116,50 @@ export default function FearGreedWidget() {
   }
 
   return (
-    <div style={{ background: bg, padding: 20, fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", maxWidth: 320, textAlign: "center" }}>
+    <div
+      style={{
+        background: bg,
+        padding: 20,
+        fontFamily:
+          "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+        maxWidth: 320,
+        textAlign: "center",
+      }}
+    >
       {showTitle && (
-        <h2 style={{ color: text, fontSize: 16, fontWeight: 700, marginBottom: 12 }}>
+        <h2
+          style={{
+            color: text,
+            fontSize: 16,
+            fontWeight: 700,
+            marginBottom: 12,
+          }}
+        >
           Fear &amp; Greed Index
         </h2>
       )}
 
       {loading ? (
-        <div style={{ width: 200, height: 120, margin: "0 auto", background: cardBg, borderRadius: 12, animation: "pulse 1.5s infinite" }}>
+        <div
+          style={{
+            width: 200,
+            height: 120,
+            margin: "0 auto",
+            background: cardBg,
+            borderRadius: 12,
+            animation: "pulse 1.5s infinite",
+          }}
+        >
           <style>{`@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }`}</style>
         </div>
       ) : (
         <>
-          <svg width="200" height="120" viewBox="0 100 200 120" style={{ margin: "0 auto", display: "block" }}>
+          <svg
+            width="200"
+            height="120"
+            viewBox="0 100 200 120"
+            style={{ margin: "0 auto", display: "block" }}
+          >
             {/* Background arc segments */}
             {ZONES.map((zone) => (
               <path
@@ -137,7 +167,7 @@ export default function FearGreedWidget() {
                 d={describeArc(
                   startAngle + (zone.start / 100) * totalAngle,
                   startAngle + (zone.end / 100) * totalAngle,
-                  radius
+                  radius,
                 )}
                 fill="none"
                 stroke={zone.color}
@@ -170,20 +200,40 @@ export default function FearGreedWidget() {
           </svg>
 
           <div style={{ marginTop: 8 }}>
-            <div style={{ color: gaugeColor, fontSize: 36, fontWeight: 800 }}>{Math.round(animatedValue)}</div>
-            <div style={{ color: gaugeColor, fontSize: 14, fontWeight: 700, marginTop: 2 }}>{label}</div>
+            <div style={{ color: gaugeColor, fontSize: 36, fontWeight: 800 }}>
+              {Math.round(animatedValue)}
+            </div>
+            <div
+              style={{
+                color: gaugeColor,
+                fontSize: 14,
+                fontWeight: 700,
+                marginTop: 2,
+              }}
+            >
+              {label}
+            </div>
           </div>
         </>
       )}
 
-      <div style={{ marginTop: 16, paddingTop: 8, borderTop: `1px solid ${border}` }}>
+      <div
+        style={{
+          marginTop: 16,
+          paddingTop: 8,
+          borderTop: `1px solid ${border}`,
+        }}
+      >
         <a
           href={`${BASE_URL}/en/fear-greed`}
           target="_blank"
           rel="noopener noreferrer"
           style={{ color: mutedText, fontSize: 11, textDecoration: "none" }}
         >
-          Powered by <span style={{ color: accentBlue, fontWeight: 600 }}>Crypto Vision News</span>
+          Powered by{" "}
+          <span style={{ color: accentBlue, fontWeight: 600 }}>
+            Crypto Vision News
+          </span>
         </a>
       </div>
     </div>

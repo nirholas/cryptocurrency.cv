@@ -43,7 +43,7 @@
     if (document.currentScript) return document.currentScript;
     // Fallback for IE11
     var scripts = document.querySelectorAll(
-      'script[src*="widget/embed.js"], script[src*="embed.js"]'
+      'script[src*="widget/embed.js"], script[src*="embed.js"]',
     );
     return scripts[scripts.length - 1] || null;
   }
@@ -144,7 +144,7 @@
     iframe.setAttribute("title", "Free Crypto News Widget");
     iframe.setAttribute(
       "sandbox",
-      "allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
+      "allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox",
     );
 
     container.appendChild(iframe);

@@ -181,7 +181,7 @@ export function AdvancedSearchFilters({
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 20 20"
             fill="currentColor"
-            className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-[var(--color-text-tertiary)]"
+            className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-text-tertiary"
           >
             <path
               fillRule="evenodd"
@@ -195,9 +195,9 @@ export function AdvancedSearchFilters({
             value={query}
             onChange={(e) => handleQueryChange(e.target.value)}
             placeholder="Search crypto news, coins, topics..."
-            className="w-full pl-12 pr-24 py-3.5 rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] text-sm
-                       focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)] focus:border-[var(--color-accent)]
-                       placeholder:text-[var(--color-text-tertiary)]"
+            className="w-full pl-12 pr-24 py-3.5 rounded-xl border border-border bg-(--color-surface) text-sm
+                       focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent
+                       placeholder:text-text-tertiary"
             autoComplete="off"
           />
           <div className="absolute right-2 top-1/2 -translate-y-1/2 flex items-center gap-1.5">
@@ -207,8 +207,8 @@ export function AdvancedSearchFilters({
               className={cn(
                 "px-2.5 py-1.5 text-xs font-medium rounded-lg transition-colors",
                 showFilters
-                  ? "bg-[var(--color-accent)] text-white"
-                  : "bg-[var(--color-surface-secondary)] text-[var(--color-text-tertiary)] hover:bg-[var(--color-surface-tertiary)]",
+                  ? "bg-accent text-white"
+                  : "bg-surface-secondary text-text-tertiary hover:bg-surface-tertiary",
               )}
             >
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="h-3.5 w-3.5 inline mr-1">
@@ -218,7 +218,7 @@ export function AdvancedSearchFilters({
             </button>
             <button
               type="submit"
-              className="px-3 py-1.5 text-xs font-medium rounded-lg bg-[var(--color-accent)] text-white hover:opacity-90 transition-opacity"
+              className="px-3 py-1.5 text-xs font-medium rounded-lg bg-accent text-white hover:opacity-90 transition-opacity"
             >
               Search
             </button>
@@ -227,19 +227,19 @@ export function AdvancedSearchFilters({
 
         {/* Suggestions dropdown */}
         {suggestions.length > 0 && (
-          <div className="absolute top-full left-0 right-0 mt-1 z-50 bg-[var(--color-surface)] border border-[var(--color-border)] rounded-lg shadow-lg overflow-hidden">
+          <div className="absolute top-full left-0 right-0 mt-1 z-50 bg-(--color-surface) border border-border rounded-lg shadow-lg overflow-hidden">
             {suggestions.map((s, i) => (
               <button
                 key={i}
                 type="button"
-                className="w-full text-left px-4 py-2.5 text-sm hover:bg-[var(--color-surface-secondary)] transition-colors"
+                className="w-full text-left px-4 py-2.5 text-sm hover:bg-surface-secondary transition-colors"
                 onClick={() => {
                   setQuery(s);
                   setSuggestions([]);
                   search(s);
                 }}
               >
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="h-3.5 w-3.5 inline mr-2 text-[var(--color-text-tertiary)]">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="h-3.5 w-3.5 inline mr-2 text-text-tertiary">
                   <path fillRule="evenodd" d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z" clipRule="evenodd" />
                 </svg>
                 <span className="line-clamp-1">{s}</span>
@@ -251,10 +251,10 @@ export function AdvancedSearchFilters({
 
       {/* Filter Panel */}
       {showFilters && (
-        <div className="mt-3 p-4 rounded-xl border border-[var(--color-border)] bg-[var(--color-surface-secondary)] space-y-4">
+        <div className="mt-3 p-4 rounded-xl border border-border bg-surface-secondary space-y-4">
           {/* Category filter */}
           <div>
-            <label className="text-xs font-semibold text-[var(--color-text-tertiary)] uppercase tracking-wide mb-2 block">
+            <label className="text-xs font-semibold text-text-tertiary uppercase tracking-wide mb-2 block">
               Category
             </label>
             <div className="flex flex-wrap gap-2">
@@ -265,8 +265,8 @@ export function AdvancedSearchFilters({
                   className={cn(
                     "px-3 py-1.5 text-xs font-medium rounded-full transition-colors",
                     category === cat.slug
-                      ? "bg-[var(--color-accent)] text-white"
-                      : "bg-[var(--color-surface)] text-[var(--color-text-secondary)] hover:bg-[var(--color-surface-tertiary)] border border-[var(--color-border)]",
+                      ? "bg-accent text-white"
+                      : "bg-(--color-surface) text-text-secondary hover:bg-surface-tertiary border border-border",
                   )}
                 >
                   {cat.label}
@@ -278,7 +278,7 @@ export function AdvancedSearchFilters({
           {/* Time range + Sort */}
           <div className="grid grid-cols-2 gap-4">
             <div>
-              <label className="text-xs font-semibold text-[var(--color-text-tertiary)] uppercase tracking-wide mb-2 block">
+              <label className="text-xs font-semibold text-text-tertiary uppercase tracking-wide mb-2 block">
                 Time Range
               </label>
               <div className="flex flex-wrap gap-1.5">
@@ -289,8 +289,8 @@ export function AdvancedSearchFilters({
                     className={cn(
                       "px-2.5 py-1 text-xs rounded-md transition-colors",
                       timeRange === tr.value
-                        ? "bg-[var(--color-accent)] text-white"
-                        : "bg-[var(--color-surface)] text-[var(--color-text-tertiary)] hover:bg-[var(--color-surface-tertiary)]",
+                        ? "bg-accent text-white"
+                        : "bg-(--color-surface) text-text-tertiary hover:bg-surface-tertiary",
                     )}
                   >
                     {tr.label}
@@ -299,13 +299,13 @@ export function AdvancedSearchFilters({
               </div>
             </div>
             <div>
-              <label className="text-xs font-semibold text-[var(--color-text-tertiary)] uppercase tracking-wide mb-2 block">
+              <label className="text-xs font-semibold text-text-tertiary uppercase tracking-wide mb-2 block">
                 Sort By
               </label>
               <select
                 value={sortBy}
                 onChange={(e) => { setSortBy(e.target.value as SortOption); setPage(1); }}
-                className="w-full px-3 py-1.5 text-xs rounded-md border border-[var(--color-border)] bg-[var(--color-surface)] text-[var(--color-text-primary)]"
+                className="w-full px-3 py-1.5 text-xs rounded-md border border-border bg-(--color-surface) text-text-primary"
               >
                 {SORT_OPTIONS.map((opt) => (
                   <option key={opt.value} value={opt.value}>
@@ -318,7 +318,7 @@ export function AdvancedSearchFilters({
 
           {/* Source filter */}
           <div>
-            <label className="text-xs font-semibold text-[var(--color-text-tertiary)] uppercase tracking-wide mb-2 block">
+            <label className="text-xs font-semibold text-text-tertiary uppercase tracking-wide mb-2 block">
               Source
             </label>
             <input
@@ -326,14 +326,14 @@ export function AdvancedSearchFilters({
               value={source}
               onChange={(e) => setSource(e.target.value)}
               placeholder="e.g., CoinDesk, Decrypt..."
-              className="w-full px-3 py-1.5 text-xs rounded-md border border-[var(--color-border)] bg-[var(--color-surface)] placeholder:text-[var(--color-text-tertiary)]"
+              className="w-full px-3 py-1.5 text-xs rounded-md border border-border bg-(--color-surface) placeholder:text-text-tertiary"
             />
           </div>
 
           {/* Apply button */}
           <button
             onClick={() => search()}
-            className="w-full py-2 text-sm font-medium rounded-lg bg-[var(--color-accent)] text-white hover:opacity-90 transition-opacity"
+            className="w-full py-2 text-sm font-medium rounded-lg bg-accent text-white hover:opacity-90 transition-opacity"
           >
             Apply Filters
           </button>
@@ -344,10 +344,10 @@ export function AdvancedSearchFilters({
       {!query && recentSearches.length > 0 && (
         <div className="mt-4">
           <div className="flex items-center justify-between mb-2">
-            <span className="text-xs font-semibold text-[var(--color-text-tertiary)] uppercase tracking-wide">
+            <span className="text-xs font-semibold text-text-tertiary uppercase tracking-wide">
               Recent Searches
             </span>
-            <button onClick={clearRecentSearches} className="text-[10px] text-[var(--color-text-tertiary)] hover:text-red-500">
+            <button onClick={clearRecentSearches} className="text-[10px] text-text-tertiary hover:text-red-500">
               Clear
             </button>
           </div>
@@ -356,7 +356,7 @@ export function AdvancedSearchFilters({
               <button
                 key={i}
                 onClick={() => { setQuery(s); search(s); }}
-                className="px-3 py-1 text-xs rounded-full border border-[var(--color-border)] text-[var(--color-text-secondary)] hover:border-[var(--color-accent)] hover:text-[var(--color-accent)] transition-colors"
+                className="px-3 py-1 text-xs rounded-full border border-border text-text-secondary hover:border-accent hover:text-accent transition-colors"
               >
                 {s}
               </button>
@@ -369,12 +369,12 @@ export function AdvancedSearchFilters({
       {loading && (
         <div className="mt-6 space-y-4">
           {Array.from({ length: 5 }).map((_, i) => (
-            <div key={i} className="animate-pulse flex gap-4 pb-4 border-b border-[var(--color-border)]">
-              <div className="w-20 h-20 bg-[var(--color-surface-tertiary)] rounded shrink-0" />
+            <div key={i} className="animate-pulse flex gap-4 pb-4 border-b border-border">
+              <div className="w-20 h-20 bg-surface-tertiary rounded shrink-0" />
               <div className="flex-1 space-y-2">
-                <div className="h-4 w-16 bg-[var(--color-surface-tertiary)] rounded" />
-                <div className="h-5 w-full bg-[var(--color-surface-tertiary)] rounded" />
-                <div className="h-3 w-32 bg-[var(--color-surface-tertiary)] rounded" />
+                <div className="h-4 w-16 bg-surface-tertiary rounded" />
+                <div className="h-5 w-full bg-surface-tertiary rounded" />
+                <div className="h-3 w-32 bg-surface-tertiary rounded" />
               </div>
             </div>
           ))}
@@ -383,7 +383,7 @@ export function AdvancedSearchFilters({
 
       {!loading && results.length > 0 && (
         <div className="mt-6">
-          <p className="text-xs text-[var(--color-text-tertiary)] mb-4">
+          <p className="text-xs text-text-tertiary mb-4">
             {totalResults} result{totalResults !== 1 ? "s" : ""} for &quot;{query}&quot;
             {category !== "all" && ` in ${category}`}
           </p>
@@ -394,10 +394,10 @@ export function AdvancedSearchFilters({
                 href={result.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex gap-4 pb-4 border-b border-[var(--color-border)] last:border-b-0"
+                className="group flex gap-4 pb-4 border-b border-border last:border-b-0"
               >
                 {result.imageUrl && (
-                  <div className="w-20 h-20 rounded-md overflow-hidden bg-[var(--color-surface-tertiary)] shrink-0">
+                  <div className="w-20 h-20 rounded-md overflow-hidden bg-surface-tertiary shrink-0">
                     <img
                       src={result.imageUrl}
                       alt=""
@@ -410,15 +410,15 @@ export function AdvancedSearchFilters({
                   <Badge variant={categoryToBadgeVariant(result.category)} className="mb-1">
                     {result.category}
                   </Badge>
-                  <h3 className="text-sm font-semibold leading-snug group-hover:text-[var(--color-accent)] transition-colors line-clamp-2">
+                  <h3 className="text-sm font-semibold leading-snug group-hover:text-accent transition-colors line-clamp-2">
                     {result.title}
                   </h3>
                   {result.description && (
-                    <p className="text-xs text-[var(--color-text-tertiary)] mt-1 line-clamp-1">
+                    <p className="text-xs text-text-tertiary mt-1 line-clamp-1">
                       {result.description}
                     </p>
                   )}
-                  <span className="text-[11px] text-[var(--color-text-tertiary)] mt-1 block">
+                  <span className="text-[11px] text-text-tertiary mt-1 block">
                     {result.source} · {result.timeAgo}
                   </span>
                 </div>
@@ -434,7 +434,7 @@ export function AdvancedSearchFilters({
                 setPage(nextPage);
                 search(undefined, nextPage);
               }}
-              className="w-full mt-4 py-2.5 text-sm font-medium rounded-lg border border-[var(--color-border)] text-[var(--color-text-secondary)] hover:bg-[var(--color-surface-secondary)] transition-colors"
+              className="w-full mt-4 py-2.5 text-sm font-medium rounded-lg border border-border text-text-secondary hover:bg-surface-secondary transition-colors"
             >
               Load More Results
             </button>
@@ -444,10 +444,10 @@ export function AdvancedSearchFilters({
 
       {!loading && query && results.length === 0 && (
         <div className="mt-8 text-center">
-          <p className="text-sm text-[var(--color-text-tertiary)]">
+          <p className="text-sm text-text-tertiary">
             No results found for &quot;{query}&quot;
           </p>
-          <p className="text-xs text-[var(--color-text-tertiary)] mt-1">
+          <p className="text-xs text-text-tertiary mt-1">
             Try different keywords or adjust your filters
           </p>
         </div>

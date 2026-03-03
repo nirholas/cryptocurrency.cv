@@ -53,8 +53,8 @@ const accessTiers = [
     price: "$0",
     period: "forever",
     description: "Try the API instantly — no key, no signup.",
-    color: "text-[var(--color-accent)]",
-    borderColor: "border-[var(--color-accent)]",
+    color: "text-accent",
+    borderColor: "border-accent",
     highlight: true,
     features: [
       "2 headline snippets per request",
@@ -161,10 +161,10 @@ export default async function KeysPage({ params }: Props) {
           <Badge className="mb-4">
             <Key className="h-3 w-3 mr-1" /> API Keys
           </Badge>
-          <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-[var(--color-text-primary)]">
+          <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-text-primary">
             Access the Crypto News API
           </h1>
-          <p className="text-lg text-[var(--color-text-secondary)] max-w-2xl mx-auto">
+          <p className="text-lg text-text-secondary max-w-2xl mx-auto">
             Start free with no signup. Scale with pay-per-request micropayments
             or subscribe for a dedicated API key.
           </p>
@@ -182,27 +182,27 @@ export default async function KeysPage({ params }: Props) {
                 }`}
               >
                 {tier.highlight && (
-                  <div className="absolute top-0 right-0 bg-[var(--color-accent)] text-white text-[10px] font-bold px-2 py-0.5 rounded-bl">
+                  <div className="absolute top-0 right-0 bg-accent text-white text-[10px] font-bold px-2 py-0.5 rounded-bl">
                     START HERE
                   </div>
                 )}
                 <CardContent className="p-6">
                   <div className="flex items-center gap-3 mb-3">
                     <div
-                      className={`flex items-center justify-center w-10 h-10 rounded-lg bg-[var(--color-bg-tertiary)] ${tier.color}`}
+                      className={`flex items-center justify-center w-10 h-10 rounded-lg bg-(--color-bg-tertiary) ${tier.color}`}
                     >
                       <Icon className="h-5 w-5" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-lg text-[var(--color-text-primary)]">
+                      <h3 className="font-semibold text-lg text-text-primary">
                         {tier.name}
                       </h3>
                       <div className="flex items-baseline gap-1">
-                        <span className="text-2xl font-bold text-[var(--color-text-primary)]">
+                        <span className="text-2xl font-bold text-text-primary">
                           {tier.price}
                         </span>
                         {tier.period && (
-                          <span className="text-sm text-[var(--color-text-tertiary)]">
+                          <span className="text-sm text-text-tertiary">
                             /{tier.period}
                           </span>
                         )}
@@ -210,7 +210,7 @@ export default async function KeysPage({ params }: Props) {
                     </div>
                   </div>
 
-                  <p className="text-sm text-[var(--color-text-secondary)] mb-4">
+                  <p className="text-sm text-text-secondary mb-4">
                     {tier.description}
                   </p>
 
@@ -218,7 +218,7 @@ export default async function KeysPage({ params }: Props) {
                     {tier.features.map((feat) => (
                       <li
                         key={feat}
-                        className="flex items-center gap-2 text-sm text-[var(--color-text-secondary)]"
+                        className="flex items-center gap-2 text-sm text-text-secondary"
                       >
                         <Check className="h-3.5 w-3.5 text-green-500 shrink-0" />
                         {feat}
@@ -227,8 +227,8 @@ export default async function KeysPage({ params }: Props) {
                   </ul>
 
                   {/* Code example */}
-                  <div className="relative bg-[var(--color-bg-tertiary)] rounded-lg p-3 mb-4 font-mono text-xs text-[var(--color-text-secondary)] overflow-x-auto">
-                    <Copy className="absolute top-2 right-2 h-3 w-3 text-[var(--color-text-tertiary)]" />
+                  <div className="relative bg-(--color-bg-tertiary) rounded-lg p-3 mb-4 font-mono text-xs text-text-secondary overflow-x-auto">
+                    <Copy className="absolute top-2 right-2 h-3 w-3 text-text-tertiary" />
                     <code>{tier.code}</code>
                   </div>
 
@@ -275,7 +275,7 @@ export default async function KeysPage({ params }: Props) {
 
         {/* Quick Links */}
         <section className="mb-16">
-          <h2 className="font-serif text-2xl font-bold mb-6 text-[var(--color-text-primary)] text-center">
+          <h2 className="font-serif text-2xl font-bold mb-6 text-text-primary text-center">
             Developer Resources
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -283,13 +283,13 @@ export default async function KeysPage({ params }: Props) {
               const Icon = link.icon;
               return (
                 <Link key={link.title} href={link.href}>
-                  <Card className="h-full transition-colors hover:border-[var(--color-accent)]">
+                  <Card className="h-full transition-colors hover:border-accent">
                     <CardContent className="p-5 flex flex-col gap-2">
-                      <Icon className="h-5 w-5 text-[var(--color-accent)]" />
-                      <h3 className="font-semibold text-sm text-[var(--color-text-primary)]">
+                      <Icon className="h-5 w-5 text-accent" />
+                      <h3 className="font-semibold text-sm text-text-primary">
                         {link.title}
                       </h3>
-                      <p className="text-xs text-[var(--color-text-secondary)]">
+                      <p className="text-xs text-text-secondary">
                         {link.description}
                       </p>
                     </CardContent>
@@ -302,14 +302,14 @@ export default async function KeysPage({ params }: Props) {
 
         {/* Info Banner */}
         <section className="mb-10">
-          <Card className="border-[var(--color-accent)]/30 bg-[var(--color-accent)]/5">
+          <Card className="border-accent/30 bg-accent/5">
             <CardContent className="p-6 flex flex-col md:flex-row items-start md:items-center gap-4">
-              <Shield className="h-8 w-8 text-[var(--color-accent)] shrink-0" />
+              <Shield className="h-8 w-8 text-accent shrink-0" />
               <div className="flex-1">
-                <h3 className="font-semibold text-[var(--color-text-primary)] mb-1">
+                <h3 className="font-semibold text-text-primary mb-1">
                   Most endpoints are free — no key required
                 </h3>
-                <p className="text-sm text-[var(--color-text-secondary)]">
+                <p className="text-sm text-text-secondary">
                   The core news API, RSS/Atom feeds, search, and category
                   endpoints are all free and open. API keys are only needed for
                   premium features like AI analysis, historical archives, and

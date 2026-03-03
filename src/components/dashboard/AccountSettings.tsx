@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
+import { Link, useRouter } from "@/i18n/navigation";
 
 interface UserData {
   id: string;
@@ -40,7 +40,7 @@ export default function AccountSettings() {
     setLoggingOut(true);
     try {
       await fetch("/api/auth/logout", { method: "POST" });
-      router.push("/en/login");
+      router.push("/login");
     } catch {
       setLoggingOut(false);
     }
@@ -164,12 +164,12 @@ export default function AccountSettings() {
               </div>
             </div>
           </div>
-          <a
-            href="/en/pricing"
+          <Link
+            href="/pricing"
             className="inline-block mt-2 text-blue-500 hover:underline text-sm font-medium"
           >
             View all pricing plans →
-          </a>
+          </Link>
         </div>
       </div>
 

@@ -19,8 +19,19 @@ interface CoinData {
 const BASE_URL = "https://cryptocurrency.cv";
 
 function formatPrice(price: number): string {
-  if (price >= 1) return price.toLocaleString("en-US", { style: "currency", currency: "USD", minimumFractionDigits: 2, maximumFractionDigits: 2 });
-  return price.toLocaleString("en-US", { style: "currency", currency: "USD", minimumFractionDigits: 2, maximumFractionDigits: 6 });
+  if (price >= 1)
+    return price.toLocaleString("en-US", {
+      style: "currency",
+      currency: "USD",
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+    });
+  return price.toLocaleString("en-US", {
+    style: "currency",
+    currency: "USD",
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 6,
+  });
 }
 
 function formatCompact(num: number): string {
@@ -30,19 +41,36 @@ function formatCompact(num: number): string {
   return `$${num.toLocaleString()}`;
 }
 
-function MiniSparkline({ prices, color, width = 120, height = 40 }: { prices: number[]; color: string; width?: number; height?: number }) {
+function MiniSparkline({
+  prices,
+  color,
+  width = 120,
+  height = 40,
+}: {
+  prices: number[];
+  color: string;
+  width?: number;
+  height?: number;
+}) {
   if (!prices || prices.length < 2) return null;
   const min = Math.min(...prices);
   const max = Math.max(...prices);
   const range = max - min || 1;
-  const points = prices.map((p, i) => {
-    const x = (i / (prices.length - 1)) * width;
-    const y = height - ((p - min) / range) * height;
-    return `${x},${y}`;
-  }).join(" ");
+  const points = prices
+    .map((p, i) => {
+      const x = (i / (prices.length - 1)) * width;
+      const y = height - ((p - min) / range) * height;
+      return `${x},${y}`;
+    })
+    .join(" ");
 
   return (
-    <svg width={width} height={height} viewBox={`0 0 ${width} ${height}`} style={{ display: "block" }}>
+    <svg
+      width={width}
+      height={height}
+      viewBox={`0 0 ${width} ${height}`}
+      style={{ display: "block" }}
+    >
       <polyline fill="none" stroke={color} strokeWidth="1.5" points={points} />
     </svg>
   );
@@ -99,11 +127,43 @@ export default function CoinWidget() {
 
   if (loading) {
     return (
-      <div style={{ background: bg, padding: 20, borderRadius: 12, fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" }}>
+      <div
+        style={{
+          background: bg,
+          padding: 20,
+          borderRadius: 12,
+          fontFamily:
+            "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+        }}
+      >
         <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-          <div style={{ width: 160, height: 24, background: cardBg, borderRadius: 6, animation: "pulse 1.5s infinite" }} />
-          <div style={{ width: 200, height: 36, background: cardBg, borderRadius: 6, animation: "pulse 1.5s infinite" }} />
-          <div style={{ width: "100%", height: 40, background: cardBg, borderRadius: 6, animation: "pulse 1.5s infinite" }} />
+          <div
+            style={{
+              width: 160,
+              height: 24,
+              background: cardBg,
+              borderRadius: 6,
+              animation: "pulse 1.5s infinite",
+            }}
+          />
+          <div
+            style={{
+              width: 200,
+              height: 36,
+              background: cardBg,
+              borderRadius: 6,
+              animation: "pulse 1.5s infinite",
+            }}
+          />
+          <div
+            style={{
+              width: "100%",
+              height: 40,
+              background: cardBg,
+              borderRadius: 6,
+              animation: "pulse 1.5s infinite",
+            }}
+          />
         </div>
         <style>{`@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }`}</style>
       </div>
@@ -112,37 +172,96 @@ export default function CoinWidget() {
 
   if (!coin) return null;
 
-  const changeColor = coin.price_change_percentage_24h >= 0 ? "#16c784" : "#ea3943";
+  const changeColor =
+    coin.price_change_percentage_24h >= 0 ? "#16c784" : "#ea3943";
 
   return (
-    <div style={{ background: bg, padding: 20, fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", maxWidth: 380 }}>
-      <div style={{ background: cardBg, borderRadius: 12, padding: 20, border: `1px solid ${border}` }}>
+    <div
+      style={{
+        background: bg,
+        padding: 20,
+        fontFamily:
+          "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+        maxWidth: 380,
+      }}
+    >
+      <div
+        style={{
+          background: cardBg,
+          borderRadius: 12,
+          padding: 20,
+          border: `1px solid ${border}`,
+        }}
+      >
         {/* Header */}
-        <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: 12,
+            marginBottom: 16,
+          }}
+        >
           {coin.image && (
-            <img src={coin.image} alt={coin.name} width={36} height={36} style={{ borderRadius: "50%" }} />
+            <img
+              src={coin.image}
+              alt={coin.name}
+              width={36}
+              height={36}
+              style={{ borderRadius: "50%" }}
+            />
           )}
           <div>
-            <div style={{ color: text, fontSize: 18, fontWeight: 700 }}>{coin.name}</div>
-            <div style={{ color: mutedText, fontSize: 13, textTransform: "uppercase" }}>{coin.symbol}</div>
+            <div style={{ color: text, fontSize: 18, fontWeight: 700 }}>
+              {coin.name}
+            </div>
+            <div
+              style={{
+                color: mutedText,
+                fontSize: 13,
+                textTransform: "uppercase",
+              }}
+            >
+              {coin.symbol}
+            </div>
           </div>
         </div>
 
         {/* Price */}
         <div style={{ marginBottom: 16 }}>
-          <div style={{ color: text, fontSize: 28, fontWeight: 800, letterSpacing: -0.5 }}>
+          <div
+            style={{
+              color: text,
+              fontSize: 28,
+              fontWeight: 800,
+              letterSpacing: -0.5,
+            }}
+          >
             {formatPrice(coin.current_price)}
           </div>
-          <div style={{ display: "flex", alignItems: "center", gap: 6, marginTop: 4 }}>
-            <span style={{
-              background: coin.price_change_percentage_24h >= 0 ? "#16c78420" : "#ea394320",
-              color: changeColor,
-              padding: "2px 8px",
-              borderRadius: 6,
-              fontSize: 13,
-              fontWeight: 700,
-            }}>
-              {coin.price_change_percentage_24h >= 0 ? "▲" : "▼"} {Math.abs(coin.price_change_percentage_24h).toFixed(2)}%
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: 6,
+              marginTop: 4,
+            }}
+          >
+            <span
+              style={{
+                background:
+                  coin.price_change_percentage_24h >= 0
+                    ? "#16c78420"
+                    : "#ea394320",
+                color: changeColor,
+                padding: "2px 8px",
+                borderRadius: 6,
+                fontSize: 13,
+                fontWeight: 700,
+              }}
+            >
+              {coin.price_change_percentage_24h >= 0 ? "▲" : "▼"}{" "}
+              {Math.abs(coin.price_change_percentage_24h).toFixed(2)}%
             </span>
             <span style={{ color: mutedText, fontSize: 12 }}>24h</span>
           </div>
@@ -151,21 +270,40 @@ export default function CoinWidget() {
         {/* Sparkline */}
         {coin.sparkline_in_7d?.price && (
           <div style={{ marginBottom: 16 }}>
-            <MiniSparkline prices={coin.sparkline_in_7d.price} color={changeColor} width={300} height={50} />
+            <MiniSparkline
+              prices={coin.sparkline_in_7d.price}
+              color={changeColor}
+              width={300}
+              height={50}
+            />
           </div>
         )}
 
         {/* Stats */}
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 8 }}>
+        <div
+          style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 8 }}
+        >
           {[
             { label: "Market Cap", value: formatCompact(coin.market_cap) },
             { label: "Volume 24h", value: formatCompact(coin.total_volume) },
             { label: "High 24h", value: formatPrice(coin.high_24h) },
             { label: "Low 24h", value: formatPrice(coin.low_24h) },
           ].map(({ label, value }) => (
-            <div key={label} style={{ padding: 8, background: isDark ? "#0f172a" : "#ffffff", borderRadius: 6, border: `1px solid ${border}` }}>
-              <div style={{ color: mutedText, fontSize: 11, marginBottom: 2 }}>{label}</div>
-              <div style={{ color: text, fontSize: 13, fontWeight: 600 }}>{value}</div>
+            <div
+              key={label}
+              style={{
+                padding: 8,
+                background: isDark ? "#0f172a" : "#ffffff",
+                borderRadius: 6,
+                border: `1px solid ${border}`,
+              }}
+            >
+              <div style={{ color: mutedText, fontSize: 11, marginBottom: 2 }}>
+                {label}
+              </div>
+              <div style={{ color: text, fontSize: 13, fontWeight: 600 }}>
+                {value}
+              </div>
             </div>
           ))}
         </div>
@@ -178,7 +316,10 @@ export default function CoinWidget() {
           rel="noopener noreferrer"
           style={{ color: mutedText, fontSize: 11, textDecoration: "none" }}
         >
-          Powered by <span style={{ color: accentBlue, fontWeight: 600 }}>Crypto Vision News</span>
+          Powered by{" "}
+          <span style={{ color: accentBlue, fontWeight: 600 }}>
+            Crypto Vision News
+          </span>
         </a>
       </div>
     </div>

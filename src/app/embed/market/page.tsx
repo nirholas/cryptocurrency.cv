@@ -15,8 +15,19 @@ interface CoinData {
 const BASE_URL = "https://cryptocurrency.cv";
 
 function formatPrice(price: number): string {
-  if (price >= 1) return price.toLocaleString("en-US", { style: "currency", currency: "USD", minimumFractionDigits: 2, maximumFractionDigits: 2 });
-  return price.toLocaleString("en-US", { style: "currency", currency: "USD", minimumFractionDigits: 2, maximumFractionDigits: 6 });
+  if (price >= 1)
+    return price.toLocaleString("en-US", {
+      style: "currency",
+      currency: "USD",
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+    });
+  return price.toLocaleString("en-US", {
+    style: "currency",
+    currency: "USD",
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 6,
+  });
 }
 
 function formatCompact(num: number): string {
@@ -45,14 +56,53 @@ export default function MarketWidget() {
         const res = await fetch(`${BASE_URL}/api/prices?limit=5`);
         if (!res.ok) throw new Error("Failed to fetch");
         const data = await res.json();
-        setCoins(Array.isArray(data) ? data.slice(0, 5) : (data.data || data.prices || []).slice(0, 5));
+        setCoins(
+          Array.isArray(data)
+            ? data.slice(0, 5)
+            : (data.data || data.prices || []).slice(0, 5),
+        );
       } catch {
         setCoins([
-          { id: "bitcoin", symbol: "BTC", name: "Bitcoin", current_price: 97500, price_change_percentage_24h: 2.4, market_cap: 1.92e12 },
-          { id: "ethereum", symbol: "ETH", name: "Ethereum", current_price: 3400, price_change_percentage_24h: -1.2, market_cap: 4.08e11 },
-          { id: "solana", symbol: "SOL", name: "Solana", current_price: 195, price_change_percentage_24h: 5.1, market_cap: 9.4e10 },
-          { id: "binancecoin", symbol: "BNB", name: "BNB", current_price: 680, price_change_percentage_24h: 0.8, market_cap: 9.9e10 },
-          { id: "cardano", symbol: "ADA", name: "Cardano", current_price: 1.05, price_change_percentage_24h: -2.3, market_cap: 3.7e10 },
+          {
+            id: "bitcoin",
+            symbol: "BTC",
+            name: "Bitcoin",
+            current_price: 97500,
+            price_change_percentage_24h: 2.4,
+            market_cap: 1.92e12,
+          },
+          {
+            id: "ethereum",
+            symbol: "ETH",
+            name: "Ethereum",
+            current_price: 3400,
+            price_change_percentage_24h: -1.2,
+            market_cap: 4.08e11,
+          },
+          {
+            id: "solana",
+            symbol: "SOL",
+            name: "Solana",
+            current_price: 195,
+            price_change_percentage_24h: 5.1,
+            market_cap: 9.4e10,
+          },
+          {
+            id: "binancecoin",
+            symbol: "BNB",
+            name: "BNB",
+            current_price: 680,
+            price_change_percentage_24h: 0.8,
+            market_cap: 9.9e10,
+          },
+          {
+            id: "cardano",
+            symbol: "ADA",
+            name: "Cardano",
+            current_price: 1.05,
+            price_change_percentage_24h: -2.3,
+            market_cap: 3.7e10,
+          },
         ]);
       } finally {
         setLoading(false);
@@ -73,10 +123,29 @@ export default function MarketWidget() {
   const accentBlue = "#3b82f6";
 
   return (
-    <div style={{ background: bg, padding: 16, fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", maxWidth: 420 }}>
+    <div
+      style={{
+        background: bg,
+        padding: 16,
+        fontFamily:
+          "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+        maxWidth: 420,
+      }}
+    >
       {showTitle && (
-        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 12, paddingBottom: 8, borderBottom: `1px solid ${border}` }}>
-          <h2 style={{ color: text, fontSize: 16, fontWeight: 700, margin: 0 }}>📊 Market Overview</h2>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+            marginBottom: 12,
+            paddingBottom: 8,
+            borderBottom: `1px solid ${border}`,
+          }}
+        >
+          <h2 style={{ color: text, fontSize: 16, fontWeight: 700, margin: 0 }}>
+            📊 Market Overview
+          </h2>
           <span style={{ color: mutedText, fontSize: 11 }}>Top 5</span>
         </div>
       )}
@@ -84,19 +153,67 @@ export default function MarketWidget() {
       {loading ? (
         <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
           {Array.from({ length: 5 }).map((_, i) => (
-            <div key={i} style={{ background: cardBg, borderRadius: 8, padding: 12, height: 52, animation: "pulse 1.5s infinite" }} />
+            <div
+              key={i}
+              style={{
+                background: cardBg,
+                borderRadius: 8,
+                padding: 12,
+                height: 52,
+                animation: "pulse 1.5s infinite",
+              }}
+            />
           ))}
           <style>{`@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }`}</style>
         </div>
       ) : (
         <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
           {/* Header */}
-          <div style={{ display: "grid", gridTemplateColumns: "28px 1fr 1fr 80px 80px", gap: 8, padding: "0 8px 6px", borderBottom: `1px solid ${border}` }}>
-            <span style={{ color: mutedText, fontSize: 10, fontWeight: 600 }}>#</span>
-            <span style={{ color: mutedText, fontSize: 10, fontWeight: 600 }}>Name</span>
-            <span style={{ color: mutedText, fontSize: 10, fontWeight: 600, textAlign: "right" }}>Price</span>
-            <span style={{ color: mutedText, fontSize: 10, fontWeight: 600, textAlign: "right" }}>24h</span>
-            <span style={{ color: mutedText, fontSize: 10, fontWeight: 600, textAlign: "right" }}>MCap</span>
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "28px 1fr 1fr 80px 80px",
+              gap: 8,
+              padding: "0 8px 6px",
+              borderBottom: `1px solid ${border}`,
+            }}
+          >
+            <span style={{ color: mutedText, fontSize: 10, fontWeight: 600 }}>
+              #
+            </span>
+            <span style={{ color: mutedText, fontSize: 10, fontWeight: 600 }}>
+              Name
+            </span>
+            <span
+              style={{
+                color: mutedText,
+                fontSize: 10,
+                fontWeight: 600,
+                textAlign: "right",
+              }}
+            >
+              Price
+            </span>
+            <span
+              style={{
+                color: mutedText,
+                fontSize: 10,
+                fontWeight: 600,
+                textAlign: "right",
+              }}
+            >
+              24h
+            </span>
+            <span
+              style={{
+                color: mutedText,
+                fontSize: 10,
+                fontWeight: 600,
+                textAlign: "right",
+              }}
+            >
+              MCap
+            </span>
           </div>
 
           {coins.map((coin, i) => (
@@ -117,29 +234,66 @@ export default function MarketWidget() {
                 border: `1px solid ${border}`,
                 transition: "background 0.15s",
               }}
-              onMouseEnter={(e) => (e.currentTarget.style.background = cardHover)}
+              onMouseEnter={(e) =>
+                (e.currentTarget.style.background = cardHover)
+              }
               onMouseLeave={(e) => (e.currentTarget.style.background = cardBg)}
             >
-              <span style={{ color: mutedText, fontSize: 12, fontWeight: 600 }}>{i + 1}</span>
+              <span style={{ color: mutedText, fontSize: 12, fontWeight: 600 }}>
+                {i + 1}
+              </span>
               <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-                {coin.image && <img src={coin.image} alt={coin.name} width={20} height={20} style={{ borderRadius: "50%" }} />}
+                {coin.image && (
+                  <img
+                    src={coin.image}
+                    alt={coin.name}
+                    width={20}
+                    height={20}
+                    style={{ borderRadius: "50%" }}
+                  />
+                )}
                 <div>
-                  <div style={{ color: text, fontSize: 13, fontWeight: 600 }}>{coin.name}</div>
-                  <div style={{ color: mutedText, fontSize: 10, textTransform: "uppercase" }}>{coin.symbol}</div>
+                  <div style={{ color: text, fontSize: 13, fontWeight: 600 }}>
+                    {coin.name}
+                  </div>
+                  <div
+                    style={{
+                      color: mutedText,
+                      fontSize: 10,
+                      textTransform: "uppercase",
+                    }}
+                  >
+                    {coin.symbol}
+                  </div>
                 </div>
               </div>
-              <div style={{ color: text, fontSize: 13, fontWeight: 600, textAlign: "right" }}>
+              <div
+                style={{
+                  color: text,
+                  fontSize: 13,
+                  fontWeight: 600,
+                  textAlign: "right",
+                }}
+              >
                 {formatPrice(coin.current_price)}
               </div>
-              <div style={{
-                textAlign: "right",
-                color: coin.price_change_percentage_24h >= 0 ? "#16c784" : "#ea3943",
-                fontSize: 12,
-                fontWeight: 700,
-              }}>
-                {coin.price_change_percentage_24h >= 0 ? "+" : ""}{coin.price_change_percentage_24h.toFixed(2)}%
+              <div
+                style={{
+                  textAlign: "right",
+                  color:
+                    coin.price_change_percentage_24h >= 0
+                      ? "#16c784"
+                      : "#ea3943",
+                  fontSize: 12,
+                  fontWeight: 700,
+                }}
+              >
+                {coin.price_change_percentage_24h >= 0 ? "+" : ""}
+                {coin.price_change_percentage_24h.toFixed(2)}%
               </div>
-              <div style={{ color: mutedText, fontSize: 12, textAlign: "right" }}>
+              <div
+                style={{ color: mutedText, fontSize: 12, textAlign: "right" }}
+              >
                 {formatCompact(coin.market_cap)}
               </div>
             </a>
@@ -147,14 +301,24 @@ export default function MarketWidget() {
         </div>
       )}
 
-      <div style={{ textAlign: "center", marginTop: 12, paddingTop: 8, borderTop: `1px solid ${border}` }}>
+      <div
+        style={{
+          textAlign: "center",
+          marginTop: 12,
+          paddingTop: 8,
+          borderTop: `1px solid ${border}`,
+        }}
+      >
         <a
           href={BASE_URL}
           target="_blank"
           rel="noopener noreferrer"
           style={{ color: mutedText, fontSize: 11, textDecoration: "none" }}
         >
-          Powered by <span style={{ color: accentBlue, fontWeight: 600 }}>Crypto Vision News</span>
+          Powered by{" "}
+          <span style={{ color: accentBlue, fontWeight: 600 }}>
+            Crypto Vision News
+          </span>
         </a>
       </div>
     </div>
