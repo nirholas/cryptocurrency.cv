@@ -10,10 +10,10 @@
 
 /**
  * Standalone WebSocket Server v4.0 — Production-Grade, Horizontally Scalable
- * 
+ *
  * Deploy to Railway, Render, or any Node.js host for full WebSocket support.
  * Designed for 1M+ concurrent connections across multiple instances.
- * 
+ *
  * Features:
  * - Real-time news broadcasting
  * - Live price streaming (Bitcoin, Ethereum, top coins)
@@ -35,11 +35,11 @@
  * - Redis-backed global connection & channel subscriber counting
  * - Graceful shutdown with 30s connection drain
  * - Leader election for upstream polling
- * 
+ *
  * Usage:
  *   npm install ws
  *   node ws-server.js
- * 
+ *
  * Or with environment:
  *   PORT=8080 REDIS_URL=redis://... WS_API_KEYS=key1,key2 node ws-server.js
  *
@@ -48,16 +48,16 @@
  *   Anonymous connections allowed when WS_REQUIRE_AUTH=false (default)
  */
 
-const WebSocket = require('ws');
-const http = require('http');
+const WebSocket = require("ws");
+const http = require("http");
 
 // Redis pub/sub for horizontal scaling (optional — graceful fallback to single-process)
-let redisPub = null;   // publish instance
-let redisSub = null;   // subscribe instance
-const REDIS_CHANNEL = 'ws:broadcast';
+let redisPub = null; // publish instance
+let redisSub = null; // subscribe instance
+const REDIS_CHANNEL = "ws:broadcast";
 
 // Redis keys for cross-instance observability
-const REDIS_KEY_TOTAL_CONNS = 'ws:connections:total';
+const REDIS_KEY_TOTAL_CONNS = "ws:connections:total";
 const REDIS_KEY_INSTANCE_CONNS = (id) => `ws:connections:${id}`;
 const REDIS_KEY_CHANNEL_SUBS = (ch) => `ws:channel:${ch}:subscribers`;
 const REDIS_KEY_STREAM_SUBS = (stream) => `ws:stream:${stream}:subscribers`;
@@ -66,18 +66,25 @@ const INSTANCE_CONN_TTL = 120; // seconds — auto-expire if instance crashes wi
 async function initRedis() {
   const url = process.env.REDIS_URL || process.env.REDIS_PRIVATE_URL;
   if (!url) {
-    console.log('[redis] No REDIS_URL — running single-process (no cross-instance fan-out)');
+    console.log(
+      "[redis] No REDIS_URL — running single-process (no cross-instance fan-out)",
+    );
     return;
   }
   try {
-    const { createClient } = require('redis');
-    redisPub = createClient({ url, socket: { reconnectStrategy: (retries) => Math.min(retries * 500, 5000) } });
+    const { createClient } = require("redis");
+    redisPub = createClient({
+      url,
+      socket: { reconnectStrategy: (retries) => Math.min(retries * 500, 5000) },
+    });
     redisSub = redisPub.duplicate();
 
     // Reconnection logging
     for (const client of [redisPub, redisSub]) {
-      client.on('error', (err) => console.error('[redis] Connection error:', err.message));
-      client.on('reconnecting', () => console.log('[redis] Reconnecting...'));
+      client.on("error", (err) =>
+        console.error("[redis] Connection error:", err.message),
+      );
+      client.on("reconnecting", () => console.log("[redis] Reconnecting..."));
     }
 
     await redisPub.connect();
@@ -91,16 +98,23 @@ async function initRedis() {
         if (meta?.instanceId === INSTANCE_ID) return;
         localBroadcastRaw(type, payload, timestamp, meta);
       } catch (e) {
-        console.error('[redis] Bad message on channel:', e.message);
+        console.error("[redis] Bad message on channel:", e.message);
       }
     });
 
     // Initialize this instance's connection counter with TTL (auto-expire on crash)
-    await redisPub.set(REDIS_KEY_INSTANCE_CONNS(INSTANCE_ID), '0', { EX: INSTANCE_CONN_TTL });
+    await redisPub.set(REDIS_KEY_INSTANCE_CONNS(INSTANCE_ID), "0", {
+      EX: INSTANCE_CONN_TTL,
+    });
 
-    console.log('[redis] Pub/Sub connected — cross-instance broadcasting enabled');
+    console.log(
+      "[redis] Pub/Sub connected — cross-instance broadcasting enabled",
+    );
   } catch (err) {
-    console.error('[redis] Init failed, falling back to single-process:', err.message);
+    console.error(
+      "[redis] Init failed, falling back to single-process:",
+      err.message,
+    );
     redisPub = null;
     redisSub = null;
   }
@@ -121,7 +135,7 @@ async function redisTrackConnect() {
       redisPub.expire(REDIS_KEY_INSTANCE_CONNS(INSTANCE_ID), INSTANCE_CONN_TTL),
     ]);
   } catch (err) {
-    console.error('[redis] Track connect error:', err.message);
+    console.error("[redis] Track connect error:", err.message);
   }
 }
 
@@ -134,7 +148,7 @@ async function redisTrackDisconnect() {
       redisPub.decr(REDIS_KEY_INSTANCE_CONNS(INSTANCE_ID)),
     ]);
   } catch (err) {
-    console.error('[redis] Track disconnect error:', err.message);
+    console.error("[redis] Track disconnect error:", err.message);
   }
 }
 
@@ -144,7 +158,7 @@ async function redisTrackChannelJoin(channelId) {
   try {
     await redisPub.incr(REDIS_KEY_CHANNEL_SUBS(channelId));
   } catch (err) {
-    console.error('[redis] Track channel join error:', err.message);
+    console.error("[redis] Track channel join error:", err.message);
   }
 }
 
@@ -154,7 +168,7 @@ async function redisTrackChannelLeave(channelId) {
   try {
     await redisPub.decr(REDIS_KEY_CHANNEL_SUBS(channelId));
   } catch (err) {
-    console.error('[redis] Track channel leave error:', err.message);
+    console.error("[redis] Track channel leave error:", err.message);
   }
 }
 
@@ -164,7 +178,7 @@ async function redisTrackStreamSubscribe(stream) {
   try {
     await redisPub.incr(REDIS_KEY_STREAM_SUBS(stream));
   } catch (err) {
-    console.error('[redis] Track stream subscribe error:', err.message);
+    console.error("[redis] Track stream subscribe error:", err.message);
   }
 }
 
@@ -174,7 +188,7 @@ async function redisTrackStreamUnsubscribe(stream) {
   try {
     await redisPub.decr(REDIS_KEY_STREAM_SUBS(stream));
   } catch (err) {
-    console.error('[redis] Track stream unsubscribe error:', err.message);
+    console.error("[redis] Track stream unsubscribe error:", err.message);
   }
 }
 
@@ -187,24 +201,28 @@ async function redisGetGlobalStats() {
     for (const ch of Object.keys(CHANNELS)) {
       pipeline.get(REDIS_KEY_CHANNEL_SUBS(ch));
     }
-    for (const stream of ['prices', 'whales', 'sentiment']) {
+    for (const stream of ["prices", "whales", "sentiment"]) {
       pipeline.get(REDIS_KEY_STREAM_SUBS(stream));
     }
     const results = await pipeline.exec();
 
     let idx = 0;
-    const totalConnections = parseInt(results[idx++] || '0', 10);
+    const totalConnections = parseInt(results[idx++] || "0", 10);
     const channelSubs = {};
     for (const ch of Object.keys(CHANNELS)) {
-      channelSubs[ch] = Math.max(0, parseInt(results[idx++] || '0', 10));
+      channelSubs[ch] = Math.max(0, parseInt(results[idx++] || "0", 10));
     }
     const streamSubs = {};
-    for (const stream of ['prices', 'whales', 'sentiment']) {
-      streamSubs[stream] = Math.max(0, parseInt(results[idx++] || '0', 10));
+    for (const stream of ["prices", "whales", "sentiment"]) {
+      streamSubs[stream] = Math.max(0, parseInt(results[idx++] || "0", 10));
     }
-    return { totalConnections: Math.max(0, totalConnections), channelSubs, streamSubs };
+    return {
+      totalConnections: Math.max(0, totalConnections),
+      channelSubs,
+      streamSubs,
+    };
   } catch (err) {
-    console.error('[redis] Global stats error:', err.message);
+    console.error("[redis] Global stats error:", err.message);
     return null;
   }
 }
@@ -212,9 +230,14 @@ async function redisGetGlobalStats() {
 /** Periodically refresh the per-instance key TTL so it doesn't expire while we're alive. */
 function startInstanceHeartbeat() {
   if (!redisPub) return;
-  setInterval(() => {
-    redisPub.expire(REDIS_KEY_INSTANCE_CONNS(INSTANCE_ID), INSTANCE_CONN_TTL).catch(() => {});
-  }, (INSTANCE_CONN_TTL / 2) * 1000);
+  setInterval(
+    () => {
+      redisPub
+        .expire(REDIS_KEY_INSTANCE_CONNS(INSTANCE_ID), INSTANCE_CONN_TTL)
+        .catch(() => {});
+    },
+    (INSTANCE_CONN_TTL / 2) * 1000,
+  );
 }
 
 // ---------------------------------------------------------------------------
@@ -238,7 +261,9 @@ async function redisSaveConnectionState(clientId, clientData) {
       streamWhales: !!clientData.streamWhales,
       streamSentiment: !!clientData.streamSentiment,
     };
-    await redisPub.set(`ws:conn:${clientId}`, JSON.stringify(state), { EX: CONN_STATE_TTL });
+    await redisPub.set(`ws:conn:${clientId}`, JSON.stringify(state), {
+      EX: CONN_STATE_TTL,
+    });
 
     // Also maintain per-channel membership sets for O(1) lookup
     for (const ch of state.channels) {
@@ -246,7 +271,7 @@ async function redisSaveConnectionState(clientId, clientData) {
       await redisPub.expire(`ws:channel:${ch}:members`, CONN_STATE_TTL);
     }
   } catch (err) {
-    console.error('[redis] Save connection state error:', err.message);
+    console.error("[redis] Save connection state error:", err.message);
   }
 }
 
@@ -258,7 +283,7 @@ async function redisLoadConnectionState(clientId) {
     if (!raw) return null;
     return JSON.parse(raw);
   } catch (err) {
-    console.error('[redis] Load connection state error:', err.message);
+    console.error("[redis] Load connection state error:", err.message);
     return null;
   }
 }
@@ -270,12 +295,14 @@ async function redisRemoveConnectionState(clientId, clientData) {
     await redisPub.del(`ws:conn:${clientId}`);
     // Remove from per-channel membership sets
     if (clientData) {
-      for (const ch of (clientData.channels || [])) {
-        await redisPub.sRem(`ws:channel:${ch}:members`, clientId).catch(() => {});
+      for (const ch of clientData.channels || []) {
+        await redisPub
+          .sRem(`ws:channel:${ch}:members`, clientId)
+          .catch(() => {});
       }
     }
   } catch (err) {
-    console.error('[redis] Remove connection state error:', err.message);
+    console.error("[redis] Remove connection state error:", err.message);
   }
 }
 
@@ -296,21 +323,30 @@ async function redisRefreshConnectionTTL(clientId) {
  * Redis is unavailable (safe — just duplicated upstream calls).
  */
 let isLeader = false;
-const LEADER_KEY = 'ws:leader';
+const LEADER_KEY = "ws:leader";
 const LEADER_TTL = 30; // seconds — must be shorter than the longest poll interval
 
 async function tryAcquireLeadership() {
-  if (!redisPub) { isLeader = true; return; } // No Redis → single-process, always leader
+  if (!redisPub) {
+    isLeader = true;
+    return;
+  } // No Redis → single-process, always leader
   try {
-    const result = await redisPub.set(LEADER_KEY, INSTANCE_ID, { NX: true, EX: LEADER_TTL });
-    isLeader = result === 'OK';
+    const result = await redisPub.set(LEADER_KEY, INSTANCE_ID, {
+      NX: true,
+      EX: LEADER_TTL,
+    });
+    isLeader = result === "OK";
   } catch {
     isLeader = true; // Redis down → poll anyway to avoid data blackout
   }
 }
 
 async function renewOrReacquireLeadership() {
-  if (!redisPub) { isLeader = true; return; }
+  if (!redisPub) {
+    isLeader = true;
+    return;
+  }
   try {
     const currentLeader = await redisPub.get(LEADER_KEY);
     if (currentLeader === INSTANCE_ID) {
@@ -334,7 +370,7 @@ const PRICE_INTERVAL = 10000; // 10 seconds for prices
 const WHALE_INTERVAL = 60000; // 1 minute for whales
 const SENTIMENT_INTERVAL = 300000; // 5 minutes for Fear & Greed
 const ALERT_EVAL_INTERVAL = 30000; // 30 seconds for alert evaluation
-const NEWS_API = process.env.NEWS_API || 'https://cryptocurrency.cv';
+const NEWS_API = process.env.NEWS_API || "https://cryptocurrency.cv";
 
 // =============================================================================
 // MESSAGE TYPES
@@ -342,55 +378,85 @@ const NEWS_API = process.env.NEWS_API || 'https://cryptocurrency.cv';
 
 const WS_MSG_TYPES = {
   // Connection
-  CONNECTED: 'connected',
-  PING: 'ping',
-  PONG: 'pong',
-  ERROR: 'error',
-  RATE_LIMITED: 'rate_limited',
-  
+  CONNECTED: "connected",
+  PING: "ping",
+  PONG: "pong",
+  ERROR: "error",
+  RATE_LIMITED: "rate_limited",
+
   // Subscriptions
-  SUBSCRIBE: 'subscribe',
-  UNSUBSCRIBE: 'unsubscribe',
-  SUBSCRIBED: 'subscribed',
-  UNSUBSCRIBED: 'unsubscribed',
-  
+  SUBSCRIBE: "subscribe",
+  UNSUBSCRIBE: "unsubscribe",
+  SUBSCRIBED: "subscribed",
+  UNSUBSCRIBED: "unsubscribed",
+
   // News
-  NEWS: 'news',
-  BREAKING: 'breaking',
-  TOPIC: 'topic',
-  
+  NEWS: "news",
+  BREAKING: "breaking",
+  TOPIC: "topic",
+
   // Market Data
-  PRICES: 'prices',
-  WHALES: 'whales',
-  SENTIMENT: 'sentiment',
-  LIQUIDATIONS: 'liquidations',
-  
+  PRICES: "prices",
+  WHALES: "whales",
+  SENTIMENT: "sentiment",
+  LIQUIDATIONS: "liquidations",
+
   // Alerts
-  ALERT: 'alert',
-  SUBSCRIBE_ALERTS: 'subscribe_alerts',
-  UNSUBSCRIBE_ALERTS: 'unsubscribe_alerts',
-  ALERTS_SUBSCRIBED: 'alerts_subscribed',
-  ALERTS_UNSUBSCRIBED: 'alerts_unsubscribed',
-  
+  ALERT: "alert",
+  SUBSCRIBE_ALERTS: "subscribe_alerts",
+  UNSUBSCRIBE_ALERTS: "unsubscribe_alerts",
+  ALERTS_SUBSCRIBED: "alerts_subscribed",
+  ALERTS_UNSUBSCRIBED: "alerts_unsubscribed",
+
   // Channels
-  JOIN_CHANNEL: 'join_channel',
-  LEAVE_CHANNEL: 'leave_channel',
-  CHANNEL_JOINED: 'channel_joined',
-  CHANNEL_LEFT: 'channel_left',
+  JOIN_CHANNEL: "join_channel",
+  LEAVE_CHANNEL: "leave_channel",
+  CHANNEL_JOINED: "channel_joined",
+  CHANNEL_LEFT: "channel_left",
 };
 
 // Available topic channels
 const CHANNELS = {
-  bitcoin: { name: 'Bitcoin', keywords: ['bitcoin', 'btc', 'lightning', 'ordinals', 'satoshi'] },
-  ethereum: { name: 'Ethereum', keywords: ['ethereum', 'eth', 'vitalik', 'erc-20', 'layer2'] },
-  defi: { name: 'DeFi', keywords: ['defi', 'yield', 'lending', 'dex', 'amm', 'liquidity'] },
-  nft: { name: 'NFTs', keywords: ['nft', 'opensea', 'blur', 'ordinals', 'digital art'] },
-  regulation: { name: 'Regulation', keywords: ['sec', 'regulation', 'cftc', 'lawsuit', 'compliance'] },
-  stablecoins: { name: 'Stablecoins', keywords: ['usdt', 'usdc', 'stablecoin', 'tether', 'circle'] },
-  altcoins: { name: 'Altcoins', keywords: ['solana', 'cardano', 'polkadot', 'avalanche', 'altcoin'] },
-  exchanges: { name: 'Exchanges', keywords: ['binance', 'coinbase', 'kraken', 'exchange', 'cex'] },
-  markets: { name: 'Markets', keywords: ['price', 'rally', 'crash', 'bull', 'bear', 'ath'] },
-  whales: { name: 'Whales', keywords: ['whale', 'accumulation', 'large', 'institutional'] },
+  bitcoin: {
+    name: "Bitcoin",
+    keywords: ["bitcoin", "btc", "lightning", "ordinals", "satoshi"],
+  },
+  ethereum: {
+    name: "Ethereum",
+    keywords: ["ethereum", "eth", "vitalik", "erc-20", "layer2"],
+  },
+  defi: {
+    name: "DeFi",
+    keywords: ["defi", "yield", "lending", "dex", "amm", "liquidity"],
+  },
+  nft: {
+    name: "NFTs",
+    keywords: ["nft", "opensea", "blur", "ordinals", "digital art"],
+  },
+  regulation: {
+    name: "Regulation",
+    keywords: ["sec", "regulation", "cftc", "lawsuit", "compliance"],
+  },
+  stablecoins: {
+    name: "Stablecoins",
+    keywords: ["usdt", "usdc", "stablecoin", "tether", "circle"],
+  },
+  altcoins: {
+    name: "Altcoins",
+    keywords: ["solana", "cardano", "polkadot", "avalanche", "altcoin"],
+  },
+  exchanges: {
+    name: "Exchanges",
+    keywords: ["binance", "coinbase", "kraken", "exchange", "cex"],
+  },
+  markets: {
+    name: "Markets",
+    keywords: ["price", "rally", "crash", "bull", "bear", "ath"],
+  },
+  whales: {
+    name: "Whales",
+    keywords: ["whale", "accumulation", "large", "institutional"],
+  },
 };
 
 // Rate limiting
@@ -400,7 +466,7 @@ const RATE_LIMIT = {
 };
 
 // Connection limits
-const MAX_CONNECTIONS = parseInt(process.env.WS_MAX_CONNECTIONS || '10000', 10);
+const MAX_CONNECTIONS = parseInt(process.env.WS_MAX_CONNECTIONS || "10000", 10);
 const MAX_PAYLOAD = 64 * 1024; // 64 KB max message size from clients
 const MAX_BUFFER_SIZE = 256 * 1024; // 256 KB — backpressure threshold
 
@@ -408,16 +474,25 @@ const MAX_BUFFER_SIZE = 256 * 1024; // 256 KB — backpressure threshold
 // API KEY AUTHENTICATION & PER-KEY CONNECTION LIMITS
 // =============================================================================
 
-const WS_REQUIRE_AUTH = (process.env.WS_REQUIRE_AUTH || 'false') === 'true';
+const WS_REQUIRE_AUTH = (process.env.WS_REQUIRE_AUTH || "false") === "true";
 const WS_API_KEYS = new Set(
-  (process.env.WS_API_KEYS || '').split(',').map(k => k.trim()).filter(Boolean)
+  (process.env.WS_API_KEYS || "")
+    .split(",")
+    .map((k) => k.trim())
+    .filter(Boolean),
 );
-const CONNECTIONS_PER_KEY = parseInt(process.env.WS_CONNECTIONS_PER_KEY || '100', 10);
-const CONNECTIONS_ANONYMOUS = parseInt(process.env.WS_CONNECTIONS_ANONYMOUS || '5', 10);
+const CONNECTIONS_PER_KEY = parseInt(
+  process.env.WS_CONNECTIONS_PER_KEY || "100",
+  10,
+);
+const CONNECTIONS_ANONYMOUS = parseInt(
+  process.env.WS_CONNECTIONS_ANONYMOUS || "5",
+  10,
+);
 
 // Per-key and per-IP connection tracking
 const connectionsByKey = new Map(); // apiKey → Set<clientId>
-const connectionsByIp = new Map();  // ip → Set<clientId> (for anonymous)
+const connectionsByIp = new Map(); // ip → Set<clientId> (for anonymous)
 
 /**
  * Validate an API key. Returns { valid, tier } or { valid: false, reason }.
@@ -426,13 +501,17 @@ const connectionsByIp = new Map();  // ip → Set<clientId> (for anonymous)
 async function validateApiKey(apiKey) {
   if (!apiKey) {
     return WS_REQUIRE_AUTH
-      ? { valid: false, reason: 'API key required. Pass ?apiKey=YOUR_KEY in the connection URL.' }
-      : { valid: true, tier: 'anonymous' };
+      ? {
+          valid: false,
+          reason:
+            "API key required. Pass ?apiKey=YOUR_KEY in the connection URL.",
+        }
+      : { valid: true, tier: "anonymous" };
   }
 
   // Check static keys
   if (WS_API_KEYS.size > 0 && WS_API_KEYS.has(apiKey)) {
-    return { valid: true, tier: 'standard' };
+    return { valid: true, tier: "standard" };
   }
 
   // Check Redis-stored keys
@@ -441,26 +520,26 @@ async function validateApiKey(apiKey) {
       const keyData = await redisPub.get(`ws:apikey:${apiKey}`);
       if (keyData) {
         const parsed = JSON.parse(keyData);
-        return { valid: true, tier: parsed.tier || 'standard', meta: parsed };
+        return { valid: true, tier: parsed.tier || "standard", meta: parsed };
       }
     } catch (err) {
-      console.error('[auth] Redis key lookup failed:', err.message);
+      console.error("[auth] Redis key lookup failed:", err.message);
     }
   }
 
   // If no keys are configured, allow everything (open mode)
   if (WS_API_KEYS.size === 0 && !WS_REQUIRE_AUTH) {
-    return { valid: true, tier: 'anonymous' };
+    return { valid: true, tier: "anonymous" };
   }
 
-  return { valid: false, reason: 'Invalid API key.' };
+  return { valid: false, reason: "Invalid API key." };
 }
 
 /**
  * Check per-key connection limit. Returns true if allowed.
  */
 function checkConnectionLimit(apiKey, ip) {
-  if (apiKey && apiKey !== '__anonymous__') {
+  if (apiKey && apiKey !== "__anonymous__") {
     const existing = connectionsByKey.get(apiKey);
     const count = existing ? existing.size : 0;
     return count < CONNECTIONS_PER_KEY;
@@ -472,7 +551,7 @@ function checkConnectionLimit(apiKey, ip) {
 }
 
 function trackConnection(clientId, apiKey, ip) {
-  if (apiKey && apiKey !== '__anonymous__') {
+  if (apiKey && apiKey !== "__anonymous__") {
     if (!connectionsByKey.has(apiKey)) connectionsByKey.set(apiKey, new Set());
     connectionsByKey.get(apiKey).add(clientId);
   } else {
@@ -482,7 +561,7 @@ function trackConnection(clientId, apiKey, ip) {
 }
 
 function untrackConnection(clientId, apiKey, ip) {
-  if (apiKey && apiKey !== '__anonymous__') {
+  if (apiKey && apiKey !== "__anonymous__") {
     const set = connectionsByKey.get(apiKey);
     if (set) {
       set.delete(clientId);
@@ -511,27 +590,64 @@ function untrackConnection(clientId, apiKey, ip) {
  *
  * Clients send: { type: "subscribe_topics", payload: { topics: ["prices:BTC", "news:breaking"] } }
  */
-const VALID_TOPIC_PREFIXES = ['prices', 'news', 'sentiment', 'whales', 'alerts'];
-const COIN_SYMBOLS = ['BTC', 'ETH', 'SOL', 'ADA', 'DOT', 'AVAX', 'LINK', 'MATIC', 'DOGE', 'XRP', 'BNB', 'UNI', 'AAVE', 'ATOM'];
+const VALID_TOPIC_PREFIXES = [
+  "prices",
+  "news",
+  "sentiment",
+  "whales",
+  "alerts",
+];
+const COIN_SYMBOLS = [
+  "BTC",
+  "ETH",
+  "SOL",
+  "ADA",
+  "DOT",
+  "AVAX",
+  "LINK",
+  "MATIC",
+  "DOGE",
+  "XRP",
+  "BNB",
+  "UNI",
+  "AAVE",
+  "ATOM",
+];
 const COIN_TO_ID = {
-  BTC: 'bitcoin', ETH: 'ethereum', SOL: 'solana', ADA: 'cardano',
-  DOT: 'polkadot', AVAX: 'avalanche-2', LINK: 'chainlink', MATIC: 'polygon',
-  DOGE: 'dogecoin', XRP: 'ripple', BNB: 'binancecoin', UNI: 'uniswap',
-  AAVE: 'aave', ATOM: 'cosmos',
+  BTC: "bitcoin",
+  ETH: "ethereum",
+  SOL: "solana",
+  ADA: "cardano",
+  DOT: "polkadot",
+  AVAX: "avalanche-2",
+  LINK: "chainlink",
+  MATIC: "polygon",
+  DOGE: "dogecoin",
+  XRP: "ripple",
+  BNB: "binancecoin",
+  UNI: "uniswap",
+  AAVE: "aave",
+  ATOM: "cosmos",
 };
 
 function isValidTopic(topic) {
-  const [prefix, suffix] = topic.split(':');
+  const [prefix, suffix] = topic.split(":");
   if (!VALID_TOPIC_PREFIXES.includes(prefix)) return false;
   if (!suffix) return false;
-  if (suffix === '*') return true;
+  if (suffix === "*") return true;
   switch (prefix) {
-    case 'prices': return COIN_SYMBOLS.includes(suffix.toUpperCase());
-    case 'news': return suffix === 'breaking' || Object.keys(CHANNELS).includes(suffix);
-    case 'sentiment': return suffix === 'global';
-    case 'whales': return suffix === '*' || COIN_SYMBOLS.includes(suffix.toUpperCase());
-    case 'alerts': return true;
-    default: return false;
+    case "prices":
+      return COIN_SYMBOLS.includes(suffix.toUpperCase());
+    case "news":
+      return suffix === "breaking" || Object.keys(CHANNELS).includes(suffix);
+    case "sentiment":
+      return suffix === "global";
+    case "whales":
+      return suffix === "*" || COIN_SYMBOLS.includes(suffix.toUpperCase());
+    case "alerts":
+      return true;
+    default:
+      return false;
   }
 }
 
@@ -548,22 +664,45 @@ function reconnectGuidance(code, extra = {}) {
     shouldReconnect: true,
     delay: 1000,
     maxDelay: 30000,
-    strategy: 'exponential-backoff',
+    strategy: "exponential-backoff",
     jitter: true,
     url: extra.url || null,
-    message: 'Reconnect with exponential backoff: delay = min(1000 * 2^attempt, 30000) + random(0..1000)',
+    message:
+      "Reconnect with exponential backoff: delay = min(1000 * 2^attempt, 30000) + random(0..1000)",
   };
   switch (code) {
     case 4001: // Auth failed
-      return { ...base, shouldReconnect: false, message: 'Authentication failed. Check your API key and retry.' };
+      return {
+        ...base,
+        shouldReconnect: false,
+        message: "Authentication failed. Check your API key and retry.",
+      };
     case 4002: // Connection limit
-      return { ...base, delay: 5000, message: 'Connection limit reached. Close other connections or upgrade your plan.' };
+      return {
+        ...base,
+        delay: 5000,
+        message:
+          "Connection limit reached. Close other connections or upgrade your plan.",
+      };
     case 4003: // Server at capacity
-      return { ...base, delay: 10000, maxDelay: 60000, message: 'Server at capacity. Retry with backoff.' };
+      return {
+        ...base,
+        delay: 10000,
+        maxDelay: 60000,
+        message: "Server at capacity. Retry with backoff.",
+      };
     case 1001: // Going away (shutdown)
-      return { ...base, delay: 500, message: 'Server is restarting. Reconnect shortly.' };
+      return {
+        ...base,
+        delay: 500,
+        message: "Server is restarting. Reconnect shortly.",
+      };
     case 4008: // Heartbeat timeout
-      return { ...base, delay: 1000, message: 'Connection timed out. Check your network and reconnect.' };
+      return {
+        ...base,
+        delay: 1000,
+        message: "Connection timed out. Check your network and reconnect.",
+      };
     default:
       return base;
   }
@@ -573,15 +712,23 @@ function reconnectGuidance(code, extra = {}) {
 // SERVER-INITIATED HEARTBEAT (WebSocket protocol-level ping/pong)
 // =============================================================================
 
-const HEARTBEAT_INTERVAL = parseInt(process.env.WS_HEARTBEAT_INTERVAL || '30000', 10); // 30s
-const HEARTBEAT_TIMEOUT = parseInt(process.env.WS_HEARTBEAT_TIMEOUT || '10000', 10);   // 10s grace
+const HEARTBEAT_INTERVAL = parseInt(
+  process.env.WS_HEARTBEAT_INTERVAL || "30000",
+  10,
+); // 30s
+const HEARTBEAT_TIMEOUT = parseInt(
+  process.env.WS_HEARTBEAT_TIMEOUT || "10000",
+  10,
+); // 10s grace
 
 function startHeartbeat() {
   setInterval(() => {
     clients.forEach((client, clientId) => {
       if (client._pongReceived === false) {
         // Didn't respond to last ping — terminate
-        console.log(`[heartbeat] Client ${clientId} failed ping/pong — terminating`);
+        console.log(
+          `[heartbeat] Client ${clientId} failed ping/pong — terminating`,
+        );
         client.ws.terminate();
         return;
       }
@@ -617,68 +764,96 @@ let whaleCache = [];
 
 // Create HTTP server for health checks
 const server = http.createServer(async (req, res) => {
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Methods', 'GET, OPTIONS');
-  
-  if (req.method === 'OPTIONS') {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Methods", "GET, OPTIONS");
+
+  if (req.method === "OPTIONS") {
     res.writeHead(204);
     res.end();
     return;
   }
 
-  if (req.url === '/health') {
+  if (req.url === "/health") {
     const globalStats = await redisGetGlobalStats();
-    res.writeHead(isShuttingDown ? 503 : 200, { 'Content-Type': 'application/json' });
-    res.end(JSON.stringify({
-      status: isShuttingDown ? 'draining' : 'ok',
-      version: '4.0.0',
-      instanceId: INSTANCE_ID,
-      isLeader,
-      redis: redisPub ? 'connected' : 'unavailable',
-      auth: { required: WS_REQUIRE_AUTH, keysConfigured: WS_API_KEYS.size },
-      clients: clients.size,
-      globalClients: globalStats?.totalConnections ?? clients.size,
-      maxClients: MAX_CONNECTIONS,
-      connectionsPerKey: CONNECTIONS_PER_KEY,
-      uptime: process.uptime(),
-      features: [
-        'news', 'breaking', 'alerts', 'prices', 'whales', 'sentiment',
-        'channels', 'topics', 'api-key-auth', 'heartbeat', 'compression',
-      ],
-      heartbeat: { interval: HEARTBEAT_INTERVAL, timeout: HEARTBEAT_TIMEOUT },
-    }));
+    res.writeHead(isShuttingDown ? 503 : 200, {
+      "Content-Type": "application/json",
+    });
+    res.end(
+      JSON.stringify({
+        status: isShuttingDown ? "draining" : "ok",
+        version: "4.0.0",
+        instanceId: INSTANCE_ID,
+        isLeader,
+        redis: redisPub ? "connected" : "unavailable",
+        auth: { required: WS_REQUIRE_AUTH, keysConfigured: WS_API_KEYS.size },
+        clients: clients.size,
+        globalClients: globalStats?.totalConnections ?? clients.size,
+        maxClients: MAX_CONNECTIONS,
+        connectionsPerKey: CONNECTIONS_PER_KEY,
+        uptime: process.uptime(),
+        features: [
+          "news",
+          "breaking",
+          "alerts",
+          "prices",
+          "whales",
+          "sentiment",
+          "channels",
+          "topics",
+          "api-key-auth",
+          "heartbeat",
+          "compression",
+        ],
+        heartbeat: { interval: HEARTBEAT_INTERVAL, timeout: HEARTBEAT_TIMEOUT },
+      }),
+    );
     return;
   }
-  
-  if (req.url === '/stats') {
+
+  if (req.url === "/stats") {
     const stats = await getStats();
-    res.writeHead(200, { 'Content-Type': 'application/json' });
+    res.writeHead(200, { "Content-Type": "application/json" });
     res.end(JSON.stringify(stats));
     return;
   }
-  
-  if (req.url === '/channels') {
-    res.writeHead(200, { 'Content-Type': 'application/json' });
-    res.end(JSON.stringify({ channels: Object.keys(CHANNELS).map(id => ({ id, ...CHANNELS[id] })) }));
+
+  if (req.url === "/channels") {
+    res.writeHead(200, { "Content-Type": "application/json" });
+    res.end(
+      JSON.stringify({
+        channels: Object.keys(CHANNELS).map((id) => ({ id, ...CHANNELS[id] })),
+      }),
+    );
     return;
   }
 
-  if (req.url === '/prices') {
-    res.writeHead(200, { 'Content-Type': 'application/json' });
-    res.end(JSON.stringify({ prices: priceCache, updatedAt: new Date().toISOString() }));
+  if (req.url === "/prices") {
+    res.writeHead(200, { "Content-Type": "application/json" });
+    res.end(
+      JSON.stringify({
+        prices: priceCache,
+        updatedAt: new Date().toISOString(),
+      }),
+    );
     return;
   }
 
-  if (req.url === '/metrics') {
+  if (req.url === "/metrics") {
     // Per-channel subscription counts (local)
-    const channelLines = Object.keys(CHANNELS).map(ch => {
-      let count = 0;
-      clients.forEach((client) => { if (client.channels.has(ch)) count++; });
-      return `ws_subscriptions_total{channel="${ch}"} ${count}`;
-    }).join('\n');
+    const channelLines = Object.keys(CHANNELS)
+      .map((ch) => {
+        let count = 0;
+        clients.forEach((client) => {
+          if (client.channels.has(ch)) count++;
+        });
+        return `ws_subscriptions_total{channel="${ch}"} ${count}`;
+      })
+      .join("\n");
 
     // Per-stream subscriber counts (local)
-    let pricesSubs = 0, whalesSubs = 0, sentimentSubs = 0;
+    let pricesSubs = 0,
+      whalesSubs = 0,
+      sentimentSubs = 0;
     clients.forEach((client) => {
       if (client.streamPrices) pricesSubs++;
       if (client.streamWhales) whalesSubs++;
@@ -686,55 +861,57 @@ const server = http.createServer(async (req, res) => {
     });
 
     const body = [
-      '# HELP ws_connections_total Current WebSocket connections on this instance',
-      '# TYPE ws_connections_total gauge',
+      "# HELP ws_connections_total Current WebSocket connections on this instance",
+      "# TYPE ws_connections_total gauge",
       `ws_connections_total{instance="${INSTANCE_ID}"} ${clients.size}`,
-      '',
-      '# HELP ws_messages_sent_total Messages sent to clients',
-      '# TYPE ws_messages_sent_total counter',
+      "",
+      "# HELP ws_messages_sent_total Messages sent to clients",
+      "# TYPE ws_messages_sent_total counter",
       `ws_messages_sent_total ${metricsCounters.messagesSent}`,
-      '',
-      '# HELP ws_messages_received_total Messages received from clients',
-      '# TYPE ws_messages_received_total counter',
+      "",
+      "# HELP ws_messages_received_total Messages received from clients",
+      "# TYPE ws_messages_received_total counter",
       `ws_messages_received_total ${metricsCounters.messagesReceived}`,
-      '',
-      '# HELP ws_messages_dropped_total Messages dropped due to backpressure',
-      '# TYPE ws_messages_dropped_total counter',
+      "",
+      "# HELP ws_messages_dropped_total Messages dropped due to backpressure",
+      "# TYPE ws_messages_dropped_total counter",
       `ws_messages_dropped_total ${metricsCounters.messagesDropped}`,
-      '',
-      '# HELP ws_subscriptions_total Active channel subscriptions',
-      '# TYPE ws_subscriptions_total gauge',
+      "",
+      "# HELP ws_subscriptions_total Active channel subscriptions",
+      "# TYPE ws_subscriptions_total gauge",
       channelLines,
-      '',
-      '# HELP ws_stream_subscribers Active stream subscribers',
-      '# TYPE ws_stream_subscribers gauge',
+      "",
+      "# HELP ws_stream_subscribers Active stream subscribers",
+      "# TYPE ws_stream_subscribers gauge",
       `ws_stream_subscribers{stream="prices"} ${pricesSubs}`,
       `ws_stream_subscribers{stream="whales"} ${whalesSubs}`,
       `ws_stream_subscribers{stream="sentiment"} ${sentimentSubs}`,
-      '',
-      '# HELP ws_uptime_seconds Server uptime',
-      '# TYPE ws_uptime_seconds gauge',
+      "",
+      "# HELP ws_uptime_seconds Server uptime",
+      "# TYPE ws_uptime_seconds gauge",
       `ws_uptime_seconds ${Math.floor(process.uptime())}`,
-      '',
-      '# HELP ws_leader Is this instance the leader',
-      '# TYPE ws_leader gauge',
+      "",
+      "# HELP ws_leader Is this instance the leader",
+      "# TYPE ws_leader gauge",
       `ws_leader ${isLeader ? 1 : 0}`,
-      '',
-    ].join('\n');
+      "",
+    ].join("\n");
 
-    res.writeHead(200, { 'Content-Type': 'text/plain; version=0.0.4; charset=utf-8' });
+    res.writeHead(200, {
+      "Content-Type": "text/plain; version=0.0.4; charset=utf-8",
+    });
     res.end(body);
     return;
   }
-  
-  res.writeHead(200, { 'Content-Type': 'text/plain' });
+
+  res.writeHead(200, { "Content-Type": "text/plain" });
   res.end(`Free Crypto News WebSocket Server v4.0
 
 Connect via ws://${req.headers.host}?apiKey=YOUR_KEY
 
 Authentication:
   Pass your API key as a query parameter: ?apiKey=YOUR_KEY
-  ${WS_REQUIRE_AUTH ? 'Authentication is REQUIRED.' : 'Anonymous connections allowed (limited).'}
+  ${WS_REQUIRE_AUTH ? "Authentication is REQUIRED." : "Anonymous connections allowed (limited)."}
 
 Topic Subscriptions:
   Subscribe to fine-grained topics:
@@ -766,7 +943,7 @@ Endpoints:
 });
 
 // Create WebSocket server with compression
-const wss = new WebSocket.Server({ 
+const wss = new WebSocket.Server({
   server,
   maxPayload: MAX_PAYLOAD,
   perMessageDeflate: {
@@ -784,22 +961,22 @@ function generateClientId() {
 }
 
 // Handle new connection
-wss.on('connection', (ws, req) => {
+wss.on("connection", (ws, req) => {
   // Reject during shutdown
   if (isShuttingDown) {
-    ws.close(1001, 'Server shutting down');
+    ws.close(1001, "Server shutting down");
     return;
   }
 
   // Enforce connection cap
   if (clients.size >= MAX_CONNECTIONS) {
-    ws.close(1013, 'Server at capacity');
+    ws.close(1013, "Server at capacity");
     return;
   }
 
   const clientId = generateClientId();
-  const ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
-  
+  const ip = req.headers["x-forwarded-for"] || req.socket.remoteAddress;
+
   clients.set(clientId, {
     ws,
     ip,
@@ -823,23 +1000,35 @@ wss.on('connection', (ws, req) => {
   // Track connection in Redis
   redisTrackConnect();
 
-  console.log(`[${new Date().toISOString()}] Client connected: ${clientId} from ${ip} (total: ${clients.size})`);
+  console.log(
+    `[${new Date().toISOString()}] Client connected: ${clientId} from ${ip} (total: ${clients.size})`,
+  );
 
   // Send welcome message with available features
-  ws.send(JSON.stringify({
-    type: WS_MSG_TYPES.CONNECTED,
-    payload: {
-      clientId,
-      message: 'Connected to Free Crypto News WebSocket v3.0',
-      serverTime: new Date().toISOString(),
-      features: ['news', 'breaking', 'alerts', 'prices', 'whales', 'sentiment', 'channels'],
-      availableChannels: Object.keys(CHANNELS),
-      rateLimit: RATE_LIMIT,
-    },
-  }));
+  ws.send(
+    JSON.stringify({
+      type: WS_MSG_TYPES.CONNECTED,
+      payload: {
+        clientId,
+        message: "Connected to Free Crypto News WebSocket v3.0",
+        serverTime: new Date().toISOString(),
+        features: [
+          "news",
+          "breaking",
+          "alerts",
+          "prices",
+          "whales",
+          "sentiment",
+          "channels",
+        ],
+        availableChannels: Object.keys(CHANNELS),
+        rateLimit: RATE_LIMIT,
+      },
+    }),
+  );
 
   // Handle messages
-  ws.on('message', (data) => {
+  ws.on("message", (data) => {
     const client = clients.get(clientId);
     if (!client) return;
 
@@ -851,13 +1040,18 @@ wss.on('connection', (ws, req) => {
       client.messageCount = 0;
       client.lastMessageReset = now;
     }
-    
+
     client.messageCount++;
     if (client.messageCount > RATE_LIMIT.messagesPerMinute) {
-      ws.send(JSON.stringify({
-        type: WS_MSG_TYPES.RATE_LIMITED,
-        payload: { message: 'Rate limit exceeded. Please slow down.', retryAfter: 60 },
-      }));
+      ws.send(
+        JSON.stringify({
+          type: WS_MSG_TYPES.RATE_LIMITED,
+          payload: {
+            message: "Rate limit exceeded. Please slow down.",
+            retryAfter: 60,
+          },
+        }),
+      );
       return;
     }
 
@@ -865,16 +1059,20 @@ wss.on('connection', (ws, req) => {
       const message = JSON.parse(data.toString());
       handleMessage(clientId, message);
     } catch (error) {
-      ws.send(JSON.stringify({
-        type: WS_MSG_TYPES.ERROR,
-        payload: { message: 'Invalid JSON message' },
-      }));
+      ws.send(
+        JSON.stringify({
+          type: WS_MSG_TYPES.ERROR,
+          payload: { message: "Invalid JSON message" },
+        }),
+      );
     }
   });
 
   // Handle close
-  ws.on('close', (code, reason) => {
-    console.log(`[${new Date().toISOString()}] Client disconnected: ${clientId} (code: ${code})`);
+  ws.on("close", (code, reason) => {
+    console.log(
+      `[${new Date().toISOString()}] Client disconnected: ${clientId} (code: ${code})`,
+    );
     const client = clients.get(clientId);
     if (client) {
       // Keep state in Redis for reconnection window (don't delete — TTL auto-expires)
@@ -884,25 +1082,25 @@ wss.on('connection', (ws, req) => {
         redisTrackChannelLeave(ch);
       }
       // Decrement Redis stream counters
-      if (client.streamPrices) redisTrackStreamUnsubscribe('prices');
-      if (client.streamWhales) redisTrackStreamUnsubscribe('whales');
-      if (client.streamSentiment) redisTrackStreamUnsubscribe('sentiment');
+      if (client.streamPrices) redisTrackStreamUnsubscribe("prices");
+      if (client.streamWhales) redisTrackStreamUnsubscribe("whales");
+      if (client.streamSentiment) redisTrackStreamUnsubscribe("sentiment");
     }
     clients.delete(clientId);
     redisTrackDisconnect();
   });
 
   // Handle errors
-  ws.on('error', (error) => {
+  ws.on("error", (error) => {
     console.error(`Client ${clientId} error:`, error.message);
     const client = clients.get(clientId);
     if (client) {
       for (const ch of client.channels) {
         redisTrackChannelLeave(ch);
       }
-      if (client.streamPrices) redisTrackStreamUnsubscribe('prices');
-      if (client.streamWhales) redisTrackStreamUnsubscribe('whales');
-      if (client.streamSentiment) redisTrackStreamUnsubscribe('sentiment');
+      if (client.streamPrices) redisTrackStreamUnsubscribe("prices");
+      if (client.streamWhales) redisTrackStreamUnsubscribe("whales");
+      if (client.streamSentiment) redisTrackStreamUnsubscribe("sentiment");
     }
     clients.delete(clientId);
     redisTrackDisconnect();
@@ -915,21 +1113,23 @@ function handleMessage(clientId, message) {
   if (!client) return;
 
   switch (message.type) {
-    case 'subscribe':
+    case "subscribe":
     case WS_MSG_TYPES.SUBSCRIBE:
       handleSubscribe(clientId, message.payload);
       break;
-    case 'unsubscribe':
+    case "unsubscribe":
     case WS_MSG_TYPES.UNSUBSCRIBE:
       handleUnsubscribe(clientId, message.payload);
       break;
-    case 'ping':
+    case "ping":
     case WS_MSG_TYPES.PING:
       client.lastPing = Date.now();
-      client.ws.send(JSON.stringify({
-        type: WS_MSG_TYPES.PONG,
-        timestamp: new Date().toISOString(),
-      }));
+      client.ws.send(
+        JSON.stringify({
+          type: WS_MSG_TYPES.PONG,
+          timestamp: new Date().toISOString(),
+        }),
+      );
       redisRefreshConnectionTTL(clientId);
       break;
     case WS_MSG_TYPES.SUBSCRIBE_ALERTS:
@@ -938,70 +1138,86 @@ function handleMessage(clientId, message) {
     case WS_MSG_TYPES.UNSUBSCRIBE_ALERTS:
       handleUnsubscribeAlerts(clientId, message.payload);
       break;
-    case 'join_channel':
+    case "join_channel":
     case WS_MSG_TYPES.JOIN_CHANNEL:
       handleJoinChannel(clientId, message.payload);
       break;
-    case 'leave_channel':
+    case "leave_channel":
     case WS_MSG_TYPES.LEAVE_CHANNEL:
       handleLeaveChannel(clientId, message.payload);
       break;
-    case 'stream_prices': {
+    case "stream_prices": {
       const wasEnabled = client.streamPrices;
       client.streamPrices = message.payload?.enabled !== false;
-      client.ws.send(JSON.stringify({
-        type: 'prices_stream',
-        payload: { enabled: client.streamPrices, interval: '10s' },
-      }));
+      client.ws.send(
+        JSON.stringify({
+          type: "prices_stream",
+          payload: { enabled: client.streamPrices, interval: "10s" },
+        }),
+      );
       // Track in Redis
-      if (client.streamPrices && !wasEnabled) redisTrackStreamSubscribe('prices');
-      if (!client.streamPrices && wasEnabled) redisTrackStreamUnsubscribe('prices');
+      if (client.streamPrices && !wasEnabled)
+        redisTrackStreamSubscribe("prices");
+      if (!client.streamPrices && wasEnabled)
+        redisTrackStreamUnsubscribe("prices");
       // Send current prices immediately
       if (client.streamPrices && Object.keys(priceCache).length > 0) {
-        client.ws.send(JSON.stringify({
-          type: WS_MSG_TYPES.PRICES,
-          payload: { prices: priceCache },
-          timestamp: new Date().toISOString(),
-        }));
+        client.ws.send(
+          JSON.stringify({
+            type: WS_MSG_TYPES.PRICES,
+            payload: { prices: priceCache },
+            timestamp: new Date().toISOString(),
+          }),
+        );
       }
       redisSaveConnectionState(clientId, client);
       break;
     }
-    case 'stream_whales': {
+    case "stream_whales": {
       const wasEnabled = client.streamWhales;
       client.streamWhales = message.payload?.enabled !== false;
-      client.ws.send(JSON.stringify({
-        type: 'whales_stream',
-        payload: { enabled: client.streamWhales, interval: '60s' },
-      }));
-      if (client.streamWhales && !wasEnabled) redisTrackStreamSubscribe('whales');
-      if (!client.streamWhales && wasEnabled) redisTrackStreamUnsubscribe('whales');
+      client.ws.send(
+        JSON.stringify({
+          type: "whales_stream",
+          payload: { enabled: client.streamWhales, interval: "60s" },
+        }),
+      );
+      if (client.streamWhales && !wasEnabled)
+        redisTrackStreamSubscribe("whales");
+      if (!client.streamWhales && wasEnabled)
+        redisTrackStreamUnsubscribe("whales");
       redisSaveConnectionState(clientId, client);
       break;
     }
-    case 'stream_sentiment': {
+    case "stream_sentiment": {
       const wasEnabled = client.streamSentiment;
       client.streamSentiment = message.payload?.enabled !== false;
-      client.ws.send(JSON.stringify({
-        type: 'sentiment_stream',
-        payload: { enabled: client.streamSentiment, interval: '5m' },
-      }));
-      if (client.streamSentiment && !wasEnabled) redisTrackStreamSubscribe('sentiment');
-      if (!client.streamSentiment && wasEnabled) redisTrackStreamUnsubscribe('sentiment');
+      client.ws.send(
+        JSON.stringify({
+          type: "sentiment_stream",
+          payload: { enabled: client.streamSentiment, interval: "5m" },
+        }),
+      );
+      if (client.streamSentiment && !wasEnabled)
+        redisTrackStreamSubscribe("sentiment");
+      if (!client.streamSentiment && wasEnabled)
+        redisTrackStreamUnsubscribe("sentiment");
       // Send current sentiment immediately
       if (client.streamSentiment && sentimentCache) {
-        client.ws.send(JSON.stringify({
-          type: WS_MSG_TYPES.SENTIMENT,
-          payload: sentimentCache,
-          timestamp: new Date().toISOString(),
-        }));
+        client.ws.send(
+          JSON.stringify({
+            type: WS_MSG_TYPES.SENTIMENT,
+            payload: sentimentCache,
+            timestamp: new Date().toISOString(),
+          }),
+        );
       }
       redisSaveConnectionState(clientId, client);
       break;
     }
     default:
       // Handle reconnection restore: client sends previous clientId to restore state
-      if (message.type === 'restore' && message.payload?.previousClientId) {
+      if (message.type === "restore" && message.payload?.previousClientId) {
         handleRestore(clientId, message.payload.previousClientId);
         break;
       }
@@ -1016,11 +1232,16 @@ async function handleRestore(clientId, previousClientId) {
 
   const state = await redisLoadConnectionState(previousClientId);
   if (!state) {
-    client.ws.send(JSON.stringify({
-      type: 'restore_failed',
-      payload: { message: 'Previous session not found or expired', previousClientId },
-      timestamp: new Date().toISOString(),
-    }));
+    client.ws.send(
+      JSON.stringify({
+        type: "restore_failed",
+        payload: {
+          message: "Previous session not found or expired",
+          previousClientId,
+        },
+        timestamp: new Date().toISOString(),
+      }),
+    );
     return;
   }
 
@@ -1052,9 +1273,18 @@ async function handleRestore(clientId, previousClientId) {
   }
 
   // Restore stream flags
-  if (state.streamPrices) { client.streamPrices = true; redisTrackStreamSubscribe('prices'); }
-  if (state.streamWhales) { client.streamWhales = true; redisTrackStreamSubscribe('whales'); }
-  if (state.streamSentiment) { client.streamSentiment = true; redisTrackStreamSubscribe('sentiment'); }
+  if (state.streamPrices) {
+    client.streamPrices = true;
+    redisTrackStreamSubscribe("prices");
+  }
+  if (state.streamWhales) {
+    client.streamWhales = true;
+    redisTrackStreamSubscribe("whales");
+  }
+  if (state.streamSentiment) {
+    client.streamSentiment = true;
+    redisTrackStreamSubscribe("sentiment");
+  }
 
   // Clean up old session
   await redisRemoveConnectionState(previousClientId, null);
@@ -1062,21 +1292,25 @@ async function handleRestore(clientId, previousClientId) {
   // Save new state
   redisSaveConnectionState(clientId, client);
 
-  client.ws.send(JSON.stringify({
-    type: 'restored',
-    payload: {
-      previousClientId,
-      subscription: client.subscription,
-      channels: Array.from(client.channels),
-      alertSubscriptions: Array.from(client.alertSubscriptions),
-      streamPrices: client.streamPrices,
-      streamWhales: client.streamWhales,
-      streamSentiment: client.streamSentiment,
-    },
-    timestamp: new Date().toISOString(),
-  }));
+  client.ws.send(
+    JSON.stringify({
+      type: "restored",
+      payload: {
+        previousClientId,
+        subscription: client.subscription,
+        channels: Array.from(client.channels),
+        alertSubscriptions: Array.from(client.alertSubscriptions),
+        streamPrices: client.streamPrices,
+        streamWhales: client.streamWhales,
+        streamSentiment: client.streamSentiment,
+      },
+      timestamp: new Date().toISOString(),
+    }),
+  );
 
-  console.log(`[${new Date().toISOString()}] Client ${clientId} restored session from ${previousClientId}`);
+  console.log(
+    `[${new Date().toISOString()}] Client ${clientId} restored session from ${previousClientId}`,
+  );
 }
 
 // Handle subscribe
@@ -1085,25 +1319,38 @@ function handleSubscribe(clientId, payload) {
   if (!client) return;
 
   if (payload.sources) {
-    client.subscription.sources = [...new Set([...client.subscription.sources, ...payload.sources])];
+    client.subscription.sources = [
+      ...new Set([...client.subscription.sources, ...payload.sources]),
+    ];
   }
   if (payload.categories) {
-    client.subscription.categories = [...new Set([...client.subscription.categories, ...payload.categories])];
+    client.subscription.categories = [
+      ...new Set([...client.subscription.categories, ...payload.categories]),
+    ];
   }
   if (payload.keywords) {
-    client.subscription.keywords = [...new Set([...client.subscription.keywords, ...payload.keywords])];
+    client.subscription.keywords = [
+      ...new Set([...client.subscription.keywords, ...payload.keywords]),
+    ];
   }
   if (payload.coins) {
-    client.subscription.coins = [...new Set([...client.subscription.coins, ...payload.coins])];
+    client.subscription.coins = [
+      ...new Set([...client.subscription.coins, ...payload.coins]),
+    ];
   }
 
-  client.ws.send(JSON.stringify({
-    type: WS_MSG_TYPES.SUBSCRIBED,
-    payload: { subscription: client.subscription },
-    timestamp: new Date().toISOString(),
-  }));
+  client.ws.send(
+    JSON.stringify({
+      type: WS_MSG_TYPES.SUBSCRIBED,
+      payload: { subscription: client.subscription },
+      timestamp: new Date().toISOString(),
+    }),
+  );
 
-  console.log(`[${new Date().toISOString()}] Client ${clientId} subscribed:`, client.subscription);
+  console.log(
+    `[${new Date().toISOString()}] Client ${clientId} subscribed:`,
+    client.subscription,
+  );
   redisSaveConnectionState(clientId, client);
 }
 
@@ -1113,23 +1360,33 @@ function handleUnsubscribe(clientId, payload) {
   if (!client) return;
 
   if (payload.sources) {
-    client.subscription.sources = client.subscription.sources.filter(s => !payload.sources.includes(s));
+    client.subscription.sources = client.subscription.sources.filter(
+      (s) => !payload.sources.includes(s),
+    );
   }
   if (payload.categories) {
-    client.subscription.categories = client.subscription.categories.filter(c => !payload.categories.includes(c));
+    client.subscription.categories = client.subscription.categories.filter(
+      (c) => !payload.categories.includes(c),
+    );
   }
   if (payload.keywords) {
-    client.subscription.keywords = client.subscription.keywords.filter(k => !payload.keywords.includes(k));
+    client.subscription.keywords = client.subscription.keywords.filter(
+      (k) => !payload.keywords.includes(k),
+    );
   }
   if (payload.coins) {
-    client.subscription.coins = client.subscription.coins.filter(c => !payload.coins.includes(c));
+    client.subscription.coins = client.subscription.coins.filter(
+      (c) => !payload.coins.includes(c),
+    );
   }
 
-  client.ws.send(JSON.stringify({
-    type: WS_MSG_TYPES.UNSUBSCRIBED,
-    payload: { subscription: client.subscription },
-    timestamp: new Date().toISOString(),
-  }));
+  client.ws.send(
+    JSON.stringify({
+      type: WS_MSG_TYPES.UNSUBSCRIBED,
+      payload: { subscription: client.subscription },
+      timestamp: new Date().toISOString(),
+    }),
+  );
   redisSaveConnectionState(clientId, client);
 }
 
@@ -1139,21 +1396,26 @@ function handleSubscribeAlerts(clientId, payload) {
   if (!client) return;
 
   // Subscribe to specific rule IDs or '*' for all alerts
-  const ruleIds = payload?.ruleIds || ['*'];
-  
+  const ruleIds = payload?.ruleIds || ["*"];
+
   for (const ruleId of ruleIds) {
     client.alertSubscriptions.add(ruleId);
   }
 
-  client.ws.send(JSON.stringify({
-    type: WS_MSG_TYPES.ALERTS_SUBSCRIBED,
-    payload: {
-      subscribedTo: Array.from(client.alertSubscriptions),
-    },
-    timestamp: new Date().toISOString(),
-  }));
+  client.ws.send(
+    JSON.stringify({
+      type: WS_MSG_TYPES.ALERTS_SUBSCRIBED,
+      payload: {
+        subscribedTo: Array.from(client.alertSubscriptions),
+      },
+      timestamp: new Date().toISOString(),
+    }),
+  );
 
-  console.log(`[${new Date().toISOString()}] Client ${clientId} subscribed to alerts:`, Array.from(client.alertSubscriptions));
+  console.log(
+    `[${new Date().toISOString()}] Client ${clientId} subscribed to alerts:`,
+    Array.from(client.alertSubscriptions),
+  );
   redisSaveConnectionState(clientId, client);
 }
 
@@ -1173,13 +1435,15 @@ function handleUnsubscribeAlerts(clientId, payload) {
     }
   }
 
-  client.ws.send(JSON.stringify({
-    type: WS_MSG_TYPES.ALERTS_UNSUBSCRIBED,
-    payload: {
-      subscribedTo: Array.from(client.alertSubscriptions),
-    },
-    timestamp: new Date().toISOString(),
-  }));
+  client.ws.send(
+    JSON.stringify({
+      type: WS_MSG_TYPES.ALERTS_UNSUBSCRIBED,
+      payload: {
+        subscribedTo: Array.from(client.alertSubscriptions),
+      },
+      timestamp: new Date().toISOString(),
+    }),
+  );
 }
 
 // Handle channel join
@@ -1189,36 +1453,48 @@ function handleJoinChannel(clientId, payload) {
 
   const channelId = payload?.channel;
   if (!channelId || !CHANNELS[channelId]) {
-    client.ws.send(JSON.stringify({
-      type: WS_MSG_TYPES.ERROR,
-      payload: { message: `Invalid channel: ${channelId}. Available: ${Object.keys(CHANNELS).join(', ')}` },
-    }));
+    client.ws.send(
+      JSON.stringify({
+        type: WS_MSG_TYPES.ERROR,
+        payload: {
+          message: `Invalid channel: ${channelId}. Available: ${Object.keys(CHANNELS).join(", ")}`,
+        },
+      }),
+    );
     return;
   }
 
   // Check subscription limit
   if (client.channels.size >= RATE_LIMIT.subscriptionsMax) {
-    client.ws.send(JSON.stringify({
-      type: WS_MSG_TYPES.ERROR,
-      payload: { message: `Maximum ${RATE_LIMIT.subscriptionsMax} subscriptions reached` },
-    }));
+    client.ws.send(
+      JSON.stringify({
+        type: WS_MSG_TYPES.ERROR,
+        payload: {
+          message: `Maximum ${RATE_LIMIT.subscriptionsMax} subscriptions reached`,
+        },
+      }),
+    );
     return;
   }
 
   client.channels.add(channelId);
   redisTrackChannelJoin(channelId);
 
-  client.ws.send(JSON.stringify({
-    type: WS_MSG_TYPES.CHANNEL_JOINED,
-    payload: {
-      channel: channelId,
-      channelInfo: CHANNELS[channelId],
-      subscribedChannels: Array.from(client.channels),
-    },
-    timestamp: new Date().toISOString(),
-  }));
+  client.ws.send(
+    JSON.stringify({
+      type: WS_MSG_TYPES.CHANNEL_JOINED,
+      payload: {
+        channel: channelId,
+        channelInfo: CHANNELS[channelId],
+        subscribedChannels: Array.from(client.channels),
+      },
+      timestamp: new Date().toISOString(),
+    }),
+  );
 
-  console.log(`[${new Date().toISOString()}] Client ${clientId} joined channel: ${channelId}`);
+  console.log(
+    `[${new Date().toISOString()}] Client ${clientId} joined channel: ${channelId}`,
+  );
   redisSaveConnectionState(clientId, client);
 }
 
@@ -1228,7 +1504,7 @@ function handleLeaveChannel(clientId, payload) {
   if (!client) return;
 
   const channelId = payload?.channel;
-  
+
   if (channelId) {
     if (client.channels.has(channelId)) {
       client.channels.delete(channelId);
@@ -1242,14 +1518,16 @@ function handleLeaveChannel(clientId, payload) {
     client.channels.clear();
   }
 
-  client.ws.send(JSON.stringify({
-    type: WS_MSG_TYPES.CHANNEL_LEFT,
-    payload: {
-      channel: channelId || 'all',
-      subscribedChannels: Array.from(client.channels),
-    },
-    timestamp: new Date().toISOString(),
-  }));
+  client.ws.send(
+    JSON.stringify({
+      type: WS_MSG_TYPES.CHANNEL_LEFT,
+      payload: {
+        channel: channelId || "all",
+        subscribedChannels: Array.from(client.channels),
+      },
+      timestamp: new Date().toISOString(),
+    }),
+  );
   redisSaveConnectionState(clientId, client);
 }
 
@@ -1276,9 +1554,17 @@ function publishBroadcast(type, payload, meta = {}) {
 
   // 2. Publish to Redis so other instances also deliver
   if (redisPub) {
-    const msg = JSON.stringify({ type, payload, timestamp, meta: enrichedMeta });
+    const msg = JSON.stringify({
+      type,
+      payload,
+      timestamp,
+      meta: enrichedMeta,
+    });
     redisPub.publish(REDIS_CHANNEL, msg).catch((err) => {
-      console.error('[redis] Publish failed (local delivery already done):', err.message);
+      console.error(
+        "[redis] Publish failed (local delivery already done):",
+        err.message,
+      );
     });
   }
 }
@@ -1292,7 +1578,16 @@ function safeSend(client, clientId, data) {
 
   // Backpressure: drop non-critical messages when the send buffer is full
   if (client.ws.bufferedAmount > MAX_BUFFER_SIZE) {
-    const parsed = typeof data === 'string' ? (() => { try { return JSON.parse(data); } catch { return null; } })() : data;
+    const parsed =
+      typeof data === "string"
+        ? (() => {
+            try {
+              return JSON.parse(data);
+            } catch {
+              return null;
+            }
+          })()
+        : data;
     const isCritical = parsed && parsed.type === WS_MSG_TYPES.BREAKING;
     if (!isCritical) {
       metricsCounters.messagesDropped++;
@@ -1301,7 +1596,7 @@ function safeSend(client, clientId, data) {
   }
 
   try {
-    client.ws.send(typeof data === 'string' ? data : JSON.stringify(data));
+    client.ws.send(typeof data === "string" ? data : JSON.stringify(data));
     metricsCounters.messagesSent++;
     return true;
   } catch (err) {
@@ -1317,22 +1612,22 @@ function safeSend(client, clientId, data) {
  */
 function localBroadcastRaw(type, payload, timestamp, meta = {}) {
   switch (meta?.broadcastKind) {
-    case 'news':
+    case "news":
       localBroadcastNews(payload.articles, type === WS_MSG_TYPES.BREAKING);
       break;
-    case 'channel':
+    case "channel":
       localBroadcastToChannel(payload.channel, payload.articles);
       break;
-    case 'prices':
+    case "prices":
       localBroadcastPrices(payload.prices);
       break;
-    case 'whales':
+    case "whales":
       localBroadcastWhales(payload);
       break;
-    case 'sentiment':
+    case "sentiment":
       localBroadcastSentiment(payload);
       break;
-    case 'alert':
+    case "alert":
       localBroadcastAlert(payload);
       break;
     default:
@@ -1362,7 +1657,11 @@ function localBroadcastToChannel(channelId, articles) {
 
 // Public wrappers (these publish through Redis when available)
 function broadcastToChannel(channelId, articles) {
-  publishBroadcast(WS_MSG_TYPES.TOPIC, { channel: channelId, articles }, { broadcastKind: 'channel' });
+  publishBroadcast(
+    WS_MSG_TYPES.TOPIC,
+    { channel: channelId, articles },
+    { broadcastKind: "channel" },
+  );
 }
 
 // Local news broadcast (called from localBroadcastRaw)
@@ -1371,19 +1670,29 @@ function localBroadcastNews(articles, isBreaking = false) {
 
   clients.forEach((client, clientId) => {
     const sub = client.subscription;
-    const filteredArticles = articles.filter(article => {
-      if (sub.sources.length === 0 && sub.categories.length === 0 && sub.keywords.length === 0) {
+    const filteredArticles = articles.filter((article) => {
+      if (
+        sub.sources.length === 0 &&
+        sub.categories.length === 0 &&
+        sub.keywords.length === 0
+      ) {
         return true;
       }
-      if (sub.sources.length > 0 && sub.sources.includes(article.sourceKey || article.source.toLowerCase())) {
+      if (
+        sub.sources.length > 0 &&
+        sub.sources.includes(article.sourceKey || article.source.toLowerCase())
+      ) {
         return true;
       }
-      if (sub.categories.length > 0 && sub.categories.includes(article.category)) {
+      if (
+        sub.categories.length > 0 &&
+        sub.categories.includes(article.category)
+      ) {
         return true;
       }
       if (sub.keywords.length > 0) {
         const title = article.title.toLowerCase();
-        if (sub.keywords.some(kw => title.includes(kw.toLowerCase()))) {
+        if (sub.keywords.some((kw) => title.includes(kw.toLowerCase()))) {
           return true;
         }
       }
@@ -1391,7 +1700,11 @@ function localBroadcastNews(articles, isBreaking = false) {
     });
 
     if (filteredArticles.length > 0) {
-      safeSend(client, clientId, { type, payload: { articles: filteredArticles }, timestamp: new Date().toISOString() });
+      safeSend(client, clientId, {
+        type,
+        payload: { articles: filteredArticles },
+        timestamp: new Date().toISOString(),
+      });
     }
   });
 }
@@ -1399,34 +1712,42 @@ function localBroadcastNews(articles, isBreaking = false) {
 // Public wrapper
 function broadcastNews(articles, isBreaking = false) {
   const type = isBreaking ? WS_MSG_TYPES.BREAKING : WS_MSG_TYPES.NEWS;
-  publishBroadcast(type, { articles }, { broadcastKind: 'news' });
+  publishBroadcast(type, { articles }, { broadcastKind: "news" });
 }
 
 // Local alert broadcast (called from localBroadcastRaw)
 function localBroadcastAlert(alertEvent) {
   let delivered = 0;
-  
+
   clients.forEach((client, clientId) => {
-    const isSubscribed = 
-      client.alertSubscriptions.has('*') || 
+    const isSubscribed =
+      client.alertSubscriptions.has("*") ||
       client.alertSubscriptions.has(alertEvent.ruleId);
-    
+
     if (isSubscribed) {
-      if (safeSend(client, clientId, { type: WS_MSG_TYPES.ALERT, data: alertEvent, timestamp: new Date().toISOString() })) {
+      if (
+        safeSend(client, clientId, {
+          type: WS_MSG_TYPES.ALERT,
+          data: alertEvent,
+          timestamp: new Date().toISOString(),
+        })
+      ) {
         delivered++;
       }
     }
   });
 
   if (delivered > 0) {
-    console.log(`[${new Date().toISOString()}] Alert ${alertEvent.id} delivered to ${delivered} clients`);
+    console.log(
+      `[${new Date().toISOString()}] Alert ${alertEvent.id} delivered to ${delivered} clients`,
+    );
   }
   return delivered;
 }
 
 // Public wrapper — publishes through Redis
 function broadcastAlert(alertEvent) {
-  publishBroadcast(WS_MSG_TYPES.ALERT, alertEvent, { broadcastKind: 'alert' });
+  publishBroadcast(WS_MSG_TYPES.ALERT, alertEvent, { broadcastKind: "alert" });
 }
 
 // Broadcast multiple alerts
@@ -1483,9 +1804,16 @@ async function getStats() {
   let whaleSubscribers = 0;
   let sentimentSubscribers = 0;
   const channelStats = {};
-  const subscriptions = { sources: 0, categories: 0, keywords: 0, coins: 0, alerts: 0, channels: 0 };
+  const subscriptions = {
+    sources: 0,
+    categories: 0,
+    keywords: 0,
+    coins: 0,
+    alerts: 0,
+    channels: 0,
+  };
 
-  Object.keys(CHANNELS).forEach(ch => channelStats[ch] = 0);
+  Object.keys(CHANNELS).forEach((ch) => (channelStats[ch] = 0));
 
   clients.forEach((client) => {
     if (client.ws.readyState === WebSocket.OPEN) {
@@ -1496,13 +1824,13 @@ async function getStats() {
       subscriptions.coins += client.subscription.coins.length;
       subscriptions.alerts += client.alertSubscriptions.size;
       subscriptions.channels += client.channels.size;
-      
+
       if (client.alertSubscriptions.size > 0) alertSubscribers++;
       if (client.streamPrices) priceSubscribers++;
       if (client.streamWhales) whaleSubscribers++;
       if (client.streamSentiment) sentimentSubscribers++;
-      
-      client.channels.forEach(ch => {
+
+      client.channels.forEach((ch) => {
         if (channelStats[ch] !== undefined) channelStats[ch]++;
       });
     }
@@ -1512,10 +1840,10 @@ async function getStats() {
   const globalStats = await redisGetGlobalStats();
 
   return {
-    version: '3.0.0',
+    version: "3.0.0",
     instanceId: INSTANCE_ID,
     isLeader,
-    redis: redisPub ? 'connected' : 'unavailable',
+    redis: redisPub ? "connected" : "unavailable",
     // Local (this instance)
     local: {
       totalConnections: clients.size,
@@ -1529,11 +1857,13 @@ async function getStats() {
       channels: channelStats,
     },
     // Global (across all instances, via Redis)
-    global: globalStats ? {
-      totalConnections: globalStats.totalConnections,
-      channels: globalStats.channelSubs,
-      streams: globalStats.streamSubs,
-    } : null,
+    global: globalStats
+      ? {
+          totalConnections: globalStats.totalConnections,
+          channels: globalStats.channelSubs,
+          streams: globalStats.streamSubs,
+        }
+      : null,
     // Legacy flat fields for backward compatibility
     totalConnections: globalStats?.totalConnections ?? clients.size,
     activeConnections,
@@ -1556,7 +1886,7 @@ async function getStats() {
 }
 
 // Fetch and broadcast news periodically
-let lastArticleLink = '';
+let lastArticleLink = "";
 
 async function pollNews() {
   try {
@@ -1566,14 +1896,16 @@ async function pollNews() {
 
     if (data.articles && data.articles.length > 0) {
       const latestLink = data.articles[0].link;
-      
+
       // Only broadcast if there's new content
       if (latestLink !== lastArticleLink) {
         lastArticleLink = latestLink;
         const newArticles = data.articles.slice(0, 5);
-        console.log(`[${new Date().toISOString()}] Broadcasting ${newArticles.length} articles to ${clients.size} clients`);
+        console.log(
+          `[${new Date().toISOString()}] Broadcasting ${newArticles.length} articles to ${clients.size} clients`,
+        );
         broadcastNews(newArticles);
-        
+
         // Also distribute to topic channels
         distributeToChannels(newArticles);
       }
@@ -1582,14 +1914,13 @@ async function pollNews() {
     // Fetch breaking news
     const breakingResponse = await fetch(`${NEWS_API}/api/breaking?limit=3`);
     const breakingData = await breakingResponse.json();
-    
+
     if (breakingData.articles && breakingData.articles.length > 0) {
       broadcastNews(breakingData.articles, true);
       distributeToChannels(breakingData.articles);
     }
-
   } catch (error) {
-    console.error('Poll error:', error.message);
+    console.error("Poll error:", error.message);
   }
 }
 
@@ -1599,8 +1930,13 @@ function cleanupStale() {
   const maxIdle = 5 * 60 * 1000; // 5 minutes
 
   clients.forEach((client, clientId) => {
-    if (now - client.lastPing > maxIdle || client.ws.readyState !== WebSocket.OPEN) {
-      console.log(`[${new Date().toISOString()}] Cleaning up stale client: ${clientId}`);
+    if (
+      now - client.lastPing > maxIdle ||
+      client.ws.readyState !== WebSocket.OPEN
+    ) {
+      console.log(
+        `[${new Date().toISOString()}] Cleaning up stale client: ${clientId}`,
+      );
       clients.delete(clientId);
     }
   });
@@ -1612,15 +1948,21 @@ function cleanupStale() {
 
 async function pollPrices() {
   try {
-    const response = await fetch(`${NEWS_API}/api/market?coins=bitcoin,ethereum,solana,cardano,polkadot,avalanche-2,chainlink,polygon`);
+    const response = await fetch(
+      `${NEWS_API}/api/market?coins=bitcoin,ethereum,solana,cardano,polkadot,avalanche-2,chainlink,polygon`,
+    );
     const data = await response.json();
 
     if (data.coins) {
       priceCache = data.coins;
-      publishBroadcast(WS_MSG_TYPES.PRICES, { prices: priceCache }, { broadcastKind: 'prices' });
+      publishBroadcast(
+        WS_MSG_TYPES.PRICES,
+        { prices: priceCache },
+        { broadcastKind: "prices" },
+      );
     }
   } catch (error) {
-    console.error('Price poll error:', error.message);
+    console.error("Price poll error:", error.message);
   }
 }
 
@@ -1630,22 +1972,30 @@ async function pollPrices() {
 
 async function pollWhales() {
   try {
-    const response = await fetch(`${NEWS_API}/api/whales?limit=10&min_usd=1000000`);
+    const response = await fetch(
+      `${NEWS_API}/api/whales?limit=10&min_usd=1000000`,
+    );
     const data = await response.json();
 
     if (data.alerts && data.alerts.length > 0) {
-      const newWhales = data.alerts.filter(whale => {
-        return !whaleCache.some(cached => cached.hash === whale.hash);
+      const newWhales = data.alerts.filter((whale) => {
+        return !whaleCache.some((cached) => cached.hash === whale.hash);
       });
 
       if (newWhales.length > 0) {
         whaleCache = data.alerts;
-        publishBroadcast(WS_MSG_TYPES.WHALES, { alerts: newWhales, isNew: true }, { broadcastKind: 'whales' });
-        console.log(`[${new Date().toISOString()}] Broadcast ${newWhales.length} new whale alerts`);
+        publishBroadcast(
+          WS_MSG_TYPES.WHALES,
+          { alerts: newWhales, isNew: true },
+          { broadcastKind: "whales" },
+        );
+        console.log(
+          `[${new Date().toISOString()}] Broadcast ${newWhales.length} new whale alerts`,
+        );
       }
     }
   } catch (error) {
-    console.error('Whale poll error:', error.message);
+    console.error("Whale poll error:", error.message);
   }
 }
 
@@ -1659,16 +2009,21 @@ async function pollSentiment() {
     const data = await response.json();
 
     if (data.current) {
-      const hasChanged = !sentimentCache || sentimentCache.value !== data.current.value;
+      const hasChanged =
+        !sentimentCache || sentimentCache.value !== data.current.value;
       sentimentCache = data.current;
 
       if (hasChanged) {
-        publishBroadcast(WS_MSG_TYPES.SENTIMENT, sentimentCache, { broadcastKind: 'sentiment' });
-        console.log(`[${new Date().toISOString()}] Broadcast sentiment update: ${sentimentCache.value} (${sentimentCache.classification})`);
+        publishBroadcast(WS_MSG_TYPES.SENTIMENT, sentimentCache, {
+          broadcastKind: "sentiment",
+        });
+        console.log(
+          `[${new Date().toISOString()}] Broadcast sentiment update: ${sentimentCache.value} (${sentimentCache.classification})`,
+        );
       }
     }
   } catch (error) {
-    console.error('Sentiment poll error:', error.message);
+    console.error("Sentiment poll error:", error.message);
   }
 }
 
@@ -1678,9 +2033,10 @@ async function pollSentiment() {
 
 function distributeToChannels(articles) {
   for (const [channelId, channel] of Object.entries(CHANNELS)) {
-    const channelArticles = articles.filter(article => {
-      const text = `${article.title} ${article.description || ''}`.toLowerCase();
-      return channel.keywords.some(kw => text.includes(kw.toLowerCase()));
+    const channelArticles = articles.filter((article) => {
+      const text =
+        `${article.title} ${article.description || ""}`.toLowerCase();
+      return channel.keywords.some((kw) => text.includes(kw.toLowerCase()));
     });
 
     if (channelArticles.length > 0) {
@@ -1696,11 +2052,13 @@ async function evaluateAndBroadcastAlerts() {
     const data = await response.json();
 
     if (data.events && data.events.length > 0) {
-      console.log(`[${new Date().toISOString()}] Triggered ${data.events.length} alerts`);
+      console.log(
+        `[${new Date().toISOString()}] Triggered ${data.events.length} alerts`,
+      );
       broadcastAlerts(data.events);
     }
   } catch (error) {
-    console.error('Alert evaluation error:', error.message);
+    console.error("Alert evaluation error:", error.message);
   }
 }
 
@@ -1734,7 +2092,9 @@ server.listen(PORT, () => {
   initRedis().then(async () => {
     await tryAcquireLeadership();
     startInstanceHeartbeat();
-    console.log(`[${new Date().toISOString()}] Instance ${INSTANCE_ID} ready (leader: ${isLeader})`);
+    console.log(
+      `[${new Date().toISOString()}] Instance ${INSTANCE_ID} ready (leader: ${isLeader})`,
+    );
   });
 
   // Leader heartbeat — renew or acquire leadership every 15s
@@ -1742,20 +2102,38 @@ server.listen(PORT, () => {
 
   // Polling loops — only the leader fetches from upstream APIs.
   // Non-leaders receive data via Redis pub/sub.
-  setInterval(() => { if (isLeader) pollNews(); }, POLL_INTERVAL);
-  setTimeout(() => { if (isLeader) pollNews(); }, 1000); // first poll after 1s startup
+  setInterval(() => {
+    if (isLeader) pollNews();
+  }, POLL_INTERVAL);
+  setTimeout(() => {
+    if (isLeader) pollNews();
+  }, 1000); // first poll after 1s startup
 
-  setInterval(() => { if (isLeader) pollPrices(); }, PRICE_INTERVAL);
-  setTimeout(() => { if (isLeader) pollPrices(); }, 1000);
+  setInterval(() => {
+    if (isLeader) pollPrices();
+  }, PRICE_INTERVAL);
+  setTimeout(() => {
+    if (isLeader) pollPrices();
+  }, 1000);
 
-  setInterval(() => { if (isLeader) pollWhales(); }, WHALE_INTERVAL);
-  setTimeout(() => { if (isLeader) pollWhales(); }, 1000);
+  setInterval(() => {
+    if (isLeader) pollWhales();
+  }, WHALE_INTERVAL);
+  setTimeout(() => {
+    if (isLeader) pollWhales();
+  }, 1000);
 
-  setInterval(() => { if (isLeader) pollSentiment(); }, SENTIMENT_INTERVAL);
-  setTimeout(() => { if (isLeader) pollSentiment(); }, 1000);
+  setInterval(() => {
+    if (isLeader) pollSentiment();
+  }, SENTIMENT_INTERVAL);
+  setTimeout(() => {
+    if (isLeader) pollSentiment();
+  }, 1000);
 
-  setInterval(() => { if (isLeader) evaluateAndBroadcastAlerts(); }, ALERT_EVAL_INTERVAL);
-  
+  setInterval(() => {
+    if (isLeader) evaluateAndBroadcastAlerts();
+  }, ALERT_EVAL_INTERVAL);
+
   // Cleanup stale connections every minute
   setInterval(cleanupStale, 60000);
 });
@@ -1767,11 +2145,15 @@ server.listen(PORT, () => {
 async function gracefulShutdown(signal) {
   if (isShuttingDown) return; // Prevent double-shutdown
   isShuttingDown = true;
-  console.log(`[${new Date().toISOString()}] ${signal} received — starting graceful shutdown (${DRAIN_TIMEOUT_MS / 1000}s drain)`);
+  console.log(
+    `[${new Date().toISOString()}] ${signal} received — starting graceful shutdown (${DRAIN_TIMEOUT_MS / 1000}s drain)`,
+  );
 
   // 1. Stop accepting new HTTP & WS connections
   server.close(() => {
-    console.log(`[${new Date().toISOString()}] HTTP server closed — no new connections`);
+    console.log(
+      `[${new Date().toISOString()}] HTTP server closed — no new connections`,
+    );
   });
 
   // 2. Release leadership immediately so another instance takes over polling
@@ -1783,14 +2165,20 @@ async function gracefulShutdown(signal) {
 
   // 3. Notify clients to reconnect, then send close frame
   const clientCount = clients.size;
-  console.log(`[${new Date().toISOString()}] Draining ${clientCount} connections...`);
+  console.log(
+    `[${new Date().toISOString()}] Draining ${clientCount} connections...`,
+  );
   wss.clients.forEach((ws) => {
     try {
       if (ws.readyState === WebSocket.OPEN) {
-        ws.send(JSON.stringify({ type: 'reconnect', reason: 'server-shutdown' }));
+        ws.send(
+          JSON.stringify({ type: "reconnect", reason: "server-shutdown" }),
+        );
       }
-      ws.close(1001, 'Server shutting down');
-    } catch { /* ignore already-closed sockets */ }
+      ws.close(1001, "Server shutting down");
+    } catch {
+      /* ignore already-closed sockets */
+    }
   });
 
   // 4. Wait for connections to drain (up to DRAIN_TIMEOUT_MS)
@@ -1806,9 +2194,15 @@ async function gracefulShutdown(signal) {
 
   // 5. Force-terminate any remaining connections
   if (clients.size > 0) {
-    console.log(`[${new Date().toISOString()}] Force-closing ${clients.size} remaining connections`);
+    console.log(
+      `[${new Date().toISOString()}] Force-closing ${clients.size} remaining connections`,
+    );
     wss.clients.forEach((ws) => {
-      try { ws.terminate(); } catch { /* noop */ }
+      try {
+        ws.terminate();
+      } catch {
+        /* noop */
+      }
     });
   }
 
@@ -1819,9 +2213,13 @@ async function gracefulShutdown(signal) {
       await Promise.allSettled([
         // Remove this instance's counter and adjust global total
         redisPub.del(REDIS_KEY_INSTANCE_CONNS(INSTANCE_ID)),
-        redisPub.decrBy(REDIS_KEY_TOTAL_CONNS, Math.max(0, localCount)).catch(() => {}),
+        redisPub
+          .decrBy(REDIS_KEY_TOTAL_CONNS, Math.max(0, localCount))
+          .catch(() => {}),
       ]);
-    } catch { /* best effort */ }
+    } catch {
+      /* best effort */
+    }
     await Promise.allSettled([
       redisPub.quit().catch(() => {}),
       redisSub.quit().catch(() => {}),
@@ -1832,6 +2230,5 @@ async function gracefulShutdown(signal) {
   process.exit(0);
 }
 
-process.on('SIGTERM', () => gracefulShutdown('SIGTERM'));
-process.on('SIGINT', () => gracefulShutdown('SIGINT'));
-
+process.on("SIGTERM", () => gracefulShutdown("SIGTERM"));
+process.on("SIGINT", () => gracefulShutdown("SIGINT"));
