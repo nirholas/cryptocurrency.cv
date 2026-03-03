@@ -276,9 +276,9 @@ export class SemanticChunker {
     // Compute pairwise cosine similarities
     const similarities: number[] = [];
     for (let i = 0; i < sentences.length - 1; i++) {
-      similarities.push(
-        cosineSim(sentences[i].embedding!, sentences[i + 1].embedding!),
-      );
+      const embA = sentences[i].embedding ?? [];
+      const embB = sentences[i + 1].embedding ?? [];
+      similarities.push(cosineSim(embA, embB));
     }
 
     // Find split points where similarity drops
@@ -329,7 +329,9 @@ export class SemanticChunker {
     const windowEmbeddings: number[][] = [];
     for (let i = 0; i <= sentences.length - windowSize; i++) {
       const window = sentences.slice(i, i + windowSize);
-      windowEmbeddings.push(averageEmbeddings(window.map((s) => s.embedding!)));
+      windowEmbeddings.push(
+        averageEmbeddings(window.map((s) => s.embedding ?? [])),
+      );
     }
 
     // Find topic boundaries
@@ -381,8 +383,8 @@ export class SemanticChunker {
     // Sentence-level similarity splits
     for (let i = 0; i < sentences.length - 1; i++) {
       const sim = cosineSim(
-        sentences[i].embedding!,
-        sentences[i + 1].embedding!,
+        sentences[i].embedding ?? [],
+        sentences[i + 1].embedding ?? [],
       );
       if (sim < threshold) {
         splitPoints.add(i + 1);
@@ -395,7 +397,7 @@ export class SemanticChunker {
       for (let i = 0; i <= sentences.length - windowSize; i++) {
         windowEmbs.push(
           averageEmbeddings(
-            sentences.slice(i, i + windowSize).map((s) => s.embedding!),
+            sentences.slice(i, i + windowSize).map((s) => s.embedding ?? []),
           ),
         );
       }

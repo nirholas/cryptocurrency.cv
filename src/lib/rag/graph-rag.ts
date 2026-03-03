@@ -44,18 +44,15 @@
  */
 
 import {
-  KnowledgeGraph,
   getKnowledgeGraph,
+  type KnowledgeGraph,
   type Entity,
   type Relationship,
   type SubGraph,
   type ImpactResult,
-  EntityType,
-  RelationType,
+  type RelationType,
 } from "@/lib/knowledge-graph";
-import { generateEmbedding } from "./embedding-service";
-import { vectorStore } from "./vector-store";
-import { hybridSearch, type HybridSearchOptions } from "./hybrid-search";
+import { hybridSearch } from "./hybrid-search";
 import { ragLogger } from "./observability";
 import type { ScoredDocument, SearchFilter, SearchResult } from "./types";
 
@@ -432,7 +429,7 @@ export class GraphRAGService {
     });
 
     // Step 6: Boost documents mentioning graph entities
-    const graphEntityIds = new Set(subgraph.nodes.map((n) => n.id));
+    const _graphEntityIds = new Set(subgraph.nodes.map((n) => n.id));
     const graphEntityNames = new Set(
       subgraph.nodes.flatMap((n) => [
         n.name.toLowerCase(),

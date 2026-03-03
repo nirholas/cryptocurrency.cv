@@ -17,11 +17,7 @@
 
 import { describe, it, expect, vi, beforeEach } from "vitest";
 import { GraphRAGService } from "@/lib/rag/graph-rag";
-import {
-  KnowledgeGraph,
-  EntityType,
-  RelationType,
-} from "@/lib/knowledge-graph";
+import { KnowledgeGraph } from "@/lib/knowledge-graph";
 
 // ═══════════════════════════════════════════════════════════════
 // MOCKS
@@ -128,7 +124,7 @@ describe("GraphRAGService", () => {
       const matches = service.extractEntities("Ethereum is better than eth");
       const ethMatch = matches.find((m) => m.entity.id === "ethereum");
       expect(ethMatch).toBeDefined();
-      expect(ethMatch!.matchType).toBe("exact");
+      expect(ethMatch?.matchType).toBe("exact");
     });
   });
 
@@ -138,7 +134,8 @@ describe("GraphRAGService", () => {
 
   describe("exploreNeighborhood", () => {
     it("returns subgraph around an entity", () => {
-      const eth = graph.getEntity("ethereum")!;
+      const eth = graph.getEntity("ethereum");
+      if (!eth) throw new Error("Expected entity");
       const subgraph = service.exploreNeighborhood([eth], 1, 50);
 
       expect(subgraph.nodes.length).toBeGreaterThan(0);
@@ -146,7 +143,8 @@ describe("GraphRAGService", () => {
     });
 
     it("finds related entities within hops", () => {
-      const eth = graph.getEntity("ethereum")!;
+      const eth = graph.getEntity("ethereum");
+      if (!eth) throw new Error("Expected entity");
       const subgraph = service.exploreNeighborhood([eth], 2, 100);
 
       // Ethereum should connect to Vitalik (via FOUNDED_BY), L2s, etc.
@@ -155,7 +153,8 @@ describe("GraphRAGService", () => {
     });
 
     it("filters by confidence threshold", () => {
-      const btc = graph.getEntity("bitcoin")!;
+      const btc = graph.getEntity("bitcoin");
+      if (!btc) throw new Error("Expected entity");
 
       const lowConf = service.exploreNeighborhood([btc], 1, 50, 0.0);
       const highConf = service.exploreNeighborhood([btc], 1, 50, 0.99);
@@ -164,8 +163,9 @@ describe("GraphRAGService", () => {
     });
 
     it("combines neighborhoods for multiple entities", () => {
-      const btc = graph.getEntity("bitcoin")!;
-      const eth = graph.getEntity("ethereum")!;
+      const btc = graph.getEntity("bitcoin");
+      const eth = graph.getEntity("ethereum");
+      if (!btc || !eth) throw new Error("Expected entities");
       const combined = service.exploreNeighborhood([btc, eth], 1, 100);
 
       expect(combined.nodes.some((n) => n.id === "bitcoin")).toBe(true);
@@ -179,7 +179,8 @@ describe("GraphRAGService", () => {
 
   describe("buildEntityContext", () => {
     it("builds context string with entity information", () => {
-      const eth = graph.getEntity("ethereum")!;
+      const eth = graph.getEntity("ethereum");
+      if (!eth) throw new Error("Expected entity");
       const subgraph = service.exploreNeighborhood([eth], 1);
       const context = service.buildEntityContext([eth], subgraph);
 
@@ -188,8 +189,9 @@ describe("GraphRAGService", () => {
     });
 
     it("includes shortest paths between multiple entities", () => {
-      const btc = graph.getEntity("bitcoin")!;
-      const sec = graph.getEntity("sec")!;
+      const btc = graph.getEntity("bitcoin");
+      const sec = graph.getEntity("sec");
+      if (!btc || !sec) throw new Error("Expected entities");
       const subgraph = service.exploreNeighborhood([btc, sec], 2);
       const context = service.buildEntityContext([btc, sec], subgraph);
 

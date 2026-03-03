@@ -431,10 +431,11 @@ function clusterSimilarPairs<T extends { id: string }>(
 
   function find(x: string): string {
     if (!parent.has(x)) parent.set(x, x);
-    if (parent.get(x) !== x) {
-      parent.set(x, find(parent.get(x)!));
+    const px = parent.get(x) ?? x;
+    if (px !== x) {
+      parent.set(x, find(px));
     }
-    return parent.get(x)!;
+    return parent.get(x) ?? x;
   }
 
   function union(x: string, y: string): void {
@@ -461,7 +462,7 @@ function clusterSimilarPairs<T extends { id: string }>(
   for (const item of items) {
     const root = find(item.id);
     if (!groups.has(root)) groups.set(root, []);
-    groups.get(root)!.push(item.id);
+    groups.get(root)?.push(item.id);
   }
 
   // Only keep clusters with 2+ members
