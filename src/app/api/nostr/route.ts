@@ -127,14 +127,6 @@ function encodeNaddr(dTag: string, relay: string, pubkeyHex: string, kind: numbe
   return bech32Encode('naddr', tlv);
 }
 
-function hexToBytes(hex: string): Uint8Array {
-  const bytes = new Uint8Array(hex.length / 2);
-  for (let i = 0; i < hex.length; i += 2) {
-    bytes[i / 2] = parseInt(hex.substring(i, i + 2), 16);
-  }
-  return bytes;
-}
-
 // Nostr event kinds
 const EVENT_KINDS = {
   TEXT_NOTE: 1,
