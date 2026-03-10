@@ -319,6 +319,21 @@ export const ApiError = {
       severity: ErrorSeverity.HIGH,
       retryAfter: 5,
     }),
+
+  from: (error: unknown): { message: string; code: ErrorCode; statusCode: number } => {
+    if (error instanceof Error) {
+      return {
+        message: error.message,
+        code: 'INTERNAL_ERROR',
+        statusCode: 500,
+      };
+    }
+    return {
+      message: String(error),
+      code: 'INTERNAL_ERROR',
+      statusCode: 500,
+    };
+  },
 };
 
 /**
