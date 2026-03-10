@@ -93,7 +93,7 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
       )
       .join("\n\n");
 
-    const result = await promptAIJson<Record<string, unknown>>(
+    const result: Record<string, unknown> = await promptAIJson(
       SYSTEM_PROMPT,
       `Context (recent crypto news):\n${context}\n\nQuestion: ${question}`,
     );

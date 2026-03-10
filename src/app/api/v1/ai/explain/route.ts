@@ -78,7 +78,7 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
   try {
     logger.info("AI explain", { term, level });
 
-    const result = await promptAIJson<Record<string, unknown>>(
+    const result: Record<string, unknown> = await promptAIJson(
       SYSTEM_PROMPT,
       `Explain this crypto concept at a ${level} level: ${term}`,
     );
