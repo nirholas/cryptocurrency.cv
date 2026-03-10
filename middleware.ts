@@ -160,9 +160,10 @@ export default async function middleware(request: NextRequest) {
     );
   }
 
-  // Bot check — skip for marketplace SPI callbacks (Alibaba Cloud sends server-to-server)
+  // Bot check — skip for marketplace SPI + Alibaba API Gateway (X-Ca-Key header)
   const ua = request.headers.get("user-agent") || "";
-  if (isBlockedBot(ua) && !pathname.startsWith("/api/marketplace/")) {
+  const isAlibabaGateway = !!request.headers.get("x-ca-key");
+  if (isBlockedBot(ua) && !pathname.startsWith("/api/marketplace/") && !isAlibabaGateway) {
     return NextResponse.json(
       { error: "Forbidden", code: "BOT_BLOCKED", requestId },
       { status: 403, headers },
@@ -362,7 +363,7 @@ export default async function middleware(request: NextRequest) {
     }
 
     // ── Tier-aware rate limiting ──────────────────────────────────────────
-    if (speraxos) {
+    if (speraxos || isAlibabaGateway) {
       headers["X-RateLimit-Limit"] = "unlimited";
       headers["X-RateLimit-Remaining"] = "unlimited";
     } else if (resolvedTier && resolvedKeyId) {
@@ -489,7 +490,7 @@ export default async function middleware(request: NextRequest) {
     }
 
     // ── Per-route rate limits for expensive endpoints ──────────────────────
-    if (!speraxos) {
+    if (!speraxos && !isAlibabaGateway) {
       const routeLimit = findRouteRateLimit(pathname);
       if (routeLimit) {
         const routeKey = resolvedKeyId
@@ -521,6 +522,7 @@ export default async function middleware(request: NextRequest) {
   if (
     pathname.startsWith("/api/") &&
     !speraxos &&
+    !isAlibabaGateway &&
     !resolvedKeyId &&
     !matchesPattern(pathname, EXEMPT_PATTERNS) &&
     !matchesPattern(pathname, FREE_TIER_PATTERNS)
