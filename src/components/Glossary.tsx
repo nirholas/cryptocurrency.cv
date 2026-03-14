@@ -59,7 +59,7 @@ export default function Glossary() {
 
   if (loading) {
     return (
-      <div className="py-8 text-center text-[var(--color-text-secondary)]">
+      <div className="py-8 text-center text-text-secondary">
         Loading glossary…
       </div>
     );
@@ -74,7 +74,7 @@ export default function Glossary() {
           placeholder="Search terms…"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          className="w-full max-w-md rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] px-4 py-2.5 text-sm text-[var(--color-text-primary)] placeholder:text-[var(--color-text-secondary)] focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]"
+          className="w-full max-w-md rounded-lg border border-border bg-(--color-surface) px-4 py-2.5 text-sm text-text-primary placeholder:text-text-secondary focus:outline-none focus:ring-2 focus:ring-accent"
         />
       </div>
 
@@ -87,8 +87,8 @@ export default function Glossary() {
             disabled={!availableLetters.has(letter)}
             className={`w-8 h-8 rounded text-xs font-semibold transition-colors ${
               availableLetters.has(letter)
-                ? "bg-[var(--color-surface-secondary)] text-[var(--color-text-primary)] hover:bg-[var(--color-accent)] hover:text-white cursor-pointer"
-                : "text-[var(--color-text-secondary)] opacity-40 cursor-default"
+                ? "bg-surface-secondary text-text-primary hover:bg-accent hover:text-white cursor-pointer"
+                : "text-text-secondary opacity-40 cursor-default"
             }`}
           >
             {letter}
@@ -98,14 +98,14 @@ export default function Glossary() {
 
       {/* Terms */}
       {filtered.length === 0 ? (
-        <p className="text-[var(--color-text-secondary)] py-4">
+        <p className="text-text-secondary py-4">
           No terms found matching &quot;{search}&quot;
         </p>
       ) : (
         <div className="space-y-8">
           {ALPHABET.filter((l) => grouped[l]).map((letter) => (
             <div key={letter} id={`glossary-${letter}`}>
-              <h3 className="font-serif text-xl font-bold text-[var(--color-accent)] mb-3 border-b border-[var(--color-border)] pb-1">
+              <h3 className="font-serif text-xl font-bold text-accent mb-3 border-b border-border pb-1">
                 {letter}
               </h3>
               <div className="space-y-1">
@@ -114,23 +114,23 @@ export default function Glossary() {
                   return (
                     <div
                       key={t.term}
-                      className="rounded-lg border border-[var(--color-border)] overflow-hidden"
+                      className="rounded-lg border border-border overflow-hidden"
                     >
                       <button
                         onClick={() =>
                           setExpandedTerm(isOpen ? null : t.term)
                         }
-                        className="w-full flex items-center justify-between px-4 py-3 text-left hover:bg-[var(--color-surface-secondary)] transition-colors cursor-pointer"
+                        className="w-full flex items-center justify-between px-4 py-3 text-left hover:bg-surface-secondary transition-colors cursor-pointer"
                       >
-                        <span className="font-medium text-[var(--color-text-primary)]">
+                        <span className="font-medium text-text-primary">
                           {t.term}
                         </span>
                         <span className="flex items-center gap-2">
-                          <span className="text-xs text-[var(--color-text-secondary)] bg-[var(--color-surface-tertiary)] px-2 py-0.5 rounded">
+                          <span className="text-xs text-text-secondary bg-surface-tertiary px-2 py-0.5 rounded">
                             {t.category}
                           </span>
                           <svg
-                            className={`w-4 h-4 text-[var(--color-text-secondary)] transition-transform ${
+                            className={`w-4 h-4 text-text-secondary transition-transform ${
                               isOpen ? "rotate-180" : ""
                             }`}
                             fill="none"
@@ -147,7 +147,7 @@ export default function Glossary() {
                         </span>
                       </button>
                       {isOpen && (
-                        <div className="px-4 pb-3 text-sm text-[var(--color-text-secondary)] leading-relaxed border-t border-[var(--color-border)]">
+                        <div className="px-4 pb-3 text-sm text-text-secondary leading-relaxed border-t border-border">
                           <p className="pt-3">{t.definition}</p>
                         </div>
                       )}

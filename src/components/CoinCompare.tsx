@@ -395,33 +395,33 @@ export default function CoinCompare() {
       {/* Coin Selector */}
       <Card className="p-5">
         <div className="flex items-center justify-between mb-4">
-          <h2 className="font-semibold text-[var(--color-text-primary)]">
+          <h2 className="font-semibold text-text-primary">
             Select Coins ({selectedCoins.length}/{MAX_COMPARE})
           </h2>
           <div className="flex items-center gap-2">
             <button
               onClick={handleCopyUrl}
               className={cn(
-                "p-1.5 rounded-lg border border-[var(--color-border)]",
-                "hover:bg-[var(--color-surface-secondary)] transition-colors",
+                "p-1.5 rounded-lg border border-border",
+                "hover:bg-surface-secondary transition-colors",
               )}
               aria-label="Copy share URL"
             >
               {copied ? (
                 <Check className="h-4 w-4 text-green-500" />
               ) : (
-                <Copy className="h-4 w-4 text-[var(--color-text-tertiary)]" />
+                <Copy className="h-4 w-4 text-text-tertiary" />
               )}
             </button>
             <button
               onClick={() => fetchData(true)}
               className={cn(
-                "p-1.5 rounded-lg border border-[var(--color-border)]",
-                "hover:bg-[var(--color-surface-secondary)] transition-colors",
+                "p-1.5 rounded-lg border border-border",
+                "hover:bg-surface-secondary transition-colors",
               )}
               aria-label="Refresh data"
             >
-              <RefreshCw className="h-4 w-4 text-[var(--color-text-tertiary)]" />
+              <RefreshCw className="h-4 w-4 text-text-tertiary" />
             </button>
           </div>
         </div>
@@ -435,7 +435,7 @@ export default function CoinCompare() {
                 key={coinId}
                 className={cn(
                   "inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full",
-                  "bg-[var(--color-accent)]/10 text-[var(--color-accent)]",
+                  "bg-accent/10 text-accent",
                   "text-sm font-medium",
                 )}
               >
@@ -465,9 +465,9 @@ export default function CoinCompare() {
               onClick={() => setShowSearch(true)}
               className={cn(
                 "inline-flex items-center gap-1 px-3 py-1.5 rounded-full",
-                "border border-dashed border-[var(--color-border)]",
-                "text-sm text-[var(--color-text-tertiary)]",
-                "hover:bg-[var(--color-surface-secondary)] transition-colors",
+                "border border-dashed border-border",
+                "text-sm text-text-tertiary",
+                "hover:bg-surface-secondary transition-colors",
               )}
             >
               + Add Coin
@@ -479,7 +479,7 @@ export default function CoinCompare() {
         {showSearch && (
           <div className="mb-4">
             <div className="relative">
-              <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-[var(--color-text-tertiary)]" />
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-text-tertiary" />
               <input
                 type="text"
                 autoFocus
@@ -493,10 +493,10 @@ export default function CoinCompare() {
                 }}
                 placeholder="Search coins..."
                 className={cn(
-                  "w-full pl-9 pr-4 py-2.5 rounded-lg border border-[var(--color-border)]",
-                  "bg-[var(--color-surface)] text-[var(--color-text-primary)]",
-                  "focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]",
-                  "placeholder:text-[var(--color-text-tertiary)]",
+                  "w-full pl-9 pr-4 py-2.5 rounded-lg border border-border",
+                  "bg-(--color-surface) text-text-primary",
+                  "focus:outline-none focus:ring-2 focus:ring-accent",
+                  "placeholder:text-text-tertiary",
                 )}
               />
             </div>
@@ -507,16 +507,16 @@ export default function CoinCompare() {
                   onClick={() => addCoin(coinId)}
                   className={cn(
                     "px-3 py-1.5 rounded-lg text-sm",
-                    "border border-[var(--color-border)] bg-[var(--color-surface)]",
-                    "hover:bg-[var(--color-surface-secondary)] transition-colors",
-                    "text-[var(--color-text-secondary)]",
+                    "border border-border bg-(--color-surface)",
+                    "hover:bg-surface-secondary transition-colors",
+                    "text-text-secondary",
                   )}
                 >
                   {coinId}
                 </button>
               ))}
               {filteredSearch.length === 0 && (
-                <p className="text-sm text-[var(--color-text-tertiary)] py-2">
+                <p className="text-sm text-text-tertiary py-2">
                   No matching coins
                 </p>
               )}
@@ -555,7 +555,7 @@ export default function CoinCompare() {
 
       {error && (
         <Card className="p-6 text-center">
-          <p className="text-[var(--color-text-secondary)] mb-3">{error}</p>
+          <p className="text-text-secondary mb-3">{error}</p>
           <Button variant="outline" size="sm" onClick={() => fetchData()}>
             <RefreshCw className="h-4 w-4 mr-1" /> Retry
           </Button>
@@ -569,8 +569,8 @@ export default function CoinCompare() {
             <div className="overflow-x-auto">
               <table className="w-full text-sm">
                 <thead>
-                  <tr className="border-b border-[var(--color-border)] bg-[var(--color-surface-secondary)]">
-                    <th className="sticky left-0 z-10 bg-[var(--color-surface-secondary)] px-4 py-3 text-left text-xs font-semibold text-[var(--color-text-tertiary)] uppercase tracking-wider">
+                  <tr className="border-b border-border bg-surface-secondary">
+                    <th className="sticky left-0 z-10 bg-surface-secondary px-4 py-3 text-left text-xs font-semibold text-text-tertiary uppercase tracking-wider">
                       Metric
                     </th>
                     {sortedCoins.map((coin) => (
@@ -587,7 +587,7 @@ export default function CoinCompare() {
                               loading="lazy"
                             />
                           )}
-                          <span className="font-semibold text-[var(--color-text-primary)]">
+                          <span className="font-semibold text-text-primary">
                             {coin.symbol.toUpperCase()}
                           </span>
                         </div>
@@ -595,35 +595,35 @@ export default function CoinCompare() {
                     ))}
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-[var(--color-border)]">
+                <tbody className="divide-y divide-border">
                   {visibleMetrics.map((metric) => (
                     <tr
                       key={metric.key}
-                      className="hover:bg-[var(--color-surface-secondary)] transition-colors"
+                      className="hover:bg-surface-secondary transition-colors"
                     >
-                      <td className="sticky left-0 z-10 bg-[var(--color-surface)] px-4 py-3">
+                      <td className="sticky left-0 z-10 bg-(--color-surface) px-4 py-3">
                         <div className="flex items-center gap-1.5">
                           {metric.sortKey ? (
                             <button
                               onClick={() => toggleSort(metric.sortKey!)}
-                              className="flex items-center gap-1 hover:text-[var(--color-accent)] transition-colors"
+                              className="flex items-center gap-1 hover:text-accent transition-colors"
                             >
-                              <span className="text-xs font-medium text-[var(--color-text-secondary)] whitespace-nowrap">
+                              <span className="text-xs font-medium text-text-secondary whitespace-nowrap">
                                 {metric.label}
                               </span>
                               {sortField === metric.sortKey && (
                                 sortDir === "asc" ? (
-                                  <ChevronUp className="h-3 w-3 text-[var(--color-accent)]" />
+                                  <ChevronUp className="h-3 w-3 text-accent" />
                                 ) : (
-                                  <ChevronDown className="h-3 w-3 text-[var(--color-accent)]" />
+                                  <ChevronDown className="h-3 w-3 text-accent" />
                                 )
                               )}
                               {sortField !== metric.sortKey && (
-                                <ArrowUpDown className="h-3 w-3 text-[var(--color-text-tertiary)] opacity-50" />
+                                <ArrowUpDown className="h-3 w-3 text-text-tertiary opacity-50" />
                               )}
                             </button>
                           ) : (
-                            <span className="text-xs font-medium text-[var(--color-text-secondary)] whitespace-nowrap">
+                            <span className="text-xs font-medium text-text-secondary whitespace-nowrap">
                               {metric.label}
                             </span>
                           )}
@@ -638,20 +638,20 @@ export default function CoinCompare() {
                             key={coin.id}
                             className={cn(
                               "px-4 py-3 text-center font-medium whitespace-nowrap",
-                              isWinner && "bg-[var(--color-accent)]/5",
+                              isWinner && "bg-accent/5",
                             )}
                           >
                             <span
                               className={cn(
-                                isWinner && "text-[var(--color-accent)] font-bold",
-                                !isWinner && "text-[var(--color-text-primary)]",
+                                isWinner && "text-accent font-bold",
+                                !isWinner && "text-text-primary",
                                 isChangeMetric && value !== null && value > 0 && !isWinner && "text-green-500 dark:text-green-400",
                                 isChangeMetric && value !== null && value < 0 && !isWinner && "text-red-500 dark:text-red-400",
                               )}
                             >
                               {value !== null ? metric.format(value) : "—"}
                               {isWinner && data.coins.length > 2 && (
-                                <Trophy className="inline-block h-3 w-3 ml-1 text-[var(--color-accent)]" />
+                                <Trophy className="inline-block h-3 w-3 ml-1 text-accent" />
                               )}
                             </span>
                           </td>
@@ -663,10 +663,10 @@ export default function CoinCompare() {
               </table>
             </div>
             {METRICS.length > 8 && (
-              <div className="px-4 py-3 border-t border-[var(--color-border)] text-center">
+              <div className="px-4 py-3 border-t border-border text-center">
                 <button
                   onClick={() => setExpandedMetrics(!expandedMetrics)}
-                  className="text-sm text-[var(--color-accent)] font-medium hover:underline"
+                  className="text-sm text-accent font-medium hover:underline"
                 >
                   {expandedMetrics
                     ? `Show fewer metrics ↑`
@@ -680,8 +680,8 @@ export default function CoinCompare() {
           {dominanceData.length >= 2 && (
             <Card className="p-5">
               <div className="flex items-center gap-2 mb-4">
-                <BarChart3 className="h-5 w-5 text-[var(--color-accent)]" />
-                <h2 className="font-semibold text-[var(--color-text-primary)]">
+                <BarChart3 className="h-5 w-5 text-accent" />
+                <h2 className="font-semibold text-text-primary">
                   Relative Market Dominance
                 </h2>
               </div>
@@ -721,7 +721,7 @@ export default function CoinCompare() {
                   return (
                     <span
                       key={coin.id}
-                      className="flex items-center gap-1.5 text-xs text-[var(--color-text-secondary)]"
+                      className="flex items-center gap-1.5 text-xs text-text-secondary"
                     >
                       <span
                         className={cn("w-2.5 h-2.5 rounded-full", dotColors[i % dotColors.length])}
@@ -737,7 +737,7 @@ export default function CoinCompare() {
           {/* Summary Card */}
           {data.summary && (
             <Card className="p-5">
-              <h2 className="font-semibold text-[var(--color-text-primary)] mb-4">
+              <h2 className="font-semibold text-text-primary mb-4">
                 Comparison Summary
               </h2>
               <CardContent className="p-0">
@@ -781,7 +781,7 @@ export default function CoinCompare() {
             <Card className="p-5">
               <div className="flex items-center gap-2 mb-4">
                 <Trophy className="h-5 w-5 text-amber-500" />
-                <h2 className="font-semibold text-[var(--color-text-primary)]">
+                <h2 className="font-semibold text-text-primary">
                   Winner Scorecard
                 </h2>
               </div>
@@ -796,8 +796,8 @@ export default function CoinCompare() {
                       className={cn(
                         "flex items-center gap-2 px-3 py-2 rounded-lg border",
                         wins > 0
-                          ? "border-[var(--color-accent)]/30 bg-[var(--color-accent)]/5"
-                          : "border-[var(--color-border)]",
+                          ? "border-accent/30 bg-accent/5"
+                          : "border-border",
                       )}
                     >
                       {coin.image && (
@@ -808,13 +808,13 @@ export default function CoinCompare() {
                           loading="lazy"
                         />
                       )}
-                      <span className="font-medium text-[var(--color-text-primary)]">
+                      <span className="font-medium text-text-primary">
                         {coin.symbol.toUpperCase()}
                       </span>
                       <Badge
                         className={cn(
                           "text-xs",
-                          wins > 0 && "bg-[var(--color-accent)]/10 text-[var(--color-accent)]",
+                          wins > 0 && "bg-accent/10 text-accent",
                         )}
                       >
                         {wins}{" "}
@@ -831,7 +831,7 @@ export default function CoinCompare() {
 
       {!loading && !error && data && data.coins.length < 2 && (
         <Card className="p-8 text-center">
-          <p className="text-[var(--color-text-secondary)]">
+          <p className="text-text-secondary">
             Select at least 2 coins to compare.
           </p>
         </Card>
@@ -855,10 +855,10 @@ function SummaryCell({
 }) {
   return (
     <div className="text-center">
-      <p className="text-xs text-[var(--color-text-tertiary)] mb-1">{label}</p>
+      <p className="text-xs text-text-tertiary mb-1">{label}</p>
       <div className="flex items-center justify-center gap-1">
         {icon}
-        <p className={cn("text-lg font-bold", color ?? "text-[var(--color-text-primary)]")}>
+        <p className={cn("text-lg font-bold", color ?? "text-text-primary")}>
           {value}
         </p>
       </div>

@@ -58,13 +58,13 @@ function fmtPct(n: number): string {
 function pnlColor(v: number): string {
   if (v > 0) return "text-green-500";
   if (v < 0) return "text-red-500";
-  return "text-[var(--color-text-secondary)]";
+  return "text-text-secondary";
 }
 
 function pnlBg(v: number): string {
   if (v > 0) return "bg-green-500/10";
   if (v < 0) return "bg-red-500/10";
-  return "bg-[var(--color-surface-secondary)]";
+  return "bg-surface-secondary";
 }
 
 /* ================================================================== */
@@ -167,7 +167,7 @@ function AllocationChart({
         {/* Center label */}
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-center">
-            <div className="text-xs text-[var(--color-text-secondary)]">Assets</div>
+            <div className="text-xs text-text-secondary">Assets</div>
             <div className="text-lg font-bold tabular-nums">{slices.length}</div>
           </div>
         </div>
@@ -177,7 +177,7 @@ function AllocationChart({
           <span key={s.label} className="flex items-center gap-1.5">
             <span className="inline-block h-2.5 w-2.5 rounded-full shrink-0" style={{ background: s.color }} />
             <span className="font-medium">{s.label}</span>
-            <span className="text-[var(--color-text-secondary)]">{s.pct.toFixed(1)}%</span>
+            <span className="text-text-secondary">{s.pct.toFixed(1)}%</span>
           </span>
         ))}
       </div>
@@ -289,7 +289,7 @@ function SortHeader({
     <th className={cn("px-4 py-3 font-medium", align === "right" ? "text-right" : "text-left", className)}>
       <button
         onClick={() => onSort(sortKey)}
-        className="inline-flex items-center gap-1 hover:text-[var(--color-text-primary)] transition-colors"
+        className="inline-flex items-center gap-1 hover:text-text-primary transition-colors"
       >
         {label}
         {active ? (
@@ -333,7 +333,7 @@ function HoldingRow({ holding }: { holding: EnrichedHolding }) {
   }, [holding.amount, holding.buyPrice]);
 
   return (
-    <tr className="border-b border-[var(--color-border)] last:border-b-0 hover:bg-[var(--color-surface-secondary)] transition-colors">
+    <tr className="border-b border-border last:border-b-0 hover:bg-surface-secondary transition-colors">
       {/* Coin */}
       <td className="px-4 py-3">
         <div className="flex items-center gap-2">
@@ -342,7 +342,7 @@ function HoldingRow({ holding }: { holding: EnrichedHolding }) {
           </div>
           <div>
             <div className="font-medium">{holding.coinName}</div>
-            <div className="text-xs text-[var(--color-text-secondary)]">{holding.symbol}</div>
+            <div className="text-xs text-text-secondary">{holding.symbol}</div>
           </div>
         </div>
       </td>
@@ -356,7 +356,7 @@ function HoldingRow({ holding }: { holding: EnrichedHolding }) {
             min="0"
             value={editAmount}
             onChange={(e) => setEditAmount(e.target.value)}
-            className="w-24 rounded border border-[var(--color-border)] bg-[var(--color-surface)] px-2 py-1 text-sm text-right focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]"
+            className="w-24 rounded border border-border bg-(--color-surface) px-2 py-1 text-sm text-right focus:outline-none focus:ring-2 focus:ring-accent"
           />
         ) : (
           holding.amount.toLocaleString("en-US", { maximumFractionDigits: 8 })
@@ -372,7 +372,7 @@ function HoldingRow({ holding }: { holding: EnrichedHolding }) {
             min="0"
             value={editBuyPrice}
             onChange={(e) => setEditBuyPrice(e.target.value)}
-            className="w-28 rounded border border-[var(--color-border)] bg-[var(--color-surface)] px-2 py-1 text-sm text-right focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]"
+            className="w-28 rounded border border-border bg-(--color-surface) px-2 py-1 text-sm text-right focus:outline-none focus:ring-2 focus:ring-accent"
           />
         ) : (
           fmtUsd(holding.buyPrice)
@@ -388,9 +388,9 @@ function HoldingRow({ holding }: { holding: EnrichedHolding }) {
       {/* Allocation */}
       <td className="px-4 py-3 text-right tabular-nums">
         <div className="flex items-center justify-end gap-2">
-          <div className="h-1.5 w-16 rounded-full bg-[var(--color-border)] overflow-hidden">
+          <div className="h-1.5 w-16 rounded-full bg-border overflow-hidden">
             <div
-              className="h-full rounded-full bg-[var(--color-accent)]"
+              className="h-full rounded-full bg-accent"
               style={{ width: `${Math.min(holding.allocation, 100)}%` }}
             />
           </div>
@@ -419,7 +419,7 @@ function HoldingRow({ holding }: { holding: EnrichedHolding }) {
               <button onClick={handleSave} className="rounded p-1.5 hover:bg-green-500/10 text-green-500 transition-colors" title="Save">
                 <Check className="h-4 w-4" />
               </button>
-              <button onClick={handleCancelEdit} className="rounded p-1.5 hover:bg-[var(--color-surface-secondary)] transition-colors" title="Cancel">
+              <button onClick={handleCancelEdit} className="rounded p-1.5 hover:bg-surface-secondary transition-colors" title="Cancel">
                 <X className="h-4 w-4" />
               </button>
             </>
@@ -427,7 +427,7 @@ function HoldingRow({ holding }: { holding: EnrichedHolding }) {
             <>
               <button
                 onClick={() => setEditing(true)}
-                className="rounded p-1.5 hover:bg-[var(--color-surface-secondary)] transition-colors"
+                className="rounded p-1.5 hover:bg-surface-secondary transition-colors"
                 title="Edit"
               >
                 <Pencil className="h-4 w-4" />
@@ -443,7 +443,7 @@ function HoldingRow({ holding }: { holding: EnrichedHolding }) {
                   </button>
                   <button
                     onClick={() => setConfirmDelete(false)}
-                    className="rounded p-1.5 hover:bg-[var(--color-surface-secondary)] transition-colors"
+                    className="rounded p-1.5 hover:bg-surface-secondary transition-colors"
                     title="Cancel"
                   >
                     <X className="h-4 w-4" />
@@ -483,11 +483,11 @@ function EmptyState() {
     <Card>
       <CardContent className="pt-6">
         <div className="flex flex-col items-center justify-center py-16 text-center">
-          <div className="h-20 w-20 rounded-full bg-[var(--color-surface-secondary)] flex items-center justify-center mb-6">
-            <Wallet className="h-10 w-10 text-[var(--color-text-secondary)]" />
+          <div className="h-20 w-20 rounded-full bg-surface-secondary flex items-center justify-center mb-6">
+            <Wallet className="h-10 w-10 text-text-secondary" />
           </div>
           <h2 className="font-serif text-2xl font-bold mb-2">Start tracking your portfolio</h2>
-          <p className="text-[var(--color-text-secondary)] max-w-md mb-8">
+          <p className="text-text-secondary max-w-md mb-8">
             Add your crypto holdings to track performance, profit &amp; loss, and
             allocation in real time. Your data is stored locally — no account needed.
           </p>
@@ -626,11 +626,11 @@ export default function PortfolioContent() {
         <Card>
           <CardContent className="pt-5">
             <div className="flex items-center gap-2 mb-2">
-              <DollarSign className="h-4 w-4 text-[var(--color-text-secondary)]" />
-              <span className="text-sm font-medium text-[var(--color-text-secondary)]">Total Value</span>
+              <DollarSign className="h-4 w-4 text-text-secondary" />
+              <span className="text-sm font-medium text-text-secondary">Total Value</span>
             </div>
             <p className="text-2xl font-bold tabular-nums">{fmtUsd(totalValue)}</p>
-            <p className="text-xs text-[var(--color-text-secondary)] mt-1">
+            <p className="text-xs text-text-secondary mt-1">
               Cost basis: {fmtUsd(totalCost)}
             </p>
           </CardContent>
@@ -645,7 +645,7 @@ export default function PortfolioContent() {
               ) : (
                 <TrendingDown className="h-4 w-4 text-red-500" />
               )}
-              <span className="text-sm font-medium text-[var(--color-text-secondary)]">Total P&amp;L</span>
+              <span className="text-sm font-medium text-text-secondary">Total P&amp;L</span>
             </div>
             <p className={cn("text-2xl font-bold tabular-nums", pnlColor(totalPnL))}>
               {totalPnL >= 0 ? "+" : ""}{fmtUsd(totalPnL)}
@@ -661,7 +661,7 @@ export default function PortfolioContent() {
           <CardContent className="pt-5">
             <div className="flex items-center gap-2 mb-2">
               <TrendingUp className="h-4 w-4 text-green-500" />
-              <span className="text-sm font-medium text-[var(--color-text-secondary)]">Best Performer</span>
+              <span className="text-sm font-medium text-text-secondary">Best Performer</span>
             </div>
             {best ? (
               <>
@@ -671,7 +671,7 @@ export default function PortfolioContent() {
                 </p>
               </>
             ) : (
-              <p className="text-sm text-[var(--color-text-secondary)]">—</p>
+              <p className="text-sm text-text-secondary">—</p>
             )}
           </CardContent>
         </Card>
@@ -681,7 +681,7 @@ export default function PortfolioContent() {
           <CardContent className="pt-5">
             <div className="flex items-center gap-2 mb-2">
               <TrendingDown className="h-4 w-4 text-red-500" />
-              <span className="text-sm font-medium text-[var(--color-text-secondary)]">Worst Performer</span>
+              <span className="text-sm font-medium text-text-secondary">Worst Performer</span>
             </div>
             {worst && enriched.length > 1 ? (
               <>
@@ -691,7 +691,7 @@ export default function PortfolioContent() {
                 </p>
               </>
             ) : (
-              <p className="text-sm text-[var(--color-text-secondary)]">—</p>
+              <p className="text-sm text-text-secondary">—</p>
             )}
           </CardContent>
         </Card>
@@ -713,7 +713,7 @@ export default function PortfolioContent() {
         <Card>
           <CardHeader>
             <div className="flex items-center gap-2">
-              <PieChart className="h-4 w-4 text-[var(--color-text-secondary)]" />
+              <PieChart className="h-4 w-4 text-text-secondary" />
               <CardTitle className="font-serif">Allocation</CardTitle>
             </div>
           </CardHeader>
@@ -744,7 +744,7 @@ export default function PortfolioContent() {
         <CardContent className="p-0 overflow-x-auto -webkit-overflow-scrolling-touch">
           <table className="w-full text-sm min-w-[700px]">
             <thead>
-              <tr className="border-b border-[var(--color-border)] text-[var(--color-text-secondary)]">
+              <tr className="border-b border-border text-text-secondary">
                 <SortHeader label="Coin" sortKey="coin" currentSort={sortKey} currentDir={sortDir} onSort={handleSort} align="left" />
                 <SortHeader label="Amount" sortKey="amount" currentSort={sortKey} currentDir={sortDir} onSort={handleSort} className="hidden sm:table-cell" />
                 <SortHeader label="Avg Buy" sortKey="buyPrice" currentSort={sortKey} currentDir={sortDir} onSort={handleSort} className="hidden md:table-cell" />
@@ -763,7 +763,7 @@ export default function PortfolioContent() {
             </tbody>
             {/* Footer totals */}
             <tfoot>
-              <tr className="border-t-2 border-[var(--color-border)] font-semibold">
+              <tr className="border-t-2 border-border font-semibold">
                 <td className="px-4 py-3">Total</td>
                 <td className="px-4 py-3 text-right tabular-nums">{enriched.length} assets</td>
                 <td className="px-4 py-3" />
@@ -799,7 +799,7 @@ function PortfolioTips() {
       <CardHeader>
         <CardTitle className="font-serif">Portfolio Tracking Tips</CardTitle>
       </CardHeader>
-      <CardContent className="space-y-4 text-sm text-[var(--color-text-secondary)]">
+      <CardContent className="space-y-4 text-sm text-text-secondary">
         <p>
           This portfolio tracker stores all data locally in your browser — nothing
           is sent to any server. Your holdings, cost basis, and trade history remain
@@ -811,7 +811,7 @@ function PortfolioTips() {
               <TrendingUp className="h-3.5 w-3.5" />
             </span>
             <div>
-              <strong className="text-[var(--color-text-primary)]">Track your cost basis</strong>
+              <strong className="text-text-primary">Track your cost basis</strong>
               <span> — Enter the price you paid for each coin to see accurate profit &amp; loss. You can edit this at any time.</span>
             </div>
           </div>
@@ -820,7 +820,7 @@ function PortfolioTips() {
               <PieChart className="h-3.5 w-3.5" />
             </span>
             <div>
-              <strong className="text-[var(--color-text-primary)]">Monitor allocation</strong>
+              <strong className="text-text-primary">Monitor allocation</strong>
               <span> — Diversification matters. The allocation chart shows how concentrated your portfolio is across different assets.</span>
             </div>
           </div>
@@ -829,7 +829,7 @@ function PortfolioTips() {
               <Download className="h-3.5 w-3.5" />
             </span>
             <div>
-              <strong className="text-[var(--color-text-primary)]">Export anytime</strong>
+              <strong className="text-text-primary">Export anytime</strong>
               <span> — Download your portfolio as a CSV file for backup, tax preparation, or import into other tools.</span>
             </div>
           </div>
@@ -838,7 +838,7 @@ function PortfolioTips() {
               <DollarSign className="h-3.5 w-3.5" />
             </span>
             <div>
-              <strong className="text-[var(--color-text-primary)]">Live prices</strong>
+              <strong className="text-text-primary">Live prices</strong>
               <span> — Prices update automatically every 60 seconds from our aggregated market data feed across multiple exchanges.</span>
             </div>
           </div>

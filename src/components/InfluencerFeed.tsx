@@ -229,15 +229,15 @@ export default function InfluencerFeed({ className }: { className?: string }) {
 
   return (
     <Card className={cn("p-0 overflow-hidden", className)}>
-      <div className="divide-y divide-[var(--color-border)]">
+      <div className="divide-y divide-border">
         {loading
           ? Array.from({ length: 5 }).map((_, i) => (
               <div key={i} className="flex items-start gap-3 p-4">
-                <div className="h-10 w-10 rounded-full animate-pulse bg-[var(--color-border)]" />
+                <div className="h-10 w-10 rounded-full animate-pulse bg-border" />
                 <div className="flex-1 space-y-2">
-                  <div className="h-4 w-32 animate-pulse rounded bg-[var(--color-border)]" />
-                  <div className="h-3 w-full animate-pulse rounded bg-[var(--color-border)]" />
-                  <div className="h-3 w-2/3 animate-pulse rounded bg-[var(--color-border)]" />
+                  <div className="h-4 w-32 animate-pulse rounded bg-border" />
+                  <div className="h-3 w-full animate-pulse rounded bg-border" />
+                  <div className="h-3 w-2/3 animate-pulse rounded bg-border" />
                 </div>
               </div>
             ))
@@ -248,7 +248,7 @@ export default function InfluencerFeed({ className }: { className?: string }) {
               >
                 {/* Avatar */}
                 <div className="relative shrink-0">
-                  <div className="h-10 w-10 rounded-full bg-[var(--color-accent)]/10 flex items-center justify-center text-[var(--color-accent)] font-bold text-sm">
+                  <div className="h-10 w-10 rounded-full bg-accent/10 flex items-center justify-center text-accent font-bold text-sm">
                     {inf.name.charAt(0).toUpperCase()}
                   </div>
                   <div className="absolute -bottom-0.5 -right-0.5">
@@ -259,22 +259,22 @@ export default function InfluencerFeed({ className }: { className?: string }) {
                 {/* Content */}
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-2 flex-wrap">
-                    <span className="font-semibold text-sm text-[var(--color-text-primary)] truncate">
+                    <span className="font-semibold text-sm text-text-primary truncate">
                       {inf.name}
                     </span>
-                    <span className="text-xs text-[var(--color-text-tertiary)]">
+                    <span className="text-xs text-text-tertiary">
                       {inf.username}
                     </span>
                     <PlatformBadge platform={inf.platform} />
                   </div>
 
                   {inf.recentPost && (
-                    <p className="mt-1 text-sm text-[var(--color-text-secondary)] line-clamp-2 leading-relaxed">
+                    <p className="mt-1 text-sm text-text-secondary line-clamp-2 leading-relaxed">
                       {inf.recentPost}
                     </p>
                   )}
 
-                  <div className="mt-1.5 flex items-center gap-3 text-[10px] text-[var(--color-text-tertiary)]">
+                  <div className="mt-1.5 flex items-center gap-3 text-[10px] text-text-tertiary">
                     <span>{formatFollowers(inf.followers)} followers</span>
                     <span>Reliability: {inf.reliabilityScore}/100</span>
                     {inf.lastActive && <span>{inf.lastActive}</span>}
@@ -283,7 +283,7 @@ export default function InfluencerFeed({ className }: { className?: string }) {
                         href={inf.postUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-0.5 hover:text-[var(--color-accent)]"
+                        className="inline-flex items-center gap-0.5 hover:text-accent"
                       >
                         <ExternalLink className="h-2.5 w-2.5" />
                         View
@@ -296,7 +296,7 @@ export default function InfluencerFeed({ className }: { className?: string }) {
       </div>
 
       {!loading && influencers.length === 0 && (
-        <div className="p-12 text-center text-[var(--color-text-secondary)]">
+        <div className="p-12 text-center text-text-secondary">
           <RefreshCw className="h-6 w-6 mx-auto mb-2 opacity-40" />
           No influencer data available.
         </div>

@@ -47,14 +47,14 @@ export default async function EventsPage({ params }: Props) {
         {/* ── Hero ──────────────────────────────────────────────── */}
         <div className="mb-10">
           <div className="mb-4 flex items-center gap-3">
-            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[var(--color-accent)]/10">
-              <CalendarDays className="h-5 w-5 text-[var(--color-accent)]" />
+            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-accent/10">
+              <CalendarDays className="h-5 w-5 text-accent" />
             </div>
             <h1 className="font-serif text-3xl font-bold tracking-tight sm:text-4xl">
               Crypto Events Calendar
             </h1>
           </div>
-          <p className="max-w-2xl text-[var(--color-text-secondary)]">
+          <p className="max-w-2xl text-text-secondary">
             Track upcoming crypto conferences, network upgrades, token launches,
             AMAs, and community events. Click any date to see scheduled events.
           </p>

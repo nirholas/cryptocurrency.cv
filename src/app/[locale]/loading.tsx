@@ -4,7 +4,7 @@ export default function Loading() {
   return (
     <div className="min-h-screen">
       {/* Hero skeleton */}
-      <section className="border-b border-[var(--color-border)]">
+      <section className="border-b border-border">
         <div className="container-main py-8 lg:py-10">
           <div className="grid md:grid-cols-2 gap-8">
             <Skeleton className="aspect-[16/10] w-full rounded-xl" />
@@ -21,7 +21,7 @@ export default function Loading() {
       </section>
 
       {/* Top stories grid skeleton */}
-      <section className="border-b border-[var(--color-border)]">
+      <section className="border-b border-border">
         <div className="container-main py-8 lg:py-10">
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {Array.from({ length: 4 }).map((_, i) => (
@@ -38,7 +38,7 @@ export default function Loading() {
       </section>
 
       {/* Markets snapshot skeleton */}
-      <section className="border-b border-[var(--color-border)]">
+      <section className="border-b border-border">
         <div className="container-main py-6">
           <div className="flex gap-6 overflow-hidden">
             {Array.from({ length: 6 }).map((_, i) => (
@@ -65,7 +65,7 @@ export default function Loading() {
               {Array.from({ length: 6 }).map((_, i) => (
                 <div
                   key={i}
-                  className="flex gap-4 pb-6 border-b border-[var(--color-border)]"
+                  className="flex gap-4 pb-6 border-b border-border"
                 >
                   <Skeleton className="aspect-square w-20 shrink-0 rounded-lg" />
                   <div className="flex-1 space-y-2">
@@ -87,7 +87,7 @@ export default function Loading() {
                 {Array.from({ length: 5 }).map((_, i) => (
                   <div
                     key={i}
-                    className="flex gap-3 pb-4 border-b border-[var(--color-border)]"
+                    className="flex gap-3 pb-4 border-b border-border"
                   >
                     <Skeleton className="h-8 w-8 rounded" />
                     <div className="flex-1 space-y-2">

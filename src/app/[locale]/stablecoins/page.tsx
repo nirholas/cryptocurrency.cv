@@ -96,19 +96,19 @@ function StatCard({
   accent?: boolean;
 }) {
   return (
-    <Card className={cn(accent && "ring-1 ring-[var(--color-accent)]/20 bg-[var(--color-accent)]/[0.03]")}>
+    <Card className={cn(accent && "ring-1 ring-accent/20 bg-accent/[0.03]")}>
       <CardContent className="p-4 md:p-5">
         <div className="flex items-start justify-between gap-2">
-          <p className="text-[10px] font-semibold uppercase tracking-wider text-[var(--color-text-tertiary)] mb-1">
+          <p className="text-[10px] font-semibold uppercase tracking-wider text-text-tertiary mb-1">
             {label}
           </p>
-          <div className="text-[var(--color-accent)] opacity-60">{icon}</div>
+          <div className="text-accent opacity-60">{icon}</div>
         </div>
-        <p className="text-xl md:text-2xl font-bold tabular-nums text-[var(--color-text-primary)]">
+        <p className="text-xl md:text-2xl font-bold tabular-nums text-text-primary">
           {value}
         </p>
         {sub && (
-          <p className="text-xs text-[var(--color-text-secondary)] mt-0.5">{sub}</p>
+          <p className="text-xs text-text-secondary mt-0.5">{sub}</p>
         )}
       </CardContent>
     </Card>
@@ -141,8 +141,8 @@ function DonutChart({
         aria-label="Stablecoin market share donut chart"
         role="img"
       >
-        <div className="absolute inset-6 rounded-full bg-[var(--color-surface)] flex items-center justify-center">
-          <span className="text-xs font-semibold text-[var(--color-text-tertiary)]">
+        <div className="absolute inset-6 rounded-full bg-(--color-surface) flex items-center justify-center">
+          <span className="text-xs font-semibold text-text-tertiary">
             Market Share
           </span>
         </div>
@@ -154,9 +154,9 @@ function DonutChart({
               className="h-3 w-3 rounded-sm shrink-0"
               style={{ backgroundColor: seg.color }}
             />
-            <span className="text-[var(--color-text-secondary)]">
+            <span className="text-text-secondary">
               {seg.symbol}{" "}
-              <span className="font-mono text-[var(--color-text-primary)]">
+              <span className="font-mono text-text-primary">
                 {seg.share.toFixed(1)}%
               </span>
             </span>
@@ -257,10 +257,10 @@ export default async function StablecoinsPage({ params }: Props) {
       <main className="container-main py-10 space-y-14">
         {/* Hero */}
         <section>
-          <h1 className="font-serif text-3xl md:text-4xl font-bold mb-2 text-[var(--color-text-primary)]">
+          <h1 className="font-serif text-3xl md:text-4xl font-bold mb-2 text-text-primary">
             💵 Stablecoin Analytics
           </h1>
-          <p className="text-[var(--color-text-secondary)] max-w-2xl">
+          <p className="text-text-secondary max-w-2xl">
             Real-time stablecoin market data — track total supply, peg health,
             market cap rankings, and de-peg alerts across all major stablecoins.
           </p>
@@ -304,7 +304,7 @@ export default async function StablecoinsPage({ params }: Props) {
         {/* De-Peg Monitor */}
         {offPeg.length > 0 && (
           <section>
-            <h2 className="font-serif text-2xl font-bold mb-4 text-[var(--color-text-primary)]">
+            <h2 className="font-serif text-2xl font-bold mb-4 text-text-primary">
               ⚠️ De-Peg Monitor
             </h2>
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
@@ -314,14 +314,14 @@ export default async function StablecoinsPage({ params }: Props) {
                     <div className="flex items-center justify-between mb-2">
                       <div className="flex items-center gap-2">
                         <AlertTriangle className="h-4 w-4 text-amber-500" />
-                        <span className="font-semibold text-[var(--color-text-primary)]">
+                        <span className="font-semibold text-text-primary">
                           {coin.name}
                         </span>
                         <Badge>{coin.symbol}</Badge>
                       </div>
                     </div>
                     <div className="flex items-baseline gap-3">
-                      <span className="text-lg font-mono font-bold text-[var(--color-text-primary)]">
+                      <span className="text-lg font-mono font-bold text-text-primary">
                         ${coin.price.toFixed(4)}
                       </span>
                       <span
@@ -346,7 +346,7 @@ export default async function StablecoinsPage({ params }: Props) {
         {/* Market Share Donut */}
         {donutSegments.length > 0 && (
           <section>
-            <h2 className="font-serif text-2xl font-bold mb-4 text-[var(--color-text-primary)]">
+            <h2 className="font-serif text-2xl font-bold mb-4 text-text-primary">
               📊 Stablecoin Market Share
             </h2>
             <Card>
@@ -359,7 +359,7 @@ export default async function StablecoinsPage({ params }: Props) {
 
         {/* Stablecoin Table */}
         <section>
-          <h2 className="font-serif text-2xl font-bold mb-4 text-[var(--color-text-primary)]">
+          <h2 className="font-serif text-2xl font-bold mb-4 text-text-primary">
             📋 All Stablecoins
           </h2>
           <StablecoinTable stablecoins={stablecoins} />

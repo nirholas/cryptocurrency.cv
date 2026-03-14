@@ -148,11 +148,11 @@ function notificationIcon(type: NotificationType): ReactNode {
     case "price_milestone":
       return <TrendingUp className="h-4 w-4 text-emerald-500" aria-hidden="true" />;
     case "digest":
-      return <Newspaper className="h-4 w-4 text-[var(--color-accent)]" aria-hidden="true" />;
+      return <Newspaper className="h-4 w-4 text-accent" aria-hidden="true" />;
     case "system":
       return <Info className="h-4 w-4 text-blue-500" aria-hidden="true" />;
     default:
-      return <Bell className="h-4 w-4 text-[var(--color-text-tertiary)]" aria-hidden="true" />;
+      return <Bell className="h-4 w-4 text-text-tertiary" aria-hidden="true" />;
   }
 }
 
@@ -407,8 +407,8 @@ export default function NotificationCenter() {
         onClick={() => setOpen(!open)}
         className={cn(
           "relative p-2 rounded-md transition-colors cursor-pointer",
-          "hover:bg-[var(--color-surface-secondary)] text-[var(--color-text-secondary)]",
-          open && "bg-[var(--color-surface-secondary)] text-[var(--color-text-primary)]"
+          "hover:bg-surface-secondary text-text-secondary",
+          open && "bg-surface-secondary text-text-primary"
         )}
         aria-label={`Notifications${unreadCount > 0 ? ` (${unreadCount} unread)` : ""}`}
         aria-expanded={open}
@@ -430,7 +430,7 @@ export default function NotificationCenter() {
           className={cn(
             "absolute right-0 top-full mt-2 z-[60]",
             "w-[380px] max-h-[520px] overflow-hidden rounded-xl",
-            "border border-[var(--color-border)] bg-[var(--color-surface)] shadow-2xl",
+            "border border-border bg-(--color-surface) shadow-2xl",
             "flex flex-col",
             "animate-dropdown"
           )}
@@ -438,8 +438,8 @@ export default function NotificationCenter() {
           aria-label="Notification Center"
         >
           {/* Header */}
-          <div className="flex items-center justify-between px-4 py-3 border-b border-[var(--color-border)]">
-            <h3 className="text-sm font-bold text-[var(--color-text-primary)]">
+          <div className="flex items-center justify-between px-4 py-3 border-b border-border">
+            <h3 className="text-sm font-bold text-text-primary">
               Notifications
               {unreadCount > 0 && (
                 <span className="ml-2 inline-flex items-center justify-center rounded-full bg-red-500/10 text-red-500 px-2 py-0.5 text-xs font-medium">
@@ -450,7 +450,7 @@ export default function NotificationCenter() {
             <div className="flex items-center gap-1">
               <button
                 onClick={toggleSound}
-                className="p-1.5 rounded-md hover:bg-[var(--color-surface-secondary)] text-[var(--color-text-tertiary)] transition-colors cursor-pointer"
+                className="p-1.5 rounded-md hover:bg-surface-secondary text-text-tertiary transition-colors cursor-pointer"
                 title={soundEnabled ? "Mute" : "Unmute"}
                 aria-label={soundEnabled ? "Mute notifications" : "Unmute notifications"}
               >
@@ -463,7 +463,7 @@ export default function NotificationCenter() {
               {unreadCount > 0 && (
                 <button
                   onClick={markAllRead}
-                  className="p-1.5 rounded-md hover:bg-[var(--color-surface-secondary)] text-[var(--color-text-tertiary)] transition-colors cursor-pointer"
+                  className="p-1.5 rounded-md hover:bg-surface-secondary text-text-tertiary transition-colors cursor-pointer"
                   title="Mark all as read"
                   aria-label="Mark all as read"
                 >
@@ -473,7 +473,7 @@ export default function NotificationCenter() {
               {notifications.length > 0 && (
                 <button
                   onClick={clearAll}
-                  className="p-1.5 rounded-md hover:bg-[var(--color-surface-secondary)] text-[var(--color-text-tertiary)] hover:text-red-500 transition-colors cursor-pointer"
+                  className="p-1.5 rounded-md hover:bg-surface-secondary text-text-tertiary hover:text-red-500 transition-colors cursor-pointer"
                   title="Clear all"
                   aria-label="Clear all notifications"
                 >
@@ -482,7 +482,7 @@ export default function NotificationCenter() {
               )}
               <Link
                 href="/notifications"
-                className="p-1.5 rounded-md hover:bg-[var(--color-surface-secondary)] text-[var(--color-text-tertiary)] transition-colors"
+                className="p-1.5 rounded-md hover:bg-surface-secondary text-text-tertiary transition-colors"
                 title="Notification Preferences"
                 aria-label="Notification Preferences"
                 onClick={() => setOpen(false)}
@@ -501,8 +501,8 @@ export default function NotificationCenter() {
                 className={cn(
                   "px-3 py-1 text-xs font-medium rounded-full transition-colors cursor-pointer",
                   filter === f
-                    ? "bg-[var(--color-accent)] text-white"
-                    : "text-[var(--color-text-tertiary)] hover:bg-[var(--color-surface-secondary)]"
+                    ? "bg-accent text-white"
+                    : "text-text-tertiary hover:bg-surface-secondary"
                 )}
               >
                 {f === "all" ? "All" : `Unread (${unreadCount})`}
@@ -514,18 +514,18 @@ export default function NotificationCenter() {
           <div className="flex-1 overflow-y-auto overscroll-contain py-1">
             {filtered.length === 0 ? (
               <div className="flex flex-col items-center justify-center py-12 text-center">
-                <BellOff className="h-10 w-10 text-[var(--color-text-tertiary)] mb-3 opacity-40" aria-hidden="true" />
-                <p className="text-sm font-medium text-[var(--color-text-secondary)]">
+                <BellOff className="h-10 w-10 text-text-tertiary mb-3 opacity-40" aria-hidden="true" />
+                <p className="text-sm font-medium text-text-secondary">
                   {filter === "unread" ? "No unread notifications" : "No notifications yet"}
                 </p>
-                <p className="text-xs text-[var(--color-text-tertiary)] mt-1">
+                <p className="text-xs text-text-tertiary mt-1">
                   Breaking news and alerts will appear here
                 </p>
               </div>
             ) : (
               grouped.map((group) => (
                 <div key={group.label}>
-                  <div className="sticky top-0 bg-[var(--color-surface-secondary)] px-4 py-1.5 text-[10px] font-semibold text-[var(--color-text-tertiary)] uppercase tracking-wider">
+                  <div className="sticky top-0 bg-surface-secondary px-4 py-1.5 text-[10px] font-semibold text-text-tertiary uppercase tracking-wider">
                     {group.label}
                   </div>
                   {group.items.map((notif) => (
@@ -544,11 +544,11 @@ export default function NotificationCenter() {
 
           {/* Footer */}
           {notifications.length > 0 && (
-            <div className="border-t border-[var(--color-border)] px-4 py-2.5">
+            <div className="border-t border-border px-4 py-2.5">
               <Link
                 href="/notifications"
                 onClick={() => setOpen(false)}
-                className="flex items-center justify-center gap-1 text-xs font-medium text-[var(--color-accent)] hover:text-[var(--color-accent-hover)] transition-colors"
+                className="flex items-center justify-center gap-1 text-xs font-medium text-accent hover:text-accent-hover transition-colors"
               >
                 Notification Preferences
                 <ChevronRight className="h-3 w-3" aria-hidden="true" />
@@ -595,8 +595,8 @@ function NotificationItem({
     <div
       className={cn(
         "group flex items-start gap-3 px-4 py-3 transition-colors",
-        "hover:bg-[var(--color-surface-secondary)]",
-        !notification.read && "bg-[var(--color-accent)]/5"
+        "hover:bg-surface-secondary",
+        !notification.read && "bg-accent/5"
       )}
     >
       {/* Icon */}
@@ -611,20 +611,20 @@ function NotificationItem({
             className={cn(
               "text-sm leading-snug",
               notification.read
-                ? "text-[var(--color-text-secondary)]"
-                : "text-[var(--color-text-primary)] font-semibold"
+                ? "text-text-secondary"
+                : "text-text-primary font-semibold"
             )}
           >
             {notification.title}
           </p>
           {!notification.read && (
-            <span className="mt-1.5 h-2 w-2 flex-shrink-0 rounded-full bg-[var(--color-accent)]" />
+            <span className="mt-1.5 h-2 w-2 flex-shrink-0 rounded-full bg-accent" />
           )}
         </div>
-        <p className="text-xs text-[var(--color-text-tertiary)] mt-0.5 line-clamp-2">
+        <p className="text-xs text-text-tertiary mt-0.5 line-clamp-2">
           {notification.message}
         </p>
-        <p className="text-[10px] text-[var(--color-text-tertiary)] mt-1">
+        <p className="text-[10px] text-text-tertiary mt-1">
           {timeAgo(notification.timestamp)}
         </p>
       </div>
@@ -638,7 +638,7 @@ function NotificationItem({
               e.stopPropagation();
               onMarkRead(notification.id);
             }}
-            className="p-1 rounded text-[var(--color-text-tertiary)] hover:text-[var(--color-accent)] transition-colors cursor-pointer"
+            className="p-1 rounded text-text-tertiary hover:text-accent transition-colors cursor-pointer"
             aria-label="Mark as read"
             title="Mark as read"
           >
@@ -651,7 +651,7 @@ function NotificationItem({
             e.stopPropagation();
             onRemove(notification.id);
           }}
-          className="p-1 rounded text-[var(--color-text-tertiary)] hover:text-red-500 transition-colors cursor-pointer"
+          className="p-1 rounded text-text-tertiary hover:text-red-500 transition-colors cursor-pointer"
           aria-label="Remove notification"
           title="Remove"
         >

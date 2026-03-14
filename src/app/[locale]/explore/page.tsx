@@ -144,10 +144,10 @@ export default async function ExplorePage({ params }: Props) {
       <main id="main-content" className="container-main py-6 md:py-10">
         {/* Page heading */}
         <div className="mb-8">
-          <h1 className="text-3xl md:text-4xl font-bold text-[var(--color-text-primary)] mb-2">
+          <h1 className="text-3xl md:text-4xl font-bold text-text-primary mb-2">
             Knowledge Graph Explorer
           </h1>
-          <p className="text-[var(--color-text-secondary)] max-w-2xl">
+          <p className="text-text-secondary max-w-2xl">
             Visualize connections between entities in crypto news — coins, people,
             companies, and protocols. Click nodes to inspect, drag to rearrange,
             scroll to zoom.

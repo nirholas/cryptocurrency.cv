@@ -119,18 +119,18 @@ export function SentimentMeter({
           {config.emoji} {config.label}
         </span>
         {confidence != null && (
-          <span className="text-[11px] text-[var(--color-text-tertiary)]">
+          <span className="text-[11px] text-text-tertiary">
             {Math.round(confidence * 100)}% confidence
           </span>
         )}
       </div>
-      <div className="h-2 rounded-full bg-[var(--color-surface-tertiary)] overflow-hidden">
+      <div className="h-2 rounded-full bg-surface-tertiary overflow-hidden">
         <div
           className={cn("h-full rounded-full transition-all duration-500", config.barColor)}
           style={{ width: `${config.score}%` }}
         />
       </div>
-      <div className="flex justify-between text-[10px] text-[var(--color-text-tertiary)]">
+      <div className="flex justify-between text-[10px] text-text-tertiary">
         <span>Bearish</span>
         <span>Neutral</span>
         <span>Bullish</span>
@@ -164,11 +164,11 @@ export function SentimentBanner({ className }: { className?: string }) {
   const config = getSentimentConfig(sentiment);
 
   return (
-    <section className={cn("border-b border-[var(--color-border)]", className)}>
+    <section className={cn("border-b border-border", className)}>
       <div className="container-main py-3">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <span className="text-sm font-semibold text-[var(--color-text-secondary)]">
+            <span className="text-sm font-semibold text-text-secondary">
               Market Mood
             </span>
             <span className={cn("px-2.5 py-0.5 rounded-full text-xs font-bold", config.bgColor, config.color)}>
@@ -212,7 +212,7 @@ export function SentimentDistribution({ counts, className }: SentimentDistProps)
         )}
       </div>
       {/* Legend */}
-      <div className="flex justify-between text-xs text-[var(--color-text-secondary)]">
+      <div className="flex justify-between text-xs text-text-secondary">
         {segments.map((seg) => (
           <span key={seg.label} className="flex items-center gap-1">
             <span className={cn("inline-block h-2 w-2 rounded-full", seg.color)} />

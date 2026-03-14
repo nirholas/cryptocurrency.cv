@@ -73,7 +73,7 @@ export default function TradingViewHeatmap({
   return (
     <div
       ref={containerRef}
-      className={cn("overflow-hidden rounded-xl border border-[var(--color-border)]", className)}
+      className={cn("overflow-hidden rounded-xl border border-border", className)}
       style={{
         width: typeof width === "number" ? width : "100%",
         height,

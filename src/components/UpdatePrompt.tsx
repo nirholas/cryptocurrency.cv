@@ -67,11 +67,11 @@ export function UpdatePrompt() {
           : "translate-y-4 opacity-0"
       )}
     >
-      <div className="overflow-hidden rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] shadow-2xl">
+      <div className="overflow-hidden rounded-xl border border-border bg-(--color-surface) shadow-2xl">
         {/* Progress bar for auto-update countdown */}
-        <div className="h-1 w-full bg-[var(--color-surface-secondary)]">
+        <div className="h-1 w-full bg-surface-secondary">
           <div
-            className="h-full bg-[var(--color-accent)] transition-all duration-1000 ease-linear"
+            className="h-full bg-accent transition-all duration-1000 ease-linear"
             style={{ width: `${((AUTO_UPDATE_DELAY - countdown) / AUTO_UPDATE_DELAY) * 100}%` }}
             aria-hidden="true"
           />
@@ -79,18 +79,18 @@ export function UpdatePrompt() {
 
         <div className="p-4">
           <div className="flex items-start gap-3">
-            <div className="flex size-10 shrink-0 items-center justify-center rounded-full bg-[var(--color-accent)]/10">
+            <div className="flex size-10 shrink-0 items-center justify-center rounded-full bg-accent/10">
               <Sparkles
-                className="size-5 text-[var(--color-accent)]"
+                className="size-5 text-accent"
                 aria-hidden="true"
               />
             </div>
 
             <div className="min-w-0 flex-1">
-              <p className="text-sm font-semibold text-[var(--color-text-primary)]">
+              <p className="text-sm font-semibold text-text-primary">
                 New version available!
               </p>
-              <p className="mt-0.5 text-xs text-[var(--color-text-secondary)]">
+              <p className="mt-0.5 text-xs text-text-secondary">
                 Includes bug fixes, performance improvements, and new features.
               </p>
 
@@ -98,7 +98,7 @@ export function UpdatePrompt() {
               {!isPaused && countdown > 0 && (
                 <button
                   onClick={() => setIsPaused(true)}
-                  className="mt-1.5 inline-flex items-center gap-1 text-[10px] text-[var(--color-text-tertiary)] hover:text-[var(--color-text-secondary)]"
+                  className="mt-1.5 inline-flex items-center gap-1 text-[10px] text-text-tertiary hover:text-text-secondary"
                 >
                   <Clock className="size-3" aria-hidden="true" />
                   Auto-updating in {minutes}:{seconds.toString().padStart(2, "0")} &middot; Pause
@@ -107,7 +107,7 @@ export function UpdatePrompt() {
               {isPaused && (
                 <button
                   onClick={() => setIsPaused(false)}
-                  className="mt-1.5 inline-flex items-center gap-1 text-[10px] text-[var(--color-text-tertiary)] hover:text-[var(--color-text-secondary)]"
+                  className="mt-1.5 inline-flex items-center gap-1 text-[10px] text-text-tertiary hover:text-text-secondary"
                 >
                   <Clock className="size-3" aria-hidden="true" />
                   Auto-update paused &middot; Resume
@@ -118,7 +118,7 @@ export function UpdatePrompt() {
             {/* Dismiss */}
             <button
               onClick={handleDismiss}
-              className="shrink-0 rounded-md p-1 text-[var(--color-text-tertiary)] transition-colors hover:bg-[var(--color-surface-secondary)] hover:text-[var(--color-text-primary)]"
+              className="shrink-0 rounded-md p-1 text-text-tertiary transition-colors hover:bg-surface-secondary hover:text-text-primary"
               aria-label="Dismiss update notification"
             >
               <X className="size-4" aria-hidden="true" />

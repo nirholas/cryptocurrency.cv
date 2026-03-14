@@ -12,7 +12,7 @@ export default function DefiLoading() {
         {Array.from({ length: 6 }).map((_, i) => (
           <div
             key={i}
-            className="rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] p-4 md:p-5"
+            className="rounded-lg border border-border bg-(--color-surface) p-4 md:p-5"
           >
             <div className="flex items-start justify-between gap-2 mb-2">
               <Skeleton className="h-3 w-28" />
@@ -26,11 +26,11 @@ export default function DefiLoading() {
 
       {/* Chain distribution + category row */}
       <div className="grid gap-6 lg:grid-cols-2 mb-10">
-        <div className="rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] p-6">
+        <div className="rounded-lg border border-border bg-(--color-surface) p-6">
           <Skeleton className="h-7 w-40 mb-4" />
           <Skeleton className="h-48 w-full rounded" />
         </div>
-        <div className="rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] p-6">
+        <div className="rounded-lg border border-border bg-(--color-surface) p-6">
           <Skeleton className="h-7 w-44 mb-4" />
           <Skeleton className="h-48 w-full rounded" />
         </div>
@@ -40,9 +40,9 @@ export default function DefiLoading() {
       <Skeleton className="h-8 w-52 mb-4" />
 
       {/* Table skeleton */}
-      <div className="rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] overflow-hidden mb-10">
+      <div className="rounded-lg border border-border bg-(--color-surface) overflow-hidden mb-10">
         {/* Table header */}
-        <div className="flex items-center gap-4 px-4 py-3 border-b border-[var(--color-border)] bg-[var(--color-surface-secondary)]">
+        <div className="flex items-center gap-4 px-4 py-3 border-b border-border bg-surface-secondary">
           <Skeleton className="h-4 w-6" />
           <Skeleton className="h-4 w-32" />
           <Skeleton className="h-4 w-16" />
@@ -55,7 +55,7 @@ export default function DefiLoading() {
         {Array.from({ length: 10 }).map((_, i) => (
           <div
             key={i}
-            className="flex items-center gap-4 px-4 py-4 border-b border-[var(--color-border)] last:border-b-0"
+            className="flex items-center gap-4 px-4 py-4 border-b border-border last:border-b-0"
           >
             <Skeleton className="h-4 w-6" />
             <div className="space-y-1 w-40">

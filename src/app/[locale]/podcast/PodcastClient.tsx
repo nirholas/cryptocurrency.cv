@@ -292,12 +292,12 @@ export default function PodcastClient() {
       {/* ---- Page header ---- */}
       <header className="space-y-2">
         <div className="flex items-center gap-3">
-          <Headphones className="h-7 w-7 text-[var(--color-accent)]" />
-          <h1 className="font-serif text-3xl font-bold text-[var(--color-text-primary)] md:text-4xl">
+          <Headphones className="h-7 w-7 text-accent" />
+          <h1 className="font-serif text-3xl font-bold text-text-primary md:text-4xl">
             Podcast &amp; AI Audio News
           </h1>
         </div>
-        <p className="max-w-2xl text-[var(--color-text-secondary)]">
+        <p className="max-w-2xl text-text-secondary">
           Stay up to date with in-depth crypto podcasts and AI-generated daily briefings
           covering Bitcoin, Ethereum, DeFi, and the wider market.
         </p>
@@ -307,8 +307,8 @@ export default function PodcastClient() {
       {activeEpisode && (
         <section className="space-y-4">
           <div className="flex items-center gap-2">
-            <Mic className="h-5 w-5 text-[var(--color-accent)]" />
-            <h2 className="font-serif text-xl font-bold text-[var(--color-text-primary)]">
+            <Mic className="h-5 w-5 text-accent" />
+            <h2 className="font-serif text-xl font-bold text-text-primary">
               Now Playing
             </h2>
             {activeEpisode.format && (
@@ -320,7 +320,7 @@ export default function PodcastClient() {
 
           <Card className="overflow-hidden">
             <CardHeader>
-              <div className="flex flex-wrap items-center gap-3 text-sm text-[var(--color-text-secondary)]">
+              <div className="flex flex-wrap items-center gap-3 text-sm text-text-secondary">
                 <span className="flex items-center gap-1">
                   <Calendar className="h-3.5 w-3.5" />
                   {formatDate(activeEpisode.date)}
@@ -349,8 +349,8 @@ export default function PodcastClient() {
       {/* ---- SECTION 2: Episode List ---- */}
       <section className="space-y-4">
         <div className="flex items-center gap-2">
-          <Radio className="h-5 w-5 text-[var(--color-accent)]" />
-          <h2 className="font-serif text-xl font-bold text-[var(--color-text-primary)]">
+          <Radio className="h-5 w-5 text-accent" />
+          <h2 className="font-serif text-xl font-bold text-text-primary">
             All Episodes
           </h2>
         </div>
@@ -364,13 +364,13 @@ export default function PodcastClient() {
                 key={ep.id}
                 className={cn(
                   "transition-colors",
-                  isActive && "ring-2 ring-[var(--color-accent)]"
+                  isActive && "ring-2 ring-accent"
                 )}
               >
                 <CardHeader className="pb-2">
                   <div className="flex items-start justify-between gap-2">
                     <div className="min-w-0 flex-1 space-y-1">
-                      <div className="flex flex-wrap items-center gap-2 text-xs text-[var(--color-text-tertiary)]">
+                      <div className="flex flex-wrap items-center gap-2 text-xs text-text-tertiary">
                         <span className="flex items-center gap-1">
                           <Calendar className="h-3 w-3" />
                           {formatDate(ep.date)}
@@ -392,8 +392,8 @@ export default function PodcastClient() {
                       className={cn(
                         "flex h-9 w-9 shrink-0 items-center justify-center rounded-full transition-transform hover:scale-110",
                         isActive
-                          ? "bg-[var(--color-accent)] text-[var(--color-text-inverse)]"
-                          : "bg-[var(--color-surface-secondary)] text-[var(--color-text-secondary)] hover:bg-[var(--color-accent)] hover:text-[var(--color-text-inverse)]"
+                          ? "bg-accent text-text-inverse"
+                          : "bg-surface-secondary text-text-secondary hover:bg-accent hover:text-text-inverse"
                       )}
                       aria-label={`Play ${ep.title}`}
                     >
@@ -404,7 +404,7 @@ export default function PodcastClient() {
                 <CardContent className="pt-0">
                   <p
                     className={cn(
-                      "text-sm text-[var(--color-text-secondary)]",
+                      "text-sm text-text-secondary",
                       !isExpanded && "line-clamp-2"
                     )}
                   >
@@ -412,7 +412,7 @@ export default function PodcastClient() {
                   </p>
                   <button
                     onClick={() => setExpandedId(isExpanded ? null : ep.id)}
-                    className="mt-1 flex items-center gap-1 text-xs font-medium text-[var(--color-accent)] hover:underline"
+                    className="mt-1 flex items-center gap-1 text-xs font-medium text-accent hover:underline"
                   >
                     {isExpanded ? (
                       <>
@@ -442,7 +442,7 @@ export default function PodcastClient() {
               <ChevronLeft className="mr-1 h-4 w-4" />
               Previous
             </Button>
-            <span className="text-sm text-[var(--color-text-secondary)]">
+            <span className="text-sm text-text-secondary">
               Page {page + 1} of {totalPages}
             </span>
             <Button
@@ -462,8 +462,8 @@ export default function PodcastClient() {
       {briefing && (
         <section className="space-y-4">
           <div className="flex items-center gap-2">
-            <Sparkles className="h-5 w-5 text-[var(--color-accent)]" />
-            <h2 className="font-serif text-xl font-bold text-[var(--color-text-primary)]">
+            <Sparkles className="h-5 w-5 text-accent" />
+            <h2 className="font-serif text-xl font-bold text-text-primary">
               AI News Briefing
             </h2>
             <Badge variant="live" className="ml-1">
@@ -471,7 +471,7 @@ export default function PodcastClient() {
             </Badge>
           </div>
 
-          <Card className="overflow-hidden border-[var(--color-accent)]/30">
+          <Card className="overflow-hidden border-accent/30">
             <CardHeader>
               <CardTitle>{briefing.title}</CardTitle>
               <CardDescription className="line-clamp-none">
@@ -480,12 +480,12 @@ export default function PodcastClient() {
             </CardHeader>
             <CardContent className="space-y-4">
               {/* Waveform + play */}
-              <div className="flex items-center gap-4 rounded-lg bg-[var(--color-surface-secondary)] p-4">
+              <div className="flex items-center gap-4 rounded-lg bg-surface-secondary p-4">
                 <button
                   onClick={() => setBriefingPlaying((p) => !p)}
                   className={cn(
                     "flex h-12 w-12 shrink-0 items-center justify-center rounded-full",
-                    "bg-[var(--color-accent)] text-[var(--color-text-inverse)]",
+                    "bg-accent text-text-inverse",
                     "transition-transform hover:scale-105 active:scale-95"
                   )}
                   aria-label={briefingPlaying ? "Pause briefing" : "Play briefing"}
@@ -499,7 +499,7 @@ export default function PodcastClient() {
 
                 <div className="flex-1 space-y-1">
                   <WaveformBars playing={briefingPlaying} className="h-8" />
-                  <div className="flex items-center justify-between text-xs text-[var(--color-text-tertiary)]">
+                  <div className="flex items-center justify-between text-xs text-text-tertiary">
                     <span>{formatDate(briefing.date)}</span>
                     <span>{formatDurationShort(briefing.duration)}</span>
                   </div>
@@ -510,7 +510,7 @@ export default function PodcastClient() {
               <div>
                 <button
                   onClick={() => setShowTranscript((s) => !s)}
-                  className="flex items-center gap-1 text-sm font-medium text-[var(--color-accent)] hover:underline"
+                  className="flex items-center gap-1 text-sm font-medium text-accent hover:underline"
                 >
                   {showTranscript ? (
                     <>
@@ -523,7 +523,7 @@ export default function PodcastClient() {
                   )}
                 </button>
                 {showTranscript && (
-                  <div className="mt-3 rounded-lg bg-[var(--color-surface-secondary)] p-4 text-sm leading-relaxed text-[var(--color-text-secondary)] whitespace-pre-line">
+                  <div className="mt-3 rounded-lg bg-surface-secondary p-4 text-sm leading-relaxed text-text-secondary whitespace-pre-line">
                     {briefing.transcript}
                   </div>
                 )}

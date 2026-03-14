@@ -42,7 +42,7 @@ export function ReadingProgressBar() {
 
   return (
     <div
-      className="fixed top-0 left-0 right-0 z-[60] h-1 bg-[var(--color-surface-tertiary)]"
+      className="fixed top-0 left-0 right-0 z-[60] h-1 bg-surface-tertiary"
       role="progressbar"
       aria-valuenow={Math.round(progress)}
       aria-valuemin={0}
@@ -50,14 +50,14 @@ export function ReadingProgressBar() {
       aria-label="Reading progress"
     >
       <div
-        className="h-full bg-gradient-to-r from-[var(--color-accent)] to-blue-500 transition-[width] duration-150 ease-out"
+        className="h-full bg-gradient-to-r from-accent to-blue-500 transition-[width] duration-150 ease-out"
         style={{ width: `${progress}%` }}
       />
       {/* Percentage chip */}
       <div
         className="absolute top-1.5 right-3 px-1.5 py-0.5 text-[10px] font-mono font-semibold rounded
-                   bg-[var(--color-surface-secondary)] text-[var(--color-text-tertiary)]
-                   border border-[var(--color-border)] shadow-sm opacity-80"
+                   bg-surface-secondary text-text-tertiary
+                   border border-border shadow-sm opacity-80"
       >
         {Math.round(progress)}%
       </div>
@@ -83,7 +83,7 @@ export function ReadingTimeBadge({
 
   return (
     <span
-      className={`inline-flex items-center gap-1 text-[11px] text-[var(--color-text-tertiary)] ${className ?? ""}`}
+      className={`inline-flex items-center gap-1 text-[11px] text-text-tertiary ${className ?? ""}`}
       title={`~${words} words`}
     >
       <svg

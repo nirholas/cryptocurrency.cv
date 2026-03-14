@@ -54,22 +54,22 @@ export default async function LearnArticlePage({ params }: Props) {
       <Header />
       <main className="container-main py-10">
         {/* Breadcrumbs */}
-        <nav className="flex items-center gap-2 text-sm text-[var(--color-text-secondary)] mb-8">
+        <nav className="flex items-center gap-2 text-sm text-text-secondary mb-8">
           <Link
             href="/"
-            className="hover:text-[var(--color-accent)] transition-colors"
+            className="hover:text-accent transition-colors"
           >
             Home
           </Link>
           <span>/</span>
           <Link
             href="/learn"
-            className="hover:text-[var(--color-accent)] transition-colors"
+            className="hover:text-accent transition-colors"
           >
             Learn
           </Link>
           <span>/</span>
-          <span className="text-[var(--color-text-primary)] font-medium truncate">
+          <span className="text-text-primary font-medium truncate">
             {article.title}
           </span>
         </nav>
@@ -79,21 +79,21 @@ export default async function LearnArticlePage({ params }: Props) {
           <article className="flex-1 min-w-0">
             <header className="mb-8">
               <span className="text-4xl mb-3 block">{article.icon}</span>
-              <h1 className="font-serif text-3xl md:text-4xl font-bold mb-3 text-[var(--color-text-primary)]">
+              <h1 className="font-serif text-3xl md:text-4xl font-bold mb-3 text-text-primary">
                 {article.title}
               </h1>
-              <p className="text-[var(--color-text-secondary)] text-lg mb-4">
+              <p className="text-text-secondary text-lg mb-4">
                 {article.description}
               </p>
               <div className="flex items-center gap-3">
                 <Badge>{article.difficulty}</Badge>
-                <span className="text-sm text-[var(--color-text-secondary)]">
+                <span className="text-sm text-text-secondary">
                   {article.readTime} read
                 </span>
-                <span className="text-sm text-[var(--color-text-secondary)]">
+                <span className="text-sm text-text-secondary">
                   •
                 </span>
-                <span className="text-sm text-[var(--color-text-secondary)]">
+                <span className="text-sm text-text-secondary">
                   {article.category}
                 </span>
               </div>
@@ -101,17 +101,17 @@ export default async function LearnArticlePage({ params }: Props) {
 
             {/* Article body rendered as prose */}
             <div
-              className="prose dark:prose-invert max-w-none prose-headings:font-serif prose-a:text-[var(--color-accent)] prose-a:no-underline hover:prose-a:underline"
+              className="prose dark:prose-invert max-w-none prose-headings:font-serif prose-a:text-accent prose-a:no-underline hover:prose-a:underline"
               dangerouslySetInnerHTML={{
                 __html: sanitizeMarkdown(markdownToHtml(article.content)),
               }}
             />
 
             {/* Back link */}
-            <div className="mt-10 pt-6 border-t border-[var(--color-border)]">
+            <div className="mt-10 pt-6 border-t border-border">
               <Link
                 href="/learn"
-                className="text-sm text-[var(--color-accent)] hover:underline"
+                className="text-sm text-accent hover:underline"
               >
                 ← Back to Learn
               </Link>
@@ -121,13 +121,13 @@ export default async function LearnArticlePage({ params }: Props) {
           {/* Related Articles Sidebar */}
           {related.length > 0 && (
             <aside className="lg:w-72 shrink-0">
-              <h2 className="font-serif text-lg font-bold mb-4 text-[var(--color-text-primary)]">
+              <h2 className="font-serif text-lg font-bold mb-4 text-text-primary">
                 Related Guides
               </h2>
               <div className="space-y-3">
                 {related.map((r) => (
                   <Link key={r.slug} href={`/learn/${r.slug}`}>
-                    <Card className="hover:border-[var(--color-accent)] transition-colors">
+                    <Card className="hover:border-accent transition-colors">
                       <CardHeader className="p-4">
                         <div className="flex items-start gap-2">
                           <span className="text-xl">{r.icon}</span>

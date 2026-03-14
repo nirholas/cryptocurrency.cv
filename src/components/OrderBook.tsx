@@ -142,15 +142,15 @@ export default function OrderBook({
       <CardHeader className="pb-2">
         <div className="flex items-center justify-between">
           <CardTitle className="flex items-center gap-2 text-base">
-            <BookOpen className="h-4 w-4 text-[var(--color-accent)]" />
+            <BookOpen className="h-4 w-4 text-accent" />
             Order Book
-            <span className="text-xs font-normal text-[var(--color-text-tertiary)]">
+            <span className="text-xs font-normal text-text-tertiary">
               {symbol}/USD
             </span>
           </CardTitle>
           <button
             onClick={fetchOrderBook}
-            className="text-[var(--color-text-tertiary)] hover:text-[var(--color-text-primary)] transition-colors"
+            className="text-text-tertiary hover:text-text-primary transition-colors"
             title="Refresh"
           >
             <RefreshCw className={cn("h-3.5 w-3.5", loading && "animate-spin")} />
@@ -160,12 +160,12 @@ export default function OrderBook({
         {/* Spread */}
         {data && typeof data.spread === "number" && (
           <div className="flex items-center gap-2 mt-1">
-            <span className="text-xs text-[var(--color-text-tertiary)]">Spread:</span>
-            <span className="text-xs font-medium text-[var(--color-text-primary)]">
+            <span className="text-xs text-text-tertiary">Spread:</span>
+            <span className="text-xs font-medium text-text-primary">
               ${formatPrice(data.spread)}
             </span>
             {typeof data.spreadPercent === "number" && (
-              <span className="text-[10px] text-[var(--color-text-tertiary)]">
+              <span className="text-[10px] text-text-tertiary">
                 ({data.spreadPercent.toFixed(3)}%)
               </span>
             )}
@@ -185,7 +185,7 @@ export default function OrderBook({
 
         {/* Error state */}
         {error && !data && (
-          <div className="py-8 text-center text-sm text-[var(--color-text-tertiary)]">
+          <div className="py-8 text-center text-sm text-text-tertiary">
             {error}
           </div>
         )}
@@ -193,7 +193,7 @@ export default function OrderBook({
         {data && (
           <div className="space-y-0">
             {/* Header */}
-            <div className="grid grid-cols-3 gap-1 px-1 pb-1.5 text-[10px] font-semibold uppercase tracking-wider text-[var(--color-text-tertiary)]">
+            <div className="grid grid-cols-3 gap-1 px-1 pb-1.5 text-[10px] font-semibold uppercase tracking-wider text-text-tertiary">
               <span>Price</span>
               <span className="text-center">Amount</span>
               <span className="text-right">Total</span>
@@ -216,10 +216,10 @@ export default function OrderBook({
                     <span className="relative z-10 font-mono text-red-600 dark:text-red-400">
                       {formatPrice(level.price)}
                     </span>
-                    <span className="relative z-10 text-center font-mono text-[var(--color-text-secondary)]">
+                    <span className="relative z-10 text-center font-mono text-text-secondary">
                       {formatAmount(level.amount)}
                     </span>
-                    <span className="relative z-10 text-right font-mono text-[var(--color-text-tertiary)]">
+                    <span className="relative z-10 text-right font-mono text-text-tertiary">
                       {formatAmount(level.total)}
                     </span>
                   </div>
@@ -228,12 +228,12 @@ export default function OrderBook({
             </div>
 
             {/* Spread divider */}
-            <div className="my-1 flex items-center justify-center gap-2 border-y border-[var(--color-border)] py-1">
-              <span className="text-[10px] font-medium text-[var(--color-text-tertiary)]">
+            <div className="my-1 flex items-center justify-center gap-2 border-y border-border py-1">
+              <span className="text-[10px] font-medium text-text-tertiary">
                 SPREAD
               </span>
               {typeof data.spread === "number" && (
-                <span className="text-xs font-bold text-[var(--color-text-primary)]">
+                <span className="text-xs font-bold text-text-primary">
                   ${formatPrice(data.spread)}
                 </span>
               )}
@@ -256,10 +256,10 @@ export default function OrderBook({
                     <span className="relative z-10 font-mono text-green-600 dark:text-green-400">
                       {formatPrice(level.price)}
                     </span>
-                    <span className="relative z-10 text-center font-mono text-[var(--color-text-secondary)]">
+                    <span className="relative z-10 text-center font-mono text-text-secondary">
                       {formatAmount(level.amount)}
                     </span>
-                    <span className="relative z-10 text-right font-mono text-[var(--color-text-tertiary)]">
+                    <span className="relative z-10 text-right font-mono text-text-tertiary">
                       {formatAmount(level.total)}
                     </span>
                   </div>
@@ -269,7 +269,7 @@ export default function OrderBook({
 
             {/* Last update */}
             {lastUpdate && (
-              <div className="mt-2 text-center text-[10px] text-[var(--color-text-tertiary)]">
+              <div className="mt-2 text-center text-[10px] text-text-tertiary">
                 Updated {lastUpdate.toLocaleTimeString()}
               </div>
             )}

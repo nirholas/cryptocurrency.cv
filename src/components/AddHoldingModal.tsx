@@ -107,12 +107,12 @@ export function AddHoldingModal({ trigger }: AddHoldingModalProps) {
       <Dialog.Portal>
         <Dialog.Overlay className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=closed]:animate-out data-[state=closed]:fade-out-0" />
         <Dialog.Content
-          className="fixed top-1/2 left-1/2 z-50 w-full max-w-md -translate-x-1/2 -translate-y-1/2 rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] p-6 shadow-xl focus:outline-none data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=open]:zoom-in-95 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95"
+          className="fixed top-1/2 left-1/2 z-50 w-full max-w-md -translate-x-1/2 -translate-y-1/2 rounded-xl border border-border bg-(--color-surface) p-6 shadow-xl focus:outline-none data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=open]:zoom-in-95 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95"
         >
           <div className="flex items-center justify-between mb-5">
             <Dialog.Title className="text-lg font-bold">Add Holding</Dialog.Title>
             <Dialog.Close asChild>
-              <button className="rounded-md p-1 hover:bg-[var(--color-surface-secondary)] transition-colors" aria-label="Close">
+              <button className="rounded-md p-1 hover:bg-surface-secondary transition-colors" aria-label="Close">
                 <X className="h-4 w-4" />
               </button>
             </Dialog.Close>
@@ -123,15 +123,15 @@ export function AddHoldingModal({ trigger }: AddHoldingModalProps) {
             <div className="relative">
               <label className="block text-sm font-medium mb-1.5">Coin</label>
               {selectedCoin ? (
-                <div className="flex items-center justify-between rounded-md border border-[var(--color-border)] bg-[var(--color-surface-secondary)] px-3 py-2">
+                <div className="flex items-center justify-between rounded-md border border-border bg-surface-secondary px-3 py-2">
                   <span className="font-medium">
                     {selectedCoin.name}{" "}
-                    <span className="text-[var(--color-text-secondary)]">({selectedCoin.symbol})</span>
+                    <span className="text-text-secondary">({selectedCoin.symbol})</span>
                   </span>
                   <button
                     type="button"
                     onClick={() => { setSelectedCoin(null); setSearchQuery(""); }}
-                    className="rounded p-0.5 hover:bg-[var(--color-border)] transition-colors"
+                    className="rounded p-0.5 hover:bg-border transition-colors"
                   >
                     <X className="h-3.5 w-3.5" />
                   </button>
@@ -139,26 +139,26 @@ export function AddHoldingModal({ trigger }: AddHoldingModalProps) {
               ) : (
                 <>
                   <div className="relative">
-                    <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-[var(--color-text-secondary)]" />
+                    <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-text-secondary" />
                     <input
                       type="text"
                       placeholder="Search coins…"
                       value={searchQuery}
                       onChange={(e) => { setSearchQuery(e.target.value); setShowDropdown(true); }}
                       onFocus={() => setShowDropdown(true)}
-                      className="w-full rounded-md border border-[var(--color-border)] bg-[var(--color-surface)] pl-9 pr-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]"
+                      className="w-full rounded-md border border-border bg-(--color-surface) pl-9 pr-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-accent"
                     />
                   </div>
                   {showDropdown && (
-                    <ul className="absolute z-10 mt-1 w-full max-h-48 overflow-y-auto rounded-md border border-[var(--color-border)] bg-[var(--color-surface)] shadow-lg">
+                    <ul className="absolute z-10 mt-1 w-full max-h-48 overflow-y-auto rounded-md border border-border bg-(--color-surface) shadow-lg">
                       {filtered.length === 0 ? (
-                        <li className="px-3 py-2 text-sm text-[var(--color-text-secondary)]">No coins found</li>
+                        <li className="px-3 py-2 text-sm text-text-secondary">No coins found</li>
                       ) : (
                         filtered.map((coin) => (
                           <li key={coin.id}>
                             <button
                               type="button"
-                              className="flex w-full items-center gap-2 px-3 py-2 text-sm hover:bg-[var(--color-surface-secondary)] transition-colors text-left"
+                              className="flex w-full items-center gap-2 px-3 py-2 text-sm hover:bg-surface-secondary transition-colors text-left"
                               onClick={() => {
                                 setSelectedCoin(coin);
                                 setSearchQuery(coin.name);
@@ -166,7 +166,7 @@ export function AddHoldingModal({ trigger }: AddHoldingModalProps) {
                               }}
                             >
                               <span className="font-medium">{coin.name}</span>
-                              <span className="text-[var(--color-text-secondary)]">{coin.symbol}</span>
+                              <span className="text-text-secondary">{coin.symbol}</span>
                             </button>
                           </li>
                         ))
@@ -187,7 +187,7 @@ export function AddHoldingModal({ trigger }: AddHoldingModalProps) {
                 placeholder="0.00"
                 value={amount}
                 onChange={(e) => setAmount(e.target.value)}
-                className="w-full rounded-md border border-[var(--color-border)] bg-[var(--color-surface)] px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]"
+                className="w-full rounded-md border border-border bg-(--color-surface) px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-accent"
               />
             </div>
 
@@ -201,7 +201,7 @@ export function AddHoldingModal({ trigger }: AddHoldingModalProps) {
                 placeholder="0.00"
                 value={buyPrice}
                 onChange={(e) => setBuyPrice(e.target.value)}
-                className="w-full rounded-md border border-[var(--color-border)] bg-[var(--color-surface)] px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]"
+                className="w-full rounded-md border border-border bg-(--color-surface) px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-accent"
               />
             </div>
 

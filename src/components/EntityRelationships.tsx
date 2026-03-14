@@ -530,10 +530,10 @@ export default function EntityRelationships({
   /* ---- Render ---------------------------------------------------- */
   if (loading) {
     return (
-      <div className={cn('flex items-center justify-center min-h-[400px] bg-[var(--color-surface)] rounded-2xl border border-[var(--color-border)]', className)}>
+      <div className={cn('flex items-center justify-center min-h-[400px] bg-(--color-surface) rounded-2xl border border-border', className)}>
         <div className="flex flex-col items-center gap-3">
-          <div className="h-10 w-10 border-3 border-[var(--color-accent)] border-t-transparent rounded-full animate-spin" />
-          <p className="text-sm text-[var(--color-text-secondary)]">Loading knowledge graph…</p>
+          <div className="h-10 w-10 border-3 border-accent border-t-transparent rounded-full animate-spin" />
+          <p className="text-sm text-text-secondary">Loading knowledge graph…</p>
         </div>
       </div>
     );
@@ -541,11 +541,11 @@ export default function EntityRelationships({
 
   if (error || !nodesRef.current.length) {
     return (
-      <div className={cn('flex items-center justify-center min-h-[400px] bg-[var(--color-surface)] rounded-2xl border border-[var(--color-border)]', className)}>
+      <div className={cn('flex items-center justify-center min-h-[400px] bg-(--color-surface) rounded-2xl border border-border', className)}>
         <div className="flex flex-col items-center gap-2 text-center px-6">
-          <Info className="h-8 w-8 text-[var(--color-text-tertiary)]" />
-          <p className="text-[var(--color-text-secondary)]">{error || 'No entities found in the knowledge graph yet.'}</p>
-          <p className="text-sm text-[var(--color-text-tertiary)]">Graph data will appear as news is ingested and analyzed.</p>
+          <Info className="h-8 w-8 text-text-tertiary" />
+          <p className="text-text-secondary">{error || 'No entities found in the knowledge graph yet.'}</p>
+          <p className="text-sm text-text-tertiary">Graph data will appear as news is ingested and analyzed.</p>
         </div>
       </div>
     );
@@ -559,7 +559,7 @@ export default function EntityRelationships({
       {/* SVG Graph */}
       <div
         ref={containerRef}
-        className="w-full h-[500px] md:h-[600px] bg-[var(--color-surface)] rounded-2xl border border-[var(--color-border)] overflow-hidden relative"
+        className="w-full h-[500px] md:h-[600px] bg-(--color-surface) rounded-2xl border border-border overflow-hidden relative"
       >
         <svg
           ref={svgRef}
@@ -660,31 +660,31 @@ export default function EntityRelationships({
         <div className="absolute bottom-3 right-3 flex flex-col gap-1">
           <button
             onClick={zoomIn}
-            className="p-1.5 rounded-lg bg-[var(--color-surface-secondary)] border border-[var(--color-border)] hover:bg-[var(--color-border)] transition-colors"
+            className="p-1.5 rounded-lg bg-surface-secondary border border-border hover:bg-border transition-colors"
             aria-label="Zoom in"
           >
-            <ZoomIn className="h-4 w-4 text-[var(--color-text-secondary)]" />
+            <ZoomIn className="h-4 w-4 text-text-secondary" />
           </button>
           <button
             onClick={zoomOut}
-            className="p-1.5 rounded-lg bg-[var(--color-surface-secondary)] border border-[var(--color-border)] hover:bg-[var(--color-border)] transition-colors"
+            className="p-1.5 rounded-lg bg-surface-secondary border border-border hover:bg-border transition-colors"
             aria-label="Zoom out"
           >
-            <ZoomOut className="h-4 w-4 text-[var(--color-text-secondary)]" />
+            <ZoomOut className="h-4 w-4 text-text-secondary" />
           </button>
           <button
             onClick={resetView}
-            className="p-1.5 rounded-lg bg-[var(--color-surface-secondary)] border border-[var(--color-border)] hover:bg-[var(--color-border)] transition-colors"
+            className="p-1.5 rounded-lg bg-surface-secondary border border-border hover:bg-border transition-colors"
             aria-label="Reset view"
           >
-            <Maximize2 className="h-4 w-4 text-[var(--color-text-secondary)]" />
+            <Maximize2 className="h-4 w-4 text-text-secondary" />
           </button>
         </div>
 
         {/* Legend */}
         <div className="absolute top-3 left-3 flex flex-wrap gap-2 max-w-[280px]">
           {Object.entries(TYPE_COLORS).slice(0, 6).map(([type, color]) => (
-            <span key={type} className="inline-flex items-center gap-1 text-[10px] text-[var(--color-text-tertiary)]">
+            <span key={type} className="inline-flex items-center gap-1 text-[10px] text-text-tertiary">
               <span className="inline-block w-2.5 h-2.5 rounded-full" style={{ background: color }} />
               {TYPE_LABELS[type] || type}
             </span>
@@ -694,50 +694,50 @@ export default function EntityRelationships({
 
       {/* Details panel (selected node) */}
       {selectedNodeData && (
-        <div className="absolute top-3 right-14 w-72 bg-[var(--color-surface)] border border-[var(--color-border)] rounded-xl shadow-lg p-4 z-10 max-h-[calc(100%-24px)] overflow-y-auto">
+        <div className="absolute top-3 right-14 w-72 bg-(--color-surface) border border-border rounded-xl shadow-lg p-4 z-10 max-h-[calc(100%-24px)] overflow-y-auto">
           <div className="flex items-start justify-between mb-3">
             <div className="flex items-center gap-2">
               <span className="inline-block w-3 h-3 rounded-full" style={{ background: selectedNodeData.color }} />
-              <h4 className="font-semibold text-[var(--color-text-primary)] leading-tight">{selectedNodeData.label}</h4>
+              <h4 className="font-semibold text-text-primary leading-tight">{selectedNodeData.label}</h4>
             </div>
             <button
               onClick={() => { setSelectedNode(null); onNodeSelect?.(null); }}
-              className="p-0.5 hover:bg-[var(--color-surface-secondary)] rounded"
+              className="p-0.5 hover:bg-surface-secondary rounded"
             >
-              <X className="h-4 w-4 text-[var(--color-text-tertiary)]" />
+              <X className="h-4 w-4 text-text-tertiary" />
             </button>
           </div>
 
           <div className="space-y-2 text-sm">
             <div className="flex justify-between">
-              <span className="text-[var(--color-text-tertiary)]">Type</span>
-              <span className="text-[var(--color-text-secondary)] capitalize">{selectedNodeData.type}</span>
+              <span className="text-text-tertiary">Type</span>
+              <span className="text-text-secondary capitalize">{selectedNodeData.type}</span>
             </div>
             <div className="flex justify-between">
-              <span className="text-[var(--color-text-tertiary)]">Sentiment</span>
+              <span className="text-text-tertiary">Sentiment</span>
               <span className={cn(
                 'font-medium',
                 selectedNodeData.sentiment > 0.2 ? 'text-green-500' :
                 selectedNodeData.sentiment < -0.2 ? 'text-red-500' :
-                'text-[var(--color-text-secondary)]',
+                'text-text-secondary',
               )}>
                 {selectedNodeData.sentiment > 0 ? '+' : ''}{selectedNodeData.sentiment.toFixed(2)}
               </span>
             </div>
             <div className="flex justify-between">
-              <span className="text-[var(--color-text-tertiary)]">Connections</span>
-              <span className="text-[var(--color-text-secondary)]">{selectedConnections.length}</span>
+              <span className="text-text-tertiary">Connections</span>
+              <span className="text-text-secondary">{selectedConnections.length}</span>
             </div>
           </div>
 
           {selectedConnections.length > 0 && (
-            <div className="mt-3 pt-3 border-t border-[var(--color-border)]">
-              <p className="text-xs font-medium text-[var(--color-text-tertiary)] mb-2">Connected Entities</p>
+            <div className="mt-3 pt-3 border-t border-border">
+              <p className="text-xs font-medium text-text-tertiary mb-2">Connected Entities</p>
               <div className="space-y-1.5 max-h-48 overflow-y-auto">
                 {selectedConnections.slice(0, 15).map((conn, i) => (
                   <button
                     key={i}
-                    className="w-full flex items-center justify-between text-left px-2 py-1 rounded hover:bg-[var(--color-surface-secondary)] transition-colors"
+                    className="w-full flex items-center justify-between text-left px-2 py-1 rounded hover:bg-surface-secondary transition-colors"
                     onClick={() => {
                       if (conn.otherNode) {
                         setSelectedNode(conn.otherNode.id);
@@ -747,9 +747,9 @@ export default function EntityRelationships({
                   >
                     <div className="flex items-center gap-1.5 min-w-0">
                       <span className="inline-block w-2 h-2 rounded-full flex-shrink-0" style={{ background: conn.otherNode?.color }} />
-                      <span className="text-sm text-[var(--color-text-primary)] truncate">{conn.otherNode?.label}</span>
+                      <span className="text-sm text-text-primary truncate">{conn.otherNode?.label}</span>
                     </div>
-                    <span className="text-xs text-[var(--color-text-tertiary)] flex-shrink-0 ml-2 capitalize">{conn.type}</span>
+                    <span className="text-xs text-text-tertiary flex-shrink-0 ml-2 capitalize">{conn.type}</span>
                   </button>
                 ))}
               </div>

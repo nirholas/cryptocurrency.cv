@@ -243,15 +243,15 @@ function SectionHeading({
 }) {
   return (
     <div className="flex items-start gap-3">
-      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[var(--color-accent)]/10 text-[var(--color-accent)]">
+      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-accent/10 text-accent">
         <Icon className="h-5 w-5" />
       </div>
       <div>
-        <h2 className="font-serif text-xl font-bold text-[var(--color-text-primary)] md:text-2xl">
+        <h2 className="font-serif text-xl font-bold text-text-primary md:text-2xl">
           {title}
         </h2>
         {subtitle && (
-          <p className="mt-0.5 text-sm text-[var(--color-text-secondary)]">
+          <p className="mt-0.5 text-sm text-text-secondary">
             {subtitle}
           </p>
         )}
@@ -270,7 +270,7 @@ function StatCard({ indicator }: { indicator: MacroIndicator }) {
     <Card className="hover:shadow-md transition-shadow">
       <CardContent className="p-5">
         <div className="flex items-center justify-between mb-3">
-          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-[var(--color-accent)]/10 text-[var(--color-accent)]">
+          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-accent/10 text-accent">
             <Icon className="h-4.5 w-4.5" />
           </div>
           <span
@@ -278,20 +278,20 @@ function StatCard({ indicator }: { indicator: MacroIndicator }) {
               "inline-flex items-center gap-0.5 text-xs font-medium",
               isUp && "text-emerald-600 dark:text-emerald-400",
               isDown && "text-red-600 dark:text-red-400",
-              !isUp && !isDown && "text-[var(--color-text-tertiary)]",
+              !isUp && !isDown && "text-text-tertiary",
             )}
           >
             <ChangeIcon className="h-3 w-3" />
             {indicator.change}
           </span>
         </div>
-        <p className="text-2xl font-bold text-[var(--color-text-primary)]">
+        <p className="text-2xl font-bold text-text-primary">
           {indicator.value}
         </p>
-        <p className="mt-1 text-sm font-medium text-[var(--color-text-secondary)]">
+        <p className="mt-1 text-sm font-medium text-text-secondary">
           {indicator.label}
         </p>
-        <p className="mt-0.5 text-xs text-[var(--color-text-tertiary)]">
+        <p className="mt-0.5 text-xs text-text-tertiary">
           {indicator.description}
         </p>
       </CardContent>
@@ -316,10 +316,10 @@ export default async function MacroPage({ params }: Props) {
           <div className="flex items-center gap-2">
             <Badge variant="default">Macro</Badge>
           </div>
-          <h1 className="font-serif text-3xl font-bold text-[var(--color-text-primary)] md:text-4xl">
+          <h1 className="font-serif text-3xl font-bold text-text-primary md:text-4xl">
             Macro Dashboard
           </h1>
-          <p className="max-w-2xl text-[var(--color-text-secondary)]">
+          <p className="max-w-2xl text-text-secondary">
             Track macroeconomic indicators that impact cryptocurrency markets.
             Monitor interest rates, inflation data, dollar strength, and their
             correlation with digital assets.
@@ -347,17 +347,17 @@ export default async function MacroPage({ params }: Props) {
             subtitle="How Bitcoin correlates with major macroeconomic indicators (90-day rolling)"
             icon={Bitcoin}
           />
-          <div className="mt-6 overflow-x-auto rounded-lg border border-[var(--color-border)]">
+          <div className="mt-6 overflow-x-auto rounded-lg border border-border">
             <table className="w-full text-sm">
               <thead>
-                <tr className="border-b border-[var(--color-border)] bg-[var(--color-surface-secondary)]">
-                  <th className="px-4 py-3 text-left font-semibold text-[var(--color-text-primary)]">
+                <tr className="border-b border-border bg-surface-secondary">
+                  <th className="px-4 py-3 text-left font-semibold text-text-primary">
                     Indicator
                   </th>
-                  <th className="px-4 py-3 text-center font-semibold text-[var(--color-text-primary)]">
+                  <th className="px-4 py-3 text-center font-semibold text-text-primary">
                     Correlation
                   </th>
-                  <th className="px-4 py-3 text-left font-semibold text-[var(--color-text-primary)] hidden sm:table-cell">
+                  <th className="px-4 py-3 text-left font-semibold text-text-primary hidden sm:table-cell">
                     Relationship
                   </th>
                 </tr>
@@ -370,16 +370,16 @@ export default async function MacroPage({ params }: Props) {
                   return (
                     <tr
                       key={row.indicator}
-                      className="border-b border-[var(--color-border)] last:border-0 hover:bg-[var(--color-surface-secondary)] transition-colors"
+                      className="border-b border-border last:border-0 hover:bg-surface-secondary transition-colors"
                     >
-                      <td className="px-4 py-3 font-medium text-[var(--color-text-primary)]">
+                      <td className="px-4 py-3 font-medium text-text-primary">
                         {row.indicator}
                       </td>
                       <td className="px-4 py-3 text-center">
                         <div className="flex items-center justify-center gap-2">
                           {/* Visual bar */}
                           <div className="hidden md:flex w-24 items-center">
-                            <div className="relative h-2 w-full rounded-full bg-[var(--color-surface-tertiary)]">
+                            <div className="relative h-2 w-full rounded-full bg-surface-tertiary">
                               <div
                                 className={cn(
                                   "absolute top-0 h-2 rounded-full",
@@ -389,7 +389,7 @@ export default async function MacroPage({ params }: Props) {
                                 )}
                                 style={{ width: `${absCorr * 50}%` }}
                               />
-                              <div className="absolute left-1/2 top-0 h-2 w-px bg-[var(--color-border)]" />
+                              <div className="absolute left-1/2 top-0 h-2 w-px bg-border" />
                             </div>
                           </div>
                           <span
@@ -405,7 +405,7 @@ export default async function MacroPage({ params }: Props) {
                           </span>
                         </div>
                       </td>
-                      <td className="px-4 py-3 text-[var(--color-text-secondary)] hidden sm:table-cell">
+                      <td className="px-4 py-3 text-text-secondary hidden sm:table-cell">
                         {row.relationship}
                       </td>
                     </tr>
@@ -414,7 +414,7 @@ export default async function MacroPage({ params }: Props) {
               </tbody>
             </table>
           </div>
-          <p className="mt-2 text-xs text-[var(--color-text-tertiary)]">
+          <p className="mt-2 text-xs text-text-tertiary">
             Correlation values range from -1 (perfect inverse) to +1 (perfect
             positive). Based on 90-day rolling data. Past correlations do not
             guarantee future relationships.
@@ -437,10 +437,10 @@ export default async function MacroPage({ params }: Props) {
                 <CardContent className="p-4">
                   <div className="flex items-start justify-between gap-2">
                     <div className="flex-1 min-w-0">
-                      <p className="text-sm font-semibold text-[var(--color-text-primary)]">
+                      <p className="text-sm font-semibold text-text-primary">
                         {event.title}
                       </p>
-                      <p className="mt-0.5 text-xs text-[var(--color-text-tertiary)]">
+                      <p className="mt-0.5 text-xs text-text-tertiary">
                         {event.type}
                       </p>
                     </div>
@@ -456,7 +456,7 @@ export default async function MacroPage({ params }: Props) {
                       {event.impact}
                     </Badge>
                   </div>
-                  <div className="mt-3 flex items-center gap-1.5 text-xs text-[var(--color-text-secondary)]">
+                  <div className="mt-3 flex items-center gap-1.5 text-xs text-text-secondary">
                     <Calendar className="h-3 w-3" />
                     <time>{event.date}</time>
                   </div>
@@ -483,7 +483,7 @@ export default async function MacroPage({ params }: Props) {
                 >
                   <CardHeader>
                     <div className="flex items-center gap-3">
-                      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[var(--color-accent)]/10 text-[var(--color-accent)]">
+                      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-accent/10 text-accent">
                         <Icon className="h-4.5 w-4.5" />
                       </div>
                       <CardTitle className="font-serif text-base">
@@ -492,7 +492,7 @@ export default async function MacroPage({ params }: Props) {
                     </div>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-sm leading-relaxed text-[var(--color-text-secondary)]">
+                    <p className="text-sm leading-relaxed text-text-secondary">
                       {card.description}
                     </p>
                   </CardContent>
@@ -503,8 +503,8 @@ export default async function MacroPage({ params }: Props) {
         </section>
 
         {/* Disclaimer */}
-        <aside className="rounded-lg border border-[var(--color-border)] bg-[var(--color-surface-secondary)] p-4">
-          <p className="text-xs text-[var(--color-text-tertiary)]">
+        <aside className="rounded-lg border border-border bg-surface-secondary p-4">
+          <p className="text-xs text-text-tertiary">
             <strong>Disclaimer:</strong> Macroeconomic data shown is for
             informational purposes only. Correlations are based on historical
             data and may not predict future market behavior. This is not

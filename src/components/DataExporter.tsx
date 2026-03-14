@@ -293,7 +293,7 @@ export default function DataExporter() {
     <div className="space-y-10">
       {/* ─── Section 1: Data Export ─── */}
       <section>
-        <h2 className="font-serif text-2xl font-bold text-[var(--color-text-primary)] mb-6">
+        <h2 className="font-serif text-2xl font-bold text-text-primary mb-6">
           Data Export
         </h2>
 
@@ -301,9 +301,9 @@ export default function DataExporter() {
           {/* Left: Configuration */}
           <div className="space-y-6">
             {/* Data type */}
-            <div className="rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] overflow-hidden">
-              <div className="px-4 py-3 border-b border-[var(--color-border)] bg-[var(--color-surface-secondary)]">
-                <h3 className="text-sm font-semibold text-[var(--color-text-primary)]">
+            <div className="rounded-lg border border-border bg-(--color-surface) overflow-hidden">
+              <div className="px-4 py-3 border-b border-border bg-surface-secondary">
+                <h3 className="text-sm font-semibold text-text-primary">
                   Data Type
                 </h3>
               </div>
@@ -317,16 +317,16 @@ export default function DataExporter() {
                       className={cn(
                         "flex items-center gap-3 rounded-md px-3 py-2.5 text-left transition-colors cursor-pointer",
                         dataType === dt.id
-                          ? "bg-[var(--color-accent)]/10 border border-[var(--color-accent)]/20"
-                          : "hover:bg-[var(--color-surface-secondary)] border border-transparent",
+                          ? "bg-accent/10 border border-accent/20"
+                          : "hover:bg-surface-secondary border border-transparent",
                       )}
                     >
                       <Icon
                         className={cn(
                           "h-4 w-4 shrink-0",
                           dataType === dt.id
-                            ? "text-[var(--color-accent)]"
-                            : "text-[var(--color-text-tertiary)]",
+                            ? "text-accent"
+                            : "text-text-tertiary",
                         )}
                       />
                       <div>
@@ -334,13 +334,13 @@ export default function DataExporter() {
                           className={cn(
                             "text-sm font-medium",
                             dataType === dt.id
-                              ? "text-[var(--color-accent)]"
-                              : "text-[var(--color-text-primary)]",
+                              ? "text-accent"
+                              : "text-text-primary",
                           )}
                         >
                           {dt.label}
                         </p>
-                        <p className="text-xs text-[var(--color-text-tertiary)]">
+                        <p className="text-xs text-text-tertiary">
                           {dt.description}
                         </p>
                       </div>
@@ -351,9 +351,9 @@ export default function DataExporter() {
             </div>
 
             {/* Configuration */}
-            <div className="rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] overflow-hidden">
-              <div className="px-4 py-3 border-b border-[var(--color-border)] bg-[var(--color-surface-secondary)]">
-                <h3 className="text-sm font-semibold text-[var(--color-text-primary)]">
+            <div className="rounded-lg border border-border bg-(--color-surface) overflow-hidden">
+              <div className="px-4 py-3 border-b border-border bg-surface-secondary">
+                <h3 className="text-sm font-semibold text-text-primary">
                   Configuration
                 </h3>
               </div>
@@ -361,13 +361,13 @@ export default function DataExporter() {
                 {/* Category */}
                 {(dataType === "news" || dataType === "market") && (
                   <div className="space-y-1">
-                    <label className="text-sm font-medium text-[var(--color-text-secondary)]">
+                    <label className="text-sm font-medium text-text-secondary">
                       Category
                     </label>
                     <select
                       value={category}
                       onChange={(e) => setCategory(e.target.value)}
-                      className="w-full rounded-md border border-[var(--color-border)] bg-[var(--color-surface-secondary)] px-3 py-1.5 text-sm text-[var(--color-text-primary)] font-mono focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]"
+                      className="w-full rounded-md border border-border bg-surface-secondary px-3 py-1.5 text-sm text-text-primary font-mono focus:outline-none focus:ring-2 focus:ring-accent"
                     >
                       {CATEGORIES.map((c) => (
                         <option key={c} value={c}>
@@ -381,32 +381,32 @@ export default function DataExporter() {
                 {/* Date range */}
                 <div className="grid grid-cols-2 gap-3">
                   <div className="space-y-1">
-                    <label className="text-sm font-medium text-[var(--color-text-secondary)]">
+                    <label className="text-sm font-medium text-text-secondary">
                       From date
                     </label>
                     <input
                       type="date"
                       value={dateFrom}
                       onChange={(e) => setDateFrom(e.target.value)}
-                      className="w-full rounded-md border border-[var(--color-border)] bg-[var(--color-surface-secondary)] px-3 py-1.5 text-sm text-[var(--color-text-primary)] font-mono focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]"
+                      className="w-full rounded-md border border-border bg-surface-secondary px-3 py-1.5 text-sm text-text-primary font-mono focus:outline-none focus:ring-2 focus:ring-accent"
                     />
                   </div>
                   <div className="space-y-1">
-                    <label className="text-sm font-medium text-[var(--color-text-secondary)]">
+                    <label className="text-sm font-medium text-text-secondary">
                       To date
                     </label>
                     <input
                       type="date"
                       value={dateTo}
                       onChange={(e) => setDateTo(e.target.value)}
-                      className="w-full rounded-md border border-[var(--color-border)] bg-[var(--color-surface-secondary)] px-3 py-1.5 text-sm text-[var(--color-text-primary)] font-mono focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]"
+                      className="w-full rounded-md border border-border bg-surface-secondary px-3 py-1.5 text-sm text-text-primary font-mono focus:outline-none focus:ring-2 focus:ring-accent"
                     />
                   </div>
                 </div>
 
                 {/* Limit */}
                 <div className="space-y-1">
-                  <label className="text-sm font-medium text-[var(--color-text-secondary)]">
+                  <label className="text-sm font-medium text-text-secondary">
                     Limit ({limit} records)
                   </label>
                   <input
@@ -416,9 +416,9 @@ export default function DataExporter() {
                     step={10}
                     value={limit}
                     onChange={(e) => setLimit(Number(e.target.value))}
-                    className="w-full accent-[var(--color-accent)]"
+                    className="w-full accent-accent"
                   />
-                  <div className="flex justify-between text-[10px] text-[var(--color-text-tertiary)]">
+                  <div className="flex justify-between text-[10px] text-text-tertiary">
                     <span>10</span>
                     <span>500</span>
                     <span>1000</span>
@@ -427,7 +427,7 @@ export default function DataExporter() {
 
                 {/* Format */}
                 <div className="space-y-1">
-                  <label className="text-sm font-medium text-[var(--color-text-secondary)]">
+                  <label className="text-sm font-medium text-text-secondary">
                     Export Format
                   </label>
                   <div className="flex gap-2">
@@ -438,8 +438,8 @@ export default function DataExporter() {
                         className={cn(
                           "flex-1 rounded-md border px-3 py-2 text-sm font-mono font-medium transition-colors cursor-pointer",
                           format === f.id
-                            ? "border-[var(--color-accent)] bg-[var(--color-accent)]/10 text-[var(--color-accent)]"
-                            : "border-[var(--color-border)] text-[var(--color-text-secondary)] hover:bg-[var(--color-surface-secondary)]",
+                            ? "border-accent bg-accent/10 text-accent"
+                            : "border-border text-text-secondary hover:bg-surface-secondary",
                         )}
                       >
                         {f.label}
@@ -449,7 +449,7 @@ export default function DataExporter() {
                 </div>
 
                 {/* Estimated size */}
-                <div className="flex items-center justify-between text-xs text-[var(--color-text-tertiary)]">
+                <div className="flex items-center justify-between text-xs text-text-tertiary">
                   <span>Estimated size:</span>
                   <span className="font-mono">{estimatedSize || estimatedSizeStr}</span>
                 </div>
@@ -483,9 +483,9 @@ export default function DataExporter() {
           </div>
 
           {/* Right: Preview */}
-          <div className="rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] overflow-hidden">
-            <div className="px-4 py-3 border-b border-[var(--color-border)] bg-[var(--color-surface-secondary)] flex items-center justify-between">
-              <h3 className="text-sm font-semibold text-[var(--color-text-primary)]">
+          <div className="rounded-lg border border-border bg-(--color-surface) overflow-hidden">
+            <div className="px-4 py-3 border-b border-border bg-surface-secondary flex items-center justify-between">
+              <h3 className="text-sm font-semibold text-text-primary">
                 Preview (first 5 rows)
               </h3>
               {estimatedSize && (
@@ -494,7 +494,7 @@ export default function DataExporter() {
             </div>
             {loading ? (
               <div className="flex items-center justify-center p-12">
-                <svg className="animate-spin h-6 w-6 text-[var(--color-accent)]" viewBox="0 0 24 24" fill="none">
+                <svg className="animate-spin h-6 w-6 text-accent" viewBox="0 0 24 24" fill="none">
                   <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" className="opacity-25" />
                   <path d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" fill="currentColor" className="opacity-75" />
                 </svg>
@@ -510,11 +510,11 @@ export default function DataExporter() {
               </div>
             ) : (
               <div className="flex flex-col items-center justify-center p-12 text-center">
-                <FileJson className="h-10 w-10 mb-3 text-[var(--color-text-tertiary)]" />
-                <p className="text-sm text-[var(--color-text-secondary)]">
+                <FileJson className="h-10 w-10 mb-3 text-text-tertiary" />
+                <p className="text-sm text-text-secondary">
                   Click <strong>Preview</strong> to see sample data
                 </p>
-                <p className="text-xs text-[var(--color-text-tertiary)] mt-1">
+                <p className="text-xs text-text-tertiary mt-1">
                   Or click <strong>Download</strong> to export directly
                 </p>
               </div>
@@ -525,22 +525,22 @@ export default function DataExporter() {
 
       {/* ─── Section 2: RSS/Atom Feed Configurator ─── */}
       <section>
-        <h2 className="font-serif text-2xl font-bold text-[var(--color-text-primary)] mb-6">
+        <h2 className="font-serif text-2xl font-bold text-text-primary mb-6">
           RSS &amp; Atom Feeds
         </h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_1fr] gap-6">
           {/* Left: Configuration */}
-          <div className="rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] overflow-hidden">
-            <div className="px-4 py-3 border-b border-[var(--color-border)] bg-[var(--color-surface-secondary)]">
-              <h3 className="text-sm font-semibold text-[var(--color-text-primary)]">
+          <div className="rounded-lg border border-border bg-(--color-surface) overflow-hidden">
+            <div className="px-4 py-3 border-b border-border bg-surface-secondary">
+              <h3 className="text-sm font-semibold text-text-primary">
                 Configure Feed
               </h3>
             </div>
             <div className="p-4 space-y-4">
               {/* Category */}
               <div className="space-y-1">
-                <label className="text-sm font-medium text-[var(--color-text-secondary)]">
+                <label className="text-sm font-medium text-text-secondary">
                   Category
                 </label>
                 <select
@@ -548,7 +548,7 @@ export default function DataExporter() {
                   onChange={(e) =>
                     setFeedConfig((prev) => ({ ...prev, category: e.target.value }))
                   }
-                  className="w-full rounded-md border border-[var(--color-border)] bg-[var(--color-surface-secondary)] px-3 py-1.5 text-sm text-[var(--color-text-primary)] font-mono focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]"
+                  className="w-full rounded-md border border-border bg-surface-secondary px-3 py-1.5 text-sm text-text-primary font-mono focus:outline-none focus:ring-2 focus:ring-accent"
                 >
                   {CATEGORIES.map((c) => (
                     <option key={c} value={c}>
@@ -560,7 +560,7 @@ export default function DataExporter() {
 
               {/* Language */}
               <div className="space-y-1">
-                <label className="text-sm font-medium text-[var(--color-text-secondary)]">
+                <label className="text-sm font-medium text-text-secondary">
                   Language
                 </label>
                 <select
@@ -568,7 +568,7 @@ export default function DataExporter() {
                   onChange={(e) =>
                     setFeedConfig((prev) => ({ ...prev, language: e.target.value }))
                   }
-                  className="w-full rounded-md border border-[var(--color-border)] bg-[var(--color-surface-secondary)] px-3 py-1.5 text-sm text-[var(--color-text-primary)] font-mono focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]"
+                  className="w-full rounded-md border border-border bg-surface-secondary px-3 py-1.5 text-sm text-text-primary font-mono focus:outline-none focus:ring-2 focus:ring-accent"
                 >
                   <option value="en">English</option>
                   <option value="es">Español</option>
@@ -585,7 +585,7 @@ export default function DataExporter() {
 
               {/* Limit */}
               <div className="space-y-1">
-                <label className="text-sm font-medium text-[var(--color-text-secondary)]">
+                <label className="text-sm font-medium text-text-secondary">
                   Items ({feedConfig.limit})
                 </label>
                 <input
@@ -600,7 +600,7 @@ export default function DataExporter() {
                       limit: Number(e.target.value),
                     }))
                   }
-                  className="w-full accent-[var(--color-accent)]"
+                  className="w-full accent-accent"
                 />
               </div>
 
@@ -610,12 +610,12 @@ export default function DataExporter() {
                 <div className="space-y-1">
                   <div className="flex items-center gap-2">
                     <Rss className="h-4 w-4 text-orange-500" />
-                    <span className="text-sm font-medium text-[var(--color-text-primary)]">
+                    <span className="text-sm font-medium text-text-primary">
                       RSS 2.0
                     </span>
                   </div>
                   <div className="flex gap-2">
-                    <code className="flex-1 rounded-md border border-[var(--color-border)] bg-[var(--color-surface-secondary)] px-3 py-1.5 text-xs font-mono text-[var(--color-text-secondary)] truncate select-all">
+                    <code className="flex-1 rounded-md border border-border bg-surface-secondary px-3 py-1.5 text-xs font-mono text-text-secondary truncate select-all">
                       {rssFeedUrl}
                     </code>
                     <Button
@@ -636,12 +636,12 @@ export default function DataExporter() {
                 <div className="space-y-1">
                   <div className="flex items-center gap-2">
                     <Rss className="h-4 w-4 text-blue-500" />
-                    <span className="text-sm font-medium text-[var(--color-text-primary)]">
+                    <span className="text-sm font-medium text-text-primary">
                       Atom 1.0
                     </span>
                   </div>
                   <div className="flex gap-2">
-                    <code className="flex-1 rounded-md border border-[var(--color-border)] bg-[var(--color-surface-secondary)] px-3 py-1.5 text-xs font-mono text-[var(--color-text-secondary)] truncate select-all">
+                    <code className="flex-1 rounded-md border border-border bg-surface-secondary px-3 py-1.5 text-xs font-mono text-text-secondary truncate select-all">
                       {atomFeedUrl}
                     </code>
                     <Button
@@ -661,13 +661,13 @@ export default function DataExporter() {
                 {/* OPML */}
                 <div className="space-y-1">
                   <div className="flex items-center gap-2">
-                    <Link2 className="h-4 w-4 text-[var(--color-text-tertiary)]" />
-                    <span className="text-sm font-medium text-[var(--color-text-primary)]">
+                    <Link2 className="h-4 w-4 text-text-tertiary" />
+                    <span className="text-sm font-medium text-text-primary">
                       OPML Export
                     </span>
                   </div>
                   <div className="flex gap-2">
-                    <code className="flex-1 rounded-md border border-[var(--color-border)] bg-[var(--color-surface-secondary)] px-3 py-1.5 text-xs font-mono text-[var(--color-text-secondary)] truncate select-all">
+                    <code className="flex-1 rounded-md border border-border bg-surface-secondary px-3 py-1.5 text-xs font-mono text-text-secondary truncate select-all">
                       {opmlUrl}
                     </code>
                     <Button
@@ -693,15 +693,15 @@ export default function DataExporter() {
           </div>
 
           {/* Right: Feed preview */}
-          <div className="rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] overflow-hidden">
-            <div className="px-4 py-3 border-b border-[var(--color-border)] bg-[var(--color-surface-secondary)]">
-              <h3 className="text-sm font-semibold text-[var(--color-text-primary)]">
+          <div className="rounded-lg border border-border bg-(--color-surface) overflow-hidden">
+            <div className="px-4 py-3 border-b border-border bg-surface-secondary">
+              <h3 className="text-sm font-semibold text-text-primary">
                 Feed Preview
               </h3>
             </div>
             {feedLoading ? (
               <div className="flex items-center justify-center p-12">
-                <svg className="animate-spin h-6 w-6 text-[var(--color-accent)]" viewBox="0 0 24 24" fill="none">
+                <svg className="animate-spin h-6 w-6 text-accent" viewBox="0 0 24 24" fill="none">
                   <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" className="opacity-25" />
                   <path d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" fill="currentColor" className="opacity-75" />
                 </svg>
@@ -717,11 +717,11 @@ export default function DataExporter() {
               </div>
             ) : (
               <div className="flex flex-col items-center justify-center p-12 text-center">
-                <Rss className="h-10 w-10 mb-3 text-[var(--color-text-tertiary)]" />
-                <p className="text-sm text-[var(--color-text-secondary)]">
+                <Rss className="h-10 w-10 mb-3 text-text-tertiary" />
+                <p className="text-sm text-text-secondary">
                   Configure your feed and click <strong>Preview</strong>
                 </p>
-                <p className="text-xs text-[var(--color-text-tertiary)] mt-1">
+                <p className="text-xs text-text-tertiary mt-1">
                   Add the RSS or Atom URL to your favorite feed reader
                 </p>
               </div>

@@ -39,10 +39,10 @@ export default async function ExchangesPage({ params }: Props) {
       <main className="container-main py-10">
         {/* Page Header */}
         <div className="mb-8">
-          <h1 className="font-serif text-3xl font-bold text-[var(--color-text-primary)] md:text-4xl">
+          <h1 className="font-serif text-3xl font-bold text-text-primary md:text-4xl">
             Cryptocurrency Exchanges
           </h1>
-          <p className="mt-2 max-w-2xl text-[var(--color-text-secondary)]">
+          <p className="mt-2 max-w-2xl text-text-secondary">
             Compare the top centralized and decentralized exchanges by trading
             volume, trust score, fees, and available markets.
           </p>

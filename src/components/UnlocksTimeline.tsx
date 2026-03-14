@@ -175,20 +175,20 @@ export default function UnlocksTimeline() {
         </h2>
 
         {thisWeek.length === 0 ? (
-          <p className="text-[var(--color-text-secondary)]">
+          <p className="text-text-secondary">
             No major token unlocks scheduled this week.
           </p>
         ) : (
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {/* Summary card */}
-            <Card className="border-[var(--color-accent)]/30 bg-[var(--color-accent)]/5">
+            <Card className="border-accent/30 bg-accent/5">
               <CardContent className="p-5">
-                <div className="mb-1 flex items-center gap-2 text-sm text-[var(--color-text-secondary)]">
+                <div className="mb-1 flex items-center gap-2 text-sm text-text-secondary">
                   <Calendar className="h-4 w-4" />
                   This Week Total
                 </div>
                 <p className="text-2xl font-bold">{formatUsd(totalWeekValue)}</p>
-                <p className="mt-1 text-sm text-[var(--color-text-tertiary)]">
+                <p className="mt-1 text-sm text-text-tertiary">
                   {thisWeek.length} unlock{thisWeek.length !== 1 ? "s" : ""}
                 </p>
               </CardContent>
@@ -204,7 +204,7 @@ export default function UnlocksTimeline() {
                     <div className="mb-2 flex items-center justify-between">
                       <span className="font-semibold">
                         {u.token}{" "}
-                        <span className="text-[var(--color-text-tertiary)]">
+                        <span className="text-text-tertiary">
                           {u.symbol}
                         </span>
                       </span>
@@ -220,11 +220,11 @@ export default function UnlocksTimeline() {
                       </Badge>
                     </div>
                     <p className="text-xl font-bold">{formatUsd(u.valueUsd)}</p>
-                    <p className="mt-1 text-sm text-[var(--color-text-secondary)]">
+                    <p className="mt-1 text-sm text-text-secondary">
                       {formatAmount(u.amount)} {u.symbol} ·{" "}
                       {u.circulatingSupplyPercent.toFixed(1)}% of supply
                     </p>
-                    <p className="mt-1 text-xs text-[var(--color-text-tertiary)]">
+                    <p className="mt-1 text-xs text-text-tertiary">
                       {formatDate(u.unlockDate)}
                     </p>
                   </CardContent>
@@ -243,7 +243,7 @@ export default function UnlocksTimeline() {
 
         <div className="relative pl-8">
           {/* Vertical line */}
-          <div className="absolute left-3.5 top-0 bottom-0 w-px bg-[var(--color-border)]" />
+          <div className="absolute left-3.5 top-0 bottom-0 w-px bg-border" />
 
           <div className="space-y-6">
             {sortedUnlocks.map((u) => {
@@ -256,14 +256,14 @@ export default function UnlocksTimeline() {
                   {/* Dot on timeline */}
                   <div
                     className={cn(
-                      "absolute -left-8 top-1.5 h-3 w-3 rounded-full border-2 border-[var(--color-surface)]",
+                      "absolute -left-8 top-1.5 h-3 w-3 rounded-full border-2 border-(--color-surface)",
                       cfg.dot
                     )}
                   />
 
                   <Card
                     className={cn(
-                      "transition-colors hover:bg-[var(--color-surface-secondary)]"
+                      "transition-colors hover:bg-surface-secondary"
                     )}
                   >
                     <CardContent className="p-4 sm:p-5">
@@ -285,13 +285,13 @@ export default function UnlocksTimeline() {
                           <div>
                             <p className="font-semibold">
                               {u.token}{" "}
-                              <span className="text-[var(--color-text-tertiary)]">
+                              <span className="text-text-tertiary">
                                 {u.symbol}
                               </span>
                             </p>
-                            <p className="text-sm text-[var(--color-text-secondary)]">
+                            <p className="text-sm text-text-secondary">
                               {formatDate(u.unlockDate)}{" "}
-                              <span className="text-[var(--color-text-tertiary)]">
+                              <span className="text-text-tertiary">
                                 ({days > 0 ? `in ${days}d` : "today"})
                               </span>
                             </p>
@@ -301,21 +301,21 @@ export default function UnlocksTimeline() {
                         {/* Right: metrics */}
                         <div className="flex flex-wrap items-center gap-4 text-sm">
                           <div className="flex items-center gap-1.5">
-                            <DollarSign className="h-4 w-4 text-[var(--color-text-tertiary)]" />
+                            <DollarSign className="h-4 w-4 text-text-tertiary" />
                             <span className="font-medium">
                               {formatUsd(u.valueUsd)}
                             </span>
                           </div>
 
                           <div className="flex items-center gap-1.5">
-                            <Coins className="h-4 w-4 text-[var(--color-text-tertiary)]" />
+                            <Coins className="h-4 w-4 text-text-tertiary" />
                             <span>
                               {formatAmount(u.amount)} {u.symbol}
                             </span>
                           </div>
 
                           <div className="flex items-center gap-1.5">
-                            <Percent className="h-4 w-4 text-[var(--color-text-tertiary)]" />
+                            <Percent className="h-4 w-4 text-text-tertiary" />
                             <span
                               className={cn(
                                 "font-medium",
@@ -363,14 +363,14 @@ export default function UnlocksTimeline() {
         <h2 className="mb-5 font-serif text-2xl font-bold tracking-tight">
           Historical Impact Analysis
         </h2>
-        <p className="mb-4 text-sm text-[var(--color-text-secondary)]">
+        <p className="mb-4 text-sm text-text-secondary">
           Average price impact in the 7 days following previous token unlock events.
         </p>
 
         <div className="overflow-x-auto">
           <table className="w-full text-sm">
             <thead>
-              <tr className="border-b border-[var(--color-border)] text-left text-[var(--color-text-secondary)]">
+              <tr className="border-b border-border text-left text-text-secondary">
                 <th className="pb-3 pr-4 font-medium">Token</th>
                 <th className="pb-3 pr-4 font-medium">Unlock Value</th>
                 <th className="pb-3 pr-4 font-medium">% of Supply</th>
@@ -378,7 +378,7 @@ export default function UnlocksTimeline() {
                 <th className="pb-3 font-medium">Risk</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-[var(--color-border)]">
+            <tbody className="divide-y divide-border">
               {sortedUnlocks
                 .filter((u) => u.previousUnlockPriceImpact != null)
                 .sort(
@@ -393,11 +393,11 @@ export default function UnlocksTimeline() {
                   return (
                     <tr
                       key={u.id}
-                      className="transition-colors hover:bg-[var(--color-surface-secondary)]"
+                      className="transition-colors hover:bg-surface-secondary"
                     >
                       <td className="py-3 pr-4 font-medium">
                         {u.token}{" "}
-                        <span className="text-[var(--color-text-tertiary)]">
+                        <span className="text-text-tertiary">
                           {u.symbol}
                         </span>
                       </td>
@@ -435,14 +435,14 @@ export default function UnlocksTimeline() {
           </table>
         </div>
 
-        <p className="mt-4 text-xs text-[var(--color-text-tertiary)]">
+        <p className="mt-4 text-xs text-text-tertiary">
           Historical data is for informational purposes only. Past performance
           does not guarantee future results.
         </p>
       </section>
 
       {/* ── Legend ─────────────────────────────────────────────────── */}
-      <div className="flex flex-wrap gap-4 text-xs text-[var(--color-text-secondary)]">
+      <div className="flex flex-wrap gap-4 text-xs text-text-secondary">
         {(["critical", "warning", "safe"] as SeverityLevel[]).map((level) => {
           const cfg = severityConfig[level];
           return (

@@ -69,10 +69,10 @@ export default async function AirdropsPage({ params }: Props) {
     <>
       <Header />
       <main className="container-main py-10">
-        <h1 className="font-serif text-3xl md:text-4xl font-bold mb-2 text-[var(--color-text-primary)]">
+        <h1 className="font-serif text-3xl md:text-4xl font-bold mb-2 text-text-primary">
           Airdrop Tracker
         </h1>
-        <p className="text-[var(--color-text-secondary)] mb-8 max-w-2xl">
+        <p className="text-text-secondary mb-8 max-w-2xl">
           Discover active and upcoming crypto airdrops. Filter by chain, check
           eligibility requirements, and track deadlines — all in one place.
         </p>

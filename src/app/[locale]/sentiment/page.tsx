@@ -112,7 +112,7 @@ function SentimentArrow({ change }: { change: number }) {
       </span>
     );
   return (
-    <span className="inline-flex items-center gap-0.5 text-[var(--color-text-tertiary)] text-sm font-medium">
+    <span className="inline-flex items-center gap-0.5 text-text-tertiary text-sm font-medium">
       <Minus className="h-4 w-4" /> 0
     </span>
   );
@@ -145,7 +145,7 @@ function NarrativeCard({ narrative }: { narrative: Narrative }) {
         <div className="flex items-center gap-2">
           <div className={`p-1.5 rounded-md ${sc.bg} ${sc.color}`}>{sc.icon}</div>
           <div>
-            <h3 className="font-semibold text-sm text-[var(--color-text-primary)]">
+            <h3 className="font-semibold text-sm text-text-primary">
               {narrative.name}
             </h3>
             {narrative.emerging && (
@@ -156,16 +156,16 @@ function NarrativeCard({ narrative }: { narrative: Narrative }) {
           </div>
         </div>
         <div className="text-right">
-          <div className="text-lg font-bold text-[var(--color-text-primary)] tabular-nums">
+          <div className="text-lg font-bold text-text-primary tabular-nums">
             {narrative.strength}
           </div>
-          <div className="text-[10px] text-[var(--color-text-tertiary)] uppercase tracking-wider">
+          <div className="text-[10px] text-text-tertiary uppercase tracking-wider">
             Strength
           </div>
         </div>
       </div>
 
-      <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed line-clamp-2">
+      <p className="text-xs text-text-secondary leading-relaxed line-clamp-2">
         {narrative.description}
       </p>
 
@@ -174,7 +174,7 @@ function NarrativeCard({ narrative }: { narrative: Narrative }) {
           {narrative.relatedTickers.slice(0, 6).map((t) => (
             <span
               key={t}
-              className="px-1.5 py-0.5 text-[10px] font-medium rounded bg-[var(--color-accent)]/10 text-[var(--color-accent)]"
+              className="px-1.5 py-0.5 text-[10px] font-medium rounded bg-accent/10 text-accent"
             >
               {t}
             </span>
@@ -183,9 +183,9 @@ function NarrativeCard({ narrative }: { narrative: Narrative }) {
       )}
 
       {/* Momentum bar */}
-      <div className="w-full h-1.5 rounded-full bg-[var(--color-border)] overflow-hidden">
+      <div className="w-full h-1.5 rounded-full bg-border overflow-hidden">
         <div
-          className="h-full rounded-full bg-[var(--color-accent)] transition-all"
+          className="h-full rounded-full bg-accent transition-all"
           style={{ width: `${narrative.strength}%` }}
         />
       </div>
@@ -212,7 +212,7 @@ function SocialBuzzCloud({ trends }: { trends: SocialTrend[] }) {
         return (
           <span
             key={trend.topic}
-            className="text-[var(--color-accent)] font-medium transition-transform hover:scale-110 cursor-default"
+            className="text-accent font-medium transition-transform hover:scale-110 cursor-default"
             style={{
               fontSize: `${fontSize}rem`,
               opacity,
@@ -233,7 +233,7 @@ function SkeletonSection({ rows = 3 }: { rows?: number }) {
       {Array.from({ length: rows }).map((_, i) => (
         <div
           key={i}
-          className="h-12 animate-pulse rounded-lg bg-[var(--color-border)]"
+          className="h-12 animate-pulse rounded-lg bg-border"
         />
       ))}
     </div>
@@ -407,10 +407,10 @@ export default async function SentimentPage({ params }: Props) {
       <Header />
       <main className="container-main py-10">
         {/* ---- Page heading ---- */}
-        <h1 className="font-serif text-3xl md:text-4xl font-bold mb-2 text-[var(--color-text-primary)]">
+        <h1 className="font-serif text-3xl md:text-4xl font-bold mb-2 text-text-primary">
           Sentiment & Social Intelligence
         </h1>
-        <p className="text-[var(--color-text-secondary)] mb-8 max-w-2xl">
+        <p className="text-text-secondary mb-8 max-w-2xl">
           Real-time market sentiment analysis powered by news, social data, and
           AI — track what the crypto community is thinking and talking about.
         </p>
@@ -419,8 +419,8 @@ export default async function SentimentPage({ params }: Props) {
         {/* SECTION 1 — Overall Market Sentiment                             */}
         {/* ================================================================ */}
         <section className="mb-10" aria-label="Overall Market Sentiment">
-          <h2 className="font-serif text-xl font-bold mb-4 text-[var(--color-text-primary)] flex items-center gap-2">
-            <Brain className="h-5 w-5 text-[var(--color-accent)]" />
+          <h2 className="font-serif text-xl font-bold mb-4 text-text-primary flex items-center gap-2">
+            <Brain className="h-5 w-5 text-accent" />
             Overall Market Sentiment
           </h2>
 
@@ -435,7 +435,7 @@ export default async function SentimentPage({ params }: Props) {
                 />
               </Suspense>
               <div className="mt-2 flex items-center gap-2 text-sm">
-                <span className="text-[var(--color-text-tertiary)]">
+                <span className="text-text-tertiary">
                   vs yesterday:
                 </span>
                 <SentimentArrow change={trendChange} />
@@ -446,21 +446,21 @@ export default async function SentimentPage({ params }: Props) {
             <div className="flex flex-col gap-4">
               <Card className="p-5 flex-1">
                 <div className="flex items-center gap-2 mb-3">
-                  <BarChart3 className="h-4 w-4 text-[var(--color-accent)]" />
-                  <h3 className="font-semibold text-sm text-[var(--color-text-primary)]">
+                  <BarChart3 className="h-4 w-4 text-accent" />
+                  <h3 className="font-semibold text-sm text-text-primary">
                     Market Summary
                   </h3>
-                  <span className="ml-auto text-[10px] text-[var(--color-text-tertiary)] bg-[var(--color-border)]/50 px-2 py-0.5 rounded-full">
+                  <span className="ml-auto text-[10px] text-text-tertiary bg-border/50 px-2 py-0.5 rounded-full">
                     Confidence: {market.confidence}%
                   </span>
                 </div>
-                <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
+                <p className="text-sm text-text-secondary leading-relaxed">
                   {market.summary}
                 </p>
               </Card>
 
               <Card className="p-5">
-                <h3 className="font-semibold text-sm text-[var(--color-text-primary)] mb-3 flex items-center gap-2">
+                <h3 className="font-semibold text-sm text-text-primary mb-3 flex items-center gap-2">
                   <Flame className="h-4 w-4 text-orange-500" />
                   Key Sentiment Drivers
                 </h3>
@@ -468,9 +468,9 @@ export default async function SentimentPage({ params }: Props) {
                   {market.keyDrivers.map((driver, i) => (
                     <li
                       key={i}
-                      className="flex items-center gap-2 text-sm text-[var(--color-text-secondary)]"
+                      className="flex items-center gap-2 text-sm text-text-secondary"
                     >
-                      <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[var(--color-accent)]/10 text-[var(--color-accent)] text-[10px] font-bold">
+                      <span className="flex h-5 w-5 items-center justify-center rounded-full bg-accent/10 text-accent text-[10px] font-bold">
                         {i + 1}
                       </span>
                       {driver}
@@ -486,8 +486,8 @@ export default async function SentimentPage({ params }: Props) {
         {/* SECTION 2 — Coin Sentiment Table                                 */}
         {/* ================================================================ */}
         <section className="mb-10" aria-label="Coin Sentiment">
-          <h2 className="font-serif text-xl font-bold mb-4 text-[var(--color-text-primary)] flex items-center gap-2">
-            <BarChart3 className="h-5 w-5 text-[var(--color-accent)]" />
+          <h2 className="font-serif text-xl font-bold mb-4 text-text-primary flex items-center gap-2">
+            <BarChart3 className="h-5 w-5 text-accent" />
             Coin Sentiment
           </h2>
           <Suspense fallback={<SkeletonSection rows={6} />}>
@@ -499,7 +499,7 @@ export default async function SentimentPage({ params }: Props) {
         {/* SECTION 3 — Trending Narratives                                  */}
         {/* ================================================================ */}
         <section className="mb-10" aria-label="Trending Narratives">
-          <h2 className="font-serif text-xl font-bold mb-4 text-[var(--color-text-primary)] flex items-center gap-2">
+          <h2 className="font-serif text-xl font-bold mb-4 text-text-primary flex items-center gap-2">
             <Flame className="h-5 w-5 text-orange-500" />
             Trending Narratives
           </h2>
@@ -511,7 +511,7 @@ export default async function SentimentPage({ params }: Props) {
               ))}
             </div>
           ) : (
-            <Card className="p-12 text-center text-[var(--color-text-secondary)]">
+            <Card className="p-12 text-center text-text-secondary">
               Narrative data is temporarily unavailable.
             </Card>
           )}
@@ -521,8 +521,8 @@ export default async function SentimentPage({ params }: Props) {
         {/* SECTION 4 — Influencer Feed                                      */}
         {/* ================================================================ */}
         <section className="mb-10" aria-label="Influencer Feed">
-          <h2 className="font-serif text-xl font-bold mb-4 text-[var(--color-text-primary)] flex items-center gap-2">
-            <Users className="h-5 w-5 text-[var(--color-accent)]" />
+          <h2 className="font-serif text-xl font-bold mb-4 text-text-primary flex items-center gap-2">
+            <Users className="h-5 w-5 text-accent" />
             Top Influencer Feed
           </h2>
           <Suspense fallback={<SkeletonSection rows={5} />}>
@@ -534,13 +534,13 @@ export default async function SentimentPage({ params }: Props) {
         {/* SECTION 5 — Social Buzz Cloud                                    */}
         {/* ================================================================ */}
         <section className="mb-4" aria-label="Social Buzz">
-          <h2 className="font-serif text-xl font-bold mb-4 text-[var(--color-text-primary)] flex items-center gap-2">
-            <Hash className="h-5 w-5 text-[var(--color-accent)]" />
+          <h2 className="font-serif text-xl font-bold mb-4 text-text-primary flex items-center gap-2">
+            <Hash className="h-5 w-5 text-accent" />
             Social Buzz
           </h2>
           <Card className="p-6">
             <SocialBuzzCloud trends={socialTrends} />
-            <p className="text-center text-[10px] text-[var(--color-text-tertiary)] mt-2">
+            <p className="text-center text-[10px] text-text-tertiary mt-2">
               Sized by mention volume across social platforms
             </p>
           </Card>

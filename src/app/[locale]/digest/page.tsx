@@ -150,15 +150,15 @@ export default async function DigestPage({ params }: Props) {
       <Header />
       <main id="main-content" className="min-h-screen">
         {/* ── Hero ── */}
-        <section className="border-b border-[var(--color-border)]">
+        <section className="border-b border-border">
           <div className="container-main py-10 lg:py-14 text-center">
             <Badge className="mb-4">
               <Newspaper className="h-3 w-3 mr-1" /> Newsletter
             </Badge>
-            <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-[var(--color-text-primary)]">
+            <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-text-primary">
               Crypto Digest
             </h1>
-            <p className="text-lg text-[var(--color-text-secondary)] max-w-2xl mx-auto">
+            <p className="text-lg text-text-secondary max-w-2xl mx-auto">
               AI-powered daily and weekly summaries of everything happening in crypto.
               Never miss a market-moving story again.
             </p>
@@ -166,24 +166,24 @@ export default async function DigestPage({ params }: Props) {
         </section>
 
         {/* ── Subscribe CTA ── */}
-        <section className="border-b border-[var(--color-border)]">
+        <section className="border-b border-border">
           <div className="container-main py-8 lg:py-10">
             <DigestSubscribeForm />
           </div>
         </section>
 
         {/* ── Latest Digest ── */}
-        <section className="border-b border-[var(--color-border)]">
+        <section className="border-b border-border">
           <div className="container-main py-8 lg:py-10">
             <h2 className="text-xl font-bold font-serif mb-6">Latest Digest</h2>
             <Card className="overflow-hidden">
               <CardContent className="p-6 md:p-8">
                 <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-6">
                   <div>
-                    <h3 className="font-serif text-xl md:text-2xl font-bold text-[var(--color-text-primary)] mb-1">
+                    <h3 className="font-serif text-xl md:text-2xl font-bold text-text-primary mb-1">
                       {digest.title}
                     </h3>
-                    <time className="text-sm text-[var(--color-text-tertiary)]">
+                    <time className="text-sm text-text-tertiary">
                       {new Date(digest.date).toLocaleDateString("en-US", {
                         weekday: "long",
                         month: "long",
@@ -197,22 +197,22 @@ export default async function DigestPage({ params }: Props) {
                   </Badge>
                 </div>
 
-                <p className="text-[var(--color-text-secondary)] text-sm leading-relaxed mb-6">
+                <p className="text-text-secondary text-sm leading-relaxed mb-6">
                   {digest.summary}
                 </p>
 
                 {digest.highlights.length > 0 && (
                   <div>
-                    <h4 className="text-sm font-semibold text-[var(--color-text-primary)] mb-3">
+                    <h4 className="text-sm font-semibold text-text-primary mb-3">
                       Key Highlights
                     </h4>
                     <ul className="space-y-2">
                       {digest.highlights.map((h, i) => (
                         <li
                           key={i}
-                          className="flex items-start gap-3 text-sm text-[var(--color-text-secondary)]"
+                          className="flex items-start gap-3 text-sm text-text-secondary"
                         >
-                          <span className="mt-1 h-1.5 w-1.5 rounded-full bg-[var(--color-accent)] shrink-0" />
+                          <span className="mt-1 h-1.5 w-1.5 rounded-full bg-accent shrink-0" />
                           {h.text}
                         </li>
                       ))}
@@ -225,7 +225,7 @@ export default async function DigestPage({ params }: Props) {
         </section>
 
         {/* ── Digest Archive ── */}
-        <section className="border-b border-[var(--color-border)]">
+        <section className="border-b border-border">
           <div className="container-main py-8 lg:py-10">
             <h2 className="text-xl font-bold font-serif mb-6">
               Digest Archive
@@ -238,10 +238,10 @@ export default async function DigestPage({ params }: Props) {
         <section>
           <div className="container-main py-8 lg:py-10">
             <div className="text-center mb-8">
-              <h2 className="font-serif text-2xl md:text-3xl font-bold text-[var(--color-text-primary)] mb-3">
+              <h2 className="font-serif text-2xl md:text-3xl font-bold text-text-primary mb-3">
                 What&apos;s Inside Each Digest
               </h2>
-              <p className="text-sm text-[var(--color-text-secondary)] max-w-lg mx-auto">
+              <p className="text-sm text-text-secondary max-w-lg mx-auto">
                 Every edition is packed with the information you need to stay ahead of the crypto market.
               </p>
             </div>
@@ -251,16 +251,16 @@ export default async function DigestPage({ params }: Props) {
                 return (
                   <Card
                     key={feature.title}
-                    className="group hover:border-[var(--color-accent)]/50 transition-colors"
+                    className="group hover:border-accent/50 transition-colors"
                   >
                     <CardContent className="p-5">
-                      <div className="h-10 w-10 rounded-lg bg-[var(--color-surface-secondary)] flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
-                        <Icon className="h-5 w-5 text-[var(--color-accent)]" />
+                      <div className="h-10 w-10 rounded-lg bg-surface-secondary flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+                        <Icon className="h-5 w-5 text-accent" />
                       </div>
-                      <h3 className="font-bold text-sm text-[var(--color-text-primary)] mb-1">
+                      <h3 className="font-bold text-sm text-text-primary mb-1">
                         {feature.title}
                       </h3>
-                      <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
+                      <p className="text-xs text-text-secondary leading-relaxed">
                         {feature.description}
                       </p>
                     </CardContent>

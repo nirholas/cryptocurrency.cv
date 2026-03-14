@@ -169,11 +169,11 @@ export default async function SourceProfilePage({ params }: Props) {
       <Header />
       <main className="min-h-screen">
         {/* ── Breadcrumbs ── */}
-        <div className="border-b border-[var(--color-border)]">
+        <div className="border-b border-border">
           <nav aria-label="Breadcrumb" className="container-main py-3">
-            <ol className="flex items-center gap-1.5 text-sm text-[var(--color-text-tertiary)]">
+            <ol className="flex items-center gap-1.5 text-sm text-text-tertiary">
               <li>
-                <Link href="/" className="transition-colors hover:text-[var(--color-accent)]">
+                <Link href="/" className="transition-colors hover:text-accent">
                   Home
                 </Link>
               </li>
@@ -194,7 +194,7 @@ export default async function SourceProfilePage({ params }: Props) {
               <li>
                 <Link
                   href="/sources"
-                  className="transition-colors hover:text-[var(--color-accent)]"
+                  className="transition-colors hover:text-accent"
                 >
                   Sources
                 </Link>
@@ -213,13 +213,13 @@ export default async function SourceProfilePage({ params }: Props) {
                   />
                 </svg>
               </li>
-              <li className="text-[var(--color-text-secondary)]">{sourceInfo.name}</li>
+              <li className="text-text-secondary">{sourceInfo.name}</li>
             </ol>
           </nav>
         </div>
 
         {/* ── Source Header ── */}
-        <section className="border-b border-[var(--color-border)] bg-[var(--color-surface-secondary)]">
+        <section className="border-b border-border bg-surface-secondary">
           <div className="container-main py-8 lg:py-12">
             <div className="flex flex-col items-start gap-6 md:flex-row md:gap-8">
               {/* Avatar / Logo Initial */}
@@ -234,7 +234,7 @@ export default async function SourceProfilePage({ params }: Props) {
               <div className="min-w-0 flex-1">
                 {/* Name + Badges */}
                 <div className="mb-2 flex flex-wrap items-center gap-3">
-                  <h1 className="font-serif text-3xl font-bold text-[var(--color-text-primary)] md:text-4xl">
+                  <h1 className="font-serif text-3xl font-bold text-text-primary md:text-4xl">
                     {sourceInfo.name}
                   </h1>
                   {tier && (
@@ -251,19 +251,19 @@ export default async function SourceProfilePage({ params }: Props) {
 
                 {/* Description */}
                 {profile?.description && (
-                  <p className="mb-4 max-w-2xl text-base leading-relaxed text-[var(--color-text-secondary)] md:text-lg">
+                  <p className="mb-4 max-w-2xl text-base leading-relaxed text-text-secondary md:text-lg">
                     {profile.description}
                   </p>
                 )}
 
                 {/* Meta row */}
-                <div className="flex flex-wrap items-center gap-4 text-sm text-[var(--color-text-tertiary)]">
+                <div className="flex flex-wrap items-center gap-4 text-sm text-text-tertiary">
                   {profile?.website && (
                     <a
                       href={profile.website}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 font-medium text-[var(--color-accent)] hover:underline"
+                      className="inline-flex items-center gap-1.5 font-medium text-accent hover:underline"
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -291,22 +291,22 @@ export default async function SourceProfilePage({ params }: Props) {
         </section>
 
         {/* ── Stats Bar ── */}
-        <section className="border-b border-[var(--color-border)]">
+        <section className="border-b border-border">
           <div className="container-main py-6">
             <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
               {/* Credibility */}
               <div>
-                <p className="mb-2 text-xs font-semibold tracking-wider text-[var(--color-text-tertiary)] uppercase">
+                <p className="mb-2 text-xs font-semibold tracking-wider text-text-tertiary uppercase">
                   Credibility
                 </p>
                 <div className="flex items-center gap-3">
-                  <div className="h-2 flex-1 overflow-hidden rounded-full bg-[var(--color-border)]">
+                  <div className="h-2 flex-1 overflow-hidden rounded-full bg-border">
                     <div
                       className={`h-full rounded-full ${credBar.color}`}
                       style={{ width: credBar.width }}
                     />
                   </div>
-                  <span className="text-sm font-semibold text-[var(--color-text-primary)]">
+                  <span className="text-sm font-semibold text-text-primary">
                     {credBar.label}
                   </span>
                 </div>
@@ -314,12 +314,12 @@ export default async function SourceProfilePage({ params }: Props) {
 
               {/* Reputation */}
               <div>
-                <p className="mb-2 text-xs font-semibold tracking-wider text-[var(--color-text-tertiary)] uppercase">
+                <p className="mb-2 text-xs font-semibold tracking-wider text-text-tertiary uppercase">
                   Reputation Score
                 </p>
-                <p className="text-2xl font-bold text-[var(--color-text-primary)]">
+                <p className="text-2xl font-bold text-text-primary">
                   {reputation}
-                  <span className="text-sm font-normal text-[var(--color-text-tertiary)]">
+                  <span className="text-sm font-normal text-text-tertiary">
                     /100
                   </span>
                 </p>
@@ -327,10 +327,10 @@ export default async function SourceProfilePage({ params }: Props) {
 
               {/* Article Count */}
               <div>
-                <p className="mb-2 text-xs font-semibold tracking-wider text-[var(--color-text-tertiary)] uppercase">
+                <p className="mb-2 text-xs font-semibold tracking-wider text-text-tertiary uppercase">
                   Recent Articles
                 </p>
-                <p className="text-2xl font-bold text-[var(--color-text-primary)]">
+                <p className="text-2xl font-bold text-text-primary">
                   {articles.length}
                 </p>
               </div>
@@ -338,14 +338,14 @@ export default async function SourceProfilePage({ params }: Props) {
               {/* Focus Areas */}
               {profile?.focus && (
                 <div>
-                  <p className="mb-2 text-xs font-semibold tracking-wider text-[var(--color-text-tertiary)] uppercase">
+                  <p className="mb-2 text-xs font-semibold tracking-wider text-text-tertiary uppercase">
                     Focus Areas
                   </p>
                   <div className="flex flex-wrap gap-1.5">
                     {profile.focus.map((f) => (
                       <span
                         key={f}
-                        className="rounded bg-[var(--color-surface-tertiary)] px-2 py-0.5 text-xs text-[var(--color-text-secondary)]"
+                        className="rounded bg-surface-tertiary px-2 py-0.5 text-xs text-text-secondary"
                       >
                         {f}
                       </span>
@@ -359,7 +359,7 @@ export default async function SourceProfilePage({ params }: Props) {
 
         {/* ── Latest Articles ── */}
         <section className="container-main py-8 lg:py-10">
-          <h2 className="mb-6 border-b border-[var(--color-border)] pb-2 font-serif text-xl font-bold text-[var(--color-text-primary)] md:text-2xl">
+          <h2 className="mb-6 border-b border-border pb-2 font-serif text-xl font-bold text-text-primary md:text-2xl">
             Latest from {sourceInfo.name}
           </h2>
 
@@ -378,7 +378,7 @@ export default async function SourceProfilePage({ params }: Props) {
 
                 {/* More articles list */}
                 {moreArticles.length > 0 && (
-                  <div className="space-y-0 divide-y divide-[var(--color-border)]">
+                  <div className="space-y-0 divide-y divide-border">
                     {moreArticles.map((article) => (
                       <div key={article.link} className="py-4 first:pt-0">
                         <NewsCardCompact article={article} />
@@ -391,37 +391,37 @@ export default async function SourceProfilePage({ params }: Props) {
               {/* Sidebar */}
               <aside className="space-y-8">
                 {/* About box */}
-                <div className="rounded-lg border border-[var(--color-border)] bg-[var(--color-surface-secondary)] p-5">
+                <div className="rounded-lg border border-border bg-surface-secondary p-5">
                   <h3 className="mb-3 font-serif text-base font-bold">About {sourceInfo.name}</h3>
                   {profile?.description ? (
-                    <p className="mb-4 text-sm leading-relaxed text-[var(--color-text-secondary)]">
+                    <p className="mb-4 text-sm leading-relaxed text-text-secondary">
                       {profile.description}
                     </p>
                   ) : (
-                    <p className="mb-4 text-sm leading-relaxed text-[var(--color-text-secondary)]">
+                    <p className="mb-4 text-sm leading-relaxed text-text-secondary">
                       {sourceInfo.name} is a {sourceInfo.category} cryptocurrency news source
                       aggregated by Crypto Vision News.
                     </p>
                   )}
                   <dl className="space-y-2 text-sm">
                     <div className="flex justify-between">
-                      <dt className="text-[var(--color-text-tertiary)]">Category</dt>
+                      <dt className="text-text-tertiary">Category</dt>
                       <dd className="font-medium capitalize">{sourceInfo.category}</dd>
                     </div>
                     {tier && (
                       <div className="flex justify-between">
-                        <dt className="text-[var(--color-text-tertiary)]">Tier</dt>
+                        <dt className="text-text-tertiary">Tier</dt>
                         <dd className="font-medium">{tierLabel(tier).text}</dd>
                       </div>
                     )}
                     {profile?.founded && (
                       <div className="flex justify-between">
-                        <dt className="text-[var(--color-text-tertiary)]">Founded</dt>
+                        <dt className="text-text-tertiary">Founded</dt>
                         <dd className="font-medium">{profile.founded}</dd>
                       </div>
                     )}
                     <div className="flex justify-between">
-                      <dt className="text-[var(--color-text-tertiary)]">Credibility</dt>
+                      <dt className="text-text-tertiary">Credibility</dt>
                       <dd className="font-medium">{Math.round(credibility * 100)}%</dd>
                     </div>
                   </dl>
@@ -430,7 +430,7 @@ export default async function SourceProfilePage({ params }: Props) {
                       href={profile.website}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="mt-4 block text-center text-sm font-medium text-[var(--color-accent)] transition-colors hover:text-[var(--color-accent-hover)]"
+                      className="mt-4 block text-center text-sm font-medium text-accent transition-colors hover:text-accent-hover"
                     >
                       Visit {sourceInfo.name} →
                     </a>
@@ -438,7 +438,7 @@ export default async function SourceProfilePage({ params }: Props) {
                 </div>
 
                 {/* Browse other sources */}
-                <div className="rounded-lg border border-[var(--color-border)] bg-[var(--color-surface-secondary)] p-5">
+                <div className="rounded-lg border border-border bg-surface-secondary p-5">
                   <h3 className="mb-3 font-serif text-base font-bold">Browse Sources</h3>
                   <div className="space-y-1.5">
                     {[
@@ -451,7 +451,7 @@ export default async function SourceProfilePage({ params }: Props) {
                       <Link
                         key={item.href}
                         href={item.href}
-                        className="block py-1 text-sm text-[var(--color-text-secondary)] transition-colors hover:text-[var(--color-accent)]"
+                        className="block py-1 text-sm text-text-secondary transition-colors hover:text-accent"
                       >
                         {item.label} →
                       </Link>
@@ -462,10 +462,10 @@ export default async function SourceProfilePage({ params }: Props) {
             </div>
           ) : (
             <div className="py-12 text-center">
-              <p className="mb-2 text-[var(--color-text-secondary)]">
+              <p className="mb-2 text-text-secondary">
                 No recent articles from {sourceInfo.name}.
               </p>
-              <p className="text-sm text-[var(--color-text-tertiary)]">
+              <p className="text-sm text-text-tertiary">
                 Articles are updated in real-time from the RSS feed.
               </p>
             </div>

@@ -318,29 +318,29 @@ export default function AdvancedChart({
   // ---- Render ---------------------------------------------------------------
 
   return (
-    <div className="rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] overflow-hidden">
+    <div className="rounded-xl border border-border bg-(--color-surface) overflow-hidden">
       {/* Toolbar */}
-      <div className="flex flex-wrap items-center gap-2 border-b border-[var(--color-border)] px-4 py-3">
+      <div className="flex flex-wrap items-center gap-2 border-b border-border px-4 py-3">
         {/* Coin selector */}
         <div className="relative">
           <button
             onClick={() => setCoinDropdownOpen((o) => !o)}
             className={cn(
-              "flex items-center gap-2 rounded-lg border border-[var(--color-border)] px-3 py-1.5",
-              "text-sm font-medium text-[var(--color-text-primary)]",
-              "hover:border-[var(--color-border-hover)] transition-colors",
-              "bg-[var(--color-surface-secondary)]"
+              "flex items-center gap-2 rounded-lg border border-border px-3 py-1.5",
+              "text-sm font-medium text-text-primary",
+              "hover:border-border-hover transition-colors",
+              "bg-surface-secondary"
             )}
           >
             {selectedCoin.label}
-            <ChevronDown className="h-4 w-4 text-[var(--color-text-tertiary)]" />
+            <ChevronDown className="h-4 w-4 text-text-tertiary" />
           </button>
 
           {coinDropdownOpen && (
             <div
               className={cn(
-                "absolute top-full left-0 z-50 mt-1 w-56 rounded-lg border border-[var(--color-border)]",
-                "bg-[var(--color-surface)] shadow-lg overflow-hidden"
+                "absolute top-full left-0 z-50 mt-1 w-56 rounded-lg border border-border",
+                "bg-(--color-surface) shadow-lg overflow-hidden"
               )}
             >
               {COINS.map((coin) => (
@@ -349,10 +349,10 @@ export default function AdvancedChart({
                   onClick={() => handleCoinChange(coin.id)}
                   className={cn(
                     "block w-full px-4 py-2 text-left text-sm",
-                    "hover:bg-[var(--color-surface-secondary)] transition-colors",
+                    "hover:bg-surface-secondary transition-colors",
                     coin.id === coinId
-                      ? "text-[var(--color-accent)] font-medium"
-                      : "text-[var(--color-text-primary)]"
+                      ? "text-accent font-medium"
+                      : "text-text-primary"
                   )}
                 >
                   {coin.label}
@@ -363,14 +363,14 @@ export default function AdvancedChart({
         </div>
 
         {/* Chart type toggle */}
-        <div className="ml-auto flex items-center gap-1 rounded-lg border border-[var(--color-border)] bg-[var(--color-surface-secondary)] p-0.5">
+        <div className="ml-auto flex items-center gap-1 rounded-lg border border-border bg-surface-secondary p-0.5">
           <button
             onClick={() => setChartType("candlestick")}
             className={cn(
               "flex items-center gap-1.5 rounded-md px-3 py-1 text-xs font-medium transition-colors",
               chartType === "candlestick"
-                ? "bg-[var(--color-accent)] text-white"
-                : "text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)]"
+                ? "bg-accent text-white"
+                : "text-text-secondary hover:text-text-primary"
             )}
             title="Candlestick"
           >
@@ -382,8 +382,8 @@ export default function AdvancedChart({
             className={cn(
               "flex items-center gap-1.5 rounded-md px-3 py-1 text-xs font-medium transition-colors",
               chartType === "line"
-                ? "bg-[var(--color-accent)] text-white"
-                : "text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)]"
+                ? "bg-accent text-white"
+                : "text-text-secondary hover:text-text-primary"
             )}
             title="Line"
           >
@@ -401,8 +401,8 @@ export default function AdvancedChart({
               className={cn(
                 "rounded-md px-2.5 py-1 text-xs font-medium transition-colors",
                 days === range.days
-                  ? "bg-[var(--color-accent)] text-white"
-                  : "text-[var(--color-text-secondary)] hover:bg-[var(--color-surface-tertiary)] hover:text-[var(--color-text-primary)]"
+                  ? "bg-accent text-white"
+                  : "text-text-secondary hover:bg-surface-tertiary hover:text-text-primary"
               )}
             >
               {range.label}
@@ -414,15 +414,15 @@ export default function AdvancedChart({
       {/* Chart area */}
       <div className="relative" style={{ height: "70vh" }}>
         {loading && (
-          <div className="absolute inset-0 z-10 flex items-center justify-center bg-[var(--color-surface)]/80">
-            <div className="h-8 w-8 animate-spin rounded-full border-2 border-[var(--color-accent)] border-t-transparent" />
+          <div className="absolute inset-0 z-10 flex items-center justify-center bg-(--color-surface)/80">
+            <div className="h-8 w-8 animate-spin rounded-full border-2 border-accent border-t-transparent" />
           </div>
         )}
 
         {error && (
           <div className="absolute inset-0 z-10 flex items-center justify-center">
             <div className="text-center">
-              <p className="text-sm text-[var(--color-text-secondary)]">{error}</p>
+              <p className="text-sm text-text-secondary">{error}</p>
               <Button
                 variant="outline"
                 size="sm"

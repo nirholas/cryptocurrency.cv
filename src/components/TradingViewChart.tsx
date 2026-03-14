@@ -153,12 +153,12 @@ export default function TradingViewChart({
   return (
     <div
       className={cn(
-        "rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] overflow-hidden",
+        "rounded-xl border border-border bg-(--color-surface) overflow-hidden",
         className
       )}
     >
       {/* Toolbar */}
-      <div className="flex flex-wrap items-center gap-2 border-b border-[var(--color-border)] bg-[var(--color-surface-secondary)] px-3 py-2">
+      <div className="flex flex-wrap items-center gap-2 border-b border-border bg-surface-secondary px-3 py-2">
         {/* Symbol picker */}
         <div className="relative">
           <Button
@@ -172,16 +172,16 @@ export default function TradingViewChart({
           </Button>
 
           {symbolOpen && (
-            <div className="absolute left-0 top-full z-50 mt-1 max-h-64 w-48 overflow-y-auto rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] shadow-lg">
+            <div className="absolute left-0 top-full z-50 mt-1 max-h-64 w-48 overflow-y-auto rounded-lg border border-border bg-(--color-surface) shadow-lg">
               {SYMBOLS.map((s) => (
                 <button
                   key={s.id}
                   onClick={() => { setSymbol(s.id); setSymbolOpen(false); }}
                   className={cn(
-                    "block w-full px-3 py-2 text-left text-xs hover:bg-[var(--color-surface-secondary)] transition-colors",
+                    "block w-full px-3 py-2 text-left text-xs hover:bg-surface-secondary transition-colors",
                     symbol === s.id
-                      ? "font-bold text-[var(--color-accent)]"
-                      : "text-[var(--color-text-primary)]"
+                      ? "font-bold text-accent"
+                      : "text-text-primary"
                   )}
                 >
                   {s.label}
@@ -192,7 +192,7 @@ export default function TradingViewChart({
         </div>
 
         {/* Interval buttons */}
-        <div className="flex items-center gap-0.5 rounded-lg bg-[var(--color-surface-tertiary)] p-0.5">
+        <div className="flex items-center gap-0.5 rounded-lg bg-surface-tertiary p-0.5">
           {INTERVALS.map((i) => (
             <button
               key={i.value}
@@ -200,8 +200,8 @@ export default function TradingViewChart({
               className={cn(
                 "rounded-md px-2 py-1 text-[11px] font-medium transition-colors",
                 interval === i.value
-                  ? "bg-[var(--color-accent)] text-white"
-                  : "text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)]"
+                  ? "bg-accent text-white"
+                  : "text-text-secondary hover:text-text-primary"
               )}
             >
               {i.label}
@@ -222,16 +222,16 @@ export default function TradingViewChart({
           </Button>
 
           {styleOpen && (
-            <div className="absolute right-0 top-full z-50 mt-1 w-36 rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] shadow-lg">
+            <div className="absolute right-0 top-full z-50 mt-1 w-36 rounded-lg border border-border bg-(--color-surface) shadow-lg">
               {CHART_STYLES.map((s) => (
                 <button
                   key={s.value}
                   onClick={() => { setChartStyle(s.value); setStyleOpen(false); }}
                   className={cn(
-                    "block w-full px-3 py-2 text-left text-xs hover:bg-[var(--color-surface-secondary)] transition-colors",
+                    "block w-full px-3 py-2 text-left text-xs hover:bg-surface-secondary transition-colors",
                     chartStyle === s.value
-                      ? "font-bold text-[var(--color-accent)]"
-                      : "text-[var(--color-text-primary)]"
+                      ? "font-bold text-accent"
+                      : "text-text-primary"
                   )}
                 >
                   {s.label}

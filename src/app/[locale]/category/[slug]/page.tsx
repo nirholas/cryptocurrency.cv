@@ -58,15 +58,15 @@ export default async function CategoryPage({ params }: Props) {
       <Header />
       <main className="container-main py-10">
         {/* Breadcrumbs */}
-        <nav aria-label="Breadcrumb" className="mb-6 text-sm text-[var(--color-text-tertiary)]">
+        <nav aria-label="Breadcrumb" className="mb-6 text-sm text-text-tertiary">
           <ol className="flex items-center gap-1.5">
             <li>
-              <Link href="/" className="hover:text-[var(--color-accent)] transition-colors">
+              <Link href="/" className="hover:text-accent transition-colors">
                 Home
               </Link>
             </li>
             <li aria-hidden="true">/</li>
-            <li className="text-[var(--color-text-primary)] font-medium">
+            <li className="text-text-primary font-medium">
               {name}
             </li>
           </ol>
@@ -83,19 +83,19 @@ export default async function CategoryPage({ params }: Props) {
             }}
             aria-hidden="true"
           />
-          <h1 className="font-serif text-3xl md:text-4xl font-bold mb-2 text-[var(--color-text-primary)]">
+          <h1 className="font-serif text-3xl md:text-4xl font-bold mb-2 text-text-primary">
             {category?.icon && <span className="mr-2">{category.icon}</span>}
             {name} News
           </h1>
           {category?.description && (
-            <p className="text-[var(--color-text-secondary)] max-w-2xl">
+            <p className="text-text-secondary max-w-2xl">
               {category.description}
             </p>
           )}
         </div>
 
         {articles.length === 0 ? (
-          <p className="text-[var(--color-text-tertiary)] py-12 text-center">
+          <p className="text-text-tertiary py-12 text-center">
             No articles found for this category.
           </p>
         ) : (
@@ -104,7 +104,7 @@ export default async function CategoryPage({ params }: Props) {
             <div className="flex-1 min-w-0">
               {/* Featured Article */}
               {featuredArticle && (
-                <div className="mb-10 pb-10 border-b border-[var(--color-border)]">
+                <div className="mb-10 pb-10 border-b border-border">
                   <FeaturedCard article={featuredArticle} />
                 </div>
               )}
@@ -129,7 +129,7 @@ export default async function CategoryPage({ params }: Props) {
             {/* Category Sidebar (desktop) */}
             <aside className="hidden lg:block w-64 shrink-0">
               <div className="sticky top-24">
-                <h2 className="font-serif text-lg font-bold mb-4 text-[var(--color-text-primary)]">
+                <h2 className="font-serif text-lg font-bold mb-4 text-text-primary">
                   Categories
                 </h2>
                 <nav aria-label="Categories">
@@ -141,8 +141,8 @@ export default async function CategoryPage({ params }: Props) {
                           className={cn(
                             "flex items-center gap-2 px-3 py-2 rounded-md text-sm transition-colors",
                             cat.slug === slug
-                              ? "bg-[var(--color-surface-secondary)] text-[var(--color-accent)] font-medium"
-                              : "text-[var(--color-text-secondary)] hover:bg-[var(--color-surface-secondary)] hover:text-[var(--color-text-primary)]"
+                              ? "bg-surface-secondary text-accent font-medium"
+                              : "text-text-secondary hover:bg-surface-secondary hover:text-text-primary"
                           )}
                         >
                           <span>{cat.icon}</span>

@@ -50,12 +50,12 @@ export default async function PredictionsPage({ params }: Props) {
         {/* Page Header */}
         <div className="mb-10">
           <div className="flex items-center gap-3 mb-2">
-            <Brain className="h-8 w-8 text-[var(--color-accent)]" />
-            <h1 className="font-serif text-3xl md:text-4xl font-bold text-[var(--color-text-primary)]">
+            <Brain className="h-8 w-8 text-accent" />
+            <h1 className="font-serif text-3xl md:text-4xl font-bold text-text-primary">
               AI Predictions
             </h1>
           </div>
-          <p className="text-[var(--color-text-secondary)] max-w-2xl">
+          <p className="text-text-secondary max-w-2xl">
             AI-powered price predictions and trading signals based on news sentiment analysis,
             on-chain data, and market analytics. Updated in real time.
           </p>
@@ -64,8 +64,8 @@ export default async function PredictionsPage({ params }: Props) {
         {/* Section: AI Price Predictions */}
         <section className="mb-12">
           <div className="flex items-center gap-2 mb-6">
-            <TrendingUp className="h-5 w-5 text-[var(--color-accent)]" />
-            <h2 className="font-serif text-xl md:text-2xl font-bold text-[var(--color-text-primary)]">
+            <TrendingUp className="h-5 w-5 text-accent" />
+            <h2 className="font-serif text-xl md:text-2xl font-bold text-text-primary">
               Price Predictions
             </h2>
           </div>
@@ -75,12 +75,12 @@ export default async function PredictionsPage({ params }: Props) {
         {/* Section: Prediction History */}
         <section className="mb-12">
           <div className="flex items-center gap-2 mb-6">
-            <History className="h-5 w-5 text-[var(--color-accent)]" />
-            <h2 className="font-serif text-xl md:text-2xl font-bold text-[var(--color-text-primary)]">
+            <History className="h-5 w-5 text-accent" />
+            <h2 className="font-serif text-xl md:text-2xl font-bold text-text-primary">
               Prediction Track Record
             </h2>
           </div>
-          <p className="text-sm text-[var(--color-text-secondary)] mb-4">
+          <p className="text-sm text-text-secondary mb-4">
             How accurate were past AI predictions? Review the historical performance below.
           </p>
           <PredictionHistoryTable />
@@ -89,12 +89,12 @@ export default async function PredictionsPage({ params }: Props) {
         {/* Section: Trading Signals */}
         <section className="mb-12">
           <div className="flex items-center gap-2 mb-6">
-            <Zap className="h-5 w-5 text-[var(--color-accent)]" />
-            <h2 className="font-serif text-xl md:text-2xl font-bold text-[var(--color-text-primary)]">
+            <Zap className="h-5 w-5 text-accent" />
+            <h2 className="font-serif text-xl md:text-2xl font-bold text-text-primary">
               Trading Signals
             </h2>
           </div>
-          <p className="text-sm text-[var(--color-text-secondary)] mb-4">
+          <p className="text-sm text-text-secondary mb-4">
             AI-generated trading signals based on recent crypto news, sentiment, and market data.
           </p>
           <TradingSignals />

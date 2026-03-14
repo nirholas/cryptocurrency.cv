@@ -30,14 +30,14 @@ export default async function AdvertisingDisclosurePage({ params }: Props) {
       <main className="container-main py-10">
         {/* Hero */}
         <div className="mb-10">
-          <h1 className="mb-3 font-serif text-3xl font-bold text-[var(--color-text-primary)] md:text-4xl">
+          <h1 className="mb-3 font-serif text-3xl font-bold text-text-primary md:text-4xl">
             Advertising Disclosure
           </h1>
-          <p className="text-sm text-[var(--color-text-tertiary)]">Last updated: March 1, 2026</p>
+          <p className="text-sm text-text-tertiary">Last updated: March 1, 2026</p>
         </div>
 
         <div className="max-w-3xl">
-          <div className="prose dark:prose-invert max-w-none leading-relaxed text-[var(--color-text-secondary)] [&_a]:text-[var(--color-accent)] [&_a]:underline [&_a]:hover:opacity-80 [&_h2]:text-[var(--color-text-primary)] [&_h3]:text-[var(--color-text-primary)] [&_strong]:text-[var(--color-text-primary)]">
+          <div className="prose dark:prose-invert max-w-none leading-relaxed text-text-secondary [&_a]:text-accent [&_a]:underline [&_a]:hover:opacity-80 [&_h2]:text-text-primary [&_h3]:text-text-primary [&_strong]:text-text-primary">
             <p className="mb-8 text-lg">
               Crypto Vision News is committed to transparency about how we fund our operations. This
               disclosure explains our advertising practices, how we label paid content, and the
@@ -125,8 +125,8 @@ export default async function AdvertisingDisclosurePage({ params }: Props) {
             </section>
 
             {/* Complaints */}
-            <section className="mb-10 rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] p-6">
-              <h2 className="mb-3 font-serif text-lg font-bold text-[var(--color-text-primary)]">
+            <section className="mb-10 rounded-lg border border-border bg-(--color-surface) p-6">
+              <h2 className="mb-3 font-serif text-lg font-bold text-text-primary">
                 Questions or Complaints
               </h2>
               <p>

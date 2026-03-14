@@ -85,7 +85,7 @@ export default function StatusAutoRefresh({
 
   return (
     <div className="container-main">
-      <div className="flex items-center justify-between gap-4 py-2 text-xs text-[var(--color-text-tertiary)]">
+      <div className="flex items-center justify-between gap-4 py-2 text-xs text-text-tertiary">
         {/* Left: status info */}
         <div className="flex items-center gap-2">
           {/* Animated dot */}
@@ -147,7 +147,7 @@ export default function StatusAutoRefresh({
             onClick={doRefresh}
             disabled={isRefreshing}
             className={cn(
-              "inline-flex items-center gap-1 px-2 py-0.5 rounded border border-[var(--color-border)] hover:border-[var(--color-border-hover)] transition-colors",
+              "inline-flex items-center gap-1 px-2 py-0.5 rounded border border-border hover:border-border-hover transition-colors",
               isRefreshing && "opacity-50 cursor-not-allowed"
             )}
             title="Refresh now"

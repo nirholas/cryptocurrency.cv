@@ -50,7 +50,7 @@ function spreadColorIntensity(spread: number): string {
   if (spread >= 1) return "bg-green-500/10 text-green-600 dark:text-green-400";
   if (spread >= 0.5)
     return "bg-green-500/5 text-green-700 dark:text-green-300";
-  return "text-[var(--color-text-secondary)]";
+  return "text-text-secondary";
 }
 
 export default function ArbitrageTable() {
@@ -183,7 +183,7 @@ export default function ArbitrageTable() {
           {[1, 2, 3].map((i) => (
             <div
               key={i}
-              className="rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] p-5"
+              className="rounded-lg border border-border bg-(--color-surface) p-5"
             >
               <Skeleton className="mb-2 h-4 w-24" />
               <Skeleton className="mb-1 h-6 w-16" />
@@ -191,11 +191,11 @@ export default function ArbitrageTable() {
             </div>
           ))}
         </div>
-        <div className="overflow-x-auto rounded-lg border border-[var(--color-border)]">
+        <div className="overflow-x-auto rounded-lg border border-border">
           <table className="w-full">
             <tbody>
               {Array.from({ length: 8 }).map((_, i) => (
-                <tr key={i} className="border-b border-[var(--color-border)]">
+                <tr key={i} className="border-b border-border">
                   {Array.from({ length: 7 }).map((__, j) => (
                     <td key={j} className="px-4 py-3">
                       <Skeleton className="h-4" />
@@ -212,9 +212,9 @@ export default function ArbitrageTable() {
 
   if (error) {
     return (
-      <div className="flex flex-col items-center justify-center gap-4 rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] py-16">
+      <div className="flex flex-col items-center justify-center gap-4 rounded-lg border border-border bg-(--color-surface) py-16">
         <AlertTriangle className="h-10 w-10 text-amber-500" />
-        <p className="text-[var(--color-text-secondary)]">{error}</p>
+        <p className="text-text-secondary">{error}</p>
         <Button variant="outline" size="sm" onClick={fetchData}>
           Try Again
         </Button>
@@ -231,12 +231,12 @@ export default function ArbitrageTable() {
             <div
               key={opp.id}
               className={cn(
-                "rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] p-5 transition-colors hover:bg-[var(--color-surface-secondary)]",
+                "rounded-lg border border-border bg-(--color-surface) p-5 transition-colors hover:bg-surface-secondary",
                 idx === 0 && "ring-1 ring-green-500/30"
               )}
             >
               <div className="mb-1 flex items-center justify-between">
-                <span className="text-xs font-medium uppercase tracking-wider text-[var(--color-text-tertiary)]">
+                <span className="text-xs font-medium uppercase tracking-wider text-text-tertiary">
                   #{idx + 1} Opportunity
                 </span>
                 <Badge variant="trading">{opp.coin}</Badge>
@@ -249,17 +249,17 @@ export default function ArbitrageTable() {
               >
                 +{opp.spreadPercent.toFixed(2)}%
               </div>
-              <p className="mt-1 text-sm text-[var(--color-text-secondary)]">
+              <p className="mt-1 text-sm text-text-secondary">
                 Buy on{" "}
-                <span className="font-medium text-[var(--color-text-primary)]">
+                <span className="font-medium text-text-primary">
                   {opp.buyExchange}
                 </span>{" "}
                 → Sell on{" "}
-                <span className="font-medium text-[var(--color-text-primary)]">
+                <span className="font-medium text-text-primary">
                   {opp.sellExchange}
                 </span>
               </p>
-              <p className="mt-0.5 text-xs text-[var(--color-text-tertiary)]">
+              <p className="mt-0.5 text-xs text-text-tertiary">
                 Est. profit: {formatCurrency(opp.estimatedProfit)}
               </p>
             </div>
@@ -270,7 +270,7 @@ export default function ArbitrageTable() {
       {/* Controls */}
       <div className="flex flex-wrap items-center gap-3">
         <div className="flex items-center gap-1.5">
-          <span className="text-sm font-medium text-[var(--color-text-secondary)]">
+          <span className="text-sm font-medium text-text-secondary">
             Min Spread:
           </span>
           {MIN_SPREAD_OPTIONS.map((opt) => (
@@ -280,8 +280,8 @@ export default function ArbitrageTable() {
               className={cn(
                 "rounded-md px-2.5 py-1 text-xs font-medium transition-colors",
                 minSpread === opt.value
-                  ? "bg-[var(--color-accent)] text-white"
-                  : "bg-[var(--color-surface-secondary)] text-[var(--color-text-secondary)] hover:bg-[var(--color-surface-tertiary)]"
+                  ? "bg-accent text-white"
+                  : "bg-surface-secondary text-text-secondary hover:bg-surface-tertiary"
               )}
             >
               {opt.label}
@@ -289,7 +289,7 @@ export default function ArbitrageTable() {
           ))}
         </div>
 
-        <div className="ml-auto flex items-center gap-2 text-xs text-[var(--color-text-tertiary)]">
+        <div className="ml-auto flex items-center gap-2 text-xs text-text-tertiary">
           <span>
             {sorted.length} opportunit{sorted.length === 1 ? "y" : "ies"}
           </span>
@@ -300,7 +300,7 @@ export default function ArbitrageTable() {
           <button
             onClick={fetchData}
             disabled={refreshing}
-            className="rounded-md p-1 transition-colors hover:bg-[var(--color-surface-secondary)]"
+            className="rounded-md p-1 transition-colors hover:bg-surface-secondary"
             aria-label="Refresh data"
           >
             <RefreshCw
@@ -311,10 +311,10 @@ export default function ArbitrageTable() {
       </div>
 
       {/* Table */}
-      <div className="overflow-x-auto rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)]">
+      <div className="overflow-x-auto rounded-lg border border-border bg-(--color-surface)">
         <table className="w-full text-sm" aria-label="Arbitrage opportunities">
           <thead>
-            <tr className="border-b border-[var(--color-border)] bg-[var(--color-surface-secondary)]">
+            <tr className="border-b border-border bg-surface-secondary">
               {(
                 [
                   { key: "coin" as SortKey, label: "Coin", cls: "" },
@@ -353,7 +353,7 @@ export default function ArbitrageTable() {
                 <th
                   key={`${col.label}-${i}`}
                   className={cn(
-                    "cursor-pointer whitespace-nowrap px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-[var(--color-text-tertiary)] transition-colors hover:text-[var(--color-text-primary)]",
+                    "cursor-pointer whitespace-nowrap px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-text-tertiary transition-colors hover:text-text-primary",
                     col.cls
                   )}
                   onClick={() => handleSort(col.key)}
@@ -376,7 +376,7 @@ export default function ArbitrageTable() {
               <tr>
                 <td
                   colSpan={7}
-                  className="px-4 py-12 text-center text-[var(--color-text-tertiary)]"
+                  className="px-4 py-12 text-center text-text-tertiary"
                 >
                   No arbitrage opportunities matching your criteria.
                 </td>
@@ -385,24 +385,24 @@ export default function ArbitrageTable() {
               sorted.map((opp) => (
                 <tr
                   key={opp.id}
-                  className="border-b border-[var(--color-border)] transition-colors hover:bg-[var(--color-surface-secondary)]"
+                  className="border-b border-border transition-colors hover:bg-surface-secondary"
                 >
-                  <td className="whitespace-nowrap px-4 py-3 font-medium text-[var(--color-text-primary)]">
+                  <td className="whitespace-nowrap px-4 py-3 font-medium text-text-primary">
                     {opp.coin}
-                    <span className="ml-1 text-xs text-[var(--color-text-tertiary)]">
+                    <span className="ml-1 text-xs text-text-tertiary">
                       {opp.symbol}
                     </span>
                   </td>
-                  <td className="whitespace-nowrap px-4 py-3 text-[var(--color-text-secondary)]">
+                  <td className="whitespace-nowrap px-4 py-3 text-text-secondary">
                     {opp.buyExchange}
                   </td>
-                  <td className="hidden whitespace-nowrap px-4 py-3 text-[var(--color-text-primary)] sm:table-cell">
+                  <td className="hidden whitespace-nowrap px-4 py-3 text-text-primary sm:table-cell">
                     {formatCurrency(opp.buyPrice)}
                   </td>
-                  <td className="hidden whitespace-nowrap px-4 py-3 text-[var(--color-text-secondary)] md:table-cell">
+                  <td className="hidden whitespace-nowrap px-4 py-3 text-text-secondary md:table-cell">
                     {opp.sellExchange}
                   </td>
-                  <td className="hidden whitespace-nowrap px-4 py-3 text-[var(--color-text-primary)] sm:table-cell">
+                  <td className="hidden whitespace-nowrap px-4 py-3 text-text-primary sm:table-cell">
                     {formatCurrency(opp.sellPrice)}
                   </td>
                   <td className="whitespace-nowrap px-4 py-3">

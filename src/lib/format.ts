@@ -69,7 +69,7 @@ export function formatPercent(value: number | null | undefined): {
   className: string;
 } {
   if (value == null || Number.isNaN(value)) {
-    return { text: '—', className: 'text-[var(--color-text-secondary)]' };
+    return { text: '—', className: 'text-text-secondary' };
   }
 
   const sign = value > 0 ? '+' : '';
@@ -79,7 +79,7 @@ export function formatPercent(value: number | null | undefined): {
       ? 'text-green-500 dark:text-green-400'
       : value < 0
         ? 'text-red-500 dark:text-red-400'
-        : 'text-[var(--color-text-secondary)]';
+        : 'text-text-secondary';
 
   return { text, className };
 }

@@ -65,8 +65,8 @@ export default function BreakingNewsBanner({ articles }: BreakingNewsBannerProps
   return (
     <div
       className={cn(
-        "relative overflow-hidden transition-colors border-b border-[var(--color-border)]",
-        "bg-[var(--color-surface-secondary)] text-[var(--color-text-primary)]"
+        "relative overflow-hidden transition-colors border-b border-border",
+        "bg-surface-secondary text-text-primary"
       )}
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
@@ -95,7 +95,7 @@ export default function BreakingNewsBanner({ articles }: BreakingNewsBannerProps
             href={current.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 text-sm font-medium text-[var(--color-text-primary)] hover:underline underline-offset-2 truncate animate-[fadeSlideIn_0.4s_ease-out]"
+            className="flex items-center gap-2 text-sm font-medium text-text-primary hover:underline underline-offset-2 truncate animate-[fadeSlideIn_0.4s_ease-out]"
           >
             <span className="truncate">{current.title}</span>
             <ExternalLink className="h-3 w-3 shrink-0 opacity-60" />
@@ -104,7 +104,7 @@ export default function BreakingNewsBanner({ articles }: BreakingNewsBannerProps
 
         {/* Source + time */}
         {(current.source || current.pubDate) && (
-          <span className="hidden md:flex items-center gap-1.5 text-[11px] text-[var(--color-text-tertiary)] shrink-0">
+          <span className="hidden md:flex items-center gap-1.5 text-[11px] text-text-tertiary shrink-0">
             {current.source && <span>{current.source}</span>}
             {current.pubDate && (
               <>
@@ -121,7 +121,7 @@ export default function BreakingNewsBanner({ articles }: BreakingNewsBannerProps
           <div className="hidden sm:flex items-center gap-0.5 shrink-0">
             <button
               onClick={() => setActiveIndex((prev) => (prev - 1 + articles.length) % articles.length)}
-              className="p-1 hover:bg-[var(--color-surface-tertiary)] rounded transition-colors cursor-pointer"
+              className="p-1 hover:bg-surface-tertiary rounded transition-colors cursor-pointer"
               aria-label="Previous breaking news"
             >
               <ChevronLeft className="h-3.5 w-3.5" />
@@ -134,7 +134,7 @@ export default function BreakingNewsBanner({ articles }: BreakingNewsBannerProps
                   onClick={() => setActiveIndex(i)}
                   className={cn(
                     "h-1.5 rounded-full transition-all cursor-pointer",
-                    i === activeIndex ? "w-4 bg-amber-500" : "w-1.5 bg-[var(--color-border)] hover:bg-[var(--color-border-hover)]"
+                    i === activeIndex ? "w-4 bg-amber-500" : "w-1.5 bg-border hover:bg-border-hover"
                   )}
                   aria-label={`Go to breaking news ${i + 1}`}
                 />
@@ -142,7 +142,7 @@ export default function BreakingNewsBanner({ articles }: BreakingNewsBannerProps
             </div>
             <button
               onClick={() => setActiveIndex((prev) => (prev + 1) % articles.length)}
-              className="p-1 hover:bg-[var(--color-surface-tertiary)] rounded transition-colors cursor-pointer"
+              className="p-1 hover:bg-surface-tertiary rounded transition-colors cursor-pointer"
               aria-label="Next breaking news"
             >
               <ChevronRight className="h-3.5 w-3.5" />
@@ -153,7 +153,7 @@ export default function BreakingNewsBanner({ articles }: BreakingNewsBannerProps
         {/* Dismiss */}
         <button
           onClick={handleDismiss}
-          className="shrink-0 p-1 hover:bg-[var(--color-surface-tertiary)] rounded transition-colors cursor-pointer"
+          className="shrink-0 p-1 hover:bg-surface-tertiary rounded transition-colors cursor-pointer"
           aria-label="Dismiss breaking news"
         >
           <X className="h-3.5 w-3.5" />
@@ -162,7 +162,7 @@ export default function BreakingNewsBanner({ articles }: BreakingNewsBannerProps
 
       {/* Auto-advance progress bar */}
       {articles.length > 1 && !isPaused && (
-        <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-[var(--color-border)]">
+        <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-border">
           <div
             key={activeIndex}
             className="h-full bg-amber-500/60 animate-[progressBar_6s_linear]"

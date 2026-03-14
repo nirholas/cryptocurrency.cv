@@ -89,10 +89,10 @@ function StatCard({ title, value, change, icon }: StatCardProps) {
     <Card className="p-5">
       <div className="flex items-start justify-between">
         <div>
-          <p className="text-xs font-medium uppercase tracking-wider text-[var(--color-text-tertiary)] mb-1">
+          <p className="text-xs font-medium uppercase tracking-wider text-text-tertiary mb-1">
             {title}
           </p>
-          <p className="text-2xl font-bold text-[var(--color-text-primary)]">
+          <p className="text-2xl font-bold text-text-primary">
             {value}
           </p>
           {change && (
@@ -101,7 +101,7 @@ function StatCard({ title, value, change, icon }: StatCardProps) {
             </p>
           )}
         </div>
-        <div className="text-[var(--color-accent)] opacity-60">{icon}</div>
+        <div className="text-accent opacity-60">{icon}</div>
       </div>
     </Card>
   );
@@ -138,7 +138,7 @@ export default async function MarketsPage({ params }: Props) {
 
   // Fear & greed color
   function fgColor(v: number | null) {
-    if (v == null) return "text-[var(--color-text-secondary)]";
+    if (v == null) return "text-text-secondary";
     if (v <= 25) return "text-red-500 dark:text-red-400";
     if (v <= 45) return "text-orange-500 dark:text-orange-400";
     if (v <= 55) return "text-yellow-500 dark:text-yellow-400";
@@ -151,10 +151,10 @@ export default async function MarketsPage({ params }: Props) {
       <Header />
       <main className="container-main py-10">
         {/* Page heading */}
-        <h1 className="font-serif text-3xl md:text-4xl font-bold mb-2 text-[var(--color-text-primary)]">
+        <h1 className="font-serif text-3xl md:text-4xl font-bold mb-2 text-text-primary">
           Markets
         </h1>
-        <p className="text-[var(--color-text-secondary)] mb-8 max-w-2xl">
+        <p className="text-text-secondary mb-8 max-w-2xl">
           Real-time cryptocurrency market data — prices, trends, and global
           overview for hundreds of digital assets.
         </p>
@@ -228,14 +228,14 @@ export default async function MarketsPage({ params }: Props) {
 
         {/* ---- Top Coins Table ---- */}
         <section aria-label="Top cryptocurrencies by market cap">
-          <h2 className="font-serif text-xl font-bold mb-4 text-[var(--color-text-primary)]">
+          <h2 className="font-serif text-xl font-bold mb-4 text-text-primary">
             Top Cryptocurrencies
           </h2>
 
           {coins.length > 0 ? (
             <MarketTable coins={coins} />
           ) : (
-            <div className="rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] p-12 text-center text-[var(--color-text-secondary)]">
+            <div className="rounded-lg border border-border bg-(--color-surface) p-12 text-center text-text-secondary">
               Market data is temporarily unavailable. Please try again shortly.
             </div>
           )}

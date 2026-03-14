@@ -152,7 +152,7 @@ function ArticleReadIndicator({
         </div>
       )}
       <div className="absolute bottom-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity">
-        <span className="text-[10px] text-[var(--color-text-tertiary)]">
+        <span className="text-[10px] text-text-tertiary">
           ~{estimateReadingTime(article.title + " " + (article.description ?? ""))} min read
         </span>
       </div>
@@ -330,8 +330,8 @@ export function SmartFeed({ initialArticles, className }: SmartFeedProps) {
             className={cn(
               "flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium whitespace-nowrap transition-all",
               mode === m.id
-                ? "bg-[var(--color-accent)] text-white shadow-sm"
-                : "bg-[var(--color-surface-secondary)] text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] hover:bg-[var(--color-surface-tertiary)]",
+                ? "bg-accent text-white shadow-sm"
+                : "bg-surface-secondary text-text-secondary hover:text-text-primary hover:bg-surface-tertiary",
             )}
           >
             <span>{m.icon}</span>
@@ -341,7 +341,7 @@ export function SmartFeed({ initialArticles, className }: SmartFeedProps) {
       </div>
 
       {/* ── Controls Bar ── */}
-      <div className="flex items-center justify-between gap-3 text-xs text-[var(--color-text-tertiary)]">
+      <div className="flex items-center justify-between gap-3 text-xs text-text-tertiary">
         <div className="flex items-center gap-3">
           {/* Auto-refresh selector */}
           <div className="flex items-center gap-1.5">
@@ -374,7 +374,7 @@ export function SmartFeed({ initialArticles, className }: SmartFeedProps) {
             onClick={fetchNewArticles}
             disabled={isRefreshing}
             className={cn(
-              "p-1 rounded hover:bg-[var(--color-surface-secondary)] transition-colors",
+              "p-1 rounded hover:bg-surface-secondary transition-colors",
               isRefreshing && "animate-spin",
             )}
             title="Refresh now"
@@ -385,7 +385,7 @@ export function SmartFeed({ initialArticles, className }: SmartFeedProps) {
           {/* Feed preferences toggle */}
           <button
             onClick={() => setShowPrefs(!showPrefs)}
-            className="p-1 rounded hover:bg-[var(--color-surface-secondary)] transition-colors"
+            className="p-1 rounded hover:bg-surface-secondary transition-colors"
             title="Feed preferences"
           >
             ⚙️
@@ -395,7 +395,7 @@ export function SmartFeed({ initialArticles, className }: SmartFeedProps) {
 
       {/* ── Preferences Panel ── */}
       {showPrefs && (
-        <div className="p-4 rounded-lg border border-[var(--color-border)] bg-[var(--color-surface-secondary)] space-y-3 animate-in slide-in-from-top duration-200">
+        <div className="p-4 rounded-lg border border-border bg-surface-secondary space-y-3 animate-in slide-in-from-top duration-200">
           <div className="flex items-center justify-between">
             <h4 className="text-sm font-semibold">Feed Preferences</h4>
             <button
@@ -403,7 +403,7 @@ export function SmartFeed({ initialArticles, className }: SmartFeedProps) {
                 setPrefs({ categories: [], sources: [], hideRead: false });
                 saveFeedPrefs({ categories: [], sources: [], hideRead: false });
               }}
-              className="text-xs text-[var(--color-accent)] hover:underline"
+              className="text-xs text-accent hover:underline"
             >
               Reset
             </button>
@@ -419,14 +419,14 @@ export function SmartFeed({ initialArticles, className }: SmartFeedProps) {
                 setPrefs(next);
                 saveFeedPrefs(next);
               }}
-              className="rounded border-[var(--color-border)]"
+              className="rounded border-border"
             />
             Hide articles I&apos;ve already read
           </label>
 
           {/* Category quick-filters */}
           <div>
-            <p className="text-xs text-[var(--color-text-tertiary)] mb-1.5">Focus categories:</p>
+            <p className="text-xs text-text-tertiary mb-1.5">Focus categories:</p>
             <div className="flex flex-wrap gap-1.5">
               {["Bitcoin", "Ethereum", "DeFi", "NFT", "Regulation", "Trading", "Altcoins"].map((cat) => (
                 <button
@@ -442,8 +442,8 @@ export function SmartFeed({ initialArticles, className }: SmartFeedProps) {
                   className={cn(
                     "px-2 py-0.5 rounded text-xs transition-colors",
                     prefs.categories.includes(cat.toLowerCase())
-                      ? "bg-[var(--color-accent)] text-white"
-                      : "bg-[var(--color-surface-tertiary)] text-[var(--color-text-secondary)] hover:bg-[var(--color-border)]",
+                      ? "bg-accent text-white"
+                      : "bg-surface-tertiary text-text-secondary hover:bg-border",
                   )}
                 >
                   {cat}
@@ -465,7 +465,7 @@ export function SmartFeed({ initialArticles, className }: SmartFeedProps) {
               key={article.link}
               onClick={() => handleArticleClick(article.link)}
               className={cn(
-                "pb-5 border-b border-[var(--color-border)] last:border-b-0 transition-opacity",
+                "pb-5 border-b border-border last:border-b-0 transition-opacity",
                 readArticles.has(article.link) && "opacity-60",
               )}
             >
@@ -476,7 +476,7 @@ export function SmartFeed({ initialArticles, className }: SmartFeedProps) {
             </div>
           ))
         ) : (
-          <div className="py-12 text-center text-[var(--color-text-tertiary)]">
+          <div className="py-12 text-center text-text-tertiary">
             <p className="text-lg mb-2">No articles match your filters</p>
             <p className="text-sm">Try adjusting your feed preferences or switching modes</p>
           </div>
@@ -531,23 +531,23 @@ export function FeedStatsWidget({ className }: { className?: string }) {
   }, []);
 
   return (
-    <div className={cn("rounded-lg border border-[var(--color-border)] p-4 bg-[var(--color-surface-secondary)]", className)}>
+    <div className={cn("rounded-lg border border-border p-4 bg-surface-secondary", className)}>
       <h4 className="text-sm font-semibold mb-3">📊 Your Feed Stats</h4>
       <dl className="space-y-2 text-sm">
         <div className="flex justify-between">
-          <dt className="text-[var(--color-text-secondary)]">Articles today</dt>
+          <dt className="text-text-secondary">Articles today</dt>
           <dd className="font-medium">{stats.articlesToday}</dd>
         </div>
         <div className="flex justify-between">
-          <dt className="text-[var(--color-text-secondary)]">You&apos;ve read</dt>
+          <dt className="text-text-secondary">You&apos;ve read</dt>
           <dd className="font-medium">{stats.readToday}</dd>
         </div>
         <div className="flex justify-between">
-          <dt className="text-[var(--color-text-secondary)]">Top source</dt>
+          <dt className="text-text-secondary">Top source</dt>
           <dd className="font-medium">{stats.topSource}</dd>
         </div>
         <div className="flex justify-between">
-          <dt className="text-[var(--color-text-secondary)]">Mood</dt>
+          <dt className="text-text-secondary">Mood</dt>
           <dd className="font-medium">😐 {stats.avgSentiment}</dd>
         </div>
       </dl>

@@ -116,12 +116,12 @@ export default function ExploreMore() {
   return (
     <section className="container-main py-12 lg:py-16">
       <div className="text-center mb-10">
-        <div className="inline-flex items-center gap-1.5 bg-[var(--color-surface-secondary)] rounded-full px-3 py-1 text-xs font-medium text-[var(--color-text-secondary)] mb-3 border border-[var(--color-border)]">
-          <Sparkles className="h-3 w-3 text-[var(--color-accent)]" />
+        <div className="inline-flex items-center gap-1.5 bg-surface-secondary rounded-full px-3 py-1 text-xs font-medium text-text-secondary mb-3 border border-border">
+          <Sparkles className="h-3 w-3 text-accent" />
           All tools free — No limits
         </div>
         <h2 className="text-2xl md:text-3xl font-bold font-serif mb-2">Explore More</h2>
-        <p className="text-sm text-[var(--color-text-secondary)] max-w-lg mx-auto">
+        <p className="text-sm text-text-secondary max-w-lg mx-auto">
           Powerful tools, real-time data, and intelligent insights to help you navigate the crypto market.
         </p>
       </div>
@@ -137,8 +137,8 @@ export default function ExploreMore() {
               key={tool.href}
               href={tool.href}
               className={cn(
-                "group relative flex items-start gap-4 rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] p-5",
-                "hover:shadow-lg hover:border-[var(--color-accent)]/50 transition-all duration-300",
+                "group relative flex items-start gap-4 rounded-xl border border-border bg-(--color-surface) p-5",
+                "hover:shadow-lg hover:border-accent/50 transition-all duration-300",
                 "hover:-translate-y-0.5"
               )}
               onMouseEnter={() => setHoveredIndex(index)}
@@ -157,7 +157,7 @@ export default function ExploreMore() {
               <div
                 className={cn(
                   "relative shrink-0 flex items-center justify-center h-11 w-11 rounded-xl transition-all duration-300",
-                  "bg-[var(--color-surface-secondary)] text-[var(--color-text-secondary)]",
+                  "bg-surface-secondary text-text-secondary",
                   `group-hover:bg-gradient-to-br group-hover:${tool.color} group-hover:text-white group-hover:shadow-md`
                 )}
               >
@@ -167,7 +167,7 @@ export default function ExploreMore() {
               {/* Content */}
               <div className="relative flex-1 min-w-0">
                 <div className="flex items-center gap-2 mb-1">
-                  <h3 className="font-semibold text-[var(--color-text-primary)] group-hover:text-[var(--color-accent)] transition-colors">
+                  <h3 className="font-semibold text-text-primary group-hover:text-accent transition-colors">
                     {tool.title}
                   </h3>
                   {badge && (
@@ -180,16 +180,16 @@ export default function ExploreMore() {
                     </span>
                   )}
                 </div>
-                <p className="text-xs text-[var(--color-text-secondary)] line-clamp-2 mb-2">
+                <p className="text-xs text-text-secondary line-clamp-2 mb-2">
                   {tool.description}
                 </p>
                 <div className="flex items-center justify-between">
                   {tool.stat && (
-                    <span className="text-[10px] text-[var(--color-text-tertiary)] font-medium">
+                    <span className="text-[10px] text-text-tertiary font-medium">
                       {tool.stat}
                     </span>
                   )}
-                  <span className="inline-flex items-center gap-1 text-xs font-medium text-[var(--color-accent)] opacity-0 group-hover:opacity-100 transition-opacity ml-auto">
+                  <span className="inline-flex items-center gap-1 text-xs font-medium text-accent opacity-0 group-hover:opacity-100 transition-opacity ml-auto">
                     Explore
                     <ArrowRight className="h-3 w-3 group-hover:translate-x-0.5 transition-transform" />
                   </span>
@@ -205,8 +205,8 @@ export default function ExploreMore() {
         <Link
           href="/developers"
           className={cn(
-            "inline-flex items-center gap-2 rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] px-5 py-2.5",
-            "text-sm font-medium text-[var(--color-text-secondary)] hover:text-[var(--color-accent)] hover:border-[var(--color-accent)] transition-all"
+            "inline-flex items-center gap-2 rounded-lg border border-border bg-(--color-surface) px-5 py-2.5",
+            "text-sm font-medium text-text-secondary hover:text-accent hover:border-accent transition-all"
           )}
         >
           <Code2 className="h-4 w-4" />

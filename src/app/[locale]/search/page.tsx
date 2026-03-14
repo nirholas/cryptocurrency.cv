@@ -299,25 +299,25 @@ function SearchPageInner() {
       <Header />
       <main className="container-main py-10">
         {/* ---- Title ---- */}
-        <h1 className="font-serif text-3xl md:text-4xl font-bold mb-6 text-[var(--color-text-primary)]">
+        <h1 className="font-serif text-3xl md:text-4xl font-bold mb-6 text-text-primary">
           Search News
         </h1>
 
         {/* ---- Search Bar ---- */}
         <div className="relative max-w-2xl mb-4">
-          <SearchIcon className="absolute left-4 top-1/2 -translate-y-1/2 text-[var(--color-text-tertiary)]" />
+          <SearchIcon className="absolute left-4 top-1/2 -translate-y-1/2 text-text-tertiary" />
           <input
             type="text"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Search for crypto news…"
-            className="w-full rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] pl-12 pr-4 py-3.5 text-base text-[var(--color-text-primary)] placeholder:text-[var(--color-text-tertiary)] focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)] transition-shadow"
+            className="w-full rounded-xl border border-border bg-(--color-surface) pl-12 pr-4 py-3.5 text-base text-text-primary placeholder:text-text-tertiary focus:outline-none focus:ring-2 focus:ring-accent transition-shadow"
           />
           {query && (
             <button
               type="button"
               onClick={() => setQuery("")}
-              className="absolute right-4 top-1/2 -translate-y-1/2 text-[var(--color-text-tertiary)] hover:text-[var(--color-text-primary)] transition-colors"
+              className="absolute right-4 top-1/2 -translate-y-1/2 text-text-tertiary hover:text-text-primary transition-colors"
               aria-label="Clear search"
             >
               ✕
@@ -329,7 +329,7 @@ function SearchPageInner() {
         {searchHistory.length > 0 && !searched && (
           <div className="mb-6 max-w-2xl">
             <div className="flex items-center justify-between mb-2">
-              <span className="text-xs font-medium text-[var(--color-text-tertiary)] uppercase tracking-wide">
+              <span className="text-xs font-medium text-text-tertiary uppercase tracking-wide">
                 Recent searches
               </span>
               <button
@@ -337,7 +337,7 @@ function SearchPageInner() {
                   clearSearchHistory();
                   setSearchHistory([]);
                 }}
-                className="text-xs text-[var(--color-text-tertiary)] hover:text-[var(--color-accent)] transition-colors"
+                className="text-xs text-text-tertiary hover:text-accent transition-colors"
               >
                 Clear
               </button>
@@ -347,7 +347,7 @@ function SearchPageInner() {
                 <button
                   key={term}
                   onClick={() => quickSearch(term)}
-                  className="rounded-full border border-[var(--color-border)] bg-[var(--color-surface)] px-3 py-1 text-sm text-[var(--color-text-secondary)] hover:border-[var(--color-accent)] hover:text-[var(--color-accent)] transition-colors"
+                  className="rounded-full border border-border bg-(--color-surface) px-3 py-1 text-sm text-text-secondary hover:border-accent hover:text-accent transition-colors"
                 >
                   {term}
                 </button>
@@ -368,8 +368,8 @@ function SearchPageInner() {
               className={cn(
                 "shrink-0 rounded-full px-4 py-1.5 text-sm font-medium transition-colors",
                 !category
-                  ? "bg-[var(--color-accent)] text-white"
-                  : "bg-[var(--color-surface-secondary)] text-[var(--color-text-secondary)] hover:bg-[var(--color-surface-tertiary)]"
+                  ? "bg-accent text-white"
+                  : "bg-surface-secondary text-text-secondary hover:bg-surface-tertiary"
               )}
             >
               All
@@ -383,8 +383,8 @@ function SearchPageInner() {
                 className={cn(
                   "shrink-0 rounded-full px-4 py-1.5 text-sm font-medium transition-colors whitespace-nowrap",
                   category === cat.slug
-                    ? "bg-[var(--color-accent)] text-white"
-                    : "bg-[var(--color-surface-secondary)] text-[var(--color-text-secondary)] hover:bg-[var(--color-surface-tertiary)]"
+                    ? "bg-accent text-white"
+                    : "bg-surface-secondary text-text-secondary hover:bg-surface-tertiary"
                 )}
               >
                 <span className="mr-1">{cat.icon}</span>
@@ -400,7 +400,7 @@ function SearchPageInner() {
               <select
                 value={source}
                 onChange={(e) => setSource(e.target.value)}
-                className="rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] px-3 py-1.5 text-sm text-[var(--color-text-primary)] focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]"
+                className="rounded-lg border border-border bg-(--color-surface) px-3 py-1.5 text-sm text-text-primary focus:outline-none focus:ring-2 focus:ring-accent"
               >
                 <option value="">All Sources</option>
                 {sources.map((s) => (
@@ -412,7 +412,7 @@ function SearchPageInner() {
             )}
 
             {/* Date range */}
-            <div className="flex rounded-lg border border-[var(--color-border)] overflow-hidden">
+            <div className="flex rounded-lg border border-border overflow-hidden">
               {DATE_RANGES.map((dr) => (
                 <button
                   key={dr.value}
@@ -420,8 +420,8 @@ function SearchPageInner() {
                   className={cn(
                     "px-3 py-1.5 text-sm font-medium transition-colors",
                     dateRange === dr.value
-                      ? "bg-[var(--color-accent)] text-white"
-                      : "bg-[var(--color-surface)] text-[var(--color-text-secondary)] hover:bg-[var(--color-surface-secondary)]"
+                      ? "bg-accent text-white"
+                      : "bg-(--color-surface) text-text-secondary hover:bg-surface-secondary"
                   )}
                 >
                   {dr.label}
@@ -430,14 +430,14 @@ function SearchPageInner() {
             </div>
 
             {/* Sort toggle */}
-            <div className="flex rounded-lg border border-[var(--color-border)] overflow-hidden">
+            <div className="flex rounded-lg border border-border overflow-hidden">
               <button
                 onClick={() => setSort("newest")}
                 className={cn(
                   "px-3 py-1.5 text-sm font-medium transition-colors",
                   sort === "newest"
-                    ? "bg-[var(--color-accent)] text-white"
-                    : "bg-[var(--color-surface)] text-[var(--color-text-secondary)] hover:bg-[var(--color-surface-secondary)]"
+                    ? "bg-accent text-white"
+                    : "bg-(--color-surface) text-text-secondary hover:bg-surface-secondary"
                 )}
               >
                 Newest
@@ -447,8 +447,8 @@ function SearchPageInner() {
                 className={cn(
                   "px-3 py-1.5 text-sm font-medium transition-colors",
                   sort === "relevance"
-                    ? "bg-[var(--color-accent)] text-white"
-                    : "bg-[var(--color-surface)] text-[var(--color-text-secondary)] hover:bg-[var(--color-surface-secondary)]"
+                    ? "bg-accent text-white"
+                    : "bg-(--color-surface) text-text-secondary hover:bg-surface-secondary"
                 )}
               >
                 Relevance
@@ -461,7 +461,7 @@ function SearchPageInner() {
 
         {/* Result count */}
         {searched && !loading && results.length > 0 && (
-          <p className="text-sm text-[var(--color-text-tertiary)] mb-4">
+          <p className="text-sm text-text-tertiary mb-4">
             {totalCount} result{totalCount !== 1 ? "s" : ""}
             {debouncedQuery.trim()
               ? ` for \u201c${debouncedQuery.trim()}\u201d`
@@ -475,11 +475,11 @@ function SearchPageInner() {
         {/* Empty initial state */}
         {!loading && !searched && (
           <div className="py-16 text-center">
-            <SearchIcon className="mx-auto h-12 w-12 text-[var(--color-text-tertiary)] opacity-40 mb-4" />
-            <h2 className="text-lg font-semibold text-[var(--color-text-secondary)] mb-2">
+            <SearchIcon className="mx-auto h-12 w-12 text-text-tertiary opacity-40 mb-4" />
+            <h2 className="text-lg font-semibold text-text-secondary mb-2">
               Discover crypto news
             </h2>
-            <p className="text-sm text-[var(--color-text-tertiary)] mb-6 max-w-md mx-auto">
+            <p className="text-sm text-text-tertiary mb-6 max-w-md mx-auto">
               Search across hundreds of sources for the latest cryptocurrency
               news, or browse by category above.
             </p>
@@ -488,7 +488,7 @@ function SearchPageInner() {
                 <button
                   key={term}
                   onClick={() => quickSearch(term)}
-                  className="rounded-full border border-[var(--color-border)] bg-[var(--color-surface)] px-4 py-1.5 text-sm text-[var(--color-text-secondary)] hover:border-[var(--color-accent)] hover:text-[var(--color-accent)] transition-colors capitalize"
+                  className="rounded-full border border-border bg-(--color-surface) px-4 py-1.5 text-sm text-text-secondary hover:border-accent hover:text-accent transition-colors capitalize"
                 >
                   {term}
                 </button>
@@ -500,10 +500,10 @@ function SearchPageInner() {
         {/* No results */}
         {!loading && searched && results.length === 0 && (
           <div className="py-16 text-center">
-            <p className="text-lg font-semibold text-[var(--color-text-secondary)] mb-2">
+            <p className="text-lg font-semibold text-text-secondary mb-2">
               No results found
             </p>
-            <p className="text-sm text-[var(--color-text-tertiary)] mb-6 max-w-md mx-auto">
+            <p className="text-sm text-text-tertiary mb-6 max-w-md mx-auto">
               {debouncedQuery.trim()
                 ? `We couldn\u2019t find anything for \u201c${debouncedQuery.trim()}\u201d. Try a different search term or adjust your filters.`
                 : "Try adjusting your filters or searching for something specific."}
@@ -564,7 +564,7 @@ export default function SearchPage() {
         <>
           <Header />
           <main className="container-main py-10">
-            <h1 className="font-serif text-3xl md:text-4xl font-bold mb-6 text-[var(--color-text-primary)]">
+            <h1 className="font-serif text-3xl md:text-4xl font-bold mb-6 text-text-primary">
               Search News
             </h1>
             <Skeleton className="h-12 w-full max-w-2xl mb-8 rounded-xl" />

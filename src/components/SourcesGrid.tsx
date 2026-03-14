@@ -156,7 +156,7 @@ export default function SourcesGrid({ sources }: SourcesGridProps) {
           {/* Search Input */}
           <div className="relative flex-1 max-w-lg">
             <svg
-              className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-[var(--color-text-tertiary)]"
+              className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-text-tertiary"
               fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}
             >
               <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -167,12 +167,12 @@ export default function SourcesGrid({ sources }: SourcesGridProps) {
               placeholder="Search sources... (⌘F)"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              className="w-full rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] py-2.5 pl-10 pr-10 text-sm text-[var(--color-text-primary)] placeholder-[var(--color-text-tertiary)] outline-none focus:border-[var(--color-accent)] focus:ring-1 focus:ring-[var(--color-accent)] transition-colors"
+              className="w-full rounded-lg border border-border bg-(--color-surface) py-2.5 pl-10 pr-10 text-sm text-text-primary placeholder-text-tertiary outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-colors"
             />
             {search && (
               <button
                 onClick={() => setSearch("")}
-                className="absolute right-3 top-1/2 -translate-y-1/2 text-[var(--color-text-tertiary)] hover:text-[var(--color-text-primary)] transition-colors"
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-text-tertiary hover:text-text-primary transition-colors"
               >
                 <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -184,14 +184,14 @@ export default function SourcesGrid({ sources }: SourcesGridProps) {
           {/* View / Sort / Export Controls */}
           <div className="flex items-center gap-2">
             {/* View Toggle */}
-            <div className="flex rounded-lg border border-[var(--color-border)] overflow-hidden">
+            <div className="flex rounded-lg border border-border overflow-hidden">
               <button
                 onClick={() => setViewMode("grid")}
                 className={cn(
                   "p-2 transition-colors",
                   viewMode === "grid"
-                    ? "bg-[var(--color-accent)] text-white"
-                    : "bg-[var(--color-surface)] text-[var(--color-text-tertiary)] hover:text-[var(--color-text-primary)]"
+                    ? "bg-accent text-white"
+                    : "bg-(--color-surface) text-text-tertiary hover:text-text-primary"
                 )}
                 title="Grid view"
               >
@@ -204,8 +204,8 @@ export default function SourcesGrid({ sources }: SourcesGridProps) {
                 className={cn(
                   "p-2 transition-colors",
                   viewMode === "list"
-                    ? "bg-[var(--color-accent)] text-white"
-                    : "bg-[var(--color-surface)] text-[var(--color-text-tertiary)] hover:text-[var(--color-text-primary)]"
+                    ? "bg-accent text-white"
+                    : "bg-(--color-surface) text-text-tertiary hover:text-text-primary"
                 )}
                 title="List view"
               >
@@ -219,7 +219,7 @@ export default function SourcesGrid({ sources }: SourcesGridProps) {
             <select
               value={sortMode}
               onChange={(e) => setSortMode(e.target.value as SortMode)}
-              className="rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] px-3 py-2 text-xs text-[var(--color-text-secondary)] outline-none focus:border-[var(--color-accent)]"
+              className="rounded-lg border border-border bg-(--color-surface) px-3 py-2 text-xs text-text-secondary outline-none focus:border-accent"
             >
               <option value="alpha">A → Z</option>
               <option value="status">By Status</option>
@@ -237,8 +237,8 @@ export default function SourcesGrid({ sources }: SourcesGridProps) {
               className={cn(
                 "rounded-full px-3 py-1 text-xs font-medium transition-colors border flex items-center gap-1.5",
                 statusFilter === key
-                  ? "bg-[var(--color-accent)] text-white border-[var(--color-accent)]"
-                  : "bg-[var(--color-surface-secondary)] text-[var(--color-text-secondary)] border-[var(--color-border)] hover:border-[var(--color-border-hover)]"
+                  ? "bg-accent text-white border-accent"
+                  : "bg-surface-secondary text-text-secondary border-border hover:border-border-hover"
               )}
             >
               {dotColor && <span className={cn("h-1.5 w-1.5 rounded-full", dotColor)} />}
@@ -254,8 +254,8 @@ export default function SourcesGrid({ sources }: SourcesGridProps) {
             className={cn(
               "rounded-full px-3.5 py-1.5 text-xs font-medium transition-colors border",
               activeCategory === ALL_CATEGORY
-                ? "bg-[var(--color-accent)] text-white border-[var(--color-accent)]"
-                : "bg-[var(--color-surface-secondary)] text-[var(--color-text-secondary)] border-[var(--color-border)] hover:border-[var(--color-border-hover)]"
+                ? "bg-accent text-white border-accent"
+                : "bg-surface-secondary text-text-secondary border-border hover:border-border-hover"
             )}
           >
             All Categories
@@ -271,8 +271,8 @@ export default function SourcesGrid({ sources }: SourcesGridProps) {
                 className={cn(
                   "rounded-full px-3.5 py-1.5 text-xs font-medium transition-colors capitalize border",
                   activeCategory === cat
-                    ? "bg-[var(--color-accent)] text-white border-[var(--color-accent)]"
-                    : "bg-[var(--color-surface-secondary)] text-[var(--color-text-secondary)] border-[var(--color-border)] hover:border-[var(--color-border-hover)]"
+                    ? "bg-accent text-white border-accent"
+                    : "bg-surface-secondary text-text-secondary border-border hover:border-border-hover"
                 )}
               >
                 {cat} ({count})
@@ -284,19 +284,19 @@ export default function SourcesGrid({ sources }: SourcesGridProps) {
 
       {/* Results Info Bar */}
       <div className="flex items-center justify-between mb-6">
-        <p className="text-sm text-[var(--color-text-tertiary)]">
-          Showing <span className="font-semibold text-[var(--color-text-primary)]">{filtered.length}</span> of {sources.length} sources
+        <p className="text-sm text-text-tertiary">
+          Showing <span className="font-semibold text-text-primary">{filtered.length}</span> of {sources.length} sources
           {search && (
-            <> matching &quot;<span className="text-[var(--color-accent)]">{search}</span>&quot;</>
+            <> matching &quot;<span className="text-accent">{search}</span>&quot;</>
           )}
         </p>
         {sortedGroups.length > 1 && (
           <div className="flex items-center gap-2 text-xs">
-            <button onClick={expandAll} className="text-[var(--color-accent)] hover:underline">
+            <button onClick={expandAll} className="text-accent hover:underline">
               Expand all
             </button>
-            <span className="text-[var(--color-text-tertiary)]">·</span>
-            <button onClick={collapseAll} className="text-[var(--color-accent)] hover:underline">
+            <span className="text-text-tertiary">·</span>
+            <button onClick={collapseAll} className="text-accent hover:underline">
               Collapse all
             </button>
           </div>
@@ -305,16 +305,16 @@ export default function SourcesGrid({ sources }: SourcesGridProps) {
 
       {/* Sources Grid / List */}
       {filtered.length === 0 ? (
-        <div className="py-16 text-center rounded-xl border border-dashed border-[var(--color-border)] bg-[var(--color-surface-secondary)]">
-          <svg className="mx-auto h-10 w-10 text-[var(--color-text-tertiary)] mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+        <div className="py-16 text-center rounded-xl border border-dashed border-border bg-surface-secondary">
+          <svg className="mx-auto h-10 w-10 text-text-tertiary mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
           </svg>
-          <p className="text-[var(--color-text-tertiary)] text-lg">
+          <p className="text-text-tertiary text-lg">
             No sources match your filters.
           </p>
           <button
             onClick={() => { setSearch(""); setActiveCategory(ALL_CATEGORY); setStatusFilter("all"); }}
-            className="mt-3 inline-flex items-center gap-1.5 text-sm text-[var(--color-accent)] hover:underline"
+            className="mt-3 inline-flex items-center gap-1.5 text-sm text-accent hover:underline"
           >
             <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
@@ -336,27 +336,27 @@ export default function SourcesGrid({ sources }: SourcesGridProps) {
                   onClick={() => toggleSection(cat)}
                   className="w-full flex items-center gap-3 mb-4 group cursor-pointer"
                 >
-                  <h2 className="font-serif text-xl font-bold text-[var(--color-text-primary)] capitalize">
+                  <h2 className="font-serif text-xl font-bold text-text-primary capitalize">
                     {cat}
                   </h2>
-                  <span className="text-sm font-normal text-[var(--color-text-tertiary)]">
+                  <span className="text-sm font-normal text-text-tertiary">
                     {catSources.length} sources · {activeInCat} active
                   </span>
                   {/* Health bar mini */}
                   <div className="hidden sm:flex items-center gap-1 ml-2">
-                    <div className="h-1.5 rounded-full bg-[var(--color-surface-tertiary)] w-20 overflow-hidden">
+                    <div className="h-1.5 rounded-full bg-surface-tertiary w-20 overflow-hidden">
                       <div
                         className="h-full bg-green-500 rounded-full transition-all"
                         style={{ width: `${catSources.length > 0 ? (activeInCat / catSources.length) * 100 : 0}%` }}
                       />
                     </div>
-                    <span className="text-[10px] text-[var(--color-text-tertiary)]">
+                    <span className="text-[10px] text-text-tertiary">
                       {catSources.length > 0 ? Math.round((activeInCat / catSources.length) * 100) : 0}%
                     </span>
                   </div>
                   <span className="ml-auto">
                     <svg
-                      className={cn("h-4 w-4 text-[var(--color-text-tertiary)] transition-transform", isCollapsed ? "" : "rotate-180")}
+                      className={cn("h-4 w-4 text-text-tertiary transition-transform", isCollapsed ? "" : "rotate-180")}
                       fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}
                     >
                       <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
@@ -373,8 +373,8 @@ export default function SourcesGrid({ sources }: SourcesGridProps) {
                       ))}
                     </div>
                   ) : (
-                    <div className="rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] overflow-hidden">
-                      <div className="divide-y divide-[var(--color-border)]">
+                    <div className="rounded-xl border border-border bg-(--color-surface) overflow-hidden">
+                      <div className="divide-y divide-border">
                         {catSources.map((source) => (
                           <SourceListRow key={source.key} source={source} onCopy={copyUrl} copiedUrl={copiedUrl} />
                         ))}
@@ -405,7 +405,7 @@ function SourceCard({
   const isCopied = copiedUrl === source.url;
 
   return (
-    <div className="group relative rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] px-4 py-3.5 transition-all hover:border-[var(--color-border-hover)] hover:shadow-md">
+    <div className="group relative rounded-lg border border-border bg-(--color-surface) px-4 py-3.5 transition-all hover:border-border-hover hover:shadow-md">
       <a href={href} target="_blank" rel="noopener noreferrer" className="flex items-start gap-3">
         {imgError ? (
           <FaviconFallback name={source.name} />
@@ -427,11 +427,11 @@ function SourceCard({
               )}
               title={source.status}
             />
-            <p className="text-sm font-medium text-[var(--color-text-primary)] truncate group-hover:text-[var(--color-accent)] transition-colors">
+            <p className="text-sm font-medium text-text-primary truncate group-hover:text-accent transition-colors">
               {source.name}
             </p>
           </div>
-          <p className="text-xs text-[var(--color-text-tertiary)] truncate mt-0.5">{domain}</p>
+          <p className="text-xs text-text-tertiary truncate mt-0.5">{domain}</p>
         </div>
         <Badge variant={categoryToBadgeVariant(source.category)} className="shrink-0 mt-0.5">
           {source.category}
@@ -442,7 +442,7 @@ function SourceCard({
       <div className="absolute right-2 top-2 hidden group-hover:flex items-center gap-1">
         <button
           onClick={(e) => { e.preventDefault(); onCopy(source.url); }}
-          className="rounded-md p-1 bg-[var(--color-surface-secondary)] border border-[var(--color-border)] text-[var(--color-text-tertiary)] hover:text-[var(--color-text-primary)] transition-colors"
+          className="rounded-md p-1 bg-surface-secondary border border-border text-text-tertiary hover:text-text-primary transition-colors"
           title={isCopied ? "Copied!" : "Copy URL"}
         >
           {isCopied ? (
@@ -457,7 +457,7 @@ function SourceCard({
         </button>
         <a
           href={href} target="_blank" rel="noopener noreferrer"
-          className="rounded-md p-1 bg-[var(--color-surface-secondary)] border border-[var(--color-border)] text-[var(--color-text-tertiary)] hover:text-[var(--color-text-primary)] transition-colors"
+          className="rounded-md p-1 bg-surface-secondary border border-border text-text-tertiary hover:text-text-primary transition-colors"
           title="Open in new tab"
         >
           <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -483,7 +483,7 @@ function SourceListRow({
   const isCopied = copiedUrl === source.url;
 
   return (
-    <div className="group flex items-center gap-4 px-4 py-3 hover:bg-[var(--color-surface-secondary)] transition-colors">
+    <div className="group flex items-center gap-4 px-4 py-3 hover:bg-surface-secondary transition-colors">
       <span
         className={cn(
           "h-2 w-2 shrink-0 rounded-full",
@@ -504,16 +504,16 @@ function SourceListRow({
       )}
       <a
         href={href} target="_blank" rel="noopener noreferrer"
-        className="text-sm font-medium text-[var(--color-text-primary)] hover:text-[var(--color-accent)] transition-colors truncate min-w-0 flex-1"
+        className="text-sm font-medium text-text-primary hover:text-accent transition-colors truncate min-w-0 flex-1"
       >
         {source.name}
       </a>
-      <span className="hidden md:block text-xs text-[var(--color-text-tertiary)] truncate max-w-[200px]">{domain}</span>
+      <span className="hidden md:block text-xs text-text-tertiary truncate max-w-[200px]">{domain}</span>
       <Badge variant={categoryToBadgeVariant(source.category)} className="shrink-0">{source.category}</Badge>
       <div className="flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
         <button
           onClick={() => onCopy(source.url)}
-          className="rounded p-1 text-[var(--color-text-tertiary)] hover:text-[var(--color-text-primary)] transition-colors"
+          className="rounded p-1 text-text-tertiary hover:text-text-primary transition-colors"
           title={isCopied ? "Copied!" : "Copy URL"}
         >
           {isCopied ? (
@@ -528,7 +528,7 @@ function SourceListRow({
         </button>
         <a
           href={href} target="_blank" rel="noopener noreferrer"
-          className="rounded p-1 text-[var(--color-text-tertiary)] hover:text-[var(--color-text-primary)] transition-colors"
+          className="rounded p-1 text-text-tertiary hover:text-text-primary transition-colors"
           title="Open"
         >
           <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -544,7 +544,7 @@ function SourceListRow({
 function FaviconFallback({ name }: { name: string }) {
   const letter = name.charAt(0).toUpperCase();
   return (
-    <div className="mt-0.5 flex h-5 w-5 items-center justify-center rounded bg-[var(--color-surface-tertiary)] text-[10px] font-bold text-[var(--color-text-secondary)] shrink-0">
+    <div className="mt-0.5 flex h-5 w-5 items-center justify-center rounded bg-surface-tertiary text-[10px] font-bold text-text-secondary shrink-0">
       {letter}
     </div>
   );

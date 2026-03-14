@@ -31,11 +31,11 @@ function Toggle({ enabled, onChange, label, description }: {
   description?: string;
 }) {
   return (
-    <div className="flex items-center justify-between py-3 border-b border-[var(--color-border)] last:border-b-0">
+    <div className="flex items-center justify-between py-3 border-b border-border last:border-b-0">
       <div className="flex-1 min-w-0 pr-4">
         <span className="text-sm font-medium">{label}</span>
         {description && (
-          <p className="text-xs text-[var(--color-text-tertiary)] mt-0.5">{description}</p>
+          <p className="text-xs text-text-tertiary mt-0.5">{description}</p>
         )}
       </div>
       <button
@@ -44,8 +44,8 @@ function Toggle({ enabled, onChange, label, description }: {
         aria-checked={enabled}
         onClick={() => onChange(!enabled)}
         className={cn(
-          "relative inline-flex h-6 w-11 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)]",
-          enabled ? "bg-[var(--color-accent)]" : "bg-[var(--color-border)]"
+          "relative inline-flex h-6 w-11 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus-visible:ring-2 focus-visible:ring-accent",
+          enabled ? "bg-accent" : "bg-border"
         )}
       >
         <span className={cn(
@@ -69,17 +69,17 @@ function SelectOption<T extends string | number>({ label, description, value, op
   onChange: (v: T) => void;
 }) {
   return (
-    <div className="flex items-center justify-between py-3 border-b border-[var(--color-border)] last:border-b-0">
+    <div className="flex items-center justify-between py-3 border-b border-border last:border-b-0">
       <div className="flex-1 min-w-0 pr-4">
         <span className="text-sm font-medium">{label}</span>
         {description && (
-          <p className="text-xs text-[var(--color-text-tertiary)] mt-0.5">{description}</p>
+          <p className="text-xs text-text-tertiary mt-0.5">{description}</p>
         )}
       </div>
       <select
         value={value}
         onChange={(e) => onChange(e.target.value as T)}
-        className="rounded-md border border-[var(--color-border)] bg-[var(--color-surface)] px-3 py-1.5 text-sm text-[var(--color-text-primary)] focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]"
+        className="rounded-md border border-border bg-(--color-surface) px-3 py-1.5 text-sm text-text-primary focus:outline-none focus:ring-2 focus:ring-accent"
       >
         {options.map((opt) => (
           <option key={String(opt.value)} value={opt.value}>{opt.label}</option>
@@ -112,12 +112,12 @@ export default function SettingsContent() {
       <div className="mb-8">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[var(--color-accent)]/10">
-              <Settings className="h-5 w-5 text-[var(--color-accent)]" />
+            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-accent/10">
+              <Settings className="h-5 w-5 text-accent" />
             </div>
             <div>
               <h1 className="text-2xl font-bold font-serif tracking-tight sm:text-3xl">Settings</h1>
-              <p className="text-sm text-[var(--color-text-tertiary)]">
+              <p className="text-sm text-text-tertiary">
                 Customize your experience — all settings are stored locally
               </p>
             </div>
@@ -293,29 +293,29 @@ export default function SettingsContent() {
           <Card>
             <CardHeader className="pb-3">
               <CardTitle className="text-base flex items-center gap-2">
-                <HardDrive className="h-4 w-4 text-[var(--color-text-tertiary)]" />
+                <HardDrive className="h-4 w-4 text-text-tertiary" />
                 Data & Storage
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="flex items-center justify-between py-2">
-                <span className="text-sm text-[var(--color-text-secondary)]">Local Storage Used</span>
+                <span className="text-sm text-text-secondary">Local Storage Used</span>
                 <span className="text-sm font-semibold tabular-nums">{getStorageUsage()}</span>
               </div>
 
               <button
                 onClick={exportData}
-                className="flex items-center gap-2 w-full px-3 py-2.5 rounded-lg border border-[var(--color-border)] text-sm font-medium hover:bg-[var(--color-surface-secondary)] transition-colors cursor-pointer"
+                className="flex items-center gap-2 w-full px-3 py-2.5 rounded-lg border border-border text-sm font-medium hover:bg-surface-secondary transition-colors cursor-pointer"
               >
-                <Download className="h-4 w-4 text-[var(--color-text-tertiary)]" />
+                <Download className="h-4 w-4 text-text-tertiary" />
                 Export All Data
               </button>
 
               <button
                 onClick={resetSettings}
-                className="flex items-center gap-2 w-full px-3 py-2.5 rounded-lg border border-[var(--color-border)] text-sm font-medium hover:bg-[var(--color-surface-secondary)] transition-colors cursor-pointer"
+                className="flex items-center gap-2 w-full px-3 py-2.5 rounded-lg border border-border text-sm font-medium hover:bg-surface-secondary transition-colors cursor-pointer"
               >
-                <RotateCcw className="h-4 w-4 text-[var(--color-text-tertiary)]" />
+                <RotateCcw className="h-4 w-4 text-text-tertiary" />
                 Reset to Defaults
               </button>
 
@@ -333,7 +333,7 @@ export default function SettingsContent() {
                     </button>
                     <button
                       onClick={() => setShowConfirmClear(false)}
-                      className="flex-1 px-3 py-1.5 rounded-md border border-[var(--color-border)] text-xs font-medium hover:bg-[var(--color-surface-secondary)] transition-colors cursor-pointer"
+                      className="flex-1 px-3 py-1.5 rounded-md border border-border text-xs font-medium hover:bg-surface-secondary transition-colors cursor-pointer"
                     >
                       Cancel
                     </button>
@@ -351,8 +351,8 @@ export default function SettingsContent() {
             </CardContent>
           </Card>
 
-          <div className="rounded-lg border border-[var(--color-border)] p-4 bg-[var(--color-surface-secondary)]">
-            <p className="text-[11px] text-[var(--color-text-tertiary)] leading-relaxed">
+          <div className="rounded-lg border border-border p-4 bg-surface-secondary">
+            <p className="text-[11px] text-text-tertiary leading-relaxed">
               All settings are stored locally in your browser. No data is sent to our servers. Clearing your browser data will reset all preferences.
             </p>
           </div>

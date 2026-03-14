@@ -93,21 +93,21 @@ function StatCard({
     <Card
       className={cn(
         accent &&
-          "ring-1 ring-[var(--color-accent)]/20 bg-[var(--color-accent)]/[0.03]"
+          "ring-1 ring-accent/20 bg-accent/[0.03]"
       )}
     >
       <CardContent className="p-4 md:p-5">
         <div className="flex items-start justify-between gap-2">
-          <p className="text-[10px] font-semibold uppercase tracking-wider text-[var(--color-text-tertiary)] mb-1">
+          <p className="text-[10px] font-semibold uppercase tracking-wider text-text-tertiary mb-1">
             {label}
           </p>
           {icon && <span className="text-lg">{icon}</span>}
         </div>
-        <p className="text-xl md:text-2xl font-bold tabular-nums text-[var(--color-text-primary)]">
+        <p className="text-xl md:text-2xl font-bold tabular-nums text-text-primary">
           {value}
         </p>
         {sub && (
-          <p className="text-xs text-[var(--color-text-secondary)] mt-0.5">
+          <p className="text-xs text-text-secondary mt-0.5">
             {sub}
           </p>
         )}
@@ -131,11 +131,11 @@ function SectionHeading({
     <div className="flex items-center gap-2 mb-4">
       {icon && <span className="text-xl">{icon}</span>}
       <div>
-        <h2 className="font-serif text-2xl font-bold text-[var(--color-text-primary)]">
+        <h2 className="font-serif text-2xl font-bold text-text-primary">
           {title}
         </h2>
         {subtitle && (
-          <p className="text-xs text-[var(--color-text-tertiary)] mt-0.5">
+          <p className="text-xs text-text-tertiary mt-0.5">
             {subtitle}
           </p>
         )}
@@ -244,16 +244,16 @@ export default async function NFTPage({ params }: Props) {
       <main className="container-main py-10 space-y-14">
         {/* ══════════ Hero ══════════ */}
         <section>
-          <h1 className="font-serif text-3xl md:text-4xl font-bold mb-2 text-[var(--color-text-primary)]">
+          <h1 className="font-serif text-3xl md:text-4xl font-bold mb-2 text-text-primary">
             🖼️ NFT &amp; Gaming Dashboard
           </h1>
-          <p className="text-[var(--color-text-secondary)] max-w-2xl">
+          <p className="text-text-secondary max-w-2xl">
             Track top NFT collections, discover trending mints, explore
             blockchain gaming metrics, and stay up to date with the latest NFT
             news.
           </p>
           {lastUpdated && (
-            <p className="text-[10px] text-[var(--color-text-tertiary)] mt-2">
+            <p className="text-[10px] text-text-tertiary mt-2">
               Last updated: {lastUpdated} UTC
             </p>
           )}
@@ -301,14 +301,14 @@ export default async function NFTPage({ params }: Props) {
                           alt={t.collection.name}
                           width={48}
                           height={48}
-                          className="h-12 w-12 rounded-lg object-cover bg-[var(--color-surface-tertiary)] shrink-0"
+                          className="h-12 w-12 rounded-lg object-cover bg-surface-tertiary shrink-0"
                           loading="lazy"
                         />
                       ) : (
-                        <div className="h-12 w-12 rounded-lg bg-[var(--color-surface-tertiary)] shrink-0" />
+                        <div className="h-12 w-12 rounded-lg bg-surface-tertiary shrink-0" />
                       )}
                       <div className="min-w-0">
-                        <p className="font-semibold text-sm truncate text-[var(--color-text-primary)]">
+                        <p className="font-semibold text-sm truncate text-text-primary">
                           {t.collection.name}
                         </p>
                         <Badge variant="nft" className="mt-0.5 text-[9px]">
@@ -318,10 +318,10 @@ export default async function NFTPage({ params }: Props) {
                     </div>
                     <div className="grid grid-cols-2 gap-2 text-xs">
                       <div>
-                        <p className="text-[var(--color-text-tertiary)]">
+                        <p className="text-text-tertiary">
                           Floor
                         </p>
-                        <p className="font-semibold tabular-nums text-[var(--color-text-primary)]">
+                        <p className="font-semibold tabular-nums text-text-primary">
                           {t.collection.stats.floorPrice > 0
                             ? `${t.collection.stats.floorPrice.toFixed(
                                 t.collection.stats.floorPrice < 1 ? 4 : 2
@@ -330,25 +330,25 @@ export default async function NFTPage({ params }: Props) {
                         </p>
                       </div>
                       <div>
-                        <p className="text-[var(--color-text-tertiary)]">
+                        <p className="text-text-tertiary">
                           Sales
                         </p>
-                        <p className="font-semibold tabular-nums text-[var(--color-text-primary)]">
+                        <p className="font-semibold tabular-nums text-text-primary">
                           {t.salesCount > 0
                             ? t.salesCount.toLocaleString()
                             : "—"}
                         </p>
                       </div>
                       <div>
-                        <p className="text-[var(--color-text-tertiary)]">
+                        <p className="text-text-tertiary">
                           Volume
                         </p>
-                        <p className="font-semibold tabular-nums text-[var(--color-text-primary)]">
+                        <p className="font-semibold tabular-nums text-text-primary">
                           {formatETH(t.volume24h)}
                         </p>
                       </div>
                       <div>
-                        <p className="text-[var(--color-text-tertiary)]">
+                        <p className="text-text-tertiary">
                           Trend
                         </p>
                         <p
@@ -358,7 +358,7 @@ export default async function NFTPage({ params }: Props) {
                               ? "text-green-600 dark:text-green-400"
                               : t.volumeChange < 0
                                 ? "text-red-600 dark:text-red-400"
-                                : "text-[var(--color-text-tertiary)]"
+                                : "text-text-tertiary"
                           )}
                         >
                           {t.volumeChange !== 0
@@ -416,41 +416,41 @@ export default async function NFTPage({ params }: Props) {
           )}
 
           {topGames.length > 0 ? (
-            <div className="overflow-x-auto rounded-lg border border-[var(--color-border)]">
+            <div className="overflow-x-auto rounded-lg border border-border">
               <table className="w-full min-w-[640px] text-sm">
-                <thead className="bg-[var(--color-surface-secondary)]">
+                <thead className="bg-surface-secondary">
                   <tr>
-                    <th className="px-3 py-2.5 text-left text-[10px] font-semibold uppercase tracking-wider text-[var(--color-text-tertiary)]">
+                    <th className="px-3 py-2.5 text-left text-[10px] font-semibold uppercase tracking-wider text-text-tertiary">
                       #
                     </th>
-                    <th className="px-3 py-2.5 text-left text-[10px] font-semibold uppercase tracking-wider text-[var(--color-text-tertiary)] min-w-[180px]">
+                    <th className="px-3 py-2.5 text-left text-[10px] font-semibold uppercase tracking-wider text-text-tertiary min-w-[180px]">
                       Game
                     </th>
-                    <th className="px-3 py-2.5 text-left text-[10px] font-semibold uppercase tracking-wider text-[var(--color-text-tertiary)]">
+                    <th className="px-3 py-2.5 text-left text-[10px] font-semibold uppercase tracking-wider text-text-tertiary">
                       Chain
                     </th>
-                    <th className="px-3 py-2.5 text-left text-[10px] font-semibold uppercase tracking-wider text-[var(--color-text-tertiary)]">
+                    <th className="px-3 py-2.5 text-left text-[10px] font-semibold uppercase tracking-wider text-text-tertiary">
                       Players (24h)
                     </th>
-                    <th className="px-3 py-2.5 text-left text-[10px] font-semibold uppercase tracking-wider text-[var(--color-text-tertiary)]">
+                    <th className="px-3 py-2.5 text-left text-[10px] font-semibold uppercase tracking-wider text-text-tertiary">
                       Volume (24h)
                     </th>
-                    <th className="px-3 py-2.5 text-left text-[10px] font-semibold uppercase tracking-wider text-[var(--color-text-tertiary)]">
+                    <th className="px-3 py-2.5 text-left text-[10px] font-semibold uppercase tracking-wider text-text-tertiary">
                       Category
                     </th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-[var(--color-border)]">
+                <tbody className="divide-y divide-border">
                   {topGames.map((game, i) => (
                     <tr
                       key={game.slug}
-                      className="hover:bg-[var(--color-surface-secondary)] transition-colors"
+                      className="hover:bg-surface-secondary transition-colors"
                     >
-                      <td className="px-3 py-3 tabular-nums font-medium text-[var(--color-text-primary)]">
+                      <td className="px-3 py-3 tabular-nums font-medium text-text-primary">
                         {i + 1}
                       </td>
                       <td className="px-3 py-3">
-                        <p className="font-semibold text-[var(--color-text-primary)]">
+                        <p className="font-semibold text-text-primary">
                           {game.name}
                         </p>
                       </td>
@@ -459,16 +459,16 @@ export default async function NFTPage({ params }: Props) {
                           {game.chain}
                         </Badge>
                       </td>
-                      <td className="px-3 py-3 tabular-nums text-[var(--color-text-primary)]">
+                      <td className="px-3 py-3 tabular-nums text-text-primary">
                         {game.dau > 0 ? game.dau.toLocaleString() : "—"}
                       </td>
-                      <td className="px-3 py-3 tabular-nums text-[var(--color-text-primary)]">
+                      <td className="px-3 py-3 tabular-nums text-text-primary">
                         {game.volume24h > 0
                           ? formatLargeNumber(game.volume24h)
                           : "—"}
                       </td>
                       <td className="px-3 py-3">
-                        <span className="text-xs text-[var(--color-text-secondary)] capitalize">
+                        <span className="text-xs text-text-secondary capitalize">
                           {game.category}
                         </span>
                       </td>
@@ -478,7 +478,7 @@ export default async function NFTPage({ params }: Props) {
               </table>
             </div>
           ) : (
-            <p className="text-[var(--color-text-tertiary)] py-8 text-center">
+            <p className="text-text-tertiary py-8 text-center">
               No gaming data available right now. Check back soon.
             </p>
           )}
@@ -492,7 +492,7 @@ export default async function NFTPage({ params }: Props) {
             icon="📰"
           />
           {articles.length === 0 ? (
-            <p className="text-[var(--color-text-tertiary)] py-8 text-center">
+            <p className="text-text-tertiary py-8 text-center">
               No NFT articles available right now. Check back soon.
             </p>
           ) : (

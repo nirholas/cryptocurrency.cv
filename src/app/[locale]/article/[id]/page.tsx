@@ -89,10 +89,10 @@ export default async function ArticlePage({ params }: Props) {
       <>
         <Header />
         <main className="container-main py-10">
-          <h1 className="font-serif text-3xl font-bold mb-4 text-[var(--color-text-primary)]">
+          <h1 className="font-serif text-3xl font-bold mb-4 text-text-primary">
             Article not found
           </h1>
-          <p className="text-[var(--color-text-secondary)]">
+          <p className="text-text-secondary">
             The requested article could not be found. It may have been removed or the link is incorrect.
           </p>
         </main>
@@ -132,9 +132,9 @@ export default async function ArticlePage({ params }: Props) {
       <main className="container-main py-10">
         {/* Breadcrumbs */}
         <nav aria-label="Breadcrumb" className="mb-6 max-w-[720px] mx-auto">
-          <ol className="flex items-center gap-1.5 text-sm text-[var(--color-text-tertiary)]">
+          <ol className="flex items-center gap-1.5 text-sm text-text-tertiary">
             <li>
-              <Link href="/" className="hover:text-[var(--color-accent)] transition-colors">
+              <Link href="/" className="hover:text-accent transition-colors">
                 Home
               </Link>
             </li>
@@ -144,7 +144,7 @@ export default async function ArticlePage({ params }: Props) {
               </svg>
             </li>
             <li>
-              <Link href={`/?category=${article.category}`} className="hover:text-[var(--color-accent)] transition-colors capitalize">
+              <Link href={`/?category=${article.category}`} className="hover:text-accent transition-colors capitalize">
                 {article.category}
               </Link>
             </li>
@@ -153,7 +153,7 @@ export default async function ArticlePage({ params }: Props) {
                 <path fillRule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clipRule="evenodd" />
               </svg>
             </li>
-            <li className="text-[var(--color-text-secondary)] truncate max-w-[200px]">
+            <li className="text-text-secondary truncate max-w-[200px]">
               {truncate(article.title, 50)}
             </li>
           </ol>
@@ -176,33 +176,33 @@ export default async function ArticlePage({ params }: Props) {
             </div>
 
             {/* Title */}
-            <h1 className="font-serif text-3xl md:text-4xl font-bold mb-4 text-[var(--color-text-primary)] leading-tight">
+            <h1 className="font-serif text-3xl md:text-4xl font-bold mb-4 text-text-primary leading-tight">
               {article.title}
             </h1>
 
             {/* Description / deck */}
             {article.description && article.description.length <= 200 && (
-              <p className="text-lg text-[var(--color-text-secondary)] leading-relaxed mb-5 font-serif italic">
+              <p className="text-lg text-text-secondary leading-relaxed mb-5 font-serif italic">
                 {article.description}
               </p>
             )}
 
             {/* Byline — editorial style */}
-            <div className="flex items-center gap-3 pt-4 border-t border-[var(--color-border)]">
+            <div className="flex items-center gap-3 pt-4 border-t border-border">
               <Link
                 href={`/source/${article.source_key}`}
-                className="flex items-center justify-center w-10 h-10 rounded-full bg-[var(--color-accent)]/10 text-[var(--color-accent)] font-bold text-sm shrink-0 hover:bg-[var(--color-accent)]/20 transition-colors"
+                className="flex items-center justify-center w-10 h-10 rounded-full bg-accent/10 text-accent font-bold text-sm shrink-0 hover:bg-accent/20 transition-colors"
               >
                 {article.source.charAt(0).toUpperCase()}
               </Link>
               <div className="flex flex-col">
                 <Link
                   href={`/source/${article.source_key}`}
-                  className="font-semibold text-sm text-[var(--color-text-primary)] hover:text-[var(--color-accent)] transition-colors"
+                  className="font-semibold text-sm text-text-primary hover:text-accent transition-colors"
                 >
                   {article.source}
                 </Link>
-                <div className="flex items-center gap-2 text-xs text-[var(--color-text-tertiary)]">
+                <div className="flex items-center gap-2 text-xs text-text-tertiary">
                   <time dateTime={pubDate}>
                     {new Date(pubDate).toLocaleDateString("en-US", {
                       year: "numeric",
@@ -238,7 +238,7 @@ export default async function ArticlePage({ params }: Props) {
           <div className="mb-8">
             {article.description && (
               <div className="prose dark:prose-invert prose-headings:font-serif max-w-none mb-6">
-                <p className="text-[var(--color-text-secondary)] leading-relaxed text-base">
+                <p className="text-text-secondary leading-relaxed text-base">
                   {article.description}
                 </p>
               </div>
@@ -250,7 +250,7 @@ export default async function ArticlePage({ params }: Props) {
                 href={article.canonical_link || article.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-[var(--color-text-primary)] text-[var(--color-text-inverse)] font-medium hover:opacity-90 transition-opacity"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-text-primary text-text-inverse font-medium hover:opacity-90 transition-opacity"
               >
                 Read full article on {article.source}
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-4 w-4">
@@ -261,17 +261,17 @@ export default async function ArticlePage({ params }: Props) {
           </div>
 
           {/* ── Share Bar ── */}
-          <div className="mb-8 pt-6 border-t border-[var(--color-border)]">
+          <div className="mb-8 pt-6 border-t border-border">
             <ShareBar url={articleUrl} title={article.title} />
           </div>
 
           {/* ── Tickers & Tags ── */}
           {(article.tickers.length > 0 || article.tags.length > 0) && (
-            <div className="mb-8 pt-6 border-t border-[var(--color-border)]">
+            <div className="mb-8 pt-6 border-t border-border">
               {/* Tickers */}
               {article.tickers.length > 0 && (
                 <div className="mb-4">
-                  <h2 className="text-sm font-semibold text-[var(--color-text-tertiary)] mb-2 uppercase tracking-wide">
+                  <h2 className="text-sm font-semibold text-text-tertiary mb-2 uppercase tracking-wide">
                     Related Assets
                   </h2>
                   <div className="flex flex-wrap gap-2">
@@ -291,14 +291,14 @@ export default async function ArticlePage({ params }: Props) {
               {/* Tags */}
               {article.tags.length > 0 && (
                 <div>
-                  <h2 className="text-sm font-semibold text-[var(--color-text-tertiary)] mb-2 uppercase tracking-wide">
+                  <h2 className="text-sm font-semibold text-text-tertiary mb-2 uppercase tracking-wide">
                     Tags
                   </h2>
                   <div className="flex flex-wrap gap-2">
                     {article.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="px-2 py-0.5 text-xs rounded bg-[var(--color-surface-tertiary)] text-[var(--color-text-tertiary)]"
+                        className="px-2 py-0.5 text-xs rounded bg-surface-tertiary text-text-tertiary"
                       >
                         #{tag}
                       </span>
@@ -311,31 +311,31 @@ export default async function ArticlePage({ params }: Props) {
 
           {/* ── Market Context ── */}
           {article.market_context && (
-            <div className="mb-8 pt-6 border-t border-[var(--color-border)]">
-              <h2 className="text-sm font-semibold text-[var(--color-text-tertiary)] mb-3 uppercase tracking-wide">
+            <div className="mb-8 pt-6 border-t border-border">
+              <h2 className="text-sm font-semibold text-text-tertiary mb-3 uppercase tracking-wide">
                 Market Context at Publication
               </h2>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
                 {article.market_context.btc_price != null && (
-                  <div className="p-3 rounded border border-[var(--color-border)] bg-[var(--color-surface)]">
-                    <p className="text-xs text-[var(--color-text-tertiary)]">BTC Price</p>
-                    <p className="font-semibold text-[var(--color-text-primary)]">
+                  <div className="p-3 rounded border border-border bg-(--color-surface)">
+                    <p className="text-xs text-text-tertiary">BTC Price</p>
+                    <p className="font-semibold text-text-primary">
                       ${article.market_context.btc_price.toLocaleString()}
                     </p>
                   </div>
                 )}
                 {article.market_context.eth_price != null && (
-                  <div className="p-3 rounded border border-[var(--color-border)] bg-[var(--color-surface)]">
-                    <p className="text-xs text-[var(--color-text-tertiary)]">ETH Price</p>
-                    <p className="font-semibold text-[var(--color-text-primary)]">
+                  <div className="p-3 rounded border border-border bg-(--color-surface)">
+                    <p className="text-xs text-text-tertiary">ETH Price</p>
+                    <p className="font-semibold text-text-primary">
                       ${article.market_context.eth_price.toLocaleString()}
                     </p>
                   </div>
                 )}
                 {article.market_context.fear_greed_index != null && (
-                  <div className="p-3 rounded border border-[var(--color-border)] bg-[var(--color-surface)]">
-                    <p className="text-xs text-[var(--color-text-tertiary)]">Fear & Greed</p>
-                    <p className="font-semibold text-[var(--color-text-primary)]">
+                  <div className="p-3 rounded border border-border bg-(--color-surface)">
+                    <p className="text-xs text-text-tertiary">Fear & Greed</p>
+                    <p className="font-semibold text-text-primary">
                       {article.market_context.fear_greed_index}/100
                     </p>
                   </div>
@@ -349,12 +349,12 @@ export default async function ArticlePage({ params }: Props) {
             <div className="mb-8">
               {article.entities.people?.length > 0 && (
                 <div className="mb-4">
-                  <h2 className="text-sm font-semibold text-[var(--color-text-tertiary)] mb-2 uppercase tracking-wide">
+                  <h2 className="text-sm font-semibold text-text-tertiary mb-2 uppercase tracking-wide">
                     People Mentioned
                   </h2>
                   <div className="flex flex-wrap gap-2">
                     {article.entities.people.map((person) => (
-                      <span key={person} className="px-2 py-0.5 text-sm rounded bg-[var(--color-surface-tertiary)] text-[var(--color-text-secondary)]">
+                      <span key={person} className="px-2 py-0.5 text-sm rounded bg-surface-tertiary text-text-secondary">
                         {person}
                       </span>
                     ))}
@@ -363,12 +363,12 @@ export default async function ArticlePage({ params }: Props) {
               )}
               {article.entities.companies?.length > 0 && (
                 <div className="mb-4">
-                  <h2 className="text-sm font-semibold text-[var(--color-text-tertiary)] mb-2 uppercase tracking-wide">
+                  <h2 className="text-sm font-semibold text-text-tertiary mb-2 uppercase tracking-wide">
                     Companies
                   </h2>
                   <div className="flex flex-wrap gap-2">
                     {article.entities.companies.map((company) => (
-                      <span key={company} className="px-2 py-0.5 text-sm rounded bg-[var(--color-surface-tertiary)] text-[var(--color-text-secondary)]">
+                      <span key={company} className="px-2 py-0.5 text-sm rounded bg-surface-tertiary text-text-secondary">
                         {company}
                       </span>
                     ))}
@@ -377,12 +377,12 @@ export default async function ArticlePage({ params }: Props) {
               )}
               {article.entities.protocols?.length > 0 && (
                 <div className="mb-4">
-                  <h2 className="text-sm font-semibold text-[var(--color-text-tertiary)] mb-2 uppercase tracking-wide">
+                  <h2 className="text-sm font-semibold text-text-tertiary mb-2 uppercase tracking-wide">
                     Protocols
                   </h2>
                   <div className="flex flex-wrap gap-2">
                     {article.entities.protocols.map((protocol) => (
-                      <span key={protocol} className="px-2 py-0.5 text-sm rounded bg-[var(--color-surface-tertiary)] text-[var(--color-text-secondary)]">
+                      <span key={protocol} className="px-2 py-0.5 text-sm rounded bg-surface-tertiary text-text-secondary">
                         {protocol}
                       </span>
                     ))}
@@ -393,15 +393,15 @@ export default async function ArticlePage({ params }: Props) {
           )}
 
           {/* Metadata footer */}
-          <p className="mt-6 text-xs text-[var(--color-text-tertiary)] italic">
+          <p className="mt-6 text-xs text-text-tertiary italic">
             Originally published by {article.source} · First indexed: {new Date(article.first_seen).toLocaleString()}
           </p>
         </article>
 
         {/* ── Related Articles ── */}
         {relatedArticles.length > 0 && (
-          <section className="mt-12 pt-8 border-t-2 border-[var(--color-text-primary)]">
-            <h2 className="font-serif text-2xl font-bold mb-6 text-[var(--color-text-primary)]">
+          <section className="mt-12 pt-8 border-t-2 border-text-primary">
+            <h2 className="font-serif text-2xl font-bold mb-6 text-text-primary">
               More on This Story
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">

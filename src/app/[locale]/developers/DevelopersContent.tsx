@@ -1008,11 +1008,11 @@ function ApiPlayground() {
   };
 
   return (
-    <div className="rounded-lg border border-[var(--color-border)] overflow-hidden">
+    <div className="rounded-lg border border-border overflow-hidden">
       {/* Playground header */}
-      <div className="bg-[var(--color-surface-secondary)] px-5 py-3 border-b border-[var(--color-border)] flex items-center gap-3">
+      <div className="bg-surface-secondary px-5 py-3 border-b border-border flex items-center gap-3">
         <span className="text-lg" aria-hidden>⚡</span>
-        <span className="font-serif font-bold text-[var(--color-text-primary)]">
+        <span className="font-serif font-bold text-text-primary">
           API Playground
         </span>
         <Badge>Interactive</Badge>
@@ -1022,7 +1022,7 @@ function ApiPlayground() {
         {/* Endpoint selector */}
         <div className="flex gap-2 flex-wrap items-end">
           <div className="flex-1 min-w-[200px]">
-            <label className="text-xs font-medium text-[var(--color-text-tertiary)] block mb-1">
+            <label className="text-xs font-medium text-text-tertiary block mb-1">
               Endpoint
             </label>
             <select
@@ -1032,7 +1032,7 @@ function ApiPlayground() {
                 setParams({ limit: "5" });
                 setResponse(null);
               }}
-              className="w-full rounded-md border border-[var(--color-border)] bg-[var(--color-surface)] px-3 py-2 font-mono text-sm text-[var(--color-text-primary)] focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]"
+              className="w-full rounded-md border border-border bg-(--color-surface) px-3 py-2 font-mono text-sm text-text-primary focus:outline-none focus:ring-2 focus:ring-accent"
             >
               {allEndpoints.map((ep) => (
                 <option key={ep} value={ep}>{ep}</option>
@@ -1061,7 +1061,7 @@ function ApiPlayground() {
         </div>
 
         {/* Built URL preview */}
-        <div className="rounded-md bg-[var(--color-surface-tertiary)] px-3 py-2 font-mono text-xs text-[var(--color-text-secondary)] overflow-x-auto">
+        <div className="rounded-md bg-surface-tertiary px-3 py-2 font-mono text-xs text-text-secondary overflow-x-auto">
           <span className="text-green-600 font-semibold">GET</span>{" "}
           {buildUrl()}
         </div>
@@ -1069,12 +1069,12 @@ function ApiPlayground() {
         {/* Parameters */}
         <div>
           <div className="flex items-center justify-between mb-2">
-            <label className="text-xs font-medium text-[var(--color-text-tertiary)]">
+            <label className="text-xs font-medium text-text-tertiary">
               Query Parameters
             </label>
             <button
               onClick={addParam}
-              className="text-xs text-[var(--color-accent)] hover:underline cursor-pointer"
+              className="text-xs text-accent hover:underline cursor-pointer"
             >
               + Add Parameter
             </button>
@@ -1091,20 +1091,20 @@ function ApiPlayground() {
                     newParams[e.target.value] = value;
                     setParams(newParams);
                   }}
-                  className="w-32 rounded-md border border-[var(--color-border)] bg-[var(--color-surface)] px-2 py-1.5 font-mono text-sm text-[var(--color-text-primary)] focus:outline-none focus:ring-1 focus:ring-[var(--color-accent)]"
+                  className="w-32 rounded-md border border-border bg-(--color-surface) px-2 py-1.5 font-mono text-sm text-text-primary focus:outline-none focus:ring-1 focus:ring-accent"
                   placeholder="key"
                 />
-                <span className="text-[var(--color-text-tertiary)]">=</span>
+                <span className="text-text-tertiary">=</span>
                 <input
                   type="text"
                   value={value}
                   onChange={(e) => updateParam(key, e.target.value)}
-                  className="flex-1 rounded-md border border-[var(--color-border)] bg-[var(--color-surface)] px-2 py-1.5 font-mono text-sm text-[var(--color-text-primary)] focus:outline-none focus:ring-1 focus:ring-[var(--color-accent)]"
+                  className="flex-1 rounded-md border border-border bg-(--color-surface) px-2 py-1.5 font-mono text-sm text-text-primary focus:outline-none focus:ring-1 focus:ring-accent"
                   placeholder="value"
                 />
                 <button
                   onClick={() => removeParam(key)}
-                  className="text-[var(--color-text-tertiary)] hover:text-red-500 cursor-pointer p-1"
+                  className="text-text-tertiary hover:text-red-500 cursor-pointer p-1"
                   aria-label="Remove parameter"
                 >
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -1117,7 +1117,7 @@ function ApiPlayground() {
           {/* Suggested params */}
           {currentEndpoint && currentEndpoint.params.length > 0 && (
             <div className="mt-2 flex flex-wrap gap-1">
-              <span className="text-[10px] text-[var(--color-text-tertiary)]">Suggested:</span>
+              <span className="text-[10px] text-text-tertiary">Suggested:</span>
               {currentEndpoint.params.map((p) => (
                 <button
                   key={p.name}
@@ -1125,8 +1125,8 @@ function ApiPlayground() {
                   className={cn(
                     "text-[10px] rounded px-1.5 py-0.5 cursor-pointer transition-colors",
                     params[p.name] !== undefined
-                      ? "bg-[var(--color-accent)]/10 text-[var(--color-accent)]"
-                      : "bg-[var(--color-surface-tertiary)] text-[var(--color-text-tertiary)] hover:text-[var(--color-text-secondary)]"
+                      ? "bg-accent/10 text-accent"
+                      : "bg-surface-tertiary text-text-tertiary hover:text-text-secondary"
                   )}
                 >
                   {p.name}{p.required ? "*" : ""}
@@ -1140,7 +1140,7 @@ function ApiPlayground() {
         {(response || loading) && (
           <div>
             <div className="flex items-center justify-between mb-2">
-              <label className="text-xs font-medium text-[var(--color-text-tertiary)]">
+              <label className="text-xs font-medium text-text-tertiary">
                 Response
               </label>
               {status !== null && (
@@ -1152,7 +1152,7 @@ function ApiPlayground() {
                     {status === 0 ? "ERR" : status}
                   </span>
                   {responseTime !== null && (
-                    <span className="text-[var(--color-text-tertiary)]">
+                    <span className="text-text-tertiary">
                       {responseTime}ms
                     </span>
                   )}
@@ -1216,11 +1216,11 @@ function EndpointSearch({ onClose }: { onClose: () => void }) {
     >
       <div className="fixed inset-0 bg-black/50 backdrop-blur-sm" />
       <div
-        className="relative w-full max-w-xl mx-4 rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] shadow-2xl overflow-hidden"
+        className="relative w-full max-w-xl mx-4 rounded-xl border border-border bg-(--color-surface) shadow-2xl overflow-hidden"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Search input */}
-        <div className="flex items-center gap-3 border-b border-[var(--color-border)] px-4 py-3">
+        <div className="flex items-center gap-3 border-b border-border px-4 py-3">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-tertiary)" strokeWidth="2">
             <circle cx="11" cy="11" r="8" /><path d="M21 21l-4.35-4.35" />
           </svg>
@@ -1230,16 +1230,16 @@ function EndpointSearch({ onClose }: { onClose: () => void }) {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Search endpoints... (e.g., /api/news, trending, gas)"
-            className="flex-1 bg-transparent text-sm text-[var(--color-text-primary)] placeholder:text-[var(--color-text-tertiary)] focus:outline-none"
+            className="flex-1 bg-transparent text-sm text-text-primary placeholder:text-text-tertiary focus:outline-none"
           />
-          <kbd className="hidden sm:inline-flex items-center gap-1 rounded border border-[var(--color-border)] bg-[var(--color-surface-secondary)] px-1.5 py-0.5 text-[10px] font-mono text-[var(--color-text-tertiary)]">
+          <kbd className="hidden sm:inline-flex items-center gap-1 rounded border border-border bg-surface-secondary px-1.5 py-0.5 text-[10px] font-mono text-text-tertiary">
             ESC
           </kbd>
         </div>
         {/* Results */}
         <div className="max-h-[50vh] overflow-y-auto p-2">
           {results.length === 0 ? (
-            <p className="text-sm text-[var(--color-text-tertiary)] text-center py-8">
+            <p className="text-sm text-text-tertiary text-center py-8">
               No endpoints match &quot;{query}&quot;
             </p>
           ) : (
@@ -1248,20 +1248,20 @@ function EndpointSearch({ onClose }: { onClose: () => void }) {
                 key={ep.path}
                 href={`#${ep.path.split("/")[2]?.split("?")[0] || "endpoints"}`}
                 onClick={onClose}
-                className="flex items-center gap-3 rounded-lg px-3 py-2.5 hover:bg-[var(--color-surface-secondary)] transition-colors group"
+                className="flex items-center gap-3 rounded-lg px-3 py-2.5 hover:bg-surface-secondary transition-colors group"
               >
                 <span className="rounded bg-green-600 px-1.5 py-0.5 text-[10px] font-bold text-white shrink-0">
                   {ep.method}
                 </span>
                 <div className="flex-1 min-w-0">
-                  <p className="font-mono text-sm text-[var(--color-text-primary)] truncate">
+                  <p className="font-mono text-sm text-text-primary truncate">
                     {ep.path}
                   </p>
-                  <p className="text-xs text-[var(--color-text-tertiary)] truncate">
+                  <p className="text-xs text-text-tertiary truncate">
                     {ep.description}
                   </p>
                 </div>
-                <span className="text-[10px] text-[var(--color-text-tertiary)] shrink-0">
+                <span className="text-[10px] text-text-tertiary shrink-0">
                   {ep.categoryIcon} {ep.category}
                 </span>
               </a>
@@ -1269,7 +1269,7 @@ function EndpointSearch({ onClose }: { onClose: () => void }) {
           )}
         </div>
         {/* Footer */}
-        <div className="border-t border-[var(--color-border)] px-4 py-2 flex items-center justify-between text-[10px] text-[var(--color-text-tertiary)]">
+        <div className="border-t border-border px-4 py-2 flex items-center justify-between text-[10px] text-text-tertiary">
           <span>{results.length} endpoint{results.length === 1 ? "" : "s"}</span>
           <span>↵ to navigate · ESC to close</span>
         </div>
@@ -1315,7 +1315,7 @@ function ApiStatusBadge() {
   return (
     <a
       href="/status"
-      className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border)] bg-[var(--color-surface-secondary)] px-3 py-1 text-xs text-[var(--color-text-secondary)] hover:bg-[var(--color-surface-tertiary)] transition-colors"
+      className="inline-flex items-center gap-2 rounded-full border border-border bg-surface-secondary px-3 py-1 text-xs text-text-secondary hover:bg-surface-tertiary transition-colors"
     >
       <span className={cn("h-2 w-2 rounded-full", colors[status], status === "online" && "animate-pulse")} />
       {labels[status]}
@@ -1378,7 +1378,7 @@ export default function DevelopersContent() {
           {/* ═══ Sidebar TOC (desktop) ═══ */}
           <aside className="hidden lg:block w-56 shrink-0">
             <nav className="sticky top-24 space-y-0.5">
-              <p className="text-xs font-semibold uppercase tracking-wider text-[var(--color-text-tertiary)] mb-3">
+              <p className="text-xs font-semibold uppercase tracking-wider text-text-tertiary mb-3">
                 On this page
               </p>
               {tocSections.map((s) => (
@@ -1389,10 +1389,10 @@ export default function DevelopersContent() {
                     "block rounded-md px-3 py-1.5 text-sm transition-all",
                     s.indent ? "pl-6" : "font-medium",
                     activeSection === s.id
-                      ? "bg-[var(--color-accent)]/10 text-[var(--color-accent)] border-l-2 border-[var(--color-accent)]"
+                      ? "bg-accent/10 text-accent border-l-2 border-accent"
                       : s.indent
-                        ? "text-[var(--color-text-tertiary)] hover:text-[var(--color-text-secondary)]"
-                        : "text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] hover:bg-[var(--color-surface-secondary)]"
+                        ? "text-text-tertiary hover:text-text-secondary"
+                        : "text-text-secondary hover:text-text-primary hover:bg-surface-secondary"
                   )}
                 >
                   {s.label}
@@ -1400,17 +1400,17 @@ export default function DevelopersContent() {
               ))}
 
               {/* TOC Actions */}
-              <div className="pt-4 mt-4 border-t border-[var(--color-border)] space-y-2">
+              <div className="pt-4 mt-4 border-t border-border space-y-2">
                 <ApiStatusBadge />
                 <button
                   onClick={() => setSearchOpen(true)}
-                  className="w-full flex items-center gap-2 rounded-md border border-[var(--color-border)] bg-[var(--color-surface-secondary)] px-3 py-2 text-xs text-[var(--color-text-tertiary)] hover:text-[var(--color-text-secondary)] hover:bg-[var(--color-surface-tertiary)] transition-colors cursor-pointer"
+                  className="w-full flex items-center gap-2 rounded-md border border-border bg-surface-secondary px-3 py-2 text-xs text-text-tertiary hover:text-text-secondary hover:bg-surface-tertiary transition-colors cursor-pointer"
                 >
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <circle cx="11" cy="11" r="8" /><path d="M21 21l-4.35-4.35" />
                   </svg>
                   Search endpoints
-                  <kbd className="ml-auto rounded border border-[var(--color-border)] px-1 py-0.5 text-[10px] font-mono">
+                  <kbd className="ml-auto rounded border border-border px-1 py-0.5 text-[10px] font-mono">
                     ⌘K
                   </kbd>
                 </button>
@@ -1426,10 +1426,10 @@ export default function DevelopersContent() {
                 <Badge className="mb-0">No API Key Required</Badge>
                 <ApiStatusBadge />
               </div>
-              <h1 className="font-serif text-4xl md:text-5xl font-bold mb-4 text-[var(--color-text-primary)]">
+              <h1 className="font-serif text-4xl md:text-5xl font-bold mb-4 text-text-primary">
                 Crypto Vision News API
               </h1>
-              <p className="text-lg text-[var(--color-text-secondary)] mb-6 max-w-2xl">
+              <p className="text-lg text-text-secondary mb-6 max-w-2xl">
                 Access real-time cryptocurrency news, market data, DeFi analytics,
                 on-chain metrics, and social sentiment — all from a single, free REST API.
                 No API keys, no authentication, no rate limits to get started.
@@ -1451,10 +1451,10 @@ export default function DevelopersContent() {
                   </a>
                 </Button>
               </div>
-              <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-[var(--color-text-tertiary)]">
+              <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-text-tertiary">
                 <span>
                   Base URL:{" "}
-                  <code className="rounded bg-[var(--color-surface-tertiary)] px-2 py-0.5 font-mono text-[var(--color-text-primary)]">
+                  <code className="rounded bg-surface-tertiary px-2 py-0.5 font-mono text-text-primary">
                     https://cryptocurrency.cv/api
                   </code>
                 </span>
@@ -1464,13 +1464,13 @@ export default function DevelopersContent() {
               {/* Mobile search */}
               <button
                 onClick={() => setSearchOpen(true)}
-                className="mt-4 lg:hidden flex items-center gap-2 rounded-md border border-[var(--color-border)] bg-[var(--color-surface-secondary)] px-3 py-2 text-sm text-[var(--color-text-tertiary)] cursor-pointer w-full max-w-xs"
+                className="mt-4 lg:hidden flex items-center gap-2 rounded-md border border-border bg-surface-secondary px-3 py-2 text-sm text-text-tertiary cursor-pointer w-full max-w-xs"
               >
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <circle cx="11" cy="11" r="8" /><path d="M21 21l-4.35-4.35" />
                 </svg>
                 Search all endpoints...
-                <kbd className="ml-auto rounded border border-[var(--color-border)] px-1.5 py-0.5 text-[10px] font-mono">
+                <kbd className="ml-auto rounded border border-border px-1.5 py-0.5 text-[10px] font-mono">
                   ⌘K
                 </kbd>
               </button>
@@ -1478,15 +1478,15 @@ export default function DevelopersContent() {
 
             {/* ── Quick Start ── */}
             <section id="quick-start" className="mb-16 scroll-mt-20">
-              <h2 className="font-serif text-2xl md:text-3xl font-bold mb-6 text-[var(--color-text-primary)]">
+              <h2 className="font-serif text-2xl md:text-3xl font-bold mb-6 text-text-primary">
                 Quick Start
               </h2>
-              <p className="text-[var(--color-text-secondary)] mb-6">
+              <p className="text-text-secondary mb-6">
                 Fetch your first crypto news in seconds. Choose your language:
               </p>
 
               {/* Language Tabs */}
-              <div className="flex flex-wrap gap-1 mb-4 rounded-lg bg-[var(--color-surface-secondary)] p-1 w-fit">
+              <div className="flex flex-wrap gap-1 mb-4 rounded-lg bg-surface-secondary p-1 w-fit">
                 {quickStartExamples.map((ex, i) => (
                   <button
                     key={ex.label}
@@ -1494,8 +1494,8 @@ export default function DevelopersContent() {
                     className={cn(
                       "rounded-md px-3 py-1.5 text-sm font-medium transition-colors cursor-pointer",
                       activeTab === i
-                        ? "bg-[var(--color-surface)] text-[var(--color-text-primary)] shadow-sm"
-                        : "text-[var(--color-text-tertiary)] hover:text-[var(--color-text-secondary)]"
+                        ? "bg-(--color-surface) text-text-primary shadow-sm"
+                        : "text-text-tertiary hover:text-text-secondary"
                     )}
                   >
                     {ex.label}
@@ -1511,10 +1511,10 @@ export default function DevelopersContent() {
 
             {/* ── API Playground ── */}
             <section id="playground" className="mb-16 scroll-mt-20">
-              <h2 className="font-serif text-2xl md:text-3xl font-bold mb-2 text-[var(--color-text-primary)]">
+              <h2 className="font-serif text-2xl md:text-3xl font-bold mb-2 text-text-primary">
                 API Playground
               </h2>
-              <p className="text-[var(--color-text-secondary)] mb-6">
+              <p className="text-text-secondary mb-6">
                 Try any endpoint directly from your browser — no tools needed.
               </p>
               <ApiPlayground />
@@ -1523,26 +1523,26 @@ export default function DevelopersContent() {
             {/* ── Endpoints Reference ── */}
             <section id="endpoints" className="mb-16 scroll-mt-20">
               <div className="flex items-center justify-between flex-wrap gap-4 mb-2">
-                <h2 className="font-serif text-2xl md:text-3xl font-bold text-[var(--color-text-primary)]">
+                <h2 className="font-serif text-2xl md:text-3xl font-bold text-text-primary">
                   Endpoints Reference
                 </h2>
                 <div className="flex items-center gap-2 text-xs">
                   <button
                     onClick={expandAll}
-                    className="text-[var(--color-accent)] hover:underline cursor-pointer"
+                    className="text-accent hover:underline cursor-pointer"
                   >
                     Expand all
                   </button>
-                  <span className="text-[var(--color-text-tertiary)]">·</span>
+                  <span className="text-text-tertiary">·</span>
                   <button
                     onClick={collapseAll}
-                    className="text-[var(--color-accent)] hover:underline cursor-pointer"
+                    className="text-accent hover:underline cursor-pointer"
                   >
                     Collapse all
                   </button>
                 </div>
               </div>
-              <p className="text-[var(--color-text-secondary)] mb-8">
+              <p className="text-text-secondary mb-8">
                 All endpoints accept GET requests and return JSON (except feed endpoints which return XML).
                 Total: {endpointCategories.reduce((sum, c) => sum + c.endpoints.length, 0)} endpoints across {endpointCategories.length} categories.
               </p>
@@ -1554,28 +1554,28 @@ export default function DevelopersContent() {
                     <div
                       key={cat.id}
                       id={cat.id}
-                      className="scroll-mt-20 rounded-lg border border-[var(--color-border)] overflow-hidden"
+                      className="scroll-mt-20 rounded-lg border border-border overflow-hidden"
                     >
                       {/* Category header */}
                       <button
                         onClick={() => toggleCategory(cat.id)}
-                        className="w-full flex items-center gap-3 bg-[var(--color-surface-secondary)] px-5 py-4 text-left cursor-pointer hover:bg-[var(--color-surface-tertiary)] transition-colors"
+                        className="w-full flex items-center gap-3 bg-surface-secondary px-5 py-4 text-left cursor-pointer hover:bg-surface-tertiary transition-colors"
                       >
                         <span className="text-xl" aria-hidden>
                           {cat.icon}
                         </span>
                         <div className="flex-1 min-w-0">
-                          <span className="font-serif text-lg font-bold text-[var(--color-text-primary)]">
+                          <span className="font-serif text-lg font-bold text-text-primary">
                             {cat.title}
                           </span>
-                          <p className="text-xs text-[var(--color-text-tertiary)] mt-0.5 truncate">
+                          <p className="text-xs text-text-tertiary mt-0.5 truncate">
                             {cat.description}
                           </p>
                         </div>
                         <Badge>{cat.endpoints.length}</Badge>
                         <svg
                           className={cn(
-                            "w-5 h-5 text-[var(--color-text-tertiary)] transition-transform shrink-0",
+                            "w-5 h-5 text-text-tertiary transition-transform shrink-0",
                             isExpanded && "rotate-180"
                           )}
                           fill="none"
@@ -1589,7 +1589,7 @@ export default function DevelopersContent() {
 
                       {/* Endpoints */}
                       {isExpanded && (
-                        <div className="divide-y divide-[var(--color-border)]">
+                        <div className="divide-y divide-border">
                           {cat.endpoints.map((ep) => (
                             <EndpointCard key={ep.path} endpoint={ep} />
                           ))}
@@ -1603,10 +1603,10 @@ export default function DevelopersContent() {
 
             {/* ── SDKs ── */}
             <section id="sdks" className="mb-16 scroll-mt-20">
-              <h2 className="font-serif text-2xl md:text-3xl font-bold mb-2 text-[var(--color-text-primary)]">
+              <h2 className="font-serif text-2xl md:text-3xl font-bold mb-2 text-text-primary">
                 SDKs &amp; Client Libraries
               </h2>
-              <p className="text-[var(--color-text-secondary)] mb-8">
+              <p className="text-text-secondary mb-8">
                 Official SDK packages to integrate crypto news into your project in minutes.
                 Click any SDK to see full usage examples.
               </p>
@@ -1633,14 +1633,14 @@ export default function DevelopersContent() {
                           </div>
                           <button
                             onClick={() => setExpandedSdk(isOpen ? null : sdk.name)}
-                            className="text-xs text-[var(--color-accent)] hover:underline cursor-pointer"
+                            className="text-xs text-accent hover:underline cursor-pointer"
                           >
                             {isOpen ? "Hide" : "Examples"}
                           </button>
                         </div>
                       </CardHeader>
                       <CardContent className="flex-1 space-y-4">
-                        <p className="text-sm text-[var(--color-text-secondary)]">
+                        <p className="text-sm text-text-secondary">
                           {sdk.description}
                         </p>
                         {/* Features */}
@@ -1648,7 +1648,7 @@ export default function DevelopersContent() {
                           {sdk.features.map((f) => (
                             <span
                               key={f}
-                              className="rounded-full bg-[var(--color-surface-tertiary)] px-2 py-0.5 text-[10px] text-[var(--color-text-tertiary)]"
+                              className="rounded-full bg-surface-tertiary px-2 py-0.5 text-[10px] text-text-tertiary"
                             >
                               {f}
                             </span>
@@ -1658,7 +1658,7 @@ export default function DevelopersContent() {
                         {/* Usage example */}
                         {isOpen && (
                           <div>
-                            <h4 className="text-xs font-semibold uppercase tracking-wide text-[var(--color-text-tertiary)] mb-2 mt-4">
+                            <h4 className="text-xs font-semibold uppercase tracking-wide text-text-tertiary mb-2 mt-4">
                               Usage Example
                             </h4>
                             <CodeBlock
@@ -1688,10 +1688,10 @@ export default function DevelopersContent() {
 
             {/* ── Integrations ── */}
             <section id="integrations" className="mb-16 scroll-mt-20">
-              <h2 className="font-serif text-2xl md:text-3xl font-bold mb-2 text-[var(--color-text-primary)]">
+              <h2 className="font-serif text-2xl md:text-3xl font-bold mb-2 text-text-primary">
                 Integrations
               </h2>
-              <p className="text-[var(--color-text-secondary)] mb-8">
+              <p className="text-text-secondary mb-8">
                 Use Crypto Vision News with your favorite tools and platforms.
               </p>
 
@@ -1712,7 +1712,7 @@ export default function DevelopersContent() {
                       </div>
                     </CardHeader>
                     <CardContent className="space-y-4">
-                      <p className="text-sm text-[var(--color-text-secondary)]">
+                      <p className="text-sm text-text-secondary">
                         {integ.description}
                       </p>
                       {integ.setupCode && (
@@ -1739,26 +1739,26 @@ export default function DevelopersContent() {
 
             {/* ── Error Codes ── */}
             <section id="errors" className="mb-16 scroll-mt-20">
-              <h2 className="font-serif text-2xl md:text-3xl font-bold mb-2 text-[var(--color-text-primary)]">
+              <h2 className="font-serif text-2xl md:text-3xl font-bold mb-2 text-text-primary">
                 HTTP Status Codes
               </h2>
-              <p className="text-[var(--color-text-secondary)] mb-6">
-                All error responses include a JSON body with an <code className="font-mono bg-[var(--color-surface-tertiary)] px-1.5 py-0.5 rounded text-xs">error</code> field.
+              <p className="text-text-secondary mb-6">
+                All error responses include a JSON body with an <code className="font-mono bg-surface-tertiary px-1.5 py-0.5 rounded text-xs">error</code> field.
               </p>
 
-              <div className="rounded-lg border border-[var(--color-border)] overflow-hidden">
+              <div className="rounded-lg border border-border overflow-hidden">
                 <div className="overflow-x-auto">
                   <table className="w-full text-sm">
                     <thead>
-                      <tr className="bg-[var(--color-surface-secondary)] border-b border-[var(--color-border)]">
-                        <th className="text-left py-3 px-4 font-medium text-[var(--color-text-tertiary)]">Code</th>
-                        <th className="text-left py-3 px-4 font-medium text-[var(--color-text-tertiary)]">Status</th>
-                        <th className="text-left py-3 px-4 font-medium text-[var(--color-text-tertiary)]">Description</th>
+                      <tr className="bg-surface-secondary border-b border-border">
+                        <th className="text-left py-3 px-4 font-medium text-text-tertiary">Code</th>
+                        <th className="text-left py-3 px-4 font-medium text-text-tertiary">Status</th>
+                        <th className="text-left py-3 px-4 font-medium text-text-tertiary">Description</th>
                       </tr>
                     </thead>
                     <tbody>
                       {errorCodes.map((ec) => (
-                        <tr key={ec.code} className="border-b border-[var(--color-border)] last:border-b-0">
+                        <tr key={ec.code} className="border-b border-border last:border-b-0">
                           <td className="py-2.5 px-4">
                             <span className={cn(
                               "font-mono text-xs font-bold px-2 py-0.5 rounded",
@@ -1770,10 +1770,10 @@ export default function DevelopersContent() {
                               {ec.code}
                             </span>
                           </td>
-                          <td className="py-2.5 px-4 font-medium text-[var(--color-text-primary)]">
+                          <td className="py-2.5 px-4 font-medium text-text-primary">
                             {ec.text}
                           </td>
-                          <td className="py-2.5 px-4 text-[var(--color-text-secondary)]">
+                          <td className="py-2.5 px-4 text-text-secondary">
                             {ec.description}
                           </td>
                         </tr>
@@ -1785,7 +1785,7 @@ export default function DevelopersContent() {
 
               {/* Error response example */}
               <div className="mt-4">
-                <h4 className="text-xs font-semibold uppercase tracking-wide text-[var(--color-text-tertiary)] mb-2">
+                <h4 className="text-xs font-semibold uppercase tracking-wide text-text-tertiary mb-2">
                   Error Response Example
                 </h4>
                 <CodeBlock
@@ -1801,18 +1801,18 @@ export default function DevelopersContent() {
 
             {/* ── Rate Limits & Authentication ── */}
             <section id="rate-limits" className="mb-16 scroll-mt-20">
-              <h2 className="font-serif text-2xl md:text-3xl font-bold mb-2 text-[var(--color-text-primary)]">
+              <h2 className="font-serif text-2xl md:text-3xl font-bold mb-2 text-text-primary">
                 Rate Limits &amp; Authentication
               </h2>
 
-              <div className="rounded-lg border border-[var(--color-border)] overflow-hidden">
+              <div className="rounded-lg border border-border overflow-hidden">
                 <div className="p-6 space-y-6">
                   {/* Free Tier */}
                   <div>
-                    <h3 className="font-serif text-lg font-bold mb-2 text-[var(--color-text-primary)] flex items-center gap-2">
+                    <h3 className="font-serif text-lg font-bold mb-2 text-text-primary flex items-center gap-2">
                       <span className="text-green-500">✓</span> Free Tier — No API Key Required
                     </h3>
-                    <p className="text-[var(--color-text-secondary)] mb-4">
+                    <p className="text-text-secondary mb-4">
                       The API is completely free to use. No registration,
                       no API keys, no authentication required. Just make HTTP requests
                       and get data back.
@@ -1820,13 +1820,13 @@ export default function DevelopersContent() {
                     <div className="overflow-x-auto">
                       <table className="w-full text-sm">
                         <thead>
-                          <tr className="border-b border-[var(--color-border)]">
-                            <th className="text-left py-2 pr-6 font-medium text-[var(--color-text-tertiary)]">Feature</th>
-                            <th className="text-left py-2 pr-6 font-medium text-[var(--color-text-tertiary)]">Free</th>
-                            <th className="text-left py-2 font-medium text-[var(--color-text-tertiary)]">Premium</th>
+                          <tr className="border-b border-border">
+                            <th className="text-left py-2 pr-6 font-medium text-text-tertiary">Feature</th>
+                            <th className="text-left py-2 pr-6 font-medium text-text-tertiary">Free</th>
+                            <th className="text-left py-2 font-medium text-text-tertiary">Premium</th>
                           </tr>
                         </thead>
-                        <tbody className="text-[var(--color-text-secondary)]">
+                        <tbody className="text-text-secondary">
                           {[
                             ["API Key Required", "No", "Optional"],
                             ["Rate Limit", "100 req/min", "Unlimited"],
@@ -1838,9 +1838,9 @@ export default function DevelopersContent() {
                             ["Priority Support", "—", "✓"],
                             ["Custom Webhooks", "—", "✓"],
                           ].map(([feature, free, premium], i) => (
-                            <tr key={i} className="border-b border-[var(--color-border)] last:border-b-0">
+                            <tr key={i} className="border-b border-border last:border-b-0">
                               <td className="py-2 pr-6">{feature}</td>
-                              <td className={cn("py-2 pr-6", free === "✓" || free === "No" ? "text-green-500" : free === "—" ? "text-[var(--color-text-tertiary)]" : "")}>{free}</td>
+                              <td className={cn("py-2 pr-6", free === "✓" || free === "No" ? "text-green-500" : free === "—" ? "text-text-tertiary" : "")}>{free}</td>
                               <td className={cn("py-2", premium === "✓" ? "text-green-500" : "")}>{premium}</td>
                             </tr>
                           ))}
@@ -1850,11 +1850,11 @@ export default function DevelopersContent() {
                   </div>
 
                   {/* Rate limit headers */}
-                  <div className="pt-4 border-t border-[var(--color-border)]">
-                    <h3 className="font-serif text-lg font-bold mb-2 text-[var(--color-text-primary)]">
+                  <div className="pt-4 border-t border-border">
+                    <h3 className="font-serif text-lg font-bold mb-2 text-text-primary">
                       Rate Limit Headers
                     </h3>
-                    <p className="text-sm text-[var(--color-text-secondary)] mb-3">
+                    <p className="text-sm text-text-secondary mb-3">
                       Every response includes rate limit information via headers:
                     </p>
                     <CodeBlock
@@ -1867,29 +1867,29 @@ Retry-After: 45`}
                   </div>
 
                   {/* CORS */}
-                  <div className="pt-4 border-t border-[var(--color-border)]">
-                    <h3 className="font-serif text-lg font-bold mb-2 text-[var(--color-text-primary)]">
+                  <div className="pt-4 border-t border-border">
+                    <h3 className="font-serif text-lg font-bold mb-2 text-text-primary">
                       CORS Support
                     </h3>
-                    <p className="text-sm text-[var(--color-text-secondary)]">
+                    <p className="text-sm text-text-secondary">
                       All API endpoints support CORS. The{" "}
-                      <code className="font-mono bg-[var(--color-surface-tertiary)] px-1.5 py-0.5 rounded text-xs">
+                      <code className="font-mono bg-surface-tertiary px-1.5 py-0.5 rounded text-xs">
                         Access-Control-Allow-Origin
                       </code>{" "}
-                      header is set to <code className="font-mono bg-[var(--color-surface-tertiary)] px-1.5 py-0.5 rounded text-xs">*</code>,
+                      header is set to <code className="font-mono bg-surface-tertiary px-1.5 py-0.5 rounded text-xs">*</code>,
                       so you can make requests directly from browser-based applications.
                     </p>
                   </div>
 
                   {/* Response Format */}
-                  <div className="pt-4 border-t border-[var(--color-border)]">
-                    <h3 className="font-serif text-lg font-bold mb-2 text-[var(--color-text-primary)]">
+                  <div className="pt-4 border-t border-border">
+                    <h3 className="font-serif text-lg font-bold mb-2 text-text-primary">
                       Response Format
                     </h3>
-                    <p className="text-sm text-[var(--color-text-secondary)]">
-                      All endpoints return JSON by default (<code className="font-mono bg-[var(--color-surface-tertiary)] px-1.5 py-0.5 rounded text-xs">Content-Type: application/json</code>),
+                    <p className="text-sm text-text-secondary">
+                      All endpoints return JSON by default (<code className="font-mono bg-surface-tertiary px-1.5 py-0.5 rounded text-xs">Content-Type: application/json</code>),
                       except feed endpoints (/api/rss, /api/atom, /api/opml) which return XML.
-                      Every response includes a <code className="font-mono bg-[var(--color-surface-tertiary)] px-1.5 py-0.5 rounded text-xs">fetchedAt</code> ISO timestamp.
+                      Every response includes a <code className="font-mono bg-surface-tertiary px-1.5 py-0.5 rounded text-xs">fetchedAt</code> ISO timestamp.
                     </p>
                   </div>
                 </div>
@@ -1898,10 +1898,10 @@ Retry-After: 45`}
 
             {/* ── Changelog ── */}
             <section id="changelog" className="mb-16 scroll-mt-20">
-              <h2 className="font-serif text-2xl md:text-3xl font-bold mb-2 text-[var(--color-text-primary)]">
+              <h2 className="font-serif text-2xl md:text-3xl font-bold mb-2 text-text-primary">
                 API Changelog
               </h2>
-              <p className="text-[var(--color-text-secondary)] mb-6">
+              <p className="text-text-secondary mb-6">
                 Recent API updates and new features.
               </p>
 
@@ -1913,27 +1913,27 @@ Retry-After: 45`}
                       <div className={cn(
                         "w-3 h-3 rounded-full border-2 shrink-0",
                         i === 0
-                          ? "border-[var(--color-accent)] bg-[var(--color-accent)]"
-                          : "border-[var(--color-border)] bg-[var(--color-surface)]"
+                          ? "border-accent bg-accent"
+                          : "border-border bg-(--color-surface)"
                       )} />
                       {i < changelog.length - 1 && (
-                        <div className="w-px flex-1 bg-[var(--color-border)]" />
+                        <div className="w-px flex-1 bg-border" />
                       )}
                     </div>
                     <div className="pb-8 min-w-0">
                       <div className="flex items-center gap-3 mb-1">
-                        <span className="font-mono font-bold text-sm text-[var(--color-text-primary)]">
+                        <span className="font-mono font-bold text-sm text-text-primary">
                           {entry.version}
                         </span>
-                        <span className="text-xs text-[var(--color-text-tertiary)]">
+                        <span className="text-xs text-text-tertiary">
                           {entry.date}
                         </span>
                         {i === 0 && <Badge>Latest</Badge>}
                       </div>
                       <ul className="space-y-1">
                         {entry.changes.map((change, j) => (
-                          <li key={j} className="text-sm text-[var(--color-text-secondary)] flex gap-2">
-                            <span className="text-[var(--color-text-tertiary)] shrink-0">•</span>
+                          <li key={j} className="text-sm text-text-secondary flex gap-2">
+                            <span className="text-text-tertiary shrink-0">•</span>
                             {change}
                           </li>
                         ))}
@@ -1984,7 +1984,7 @@ function EndpointCard({ endpoint: ep }: { endpoint: Endpoint }) {
         <span className="rounded bg-green-600 px-2 py-0.5 text-xs font-bold text-white uppercase">
           {ep.method}
         </span>
-        <code className="font-mono text-sm text-[var(--color-text-primary)]">
+        <code className="font-mono text-sm text-text-primary">
           {ep.path}
         </code>
         {ep.status === "beta" && <Badge>Beta</Badge>}
@@ -1997,7 +1997,7 @@ function EndpointCard({ endpoint: ep }: { endpoint: Endpoint }) {
         {ep.params.length > 0 && (
           <button
             onClick={() => setShowUrlBuilder(!showUrlBuilder)}
-            className="ml-auto text-xs text-[var(--color-accent)] hover:underline cursor-pointer flex items-center gap-1"
+            className="ml-auto text-xs text-accent hover:underline cursor-pointer flex items-center gap-1"
           >
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
@@ -2007,20 +2007,20 @@ function EndpointCard({ endpoint: ep }: { endpoint: Endpoint }) {
           </button>
         )}
       </div>
-      <p className="text-[var(--color-text-secondary)] text-sm">
+      <p className="text-text-secondary text-sm">
         {ep.description}
       </p>
 
       {/* URL Builder */}
       {showUrlBuilder && (
-        <div className="rounded-lg bg-[var(--color-surface-secondary)] p-4 space-y-3">
-          <p className="text-xs font-semibold uppercase tracking-wide text-[var(--color-text-tertiary)]">
+        <div className="rounded-lg bg-surface-secondary p-4 space-y-3">
+          <p className="text-xs font-semibold uppercase tracking-wide text-text-tertiary">
             URL Builder
           </p>
           <div className="grid gap-2 sm:grid-cols-2">
             {ep.params.map((p) => (
               <div key={p.name}>
-                <label className="text-xs text-[var(--color-text-tertiary)] mb-0.5 block">
+                <label className="text-xs text-text-tertiary mb-0.5 block">
                   {p.name}
                   {p.required && <span className="text-red-500 ml-0.5">*</span>}
                 </label>
@@ -2034,13 +2034,13 @@ function EndpointCard({ endpoint: ep }: { endpoint: Endpoint }) {
                       [p.name]: e.target.value,
                     }))
                   }
-                  className="w-full rounded-md border border-[var(--color-border)] bg-[var(--color-surface)] px-2 py-1.5 font-mono text-xs text-[var(--color-text-primary)] focus:outline-none focus:ring-1 focus:ring-[var(--color-accent)]"
+                  className="w-full rounded-md border border-border bg-(--color-surface) px-2 py-1.5 font-mono text-xs text-text-primary focus:outline-none focus:ring-1 focus:ring-accent"
                 />
               </div>
             ))}
           </div>
           <div className="flex items-center gap-2">
-            <code className="flex-1 rounded-md bg-[var(--color-surface-tertiary)] px-3 py-2 font-mono text-xs text-[var(--color-text-secondary)] overflow-x-auto">
+            <code className="flex-1 rounded-md bg-surface-tertiary px-3 py-2 font-mono text-xs text-text-secondary overflow-x-auto">
               {builtUrl}
             </code>
             <Button variant="outline" size="sm" onClick={copyUrl}>
@@ -2053,41 +2053,41 @@ function EndpointCard({ endpoint: ep }: { endpoint: Endpoint }) {
       {/* Parameters table */}
       {ep.params.length > 0 && (
         <div>
-          <h4 className="text-xs font-semibold uppercase tracking-wide text-[var(--color-text-tertiary)] mb-2">
+          <h4 className="text-xs font-semibold uppercase tracking-wide text-text-tertiary mb-2">
             Parameters
           </h4>
-          <div className="overflow-x-auto rounded-lg border border-[var(--color-border)]">
+          <div className="overflow-x-auto rounded-lg border border-border">
             <table className="w-full text-sm">
               <thead>
-                <tr className="bg-[var(--color-surface-secondary)] border-b border-[var(--color-border)]">
-                  <th className="text-left py-2 px-3 font-medium text-[var(--color-text-tertiary)]">Name</th>
-                  <th className="text-left py-2 px-3 font-medium text-[var(--color-text-tertiary)]">Type</th>
-                  <th className="text-left py-2 px-3 font-medium text-[var(--color-text-tertiary)]">Required</th>
-                  <th className="text-left py-2 px-3 font-medium text-[var(--color-text-tertiary)]">Description</th>
+                <tr className="bg-surface-secondary border-b border-border">
+                  <th className="text-left py-2 px-3 font-medium text-text-tertiary">Name</th>
+                  <th className="text-left py-2 px-3 font-medium text-text-tertiary">Type</th>
+                  <th className="text-left py-2 px-3 font-medium text-text-tertiary">Required</th>
+                  <th className="text-left py-2 px-3 font-medium text-text-tertiary">Description</th>
                 </tr>
               </thead>
               <tbody>
                 {ep.params.map((p) => (
                   <tr
                     key={p.name}
-                    className="border-b border-[var(--color-border)] last:border-b-0"
+                    className="border-b border-border last:border-b-0"
                   >
                     <td className="py-2 px-3">
-                      <code className="font-mono text-xs bg-[var(--color-surface-tertiary)] px-1.5 py-0.5 rounded text-[var(--color-text-primary)]">
+                      <code className="font-mono text-xs bg-surface-tertiary px-1.5 py-0.5 rounded text-text-primary">
                         {p.name}
                       </code>
                     </td>
-                    <td className="py-2 px-3 text-[var(--color-text-tertiary)] font-mono text-xs">
+                    <td className="py-2 px-3 text-text-tertiary font-mono text-xs">
                       {p.type}
                     </td>
                     <td className="py-2 px-3">
                       {p.required ? (
                         <span className="text-red-500 text-xs font-medium">required</span>
                       ) : (
-                        <span className="text-[var(--color-text-tertiary)] text-xs">optional</span>
+                        <span className="text-text-tertiary text-xs">optional</span>
                       )}
                     </td>
-                    <td className="py-2 px-3 text-[var(--color-text-secondary)]">
+                    <td className="py-2 px-3 text-text-secondary">
                       {p.description}
                     </td>
                   </tr>
@@ -2100,7 +2100,7 @@ function EndpointCard({ endpoint: ep }: { endpoint: Endpoint }) {
 
       {/* Example Response */}
       <div>
-        <h4 className="text-xs font-semibold uppercase tracking-wide text-[var(--color-text-tertiary)] mb-2">
+        <h4 className="text-xs font-semibold uppercase tracking-wide text-text-tertiary mb-2">
           Example Response
         </h4>
         <CodeBlock

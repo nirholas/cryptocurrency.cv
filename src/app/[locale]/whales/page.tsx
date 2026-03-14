@@ -243,7 +243,7 @@ async function OnChainStatsGrid() {
 
   return (
     <section>
-      <h2 className="font-serif text-2xl font-bold mb-4 text-[var(--color-text-primary)]">
+      <h2 className="font-serif text-2xl font-bold mb-4 text-text-primary">
         On-Chain Stats
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -252,17 +252,17 @@ async function OnChainStatsGrid() {
           return (
             <Card key={`${m.metric}-${i}`}>
               <CardContent className="flex items-start gap-3 py-4 px-5">
-                <span className="shrink-0 p-2 rounded-lg bg-[var(--color-accent)]/10">
-                  <Icon className="w-5 h-5 text-[var(--color-accent)]" />
+                <span className="shrink-0 p-2 rounded-lg bg-accent/10">
+                  <Icon className="w-5 h-5 text-accent" />
                 </span>
                 <div className="min-w-0">
-                  <p className="text-xs text-[var(--color-text-tertiary)] truncate">
+                  <p className="text-xs text-text-tertiary truncate">
                     {m.metric}
                   </p>
-                  <p className="text-lg font-bold text-[var(--color-text-primary)] mt-0.5">
+                  <p className="text-lg font-bold text-text-primary mt-0.5">
                     {m.value === 0 ? "—" : formatMetricValue(m.value, m.unit)}
                   </p>
-                  <p className="text-[10px] text-[var(--color-text-tertiary)] mt-0.5">
+                  <p className="text-[10px] text-text-tertiary mt-0.5">
                     {m.chain} · {m.source}
                   </p>
                 </div>
@@ -281,12 +281,12 @@ async function ExchangeFlows() {
   if (flows.length === 0) {
     return (
       <section>
-        <h2 className="font-serif text-2xl font-bold mb-4 text-[var(--color-text-primary)]">
+        <h2 className="font-serif text-2xl font-bold mb-4 text-text-primary">
           Exchange Flows
         </h2>
         <Card>
           <CardContent className="py-8">
-            <p className="text-sm text-[var(--color-text-tertiary)] text-center">
+            <p className="text-sm text-text-tertiary text-center">
               Exchange flow data is currently unavailable.
             </p>
           </CardContent>
@@ -297,7 +297,7 @@ async function ExchangeFlows() {
 
   return (
     <section>
-      <h2 className="font-serif text-2xl font-bold mb-4 text-[var(--color-text-primary)]">
+      <h2 className="font-serif text-2xl font-bold mb-4 text-text-primary">
         Exchange Flows
       </h2>
       <Card>
@@ -305,20 +305,20 @@ async function ExchangeFlows() {
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
-                <tr className="border-b border-[var(--color-border)]">
-                  <th className="text-left px-4 py-3 text-xs font-semibold text-[var(--color-text-tertiary)]">
+                <tr className="border-b border-border">
+                  <th className="text-left px-4 py-3 text-xs font-semibold text-text-tertiary">
                     Asset
                   </th>
-                  <th className="text-right px-4 py-3 text-xs font-semibold text-[var(--color-text-tertiary)]">
+                  <th className="text-right px-4 py-3 text-xs font-semibold text-text-tertiary">
                     Net Change
                   </th>
-                  <th className="text-right px-4 py-3 text-xs font-semibold text-[var(--color-text-tertiary)] hidden sm:table-cell">
+                  <th className="text-right px-4 py-3 text-xs font-semibold text-text-tertiary hidden sm:table-cell">
                     Net Change (USD)
                   </th>
-                  <th className="text-right px-4 py-3 text-xs font-semibold text-[var(--color-text-tertiary)] hidden md:table-cell">
+                  <th className="text-right px-4 py-3 text-xs font-semibold text-text-tertiary hidden md:table-cell">
                     Price (24h)
                   </th>
-                  <th className="text-center px-4 py-3 text-xs font-semibold text-[var(--color-text-tertiary)]">
+                  <th className="text-center px-4 py-3 text-xs font-semibold text-text-tertiary">
                     Signal
                   </th>
                 </tr>
@@ -333,13 +333,13 @@ async function ExchangeFlows() {
                   return (
                     <tr
                       key={f.symbol}
-                      className="border-b border-[var(--color-border)] last:border-b-0 hover:bg-[var(--color-surface-secondary)] transition-colors"
+                      className="border-b border-border last:border-b-0 hover:bg-surface-secondary transition-colors"
                     >
                       <td className="px-4 py-3">
-                        <span className="font-semibold text-[var(--color-text-primary)]">
+                        <span className="font-semibold text-text-primary">
                           {f.symbol}
                         </span>
-                        <span className="text-xs text-[var(--color-text-tertiary)] ml-1.5 hidden sm:inline">
+                        <span className="text-xs text-text-tertiary ml-1.5 hidden sm:inline">
                           {f.coin}
                         </span>
                       </td>
@@ -372,7 +372,7 @@ async function ExchangeFlows() {
                           ) : pctChange < 0 ? (
                             <TrendingDown className="w-3.5 h-3.5 text-red-500" />
                           ) : (
-                            <Minus className="w-3.5 h-3.5 text-[var(--color-text-tertiary)]" />
+                            <Minus className="w-3.5 h-3.5 text-text-tertiary" />
                           )}
                           <span
                             className={cn(
@@ -381,7 +381,7 @@ async function ExchangeFlows() {
                                 ? "text-green-500"
                                 : pctChange < 0
                                   ? "text-red-500"
-                                  : "text-[var(--color-text-tertiary)]",
+                                  : "text-text-tertiary",
                             )}
                           >
                             {pctChange > 0 ? "+" : ""}
@@ -397,7 +397,7 @@ async function ExchangeFlows() {
                               ? "bg-green-500/10 text-green-600"
                               : f.signal === "distribution" || f.signal === "bearish"
                                 ? "bg-red-500/10 text-red-600"
-                                : "bg-[var(--color-surface-tertiary)] text-[var(--color-text-tertiary)]",
+                                : "bg-surface-tertiary text-text-tertiary",
                           )}
                         >
                           {f.signal}
@@ -411,8 +411,8 @@ async function ExchangeFlows() {
           </div>
 
           {/* Interpretations */}
-          <div className="border-t border-[var(--color-border)] px-4 py-3">
-            <p className="text-xs font-semibold text-[var(--color-text-tertiary)] mb-1.5">
+          <div className="border-t border-border px-4 py-3">
+            <p className="text-xs font-semibold text-text-tertiary mb-1.5">
               Analysis
             </p>
             <div className="space-y-1">
@@ -422,7 +422,7 @@ async function ExchangeFlows() {
                 .map((f) => (
                   <p
                     key={f.symbol}
-                    className="text-xs text-[var(--color-text-secondary)]"
+                    className="text-xs text-text-secondary"
                   >
                     <span className="font-semibold">{f.symbol}:</span>{" "}
                     {f.interpretation}
@@ -442,12 +442,12 @@ async function NotableWallets() {
   if (wallets.length === 0) {
     return (
       <section>
-        <h2 className="font-serif text-2xl font-bold mb-4 text-[var(--color-text-primary)]">
+        <h2 className="font-serif text-2xl font-bold mb-4 text-text-primary">
           Notable Wallets
         </h2>
         <Card>
           <CardContent className="py-8">
-            <p className="text-sm text-[var(--color-text-tertiary)] text-center">
+            <p className="text-sm text-text-tertiary text-center">
               Notable wallet data is currently unavailable.
             </p>
           </CardContent>
@@ -458,7 +458,7 @@ async function NotableWallets() {
 
   return (
     <section>
-      <h2 className="font-serif text-2xl font-bold mb-4 text-[var(--color-text-primary)]">
+      <h2 className="font-serif text-2xl font-bold mb-4 text-text-primary">
         Notable Wallets
       </h2>
       <Card>
@@ -466,23 +466,23 @@ async function NotableWallets() {
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
-                <tr className="border-b border-[var(--color-border)]">
-                  <th className="text-left px-4 py-3 text-xs font-semibold text-[var(--color-text-tertiary)]">
+                <tr className="border-b border-border">
+                  <th className="text-left px-4 py-3 text-xs font-semibold text-text-tertiary">
                     Wallet
                   </th>
-                  <th className="text-left px-4 py-3 text-xs font-semibold text-[var(--color-text-tertiary)]">
+                  <th className="text-left px-4 py-3 text-xs font-semibold text-text-tertiary">
                     Chain
                   </th>
-                  <th className="text-right px-4 py-3 text-xs font-semibold text-[var(--color-text-tertiary)]">
+                  <th className="text-right px-4 py-3 text-xs font-semibold text-text-tertiary">
                     Amount
                   </th>
-                  <th className="text-right px-4 py-3 text-xs font-semibold text-[var(--color-text-tertiary)] hidden sm:table-cell">
+                  <th className="text-right px-4 py-3 text-xs font-semibold text-text-tertiary hidden sm:table-cell">
                     USD Value
                   </th>
-                  <th className="text-center px-4 py-3 text-xs font-semibold text-[var(--color-text-tertiary)]">
+                  <th className="text-center px-4 py-3 text-xs font-semibold text-text-tertiary">
                     Type
                   </th>
-                  <th className="text-right px-4 py-3 text-xs font-semibold text-[var(--color-text-tertiary)] hidden md:table-cell">
+                  <th className="text-right px-4 py-3 text-xs font-semibold text-text-tertiary hidden md:table-cell">
                     Hash
                   </th>
                 </tr>
@@ -491,28 +491,28 @@ async function NotableWallets() {
                 {wallets.map((w, i) => (
                   <tr
                     key={`${w.hash}-${i}`}
-                    className="border-b border-[var(--color-border)] last:border-b-0 hover:bg-[var(--color-surface-secondary)] transition-colors"
+                    className="border-b border-border last:border-b-0 hover:bg-surface-secondary transition-colors"
                   >
                     <td className="px-4 py-3">
                       <div className="flex items-center gap-1.5">
-                        <Wallet className="w-3.5 h-3.5 text-[var(--color-text-tertiary)]" />
-                        <span className="font-mono text-xs text-[var(--color-text-primary)]">
+                        <Wallet className="w-3.5 h-3.5 text-text-tertiary" />
+                        <span className="font-mono text-xs text-text-primary">
                           {truncate(w.from || w.to, 16)}
                         </span>
                       </div>
                     </td>
                     <td className="px-4 py-3">
-                      <span className="text-xs text-[var(--color-text-secondary)] capitalize">
+                      <span className="text-xs text-text-secondary capitalize">
                         {w.blockchain}
                       </span>
                     </td>
                     <td className="px-4 py-3 text-right">
-                      <span className="font-mono text-sm font-semibold text-[var(--color-text-primary)]">
+                      <span className="font-mono text-sm font-semibold text-text-primary">
                         {formatCoinAmount(w.amount)} {w.symbol}
                       </span>
                     </td>
                     <td className="px-4 py-3 text-right hidden sm:table-cell">
-                      <span className="text-sm text-[var(--color-text-secondary)]">
+                      <span className="text-sm text-text-secondary">
                         {formatUsd(w.usd_value)}
                       </span>
                     </td>
@@ -522,14 +522,14 @@ async function NotableWallets() {
                           "inline-block px-2 py-0.5 rounded-full text-[10px] font-semibold capitalize",
                           w.significance === "high" || w.significance === "critical"
                             ? "bg-red-500/10 text-red-600"
-                            : "bg-[var(--color-surface-tertiary)] text-[var(--color-text-tertiary)]",
+                            : "bg-surface-tertiary text-text-tertiary",
                         )}
                       >
                         {w.type || w.significance || "transfer"}
                       </span>
                     </td>
                     <td className="px-4 py-3 text-right hidden md:table-cell">
-                      <span className="font-mono text-[10px] text-[var(--color-text-tertiary)]">
+                      <span className="font-mono text-[10px] text-text-tertiary">
                         {truncate(w.hash, 16)}
                       </span>
                     </td>
@@ -584,10 +584,10 @@ export default async function WhalesPage({ params }: Props) {
       <main className="container-main py-10">
         {/* Hero */}
         <div className="mb-8">
-          <h1 className="font-serif text-3xl md:text-4xl font-bold mb-2 text-[var(--color-text-primary)]">
+          <h1 className="font-serif text-3xl md:text-4xl font-bold mb-2 text-text-primary">
             🐋 Whale Alerts &amp; On-Chain Activity
           </h1>
-          <p className="text-[var(--color-text-secondary)] max-w-2xl">
+          <p className="text-text-secondary max-w-2xl">
             Track large cryptocurrency transactions in real time. Monitor
             on-chain metrics, exchange flows, and notable wallet activity across
             Bitcoin, Ethereum, and top altcoins.

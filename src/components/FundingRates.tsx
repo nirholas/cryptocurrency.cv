@@ -91,10 +91,10 @@ export default function FundingRates() {
     <button
       onClick={() => toggleSort(field)}
       className={cn(
-        "flex items-center gap-1 text-xs font-semibold uppercase tracking-wider transition-colors hover:text-[var(--color-text-primary)]",
+        "flex items-center gap-1 text-xs font-semibold uppercase tracking-wider transition-colors hover:text-text-primary",
         sortField === field
-          ? "text-[var(--color-accent)]"
-          : "text-[var(--color-text-secondary)]",
+          ? "text-accent"
+          : "text-text-secondary",
       )}
     >
       {children}
@@ -123,12 +123,12 @@ export default function FundingRates() {
         <div className="overflow-x-auto">
           <table className="w-full text-sm">
             <thead>
-              <tr className="border-b border-[var(--color-border)]">
+              <tr className="border-b border-border">
                 <th className="pb-2 text-left">
                   <SortButton field="symbol">Coin</SortButton>
                 </th>
                 <th className="pb-2 text-left">
-                  <span className="text-xs font-semibold uppercase tracking-wider text-[var(--color-text-secondary)]">
+                  <span className="text-xs font-semibold uppercase tracking-wider text-text-secondary">
                     Exchange
                   </span>
                 </th>
@@ -139,7 +139,7 @@ export default function FundingRates() {
                   <SortButton field="annualized">Annualized</SortButton>
                 </th>
                 <th className="hidden pb-2 text-right md:table-cell">
-                  <span className="text-xs font-semibold uppercase tracking-wider text-[var(--color-text-secondary)]">
+                  <span className="text-xs font-semibold uppercase tracking-wider text-text-secondary">
                     Next Funding
                   </span>
                 </th>
@@ -158,7 +158,7 @@ export default function FundingRates() {
                 <tr>
                   <td
                     colSpan={5}
-                    className="py-8 text-center text-[var(--color-text-tertiary)]"
+                    className="py-8 text-center text-text-tertiary"
                   >
                     No funding rate data available
                   </td>
@@ -174,10 +174,10 @@ export default function FundingRates() {
                   return (
                     <tr
                       key={`${r.symbol}-${r.exchange ?? idx}`}
-                      className="border-b border-[var(--color-border)]/50 transition-colors hover:bg-[var(--color-surface-secondary)]"
+                      className="border-b border-border/50 transition-colors hover:bg-surface-secondary"
                     >
                       <td className="py-2 font-medium">{r.symbol}</td>
-                      <td className="py-2 text-[var(--color-text-secondary)]">
+                      <td className="py-2 text-text-secondary">
                         {r.exchange ?? "—"}
                       </td>
                       <td className={cn("py-2 text-right font-mono", colorClass)}>
@@ -193,7 +193,7 @@ export default function FundingRates() {
                         {isPositive ? "+" : ""}
                         {ann.toFixed(2)}%
                       </td>
-                      <td className="hidden py-2 text-right text-[var(--color-text-secondary)] md:table-cell">
+                      <td className="hidden py-2 text-right text-text-secondary md:table-cell">
                         {r.nextFundingTime
                           ? new Date(r.nextFundingTime).toLocaleTimeString(
                               [],

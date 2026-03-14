@@ -27,14 +27,14 @@ export function SectionHeader({
 }) {
   return (
     <div className={`flex items-center justify-between mb-6 ${className}`}>
-      <h2 className="flex items-center gap-2 font-serif text-xl md:text-2xl font-bold text-[var(--color-text-primary)]">
+      <h2 className="flex items-center gap-2 font-serif text-xl md:text-2xl font-bold text-text-primary">
         {icon && <span className="text-lg">{icon}</span>}
         {title}
       </h2>
       {href && (
         <Link
           href={href}
-          className="text-sm font-medium text-[var(--color-accent)] hover:text-[var(--color-accent-hover)] transition-colors whitespace-nowrap"
+          className="text-sm font-medium text-accent hover:text-accent-hover transition-colors whitespace-nowrap"
         >
           See all →
         </Link>
@@ -57,12 +57,12 @@ export function DateHeader() {
   });
 
   return (
-    <div className="border-b-2 border-[var(--color-text-primary)] mb-1">
+    <div className="border-b-2 border-text-primary mb-1">
       <div className="container-main flex items-center justify-between py-2">
-        <p className="text-sm font-medium text-[var(--color-text-secondary)] tracking-wide">
+        <p className="text-sm font-medium text-text-secondary tracking-wide">
           {formatted}
         </p>
-        <p className="text-xs text-[var(--color-text-tertiary)] hidden sm:block">
+        <p className="text-xs text-text-tertiary hidden sm:block">
           Your trusted source for crypto news & analysis
         </p>
       </div>
@@ -78,10 +78,10 @@ export function EditorsPicks({ articles }: { articles: NewsArticle[] }) {
   if (articles.length === 0) return null;
 
   return (
-    <section className="border-b border-[var(--color-border)] bg-[var(--color-surface-secondary)]">
+    <section className="border-b border-border bg-surface-secondary">
       <div className="container-main py-6 lg:py-8">
         <div className="flex items-center gap-3 mb-5">
-          <span className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[var(--color-accent)] text-white text-xs font-bold uppercase tracking-wider">
+          <span className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-accent text-white text-xs font-bold uppercase tracking-wider">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-3.5 w-3.5">
               <path fillRule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clipRule="evenodd" />
             </svg>
@@ -113,7 +113,7 @@ function EditorsPickCard({ article }: { article: NewsArticle }) {
       >
         <article className="flex gap-4 items-start">
           {article.imageUrl && (
-            <div className="overflow-hidden rounded-md bg-[var(--color-surface-tertiary)] shrink-0 w-24 h-24">
+            <div className="overflow-hidden rounded-md bg-surface-tertiary shrink-0 w-24 h-24">
               <img
                 src={article.imageUrl}
                 alt={article.title}
@@ -126,11 +126,11 @@ function EditorsPickCard({ article }: { article: NewsArticle }) {
             <Badge variant={categoryToBadgeVariant(article.category)} className="w-fit text-[10px]">
               {article.category}
             </Badge>
-            <h3 className="font-serif text-base font-bold leading-snug tracking-tight group-hover:text-[var(--color-accent)] transition-colors line-clamp-3">
+            <h3 className="font-serif text-base font-bold leading-snug tracking-tight group-hover:text-accent transition-colors line-clamp-3">
               {article.title}
             </h3>
-            <span className="text-xs text-[var(--color-text-tertiary)]">
-              <Link href={`/source/${article.sourceKey}`} className="font-medium text-[var(--color-text-secondary)] hover:text-[var(--color-accent)] transition-colors">{article.source}</Link> · {article.timeAgo}
+            <span className="text-xs text-text-tertiary">
+              <Link href={`/source/${article.sourceKey}`} className="font-medium text-text-secondary hover:text-accent transition-colors">{article.source}</Link> · {article.timeAgo}
             </span>
           </div>
         </article>
@@ -160,7 +160,7 @@ export function CategorySection({
   const rest = articles.slice(1, 4);
 
   return (
-    <section className="border-b border-[var(--color-border)]">
+    <section className="border-b border-border">
       <div className="container-main py-8 lg:py-10">
         <SectionHeader title={title} href={href} icon={icon} />
         <div className="grid gap-6 lg:grid-cols-[1.5fr_1fr]">
@@ -178,7 +178,7 @@ export function CategorySection({
             >
               <article>
                 {lead.imageUrl && (
-                  <div className="overflow-hidden rounded-md bg-[var(--color-surface-tertiary)] mb-4">
+                  <div className="overflow-hidden rounded-md bg-surface-tertiary mb-4">
                     <img
                       src={lead.imageUrl}
                       alt={lead.title}
@@ -190,23 +190,23 @@ export function CategorySection({
                 <Badge variant={categoryToBadgeVariant(lead.category)} className="mb-2">
                   {lead.category}
                 </Badge>
-                <h3 className="font-serif text-xl md:text-2xl font-bold leading-snug tracking-tight mb-2 group-hover:text-[var(--color-accent)] transition-colors">
+                <h3 className="font-serif text-xl md:text-2xl font-bold leading-snug tracking-tight mb-2 group-hover:text-accent transition-colors">
                   {lead.title}
                 </h3>
                 {lead.description && (
-                  <p className="text-sm text-[var(--color-text-secondary)] line-clamp-2 mb-2">
+                  <p className="text-sm text-text-secondary line-clamp-2 mb-2">
                     {lead.description}
                   </p>
                 )}
-                <span className="text-xs text-[var(--color-text-tertiary)]">
-                  <Link href={`/source/${lead.sourceKey}`} className="font-medium text-[var(--color-text-secondary)] hover:text-[var(--color-accent)] transition-colors">{lead.source}</Link> · {lead.timeAgo}
+                <span className="text-xs text-text-tertiary">
+                  <Link href={`/source/${lead.sourceKey}`} className="font-medium text-text-secondary hover:text-accent transition-colors">{lead.source}</Link> · {lead.timeAgo}
                 </span>
               </article>
             </Link>
           </div>
 
           {/* Secondary stories */}
-          <div className="flex flex-col divide-y divide-[var(--color-border)]">
+          <div className="flex flex-col divide-y divide-border">
             {rest.map((article) => (
               <div key={article.link} className="group relative py-4 first:pt-0 last:pb-0">
                 <BookmarkButton
@@ -221,7 +221,7 @@ export function CategorySection({
                 >
                   <article className="flex gap-4 items-start">
                     {article.imageUrl && (
-                      <div className="overflow-hidden rounded-md bg-[var(--color-surface-tertiary)] shrink-0 w-20 h-20">
+                      <div className="overflow-hidden rounded-md bg-surface-tertiary shrink-0 w-20 h-20">
                         <img
                           src={article.imageUrl}
                           alt={article.title}
@@ -231,11 +231,11 @@ export function CategorySection({
                       </div>
                     )}
                     <div className="flex flex-col gap-1 min-w-0">
-                      <h4 className="text-sm font-semibold leading-snug group-hover:text-[var(--color-accent)] transition-colors line-clamp-2">
+                      <h4 className="text-sm font-semibold leading-snug group-hover:text-accent transition-colors line-clamp-2">
                         {article.title}
                       </h4>
-                      <span className="text-xs text-[var(--color-text-tertiary)]">
-                        <Link href={`/source/${article.sourceKey}`} className="font-medium text-[var(--color-text-secondary)] hover:text-[var(--color-accent)] transition-colors">{article.source}</Link> · {article.timeAgo}
+                      <span className="text-xs text-text-tertiary">
+                        <Link href={`/source/${article.sourceKey}`} className="font-medium text-text-secondary hover:text-accent transition-colors">{article.source}</Link> · {article.timeAgo}
                       </span>
                     </div>
                   </article>
@@ -258,7 +258,7 @@ export function MostRead({ articles }: { articles: NewsArticle[] }) {
 
   return (
     <div>
-      <h3 className="text-base font-bold font-serif mb-4 pb-2 border-b-2 border-[var(--color-accent)]">
+      <h3 className="text-base font-bold font-serif mb-4 pb-2 border-b-2 border-accent">
         Most Read
       </h3>
       <div className="space-y-0">
@@ -270,15 +270,15 @@ export function MostRead({ articles }: { articles: NewsArticle[] }) {
             rel="noopener noreferrer"
             className="group block"
           >
-            <article className="flex gap-3 items-start py-3 border-b border-[var(--color-border)] last:border-b-0">
-              <span className="text-3xl font-bold text-[var(--color-accent)] tabular-nums shrink-0 leading-none mt-0.5 opacity-60">
+            <article className="flex gap-3 items-start py-3 border-b border-border last:border-b-0">
+              <span className="text-3xl font-bold text-accent tabular-nums shrink-0 leading-none mt-0.5 opacity-60">
                 {i + 1}
               </span>
               <div className="flex flex-col gap-1 min-w-0">
-                <h4 className="text-sm font-semibold leading-snug group-hover:text-[var(--color-accent)] transition-colors line-clamp-2">
+                <h4 className="text-sm font-semibold leading-snug group-hover:text-accent transition-colors line-clamp-2">
                   {article.title}
                 </h4>
-                <span className="text-xs text-[var(--color-text-tertiary)]">
+                <span className="text-xs text-text-tertiary">
                   {article.source} · {article.timeAgo}
                 </span>
               </div>
@@ -298,16 +298,16 @@ export function OpinionSection({ articles }: { articles: NewsArticle[] }) {
   if (articles.length === 0) return null;
 
   return (
-    <section className="border-b border-[var(--color-border)] bg-gradient-to-r from-amber-50/50 to-orange-50/50 dark:from-amber-950/20 dark:to-orange-950/20">
+    <section className="border-b border-border bg-gradient-to-r from-amber-50/50 to-orange-50/50 dark:from-amber-950/20 dark:to-orange-950/20">
       <div className="container-main py-8 lg:py-10">
         <div className="flex items-center gap-3 mb-6">
           <div className="w-1 h-8 bg-amber-500 rounded-full" />
-          <h2 className="font-serif text-xl md:text-2xl font-bold text-[var(--color-text-primary)]">
+          <h2 className="font-serif text-xl md:text-2xl font-bold text-text-primary">
             Analysis & Opinion
           </h2>
           <Link
             href="/category/trading"
-            className="ml-auto text-sm font-medium text-[var(--color-accent)] hover:text-[var(--color-accent-hover)] transition-colors"
+            className="ml-auto text-sm font-medium text-accent hover:text-accent-hover transition-colors"
           >
             More analysis →
           </Link>
@@ -328,16 +328,16 @@ export function OpinionSection({ articles }: { articles: NewsArticle[] }) {
                       Opinion
                     </span>
                   </div>
-                  <h3 className="font-serif text-lg font-bold leading-snug tracking-tight group-hover:text-[var(--color-accent)] transition-colors line-clamp-3">
+                  <h3 className="font-serif text-lg font-bold leading-snug tracking-tight group-hover:text-accent transition-colors line-clamp-3">
                     {article.title}
                   </h3>
                   {article.description && (
-                    <p className="text-sm text-[var(--color-text-secondary)] line-clamp-2">
+                    <p className="text-sm text-text-secondary line-clamp-2">
                       {article.description}
                     </p>
                   )}
-                  <span className="text-xs text-[var(--color-text-tertiary)]">
-                    <Link href={`/source/${article.sourceKey}`} className="font-medium text-[var(--color-text-secondary)] hover:text-[var(--color-accent)] transition-colors">{article.source}</Link> · {article.timeAgo}
+                  <span className="text-xs text-text-tertiary">
+                    <Link href={`/source/${article.sourceKey}`} className="font-medium text-text-secondary hover:text-accent transition-colors">{article.source}</Link> · {article.timeAgo}
                   </span>
                 </article>
               </Link>

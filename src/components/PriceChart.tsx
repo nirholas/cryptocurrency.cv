@@ -172,11 +172,11 @@ export default function PriceChart({ coinId }: { coinId: string }) {
   const fillGradientId = `chart-gradient-${coinId}`;
 
   return (
-    <div className="rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] p-4 md:p-6">
+    <div className="rounded-xl border border-border bg-(--color-surface) p-4 md:p-6">
       {/* Time range selector */}
       <div className="flex items-center justify-between mb-4 flex-wrap gap-2">
         <div className="flex items-center gap-2">
-          <span className="text-sm font-medium text-[var(--color-text-secondary)]">
+          <span className="text-sm font-medium text-text-secondary">
             Price Chart
           </span>
           {data.length > 0 && (
@@ -200,8 +200,8 @@ export default function PriceChart({ coinId }: { coinId: string }) {
               className={cn(
                 "px-3 py-1.5 text-xs font-medium rounded-md transition-colors cursor-pointer",
                 days === range.days
-                  ? "bg-[var(--color-accent)] text-white"
-                  : "text-[var(--color-text-secondary)] hover:bg-[var(--color-bg-secondary)]"
+                  ? "bg-accent text-white"
+                  : "text-text-secondary hover:bg-(--color-bg-secondary)"
               )}
             >
               {range.label}
@@ -213,7 +213,7 @@ export default function PriceChart({ coinId }: { coinId: string }) {
       {/* Chart area */}
       <div className="relative">
         {loading && (
-          <div className="flex items-center justify-center h-[300px] text-[var(--color-text-tertiary)]">
+          <div className="flex items-center justify-center h-[300px] text-text-tertiary">
             <div className="flex items-center gap-2">
               <div className="h-4 w-4 animate-spin rounded-full border-2 border-current border-t-transparent" />
               Loading chart…
@@ -222,7 +222,7 @@ export default function PriceChart({ coinId }: { coinId: string }) {
         )}
 
         {error && !loading && (
-          <div className="flex items-center justify-center h-[300px] text-[var(--color-text-tertiary)]">
+          <div className="flex items-center justify-center h-[300px] text-text-tertiary">
             Chart data unavailable
           </div>
         )}
@@ -326,17 +326,17 @@ export default function PriceChart({ coinId }: { coinId: string }) {
         {/* Tooltip overlay */}
         {tooltip && (
           <div
-            className="absolute pointer-events-none z-10 rounded-lg bg-[var(--color-surface)] border border-[var(--color-border)] shadow-md px-3 py-2 text-xs"
+            className="absolute pointer-events-none z-10 rounded-lg bg-(--color-surface) border border-border shadow-md px-3 py-2 text-xs"
             style={{
               left: `${(tooltip.x / chartWidth) * 100}%`,
               top: "0",
               transform: "translateX(-50%)",
             }}
           >
-            <p className="font-semibold text-[var(--color-text-primary)]">
+            <p className="font-semibold text-text-primary">
               {formatChartPrice(tooltip.price)}
             </p>
-            <p className="text-[var(--color-text-tertiary)]">
+            <p className="text-text-tertiary">
               {formatDate(tooltip.date, days)}
             </p>
           </div>

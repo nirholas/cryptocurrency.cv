@@ -29,7 +29,7 @@ export default function BackToTop() {
     <button
       onClick={scrollToTop}
       aria-label="Back to top"
-      className={`fixed bottom-6 right-6 z-50 flex h-11 w-11 items-center justify-center rounded-full bg-[var(--color-surface)] border border-[var(--color-border)] shadow-lg transition-all duration-300 hover:scale-110 hover:shadow-xl ${
+      className={`fixed bottom-6 right-6 z-50 flex h-11 w-11 items-center justify-center rounded-full bg-(--color-surface) border border-border shadow-lg transition-all duration-300 hover:scale-110 hover:shadow-xl ${
         visible
           ? "translate-y-0 opacity-100"
           : "pointer-events-none translate-y-4 opacity-0"
@@ -64,7 +64,7 @@ export default function BackToTop() {
           className="transition-[stroke-dashoffset] duration-150"
         />
       </svg>
-      <ArrowUp className="h-4 w-4 text-[var(--color-text-primary)]" aria-hidden="true" />
+      <ArrowUp className="h-4 w-4 text-text-primary" aria-hidden="true" />
     </button>
   );
 }

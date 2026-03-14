@@ -87,19 +87,19 @@ export default function TrendingCoins() {
   if (loading) {
     return (
       <div>
-        <h3 className="text-base font-bold font-serif mb-4 pb-2 border-b border-[var(--color-border)] flex items-center gap-2">
+        <h3 className="text-base font-bold font-serif mb-4 pb-2 border-b border-border flex items-center gap-2">
           <Flame className="h-4 w-4 text-orange-500" />
           Trending
         </h3>
         <div className="space-y-3">
           {Array.from({ length: 6 }).map((_, i) => (
             <div key={i} className="flex items-center gap-3 animate-pulse">
-              <span className="w-6 h-6 rounded-full bg-[var(--color-border)]" />
+              <span className="w-6 h-6 rounded-full bg-border" />
               <div className="flex-1 space-y-1.5">
-                <div className="h-3 w-20 rounded bg-[var(--color-border)]" />
-                <div className="h-2.5 w-14 rounded bg-[var(--color-border)]" />
+                <div className="h-3 w-20 rounded bg-border" />
+                <div className="h-2.5 w-14 rounded bg-border" />
               </div>
-              <div className="h-3 w-12 rounded bg-[var(--color-border)]" />
+              <div className="h-3 w-12 rounded bg-border" />
             </div>
           ))}
         </div>
@@ -110,11 +110,11 @@ export default function TrendingCoins() {
   if (coins.length === 0) {
     return (
       <div>
-        <h3 className="text-base font-bold font-serif mb-4 pb-2 border-b border-[var(--color-border)] flex items-center gap-2">
+        <h3 className="text-base font-bold font-serif mb-4 pb-2 border-b border-border flex items-center gap-2">
           <Flame className="h-4 w-4 text-orange-500" />
           Trending
         </h3>
-        <p className="text-sm text-[var(--color-text-tertiary)]">
+        <p className="text-sm text-text-tertiary">
           Trending data unavailable
         </p>
       </div>
@@ -123,7 +123,7 @@ export default function TrendingCoins() {
 
   return (
     <div>
-      <h3 className="text-base font-bold font-serif mb-4 pb-2 border-b border-[var(--color-border)] flex items-center gap-2">
+      <h3 className="text-base font-bold font-serif mb-4 pb-2 border-b border-border flex items-center gap-2">
         <Flame className="h-4 w-4 text-orange-500" />
         Trending Coins
       </h3>
@@ -136,10 +136,10 @@ export default function TrendingCoins() {
             <Link
               key={coin.id}
               href={`/coin/${coin.id}`}
-              className="flex items-center gap-3 py-2 px-2 -mx-2 rounded-md hover:bg-[var(--color-surface-secondary)] transition-colors group"
+              className="flex items-center gap-3 py-2 px-2 -mx-2 rounded-md hover:bg-surface-secondary transition-colors group"
             >
               {/* Rank */}
-              <span className="text-xs font-bold text-[var(--color-text-tertiary)] w-4 text-right tabular-nums">
+              <span className="text-xs font-bold text-text-tertiary w-4 text-right tabular-nums">
                 {i + 1}
               </span>
 
@@ -149,12 +149,12 @@ export default function TrendingCoins() {
                   <span className="text-sm font-semibold truncate">
                     {coin.symbol.toUpperCase()}
                   </span>
-                  <span className="text-xs text-[var(--color-text-tertiary)] truncate hidden sm:inline">
+                  <span className="text-xs text-text-tertiary truncate hidden sm:inline">
                     {coin.name}
                   </span>
                 </div>
                 {coin.price ? (
-                  <span className="text-xs text-[var(--color-text-secondary)] tabular-nums">
+                  <span className="text-xs text-text-secondary tabular-nums">
                     {formatPrice(coin.price)}
                   </span>
                 ) : null}
@@ -178,7 +178,7 @@ export default function TrendingCoins() {
                   {Math.abs(coin.change24h).toFixed(1)}%
                 </span>
               ) : (
-                <span className="text-xs text-[var(--color-text-tertiary)]">
+                <span className="text-xs text-text-tertiary">
                   <Search className="h-3 w-3" />
                 </span>
               )}
@@ -189,7 +189,7 @@ export default function TrendingCoins() {
 
       <Link
         href="/screener"
-        className="flex items-center justify-center gap-1 mt-4 pt-3 border-t border-[var(--color-border)] text-xs font-medium text-[var(--color-accent)] hover:text-[var(--color-accent-hover)] transition-colors"
+        className="flex items-center justify-center gap-1 mt-4 pt-3 border-t border-border text-xs font-medium text-accent hover:text-accent-hover transition-colors"
       >
         View Full Screener
         <ArrowRight className="h-3 w-3" />

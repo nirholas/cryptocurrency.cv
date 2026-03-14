@@ -157,10 +157,10 @@ export default async function CoinPage({ params }: Props) {
       <>
         <Header />
         <main className="container-main py-10">
-          <h1 className="font-serif text-3xl font-bold mb-4 text-[var(--color-text-primary)]">
+          <h1 className="font-serif text-3xl font-bold mb-4 text-text-primary">
             Coin not found
           </h1>
-          <p className="text-[var(--color-text-secondary)]">
+          <p className="text-text-secondary">
             Could not find data for &ldquo;{id}&rdquo;. The coin may not exist or the data source is temporarily unavailable.
           </p>
         </main>
@@ -181,16 +181,16 @@ export default async function CoinPage({ params }: Props) {
       <Header />
       <main className="container-main py-10">
         {/* Breadcrumbs */}
-        <nav className="flex items-center gap-1 text-sm text-[var(--color-text-tertiary)] mb-6">
-          <Link href="/" className="hover:text-[var(--color-accent)] transition-colors">
+        <nav className="flex items-center gap-1 text-sm text-text-tertiary mb-6">
+          <Link href="/" className="hover:text-accent transition-colors">
             Home
           </Link>
           <ChevronRight className="h-3.5 w-3.5" />
-          <Link href="/markets" className="hover:text-[var(--color-accent)] transition-colors">
+          <Link href="/markets" className="hover:text-accent transition-colors">
             Markets
           </Link>
           <ChevronRight className="h-3.5 w-3.5" />
-          <span className="text-[var(--color-text-primary)] font-medium">{coin.name}</span>
+          <span className="text-text-primary font-medium">{coin.name}</span>
         </nav>
 
         {/* ── Section 1: Coin Header ── */}
@@ -206,14 +206,14 @@ export default async function CoinPage({ params }: Props) {
           )}
           <div className="flex-1 min-w-0">
             <div className="flex items-center gap-3 flex-wrap">
-              <h1 className="font-serif text-3xl md:text-4xl font-bold text-[var(--color-text-primary)]">
+              <h1 className="font-serif text-3xl md:text-4xl font-bold text-text-primary">
                 {coin.name}
               </h1>
-              <span className="text-[var(--color-text-tertiary)] font-medium text-xl md:text-2xl uppercase">
+              <span className="text-text-tertiary font-medium text-xl md:text-2xl uppercase">
                 {coin.symbol}
               </span>
               {coin.market_cap_rank && (
-                <span className="inline-flex items-center px-2.5 py-1 text-xs font-semibold rounded-full bg-[var(--color-accent)] text-white">
+                <span className="inline-flex items-center px-2.5 py-1 text-xs font-semibold rounded-full bg-accent text-white">
                   #{coin.market_cap_rank}
                 </span>
               )}
@@ -221,7 +221,7 @@ export default async function CoinPage({ params }: Props) {
 
             {/* Price + change badges */}
             <div className="flex items-baseline gap-4 mt-3 flex-wrap">
-              <span className="text-4xl md:text-5xl font-bold text-[var(--color-text-primary)] tabular-nums">
+              <span className="text-4xl md:text-5xl font-bold text-text-primary tabular-nums">
                 {formatPrice(md?.current_price?.usd)}
               </span>
               <div className="flex items-center gap-2">
@@ -232,7 +232,7 @@ export default async function CoinPage({ params }: Props) {
             </div>
 
             {md?.price_change_24h != null && (
-              <p className="text-sm text-[var(--color-text-tertiary)] mt-1.5">
+              <p className="text-sm text-text-tertiary mt-1.5">
                 {md.price_change_24h >= 0 ? "+" : ""}
                 ${Math.abs(md.price_change_24h).toFixed(4)} today
               </p>
@@ -244,7 +244,7 @@ export default async function CoinPage({ params }: Props) {
         <div className="mb-10">
           <Suspense
             fallback={
-              <div className="h-[370px] rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] animate-pulse" />
+              <div className="h-[370px] rounded-xl border border-border bg-(--color-surface) animate-pulse" />
             }
           >
             <PriceChart coinId={coin.id} />
@@ -253,7 +253,7 @@ export default async function CoinPage({ params }: Props) {
 
         {/* ── Section 3: Stats Grid ── */}
         <div className="mb-10">
-          <h2 className="font-serif text-xl font-bold text-[var(--color-text-primary)] mb-4">
+          <h2 className="font-serif text-xl font-bold text-text-primary mb-4">
             Market Stats
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
@@ -284,7 +284,7 @@ export default async function CoinPage({ params }: Props) {
         {/* ── Section 4: Related News ── */}
         {relatedNews.length > 0 && (
           <div className="mb-10">
-            <h2 className="font-serif text-xl font-bold text-[var(--color-text-primary)] mb-4">
+            <h2 className="font-serif text-xl font-bold text-text-primary mb-4">
               Latest {coin.name} News
             </h2>
             <div className="grid gap-4 sm:grid-cols-2">
@@ -298,11 +298,11 @@ export default async function CoinPage({ params }: Props) {
         {/* Description */}
         {coin.description?.en && (
           <div className="mb-10">
-            <h2 className="font-serif text-xl font-bold mb-3 text-[var(--color-text-primary)]">
+            <h2 className="font-serif text-xl font-bold mb-3 text-text-primary">
               About {coin.name}
             </h2>
             <div
-              className="prose prose-sm max-w-none text-[var(--color-text-secondary)] [&_a]:text-blue-500 [&_a]:underline"
+              className="prose prose-sm max-w-none text-text-secondary [&_a]:text-blue-500 [&_a]:underline"
               dangerouslySetInnerHTML={{
                 __html: sanitizeMarkdown(coin.description.en.slice(0, 2000)),
               }}
@@ -313,7 +313,7 @@ export default async function CoinPage({ params }: Props) {
         {/* Links */}
         {coin.links && (
           <div className="mb-8">
-            <h2 className="font-serif text-xl font-bold mb-3 text-[var(--color-text-primary)]">Links</h2>
+            <h2 className="font-serif text-xl font-bold mb-3 text-text-primary">Links</h2>
             <div className="flex flex-wrap gap-2">
               {coin.links.homepage?.[0] && (
                 <LinkPill href={coin.links.homepage[0]} label="Website" />
@@ -345,7 +345,7 @@ export default async function CoinPage({ params }: Props) {
 
         {/* Last updated */}
         {coin.last_updated && (
-          <p className="text-xs text-[var(--color-text-tertiary)]">
+          <p className="text-xs text-text-tertiary">
             Last updated: {new Date(coin.last_updated).toLocaleString()}
           </p>
         )}
@@ -391,21 +391,21 @@ function StatCard({
   highlight?: "green" | "red";
 }) {
   return (
-    <div className="p-4 rounded-lg border border-[var(--color-border)] bg-[var(--color-bg-secondary)]">
-      <p className="text-xs text-[var(--color-text-tertiary)] mb-1">{label}</p>
+    <div className="p-4 rounded-lg border border-border bg-(--color-bg-secondary)">
+      <p className="text-xs text-text-tertiary mb-1">{label}</p>
       <p
         className={`text-lg font-semibold ${
           highlight === "green"
             ? "text-green-500"
             : highlight === "red"
               ? "text-red-500"
-              : "text-[var(--color-text-primary)]"
+              : "text-text-primary"
         }`}
       >
         {value}
       </p>
       {sub && (
-        <p className="text-xs text-[var(--color-text-tertiary)] mt-0.5">{sub}</p>
+        <p className="text-xs text-text-tertiary mt-0.5">{sub}</p>
       )}
     </div>
   );
@@ -417,7 +417,7 @@ function LinkPill({ href, label }: { href: string; label: string }) {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="inline-flex items-center gap-1 px-3 py-1.5 text-sm rounded-full border border-[var(--color-border)] text-[var(--color-text-secondary)] hover:bg-[var(--color-bg-secondary)] transition-colors"
+      className="inline-flex items-center gap-1 px-3 py-1.5 text-sm rounded-full border border-border text-text-secondary hover:bg-(--color-bg-secondary) transition-colors"
     >
       {label} ↗
     </a>

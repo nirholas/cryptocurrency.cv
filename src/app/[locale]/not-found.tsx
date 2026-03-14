@@ -15,12 +15,12 @@ export default function NotFound() {
       <main className="container-main py-20 text-center min-h-[60vh] flex flex-col items-center justify-center">
         <span className="text-6xl mb-4">📰</span>
         <h1 className="text-4xl font-bold font-serif mb-4">Page Not Found</h1>
-        <p className="text-[var(--color-text-secondary)] mb-8 max-w-md">
+        <p className="text-text-secondary mb-8 max-w-md">
           The page you&apos;re looking for doesn&apos;t exist or has been moved.
         </p>
         <Link
           href="/"
-          className="px-6 py-2.5 rounded-md bg-[var(--color-accent)] text-white text-sm font-medium hover:bg-[var(--color-accent-hover)] transition-colors"
+          className="px-6 py-2.5 rounded-md bg-accent text-white text-sm font-medium hover:bg-accent-hover transition-colors"
         >
           Back to Home
         </Link>

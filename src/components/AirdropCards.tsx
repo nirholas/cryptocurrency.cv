@@ -270,7 +270,7 @@ function DifficultyDot({ difficulty }: { difficulty: Airdrop["difficulty"] }) {
     hard: "bg-red-500",
   };
   return (
-    <span className="inline-flex items-center gap-1 text-xs text-[var(--color-text-secondary)]">
+    <span className="inline-flex items-center gap-1 text-xs text-text-secondary">
       <span className={cn("h-2 w-2 rounded-full", colors[difficulty])} />
       {difficulty}
     </span>
@@ -300,7 +300,7 @@ function AirdropCard({ airdrop }: { airdrop: Airdrop }) {
                 <Check className="ml-1 inline h-4 w-4 text-green-500" />
               )}
             </CardTitle>
-            <p className="text-xs text-[var(--color-text-tertiary)]">
+            <p className="text-xs text-text-tertiary">
               ${enriched.token}
             </p>
           </div>
@@ -316,8 +316,8 @@ function AirdropCard({ airdrop }: { airdrop: Airdrop }) {
       </CardHeader>
 
       <CardContent className="flex-1 space-y-3 text-sm">
-        <div className="flex items-center gap-2 text-[var(--color-text-primary)]">
-          <Gift className="h-4 w-4 text-[var(--color-accent)]" />
+        <div className="flex items-center gap-2 text-text-primary">
+          <Gift className="h-4 w-4 text-accent" />
           <span className="font-medium">Est. value:</span>
           <span>{enriched.estimatedValue}</span>
         </div>
@@ -327,7 +327,7 @@ function AirdropCard({ airdrop }: { airdrop: Airdrop }) {
             {enriched.requirements.map((r) => (
               <li
                 key={r}
-                className="flex items-start gap-2 text-xs text-[var(--color-text-secondary)]"
+                className="flex items-start gap-2 text-xs text-text-secondary"
               >
                 <Check className="mt-0.5 h-3 w-3 shrink-0 text-green-500" />
                 {r}
@@ -343,7 +343,7 @@ function AirdropCard({ airdrop }: { airdrop: Airdrop }) {
             href={enriched.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 text-sm font-medium text-[var(--color-accent)] hover:underline"
+            className="inline-flex items-center gap-1 text-sm font-medium text-accent hover:underline"
           >
             Learn More <ExternalLink className="h-3.5 w-3.5" />
           </a>
@@ -467,7 +467,7 @@ export default function AirdropCards() {
       {/* Controls */}
       <div className="flex flex-wrap items-center gap-3">
         {/* Sort */}
-        <div className="flex items-center gap-2 text-sm text-[var(--color-text-secondary)]">
+        <div className="flex items-center gap-2 text-sm text-text-secondary">
           <ArrowUpDown className="h-4 w-4" />
           <span className="font-medium">Sort:</span>
           {(["deadline", "value", "newest"] as SortKey[]).map((k) => (
@@ -487,12 +487,12 @@ export default function AirdropCards() {
         </div>
 
         {/* Chain filter */}
-        <div className="flex items-center gap-2 text-sm text-[var(--color-text-secondary)]">
+        <div className="flex items-center gap-2 text-sm text-text-secondary">
           <Filter className="h-4 w-4" />
           <select
             value={filterChain}
             onChange={(e) => setFilterChain(e.target.value)}
-            className="rounded-md border border-[var(--color-border)] bg-[var(--color-surface)] px-2 py-1 text-sm text-[var(--color-text-primary)]"
+            className="rounded-md border border-border bg-(--color-surface) px-2 py-1 text-sm text-text-primary"
           >
             {chains.map((c) => (
               <option key={c} value={c}>
@@ -503,11 +503,11 @@ export default function AirdropCards() {
         </div>
 
         {/* Status filter */}
-        <div className="flex items-center gap-2 text-sm text-[var(--color-text-secondary)]">
+        <div className="flex items-center gap-2 text-sm text-text-secondary">
           <select
             value={filterStatus}
             onChange={(e) => setFilterStatus(e.target.value)}
-            className="rounded-md border border-[var(--color-border)] bg-[var(--color-surface)] px-2 py-1 text-sm text-[var(--color-text-primary)]"
+            className="rounded-md border border-border bg-(--color-surface) px-2 py-1 text-sm text-text-primary"
           >
             <option value="all">All Status</option>
             <option value="active">Active</option>
@@ -520,12 +520,12 @@ export default function AirdropCards() {
       {/*  Section 1 — Active Airdrops                                  */}
       {/* ============================================================ */}
       <section>
-        <h2 className="font-serif text-2xl font-bold mb-4 flex items-center gap-2 text-[var(--color-text-primary)]">
+        <h2 className="font-serif text-2xl font-bold mb-4 flex items-center gap-2 text-text-primary">
           <Sparkles className="h-5 w-5 text-green-500" />
           Active Airdrops
         </h2>
         {active.length === 0 ? (
-          <p className="text-sm text-[var(--color-text-secondary)]">
+          <p className="text-sm text-text-secondary">
             No active airdrops match your filters.
           </p>
         ) : (
@@ -541,23 +541,23 @@ export default function AirdropCards() {
       {/*  Section 2 — Upcoming Airdrops (Timeline)                     */}
       {/* ============================================================ */}
       <section>
-        <h2 className="font-serif text-2xl font-bold mb-4 flex items-center gap-2 text-[var(--color-text-primary)]">
+        <h2 className="font-serif text-2xl font-bold mb-4 flex items-center gap-2 text-text-primary">
           <Calendar className="h-5 w-5 text-blue-500" />
           Upcoming Airdrops
         </h2>
 
         {upcoming.length === 0 ? (
-          <p className="text-sm text-[var(--color-text-secondary)]">
+          <p className="text-sm text-text-secondary">
             No upcoming airdrops match your filters.
           </p>
         ) : (
-          <div className="relative border-l-2 border-[var(--color-border)] pl-6 space-y-8">
+          <div className="relative border-l-2 border-border pl-6 space-y-8">
             {upcoming.map((a) => {
               const enriched = { ...a, ...ENRICHED[a.id] };
               return (
                 <div key={a.id} className="relative">
                   {/* Timeline dot */}
-                  <span className="absolute -left-[31px] top-1 flex h-4 w-4 items-center justify-center rounded-full border-2 border-[var(--color-border)] bg-[var(--color-surface)]">
+                  <span className="absolute -left-[31px] top-1 flex h-4 w-4 items-center justify-center rounded-full border-2 border-border bg-(--color-surface)">
                     <span className="h-2 w-2 rounded-full bg-blue-500" />
                   </span>
 
@@ -583,13 +583,13 @@ export default function AirdropCards() {
                     </CardHeader>
                     <CardContent className="text-sm space-y-2">
                       {enriched.dateRange && (
-                        <p className="flex items-center gap-2 text-[var(--color-text-secondary)]">
+                        <p className="flex items-center gap-2 text-text-secondary">
                           <Clock className="h-3.5 w-3.5" />
                           Expected: {enriched.dateRange}
                         </p>
                       )}
-                      <p className="flex items-center gap-2 text-[var(--color-text-primary)]">
-                        <Gift className="h-3.5 w-3.5 text-[var(--color-accent)]" />
+                      <p className="flex items-center gap-2 text-text-primary">
+                        <Gift className="h-3.5 w-3.5 text-accent" />
                         Est. value: {a.estimatedValue}
                       </p>
                       {enriched.requirements &&
@@ -598,7 +598,7 @@ export default function AirdropCards() {
                             {enriched.requirements.map((r) => (
                               <li
                                 key={r}
-                                className="flex items-start gap-2 text-xs text-[var(--color-text-secondary)]"
+                                className="flex items-start gap-2 text-xs text-text-secondary"
                               >
                                 <Check className="mt-0.5 h-3 w-3 shrink-0 text-green-500" />
                                 {r}
@@ -621,7 +621,7 @@ export default function AirdropCards() {
       <section>
         <button
           onClick={() => setShowPast((p) => !p)}
-          className="flex items-center gap-2 font-serif text-2xl font-bold text-[var(--color-text-primary)] hover:text-[var(--color-accent)] transition-colors"
+          className="flex items-center gap-2 font-serif text-2xl font-bold text-text-primary hover:text-accent transition-colors"
         >
           <Clock className="h-5 w-5 text-neutral-500" />
           Past Airdrops
@@ -636,7 +636,7 @@ export default function AirdropCards() {
           <div className="mt-4 overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
-                <tr className="border-b border-[var(--color-border)] text-left text-xs uppercase tracking-wider text-[var(--color-text-tertiary)]">
+                <tr className="border-b border-border text-left text-xs uppercase tracking-wider text-text-tertiary">
                   <th className="pb-2 pr-4">Project</th>
                   <th className="pb-2 pr-4">Token</th>
                   <th className="pb-2 pr-4">Chain</th>
@@ -644,13 +644,13 @@ export default function AirdropCards() {
                   <th className="pb-2">Date</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-[var(--color-border)]">
+              <tbody className="divide-y divide-border">
                 {PAST_AIRDROPS.map((a) => (
                   <tr key={a.id}>
-                    <td className="py-2 pr-4 font-medium text-[var(--color-text-primary)]">
+                    <td className="py-2 pr-4 font-medium text-text-primary">
                       {a.name}
                     </td>
-                    <td className="py-2 pr-4 text-[var(--color-text-secondary)]">
+                    <td className="py-2 pr-4 text-text-secondary">
                       ${a.token}
                     </td>
                     <td className="py-2 pr-4">
@@ -659,7 +659,7 @@ export default function AirdropCards() {
                     <td className="py-2 pr-4 text-green-600 dark:text-green-400 font-medium">
                       {a.actualValue}
                     </td>
-                    <td className="py-2 text-[var(--color-text-secondary)]">
+                    <td className="py-2 text-text-secondary">
                       {a.distributedDate}
                     </td>
                   </tr>
@@ -674,13 +674,13 @@ export default function AirdropCards() {
       {/*  Section 4 — Eligibility Checker                              */}
       {/* ============================================================ */}
       <section>
-        <h2 className="font-serif text-2xl font-bold mb-4 flex items-center gap-2 text-[var(--color-text-primary)]">
-          <Info className="h-5 w-5 text-[var(--color-accent)]" />
+        <h2 className="font-serif text-2xl font-bold mb-4 flex items-center gap-2 text-text-primary">
+          <Info className="h-5 w-5 text-accent" />
           Eligibility Checker
         </h2>
         <Card>
           <CardContent className="pt-6">
-            <p className="text-sm text-[var(--color-text-secondary)] mb-4">
+            <p className="text-sm text-text-secondary mb-4">
               Most airdrops share common eligibility criteria. Check off items
               below to see how well you might qualify.
             </p>
@@ -688,22 +688,22 @@ export default function AirdropCards() {
               {ELIGIBILITY_CRITERIA.map(({ id, label, icon: Icon }) => (
                 <label
                   key={id}
-                  className="flex cursor-pointer items-center gap-3 rounded-md border border-[var(--color-border)] px-4 py-3 transition-colors hover:bg-[var(--color-surface-secondary)]"
+                  className="flex cursor-pointer items-center gap-3 rounded-md border border-border px-4 py-3 transition-colors hover:bg-surface-secondary"
                 >
                   <input
                     type="checkbox"
                     checked={checkedCriteria.has(id)}
                     onChange={() => toggleCriteria(id)}
-                    className="h-4 w-4 rounded border-[var(--color-border)] accent-[var(--color-accent)]"
+                    className="h-4 w-4 rounded border-border accent-accent"
                   />
-                  <Icon className="h-4 w-4 text-[var(--color-text-secondary)]" />
-                  <span className="text-sm text-[var(--color-text-primary)]">
+                  <Icon className="h-4 w-4 text-text-secondary" />
+                  <span className="text-sm text-text-primary">
                     {label}
                   </span>
                 </label>
               ))}
             </div>
-            <p className="mt-4 text-xs text-[var(--color-text-tertiary)]">
+            <p className="mt-4 text-xs text-text-tertiary">
               {checkedCriteria.size} / {ELIGIBILITY_CRITERIA.length} criteria
               met — This is purely informational and does not guarantee
               eligibility.

@@ -132,7 +132,7 @@ function ImpactBadge({ impact }: { impact: "bullish" | "bearish" | "neutral" }) 
     );
   }
   return (
-    <span className="inline-flex items-center gap-1 rounded-full bg-[var(--color-surface-tertiary)] px-2.5 py-0.5 text-xs font-medium text-[var(--color-text-secondary)]">
+    <span className="inline-flex items-center gap-1 rounded-full bg-surface-tertiary px-2.5 py-0.5 text-xs font-medium text-text-secondary">
       <Minus className="h-3 w-3" />
       Neutral
     </span>
@@ -150,15 +150,15 @@ function SectionHeading({
 }) {
   return (
     <div className="flex items-start gap-3">
-      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[var(--color-accent)]/10 text-[var(--color-accent)]">
+      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-accent/10 text-accent">
         <Icon className="h-5 w-5" />
       </div>
       <div>
-        <h2 className="font-serif text-xl font-bold text-[var(--color-text-primary)] md:text-2xl">
+        <h2 className="font-serif text-xl font-bold text-text-primary md:text-2xl">
           {title}
         </h2>
         {subtitle && (
-          <p className="mt-0.5 text-sm text-[var(--color-text-secondary)]">
+          <p className="mt-0.5 text-sm text-text-secondary">
             {subtitle}
           </p>
         )}
@@ -191,10 +191,10 @@ export default async function RegulationPage({ params }: Props) {
           <div className="flex items-center gap-2">
             <Badge variant="regulation">Regulation</Badge>
           </div>
-          <h1 className="font-serif text-3xl font-bold text-[var(--color-text-primary)] md:text-4xl">
+          <h1 className="font-serif text-3xl font-bold text-text-primary md:text-4xl">
             Crypto Regulation Tracker
           </h1>
-          <p className="max-w-2xl text-[var(--color-text-secondary)]">
+          <p className="max-w-2xl text-text-secondary">
             Monitor cryptocurrency regulations, government policies, and legal
             developments across every major jurisdiction worldwide.
           </p>
@@ -222,31 +222,31 @@ export default async function RegulationPage({ params }: Props) {
 
           <div className="relative mt-6">
             {/* Timeline line */}
-            <div className="absolute left-4 top-0 bottom-0 w-px bg-[var(--color-border)] md:left-6" />
+            <div className="absolute left-4 top-0 bottom-0 w-px bg-border md:left-6" />
 
             <div className="space-y-4">
               {RECENT_ACTIONS.map((action, i) => (
                 <div
                   key={i}
-                  className="relative ml-10 md:ml-14 rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] p-4 transition-shadow hover:shadow-md"
+                  className="relative ml-10 md:ml-14 rounded-lg border border-border bg-(--color-surface) p-4 transition-shadow hover:shadow-md"
                 >
                   {/* Timeline dot */}
-                  <div className="absolute -left-[1.625rem] md:-left-[2.125rem] top-5 h-3 w-3 rounded-full border-2 border-[var(--color-accent)] bg-[var(--color-surface)]" />
+                  <div className="absolute -left-[1.625rem] md:-left-[2.125rem] top-5 h-3 w-3 rounded-full border-2 border-accent bg-(--color-surface)" />
 
                   <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
                     <div className="flex items-center gap-2">
                       <span className="text-xl">{action.flag}</span>
-                      <span className="text-sm font-medium text-[var(--color-text-primary)]">
+                      <span className="text-sm font-medium text-text-primary">
                         {action.country}
                       </span>
                       <ImpactBadge impact={action.impact} />
                     </div>
-                    <time className="flex items-center gap-1 text-xs text-[var(--color-text-tertiary)]">
+                    <time className="flex items-center gap-1 text-xs text-text-tertiary">
                       <Clock className="h-3 w-3" />
                       {action.date}
                     </time>
                   </div>
-                  <p className="mt-1.5 text-sm text-[var(--color-text-secondary)]">
+                  <p className="mt-1.5 text-sm text-text-secondary">
                     {action.title}
                   </p>
                 </div>
@@ -272,8 +272,8 @@ export default async function RegulationPage({ params }: Props) {
           ) : (
             <Card className="mt-6">
               <CardContent className="flex flex-col items-center justify-center py-12 text-center">
-                <Landmark className="mb-3 h-10 w-10 text-[var(--color-text-tertiary)]" />
-                <p className="text-sm text-[var(--color-text-secondary)]">
+                <Landmark className="mb-3 h-10 w-10 text-text-tertiary" />
+                <p className="text-sm text-text-secondary">
                   No regulation news available at the moment.
                 </p>
               </CardContent>
@@ -343,7 +343,7 @@ export default async function RegulationPage({ params }: Props) {
                   </div>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-sm text-[var(--color-text-secondary)]">
+                  <p className="text-sm text-text-secondary">
                     {fw.description}
                   </p>
                 </CardContent>

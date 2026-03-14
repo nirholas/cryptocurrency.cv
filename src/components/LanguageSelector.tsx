@@ -31,11 +31,11 @@ export default function LanguageSelector() {
 
   return (
     <div className="flex items-center gap-2">
-      <Globe className="h-4 w-4 text-[var(--color-text-tertiary)]" />
+      <Globe className="h-4 w-4 text-text-tertiary" />
       <select
         value={locale}
         onChange={handleChange}
-        className="h-8 rounded-md border border-[var(--color-border)] bg-[var(--color-surface)] px-2 text-xs text-[var(--color-text-secondary)] focus:outline-none focus:ring-1 focus:ring-[var(--color-accent)] cursor-pointer"
+        className="h-8 rounded-md border border-border bg-(--color-surface) px-2 text-xs text-text-secondary focus:outline-none focus:ring-1 focus:ring-accent cursor-pointer"
         aria-label="Select language"
       >
         {POPULAR_LOCALES.map((l) => (

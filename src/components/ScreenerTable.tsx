@@ -113,7 +113,7 @@ function parseNum(s: string): number | null {
 }
 
 function ChangeCell({ value }: { value: number | undefined }) {
-  if (value == null) return <span className="text-[var(--color-text-secondary)]">—</span>;
+  if (value == null) return <span className="text-text-secondary">—</span>;
   return (
     <span
       className={cn(
@@ -289,7 +289,7 @@ export default function ScreenerTable({ coins, className }: ScreenerTableProps) 
           placeholder="Search coins..."
           value={filters.search}
           onChange={(e) => updateFilter("search", e.target.value)}
-          className="h-9 px-3 rounded-md border border-[var(--color-border)] bg-[var(--color-surface)] text-sm text-[var(--color-text-primary)] placeholder:text-[var(--color-text-secondary)] focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)] w-56"
+          className="h-9 px-3 rounded-md border border-border bg-(--color-surface) text-sm text-text-primary placeholder:text-text-secondary focus:outline-none focus:ring-2 focus:ring-accent w-56"
         />
         <Button
           variant="outline"
@@ -308,14 +308,14 @@ export default function ScreenerTable({ coins, className }: ScreenerTableProps) 
         <Button variant="outline" size="sm" onClick={exportCsv}>
           Export CSV
         </Button>
-        <span className="text-xs text-[var(--color-text-secondary)] ml-auto">
+        <span className="text-xs text-text-secondary ml-auto">
           {filtered.length} coins
         </span>
       </div>
 
       {/* Filter panel */}
       {showFilters && (
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 p-4 rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)]">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 p-4 rounded-lg border border-border bg-(--color-surface)">
           {(
             [
               ["minPrice", "Min Price"],
@@ -329,7 +329,7 @@ export default function ScreenerTable({ coins, className }: ScreenerTableProps) 
             ] as [keyof Filters, string][]
           ).map(([key, label]) => (
             <div key={key}>
-              <label className="text-xs text-[var(--color-text-secondary)] block mb-1">
+              <label className="text-xs text-text-secondary block mb-1">
                 {label}
               </label>
               <input
@@ -337,7 +337,7 @@ export default function ScreenerTable({ coins, className }: ScreenerTableProps) 
                 value={filters[key]}
                 onChange={(e) => updateFilter(key, e.target.value)}
                 placeholder="Any"
-                className="h-8 px-2 rounded-md border border-[var(--color-border)] bg-[var(--color-surface)] text-sm text-[var(--color-text-primary)] w-full focus:outline-none focus:ring-1 focus:ring-[var(--color-accent)]"
+                className="h-8 px-2 rounded-md border border-border bg-(--color-surface) text-sm text-text-primary w-full focus:outline-none focus:ring-1 focus:ring-accent"
               />
             </div>
           ))}
@@ -346,7 +346,7 @@ export default function ScreenerTable({ coins, className }: ScreenerTableProps) 
 
       {/* Column visibility */}
       {showColumns && (
-        <div className="flex flex-wrap gap-2 p-3 rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)]">
+        <div className="flex flex-wrap gap-2 p-3 rounded-lg border border-border bg-(--color-surface)">
           {COLUMNS.map((col) => (
             <label
               key={col.id}
@@ -358,7 +358,7 @@ export default function ScreenerTable({ coins, className }: ScreenerTableProps) 
                 onChange={() => toggleColumn(col.id)}
                 className="rounded"
               />
-              <span className="text-[var(--color-text-secondary)]">
+              <span className="text-text-secondary">
                 {col.label}
               </span>
             </label>
@@ -367,20 +367,20 @@ export default function ScreenerTable({ coins, className }: ScreenerTableProps) 
       )}
 
       {/* Table */}
-      <div className="overflow-x-auto rounded-lg border border-[var(--color-border)] -webkit-overflow-scrolling-touch">
+      <div className="overflow-x-auto rounded-lg border border-border -webkit-overflow-scrolling-touch">
         <table className="w-full text-sm min-w-[600px]">
           <thead>
-            <tr className="border-b border-[var(--color-border)] bg-[var(--color-surface)]">
+            <tr className="border-b border-border bg-(--color-surface)">
               {activeCols.map((col) => (
                 <th
                   key={col.id}
-                  className="px-3 py-2.5 text-left font-medium text-[var(--color-text-secondary)] cursor-pointer select-none hover:text-[var(--color-text-primary)] whitespace-nowrap"
+                  className="px-3 py-2.5 text-left font-medium text-text-secondary cursor-pointer select-none hover:text-text-primary whitespace-nowrap"
                   onClick={() => handleSort(col.sortKey)}
                 >
                   <span className="inline-flex items-center gap-1">
                     {col.label}
                     {sort.key === col.sortKey && (
-                      <span className="text-[var(--color-accent)]">
+                      <span className="text-accent">
                         {sort.dir === "asc" ? "↑" : "↓"}
                       </span>
                     )}
@@ -394,7 +394,7 @@ export default function ScreenerTable({ coins, className }: ScreenerTableProps) 
               <tr>
                 <td
                   colSpan={activeCols.length}
-                  className="text-center py-10 text-[var(--color-text-secondary)]"
+                  className="text-center py-10 text-text-secondary"
                 >
                   No coins match your filters
                 </td>
@@ -403,10 +403,10 @@ export default function ScreenerTable({ coins, className }: ScreenerTableProps) 
               pageData.map((coin) => (
                 <tr
                   key={coin.id}
-                  className="border-b border-[var(--color-border)] hover:bg-[var(--color-surface)] transition-colors"
+                  className="border-b border-border hover:bg-(--color-surface) transition-colors"
                 >
                   {visibleCols.has("rank") && (
-                    <td className="px-3 py-2.5 tabular-nums text-[var(--color-text-secondary)]">
+                    <td className="px-3 py-2.5 tabular-nums text-text-secondary">
                       {coin.market_cap_rank}
                     </td>
                   )}
@@ -423,17 +423,17 @@ export default function ScreenerTable({ coins, className }: ScreenerTableProps) 
                             loading="lazy"
                           />
                         )}
-                        <span className="font-medium text-[var(--color-text-primary)]">
+                        <span className="font-medium text-text-primary">
                           {coin.name}
                         </span>
-                        <span className="text-[var(--color-text-secondary)] uppercase text-xs">
+                        <span className="text-text-secondary uppercase text-xs">
                           {coin.symbol}
                         </span>
                       </div>
                     </td>
                   )}
                   {visibleCols.has("price") && (
-                    <td className="px-3 py-2.5 tabular-nums text-[var(--color-text-primary)] font-medium whitespace-nowrap">
+                    <td className="px-3 py-2.5 tabular-nums text-text-primary font-medium whitespace-nowrap">
                       {formatPrice(coin.current_price)}
                     </td>
                   )}
@@ -457,17 +457,17 @@ export default function ScreenerTable({ coins, className }: ScreenerTableProps) 
                     </td>
                   )}
                   {visibleCols.has("mcap") && (
-                    <td className="px-3 py-2.5 tabular-nums text-[var(--color-text-primary)] whitespace-nowrap">
+                    <td className="px-3 py-2.5 tabular-nums text-text-primary whitespace-nowrap">
                       {formatCompact(coin.market_cap)}
                     </td>
                   )}
                   {visibleCols.has("volume") && (
-                    <td className="px-3 py-2.5 tabular-nums text-[var(--color-text-primary)] whitespace-nowrap">
+                    <td className="px-3 py-2.5 tabular-nums text-text-primary whitespace-nowrap">
                       {formatCompact(coin.total_volume)}
                     </td>
                   )}
                   {visibleCols.has("supply") && (
-                    <td className="px-3 py-2.5 tabular-nums text-[var(--color-text-primary)] whitespace-nowrap">
+                    <td className="px-3 py-2.5 tabular-nums text-text-primary whitespace-nowrap">
                       {formatSupply(coin.circulating_supply, coin.symbol)}
                     </td>
                   )}
@@ -480,7 +480,7 @@ export default function ScreenerTable({ coins, className }: ScreenerTableProps) 
 
       {/* Pagination */}
       <div className="flex flex-wrap items-center justify-between gap-4">
-        <div className="flex items-center gap-2 text-sm text-[var(--color-text-secondary)]">
+        <div className="flex items-center gap-2 text-sm text-text-secondary">
           <span>Rows:</span>
           {PER_PAGE_OPTIONS.map((n) => (
             <button
@@ -492,8 +492,8 @@ export default function ScreenerTable({ coins, className }: ScreenerTableProps) 
               className={cn(
                 "px-2 py-0.5 rounded text-sm",
                 perPage === n
-                  ? "bg-[var(--color-accent)] text-white"
-                  : "hover:text-[var(--color-text-primary)]"
+                  ? "bg-accent text-white"
+                  : "hover:text-text-primary"
               )}
             >
               {n}
@@ -510,7 +510,7 @@ export default function ScreenerTable({ coins, className }: ScreenerTableProps) 
           >
             ← Prev
           </Button>
-          <span className="text-sm tabular-nums text-[var(--color-text-secondary)]">
+          <span className="text-sm tabular-nums text-text-secondary">
             {page} / {totalPages}
           </span>
           <Button

@@ -15,40 +15,40 @@ function DashboardSkeleton() {
     <>
       {/* Hero skeleton */}
       <div className="mb-8 animate-pulse">
-        <div className="h-9 w-64 rounded bg-[var(--color-surface-tertiary)] mb-3" />
-        <div className="h-4 w-96 max-w-full rounded bg-[var(--color-surface-tertiary)]" />
+        <div className="h-9 w-64 rounded bg-surface-tertiary mb-3" />
+        <div className="h-4 w-96 max-w-full rounded bg-surface-tertiary" />
       </div>
 
       {/* Stats skeleton */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
         {Array.from({ length: 4 }).map((_, i) => (
-          <div key={i} className="rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] p-4 text-center animate-pulse">
-            <div className="h-8 w-12 mx-auto rounded bg-[var(--color-surface-tertiary)] mb-1" />
-            <div className="h-3 w-16 mx-auto rounded bg-[var(--color-surface-tertiary)]" />
+          <div key={i} className="rounded-xl border border-border bg-(--color-surface) p-4 text-center animate-pulse">
+            <div className="h-8 w-12 mx-auto rounded bg-surface-tertiary mb-1" />
+            <div className="h-3 w-16 mx-auto rounded bg-surface-tertiary" />
           </div>
         ))}
       </div>
 
       {/* Health + Category skeleton */}
       <div className="grid md:grid-cols-2 gap-6 mb-8">
-        <div className="rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] p-6 animate-pulse">
-          <div className="h-5 w-32 rounded bg-[var(--color-surface-tertiary)] mb-4" />
+        <div className="rounded-xl border border-border bg-(--color-surface) p-6 animate-pulse">
+          <div className="h-5 w-32 rounded bg-surface-tertiary mb-4" />
           <div className="flex items-center gap-6">
-            <div className="w-28 h-28 rounded-full bg-[var(--color-surface-tertiary)]" />
+            <div className="w-28 h-28 rounded-full bg-surface-tertiary" />
             <div className="space-y-3 flex-1">
-              <div className="h-3 w-24 rounded bg-[var(--color-surface-tertiary)]" />
-              <div className="h-3 w-28 rounded bg-[var(--color-surface-tertiary)]" />
-              <div className="h-3 w-20 rounded bg-[var(--color-surface-tertiary)]" />
+              <div className="h-3 w-24 rounded bg-surface-tertiary" />
+              <div className="h-3 w-28 rounded bg-surface-tertiary" />
+              <div className="h-3 w-20 rounded bg-surface-tertiary" />
             </div>
           </div>
         </div>
-        <div className="rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] p-6 animate-pulse">
-          <div className="h-5 w-44 rounded bg-[var(--color-surface-tertiary)] mb-4" />
+        <div className="rounded-xl border border-border bg-(--color-surface) p-6 animate-pulse">
+          <div className="h-5 w-44 rounded bg-surface-tertiary mb-4" />
           <div className="space-y-3">
             {Array.from({ length: 5 }).map((_, i) => (
               <div key={i}>
-                <div className="h-3 w-full rounded bg-[var(--color-surface-tertiary)] mb-1" />
-                <div className="h-2 rounded-full bg-[var(--color-surface-tertiary)]" />
+                <div className="h-3 w-full rounded bg-surface-tertiary mb-1" />
+                <div className="h-2 rounded-full bg-surface-tertiary" />
               </div>
             ))}
           </div>
@@ -60,12 +60,12 @@ function DashboardSkeleton() {
       {/* Grid skeleton */}
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {Array.from({ length: 12 }).map((_, i) => (
-          <div key={i} className="rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] px-4 py-3.5 animate-pulse">
+          <div key={i} className="rounded-lg border border-border bg-(--color-surface) px-4 py-3.5 animate-pulse">
             <div className="flex items-start gap-3">
-              <div className="h-5 w-5 rounded bg-[var(--color-surface-tertiary)] mt-0.5" />
+              <div className="h-5 w-5 rounded bg-surface-tertiary mt-0.5" />
               <div className="flex-1 space-y-2">
-                <div className="h-3.5 w-3/4 rounded bg-[var(--color-surface-tertiary)]" />
-                <div className="h-2.5 w-1/2 rounded bg-[var(--color-surface-tertiary)]" />
+                <div className="h-3.5 w-3/4 rounded bg-surface-tertiary" />
+                <div className="h-2.5 w-1/2 rounded bg-surface-tertiary" />
               </div>
             </div>
           </div>
@@ -109,7 +109,7 @@ export default function SourcesPageClient({ token }: SourcesPageClientProps) {
     return (
       <div className="py-20 text-center">
         <svg
-          className="mx-auto h-12 w-12 text-[var(--color-text-tertiary)] mb-4"
+          className="mx-auto h-12 w-12 text-text-tertiary mb-4"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -121,10 +121,10 @@ export default function SourcesPageClient({ token }: SourcesPageClientProps) {
             d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z"
           />
         </svg>
-        <p className="text-[var(--color-text-tertiary)] text-lg">
+        <p className="text-text-tertiary text-lg">
           Unable to load sources.
         </p>
-        <p className="text-[var(--color-text-tertiary)] text-sm mt-1">
+        <p className="text-text-tertiary text-sm mt-1">
           Please try again later.
         </p>
       </div>
@@ -159,10 +159,10 @@ function SourcesDashboard({ sources }: { sources: SourceInfo[] }) {
     <>
       {/* Hero Header */}
       <div className="mb-8">
-        <h1 className="font-serif text-3xl md:text-4xl font-bold mb-3 text-[var(--color-text-primary)]">
+        <h1 className="font-serif text-3xl md:text-4xl font-bold mb-3 text-text-primary">
           {sources.length}+ News Sources
         </h1>
-        <p className="text-[var(--color-text-secondary)] max-w-2xl text-base leading-relaxed">
+        <p className="text-text-secondary max-w-2xl text-base leading-relaxed">
           Crypto Vision News aggregates headlines from {sources.length}+ sources
           across {categories.size} categories in the crypto ecosystem —
           updated in real-time, with intelligent health monitoring.
@@ -171,35 +171,35 @@ function SourcesDashboard({ sources }: { sources: SourceInfo[] }) {
 
       {/* Stats Dashboard */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-        <div className="rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] p-4 text-center transition-shadow hover:shadow-md">
-          <div className="text-3xl font-bold text-[var(--color-text-primary)]">
+        <div className="rounded-xl border border-border bg-(--color-surface) p-4 text-center transition-shadow hover:shadow-md">
+          <div className="text-3xl font-bold text-text-primary">
             {sources.length}
           </div>
-          <div className="text-xs text-[var(--color-text-tertiary)] mt-1">
+          <div className="text-xs text-text-tertiary mt-1">
             Total Sources
           </div>
         </div>
-        <div className="rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] p-4 text-center transition-shadow hover:shadow-md">
+        <div className="rounded-xl border border-border bg-(--color-surface) p-4 text-center transition-shadow hover:shadow-md">
           <div className="text-3xl font-bold text-green-500">
             {activeCount}
           </div>
-          <div className="text-xs text-[var(--color-text-tertiary)] mt-1">
+          <div className="text-xs text-text-tertiary mt-1">
             Active
           </div>
         </div>
-        <div className="rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] p-4 text-center transition-shadow hover:shadow-md">
+        <div className="rounded-xl border border-border bg-(--color-surface) p-4 text-center transition-shadow hover:shadow-md">
           <div className="text-3xl font-bold text-red-500">
             {unavailableCount}
           </div>
-          <div className="text-xs text-[var(--color-text-tertiary)] mt-1">
+          <div className="text-xs text-text-tertiary mt-1">
             Unavailable
           </div>
         </div>
-        <div className="rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] p-4 text-center transition-shadow hover:shadow-md">
-          <div className="text-3xl font-bold text-[var(--color-accent)]">
+        <div className="rounded-xl border border-border bg-(--color-surface) p-4 text-center transition-shadow hover:shadow-md">
+          <div className="text-3xl font-bold text-accent">
             {categories.size}
           </div>
-          <div className="text-xs text-[var(--color-text-tertiary)] mt-1">
+          <div className="text-xs text-text-tertiary mt-1">
             Categories
           </div>
         </div>
@@ -208,8 +208,8 @@ function SourcesDashboard({ sources }: { sources: SourceInfo[] }) {
       {/* Health Ring + Category Distribution */}
       <div className="grid md:grid-cols-2 gap-6 mb-8">
         {/* Overall Health Ring */}
-        <div className="rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] p-6">
-          <h2 className="font-serif text-lg font-bold text-[var(--color-text-primary)] mb-4">
+        <div className="rounded-xl border border-border bg-(--color-surface) p-6">
+          <h2 className="font-serif text-lg font-bold text-text-primary mb-4">
             Source Health
           </h2>
           <div className="flex items-center gap-6">
@@ -231,7 +231,7 @@ function SourcesDashboard({ sources }: { sources: SourceInfo[] }) {
                 />
               </svg>
               <div className="absolute inset-0 flex items-center justify-center">
-                <span className="text-2xl font-bold text-[var(--color-text-primary)]">
+                <span className="text-2xl font-bold text-text-primary">
                   {healthPercent}%
                 </span>
               </div>
@@ -239,20 +239,20 @@ function SourcesDashboard({ sources }: { sources: SourceInfo[] }) {
             <div className="space-y-2">
               <div className="flex items-center gap-2">
                 <span className="h-3 w-3 rounded-full bg-green-500 shrink-0" />
-                <span className="text-sm text-[var(--color-text-secondary)]">
+                <span className="text-sm text-text-secondary">
                   Active — {activeCount}
                 </span>
               </div>
               <div className="flex items-center gap-2">
                 <span className="h-3 w-3 rounded-full bg-red-500 shrink-0" />
-                <span className="text-sm text-[var(--color-text-secondary)]">
+                <span className="text-sm text-text-secondary">
                   Unavailable — {unavailableCount}
                 </span>
               </div>
               {unknownCount > 0 && (
                 <div className="flex items-center gap-2">
                   <span className="h-3 w-3 rounded-full bg-yellow-500 shrink-0" />
-                  <span className="text-sm text-[var(--color-text-secondary)]">
+                  <span className="text-sm text-text-secondary">
                     Unknown — {unknownCount}
                   </span>
                 </div>
@@ -262,8 +262,8 @@ function SourcesDashboard({ sources }: { sources: SourceInfo[] }) {
         </div>
 
         {/* Category Distribution */}
-        <div className="rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] p-6">
-          <h2 className="font-serif text-lg font-bold text-[var(--color-text-primary)] mb-4">
+        <div className="rounded-xl border border-border bg-(--color-surface) p-6">
+          <h2 className="font-serif text-lg font-bold text-text-primary mb-4">
             Category Distribution
           </h2>
           <div className="space-y-2.5">
@@ -277,16 +277,16 @@ function SourcesDashboard({ sources }: { sources: SourceInfo[] }) {
               return (
                 <div key={cat}>
                   <div className="flex items-center justify-between text-sm mb-1">
-                    <span className="capitalize text-[var(--color-text-primary)] font-medium">
+                    <span className="capitalize text-text-primary font-medium">
                       {cat}
                     </span>
-                    <span className="text-[var(--color-text-tertiary)] text-xs">
+                    <span className="text-text-tertiary text-xs">
                       {total} ({pct}%) · {healthPct}% healthy
                     </span>
                   </div>
-                  <div className="h-2 rounded-full bg-[var(--color-surface-tertiary)] overflow-hidden">
+                  <div className="h-2 rounded-full bg-surface-tertiary overflow-hidden">
                     <div
-                      className="h-full rounded-full bg-[var(--color-accent)] transition-all"
+                      className="h-full rounded-full bg-accent transition-all"
                       style={{ width: `${pct}%` }}
                     />
                   </div>
@@ -294,7 +294,7 @@ function SourcesDashboard({ sources }: { sources: SourceInfo[] }) {
               );
             })}
             {sortedCats.length > 7 && (
-              <p className="text-xs text-[var(--color-text-tertiary)] mt-1">
+              <p className="text-xs text-text-tertiary mt-1">
                 + {sortedCats.length - 7} more categories
               </p>
             )}

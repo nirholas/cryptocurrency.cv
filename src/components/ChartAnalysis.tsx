@@ -118,7 +118,7 @@ export default function ChartAnalysis({
       ? "text-green-500"
       : analysis?.trend === "bearish"
         ? "text-red-500"
-        : "text-[var(--color-text-tertiary)]";
+        : "text-text-tertiary";
 
   // ---- Render ---------------------------------------------------------------
 
@@ -173,13 +173,13 @@ export default function ChartAnalysis({
           <Card>
             <CardHeader className="pb-3">
               <CardTitle className="flex items-center gap-2 text-base">
-                <BarChart3 className="h-4 w-4 text-[var(--color-accent)]" />
+                <BarChart3 className="h-4 w-4 text-accent" />
                 Trend Analysis
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-3">
               <div className="flex items-center justify-between">
-                <span className="text-sm text-[var(--color-text-secondary)]">Direction</span>
+                <span className="text-sm text-text-secondary">Direction</span>
                 <div className={cn("flex items-center gap-1.5 font-semibold capitalize", trendColor)}>
                   <TrendIcon className="h-4 w-4" />
                   {analysis.trend}
@@ -187,25 +187,25 @@ export default function ChartAnalysis({
               </div>
 
               <div className="flex items-center justify-between">
-                <span className="text-sm text-[var(--color-text-secondary)]">Trend Strength</span>
+                <span className="text-sm text-text-secondary">Trend Strength</span>
                 <div className="flex items-center gap-2">
-                  <div className="h-2 w-24 rounded-full bg-[var(--color-surface-tertiary)]">
+                  <div className="h-2 w-24 rounded-full bg-surface-tertiary">
                     <div
-                      className="h-full rounded-full bg-[var(--color-accent)] transition-all"
+                      className="h-full rounded-full bg-accent transition-all"
                       style={{ width: `${Math.min(analysis.trendStrength, 100)}%` }}
                     />
                   </div>
-                  <span className="text-sm font-medium text-[var(--color-text-primary)]">
+                  <span className="text-sm font-medium text-text-primary">
                     {analysis.trendStrength}%
                   </span>
                 </div>
               </div>
 
               <div className="flex items-center justify-between">
-                <span className="text-sm text-[var(--color-text-secondary)]">AI Confidence</span>
+                <span className="text-sm text-text-secondary">AI Confidence</span>
                 <div className="flex items-center gap-2">
-                  <Shield className="h-3.5 w-3.5 text-[var(--color-accent)]" />
-                  <span className="text-sm font-bold text-[var(--color-text-primary)]">
+                  <Shield className="h-3.5 w-3.5 text-accent" />
+                  <span className="text-sm font-bold text-text-primary">
                     {analysis.confidence}%
                   </span>
                 </div>
@@ -217,13 +217,13 @@ export default function ChartAnalysis({
           <Card>
             <CardHeader className="pb-3">
               <CardTitle className="flex items-center gap-2 text-base">
-                <Target className="h-4 w-4 text-[var(--color-accent)]" />
+                <Target className="h-4 w-4 text-accent" />
                 Detected Patterns
               </CardTitle>
             </CardHeader>
             <CardContent>
               {analysis.patterns.length === 0 ? (
-                <p className="text-sm text-[var(--color-text-tertiary)]">
+                <p className="text-sm text-text-tertiary">
                   No significant patterns detected.
                 </p>
               ) : (
@@ -252,7 +252,7 @@ export default function ChartAnalysis({
               )}
 
               {analysis.patterns.length > 0 && analysis.patterns[0].description && (
-                <p className="mt-3 text-xs text-[var(--color-text-secondary)]">
+                <p className="mt-3 text-xs text-text-secondary">
                   {analysis.patterns[0].description}
                 </p>
               )}
@@ -266,7 +266,7 @@ export default function ChartAnalysis({
             </CardHeader>
             <CardContent>
               {analysis.supportResistance.length === 0 ? (
-                <p className="text-sm text-[var(--color-text-tertiary)]">
+                <p className="text-sm text-text-tertiary">
                   No key levels identified.
                 </p>
               ) : (
@@ -274,7 +274,7 @@ export default function ChartAnalysis({
                   {analysis.supportResistance.map((sr, i) => (
                     <div
                       key={i}
-                      className="flex items-center justify-between rounded-md border border-[var(--color-border)] px-3 py-2"
+                      className="flex items-center justify-between rounded-md border border-border px-3 py-2"
                     >
                       <div className="flex items-center gap-2">
                         <span
@@ -283,22 +283,22 @@ export default function ChartAnalysis({
                             sr.type === "support" ? "bg-green-500" : "bg-red-500"
                           )}
                         />
-                        <span className="text-xs font-medium uppercase text-[var(--color-text-secondary)]">
+                        <span className="text-xs font-medium uppercase text-text-secondary">
                           {sr.type}
                         </span>
                       </div>
                       <div className="flex items-center gap-3">
-                        <span className="text-sm font-semibold text-[var(--color-text-primary)]">
+                        <span className="text-sm font-semibold text-text-primary">
                           ${sr.price.toLocaleString("en-US", { minimumFractionDigits: 2 })}
                         </span>
                         <span
                           className={cn(
                             "text-[10px] uppercase tracking-wider",
                             sr.strength === "strong"
-                              ? "text-[var(--color-accent)]"
+                              ? "text-accent"
                               : sr.strength === "moderate"
-                                ? "text-[var(--color-text-secondary)]"
-                                : "text-[var(--color-text-tertiary)]"
+                                ? "text-text-secondary"
+                                : "text-text-tertiary"
                           )}
                         >
                           {sr.strength}
@@ -317,20 +317,20 @@ export default function ChartAnalysis({
               <CardTitle className="text-base">AI Summary</CardTitle>
             </CardHeader>
             <CardContent className="space-y-3">
-              <p className="text-sm leading-relaxed text-[var(--color-text-secondary)]">
+              <p className="text-sm leading-relaxed text-text-secondary">
                 {analysis.summary}
               </p>
               {analysis.recommendation && (
-                <div className="rounded-md bg-[var(--color-surface-tertiary)] px-3 py-2">
-                  <p className="text-xs font-medium text-[var(--color-text-tertiary)]">
+                <div className="rounded-md bg-surface-tertiary px-3 py-2">
+                  <p className="text-xs font-medium text-text-tertiary">
                     Recommendation
                   </p>
-                  <p className="text-sm font-semibold text-[var(--color-text-primary)]">
+                  <p className="text-sm font-semibold text-text-primary">
                     {analysis.recommendation}
                   </p>
                 </div>
               )}
-              <p className="text-[10px] text-[var(--color-text-tertiary)]">
+              <p className="text-[10px] text-text-tertiary">
                 ⚠️ This analysis is AI-generated and for informational purposes only. Not financial advice.
               </p>
             </CardContent>

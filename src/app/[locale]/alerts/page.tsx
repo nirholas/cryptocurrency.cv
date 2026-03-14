@@ -282,7 +282,7 @@ export default function AlertsPage() {
     switch (type) {
       case "price_above": return <TrendingUp className="h-4 w-4 text-green-500" />;
       case "price_below": return <TrendingDown className="h-4 w-4 text-red-500" />;
-      case "percent_change": return <Percent className="h-4 w-4 text-[var(--color-accent)]" />;
+      case "percent_change": return <Percent className="h-4 w-4 text-accent" />;
       case "volume_spike": return <BarChart3 className="h-4 w-4 text-purple-500" />;
       case "recurring": return <RefreshCw className="h-4 w-4 text-cyan-500" />;
     }
@@ -315,7 +315,7 @@ export default function AlertsPage() {
 
   const SortHeader = ({ field, children }: { field: SortField; children: React.ReactNode }) => (
     <th
-      className="pb-3 pr-4 font-medium cursor-pointer hover:text-[var(--color-text-primary)] transition-colors select-none"
+      className="pb-3 pr-4 font-medium cursor-pointer hover:text-text-primary transition-colors select-none"
       onClick={() => handleSort(field)}
     >
       <span className="inline-flex items-center gap-1">
@@ -334,14 +334,14 @@ export default function AlertsPage() {
         {/* Page Header */}
         <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between mb-8">
           <div>
-            <h1 className="font-serif text-3xl md:text-4xl font-bold text-[var(--color-text-primary)] mb-2 flex items-center gap-3">
-              <Bell className="h-8 w-8 text-[var(--color-accent)]" />
+            <h1 className="font-serif text-3xl md:text-4xl font-bold text-text-primary mb-2 flex items-center gap-3">
+              <Bell className="h-8 w-8 text-accent" />
               Price Alerts
             </h1>
-            <p className="text-[var(--color-text-secondary)]">
+            <p className="text-text-secondary">
               Intelligent price monitoring — checked every 30 seconds.
               {lastCheckedAt && (
-                <span className="ml-2 text-xs text-[var(--color-text-tertiary)]">
+                <span className="ml-2 text-xs text-text-tertiary">
                   Last check: {formatTimeAgo(lastCheckedAt)}
                 </span>
               )}
@@ -376,23 +376,23 @@ export default function AlertsPage() {
 
         {/* Stats strip */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
-          <div className="rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] p-3 text-center">
-            <p className="text-2xl font-bold text-[var(--color-text-primary)] tabular-nums">{stats.total}</p>
-            <p className="text-xs text-[var(--color-text-tertiary)]">Total Alerts</p>
+          <div className="rounded-lg border border-border bg-(--color-surface) p-3 text-center">
+            <p className="text-2xl font-bold text-text-primary tabular-nums">{stats.total}</p>
+            <p className="text-xs text-text-tertiary">Total Alerts</p>
           </div>
-          <div className="rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] p-3 text-center">
+          <div className="rounded-lg border border-border bg-(--color-surface) p-3 text-center">
             <p className="text-2xl font-bold text-green-500 tabular-nums">{stats.enabled}</p>
-            <p className="text-xs text-[var(--color-text-tertiary)]">Active</p>
+            <p className="text-xs text-text-tertiary">Active</p>
           </div>
-          <div className="rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] p-3 text-center">
-            <p className="text-2xl font-bold text-[var(--color-accent)] tabular-nums">{stats.triggered}</p>
-            <p className="text-xs text-[var(--color-text-tertiary)]">Triggered</p>
+          <div className="rounded-lg border border-border bg-(--color-surface) p-3 text-center">
+            <p className="text-2xl font-bold text-accent tabular-nums">{stats.triggered}</p>
+            <p className="text-xs text-text-tertiary">Triggered</p>
           </div>
-          <div className="rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] p-3 text-center">
-            <p className="text-2xl font-bold text-[var(--color-text-primary)] tabular-nums">
+          <div className="rounded-lg border border-border bg-(--color-surface) p-3 text-center">
+            <p className="text-2xl font-bold text-text-primary tabular-nums">
               {stats.mostTriggered ? stats.mostTriggered.triggerCount : 0}
             </p>
-            <p className="text-xs text-[var(--color-text-tertiary)]">
+            <p className="text-xs text-text-tertiary">
               {stats.mostTriggered ? `${stats.mostTriggered.coinName} fires` : "Top Fires"}
             </p>
           </div>
@@ -412,13 +412,13 @@ export default function AlertsPage() {
               <CardContent className="space-y-4">
                 {/* Coin select with current price */}
                 <div>
-                  <label className="text-sm font-medium text-[var(--color-text-secondary)] mb-1 block">
+                  <label className="text-sm font-medium text-text-secondary mb-1 block">
                     Coin
                   </label>
                   <select
                     value={coinId}
                     onChange={(e) => setCoinId(e.target.value)}
-                    className="w-full rounded-md border border-[var(--color-border)] bg-[var(--color-surface)] px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]"
+                    className="w-full rounded-md border border-border bg-(--color-surface) px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-accent"
                   >
                     {COIN_OPTIONS.map((c) => (
                       <option key={c.id} value={c.id}>
@@ -427,8 +427,8 @@ export default function AlertsPage() {
                     ))}
                   </select>
                   {livePrices[coinId]?.usd && (
-                    <p className="text-xs text-[var(--color-text-tertiary)] mt-1">
-                      Current: <span className="font-medium text-[var(--color-text-primary)]">${livePrices[coinId].usd.toLocaleString()}</span>
+                    <p className="text-xs text-text-tertiary mt-1">
+                      Current: <span className="font-medium text-text-primary">${livePrices[coinId].usd.toLocaleString()}</span>
                       {livePrices[coinId].usd_24h_change != null && (
                         <span className={cn("ml-1", (livePrices[coinId].usd_24h_change ?? 0) >= 0 ? "text-green-500" : "text-red-500")}>
                           {(livePrices[coinId].usd_24h_change ?? 0) >= 0 ? "+" : ""}
@@ -441,7 +441,7 @@ export default function AlertsPage() {
 
                 {/* Type select */}
                 <div>
-                  <label className="text-sm font-medium text-[var(--color-text-secondary)] mb-1 block">
+                  <label className="text-sm font-medium text-text-secondary mb-1 block">
                     Alert Type
                   </label>
                   <div className="grid grid-cols-2 gap-2">
@@ -455,8 +455,8 @@ export default function AlertsPage() {
                           className={cn(
                             "flex items-center gap-2 rounded-md border px-3 py-2 text-xs font-medium transition-all",
                             alertType === t.value
-                              ? "border-[var(--color-accent)] bg-[var(--color-accent)]/10 text-[var(--color-accent)]"
-                              : "border-[var(--color-border)] text-[var(--color-text-secondary)] hover:border-[var(--color-accent)]/40",
+                              ? "border-accent bg-accent/10 text-accent"
+                              : "border-border text-text-secondary hover:border-accent/40",
                           )}
                         >
                           <Icon className="h-3.5 w-3.5" />
@@ -469,7 +469,7 @@ export default function AlertsPage() {
 
                 {/* Target */}
                 <div>
-                  <label className="text-sm font-medium text-[var(--color-text-secondary)] mb-1 block">
+                  <label className="text-sm font-medium text-text-secondary mb-1 block">
                     {alertType === "percent_change" ? "Percent (%)" : alertType === "volume_spike" ? "Volume (USD)" : "Target Price (USD)"}
                   </label>
                   <input
@@ -479,7 +479,7 @@ export default function AlertsPage() {
                     value={target}
                     onChange={(e) => setTarget(e.target.value)}
                     placeholder={alertType === "percent_change" ? "e.g. 5" : alertType === "volume_spike" ? "e.g. 1000000000" : "e.g. 100000"}
-                    className="w-full rounded-md border border-[var(--color-border)] bg-[var(--color-surface)] px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]"
+                    className="w-full rounded-md border border-border bg-(--color-surface) px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-accent"
                     onKeyDown={(e) => {
                       if (e.key === "Enter") handleCreate();
                     }}
@@ -494,7 +494,7 @@ export default function AlertsPage() {
                             key={mult}
                             type="button"
                             onClick={() => setTarget(String(val))}
-                            className="rounded border border-[var(--color-border)] px-2 py-0.5 text-[10px] font-medium text-[var(--color-text-tertiary)] hover:border-[var(--color-accent)] hover:text-[var(--color-accent)] transition-colors"
+                            className="rounded border border-border px-2 py-0.5 text-[10px] font-medium text-text-tertiary hover:border-accent hover:text-accent transition-colors"
                           >
                             {mult < 1 ? `${Math.round((1 - mult) * 100)}%▼` : `+${Math.round((mult - 1) * 100)}%▲`}
                           </button>
@@ -506,7 +506,7 @@ export default function AlertsPage() {
 
                 {/* Priority */}
                 <div>
-                  <label className="text-sm font-medium text-[var(--color-text-secondary)] mb-1 block">
+                  <label className="text-sm font-medium text-text-secondary mb-1 block">
                     Priority
                   </label>
                   <div className="flex gap-1.5">
@@ -518,8 +518,8 @@ export default function AlertsPage() {
                         className={cn(
                           "flex-1 rounded-md border px-2 py-1.5 text-xs font-medium transition-all text-center",
                           priority === p.value
-                            ? "border-[var(--color-accent)] bg-[var(--color-accent)]/10"
-                            : "border-[var(--color-border)] hover:border-[var(--color-accent)]/40",
+                            ? "border-accent bg-accent/10"
+                            : "border-border hover:border-accent/40",
                           p.color,
                         )}
                       >
@@ -533,16 +533,16 @@ export default function AlertsPage() {
                 <button
                   type="button"
                   onClick={() => setShowAdvanced(!showAdvanced)}
-                  className="text-xs text-[var(--color-accent)] hover:underline"
+                  className="text-xs text-accent hover:underline"
                 >
                   {showAdvanced ? "Hide" : "Show"} advanced options
                 </button>
 
                 {showAdvanced && (
-                  <div className="space-y-4 border-t border-[var(--color-border)] pt-4">
+                  <div className="space-y-4 border-t border-border pt-4">
                     {/* Note */}
                     <div>
-                      <label className="text-sm font-medium text-[var(--color-text-secondary)] mb-1 block">
+                      <label className="text-sm font-medium text-text-secondary mb-1 block">
                         Note (optional)
                       </label>
                       <input
@@ -551,19 +551,19 @@ export default function AlertsPage() {
                         onChange={(e) => setNote(e.target.value)}
                         placeholder="e.g. Take profit target"
                         maxLength={100}
-                        className="w-full rounded-md border border-[var(--color-border)] bg-[var(--color-surface)] px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]"
+                        className="w-full rounded-md border border-border bg-(--color-surface) px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-accent"
                       />
                     </div>
 
                     {/* Cooldown (recurring) */}
                     <div>
-                      <label className="text-sm font-medium text-[var(--color-text-secondary)] mb-1 block">
+                      <label className="text-sm font-medium text-text-secondary mb-1 block">
                         Repeat Behavior
                       </label>
                       <select
                         value={cooldownMs}
                         onChange={(e) => setCooldownMs(Number(e.target.value))}
-                        className="w-full rounded-md border border-[var(--color-border)] bg-[var(--color-surface)] px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]"
+                        className="w-full rounded-md border border-border bg-(--color-surface) px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-accent"
                       >
                         {COOLDOWN_OPTIONS.map((c) => (
                           <option key={c.value} value={c.value}>{c.label}</option>
@@ -573,7 +573,7 @@ export default function AlertsPage() {
 
                     {/* Expiry */}
                     <div>
-                      <label className="text-sm font-medium text-[var(--color-text-secondary)] mb-1 block">
+                      <label className="text-sm font-medium text-text-secondary mb-1 block">
                         Auto-expire after (hours, optional)
                       </label>
                       <input
@@ -582,7 +582,7 @@ export default function AlertsPage() {
                         value={expiresIn}
                         onChange={(e) => setExpiresIn(e.target.value)}
                         placeholder="e.g. 24"
-                        className="w-full rounded-md border border-[var(--color-border)] bg-[var(--color-surface)] px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]"
+                        className="w-full rounded-md border border-border bg-(--color-surface) px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-accent"
                       />
                     </div>
                   </div>
@@ -639,8 +639,8 @@ export default function AlertsPage() {
                         className={cn(
                           "w-full flex items-center justify-between rounded-md border px-3 py-2 text-sm transition-all",
                           alreadyExists
-                            ? "border-[var(--color-border)] text-[var(--color-text-tertiary)] opacity-50 cursor-not-allowed"
-                            : "border-[var(--color-border)] hover:border-[var(--color-accent)] hover:text-[var(--color-accent)]",
+                            ? "border-border text-text-tertiary opacity-50 cursor-not-allowed"
+                            : "border-border hover:border-accent hover:text-accent",
                         )}
                       >
                         <span>{preset.label}</span>
@@ -660,7 +660,7 @@ export default function AlertsPage() {
           {/* Right column – Tabs: Active / Triggered / Stats */}
           <div className="lg:col-span-2 space-y-4">
             {/* Tab bar */}
-            <div className="flex gap-1 border-b border-[var(--color-border)]">
+            <div className="flex gap-1 border-b border-border">
               {([
                 { id: "active" as ViewTab, label: "Active Alerts", icon: AlertTriangle, count: alerts.length },
                 { id: "triggered" as ViewTab, label: "Triggered", icon: Clock, count: triggered.length },
@@ -675,14 +675,14 @@ export default function AlertsPage() {
                     className={cn(
                       "flex items-center gap-1.5 px-4 py-2.5 text-sm font-medium border-b-2 transition-colors -mb-px",
                       activeTab === tab.id
-                        ? "border-[var(--color-accent)] text-[var(--color-accent)]"
-                        : "border-transparent text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)]",
+                        ? "border-accent text-accent"
+                        : "border-transparent text-text-secondary hover:text-text-primary",
                     )}
                   >
                     <Icon className="h-4 w-4" />
                     {tab.label}
                     {tab.count !== null && tab.count > 0 && (
-                      <span className="ml-1 rounded-full bg-[var(--color-accent)]/10 px-1.5 py-0.5 text-[10px] tabular-nums font-semibold text-[var(--color-accent)]">
+                      <span className="ml-1 rounded-full bg-accent/10 px-1.5 py-0.5 text-[10px] tabular-nums font-semibold text-accent">
                         {tab.count}
                       </span>
                     )}
@@ -701,13 +701,13 @@ export default function AlertsPage() {
                       <div className="flex items-center gap-2 flex-wrap">
                         {/* Search */}
                         <div className="relative flex-1 min-w-[200px]">
-                          <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-[var(--color-text-tertiary)]" />
+                          <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-text-tertiary" />
                           <input
                             type="text"
                             value={searchQuery}
                             onChange={(e) => setSearchQuery(e.target.value)}
                             placeholder="Search alerts…"
-                            className="w-full rounded-md border border-[var(--color-border)] bg-[var(--color-surface)] pl-9 pr-3 py-2 text-sm placeholder:text-[var(--color-text-tertiary)] focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]/40"
+                            className="w-full rounded-md border border-border bg-(--color-surface) pl-9 pr-3 py-2 text-sm placeholder:text-text-tertiary focus:outline-none focus:ring-2 focus:ring-accent/40"
                           />
                         </div>
 
@@ -715,7 +715,7 @@ export default function AlertsPage() {
                         <select
                           value={filterType}
                           onChange={(e) => setFilterType(e.target.value as AlertType | "all")}
-                          className="rounded-md border border-[var(--color-border)] bg-[var(--color-surface)] px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]"
+                          className="rounded-md border border-border bg-(--color-surface) px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-accent"
                         >
                           <option value="all">All Types</option>
                           {ALERT_TYPE_OPTIONS.filter((t) => t.value !== "recurring").map((t) => (
@@ -727,7 +727,7 @@ export default function AlertsPage() {
                         <select
                           value={filterStatus}
                           onChange={(e) => setFilterStatus(e.target.value as "all" | "enabled" | "disabled")}
-                          className="rounded-md border border-[var(--color-border)] bg-[var(--color-surface)] px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]"
+                          className="rounded-md border border-border bg-(--color-surface) px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-accent"
                         >
                           <option value="all">All Status</option>
                           <option value="enabled">Enabled</option>
@@ -737,8 +737,8 @@ export default function AlertsPage() {
 
                       {/* Bulk actions */}
                       {selectedIds.size > 0 && (
-                        <div className="flex items-center gap-2 rounded-md bg-[var(--color-accent)]/5 border border-[var(--color-accent)]/20 px-3 py-2">
-                          <span className="text-sm font-medium text-[var(--color-accent)]">
+                        <div className="flex items-center gap-2 rounded-md bg-accent/5 border border-accent/20 px-3 py-2">
+                          <span className="text-sm font-medium text-accent">
                             {selectedIds.size} selected
                           </span>
                           <Button variant="ghost" size="sm" onClick={() => bulkToggle([...selectedIds], true)}>
@@ -760,11 +760,11 @@ export default function AlertsPage() {
 
                   {filteredAlerts.length === 0 ? (
                     <div className="text-center py-12 space-y-3">
-                      <Bell className="h-12 w-12 mx-auto text-[var(--color-text-tertiary)]" />
-                      <h3 className="font-semibold text-lg text-[var(--color-text-primary)]">
+                      <Bell className="h-12 w-12 mx-auto text-text-tertiary" />
+                      <h3 className="font-semibold text-lg text-text-primary">
                         {alerts.length === 0 ? "No alerts yet" : "No matching alerts"}
                       </h3>
-                      <p className="text-sm text-[var(--color-text-secondary)] max-w-md mx-auto">
+                      <p className="text-sm text-text-secondary max-w-md mx-auto">
                         {alerts.length === 0
                           ? "Create your first price alert using the form. Get notified when crypto hits your target — supports price thresholds, percentage changes, and volume spikes."
                           : "Try adjusting your search or filters."}
@@ -774,11 +774,11 @@ export default function AlertsPage() {
                     <div className="overflow-x-auto">
                       <table className="w-full text-sm">
                         <thead>
-                          <tr className="border-b border-[var(--color-border)] text-left text-[var(--color-text-secondary)]">
+                          <tr className="border-b border-border text-left text-text-secondary">
                             <th className="pb-3 pr-2 w-8">
                               <button onClick={selectedIds.size === filteredAlerts.length ? deselectAll : selectAll} title="Select all">
                                 {selectedIds.size === filteredAlerts.length && filteredAlerts.length > 0 ? (
-                                  <CheckSquare className="h-4 w-4 text-[var(--color-accent)]" />
+                                  <CheckSquare className="h-4 w-4 text-accent" />
                                 ) : (
                                   <Square className="h-4 w-4" />
                                 )}
@@ -798,24 +798,24 @@ export default function AlertsPage() {
                             <tr
                               key={alert.id}
                               className={cn(
-                                "border-b border-[var(--color-border)] last:border-0 transition-colors",
-                                selectedIds.has(alert.id) && "bg-[var(--color-accent)]/5",
+                                "border-b border-border last:border-0 transition-colors",
+                                selectedIds.has(alert.id) && "bg-accent/5",
                               )}
                             >
                               <td className="py-3 pr-2">
                                 <button onClick={() => toggleSelect(alert.id)}>
                                   {selectedIds.has(alert.id) ? (
-                                    <CheckSquare className="h-4 w-4 text-[var(--color-accent)]" />
+                                    <CheckSquare className="h-4 w-4 text-accent" />
                                   ) : (
-                                    <Square className="h-4 w-4 text-[var(--color-text-tertiary)]" />
+                                    <Square className="h-4 w-4 text-text-tertiary" />
                                   )}
                                 </button>
                               </td>
                               <td className="py-3 pr-4">
                                 <div>
-                                  <span className="font-medium text-[var(--color-text-primary)]">{alert.coinName}</span>
+                                  <span className="font-medium text-text-primary">{alert.coinName}</span>
                                   {alert.note && (
-                                    <p className="text-[10px] text-[var(--color-text-tertiary)] truncate max-w-[120px]">{alert.note}</p>
+                                    <p className="text-[10px] text-text-tertiary truncate max-w-[120px]">{alert.note}</p>
                                   )}
                                 </div>
                               </td>
@@ -830,7 +830,7 @@ export default function AlertsPage() {
                                   ? `${alert.target}%`
                                   : `$${alert.target.toLocaleString()}`}
                               </td>
-                              <td className="py-3 pr-4 tabular-nums text-[var(--color-text-secondary)]">
+                              <td className="py-3 pr-4 tabular-nums text-text-secondary">
                                 {currentPrice(alert.coinId)}
                               </td>
                               <td className="py-3 pr-4">
@@ -843,7 +843,7 @@ export default function AlertsPage() {
                                     "inline-flex items-center gap-1.5 rounded-full px-2.5 py-0.5 text-xs font-medium transition-colors",
                                     alert.enabled
                                       ? "bg-green-500/10 text-green-500"
-                                      : "bg-[var(--color-text-tertiary)]/10 text-[var(--color-text-tertiary)]",
+                                      : "bg-text-tertiary/10 text-text-tertiary",
                                   )}
                                 >
                                   {alert.enabled ? <Bell className="h-3 w-3" /> : <BellOff className="h-3 w-3" />}
@@ -902,11 +902,11 @@ export default function AlertsPage() {
                 <CardContent>
                   {triggered.length === 0 ? (
                     <div className="text-center py-12 space-y-3">
-                      <Clock className="h-12 w-12 mx-auto text-[var(--color-text-tertiary)]" />
-                      <h3 className="font-semibold text-lg text-[var(--color-text-primary)]">
+                      <Clock className="h-12 w-12 mx-auto text-text-tertiary" />
+                      <h3 className="font-semibold text-lg text-text-primary">
                         No triggered alerts yet
                       </h3>
-                      <p className="text-sm text-[var(--color-text-secondary)] max-w-md mx-auto">
+                      <p className="text-sm text-text-secondary max-w-md mx-auto">
                         When your price alerts fire, they&apos;ll appear here with timestamp and price details.
                       </p>
                     </div>
@@ -915,20 +915,20 @@ export default function AlertsPage() {
                       {triggered.map((t, i) => (
                         <li
                           key={`${t.id}-${i}`}
-                          className="flex items-start gap-3 rounded-lg border border-[var(--color-border)] p-3 text-sm hover:border-[var(--color-accent)]/30 transition-colors group"
+                          className="flex items-start gap-3 rounded-lg border border-border p-3 text-sm hover:border-accent/30 transition-colors group"
                         >
                           <div className="mt-0.5">{typeIcon(t.type)}</div>
                           <div className="flex-1 min-w-0">
                             <div className="flex items-start justify-between gap-2">
                               <div>
-                                <p className="font-medium text-[var(--color-text-primary)]">
+                                <p className="font-medium text-text-primary">
                                   {t.coinName}
-                                  <span className="ml-2 text-[var(--color-text-secondary)] font-normal">
+                                  <span className="ml-2 text-text-secondary font-normal">
                                     {formatType(t.type)}{" "}
                                     {t.type === "percent_change" ? `${t.target}%` : `$${t.target.toLocaleString()}`}
                                   </span>
                                 </p>
-                                <p className="text-xs text-[var(--color-text-tertiary)] mt-0.5">
+                                <p className="text-xs text-text-tertiary mt-0.5">
                                   Price was <span className="font-medium">${t.currentPrice.toLocaleString()}</span>
                                   {" · "}
                                   {formatTimeAgo(t.triggeredAt)}
@@ -937,7 +937,7 @@ export default function AlertsPage() {
                               </div>
                               <button
                                 onClick={() => removeTriggered(i)}
-                                className="opacity-0 group-hover:opacity-100 transition-opacity text-[var(--color-text-tertiary)] hover:text-red-500"
+                                className="opacity-0 group-hover:opacity-100 transition-opacity text-text-tertiary hover:text-red-500"
                                 title="Remove"
                               >
                                 <X className="h-3.5 w-3.5" />
@@ -960,21 +960,21 @@ export default function AlertsPage() {
                   <CardTitle className="flex items-center gap-2 text-lg">
                     <Activity className="h-5 w-5 text-green-500" />
                     Live Prices
-                    <span className="text-xs font-normal text-[var(--color-text-tertiary)]">
+                    <span className="text-xs font-normal text-text-tertiary">
                       (coins with active alerts)
                     </span>
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   {Object.keys(livePrices).length === 0 ? (
-                    <p className="text-center py-8 text-sm text-[var(--color-text-tertiary)]">
+                    <p className="text-center py-8 text-sm text-text-tertiary">
                       Create alerts to start tracking live prices.
                     </p>
                   ) : (
                     <div className="overflow-x-auto">
                       <table className="w-full text-sm">
                         <thead>
-                          <tr className="border-b border-[var(--color-border)] text-left text-[var(--color-text-secondary)]">
+                          <tr className="border-b border-border text-left text-text-secondary">
                             <th className="pb-3 pr-4 font-medium">Coin</th>
                             <th className="pb-3 pr-4 font-medium text-right">Price</th>
                             <th className="pb-3 pr-4 font-medium text-right">24h Change</th>
@@ -987,14 +987,14 @@ export default function AlertsPage() {
                             const alertCount = alerts.filter((a) => a.coinId === id && a.enabled).length;
                             const change = data.usd_24h_change ?? 0;
                             return (
-                              <tr key={id} className="border-b border-[var(--color-border)] last:border-0">
-                                <td className="py-3 pr-4 font-medium text-[var(--color-text-primary)]">
+                              <tr key={id} className="border-b border-border last:border-0">
+                                <td className="py-3 pr-4 font-medium text-text-primary">
                                   {coinMeta?.name ?? id}
                                   {coinMeta && (
-                                    <span className="ml-1.5 text-xs text-[var(--color-text-tertiary)]">{coinMeta.symbol}</span>
+                                    <span className="ml-1.5 text-xs text-text-tertiary">{coinMeta.symbol}</span>
                                   )}
                                 </td>
-                                <td className="py-3 pr-4 text-right tabular-nums font-medium text-[var(--color-text-primary)]">
+                                <td className="py-3 pr-4 text-right tabular-nums font-medium text-text-primary">
                                   ${data.usd.toLocaleString()}
                                 </td>
                                 <td className={cn("py-3 pr-4 text-right tabular-nums font-medium", change >= 0 ? "text-green-500" : "text-red-500")}>

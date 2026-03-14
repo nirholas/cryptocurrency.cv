@@ -146,7 +146,7 @@ function ConfidenceGauge({ confidence }: { confidence: number }) {
           x={center}
           y={center - 8}
           textAnchor="middle"
-          className="text-lg font-bold fill-[var(--color-text-primary)]"
+          className="text-lg font-bold fill-text-primary"
           fontSize="16"
         >
           {confidence}%
@@ -181,29 +181,29 @@ function PredictionCard({ prediction }: { prediction: CoinPrediction }) {
           <div className="flex items-center gap-2">
             {directionIcon}
             <CardTitle className="text-xl">{prediction.coin}</CardTitle>
-            <span className="text-xs text-[var(--color-text-tertiary)] uppercase font-mono">
+            <span className="text-xs text-text-tertiary uppercase font-mono">
               {prediction.symbol}
             </span>
           </div>
-          <Brain className="h-4 w-4 text-[var(--color-accent)] opacity-60" />
+          <Brain className="h-4 w-4 text-accent opacity-60" />
         </div>
       </CardHeader>
       <CardContent className="space-y-4">
         {/* Current Price */}
         <div>
-          <p className="text-xs font-medium uppercase tracking-wider text-[var(--color-text-tertiary)]">
+          <p className="text-xs font-medium uppercase tracking-wider text-text-tertiary">
             Current Price
           </p>
-          <p className="text-2xl font-bold text-[var(--color-text-primary)]">
+          <p className="text-2xl font-bold text-text-primary">
             {formatPrice(prediction.currentPrice)}
           </p>
         </div>
 
         {/* Predictions Row */}
         <div className="grid grid-cols-2 gap-4">
-          <div className="rounded-lg bg-[var(--color-surface-secondary)] p-3">
-            <p className="text-xs text-[var(--color-text-tertiary)] mb-1">7-Day Prediction</p>
-            <p className="text-lg font-semibold text-[var(--color-text-primary)]">
+          <div className="rounded-lg bg-surface-secondary p-3">
+            <p className="text-xs text-text-tertiary mb-1">7-Day Prediction</p>
+            <p className="text-lg font-semibold text-text-primary">
               {formatPrice(prediction.prediction7d)}
             </p>
             <p
@@ -215,9 +215,9 @@ function PredictionCard({ prediction }: { prediction: CoinPrediction }) {
               {formatPct(pct7d)}
             </p>
           </div>
-          <div className="rounded-lg bg-[var(--color-surface-secondary)] p-3">
-            <p className="text-xs text-[var(--color-text-tertiary)] mb-1">30-Day Prediction</p>
-            <p className="text-lg font-semibold text-[var(--color-text-primary)]">
+          <div className="rounded-lg bg-surface-secondary p-3">
+            <p className="text-xs text-text-tertiary mb-1">30-Day Prediction</p>
+            <p className="text-lg font-semibold text-text-primary">
               {formatPrice(prediction.prediction30d)}
             </p>
             <p
@@ -238,7 +238,7 @@ function PredictionCard({ prediction }: { prediction: CoinPrediction }) {
 
         {/* Reasoning */}
         {prediction.reasoning && (
-          <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed border-t border-[var(--color-border)] pt-3">
+          <p className="text-xs text-text-secondary leading-relaxed border-t border-border pt-3">
             {prediction.reasoning}
           </p>
         )}
@@ -343,10 +343,10 @@ export default function PredictionCards() {
     return (
       <Card className="p-8 text-center">
         <AlertTriangle className="h-8 w-8 text-amber-500 mx-auto mb-3" />
-        <p className="text-[var(--color-text-secondary)]">{error}</p>
+        <p className="text-text-secondary">{error}</p>
         <button
           onClick={fetchPredictions}
-          className="mt-3 text-sm text-[var(--color-accent)] hover:underline inline-flex items-center gap-1"
+          className="mt-3 text-sm text-accent hover:underline inline-flex items-center gap-1"
         >
           <RefreshCw className="h-3 w-3" /> Try Again
         </button>
@@ -365,7 +365,7 @@ export default function PredictionCards() {
       {/* Disclaimer */}
       <div className="flex items-start gap-3 rounded-lg border border-amber-500/30 bg-amber-500/5 p-4">
         <ShieldAlert className="h-5 w-5 text-amber-500 mt-0.5 shrink-0" />
-        <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
+        <p className="text-xs text-text-secondary leading-relaxed">
           <strong>Disclaimer:</strong> Not financial advice. AI-generated predictions for educational
           purposes only. Cryptocurrency markets are highly volatile. Always do your own research (DYOR)
           before making investment decisions.
@@ -406,7 +406,7 @@ export function TradingSignals() {
     return (
       <div className="space-y-3">
         {[1, 2, 3, 4, 5].map((i) => (
-          <div key={i} className="flex items-center gap-4 p-4 rounded-lg border border-[var(--color-border)]">
+          <div key={i} className="flex items-center gap-4 p-4 rounded-lg border border-border">
             <Skeleton className="h-6 w-20" />
             <Skeleton className="h-4 w-12" />
             <Skeleton className="h-4 w-full" />
@@ -424,10 +424,10 @@ export function TradingSignals() {
         return (
           <div
             key={`${signal.ticker}-${idx}`}
-            className="flex flex-col sm:flex-row sm:items-center gap-3 p-4 rounded-lg border border-[var(--color-border)] hover:bg-[var(--color-surface-secondary)] transition-colors"
+            className="flex flex-col sm:flex-row sm:items-center gap-3 p-4 rounded-lg border border-border hover:bg-surface-secondary transition-colors"
           >
             <div className="flex items-center gap-3 shrink-0">
-              <span className="font-mono font-bold text-[var(--color-text-primary)] w-12">
+              <span className="font-mono font-bold text-text-primary w-12">
                 {signal.ticker}
               </span>
               <span
@@ -442,11 +442,11 @@ export function TradingSignals() {
               </span>
             </div>
             <div className="flex-1 min-w-0">
-              <p className="text-sm text-[var(--color-text-secondary)] line-clamp-1">
+              <p className="text-sm text-text-secondary line-clamp-1">
                 {signal.reasoning}
               </p>
             </div>
-            <div className="flex items-center gap-3 shrink-0 text-xs text-[var(--color-text-tertiary)]">
+            <div className="flex items-center gap-3 shrink-0 text-xs text-text-tertiary">
               <span className="flex items-center gap-1">
                 <Target className="h-3 w-3" />
                 {signal.confidence}%
@@ -461,7 +461,7 @@ export function TradingSignals() {
 
       <div className="flex items-start gap-3 rounded-lg border border-amber-500/30 bg-amber-500/5 p-4 mt-4">
         <ShieldAlert className="h-5 w-5 text-amber-500 mt-0.5 shrink-0" />
-        <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
+        <p className="text-xs text-text-secondary leading-relaxed">
           <strong>Disclaimer:</strong> These signals are AI-generated based on news sentiment analysis.
           They are not financial advice. Past performance does not guarantee future results.
         </p>
@@ -499,12 +499,12 @@ export function PredictionHistoryTable() {
 
   if (loading) {
     return (
-      <div className="overflow-x-auto rounded-lg border border-[var(--color-border)]">
+      <div className="overflow-x-auto rounded-lg border border-border">
         <table className="w-full">
           <thead>
-            <tr className="border-b border-[var(--color-border)] bg-[var(--color-surface-secondary)]">
+            <tr className="border-b border-border bg-surface-secondary">
               {["Date", "Coin", "Predicted", "Actual", "Accuracy"].map((h) => (
-                <th key={h} className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-[var(--color-text-tertiary)]">
+                <th key={h} className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-text-tertiary">
                   {h}
                 </th>
               ))}
@@ -512,7 +512,7 @@ export function PredictionHistoryTable() {
           </thead>
           <tbody>
             {[1, 2, 3, 4, 5].map((i) => (
-              <tr key={i} className="border-b border-[var(--color-border)]">
+              <tr key={i} className="border-b border-border">
                 {[1, 2, 3, 4, 5].map((j) => (
                   <td key={j} className="px-4 py-3">
                     <Skeleton className="h-4 w-16" />
@@ -527,23 +527,23 @@ export function PredictionHistoryTable() {
   }
 
   return (
-    <div className="overflow-x-auto rounded-lg border border-[var(--color-border)]">
+    <div className="overflow-x-auto rounded-lg border border-border">
       <table className="w-full" aria-label="Prediction history">
         <thead>
-          <tr className="border-b border-[var(--color-border)] bg-[var(--color-surface-secondary)]">
-            <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-[var(--color-text-tertiary)]">
+          <tr className="border-b border-border bg-surface-secondary">
+            <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-text-tertiary">
               Date
             </th>
-            <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-[var(--color-text-tertiary)]">
+            <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-text-tertiary">
               Coin
             </th>
-            <th className="px-4 py-3 text-right text-xs font-semibold uppercase tracking-wider text-[var(--color-text-tertiary)]">
+            <th className="px-4 py-3 text-right text-xs font-semibold uppercase tracking-wider text-text-tertiary">
               Predicted
             </th>
-            <th className="px-4 py-3 text-right text-xs font-semibold uppercase tracking-wider text-[var(--color-text-tertiary)]">
+            <th className="px-4 py-3 text-right text-xs font-semibold uppercase tracking-wider text-text-tertiary">
               Actual
             </th>
-            <th className="px-4 py-3 text-right text-xs font-semibold uppercase tracking-wider text-[var(--color-text-tertiary)]">
+            <th className="px-4 py-3 text-right text-xs font-semibold uppercase tracking-wider text-text-tertiary">
               Accuracy
             </th>
           </tr>
@@ -559,18 +559,18 @@ export function PredictionHistoryTable() {
             return (
               <tr
                 key={`${row.coin}-${row.date}-${idx}`}
-                className="border-b border-[var(--color-border)] hover:bg-[var(--color-surface-secondary)] transition-colors"
+                className="border-b border-border hover:bg-surface-secondary transition-colors"
               >
-                <td className="px-4 py-3 text-sm text-[var(--color-text-secondary)]">
+                <td className="px-4 py-3 text-sm text-text-secondary">
                   {row.date}
                 </td>
-                <td className="px-4 py-3 text-sm font-medium text-[var(--color-text-primary)]">
+                <td className="px-4 py-3 text-sm font-medium text-text-primary">
                   {row.coin}
                 </td>
-                <td className="px-4 py-3 text-sm text-right font-mono text-[var(--color-text-primary)]">
+                <td className="px-4 py-3 text-sm text-right font-mono text-text-primary">
                   {formatPrice(row.predicted)}
                 </td>
-                <td className="px-4 py-3 text-sm text-right font-mono text-[var(--color-text-primary)]">
+                <td className="px-4 py-3 text-sm text-right font-mono text-text-primary">
                   {formatPrice(row.actual)}
                 </td>
                 <td className={cn("px-4 py-3 text-sm text-right font-semibold", accuracyColor)}>

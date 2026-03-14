@@ -7,7 +7,7 @@ const badgeVariants = cva(
   {
     variants: {
       variant: {
-        default: 'bg-[var(--color-surface-tertiary)] text-[var(--color-text-secondary)]',
+        default: 'bg-surface-tertiary text-text-secondary',
         bitcoin: 'cat-bitcoin',
         ethereum: 'cat-ethereum',
         defi: 'cat-defi',

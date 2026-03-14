@@ -74,12 +74,12 @@ export default function NewsletterCTA() {
   };
 
   return (
-    <section className="border-b border-[var(--color-border)]">
+    <section className="border-b border-border">
       <div className="container-main py-10 lg:py-14">
         <div
           className={cn(
             "relative overflow-hidden rounded-2xl",
-            "bg-gradient-to-br from-[var(--color-accent)] via-[color-mix(in_srgb,var(--color-accent),#6366f1_40%)] to-[color-mix(in_srgb,var(--color-accent),#000_30%)]"
+            "bg-gradient-to-br from-accent via-[color-mix(in_srgb,var(--color-accent),#6366f1_40%)] to-[color-mix(in_srgb,var(--color-accent),#000_30%)]"
           )}
         >
           {/* Animated gradient orbs */}
@@ -172,7 +172,7 @@ export default function NewsletterCTA() {
                           className={cn(
                             "inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-medium transition-all cursor-pointer",
                             selectedTags.has(tag.id)
-                              ? "bg-white text-[var(--color-accent)] shadow-md scale-105"
+                              ? "bg-white text-accent shadow-md scale-105"
                               : "bg-white/10 text-white/80 hover:bg-white/20"
                           )}
                         >
@@ -202,7 +202,7 @@ export default function NewsletterCTA() {
                     <Button
                       type="submit"
                       disabled={status === "loading"}
-                      className="h-12 px-6 bg-white text-[var(--color-accent)] hover:bg-white/90 font-bold shadow-lg rounded-xl text-sm"
+                      className="h-12 px-6 bg-white text-accent hover:bg-white/90 font-bold shadow-lg rounded-xl text-sm"
                     >
                       {status === "loading" ? (
                         <Loader2 className="h-4 w-4 animate-spin" />

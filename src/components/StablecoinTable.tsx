@@ -72,9 +72,9 @@ function SortHeader({ label, sortKey, currentSort, currentDir, onSort, align = "
   return (
     <th
       className={cn(
-        "px-3 py-3 text-xs font-semibold uppercase tracking-wider cursor-pointer select-none transition-colors hover:text-[var(--color-accent)]",
+        "px-3 py-3 text-xs font-semibold uppercase tracking-wider cursor-pointer select-none transition-colors hover:text-accent",
         align === "left" ? "text-left" : "text-right",
-        active ? "text-[var(--color-accent)]" : "text-[var(--color-text-tertiary)]",
+        active ? "text-accent" : "text-text-tertiary",
         className
       )}
       onClick={() => onSort(sortKey)}
@@ -142,17 +142,17 @@ export default function StablecoinTable({ stablecoins }: { stablecoins: Stableco
 
   if (stablecoins.length === 0) {
     return (
-      <div className="rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] p-12 text-center text-[var(--color-text-secondary)]">
+      <div className="rounded-lg border border-border bg-(--color-surface) p-12 text-center text-text-secondary">
         Stablecoin data is temporarily unavailable. Please try again shortly.
       </div>
     );
   }
 
   return (
-    <div className="overflow-x-auto rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] -webkit-overflow-scrolling-touch">
+    <div className="overflow-x-auto rounded-lg border border-border bg-(--color-surface) -webkit-overflow-scrolling-touch">
       <table className="w-full text-sm min-w-[500px]" aria-label="Stablecoin market data">
         <thead>
-          <tr className="border-b border-[var(--color-border)]">
+          <tr className="border-b border-border">
             <SortHeader label="#" sortKey="rank" currentSort={sortKey} currentDir={sortDir} onSort={handleSort} align="left" />
             <SortHeader label="Name" sortKey="name" currentSort={sortKey} currentDir={sortDir} onSort={handleSort} align="left" />
             <SortHeader label="Market Cap" sortKey="marketCap" currentSort={sortKey} currentDir={sortDir} onSort={handleSort} />
@@ -167,21 +167,21 @@ export default function StablecoinTable({ stablecoins }: { stablecoins: Stableco
             return (
               <tr
                 key={coin.symbol}
-                className="border-b border-[var(--color-border)] last:border-b-0 hover:bg-[var(--color-surface-secondary)] transition-colors"
+                className="border-b border-border last:border-b-0 hover:bg-surface-secondary transition-colors"
               >
-                <td className="px-3 py-3 text-[var(--color-text-tertiary)] font-mono text-xs">
+                <td className="px-3 py-3 text-text-tertiary font-mono text-xs">
                   {coin.rank}
                 </td>
                 <td className="px-3 py-3">
                   <div className="flex flex-col">
-                    <span className="font-medium text-[var(--color-text-primary)]">{coin.name}</span>
-                    <span className="text-xs text-[var(--color-text-tertiary)] uppercase">{coin.symbol}</span>
+                    <span className="font-medium text-text-primary">{coin.name}</span>
+                    <span className="text-xs text-text-tertiary uppercase">{coin.symbol}</span>
                   </div>
                 </td>
-                <td className="px-3 py-3 text-right font-mono text-[var(--color-text-primary)]">
+                <td className="px-3 py-3 text-right font-mono text-text-primary">
                   {formatLargeNumber(coin.marketCap)}
                 </td>
-                <td className="hidden sm:table-cell px-3 py-3 text-right font-mono text-[var(--color-text-secondary)]">
+                <td className="hidden sm:table-cell px-3 py-3 text-right font-mono text-text-secondary">
                   {formatLargeNumber(coin.volume24h)}
                 </td>
                 <td className="px-3 py-3 text-right">
@@ -200,7 +200,7 @@ export default function StablecoinTable({ stablecoins }: { stablecoins: Stableco
                         ? "text-green-600 dark:text-green-400"
                         : coin.supplyChange7d < 0
                           ? "text-red-600 dark:text-red-400"
-                          : "text-[var(--color-text-secondary)]"
+                          : "text-text-secondary"
                     )}
                   >
                     {formatPct(coin.supplyChange7d)}

@@ -174,8 +174,8 @@ export default function ShareBar({ url, title, description, compact = false, cla
             target="_blank"
             rel="noopener noreferrer"
             className={cn(
-              "inline-flex items-center justify-center rounded-md p-2 text-[var(--color-text-tertiary)] transition-colors",
-              "bg-[var(--color-surface-tertiary)]",
+              "inline-flex items-center justify-center rounded-md p-2 text-text-tertiary transition-colors",
+              "bg-surface-tertiary",
               link.color,
             )}
             aria-label={`Share on ${link.name}`}
@@ -190,7 +190,7 @@ export default function ShareBar({ url, title, description, compact = false, cla
             "inline-flex items-center justify-center rounded-md p-2 transition-colors",
             copied
               ? "bg-green-100 text-green-700 dark:bg-green-900/40 dark:text-green-300"
-              : "bg-[var(--color-surface-tertiary)] text-[var(--color-text-tertiary)] hover:bg-[var(--color-surface-secondary)]"
+              : "bg-surface-tertiary text-text-tertiary hover:bg-surface-secondary"
           )}
           aria-label="Copy link"
           title="Copy link"
@@ -203,7 +203,7 @@ export default function ShareBar({ url, title, description, compact = false, cla
 
   return (
     <div className={cn("flex items-center gap-2 flex-wrap", className)}>
-      <span className="text-xs font-medium text-[var(--color-text-tertiary)] uppercase tracking-wide mr-1">
+      <span className="text-xs font-medium text-text-tertiary uppercase tracking-wide mr-1">
         Share
       </span>
       <button
@@ -212,7 +212,7 @@ export default function ShareBar({ url, title, description, compact = false, cla
           "inline-flex items-center gap-1.5 rounded-md px-3 py-1.5 text-xs font-medium transition-colors",
           copied
             ? "bg-green-100 text-green-700 dark:bg-green-900/40 dark:text-green-300"
-            : "bg-[var(--color-surface-tertiary)] text-[var(--color-text-secondary)] hover:bg-[var(--color-surface-secondary)]"
+            : "bg-surface-tertiary text-text-secondary hover:bg-surface-secondary"
         )}
         aria-label="Copy link"
       >
@@ -227,7 +227,7 @@ export default function ShareBar({ url, title, description, compact = false, cla
           rel="noopener noreferrer"
           className={cn(
             "inline-flex items-center gap-1.5 rounded-md px-3 py-1.5 text-xs font-medium transition-colors",
-            "bg-[var(--color-surface-tertiary)] text-[var(--color-text-secondary)]",
+            "bg-surface-tertiary text-text-secondary",
             link.color,
           )}
           aria-label={`Share on ${link.name}`}
@@ -239,7 +239,7 @@ export default function ShareBar({ url, title, description, compact = false, cla
       {/* Native share (mobile) */}
       <button
         onClick={handleNativeShare}
-        className="inline-flex items-center gap-1.5 rounded-md px-3 py-1.5 text-xs font-medium bg-[var(--color-surface-tertiary)] text-[var(--color-text-secondary)] hover:bg-[var(--color-surface-secondary)] transition-colors sm:hidden"
+        className="inline-flex items-center gap-1.5 rounded-md px-3 py-1.5 text-xs font-medium bg-surface-tertiary text-text-secondary hover:bg-surface-secondary transition-colors sm:hidden"
         aria-label="Share via device"
       >
         <ShareIcon />

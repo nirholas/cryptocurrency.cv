@@ -146,7 +146,7 @@ function FearGreedGauge({ value, label }: { value: number; label: string }) {
       <span className="text-lg font-bold mt-1" style={{ color: gaugeColor }}>
         {clampedValue}
       </span>
-      <span className="text-[11px] text-[var(--color-text-secondary)] capitalize">
+      <span className="text-[11px] text-text-secondary capitalize">
         {label}
       </span>
     </div>
@@ -244,7 +244,7 @@ export default function MarketsSnapshot() {
   const losers = coins.filter((c) => c.change24h < 0).length;
 
   return (
-    <section className="border-b border-[var(--color-border)] bg-[var(--color-surface-secondary)]">
+    <section className="border-b border-border bg-surface-secondary">
       <div className="container-main py-6 lg:py-8">
         {/* Header row */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-5">
@@ -256,7 +256,7 @@ export default function MarketsSnapshot() {
                   <TrendingUp className="h-3 w-3" />
                   {gainers}
                 </span>
-                <span className="text-[var(--color-text-tertiary)]">/</span>
+                <span className="text-text-tertiary">/</span>
                 <span className="flex items-center gap-1 text-red-500 font-medium">
                   <TrendingDown className="h-3 w-3" />
                   {losers}
@@ -267,14 +267,14 @@ export default function MarketsSnapshot() {
 
           <div className="flex items-center gap-3">
             {/* Sort toggle */}
-            <div className="flex items-center rounded-md border border-[var(--color-border)] bg-[var(--color-surface)] text-xs overflow-hidden">
+            <div className="flex items-center rounded-md border border-border bg-(--color-surface) text-xs overflow-hidden">
               <button
                 onClick={() => setSortBy("marketCap")}
                 className={cn(
                   "px-2.5 py-1.5 transition-colors cursor-pointer",
                   sortBy === "marketCap"
-                    ? "bg-[var(--color-accent)] text-white"
-                    : "text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)]"
+                    ? "bg-accent text-white"
+                    : "text-text-secondary hover:text-text-primary"
                 )}
               >
                 Market Cap
@@ -284,8 +284,8 @@ export default function MarketsSnapshot() {
                 className={cn(
                   "px-2.5 py-1.5 transition-colors cursor-pointer",
                   sortBy === "change"
-                    ? "bg-[var(--color-accent)] text-white"
-                    : "text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)]"
+                    ? "bg-accent text-white"
+                    : "text-text-secondary hover:text-text-primary"
                 )}
               >
                 Top Movers
@@ -294,7 +294,7 @@ export default function MarketsSnapshot() {
 
             {/* Last updated */}
             {lastUpdated && (
-              <span className="hidden lg:flex items-center gap-1 text-[11px] text-[var(--color-text-tertiary)]">
+              <span className="hidden lg:flex items-center gap-1 text-[11px] text-text-tertiary">
                 <RefreshCw className="h-3 w-3" />
                 {lastUpdated.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}
               </span>
@@ -302,7 +302,7 @@ export default function MarketsSnapshot() {
 
             <Link
               href="/markets"
-              className="flex items-center gap-1 text-sm font-medium text-[var(--color-accent)] hover:text-[var(--color-accent-hover)] transition-colors"
+              className="flex items-center gap-1 text-sm font-medium text-accent hover:text-accent-hover transition-colors"
             >
               View all <ArrowRight className="h-3.5 w-3.5" />
             </Link>
@@ -312,28 +312,28 @@ export default function MarketsSnapshot() {
         {/* Global stats banner */}
         {globals && !loading && (
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-5">
-            <div className="flex items-center gap-2 rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] px-3 py-2">
-              <BarChart2 className="h-4 w-4 text-[var(--color-accent)] shrink-0" />
+            <div className="flex items-center gap-2 rounded-lg border border-border bg-(--color-surface) px-3 py-2">
+              <BarChart2 className="h-4 w-4 text-accent shrink-0" />
               <div>
-                <p className="text-[10px] text-[var(--color-text-tertiary)] uppercase tracking-wider">Market Cap</p>
+                <p className="text-[10px] text-text-tertiary uppercase tracking-wider">Market Cap</p>
                 <p className="text-sm font-bold">{formatCompact(globals.totalMarketCap)}</p>
               </div>
             </div>
-            <div className="flex items-center gap-2 rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] px-3 py-2">
-              <Activity className="h-4 w-4 text-[var(--color-accent)] shrink-0" />
+            <div className="flex items-center gap-2 rounded-lg border border-border bg-(--color-surface) px-3 py-2">
+              <Activity className="h-4 w-4 text-accent shrink-0" />
               <div>
-                <p className="text-[10px] text-[var(--color-text-tertiary)] uppercase tracking-wider">24h Volume</p>
+                <p className="text-[10px] text-text-tertiary uppercase tracking-wider">24h Volume</p>
                 <p className="text-sm font-bold">{formatCompact(globals.totalVolume24h)}</p>
               </div>
             </div>
-            <div className="flex items-center gap-2 rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] px-3 py-2">
+            <div className="flex items-center gap-2 rounded-lg border border-border bg-(--color-surface) px-3 py-2">
               <Zap className="h-4 w-4 text-[#f7931a] shrink-0" />
               <div>
-                <p className="text-[10px] text-[var(--color-text-tertiary)] uppercase tracking-wider">BTC Dominance</p>
+                <p className="text-[10px] text-text-tertiary uppercase tracking-wider">BTC Dominance</p>
                 <p className="text-sm font-bold">{globals.btcDominance.toFixed(1)}%</p>
               </div>
             </div>
-            <div className="flex items-center gap-2 rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] px-3 py-2">
+            <div className="flex items-center gap-2 rounded-lg border border-border bg-(--color-surface) px-3 py-2">
               <FearGreedGauge value={globals.fearGreedIndex} label={globals.fearGreedLabel} />
             </div>
           </div>
@@ -345,11 +345,11 @@ export default function MarketsSnapshot() {
             ? Array.from({ length: 8 }).map((_, i) => (
                 <div
                   key={i}
-                  className="rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] p-3 animate-pulse"
+                  className="rounded-lg border border-border bg-(--color-surface) p-3 animate-pulse"
                 >
-                  <div className="h-4 w-10 bg-[var(--color-border)] rounded mb-2" />
-                  <div className="h-5 w-16 bg-[var(--color-border)] rounded mb-1" />
-                  <div className="h-3 w-12 bg-[var(--color-border)] rounded" />
+                  <div className="h-4 w-10 bg-border rounded mb-2" />
+                  <div className="h-5 w-16 bg-border rounded mb-1" />
+                  <div className="h-3 w-12 bg-border rounded" />
                 </div>
               ))
             : sortedCoins.map((coin) => {
@@ -359,13 +359,13 @@ export default function MarketsSnapshot() {
                     key={coin.symbol}
                     href={`/coin/${coin.symbol.toLowerCase()}`}
                     className={cn(
-                      "group rounded-lg border bg-[var(--color-surface)] p-3 transition-all",
-                      "hover:shadow-md hover:border-[var(--color-accent)]",
+                      "group rounded-lg border bg-(--color-surface) p-3 transition-all",
+                      "hover:shadow-md hover:border-accent",
                       isPositive ? "border-emerald-500/20" : "border-red-500/20"
                     )}
                   >
                     <div className="flex items-center justify-between mb-1">
-                      <span className="text-xs font-bold text-[var(--color-text-primary)]">
+                      <span className="text-xs font-bold text-text-primary">
                         {coin.symbol}
                       </span>
                       {isPositive ? (
@@ -374,7 +374,7 @@ export default function MarketsSnapshot() {
                         <TrendingDown className="h-3 w-3 text-red-500" />
                       )}
                     </div>
-                    <div className="text-sm font-bold text-[var(--color-text-primary)] leading-tight">
+                    <div className="text-sm font-bold text-text-primary leading-tight">
                       {formatPrice(coin.price)}
                     </div>
                     <div className="flex items-center justify-between mt-1.5 gap-1">
@@ -393,7 +393,7 @@ export default function MarketsSnapshot() {
                     </div>
                     {/* Volume on hover */}
                     {coin.volume24h != null && coin.volume24h > 0 && (
-                      <div className="hidden group-hover:block mt-1.5 pt-1.5 border-t border-[var(--color-border)] text-[10px] text-[var(--color-text-tertiary)]">
+                      <div className="hidden group-hover:block mt-1.5 pt-1.5 border-t border-border text-[10px] text-text-tertiary">
                         Vol: {formatCompact(coin.volume24h)}
                       </div>
                     )}
@@ -403,7 +403,7 @@ export default function MarketsSnapshot() {
         </div>
 
         {/* Data attribution */}
-        <div className="mt-4 flex items-center justify-between text-[10px] text-[var(--color-text-tertiary)]">
+        <div className="mt-4 flex items-center justify-between text-[10px] text-text-tertiary">
           <span>Market data via CoinGecko API. Prices update every 30s.</span>
           {lastUpdated && (
             <span className="flex items-center gap-1">

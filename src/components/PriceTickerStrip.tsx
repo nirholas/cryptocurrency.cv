@@ -81,13 +81,13 @@ function fearGreedBg(value: number): string {
 
 function TickerSkeleton() {
   return (
-    <div className="h-[40px] overflow-hidden border-b border-[var(--color-border)] bg-[var(--color-surface)]">
+    <div className="h-[40px] overflow-hidden border-b border-border bg-(--color-surface)">
       <div className="flex h-full items-center gap-8 px-4">
         {Array.from({ length: 8 }).map((_, i) => (
           <span key={i} className="inline-flex items-center gap-1.5">
-            <span className="h-3 w-8 rounded bg-[var(--color-border)] animate-pulse" />
-            <span className="h-3 w-14 rounded bg-[var(--color-border)] animate-pulse" />
-            <span className="h-3 w-10 rounded bg-[var(--color-border)] animate-pulse" />
+            <span className="h-3 w-8 rounded bg-border animate-pulse" />
+            <span className="h-3 w-14 rounded bg-border animate-pulse" />
+            <span className="h-3 w-10 rounded bg-border animate-pulse" />
           </span>
         ))}
       </div>
@@ -181,7 +181,7 @@ export default function PriceTickerStrip() {
 
   return (
     <div
-      className="h-[40px] overflow-hidden border-b border-[var(--color-border)] bg-[var(--color-surface)]"
+      className="h-[40px] overflow-hidden border-b border-border bg-(--color-surface)"
       role="region"
       aria-label="Live cryptocurrency prices"
       aria-live="polite"
@@ -192,7 +192,7 @@ export default function PriceTickerStrip() {
           <Link
             href="/fear-greed"
             className={cn(
-              "hidden md:flex items-center gap-1.5 px-3 h-full border-r border-[var(--color-border)] text-xs font-medium shrink-0 transition-colors hover:bg-[var(--color-surface-secondary)]",
+              "hidden md:flex items-center gap-1.5 px-3 h-full border-r border-border text-xs font-medium shrink-0 transition-colors hover:bg-surface-secondary",
               fearGreedBg(fearGreed.value),
             )}
             aria-label={`Fear and Greed Index: ${fearGreed.value} — ${fearGreed.classification}`}
@@ -201,7 +201,7 @@ export default function PriceTickerStrip() {
             <span className={cn("font-bold tabular-nums", fearGreedColor(fearGreed.value))}>
               {fearGreed.value}
             </span>
-            <span className="text-[var(--color-text-tertiary)] hidden lg:inline">
+            <span className="text-text-tertiary hidden lg:inline">
               {fearGreed.classification}
             </span>
           </Link>
@@ -221,15 +221,15 @@ export default function PriceTickerStrip() {
                   key={`${coin.id}-${i}`}
                   href={`/coin/${coin.id}`}
                   className={cn(
-                    "inline-flex items-center gap-1.5 text-xs font-medium px-2 py-1 rounded transition-all hover:bg-[var(--color-surface-secondary)]",
+                    "inline-flex items-center gap-1.5 text-xs font-medium px-2 py-1 rounded transition-all hover:bg-surface-secondary",
                     flashUp && "ticker-flash-up",
                     flashDown && "ticker-flash-down",
                   )}
                 >
-                  <span className="font-semibold text-[var(--color-text-primary)]">
+                  <span className="font-semibold text-text-primary">
                     {coin.symbol}
                   </span>
-                  <span className="text-[var(--color-text-secondary)] tabular-nums">
+                  <span className="text-text-secondary tabular-nums">
                     {formatPrice(coin.price)}
                   </span>
                   <span

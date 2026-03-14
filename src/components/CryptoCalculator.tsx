@@ -274,7 +274,7 @@ export default function CryptoCalculator() {
           </div>
         ) : error ? (
           <div className="text-center py-8">
-            <p className="text-[var(--color-text-secondary)] mb-3">{error}</p>
+            <p className="text-text-secondary mb-3">{error}</p>
             <Button variant="outline" size="sm" onClick={() => fetchPrices()}>
               <RefreshCw className="h-4 w-4 mr-1" /> Retry
             </Button>
@@ -308,7 +308,7 @@ export default function CryptoCalculator() {
 
             {/* Crypto input */}
             <div className="space-y-2 mb-4">
-              <label className="text-sm font-medium text-[var(--color-text-secondary)]">
+              <label className="text-sm font-medium text-text-secondary">
                 {mode === "crypto-fiat" ? "Cryptocurrency" : "From"}
               </label>
               <div className="flex gap-2">
@@ -323,10 +323,10 @@ export default function CryptoCalculator() {
                     setCryptoAmount(e.target.value);
                   }}
                   className={cn(
-                    "flex-1 rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)]",
-                    "px-4 py-3 text-lg font-medium text-[var(--color-text-primary)]",
-                    "focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)] focus:border-transparent",
-                    "placeholder:text-[var(--color-text-tertiary)]",
+                    "flex-1 rounded-lg border border-border bg-(--color-surface)",
+                    "px-4 py-3 text-lg font-medium text-text-primary",
+                    "focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent",
+                    "placeholder:text-text-tertiary",
                   )}
                   placeholder="0.00"
                 />
@@ -334,9 +334,9 @@ export default function CryptoCalculator() {
                   value={fromCoin}
                   onChange={(e) => setFromCoin(e.target.value)}
                   className={cn(
-                    "w-36 rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)]",
-                    "px-3 py-3 font-medium text-[var(--color-text-primary)]",
-                    "focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]",
+                    "w-36 rounded-lg border border-border bg-(--color-surface)",
+                    "px-3 py-3 font-medium text-text-primary",
+                    "focus:outline-none focus:ring-2 focus:ring-accent",
                   )}
                 >
                   {POPULAR_COINS.map((coin) => (
@@ -353,19 +353,19 @@ export default function CryptoCalculator() {
               <button
                 onClick={handleSwap}
                 className={cn(
-                  "p-2 rounded-full border border-[var(--color-border)]",
-                  "bg-[var(--color-surface-secondary)] hover:bg-[var(--color-surface-tertiary)]",
+                  "p-2 rounded-full border border-border",
+                  "bg-surface-secondary hover:bg-surface-tertiary",
                   "transition-colors hover:scale-110 active:scale-95",
                 )}
                 aria-label="Swap conversion direction"
               >
-                <ArrowUpDown className="h-5 w-5 text-[var(--color-accent)]" />
+                <ArrowUpDown className="h-5 w-5 text-accent" />
               </button>
             </div>
 
             {/* Second input (fiat or crypto) */}
             <div className="space-y-2 mt-4">
-              <label className="text-sm font-medium text-[var(--color-text-secondary)]">
+              <label className="text-sm font-medium text-text-secondary">
                 {mode === "crypto-fiat" ? "Fiat Currency" : "To"}
               </label>
               <div className="flex gap-2">
@@ -382,10 +382,10 @@ export default function CryptoCalculator() {
                         setFiatAmount(e.target.value);
                       }}
                       className={cn(
-                        "flex-1 rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)]",
-                        "px-4 py-3 text-lg font-medium text-[var(--color-text-primary)]",
-                        "focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)] focus:border-transparent",
-                        "placeholder:text-[var(--color-text-tertiary)]",
+                        "flex-1 rounded-lg border border-border bg-(--color-surface)",
+                        "px-4 py-3 text-lg font-medium text-text-primary",
+                        "focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent",
+                        "placeholder:text-text-tertiary",
                       )}
                       placeholder="0.00"
                     />
@@ -393,9 +393,9 @@ export default function CryptoCalculator() {
                       value={toCurrency}
                       onChange={(e) => setToCurrency(e.target.value as FiatCode)}
                       className={cn(
-                        "w-36 rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)]",
-                        "px-3 py-3 font-medium text-[var(--color-text-primary)]",
-                        "focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]",
+                        "w-36 rounded-lg border border-border bg-(--color-surface)",
+                        "px-3 py-3 font-medium text-text-primary",
+                        "focus:outline-none focus:ring-2 focus:ring-accent",
                       )}
                     >
                       {FIAT_CURRENCIES.map((fiat) => (
@@ -412,8 +412,8 @@ export default function CryptoCalculator() {
                       readOnly
                       value={toCoinAmount}
                       className={cn(
-                        "flex-1 rounded-lg border border-[var(--color-border)] bg-[var(--color-surface-secondary)]",
-                        "px-4 py-3 text-lg font-medium text-[var(--color-text-primary)]",
+                        "flex-1 rounded-lg border border-border bg-surface-secondary",
+                        "px-4 py-3 text-lg font-medium text-text-primary",
                         "cursor-default",
                       )}
                       placeholder="0.00"
@@ -422,9 +422,9 @@ export default function CryptoCalculator() {
                       value={toCoin}
                       onChange={(e) => setToCoin(e.target.value)}
                       className={cn(
-                        "w-36 rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)]",
-                        "px-3 py-3 font-medium text-[var(--color-text-primary)]",
-                        "focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]",
+                        "w-36 rounded-lg border border-border bg-(--color-surface)",
+                        "px-3 py-3 font-medium text-text-primary",
+                        "focus:outline-none focus:ring-2 focus:ring-accent",
                       )}
                     >
                       {POPULAR_COINS.filter((c) => c.id !== fromCoin).map(
@@ -449,9 +449,9 @@ export default function CryptoCalculator() {
                     onClick={() => handlePreset(p.value)}
                     className={cn(
                       "px-3 py-1.5 rounded-lg text-xs font-medium",
-                      "border border-[var(--color-border)] bg-[var(--color-surface-secondary)]",
-                      "hover:bg-[var(--color-surface-tertiary)] transition-colors",
-                      "text-[var(--color-text-secondary)]",
+                      "border border-border bg-surface-secondary",
+                      "hover:bg-surface-tertiary transition-colors",
+                      "text-text-secondary",
                     )}
                   >
                     {p.label}
@@ -461,14 +461,14 @@ export default function CryptoCalculator() {
             )}
 
             {/* Rate display + Copy */}
-            <div className="mt-6 p-4 rounded-lg bg-[var(--color-surface-secondary)] border border-[var(--color-border)]">
+            <div className="mt-6 p-4 rounded-lg bg-surface-secondary border border-border">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-xs text-[var(--color-text-tertiary)] uppercase tracking-wider mb-1">
+                  <p className="text-xs text-text-tertiary uppercase tracking-wider mb-1">
                     Current Rate
                   </p>
                   {mode === "crypto-fiat" && rate !== null && selectedCoin && selectedFiat ? (
-                    <p className="text-lg font-semibold text-[var(--color-text-primary)]">
+                    <p className="text-lg font-semibold text-text-primary">
                       1 {selectedCoin.symbol} = {selectedFiat.symbol}
                       {rate.toLocaleString("en-US", {
                         minimumFractionDigits: 2,
@@ -476,7 +476,7 @@ export default function CryptoCalculator() {
                       })}
                     </p>
                   ) : mode === "crypto-crypto" && cryptoCryptoRate !== null ? (
-                    <p className="text-lg font-semibold text-[var(--color-text-primary)]">
+                    <p className="text-lg font-semibold text-text-primary">
                       1 {selectedCoin?.symbol} ={" "}
                       {cryptoCryptoRate.toFixed(
                         cryptoCryptoRate < 1 ? 6 : cryptoCryptoRate < 100 ? 4 : 2,
@@ -484,7 +484,7 @@ export default function CryptoCalculator() {
                       {POPULAR_COINS.find((c) => c.id === toCoin)?.symbol}
                     </p>
                   ) : (
-                    <p className="text-[var(--color-text-tertiary)]">—</p>
+                    <p className="text-text-tertiary">—</p>
                   )}
                   {change24h !== null && (
                     <div className="flex items-center gap-1 mt-1">
@@ -500,7 +500,7 @@ export default function CryptoCalculator() {
                             ? "text-green-500 dark:text-green-400"
                             : change24h < 0
                               ? "text-red-500 dark:text-red-400"
-                              : "text-[var(--color-text-secondary)]",
+                              : "text-text-secondary",
                         )}
                       >
                         {change24h > 0 ? "+" : ""}
@@ -513,31 +513,31 @@ export default function CryptoCalculator() {
                   <button
                     onClick={handleCopy}
                     className={cn(
-                      "p-2 rounded-lg border border-[var(--color-border)]",
-                      "hover:bg-[var(--color-surface-tertiary)] transition-colors",
+                      "p-2 rounded-lg border border-border",
+                      "hover:bg-surface-tertiary transition-colors",
                     )}
                     aria-label="Copy conversion result"
                   >
                     {copied ? (
                       <Check className="h-4 w-4 text-green-500" />
                     ) : (
-                      <Copy className="h-4 w-4 text-[var(--color-text-tertiary)]" />
+                      <Copy className="h-4 w-4 text-text-tertiary" />
                     )}
                   </button>
                   <button
                     onClick={() => fetchPrices(true)}
                     className={cn(
-                      "p-2 rounded-lg border border-[var(--color-border)]",
-                      "hover:bg-[var(--color-surface-tertiary)] transition-colors",
+                      "p-2 rounded-lg border border-border",
+                      "hover:bg-surface-tertiary transition-colors",
                     )}
                     aria-label="Refresh prices"
                   >
-                    <RefreshCw className="h-4 w-4 text-[var(--color-text-tertiary)]" />
+                    <RefreshCw className="h-4 w-4 text-text-tertiary" />
                   </button>
                 </div>
               </div>
               {lastUpdated && (
-                <p className="text-[10px] text-[var(--color-text-tertiary)] mt-2">
+                <p className="text-[10px] text-text-tertiary mt-2">
                   Updated {lastUpdated.toLocaleTimeString()} · Auto-refreshes every 60s
                 </p>
               )}
@@ -554,8 +554,8 @@ export default function CryptoCalculator() {
             className="w-full flex items-center justify-between"
           >
             <div className="flex items-center gap-2">
-              <Percent className="h-5 w-5 text-[var(--color-accent)]" />
-              <h2 className="font-serif text-lg font-semibold text-[var(--color-text-primary)]">
+              <Percent className="h-5 w-5 text-accent" />
+              <h2 className="font-serif text-lg font-semibold text-text-primary">
                 Investment Simulator
               </h2>
             </div>
@@ -566,13 +566,13 @@ export default function CryptoCalculator() {
 
           {showInvestment && (
             <div className="mt-5 space-y-4">
-              <p className="text-sm text-[var(--color-text-secondary)]">
+              <p className="text-sm text-text-secondary">
                 See what you&apos;d get if you invested today in{" "}
                 {selectedCoin?.name ?? "this coin"}.
               </p>
               <div className="flex gap-2">
                 <div className="relative flex-1">
-                  <span className="absolute left-3 top-1/2 -translate-y-1/2 text-[var(--color-text-tertiary)]">
+                  <span className="absolute left-3 top-1/2 -translate-y-1/2 text-text-tertiary">
                     $
                   </span>
                   <input
@@ -581,9 +581,9 @@ export default function CryptoCalculator() {
                     value={investAmount}
                     onChange={(e) => setInvestAmount(e.target.value)}
                     className={cn(
-                      "w-full rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)]",
-                      "pl-8 pr-4 py-3 text-lg font-medium text-[var(--color-text-primary)]",
-                      "focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]",
+                      "w-full rounded-lg border border-border bg-(--color-surface)",
+                      "pl-8 pr-4 py-3 text-lg font-medium text-text-primary",
+                      "focus:outline-none focus:ring-2 focus:ring-accent",
                     )}
                     placeholder="1000"
                   />
@@ -595,11 +595,11 @@ export default function CryptoCalculator() {
                       onClick={() => setInvestAmount(amt.toString())}
                       className={cn(
                         "px-2 py-1 rounded text-xs font-medium",
-                        "border border-[var(--color-border)]",
-                        "hover:bg-[var(--color-surface-secondary)] transition-colors",
+                        "border border-border",
+                        "hover:bg-surface-secondary transition-colors",
                         investAmount === amt.toString()
-                          ? "bg-[var(--color-accent)]/10 text-[var(--color-accent)] border-[var(--color-accent)]/30"
-                          : "text-[var(--color-text-tertiary)]",
+                          ? "bg-accent/10 text-accent border-accent/30"
+                          : "text-text-tertiary",
                       )}
                     >
                       ${amt >= 1000 ? `${amt / 1000}k` : amt}
@@ -610,21 +610,21 @@ export default function CryptoCalculator() {
 
               {investmentCalc && (
                 <div className="grid grid-cols-2 gap-3">
-                  <div className="p-3 rounded-lg bg-[var(--color-surface-secondary)]">
-                    <p className="text-xs text-[var(--color-text-tertiary)]">
+                  <div className="p-3 rounded-lg bg-surface-secondary">
+                    <p className="text-xs text-text-tertiary">
                       You&apos;d receive
                     </p>
-                    <p className="text-lg font-bold text-[var(--color-text-primary)]">
+                    <p className="text-lg font-bold text-text-primary">
                       {investmentCalc.coins < 1
                         ? investmentCalc.coins.toFixed(6)
                         : investmentCalc.coins.toFixed(4)}{" "}
-                      <span className="text-sm font-normal text-[var(--color-text-tertiary)]">
+                      <span className="text-sm font-normal text-text-tertiary">
                         {selectedCoin?.symbol}
                       </span>
                     </p>
                   </div>
-                  <div className="p-3 rounded-lg bg-[var(--color-surface-secondary)]">
-                    <p className="text-xs text-[var(--color-text-tertiary)]">
+                  <div className="p-3 rounded-lg bg-surface-secondary">
+                    <p className="text-xs text-text-tertiary">
                       24h PnL (if bought yesterday)
                     </p>
                     <p
@@ -634,32 +634,32 @@ export default function CryptoCalculator() {
                           ? "text-green-500"
                           : investmentCalc.pnl24h < 0
                             ? "text-red-500"
-                            : "text-[var(--color-text-primary)]",
+                            : "text-text-primary",
                       )}
                     >
                       {investmentCalc.pnl24h > 0 ? "+" : ""}$
                       {Math.abs(investmentCalc.pnl24h).toFixed(2)}
                     </p>
                   </div>
-                  <div className="p-3 rounded-lg bg-[var(--color-surface-secondary)]">
-                    <p className="text-xs text-[var(--color-text-tertiary)]">
+                  <div className="p-3 rounded-lg bg-surface-secondary">
+                    <p className="text-xs text-text-tertiary">
                       7d projection*
                     </p>
-                    <p className="text-lg font-bold text-[var(--color-text-primary)]">
+                    <p className="text-lg font-bold text-text-primary">
                       ${investmentCalc.weekProjection.toFixed(2)}
                     </p>
                   </div>
-                  <div className="p-3 rounded-lg bg-[var(--color-surface-secondary)]">
-                    <p className="text-xs text-[var(--color-text-tertiary)]">
+                  <div className="p-3 rounded-lg bg-surface-secondary">
+                    <p className="text-xs text-text-tertiary">
                       30d projection*
                     </p>
-                    <p className="text-lg font-bold text-[var(--color-text-primary)]">
+                    <p className="text-lg font-bold text-text-primary">
                       ${investmentCalc.monthProjection.toFixed(2)}
                     </p>
                   </div>
                 </div>
               )}
-              <p className="text-[10px] text-[var(--color-text-tertiary)]">
+              <p className="text-[10px] text-text-tertiary">
                 * Projections extrapolate the current 24h trend. Not financial
                 advice. Past performance does not indicate future results.
               </p>
@@ -671,10 +671,10 @@ export default function CryptoCalculator() {
       {/* Quick Rates Table */}
       {prices && (
         <Card className="p-6">
-          <h2 className="font-serif text-lg font-semibold text-[var(--color-text-primary)] mb-4">
+          <h2 className="font-serif text-lg font-semibold text-text-primary mb-4">
             Live Rates
           </h2>
-          <div className="divide-y divide-[var(--color-border)]">
+          <div className="divide-y divide-border">
             {POPULAR_COINS.map((coin) => {
               const coinData = prices[coin.id];
               if (!coinData) return null;
@@ -691,8 +691,8 @@ export default function CryptoCalculator() {
                   }}
                   className={cn(
                     "flex items-center justify-between w-full py-3 px-2 text-left rounded-lg",
-                    "hover:bg-[var(--color-surface-secondary)] transition-colors",
-                    fromCoin === coin.id && "bg-[var(--color-surface-secondary)]",
+                    "hover:bg-surface-secondary transition-colors",
+                    fromCoin === coin.id && "bg-surface-secondary",
                   )}
                 >
                   <span className="flex items-center gap-2">
@@ -700,15 +700,15 @@ export default function CryptoCalculator() {
                       className="w-2.5 h-2.5 rounded-full shrink-0"
                       style={{ backgroundColor: coin.color }}
                     />
-                    <span className="font-medium text-[var(--color-text-primary)]">
+                    <span className="font-medium text-text-primary">
                       {coin.symbol}
                     </span>
-                    <span className="text-[var(--color-text-tertiary)] font-normal text-sm hidden sm:inline">
+                    <span className="text-text-tertiary font-normal text-sm hidden sm:inline">
                       {coin.name}
                     </span>
                   </span>
                   <span className="flex items-center gap-3">
-                    <span className="font-medium text-[var(--color-text-primary)]">
+                    <span className="font-medium text-text-primary">
                       {fiatSym}
                       {price.toLocaleString("en-US", {
                         minimumFractionDigits: 2,
@@ -723,7 +723,7 @@ export default function CryptoCalculator() {
                             ? "text-green-500 dark:text-green-400"
                             : ch < 0
                               ? "text-red-500 dark:text-red-400"
-                              : "text-[var(--color-text-tertiary)]",
+                              : "text-text-tertiary",
                         )}
                       >
                         {ch > 0 ? "▲" : ch < 0 ? "▼" : ""}

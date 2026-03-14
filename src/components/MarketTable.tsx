@@ -190,18 +190,18 @@ export default function MarketTable({ coins }: { coins: CoinRow[] }) {
   };
 
   return (
-    <div className="overflow-x-auto rounded-lg border border-[var(--color-border)] -webkit-overflow-scrolling-touch">
+    <div className="overflow-x-auto rounded-lg border border-border -webkit-overflow-scrolling-touch">
       <table className="w-full text-sm min-w-[540px]">
         <thead>
-          <tr className="border-b border-[var(--color-border)] bg-[var(--color-surface)]">
+          <tr className="border-b border-border bg-(--color-surface)">
             {columns.map((col) => (
               <th
                 key={col.key}
                 className={cn(
-                  "cursor-pointer select-none whitespace-nowrap px-3 py-2.5 sm:px-4 sm:py-3 font-medium text-[var(--color-text-secondary)] transition-colors hover:text-[var(--color-text-primary)]",
+                  "cursor-pointer select-none whitespace-nowrap px-3 py-2.5 sm:px-4 sm:py-3 font-medium text-text-secondary transition-colors hover:text-text-primary",
                   col.align === "right" ? "text-right" : "text-left",
                   col.hideClass,
-                  col.key === "name" && "sticky left-0 z-10 bg-[var(--color-surface)]",
+                  col.key === "name" && "sticky left-0 z-10 bg-(--color-surface)",
                 )}
                 onClick={() => handleSort(col.key)}
               >
@@ -210,7 +210,7 @@ export default function MarketTable({ coins }: { coins: CoinRow[] }) {
               </th>
             ))}
             {/* Sparkline column — hidden on small screens */}
-            <th className="hidden xl:table-cell px-4 py-3 text-right font-medium text-[var(--color-text-secondary)]">
+            <th className="hidden xl:table-cell px-4 py-3 text-right font-medium text-text-secondary">
               7d Chart
             </th>
           </tr>
@@ -227,15 +227,15 @@ export default function MarketTable({ coins }: { coins: CoinRow[] }) {
               <tr
                 key={coin.id}
                 onClick={() => router.push(`/coin/${coin.id}`)}
-                className="group border-b border-[var(--color-border)] bg-[var(--color-surface)] transition-colors hover:bg-[var(--color-surface-secondary)] cursor-pointer"
+                className="group border-b border-border bg-(--color-surface) transition-colors hover:bg-surface-secondary cursor-pointer"
               >
                 {/* Rank */}
-                <td className="hidden sm:table-cell px-3 py-2.5 sm:px-4 sm:py-3 text-[var(--color-text-secondary)]">
+                <td className="hidden sm:table-cell px-3 py-2.5 sm:px-4 sm:py-3 text-text-secondary">
                   {coin.market_cap_rank}
                 </td>
 
                 {/* Coin name + icon — sticky on mobile */}
-                <td className="px-3 py-2.5 sm:px-4 sm:py-3 sticky left-0 z-10 bg-[var(--color-surface)] group-hover:bg-[var(--color-surface-secondary)] transition-colors">
+                <td className="px-3 py-2.5 sm:px-4 sm:py-3 sticky left-0 z-10 bg-(--color-surface) group-hover:bg-surface-secondary transition-colors">
                   <div className="flex items-center gap-2">
                     {coin.image && (
                       <img
@@ -247,17 +247,17 @@ export default function MarketTable({ coins }: { coins: CoinRow[] }) {
                         loading="lazy"
                       />
                     )}
-                    <span className="font-medium text-[var(--color-text-primary)] truncate max-w-[120px] sm:max-w-none">
+                    <span className="font-medium text-text-primary truncate max-w-[120px] sm:max-w-none">
                       {coin.name}
                     </span>
-                    <span className="uppercase text-[var(--color-text-tertiary)] text-xs hidden sm:inline">
+                    <span className="uppercase text-text-tertiary text-xs hidden sm:inline">
                       {coin.symbol}
                     </span>
                   </div>
                 </td>
 
                 {/* Price */}
-                <td className="px-3 py-2.5 sm:px-4 sm:py-3 text-right font-mono text-[var(--color-text-primary)]">
+                <td className="px-3 py-2.5 sm:px-4 sm:py-3 text-right font-mono text-text-primary">
                   {formatCurrency(coin.current_price)}
                 </td>
 
@@ -282,12 +282,12 @@ export default function MarketTable({ coins }: { coins: CoinRow[] }) {
                 </td>
 
                 {/* Market Cap */}
-                <td className="hidden lg:table-cell px-4 py-3 text-right text-[var(--color-text-secondary)]">
+                <td className="hidden lg:table-cell px-4 py-3 text-right text-text-secondary">
                   {formatLargeNumber(coin.market_cap, { prefix: "$" })}
                 </td>
 
                 {/* Volume */}
-                <td className="hidden lg:table-cell px-4 py-3 text-right text-[var(--color-text-secondary)]">
+                <td className="hidden lg:table-cell px-4 py-3 text-right text-text-secondary">
                   {formatLargeNumber(coin.total_volume, { prefix: "$" })}
                 </td>
 

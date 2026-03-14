@@ -144,7 +144,7 @@ export default async function DerivativesPage({ params }: Props) {
           <h1 className="font-serif text-3xl font-bold tracking-tight sm:text-4xl">
             Derivatives &amp; Liquidations
           </h1>
-          <p className="mt-2 text-[var(--color-text-secondary)]">
+          <p className="mt-2 text-text-secondary">
             Live liquidation feed, funding rates, open interest, and options
             data across major exchanges.
           </p>
@@ -159,11 +159,11 @@ export default async function DerivativesPage({ params }: Props) {
               return (
                 <Card key={card.label}>
                   <CardContent className="flex items-center gap-3 p-4">
-                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[var(--color-accent)]/10">
-                      <Icon className="h-5 w-5 text-[var(--color-accent)]" />
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-accent/10">
+                      <Icon className="h-5 w-5 text-accent" />
                     </div>
                     <div>
-                      <p className="text-xs text-[var(--color-text-secondary)]">
+                      <p className="text-xs text-text-secondary">
                         {card.label}
                       </p>
                       <p className="font-mono text-lg font-bold">
@@ -207,7 +207,7 @@ export default async function DerivativesPage({ params }: Props) {
                   {/* Put/Call Ratio Gauge */}
                   <div>
                     <div className="mb-1 flex items-center justify-between text-sm">
-                      <span className="text-[var(--color-text-secondary)]">
+                      <span className="text-text-secondary">
                         Put/Call Ratio
                       </span>
                       <span className="font-mono font-semibold">
@@ -215,7 +215,7 @@ export default async function DerivativesPage({ params }: Props) {
                       </span>
                     </div>
                     {btcPCR !== null && (
-                      <div className="relative h-3 w-full overflow-hidden rounded-full bg-[var(--color-surface-tertiary)]">
+                      <div className="relative h-3 w-full overflow-hidden rounded-full bg-surface-tertiary">
                         {/* Gauge: < 0.7 bullish (green), 0.7-1.0 neutral, > 1.0 bearish (red) */}
                         <div
                           className={`h-full rounded-full transition-all ${
@@ -230,17 +230,17 @@ export default async function DerivativesPage({ params }: Props) {
                           }}
                         />
                         {/* Center marker at 1.0 */}
-                        <div className="absolute left-1/2 top-0 h-full w-0.5 bg-[var(--color-text-tertiary)]" />
+                        <div className="absolute left-1/2 top-0 h-full w-0.5 bg-text-tertiary" />
                       </div>
                     )}
-                    <div className="mt-1 flex justify-between text-xs text-[var(--color-text-tertiary)]">
+                    <div className="mt-1 flex justify-between text-xs text-text-tertiary">
                       <span>Bullish</span>
                       <span>Bearish</span>
                     </div>
                   </div>
                   {/* Max Pain */}
                   <div className="flex items-center justify-between">
-                    <span className="text-sm text-[var(--color-text-secondary)]">
+                    <span className="text-sm text-text-secondary">
                       Max Pain
                     </span>
                     <span className="font-mono text-lg font-bold">
@@ -265,7 +265,7 @@ export default async function DerivativesPage({ params }: Props) {
                   {/* Put/Call Ratio Gauge */}
                   <div>
                     <div className="mb-1 flex items-center justify-between text-sm">
-                      <span className="text-[var(--color-text-secondary)]">
+                      <span className="text-text-secondary">
                         Put/Call Ratio
                       </span>
                       <span className="font-mono font-semibold">
@@ -273,7 +273,7 @@ export default async function DerivativesPage({ params }: Props) {
                       </span>
                     </div>
                     {ethPCR !== null && (
-                      <div className="relative h-3 w-full overflow-hidden rounded-full bg-[var(--color-surface-tertiary)]">
+                      <div className="relative h-3 w-full overflow-hidden rounded-full bg-surface-tertiary">
                         <div
                           className={`h-full rounded-full transition-all ${
                             ethPCR < 0.7
@@ -286,17 +286,17 @@ export default async function DerivativesPage({ params }: Props) {
                             width: `${Math.min(ethPCR * 50, 100)}%`,
                           }}
                         />
-                        <div className="absolute left-1/2 top-0 h-full w-0.5 bg-[var(--color-text-tertiary)]" />
+                        <div className="absolute left-1/2 top-0 h-full w-0.5 bg-text-tertiary" />
                       </div>
                     )}
-                    <div className="mt-1 flex justify-between text-xs text-[var(--color-text-tertiary)]">
+                    <div className="mt-1 flex justify-between text-xs text-text-tertiary">
                       <span>Bullish</span>
                       <span>Bearish</span>
                     </div>
                   </div>
                   {/* Max Pain */}
                   <div className="flex items-center justify-between">
-                    <span className="text-sm text-[var(--color-text-secondary)]">
+                    <span className="text-sm text-text-secondary">
                       Max Pain
                     </span>
                     <span className="font-mono text-lg font-bold">

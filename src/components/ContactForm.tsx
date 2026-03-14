@@ -122,7 +122,7 @@ export default function ContactForm() {
   }
 
   const inputClasses =
-    "w-full rounded-lg border bg-[var(--color-surface)] px-4 py-2.5 text-sm text-[var(--color-text-primary)] placeholder:text-[var(--color-text-tertiary)] focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)] focus:border-transparent transition-all";
+    "w-full rounded-lg border bg-(--color-surface) px-4 py-2.5 text-sm text-text-primary placeholder:text-text-tertiary focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all";
 
   const getInputBorderClass = (field: string) => {
     if (touched[field] && fieldErrors[field as keyof FieldErrors]) {
@@ -131,7 +131,7 @@ export default function ContactForm() {
     if (touched[field] && !fieldErrors[field as keyof FieldErrors]) {
       return "border-green-500/50";
     }
-    return "border-[var(--color-border)]";
+    return "border-border";
   };
 
   // Show success state after submit
@@ -141,10 +141,10 @@ export default function ContactForm() {
         <div className="inline-flex items-center justify-center h-16 w-16 rounded-full bg-green-500/10 text-green-500 mb-4">
           <CheckCircle className="h-8 w-8" />
         </div>
-        <h3 className="font-bold text-lg mb-2 text-[var(--color-text-primary)]">
+        <h3 className="font-bold text-lg mb-2 text-text-primary">
           Message Sent!
         </h3>
-        <p className="text-sm text-[var(--color-text-secondary)] mb-6 max-w-sm mx-auto">
+        <p className="text-sm text-text-secondary mb-6 max-w-sm mx-auto">
           Thank you for reaching out. We typically respond within 24-48 hours during business days.
         </p>
         <Button variant="outline" onClick={handleReset}>
@@ -182,7 +182,7 @@ export default function ContactForm() {
         <div>
           <label
             htmlFor="contact-name"
-            className="block text-sm font-medium text-[var(--color-text-primary)] mb-1.5"
+            className="block text-sm font-medium text-text-primary mb-1.5"
           >
             Name <span className="text-red-500">*</span>
           </label>
@@ -212,7 +212,7 @@ export default function ContactForm() {
         <div>
           <label
             htmlFor="contact-email"
-            className="block text-sm font-medium text-[var(--color-text-primary)] mb-1.5"
+            className="block text-sm font-medium text-text-primary mb-1.5"
           >
             Email <span className="text-red-500">*</span>
           </label>
@@ -244,7 +244,7 @@ export default function ContactForm() {
       <div>
         <label
           htmlFor="contact-subject"
-          className="block text-sm font-medium text-[var(--color-text-primary)] mb-1.5"
+          className="block text-sm font-medium text-text-primary mb-1.5"
         >
           Subject
         </label>
@@ -252,7 +252,7 @@ export default function ContactForm() {
           id="contact-subject"
           value={subject}
           onChange={(e) => setSubject(e.target.value)}
-          className={cn(inputClasses, "appearance-none cursor-pointer border-[var(--color-border)]")}
+          className={cn(inputClasses, "appearance-none cursor-pointer border-border")}
         >
           {subjects.map((s) => (
             <option key={s.value} value={s.value}>
@@ -265,7 +265,7 @@ export default function ContactForm() {
       <div>
         <label
           htmlFor="contact-message"
-          className="block text-sm font-medium text-[var(--color-text-primary)] mb-1.5"
+          className="block text-sm font-medium text-text-primary mb-1.5"
         >
           Message <span className="text-red-500">*</span>
         </label>
@@ -297,7 +297,7 @@ export default function ContactForm() {
           )}
           <p className={cn(
             "text-xs",
-            message.length > 4500 ? "text-amber-500" : "text-[var(--color-text-tertiary)]"
+            message.length > 4500 ? "text-amber-500" : "text-text-tertiary"
           )}>
             {message.length.toLocaleString()}/5,000
           </p>
@@ -323,7 +323,7 @@ export default function ContactForm() {
             </span>
           )}
         </Button>
-        <p className="text-xs text-[var(--color-text-tertiary)] hidden md:block">
+        <p className="text-xs text-text-tertiary hidden md:block">
           Typically responds in 24-48 hrs
         </p>
       </div>

@@ -60,7 +60,7 @@ function signalLabel(s: string): string {
 function signalColor(s: string): string {
   if (s === "strong_buy" || s === "buy") return "text-green-600 dark:text-green-400";
   if (s === "strong_sell" || s === "sell") return "text-red-600 dark:text-red-400";
-  return "text-[var(--color-text-secondary)]";
+  return "text-text-secondary";
 }
 
 function signalBg(s: string): string {
@@ -125,29 +125,29 @@ export default function TradingPageClient() {
     <div className="space-y-6">
       {/* Page header */}
       <div>
-        <h1 className="font-serif text-3xl font-bold text-[var(--color-text-primary)] sm:text-4xl">
+        <h1 className="font-serif text-3xl font-bold text-text-primary sm:text-4xl">
           Trading &amp; Charts
         </h1>
-        <p className="mt-2 text-sm text-[var(--color-text-secondary)]">
+        <p className="mt-2 text-sm text-text-secondary">
           Advanced charting, AI analysis, live order book, and trading signals
         </p>
       </div>
 
       {/* TradingView Ticker Tape */}
-      <div className="rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] overflow-hidden">
+      <div className="rounded-xl border border-border bg-(--color-surface) overflow-hidden">
         <TradingViewTicker />
       </div>
 
       {/* Chart Mode Toggle */}
       <div className="flex items-center gap-2">
-        <div className="flex items-center gap-0.5 rounded-lg bg-[var(--color-surface-secondary)] p-1 border border-[var(--color-border)]">
+        <div className="flex items-center gap-0.5 rounded-lg bg-surface-secondary p-1 border border-border">
           <button
             onClick={() => setChartMode("tradingview")}
             className={cn(
               "rounded-md px-3 py-1.5 text-xs font-medium transition-colors",
               chartMode === "tradingview"
-                ? "bg-[var(--color-accent)] text-white shadow-sm"
-                : "text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)]"
+                ? "bg-accent text-white shadow-sm"
+                : "text-text-secondary hover:text-text-primary"
             )}
           >
             TradingView
@@ -157,14 +157,14 @@ export default function TradingPageClient() {
             className={cn(
               "rounded-md px-3 py-1.5 text-xs font-medium transition-colors",
               chartMode === "lightweight"
-                ? "bg-[var(--color-accent)] text-white shadow-sm"
-                : "text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)]"
+                ? "bg-accent text-white shadow-sm"
+                : "text-text-secondary hover:text-text-primary"
             )}
           >
             Lightweight Chart
           </button>
         </div>
-        <span className="text-[10px] text-[var(--color-text-tertiary)] uppercase tracking-wider">
+        <span className="text-[10px] text-text-tertiary uppercase tracking-wider">
           Chart Engine
         </span>
       </div>
@@ -198,7 +198,7 @@ export default function TradingPageClient() {
 
           {/* AI Chart Analysis */}
           <section>
-            <h2 className="font-serif text-xl font-semibold text-[var(--color-text-primary)] mb-4">
+            <h2 className="font-serif text-xl font-semibold text-text-primary mb-4">
               AI Chart Analysis
             </h2>
             <ChartAnalysis coinId={coinId} timeframe="1d" />
@@ -221,10 +221,10 @@ export default function TradingPageClient() {
       {/* TradingView Mini Charts Grid */}
       <section>
         <div className="flex items-center gap-3 mb-4">
-          <h2 className="font-serif text-xl font-semibold text-[var(--color-text-primary)]">
+          <h2 className="font-serif text-xl font-semibold text-text-primary">
             Quick Charts
           </h2>
-          <Grid3x3 className="h-5 w-5 text-[var(--color-accent)]" />
+          <Grid3x3 className="h-5 w-5 text-accent" />
         </div>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           <TradingViewMiniChart symbol="BINANCE:BTCUSDT" height={200} dateRange="1M" />
@@ -237,10 +237,10 @@ export default function TradingPageClient() {
       {/* TradingView Crypto Heatmap */}
       <section>
         <div className="flex items-center gap-3 mb-4">
-          <h2 className="font-serif text-xl font-semibold text-[var(--color-text-primary)]">
+          <h2 className="font-serif text-xl font-semibold text-text-primary">
             Crypto Heatmap
           </h2>
-          <BarChart3 className="h-5 w-5 text-[var(--color-accent)]" />
+          <BarChart3 className="h-5 w-5 text-accent" />
         </div>
         <TradingViewHeatmap height={500} />
       </section>
@@ -248,10 +248,10 @@ export default function TradingPageClient() {
       {/* Trading Signals Feed */}
       <section>
         <div className="flex items-center gap-3 mb-4">
-          <h2 className="font-serif text-xl font-semibold text-[var(--color-text-primary)]">
+          <h2 className="font-serif text-xl font-semibold text-text-primary">
             Trading Signals
           </h2>
-          <Zap className="h-5 w-5 text-[var(--color-accent)]" />
+          <Zap className="h-5 w-5 text-accent" />
         </div>
 
         {signalsLoading && (
@@ -269,16 +269,16 @@ export default function TradingPageClient() {
         )}
 
         {signalsError && (
-          <div className="rounded-lg border border-[var(--color-border)] bg-[var(--color-surface-secondary)] p-6 text-center">
-            <AlertTriangle className="mx-auto mb-2 h-6 w-6 text-[var(--color-text-tertiary)]" />
-            <p className="text-sm text-[var(--color-text-secondary)]">{signalsError}</p>
+          <div className="rounded-lg border border-border bg-surface-secondary p-6 text-center">
+            <AlertTriangle className="mx-auto mb-2 h-6 w-6 text-text-tertiary" />
+            <p className="text-sm text-text-secondary">{signalsError}</p>
           </div>
         )}
 
         {!signalsLoading && !signalsError && signals.length === 0 && (
-          <div className="rounded-lg border border-[var(--color-border)] bg-[var(--color-surface-secondary)] p-6 text-center">
-            <Signal className="mx-auto mb-2 h-6 w-6 text-[var(--color-text-tertiary)]" />
-            <p className="text-sm text-[var(--color-text-secondary)]">
+          <div className="rounded-lg border border-border bg-surface-secondary p-6 text-center">
+            <Signal className="mx-auto mb-2 h-6 w-6 text-text-tertiary" />
+            <p className="text-sm text-text-secondary">
               No trading signals available at the moment.
             </p>
           </div>
@@ -291,7 +291,7 @@ export default function TradingPageClient() {
                 <CardContent className="p-4">
                   <div className="flex items-start justify-between mb-2">
                     <div className="flex items-center gap-2">
-                      <span className="text-sm font-bold text-[var(--color-text-primary)]">
+                      <span className="text-sm font-bold text-text-primary">
                         {sig.ticker}
                       </span>
                       <Badge className={cn("text-[10px]", signalBg(sig.signal))}>
@@ -314,10 +314,10 @@ export default function TradingPageClient() {
 
                   {/* Confidence bar */}
                   <div className="mb-2 flex items-center gap-2">
-                    <span className="text-[10px] uppercase tracking-wider text-[var(--color-text-tertiary)]">
+                    <span className="text-[10px] uppercase tracking-wider text-text-tertiary">
                       Confidence
                     </span>
-                    <div className="flex-1 h-1.5 rounded-full bg-[var(--color-surface-tertiary)]">
+                    <div className="flex-1 h-1.5 rounded-full bg-surface-tertiary">
                       <div
                         className={cn(
                           "h-full rounded-full transition-all",
@@ -330,18 +330,18 @@ export default function TradingPageClient() {
                         style={{ width: `${sig.confidence}%` }}
                       />
                     </div>
-                    <span className="text-xs font-medium text-[var(--color-text-primary)]">
+                    <span className="text-xs font-medium text-text-primary">
                       {sig.confidence}%
                     </span>
                   </div>
 
                   {/* Reasoning */}
-                  <p className="text-xs text-[var(--color-text-secondary)] line-clamp-2 mb-2">
+                  <p className="text-xs text-text-secondary line-clamp-2 mb-2">
                     {sig.reasoning}
                   </p>
 
                   {/* Footer: timeframe */}
-                  <div className="flex items-center gap-1.5 text-[var(--color-text-tertiary)]">
+                  <div className="flex items-center gap-1.5 text-text-tertiary">
                     <Clock className="h-3 w-3" />
                     <span className="text-[10px] uppercase tracking-wider">
                       {sig.timeframe}
@@ -354,8 +354,8 @@ export default function TradingPageClient() {
         )}
 
         {/* Disclaimer */}
-        <div className="mt-4 rounded-lg border border-[var(--color-border)] bg-[var(--color-surface-secondary)] p-3">
-          <p className="text-[10px] text-[var(--color-text-tertiary)]">
+        <div className="mt-4 rounded-lg border border-border bg-surface-secondary p-3">
+          <p className="text-[10px] text-text-tertiary">
             ⚠️ Trading signals are AI-generated from news analysis and are for informational
             purposes only. They do not constitute financial advice. Always do your own research
             (DYOR) before making any trading decisions.

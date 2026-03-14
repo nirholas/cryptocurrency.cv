@@ -52,7 +52,7 @@ function formatCompact(num: number): string {
 function MiniBar({ value, max, color }: { value: number; max: number; color: string }) {
   const pct = max > 0 ? Math.min(100, (value / max) * 100) : 0;
   return (
-    <div className="h-1 w-full rounded-full bg-[var(--color-border)] overflow-hidden">
+    <div className="h-1 w-full rounded-full bg-border overflow-hidden">
       <div
         className={cn("h-full rounded-full transition-all duration-500", color)}
         style={{ width: `${pct}%` }}
@@ -71,7 +71,7 @@ function MoverCard({ coin, rank, maxVolume }: { coin: Mover; rank: number; maxVo
   return (
     <Link
       href={`/coin/${coin.id}`}
-      className="group flex items-center gap-3 p-3 rounded-lg border border-[var(--color-border)] hover:border-[var(--color-accent)]/30 bg-[var(--color-surface)] hover:bg-[var(--color-surface-secondary)] transition-all duration-200"
+      className="group flex items-center gap-3 p-3 rounded-lg border border-border hover:border-accent/30 bg-(--color-surface) hover:bg-surface-secondary transition-all duration-200"
     >
       <span className={cn(
         "flex items-center justify-center w-7 h-7 rounded-full text-xs font-bold shrink-0",
@@ -83,16 +83,16 @@ function MoverCard({ coin, rank, maxVolume }: { coin: Mover; rank: number; maxVo
       <div className="flex-1 min-w-0">
         <div className="flex items-center gap-2">
           <span className="font-semibold text-sm truncate">{coin.symbol.toUpperCase()}</span>
-          <span className="text-xs text-[var(--color-text-tertiary)] truncate hidden sm:inline">
+          <span className="text-xs text-text-tertiary truncate hidden sm:inline">
             {coin.name}
           </span>
         </div>
         <div className="flex items-center gap-2 mt-0.5">
-          <span className="text-xs text-[var(--color-text-secondary)] tabular-nums">
+          <span className="text-xs text-text-secondary tabular-nums">
             {formatPrice(coin.price)}
           </span>
           {coin.volume24h && (
-            <span className="text-[10px] text-[var(--color-text-tertiary)]">
+            <span className="text-[10px] text-text-tertiary">
               Vol {formatCompact(coin.volume24h)}
             </span>
           )}
@@ -206,7 +206,7 @@ export default function MarketMovers() {
   );
 
   return (
-    <section className="border-b border-[var(--color-border)]">
+    <section className="border-b border-border">
       <div className="container-main py-8 lg:py-10">
         {/* Section header */}
         <div className="flex items-center justify-between mb-6">
@@ -215,14 +215,14 @@ export default function MarketMovers() {
               <Flame className="h-5 w-5 text-orange-500" />
               <h2 className="text-xl font-bold font-serif">Market Movers</h2>
             </div>
-            <div className="flex rounded-lg border border-[var(--color-border)] overflow-hidden">
+            <div className="flex rounded-lg border border-border overflow-hidden">
               <button
                 onClick={() => setTab("gainers")}
                 className={cn(
                   "flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium transition-colors cursor-pointer",
                   tab === "gainers"
                     ? "bg-emerald-500/10 text-emerald-500"
-                    : "text-[var(--color-text-tertiary)] hover:bg-[var(--color-surface-secondary)]"
+                    : "text-text-tertiary hover:bg-surface-secondary"
                 )}
               >
                 <TrendingUp className="h-3 w-3" />
@@ -231,10 +231,10 @@ export default function MarketMovers() {
               <button
                 onClick={() => setTab("losers")}
                 className={cn(
-                  "flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium transition-colors cursor-pointer border-l border-[var(--color-border)]",
+                  "flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium transition-colors cursor-pointer border-l border-border",
                   tab === "losers"
                     ? "bg-red-500/10 text-red-500"
-                    : "text-[var(--color-text-tertiary)] hover:bg-[var(--color-surface-secondary)]"
+                    : "text-text-tertiary hover:bg-surface-secondary"
                 )}
               >
                 <TrendingDown className="h-3 w-3" />
@@ -246,14 +246,14 @@ export default function MarketMovers() {
           <div className="flex items-center gap-2">
             <button
               onClick={handleRefresh}
-              className="p-2 rounded-md hover:bg-[var(--color-surface-secondary)] text-[var(--color-text-tertiary)] transition-colors cursor-pointer"
+              className="p-2 rounded-md hover:bg-surface-secondary text-text-tertiary transition-colors cursor-pointer"
               title="Refresh"
             >
               <RefreshCw className={cn("h-4 w-4", refreshing && "animate-spin")} />
             </button>
             <Link
               href="/screener"
-              className="hidden sm:flex items-center gap-1 text-xs font-medium text-[var(--color-accent)] hover:text-[var(--color-accent-hover)] transition-colors"
+              className="hidden sm:flex items-center gap-1 text-xs font-medium text-accent hover:text-accent-hover transition-colors"
             >
               Full Screener
               <ArrowRight className="h-3 w-3" />
@@ -267,14 +267,14 @@ export default function MarketMovers() {
             {Array.from({ length: 10 }).map((_, i) => (
               <div
                 key={i}
-                className="h-[88px] rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] animate-pulse"
+                className="h-[88px] rounded-lg border border-border bg-(--color-surface) animate-pulse"
               />
             ))}
           </div>
         ) : activeList.length === 0 ? (
           <div className="flex flex-col items-center justify-center py-12 text-center">
-            <BarChart3 className="h-8 w-8 text-[var(--color-text-tertiary)] mb-3 opacity-40" />
-            <p className="text-sm text-[var(--color-text-tertiary)]">
+            <BarChart3 className="h-8 w-8 text-text-tertiary mb-3 opacity-40" />
+            <p className="text-sm text-text-tertiary">
               Market data temporarily unavailable
             </p>
           </div>

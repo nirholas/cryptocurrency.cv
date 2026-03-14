@@ -380,12 +380,12 @@ import { CryptoWidget } from '@nicholasgriffintn/crypto-widget-vue';
             </div>
             <div>
               <h1 className="text-3xl font-bold">Widget Builder</h1>
-              <p className="text-[var(--color-text-secondary)] text-sm">
+              <p className="text-text-secondary text-sm">
                 Create free embeddable crypto widgets for any website
               </p>
             </div>
           </div>
-          <p className="text-[var(--color-text-tertiary)] text-sm mt-3 max-w-2xl">
+          <p className="text-text-tertiary text-sm mt-3 max-w-2xl">
             Configure your widget, preview it live, and grab the embed code.
             Works everywhere — WordPress, React, Vue, static HTML, and more. No
             API key required.
@@ -394,17 +394,17 @@ import { CryptoWidget } from '@nicholasgriffintn/crypto-widget-vue';
 
         {/* Quick Start Templates */}
         {showTemplates && (
-          <div className="mb-8 rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] p-6">
+          <div className="mb-8 rounded-xl border border-border bg-(--color-surface) p-6">
             <div className="flex items-center justify-between mb-4">
               <div>
                 <h2 className="text-lg font-semibold">Quick Start Templates</h2>
-                <p className="text-sm text-[var(--color-text-tertiary)] mt-0.5">
+                <p className="text-sm text-text-tertiary mt-0.5">
                   Choose a pre-configured template or start from scratch
                 </p>
               </div>
               <button
                 onClick={() => setShowTemplates(false)}
-                className="text-xs text-[var(--color-text-tertiary)] hover:text-[var(--color-text-primary)] transition-colors px-3 py-1.5 rounded-lg hover:bg-[var(--color-surface-secondary)]"
+                className="text-xs text-text-tertiary hover:text-text-primary transition-colors px-3 py-1.5 rounded-lg hover:bg-surface-secondary"
               >
                 Skip →
               </button>
@@ -414,14 +414,14 @@ import { CryptoWidget } from '@nicholasgriffintn/crypto-widget-vue';
                 <button
                   key={template.name}
                   onClick={() => applyTemplate(template)}
-                  className="flex items-start gap-3 p-4 rounded-lg border border-[var(--color-border)] hover:border-blue-500/50 hover:bg-blue-500/5 text-left transition-all group"
+                  className="flex items-start gap-3 p-4 rounded-lg border border-border hover:border-blue-500/50 hover:bg-blue-500/5 text-left transition-all group"
                 >
                   <span className="text-2xl mt-0.5 group-hover:scale-110 transition-transform">
                     {template.icon}
                   </span>
                   <div>
                     <div className="font-semibold text-sm">{template.name}</div>
-                    <div className="text-xs text-[var(--color-text-tertiary)] mt-0.5">
+                    <div className="text-xs text-text-tertiary mt-0.5">
                       {template.description}
                     </div>
                   </div>
@@ -435,7 +435,7 @@ import { CryptoWidget } from '@nicholasgriffintn/crypto-widget-vue';
           {/* LEFT: Configuration Panel */}
           <div className="space-y-4">
             {/* Widget Type Selector */}
-            <div className="rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] p-6">
+            <div className="rounded-xl border border-border bg-(--color-surface) p-6">
               <h2 className="text-lg font-semibold mb-4">Widget Type</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {WIDGET_TYPES.map((wt) => (
@@ -445,13 +445,13 @@ import { CryptoWidget } from '@nicholasgriffintn/crypto-widget-vue';
                     className={`flex items-start gap-3 p-4 rounded-lg border text-left transition-all ${
                       config.type === wt.id
                         ? "border-blue-500 bg-blue-500/10 ring-1 ring-blue-500"
-                        : "border-[var(--color-border)] hover:border-blue-500/50 hover:bg-[var(--color-surface-secondary)]"
+                        : "border-border hover:border-blue-500/50 hover:bg-surface-secondary"
                     }`}
                   >
                     <span className="text-2xl">{wt.icon}</span>
                     <div>
                       <div className="font-semibold text-sm">{wt.name}</div>
-                      <div className="text-xs text-[var(--color-text-tertiary)] mt-0.5">
+                      <div className="text-xs text-text-tertiary mt-0.5">
                         {wt.description}
                       </div>
                     </div>
@@ -461,12 +461,12 @@ import { CryptoWidget } from '@nicholasgriffintn/crypto-widget-vue';
             </div>
 
             {/* Theme & Layout */}
-            <div className="rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] p-6">
+            <div className="rounded-xl border border-border bg-(--color-surface) p-6">
               <h2 className="text-lg font-semibold mb-4">Appearance</h2>
               <div className="space-y-5">
                 {/* Theme */}
                 <div>
-                  <span className="text-sm font-medium mb-2 block text-[var(--color-text-secondary)]">
+                  <span className="text-sm font-medium mb-2 block text-text-secondary">
                     Theme
                   </span>
                   <div className="flex gap-2">
@@ -477,7 +477,7 @@ import { CryptoWidget } from '@nicholasgriffintn/crypto-widget-vue';
                         className={`px-4 py-2 rounded-lg text-sm font-medium capitalize transition-all ${
                           config.theme === t
                             ? "bg-blue-500 text-white shadow-lg shadow-blue-500/25"
-                            : "bg-[var(--color-surface-secondary)] hover:bg-[var(--color-surface-secondary)]/80 text-[var(--color-text-primary)]"
+                            : "bg-surface-secondary hover:bg-surface-secondary/80 text-text-primary"
                         }`}
                       >
                         {t === "auto"
@@ -492,7 +492,7 @@ import { CryptoWidget } from '@nicholasgriffintn/crypto-widget-vue';
 
                 {/* Accent Color */}
                 <div>
-                  <span className="text-sm font-medium mb-2 block text-[var(--color-text-secondary)]">
+                  <span className="text-sm font-medium mb-2 block text-text-secondary">
                     Accent Color
                   </span>
                   <div className="flex flex-wrap gap-2">
@@ -503,7 +503,7 @@ import { CryptoWidget } from '@nicholasgriffintn/crypto-widget-vue';
                         title={color.label}
                         className={`w-8 h-8 rounded-full transition-all ${
                           config.accentColor === color.value
-                            ? "ring-2 ring-offset-2 ring-offset-[var(--color-surface)] scale-110"
+                            ? "ring-2 ring-offset-2 ring-offset-(--color-surface) scale-110"
                             : "hover:scale-110"
                         }`}
                         style={{ backgroundColor: color.value }}
@@ -511,7 +511,7 @@ import { CryptoWidget } from '@nicholasgriffintn/crypto-widget-vue';
                     ))}
                     <label
                       title="Custom color"
-                      className="relative w-8 h-8 rounded-full border-2 border-dashed border-[var(--color-border)] hover:border-[var(--color-text-tertiary)] cursor-pointer flex items-center justify-center transition-all hover:scale-110"
+                      className="relative w-8 h-8 rounded-full border-2 border-dashed border-border hover:border-text-tertiary cursor-pointer flex items-center justify-center transition-all hover:scale-110"
                     >
                       <span className="text-xs">🎨</span>
                       <input
@@ -528,7 +528,7 @@ import { CryptoWidget } from '@nicholasgriffintn/crypto-widget-vue';
 
                 {/* Border Radius */}
                 <div>
-                  <span className="text-sm font-medium mb-2 block text-[var(--color-text-secondary)]">
+                  <span className="text-sm font-medium mb-2 block text-text-secondary">
                     Border Radius: {config.borderRadius}px
                   </span>
                   <input
@@ -541,7 +541,7 @@ import { CryptoWidget } from '@nicholasgriffintn/crypto-widget-vue';
                     }
                     className="w-full accent-blue-500"
                   />
-                  <div className="flex justify-between text-[10px] text-[var(--color-text-tertiary)] mt-1">
+                  <div className="flex justify-between text-[10px] text-text-tertiary mt-1">
                     <span>Square</span>
                     <span>Rounded</span>
                   </div>
@@ -549,7 +549,7 @@ import { CryptoWidget } from '@nicholasgriffintn/crypto-widget-vue';
 
                 {/* Width */}
                 <div>
-                  <span className="text-sm font-medium mb-2 block text-[var(--color-text-secondary)]">
+                  <span className="text-sm font-medium mb-2 block text-text-secondary">
                     Width
                   </span>
                   <div className="flex gap-2">
@@ -560,7 +560,7 @@ import { CryptoWidget } from '@nicholasgriffintn/crypto-widget-vue';
                         className={`px-4 py-2 rounded-lg text-sm font-medium capitalize transition-all ${
                           config.width === w
                             ? "bg-blue-500 text-white shadow-lg shadow-blue-500/25"
-                            : "bg-[var(--color-surface-secondary)] hover:bg-[var(--color-surface-secondary)]/80 text-[var(--color-text-primary)]"
+                            : "bg-surface-secondary hover:bg-surface-secondary/80 text-text-primary"
                         }`}
                       >
                         {w}
@@ -579,7 +579,7 @@ import { CryptoWidget } from '@nicholasgriffintn/crypto-widget-vue';
                         }
                         className="w-full accent-blue-500"
                       />
-                      <div className="text-xs text-[var(--color-text-tertiary)] mt-1">
+                      <div className="text-xs text-text-tertiary mt-1">
                         {config.fixedWidth}px
                       </div>
                     </div>
@@ -596,7 +596,7 @@ import { CryptoWidget } from '@nicholasgriffintn/crypto-widget-vue';
                     }
                     className="w-4 h-4 rounded accent-blue-500"
                   />
-                  <span className="text-sm text-[var(--color-text-secondary)]">
+                  <span className="text-sm text-text-secondary">
                     Transparent background
                   </span>
                 </label>
@@ -607,12 +607,12 @@ import { CryptoWidget } from '@nicholasgriffintn/crypto-widget-vue';
             {(config.type === "news" ||
               config.type === "coin" ||
               config.type === "chart") && (
-              <div className="rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] p-6">
+              <div className="rounded-xl border border-border bg-(--color-surface) p-6">
                 <h2 className="text-lg font-semibold mb-4">Widget Options</h2>
                 <div className="space-y-4">
                   {config.type === "news" && (
                     <div>
-                      <span className="text-sm font-medium mb-2 block text-[var(--color-text-secondary)]">
+                      <span className="text-sm font-medium mb-2 block text-text-secondary">
                         Number of Articles
                       </span>
                       <div className="flex gap-2">
@@ -623,7 +623,7 @@ import { CryptoWidget } from '@nicholasgriffintn/crypto-widget-vue';
                             className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
                               config.count === c
                                 ? "bg-blue-500 text-white shadow-lg shadow-blue-500/25"
-                                : "bg-[var(--color-surface-secondary)] hover:bg-[var(--color-surface-secondary)]/80 text-[var(--color-text-primary)]"
+                                : "bg-surface-secondary hover:bg-surface-secondary/80 text-text-primary"
                             }`}
                           >
                             {c}
@@ -635,13 +635,13 @@ import { CryptoWidget } from '@nicholasgriffintn/crypto-widget-vue';
 
                   {config.type === "coin" && (
                     <div>
-                      <span className="text-sm font-medium mb-2 block text-[var(--color-text-secondary)]">
+                      <span className="text-sm font-medium mb-2 block text-text-secondary">
                         Select Coin
                       </span>
                       <select
                         value={config.coin}
                         onChange={(e) => updateConfig("coin", e.target.value)}
-                        className="w-full p-2.5 rounded-lg border border-[var(--color-border)] bg-[var(--color-surface-secondary)] text-[var(--color-text-primary)] text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        className="w-full p-2.5 rounded-lg border border-border bg-surface-secondary text-text-primary text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
                       >
                         {POPULAR_COINS.map((c) => (
                           <option key={c.id} value={c.id}>
@@ -655,7 +655,7 @@ import { CryptoWidget } from '@nicholasgriffintn/crypto-widget-vue';
                   {config.type === "chart" && (
                     <>
                       <div>
-                        <span className="text-sm font-medium mb-2 block text-[var(--color-text-secondary)]">
+                        <span className="text-sm font-medium mb-2 block text-text-secondary">
                           Trading Pair
                         </span>
                         <select
@@ -663,7 +663,7 @@ import { CryptoWidget } from '@nicholasgriffintn/crypto-widget-vue';
                           onChange={(e) =>
                             updateConfig("symbol", e.target.value)
                           }
-                          className="w-full p-2.5 rounded-lg border border-[var(--color-border)] bg-[var(--color-surface-secondary)] text-[var(--color-text-primary)] text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                          className="w-full p-2.5 rounded-lg border border-border bg-surface-secondary text-text-primary text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
                         >
                           <option value="BINANCE:BTCUSDT">BTC / USDT</option>
                           <option value="BINANCE:ETHUSDT">ETH / USDT</option>
@@ -678,7 +678,7 @@ import { CryptoWidget } from '@nicholasgriffintn/crypto-widget-vue';
                         </select>
                       </div>
                       <div>
-                        <span className="text-sm font-medium mb-2 block text-[var(--color-text-secondary)]">
+                        <span className="text-sm font-medium mb-2 block text-text-secondary">
                           Default Interval
                         </span>
                         <div className="flex flex-wrap gap-2">
@@ -697,7 +697,7 @@ import { CryptoWidget } from '@nicholasgriffintn/crypto-widget-vue';
                               className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-all ${
                                 config.interval === i.value
                                   ? "bg-blue-500 text-white shadow-lg shadow-blue-500/25"
-                                  : "bg-[var(--color-surface-secondary)] hover:bg-[var(--color-surface-secondary)]/80 text-[var(--color-text-primary)]"
+                                  : "bg-surface-secondary hover:bg-surface-secondary/80 text-text-primary"
                               }`}
                             >
                               {i.label}
@@ -712,7 +712,7 @@ import { CryptoWidget } from '@nicholasgriffintn/crypto-widget-vue';
             )}
 
             {/* Display & Behavior Options */}
-            <div className="rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] p-6">
+            <div className="rounded-xl border border-border bg-(--color-surface) p-6">
               <h2 className="text-lg font-semibold mb-4">
                 Display &amp; Behavior
               </h2>
@@ -728,7 +728,7 @@ import { CryptoWidget } from '@nicholasgriffintn/crypto-widget-vue';
                         }
                         className="w-4 h-4 rounded accent-blue-500"
                       />
-                      <span className="text-sm text-[var(--color-text-secondary)]">
+                      <span className="text-sm text-text-secondary">
                         Show title
                       </span>
                     </label>
@@ -737,7 +737,7 @@ import { CryptoWidget } from '@nicholasgriffintn/crypto-widget-vue';
 
                 {/* Auto-refresh */}
                 <div>
-                  <span className="text-sm font-medium mb-2 block text-[var(--color-text-secondary)]">
+                  <span className="text-sm font-medium mb-2 block text-text-secondary">
                     Auto-refresh Interval
                   </span>
                   <div className="flex flex-wrap gap-2">
@@ -748,7 +748,7 @@ import { CryptoWidget } from '@nicholasgriffintn/crypto-widget-vue';
                         className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-all ${
                           config.refreshInterval === r.value
                             ? "bg-blue-500 text-white shadow-lg shadow-blue-500/25"
-                            : "bg-[var(--color-surface-secondary)] hover:bg-[var(--color-surface-secondary)]/80 text-[var(--color-text-primary)]"
+                            : "bg-surface-secondary hover:bg-surface-secondary/80 text-text-primary"
                         }`}
                       >
                         {r.label}
@@ -759,13 +759,13 @@ import { CryptoWidget } from '@nicholasgriffintn/crypto-widget-vue';
 
                 {/* Locale */}
                 <div>
-                  <span className="text-sm font-medium mb-2 block text-[var(--color-text-secondary)]">
+                  <span className="text-sm font-medium mb-2 block text-text-secondary">
                     Language
                   </span>
                   <select
                     value={config.locale}
                     onChange={(e) => updateConfig("locale", e.target.value)}
-                    className="w-full p-2.5 rounded-lg border border-[var(--color-border)] bg-[var(--color-surface-secondary)] text-[var(--color-text-primary)] text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full p-2.5 rounded-lg border border-border bg-surface-secondary text-text-primary text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
                   >
                     {LOCALE_OPTIONS.map((l) => (
                       <option key={l.value} value={l.value}>
@@ -782,7 +782,7 @@ import { CryptoWidget } from '@nicholasgriffintn/crypto-widget-vue';
               {!showTemplates && (
                 <button
                   onClick={() => setShowTemplates(true)}
-                  className="flex-1 py-2.5 rounded-lg border border-[var(--color-border)] text-sm font-medium text-[var(--color-text-secondary)] hover:bg-[var(--color-surface-secondary)] transition-all"
+                  className="flex-1 py-2.5 rounded-lg border border-border text-sm font-medium text-text-secondary hover:bg-surface-secondary transition-all"
                 >
                   ← Browse Templates
                 </button>
@@ -807,7 +807,7 @@ import { CryptoWidget } from '@nicholasgriffintn/crypto-widget-vue';
                     locale: "en",
                   })
                 }
-                className="flex-1 py-2.5 rounded-lg border border-[var(--color-border)] text-sm font-medium text-[var(--color-text-secondary)] hover:bg-[var(--color-surface-secondary)] transition-all"
+                className="flex-1 py-2.5 rounded-lg border border-border text-sm font-medium text-text-secondary hover:bg-surface-secondary transition-all"
               >
                 Reset to Defaults
               </button>
@@ -817,7 +817,7 @@ import { CryptoWidget } from '@nicholasgriffintn/crypto-widget-vue';
           {/* RIGHT: Preview + Embed Code */}
           <div className="space-y-4">
             {/* Live Preview */}
-            <div className="rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] p-6 lg:sticky lg:top-20">
+            <div className="rounded-xl border border-border bg-(--color-surface) p-6 lg:sticky lg:top-20">
               <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center gap-3">
                   <h2 className="text-lg font-semibold">Live Preview</h2>
@@ -826,7 +826,7 @@ import { CryptoWidget } from '@nicholasgriffintn/crypto-widget-vue';
                   </span>
                 </div>
                 {/* Device Preview Toggle */}
-                <div className="flex items-center gap-1 bg-[var(--color-surface-secondary)] rounded-lg p-0.5">
+                <div className="flex items-center gap-1 bg-surface-secondary rounded-lg p-0.5">
                   {[
                     { id: "desktop" as const, label: "🖥️", title: "Desktop" },
                     { id: "tablet" as const, label: "📱", title: "Tablet" },
@@ -838,8 +838,8 @@ import { CryptoWidget } from '@nicholasgriffintn/crypto-widget-vue';
                       title={device.title}
                       className={`px-2 py-1 rounded-md text-sm transition-all ${
                         previewDevice === device.id
-                          ? "bg-[var(--color-surface)] shadow-sm"
-                          : "hover:bg-[var(--color-surface)]/50"
+                          ? "bg-(--color-surface) shadow-sm"
+                          : "hover:bg-(--color-surface)/50"
                       }`}
                     >
                       {device.label}
@@ -851,7 +851,7 @@ import { CryptoWidget } from '@nicholasgriffintn/crypto-widget-vue';
               {/* Preview container with device frame */}
               <div className="flex justify-center">
                 <div
-                  className="rounded-lg border border-[var(--color-border)] overflow-hidden bg-[var(--color-surface-secondary)]/30 transition-all duration-300"
+                  className="rounded-lg border border-border overflow-hidden bg-surface-secondary/30 transition-all duration-300"
                   style={{
                     width: previewWidth ? `${previewWidth}px` : "100%",
                     maxWidth: "100%",
@@ -881,7 +881,7 @@ import { CryptoWidget } from '@nicholasgriffintn/crypto-widget-vue';
               </div>
 
               {/* Widget info bar */}
-              <div className="mt-4 flex items-center justify-between text-xs text-[var(--color-text-tertiary)]">
+              <div className="mt-4 flex items-center justify-between text-xs text-text-tertiary">
                 <div className="flex items-center gap-3">
                   <span>
                     {currentWidget.icon} {currentWidget.name}
@@ -904,7 +904,7 @@ import { CryptoWidget } from '@nicholasgriffintn/crypto-widget-vue';
             </div>
 
             {/* Embed Code with Tabs */}
-            <div className="rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] p-6">
+            <div className="rounded-xl border border-border bg-(--color-surface) p-6">
               <div className="flex items-center justify-between mb-4">
                 <h2 className="text-lg font-semibold">Embed Code</h2>
                 <button
@@ -920,7 +920,7 @@ import { CryptoWidget } from '@nicholasgriffintn/crypto-widget-vue';
               </div>
 
               {/* Tab bar */}
-              <div className="flex flex-wrap gap-1 mb-4 bg-[var(--color-surface-secondary)] rounded-lg p-1">
+              <div className="flex flex-wrap gap-1 mb-4 bg-surface-secondary rounded-lg p-1">
                 {[
                   { id: "iframe" as const, label: "HTML" },
                   { id: "script" as const, label: "Script" },
@@ -933,8 +933,8 @@ import { CryptoWidget } from '@nicholasgriffintn/crypto-widget-vue';
                     onClick={() => setEmbedTab(tab.id)}
                     className={`px-3 py-1.5 rounded-md text-xs font-medium transition-all ${
                       embedTab === tab.id
-                        ? "bg-[var(--color-surface)] text-[var(--color-text-primary)] shadow-sm"
-                        : "text-[var(--color-text-tertiary)] hover:text-[var(--color-text-secondary)]"
+                        ? "bg-(--color-surface) text-text-primary shadow-sm"
+                        : "text-text-tertiary hover:text-text-secondary"
                     }`}
                   >
                     {tab.label}
@@ -943,35 +943,35 @@ import { CryptoWidget } from '@nicholasgriffintn/crypto-widget-vue';
               </div>
 
               <div className="relative">
-                <pre className="bg-[var(--color-surface-secondary)] rounded-lg p-4 text-xs overflow-x-auto font-mono leading-relaxed text-[var(--color-text-secondary)] max-h-64 overflow-y-auto">
+                <pre className="bg-surface-secondary rounded-lg p-4 text-xs overflow-x-auto font-mono leading-relaxed text-text-secondary max-h-64 overflow-y-auto">
                   <code>{getEmbedCode()}</code>
                 </pre>
               </div>
 
               {embedTab === "script" && (
-                <p className="text-xs text-[var(--color-text-tertiary)] mt-3">
+                <p className="text-xs text-text-tertiary mt-3">
                   The script tag automatically creates an iframe and handles
                   resizing. Just paste it where you want the widget to appear.
                 </p>
               )}
               {embedTab === "react" && (
-                <p className="text-xs text-[var(--color-text-tertiary)] mt-3">
+                <p className="text-xs text-text-tertiary mt-3">
                   Install:{" "}
-                  <code className="bg-[var(--color-surface-secondary)] px-1.5 py-0.5 rounded text-xs">
+                  <code className="bg-surface-secondary px-1.5 py-0.5 rounded text-xs">
                     npm install @nicholasgriffintn/crypto-widget-react
                   </code>
                 </p>
               )}
               {embedTab === "vue" && (
-                <p className="text-xs text-[var(--color-text-tertiary)] mt-3">
+                <p className="text-xs text-text-tertiary mt-3">
                   Install:{" "}
-                  <code className="bg-[var(--color-surface-secondary)] px-1.5 py-0.5 rounded text-xs">
+                  <code className="bg-surface-secondary px-1.5 py-0.5 rounded text-xs">
                     npm install @nicholasgriffintn/crypto-widget-vue
                   </code>
                 </p>
               )}
               {embedTab === "wordpress" && (
-                <p className="text-xs text-[var(--color-text-tertiary)] mt-3">
+                <p className="text-xs text-text-tertiary mt-3">
                   Paste this shortcode into any post or page. Requires the
                   Crypto Vision News WordPress plugin.
                 </p>
@@ -979,14 +979,14 @@ import { CryptoWidget } from '@nicholasgriffintn/crypto-widget-vue';
             </div>
 
             {/* Usage Tips */}
-            <div className="rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] p-6">
+            <div className="rounded-xl border border-border bg-(--color-surface) p-6">
               <button
                 onClick={() => toggleSection("tips")}
                 className="flex items-center justify-between w-full text-left"
               >
                 <h2 className="text-lg font-semibold">Usage Tips</h2>
                 <svg
-                  className={`w-4 h-4 text-[var(--color-text-tertiary)] transition-transform ${activeSection === "tips" ? "rotate-180" : ""}`}
+                  className={`w-4 h-4 text-text-tertiary transition-transform ${activeSection === "tips" ? "rotate-180" : ""}`}
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -1000,7 +1000,7 @@ import { CryptoWidget } from '@nicholasgriffintn/crypto-widget-vue';
                 </svg>
               </button>
               {activeSection === "tips" && (
-                <ul className="text-sm text-[var(--color-text-secondary)] space-y-2 mt-4">
+                <ul className="text-sm text-text-secondary space-y-2 mt-4">
                   <li className="flex items-start gap-2">
                     <span className="text-green-500 mt-0.5">✓</span>
                     Widgets auto-refresh data based on your interval setting
@@ -1008,7 +1008,7 @@ import { CryptoWidget } from '@nicholasgriffintn/crypto-widget-vue';
                   <li className="flex items-start gap-2">
                     <span className="text-green-500 mt-0.5">✓</span>
                     Use{" "}
-                    <code className="bg-[var(--color-surface-secondary)] px-1.5 py-0.5 rounded text-xs">
+                    <code className="bg-surface-secondary px-1.5 py-0.5 rounded text-xs">
                       theme=auto
                     </code>{" "}
                     to match your site&apos;s color scheme
@@ -1046,7 +1046,7 @@ import { CryptoWidget } from '@nicholasgriffintn/crypto-widget-vue';
             </div>
 
             {/* FAQ */}
-            <div className="rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] p-6">
+            <div className="rounded-xl border border-border bg-(--color-surface) p-6">
               <button
                 onClick={() => toggleSection("faq")}
                 className="flex items-center justify-between w-full text-left"
@@ -1055,7 +1055,7 @@ import { CryptoWidget } from '@nicholasgriffintn/crypto-widget-vue';
                   Frequently Asked Questions
                 </h2>
                 <svg
-                  className={`w-4 h-4 text-[var(--color-text-tertiary)] transition-transform ${activeSection === "faq" ? "rotate-180" : ""}`}
+                  className={`w-4 h-4 text-text-tertiary transition-transform ${activeSection === "faq" ? "rotate-180" : ""}`}
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -1071,49 +1071,49 @@ import { CryptoWidget } from '@nicholasgriffintn/crypto-widget-vue';
               {activeSection === "faq" && (
                 <div className="space-y-4 mt-4">
                   <div>
-                    <h3 className="text-sm font-medium text-[var(--color-text-primary)]">
+                    <h3 className="text-sm font-medium text-text-primary">
                       Is this really free?
                     </h3>
-                    <p className="text-sm text-[var(--color-text-tertiary)] mt-1">
+                    <p className="text-sm text-text-tertiary mt-1">
                       Yes! All widgets are completely free with no API key
                       required. The &quot;Powered by&quot; branding is required
                       and always displayed on all widgets.
                     </p>
                   </div>
                   <div>
-                    <h3 className="text-sm font-medium text-[var(--color-text-primary)]">
+                    <h3 className="text-sm font-medium text-text-primary">
                       Can I use these on commercial sites?
                     </h3>
-                    <p className="text-sm text-[var(--color-text-tertiary)] mt-1">
+                    <p className="text-sm text-text-tertiary mt-1">
                       Absolutely. Widgets are free for both personal and
                       commercial use.
                     </p>
                   </div>
                   <div>
-                    <h3 className="text-sm font-medium text-[var(--color-text-primary)]">
+                    <h3 className="text-sm font-medium text-text-primary">
                       How often does the data update?
                     </h3>
-                    <p className="text-sm text-[var(--color-text-tertiary)] mt-1">
+                    <p className="text-sm text-text-tertiary mt-1">
                       Widgets auto-refresh based on your configured interval (30
                       seconds to 10 minutes). Price data is sourced from major
                       exchanges in real-time.
                     </p>
                   </div>
                   <div>
-                    <h3 className="text-sm font-medium text-[var(--color-text-primary)]">
+                    <h3 className="text-sm font-medium text-text-primary">
                       Can I customize the styling further?
                     </h3>
-                    <p className="text-sm text-[var(--color-text-tertiary)] mt-1">
+                    <p className="text-sm text-text-tertiary mt-1">
                       Yes — theme, accent color, border radius, and transparency
                       are all configurable. For advanced CSS customization, use
                       the script embed which gives more control.
                     </p>
                   </div>
                   <div>
-                    <h3 className="text-sm font-medium text-[var(--color-text-primary)]">
+                    <h3 className="text-sm font-medium text-text-primary">
                       Do widgets work on mobile?
                     </h3>
-                    <p className="text-sm text-[var(--color-text-tertiary)] mt-1">
+                    <p className="text-sm text-text-tertiary mt-1">
                       Yes, all widgets are fully responsive. Use the preview
                       device toggle above to see how they look on different
                       screen sizes.

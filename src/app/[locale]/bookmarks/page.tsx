@@ -51,7 +51,7 @@ export default function BookmarksPage() {
             <h1 className="font-serif text-3xl font-bold tracking-tight">
               Bookmarks
             </h1>
-            <p className="text-[var(--color-text-secondary)] text-sm mt-1">
+            <p className="text-text-secondary text-sm mt-1">
               {bookmarks.length} saved article{bookmarks.length !== 1 ? "s" : ""}
             </p>
           </div>
@@ -60,7 +60,7 @@ export default function BookmarksPage() {
             <div className="relative">
               {showConfirmClear ? (
                 <div className="flex items-center gap-2">
-                  <span className="text-sm text-[var(--color-text-secondary)]">
+                  <span className="text-sm text-text-secondary">
                     Clear all bookmarks?
                   </span>
                   <button
@@ -76,7 +76,7 @@ export default function BookmarksPage() {
                   <button
                     type="button"
                     onClick={() => setShowConfirmClear(false)}
-                    className="rounded-md border border-[var(--color-border)] px-3 py-1.5 text-sm font-medium hover:bg-[var(--color-surface)] transition-colors"
+                    className="rounded-md border border-border px-3 py-1.5 text-sm font-medium hover:bg-(--color-surface) transition-colors"
                   >
                     Cancel
                   </button>
@@ -85,7 +85,7 @@ export default function BookmarksPage() {
                 <button
                   type="button"
                   onClick={() => setShowConfirmClear(true)}
-                  className="rounded-md border border-[var(--color-border)] px-3 py-1.5 text-sm font-medium text-[var(--color-text-secondary)] hover:border-red-500 hover:text-red-500 transition-colors"
+                  className="rounded-md border border-border px-3 py-1.5 text-sm font-medium text-text-secondary hover:border-red-500 hover:text-red-500 transition-colors"
                 >
                   Clear All
                 </button>
@@ -103,7 +103,7 @@ export default function BookmarksPage() {
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className="h-16 w-16 text-[var(--color-text-tertiary)] mb-4"
+              className="h-16 w-16 text-text-tertiary mb-4"
             >
               <path
                 strokeLinecap="round"
@@ -112,13 +112,13 @@ export default function BookmarksPage() {
               />
             </svg>
             <h2 className="text-xl font-semibold mb-2">No bookmarks yet</h2>
-            <p className="text-[var(--color-text-secondary)] max-w-md">
+            <p className="text-text-secondary max-w-md">
               Bookmark articles while browsing to save them here for later reading.
               Click the bookmark icon on any article card to get started.
             </p>
             <Link
               href="/"
-              className="mt-6 inline-flex items-center rounded-md bg-[var(--color-accent)] px-4 py-2 text-sm font-medium text-white hover:opacity-90 transition-opacity"
+              className="mt-6 inline-flex items-center rounded-md bg-accent px-4 py-2 text-sm font-medium text-white hover:opacity-90 transition-opacity"
             >
               Browse articles
             </Link>
@@ -135,7 +135,7 @@ export default function BookmarksPage() {
                   viewBox="0 0 24 24"
                   strokeWidth={1.5}
                   stroke="currentColor"
-                  className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-[var(--color-text-tertiary)]"
+                  className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-text-tertiary"
                 >
                   <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
                 </svg>
@@ -144,7 +144,7 @@ export default function BookmarksPage() {
                   placeholder="Search bookmarks…"
                   value={search}
                   onChange={(e) => setSearch(e.target.value)}
-                  className="w-full rounded-md border border-[var(--color-border)] bg-[var(--color-surface)] pl-9 pr-3 py-2 text-sm placeholder:text-[var(--color-text-tertiary)] focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]/40"
+                  className="w-full rounded-md border border-border bg-(--color-surface) pl-9 pr-3 py-2 text-sm placeholder:text-text-tertiary focus:outline-none focus:ring-2 focus:ring-accent/40"
                 />
               </div>
 
@@ -157,8 +157,8 @@ export default function BookmarksPage() {
                     className={cn(
                       "rounded-full px-3 py-1 text-xs font-medium border transition-colors",
                       !activeCategory
-                        ? "bg-[var(--color-accent)] text-white border-transparent"
-                        : "border-[var(--color-border)] text-[var(--color-text-secondary)] hover:border-[var(--color-accent)]",
+                        ? "bg-accent text-white border-transparent"
+                        : "border-border text-text-secondary hover:border-accent",
                     )}
                   >
                     All
@@ -173,8 +173,8 @@ export default function BookmarksPage() {
                       className={cn(
                         "rounded-full px-3 py-1 text-xs font-medium border transition-colors",
                         activeCategory === cat
-                          ? "bg-[var(--color-accent)] text-white border-transparent"
-                          : "border-[var(--color-border)] text-[var(--color-text-secondary)] hover:border-[var(--color-accent)]",
+                          ? "bg-accent text-white border-transparent"
+                          : "border-border text-text-secondary hover:border-accent",
                       )}
                     >
                       {cat}
@@ -186,7 +186,7 @@ export default function BookmarksPage() {
 
             {/* Results */}
             {filtered.length === 0 ? (
-              <p className="text-center py-12 text-[var(--color-text-secondary)]">
+              <p className="text-center py-12 text-text-secondary">
                 No bookmarks match your search.
               </p>
             ) : (
@@ -194,7 +194,7 @@ export default function BookmarksPage() {
                 {filtered.map((article) => (
                   <div
                     key={article.link}
-                    className="group relative flex flex-col gap-3 rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] p-4 transition-colors hover:border-[var(--color-accent)]/40"
+                    className="group relative flex flex-col gap-3 rounded-lg border border-border bg-(--color-surface) p-4 transition-colors hover:border-accent/40"
                   >
                     {/* Bookmark remove button */}
                     <div className="absolute top-3 right-3 z-10">
@@ -208,7 +208,7 @@ export default function BookmarksPage() {
                       className="flex flex-col gap-3"
                     >
                       {article.imageUrl && (
-                        <div className="overflow-hidden rounded-md bg-[var(--color-surface-tertiary)] aspect-[16/10]">
+                        <div className="overflow-hidden rounded-md bg-surface-tertiary aspect-[16/10]">
                           <img
                             src={article.imageUrl}
                             alt={article.title}
@@ -224,10 +224,10 @@ export default function BookmarksPage() {
                         >
                           {article.category}
                         </Badge>
-                        <h3 className="font-serif text-base font-bold leading-snug tracking-tight group-hover:text-[var(--color-accent)] transition-colors line-clamp-3">
+                        <h3 className="font-serif text-base font-bold leading-snug tracking-tight group-hover:text-accent transition-colors line-clamp-3">
                           {article.title}
                         </h3>
-                        <span className="text-xs text-[var(--color-text-tertiary)]">
+                        <span className="text-xs text-text-tertiary">
                           {article.source} &middot; Saved{" "}
                           {new Date(article.savedAt).toLocaleDateString()}
                         </span>

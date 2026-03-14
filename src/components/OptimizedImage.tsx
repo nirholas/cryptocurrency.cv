@@ -110,7 +110,7 @@ export default function OptimizedImage({
     <div
       ref={containerRef}
       className={cn(
-        "relative overflow-hidden rounded-lg bg-[var(--color-surface-secondary)]",
+        "relative overflow-hidden rounded-lg bg-surface-secondary",
         containerClassName
       )}
       style={{ aspectRatio }}

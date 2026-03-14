@@ -175,13 +175,13 @@ function sentimentBg(v: number): string {
 function SentimentMeter({ label, value, icon }: { label: string; value: number; icon: React.ReactNode }) {
   return (
     <div className="flex items-center gap-3">
-      <div className="shrink-0 text-[var(--color-text-tertiary)]">{icon}</div>
+      <div className="shrink-0 text-text-tertiary">{icon}</div>
       <div className="flex-1 min-w-0">
         <div className="flex items-center justify-between mb-1">
-          <span className="text-xs font-medium text-[var(--color-text-secondary)]">{label}</span>
+          <span className="text-xs font-medium text-text-secondary">{label}</span>
           <span className={cn("text-xs font-bold tabular-nums", sentimentColor(value))}>{value}</span>
         </div>
-        <div className="h-1.5 w-full rounded-full bg-[var(--color-border)] overflow-hidden">
+        <div className="h-1.5 w-full rounded-full bg-border overflow-hidden">
           <div className={cn("h-full rounded-full transition-all duration-700", sentimentBg(value))} style={{ width: `${value}%` }} />
         </div>
       </div>
@@ -205,19 +205,19 @@ function SignalCard({ signal }: { signal: Signal }) {
           <span className={cn("text-xs font-bold uppercase tracking-wide", config.color)}>{signal.type}</span>
         </div>
         <div className="flex items-center gap-1">
-          <div className="h-1.5 w-12 rounded-full bg-[var(--color-border)] overflow-hidden">
+          <div className="h-1.5 w-12 rounded-full bg-border overflow-hidden">
             <div className={cn("h-full rounded-full", signal.strength >= 70 ? "bg-emerald-500" : signal.strength >= 50 ? "bg-yellow-500" : "bg-red-500")} style={{ width: `${signal.strength}%` }} />
           </div>
-          <span className="text-[10px] tabular-nums text-[var(--color-text-tertiary)]">{signal.strength}%</span>
+          <span className="text-[10px] tabular-nums text-text-tertiary">{signal.strength}%</span>
         </div>
       </div>
       <h4 className="mt-2 text-sm font-semibold">{signal.title}</h4>
-      <p className="mt-1 text-xs text-[var(--color-text-secondary)] leading-relaxed">{signal.description}</p>
+      <p className="mt-1 text-xs text-text-secondary leading-relaxed">{signal.description}</p>
       <div className="mt-3 flex items-center justify-between">
         <div className="flex items-center gap-1.5">
           {signal.coins.map((c) => (<Badge key={c} className="text-[10px] px-1.5 py-0">{c}</Badge>))}
         </div>
-        <div className="flex items-center gap-2 text-[10px] text-[var(--color-text-tertiary)]">
+        <div className="flex items-center gap-2 text-[10px] text-text-tertiary">
           <span>{signal.source}</span>
           <span>·</span>
           <span>{timeAgo(signal.timestamp)}</span>
@@ -236,7 +236,7 @@ function WhaleAlertCard({ alert }: { alert: WhaleAlert }) {
   const config = typeConfig[alert.type];
 
   return (
-    <div className="flex items-center gap-3 py-3 border-b border-[var(--color-border)] last:border-b-0">
+    <div className="flex items-center gap-3 py-3 border-b border-border last:border-b-0">
       <div className={cn("shrink-0", config.color)}>{config.icon}</div>
       <div className="flex-1 min-w-0">
         <div className="flex items-center gap-2">
@@ -244,9 +244,9 @@ function WhaleAlertCard({ alert }: { alert: WhaleAlert }) {
           <Badge className="text-[10px] px-1.5 py-0">{alert.symbol}</Badge>
           <span className={cn("text-[10px] font-medium", config.color)}>{config.label}</span>
         </div>
-        <p className="text-xs text-[var(--color-text-tertiary)] mt-0.5 truncate">{alert.from} → {alert.to}</p>
+        <p className="text-xs text-text-tertiary mt-0.5 truncate">{alert.from} → {alert.to}</p>
       </div>
-      <span className="text-[10px] text-[var(--color-text-tertiary)] shrink-0">{timeAgo(alert.timestamp)}</span>
+      <span className="text-[10px] text-text-tertiary shrink-0">{timeAgo(alert.timestamp)}</span>
     </div>
   );
 }
@@ -260,22 +260,22 @@ function NarrativeRow({ narrative }: { narrative: Narrative }) {
   const trend = trendConfig[narrative.trend];
 
   return (
-    <div className="py-3 border-b border-[var(--color-border)] last:border-b-0">
+    <div className="py-3 border-b border-border last:border-b-0">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2">
           <span className={trend.color}>{trend.icon}</span>
           <span className="text-sm font-semibold">{narrative.name}</span>
         </div>
         <div className="flex items-center gap-3">
-          <span className={cn("text-xs font-bold tabular-nums", narrative.weekChange > 0 ? "text-emerald-500" : narrative.weekChange < 0 ? "text-red-500" : "text-[var(--color-text-tertiary)]")}>
+          <span className={cn("text-xs font-bold tabular-nums", narrative.weekChange > 0 ? "text-emerald-500" : narrative.weekChange < 0 ? "text-red-500" : "text-text-tertiary")}>
             {narrative.weekChange > 0 ? "+" : ""}{narrative.weekChange}%
           </span>
-          <div className="h-1.5 w-16 rounded-full bg-[var(--color-border)] overflow-hidden">
+          <div className="h-1.5 w-16 rounded-full bg-border overflow-hidden">
             <div className={cn("h-full rounded-full", narrative.score >= 70 ? "bg-emerald-500" : narrative.score >= 50 ? "bg-yellow-500" : "bg-red-500")} style={{ width: `${narrative.score}%` }} />
           </div>
         </div>
       </div>
-      <p className="mt-1 text-xs text-[var(--color-text-secondary)]">{narrative.description}</p>
+      <p className="mt-1 text-xs text-text-secondary">{narrative.description}</p>
       <div className="mt-2 flex gap-1">
         {narrative.coins.map((c) => (<Badge key={c} className="text-[10px] px-1.5 py-0">{c}</Badge>))}
       </div>
@@ -305,10 +305,10 @@ function AnomalyCard({ anomaly }: { anomaly: AnomalyEvent }) {
           <Badge className="text-[10px]">{anomaly.symbol}</Badge>
           <span className={cn("text-[10px] font-bold uppercase", config.color)}>{anomaly.severity}</span>
         </div>
-        <span className="text-[10px] text-[var(--color-text-tertiary)]">{timeAgo(anomaly.timestamp)}</span>
+        <span className="text-[10px] text-text-tertiary">{timeAgo(anomaly.timestamp)}</span>
       </div>
       <h4 className="mt-2 text-sm font-semibold">{anomaly.title}</h4>
-      <p className="mt-1 text-xs text-[var(--color-text-secondary)] leading-relaxed">{anomaly.description}</p>
+      <p className="mt-1 text-xs text-text-secondary leading-relaxed">{anomaly.description}</p>
     </div>
   );
 }
@@ -352,15 +352,15 @@ export default function IntelligenceContent() {
       <div className="mb-8">
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center gap-3">
-            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[var(--color-accent)]/10">
-              <Brain className="h-5 w-5 text-[var(--color-accent)]" />
+            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-accent/10">
+              <Brain className="h-5 w-5 text-accent" />
             </div>
             <div>
               <h1 className="text-2xl font-bold font-serif tracking-tight sm:text-3xl">Market Intelligence</h1>
-              <p className="text-sm text-[var(--color-text-tertiary)]">AI-powered signals, whale tracking, narrative analysis & anomaly detection</p>
+              <p className="text-sm text-text-tertiary">AI-powered signals, whale tracking, narrative analysis & anomaly detection</p>
             </div>
           </div>
-          <div className="hidden sm:flex items-center gap-2 text-xs text-[var(--color-text-tertiary)]">
+          <div className="hidden sm:flex items-center gap-2 text-xs text-text-tertiary">
             <Clock className="h-3.5 w-3.5" />
             Updated {lastUpdated.toLocaleTimeString()}
           </div>
@@ -372,8 +372,8 @@ export default function IntelligenceContent() {
         <Card>
           <CardContent className="p-4">
             <div className="flex items-center gap-2 mb-2">
-              <Sparkles className="h-4 w-4 text-[var(--color-accent)]" />
-              <span className="text-xs font-medium text-[var(--color-text-secondary)]">Sentiment</span>
+              <Sparkles className="h-4 w-4 text-accent" />
+              <span className="text-xs font-medium text-text-secondary">Sentiment</span>
             </div>
             <div className={cn("text-2xl font-bold tabular-nums", sentimentColor(sentiment.overall))}>{sentiment.overall}</div>
             <span className={cn("text-xs font-medium", sentimentColor(sentiment.overall))}>{sentimentLabel(sentiment.overall)}</span>
@@ -383,30 +383,30 @@ export default function IntelligenceContent() {
           <CardContent className="p-4">
             <div className="flex items-center gap-2 mb-2">
               <TrendingUp className="h-4 w-4 text-emerald-500" />
-              <span className="text-xs font-medium text-[var(--color-text-secondary)]">Bullish</span>
+              <span className="text-xs font-medium text-text-secondary">Bullish</span>
             </div>
             <div className="text-2xl font-bold tabular-nums text-emerald-500">{bullishSignals}</div>
-            <span className="text-xs text-[var(--color-text-tertiary)]">Avg strength {avgStrength}%</span>
+            <span className="text-xs text-text-tertiary">Avg strength {avgStrength}%</span>
           </CardContent>
         </Card>
         <Card>
           <CardContent className="p-4">
             <div className="flex items-center gap-2 mb-2">
               <TrendingDown className="h-4 w-4 text-red-500" />
-              <span className="text-xs font-medium text-[var(--color-text-secondary)]">Bearish</span>
+              <span className="text-xs font-medium text-text-secondary">Bearish</span>
             </div>
             <div className="text-2xl font-bold tabular-nums text-red-500">{bearishSignals}</div>
-            <span className="text-xs text-[var(--color-text-tertiary)]">of {signals.length} total</span>
+            <span className="text-xs text-text-tertiary">of {signals.length} total</span>
           </CardContent>
         </Card>
         <Card>
           <CardContent className="p-4">
             <div className="flex items-center gap-2 mb-2">
               <Eye className="h-4 w-4 text-blue-500" />
-              <span className="text-xs font-medium text-[var(--color-text-secondary)]">Whale Activity</span>
+              <span className="text-xs font-medium text-text-secondary">Whale Activity</span>
             </div>
             <div className="text-2xl font-bold tabular-nums">{formatUsd(whaleAlerts.reduce((sum, a) => sum + a.valueUsd, 0))}</div>
-            <span className="text-xs text-[var(--color-text-tertiary)]">{whaleAlerts.length} movements</span>
+            <span className="text-xs text-text-tertiary">{whaleAlerts.length} movements</span>
           </CardContent>
         </Card>
       </div>
@@ -415,7 +415,7 @@ export default function IntelligenceContent() {
       <div className="grid gap-8 lg:grid-cols-[1fr_360px]">
         {/* Left — Tabbed */}
         <div>
-          <div className="flex items-center gap-1 mb-6 p-1 rounded-lg bg-[var(--color-surface-secondary)] border border-[var(--color-border)] overflow-x-auto">
+          <div className="flex items-center gap-1 mb-6 p-1 rounded-lg bg-surface-secondary border border-border overflow-x-auto">
             {tabs.map((tab) => (
               <button
                 key={tab.key}
@@ -423,8 +423,8 @@ export default function IntelligenceContent() {
                 className={cn(
                   "inline-flex items-center gap-1.5 px-3 py-2 text-sm font-medium rounded-md transition-all whitespace-nowrap cursor-pointer",
                   activeTab === tab.key
-                    ? "bg-[var(--color-surface)] text-[var(--color-text-primary)] shadow-sm"
-                    : "text-[var(--color-text-tertiary)] hover:text-[var(--color-text-secondary)]"
+                    ? "bg-(--color-surface) text-text-primary shadow-sm"
+                    : "text-text-tertiary hover:text-text-secondary"
                 )}
               >
                 {tab.icon}
@@ -467,7 +467,7 @@ export default function IntelligenceContent() {
           <Card>
             <CardHeader className="pb-3">
               <CardTitle className="text-base flex items-center gap-2">
-                <Activity className="h-4 w-4 text-[var(--color-accent)]" />
+                <Activity className="h-4 w-4 text-accent" />
                 Sentiment Breakdown
               </CardTitle>
             </CardHeader>
@@ -489,17 +489,17 @@ export default function IntelligenceContent() {
                 { label: "DeFi Dashboard", href: "/defi", icon: <Layers className="h-4 w-4" /> },
                 { label: "Price Screener", href: "/screener", icon: <Target className="h-4 w-4" /> },
               ].map((item) => (
-                <Link key={item.href} href={item.href} className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-[var(--color-surface-secondary)] transition-colors group">
-                  <span className="text-[var(--color-text-tertiary)] group-hover:text-[var(--color-accent)] transition-colors">{item.icon}</span>
+                <Link key={item.href} href={item.href} className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-surface-secondary transition-colors group">
+                  <span className="text-text-tertiary group-hover:text-accent transition-colors">{item.icon}</span>
                   <span className="text-sm font-medium flex-1">{item.label}</span>
-                  <ArrowRight className="h-3.5 w-3.5 text-[var(--color-text-tertiary)] opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <ArrowRight className="h-3.5 w-3.5 text-text-tertiary opacity-0 group-hover:opacity-100 transition-opacity" />
                 </Link>
               ))}
             </CardContent>
           </Card>
 
-          <div className="rounded-lg border border-[var(--color-border)] p-4 bg-[var(--color-surface-secondary)]">
-            <p className="text-[11px] text-[var(--color-text-tertiary)] leading-relaxed">
+          <div className="rounded-lg border border-border p-4 bg-surface-secondary">
+            <p className="text-[11px] text-text-tertiary leading-relaxed">
               <strong>Disclaimer:</strong> Intelligence data is for informational purposes only and not financial advice. Signals are algorithmically generated. Always DYOR.
             </p>
           </div>

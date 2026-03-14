@@ -69,7 +69,7 @@ export default function NavigationProgress() {
 
   return (
     <div
-      className="fixed top-0 left-0 right-0 z-[100] h-[2px] pointer-events-none"
+      className="fixed top-0 left-0 right-0 z-100 h-[2px] pointer-events-none"
       role="progressbar"
       aria-valuenow={Math.round(progress)}
       aria-valuemin={0}
@@ -77,7 +77,7 @@ export default function NavigationProgress() {
       aria-label="Page loading"
     >
       <div
-        className="h-full bg-[var(--color-accent)] transition-all duration-300 ease-out shadow-[0_0_8px_var(--color-accent)]"
+        className="h-full bg-accent transition-all duration-300 ease-out shadow-[0_0_8px_var(--color-accent)]"
         style={{
           width: `${progress}%`,
           opacity: progress >= 100 ? 0 : 1,

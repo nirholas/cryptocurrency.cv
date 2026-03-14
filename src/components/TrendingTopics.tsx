@@ -129,8 +129,8 @@ export function TrendingTopics({ className }: { className?: string }) {
       <div className={cn("space-y-3", className)}>
         {Array.from({ length: 5 }).map((_, i) => (
           <div key={i} className="animate-pulse">
-            <div className="h-4 w-24 bg-[var(--color-surface-tertiary)] rounded mb-1" />
-            <div className="h-3 w-16 bg-[var(--color-surface-tertiary)] rounded" />
+            <div className="h-4 w-24 bg-surface-tertiary rounded mb-1" />
+            <div className="h-3 w-16 bg-surface-tertiary rounded" />
           </div>
         ))}
       </div>
@@ -142,7 +142,7 @@ export function TrendingTopics({ className }: { className?: string }) {
       {/* Hot Topics */}
       {topics.length > 0 && (
         <div>
-          <h3 className="text-base font-bold font-serif mb-3 pb-2 border-b border-[var(--color-border)] flex items-center gap-2">
+          <h3 className="text-base font-bold font-serif mb-3 pb-2 border-b border-border flex items-center gap-2">
             <span aria-hidden="true">🔥</span> Hot Topics
           </h3>
           <div className="space-y-2">
@@ -153,10 +153,10 @@ export function TrendingTopics({ className }: { className?: string }) {
                 className="flex items-center justify-between py-1.5 group"
               >
                 <div className="flex items-center gap-2">
-                  <span className="text-sm font-medium group-hover:text-[var(--color-accent)] transition-colors">
+                  <span className="text-sm font-medium group-hover:text-accent transition-colors">
                     {topic.name}
                   </span>
-                  <span className="text-[11px] text-[var(--color-text-tertiary)] tabular-nums">
+                  <span className="text-[11px] text-text-tertiary tabular-nums">
                     {topic.count} articles
                   </span>
                 </div>
@@ -178,22 +178,22 @@ export function TrendingTopics({ className }: { className?: string }) {
       {/* Narrative Clusters */}
       {narratives.length > 0 && (
         <div>
-          <h3 className="text-base font-bold font-serif mb-3 pb-2 border-b border-[var(--color-border)] flex items-center gap-2">
+          <h3 className="text-base font-bold font-serif mb-3 pb-2 border-b border-border flex items-center gap-2">
             <span aria-hidden="true">🧵</span> Narratives
           </h3>
           <div className="space-y-3">
             {narratives.map((n) => (
               <div
                 key={n.id}
-                className="p-3 rounded-lg border border-[var(--color-border)] bg-[var(--color-surface-secondary)] hover:border-[var(--color-accent)] transition-colors"
+                className="p-3 rounded-lg border border-border bg-surface-secondary hover:border-accent transition-colors"
               >
                 <div className="flex items-start justify-between mb-1">
-                  <h4 className="text-sm font-semibold text-[var(--color-text-primary)] leading-snug">
+                  <h4 className="text-sm font-semibold text-text-primary leading-snug">
                     {n.title}
                   </h4>
                   <MomentumIcon direction={n.momentum} />
                 </div>
-                <p className="text-xs text-[var(--color-text-tertiary)] mb-2 line-clamp-2">
+                <p className="text-xs text-text-tertiary mb-2 line-clamp-2">
                   {n.description}
                 </p>
                 <div className="flex items-center gap-2">
@@ -209,7 +209,7 @@ export function TrendingTopics({ className }: { className?: string }) {
                   >
                     {n.sentiment}
                   </Badge>
-                  <span className="text-[10px] text-[var(--color-text-tertiary)]">
+                  <span className="text-[10px] text-text-tertiary">
                     {n.articleCount} articles · {n.timeRange}
                   </span>
                 </div>

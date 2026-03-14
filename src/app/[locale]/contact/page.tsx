@@ -155,10 +155,10 @@ export default async function ContactPage({ params }: Props) {
           <Badge className="mb-4">
             <MessageSquare className="h-3 w-3 mr-1" /> Support
           </Badge>
-          <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-[var(--color-text-primary)]">
+          <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-text-primary">
             How Can We Help?
           </h1>
-          <p className="text-lg text-[var(--color-text-secondary)] max-w-2xl mx-auto">
+          <p className="text-lg text-text-secondary max-w-2xl mx-auto">
             Have a question, found a bug, or want to collaborate?
             Reach out through any channel below — we&apos;d love to hear from you.
           </p>
@@ -175,27 +175,27 @@ export default async function ContactPage({ params }: Props) {
                 ? { href: method.link as "/" }
                 : { href: method.link, target: "_blank" as const, rel: "noopener noreferrer" };
               return (
-                <Card key={method.title} className="group hover:border-[var(--color-accent)]/50 transition-colors">
+                <Card key={method.title} className="group hover:border-accent/50 transition-colors">
                   <CardContent className="p-5">
                     <div className="flex items-center gap-3 mb-3">
-                      <div className={cn("h-10 w-10 rounded-lg bg-[var(--color-surface-secondary)] flex items-center justify-center group-hover:scale-110 transition-transform", method.color)}>
+                      <div className={cn("h-10 w-10 rounded-lg bg-surface-secondary flex items-center justify-center group-hover:scale-110 transition-transform", method.color)}>
                         <Icon className="h-5 w-5" />
                       </div>
                       <div>
-                        <h3 className="font-bold text-sm text-[var(--color-text-primary)]">
+                        <h3 className="font-bold text-sm text-text-primary">
                           {method.title}
                         </h3>
-                        <div className="flex items-center gap-1 text-[10px] text-[var(--color-text-tertiary)]">
+                        <div className="flex items-center gap-1 text-[10px] text-text-tertiary">
                           <Clock className="h-2.5 w-2.5" /> {method.responseTime}
                         </div>
                       </div>
                     </div>
-                    <p className="text-xs text-[var(--color-text-secondary)] mb-3 leading-relaxed">
+                    <p className="text-xs text-text-secondary mb-3 leading-relaxed">
                       {method.description}
                     </p>
                     <LinkComp
                       {...linkProps}
-                      className="inline-flex items-center gap-1 text-sm text-[var(--color-accent)] hover:underline font-medium"
+                      className="inline-flex items-center gap-1 text-sm text-accent hover:underline font-medium"
                     >
                       {method.linkText}
                       {!isInternal && <ExternalLink className="h-3 w-3" />}
@@ -214,10 +214,10 @@ export default async function ContactPage({ params }: Props) {
             <Card>
               <CardContent className="p-6 md:p-8">
                 <div className="flex items-center justify-between mb-6">
-                  <h2 className="font-serif text-xl font-bold text-[var(--color-text-primary)]">
+                  <h2 className="font-serif text-xl font-bold text-text-primary">
                     Send us a Message
                   </h2>
-                  <div className="flex items-center gap-1.5 text-xs text-[var(--color-text-tertiary)]">
+                  <div className="flex items-center gap-1.5 text-xs text-text-tertiary">
                     <div className="h-2 w-2 rounded-full bg-green-500 animate-pulse" />
                     Online
                   </div>
@@ -231,7 +231,7 @@ export default async function ContactPage({ params }: Props) {
           <div className="space-y-6">
             {/* Quick Links */}
             <div>
-              <h3 className="font-bold text-sm uppercase tracking-wider text-[var(--color-text-tertiary)] mb-3">
+              <h3 className="font-bold text-sm uppercase tracking-wider text-text-tertiary mb-3">
                 Quick Links
               </h3>
               <div className="space-y-2">
@@ -245,18 +245,18 @@ export default async function ContactPage({ params }: Props) {
                     <Comp
                       key={link.label}
                       {...props}
-                      className="flex items-center gap-3 rounded-lg border border-[var(--color-border)] bg-[var(--color-surface-secondary)] p-3 hover:border-[var(--color-accent)]/40 transition-colors group"
+                      className="flex items-center gap-3 rounded-lg border border-border bg-surface-secondary p-3 hover:border-accent/40 transition-colors group"
                     >
-                      <Icon className="h-4 w-4 text-[var(--color-text-tertiary)] group-hover:text-[var(--color-accent)] transition-colors shrink-0" />
+                      <Icon className="h-4 w-4 text-text-tertiary group-hover:text-accent transition-colors shrink-0" />
                       <div className="min-w-0">
-                        <div className="text-sm font-medium text-[var(--color-text-primary)] truncate">
+                        <div className="text-sm font-medium text-text-primary truncate">
                           {link.label}
                         </div>
-                        <div className="text-[10px] text-[var(--color-text-tertiary)]">
+                        <div className="text-[10px] text-text-tertiary">
                           {link.description}
                         </div>
                       </div>
-                      <ArrowRight className="h-3 w-3 text-[var(--color-text-tertiary)] ml-auto shrink-0 opacity-0 group-hover:opacity-100 transition-opacity" />
+                      <ArrowRight className="h-3 w-3 text-text-tertiary ml-auto shrink-0 opacity-0 group-hover:opacity-100 transition-opacity" />
                     </Comp>
                   );
                 })}
@@ -264,9 +264,9 @@ export default async function ContactPage({ params }: Props) {
             </div>
 
             {/* Response expectations */}
-            <div className="rounded-xl border border-[var(--color-border)] bg-[var(--color-surface-secondary)] p-5">
-              <h3 className="font-bold text-sm text-[var(--color-text-primary)] mb-3 flex items-center gap-2">
-                <Clock className="h-4 w-4 text-[var(--color-accent)]" />
+            <div className="rounded-xl border border-border bg-surface-secondary p-5">
+              <h3 className="font-bold text-sm text-text-primary mb-3 flex items-center gap-2">
+                <Clock className="h-4 w-4 text-accent" />
                 Response Times
               </h3>
               <div className="space-y-3">
@@ -277,7 +277,7 @@ export default async function ContactPage({ params }: Props) {
                   { channel: "Security Issues", time: "< 24 hours", priority: "critical" },
                 ].map((item) => (
                   <div key={item.channel} className="flex items-center justify-between text-sm">
-                    <span className="text-[var(--color-text-secondary)]">{item.channel}</span>
+                    <span className="text-text-secondary">{item.channel}</span>
                     <Badge className={cn(
                       "text-[10px]",
                       item.priority === "critical"
@@ -294,11 +294,11 @@ export default async function ContactPage({ params }: Props) {
             </div>
 
             {/* Community CTA */}
-            <div className="rounded-xl border border-[var(--color-accent)]/20 bg-[var(--color-accent)]/5 p-5 text-center">
-              <h3 className="font-bold text-sm text-[var(--color-text-primary)] mb-2">
+            <div className="rounded-xl border border-accent/20 bg-accent/5 p-5 text-center">
+              <h3 className="font-bold text-sm text-text-primary mb-2">
                 Join the Community
               </h3>
-              <p className="text-xs text-[var(--color-text-secondary)] mb-4">
+              <p className="text-xs text-text-secondary mb-4">
                 Contribute to the project, discuss features, and connect with other developers.
               </p>
               <Button variant="primary" size="sm" asChild className="w-full">
@@ -313,11 +313,11 @@ export default async function ContactPage({ params }: Props) {
         {/* FAQ */}
         <section className="max-w-3xl mx-auto mb-14">
           <div className="text-center mb-8">
-            <HelpCircle className="h-6 w-6 text-[var(--color-accent)] mx-auto mb-3" />
-            <h2 className="font-serif text-2xl md:text-3xl font-bold text-[var(--color-text-primary)]">
+            <HelpCircle className="h-6 w-6 text-accent mx-auto mb-3" />
+            <h2 className="font-serif text-2xl md:text-3xl font-bold text-text-primary">
               Frequently Asked Questions
             </h2>
-            <p className="text-sm text-[var(--color-text-secondary)] mt-2">
+            <p className="text-sm text-text-secondary mt-2">
               Can&apos;t find what you need? Send us a message above.
             </p>
           </div>
@@ -325,13 +325,13 @@ export default async function ContactPage({ params }: Props) {
             {faqs.map((faq) => (
               <details
                 key={faq.question}
-                className="group rounded-lg border border-[var(--color-border)] bg-[var(--color-surface-secondary)]"
+                className="group rounded-lg border border-border bg-surface-secondary"
               >
-                <summary className="flex cursor-pointer items-center justify-between p-5 text-sm font-medium text-[var(--color-text-primary)] hover:bg-[var(--color-surface-tertiary)] rounded-lg transition select-none">
+                <summary className="flex cursor-pointer items-center justify-between p-5 text-sm font-medium text-text-primary hover:bg-surface-tertiary rounded-lg transition select-none">
                   {faq.question}
-                  <ChevronDown className="h-4 w-4 shrink-0 text-[var(--color-text-tertiary)] transition-transform group-open:rotate-180 ml-4" />
+                  <ChevronDown className="h-4 w-4 shrink-0 text-text-tertiary transition-transform group-open:rotate-180 ml-4" />
                 </summary>
-                <div className="px-5 pb-5 text-sm text-[var(--color-text-secondary)] leading-relaxed">
+                <div className="px-5 pb-5 text-sm text-text-secondary leading-relaxed">
                   {faq.answer}
                 </div>
               </details>
@@ -341,11 +341,11 @@ export default async function ContactPage({ params }: Props) {
 
         {/* Bottom CTA */}
         <section className="mb-10">
-          <div className="rounded-xl bg-[var(--color-surface-secondary)] border border-[var(--color-border)] p-8 md:p-10 text-center max-w-3xl mx-auto">
-            <h2 className="font-serif text-xl md:text-2xl font-bold mb-3 text-[var(--color-text-primary)]">
+          <div className="rounded-xl bg-surface-secondary border border-border p-8 md:p-10 text-center max-w-3xl mx-auto">
+            <h2 className="font-serif text-xl md:text-2xl font-bold mb-3 text-text-primary">
               Prefer to dive straight in?
             </h2>
-            <p className="text-sm text-[var(--color-text-secondary)] mb-6">
+            <p className="text-sm text-text-secondary mb-6">
               No sign-up required. Start making API requests in under 30 seconds.
             </p>
             <div className="flex gap-3 justify-center flex-wrap">

@@ -287,8 +287,8 @@ const stanceConfig: Record<
   },
   unknown: {
     label: "Unknown",
-    color: "text-[var(--color-text-tertiary)]",
-    bg: "bg-[var(--color-surface-secondary)] border-[var(--color-border)]",
+    color: "text-text-tertiary",
+    bg: "bg-surface-secondary border-border",
     icon: ShieldQuestion,
   },
 };
@@ -364,12 +364,12 @@ export default function RegulationMap() {
                     className={cn(
                       "flex items-center gap-2 rounded-lg border px-3 py-2.5 text-left text-sm transition-all",
                       selected?.code === country.code
-                        ? cn(cfg.bg, "ring-2 ring-[var(--color-accent)]")
-                        : "border-[var(--color-border)] bg-[var(--color-surface)] hover:bg-[var(--color-surface-secondary)]",
+                        ? cn(cfg.bg, "ring-2 ring-accent")
+                        : "border-border bg-(--color-surface) hover:bg-surface-secondary",
                     )}
                   >
                     <span className="text-lg">{country.flag}</span>
-                    <span className="font-medium text-[var(--color-text-primary)] truncate">
+                    <span className="font-medium text-text-primary truncate">
                       {country.name}
                     </span>
                   </button>
@@ -414,28 +414,28 @@ export default function RegulationMap() {
             </Button>
           </CardHeader>
           <CardContent className="space-y-4">
-            <p className="text-sm text-[var(--color-text-secondary)]">
+            <p className="text-sm text-text-secondary">
               {selected.summary}
             </p>
 
             <div>
-              <h4 className="mb-2 text-sm font-semibold text-[var(--color-text-primary)]">
+              <h4 className="mb-2 text-sm font-semibold text-text-primary">
                 Recent Regulatory Actions
               </h4>
               <ul className="space-y-1.5">
                 {selected.recentActions.map((action, i) => (
                   <li
                     key={i}
-                    className="flex items-start gap-2 text-sm text-[var(--color-text-secondary)]"
+                    className="flex items-start gap-2 text-sm text-text-secondary"
                   >
-                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--color-accent)]" />
+                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
                     {action}
                   </li>
                 ))}
               </ul>
             </div>
 
-            <p className="text-xs text-[var(--color-text-tertiary)]">
+            <p className="text-xs text-text-tertiary">
               Last updated: {selected.lastUpdated}
             </p>
           </CardContent>

@@ -113,10 +113,10 @@ export default async function BlogPage({ params }: Props) {
       <Header />
       <main className="container-main py-10">
         <section className="mb-12">
-          <h1 className="font-serif text-3xl md:text-4xl font-bold mb-3 text-[var(--color-text-primary)]">
+          <h1 className="font-serif text-3xl md:text-4xl font-bold mb-3 text-text-primary">
             Blog
           </h1>
-          <p className="text-[var(--color-text-secondary)] max-w-2xl text-lg leading-relaxed">
+          <p className="text-text-secondary max-w-2xl text-lg leading-relaxed">
             In-depth articles, guides, and analysis on cryptocurrency and
             blockchain technology.
           </p>
@@ -125,7 +125,7 @@ export default async function BlogPage({ params }: Props) {
         {/* Featured Posts */}
         {featured.length > 0 && (
           <section className="mb-12">
-            <h2 className="font-serif text-2xl font-bold mb-6 text-[var(--color-text-primary)]">
+            <h2 className="font-serif text-2xl font-bold mb-6 text-text-primary">
               Featured
             </h2>
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -138,19 +138,19 @@ export default async function BlogPage({ params }: Props) {
 
         {/* All Posts */}
         <section>
-          <h2 className="font-serif text-2xl font-bold mb-6 text-[var(--color-text-primary)]">
+          <h2 className="font-serif text-2xl font-bold mb-6 text-text-primary">
             All Articles
           </h2>
           {posts.length === 0 ? (
             <Card>
               <CardContent className="py-12 text-center">
-                <p className="text-[var(--color-text-secondary)] text-lg">
+                <p className="text-text-secondary text-lg">
                   Blog coming soon. Stay tuned for articles on crypto and
                   blockchain.
                 </p>
                 <Link
                   href="/"
-                  className="mt-4 inline-block text-sm text-[var(--color-accent)] hover:underline"
+                  className="mt-4 inline-block text-sm text-accent hover:underline"
                 >
                   ← Back to News
                 </Link>
@@ -166,17 +166,17 @@ export default async function BlogPage({ params }: Props) {
         </section>
 
         {/* CTA */}
-        <div className="mt-12 pt-8 border-t border-[var(--color-border)]">
+        <div className="mt-12 pt-8 border-t border-border">
           <div className="flex gap-4 flex-wrap">
             <Link
               href="/learn"
-              className="rounded-lg border border-[var(--color-border)] px-5 py-2.5 text-sm font-medium text-[var(--color-text-primary)] hover:bg-[var(--color-surface-tertiary)] transition"
+              className="rounded-lg border border-border px-5 py-2.5 text-sm font-medium text-text-primary hover:bg-surface-tertiary transition"
             >
               Learn Crypto
             </Link>
             <Link
               href="/"
-              className="rounded-lg border border-[var(--color-border)] px-5 py-2.5 text-sm font-medium text-[var(--color-text-primary)] hover:bg-[var(--color-surface-tertiary)] transition"
+              className="rounded-lg border border-border px-5 py-2.5 text-sm font-medium text-text-primary hover:bg-surface-tertiary transition"
             >
               Latest News
             </Link>
@@ -203,7 +203,7 @@ function BlogPostCard({ post }: { post: BlogPost }) {
     : "";
 
   return (
-    <Card className="flex flex-col h-full hover:border-[var(--color-accent)] transition-colors">
+    <Card className="flex flex-col h-full hover:border-accent transition-colors">
       <CardHeader>
         <div className="flex items-center gap-2 mb-2">
           <Badge>{post.category}</Badge>
@@ -216,10 +216,10 @@ function BlogPostCard({ post }: { post: BlogPost }) {
       </CardHeader>
       <CardFooter className="mt-auto">
         <div className="flex items-center justify-between w-full">
-          <span className="text-xs text-[var(--color-text-secondary)]">
+          <span className="text-xs text-text-secondary">
             {formattedDate}
           </span>
-          <span className="text-xs text-[var(--color-accent)] font-medium">
+          <span className="text-xs text-accent font-medium">
             Read →
           </span>
         </div>

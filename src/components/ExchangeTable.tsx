@@ -61,7 +61,7 @@ function trustBar(score: number) {
           : "bg-red-500";
   return (
     <div className="flex items-center gap-2">
-      <div className="h-1.5 w-16 overflow-hidden rounded-full bg-[var(--color-surface-tertiary)]">
+      <div className="h-1.5 w-16 overflow-hidden rounded-full bg-surface-tertiary">
         <div className={cn("h-full rounded-full", color)} style={{ width: `${pct}%` }} />
       </div>
       <span className={cn("text-xs font-medium", trustBadge(score).cls)}>
@@ -197,11 +197,11 @@ export default function ExchangeTable({
             <Skeleton key={i} className="h-9 w-24 rounded-md" />
           ))}
         </div>
-        <div className="overflow-x-auto rounded-lg border border-[var(--color-border)]">
+        <div className="overflow-x-auto rounded-lg border border-border">
           <table className="w-full">
             <tbody>
               {Array.from({ length: 10 }).map((_, i) => (
-                <tr key={i} className="border-b border-[var(--color-border)]">
+                <tr key={i} className="border-b border-border">
                   {Array.from({ length: 6 }).map((__, j) => (
                     <td key={j} className="px-4 py-3">
                       <Skeleton className="h-4" />
@@ -218,9 +218,9 @@ export default function ExchangeTable({
 
   if (error) {
     return (
-      <div className="flex flex-col items-center justify-center gap-4 rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] py-16">
+      <div className="flex flex-col items-center justify-center gap-4 rounded-lg border border-border bg-(--color-surface) py-16">
         <AlertTriangle className="h-10 w-10 text-amber-500" />
-        <p className="text-[var(--color-text-secondary)]">{error}</p>
+        <p className="text-text-secondary">{error}</p>
         <Button variant="outline" size="sm" onClick={fetchData}>
           Try Again
         </Button>
@@ -265,24 +265,24 @@ export default function ExchangeTable({
             className={cn(
               "rounded-md px-4 py-2 text-sm font-medium transition-colors",
               tab === t
-                ? "bg-[var(--color-accent)] text-white"
-                : "bg-[var(--color-surface-secondary)] text-[var(--color-text-secondary)] hover:bg-[var(--color-surface-tertiary)]"
+                ? "bg-accent text-white"
+                : "bg-surface-secondary text-text-secondary hover:bg-surface-tertiary"
             )}
           >
             {t === "all" ? "All Exchanges" : t}
           </button>
         ))}
-        <span className="ml-auto self-center text-xs text-[var(--color-text-tertiary)]">
+        <span className="ml-auto self-center text-xs text-text-tertiary">
           {sorted.length} exchange{sorted.length !== 1 && "s"}
         </span>
       </div>
 
       {/* Table */}
-      <div className="overflow-x-auto rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)]">
+      <div className="overflow-x-auto rounded-lg border border-border bg-(--color-surface)">
         <table className="w-full text-sm" aria-label="Exchange rankings">
           <thead>
-            <tr className="border-b border-[var(--color-border)] bg-[var(--color-surface-secondary)]">
-              <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-[var(--color-text-tertiary)]">
+            <tr className="border-b border-border bg-surface-secondary">
+              <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-text-tertiary">
                 #
               </th>
               {(
@@ -313,7 +313,7 @@ export default function ExchangeTable({
                 <th
                   key={col.label}
                   className={cn(
-                    "cursor-pointer whitespace-nowrap px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-[var(--color-text-tertiary)] transition-colors hover:text-[var(--color-text-primary)]",
+                    "cursor-pointer whitespace-nowrap px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-text-tertiary transition-colors hover:text-text-primary",
                     col.cls
                   )}
                   onClick={() => handleSort(col.key)}
@@ -329,7 +329,7 @@ export default function ExchangeTable({
                   <SortIcon column={col.key} />
                 </th>
               ))}
-              <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-[var(--color-text-tertiary)]">
+              <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-text-tertiary">
                 Actions
               </th>
             </tr>
@@ -339,7 +339,7 @@ export default function ExchangeTable({
               <tr>
                 <td
                   colSpan={7}
-                  className="px-4 py-12 text-center text-[var(--color-text-tertiary)]"
+                  className="px-4 py-12 text-center text-text-tertiary"
                 >
                   No exchanges found.
                 </td>
@@ -349,16 +349,16 @@ export default function ExchangeTable({
                 <tr
                   key={ex.id}
                   className={cn(
-                    "border-b border-[var(--color-border)] transition-colors hover:bg-[var(--color-surface-secondary)]",
-                    compareIds.includes(ex.id) && "bg-[var(--color-accent)]/5"
+                    "border-b border-border transition-colors hover:bg-surface-secondary",
+                    compareIds.includes(ex.id) && "bg-accent/5"
                   )}
                 >
-                  <td className="px-4 py-3 text-[var(--color-text-tertiary)]">
+                  <td className="px-4 py-3 text-text-tertiary">
                     {idx + 1}
                   </td>
                   <td className="whitespace-nowrap px-4 py-3">
                     <div className="flex items-center gap-2">
-                      <span className="font-medium text-[var(--color-text-primary)]">
+                      <span className="font-medium text-text-primary">
                         {ex.name}
                       </span>
                       <Badge
@@ -368,21 +368,21 @@ export default function ExchangeTable({
                       </Badge>
                     </div>
                     {ex.country && (
-                      <span className="text-xs text-[var(--color-text-tertiary)]">
+                      <span className="text-xs text-text-tertiary">
                         {ex.country}
                       </span>
                     )}
                   </td>
-                  <td className="whitespace-nowrap px-4 py-3 text-[var(--color-text-primary)]">
+                  <td className="whitespace-nowrap px-4 py-3 text-text-primary">
                     {formatLargeNumber(ex.volume24h, { prefix: "$" })}
                   </td>
-                  <td className="hidden whitespace-nowrap px-4 py-3 text-[var(--color-text-secondary)] md:table-cell">
+                  <td className="hidden whitespace-nowrap px-4 py-3 text-text-secondary md:table-cell">
                     {ex.markets.toLocaleString()}
                   </td>
                   <td className="whitespace-nowrap px-4 py-3">
                     {trustBar(ex.trustScore)}
                   </td>
-                  <td className="hidden whitespace-nowrap px-4 py-3 text-[var(--color-text-secondary)] lg:table-cell">
+                  <td className="hidden whitespace-nowrap px-4 py-3 text-text-secondary lg:table-cell">
                     {ex.yearEstablished ?? "—"}
                   </td>
                   <td className="whitespace-nowrap px-4 py-3">
@@ -392,7 +392,7 @@ export default function ExchangeTable({
                           href={ex.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="rounded-md p-1.5 text-[var(--color-text-tertiary)] transition-colors hover:bg-[var(--color-surface-tertiary)] hover:text-[var(--color-accent)]"
+                          className="rounded-md p-1.5 text-text-tertiary transition-colors hover:bg-surface-tertiary hover:text-accent"
                           aria-label={`Visit ${ex.name}`}
                         >
                           <ExternalLink className="h-4 w-4" />
@@ -404,8 +404,8 @@ export default function ExchangeTable({
                           className={cn(
                             "rounded-md p-1.5 transition-colors",
                             compareIds.includes(ex.id)
-                              ? "text-[var(--color-accent)]"
-                              : "text-[var(--color-text-tertiary)] hover:bg-[var(--color-surface-tertiary)] hover:text-[var(--color-accent)]"
+                              ? "text-accent"
+                              : "text-text-tertiary hover:bg-surface-tertiary hover:text-accent"
                           )}
                           aria-label={`Compare ${ex.name}`}
                         >
@@ -429,7 +429,7 @@ export default function ExchangeTable({
       {/* Volume Distribution Donut */}
       {volumeShares.length > 0 && (
         <div>
-          <h3 className="mb-4 font-serif text-xl font-bold text-[var(--color-text-primary)]">
+          <h3 className="mb-4 font-serif text-xl font-bold text-text-primary">
             Volume Distribution
           </h3>
           <div className="flex flex-col items-center gap-6 sm:flex-row sm:items-start">
@@ -438,7 +438,7 @@ export default function ExchangeTable({
               style={{ background: conicGradient }}
               aria-hidden="true"
             >
-              <div className="absolute inset-4 rounded-full bg-[var(--color-surface)]" />
+              <div className="absolute inset-4 rounded-full bg-(--color-surface)" />
             </div>
             <div className="grid grid-cols-2 gap-x-6 gap-y-1.5">
               {volumeShares.map((v, i) => (
@@ -450,10 +450,10 @@ export default function ExchangeTable({
                         DONUT_COLORS[i % DONUT_COLORS.length],
                     }}
                   />
-                  <span className="text-[var(--color-text-secondary)]">
+                  <span className="text-text-secondary">
                     {v.name}
                   </span>
-                  <span className="ml-auto font-medium text-[var(--color-text-primary)]">
+                  <span className="ml-auto font-medium text-text-primary">
                     {v.share.toFixed(1)}%
                   </span>
                 </div>

@@ -76,13 +76,13 @@ export default function NFTCollections({
   }
 
   const thClass =
-    "px-3 py-2.5 text-left text-[10px] font-semibold uppercase tracking-wider text-[var(--color-text-tertiary)] cursor-pointer select-none whitespace-nowrap hover:text-[var(--color-text-primary)] transition-colors";
+    "px-3 py-2.5 text-left text-[10px] font-semibold uppercase tracking-wider text-text-tertiary cursor-pointer select-none whitespace-nowrap hover:text-text-primary transition-colors";
   const tdClass =
-    "px-3 py-3 text-sm text-[var(--color-text-primary)] whitespace-nowrap";
+    "px-3 py-3 text-sm text-text-primary whitespace-nowrap";
 
   if (collections.length === 0) {
     return (
-      <p className="text-[var(--color-text-tertiary)] py-8 text-center">
+      <p className="text-text-tertiary py-8 text-center">
         No NFT collection data available right now. Check back soon.
       </p>
     );
@@ -91,9 +91,9 @@ export default function NFTCollections({
   return (
     <div>
       {/* table */}
-      <div className="overflow-x-auto rounded-lg border border-[var(--color-border)]">
+      <div className="overflow-x-auto rounded-lg border border-border">
         <table className="w-full min-w-[640px] text-sm">
-          <thead className="bg-[var(--color-surface-secondary)]">
+          <thead className="bg-surface-secondary">
             <tr>
               <th className={thClass} onClick={() => toggleSort("rank")}>
                 # <SortIcon field="rank" />
@@ -116,11 +116,11 @@ export default function NFTCollections({
               </th>
             </tr>
           </thead>
-          <tbody className="divide-y divide-[var(--color-border)]">
+          <tbody className="divide-y divide-border">
             {rows.map((c) => (
               <tr
                 key={c.slug}
-                className="hover:bg-[var(--color-surface-secondary)] transition-colors"
+                className="hover:bg-surface-secondary transition-colors"
               >
                 <td className={cn(tdClass, "tabular-nums font-medium")}>
                   {c.rank}
@@ -133,7 +133,7 @@ export default function NFTCollections({
                         alt={c.name}
                         width={40}
                         height={40}
-                        className="h-10 w-10 rounded-lg object-cover bg-[var(--color-surface-tertiary)] shrink-0"
+                        className="h-10 w-10 rounded-lg object-cover bg-surface-tertiary shrink-0"
                         loading="lazy"
                         onError={(e) => {
                           (e.target as HTMLImageElement).style.display = "none";
@@ -145,15 +145,15 @@ export default function NFTCollections({
                     ) : null}
                     <span
                       className={cn(
-                        "h-10 w-10 rounded-lg bg-[var(--color-surface-tertiary)] flex items-center justify-center shrink-0",
+                        "h-10 w-10 rounded-lg bg-surface-tertiary flex items-center justify-center shrink-0",
                         c.imageUrl ? "hidden" : ""
                       )}
                     >
-                      <ImageOff className="h-4 w-4 text-[var(--color-text-tertiary)]" />
+                      <ImageOff className="h-4 w-4 text-text-tertiary" />
                     </span>
                     <div className="min-w-0">
                       <p className="font-semibold truncate">{c.name}</p>
-                      <p className="text-[10px] text-[var(--color-text-tertiary)] uppercase tracking-wider">
+                      <p className="text-[10px] text-text-tertiary uppercase tracking-wider">
                         {c.chain}
                       </p>
                     </div>
@@ -175,7 +175,7 @@ export default function NFTCollections({
                         ? "text-green-600 dark:text-green-400"
                         : c.volumeChange24h < 0
                           ? "text-red-600 dark:text-red-400"
-                          : "text-[var(--color-text-tertiary)]"
+                          : "text-text-tertiary"
                     )}
                   >
                     {c.volumeChange24h > 0 && "▲"}
@@ -196,7 +196,7 @@ export default function NFTCollections({
 
       {/* pagination */}
       {totalPages > 1 && (
-        <div className="flex items-center justify-between mt-4 text-sm text-[var(--color-text-secondary)]">
+        <div className="flex items-center justify-between mt-4 text-sm text-text-secondary">
           <span>
             Page {page + 1} of {totalPages} &middot;{" "}
             {sorted.length} collections

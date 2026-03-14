@@ -113,7 +113,7 @@ export default function LiquidationFeed() {
         </CardTitle>
         <div className="flex items-center gap-2">
           {data && (
-            <span className="text-sm text-[var(--color-text-secondary)]">
+            <span className="text-sm text-text-secondary">
               24h: {formatLargeNumber(data.totals.totalUsd, { prefix: "$" })}
             </span>
           )}
@@ -127,7 +127,7 @@ export default function LiquidationFeed() {
             {soundEnabled ? (
               <Volume2 className="h-4 w-4" />
             ) : (
-              <VolumeOff className="h-4 w-4 text-[var(--color-text-tertiary)]" />
+              <VolumeOff className="h-4 w-4 text-text-tertiary" />
             )}
           </Button>
         </div>
@@ -152,7 +152,7 @@ export default function LiquidationFeed() {
               <Skeleton key={i} className="h-8 w-full" />
             ))
           ) : visibleItems.length === 0 ? (
-            <p className="py-4 text-center text-sm text-[var(--color-text-tertiary)]">
+            <p className="py-4 text-center text-sm text-text-tertiary">
               No recent liquidations
             </p>
           ) : (
@@ -178,7 +178,7 @@ export default function LiquidationFeed() {
                     {formatLargeNumber(liq.amount, { prefix: "$" })}
                   </span>
                 </span>
-                <span className="flex items-center gap-2 text-[var(--color-text-secondary)]">
+                <span className="flex items-center gap-2 text-text-secondary">
                   <span className="font-medium">{liq.symbol}</span>
                   <span className="text-xs">{liq.exchange}</span>
                 </span>

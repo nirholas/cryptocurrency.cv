@@ -243,19 +243,19 @@ export function KeyboardShortcutsProvider({ children }: { children: ReactNode })
 
       {/* Pending key indicator (bottom-left) */}
       {pendingKeyState && (
-        <div className="fixed bottom-4 left-4 z-[110] flex items-center gap-2 rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] shadow-lg px-3 py-2 animate-in fade-in-0 zoom-in-95">
-          <kbd className="inline-flex h-7 min-w-7 items-center justify-center rounded border border-[var(--color-accent)]/30 bg-[var(--color-accent)]/10 px-2 font-mono text-sm font-semibold text-[var(--color-accent)]">
+        <div className="fixed bottom-4 left-4 z-[110] flex items-center gap-2 rounded-lg border border-border bg-(--color-surface) shadow-lg px-3 py-2 animate-in fade-in-0 zoom-in-95">
+          <kbd className="inline-flex h-7 min-w-7 items-center justify-center rounded border border-accent/30 bg-accent/10 px-2 font-mono text-sm font-semibold text-accent">
             {pendingKeyState}
           </kbd>
-          <ArrowRight className="h-3 w-3 text-[var(--color-text-tertiary)]" />
-          <span className="text-xs text-[var(--color-text-secondary)]">waiting for next key…</span>
+          <ArrowRight className="h-3 w-3 text-text-tertiary" />
+          <span className="text-xs text-text-secondary">waiting for next key…</span>
         </div>
       )}
 
       {/* Action flash indicator (bottom-center) */}
       {lastAction && (
-        <div className="fixed bottom-4 left-1/2 -translate-x-1/2 z-[110] rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] shadow-lg px-4 py-2 animate-in fade-in-0 slide-in-from-bottom-2">
-          <span className="text-sm font-medium text-[var(--color-text-primary)]">{lastAction}</span>
+        <div className="fixed bottom-4 left-1/2 -translate-x-1/2 z-[110] rounded-lg border border-border bg-(--color-surface) shadow-lg px-4 py-2 animate-in fade-in-0 slide-in-from-bottom-2">
+          <span className="text-sm font-medium text-text-primary">{lastAction}</span>
         </div>
       )}
 
@@ -266,7 +266,7 @@ export function KeyboardShortcutsProvider({ children }: { children: ReactNode })
           <Dialog.Content
             className={cn(
               "fixed left-1/2 top-1/2 z-50 w-full max-w-xl -translate-x-1/2 -translate-y-1/2",
-              "rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] shadow-2xl",
+              "rounded-xl border border-border bg-(--color-surface) shadow-2xl",
               "flex flex-col max-h-[80vh] focus:outline-none",
               "data-[state=open]:animate-in data-[state=closed]:animate-out",
               "data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0",
@@ -275,11 +275,11 @@ export function KeyboardShortcutsProvider({ children }: { children: ReactNode })
           >
             {/* Header */}
             <div className="flex items-center justify-between p-6 pb-0">
-              <Dialog.Title className="text-lg font-semibold text-[var(--color-text-primary)] flex items-center gap-2">
-                <Keyboard className="h-5 w-5 text-[var(--color-accent)]" />
+              <Dialog.Title className="text-lg font-semibold text-text-primary flex items-center gap-2">
+                <Keyboard className="h-5 w-5 text-accent" />
                 Keyboard Shortcuts
               </Dialog.Title>
-              <Dialog.Close className="rounded-md p-1.5 text-[var(--color-text-secondary)] hover:bg-[var(--color-border)] transition-colors">
+              <Dialog.Close className="rounded-md p-1.5 text-text-secondary hover:bg-border transition-colors">
                 <X className="h-4 w-4" />
               </Dialog.Close>
             </div>
@@ -292,40 +292,40 @@ export function KeyboardShortcutsProvider({ children }: { children: ReactNode })
                 onChange={(e) => setSearchFilter(e.target.value)}
                 placeholder="Filter shortcuts…"
                 autoFocus
-                className="w-full rounded-md border border-[var(--color-border)] bg-[var(--color-surface)] px-3 py-2 text-sm placeholder:text-[var(--color-text-tertiary)] focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]/40"
+                className="w-full rounded-md border border-border bg-(--color-surface) px-3 py-2 text-sm placeholder:text-text-tertiary focus:outline-none focus:ring-2 focus:ring-accent/40"
               />
             </div>
 
             {/* Scrollable shortcuts list */}
             <div className="overflow-y-auto p-6 space-y-6">
               {totalShown === 0 ? (
-                <p className="text-center text-sm text-[var(--color-text-tertiary)] py-4">
+                <p className="text-center text-sm text-text-tertiary py-4">
                   No shortcuts match &ldquo;{searchFilter}&rdquo;
                 </p>
               ) : (
                 Object.entries(grouped).map(([category, shortcuts]) => (
                   <div key={category}>
-                    <h3 className="text-xs font-semibold uppercase tracking-wider text-[var(--color-text-tertiary)] mb-3">
+                    <h3 className="text-xs font-semibold uppercase tracking-wider text-text-tertiary mb-3">
                       {category}
                     </h3>
                     <ul className="space-y-1">
                       {shortcuts.map((s) => (
                         <li
                           key={s.description}
-                          className="flex items-center justify-between text-sm py-1.5 px-2 rounded-md hover:bg-[var(--color-border)]/30 transition-colors"
+                          className="flex items-center justify-between text-sm py-1.5 px-2 rounded-md hover:bg-border/30 transition-colors"
                         >
-                          <span className="text-[var(--color-text-secondary)]">
+                          <span className="text-text-secondary">
                             {s.description}
                           </span>
                           <span className="flex items-center gap-1 shrink-0 ml-4">
                             {s.keys.map((k, i) => (
                               <span key={i} className="inline-flex items-center gap-0.5">
                                 {i > 0 && (
-                                  <span className="text-[var(--color-text-tertiary)] mx-0.5 text-[10px]">
+                                  <span className="text-text-tertiary mx-0.5 text-[10px]">
                                     then
                                   </span>
                                 )}
-                                <kbd className="inline-flex h-6 min-w-6 items-center justify-center rounded border border-[var(--color-border)] bg-[var(--color-surface)] px-1.5 font-mono text-xs text-[var(--color-text-primary)] shadow-sm">
+                                <kbd className="inline-flex h-6 min-w-6 items-center justify-center rounded border border-border bg-(--color-surface) px-1.5 font-mono text-xs text-text-primary shadow-sm">
                                   {k}
                                 </kbd>
                               </span>
@@ -340,12 +340,12 @@ export function KeyboardShortcutsProvider({ children }: { children: ReactNode })
             </div>
 
             {/* Footer */}
-            <div className="border-t border-[var(--color-border)] px-6 py-3 flex items-center justify-between">
-              <p className="text-xs text-[var(--color-text-tertiary)]">
+            <div className="border-t border-border px-6 py-3 flex items-center justify-between">
+              <p className="text-xs text-text-tertiary">
                 {SHORTCUTS.length} shortcuts available
               </p>
-              <p className="text-xs text-[var(--color-text-tertiary)]">
-                Press <kbd className="rounded border border-[var(--color-border)] px-1 py-0.5 font-mono text-[10px]">?</kbd> to toggle
+              <p className="text-xs text-text-tertiary">
+                Press <kbd className="rounded border border-border px-1 py-0.5 font-mono text-[10px]">?</kbd> to toggle
               </p>
             </div>
           </Dialog.Content>

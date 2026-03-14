@@ -95,21 +95,21 @@ function StatCard({
     <Card
       className={cn(
         accent &&
-          "ring-1 ring-[var(--color-accent)]/20 bg-[var(--color-accent)]/[0.03]"
+          "ring-1 ring-accent/20 bg-accent/[0.03]"
       )}
     >
       <CardContent className="p-4 md:p-5">
         <div className="flex items-start justify-between gap-2">
-          <p className="text-[10px] font-semibold uppercase tracking-wider text-[var(--color-text-tertiary)] mb-1">
+          <p className="text-[10px] font-semibold uppercase tracking-wider text-text-tertiary mb-1">
             {label}
           </p>
           {icon && <span className="text-lg">{icon}</span>}
         </div>
-        <p className="text-xl md:text-2xl font-bold tabular-nums text-[var(--color-text-primary)]">
+        <p className="text-xl md:text-2xl font-bold tabular-nums text-text-primary">
           {value}
         </p>
         {sub && (
-          <p className="text-xs text-[var(--color-text-secondary)] mt-0.5">
+          <p className="text-xs text-text-secondary mt-0.5">
             {sub}
           </p>
         )}
@@ -133,11 +133,11 @@ function SectionHeading({
     <div className="flex items-center gap-2 mb-4">
       {icon && <span className="text-xl">{icon}</span>}
       <div>
-        <h2 className="font-serif text-2xl font-bold text-[var(--color-text-primary)]">
+        <h2 className="font-serif text-2xl font-bold text-text-primary">
           {title}
         </h2>
         {subtitle && (
-          <p className="text-xs text-[var(--color-text-tertiary)] mt-0.5">
+          <p className="text-xs text-text-tertiary mt-0.5">
             {subtitle}
           </p>
         )}
@@ -370,16 +370,16 @@ export default async function DefiPage({ params }: Props) {
       <main className="container-main py-10 space-y-14">
         {/* ══════════ Hero ══════════ */}
         <section>
-          <h1 className="font-serif text-3xl md:text-4xl font-bold mb-2 text-[var(--color-text-primary)]">
+          <h1 className="font-serif text-3xl md:text-4xl font-bold mb-2 text-text-primary">
             🏦 DeFi Dashboard
           </h1>
-          <p className="text-[var(--color-text-secondary)] max-w-2xl">
+          <p className="text-text-secondary max-w-2xl">
             Comprehensive decentralized finance analytics — protocol rankings,
             yield risk scoring, DEX volumes, bridge activity, stablecoin
             dominance, and real-time DeFi news.
           </p>
           {lastUpdated && (
-            <p className="text-[10px] text-[var(--color-text-tertiary)] mt-2">
+            <p className="text-[10px] text-text-tertiary mt-2">
               Last updated: {lastUpdated} UTC
             </p>
           )}
@@ -487,7 +487,7 @@ export default async function DefiPage({ params }: Props) {
             icon="📰"
           />
           {articles.length === 0 ? (
-            <p className="text-[var(--color-text-tertiary)] py-8 text-center">
+            <p className="text-text-tertiary py-8 text-center">
               No DeFi articles available right now. Check back soon.
             </p>
           ) : (

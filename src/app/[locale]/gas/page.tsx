@@ -82,8 +82,8 @@ const SPEED_CARDS = [
     emoji: "⚡",
     label: "Standard",
     desc: "~3 min",
-    barColor: "bg-[var(--color-accent)]",
-    borderColor: "border-[var(--color-accent)]/20",
+    barColor: "bg-accent",
+    borderColor: "border-accent/20",
   },
   {
     key: "high" as const,
@@ -210,8 +210,8 @@ function CongestionMeter({ medianGwei }: { medianGwei: number }) {
     <Card className="p-6 mb-8">
       <div className="flex items-center justify-between mb-3">
         <div className="flex items-center gap-2">
-          <Activity className="h-5 w-5 text-[var(--color-text-tertiary)]" />
-          <h2 className="font-serif text-lg font-semibold text-[var(--color-text-primary)]">
+          <Activity className="h-5 w-5 text-text-tertiary" />
+          <h2 className="font-serif text-lg font-semibold text-text-primary">
             Network Congestion
           </h2>
         </div>
@@ -224,17 +224,17 @@ function CongestionMeter({ medianGwei }: { medianGwei: number }) {
           style={{ width: `${fillPct}%` }}
         />
         <div
-          className="absolute top-0 -ml-1 w-2 h-4 bg-white dark:bg-gray-900 rounded-full border-2 border-[var(--color-text-primary)] transition-all duration-700"
+          className="absolute top-0 -ml-1 w-2 h-4 bg-white dark:bg-gray-900 rounded-full border-2 border-text-primary transition-all duration-700"
           style={{ left: `${fillPct}%` }}
         />
       </div>
-      <div className="flex justify-between text-[10px] text-[var(--color-text-tertiary)] mb-3">
+      <div className="flex justify-between text-[10px] text-text-tertiary mb-3">
         <span>Low (0)</span>
         <span>Normal (50)</span>
         <span>High (100)</span>
         <span>Very High (200+)</span>
       </div>
-      <p className="text-sm text-[var(--color-text-secondary)]">{status.msg}</p>
+      <p className="text-sm text-text-secondary">{status.msg}</p>
     </Card>
   );
 }
@@ -245,19 +245,19 @@ function L2Comparison({ gas }: { gas: GasData }) {
   return (
     <Card className="p-6">
       <div className="flex items-center gap-2 mb-4">
-        <Layers className="h-5 w-5 text-[var(--color-accent)]" />
-        <h2 className="font-serif text-lg font-semibold text-[var(--color-text-primary)]">
+        <Layers className="h-5 w-5 text-accent" />
+        <h2 className="font-serif text-lg font-semibold text-text-primary">
           L1 vs Layer 2 Fees
         </h2>
       </div>
-      <p className="text-sm text-[var(--color-text-secondary)] mb-4">
+      <p className="text-sm text-text-secondary mb-4">
         Estimated cost for a standard ETH transfer on L2 networks vs Ethereum mainnet.
       </p>
       <div className="space-y-3">
         <div className="flex items-center gap-3">
-          <span className="w-28 text-sm font-medium text-[var(--color-text-primary)] shrink-0">Ethereum L1</span>
-          <div className="flex-1 h-7 rounded bg-[var(--color-surface-secondary)] overflow-hidden">
-            <div className="h-full rounded bg-[var(--color-accent)] flex items-center justify-end pr-2 transition-all" style={{ width: "100%" }}>
+          <span className="w-28 text-sm font-medium text-text-primary shrink-0">Ethereum L1</span>
+          <div className="flex-1 h-7 rounded bg-surface-secondary overflow-hidden">
+            <div className="h-full rounded bg-accent flex items-center justify-end pr-2 transition-all" style={{ width: "100%" }}>
               <span className="text-xs font-medium text-white">
                 {ethTransferUsd !== null ? formatCurrency(ethTransferUsd) : `${gas.medium.gwei} gwei`}
               </span>
@@ -271,8 +271,8 @@ function L2Comparison({ gas }: { gas: GasData }) {
           const savings = ethTransferUsd !== null && l2Cost !== null ? ((1 - l2.ratio) * 100).toFixed(0) : null;
           return (
             <div key={l2.name} className="flex items-center gap-3">
-              <span className="w-28 text-sm text-[var(--color-text-secondary)] shrink-0">{l2.name}</span>
-              <div className="flex-1 h-7 rounded bg-[var(--color-surface-secondary)] overflow-hidden">
+              <span className="w-28 text-sm text-text-secondary shrink-0">{l2.name}</span>
+              <div className="flex-1 h-7 rounded bg-surface-secondary overflow-hidden">
                 <div
                   className="h-full rounded flex items-center justify-end pr-2 transition-all"
                   style={{ width: `${barPct}%`, backgroundColor: l2.color, minWidth: "60px" }}
@@ -310,26 +310,26 @@ export default async function GasPage({ params }: Props) {
         {/* Heading */}
         <div className="mb-8">
           <div className="flex items-center gap-3 mb-2">
-            <Fuel className="h-7 w-7 text-[var(--color-accent)]" />
-            <h1 className="font-serif text-3xl font-bold text-[var(--color-text-primary)]">
+            <Fuel className="h-7 w-7 text-accent" />
+            <h1 className="font-serif text-3xl font-bold text-text-primary">
               Ethereum Gas Tracker
             </h1>
           </div>
-          <p className="text-[var(--color-text-secondary)] max-w-2xl">
+          <p className="text-text-secondary max-w-2xl">
             Live gas prices on Ethereum mainnet with estimated USD costs for common on-chain actions.
             Compare Layer 2 fees and find the best time to transact.
           </p>
           {gas && (
             <div className="flex flex-wrap items-center gap-3 mt-3">
-              <span className="inline-flex items-center gap-1.5 text-xs text-[var(--color-text-tertiary)] bg-[var(--color-surface-secondary)] px-2.5 py-1 rounded-full">
+              <span className="inline-flex items-center gap-1.5 text-xs text-text-tertiary bg-surface-secondary px-2.5 py-1 rounded-full">
                 <span className="live-dot" /> Live
               </span>
-              <span className="text-xs text-[var(--color-text-tertiary)]">Source: {gas.source}</span>
+              <span className="text-xs text-text-tertiary">Source: {gas.source}</span>
               {gas.lastBlock && (
-                <span className="text-xs text-[var(--color-text-tertiary)]">Block #{gas.lastBlock}</span>
+                <span className="text-xs text-text-tertiary">Block #{gas.lastBlock}</span>
               )}
               {gas.baseFee !== null && (
-                <span className="text-xs text-[var(--color-text-tertiary)]">
+                <span className="text-xs text-text-tertiary">
                   Base fee: {gas.baseFee.toFixed(1)} gwei
                 </span>
               )}
@@ -339,9 +339,9 @@ export default async function GasPage({ params }: Props) {
 
         {!gas ? (
           <Card className="p-10 text-center">
-            <Fuel className="h-10 w-10 mx-auto mb-3 text-[var(--color-text-tertiary)]" />
-            <p className="text-[var(--color-text-secondary)] mb-2">Unable to load gas data. Please try again shortly.</p>
-            <p className="text-xs text-[var(--color-text-tertiary)]">Gas data is fetched live from Etherscan.</p>
+            <Fuel className="h-10 w-10 mx-auto mb-3 text-text-tertiary" />
+            <p className="text-text-secondary mb-2">Unable to load gas data. Please try again shortly.</p>
+            <p className="text-xs text-text-tertiary">Gas data is fetched live from Etherscan.</p>
           </Card>
         ) : (
           <>
@@ -358,18 +358,18 @@ export default async function GasPage({ params }: Props) {
                       <div className="flex items-center gap-2">
                         <span className="text-2xl" role="img" aria-label={label}>{emoji}</span>
                         <div>
-                          <h2 className="font-serif text-lg font-semibold text-[var(--color-text-primary)]">{label}</h2>
-                          <p className="text-xs text-[var(--color-text-tertiary)]">{desc}</p>
+                          <h2 className="font-serif text-lg font-semibold text-text-primary">{label}</h2>
+                          <p className="text-xs text-text-tertiary">{desc}</p>
                         </div>
                       </div>
                       <div className="text-right">
-                        <p className="text-3xl font-bold text-[var(--color-accent)]">{level.gwei}</p>
-                        <p className="text-[10px] text-[var(--color-text-tertiary)]">gwei</p>
+                        <p className="text-3xl font-bold text-accent">{level.gwei}</p>
+                        <p className="text-[10px] text-text-tertiary">gwei</p>
                       </div>
                     </div>
 
                     {level.usd !== null && (
-                      <p className="text-xs text-[var(--color-text-tertiary)] mb-3">
+                      <p className="text-xs text-text-tertiary mb-3">
                         ≈ {formatCurrency(level.usd)} for a basic transfer
                       </p>
                     )}
@@ -386,10 +386,10 @@ export default async function GasPage({ params }: Props) {
 
             {/* Transaction Cost Estimator */}
             <Card className="p-6 mb-8">
-              <h2 className="font-serif text-lg font-semibold text-[var(--color-text-primary)] mb-1">
+              <h2 className="font-serif text-lg font-semibold text-text-primary mb-1">
                 Transaction Cost Estimator
               </h2>
-              <p className="text-sm text-[var(--color-text-secondary)] mb-5">
+              <p className="text-sm text-text-secondary mb-5">
                 Estimated costs at current gas prices for common Ethereum operations.
               </p>
 
@@ -398,17 +398,17 @@ export default async function GasPage({ params }: Props) {
                 if (actions.length === 0) return null;
                 return (
                   <div key={cat.key} className="mb-6 last:mb-0">
-                    <h3 className="text-sm font-medium text-[var(--color-text-tertiary)] uppercase tracking-wider mb-2 flex items-center gap-1.5">
+                    <h3 className="text-sm font-medium text-text-tertiary uppercase tracking-wider mb-2 flex items-center gap-1.5">
                       <span>{cat.icon}</span> {cat.label}
                     </h3>
-                    <div className="border border-[var(--color-border)] rounded-lg overflow-x-auto">
+                    <div className="border border-border rounded-lg overflow-x-auto">
                       <table className="w-full text-sm min-w-[480px]">
                         <thead>
-                          <tr className="bg-[var(--color-surface-secondary)]">
-                            <th className="px-4 py-2 text-left font-medium text-[var(--color-text-tertiary)]">Action</th>
-                            <th className="px-3 py-2 text-right font-medium text-[var(--color-text-tertiary)] hidden sm:table-cell">Gas Units</th>
+                          <tr className="bg-surface-secondary">
+                            <th className="px-4 py-2 text-left font-medium text-text-tertiary">Action</th>
+                            <th className="px-3 py-2 text-right font-medium text-text-tertiary hidden sm:table-cell">Gas Units</th>
                             {SPEED_CARDS.map((s) => (
-                              <th key={s.key} className="px-3 py-2 text-right font-medium text-[var(--color-text-tertiary)]">
+                              <th key={s.key} className="px-3 py-2 text-right font-medium text-text-tertiary">
                                 {s.emoji} {s.label}
                               </th>
                             ))}
@@ -416,15 +416,15 @@ export default async function GasPage({ params }: Props) {
                         </thead>
                         <tbody>
                           {actions.map((action) => (
-                            <tr key={action.label} className="border-t border-[var(--color-border)]">
-                              <td className="px-4 py-2.5 text-[var(--color-text-primary)]">
+                            <tr key={action.label} className="border-t border-border">
+                              <td className="px-4 py-2.5 text-text-primary">
                                 <span className="mr-1.5">{action.icon}</span>{action.label}
                               </td>
-                              <td className="px-3 py-2.5 text-right text-[var(--color-text-tertiary)] hidden sm:table-cell">
+                              <td className="px-3 py-2.5 text-right text-text-tertiary hidden sm:table-cell">
                                 {action.gasUnits.toLocaleString()}
                               </td>
                               {SPEED_CARDS.map((s) => (
-                                <td key={s.key} className="px-3 py-2.5 text-right font-medium text-[var(--color-text-primary)]">
+                                <td key={s.key} className="px-3 py-2.5 text-right font-medium text-text-primary">
                                   {estimateUsd(gas[s.key].gwei, action.gasUnits, gas[s.key].usd)}
                                 </td>
                               ))}
@@ -440,7 +440,7 @@ export default async function GasPage({ params }: Props) {
 
             {/* Gas Price Bars */}
             <Card className="p-6 mb-8">
-              <h2 className="font-serif text-lg font-semibold text-[var(--color-text-primary)] mb-4">
+              <h2 className="font-serif text-lg font-semibold text-text-primary mb-4">
                 Gas Price Comparison
               </h2>
               <div className="space-y-3">
@@ -451,15 +451,15 @@ export default async function GasPage({ params }: Props) {
                   return (
                     <div key={key}>
                       <div className="flex items-center justify-between text-sm mb-1">
-                        <span className="text-[var(--color-text-secondary)]">{emoji} {label}</span>
-                        <span className="font-medium text-[var(--color-text-primary)]">
+                        <span className="text-text-secondary">{emoji} {label}</span>
+                        <span className="font-medium text-text-primary">
                           {level.gwei} gwei
                           {level.usd !== null && (
-                            <span className="text-[var(--color-text-tertiary)] ml-1">({formatCurrency(level.usd)})</span>
+                            <span className="text-text-tertiary ml-1">({formatCurrency(level.usd)})</span>
                           )}
                         </span>
                       </div>
-                      <div className="h-4 rounded-full bg-[var(--color-surface-secondary)] overflow-hidden">
+                      <div className="h-4 rounded-full bg-surface-secondary overflow-hidden">
                         <div className={`h-full rounded-full ${barColor} transition-all duration-500`} style={{ width: `${pct}%` }} />
                       </div>
                     </div>
@@ -468,11 +468,11 @@ export default async function GasPage({ params }: Props) {
               </div>
 
               {gas.high.gwei > 0 && gas.low.gwei > 0 && (
-                <div className="mt-4 pt-4 border-t border-[var(--color-border)] flex items-center justify-between text-sm">
-                  <span className="text-[var(--color-text-tertiary)]">Fast/Slow Spread</span>
-                  <span className="font-medium text-[var(--color-text-primary)]">
+                <div className="mt-4 pt-4 border-t border-border flex items-center justify-between text-sm">
+                  <span className="text-text-tertiary">Fast/Slow Spread</span>
+                  <span className="font-medium text-text-primary">
                     {(gas.high.gwei / gas.low.gwei).toFixed(1)}×
-                    <span className="text-[var(--color-text-tertiary)] ml-1">
+                    <span className="text-text-tertiary ml-1">
                       ({gas.high.gwei - gas.low.gwei} gwei difference)
                     </span>
                   </span>
@@ -488,33 +488,33 @@ export default async function GasPage({ params }: Props) {
             {/* Educational Section */}
             <Card className="p-6 mb-8">
               <div className="flex items-center gap-2 mb-4">
-                <Info className="h-5 w-5 text-[var(--color-accent)]" />
-                <h2 className="font-serif text-lg font-semibold text-[var(--color-text-primary)]">
+                <Info className="h-5 w-5 text-accent" />
+                <h2 className="font-serif text-lg font-semibold text-text-primary">
                   Understanding Ethereum Gas
                 </h2>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                <div className="p-4 rounded-lg bg-[var(--color-surface-secondary)]">
-                  <h3 className="font-medium text-[var(--color-text-primary)] mb-1.5 flex items-center gap-1.5">
-                    <Fuel className="h-4 w-4 text-[var(--color-accent)]" /> What is Gas?
+                <div className="p-4 rounded-lg bg-surface-secondary">
+                  <h3 className="font-medium text-text-primary mb-1.5 flex items-center gap-1.5">
+                    <Fuel className="h-4 w-4 text-accent" /> What is Gas?
                   </h3>
-                  <p className="text-sm text-[var(--color-text-secondary)]">
+                  <p className="text-sm text-text-secondary">
                     Gas measures computational effort to execute transactions on Ethereum. More complex operations use more gas.
                   </p>
                 </div>
-                <div className="p-4 rounded-lg bg-[var(--color-surface-secondary)]">
-                  <h3 className="font-medium text-[var(--color-text-primary)] mb-1.5 flex items-center gap-1.5">
-                    <Activity className="h-4 w-4 text-[var(--color-accent)]" /> Gwei Explained
+                <div className="p-4 rounded-lg bg-surface-secondary">
+                  <h3 className="font-medium text-text-primary mb-1.5 flex items-center gap-1.5">
+                    <Activity className="h-4 w-4 text-accent" /> Gwei Explained
                   </h3>
-                  <p className="text-sm text-[var(--color-text-secondary)]">
+                  <p className="text-sm text-text-secondary">
                     Gwei (gigawei) is a denomination of ETH. 1 ETH = 1 billion gwei. Gas prices are quoted in gwei per unit of gas.
                   </p>
                 </div>
-                <div className="p-4 rounded-lg bg-[var(--color-surface-secondary)]">
-                  <h3 className="font-medium text-[var(--color-text-primary)] mb-1.5 flex items-center gap-1.5">
-                    <ArrowRight className="h-4 w-4 text-[var(--color-accent)]" /> EIP-1559
+                <div className="p-4 rounded-lg bg-surface-secondary">
+                  <h3 className="font-medium text-text-primary mb-1.5 flex items-center gap-1.5">
+                    <ArrowRight className="h-4 w-4 text-accent" /> EIP-1559
                   </h3>
-                  <p className="text-sm text-[var(--color-text-secondary)]">
+                  <p className="text-sm text-text-secondary">
                     Since EIP-1559, fees comprise a base fee (burned) plus an optional priority tip. The base fee adjusts automatically with demand.
                   </p>
                 </div>
@@ -525,7 +525,7 @@ export default async function GasPage({ params }: Props) {
             <Card className="p-6">
               <div className="flex items-center gap-2 mb-5">
                 <Lightbulb className="h-5 w-5 text-amber-500" />
-                <h2 className="font-serif text-lg font-semibold text-[var(--color-text-primary)]">
+                <h2 className="font-serif text-lg font-semibold text-text-primary">
                   Tips to Save on Gas
                 </h2>
               </div>
@@ -533,12 +533,12 @@ export default async function GasPage({ params }: Props) {
                 {TIPS.map((tip) => {
                   const Icon = tip.icon;
                   return (
-                    <div key={tip.title} className="p-4 rounded-lg border border-[var(--color-border)] hover:border-[var(--color-border-hover)] transition-colors">
+                    <div key={tip.title} className="p-4 rounded-lg border border-border hover:border-border-hover transition-colors">
                       <div className="flex items-center gap-2 mb-2">
-                        <Icon className="h-4 w-4 text-[var(--color-accent)] shrink-0" />
-                        <h3 className="font-medium text-sm text-[var(--color-text-primary)]">{tip.title}</h3>
+                        <Icon className="h-4 w-4 text-accent shrink-0" />
+                        <h3 className="font-medium text-sm text-text-primary">{tip.title}</h3>
                       </div>
-                      <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">{tip.tip}</p>
+                      <p className="text-xs text-text-secondary leading-relaxed">{tip.tip}</p>
                     </div>
                   );
                 })}

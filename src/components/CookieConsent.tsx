@@ -149,20 +149,20 @@ export function CookieConsent() {
       aria-label="Cookie consent"
       aria-modal="false"
     >
-      <div className="border-t border-[var(--color-border)] bg-[var(--color-surface)] shadow-2xl">
+      <div className="border-t border-border bg-(--color-surface) shadow-2xl">
         {/* ── Main bar ── */}
         <div className="mx-auto max-w-5xl px-4 py-3 sm:px-6">
           <div className="flex flex-col items-center gap-3 sm:flex-row sm:gap-4">
             <div className="flex items-center gap-2 sm:gap-3">
               <Cookie
-                className="hidden size-5 shrink-0 text-[var(--color-accent)] sm:block"
+                className="hidden size-5 shrink-0 text-accent sm:block"
                 aria-hidden="true"
               />
-              <p className="flex-1 text-center text-sm text-[var(--color-text-primary)] sm:text-left">
+              <p className="flex-1 text-center text-sm text-text-primary sm:text-left">
                 We use cookies for analytics and to personalise your experience.{" "}
                 <button
                   onClick={() => setExpanded((p) => !p)}
-                  className="inline-flex items-center gap-0.5 text-[var(--color-accent)] underline underline-offset-2 hover:text-[var(--color-accent-hover)]"
+                  className="inline-flex items-center gap-0.5 text-accent underline underline-offset-2 hover:text-accent-hover"
                 >
                   {expanded ? "Hide" : "Manage"} preferences
                   {expanded ? (
@@ -200,21 +200,21 @@ export function CookieConsent() {
           )}
           aria-hidden={!expanded}
         >
-          <div className="mx-auto max-w-5xl border-t border-[var(--color-border)] px-4 py-4 sm:px-6">
+          <div className="mx-auto max-w-5xl border-t border-border px-4 py-4 sm:px-6">
             <div className="grid gap-3 sm:grid-cols-3">
               {/* Essential — always on */}
-              <label className="flex cursor-not-allowed items-start gap-3 rounded-lg border border-[var(--color-border)] bg-[var(--color-surface-secondary)] p-3">
+              <label className="flex cursor-not-allowed items-start gap-3 rounded-lg border border-border bg-surface-secondary p-3">
                 <input
                   type="checkbox"
                   checked
                   disabled
-                  className="mt-0.5 accent-[var(--color-accent)]"
+                  className="mt-0.5 accent-accent"
                 />
                 <div>
-                  <span className="text-sm font-medium text-[var(--color-text-primary)]">
+                  <span className="text-sm font-medium text-text-primary">
                     Essential
                   </span>
-                  <p className="text-xs text-[var(--color-text-secondary)]">
+                  <p className="text-xs text-text-secondary">
                     Required for the site to function.
                   </p>
                 </div>
@@ -222,36 +222,36 @@ export function CookieConsent() {
               </label>
 
               {/* Analytics */}
-              <label className="flex cursor-pointer items-start gap-3 rounded-lg border border-[var(--color-border)] p-3 transition-colors hover:bg-[var(--color-surface-secondary)]">
+              <label className="flex cursor-pointer items-start gap-3 rounded-lg border border-border p-3 transition-colors hover:bg-surface-secondary">
                 <input
                   type="checkbox"
                   checked={analytics}
                   onChange={(e) => setAnalytics(e.target.checked)}
-                  className="mt-0.5 accent-[var(--color-accent)]"
+                  className="mt-0.5 accent-accent"
                 />
                 <div>
-                  <span className="text-sm font-medium text-[var(--color-text-primary)]">
+                  <span className="text-sm font-medium text-text-primary">
                     Analytics
                   </span>
-                  <p className="text-xs text-[var(--color-text-secondary)]">
+                  <p className="text-xs text-text-secondary">
                     Help us understand how you use the app.
                   </p>
                 </div>
               </label>
 
               {/* Personalization */}
-              <label className="flex cursor-pointer items-start gap-3 rounded-lg border border-[var(--color-border)] p-3 transition-colors hover:bg-[var(--color-surface-secondary)]">
+              <label className="flex cursor-pointer items-start gap-3 rounded-lg border border-border p-3 transition-colors hover:bg-surface-secondary">
                 <input
                   type="checkbox"
                   checked={personalization}
                   onChange={(e) => setPersonalization(e.target.checked)}
-                  className="mt-0.5 accent-[var(--color-accent)]"
+                  className="mt-0.5 accent-accent"
                 />
                 <div>
-                  <span className="text-sm font-medium text-[var(--color-text-primary)]">
+                  <span className="text-sm font-medium text-text-primary">
                     Personalization
                   </span>
-                  <p className="text-xs text-[var(--color-text-secondary)]">
+                  <p className="text-xs text-text-secondary">
                     Remember your preferences and watchlists.
                   </p>
                 </div>
@@ -261,7 +261,7 @@ export function CookieConsent() {
             <div className="mt-3 flex items-center justify-between">
               <a
                 href="/privacy"
-                className="inline-flex items-center gap-1 text-xs text-[var(--color-text-secondary)] underline-offset-2 hover:text-[var(--color-accent)] hover:underline"
+                className="inline-flex items-center gap-1 text-xs text-text-secondary underline-offset-2 hover:text-accent hover:underline"
               >
                 Privacy policy
                 <ExternalLink className="size-3" aria-hidden="true" />

@@ -12,7 +12,7 @@ export default function MarketsLoading() {
         {Array.from({ length: 6 }).map((_, i) => (
           <div
             key={i}
-            className="rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] p-5"
+            className="rounded-lg border border-border bg-(--color-surface) p-5"
           >
             <div className="flex items-start justify-between">
               <div className="space-y-2 flex-1">
@@ -30,9 +30,9 @@ export default function MarketsLoading() {
       <Skeleton className="h-7 w-52 mb-4" />
 
       {/* Table skeleton */}
-      <div className="rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] overflow-hidden">
+      <div className="rounded-lg border border-border bg-(--color-surface) overflow-hidden">
         {/* Table header */}
-        <div className="flex items-center gap-4 px-4 py-3 border-b border-[var(--color-border)] bg-[var(--color-surface-secondary)]">
+        <div className="flex items-center gap-4 px-4 py-3 border-b border-border bg-surface-secondary">
           <Skeleton className="h-4 w-8" />
           <Skeleton className="h-4 w-32" />
           <Skeleton className="h-4 w-20 ml-auto" />
@@ -46,7 +46,7 @@ export default function MarketsLoading() {
         {Array.from({ length: 10 }).map((_, i) => (
           <div
             key={i}
-            className="flex items-center gap-4 px-4 py-4 border-b border-[var(--color-border)] last:border-b-0"
+            className="flex items-center gap-4 px-4 py-4 border-b border-border last:border-b-0"
           >
             <Skeleton className="h-4 w-6" />
             <Skeleton className="h-8 w-8 rounded-full shrink-0" />

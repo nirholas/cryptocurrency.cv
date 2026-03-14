@@ -254,7 +254,7 @@ export default function FearGreedGauge({
             <span
               className={cn(
                 "font-medium tabular-nums",
-                valueDiff > 0 ? "text-green-500" : valueDiff < 0 ? "text-red-500" : "text-[var(--color-text-secondary)]"
+                valueDiff > 0 ? "text-green-500" : valueDiff < 0 ? "text-red-500" : "text-text-secondary"
               )}
             >
               {valueDiff > 0 ? "▲" : valueDiff < 0 ? "▼" : "—"}{" "}
@@ -265,11 +265,11 @@ export default function FearGreedGauge({
       </div>
 
       <div className="mt-4 text-center">
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[var(--color-border)] bg-[var(--color-surface)]">
+        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-(--color-surface)">
           <span>{signal.emoji}</span>
-          <span className="text-sm font-semibold text-[var(--color-text-primary)]">{signal.text}</span>
+          <span className="text-sm font-semibold text-text-primary">{signal.text}</span>
         </div>
-        <p className="text-xs text-[var(--color-text-secondary)] mt-1.5 max-w-xs mx-auto">{signal.description}</p>
+        <p className="text-xs text-text-secondary mt-1.5 max-w-xs mx-auto">{signal.description}</p>
       </div>
     </div>
   );

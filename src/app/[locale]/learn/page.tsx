@@ -83,10 +83,10 @@ export default async function LearnPage({ params }: Props) {
       <main className="container-main py-10">
         {/* Hero */}
         <section className="mb-12">
-          <h1 className="font-serif text-3xl md:text-4xl font-bold mb-3 text-[var(--color-text-primary)]">
+          <h1 className="font-serif text-3xl md:text-4xl font-bold mb-3 text-text-primary">
             Learn Crypto
           </h1>
-          <p className="text-[var(--color-text-secondary)] max-w-2xl text-lg leading-relaxed">
+          <p className="text-text-secondary max-w-2xl text-lg leading-relaxed">
             New to cryptocurrency? Start here. Our beginner-friendly guides,
             searchable glossary, and curated resources will help you understand
             blockchain, digital assets, and decentralized finance.
@@ -95,13 +95,13 @@ export default async function LearnPage({ params }: Props) {
 
         {/* Beginner Guides Grid */}
         <section className="mb-16">
-          <h2 className="font-serif text-2xl font-bold mb-6 text-[var(--color-text-primary)]">
+          <h2 className="font-serif text-2xl font-bold mb-6 text-text-primary">
             Beginner Guides
           </h2>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {learnArticles.map((article) => (
               <Link key={article.slug} href={`/learn/${article.slug}`}>
-                <Card className="h-full flex flex-col hover:border-[var(--color-accent)] transition-colors">
+                <Card className="h-full flex flex-col hover:border-accent transition-colors">
                   <CardHeader>
                     <span className="text-3xl mb-2 block">{article.icon}</span>
                     <CardTitle>{article.title}</CardTitle>
@@ -110,7 +110,7 @@ export default async function LearnPage({ params }: Props) {
                   <CardFooter className="mt-auto">
                     <div className="flex items-center justify-between w-full">
                       <Badge>{article.difficulty}</Badge>
-                      <span className="text-xs text-[var(--color-text-secondary)]">
+                      <span className="text-xs text-text-secondary">
                         {article.readTime}
                       </span>
                     </div>
@@ -123,10 +123,10 @@ export default async function LearnPage({ params }: Props) {
 
         {/* Glossary Section */}
         <section className="mb-16">
-          <h2 className="font-serif text-2xl font-bold mb-2 text-[var(--color-text-primary)]">
+          <h2 className="font-serif text-2xl font-bold mb-2 text-text-primary">
             Crypto Glossary
           </h2>
-          <p className="text-[var(--color-text-secondary)] mb-6">
+          <p className="text-text-secondary mb-6">
             A searchable A–Z reference of essential cryptocurrency terms and
             definitions.
           </p>
@@ -135,10 +135,10 @@ export default async function LearnPage({ params }: Props) {
 
         {/* Resources Section */}
         <section className="mb-12">
-          <h2 className="font-serif text-2xl font-bold mb-6 text-[var(--color-text-primary)]">
+          <h2 className="font-serif text-2xl font-bold mb-6 text-text-primary">
             Resources
           </h2>
-          <p className="text-[var(--color-text-secondary)] mb-6">
+          <p className="text-text-secondary mb-6">
             Handpicked books, podcasts, and tools for going deeper.
           </p>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -150,9 +150,9 @@ export default async function LearnPage({ params }: Props) {
                 rel="noopener noreferrer"
                 className="group"
               >
-                <Card className="h-full hover:border-[var(--color-accent)] transition-colors">
+                <Card className="h-full hover:border-accent transition-colors">
                   <CardHeader>
-                    <CardTitle className="group-hover:text-[var(--color-accent)] transition-colors">
+                    <CardTitle className="group-hover:text-accent transition-colors">
                       {r.title}
                       <span className="inline-block ml-1 opacity-0 group-hover:opacity-100 transition-opacity">
                         ↗
@@ -167,26 +167,26 @@ export default async function LearnPage({ params }: Props) {
         </section>
 
         {/* CTA */}
-        <div className="pt-8 border-t border-[var(--color-border)]">
-          <p className="text-[var(--color-text-secondary)] mb-4">
+        <div className="pt-8 border-t border-border">
+          <p className="text-text-secondary mb-4">
             Ready to explore?
           </p>
           <div className="flex gap-4 flex-wrap">
             <Link
               href="/"
-              className="rounded-lg bg-[var(--color-accent)] px-5 py-2.5 text-sm font-medium text-white hover:opacity-90 transition-opacity"
+              className="rounded-lg bg-accent px-5 py-2.5 text-sm font-medium text-white hover:opacity-90 transition-opacity"
             >
               Read the Latest News
             </Link>
             <Link
               href="/blog"
-              className="rounded-lg border border-[var(--color-border)] px-5 py-2.5 text-sm font-medium text-[var(--color-text-primary)] hover:bg-[var(--color-surface-tertiary)] transition"
+              className="rounded-lg border border-border px-5 py-2.5 text-sm font-medium text-text-primary hover:bg-surface-tertiary transition"
             >
               Read the Blog
             </Link>
             <Link
               href="/developers"
-              className="rounded-lg border border-[var(--color-border)] px-5 py-2.5 text-sm font-medium text-[var(--color-text-primary)] hover:bg-[var(--color-surface-tertiary)] transition"
+              className="rounded-lg border border-border px-5 py-2.5 text-sm font-medium text-text-primary hover:bg-surface-tertiary transition"
             >
               Explore the API
             </Link>

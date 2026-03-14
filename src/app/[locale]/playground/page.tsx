@@ -36,10 +36,10 @@ export default async function PlaygroundPage({ params }: Props) {
       <main className="container-main py-10">
         {/* Header */}
         <div className="mb-8">
-          <h1 className="font-serif text-3xl font-bold tracking-tight text-[var(--color-text-primary)] sm:text-4xl">
+          <h1 className="font-serif text-3xl font-bold tracking-tight text-text-primary sm:text-4xl">
             API Playground
           </h1>
-          <p className="mt-2 text-[var(--color-text-secondary)] max-w-2xl">
+          <p className="mt-2 text-text-secondary max-w-2xl">
             Explore and test every endpoint interactively. Build your request,
             send it, and inspect the response — no API key needed.
           </p>

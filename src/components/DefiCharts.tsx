@@ -75,10 +75,10 @@ export function ChainDistributionChart({
       <CardContent className="space-y-2">
         {entries.map((entry) => (
           <div key={entry.chain} className="flex items-center gap-3">
-            <span className="text-xs font-medium text-[var(--color-text-primary)] w-20 truncate">
+            <span className="text-xs font-medium text-text-primary w-20 truncate">
               {entry.chain}
             </span>
-            <div className="flex-1 h-4 rounded-full bg-[var(--color-border)]/50 overflow-hidden">
+            <div className="flex-1 h-4 rounded-full bg-border/50 overflow-hidden">
               <div
                 className="h-full rounded-full transition-all duration-500"
                 style={{
@@ -88,7 +88,7 @@ export function ChainDistributionChart({
                 }}
               />
             </div>
-            <span className="text-xs font-semibold tabular-nums text-[var(--color-text-secondary)] w-12 text-right">
+            <span className="text-xs font-semibold tabular-nums text-text-secondary w-12 text-right">
               {formatPct(entry.percentage)}
             </span>
           </div>
@@ -131,7 +131,7 @@ export function CategoryBreakdown({
       </CardHeader>
       <CardContent className="space-y-3">
         {/* stacked bar */}
-        <div className="flex h-5 rounded-full overflow-hidden border border-[var(--color-border)]">
+        <div className="flex h-5 rounded-full overflow-hidden border border-border">
           {entries.map((entry, i) => (
             <div
               key={entry.name}
@@ -156,10 +156,10 @@ export function CategoryBreakdown({
                   backgroundColor: CATEGORY_COLORS[i % CATEGORY_COLORS.length],
                 }}
               />
-              <span className="text-xs text-[var(--color-text-secondary)] truncate">
+              <span className="text-xs text-text-secondary truncate">
                 {entry.name}
               </span>
-              <span className="text-xs font-semibold tabular-nums text-[var(--color-text-primary)] ml-auto">
+              <span className="text-xs font-semibold tabular-nums text-text-primary ml-auto">
                 {formatPct(entry.pct)}
               </span>
             </div>
@@ -255,7 +255,7 @@ function RiskMeter({ score }: { score: number }) {
                   : i < 8
                     ? "bg-orange-500"
                     : "bg-red-500"
-              : "bg-[var(--color-border)]"
+              : "bg-border"
           )}
         />
       ))}
@@ -297,8 +297,8 @@ export function YieldRiskTable({ pools }: { pools: YieldPoolData[] }) {
               className={cn(
                 "px-2.5 py-1 text-xs font-medium rounded-md border transition-colors",
                 sortBy === key
-                  ? "bg-[var(--color-accent)]/15 text-[var(--color-accent)] border-[var(--color-accent)]/30"
-                  : "text-[var(--color-text-tertiary)] border-[var(--color-border)] hover:text-[var(--color-text-secondary)]"
+                  ? "bg-accent/15 text-accent border-accent/30"
+                  : "text-text-tertiary border-border hover:text-text-secondary"
               )}
             >
               {key === "apy" ? "Highest APY" : key === "tvlUsd" ? "Highest TVL" : "Lowest Risk"}
@@ -310,34 +310,34 @@ export function YieldRiskTable({ pools }: { pools: YieldPoolData[] }) {
             type="checkbox"
             checked={showStableOnly}
             onChange={(e) => setShowStableOnly(e.target.checked)}
-            className="rounded border-[var(--color-border)] accent-[var(--color-accent)]"
+            className="rounded border-border accent-accent"
           />
-          <span className="text-xs text-[var(--color-text-secondary)]">
+          <span className="text-xs text-text-secondary">
             Stablecoins only
           </span>
         </label>
       </div>
 
-      <div className="overflow-x-auto rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)]">
+      <div className="overflow-x-auto rounded-xl border border-border bg-(--color-surface)">
         <table className="w-full text-sm">
           <thead>
-            <tr className="border-b border-[var(--color-border)]">
-              <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-[var(--color-text-tertiary)]">
+            <tr className="border-b border-border">
+              <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-text-tertiary">
                 Pool
               </th>
-              <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-[var(--color-text-tertiary)] hidden sm:table-cell">
+              <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-text-tertiary hidden sm:table-cell">
                 Chain
               </th>
-              <th className="px-4 py-3 text-right text-xs font-semibold uppercase tracking-wider text-[var(--color-text-tertiary)]">
+              <th className="px-4 py-3 text-right text-xs font-semibold uppercase tracking-wider text-text-tertiary">
                 APY
               </th>
-              <th className="px-4 py-3 text-right text-xs font-semibold uppercase tracking-wider text-[var(--color-text-tertiary)] hidden md:table-cell">
+              <th className="px-4 py-3 text-right text-xs font-semibold uppercase tracking-wider text-text-tertiary hidden md:table-cell">
                 Base / Reward
               </th>
-              <th className="px-4 py-3 text-right text-xs font-semibold uppercase tracking-wider text-[var(--color-text-tertiary)] hidden sm:table-cell">
+              <th className="px-4 py-3 text-right text-xs font-semibold uppercase tracking-wider text-text-tertiary hidden sm:table-cell">
                 TVL
               </th>
-              <th className="px-4 py-3 text-center text-xs font-semibold uppercase tracking-wider text-[var(--color-text-tertiary)]">
+              <th className="px-4 py-3 text-center text-xs font-semibold uppercase tracking-wider text-text-tertiary">
                 Risk
               </th>
             </tr>
@@ -347,7 +347,7 @@ export function YieldRiskTable({ pools }: { pools: YieldPoolData[] }) {
               <tr>
                 <td
                   colSpan={6}
-                  className="px-4 py-10 text-center text-[var(--color-text-tertiary)]"
+                  className="px-4 py-10 text-center text-text-tertiary"
                 >
                   No yield pools available.
                 </td>
@@ -356,14 +356,14 @@ export function YieldRiskTable({ pools }: { pools: YieldPoolData[] }) {
             {processed.slice(0, 15).map((pool) => (
               <tr
                 key={pool.pool}
-                className="border-b border-[var(--color-border)] last:border-0 hover:bg-[var(--color-surface-hover)] transition-colors"
+                className="border-b border-border last:border-0 hover:bg-(--color-surface-hover) transition-colors"
               >
                 <td className="px-4 py-3">
                   <div>
-                    <p className="font-semibold text-[var(--color-text-primary)] truncate max-w-[200px]">
+                    <p className="font-semibold text-text-primary truncate max-w-[200px]">
                       {pool.symbol}
                     </p>
-                    <p className="text-[10px] text-[var(--color-text-tertiary)]">
+                    <p className="text-[10px] text-text-tertiary">
                       {pool.project}
                       {pool.stablecoin && (
                         <span className="ml-1.5 inline-flex items-center px-1 py-0 rounded text-[9px] bg-green-500/15 text-green-500">
@@ -374,7 +374,7 @@ export function YieldRiskTable({ pools }: { pools: YieldPoolData[] }) {
                   </div>
                 </td>
                 <td className="px-4 py-3 hidden sm:table-cell">
-                  <span className="text-xs text-[var(--color-text-secondary)]">
+                  <span className="text-xs text-text-secondary">
                     {pool.chain}
                   </span>
                 </td>
@@ -386,21 +386,21 @@ export function YieldRiskTable({ pools }: { pools: YieldPoolData[] }) {
                         ? "text-orange-500"
                         : pool.apy > 20
                           ? "text-green-500"
-                          : "text-[var(--color-text-primary)]"
+                          : "text-text-primary"
                     )}
                   >
                     {pool.apy.toFixed(2)}%
                   </span>
                 </td>
                 <td className="px-4 py-3 text-right hidden md:table-cell">
-                  <span className="text-xs tabular-nums text-[var(--color-text-secondary)]">
+                  <span className="text-xs tabular-nums text-text-secondary">
                     {pool.apyBase !== null ? `${pool.apyBase.toFixed(1)}%` : "—"}
                     {" / "}
                     {pool.apyReward !== null ? `${pool.apyReward.toFixed(1)}%` : "—"}
                   </span>
                 </td>
                 <td className="px-4 py-3 text-right hidden sm:table-cell">
-                  <span className="text-xs font-semibold tabular-nums text-[var(--color-text-primary)]">
+                  <span className="text-xs font-semibold tabular-nums text-text-primary">
                     {formatLargeNumber(pool.tvlUsd)}
                   </span>
                 </td>
@@ -457,10 +457,10 @@ export function DexVolumeGrid({ dexes }: { dexes: DexVolumeData[] }) {
           <CardContent className="p-4 space-y-2">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
-                <span className="text-lg font-bold tabular-nums text-[var(--color-text-tertiary)]">
+                <span className="text-lg font-bold tabular-nums text-text-tertiary">
                   {i + 1}
                 </span>
-                <span className="font-semibold text-sm text-[var(--color-text-primary)] truncate">
+                <span className="font-semibold text-sm text-text-primary truncate">
                   {dex.name}
                 </span>
               </div>
@@ -474,19 +474,19 @@ export function DexVolumeGrid({ dexes }: { dexes: DexVolumeData[] }) {
                 {dex.change_1d.toFixed(1)}%
               </span>
             </div>
-            <p className="text-lg font-bold tabular-nums text-[var(--color-text-primary)]">
+            <p className="text-lg font-bold tabular-nums text-text-primary">
               {formatLargeNumber(dex.total24h)}
             </p>
-            <div className="h-1.5 rounded-full bg-[var(--color-border)]/50 overflow-hidden">
+            <div className="h-1.5 rounded-full bg-border/50 overflow-hidden">
               <div
-                className="h-full rounded-full bg-[var(--color-accent)] transition-all"
+                className="h-full rounded-full bg-accent transition-all"
                 style={{
                   width: `${(dex.total24h / maxVol) * 100}%`,
                   minWidth: "4px",
                 }}
               />
             </div>
-            <p className="text-[10px] text-[var(--color-text-tertiary)]">
+            <p className="text-[10px] text-text-tertiary">
               7d: {formatLargeNumber(dex.total7d)}
               <span className="ml-1.5">
                 ({dex.change_7d >= 0 ? "+" : ""}
@@ -529,23 +529,23 @@ export function BridgeVolumeTable({
   const maxVol = top[0]?.lastDailyVolume ?? 1;
 
   return (
-    <div className="overflow-x-auto rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)]">
+    <div className="overflow-x-auto rounded-xl border border-border bg-(--color-surface)">
       <table className="w-full text-sm">
         <thead>
-          <tr className="border-b border-[var(--color-border)]">
-            <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-[var(--color-text-tertiary)]">
+          <tr className="border-b border-border">
+            <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-text-tertiary">
               Bridge
             </th>
-            <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-[var(--color-text-tertiary)] hidden sm:table-cell">
+            <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-text-tertiary hidden sm:table-cell">
               Chains
             </th>
-            <th className="px-4 py-3 text-right text-xs font-semibold uppercase tracking-wider text-[var(--color-text-tertiary)]">
+            <th className="px-4 py-3 text-right text-xs font-semibold uppercase tracking-wider text-text-tertiary">
               24h Volume
             </th>
-            <th className="px-4 py-3 text-right text-xs font-semibold uppercase tracking-wider text-[var(--color-text-tertiary)] hidden md:table-cell">
+            <th className="px-4 py-3 text-right text-xs font-semibold uppercase tracking-wider text-text-tertiary hidden md:table-cell">
               7d Volume
             </th>
-            <th className="px-4 py-3 text-right text-xs font-semibold uppercase tracking-wider text-[var(--color-text-tertiary)] hidden lg:table-cell">
+            <th className="px-4 py-3 text-right text-xs font-semibold uppercase tracking-wider text-text-tertiary hidden lg:table-cell">
               30d Volume
             </th>
           </tr>
@@ -554,10 +554,10 @@ export function BridgeVolumeTable({
           {top.map((bridge) => (
             <tr
               key={bridge.name}
-              className="border-b border-[var(--color-border)] last:border-0 hover:bg-[var(--color-surface-hover)] transition-colors"
+              className="border-b border-border last:border-0 hover:bg-(--color-surface-hover) transition-colors"
             >
               <td className="px-4 py-3">
-                <span className="font-semibold text-[var(--color-text-primary)]">
+                <span className="font-semibold text-text-primary">
                   {bridge.displayName}
                 </span>
               </td>
@@ -566,13 +566,13 @@ export function BridgeVolumeTable({
                   {bridge.chains.slice(0, 4).map((c) => (
                     <span
                       key={c}
-                      className="text-[10px] px-1.5 py-0.5 rounded bg-[var(--color-surface-hover)] text-[var(--color-text-tertiary)]"
+                      className="text-[10px] px-1.5 py-0.5 rounded bg-(--color-surface-hover) text-text-tertiary"
                     >
                       {c}
                     </span>
                   ))}
                   {bridge.chains.length > 4 && (
-                    <span className="text-[10px] px-1.5 py-0.5 rounded bg-[var(--color-surface-hover)] text-[var(--color-text-tertiary)]">
+                    <span className="text-[10px] px-1.5 py-0.5 rounded bg-(--color-surface-hover) text-text-tertiary">
                       +{bridge.chains.length - 4}
                     </span>
                   )}
@@ -580,10 +580,10 @@ export function BridgeVolumeTable({
               </td>
               <td className="px-4 py-3 text-right">
                 <div className="flex items-center gap-2 justify-end">
-                  <span className="font-semibold tabular-nums text-[var(--color-text-primary)]">
+                  <span className="font-semibold tabular-nums text-text-primary">
                     {formatLargeNumber(bridge.lastDailyVolume)}
                   </span>
-                  <div className="w-12 h-1.5 rounded-full bg-[var(--color-border)]/50 overflow-hidden hidden md:block">
+                  <div className="w-12 h-1.5 rounded-full bg-border/50 overflow-hidden hidden md:block">
                     <div
                       className="h-full rounded-full bg-purple-500 transition-all"
                       style={{
@@ -594,10 +594,10 @@ export function BridgeVolumeTable({
                   </div>
                 </div>
               </td>
-              <td className="px-4 py-3 text-right hidden md:table-cell font-medium tabular-nums text-[var(--color-text-secondary)]">
+              <td className="px-4 py-3 text-right hidden md:table-cell font-medium tabular-nums text-text-secondary">
                 {formatLargeNumber(bridge.weeklyVolume)}
               </td>
-              <td className="px-4 py-3 text-right hidden lg:table-cell font-medium tabular-nums text-[var(--color-text-secondary)]">
+              <td className="px-4 py-3 text-right hidden lg:table-cell font-medium tabular-nums text-text-secondary">
                 {formatLargeNumber(bridge.monthlyVolume)}
               </td>
             </tr>
@@ -649,7 +649,7 @@ export function StablecoinDominance({
       </CardHeader>
       <CardContent className="space-y-3">
         {/* stacked bar */}
-        <div className="flex h-6 rounded-lg overflow-hidden border border-[var(--color-border)]">
+        <div className="flex h-6 rounded-lg overflow-hidden border border-border">
           {sorted.map((coin, i) => {
             const pct = totalMcap > 0 ? (coin.marketCap / totalMcap) * 100 : 0;
             return (
@@ -683,16 +683,16 @@ export function StablecoinDominance({
                   className="w-2.5 h-2.5 rounded-sm shrink-0"
                   style={{ backgroundColor: STABLECOIN_COLORS[i] }}
                 />
-                <span className="text-xs font-semibold text-[var(--color-text-primary)] w-14">
+                <span className="text-xs font-semibold text-text-primary w-14">
                   {coin.symbol}
                 </span>
-                <span className="text-xs text-[var(--color-text-secondary)] flex-1 truncate">
+                <span className="text-xs text-text-secondary flex-1 truncate">
                   {coin.name}
                 </span>
-                <span className="text-xs tabular-nums text-[var(--color-text-secondary)]">
+                <span className="text-xs tabular-nums text-text-secondary">
                   {formatLargeNumber(coin.marketCap)}
                 </span>
-                <span className="text-xs font-semibold tabular-nums text-[var(--color-text-primary)] w-12 text-right">
+                <span className="text-xs font-semibold tabular-nums text-text-primary w-12 text-right">
                   {pct.toFixed(1)}%
                 </span>
                 {depegged && (
@@ -723,7 +723,7 @@ export function DefiTabs({
   onChange: (id: string) => void;
 }) {
   return (
-    <div className="flex gap-1 p-1 rounded-lg bg-[var(--color-surface)] border border-[var(--color-border)] w-fit">
+    <div className="flex gap-1 p-1 rounded-lg bg-(--color-surface) border border-border w-fit">
       {tabs.map((tab) => (
         <button
           key={tab.id}
@@ -731,8 +731,8 @@ export function DefiTabs({
           className={cn(
             "px-3 py-1.5 text-sm font-medium rounded-md transition-colors",
             activeTab === tab.id
-              ? "bg-[var(--color-accent)] text-white shadow-sm"
-              : "text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] hover:bg-[var(--color-surface-hover)]"
+              ? "bg-accent text-white shadow-sm"
+              : "text-text-secondary hover:text-text-primary hover:bg-(--color-surface-hover)"
           )}
         >
           {tab.icon && <span className="mr-1">{tab.icon}</span>}

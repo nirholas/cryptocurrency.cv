@@ -217,14 +217,14 @@ function Block({ block }: { block: MdBlock }) {
 
     case 'table':
       return (
-        <div className="overflow-x-auto rounded-md border border-[var(--color-border)]">
+        <div className="overflow-x-auto rounded-md border border-border">
           <table className="w-full text-xs">
             <thead>
-              <tr className="bg-[var(--color-surface-tertiary)]">
+              <tr className="bg-surface-tertiary">
                 {block.headers.map((h, i) => (
                   <th
                     key={i}
-                    className="border-b border-[var(--color-border)] px-3 py-2 text-left font-semibold text-[var(--color-text-primary)]"
+                    className="border-b border-border px-3 py-2 text-left font-semibold text-text-primary"
                   >
                     <InlineContent text={h} />
                   </th>
@@ -233,11 +233,11 @@ function Block({ block }: { block: MdBlock }) {
             </thead>
             <tbody>
               {block.rows.map((row, ri) => (
-                <tr key={ri} className={ri % 2 === 1 ? 'bg-[var(--color-surface-secondary)]' : ''}>
+                <tr key={ri} className={ri % 2 === 1 ? 'bg-surface-secondary' : ''}>
                   {row.map((cell, ci) => (
                     <td
                       key={ci}
-                      className="border-b border-[var(--color-border)]/30 px-3 py-2 text-[var(--color-text-primary)]"
+                      className="border-b border-border/30 px-3 py-2 text-text-primary"
                     >
                       <InlineContent text={cell} />
                     </td>
@@ -281,17 +281,17 @@ function CodeBlock({ lang, code }: { lang: string; code: string }) {
   }, [code]);
 
   return (
-    <div className="group relative overflow-hidden rounded-md bg-[var(--color-surface-tertiary)]">
+    <div className="group relative overflow-hidden rounded-md bg-surface-tertiary">
       {lang && (
-        <div className="flex items-center justify-between border-b border-[var(--color-border)]/30 px-3 py-1.5">
-          <span className="font-mono text-[10px] tracking-wide text-[var(--color-text-tertiary)] uppercase">
+        <div className="flex items-center justify-between border-b border-border/30 px-3 py-1.5">
+          <span className="font-mono text-[10px] tracking-wide text-text-tertiary uppercase">
             {lang}
           </span>
         </div>
       )}
       <button
         onClick={handleCopy}
-        className="absolute top-1.5 right-1.5 rounded border border-[var(--color-border)] bg-[var(--color-surface-secondary)] p-1 text-[var(--color-text-tertiary)] opacity-0 transition-opacity group-hover:opacity-100 hover:text-[var(--color-text-primary)]"
+        className="absolute top-1.5 right-1.5 rounded border border-border bg-surface-secondary p-1 text-text-tertiary opacity-0 transition-opacity group-hover:opacity-100 hover:text-text-primary"
         title="Copy code"
       >
         {copied ? <Check className="h-3 w-3 text-green-500" /> : <Copy className="h-3 w-3" />}

@@ -41,10 +41,10 @@ export function BookmarkButton({ article, className }: BookmarkButtonProps) {
       aria-label={bookmarked ? "Remove bookmark" : "Add bookmark"}
       className={cn(
         "inline-flex items-center justify-center rounded-md p-1.5 transition-colors",
-        "bg-[var(--color-surface)]/80 backdrop-blur-sm border border-[var(--color-border)]",
-        "hover:bg-[var(--color-accent)] hover:text-white",
-        bookmarked && "text-[var(--color-accent)]",
-        !bookmarked && "text-[var(--color-text-tertiary)]",
+        "bg-(--color-surface)/80 backdrop-blur-sm border border-border",
+        "hover:bg-accent hover:text-white",
+        bookmarked && "text-accent",
+        !bookmarked && "text-text-tertiary",
         className,
       )}
     >

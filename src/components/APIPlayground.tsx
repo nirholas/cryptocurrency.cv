@@ -420,16 +420,16 @@ export default function APIPlayground() {
     <div className="grid grid-cols-1 lg:grid-cols-[320px_1fr] gap-6">
       {/* ── Left: Endpoint Selector ── */}
       <div className="space-y-4">
-        <div className="rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] overflow-hidden">
-          <div className="px-4 py-3 border-b border-[var(--color-border)] bg-[var(--color-surface-secondary)]">
-            <h3 className="text-sm font-semibold text-[var(--color-text-primary)]">
+        <div className="rounded-lg border border-border bg-(--color-surface) overflow-hidden">
+          <div className="px-4 py-3 border-b border-border bg-surface-secondary">
+            <h3 className="text-sm font-semibold text-text-primary">
               Endpoints
             </h3>
           </div>
           <div className="p-2 max-h-[60vh] overflow-y-auto">
             {CATEGORIES.map((cat) => (
               <div key={cat} className="mb-2">
-                <p className="px-2 py-1 text-[10px] font-bold uppercase tracking-widest text-[var(--color-text-tertiary)]">
+                <p className="px-2 py-1 text-[10px] font-bold uppercase tracking-widest text-text-tertiary">
                   {cat}
                 </p>
                 {ENDPOINTS.filter((e) => e.category === cat).map((ep) => (
@@ -439,8 +439,8 @@ export default function APIPlayground() {
                     className={cn(
                       "w-full flex items-center gap-2 rounded-md px-3 py-2 text-left text-sm transition-colors cursor-pointer",
                       selectedId === ep.id
-                        ? "bg-[var(--color-accent)]/10 text-[var(--color-accent)]"
-                        : "text-[var(--color-text-secondary)] hover:bg-[var(--color-surface-secondary)]",
+                        ? "bg-accent/10 text-accent"
+                        : "text-text-secondary hover:bg-surface-secondary",
                     )}
                   >
                     <span
@@ -465,9 +465,9 @@ export default function APIPlayground() {
       {/* ── Right: Request Builder + Response ── */}
       <div className="space-y-4">
         {/* Endpoint info */}
-        <div className="rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] overflow-hidden">
+        <div className="rounded-lg border border-border bg-(--color-surface) overflow-hidden">
           {/* URL bar */}
-          <div className="flex items-center gap-2 px-4 py-3 border-b border-[var(--color-border)] bg-[var(--color-surface-secondary)]">
+          <div className="flex items-center gap-2 px-4 py-3 border-b border-border bg-surface-secondary">
             <span
               className={cn(
                 "shrink-0 rounded px-2 py-0.5 text-xs font-bold uppercase text-white",
@@ -476,7 +476,7 @@ export default function APIPlayground() {
             >
               {endpoint.method}
             </span>
-            <code className="font-mono text-sm text-[var(--color-text-primary)] truncate flex-1 select-all">
+            <code className="font-mono text-sm text-text-primary truncate flex-1 select-all">
               {buildUrl()}
             </code>
             <div className="flex items-center gap-2 shrink-0">
@@ -510,26 +510,26 @@ export default function APIPlayground() {
           </div>
 
           {/* Description */}
-          <div className="px-4 py-2 border-b border-[var(--color-border)]">
-            <p className="text-sm text-[var(--color-text-secondary)]">
+          <div className="px-4 py-2 border-b border-border">
+            <p className="text-sm text-text-secondary">
               {endpoint.description}
             </p>
           </div>
 
           {/* Parameters */}
           {endpoint.params.length > 0 && (
-            <div className="px-4 py-3 border-b border-[var(--color-border)] space-y-3">
-              <p className="text-xs font-semibold uppercase tracking-wide text-[var(--color-text-tertiary)]">
+            <div className="px-4 py-3 border-b border-border space-y-3">
+              <p className="text-xs font-semibold uppercase tracking-wide text-text-tertiary">
                 Parameters
               </p>
               <div className="grid gap-3 sm:grid-cols-2">
                 {endpoint.params.map((p) => (
                   <div key={p.name} className="space-y-1">
                     <label className="flex items-center gap-2 text-sm">
-                      <code className="font-mono text-xs bg-[var(--color-surface-tertiary)] px-1.5 py-0.5 rounded text-[var(--color-text-primary)]">
+                      <code className="font-mono text-xs bg-surface-tertiary px-1.5 py-0.5 rounded text-text-primary">
                         {p.name}
                       </code>
-                      <span className="text-[10px] text-[var(--color-text-tertiary)]">
+                      <span className="text-[10px] text-text-tertiary">
                         {p.type}
                       </span>
                       {p.required && (
@@ -545,7 +545,7 @@ export default function APIPlayground() {
                             [p.name]: e.target.value,
                           }))
                         }
-                        className="w-full rounded-md border border-[var(--color-border)] bg-[var(--color-surface-secondary)] px-3 py-1.5 text-sm text-[var(--color-text-primary)] font-mono focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]"
+                        className="w-full rounded-md border border-border bg-surface-secondary px-3 py-1.5 text-sm text-text-primary font-mono focus:outline-none focus:ring-2 focus:ring-accent"
                       >
                         <option value="">— any —</option>
                         {p.options.map((opt) => (
@@ -565,7 +565,7 @@ export default function APIPlayground() {
                           }))
                         }
                         placeholder={p.description}
-                        className="w-full rounded-md border border-[var(--color-border)] bg-[var(--color-surface-secondary)] px-3 py-1.5 text-sm text-[var(--color-text-primary)] font-mono placeholder:text-[var(--color-text-tertiary)] focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]"
+                        className="w-full rounded-md border border-border bg-surface-secondary px-3 py-1.5 text-sm text-text-primary font-mono placeholder:text-text-tertiary focus:outline-none focus:ring-2 focus:ring-accent"
                       />
                     )}
                   </div>
@@ -577,11 +577,11 @@ export default function APIPlayground() {
 
         {/* Response */}
         {response.status !== "idle" && (
-          <div className="rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] overflow-hidden">
+          <div className="rounded-lg border border-border bg-(--color-surface) overflow-hidden">
             {/* Response header */}
-            <div className="flex items-center justify-between px-4 py-2 border-b border-[var(--color-border)] bg-[var(--color-surface-secondary)]">
+            <div className="flex items-center justify-between px-4 py-2 border-b border-border bg-surface-secondary">
               <div className="flex items-center gap-3">
-                <span className="text-xs font-semibold uppercase tracking-wide text-[var(--color-text-tertiary)]">
+                <span className="text-xs font-semibold uppercase tracking-wide text-text-tertiary">
                   Response
                 </span>
                 {response.code && (
@@ -596,13 +596,13 @@ export default function APIPlayground() {
                   </span>
                 )}
                 {response.time !== undefined && (
-                  <span className="inline-flex items-center gap-1 text-xs text-[var(--color-text-tertiary)]">
+                  <span className="inline-flex items-center gap-1 text-xs text-text-tertiary">
                     <Clock className="h-3 w-3" />
                     {response.time}ms
                   </span>
                 )}
                 {response.size && (
-                  <span className="inline-flex items-center gap-1 text-xs text-[var(--color-text-tertiary)]">
+                  <span className="inline-flex items-center gap-1 text-xs text-text-tertiary">
                     <Zap className="h-3 w-3" />
                     {response.size}
                   </span>
@@ -616,8 +616,8 @@ export default function APIPlayground() {
                     className={cn(
                       "rounded px-2 py-1 text-xs font-medium transition-colors cursor-pointer",
                       activeTab === tab
-                        ? "bg-[var(--color-surface-tertiary)] text-[var(--color-text-primary)]"
-                        : "text-[var(--color-text-tertiary)] hover:text-[var(--color-text-secondary)]",
+                        ? "bg-surface-tertiary text-text-primary"
+                        : "text-text-tertiary hover:text-text-secondary",
                     )}
                   >
                     {tab === "body" ? "Body" : tab === "headers" ? "Headers" : "cURL"}
@@ -628,7 +628,7 @@ export default function APIPlayground() {
 
             {response.status === "loading" ? (
               <div className="flex items-center justify-center p-12">
-                <svg className="animate-spin h-6 w-6 text-[var(--color-accent)]" viewBox="0 0 24 24" fill="none">
+                <svg className="animate-spin h-6 w-6 text-accent" viewBox="0 0 24 24" fill="none">
                   <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" className="opacity-25" />
                   <path d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" fill="currentColor" className="opacity-75" />
                 </svg>
@@ -643,11 +643,11 @@ export default function APIPlayground() {
                   <table className="w-full text-sm">
                     <tbody>
                       {Object.entries(response.headers).map(([key, val]) => (
-                        <tr key={key} className="border-b border-[var(--color-border)]">
-                          <td className="py-1.5 pr-4 font-mono text-xs text-[var(--color-accent)] whitespace-nowrap">
+                        <tr key={key} className="border-b border-border">
+                          <td className="py-1.5 pr-4 font-mono text-xs text-accent whitespace-nowrap">
                             {key}
                           </td>
-                          <td className="py-1.5 font-mono text-xs text-[var(--color-text-secondary)] break-all">
+                          <td className="py-1.5 font-mono text-xs text-text-secondary break-all">
                             {val}
                           </td>
                         </tr>
@@ -655,19 +655,19 @@ export default function APIPlayground() {
                     </tbody>
                   </table>
                 ) : (
-                  <p className="text-sm text-[var(--color-text-tertiary)]">No headers available</p>
+                  <p className="text-sm text-text-tertiary">No headers available</p>
                 )}
               </div>
             ) : (
               <div>
                 {/* Body toolbar */}
-                <div className="flex items-center justify-between px-4 py-2 border-b border-[var(--color-border)]">
-                  <label className="flex items-center gap-2 text-xs text-[var(--color-text-tertiary)] cursor-pointer">
+                <div className="flex items-center justify-between px-4 py-2 border-b border-border">
+                  <label className="flex items-center gap-2 text-xs text-text-tertiary cursor-pointer">
                     <input
                       type="checkbox"
                       checked={prettyJson}
                       onChange={(e) => setPrettyJson(e.target.checked)}
-                      className="accent-[var(--color-accent)]"
+                      className="accent-accent"
                     />
                     Pretty Print
                   </label>
@@ -700,12 +700,12 @@ export default function APIPlayground() {
 
         {/* Idle state hint */}
         {response.status === "idle" && (
-          <div className="rounded-lg border border-dashed border-[var(--color-border)] bg-[var(--color-surface-secondary)] p-12 text-center">
-            <Globe className="h-10 w-10 mx-auto mb-3 text-[var(--color-text-tertiary)]" />
-            <p className="text-sm text-[var(--color-text-secondary)]">
+          <div className="rounded-lg border border-dashed border-border bg-surface-secondary p-12 text-center">
+            <Globe className="h-10 w-10 mx-auto mb-3 text-text-tertiary" />
+            <p className="text-sm text-text-secondary">
               Select an endpoint and click <strong>Send Request</strong> to see the response
             </p>
-            <p className="text-xs text-[var(--color-text-tertiary)] mt-1">
+            <p className="text-xs text-text-tertiary mt-1">
               No API key required — all endpoints are free and open
             </p>
           </div>

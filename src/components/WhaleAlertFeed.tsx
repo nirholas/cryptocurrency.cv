@@ -208,9 +208,9 @@ export default function WhaleAlertFeed({ className }: { className?: string }) {
         </CardHeader>
         <CardContent className="space-y-3">
           {Array.from({ length: 6 }).map((_, i) => (
-            <div key={i} className="animate-pulse border-l-2 border-[var(--color-border)] pl-4 py-3">
-              <div className="h-4 w-40 bg-[var(--color-surface-tertiary)] rounded mb-2" />
-              <div className="h-3 w-64 bg-[var(--color-surface-tertiary)] rounded" />
+            <div key={i} className="animate-pulse border-l-2 border-border pl-4 py-3">
+              <div className="h-4 w-40 bg-surface-tertiary rounded mb-2" />
+              <div className="h-3 w-64 bg-surface-tertiary rounded" />
             </div>
           ))}
         </CardContent>
@@ -246,14 +246,14 @@ export default function WhaleAlertFeed({ className }: { className?: string }) {
               <select
                 value={minAmount}
                 onChange={(e) => setMinAmount(Number(e.target.value))}
-                className="text-xs rounded-md border border-[var(--color-border)] bg-[var(--color-surface)] text-[var(--color-text-primary)] px-2 py-1.5 pr-6 appearance-none cursor-pointer"
+                className="text-xs rounded-md border border-border bg-(--color-surface) text-text-primary px-2 py-1.5 pr-6 appearance-none cursor-pointer"
                 aria-label="Minimum amount filter"
               >
                 {MIN_AMOUNT_OPTIONS.map((opt) => (
                   <option key={opt.value} value={opt.value}>{opt.label}</option>
                 ))}
               </select>
-              <Filter className="absolute right-1.5 top-1/2 -translate-y-1/2 w-3 h-3 text-[var(--color-text-tertiary)] pointer-events-none" />
+              <Filter className="absolute right-1.5 top-1/2 -translate-y-1/2 w-3 h-3 text-text-tertiary pointer-events-none" />
             </div>
 
             {/* Pause / resume */}
@@ -280,7 +280,7 @@ export default function WhaleAlertFeed({ className }: { className?: string }) {
 
         {/* Summary bar */}
         {summary && (
-          <div className="flex flex-wrap gap-4 mt-3 text-xs text-[var(--color-text-secondary)]">
+          <div className="flex flex-wrap gap-4 mt-3 text-xs text-text-secondary">
             <span>{summary.totalTransactions} transactions</span>
             <span>Total: {formatUsd(summary.totalValueUsd)}</span>
             <span className="text-red-500">↓ {summary.exchangeDeposits} deposits</span>
@@ -292,7 +292,7 @@ export default function WhaleAlertFeed({ className }: { className?: string }) {
 
       <CardContent>
         {filtered.length === 0 ? (
-          <p className="text-sm text-[var(--color-text-tertiary)] text-center py-8">
+          <p className="text-sm text-text-tertiary text-center py-8">
             No whale alerts matching the current filters.
           </p>
         ) : (
@@ -309,7 +309,7 @@ export default function WhaleAlertFeed({ className }: { className?: string }) {
                   className={cn(
                     "border-l-3 pl-4 py-3 rounded-r-md transition-all duration-500",
                     config.border,
-                    isNew && "bg-[var(--color-accent)]/5 animate-pulse",
+                    isNew && "bg-accent/5 animate-pulse",
                   )}
                 >
                   <div className="flex items-start justify-between gap-2">
@@ -319,7 +319,7 @@ export default function WhaleAlertFeed({ className }: { className?: string }) {
                       </span>
                       <div className="min-w-0">
                         <div className="flex items-center gap-1.5 flex-wrap">
-                          <span className="font-semibold text-sm text-[var(--color-text-primary)]">
+                          <span className="font-semibold text-sm text-text-primary">
                             {formatAmount(tx.amount)} {tx.symbol}
                           </span>
                           <Badge variant="default" className="text-[10px]">
@@ -337,7 +337,7 @@ export default function WhaleAlertFeed({ className }: { className?: string }) {
                             {config.label}
                           </Badge>
                         </div>
-                        <p className="text-xs text-[var(--color-text-tertiary)] mt-0.5 truncate">
+                        <p className="text-xs text-text-tertiary mt-0.5 truncate">
                           <span className="font-mono">
                             {tx.from?.owner || truncateAddress(tx.from?.address)}
                           </span>
@@ -348,7 +348,7 @@ export default function WhaleAlertFeed({ className }: { className?: string }) {
                         </p>
                       </div>
                     </div>
-                    <span className="text-[10px] text-[var(--color-text-tertiary)] shrink-0 whitespace-nowrap">
+                    <span className="text-[10px] text-text-tertiary shrink-0 whitespace-nowrap">
                       {timeAgo(tx.timestamp)}
                     </span>
                   </div>

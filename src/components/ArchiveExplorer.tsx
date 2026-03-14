@@ -116,7 +116,7 @@ function YearSelector({
   const t = useTranslations("archive");
   return (
     <div className="space-y-2">
-      <h3 className="font-serif text-sm font-medium text-[var(--color-text-secondary)]">
+      <h3 className="font-serif text-sm font-medium text-text-secondary">
         {t("selectYear")}
       </h3>
       <div className="flex flex-wrap gap-2">
@@ -153,7 +153,7 @@ function MonthGrid({
 
   return (
     <div className="space-y-2">
-      <h3 className="font-serif text-sm font-medium text-[var(--color-text-secondary)]">
+      <h3 className="font-serif text-sm font-medium text-text-secondary">
         {t("selectMonth")} — {year}
       </h3>
       <div className="grid grid-cols-4 gap-2 sm:grid-cols-6">
@@ -203,12 +203,12 @@ function DayCalendar({
 
   return (
     <div className="space-y-2">
-      <h3 className="font-serif text-sm font-medium text-[var(--color-text-secondary)]">
+      <h3 className="font-serif text-sm font-medium text-text-secondary">
         {t("selectDay")} — {MONTHS[month - 1]} {year}
       </h3>
       <div className="grid grid-cols-7 gap-1">
         {dayNames.map((d) => (
-          <div key={d} className="text-center text-xs font-medium text-[var(--color-text-tertiary)] py-1">
+          <div key={d} className="text-center text-xs font-medium text-text-tertiary py-1">
             {d}
           </div>
         ))}
@@ -233,9 +233,9 @@ function DayCalendar({
               className={cn(
                 "rounded-md p-1.5 text-sm transition-colors relative",
                 selectedDay === day
-                  ? "bg-[var(--color-brand)] text-white font-bold"
-                  : "hover:bg-[var(--color-surface-hover)]",
-                isToday && selectedDay !== day && "ring-1 ring-[var(--color-brand)]",
+                  ? "bg-(--color-brand) text-white font-bold"
+                  : "hover:bg-(--color-surface-hover)",
+                isToday && selectedDay !== day && "ring-1 ring-(--color-brand)",
                 isFuture && "opacity-30 cursor-not-allowed",
                 hasNotable && "font-semibold"
               )}
@@ -302,34 +302,34 @@ function MarketContext({
         {market ? (
           <>
             <div className="grid grid-cols-2 gap-3">
-              <div className="rounded-lg bg-[var(--color-surface-elevated)] p-3">
-                <p className="text-xs text-[var(--color-text-secondary)]">BTC</p>
+              <div className="rounded-lg bg-(--color-surface-elevated) p-3">
+                <p className="text-xs text-text-secondary">BTC</p>
                 <p className="text-lg font-bold text-amber-500">{formatPrice(market.btc_price)}</p>
               </div>
-              <div className="rounded-lg bg-[var(--color-surface-elevated)] p-3">
-                <p className="text-xs text-[var(--color-text-secondary)]">ETH</p>
+              <div className="rounded-lg bg-(--color-surface-elevated) p-3">
+                <p className="text-xs text-text-secondary">ETH</p>
                 <p className="text-lg font-bold text-blue-400">{formatPrice(market.eth_price)}</p>
               </div>
-              <div className="rounded-lg bg-[var(--color-surface-elevated)] p-3">
-                <p className="text-xs text-[var(--color-text-secondary)]">SOL</p>
+              <div className="rounded-lg bg-(--color-surface-elevated) p-3">
+                <p className="text-xs text-text-secondary">SOL</p>
                 <p className="text-lg font-bold text-purple-400">{formatPrice(market.sol_price)}</p>
               </div>
-              <div className="rounded-lg bg-[var(--color-surface-elevated)] p-3">
-                <p className="text-xs text-[var(--color-text-secondary)]">{t("marketCap")}</p>
+              <div className="rounded-lg bg-(--color-surface-elevated) p-3">
+                <p className="text-xs text-text-secondary">{t("marketCap")}</p>
                 <p className="text-lg font-bold">{formatMarketCap(market.total_market_cap)}</p>
               </div>
             </div>
             <div className="flex items-center gap-4 text-sm">
-              <span className="text-[var(--color-text-secondary)]">{t("btcDominance")}:</span>
+              <span className="text-text-secondary">{t("btcDominance")}:</span>
               <span className="font-semibold">{market.btc_dominance.toFixed(1)}%</span>
-              <span className="text-[var(--color-text-secondary)]">{t("fearGreed")}:</span>
+              <span className="text-text-secondary">{t("fearGreed")}:</span>
               <Badge variant="default">
                 {market.fear_greed_index}
               </Badge>
             </div>
           </>
         ) : (
-          <p className="text-sm text-[var(--color-text-tertiary)] italic">
+          <p className="text-sm text-text-tertiary italic">
             {t("noMarketData")}
           </p>
         )}
@@ -403,13 +403,13 @@ function StatsDashboard({
       <CardContent className="space-y-6">
         {/* Total articles */}
         <div className="flex items-center gap-3">
-          <Database className="h-5 w-5 text-[var(--color-brand)]" />
+          <Database className="h-5 w-5 text-(--color-brand)" />
           <div>
             <p className="text-2xl font-bold">{stats.totalArticles.toLocaleString()}</p>
-            <p className="text-xs text-[var(--color-text-secondary)]">{t("totalArticles")}</p>
+            <p className="text-xs text-text-secondary">{t("totalArticles")}</p>
           </div>
           {stats.dateRange && (
-            <div className="ml-auto text-right text-xs text-[var(--color-text-tertiary)]">
+            <div className="ml-auto text-right text-xs text-text-tertiary">
               <p>{stats.dateRange.earliest}</p>
               <p>{t("to")} {stats.dateRange.latest}</p>
             </div>
@@ -419,20 +419,20 @@ function StatsDashboard({
         {/* Year bar chart */}
         {Object.keys(yearData).length > 0 && (
           <div className="space-y-2">
-            <h4 className="text-sm font-medium text-[var(--color-text-secondary)]">{t("articlesPerYear")}</h4>
+            <h4 className="text-sm font-medium text-text-secondary">{t("articlesPerYear")}</h4>
             <div className="space-y-1.5">
               {Object.entries(yearData)
                 .sort(([a], [b]) => a.localeCompare(b))
                 .map(([year, count]) => (
                   <div key={year} className="flex items-center gap-2 text-sm">
                     <span className="w-10 shrink-0 font-mono text-xs">{year}</span>
-                    <div className="flex-1 h-5 rounded bg-[var(--color-surface-elevated)] overflow-hidden">
+                    <div className="flex-1 h-5 rounded bg-(--color-surface-elevated) overflow-hidden">
                       <div
-                        className="h-full rounded bg-[var(--color-brand)] transition-all duration-500"
+                        className="h-full rounded bg-(--color-brand) transition-all duration-500"
                         style={{ width: `${(count / maxArticles) * 100}%` }}
                       />
                     </div>
-                    <span className="w-14 shrink-0 text-right text-xs font-mono text-[var(--color-text-secondary)]">
+                    <span className="w-14 shrink-0 text-right text-xs font-mono text-text-secondary">
                       {count.toLocaleString()}
                     </span>
                   </div>
@@ -444,7 +444,7 @@ function StatsDashboard({
         {/* Top sources */}
         {topSources.length > 0 && (
           <div className="space-y-2">
-            <h4 className="text-sm font-medium text-[var(--color-text-secondary)]">{t("topSources")}</h4>
+            <h4 className="text-sm font-medium text-text-secondary">{t("topSources")}</h4>
             <div className="flex flex-wrap gap-1.5">
               {topSources.map(([source, count]) => (
                 <Badge key={source} variant="default">
@@ -458,7 +458,7 @@ function StatsDashboard({
         {/* Top categories */}
         {topCategories.length > 0 && (
           <div className="space-y-2">
-            <h4 className="text-sm font-medium text-[var(--color-text-secondary)]">{t("topCategories")}</h4>
+            <h4 className="text-sm font-medium text-text-secondary">{t("topCategories")}</h4>
             <div className="flex flex-wrap gap-1.5">
               {topCategories.map(([cat, count]) => (
                 <Badge key={cat} variant="default">
@@ -509,30 +509,30 @@ function ArchiveSearch({
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               placeholder={t("searchPlaceholder")}
-              className="w-full rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-brand)]"
+              className="w-full rounded-lg border border-border bg-(--color-surface) px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-(--color-brand)"
             />
           </div>
           <div className="grid grid-cols-2 gap-2">
             <div>
-              <label className="text-xs text-[var(--color-text-secondary)] mb-1 block">
+              <label className="text-xs text-text-secondary mb-1 block">
                 {t("startDate")}
               </label>
               <input
                 type="date"
                 value={startDate}
                 onChange={(e) => setStartDate(e.target.value)}
-                className="w-full rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-brand)]"
+                className="w-full rounded-lg border border-border bg-(--color-surface) px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-(--color-brand)"
               />
             </div>
             <div>
-              <label className="text-xs text-[var(--color-text-secondary)] mb-1 block">
+              <label className="text-xs text-text-secondary mb-1 block">
                 {t("endDate")}
               </label>
               <input
                 type="date"
                 value={endDate}
                 onChange={(e) => setEndDate(e.target.value)}
-                className="w-full rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-brand)]"
+                className="w-full rounded-lg border border-border bg-(--color-surface) px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-(--color-brand)"
               />
             </div>
           </div>
@@ -818,7 +818,7 @@ export default function ArchiveExplorer() {
         <h1 className="font-serif text-3xl font-bold tracking-tight sm:text-4xl">
           {t("title")}
         </h1>
-        <p className="mt-2 text-[var(--color-text-secondary)]">{t("subtitle")}</p>
+        <p className="mt-2 text-text-secondary">{t("subtitle")}</p>
       </div>
 
       {/* Date navigation */}
@@ -860,7 +860,7 @@ export default function ArchiveExplorer() {
               <div>
                 <h2 className="font-serif text-xl font-semibold">{periodLabel}</h2>
                 {total > 0 && (
-                  <p className="text-sm text-[var(--color-text-secondary)]">
+                  <p className="text-sm text-text-secondary">
                     {total.toLocaleString()} {t("articlesFound")}
                   </p>
                 )}
@@ -906,9 +906,9 @@ export default function ArchiveExplorer() {
           {/* No results */}
           {!loading && articles.length === 0 && selectedYear && !searchResults && (
             <div className="flex flex-col items-center justify-center py-16 text-center">
-              <Newspaper className="h-12 w-12 text-[var(--color-text-tertiary)] mb-3" />
-              <p className="text-[var(--color-text-secondary)]">{t("noArticles")}</p>
-              <p className="text-sm text-[var(--color-text-tertiary)] mt-1">
+              <Newspaper className="h-12 w-12 text-text-tertiary mb-3" />
+              <p className="text-text-secondary">{t("noArticles")}</p>
+              <p className="text-sm text-text-tertiary mt-1">
                 {t("noArticlesHint")}
               </p>
             </div>
@@ -929,8 +929,8 @@ export default function ArchiveExplorer() {
                 ))
               ) : (
                 <div className="flex flex-col items-center justify-center py-12 text-center">
-                  <AlertCircle className="h-10 w-10 text-[var(--color-text-tertiary)] mb-3" />
-                  <p className="text-[var(--color-text-secondary)]">{t("noSearchResults")}</p>
+                  <AlertCircle className="h-10 w-10 text-text-tertiary mb-3" />
+                  <p className="text-text-secondary">{t("noSearchResults")}</p>
                 </div>
               )}
             </div>
@@ -939,9 +939,9 @@ export default function ArchiveExplorer() {
           {/* Welcome state */}
           {!selectedYear && !searchResults && (
             <div className="flex flex-col items-center justify-center py-20 text-center">
-              <Activity className="h-16 w-16 text-[var(--color-brand)] mb-4 opacity-50" />
+              <Activity className="h-16 w-16 text-(--color-brand) mb-4 opacity-50" />
               <h2 className="font-serif text-2xl font-semibold mb-2">{t("welcomeTitle")}</h2>
-              <p className="text-[var(--color-text-secondary)] max-w-md">
+              <p className="text-text-secondary max-w-md">
                 {t("welcomeDescription")}
               </p>
             </div>

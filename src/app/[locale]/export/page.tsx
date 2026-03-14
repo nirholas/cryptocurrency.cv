@@ -38,10 +38,10 @@ export default async function ExportPage({ params }: Props) {
       <main className="container-main py-10">
         {/* Header */}
         <div className="mb-8">
-          <h1 className="font-serif text-3xl font-bold tracking-tight text-[var(--color-text-primary)] sm:text-4xl">
+          <h1 className="font-serif text-3xl font-bold tracking-tight text-text-primary sm:text-4xl">
             Data Export &amp; Feeds
           </h1>
-          <p className="mt-2 text-[var(--color-text-secondary)] max-w-2xl">
+          <p className="mt-2 text-text-secondary max-w-2xl">
             Download crypto data in multiple formats or subscribe to real-time
             RSS and Atom feeds. All exports are free — no API key required.
           </p>

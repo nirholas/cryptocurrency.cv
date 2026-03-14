@@ -52,7 +52,7 @@ async function ScreenerContent() {
 
   if (!coins || coins.length === 0) {
     return (
-      <div className="text-center py-20 text-[var(--color-text-secondary)]">
+      <div className="text-center py-20 text-text-secondary">
         <p className="text-lg">Unable to load market data right now.</p>
         <p className="text-sm mt-2">Please try again later.</p>
       </div>
@@ -87,10 +87,10 @@ export default async function ScreenerPage({ params }: Props) {
     <>
       <Header />
       <main className="container-main py-10">
-        <h1 className="font-serif text-3xl md:text-4xl font-bold mb-2 text-[var(--color-text-primary)]">
+        <h1 className="font-serif text-3xl md:text-4xl font-bold mb-2 text-text-primary">
           Crypto Screener
         </h1>
-        <p className="text-[var(--color-text-secondary)] mb-8 max-w-2xl">
+        <p className="text-text-secondary mb-8 max-w-2xl">
           Filter, sort, and analyze 100+ cryptocurrencies. Use the filters to
           narrow down coins by price, market cap, volume, and price change.
         </p>

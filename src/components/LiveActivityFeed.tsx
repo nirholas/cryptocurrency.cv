@@ -147,12 +147,12 @@ export function LiveActivityFeed({
       <div className={cn("space-y-3", className)}>
         <div className="flex items-center gap-2 mb-3">
           <span className="live-dot" />
-          <span className="text-xs font-semibold text-[var(--color-text-tertiary)]">Live Activity</span>
+          <span className="text-xs font-semibold text-text-tertiary">Live Activity</span>
         </div>
         {Array.from({ length: 4 }).map((_, i) => (
-          <div key={i} className="animate-pulse border-l-2 border-[var(--color-border)] pl-3 py-2">
-            <div className="h-3 w-32 bg-[var(--color-surface-tertiary)] rounded mb-1" />
-            <div className="h-2.5 w-48 bg-[var(--color-surface-tertiary)] rounded" />
+          <div key={i} className="animate-pulse border-l-2 border-border pl-3 py-2">
+            <div className="h-3 w-32 bg-surface-tertiary rounded mb-1" />
+            <div className="h-2.5 w-48 bg-surface-tertiary rounded" />
           </div>
         ))}
       </div>
@@ -164,9 +164,9 @@ export function LiveActivityFeed({
       <div className={cn("", className)}>
         <div className="flex items-center gap-2 mb-3">
           <span className="live-dot" />
-          <span className="text-xs font-semibold text-[var(--color-text-tertiary)]">Live Activity</span>
+          <span className="text-xs font-semibold text-text-tertiary">Live Activity</span>
         </div>
-        <p className="text-xs text-[var(--color-text-tertiary)] text-center py-6">
+        <p className="text-xs text-text-tertiary text-center py-6">
           No recent activity detected
         </p>
       </div>
@@ -182,12 +182,12 @@ export function LiveActivityFeed({
       <div className="flex items-center justify-between mb-3">
         <div className="flex items-center gap-2">
           <span className={cn("live-dot", paused && "opacity-50")} />
-          <span className="text-xs font-semibold text-[var(--color-text-tertiary)]">
+          <span className="text-xs font-semibold text-text-tertiary">
             Live Activity
           </span>
         </div>
         {paused && (
-          <span className="text-[10px] text-[var(--color-text-tertiary)]">Paused</span>
+          <span className="text-[10px] text-text-tertiary">Paused</span>
         )}
       </div>
 
@@ -202,25 +202,25 @@ export function LiveActivityFeed({
               className={cn(
                 "border-l-2 pl-3 py-2 transition-all duration-500",
                 config.color,
-                isNew && "bg-[var(--color-accent)]/5 animate-pulse",
+                isNew && "bg-accent/5 animate-pulse",
               )}
             >
               <div className="flex items-start justify-between gap-2">
                 <div className="flex items-center gap-1.5">
                   <span className="text-sm" aria-hidden="true">{config.icon}</span>
-                  <span className="text-xs font-semibold text-[var(--color-text-primary)]">
+                  <span className="text-xs font-semibold text-text-primary">
                     {event.title}
                   </span>
                 </div>
-                <span className="text-[10px] text-[var(--color-text-tertiary)] shrink-0">
+                <span className="text-[10px] text-text-tertiary shrink-0">
                   {timeAgo(event.timestamp)}
                 </span>
               </div>
-              <p className={cn("text-[11px] text-[var(--color-text-tertiary)] mt-0.5 line-clamp-1", compact && "hidden")}>
+              <p className={cn("text-[11px] text-text-tertiary mt-0.5 line-clamp-1", compact && "hidden")}>
                 {event.description}
               </p>
               {event.amount && (
-                <span className="inline-block mt-1 text-[10px] font-semibold text-[var(--color-text-secondary)] bg-[var(--color-surface-tertiary)] px-1.5 py-0.5 rounded">
+                <span className="inline-block mt-1 text-[10px] font-semibold text-text-secondary bg-surface-tertiary px-1.5 py-0.5 rounded">
                   {event.amount}
                 </span>
               )}

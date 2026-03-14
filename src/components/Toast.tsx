@@ -43,7 +43,7 @@ export function ToastProvider({ children }: { children: ReactNode }) {
       {/* Toast container */}
       {toasts.length > 0 && (
         <div
-          className="fixed bottom-4 right-4 z-[100] flex flex-col gap-2"
+          className="fixed bottom-4 right-4 z-100 flex flex-col gap-2"
           aria-live="assertive"
           aria-atomic="true"
           role="log"
@@ -52,7 +52,7 @@ export function ToastProvider({ children }: { children: ReactNode }) {
           {toasts.map((toast) => (
             <div
               key={toast.id}
-              className="animate-slide-up rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] px-4 py-3 shadow-lg text-sm flex items-center gap-2"
+              className="animate-slide-up rounded-lg border border-border bg-(--color-surface) px-4 py-3 shadow-lg text-sm flex items-center gap-2"
               role="alert"
               aria-live="assertive"
             >
@@ -62,7 +62,7 @@ export function ToastProvider({ children }: { children: ReactNode }) {
               <span>{toast.message}</span>
               <button
                 onClick={() => removeToast(toast.id)}
-                className="ml-2 p-1 rounded text-[var(--color-text-tertiary)] hover:text-[var(--color-text-primary)] transition-colors cursor-pointer"
+                className="ml-2 p-1 rounded text-text-tertiary hover:text-text-primary transition-colors cursor-pointer"
                 aria-label="Dismiss notification"
               >
                 <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">

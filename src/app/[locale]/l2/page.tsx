@@ -131,19 +131,19 @@ function StatCard({
   accent?: boolean;
 }) {
   return (
-    <Card className={cn(accent && "ring-1 ring-[var(--color-accent)]/20 bg-[var(--color-accent)]/[0.03]")}>
+    <Card className={cn(accent && "ring-1 ring-accent/20 bg-accent/[0.03]")}>
       <CardContent className="p-4 md:p-5">
         <div className="flex items-start justify-between gap-2">
-          <p className="text-[10px] font-semibold uppercase tracking-wider text-[var(--color-text-tertiary)] mb-1">
+          <p className="text-[10px] font-semibold uppercase tracking-wider text-text-tertiary mb-1">
             {label}
           </p>
-          <div className="text-[var(--color-accent)] opacity-60">{icon}</div>
+          <div className="text-accent opacity-60">{icon}</div>
         </div>
-        <p className="text-xl md:text-2xl font-bold tabular-nums text-[var(--color-text-primary)]">
+        <p className="text-xl md:text-2xl font-bold tabular-nums text-text-primary">
           {value}
         </p>
         {sub && (
-          <p className="text-xs text-[var(--color-text-secondary)] mt-0.5">
+          <p className="text-xs text-text-secondary mt-0.5">
             {sub}
           </p>
         )}
@@ -228,10 +228,10 @@ export default async function L2Page({ params }: Props) {
       <main className="container-main py-10 space-y-14">
         {/* Hero */}
         <section>
-          <h1 className="font-serif text-3xl md:text-4xl font-bold mb-2 text-[var(--color-text-primary)]">
+          <h1 className="font-serif text-3xl md:text-4xl font-bold mb-2 text-text-primary">
             ⛓️ Layer 2 Analytics
           </h1>
-          <p className="text-[var(--color-text-secondary)] max-w-2xl">
+          <p className="text-text-secondary max-w-2xl">
             Compare Ethereum Layer 2 scaling solutions — track TVL rankings,
             transaction throughput, fees, and cross-chain bridge activity.
           </p>
@@ -268,7 +268,7 @@ export default async function L2Page({ params }: Props) {
 
         {/* L2 Comparison Table */}
         <section>
-          <h2 className="font-serif text-2xl font-bold mb-4 text-[var(--color-text-primary)]">
+          <h2 className="font-serif text-2xl font-bold mb-4 text-text-primary">
             📊 L2 Comparison
           </h2>
           <L2Table l2s={l2Rows} />
@@ -277,20 +277,20 @@ export default async function L2Page({ params }: Props) {
         {/* Bridge Volume */}
         {topBridges.length > 0 && (
           <section>
-            <h2 className="font-serif text-2xl font-bold mb-4 text-[var(--color-text-primary)]">
+            <h2 className="font-serif text-2xl font-bold mb-4 text-text-primary">
               🌉 Cross-Chain Bridge Volume
             </h2>
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {topBridges.map((bridge) => (
                 <Card key={bridge.name}>
                   <CardContent className="p-4">
-                    <p className="font-medium text-[var(--color-text-primary)] mb-1">
+                    <p className="font-medium text-text-primary mb-1">
                       {bridge.displayName || bridge.name}
                     </p>
-                    <p className="text-xl font-bold font-mono text-[var(--color-text-primary)]">
+                    <p className="text-xl font-bold font-mono text-text-primary">
                       {formatLargeNumber(bridge.lastDailyVolume)}
                     </p>
-                    <p className="text-[10px] uppercase tracking-wider text-[var(--color-text-tertiary)] mt-1">
+                    <p className="text-[10px] uppercase tracking-wider text-text-tertiary mt-1">
                       24h volume
                     </p>
                     {bridge.chains && bridge.chains.length > 0 && (
@@ -298,13 +298,13 @@ export default async function L2Page({ params }: Props) {
                         {bridge.chains.slice(0, 4).map((chain) => (
                           <span
                             key={chain}
-                            className="text-[10px] px-1.5 py-0.5 rounded bg-[var(--color-surface-tertiary)] text-[var(--color-text-tertiary)]"
+                            className="text-[10px] px-1.5 py-0.5 rounded bg-surface-tertiary text-text-tertiary"
                           >
                             {chain}
                           </span>
                         ))}
                         {bridge.chains.length > 4 && (
-                          <span className="text-[10px] px-1.5 py-0.5 rounded bg-[var(--color-surface-tertiary)] text-[var(--color-text-tertiary)]">
+                          <span className="text-[10px] px-1.5 py-0.5 rounded bg-surface-tertiary text-text-tertiary">
                             +{bridge.chains.length - 4}
                           </span>
                         )}
@@ -319,12 +319,12 @@ export default async function L2Page({ params }: Props) {
 
         {/* Fee Comparison */}
         <section>
-          <h2 className="font-serif text-2xl font-bold mb-4 text-[var(--color-text-primary)]">
+          <h2 className="font-serif text-2xl font-bold mb-4 text-text-primary">
             ⛽ Fee Comparison
           </h2>
           <Card>
             <CardContent className="p-6">
-              <p className="text-xs text-[var(--color-text-tertiary)] mb-4">
+              <p className="text-xs text-text-tertiary mb-4">
                 Average transaction costs across Ethereum L1 and major L2 networks (approximate)
               </p>
               <div className="space-y-4">
@@ -332,10 +332,10 @@ export default async function L2Page({ params }: Props) {
                   const barWidth = maxFee > 0 ? (item.fee / maxFee) * 100 : 0;
                   return (
                     <div key={item.name} className="flex items-center gap-4">
-                      <span className="w-28 text-sm font-medium text-[var(--color-text-primary)] shrink-0">
+                      <span className="w-28 text-sm font-medium text-text-primary shrink-0">
                         {item.name}
                       </span>
-                      <div className="flex-1 h-6 rounded bg-[var(--color-surface-tertiary)] overflow-hidden relative">
+                      <div className="flex-1 h-6 rounded bg-surface-tertiary overflow-hidden relative">
                         <div
                           className="h-full rounded transition-all duration-500"
                           style={{
@@ -345,14 +345,14 @@ export default async function L2Page({ params }: Props) {
                           }}
                         />
                       </div>
-                      <span className="w-16 text-right text-sm font-mono text-[var(--color-text-primary)]">
+                      <span className="w-16 text-right text-sm font-mono text-text-primary">
                         ${item.fee.toFixed(2)}
                       </span>
                     </div>
                   );
                 })}
               </div>
-              <p className="text-[10px] text-[var(--color-text-tertiary)] mt-4">
+              <p className="text-[10px] text-text-tertiary mt-4">
                 * Fees are approximate averages and vary based on network congestion and transaction complexity.
               </p>
             </CardContent>

@@ -172,15 +172,15 @@ export default async function SolanaPage({ params }: Props) {
       <Header />
       <main className="container-main py-10">
         {/* Breadcrumbs */}
-        <nav className="flex items-center gap-1 text-sm text-[var(--color-text-tertiary)] mb-6">
+        <nav className="flex items-center gap-1 text-sm text-text-tertiary mb-6">
           <Link
             href="/"
-            className="hover:text-[var(--color-accent)] transition-colors"
+            className="hover:text-accent transition-colors"
           >
             Home
           </Link>
           <ChevronRight className="h-3.5 w-3.5" />
-          <span className="text-[var(--color-text-primary)] font-medium">
+          <span className="text-text-primary font-medium">
             Solana
           </span>
         </nav>
@@ -192,17 +192,17 @@ export default async function SolanaPage({ params }: Props) {
               S
             </div>
             <div>
-              <h1 className="font-serif text-3xl md:text-4xl font-bold text-[var(--color-text-primary)]">
+              <h1 className="font-serif text-3xl md:text-4xl font-bold text-text-primary">
                 Solana
               </h1>
-              <span className="text-[var(--color-text-tertiary)] text-sm uppercase font-medium">
+              <span className="text-text-tertiary text-sm uppercase font-medium">
                 SOL
               </span>
             </div>
           </div>
 
           <div className="flex items-baseline gap-4 mt-4 flex-wrap">
-            <span className="text-4xl md:text-5xl font-bold text-[var(--color-text-primary)] tabular-nums">
+            <span className="text-4xl md:text-5xl font-bold text-text-primary tabular-nums">
               {formatPrice(price)}
             </span>
             {change24h != null && (
@@ -237,12 +237,12 @@ export default async function SolanaPage({ params }: Props) {
             )}
           </div>
 
-          <div className="flex items-center gap-6 mt-3 text-sm text-[var(--color-text-secondary)] flex-wrap">
+          <div className="flex items-center gap-6 mt-3 text-sm text-text-secondary flex-wrap">
             {md?.ath?.usd && (
               <span>
                 ATH: {formatPrice(md.ath.usd)}
                 {md.ath_date?.usd && (
-                  <span className="text-[var(--color-text-tertiary)] ml-1">
+                  <span className="text-text-tertiary ml-1">
                     (
                     {new Date(md.ath_date.usd).toLocaleDateString("en-US", {
                       month: "short",
@@ -264,7 +264,7 @@ export default async function SolanaPage({ params }: Props) {
 
         {/* ── Network Stats ── */}
         <section className="mb-10">
-          <h2 className="font-serif text-xl font-bold text-[var(--color-text-primary)] mb-4">
+          <h2 className="font-serif text-xl font-bold text-text-primary mb-4">
             Network Statistics
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
@@ -319,22 +319,22 @@ export default async function SolanaPage({ params }: Props) {
         {/* ── Supply Info ── */}
         <section className="mb-10">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            <div className="p-4 rounded-lg border border-[var(--color-border)] bg-[var(--color-surface-secondary)]">
-              <p className="text-xs text-[var(--color-text-tertiary)] mb-1">
+            <div className="p-4 rounded-lg border border-border bg-surface-secondary">
+              <p className="text-xs text-text-tertiary mb-1">
                 Circulating Supply
               </p>
-              <p className="text-lg font-semibold text-[var(--color-text-primary)]">
+              <p className="text-lg font-semibold text-text-primary">
                 {formatSupply(md?.circulating_supply)}
               </p>
             </div>
-            <div className="p-4 rounded-lg border border-[var(--color-border)] bg-[var(--color-surface-secondary)]">
-              <p className="text-xs text-[var(--color-text-tertiary)] mb-1">
+            <div className="p-4 rounded-lg border border-border bg-surface-secondary">
+              <p className="text-xs text-text-tertiary mb-1">
                 Total Supply
               </p>
-              <p className="text-lg font-semibold text-[var(--color-text-primary)]">
+              <p className="text-lg font-semibold text-text-primary">
                 {formatSupply(md?.total_supply)}
               </p>
-              <p className="text-xs text-[var(--color-text-tertiary)] mt-0.5">
+              <p className="text-xs text-text-tertiary mt-0.5">
                 Inflationary model with decreasing issuance
               </p>
             </div>
@@ -343,12 +343,12 @@ export default async function SolanaPage({ params }: Props) {
 
         {/* ── Price Chart ── */}
         <section className="mb-10">
-          <h2 className="font-serif text-xl font-bold text-[var(--color-text-primary)] mb-4">
+          <h2 className="font-serif text-xl font-bold text-text-primary mb-4">
             Price Chart
           </h2>
           <Suspense
             fallback={
-              <div className="h-[370px] rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] animate-pulse" />
+              <div className="h-[370px] rounded-xl border border-border bg-(--color-surface) animate-pulse" />
             }
           >
             <PriceChart coinId="solana" />
@@ -358,12 +358,12 @@ export default async function SolanaPage({ params }: Props) {
         {/* ── Solana Ecosystem ── */}
         <section className="mb-10">
           <div className="flex items-center justify-between mb-4">
-            <h2 className="font-serif text-xl font-bold text-[var(--color-text-primary)]">
+            <h2 className="font-serif text-xl font-bold text-text-primary">
               Solana Ecosystem
             </h2>
             <Link
               href="/defi"
-              className="text-sm text-[var(--color-accent)] hover:underline"
+              className="text-sm text-accent hover:underline"
             >
               View all DeFi →
             </Link>
@@ -371,17 +371,17 @@ export default async function SolanaPage({ params }: Props) {
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
-                <tr className="border-b border-[var(--color-border)]">
-                  <th className="text-left py-3 px-3 text-xs font-medium text-[var(--color-text-tertiary)] uppercase tracking-wider">
+                <tr className="border-b border-border">
+                  <th className="text-left py-3 px-3 text-xs font-medium text-text-tertiary uppercase tracking-wider">
                     #
                   </th>
-                  <th className="text-left py-3 px-3 text-xs font-medium text-[var(--color-text-tertiary)] uppercase tracking-wider">
+                  <th className="text-left py-3 px-3 text-xs font-medium text-text-tertiary uppercase tracking-wider">
                     Protocol
                   </th>
-                  <th className="text-left py-3 px-3 text-xs font-medium text-[var(--color-text-tertiary)] uppercase tracking-wider">
+                  <th className="text-left py-3 px-3 text-xs font-medium text-text-tertiary uppercase tracking-wider">
                     Category
                   </th>
-                  <th className="text-right py-3 px-3 text-xs font-medium text-[var(--color-text-tertiary)] uppercase tracking-wider">
+                  <th className="text-right py-3 px-3 text-xs font-medium text-text-tertiary uppercase tracking-wider">
                     TVL
                   </th>
                 </tr>
@@ -390,23 +390,23 @@ export default async function SolanaPage({ params }: Props) {
                 {TOP_SOLANA_PROTOCOLS.map((protocol, i) => (
                   <tr
                     key={protocol.name}
-                    className="border-b border-[var(--color-border)] hover:bg-[var(--color-surface-secondary)] transition-colors"
+                    className="border-b border-border hover:bg-surface-secondary transition-colors"
                   >
-                    <td className="py-3 px-3 text-[var(--color-text-tertiary)]">
+                    <td className="py-3 px-3 text-text-tertiary">
                       {i + 1}
                     </td>
-                    <td className="py-3 px-3 font-medium text-[var(--color-text-primary)]">
+                    <td className="py-3 px-3 font-medium text-text-primary">
                       <div className="flex items-center gap-2">
                         <Layers className="h-4 w-4 text-[#9945FF]" />
                         {protocol.name}
                       </div>
                     </td>
                     <td className="py-3 px-3">
-                      <span className="inline-flex items-center px-2 py-0.5 text-xs font-medium rounded-full bg-[var(--color-surface-tertiary)] text-[var(--color-text-secondary)]">
+                      <span className="inline-flex items-center px-2 py-0.5 text-xs font-medium rounded-full bg-surface-tertiary text-text-secondary">
                         {protocol.category}
                       </span>
                     </td>
-                    <td className="py-3 px-3 text-right font-medium text-[var(--color-text-primary)] tabular-nums">
+                    <td className="py-3 px-3 text-right font-medium text-text-primary tabular-nums">
                       {protocol.tvl}
                     </td>
                   </tr>
@@ -420,12 +420,12 @@ export default async function SolanaPage({ params }: Props) {
         {newsResponse.articles.length > 0 && (
           <section className="mb-10">
             <div className="flex items-center justify-between mb-4">
-              <h2 className="font-serif text-xl font-bold text-[var(--color-text-primary)]">
+              <h2 className="font-serif text-xl font-bold text-text-primary">
                 Latest Solana News
               </h2>
               <Link
                 href="/search?q=solana"
-                className="text-sm text-[var(--color-accent)] hover:underline"
+                className="text-sm text-accent hover:underline"
               >
                 View all →
               </Link>
@@ -440,7 +440,7 @@ export default async function SolanaPage({ params }: Props) {
 
         {/* ── Why Solana ── */}
         <section className="mb-10">
-          <h2 className="font-serif text-xl font-bold text-[var(--color-text-primary)] mb-4">
+          <h2 className="font-serif text-xl font-bold text-text-primary mb-4">
             What Makes Solana Unique
           </h2>
           <div className="grid gap-3 sm:grid-cols-3">
@@ -484,12 +484,12 @@ function StatCard({
   value: string;
 }) {
   return (
-    <div className="p-4 rounded-lg border border-[var(--color-border)] bg-[var(--color-surface-secondary)]">
-      <div className="flex items-center gap-2 mb-2 text-[var(--color-text-tertiary)]">
+    <div className="p-4 rounded-lg border border-border bg-surface-secondary">
+      <div className="flex items-center gap-2 mb-2 text-text-tertiary">
         {icon}
         <p className="text-xs">{label}</p>
       </div>
-      <p className="text-lg font-semibold text-[var(--color-text-primary)] tabular-nums">
+      <p className="text-lg font-semibold text-text-primary tabular-nums">
         {value}
       </p>
     </div>
@@ -506,14 +506,14 @@ function FeatureCard({
   description: string;
 }) {
   return (
-    <div className="flex flex-col gap-3 p-5 rounded-lg border border-[var(--color-border)] bg-[var(--color-surface-secondary)]">
+    <div className="flex flex-col gap-3 p-5 rounded-lg border border-border bg-surface-secondary">
       <div className="flex items-center gap-2 text-[#9945FF]">
         {icon}
-        <h3 className="font-semibold text-[var(--color-text-primary)]">
+        <h3 className="font-semibold text-text-primary">
           {title}
         </h3>
       </div>
-      <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
+      <p className="text-sm text-text-secondary leading-relaxed">
         {description}
       </p>
     </div>

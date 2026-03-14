@@ -92,11 +92,11 @@ function Toggle({
   return (
     <label className="flex items-center justify-between gap-4 py-3 cursor-pointer group">
       <div className="flex-1 min-w-0">
-        <span className="text-sm font-medium text-[var(--color-text-primary)]">
+        <span className="text-sm font-medium text-text-primary">
           {label}
         </span>
         {description && (
-          <p className="text-xs text-[var(--color-text-tertiary)] mt-0.5">
+          <p className="text-xs text-text-tertiary mt-0.5">
             {description}
           </p>
         )}
@@ -107,10 +107,10 @@ function Toggle({
         aria-checked={checked}
         onClick={() => onChange(!checked)}
         className={cn(
-          "relative inline-flex h-6 w-11 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2",
+          "relative inline-flex h-6 w-11 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2",
           checked
-            ? "bg-[var(--color-accent)]"
-            : "bg-[var(--color-surface-tertiary)]"
+            ? "bg-accent"
+            : "bg-surface-tertiary"
         )}
       >
         <span
@@ -147,8 +147,8 @@ function RadioOption<T extends string>({
       className={cn(
         "flex items-center gap-2 rounded-lg border px-4 py-3 text-sm font-medium transition-all",
         isActive
-          ? "border-[var(--color-accent)] bg-[var(--color-accent)]/10 text-[var(--color-accent)]"
-          : "border-[var(--color-border)] text-[var(--color-text-secondary)] hover:border-[var(--color-text-tertiary)]"
+          ? "border-accent bg-accent/10 text-accent"
+          : "border-border text-text-secondary hover:border-text-tertiary"
       )}
     >
       {Icon && <Icon className="h-4 w-4" />}
@@ -179,14 +179,14 @@ function SelectField<T extends string>({
     <div className="flex items-center justify-between gap-4 py-3">
       <div className="flex items-center gap-3 flex-1 min-w-0">
         {Icon && (
-          <Icon className="h-4 w-4 text-[var(--color-text-tertiary)] shrink-0" />
+          <Icon className="h-4 w-4 text-text-tertiary shrink-0" />
         )}
         <div>
-          <span className="text-sm font-medium text-[var(--color-text-primary)]">
+          <span className="text-sm font-medium text-text-primary">
             {label}
           </span>
           {description && (
-            <p className="text-xs text-[var(--color-text-tertiary)] mt-0.5">
+            <p className="text-xs text-text-tertiary mt-0.5">
               {description}
             </p>
           )}
@@ -195,7 +195,7 @@ function SelectField<T extends string>({
       <select
         value={value}
         onChange={(e) => onChange(e.target.value as T)}
-        className="rounded-md border border-[var(--color-border)] bg-[var(--color-surface)] px-3 py-2 text-sm text-[var(--color-text-primary)] focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)] min-w-[140px]"
+        className="rounded-md border border-border bg-(--color-surface) px-3 py-2 text-sm text-text-primary focus:outline-none focus:ring-2 focus:ring-accent min-w-[140px]"
       >
         {options.map((opt) => (
           <option key={opt.value} value={opt.value}>
@@ -218,11 +218,11 @@ function SectionHeader({
 }) {
   return (
     <div className="mb-4">
-      <h3 className="font-serif text-lg font-bold text-[var(--color-text-primary)]">
+      <h3 className="font-serif text-lg font-bold text-text-primary">
         {title}
       </h3>
       {description && (
-        <p className="text-sm text-[var(--color-text-secondary)] mt-1">
+        <p className="text-sm text-text-secondary mt-1">
           {description}
         </p>
       )}
@@ -303,8 +303,8 @@ function AppearanceTab({
               className={cn(
                 "flex flex-col items-center gap-1 rounded-lg border px-4 py-3 transition-all",
                 settings.fontSize === opt.value
-                  ? "border-[var(--color-accent)] bg-[var(--color-accent)]/10"
-                  : "border-[var(--color-border)] hover:border-[var(--color-text-tertiary)]"
+                  ? "border-accent bg-accent/10"
+                  : "border-border hover:border-text-tertiary"
               )}
             >
               <span
@@ -318,7 +318,7 @@ function AppearanceTab({
               >
                 {opt.preview}
               </span>
-              <span className="text-xs text-[var(--color-text-secondary)]">
+              <span className="text-xs text-text-secondary">
                 {opt.label}
               </span>
             </button>
@@ -329,7 +329,7 @@ function AppearanceTab({
       {/* Compact Mode */}
       <div>
         <SectionHeader title="Display Density" />
-        <div className="border border-[var(--color-border)] rounded-lg px-4 divide-y divide-[var(--color-border)]">
+        <div className="border border-border rounded-lg px-4 divide-y divide-border">
           <Toggle
             checked={settings.compactMode}
             onChange={(v) => updateSettings({ compactMode: v })}
@@ -383,13 +383,13 @@ function LanguageTab({ currentLocale }: { currentLocale: string }) {
 
       {/* Search */}
       <div className="relative">
-        <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-[var(--color-text-tertiary)]" />
+        <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-text-tertiary" />
         <input
           type="text"
           placeholder="Search languages..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          className="w-full rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] py-2.5 pl-10 pr-4 text-sm text-[var(--color-text-primary)] placeholder:text-[var(--color-text-tertiary)] focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]"
+          className="w-full rounded-lg border border-border bg-(--color-surface) py-2.5 pl-10 pr-4 text-sm text-text-primary placeholder:text-text-tertiary focus:outline-none focus:ring-2 focus:ring-accent"
         />
       </div>
 
@@ -397,7 +397,7 @@ function LanguageTab({ currentLocale }: { currentLocale: string }) {
       <div className="max-h-[480px] overflow-y-auto space-y-6 pr-1">
         {Object.entries(filteredRegions).map(([region, codes]) => (
           <div key={region}>
-            <h4 className="text-xs font-semibold uppercase tracking-wider text-[var(--color-text-tertiary)] mb-2">
+            <h4 className="text-xs font-semibold uppercase tracking-wider text-text-tertiary mb-2">
               {region}
             </h4>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-1">
@@ -411,13 +411,13 @@ function LanguageTab({ currentLocale }: { currentLocale: string }) {
                     className={cn(
                       "flex items-center justify-between rounded-lg px-3 py-2.5 text-sm transition-colors text-left",
                       isActive
-                        ? "bg-[var(--color-accent)]/10 text-[var(--color-accent)] font-medium"
-                        : "text-[var(--color-text-primary)] hover:bg-[var(--color-surface-secondary)]"
+                        ? "bg-accent/10 text-accent font-medium"
+                        : "text-text-primary hover:bg-surface-secondary"
                     )}
                   >
                     <span>{localeNames[code]}</span>
                     <div className="flex items-center gap-2">
-                      <span className="text-xs text-[var(--color-text-tertiary)]">
+                      <span className="text-xs text-text-tertiary">
                         {code}
                       </span>
                       {isActive && <Check className="h-4 w-4" />}
@@ -429,7 +429,7 @@ function LanguageTab({ currentLocale }: { currentLocale: string }) {
           </div>
         ))}
         {Object.keys(filteredRegions).length === 0 && (
-          <p className="text-sm text-[var(--color-text-tertiary)] text-center py-8">
+          <p className="text-sm text-text-tertiary text-center py-8">
             No languages match your search.
           </p>
         )}
@@ -454,7 +454,7 @@ function ContentTab({
         description="Customize what content you see and how it's displayed."
       />
 
-      <div className="border border-[var(--color-border)] rounded-lg px-4 divide-y divide-[var(--color-border)]">
+      <div className="border border-border rounded-lg px-4 divide-y divide-border">
         <SelectField
           value={settings.defaultCategory}
           onChange={(v) => updateSettings({ defaultCategory: v })}
@@ -499,7 +499,7 @@ function ContentTab({
         />
       </div>
 
-      <div className="border border-[var(--color-border)] rounded-lg px-4 divide-y divide-[var(--color-border)]">
+      <div className="border border-border rounded-lg px-4 divide-y divide-border">
         <Toggle
           checked={settings.showAISummaries}
           onChange={(v) => updateSettings({ showAISummaries: v })}
@@ -547,15 +547,15 @@ function NotificationsTab({
       />
 
       {/* Browser Notification Permission */}
-      <div className="border border-[var(--color-border)] rounded-lg p-4">
+      <div className="border border-border rounded-lg p-4">
         <div className="flex items-center justify-between gap-4">
           <div className="flex items-center gap-3">
-            <Bell className="h-5 w-5 text-[var(--color-text-tertiary)]" />
+            <Bell className="h-5 w-5 text-text-tertiary" />
             <div>
-              <p className="text-sm font-medium text-[var(--color-text-primary)]">
+              <p className="text-sm font-medium text-text-primary">
                 Browser Notifications
               </p>
-              <p className="text-xs text-[var(--color-text-tertiary)]">
+              <p className="text-xs text-text-tertiary">
                 {permissionState === "granted"
                   ? "Notifications are enabled"
                   : permissionState === "denied"
@@ -583,7 +583,7 @@ function NotificationsTab({
       </div>
 
       {/* Notification Types */}
-      <div className="border border-[var(--color-border)] rounded-lg px-4 divide-y divide-[var(--color-border)]">
+      <div className="border border-border rounded-lg px-4 divide-y divide-border">
         <Toggle
           checked={settings.priceAlertNotifications}
           onChange={(v) => updateSettings({ priceAlertNotifications: v })}
@@ -599,19 +599,19 @@ function NotificationsTab({
       </div>
 
       {/* Sound */}
-      <div className="border border-[var(--color-border)] rounded-lg px-4 divide-y divide-[var(--color-border)]">
+      <div className="border border-border rounded-lg px-4 divide-y divide-border">
         <div className="flex items-center justify-between gap-4 py-3">
           <div className="flex items-center gap-3">
             {settings.soundEffects ? (
-              <Volume2 className="h-4 w-4 text-[var(--color-text-tertiary)]" />
+              <Volume2 className="h-4 w-4 text-text-tertiary" />
             ) : (
-              <VolumeX className="h-4 w-4 text-[var(--color-text-tertiary)]" />
+              <VolumeX className="h-4 w-4 text-text-tertiary" />
             )}
             <div>
-              <span className="text-sm font-medium text-[var(--color-text-primary)]">
+              <span className="text-sm font-medium text-text-primary">
                 Sound Effects
               </span>
-              <p className="text-xs text-[var(--color-text-tertiary)] mt-0.5">
+              <p className="text-xs text-text-tertiary mt-0.5">
                 Play sounds for notifications and interactions
               </p>
             </div>
@@ -624,10 +624,10 @@ function NotificationsTab({
               updateSettings({ soundEffects: !settings.soundEffects })
             }
             className={cn(
-              "relative inline-flex h-6 w-11 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2",
+              "relative inline-flex h-6 w-11 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2",
               settings.soundEffects
-                ? "bg-[var(--color-accent)]"
-                : "bg-[var(--color-surface-tertiary)]"
+                ? "bg-accent"
+                : "bg-surface-tertiary"
             )}
           >
             <span
@@ -668,36 +668,36 @@ function PrivacyTab({
       />
 
       {/* Storage Info */}
-      <div className="border border-[var(--color-border)] rounded-lg p-4">
+      <div className="border border-border rounded-lg p-4">
         <div className="flex items-center gap-3 mb-3">
-          <HardDrive className="h-5 w-5 text-[var(--color-text-tertiary)]" />
+          <HardDrive className="h-5 w-5 text-text-tertiary" />
           <div>
-            <p className="text-sm font-medium text-[var(--color-text-primary)]">
+            <p className="text-sm font-medium text-text-primary">
               Local Storage Usage
             </p>
-            <p className="text-xs text-[var(--color-text-tertiary)]">
+            <p className="text-xs text-text-tertiary">
               {getStorageUsage()} used
             </p>
           </div>
         </div>
-        <div className="h-2 rounded-full bg-[var(--color-surface-tertiary)] overflow-hidden">
+        <div className="h-2 rounded-full bg-surface-tertiary overflow-hidden">
           <div
-            className="h-full rounded-full bg-[var(--color-accent)] transition-all"
+            className="h-full rounded-full bg-accent transition-all"
             style={{ width: "12%" }}
           />
         </div>
       </div>
 
       {/* Export / Clear */}
-      <div className="border border-[var(--color-border)] rounded-lg p-4 space-y-3">
+      <div className="border border-border rounded-lg p-4 space-y-3">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <Download className="h-4 w-4 text-[var(--color-text-tertiary)]" />
+            <Download className="h-4 w-4 text-text-tertiary" />
             <div>
-              <p className="text-sm font-medium text-[var(--color-text-primary)]">
+              <p className="text-sm font-medium text-text-primary">
                 Export Data
               </p>
-              <p className="text-xs text-[var(--color-text-tertiary)]">
+              <p className="text-xs text-text-tertiary">
                 Download all your local data as JSON
               </p>
             </div>
@@ -707,15 +707,15 @@ function PrivacyTab({
             Export
           </Button>
         </div>
-        <div className="border-t border-[var(--color-border)]" />
+        <div className="border-t border-border" />
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
             <Trash2 className="h-4 w-4 text-red-500" />
             <div>
-              <p className="text-sm font-medium text-[var(--color-text-primary)]">
+              <p className="text-sm font-medium text-text-primary">
                 Clear All Data
               </p>
-              <p className="text-xs text-[var(--color-text-tertiary)]">
+              <p className="text-xs text-text-tertiary">
                 Remove all locally stored data (cannot be undone)
               </p>
             </div>
@@ -755,20 +755,20 @@ function PrivacyTab({
 
       {/* Cookie Preferences */}
       <div>
-        <h4 className="font-serif text-base font-bold text-[var(--color-text-primary)] mb-3 flex items-center gap-2">
+        <h4 className="font-serif text-base font-bold text-text-primary mb-3 flex items-center gap-2">
           <Cookie className="h-4 w-4" /> Cookie Preferences
         </h4>
-        <div className="border border-[var(--color-border)] rounded-lg px-4 divide-y divide-[var(--color-border)]">
+        <div className="border border-border rounded-lg px-4 divide-y divide-border">
           <div className="flex items-center justify-between py-3">
             <div>
-              <span className="text-sm font-medium text-[var(--color-text-primary)]">
+              <span className="text-sm font-medium text-text-primary">
                 Essential Cookies
               </span>
-              <p className="text-xs text-[var(--color-text-tertiary)] mt-0.5">
+              <p className="text-xs text-text-tertiary mt-0.5">
                 Required for basic site functionality
               </p>
             </div>
-            <span className="text-xs font-medium text-[var(--color-text-tertiary)]">
+            <span className="text-xs font-medium text-text-tertiary">
               Always On
             </span>
           </div>
@@ -898,10 +898,10 @@ export default function SettingsPanel({
   return (
     <main className="container-main py-8">
       <div className="mb-8">
-        <h1 className="font-serif text-3xl font-bold text-[var(--color-text-primary)]">
+        <h1 className="font-serif text-3xl font-bold text-text-primary">
           Settings
         </h1>
-        <p className="text-[var(--color-text-secondary)] mt-2">
+        <p className="text-text-secondary mt-2">
           Customize your Crypto Vision News experience
         </p>
       </div>
@@ -921,8 +921,8 @@ export default function SettingsPanel({
                   className={cn(
                     "flex items-center gap-2.5 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors whitespace-nowrap",
                     isActive
-                      ? "bg-[var(--color-accent)]/10 text-[var(--color-accent)]"
-                      : "text-[var(--color-text-secondary)] hover:bg-[var(--color-surface-secondary)] hover:text-[var(--color-text-primary)]",
+                      ? "bg-accent/10 text-accent"
+                      : "text-text-secondary hover:bg-surface-secondary hover:text-text-primary",
                     tab.id === "danger" &&
                       !isActive &&
                       "text-red-500 hover:text-red-600"

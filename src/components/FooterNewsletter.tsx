@@ -54,8 +54,8 @@ export default function FooterNewsletter() {
           aria-invalid={status === "error"}
           aria-describedby={status === "error" ? "footer-newsletter-error" : undefined}
           className={cn(
-            "h-9 flex-1 min-w-0 rounded-md border border-[var(--color-border)] bg-[var(--color-surface)] px-3 text-sm",
-            "focus:outline-none focus:ring-1 focus:ring-[var(--color-accent)]",
+            "h-9 flex-1 min-w-0 rounded-md border border-border bg-(--color-surface) px-3 text-sm",
+            "focus:outline-none focus:ring-1 focus:ring-accent",
             status === "error" && "border-red-500"
           )}
         />

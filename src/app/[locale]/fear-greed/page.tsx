@@ -208,17 +208,17 @@ function BreakdownCard({
         {Object.entries(breakdown).map(([key, { value, weight }]) => (
           <div key={key}>
             <div className="flex justify-between text-sm mb-1">
-              <span className="text-[var(--color-text-secondary)]">
+              <span className="text-text-secondary">
                 {labels[key] || key}
               </span>
               <span className="font-medium tabular-nums">
                 {value}/100{" "}
-                <span className="text-xs text-[var(--color-text-secondary)]">
+                <span className="text-xs text-text-secondary">
                   ({Math.round(weight * 100)}%)
                 </span>
               </span>
             </div>
-            <div className="h-2 rounded-full bg-[var(--color-border)] overflow-hidden">
+            <div className="h-2 rounded-full bg-border overflow-hidden">
               <div
                 className="h-full rounded-full transition-all"
                 style={{
@@ -251,7 +251,7 @@ async function FearGreedContent() {
 
   if (!fgData) {
     return (
-      <div className="text-center py-20 text-[var(--color-text-secondary)]">
+      <div className="text-center py-20 text-text-secondary">
         <p className="text-lg">Unable to load Fear &amp; Greed data right now.</p>
         <p className="text-sm mt-2">Please try again later.</p>
       </div>
@@ -270,7 +270,7 @@ async function FearGreedContent() {
               value={current.value}
               label={current.valueClassification}
             />
-            <p className="text-center text-xs text-[var(--color-text-secondary)] mt-4">
+            <p className="text-center text-xs text-text-secondary mt-4">
               Next update: {current.timeUntilUpdate}
             </p>
           </CardContent>
@@ -285,7 +285,7 @@ async function FearGreedContent() {
             <CardContent>
               {btcPrice ? (
                 <div className="flex items-baseline gap-3">
-                  <span className="text-sm text-[var(--color-text-secondary)]">
+                  <span className="text-sm text-text-secondary">
                     Bitcoin
                   </span>
                   <span className="text-2xl font-bold tabular-nums">
@@ -303,7 +303,7 @@ async function FearGreedContent() {
                   </span>
                 </div>
               ) : (
-                <p className="text-sm text-[var(--color-text-secondary)]">
+                <p className="text-sm text-text-secondary">
                   Price data unavailable
                 </p>
               )}
@@ -318,19 +318,19 @@ async function FearGreedContent() {
             <CardContent>
               <div className="grid grid-cols-2 gap-4 text-sm">
                 <div>
-                  <div className="text-[var(--color-text-secondary)]">7-day avg</div>
+                  <div className="text-text-secondary">7-day avg</div>
                   <div className="font-semibold tabular-nums text-lg">
                     {Math.round(trend.averageValue7d)}
                   </div>
                 </div>
                 <div>
-                  <div className="text-[var(--color-text-secondary)]">30-day avg</div>
+                  <div className="text-text-secondary">30-day avg</div>
                   <div className="font-semibold tabular-nums text-lg">
                     {Math.round(trend.averageValue30d)}
                   </div>
                 </div>
                 <div>
-                  <div className="text-[var(--color-text-secondary)]">7d change</div>
+                  <div className="text-text-secondary">7d change</div>
                   <div
                     className={`font-semibold tabular-nums ${
                       trend.change7d >= 0 ? "text-green-500" : "text-red-500"
@@ -340,7 +340,7 @@ async function FearGreedContent() {
                   </div>
                 </div>
                 <div>
-                  <div className="text-[var(--color-text-secondary)]">Direction</div>
+                  <div className="text-text-secondary">Direction</div>
                   <div className="font-semibold capitalize">{trend.direction}</div>
                 </div>
               </div>
@@ -367,7 +367,7 @@ async function FearGreedContent() {
           <CardHeader>
             <CardTitle className="font-serif">What It Means</CardTitle>
           </CardHeader>
-          <CardContent className="space-y-3 text-sm text-[var(--color-text-secondary)]">
+          <CardContent className="space-y-3 text-sm text-text-secondary">
             <p>
               The Crypto Fear &amp; Greed Index measures market sentiment on a
               scale from 0 (Extreme Fear) to 100 (Extreme Greed). It combines
@@ -378,35 +378,35 @@ async function FearGreedContent() {
               <div className="flex items-center gap-2">
                 <span className="inline-block w-3 h-3 rounded-full bg-red-500" />
                 <span>
-                  <strong className="text-[var(--color-text-primary)]">0–25 Extreme Fear</strong> — Investors
+                  <strong className="text-text-primary">0–25 Extreme Fear</strong> — Investors
                   are very worried. Potential buying opportunity.
                 </span>
               </div>
               <div className="flex items-center gap-2">
                 <span className="inline-block w-3 h-3 rounded-full bg-orange-500" />
                 <span>
-                  <strong className="text-[var(--color-text-primary)]">25–45 Fear</strong> — Market
+                  <strong className="text-text-primary">25–45 Fear</strong> — Market
                   uncertainty is high.
                 </span>
               </div>
               <div className="flex items-center gap-2">
                 <span className="inline-block w-3 h-3 rounded-full bg-yellow-500" />
                 <span>
-                  <strong className="text-[var(--color-text-primary)]">45–55 Neutral</strong> — Market
+                  <strong className="text-text-primary">45–55 Neutral</strong> — Market
                   sentiment is balanced.
                 </span>
               </div>
               <div className="flex items-center gap-2">
                 <span className="inline-block w-3 h-3 rounded-full bg-green-500" />
                 <span>
-                  <strong className="text-[var(--color-text-primary)]">55–75 Greed</strong> — Investors are
+                  <strong className="text-text-primary">55–75 Greed</strong> — Investors are
                   becoming greedy. Caution advised.
                 </span>
               </div>
               <div className="flex items-center gap-2">
                 <span className="inline-block w-3 h-3 rounded-full bg-emerald-600" />
                 <span>
-                  <strong className="text-[var(--color-text-primary)]">75–100 Extreme Greed</strong> — Market
+                  <strong className="text-text-primary">75–100 Extreme Greed</strong> — Market
                   may be due for a correction.
                 </span>
               </div>
@@ -463,10 +463,10 @@ export default async function FearGreedPage({ params }: Props) {
     <>
       <Header />
       <main className="container-main py-10">
-        <h1 className="font-serif text-3xl md:text-4xl font-bold mb-2 text-[var(--color-text-primary)]">
+        <h1 className="font-serif text-3xl md:text-4xl font-bold mb-2 text-text-primary">
           Crypto Fear &amp; Greed Index
         </h1>
-        <p className="text-[var(--color-text-secondary)] mb-8 max-w-2xl">
+        <p className="text-text-secondary mb-8 max-w-2xl">
           Real-time market sentiment gauge — from extreme fear to extreme greed.
           Track how the crypto market is feeling today.
         </p>

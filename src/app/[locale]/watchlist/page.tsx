@@ -145,40 +145,40 @@ function SummaryCards({
       <Card className="p-4">
         <div className="flex items-start justify-between">
           <div>
-            <p className="text-xs font-medium uppercase tracking-wider text-[var(--color-text-tertiary)] mb-1">
+            <p className="text-xs font-medium uppercase tracking-wider text-text-tertiary mb-1">
               Combined Market Cap
             </p>
-            <p className="text-lg font-bold text-[var(--color-text-primary)]">
+            <p className="text-lg font-bold text-text-primary">
               {formatLargeNumber(stats.totalMarketCap, { prefix: "$" })}
             </p>
           </div>
-          <DollarSign className="h-5 w-5 text-[var(--color-accent)]" />
+          <DollarSign className="h-5 w-5 text-accent" />
         </div>
       </Card>
 
       <Card className="p-4">
         <div className="flex items-start justify-between">
           <div>
-            <p className="text-xs font-medium uppercase tracking-wider text-[var(--color-text-tertiary)] mb-1">
+            <p className="text-xs font-medium uppercase tracking-wider text-text-tertiary mb-1">
               Avg 24h Change
             </p>
             <p className={cn("text-lg font-bold", avgPct.className)}>
               {avgPct.text}
             </p>
           </div>
-          <Activity className="h-5 w-5 text-[var(--color-accent)]" />
+          <Activity className="h-5 w-5 text-accent" />
         </div>
       </Card>
 
       <Card className="p-4">
         <div className="flex items-start justify-between">
           <div>
-            <p className="text-xs font-medium uppercase tracking-wider text-[var(--color-text-tertiary)] mb-1">
+            <p className="text-xs font-medium uppercase tracking-wider text-text-tertiary mb-1">
               Best Performer
             </p>
             {stats.best ? (
               <div className="flex items-center gap-1.5">
-                <span className="text-sm font-semibold text-[var(--color-text-primary)]">
+                <span className="text-sm font-semibold text-text-primary">
                   {stats.best.symbol.toUpperCase()}
                 </span>
                 <span className={cn("text-sm font-bold", bestPct?.className)}>
@@ -186,7 +186,7 @@ function SummaryCards({
                 </span>
               </div>
             ) : (
-              <span className="text-sm text-[var(--color-text-secondary)]">—</span>
+              <span className="text-sm text-text-secondary">—</span>
             )}
           </div>
           <TrendingUp className="h-5 w-5 text-green-500" />
@@ -196,12 +196,12 @@ function SummaryCards({
       <Card className="p-4">
         <div className="flex items-start justify-between">
           <div>
-            <p className="text-xs font-medium uppercase tracking-wider text-[var(--color-text-tertiary)] mb-1">
+            <p className="text-xs font-medium uppercase tracking-wider text-text-tertiary mb-1">
               Worst Performer
             </p>
             {stats.worst ? (
               <div className="flex items-center gap-1.5">
-                <span className="text-sm font-semibold text-[var(--color-text-primary)]">
+                <span className="text-sm font-semibold text-text-primary">
                   {stats.worst.symbol.toUpperCase()}
                 </span>
                 <span className={cn("text-sm font-bold", worstPct?.className)}>
@@ -209,7 +209,7 @@ function SummaryCards({
                 </span>
               </div>
             ) : (
-              <span className="text-sm text-[var(--color-text-secondary)]">—</span>
+              <span className="text-sm text-text-secondary">—</span>
             )}
           </div>
           <TrendingDown className="h-5 w-5 text-red-500" />
@@ -245,7 +245,7 @@ function NoteEditor({
       <button
         type="button"
         onClick={() => { setValue(currentNote ?? ""); setEditing(true); }}
-        className="inline-flex items-center gap-1 text-xs text-[var(--color-text-tertiary)] hover:text-[var(--color-accent)] transition-colors"
+        className="inline-flex items-center gap-1 text-xs text-text-tertiary hover:text-accent transition-colors"
         title={currentNote || "Add a note"}
       >
         <StickyNote className="h-3 w-3" />
@@ -275,7 +275,7 @@ function NoteEditor({
         onBlur={() => { onSave(coinId, value); setEditing(false); }}
         maxLength={100}
         placeholder="Add note…"
-        className="w-28 rounded border border-[var(--color-border)] bg-[var(--color-surface)] px-1.5 py-0.5 text-xs text-[var(--color-text-primary)] focus:outline-none focus:ring-1 focus:ring-[var(--color-accent)]"
+        className="w-28 rounded border border-border bg-(--color-surface) px-1.5 py-0.5 text-xs text-text-primary focus:outline-none focus:ring-1 focus:ring-accent"
       />
     </form>
   );
@@ -309,7 +309,7 @@ function TagManager({
       {tags.map((tag) => (
         <span
           key={tag}
-          className="inline-flex items-center gap-0.5 rounded-full bg-[var(--color-accent)]/10 px-2 py-0.5 text-[10px] font-medium text-[var(--color-accent)]"
+          className="inline-flex items-center gap-0.5 rounded-full bg-accent/10 px-2 py-0.5 text-[10px] font-medium text-accent"
         >
           {tag}
           <button
@@ -338,14 +338,14 @@ function TagManager({
             onBlur={() => { if (value.trim()) onAdd(coinId, value); setAdding(false); setValue(""); }}
             maxLength={20}
             placeholder="tag"
-            className="w-16 rounded border border-[var(--color-border)] bg-[var(--color-surface)] px-1 py-0.5 text-[10px] text-[var(--color-text-primary)] focus:outline-none focus:ring-1 focus:ring-[var(--color-accent)]"
+            className="w-16 rounded border border-border bg-(--color-surface) px-1 py-0.5 text-[10px] text-text-primary focus:outline-none focus:ring-1 focus:ring-accent"
           />
         </form>
       ) : (
         <button
           type="button"
           onClick={() => setAdding(true)}
-          className="inline-flex items-center gap-0.5 rounded-full border border-dashed border-[var(--color-border)] px-1.5 py-0.5 text-[10px] text-[var(--color-text-tertiary)] hover:border-[var(--color-accent)] hover:text-[var(--color-accent)] transition-colors"
+          className="inline-flex items-center gap-0.5 rounded-full border border-dashed border-border px-1.5 py-0.5 text-[10px] text-text-tertiary hover:border-accent hover:text-accent transition-colors"
         >
           <Tag className="h-2.5 w-2.5" />
           <span>tag</span>
@@ -395,7 +395,7 @@ function CoinCard({
       <button
         type="button"
         onClick={() => onRemove(coin.id)}
-        className="absolute top-3 right-3 rounded p-1 text-[var(--color-text-tertiary)] opacity-0 group-hover:opacity-100 hover:text-red-500 hover:bg-[var(--color-surface)] transition-all"
+        className="absolute top-3 right-3 rounded p-1 text-text-tertiary opacity-0 group-hover:opacity-100 hover:text-red-500 hover:bg-(--color-surface) transition-all"
         aria-label={`Remove ${coin.name}`}
       >
         <Trash2 className="h-3.5 w-3.5" />
@@ -414,10 +414,10 @@ function CoinCard({
           />
         )}
         <div>
-          <p className="font-semibold text-[var(--color-text-primary)] leading-tight">
+          <p className="font-semibold text-text-primary leading-tight">
             {coin.name}
           </p>
-          <p className="text-xs uppercase text-[var(--color-text-tertiary)]">
+          <p className="text-xs uppercase text-text-tertiary">
             {coin.symbol}
           </p>
         </div>
@@ -425,7 +425,7 @@ function CoinCard({
 
       {/* Price row */}
       <div className="flex items-baseline justify-between mb-2">
-        <span className="text-lg font-bold font-mono text-[var(--color-text-primary)]">
+        <span className="text-lg font-bold font-mono text-text-primary">
           {data ? formatCurrency(data.current_price) : "—"}
         </span>
         {pct24 && (
@@ -436,7 +436,7 @@ function CoinCard({
       </div>
 
       {/* Stats */}
-      <div className="grid grid-cols-2 gap-x-4 gap-y-1 text-[11px] text-[var(--color-text-secondary)] mb-2">
+      <div className="grid grid-cols-2 gap-x-4 gap-y-1 text-[11px] text-text-secondary mb-2">
         <div className="flex justify-between">
           <span>7d</span>
           <span className={cn("font-mono", pct7d?.className)}>{pct7d?.text ?? "—"}</span>
@@ -459,13 +459,13 @@ function CoinCard({
       )}
 
       {/* Tags + Note */}
-      <div className="space-y-1.5 border-t border-[var(--color-border)] pt-2 mt-1">
+      <div className="space-y-1.5 border-t border-border pt-2 mt-1">
         <TagManager coinId={coin.id} tags={coin.tags ?? []} onAdd={onAddTag} onRemove={onRemoveTag} />
         <NoteEditor coinId={coin.id} currentNote={coin.note} onSave={onUpdateNote} />
       </div>
 
       {/* Added date */}
-      <p className="text-[10px] text-[var(--color-text-tertiary)] mt-2 flex items-center gap-1">
+      <p className="text-[10px] text-text-tertiary mt-2 flex items-center gap-1">
         <Clock className="h-2.5 w-2.5" />
         Added {new Date(coin.addedAt).toLocaleDateString()}
       </p>
@@ -505,16 +505,16 @@ function ImportModal({
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm" onClick={onClose}>
       <div
-        className="mx-4 w-full max-w-lg rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] p-6 shadow-xl animate-scale-in"
+        className="mx-4 w-full max-w-lg rounded-xl border border-border bg-(--color-surface) p-6 shadow-xl animate-scale-in"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex items-center justify-between mb-4">
-          <h3 className="text-lg font-semibold text-[var(--color-text-primary)]">Import Watchlist</h3>
-          <button type="button" onClick={onClose} className="rounded p-1 hover:bg-[var(--color-surface-secondary)]">
+          <h3 className="text-lg font-semibold text-text-primary">Import Watchlist</h3>
+          <button type="button" onClick={onClose} className="rounded p-1 hover:bg-surface-secondary">
             <X className="h-4 w-4" />
           </button>
         </div>
-        <p className="text-sm text-[var(--color-text-secondary)] mb-3">
+        <p className="text-sm text-text-secondary mb-3">
           Paste a JSON export from this app or another watchlist. Supports v1 and v2 formats.
         </p>
         <textarea
@@ -522,7 +522,7 @@ function ImportModal({
           onChange={(e) => setValue(e.target.value)}
           rows={8}
           placeholder='{"version":2,"coins":[...]}'
-          className="w-full rounded-lg border border-[var(--color-border)] bg-[var(--color-bg)] p-3 text-sm font-mono text-[var(--color-text-primary)] placeholder:text-[var(--color-text-tertiary)] focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)] resize-none"
+          className="w-full rounded-lg border border-border bg-(--color-bg) p-3 text-sm font-mono text-text-primary placeholder:text-text-tertiary focus:outline-none focus:ring-2 focus:ring-accent resize-none"
         />
         <div className="flex justify-end gap-2 mt-4">
           <Button variant="ghost" onClick={onClose}>
@@ -728,10 +728,10 @@ export default function WatchlistPage() {
             <h1 className="font-serif text-3xl font-bold tracking-tight">
               Watchlist
             </h1>
-            <p className="text-[var(--color-text-secondary)] text-sm mt-1">
+            <p className="text-text-secondary text-sm mt-1">
               {coins.length} / {maxCoins} coin{coins.length !== 1 ? "s" : ""} tracked
               {lastRefresh && (
-                <span className="ml-2 text-[var(--color-text-tertiary)]">
+                <span className="ml-2 text-text-tertiary">
                   · Updated {lastRefresh.toLocaleTimeString()}
                 </span>
               )}
@@ -756,7 +756,7 @@ export default function WatchlistPage() {
 
               {showConfirmClear ? (
                 <div className="flex items-center gap-2">
-                  <span className="text-sm text-[var(--color-text-secondary)]">Clear all?</span>
+                  <span className="text-sm text-text-secondary">Clear all?</span>
                   <button
                     type="button"
                     onClick={() => { clearAll(); setShowConfirmClear(false); addToast("Watchlist cleared", "info"); }}
@@ -767,7 +767,7 @@ export default function WatchlistPage() {
                   <button
                     type="button"
                     onClick={() => setShowConfirmClear(false)}
-                    className="rounded-md border border-[var(--color-border)] px-3 py-1.5 text-sm font-medium hover:bg-[var(--color-surface)] transition-colors"
+                    className="rounded-md border border-border px-3 py-1.5 text-sm font-medium hover:bg-(--color-surface) transition-colors"
                   >
                     Cancel
                   </button>
@@ -777,7 +777,7 @@ export default function WatchlistPage() {
                   variant="ghost"
                   size="sm"
                   onClick={() => setShowConfirmClear(true)}
-                  className="text-[var(--color-text-secondary)] hover:text-red-500"
+                  className="text-text-secondary hover:text-red-500"
                 >
                   <Trash2 className="mr-1.5 h-3.5 w-3.5" />
                   Clear
@@ -790,11 +790,11 @@ export default function WatchlistPage() {
         {coins.length === 0 ? (
           /* Empty state */
           <div className="flex flex-col items-center justify-center py-24 text-center">
-            <div className="mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-[var(--color-surface)] border border-[var(--color-border)]">
-              <Star className="h-10 w-10 text-[var(--color-text-tertiary)]" />
+            <div className="mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-(--color-surface) border border-border">
+              <Star className="h-10 w-10 text-text-tertiary" />
             </div>
             <h2 className="text-xl font-semibold mb-2">Your watchlist is empty</h2>
-            <p className="text-[var(--color-text-secondary)] max-w-md mb-6">
+            <p className="text-text-secondary max-w-md mb-6">
               Start tracking your favorite cryptocurrencies by starring them from
               the Markets page, or import an existing watchlist.
             </p>
@@ -821,19 +821,19 @@ export default function WatchlistPage() {
               <div className="flex flex-col sm:flex-row gap-3">
                 {/* Search */}
                 <div className="relative flex-1">
-                  <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-[var(--color-text-tertiary)]" />
+                  <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-text-tertiary" />
                   <input
                     type="text"
                     value={search}
                     onChange={(e) => setSearch(e.target.value)}
                     placeholder="Search coins, symbols, notes…"
-                    className="w-full rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] py-2 pl-9 pr-8 text-sm text-[var(--color-text-primary)] placeholder:text-[var(--color-text-tertiary)] focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]"
+                    className="w-full rounded-lg border border-border bg-(--color-surface) py-2 pl-9 pr-8 text-sm text-text-primary placeholder:text-text-tertiary focus:outline-none focus:ring-2 focus:ring-accent"
                   />
                   {search && (
                     <button
                       type="button"
                       onClick={() => setSearch("")}
-                      className="absolute right-2.5 top-1/2 -translate-y-1/2 text-[var(--color-text-tertiary)] hover:text-[var(--color-text-primary)]"
+                      className="absolute right-2.5 top-1/2 -translate-y-1/2 text-text-tertiary hover:text-text-primary"
                     >
                       <X className="h-3.5 w-3.5" />
                     </button>
@@ -844,7 +844,7 @@ export default function WatchlistPage() {
                 <select
                   value={sortPreference}
                   onChange={(e) => setSortPreference(e.target.value as SortPreference)}
-                  className="rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] px-3 py-2 text-sm text-[var(--color-text-primary)] focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]"
+                  className="rounded-lg border border-border bg-(--color-surface) px-3 py-2 text-sm text-text-primary focus:outline-none focus:ring-2 focus:ring-accent"
                 >
                   {SORT_OPTIONS.map((opt) => (
                     <option key={opt.value} value={opt.value}>
@@ -854,15 +854,15 @@ export default function WatchlistPage() {
                 </select>
 
                 {/* View toggle */}
-                <div className="flex items-center rounded-lg border border-[var(--color-border)] overflow-hidden">
+                <div className="flex items-center rounded-lg border border-border overflow-hidden">
                   <button
                     type="button"
                     onClick={() => setViewMode("table")}
                     className={cn(
                       "px-3 py-2 transition-colors",
                       viewMode === "table"
-                        ? "bg-[var(--color-accent)] text-white"
-                        : "bg-[var(--color-surface)] text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)]",
+                        ? "bg-accent text-white"
+                        : "bg-(--color-surface) text-text-secondary hover:text-text-primary",
                     )}
                     aria-label="Table view"
                   >
@@ -874,8 +874,8 @@ export default function WatchlistPage() {
                     className={cn(
                       "px-3 py-2 transition-colors",
                       viewMode === "grid"
-                        ? "bg-[var(--color-accent)] text-white"
-                        : "bg-[var(--color-surface)] text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)]",
+                        ? "bg-accent text-white"
+                        : "bg-(--color-surface) text-text-secondary hover:text-text-primary",
                     )}
                     aria-label="Grid view"
                   >
@@ -887,15 +887,15 @@ export default function WatchlistPage() {
               {/* Tag filters */}
               {allTags.length > 0 && (
                 <div className="flex flex-wrap items-center gap-1.5">
-                  <Tag className="h-3.5 w-3.5 text-[var(--color-text-tertiary)]" />
+                  <Tag className="h-3.5 w-3.5 text-text-tertiary" />
                   <button
                     type="button"
                     onClick={() => setActiveTag(null)}
                     className={cn(
                       "rounded-full px-2.5 py-1 text-xs font-medium transition-colors",
                       !activeTag
-                        ? "bg-[var(--color-accent)] text-white"
-                        : "bg-[var(--color-surface)] text-[var(--color-text-secondary)] border border-[var(--color-border)] hover:border-[var(--color-accent)]",
+                        ? "bg-accent text-white"
+                        : "bg-(--color-surface) text-text-secondary border border-border hover:border-accent",
                     )}
                   >
                     All
@@ -908,8 +908,8 @@ export default function WatchlistPage() {
                       className={cn(
                         "rounded-full px-2.5 py-1 text-xs font-medium transition-colors",
                         activeTag === tag
-                          ? "bg-[var(--color-accent)] text-white"
-                          : "bg-[var(--color-surface)] text-[var(--color-text-secondary)] border border-[var(--color-border)] hover:border-[var(--color-accent)]",
+                          ? "bg-accent text-white"
+                          : "bg-(--color-surface) text-text-secondary border border-border hover:border-accent",
                       )}
                     >
                       {tag}
@@ -920,7 +920,7 @@ export default function WatchlistPage() {
 
               {/* Result count when filtered */}
               {(search || activeTag) && (
-                <p className="text-xs text-[var(--color-text-tertiary)]">
+                <p className="text-xs text-text-tertiary">
                   Showing {filteredCoins.length} of {coins.length} coins
                   {activeTag && <span> · tag: <strong>{activeTag}</strong></span>}
                 </p>
@@ -929,22 +929,22 @@ export default function WatchlistPage() {
 
             {/* Loading state */}
             {loading ? (
-              <div className="overflow-x-auto rounded-lg border border-[var(--color-border)]">
+              <div className="overflow-x-auto rounded-lg border border-border">
                 <table className="w-full text-sm">
                   <thead>
-                    <tr className="border-b border-[var(--color-border)] bg-[var(--color-surface)]">
-                      <th className="px-4 py-3 text-left font-medium text-[var(--color-text-secondary)]">Coin</th>
-                      <th className="px-4 py-3 text-right font-medium text-[var(--color-text-secondary)]">Price</th>
-                      <th className="px-4 py-3 text-right font-medium text-[var(--color-text-secondary)]">24h %</th>
-                      <th className="hidden md:table-cell px-4 py-3 text-right font-medium text-[var(--color-text-secondary)]">7d %</th>
-                      <th className="hidden lg:table-cell px-4 py-3 text-right font-medium text-[var(--color-text-secondary)]">Market Cap</th>
-                      <th className="hidden lg:table-cell px-4 py-3 text-right font-medium text-[var(--color-text-secondary)]">Volume</th>
-                      <th className="px-4 py-3 text-right font-medium text-[var(--color-text-secondary)]">Actions</th>
+                    <tr className="border-b border-border bg-(--color-surface)">
+                      <th className="px-4 py-3 text-left font-medium text-text-secondary">Coin</th>
+                      <th className="px-4 py-3 text-right font-medium text-text-secondary">Price</th>
+                      <th className="px-4 py-3 text-right font-medium text-text-secondary">24h %</th>
+                      <th className="hidden md:table-cell px-4 py-3 text-right font-medium text-text-secondary">7d %</th>
+                      <th className="hidden lg:table-cell px-4 py-3 text-right font-medium text-text-secondary">Market Cap</th>
+                      <th className="hidden lg:table-cell px-4 py-3 text-right font-medium text-text-secondary">Volume</th>
+                      <th className="px-4 py-3 text-right font-medium text-text-secondary">Actions</th>
                     </tr>
                   </thead>
                   <tbody>
                     {coins.map((coin) => (
-                      <tr key={coin.id} className="border-b border-[var(--color-border)] bg-[var(--color-surface)]">
+                      <tr key={coin.id} className="border-b border-border bg-(--color-surface)">
                         <td className="px-4 py-3"><Skeleton className="h-5 w-32" /></td>
                         <td className="px-4 py-3"><Skeleton className="ml-auto h-5 w-20" /></td>
                         <td className="px-4 py-3"><Skeleton className="ml-auto h-5 w-16" /></td>
@@ -960,9 +960,9 @@ export default function WatchlistPage() {
             ) : filteredCoins.length === 0 ? (
               /* No results */
               <div className="flex flex-col items-center justify-center py-16 text-center">
-                <Search className="h-10 w-10 text-[var(--color-text-tertiary)] mb-4" />
+                <Search className="h-10 w-10 text-text-tertiary mb-4" />
                 <h3 className="text-lg font-semibold mb-1">No coins match your search</h3>
-                <p className="text-sm text-[var(--color-text-secondary)]">
+                <p className="text-sm text-text-secondary">
                   Try a different search term or clear the filters.
                 </p>
                 <Button variant="ghost" size="sm" className="mt-3" onClick={() => { setSearch(""); setActiveTag(null); }}>
@@ -986,19 +986,19 @@ export default function WatchlistPage() {
               </div>
             ) : (
               /* Table view */
-              <div className="overflow-x-auto rounded-lg border border-[var(--color-border)]">
+              <div className="overflow-x-auto rounded-lg border border-border">
                 <table className="w-full text-sm">
                   <thead>
-                    <tr className="border-b border-[var(--color-border)] bg-[var(--color-surface)]">
-                      <th className="px-4 py-3 text-left font-medium text-[var(--color-text-secondary)]">Coin</th>
-                      <th className="px-4 py-3 text-right font-medium text-[var(--color-text-secondary)]">Price</th>
-                      <th className="px-4 py-3 text-right font-medium text-[var(--color-text-secondary)]">24h %</th>
-                      <th className="hidden md:table-cell px-4 py-3 text-right font-medium text-[var(--color-text-secondary)]">7d %</th>
-                      <th className="hidden lg:table-cell px-4 py-3 text-right font-medium text-[var(--color-text-secondary)]">Market Cap</th>
-                      <th className="hidden lg:table-cell px-4 py-3 text-right font-medium text-[var(--color-text-secondary)]">Volume (24h)</th>
-                      <th className="hidden xl:table-cell px-4 py-3 text-right font-medium text-[var(--color-text-secondary)]">7d Chart</th>
-                      <th className="hidden md:table-cell px-4 py-3 text-left font-medium text-[var(--color-text-secondary)]">Info</th>
-                      <th className="px-4 py-3 text-right font-medium text-[var(--color-text-secondary)]">Actions</th>
+                    <tr className="border-b border-border bg-(--color-surface)">
+                      <th className="px-4 py-3 text-left font-medium text-text-secondary">Coin</th>
+                      <th className="px-4 py-3 text-right font-medium text-text-secondary">Price</th>
+                      <th className="px-4 py-3 text-right font-medium text-text-secondary">24h %</th>
+                      <th className="hidden md:table-cell px-4 py-3 text-right font-medium text-text-secondary">7d %</th>
+                      <th className="hidden lg:table-cell px-4 py-3 text-right font-medium text-text-secondary">Market Cap</th>
+                      <th className="hidden lg:table-cell px-4 py-3 text-right font-medium text-text-secondary">Volume (24h)</th>
+                      <th className="hidden xl:table-cell px-4 py-3 text-right font-medium text-text-secondary">7d Chart</th>
+                      <th className="hidden md:table-cell px-4 py-3 text-left font-medium text-text-secondary">Info</th>
+                      <th className="px-4 py-3 text-right font-medium text-text-secondary">Actions</th>
                     </tr>
                   </thead>
 
@@ -1011,7 +1011,7 @@ export default function WatchlistPage() {
                       return (
                         <tr
                           key={coin.id}
-                          className="border-b border-[var(--color-border)] bg-[var(--color-surface)] transition-colors hover:bg-[var(--color-surface-secondary)]"
+                          className="border-b border-border bg-(--color-surface) transition-colors hover:bg-surface-secondary"
                         >
                           {/* Coin */}
                           <td className="px-4 py-3">
@@ -1026,17 +1026,17 @@ export default function WatchlistPage() {
                                   loading="lazy"
                                 />
                               )}
-                              <span className="font-medium text-[var(--color-text-primary)]">
+                              <span className="font-medium text-text-primary">
                                 {coin.name}
                               </span>
-                              <span className="uppercase text-[var(--color-text-tertiary)] text-xs">
+                              <span className="uppercase text-text-tertiary text-xs">
                                 {coin.symbol}
                               </span>
                             </Link>
                           </td>
 
                           {/* Price */}
-                          <td className="px-4 py-3 text-right font-mono text-[var(--color-text-primary)]">
+                          <td className="px-4 py-3 text-right font-mono text-text-primary">
                             {data ? formatCurrency(data.current_price) : "—"}
                           </td>
 
@@ -1051,12 +1051,12 @@ export default function WatchlistPage() {
                           </td>
 
                           {/* Market Cap */}
-                          <td className="hidden lg:table-cell px-4 py-3 text-right text-[var(--color-text-secondary)]">
+                          <td className="hidden lg:table-cell px-4 py-3 text-right text-text-secondary">
                             {data ? formatLargeNumber(data.market_cap, { prefix: "$" }) : "—"}
                           </td>
 
                           {/* Volume */}
-                          <td className="hidden lg:table-cell px-4 py-3 text-right text-[var(--color-text-secondary)]">
+                          <td className="hidden lg:table-cell px-4 py-3 text-right text-text-secondary">
                             {data ? formatLargeNumber(data.total_volume, { prefix: "$" }) : "—"}
                           </td>
 
@@ -1084,7 +1084,7 @@ export default function WatchlistPage() {
                                     type="button"
                                     onClick={() => moveUp(index)}
                                     disabled={index === 0}
-                                    className="rounded p-1 text-[var(--color-text-tertiary)] hover:text-[var(--color-text-primary)] hover:bg-[var(--color-surface)] disabled:opacity-30 transition-colors"
+                                    className="rounded p-1 text-text-tertiary hover:text-text-primary hover:bg-(--color-surface) disabled:opacity-30 transition-colors"
                                     aria-label={`Move ${coin.name} up`}
                                   >
                                     <ChevronUp className="h-4 w-4" />
@@ -1093,7 +1093,7 @@ export default function WatchlistPage() {
                                     type="button"
                                     onClick={() => moveDown(index)}
                                     disabled={index === filteredCoins.length - 1}
-                                    className="rounded p-1 text-[var(--color-text-tertiary)] hover:text-[var(--color-text-primary)] hover:bg-[var(--color-surface)] disabled:opacity-30 transition-colors"
+                                    className="rounded p-1 text-text-tertiary hover:text-text-primary hover:bg-(--color-surface) disabled:opacity-30 transition-colors"
                                     aria-label={`Move ${coin.name} down`}
                                   >
                                     <ChevronDown className="h-4 w-4" />
@@ -1103,7 +1103,7 @@ export default function WatchlistPage() {
                               <button
                                 type="button"
                                 onClick={() => removeCoin(coin.id)}
-                                className="rounded p-1 text-[var(--color-text-tertiary)] hover:text-red-500 hover:bg-[var(--color-surface)] transition-colors"
+                                className="rounded p-1 text-text-tertiary hover:text-red-500 hover:bg-(--color-surface) transition-colors"
                                 aria-label={`Remove ${coin.name} from watchlist`}
                               >
                                 <Trash2 className="h-4 w-4" />

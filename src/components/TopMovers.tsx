@@ -68,21 +68,21 @@ export default function TopMovers() {
   const items = tab === "gainers" ? gainers : losers;
 
   return (
-    <section className="border-b border-[var(--color-border)]">
+    <section className="border-b border-border">
       <div className="container-main py-8">
         <div className="flex items-center justify-between mb-5">
           <div className="flex items-center gap-3">
             <Flame className="h-5 w-5 text-orange-500" />
             <h2 className="text-xl font-bold font-serif">Top Movers</h2>
           </div>
-          <div className="flex rounded-lg border border-[var(--color-border)] overflow-hidden text-sm">
+          <div className="flex rounded-lg border border-border overflow-hidden text-sm">
             <button
               onClick={() => setTab("gainers")}
               className={cn(
                 "px-4 py-1.5 font-medium transition-colors cursor-pointer",
                 tab === "gainers"
                   ? "bg-emerald-500/10 text-emerald-600 dark:text-emerald-400"
-                  : "text-[var(--color-text-secondary)] hover:bg-[var(--color-surface-secondary)]",
+                  : "text-text-secondary hover:bg-surface-secondary",
               )}
             >
               Gainers
@@ -90,10 +90,10 @@ export default function TopMovers() {
             <button
               onClick={() => setTab("losers")}
               className={cn(
-                "px-4 py-1.5 font-medium transition-colors cursor-pointer border-l border-[var(--color-border)]",
+                "px-4 py-1.5 font-medium transition-colors cursor-pointer border-l border-border",
                 tab === "losers"
                   ? "bg-red-500/10 text-red-600 dark:text-red-400"
-                  : "text-[var(--color-text-secondary)] hover:bg-[var(--color-surface-secondary)]",
+                  : "text-text-secondary hover:bg-surface-secondary",
               )}
             >
               Losers
@@ -108,13 +108,13 @@ export default function TopMovers() {
               <Link
                 key={coin.id}
                 href={`/coin/${coin.id}`}
-                className="group flex items-center justify-between rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] p-4 transition-all hover:border-[var(--color-text-tertiary)] hover:shadow-sm"
+                className="group flex items-center justify-between rounded-xl border border-border bg-(--color-surface) p-4 transition-all hover:border-text-tertiary hover:shadow-sm"
               >
                 <div>
-                  <p className="text-sm font-bold text-[var(--color-text-primary)]">
+                  <p className="text-sm font-bold text-text-primary">
                     {coin.symbol}
                   </p>
-                  <p className="text-xs text-[var(--color-text-tertiary)] tabular-nums mt-0.5">
+                  <p className="text-xs text-text-tertiary tabular-nums mt-0.5">
                     {formatPrice(coin.price)}
                   </p>
                 </div>
@@ -141,7 +141,7 @@ export default function TopMovers() {
         <div className="mt-4 text-center">
           <Link
             href="/markets"
-            className="inline-flex items-center gap-1 text-sm font-medium text-[var(--color-accent)] hover:text-[var(--color-accent-hover)] transition-colors"
+            className="inline-flex items-center gap-1 text-sm font-medium text-accent hover:text-accent-hover transition-colors"
           >
             View all markets <ArrowRight className="h-3.5 w-3.5" />
           </Link>

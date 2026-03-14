@@ -44,7 +44,7 @@ export default function ExchangesClient() {
     <div className="space-y-8">
       {/* Compare Prompt */}
       {compareList.length === 0 && (
-        <div className="flex items-center gap-2 rounded-lg border border-dashed border-[var(--color-border)] bg-[var(--color-surface)] p-4 text-sm text-[var(--color-text-tertiary)]">
+        <div className="flex items-center gap-2 rounded-lg border border-dashed border-border bg-(--color-surface) p-4 text-sm text-text-tertiary">
           <ArrowLeftRight className="h-4 w-4 shrink-0" />
           <span>
             Click the <span className="font-medium">★</span> icon on any two
@@ -55,14 +55,14 @@ export default function ExchangesClient() {
 
       {/* Comparison Panel */}
       {compareList.length === 2 && (
-        <div className="rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] p-6">
+        <div className="rounded-lg border border-border bg-(--color-surface) p-6">
           <div className="mb-4 flex items-center justify-between">
-            <h3 className="font-serif text-lg font-bold text-[var(--color-text-primary)]">
+            <h3 className="font-serif text-lg font-bold text-text-primary">
               Exchange Comparison
             </h3>
             <button
               onClick={() => setCompareList([])}
-              className="rounded-md p-1 text-[var(--color-text-tertiary)] transition-colors hover:bg-[var(--color-surface-tertiary)]"
+              className="rounded-md p-1 text-text-tertiary transition-colors hover:bg-surface-tertiary"
               aria-label="Close comparison"
             >
               <X className="h-4 w-4" />
@@ -72,21 +72,21 @@ export default function ExchangesClient() {
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
-                <tr className="border-b border-[var(--color-border)]">
-                  <th className="pb-3 pr-4 text-left text-xs font-semibold uppercase tracking-wider text-[var(--color-text-tertiary)]">
+                <tr className="border-b border-border">
+                  <th className="pb-3 pr-4 text-left text-xs font-semibold uppercase tracking-wider text-text-tertiary">
                     Feature
                   </th>
                   {compareList.map((ex) => (
                     <th
                       key={ex.id}
-                      className="pb-3 text-left text-sm font-bold text-[var(--color-text-primary)]"
+                      className="pb-3 text-left text-sm font-bold text-text-primary"
                     >
                       {ex.name}
                     </th>
                   ))}
                 </tr>
               </thead>
-              <tbody className="divide-y divide-[var(--color-border)]">
+              <tbody className="divide-y divide-border">
                 {[
                   {
                     label: "Type",
@@ -150,14 +150,14 @@ export default function ExchangesClient() {
 
                   return (
                     <tr key={row.label}>
-                      <td className="py-2.5 pr-4 text-[var(--color-text-tertiary)]">
+                      <td className="py-2.5 pr-4 text-text-tertiary">
                         {row.label}
                       </td>
                       {row.values.map((val, i) => (
                         <td
                           key={i}
                           className={cn(
-                            "py-2.5 text-[var(--color-text-primary)]",
+                            "py-2.5 text-text-primary",
                             better === i && "font-semibold text-green-600 dark:text-green-400"
                           )}
                         >

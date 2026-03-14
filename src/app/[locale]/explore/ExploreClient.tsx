@@ -22,10 +22,10 @@ const EntityRelationships = dynamic(
   {
     ssr: false,
     loading: () => (
-      <div className="flex items-center justify-center min-h-[500px] bg-[var(--color-surface)] rounded-2xl border border-[var(--color-border)]">
+      <div className="flex items-center justify-center min-h-[500px] bg-(--color-surface) rounded-2xl border border-border">
         <div className="flex flex-col items-center gap-3">
-          <div className="h-10 w-10 border-3 border-[var(--color-accent)] border-t-transparent rounded-full animate-spin" />
-          <p className="text-sm text-[var(--color-text-secondary)]">Loading knowledge graph…</p>
+          <div className="h-10 w-10 border-3 border-accent border-t-transparent rounded-full animate-spin" />
+          <p className="text-sm text-text-secondary">Loading knowledge graph…</p>
         </div>
       </div>
     ),
@@ -119,21 +119,21 @@ export default function ExploreClient({
     <div className="space-y-6">
       {/* ---- Search Bar ---- */}
       <form onSubmit={handleSearch} className="relative max-w-xl">
-        <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-[var(--color-text-tertiary)]" />
+        <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-text-tertiary" />
         <input
           type="text"
           value={searchValue}
           onChange={e => setSearchValue(e.target.value)}
           placeholder="Search entities — Bitcoin, Vitalik, Coinbase, Layer 2…"
-          className="w-full pl-12 pr-10 py-3 rounded-xl bg-[var(--color-surface)] border border-[var(--color-border)] text-[var(--color-text-primary)] placeholder:text-[var(--color-text-tertiary)] focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)] transition-shadow"
+          className="w-full pl-12 pr-10 py-3 rounded-xl bg-(--color-surface) border border-border text-text-primary placeholder:text-text-tertiary focus:outline-none focus:ring-2 focus:ring-accent transition-shadow"
         />
         {searchValue && (
           <button
             type="button"
             onClick={clearSearch}
-            className="absolute right-3 top-1/2 -translate-y-1/2 p-1 hover:bg-[var(--color-surface-secondary)] rounded"
+            className="absolute right-3 top-1/2 -translate-y-1/2 p-1 hover:bg-surface-secondary rounded"
           >
-            <X className="h-4 w-4 text-[var(--color-text-tertiary)]" />
+            <X className="h-4 w-4 text-text-tertiary" />
           </button>
         )}
       </form>
@@ -141,8 +141,8 @@ export default function ExploreClient({
       {/* Active filter indicator */}
       {(activeTag || searchEntity) && (
         <div className="flex items-center gap-2 text-sm">
-          <span className="text-[var(--color-text-tertiary)]">Filtered by:</span>
-          <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-[var(--color-accent)]/15 text-[var(--color-accent)] font-medium text-xs">
+          <span className="text-text-tertiary">Filtered by:</span>
+          <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-accent/15 text-accent font-medium text-xs">
             {activeTag ? `#${activeTag}` : searchEntity}
             <button
               onClick={() => {
@@ -174,13 +174,13 @@ export default function ExploreClient({
           <Card>
             <CardHeader className="pb-3">
               <CardTitle className="flex items-center gap-2 text-base">
-                <TrendingUp className="h-4 w-4 text-[var(--color-accent)]" />
+                <TrendingUp className="h-4 w-4 text-accent" />
                 Trending Connections
               </CardTitle>
             </CardHeader>
             <CardContent>
               {trendingConnections.length === 0 ? (
-                <p className="text-sm text-[var(--color-text-tertiary)]">
+                <p className="text-sm text-text-tertiary">
                   No trending connections yet. Data builds as news is analyzed.
                 </p>
               ) : (
@@ -196,16 +196,16 @@ export default function ExploreClient({
                         className={cn(
                           'w-full flex items-center justify-between px-3 py-2 rounded-lg text-left transition-colors',
                           isActive
-                            ? 'bg-[var(--color-accent)]/10 ring-1 ring-[var(--color-accent)]/30'
-                            : 'hover:bg-[var(--color-surface-secondary)]',
+                            ? 'bg-accent/10 ring-1 ring-accent/30'
+                            : 'hover:bg-surface-secondary',
                         )}
                       >
                         <div className="flex items-center gap-1.5 min-w-0 text-sm">
-                          <span className="text-[var(--color-text-primary)] font-medium truncate">
+                          <span className="text-text-primary font-medium truncate">
                             {pair.sourceLabel}
                           </span>
-                          <span className="text-[var(--color-text-tertiary)] flex-shrink-0">↔</span>
-                          <span className="text-[var(--color-text-primary)] font-medium truncate">
+                          <span className="text-text-tertiary flex-shrink-0">↔</span>
+                          <span className="text-text-primary font-medium truncate">
                             {pair.targetLabel}
                           </span>
                         </div>
@@ -216,7 +216,7 @@ export default function ExploreClient({
                               ? 'text-green-600 dark:text-green-400 bg-green-500/10'
                               : pair.strength >= 40
                                 ? 'text-amber-600 dark:text-amber-400 bg-amber-500/10'
-                                : 'text-[var(--color-text-tertiary)] bg-[var(--color-surface-secondary)]',
+                                : 'text-text-tertiary bg-surface-secondary',
                           )}
                         >
                           {pair.strength}
@@ -233,13 +233,13 @@ export default function ExploreClient({
           <Card>
             <CardHeader className="pb-3">
               <CardTitle className="flex items-center gap-2 text-base">
-                <Hash className="h-4 w-4 text-[var(--color-accent)]" />
+                <Hash className="h-4 w-4 text-accent" />
                 Topic Clusters
               </CardTitle>
             </CardHeader>
             <CardContent>
               {tags.length === 0 ? (
-                <p className="text-sm text-[var(--color-text-tertiary)]">
+                <p className="text-sm text-text-tertiary">
                   No topics available yet.
                 </p>
               ) : (
@@ -256,8 +256,8 @@ export default function ExploreClient({
                         className={cn(
                           'px-2 py-0.5 rounded-md transition-all leading-snug',
                           isActive
-                            ? 'bg-[var(--color-accent)] text-[var(--color-text-inverse)] font-semibold'
-                            : 'text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] hover:bg-[var(--color-surface-secondary)]',
+                            ? 'bg-accent text-text-inverse font-semibold'
+                            : 'text-text-secondary hover:text-text-primary hover:bg-surface-secondary',
                         )}
                         style={{ fontSize: `${fontSize}px` }}
                       >
@@ -274,18 +274,18 @@ export default function ExploreClient({
           <Card>
             <CardHeader className="pb-3">
               <CardTitle className="flex items-center gap-2 text-base">
-                <Network className="h-4 w-4 text-[var(--color-accent)]" />
+                <Network className="h-4 w-4 text-accent" />
                 About
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
+              <p className="text-sm text-text-secondary leading-relaxed">
                 This knowledge graph is built automatically from crypto news articles.
                 Entities are extracted using AI and connected based on co-occurrence
                 and semantic relationships. The graph updates as new articles are
                 ingested.
               </p>
-              <ul className="mt-3 space-y-1 text-xs text-[var(--color-text-tertiary)]">
+              <ul className="mt-3 space-y-1 text-xs text-text-tertiary">
                 <li>• Scroll to zoom in/out</li>
                 <li>• Drag background to pan</li>
                 <li>• Drag nodes to rearrange</li>

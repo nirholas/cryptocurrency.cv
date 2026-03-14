@@ -212,28 +212,28 @@ export default function SentimentTable({ className }: { className?: string }) {
       <div className="overflow-x-auto -webkit-overflow-scrolling-touch">
         <table className="w-full text-sm min-w-[480px]">
           <thead>
-            <tr className="border-b border-[var(--color-border)] text-left text-xs uppercase tracking-wider text-[var(--color-text-tertiary)]">
+            <tr className="border-b border-border text-left text-xs uppercase tracking-wider text-text-tertiary">
               <th className="px-4 py-3 font-medium">Coin</th>
               <th
-                className="px-4 py-3 font-medium cursor-pointer select-none hover:text-[var(--color-text-primary)]"
+                className="px-4 py-3 font-medium cursor-pointer select-none hover:text-text-primary"
                 onClick={() => handleSort("score")}
               >
                 Sentiment <SortIcon col="score" />
               </th>
               <th
-                className="hidden sm:table-cell px-4 py-3 font-medium cursor-pointer select-none hover:text-[var(--color-text-primary)]"
+                className="hidden sm:table-cell px-4 py-3 font-medium cursor-pointer select-none hover:text-text-primary"
                 onClick={() => handleSort("socialVolume")}
               >
                 Social Vol <SortIcon col="socialVolume" />
               </th>
               <th
-                className="hidden md:table-cell px-4 py-3 font-medium cursor-pointer select-none hover:text-[var(--color-text-primary)]"
+                className="hidden md:table-cell px-4 py-3 font-medium cursor-pointer select-none hover:text-text-primary"
                 onClick={() => handleSort("newsMentions")}
               >
                 News <SortIcon col="newsMentions" />
               </th>
               <th
-                className="px-4 py-3 font-medium cursor-pointer select-none hover:text-[var(--color-text-primary)]"
+                className="px-4 py-3 font-medium cursor-pointer select-none hover:text-text-primary"
                 onClick={() => handleSort("change24h")}
               >
                 24h Chg <SortIcon col="change24h" />
@@ -246,11 +246,11 @@ export default function SentimentTable({ className }: { className?: string }) {
               ? Array.from({ length: 8 }).map((_, i) => (
                   <tr
                     key={i}
-                    className="border-b border-[var(--color-border)] last:border-0"
+                    className="border-b border-border last:border-0"
                   >
                     {Array.from({ length: 6 }).map((_, j) => (
                       <td key={j} className="px-4 py-3">
-                        <div className="h-4 w-16 animate-pulse rounded bg-[var(--color-border)]" />
+                        <div className="h-4 w-16 animate-pulse rounded bg-border" />
                       </td>
                     ))}
                   </tr>
@@ -258,12 +258,12 @@ export default function SentimentTable({ className }: { className?: string }) {
               : sorted.map((c) => (
                   <tr
                     key={c.symbol}
-                    className="border-b border-[var(--color-border)] last:border-0 hover:bg-[var(--color-surface-hover,var(--color-border))]/30 transition-colors"
+                    className="border-b border-border last:border-0 hover:bg-[var(--color-surface-hover,var(--color-border))]/30 transition-colors"
                   >
                     {/* Coin */}
-                    <td className="px-4 py-3 font-medium text-[var(--color-text-primary)]">
+                    <td className="px-4 py-3 font-medium text-text-primary">
                       <span className="font-semibold">{c.symbol}</span>
-                      <span className="ml-1.5 text-xs text-[var(--color-text-tertiary)] hidden sm:inline">
+                      <span className="ml-1.5 text-xs text-text-tertiary hidden sm:inline">
                         {c.coin}
                       </span>
                     </td>
@@ -271,7 +271,7 @@ export default function SentimentTable({ className }: { className?: string }) {
                     {/* Sentiment Score */}
                     <td className="px-4 py-3">
                       <div className="flex items-center gap-2">
-                        <div className="w-16 h-2 rounded-full bg-[var(--color-border)] overflow-hidden">
+                        <div className="w-16 h-2 rounded-full bg-border overflow-hidden">
                           <div
                             className={cn("h-full rounded-full transition-all", getScoreColor(c.score))}
                             style={{ width: `${c.score}%` }}
@@ -280,19 +280,19 @@ export default function SentimentTable({ className }: { className?: string }) {
                         <span className={cn("text-xs font-semibold tabular-nums", getScoreTextColor(c.score))}>
                           {c.score}
                         </span>
-                        <span className="text-[10px] text-[var(--color-text-tertiary)] hidden md:inline">
+                        <span className="text-[10px] text-text-tertiary hidden md:inline">
                           {getScoreLabel(c.score)}
                         </span>
                       </div>
                     </td>
 
                     {/* Social Volume */}
-                    <td className="px-4 py-3 text-[var(--color-text-secondary)] tabular-nums">
+                    <td className="px-4 py-3 text-text-secondary tabular-nums">
                       {formatVolume(c.socialVolume)}
                     </td>
 
                     {/* News Mentions */}
-                    <td className="px-4 py-3 text-[var(--color-text-secondary)] tabular-nums">
+                    <td className="px-4 py-3 text-text-secondary tabular-nums">
                       {c.newsMentions}
                     </td>
 
@@ -305,7 +305,7 @@ export default function SentimentTable({ className }: { className?: string }) {
                             ? "text-green-500 dark:text-green-400"
                             : c.change24h < 0
                             ? "text-red-500 dark:text-red-400"
-                            : "text-[var(--color-text-tertiary)]"
+                            : "text-text-tertiary"
                         )}
                       >
                         {c.change24h > 0 ? (
@@ -330,7 +330,7 @@ export default function SentimentTable({ className }: { className?: string }) {
       </div>
 
       {!loading && coins.length === 0 && (
-        <div className="p-12 text-center text-[var(--color-text-secondary)]">
+        <div className="p-12 text-center text-text-secondary">
           <RefreshCw className="h-6 w-6 mx-auto mb-2 opacity-40" />
           No sentiment data available.
         </div>

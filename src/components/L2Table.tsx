@@ -45,7 +45,7 @@ function getTypeBadgeClass(type: string): string {
     case "validium":
       return "bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300";
     default:
-      return "bg-[var(--color-surface-tertiary)] text-[var(--color-text-secondary)]";
+      return "bg-surface-tertiary text-text-secondary";
   }
 }
 
@@ -64,9 +64,9 @@ function SortHeader({ label, sortKey, currentSort, currentDir, onSort, align = "
   return (
     <th
       className={cn(
-        "px-3 py-3 text-xs font-semibold uppercase tracking-wider cursor-pointer select-none transition-colors hover:text-[var(--color-accent)]",
+        "px-3 py-3 text-xs font-semibold uppercase tracking-wider cursor-pointer select-none transition-colors hover:text-accent",
         align === "left" ? "text-left" : "text-right",
-        active ? "text-[var(--color-accent)]" : "text-[var(--color-text-tertiary)]",
+        active ? "text-accent" : "text-text-tertiary",
         className
       )}
       onClick={() => onSort(sortKey)}
@@ -136,22 +136,22 @@ export default function L2Table({ l2s }: { l2s: L2Row[] }) {
 
   if (l2s.length === 0) {
     return (
-      <div className="rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] p-12 text-center text-[var(--color-text-secondary)]">
+      <div className="rounded-lg border border-border bg-(--color-surface) p-12 text-center text-text-secondary">
         Layer 2 data is temporarily unavailable. Please try again shortly.
       </div>
     );
   }
 
   return (
-    <div className="overflow-x-auto rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] -webkit-overflow-scrolling-touch">
+    <div className="overflow-x-auto rounded-lg border border-border bg-(--color-surface) -webkit-overflow-scrolling-touch">
       <table className="w-full text-sm min-w-[600px]" aria-label="Layer 2 comparison data">
         <thead>
-          <tr className="border-b border-[var(--color-border)]">
+          <tr className="border-b border-border">
             <SortHeader label="#" sortKey="rank" currentSort={sortKey} currentDir={sortDir} onSort={handleSort} align="left" />
             <SortHeader label="L2 Name" sortKey="name" currentSort={sortKey} currentDir={sortDir} onSort={handleSort} align="left" />
             <SortHeader label="Type" sortKey="type" currentSort={sortKey} currentDir={sortDir} onSort={handleSort} align="left" className="hidden sm:table-cell" />
             <SortHeader label="TVL" sortKey="tvl" currentSort={sortKey} currentDir={sortDir} onSort={handleSort} />
-            <th className="hidden md:table-cell px-3 py-3 text-right text-xs font-semibold uppercase tracking-wider text-[var(--color-text-tertiary)]">
+            <th className="hidden md:table-cell px-3 py-3 text-right text-xs font-semibold uppercase tracking-wider text-text-tertiary">
               TVL Share
             </th>
             <SortHeader label="TPS" sortKey="tps" currentSort={sortKey} currentDir={sortDir} onSort={handleSort} className="hidden md:table-cell" />
@@ -166,16 +166,16 @@ export default function L2Table({ l2s }: { l2s: L2Row[] }) {
             return (
               <tr
                 key={l2.slug}
-                className="border-b border-[var(--color-border)] last:border-b-0 hover:bg-[var(--color-surface-secondary)] transition-colors"
+                className="border-b border-border last:border-b-0 hover:bg-surface-secondary transition-colors"
               >
-                <td className="px-3 py-3 text-[var(--color-text-tertiary)] font-mono text-xs">
+                <td className="px-3 py-3 text-text-tertiary font-mono text-xs">
                   {l2.rank}
                 </td>
                 <td className="px-3 py-3">
                   <div className="flex items-center gap-2">
-                    <span className="font-medium text-[var(--color-text-primary)]">{l2.name}</span>
+                    <span className="font-medium text-text-primary">{l2.name}</span>
                     {l2.stage && (
-                      <span className="text-[10px] font-mono text-[var(--color-text-tertiary)] bg-[var(--color-surface-tertiary)] px-1.5 py-0.5 rounded">
+                      <span className="text-[10px] font-mono text-text-tertiary bg-surface-tertiary px-1.5 py-0.5 rounded">
                         {l2.stage}
                       </span>
                     )}
@@ -186,26 +186,26 @@ export default function L2Table({ l2s }: { l2s: L2Row[] }) {
                     {l2.type}
                   </span>
                 </td>
-                <td className="px-3 py-3 text-right font-mono text-[var(--color-text-primary)]">
+                <td className="px-3 py-3 text-right font-mono text-text-primary">
                   {formatLargeNumber(l2.tvl)}
                 </td>
                 <td className="hidden md:table-cell px-3 py-3">
                   <div className="flex items-center gap-2 justify-end">
-                    <div className="w-20 h-2 rounded-full bg-[var(--color-surface-tertiary)] overflow-hidden">
+                    <div className="w-20 h-2 rounded-full bg-surface-tertiary overflow-hidden">
                       <div
-                        className="h-full rounded-full bg-[var(--color-accent)]"
+                        className="h-full rounded-full bg-accent"
                         style={{ width: `${tvlPct}%` }}
                       />
                     </div>
-                    <span className="text-xs font-mono text-[var(--color-text-tertiary)] w-10 text-right">
+                    <span className="text-xs font-mono text-text-tertiary w-10 text-right">
                       {tvlPct.toFixed(0)}%
                     </span>
                   </div>
                 </td>
-                <td className="hidden md:table-cell px-3 py-3 text-right font-mono text-[var(--color-text-secondary)]">
+                <td className="hidden md:table-cell px-3 py-3 text-right font-mono text-text-secondary">
                   {l2.tps > 0 ? l2.tps.toFixed(1) : "—"}
                 </td>
-                <td className="hidden lg:table-cell px-3 py-3 text-right font-mono text-[var(--color-text-secondary)]">
+                <td className="hidden lg:table-cell px-3 py-3 text-right font-mono text-text-secondary">
                   {l2.averageFee > 0 ? `$${l2.averageFee.toFixed(4)}` : "—"}
                 </td>
                 <td className="px-3 py-3 text-right">
@@ -216,7 +216,7 @@ export default function L2Table({ l2s }: { l2s: L2Row[] }) {
                         ? "text-green-600 dark:text-green-400"
                         : l2.change7d < 0
                           ? "text-red-600 dark:text-red-400"
-                          : "text-[var(--color-text-secondary)]"
+                          : "text-text-secondary"
                     )}
                   >
                     {formatPct(l2.change7d)}

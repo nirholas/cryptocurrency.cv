@@ -73,7 +73,7 @@ export function WatchlistButton({
         s.button,
         watched
           ? "text-yellow-500 hover:text-yellow-600"
-          : "text-[var(--color-text-tertiary)] hover:text-yellow-500",
+          : "text-text-tertiary hover:text-yellow-500",
         animating && "scale-125",
         className,
       )}

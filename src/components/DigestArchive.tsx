@@ -22,7 +22,7 @@ interface DigestItem {
 const SENTIMENT_COLORS: Record<string, string> = {
   bullish: "text-green-600 dark:text-green-400",
   bearish: "text-red-600 dark:text-red-400",
-  neutral: "text-[var(--color-text-tertiary)]",
+  neutral: "text-text-tertiary",
   mixed: "text-yellow-600 dark:text-yellow-400",
 };
 
@@ -60,8 +60,8 @@ export default function DigestArchive() {
   if (status === "loading") {
     return (
       <div className="flex items-center justify-center py-12">
-        <Loader2 className="h-5 w-5 animate-spin text-[var(--color-text-tertiary)]" />
-        <span className="ml-2 text-sm text-[var(--color-text-tertiary)]">
+        <Loader2 className="h-5 w-5 animate-spin text-text-tertiary" />
+        <span className="ml-2 text-sm text-text-tertiary">
           Loading archive…
         </span>
       </div>
@@ -71,7 +71,7 @@ export default function DigestArchive() {
   if (status === "error" || digests.length === 0) {
     return (
       <div className="text-center py-12">
-        <p className="text-sm text-[var(--color-text-tertiary)]">
+        <p className="text-sm text-text-tertiary">
           {status === "error"
             ? "Unable to load the digest archive right now. Please try again later."
             : "No digests available yet. Check back soon!"}
@@ -98,18 +98,18 @@ export default function DigestArchive() {
         return (
           <Card
             key={digest.date || i}
-            className="group hover:border-[var(--color-accent)]/50 transition-colors"
+            className="group hover:border-accent/50 transition-colors"
           >
             <CardContent className="p-4 md:p-5 flex items-center gap-4">
               {/* date icon */}
-              <div className="hidden sm:flex h-10 w-10 rounded-lg bg-[var(--color-surface-secondary)] items-center justify-center shrink-0">
-                <Calendar className="h-4 w-4 text-[var(--color-text-tertiary)]" />
+              <div className="hidden sm:flex h-10 w-10 rounded-lg bg-surface-secondary items-center justify-center shrink-0">
+                <Calendar className="h-4 w-4 text-text-tertiary" />
               </div>
 
               {/* content */}
               <div className="flex-1 min-w-0">
                 <div className="flex items-center gap-2 flex-wrap">
-                  <h3 className="font-semibold text-sm text-[var(--color-text-primary)] truncate">
+                  <h3 className="font-semibold text-sm text-text-primary truncate">
                     {title}
                   </h3>
                   {sentiment && (
@@ -124,19 +124,19 @@ export default function DigestArchive() {
                   )}
                 </div>
                 {dateStr && (
-                  <p className="text-xs text-[var(--color-text-tertiary)] mt-0.5">
+                  <p className="text-xs text-text-tertiary mt-0.5">
                     {dateStr}
                   </p>
                 )}
                 {summary && (
-                  <p className="text-xs text-[var(--color-text-secondary)] mt-1 line-clamp-2">
+                  <p className="text-xs text-text-secondary mt-1 line-clamp-2">
                     {summary}
                   </p>
                 )}
               </div>
 
               {/* arrow */}
-              <ChevronRight className="h-4 w-4 text-[var(--color-text-tertiary)] shrink-0 group-hover:text-[var(--color-accent)] transition-colors" />
+              <ChevronRight className="h-4 w-4 text-text-tertiary shrink-0 group-hover:text-accent transition-colors" />
             </CardContent>
           </Card>
         );

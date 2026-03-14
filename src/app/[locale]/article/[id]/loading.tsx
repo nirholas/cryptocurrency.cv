@@ -40,7 +40,7 @@ export default function ArticleLoading() {
         </header>
 
         {/* AI Summary skeleton */}
-        <div className="mb-8 p-5 rounded-lg border border-[var(--color-border)] bg-[var(--color-surface-secondary)]">
+        <div className="mb-8 p-5 rounded-lg border border-border bg-surface-secondary">
           <div className="flex items-center gap-2 mb-3">
             <Skeleton className="h-4 w-4 rounded" />
             <Skeleton className="h-4 w-24" />
@@ -69,7 +69,7 @@ export default function ArticleLoading() {
         </div>
 
         {/* Share bar skeleton */}
-        <div className="mb-8 pt-6 border-t border-[var(--color-border)]">
+        <div className="mb-8 pt-6 border-t border-border">
           <div className="flex items-center gap-3">
             {Array.from({ length: 4 }).map((_, i) => (
               <Skeleton key={i} className="h-9 w-9 rounded" />
@@ -78,7 +78,7 @@ export default function ArticleLoading() {
         </div>
 
         {/* Tags skeleton */}
-        <div className="mb-8 pt-6 border-t border-[var(--color-border)]">
+        <div className="mb-8 pt-6 border-t border-border">
           <Skeleton className="h-4 w-28 mb-3" />
           <div className="flex flex-wrap gap-2">
             {Array.from({ length: 5 }).map((_, i) => (
@@ -88,7 +88,7 @@ export default function ArticleLoading() {
         </div>
 
         {/* Related articles skeleton */}
-        <div className="pt-8 border-t border-[var(--color-border)]">
+        <div className="pt-8 border-t border-border">
           <Skeleton className="h-7 w-40 mb-6" />
           <div className="grid gap-5 sm:grid-cols-2">
             {Array.from({ length: 4 }).map((_, i) => (

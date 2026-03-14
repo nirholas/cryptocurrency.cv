@@ -89,14 +89,14 @@ export default async function CalculatorPage({ params }: Props) {
       <main className="container-main py-8 md:py-12">
         {/* Hero */}
         <div className="text-center mb-10">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[var(--color-accent)]/10 text-[var(--color-accent)] text-xs font-semibold mb-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-accent/10 text-accent text-xs font-semibold mb-4">
             <Calculator className="h-3.5 w-3.5" />
             Real-time Crypto Calculator
           </div>
-          <h1 className="font-serif text-3xl md:text-4xl font-bold text-[var(--color-text-primary)] mb-3">
+          <h1 className="font-serif text-3xl md:text-4xl font-bold text-text-primary mb-3">
             Crypto Calculator
           </h1>
-          <p className="text-[var(--color-text-secondary)] max-w-xl mx-auto">
+          <p className="text-text-secondary max-w-xl mx-auto">
             Convert between cryptocurrencies and fiat currencies with live
             prices. Supports crypto-to-crypto, fiat presets, and an investment
             simulator.
@@ -110,20 +110,20 @@ export default async function CalculatorPage({ params }: Props) {
 
         {/* Features grid */}
         <section className="mt-16">
-          <h2 className="font-serif text-2xl font-bold text-center text-[var(--color-text-primary)] mb-8">
+          <h2 className="font-serif text-2xl font-bold text-center text-text-primary mb-8">
             Why Use This Calculator?
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
             {FEATURES.map((f) => (
               <div
                 key={f.title}
-                className="p-5 rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] hover:bg-[var(--color-surface-secondary)] transition-colors"
+                className="p-5 rounded-xl border border-border bg-(--color-surface) hover:bg-surface-secondary transition-colors"
               >
-                <f.icon className="h-6 w-6 text-[var(--color-accent)] mb-3" />
-                <h3 className="font-semibold text-[var(--color-text-primary)] mb-1">
+                <f.icon className="h-6 w-6 text-accent mb-3" />
+                <h3 className="font-semibold text-text-primary mb-1">
                   {f.title}
                 </h3>
-                <p className="text-sm text-[var(--color-text-secondary)]">
+                <p className="text-sm text-text-secondary">
                   {f.desc}
                 </p>
               </div>
@@ -133,7 +133,7 @@ export default async function CalculatorPage({ params }: Props) {
 
         {/* FAQ / Educational */}
         <section className="mt-16 max-w-2xl mx-auto">
-          <h2 className="font-serif text-2xl font-bold text-center text-[var(--color-text-primary)] mb-6">
+          <h2 className="font-serif text-2xl font-bold text-center text-text-primary mb-6">
             Frequently Asked Questions
           </h2>
           <div className="space-y-5">
@@ -157,12 +157,12 @@ export default async function CalculatorPage({ params }: Props) {
             ].map(({ q, a }) => (
               <div
                 key={q}
-                className="p-4 rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)]"
+                className="p-4 rounded-xl border border-border bg-(--color-surface)"
               >
-                <h3 className="font-semibold text-[var(--color-text-primary)] mb-1">
+                <h3 className="font-semibold text-text-primary mb-1">
                   {q}
                 </h3>
-                <p className="text-sm text-[var(--color-text-secondary)]">{a}</p>
+                <p className="text-sm text-text-secondary">{a}</p>
               </div>
             ))}
           </div>

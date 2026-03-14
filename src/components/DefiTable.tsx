@@ -64,9 +64,9 @@ function formatPercentage(value: number): string {
 /** Tiny inline SVG bar showing TVL relative to the max TVL in the set */
 function TvlBar({ ratio }: { ratio: number }) {
   return (
-    <div className="w-16 h-1.5 rounded-full bg-[var(--color-border)] overflow-hidden ml-2 hidden xl:block">
+    <div className="w-16 h-1.5 rounded-full bg-border overflow-hidden ml-2 hidden xl:block">
       <div
-        className="h-full rounded-full bg-[var(--color-accent)] transition-all duration-300"
+        className="h-full rounded-full bg-accent transition-all duration-300"
         style={{ width: `${Math.max(ratio * 100, 2)}%` }}
       />
     </div>
@@ -166,8 +166,8 @@ export default function DefiTable({ protocols }: { protocols: DefiProtocol[] }) 
         className={cn(
           "flex items-center gap-1 text-xs font-semibold uppercase tracking-wider transition-colors whitespace-nowrap",
           active
-            ? "text-[var(--color-accent)]"
-            : "text-[var(--color-text-tertiary)] hover:text-[var(--color-text-secondary)]"
+            ? "text-accent"
+            : "text-text-tertiary hover:text-text-secondary"
         )}
       >
         {label}
@@ -186,7 +186,7 @@ export default function DefiTable({ protocols }: { protocols: DefiProtocol[] }) 
       <div className="flex flex-col sm:flex-row gap-3 items-start sm:items-center">
         <div className="relative flex-1 max-w-sm">
           <svg
-            className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[var(--color-text-tertiary)]"
+            className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-text-tertiary"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -200,7 +200,7 @@ export default function DefiTable({ protocols }: { protocols: DefiProtocol[] }) 
             placeholder="Search protocols, chains..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className="w-full pl-9 pr-3 py-2 text-sm rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] text-[var(--color-text-primary)] placeholder:text-[var(--color-text-tertiary)] focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]/40 transition"
+            className="w-full pl-9 pr-3 py-2 text-sm rounded-lg border border-border bg-(--color-surface) text-text-primary placeholder:text-text-tertiary focus:outline-none focus:ring-2 focus:ring-accent/40 transition"
           />
         </div>
         <div className="flex gap-1.5 flex-wrap">
@@ -211,8 +211,8 @@ export default function DefiTable({ protocols }: { protocols: DefiProtocol[] }) 
               className={cn(
                 "px-2.5 py-1 text-xs font-medium rounded-md border transition-colors",
                 categoryFilter === cat
-                  ? "bg-[var(--color-accent)]/15 text-[var(--color-accent)] border-[var(--color-accent)]/30"
-                  : "bg-transparent text-[var(--color-text-tertiary)] border-[var(--color-border)] hover:text-[var(--color-text-secondary)]"
+                  ? "bg-accent/15 text-accent border-accent/30"
+                  : "bg-transparent text-text-tertiary border-border hover:text-text-secondary"
               )}
             >
               {cat}
@@ -222,19 +222,19 @@ export default function DefiTable({ protocols }: { protocols: DefiProtocol[] }) 
       </div>
 
       {/* ── Results Count ── */}
-      <p className="text-xs text-[var(--color-text-tertiary)]">
+      <p className="text-xs text-text-tertiary">
         {sorted.length} protocol{sorted.length !== 1 ? "s" : ""}
         {search && ` matching "${search}"`}
         {categoryFilter !== "All" && ` in ${categoryFilter}`}
       </p>
 
       {/* ── Table ── */}
-      <div className="overflow-x-auto rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)]">
+      <div className="overflow-x-auto rounded-xl border border-border bg-(--color-surface)">
         <table className="w-full text-sm">
           <thead>
-            <tr className="border-b border-[var(--color-border)]">
+            <tr className="border-b border-border">
               <th className="px-4 py-3 text-left w-10">
-                <span className="text-xs font-semibold uppercase tracking-wider text-[var(--color-text-tertiary)]">
+                <span className="text-xs font-semibold uppercase tracking-wider text-text-tertiary">
                   #
                 </span>
               </th>
@@ -242,7 +242,7 @@ export default function DefiTable({ protocols }: { protocols: DefiProtocol[] }) 
                 <SortHeader label="Protocol" colKey="name" />
               </th>
               <th className="px-4 py-3 text-left hidden md:table-cell">
-                <span className="text-xs font-semibold uppercase tracking-wider text-[var(--color-text-tertiary)]">
+                <span className="text-xs font-semibold uppercase tracking-wider text-text-tertiary">
                   Chain(s)
                 </span>
               </th>
@@ -266,7 +266,7 @@ export default function DefiTable({ protocols }: { protocols: DefiProtocol[] }) 
               <tr>
                 <td
                   colSpan={8}
-                  className="px-4 py-10 text-center text-[var(--color-text-tertiary)]"
+                  className="px-4 py-10 text-center text-text-tertiary"
                 >
                   No protocols match your search.
                 </td>
@@ -279,14 +279,14 @@ export default function DefiTable({ protocols }: { protocols: DefiProtocol[] }) 
                   <tr
                     key={protocol.id}
                     className={cn(
-                      "border-b border-[var(--color-border)] hover:bg-[var(--color-surface-hover)] transition-colors cursor-pointer",
-                      isExpanded && "bg-[var(--color-surface-hover)]"
+                      "border-b border-border hover:bg-(--color-surface-hover) transition-colors cursor-pointer",
+                      isExpanded && "bg-(--color-surface-hover)"
                     )}
                     onClick={() =>
                       setExpandedId(isExpanded ? null : protocol.id)
                     }
                   >
-                    <td className="px-4 py-3 text-[var(--color-text-tertiary)] tabular-nums font-medium">
+                    <td className="px-4 py-3 text-text-tertiary tabular-nums font-medium">
                       {i + 1}
                     </td>
                     <td className="px-4 py-3">
@@ -295,20 +295,20 @@ export default function DefiTable({ protocols }: { protocols: DefiProtocol[] }) 
                           <img
                             src={protocol.logo}
                             alt=""
-                            className="w-7 h-7 rounded-full ring-1 ring-[var(--color-border)]"
+                            className="w-7 h-7 rounded-full ring-1 ring-border"
                             loading="lazy"
                           />
                         ) : (
-                          <div className="w-7 h-7 rounded-full bg-[var(--color-accent)]/15 flex items-center justify-center text-xs font-bold text-[var(--color-accent)]">
+                          <div className="w-7 h-7 rounded-full bg-accent/15 flex items-center justify-center text-xs font-bold text-accent">
                             {protocol.name.charAt(0)}
                           </div>
                         )}
                         <div className="min-w-0">
-                          <span className="font-semibold text-[var(--color-text-primary)] block truncate">
+                          <span className="font-semibold text-text-primary block truncate">
                             {protocol.name}
                           </span>
                           {protocol.symbol && (
-                            <span className="text-[10px] text-[var(--color-text-tertiary)] uppercase">
+                            <span className="text-[10px] text-text-tertiary uppercase">
                               {protocol.symbol}
                             </span>
                           )}
@@ -337,7 +337,7 @@ export default function DefiTable({ protocols }: { protocols: DefiProtocol[] }) 
                     </td>
                     <td className="px-4 py-3 text-right">
                       <div className="flex items-center justify-end">
-                        <span className="font-semibold tabular-nums text-[var(--color-text-primary)]">
+                        <span className="font-semibold tabular-nums text-text-primary">
                           {formatTvl(protocol.tvl)}
                         </span>
                         <TvlBar ratio={protocol.tvl / maxTvl} />
@@ -366,7 +366,7 @@ export default function DefiTable({ protocols }: { protocols: DefiProtocol[] }) 
                           {formatPercentage(protocol.tvlChange7d)}
                         </span>
                       ) : (
-                        <span className="text-[var(--color-text-tertiary)]">—</span>
+                        <span className="text-text-tertiary">—</span>
                       )}
                     </td>
                     <td className="px-4 py-3 hidden lg:table-cell">
@@ -374,7 +374,7 @@ export default function DefiTable({ protocols }: { protocols: DefiProtocol[] }) 
                         {protocol.category}
                       </Badge>
                     </td>
-                    <td className="px-4 py-3 text-[var(--color-text-tertiary)]">
+                    <td className="px-4 py-3 text-text-tertiary">
                       <svg
                         className={cn(
                           "w-4 h-4 transition-transform duration-200",
@@ -394,37 +394,37 @@ export default function DefiTable({ protocols }: { protocols: DefiProtocol[] }) 
                   {isExpanded && (
                     <tr
                       key={`${protocol.id}-detail`}
-                      className="border-b border-[var(--color-border)] bg-[var(--color-surface-hover)]/50"
+                      className="border-b border-border bg-(--color-surface-hover)/50"
                     >
                       <td colSpan={8} className="px-6 py-4">
                         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 text-sm">
                           {protocol.description && (
                             <div className="sm:col-span-2 lg:col-span-4">
-                              <p className="text-[var(--color-text-secondary)] text-xs leading-relaxed">
+                              <p className="text-text-secondary text-xs leading-relaxed">
                                 {protocol.description}
                               </p>
                             </div>
                           )}
                           <div>
-                            <p className="text-[10px] uppercase tracking-wider text-[var(--color-text-tertiary)] mb-0.5">
+                            <p className="text-[10px] uppercase tracking-wider text-text-tertiary mb-0.5">
                               Market Cap
                             </p>
-                            <p className="font-semibold tabular-nums text-[var(--color-text-primary)]">
+                            <p className="font-semibold tabular-nums text-text-primary">
                               {protocol.mcap ? formatTvl(protocol.mcap) : "—"}
                             </p>
                           </div>
                           <div>
-                            <p className="text-[10px] uppercase tracking-wider text-[var(--color-text-tertiary)] mb-0.5">
+                            <p className="text-[10px] uppercase tracking-wider text-text-tertiary mb-0.5">
                               TVL / MCap Ratio
                             </p>
-                            <p className="font-semibold tabular-nums text-[var(--color-text-primary)]">
+                            <p className="font-semibold tabular-nums text-text-primary">
                               {protocol.mcap && protocol.mcap > 0
                                 ? (protocol.tvl / protocol.mcap).toFixed(2)
                                 : "—"}
                             </p>
                           </div>
                           <div>
-                            <p className="text-[10px] uppercase tracking-wider text-[var(--color-text-tertiary)] mb-0.5">
+                            <p className="text-[10px] uppercase tracking-wider text-text-tertiary mb-0.5">
                               Chains
                             </p>
                             <div className="flex flex-wrap gap-1 mt-1">
@@ -442,10 +442,10 @@ export default function DefiTable({ protocols }: { protocols: DefiProtocol[] }) 
                             </div>
                           </div>
                           <div>
-                            <p className="text-[10px] uppercase tracking-wider text-[var(--color-text-tertiary)] mb-0.5">
+                            <p className="text-[10px] uppercase tracking-wider text-text-tertiary mb-0.5">
                               Audits
                             </p>
-                            <p className="text-[var(--color-text-primary)]">
+                            <p className="text-text-primary">
                               {protocol.audits || "Unknown"}
                             </p>
                           </div>
@@ -456,7 +456,7 @@ export default function DefiTable({ protocols }: { protocols: DefiProtocol[] }) 
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 onClick={(e) => e.stopPropagation()}
-                                className="text-xs text-[var(--color-accent)] hover:underline"
+                                className="text-xs text-accent hover:underline"
                               >
                                 Website ↗
                               </a>
@@ -467,7 +467,7 @@ export default function DefiTable({ protocols }: { protocols: DefiProtocol[] }) 
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 onClick={(e) => e.stopPropagation()}
-                                className="text-xs text-[var(--color-accent)] hover:underline"
+                                className="text-xs text-accent hover:underline"
                               >
                                 @{protocol.twitter} ↗
                               </a>

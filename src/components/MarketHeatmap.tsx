@@ -229,7 +229,7 @@ export default function MarketHeatmap({
   return (
     <div className={cn("space-y-4", className)}>
       {/* Time range toggle */}
-      <div className="flex gap-1 p-1 rounded-lg bg-[var(--color-surface)] border border-[var(--color-border)] w-fit">
+      <div className="flex gap-1 p-1 rounded-lg bg-(--color-surface) border border-border w-fit">
         {ranges.map((r) => (
           <button
             key={r.key}
@@ -237,8 +237,8 @@ export default function MarketHeatmap({
             className={cn(
               "px-3 py-1.5 text-sm font-medium rounded-md transition-colors",
               timeRange === r.key
-                ? "bg-[var(--color-accent)] text-white"
-                : "text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)]"
+                ? "bg-accent text-white"
+                : "text-text-secondary hover:text-text-primary"
             )}
           >
             {r.label}
@@ -247,7 +247,7 @@ export default function MarketHeatmap({
       </div>
 
       {/* Heatmap */}
-      <div className="relative overflow-hidden rounded-lg border border-[var(--color-border)]">
+      <div className="relative overflow-hidden rounded-lg border border-border">
         <svg
           viewBox={`0 0 ${containerW} ${containerH}`}
           className="w-full"
@@ -317,7 +317,7 @@ export default function MarketHeatmap({
         {/* Tooltip */}
         {hoveredCoin && (
           <div
-            className="absolute pointer-events-none z-10 bg-[var(--color-surface)] border border-[var(--color-border)] rounded-lg shadow-lg p-3 text-sm min-w-[180px]"
+            className="absolute pointer-events-none z-10 bg-(--color-surface) border border-border rounded-lg shadow-lg p-3 text-sm min-w-[180px]"
             style={{
               left: `${Math.min(tooltipPos.x + 12, containerW - 200)}px`,
               top: `${tooltipPos.y + 12}px`,
@@ -327,16 +327,16 @@ export default function MarketHeatmap({
                   : "none",
             }}
           >
-            <div className="font-semibold text-[var(--color-text-primary)]">
+            <div className="font-semibold text-text-primary">
               {hoveredCoin.name}{" "}
-              <span className="text-[var(--color-text-secondary)] font-normal">
+              <span className="text-text-secondary font-normal">
                 {hoveredCoin.symbol.toUpperCase()}
               </span>
             </div>
-            <div className="mt-1 space-y-0.5 text-[var(--color-text-secondary)]">
+            <div className="mt-1 space-y-0.5 text-text-secondary">
               <div className="flex justify-between gap-4">
                 <span>Price</span>
-                <span className="font-medium text-[var(--color-text-primary)] tabular-nums">
+                <span className="font-medium text-text-primary tabular-nums">
                   $
                   {hoveredCoin.current_price.toLocaleString(undefined, {
                     maximumFractionDigits: 2,
@@ -345,13 +345,13 @@ export default function MarketHeatmap({
               </div>
               <div className="flex justify-between gap-4">
                 <span>Market Cap</span>
-                <span className="font-medium text-[var(--color-text-primary)]">
+                <span className="font-medium text-text-primary">
                   {formatCompact(hoveredCoin.market_cap)}
                 </span>
               </div>
               <div className="flex justify-between gap-4">
                 <span>Volume</span>
-                <span className="font-medium text-[var(--color-text-primary)]">
+                <span className="font-medium text-text-primary">
                   {formatCompact(hoveredCoin.total_volume)}
                 </span>
               </div>
@@ -375,7 +375,7 @@ export default function MarketHeatmap({
       </div>
 
       {/* Legend */}
-      <div className="flex items-center justify-center gap-1 text-xs text-[var(--color-text-secondary)]">
+      <div className="flex items-center justify-center gap-1 text-xs text-text-secondary">
         <span>-10%+</span>
         <div className="flex gap-0.5">
           {[

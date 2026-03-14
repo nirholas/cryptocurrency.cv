@@ -49,10 +49,10 @@ export default function DigestSubscribeForm() {
           <CheckCircle className="h-5 w-5 text-green-600 dark:text-green-400" />
         </div>
         <div>
-          <p className="font-semibold text-sm text-[var(--color-text-primary)]">
+          <p className="font-semibold text-sm text-text-primary">
             {message}
           </p>
-          <p className="text-xs text-[var(--color-text-tertiary)] mt-0.5">
+          <p className="text-xs text-text-tertiary mt-0.5">
             Frequency: {frequency === "daily" ? "Daily" : "Weekly"}
           </p>
         </div>
@@ -69,8 +69,8 @@ export default function DigestSubscribeForm() {
           className={cn(
             "px-4 py-1.5 rounded-full text-sm font-medium transition-colors cursor-pointer",
             frequency === "daily"
-              ? "bg-[var(--color-accent)] text-white"
-              : "bg-[var(--color-surface-secondary)] text-[var(--color-text-secondary)] hover:bg-[var(--color-surface-tertiary)]"
+              ? "bg-accent text-white"
+              : "bg-surface-secondary text-text-secondary hover:bg-surface-tertiary"
           )}
         >
           Daily
@@ -81,8 +81,8 @@ export default function DigestSubscribeForm() {
           className={cn(
             "px-4 py-1.5 rounded-full text-sm font-medium transition-colors cursor-pointer",
             frequency === "weekly"
-              ? "bg-[var(--color-accent)] text-white"
-              : "bg-[var(--color-surface-secondary)] text-[var(--color-text-secondary)] hover:bg-[var(--color-surface-tertiary)]"
+              ? "bg-accent text-white"
+              : "bg-surface-secondary text-text-secondary hover:bg-surface-tertiary"
           )}
         >
           Weekly
@@ -94,7 +94,7 @@ export default function DigestSubscribeForm() {
         className="flex flex-col sm:flex-row gap-3"
       >
         <div className="relative flex-1">
-          <Mail className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-[var(--color-text-tertiary)]" />
+          <Mail className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-text-tertiary" />
           <input
             type="email"
             value={email}
@@ -102,9 +102,9 @@ export default function DigestSubscribeForm() {
             placeholder="your@email.com"
             required
             className={cn(
-              "w-full h-12 rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] pl-10 pr-4 text-sm",
-              "focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)] focus:border-transparent",
-              "placeholder:text-[var(--color-text-tertiary)]"
+              "w-full h-12 rounded-lg border border-border bg-(--color-surface) pl-10 pr-4 text-sm",
+              "focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent",
+              "placeholder:text-text-tertiary"
             )}
           />
         </div>
@@ -128,7 +128,7 @@ export default function DigestSubscribeForm() {
         </p>
       )}
 
-      <p className="mt-3 text-[11px] text-[var(--color-text-tertiary)] text-center">
+      <p className="mt-3 text-[11px] text-text-tertiary text-center">
         Free forever. No spam. Unsubscribe anytime.
       </p>
     </div>

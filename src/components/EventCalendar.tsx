@@ -59,9 +59,9 @@ const EVENT_TYPE_CONFIG: Record<
   },
   other: {
     label: "Other",
-    color: "text-[var(--color-text-tertiary)]",
-    dot: "bg-[var(--color-text-tertiary)]",
-    bg: "bg-[var(--color-surface-secondary)]",
+    color: "text-text-tertiary",
+    dot: "bg-text-tertiary",
+    bg: "bg-surface-secondary",
   },
 };
 
@@ -264,7 +264,7 @@ export default function EventCalendar() {
               return (
                 <Card
                   key={evt.id}
-                  className="border-[var(--color-accent)]/20 transition-shadow hover:shadow-lg"
+                  className="border-accent/20 transition-shadow hover:shadow-lg"
                 >
                   <CardContent className="p-5">
                     <Badge
@@ -275,11 +275,11 @@ export default function EventCalendar() {
                     <h3 className="mb-2 font-serif text-lg font-semibold leading-snug">
                       {evt.title}
                     </h3>
-                    <p className="mb-3 text-sm text-[var(--color-text-secondary)] line-clamp-2">
+                    <p className="mb-3 text-sm text-text-secondary line-clamp-2">
                       {evt.description}
                     </p>
                     <div className="flex items-center justify-between">
-                      <span className="text-sm text-[var(--color-text-tertiary)]">
+                      <span className="text-sm text-text-tertiary">
                         {formatDate(evt.date)}
                       </span>
                       {evt.link && (
@@ -287,7 +287,7 @@ export default function EventCalendar() {
                           href={evt.link}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1 text-sm text-[var(--color-accent)] hover:underline"
+                          className="inline-flex items-center gap-1 text-sm text-accent hover:underline"
                         >
                           Details <ExternalLink className="h-3 w-3" />
                         </a>
@@ -323,7 +323,7 @@ export default function EventCalendar() {
             </div>
 
             {/* Day headers */}
-            <div className="grid grid-cols-7 gap-px text-center text-xs font-medium text-[var(--color-text-tertiary)]">
+            <div className="grid grid-cols-7 gap-px text-center text-xs font-medium text-text-tertiary">
               {DAYS_OF_WEEK.map((d) => (
                 <div key={d} className="py-2">
                   {d}
@@ -347,11 +347,11 @@ export default function EventCalendar() {
                     className={cn(
                       "relative flex min-h-[60px] flex-col items-center rounded-md p-1.5 text-sm transition-colors sm:min-h-[72px] sm:p-2",
                       inMonth
-                        ? "text-[var(--color-text-primary)]"
-                        : "text-[var(--color-text-tertiary)] opacity-40",
-                      isToday && "bg-[var(--color-accent)]/10 font-bold",
-                      isSelected && "ring-2 ring-[var(--color-accent)]",
-                      dayEvents.length > 0 && inMonth && "hover:bg-[var(--color-surface-secondary)] cursor-pointer",
+                        ? "text-text-primary"
+                        : "text-text-tertiary opacity-40",
+                      isToday && "bg-accent/10 font-bold",
+                      isSelected && "ring-2 ring-accent",
+                      dayEvents.length > 0 && inMonth && "hover:bg-surface-secondary cursor-pointer",
                       dayEvents.length === 0 && "cursor-default"
                     )}
                     aria-label={`${formatDate(key)}${dayEvents.length > 0 ? `, ${dayEvents.length} events` : ""}`}
@@ -369,7 +369,7 @@ export default function EventCalendar() {
                           />
                         ))}
                         {dayEvents.length > 3 && (
-                          <span className="text-[10px] leading-none text-[var(--color-text-tertiary)]">
+                          <span className="text-[10px] leading-none text-text-tertiary">
                             +{dayEvents.length - 3}
                           </span>
                         )}
@@ -381,7 +381,7 @@ export default function EventCalendar() {
             </div>
 
             {/* Legend */}
-            <div className="mt-4 flex flex-wrap gap-3 border-t border-[var(--color-border)] pt-3 text-xs text-[var(--color-text-secondary)]">
+            <div className="mt-4 flex flex-wrap gap-3 border-t border-border pt-3 text-xs text-text-secondary">
               {(Object.entries(EVENT_TYPE_CONFIG) as [EventType, typeof EVENT_TYPE_CONFIG[EventType]][]).map(
                 ([type, cfg]) => (
                   <div key={type} className="flex items-center gap-1.5">
@@ -401,7 +401,7 @@ export default function EventCalendar() {
               Events on {formatDate(selectedDate)}
             </h3>
             {selectedEvents.length === 0 ? (
-              <p className="text-sm text-[var(--color-text-secondary)]">
+              <p className="text-sm text-text-secondary">
                 No events on this date.
               </p>
             ) : (
@@ -418,7 +418,7 @@ export default function EventCalendar() {
                             </Badge>
                             <h4 className="font-semibold">{evt.title}</h4>
                             {evt.description && (
-                              <p className="mt-1 text-sm text-[var(--color-text-secondary)]">
+                              <p className="mt-1 text-sm text-text-secondary">
                                 {evt.description}
                               </p>
                             )}
@@ -428,7 +428,7 @@ export default function EventCalendar() {
                               href={evt.link}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="shrink-0 text-[var(--color-accent)] hover:underline"
+                              className="shrink-0 text-accent hover:underline"
                               aria-label={`Details for ${evt.title}`}
                             >
                               <ExternalLink className="h-4 w-4" />
@@ -452,7 +452,7 @@ export default function EventCalendar() {
         </h2>
 
         {upcomingEvents.length === 0 ? (
-          <p className="text-[var(--color-text-secondary)]">
+          <p className="text-text-secondary">
             No upcoming events scheduled.
           </p>
         ) : (
@@ -462,7 +462,7 @@ export default function EventCalendar() {
               return (
                 <Card
                   key={evt.id}
-                  className="transition-colors hover:bg-[var(--color-surface-secondary)]"
+                  className="transition-colors hover:bg-surface-secondary"
                 >
                   <CardContent className="flex flex-col gap-3 p-4 sm:flex-row sm:items-center sm:justify-between">
                     <div className="flex items-start gap-3">
@@ -482,21 +482,21 @@ export default function EventCalendar() {
                           </Badge>
                         </div>
                         {evt.description && (
-                          <p className="mt-1 text-sm text-[var(--color-text-secondary)] line-clamp-1">
+                          <p className="mt-1 text-sm text-text-secondary line-clamp-1">
                             {evt.description}
                           </p>
                         )}
                       </div>
                     </div>
 
-                    <div className="flex shrink-0 items-center gap-3 text-sm text-[var(--color-text-tertiary)]">
+                    <div className="flex shrink-0 items-center gap-3 text-sm text-text-tertiary">
                       <span>{formatDate(evt.date)}</span>
                       {evt.link && (
                         <a
                           href={evt.link}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1 text-[var(--color-accent)] hover:underline"
+                          className="inline-flex items-center gap-1 text-accent hover:underline"
                         >
                           Link <ExternalLink className="h-3 w-3" />
                         </a>

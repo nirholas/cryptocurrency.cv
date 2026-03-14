@@ -221,12 +221,12 @@ export default async function ResearchPage({ params }: Props) {
         {/* Page Header */}
         <div className="mb-10">
           <div className="flex items-center gap-3 mb-2">
-            <BookOpen className="h-8 w-8 text-[var(--color-accent)]" />
-            <h1 className="font-serif text-3xl md:text-4xl font-bold text-[var(--color-text-primary)]">
+            <BookOpen className="h-8 w-8 text-accent" />
+            <h1 className="font-serif text-3xl md:text-4xl font-bold text-text-primary">
               Research Hub
             </h1>
           </div>
-          <p className="text-[var(--color-text-secondary)] max-w-2xl">
+          <p className="text-text-secondary max-w-2xl">
             In-depth cryptocurrency research, market analysis, token reviews, sector deep dives,
             and weekly digests powered by AI and expert analysis.
           </p>
@@ -234,20 +234,20 @@ export default async function ResearchPage({ params }: Props) {
 
         {/* AI-Powered Analysis CTA */}
         <section className="mb-10">
-          <Card className="overflow-hidden border-[var(--color-accent)]/20 bg-gradient-to-br from-[var(--color-surface)] to-[var(--color-surface-secondary)]">
+          <Card className="overflow-hidden border-accent/20 bg-gradient-to-br from-(--color-surface) to-surface-secondary">
             <CardContent className="p-6 md:p-8">
               <div className="flex flex-col md:flex-row md:items-center gap-6">
                 <div className="flex-1">
                   <div className="flex items-center gap-2 mb-3">
-                    <Sparkles className="h-5 w-5 text-[var(--color-accent)]" />
-                    <span className="text-xs font-semibold uppercase tracking-wider text-[var(--color-accent)]">
+                    <Sparkles className="h-5 w-5 text-accent" />
+                    <span className="text-xs font-semibold uppercase tracking-wider text-accent">
                       AI-Powered
                     </span>
                   </div>
-                  <h2 className="font-serif text-2xl font-bold text-[var(--color-text-primary)] mb-2">
+                  <h2 className="font-serif text-2xl font-bold text-text-primary mb-2">
                     Ask AI About Any Crypto Topic
                   </h2>
-                  <p className="text-[var(--color-text-secondary)] text-sm leading-relaxed">
+                  <p className="text-text-secondary text-sm leading-relaxed">
                     Get instant AI-generated analysis on any cryptocurrency, market trend, or
                     blockchain project. Powered by real-time news data and market intelligence.
                   </p>
@@ -279,9 +279,9 @@ export default async function ResearchPage({ params }: Props) {
                 key={key}
                 className={cn(
                   "inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium transition-colors",
-                  "border border-[var(--color-border)] hover:bg-[var(--color-surface-secondary)]",
+                  "border border-border hover:bg-surface-secondary",
                   key === "all" &&
-                    "bg-[var(--color-accent)] text-white border-[var(--color-accent)] hover:bg-[var(--color-accent)]/90"
+                    "bg-accent text-white border-accent hover:bg-accent/90"
                 )}
               >
                 <Icon className="h-3.5 w-3.5" />
@@ -311,21 +311,21 @@ export default async function ResearchPage({ params }: Props) {
                       >
                         {catBadge.label}
                       </span>
-                      <div className="flex items-center gap-1 text-xs text-[var(--color-text-tertiary)]">
+                      <div className="flex items-center gap-1 text-xs text-text-tertiary">
                         <Clock className="h-3 w-3" />
                         {report.readTime} min read
                       </div>
                     </div>
-                    <CardTitle className="text-lg leading-snug group-hover:text-[var(--color-accent)] transition-colors">
+                    <CardTitle className="text-lg leading-snug group-hover:text-accent transition-colors">
                       {report.title}
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="flex-1 flex flex-col justify-between">
-                    <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed line-clamp-3 mb-4">
+                    <p className="text-sm text-text-secondary leading-relaxed line-clamp-3 mb-4">
                       {report.excerpt}
                     </p>
                     <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-2 text-xs text-[var(--color-text-tertiary)]">
+                      <div className="flex items-center gap-2 text-xs text-text-tertiary">
                         <Calendar className="h-3 w-3" />
                         {new Date(report.date).toLocaleDateString("en-US", {
                           month: "short",
@@ -333,7 +333,7 @@ export default async function ResearchPage({ params }: Props) {
                           year: "numeric",
                         })}
                       </div>
-                      <span className="inline-flex items-center gap-1 text-xs font-medium text-[var(--color-accent)] group-hover:underline">
+                      <span className="inline-flex items-center gap-1 text-xs font-medium text-accent group-hover:underline">
                         Read Report <ArrowRight className="h-3 w-3" />
                       </span>
                     </div>
@@ -346,7 +346,7 @@ export default async function ResearchPage({ params }: Props) {
 
         {/* Research Stats */}
         <section className="mb-12">
-          <h2 className="font-serif text-xl md:text-2xl font-bold text-[var(--color-text-primary)] mb-6">
+          <h2 className="font-serif text-xl md:text-2xl font-bold text-text-primary mb-6">
             Research Coverage
           </h2>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -379,17 +379,17 @@ export default async function ResearchPage({ params }: Props) {
               <Card key={stat.label} className="p-5">
                 <div className="flex items-start justify-between">
                   <div>
-                    <p className="text-xs font-medium uppercase tracking-wider text-[var(--color-text-tertiary)] mb-1">
+                    <p className="text-xs font-medium uppercase tracking-wider text-text-tertiary mb-1">
                       {stat.label}
                     </p>
-                    <p className="text-2xl font-bold text-[var(--color-text-primary)]">
+                    <p className="text-2xl font-bold text-text-primary">
                       {stat.value}
                     </p>
-                    <p className="text-xs text-[var(--color-text-tertiary)] mt-1">
+                    <p className="text-xs text-text-tertiary mt-1">
                       {stat.description}
                     </p>
                   </div>
-                  <stat.icon className="h-5 w-5 text-[var(--color-accent)] opacity-60" />
+                  <stat.icon className="h-5 w-5 text-accent opacity-60" />
                 </div>
               </Card>
             ))}
@@ -398,7 +398,7 @@ export default async function ResearchPage({ params }: Props) {
 
         {/* Topics Section */}
         <section>
-          <h2 className="font-serif text-xl md:text-2xl font-bold text-[var(--color-text-primary)] mb-6">
+          <h2 className="font-serif text-xl md:text-2xl font-bold text-text-primary mb-6">
             Popular Research Topics
           </h2>
           <div className="flex flex-wrap gap-2">
@@ -423,7 +423,7 @@ export default async function ResearchPage({ params }: Props) {
               <Badge
                 key={topic}
                 variant="default"
-                className="px-3 py-1.5 text-sm cursor-pointer hover:bg-[var(--color-surface-secondary)] transition-colors"
+                className="px-3 py-1.5 text-sm cursor-pointer hover:bg-surface-secondary transition-colors"
               >
                 {topic}
               </Badge>

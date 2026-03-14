@@ -160,15 +160,15 @@ export default async function BitcoinPage({ params }: Props) {
       <Header />
       <main className="container-main py-10">
         {/* Breadcrumbs */}
-        <nav className="flex items-center gap-1 text-sm text-[var(--color-text-tertiary)] mb-6">
+        <nav className="flex items-center gap-1 text-sm text-text-tertiary mb-6">
           <Link
             href="/"
-            className="hover:text-[var(--color-accent)] transition-colors"
+            className="hover:text-accent transition-colors"
           >
             Home
           </Link>
           <ChevronRight className="h-3.5 w-3.5" />
-          <span className="text-[var(--color-text-primary)] font-medium">
+          <span className="text-text-primary font-medium">
             Bitcoin
           </span>
         </nav>
@@ -180,17 +180,17 @@ export default async function BitcoinPage({ params }: Props) {
               ₿
             </div>
             <div>
-              <h1 className="font-serif text-3xl md:text-4xl font-bold text-[var(--color-text-primary)]">
+              <h1 className="font-serif text-3xl md:text-4xl font-bold text-text-primary">
                 Bitcoin
               </h1>
-              <span className="text-[var(--color-text-tertiary)] text-sm uppercase font-medium">
+              <span className="text-text-tertiary text-sm uppercase font-medium">
                 BTC
               </span>
             </div>
           </div>
 
           <div className="flex items-baseline gap-4 mt-4 flex-wrap">
-            <span className="text-4xl md:text-5xl font-bold text-[var(--color-text-primary)] tabular-nums">
+            <span className="text-4xl md:text-5xl font-bold text-text-primary tabular-nums">
               {formatPrice(price)}
             </span>
             {change24h != null && (
@@ -225,12 +225,12 @@ export default async function BitcoinPage({ params }: Props) {
             )}
           </div>
 
-          <div className="flex items-center gap-6 mt-3 text-sm text-[var(--color-text-secondary)]">
+          <div className="flex items-center gap-6 mt-3 text-sm text-text-secondary">
             {md?.ath?.usd && (
               <span>
                 ATH: {formatPrice(md.ath.usd)}
                 {md.ath_date?.usd && (
-                  <span className="text-[var(--color-text-tertiary)] ml-1">
+                  <span className="text-text-tertiary ml-1">
                     (
                     {new Date(md.ath_date.usd).toLocaleDateString("en-US", {
                       month: "short",
@@ -252,7 +252,7 @@ export default async function BitcoinPage({ params }: Props) {
 
         {/* ── Network Stats ── */}
         <section className="mb-10">
-          <h2 className="font-serif text-xl font-bold text-[var(--color-text-primary)] mb-4">
+          <h2 className="font-serif text-xl font-bold text-text-primary mb-4">
             Network Statistics
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
@@ -308,27 +308,27 @@ export default async function BitcoinPage({ params }: Props) {
         {/* ── Supply Info ── */}
         <section className="mb-10">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-            <div className="p-4 rounded-lg border border-[var(--color-border)] bg-[var(--color-surface-secondary)]">
-              <p className="text-xs text-[var(--color-text-tertiary)] mb-1">
+            <div className="p-4 rounded-lg border border-border bg-surface-secondary">
+              <p className="text-xs text-text-tertiary mb-1">
                 Circulating Supply
               </p>
-              <p className="text-lg font-semibold text-[var(--color-text-primary)]">
+              <p className="text-lg font-semibold text-text-primary">
                 {formatSupply(md?.circulating_supply)}
               </p>
             </div>
-            <div className="p-4 rounded-lg border border-[var(--color-border)] bg-[var(--color-surface-secondary)]">
-              <p className="text-xs text-[var(--color-text-tertiary)] mb-1">
+            <div className="p-4 rounded-lg border border-border bg-surface-secondary">
+              <p className="text-xs text-text-tertiary mb-1">
                 Max Supply
               </p>
-              <p className="text-lg font-semibold text-[var(--color-text-primary)]">
+              <p className="text-lg font-semibold text-text-primary">
                 {formatSupply(md?.max_supply) || "21M"}
               </p>
             </div>
-            <div className="p-4 rounded-lg border border-[var(--color-border)] bg-[var(--color-surface-secondary)]">
-              <p className="text-xs text-[var(--color-text-tertiary)] mb-1">
+            <div className="p-4 rounded-lg border border-border bg-surface-secondary">
+              <p className="text-xs text-text-tertiary mb-1">
                 % Mined
               </p>
-              <p className="text-lg font-semibold text-[var(--color-text-primary)]">
+              <p className="text-lg font-semibold text-text-primary">
                 {md?.circulating_supply && md?.max_supply
                   ? `${((md.circulating_supply / md.max_supply) * 100).toFixed(1)}%`
                   : "—"}
@@ -339,12 +339,12 @@ export default async function BitcoinPage({ params }: Props) {
 
         {/* ── Price Chart ── */}
         <section className="mb-10">
-          <h2 className="font-serif text-xl font-bold text-[var(--color-text-primary)] mb-4">
+          <h2 className="font-serif text-xl font-bold text-text-primary mb-4">
             Price Chart
           </h2>
           <Suspense
             fallback={
-              <div className="h-[370px] rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] animate-pulse" />
+              <div className="h-[370px] rounded-xl border border-border bg-(--color-surface) animate-pulse" />
             }
           >
             <PriceChart coinId="bitcoin" />
@@ -355,12 +355,12 @@ export default async function BitcoinPage({ params }: Props) {
         {newsResponse.articles.length > 0 && (
           <section className="mb-10">
             <div className="flex items-center justify-between mb-4">
-              <h2 className="font-serif text-xl font-bold text-[var(--color-text-primary)]">
+              <h2 className="font-serif text-xl font-bold text-text-primary">
                 Latest Bitcoin News
               </h2>
               <Link
                 href="/search?q=bitcoin"
-                className="text-sm text-[var(--color-accent)] hover:underline"
+                className="text-sm text-accent hover:underline"
               >
                 View all →
               </Link>
@@ -375,7 +375,7 @@ export default async function BitcoinPage({ params }: Props) {
 
         {/* ── Educational Links ── */}
         <section className="mb-10">
-          <h2 className="font-serif text-xl font-bold text-[var(--color-text-primary)] mb-4">
+          <h2 className="font-serif text-xl font-bold text-text-primary mb-4">
             Learn About Bitcoin
           </h2>
           <div className="grid gap-3 sm:grid-cols-3">
@@ -422,12 +422,12 @@ function StatCard({
   value: string;
 }) {
   return (
-    <div className="p-4 rounded-lg border border-[var(--color-border)] bg-[var(--color-surface-secondary)]">
-      <div className="flex items-center gap-2 mb-2 text-[var(--color-text-tertiary)]">
+    <div className="p-4 rounded-lg border border-border bg-surface-secondary">
+      <div className="flex items-center gap-2 mb-2 text-text-tertiary">
         {icon}
         <p className="text-xs">{label}</p>
       </div>
-      <p className="text-lg font-semibold text-[var(--color-text-primary)] tabular-nums">
+      <p className="text-lg font-semibold text-text-primary tabular-nums">
         {value}
       </p>
     </div>
@@ -450,16 +450,16 @@ function EducationCard({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="group flex flex-col gap-3 p-5 rounded-lg border border-[var(--color-border)] bg-[var(--color-surface-secondary)] hover:border-[var(--color-accent)] transition-colors"
+      className="group flex flex-col gap-3 p-5 rounded-lg border border-border bg-surface-secondary hover:border-accent transition-colors"
     >
-      <div className="flex items-center gap-2 text-[var(--color-accent)]">
+      <div className="flex items-center gap-2 text-accent">
         {icon}
-        <h3 className="font-semibold text-[var(--color-text-primary)] group-hover:text-[var(--color-accent)] transition-colors">
+        <h3 className="font-semibold text-text-primary group-hover:text-accent transition-colors">
           {title}
         </h3>
         <ExternalLink className="h-3.5 w-3.5 ml-auto opacity-0 group-hover:opacity-100 transition-opacity" />
       </div>
-      <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
+      <p className="text-sm text-text-secondary leading-relaxed">
         {description}
       </p>
     </a>

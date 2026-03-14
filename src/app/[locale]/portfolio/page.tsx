@@ -84,10 +84,10 @@ export default async function PortfolioPage({ params }: Props) {
     <>
       <Header />
       <main className="container-main py-10">
-        <h1 className="font-serif text-3xl md:text-4xl font-bold mb-2 text-[var(--color-text-primary)]">
+        <h1 className="font-serif text-3xl md:text-4xl font-bold mb-2 text-text-primary">
           Portfolio Tracker
         </h1>
-        <p className="text-[var(--color-text-secondary)] mb-8 max-w-2xl">
+        <p className="text-text-secondary mb-8 max-w-2xl">
           Track your crypto holdings, monitor profit &amp; loss in real time,
           and visualize your allocation — all stored locally, no sign-up required.
         </p>
