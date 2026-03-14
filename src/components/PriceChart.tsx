@@ -213,7 +213,7 @@ export default function PriceChart({ coinId }: { coinId: string }) {
       {/* Chart area */}
       <div className="relative">
         {loading && (
-          <div className="flex items-center justify-center h-[300px] text-text-tertiary">
+          <div className="flex items-center justify-center h-75 text-text-tertiary">
             <div className="flex items-center gap-2">
               <div className="h-4 w-4 animate-spin rounded-full border-2 border-current border-t-transparent" />
               Loading chart…
@@ -222,7 +222,7 @@ export default function PriceChart({ coinId }: { coinId: string }) {
         )}
 
         {error && !loading && (
-          <div className="flex items-center justify-center h-[300px] text-text-tertiary">
+          <div className="flex items-center justify-center h-75 text-text-tertiary">
             Chart data unavailable
           </div>
         )}

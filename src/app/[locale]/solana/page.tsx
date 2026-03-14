@@ -188,7 +188,7 @@ export default async function SolanaPage({ params }: Props) {
         {/* ── Hero Section ── */}
         <section className="mb-10">
           <div className="flex items-center gap-3 mb-2">
-            <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#9945FF] to-[#14F195] flex items-center justify-center text-white font-bold text-lg">
+            <div className="w-12 h-12 rounded-full bg-linear-to-br from-[#9945FF] to-[#14F195] flex items-center justify-center text-white font-bold text-lg">
               S
             </div>
             <div>
@@ -348,7 +348,7 @@ export default async function SolanaPage({ params }: Props) {
           </h2>
           <Suspense
             fallback={
-              <div className="h-[370px] rounded-xl border border-border bg-(--color-surface) animate-pulse" />
+              <div className="h-92.5 rounded-xl border border-border bg-(--color-surface) animate-pulse" />
             }
           >
             <PriceChart coinId="solana" />

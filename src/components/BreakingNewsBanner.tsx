@@ -74,7 +74,7 @@ export default function BreakingNewsBanner({ articles }: BreakingNewsBannerProps
       aria-live="assertive"
     >
       {/* Subtle left accent line */}
-      <div className="absolute left-0 top-0 bottom-0 w-[3px] bg-amber-500" />
+      <div className="absolute left-0 top-0 bottom-0 w-0.75 bg-amber-500" />
 
       <div className="container-main flex items-center h-11 gap-3 relative z-10">
         {/* Badge */}

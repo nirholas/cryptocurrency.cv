@@ -5,7 +5,7 @@ export default function DefiLoading() {
     <div className="container-main py-10">
       {/* Page heading skeleton */}
       <Skeleton className="h-10 w-64 mb-2" />
-      <Skeleton className="h-5 w-[480px] max-w-full mb-8" />
+      <Skeleton className="h-5 w-120 max-w-full mb-8" />
 
       {/* Stats row skeleton — 6 cards */}
       <section className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 mb-10">
@@ -75,7 +75,7 @@ export default function DefiLoading() {
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {Array.from({ length: 6 }).map((_, i) => (
           <div key={i} className="space-y-3">
-            <Skeleton className="aspect-[16/10] w-full rounded-lg" />
+            <Skeleton className="aspect-16/10 w-full rounded-lg" />
             <Skeleton className="h-4 w-16" />
             <Skeleton className="h-5 w-full" />
             <Skeleton className="h-5 w-3/4" />

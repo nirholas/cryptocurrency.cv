@@ -317,7 +317,7 @@ export default function MarketHeatmap({
         {/* Tooltip */}
         {hoveredCoin && (
           <div
-            className="absolute pointer-events-none z-10 bg-(--color-surface) border border-border rounded-lg shadow-lg p-3 text-sm min-w-[180px]"
+            className="absolute pointer-events-none z-10 bg-(--color-surface) border border-border rounded-lg shadow-lg p-3 text-sm min-w-45"
             style={{
               left: `${Math.min(tooltipPos.x + 12, containerW - 200)}px`,
               top: `${tooltipPos.y + 12}px`,

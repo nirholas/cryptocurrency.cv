@@ -4,7 +4,7 @@ export default function ArticleLoading() {
   return (
     <div className="container-main py-10">
       {/* Breadcrumb skeleton */}
-      <nav className="mb-6 max-w-[720px] mx-auto">
+      <nav className="mb-6 max-w-180 mx-auto">
         <div className="flex items-center gap-1.5">
           <Skeleton className="h-4 w-12" />
           <Skeleton className="h-4 w-4" />
@@ -14,7 +14,7 @@ export default function ArticleLoading() {
         </div>
       </nav>
 
-      <article className="max-w-[720px] mx-auto">
+      <article className="max-w-180 mx-auto">
         {/* Header skeleton */}
         <header className="mb-8">
           {/* Badges */}
@@ -93,7 +93,7 @@ export default function ArticleLoading() {
           <div className="grid gap-5 sm:grid-cols-2">
             {Array.from({ length: 4 }).map((_, i) => (
               <div key={i} className="space-y-3">
-                <Skeleton className="aspect-[16/10] w-full rounded-lg" />
+                <Skeleton className="aspect-16/10 w-full rounded-lg" />
                 <Skeleton className="h-4 w-16" />
                 <Skeleton className="h-5 w-full" />
                 <Skeleton className="h-3 w-24" />

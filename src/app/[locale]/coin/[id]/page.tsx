@@ -244,7 +244,7 @@ export default async function CoinPage({ params }: Props) {
         <div className="mb-10">
           <Suspense
             fallback={
-              <div className="h-[370px] rounded-xl border border-border bg-(--color-surface) animate-pulse" />
+              <div className="h-92.5 rounded-xl border border-border bg-(--color-surface) animate-pulse" />
             }
           >
             <PriceChart coinId={coin.id} />

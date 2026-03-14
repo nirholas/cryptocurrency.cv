@@ -210,7 +210,7 @@ export default function SentimentTable({ className }: { className?: string }) {
   return (
     <Card className={cn("overflow-hidden", className)}>
       <div className="overflow-x-auto -webkit-overflow-scrolling-touch">
-        <table className="w-full text-sm min-w-[480px]">
+        <table className="w-full text-sm min-w-120">
           <thead>
             <tr className="border-b border-border text-left text-xs uppercase tracking-wider text-text-tertiary">
               <th className="px-4 py-3 font-medium">Coin</th>
@@ -258,7 +258,7 @@ export default function SentimentTable({ className }: { className?: string }) {
               : sorted.map((c) => (
                   <tr
                     key={c.symbol}
-                    className="border-b border-border last:border-0 hover:bg-[var(--color-surface-hover,var(--color-border))]/30 transition-colors"
+                    className="border-b border-border last:border-0 hover:bg-(--color-surface-hover,var(--color-border))/30 transition-colors"
                   >
                     {/* Coin */}
                     <td className="px-4 py-3 font-medium text-text-primary">

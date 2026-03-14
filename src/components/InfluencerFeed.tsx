@@ -244,7 +244,7 @@ export default function InfluencerFeed({ className }: { className?: string }) {
           : influencers.map((inf) => (
               <div
                 key={inf.id}
-                className="flex items-start gap-3 p-4 hover:bg-[var(--color-surface-hover,var(--color-border))]/20 transition-colors"
+                className="flex items-start gap-3 p-4 hover:bg-(--color-surface-hover,var(--color-border))/20 transition-colors"
               >
                 {/* Avatar */}
                 <div className="relative shrink-0">

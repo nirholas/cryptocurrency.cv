@@ -35,7 +35,7 @@ export default function CoinLoading() {
 
       {/* Chart placeholder skeleton */}
       <div className="mb-10">
-        <Skeleton className="h-[370px] w-full rounded-xl" />
+        <Skeleton className="h-92.5 w-full rounded-xl" />
       </div>
 
       {/* Stats grid skeleton */}
@@ -66,7 +66,7 @@ export default function CoinLoading() {
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {Array.from({ length: 4 }).map((_, i) => (
             <div key={i} className="space-y-3">
-              <Skeleton className="aspect-[16/10] w-full rounded-lg" />
+              <Skeleton className="aspect-16/10 w-full rounded-lg" />
               <Skeleton className="h-4 w-16" />
               <Skeleton className="h-5 w-full" />
               <Skeleton className="h-3 w-24" />

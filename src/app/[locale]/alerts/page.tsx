@@ -700,7 +700,7 @@ export default function AlertsPage() {
                     <div className="flex flex-col gap-3 mb-4">
                       <div className="flex items-center gap-2 flex-wrap">
                         {/* Search */}
-                        <div className="relative flex-1 min-w-[200px]">
+                        <div className="relative flex-1 min-w-50">
                           <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-text-tertiary" />
                           <input
                             type="text"
@@ -815,7 +815,7 @@ export default function AlertsPage() {
                                 <div>
                                   <span className="font-medium text-text-primary">{alert.coinName}</span>
                                   {alert.note && (
-                                    <p className="text-[10px] text-text-tertiary truncate max-w-[120px]">{alert.note}</p>
+                                    <p className="text-[10px] text-text-tertiary truncate max-w-30">{alert.note}</p>
                                   )}
                                 </div>
                               </td>

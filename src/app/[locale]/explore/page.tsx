@@ -158,7 +158,7 @@ export default async function ExplorePage({ params }: Props) {
           fallback={
             <div className="space-y-6">
               <Skeleton className="h-12 w-full rounded-xl" />
-              <Skeleton className="h-[600px] w-full rounded-2xl" />
+              <Skeleton className="h-150 w-full rounded-2xl" />
             </div>
           }
         >

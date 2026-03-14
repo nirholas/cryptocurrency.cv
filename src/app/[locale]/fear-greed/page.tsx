@@ -112,7 +112,7 @@ function HistoricalChart({ data }: { data: FearGreedData[] }) {
     <div className="overflow-x-auto">
       <svg
         viewBox={`0 0 ${chartWidth + 40} ${chartHeight + 30}`}
-        className="w-full min-w-[400px]"
+        className="w-full min-w-100"
         aria-label="Fear and Greed Index - 30 day history"
       >
         {/* Y-axis labels */}

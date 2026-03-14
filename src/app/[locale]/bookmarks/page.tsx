@@ -208,7 +208,7 @@ export default function BookmarksPage() {
                       className="flex flex-col gap-3"
                     >
                       {article.imageUrl && (
-                        <div className="overflow-hidden rounded-md bg-surface-tertiary aspect-[16/10]">
+                        <div className="overflow-hidden rounded-md bg-surface-tertiary aspect-16/10">
                           <img
                             src={article.imageUrl}
                             alt={article.title}

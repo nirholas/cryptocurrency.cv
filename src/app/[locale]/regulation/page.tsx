@@ -231,7 +231,7 @@ export default async function RegulationPage({ params }: Props) {
                   className="relative ml-10 md:ml-14 rounded-lg border border-border bg-(--color-surface) p-4 transition-shadow hover:shadow-md"
                 >
                   {/* Timeline dot */}
-                  <div className="absolute -left-[1.625rem] md:-left-[2.125rem] top-5 h-3 w-3 rounded-full border-2 border-accent bg-(--color-surface)" />
+                  <div className="absolute -left-6.5 md:-left-8.5 top-5 h-3 w-3 rounded-full border-2 border-accent bg-(--color-surface)" />
 
                   <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
                     <div className="flex items-center gap-2">

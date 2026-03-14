@@ -7,7 +7,7 @@ export default function Loading() {
       <section className="border-b border-border">
         <div className="container-main py-8 lg:py-10">
           <div className="grid md:grid-cols-2 gap-8">
-            <Skeleton className="aspect-[16/10] w-full rounded-xl" />
+            <Skeleton className="aspect-16/10 w-full rounded-xl" />
             <div className="space-y-4">
               <Skeleton className="h-6 w-24" />
               <Skeleton className="h-10 w-full" />
@@ -26,7 +26,7 @@ export default function Loading() {
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {Array.from({ length: 4 }).map((_, i) => (
               <div key={i} className="space-y-3">
-                <Skeleton className="aspect-[16/10] w-full rounded-lg" />
+                <Skeleton className="aspect-16/10 w-full rounded-lg" />
                 <Skeleton className="h-4 w-20" />
                 <Skeleton className="h-5 w-full" />
                 <Skeleton className="h-5 w-3/4" />

@@ -129,7 +129,7 @@ export default async function TagsPage({ params }: Props) {
                   <Link
                     key={tag.slug}
                     href={`/tags/${tag.slug}`}
-                    className="group flex items-center gap-3 rounded-lg border border-border bg-(--color-surface-primary) p-3 transition-all hover:border-accent hover:shadow-sm"
+                    className="group flex items-center gap-3 rounded-lg border border-border bg-surface p-3 transition-all hover:border-accent hover:shadow-sm"
                   >
                     <span className="text-xl">{tag.icon}</span>
                     <div className="min-w-0 flex-1">

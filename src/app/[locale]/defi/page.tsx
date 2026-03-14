@@ -95,7 +95,7 @@ function StatCard({
     <Card
       className={cn(
         accent &&
-          "ring-1 ring-accent/20 bg-accent/[0.03]"
+          "ring-1 ring-accent/20 bg-accent/3"
       )}
     >
       <CardContent className="p-4 md:p-5">
