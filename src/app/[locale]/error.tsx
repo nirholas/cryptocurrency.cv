@@ -1,16 +1,16 @@
-"use client";
+'use client';
 
-import { useEffect } from "react";
-import { Link } from "@/i18n/navigation";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import { useEffect } from 'react';
+import { Link } from '@/i18n/navigation';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 
 const QUICK_LINKS = [
-  { href: "/", label: "Latest News" },
-  { href: "/markets", label: "Markets" },
-  { href: "/bitcoin", label: "Bitcoin" },
-  { href: "/ethereum", label: "Ethereum" },
-  { href: "/defi", label: "DeFi" },
+  { href: '/', label: 'Latest News' },
+  { href: '/markets', label: 'Markets' },
+  { href: '/bitcoin', label: 'Bitcoin' },
+  { href: '/ethereum', label: 'Ethereum' },
+  { href: '/defi', label: 'DeFi' },
 ];
 
 export default function Error({
@@ -21,35 +21,31 @@ export default function Error({
   reset: () => void;
 }) {
   useEffect(() => {
-    console.error("[page-error]", error);
+    console.error('[page-error]', error);
   }, [error]);
 
   return (
     <>
       <Header />
-      <main className="container-main py-20 text-center min-h-[60vh] flex flex-col items-center justify-center">
-        <h1 className="text-4xl font-bold font-serif mb-4">
-          Something went wrong
-        </h1>
+      <main className="container-main flex min-h-[60vh] flex-col items-center justify-center py-20 text-center">
+        <h1 className="mb-4 font-serif text-4xl font-bold">Something went wrong</h1>
         <p className="text-text-secondary mb-4 max-w-md">
-          We had trouble loading this page. The data may be temporarily
-          unavailable — try again or browse another section below.
+          We had trouble loading this page. The data may be temporarily unavailable — try again or
+          browse another section below.
         </p>
         {error?.digest && (
-          <p className="text-text-tertiary text-xs mb-6">
-            Error ID: {error.digest}
-          </p>
+          <p className="text-text-tertiary mb-6 text-xs">Error ID: {error.digest}</p>
         )}
-        <div className="flex gap-4 mb-10">
+        <div className="mb-10 flex gap-4">
           <button
             onClick={reset}
-            className="px-6 py-2.5 rounded-md bg-accent text-white text-sm font-medium hover:bg-accent-hover transition-colors cursor-pointer"
+            className="bg-accent hover:bg-accent-hover cursor-pointer rounded-md px-6 py-2.5 text-sm font-medium text-white transition-colors"
           >
             Try again
           </button>
           <Link
             href="/"
-            className="px-6 py-2.5 rounded-md border border-border text-sm font-medium hover:bg-surface-secondary transition-colors"
+            className="border-border hover:bg-surface-secondary rounded-md border px-6 py-2.5 text-sm font-medium transition-colors"
           >
             Go home
           </Link>
@@ -59,7 +55,7 @@ export default function Error({
             <Link
               key={link.href}
               href={link.href}
-              className="px-4 py-2 rounded-full border border-border text-sm text-text-secondary hover:text-text-primary hover:bg-surface-secondary transition-colors"
+              className="border-border text-text-secondary hover:text-text-primary hover:bg-surface-secondary rounded-full border px-4 py-2 text-sm transition-colors"
             >
               {link.label}
             </Link>

@@ -2,15 +2,15 @@ import { NonceScript } from './NonceScript';
 
 export function WebsiteStructuredData() {
   const data = {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    name: "Crypto Vision News",
-    alternateName: ["CV News", "Free Crypto News", "cryptocurrency.cv"],
-    url: "https://cryptocurrency.cv",
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'Crypto Vision News',
+    alternateName: ['CV News', 'Free Crypto News', 'cryptocurrency.cv'],
+    url: 'https://cryptocurrency.cv',
     potentialAction: {
-      "@type": "SearchAction",
-      target: "https://cryptocurrency.cv/en/search?q={search_term_string}",
-      "query-input": "required name=search_term_string",
+      '@type': 'SearchAction',
+      target: 'https://cryptocurrency.cv/en/search?q={search_term_string}',
+      'query-input': 'required name=search_term_string',
     },
   };
   return (
@@ -23,19 +23,16 @@ export function WebsiteStructuredData() {
 
 export function OrganizationStructuredData() {
   const data = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    name: "Crypto Vision",
-    url: "https://cryptocurrency.cv",
-    logo: "https://cryptocurrency.cv/icons/icon-512x512.png",
-    sameAs: [
-      "https://github.com/nirholas/free-crypto-news",
-      "https://x.com/nichxbt",
-    ],
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Crypto Vision',
+    url: 'https://cryptocurrency.cv',
+    logo: 'https://cryptocurrency.cv/icons/icon-512x512.png',
+    sameAs: ['https://github.com/nirholas/free-crypto-news', 'https://x.com/nichxbt'],
     contactPoint: {
-      "@type": "ContactPoint",
-      email: "support@cryptocurrency.cv",
-      contactType: "customer support",
+      '@type': 'ContactPoint',
+      email: 'support@cryptocurrency.cv',
+      contactType: 'customer support',
     },
   };
   return (
@@ -46,15 +43,25 @@ export function OrganizationStructuredData() {
   );
 }
 
-export function NewsListStructuredData({ articles }: { articles: { title: string; link: string; pubDate: string; description?: string; imageUrl?: string }[] }) {
+export function NewsListStructuredData({
+  articles,
+}: {
+  articles: {
+    title: string;
+    link: string;
+    pubDate: string;
+    description?: string;
+    imageUrl?: string;
+  }[];
+}) {
   const data = {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
     itemListElement: articles.slice(0, 10).map((a, i) => ({
-      "@type": "ListItem",
+      '@type': 'ListItem',
       position: i + 1,
       item: {
-        "@type": "NewsArticle",
+        '@type': 'NewsArticle',
         headline: a.title,
         url: a.link,
         datePublished: a.pubDate,
@@ -74,16 +81,12 @@ export function NewsListStructuredData({ articles }: { articles: { title: string
 /**
  * Breadcrumb structured data for rich breadcrumb results in search
  */
-export function BreadcrumbStructuredData({
-  items,
-}: {
-  items: { name: string; url: string }[];
-}) {
+export function BreadcrumbStructuredData({ items }: { items: { name: string; url: string }[] }) {
   const data = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
     itemListElement: items.map((item, i) => ({
-      "@type": "ListItem",
+      '@type': 'ListItem',
       position: i + 1,
       name: item.name,
       item: item.url,
@@ -106,13 +109,13 @@ export function FAQStructuredData({
   questions: { question: string; answer: string }[];
 }) {
   const data = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
     mainEntity: questions.map((q) => ({
-      "@type": "Question",
+      '@type': 'Question',
       name: q.question,
       acceptedAnswer: {
-        "@type": "Answer",
+        '@type': 'Answer',
         text: q.answer,
       },
     })),
@@ -152,33 +155,33 @@ export function ArticleStructuredData({
   keywords?: string[];
 }) {
   const data = {
-    "@context": "https://schema.org",
-    "@type": "NewsArticle",
+    '@context': 'https://schema.org',
+    '@type': 'NewsArticle',
     headline,
     description,
     url,
     mainEntityOfPage: {
-      "@type": "WebPage",
-      "@id": url,
+      '@type': 'WebPage',
+      '@id': url,
     },
     ...(image ? { image: [image] } : {}),
     datePublished,
     dateModified: dateModified || datePublished,
     author: {
-      "@type": "Person",
-      name: author || "Crypto Vision",
+      '@type': 'Person',
+      name: author || 'Crypto Vision',
     },
     publisher: {
-      "@type": "Organization",
-      name: publisher || "Crypto Vision",
-      url: "https://cryptocurrency.cv",
+      '@type': 'Organization',
+      name: publisher || 'Crypto Vision',
+      url: 'https://cryptocurrency.cv',
       logo: {
-        "@type": "ImageObject",
-        url: "https://cryptocurrency.cv/icons/icon-512x512.png",
+        '@type': 'ImageObject',
+        url: 'https://cryptocurrency.cv/icons/icon-512x512.png',
       },
     },
     ...(section ? { articleSection: section } : {}),
-    ...(keywords && keywords.length > 0 ? { keywords: keywords.join(", ") } : {}),
+    ...(keywords && keywords.length > 0 ? { keywords: keywords.join(', ') } : {}),
   };
   return (
     <NonceScript
@@ -193,33 +196,33 @@ export function ArticleStructuredData({
  */
 export function SoftwareApplicationStructuredData() {
   const data = {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    name: "Crypto Vision News API",
-    applicationCategory: "FinanceApplication",
-    operatingSystem: "Any",
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: 'Crypto Vision News API',
+    applicationCategory: 'FinanceApplication',
+    operatingSystem: 'Any',
     description:
-      "Free crypto news API — real-time aggregator for Bitcoin, Ethereum, DeFi, Solana & altcoins. RSS/Atom feeds, JSON REST API, historical archive with market context. No API key required.",
-    url: "https://cryptocurrency.cv/en/developers",
+      'Free crypto news API — real-time aggregator for Bitcoin, Ethereum, DeFi, Solana & altcoins. RSS/Atom feeds, JSON REST API, historical archive with market context. No API key required.',
+    url: 'https://cryptocurrency.cv/en/developers',
     offers: {
-      "@type": "Offer",
-      price: "0",
-      priceCurrency: "USD",
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'USD',
     },
     creator: {
-      "@type": "Organization",
-      name: "Crypto Vision",
-      url: "https://cryptocurrency.cv",
+      '@type': 'Organization',
+      name: 'Crypto Vision',
+      url: 'https://cryptocurrency.cv',
     },
     featureList: [
-      "JSON REST API",
-      "RSS/Atom Feeds",
-      "WebSocket Real-time Updates",
-      "Historical News Archive",
-      "Market Context Data",
-      "AI/LLM Ready",
-      "SDKs for Python, TypeScript, Go, React, PHP",
-      "No API key required",
+      'JSON REST API',
+      'RSS/Atom Feeds',
+      'WebSocket Real-time Updates',
+      'Historical News Archive',
+      'Market Context Data',
+      'AI/LLM Ready',
+      'SDKs for Python, TypeScript, Go, React, PHP',
+      'No API key required',
     ],
   };
   return (

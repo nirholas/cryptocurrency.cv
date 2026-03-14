@@ -1,21 +1,14 @@
-import { setRequestLocale } from "next-intl/server";
-import type { Metadata } from "next";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import { generateSEOMetadata } from "@/lib/seo";
-import { SITE_URL } from "@/lib/constants";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
-import { Badge } from "@/components/ui/Badge";
-import L2Table, { type L2Row } from "@/components/L2Table";
-import { cn } from "@/lib/utils";
-import {
-  Layers,
-  TrendingUp,
-  Zap,
-  ArrowRightLeft,
-  BarChart3,
-  DollarSign,
-} from "lucide-react";
+import { setRequestLocale } from 'next-intl/server';
+import type { Metadata } from 'next';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import { generateSEOMetadata } from '@/lib/seo';
+import { SITE_URL } from '@/lib/constants';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
+import { Badge } from '@/components/ui/Badge';
+import L2Table, { type L2Row } from '@/components/L2Table';
+import { cn } from '@/lib/utils';
+import { Layers, TrendingUp, Zap, ArrowRightLeft, BarChart3, DollarSign } from 'lucide-react';
 
 export const revalidate = 300;
 
@@ -83,23 +76,23 @@ async function fetchJSON<T>(path: string): Promise<T | null> {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   return generateSEOMetadata({
-    title: "Layer 2 Analytics — TVL, TPS, Fees & Bridge Data | Crypto Vision News",
+    title: 'Layer 2 Analytics — TVL, TPS, Fees & Bridge Data | Crypto Vision News',
     description:
-      "Compare Ethereum Layer 2 scaling solutions including Arbitrum, Optimism, Base, zkSync, and more. Track TVL, transaction throughput, fees, and bridge volumes.",
-    path: "/l2",
+      'Compare Ethereum Layer 2 scaling solutions including Arbitrum, Optimism, Base, zkSync, and more. Track TVL, transaction throughput, fees, and bridge volumes.',
+    path: '/l2',
     locale,
     tags: [
-      "layer 2",
-      "L2",
-      "rollups",
-      "arbitrum",
-      "optimism",
-      "base",
-      "zksync",
-      "TVL",
-      "ethereum scaling",
-      "bridges",
-      "crypto",
+      'layer 2',
+      'L2',
+      'rollups',
+      'arbitrum',
+      'optimism',
+      'base',
+      'zksync',
+      'TVL',
+      'ethereum scaling',
+      'bridges',
+      'crypto',
     ],
   });
 }
@@ -113,7 +106,7 @@ function formatLargeNumber(value: number): string {
 }
 
 function formatPct(value: number): string {
-  const sign = value >= 0 ? "+" : "";
+  const sign = value >= 0 ? '+' : '';
   return `${sign}${value.toFixed(2)}%`;
 }
 
@@ -131,22 +124,16 @@ function StatCard({
   accent?: boolean;
 }) {
   return (
-    <Card className={cn(accent && "ring-1 ring-accent/20 bg-accent/[0.03]")}>
+    <Card className={cn(accent && 'ring-accent/20 bg-accent/[0.03] ring-1')}>
       <CardContent className="p-4 md:p-5">
         <div className="flex items-start justify-between gap-2">
-          <p className="text-[10px] font-semibold uppercase tracking-wider text-text-tertiary mb-1">
+          <p className="text-text-tertiary mb-1 text-[10px] font-semibold tracking-wider uppercase">
             {label}
           </p>
           <div className="text-accent opacity-60">{icon}</div>
         </div>
-        <p className="text-xl md:text-2xl font-bold tabular-nums text-text-primary">
-          {value}
-        </p>
-        {sub && (
-          <p className="text-xs text-text-secondary mt-0.5">
-            {sub}
-          </p>
-        )}
+        <p className="text-text-primary text-xl font-bold tabular-nums md:text-2xl">{value}</p>
+        {sub && <p className="text-text-secondary mt-0.5 text-xs">{sub}</p>}
       </CardContent>
     </Card>
   );
@@ -154,11 +141,11 @@ function StatCard({
 
 // Average fee data (approximate, for comparison display)
 const FEE_COMPARISON = [
-  { name: "Ethereum L1", fee: 3.5, color: "#627eea" },
-  { name: "Arbitrum", fee: 0.1, color: "#28a0f0" },
-  { name: "Optimism", fee: 0.07, color: "#ff0420" },
-  { name: "Base", fee: 0.03, color: "#0052ff" },
-  { name: "zkSync", fee: 0.05, color: "#8b8dfc" },
+  { name: 'Ethereum L1', fee: 3.5, color: '#627eea' },
+  { name: 'Arbitrum', fee: 0.1, color: '#28a0f0' },
+  { name: 'Optimism', fee: 0.07, color: '#ff0420' },
+  { name: 'Base', fee: 0.03, color: '#0052ff' },
+  { name: 'zkSync', fee: 0.05, color: '#8b8dfc' },
 ];
 
 export default async function L2Page({ params }: Props) {
@@ -166,12 +153,12 @@ export default async function L2Page({ params }: Props) {
   setRequestLocale(locale);
 
   const [l2Result, bridgeResult] = await Promise.allSettled([
-    fetchJSON<L2Summary>("/api/l2"),
-    fetchJSON<BridgesSummary>("/api/bridges"),
+    fetchJSON<L2Summary>('/api/l2'),
+    fetchJSON<BridgesSummary>('/api/bridges'),
   ]);
 
-  const l2Data = l2Result.status === "fulfilled" ? l2Result.value : null;
-  const bridgeData = bridgeResult.status === "fulfilled" ? bridgeResult.value : null;
+  const l2Data = l2Result.status === 'fulfilled' ? l2Result.value : null;
+  const bridgeData = bridgeResult.status === 'fulfilled' ? bridgeResult.value : null;
 
   const topProjects = l2Data?.topProjects ?? [];
   const activityMetrics = l2Data?.activityMetrics ?? [];
@@ -190,13 +177,12 @@ export default async function L2Page({ params }: Props) {
   // Transform to L2Row
   const l2Rows: L2Row[] = topProjects.map((p, idx) => {
     const activity = activityMap.get(p.name.toLowerCase());
-    const typeLabel = p.category ?? p.type ?? "Rollup";
-    const normalizedType =
-      typeLabel.toLowerCase().includes("zk")
-        ? "ZK Rollup"
-        : typeLabel.toLowerCase().includes("optimistic")
-          ? "Optimistic"
-          : typeLabel.charAt(0).toUpperCase() + typeLabel.slice(1);
+    const typeLabel = p.category ?? p.type ?? 'Rollup';
+    const normalizedType = typeLabel.toLowerCase().includes('zk')
+      ? 'ZK Rollup'
+      : typeLabel.toLowerCase().includes('optimistic')
+        ? 'Optimistic'
+        : typeLabel.charAt(0).toUpperCase() + typeLabel.slice(1);
 
     return {
       rank: idx + 1,
@@ -215,8 +201,7 @@ export default async function L2Page({ params }: Props) {
   const bridges = bridgeData?.topByVolume ?? bridgeData?.bridges ?? [];
   const topBridges = bridges.slice(0, 8);
   const totalBridgeVolume =
-    bridgeData?.totalVolume24h ??
-    bridges.reduce((s, b) => s + (b.lastDailyVolume ?? 0), 0);
+    bridgeData?.totalVolume24h ?? bridges.reduce((s, b) => s + (b.lastDailyVolume ?? 0), 0);
 
   // Dominant L2
   const dominance = l2Data?.dominance ?? {};
@@ -228,24 +213,24 @@ export default async function L2Page({ params }: Props) {
   return (
     <>
       <Header />
-      <main className="container-main py-10 space-y-14">
+      <main className="container-main space-y-14 py-10">
         {/* Hero */}
         <section>
-          <h1 className="font-serif text-3xl md:text-4xl font-bold mb-2 text-text-primary">
+          <h1 className="text-text-primary mb-2 font-serif text-3xl font-bold md:text-4xl">
             ⛓️ Layer 2 Analytics
           </h1>
           <p className="text-text-secondary max-w-2xl">
-            Compare Ethereum Layer 2 scaling solutions — track TVL rankings,
-            transaction throughput, fees, and cross-chain bridge activity.
+            Compare Ethereum Layer 2 scaling solutions — track TVL rankings, transaction throughput,
+            fees, and cross-chain bridge activity.
           </p>
         </section>
 
         {/* Stats Grid */}
         <section>
-          <div className="grid gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+          <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
             <StatCard
               label="Total L2 TVL"
-              value={totalTvl > 0 ? formatLargeNumber(totalTvl) : "—"}
+              value={totalTvl > 0 ? formatLargeNumber(totalTvl) : '—'}
               sub={totalTvlChange24h !== 0 ? `${formatPct(totalTvlChange24h)} (24h)` : undefined}
               icon={<Layers className="h-5 w-5" />}
               accent
@@ -257,13 +242,17 @@ export default async function L2Page({ params }: Props) {
             />
             <StatCard
               label="Top L2"
-              value={topL2Name ?? (l2Rows[0]?.name ?? "—")}
-              sub={topL2Name && dominance[topL2Name] ? `${dominance[topL2Name].toFixed(1)}% dominance` : undefined}
+              value={topL2Name ?? l2Rows[0]?.name ?? '—'}
+              sub={
+                topL2Name && dominance[topL2Name]
+                  ? `${dominance[topL2Name].toFixed(1)}% dominance`
+                  : undefined
+              }
               icon={<TrendingUp className="h-5 w-5" />}
             />
             <StatCard
               label="Bridge Volume (24h)"
-              value={totalBridgeVolume > 0 ? formatLargeNumber(totalBridgeVolume) : "—"}
+              value={totalBridgeVolume > 0 ? formatLargeNumber(totalBridgeVolume) : '—'}
               icon={<ArrowRightLeft className="h-5 w-5" />}
             />
           </div>
@@ -271,43 +260,41 @@ export default async function L2Page({ params }: Props) {
 
         {/* L2 Comparison Table */}
         <section>
-          <h2 className="font-serif text-2xl font-bold mb-4 text-text-primary">
-            📊 L2 Comparison
-          </h2>
+          <h2 className="text-text-primary mb-4 font-serif text-2xl font-bold">📊 L2 Comparison</h2>
           <L2Table l2s={l2Rows} />
         </section>
 
         {/* Bridge Volume */}
         {topBridges.length > 0 && (
           <section>
-            <h2 className="font-serif text-2xl font-bold mb-4 text-text-primary">
+            <h2 className="text-text-primary mb-4 font-serif text-2xl font-bold">
               🌉 Cross-Chain Bridge Volume
             </h2>
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {topBridges.map((bridge) => (
                 <Card key={bridge.name}>
                   <CardContent className="p-4">
-                    <p className="font-medium text-text-primary mb-1">
+                    <p className="text-text-primary mb-1 font-medium">
                       {bridge.displayName || bridge.name}
                     </p>
-                    <p className="text-xl font-bold font-mono text-text-primary">
+                    <p className="text-text-primary font-mono text-xl font-bold">
                       {formatLargeNumber(bridge.lastDailyVolume)}
                     </p>
-                    <p className="text-[10px] uppercase tracking-wider text-text-tertiary mt-1">
+                    <p className="text-text-tertiary mt-1 text-[10px] tracking-wider uppercase">
                       24h volume
                     </p>
                     {bridge.chains && bridge.chains.length > 0 && (
-                      <div className="flex flex-wrap gap-1 mt-2">
+                      <div className="mt-2 flex flex-wrap gap-1">
                         {bridge.chains.slice(0, 4).map((chain) => (
                           <span
                             key={chain}
-                            className="text-[10px] px-1.5 py-0.5 rounded bg-surface-tertiary text-text-tertiary"
+                            className="bg-surface-tertiary text-text-tertiary rounded px-1.5 py-0.5 text-[10px]"
                           >
                             {chain}
                           </span>
                         ))}
                         {bridge.chains.length > 4 && (
-                          <span className="text-[10px] px-1.5 py-0.5 rounded bg-surface-tertiary text-text-tertiary">
+                          <span className="bg-surface-tertiary text-text-tertiary rounded px-1.5 py-0.5 text-[10px]">
                             +{bridge.chains.length - 4}
                           </span>
                         )}
@@ -322,12 +309,12 @@ export default async function L2Page({ params }: Props) {
 
         {/* Fee Comparison */}
         <section>
-          <h2 className="font-serif text-2xl font-bold mb-4 text-text-primary">
+          <h2 className="text-text-primary mb-4 font-serif text-2xl font-bold">
             ⛽ Fee Comparison
           </h2>
           <Card>
             <CardContent className="p-6">
-              <p className="text-xs text-text-tertiary mb-4">
+              <p className="text-text-tertiary mb-4 text-xs">
                 Average transaction costs across Ethereum L1 and major L2 networks (approximate)
               </p>
               <div className="space-y-4">
@@ -335,28 +322,29 @@ export default async function L2Page({ params }: Props) {
                   const barWidth = maxFee > 0 ? (item.fee / maxFee) * 100 : 0;
                   return (
                     <div key={item.name} className="flex items-center gap-4">
-                      <span className="w-28 text-sm font-medium text-text-primary shrink-0">
+                      <span className="text-text-primary w-28 shrink-0 text-sm font-medium">
                         {item.name}
                       </span>
-                      <div className="flex-1 h-6 rounded bg-surface-tertiary overflow-hidden relative">
+                      <div className="bg-surface-tertiary relative h-6 flex-1 overflow-hidden rounded">
                         <div
                           className="h-full rounded transition-all duration-500"
                           style={{
                             width: `${barWidth}%`,
                             backgroundColor: item.color,
-                            minWidth: "2px",
+                            minWidth: '2px',
                           }}
                         />
                       </div>
-                      <span className="w-16 text-right text-sm font-mono text-text-primary">
+                      <span className="text-text-primary w-16 text-right font-mono text-sm">
                         ${item.fee.toFixed(2)}
                       </span>
                     </div>
                   );
                 })}
               </div>
-              <p className="text-[10px] text-text-tertiary mt-4">
-                * Fees are approximate averages and vary based on network congestion and transaction complexity.
+              <p className="text-text-tertiary mt-4 text-[10px]">
+                * Fees are approximate averages and vary based on network congestion and transaction
+                complexity.
               </p>
             </CardContent>
           </Card>

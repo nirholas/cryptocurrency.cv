@@ -92,11 +92,9 @@ export default async function TeamPage({ params }: Props) {
       <main className="container-main py-10">
         {/* Hero */}
         <section className="mb-16 pt-8 text-center">
-          <Users className="mx-auto mb-4 h-10 w-10 text-accent" />
-          <h1 className="font-serif text-4xl font-bold text-text-primary md:text-5xl">
-            Our Team
-          </h1>
-          <p className="mx-auto mt-4 max-w-2xl text-lg text-text-secondary">
+          <Users className="text-accent mx-auto mb-4 h-10 w-10" />
+          <h1 className="text-text-primary font-serif text-4xl font-bold md:text-5xl">Our Team</h1>
+          <p className="text-text-secondary mx-auto mt-4 max-w-2xl text-lg">
             The people behind Free Crypto News — building the free and open crypto news
             infrastructure the industry needs.
           </p>
@@ -104,7 +102,7 @@ export default async function TeamPage({ params }: Props) {
 
         {/* Leadership */}
         <section className="mb-16">
-          <h2 className="mb-6 font-serif text-2xl font-bold text-text-primary md:text-3xl">
+          <h2 className="text-text-primary mb-6 font-serif text-2xl font-bold md:text-3xl">
             Leadership
           </h2>
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
@@ -117,7 +115,7 @@ export default async function TeamPage({ params }: Props) {
         {/* Core Contributors */}
         {coreContributors.length > 0 && (
           <section className="mb-16">
-            <h2 className="mb-6 font-serif text-2xl font-bold text-text-primary md:text-3xl">
+            <h2 className="text-text-primary mb-6 font-serif text-2xl font-bold md:text-3xl">
               Contributors
             </h2>
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
@@ -130,12 +128,11 @@ export default async function TeamPage({ params }: Props) {
 
         {/* Open Source Contributors */}
         <section className="mb-16">
-          <h2 className="mb-3 font-serif text-2xl font-bold text-text-primary md:text-3xl">
+          <h2 className="text-text-primary mb-3 font-serif text-2xl font-bold md:text-3xl">
             Open Source Contributors
           </h2>
-          <p className="mb-6 text-text-secondary">
-            Thanks to our{' '}
-            <strong className="text-text-primary">{contributors.length}</strong>{' '}
+          <p className="text-text-secondary mb-6">
+            Thanks to our <strong className="text-text-primary">{contributors.length}</strong>{' '}
             GitHub contributors who have helped build this project.
           </p>
           <div className="grid grid-cols-3 gap-4 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8">
@@ -145,7 +142,7 @@ export default async function TeamPage({ params }: Props) {
                 href={c.profileUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex flex-col items-center rounded-lg p-3 transition-colors hover:bg-surface-secondary"
+                className="hover:bg-surface-secondary flex flex-col items-center rounded-lg p-3 transition-colors"
               >
                 <img
                   src={c.avatarUrl}
@@ -154,12 +151,8 @@ export default async function TeamPage({ params }: Props) {
                   height={48}
                   className="mb-2 h-12 w-12 rounded-full"
                 />
-                <span className="text-xs font-medium text-text-secondary">
-                  {c.username}
-                </span>
-                <span className="text-[10px] text-text-tertiary">
-                  {c.contributions} commits
-                </span>
+                <span className="text-text-secondary text-xs font-medium">{c.username}</span>
+                <span className="text-text-tertiary text-[10px]">{c.contributions} commits</span>
               </a>
             ))}
           </div>
@@ -168,7 +161,7 @@ export default async function TeamPage({ params }: Props) {
               href="https://github.com/nirholas/free-crypto-news/graphs/contributors"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 text-sm font-medium text-accent hover:underline"
+              className="text-accent inline-flex items-center gap-1 text-sm font-medium hover:underline"
             >
               View all contributors on GitHub
               <ArrowRight className="h-4 w-4" />
@@ -178,11 +171,11 @@ export default async function TeamPage({ params }: Props) {
 
         {/* Join Us */}
         <section className="mb-10">
-          <div className="rounded-xl border border-border bg-surface-secondary p-8 md:p-12">
-            <h2 className="mb-3 font-serif text-2xl font-bold text-text-primary md:text-3xl">
+          <div className="border-border bg-surface-secondary rounded-xl border p-8 md:p-12">
+            <h2 className="text-text-primary mb-3 font-serif text-2xl font-bold md:text-3xl">
               Join Us
             </h2>
-            <p className="mb-6 max-w-2xl text-text-secondary">
+            <p className="text-text-secondary mb-6 max-w-2xl">
               We&apos;re always looking for contributors. Whether you&apos;re fixing bugs, adding
               features, translating, or improving docs — every contribution matters.
             </p>
@@ -191,7 +184,7 @@ export default async function TeamPage({ params }: Props) {
                 href="https://github.com/nirholas/free-crypto-news/issues"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-lg border border-border bg-(--color-surface) px-5 py-2.5 text-sm font-medium text-text-primary transition-colors hover:border-accent/50 hover:text-accent"
+                className="border-border text-text-primary hover:border-accent/50 hover:text-accent inline-flex items-center gap-2 rounded-lg border bg-(--color-surface) px-5 py-2.5 text-sm font-medium transition-colors"
               >
                 <ExternalLink className="h-4 w-4" />
                 View open issues on GitHub
@@ -200,7 +193,7 @@ export default async function TeamPage({ params }: Props) {
                 href="https://github.com/nirholas/free-crypto-news/blob/main/CONTRIBUTING.md"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-lg border border-border bg-(--color-surface) px-5 py-2.5 text-sm font-medium text-text-primary transition-colors hover:border-accent/50 hover:text-accent"
+                className="border-border text-text-primary hover:border-accent/50 hover:text-accent inline-flex items-center gap-2 rounded-lg border bg-(--color-surface) px-5 py-2.5 text-sm font-medium transition-colors"
               >
                 <BookOpen className="h-4 w-4" />
                 Read our contributing guide
