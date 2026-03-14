@@ -1,15 +1,15 @@
-"use client";
+'use client';
 
-import { useEffect, useCallback } from "react";
-import { X } from "lucide-react";
-import type { Video } from "@/lib/video-sources";
+import { useEffect, useCallback } from 'react';
+import { X } from 'lucide-react';
+import type { Video } from '@/lib/video-sources';
 
 function timeAgo(dateStr: string): string {
   const now = Date.now();
   const then = new Date(dateStr).getTime();
   const diff = Math.max(0, now - then);
   const minutes = Math.floor(diff / 60000);
-  if (minutes < 1) return "Just now";
+  if (minutes < 1) return 'Just now';
   if (minutes < 60) return `${minutes}m ago`;
   const hours = Math.floor(minutes / 60);
   if (hours < 24) return `${hours}h ago`;
@@ -27,23 +27,23 @@ interface VideoPlayerProps {
 export default function VideoPlayer({ video, onClose }: VideoPlayerProps) {
   const handleKeyDown = useCallback(
     (e: KeyboardEvent) => {
-      if (e.key === "Escape") onClose();
+      if (e.key === 'Escape') onClose();
     },
-    [onClose]
+    [onClose],
   );
 
   useEffect(() => {
-    document.addEventListener("keydown", handleKeyDown);
-    document.body.style.overflow = "hidden";
+    document.addEventListener('keydown', handleKeyDown);
+    document.body.style.overflow = 'hidden';
     return () => {
-      document.removeEventListener("keydown", handleKeyDown);
-      document.body.style.overflow = "";
+      document.removeEventListener('keydown', handleKeyDown);
+      document.body.style.overflow = '';
     };
   }, [handleKeyDown]);
 
   return (
     <div
-      className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-sm p-4 sm:p-6"
+      className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 p-4 backdrop-blur-sm sm:p-6"
       onClick={(e) => {
         if (e.target === e.currentTarget) onClose();
       }}
@@ -55,7 +55,7 @@ export default function VideoPlayer({ video, onClose }: VideoPlayerProps) {
         {/* Close button */}
         <button
           onClick={onClose}
-          className="absolute -top-12 right-0 flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white hover:bg-white/20 transition-colors"
+          className="absolute -top-12 right-0 flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white/20"
           aria-label="Close video player"
         >
           <X className="h-5 w-5" />
@@ -74,9 +74,7 @@ export default function VideoPlayer({ video, onClose }: VideoPlayerProps) {
 
         {/* Video info */}
         <div className="mt-4 text-white">
-          <h2 className="font-serif text-lg font-bold leading-snug md:text-xl">
-            {video.title}
-          </h2>
+          <h2 className="font-serif text-lg leading-snug font-bold md:text-xl">{video.title}</h2>
           <p className="mt-1 text-sm text-white/60">
             {video.source.name} &middot; {timeAgo(video.publishedAt)}
           </p>

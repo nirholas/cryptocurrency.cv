@@ -1,15 +1,15 @@
-"use client";
+'use client';
 
-import { cn } from "@/lib/utils";
-import type { Video } from "@/lib/video-sources";
-import { Play } from "lucide-react";
+import { cn } from '@/lib/utils';
+import type { Video } from '@/lib/video-sources';
+import { Play } from 'lucide-react';
 
 function timeAgo(dateStr: string): string {
   const now = Date.now();
   const then = new Date(dateStr).getTime();
   const diff = Math.max(0, now - then);
   const minutes = Math.floor(diff / 60000);
-  if (minutes < 1) return "Just now";
+  if (minutes < 1) return 'Just now';
   if (minutes < 60) return `${minutes}m ago`;
   const hours = Math.floor(minutes / 60);
   if (hours < 24) return `${hours}h ago`;
@@ -29,11 +29,16 @@ export default function VideoCard({ video, onPlay, featured }: VideoCardProps) {
   if (featured) {
     return (
       <article
-        className="group grid gap-6 md:grid-cols-2 md:gap-10 items-center cursor-pointer"
+        className="group grid cursor-pointer items-center gap-6 md:grid-cols-2 md:gap-10"
         onClick={() => onPlay(video)}
         role="button"
         tabIndex={0}
-        onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); onPlay(video); } }}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            onPlay(video);
+          }
+        }}
       >
         {/* Thumbnail */}
         <div className="relative aspect-video w-full overflow-hidden rounded-xl bg-[var(--color-surface-tertiary)]">
@@ -44,9 +49,9 @@ export default function VideoCard({ video, onPlay, featured }: VideoCardProps) {
             className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]"
           />
           {/* Play overlay */}
-          <div className="absolute inset-0 flex items-center justify-center bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <div className="absolute inset-0 flex items-center justify-center bg-black/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
             <div className="flex h-16 w-16 items-center justify-center rounded-full bg-white/90 shadow-lg backdrop-blur-sm">
-              <Play className="h-7 w-7 text-black fill-black ml-0.5" />
+              <Play className="ml-0.5 h-7 w-7 fill-black text-black" />
             </div>
           </div>
           {/* Source badge */}
@@ -57,11 +62,11 @@ export default function VideoCard({ video, onPlay, featured }: VideoCardProps) {
 
         {/* Info */}
         <div className="flex flex-col gap-3">
-          <h2 className="font-serif text-2xl md:text-3xl font-bold leading-[1.15] tracking-tight group-hover:text-[var(--color-accent)] transition-colors">
+          <h2 className="font-serif text-2xl leading-[1.15] font-bold tracking-tight transition-colors group-hover:text-[var(--color-accent)] md:text-3xl">
             {video.title}
           </h2>
           {video.description && (
-            <p className="text-[var(--color-text-secondary)] line-clamp-3 text-base leading-relaxed">
+            <p className="line-clamp-3 text-base leading-relaxed text-[var(--color-text-secondary)]">
               {video.description}
             </p>
           )}
@@ -75,11 +80,16 @@ export default function VideoCard({ video, onPlay, featured }: VideoCardProps) {
 
   return (
     <article
-      className="group flex flex-col gap-3 cursor-pointer"
+      className="group flex cursor-pointer flex-col gap-3"
       onClick={() => onPlay(video)}
       role="button"
       tabIndex={0}
-      onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); onPlay(video); } }}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          onPlay(video);
+        }
+      }}
     >
       {/* Thumbnail */}
       <div className="relative aspect-video w-full overflow-hidden rounded-lg bg-[var(--color-surface-tertiary)]">
@@ -90,9 +100,9 @@ export default function VideoCard({ video, onPlay, featured }: VideoCardProps) {
           className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]"
         />
         {/* Play overlay */}
-        <div className="absolute inset-0 flex items-center justify-center bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <div className="absolute inset-0 flex items-center justify-center bg-black/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
           <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white/90 shadow-lg backdrop-blur-sm">
-            <Play className="h-5 w-5 text-black fill-black ml-0.5" />
+            <Play className="ml-0.5 h-5 w-5 fill-black text-black" />
           </div>
         </div>
         {/* Source badge */}
@@ -103,7 +113,7 @@ export default function VideoCard({ video, onPlay, featured }: VideoCardProps) {
 
       {/* Info */}
       <div className="flex flex-col gap-1.5">
-        <h3 className="font-serif text-base font-bold leading-snug line-clamp-2 group-hover:text-[var(--color-accent)] transition-colors">
+        <h3 className="line-clamp-2 font-serif text-base leading-snug font-bold transition-colors group-hover:text-[var(--color-accent)]">
           {video.title}
         </h3>
         <span className="text-xs text-[var(--color-text-tertiary)]">

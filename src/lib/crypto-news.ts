@@ -2366,6 +2366,12 @@ export interface NewsArticle {
   sourceKey: string;
   category: string;
   timeAgo: string;
+  /** Author / byline extracted from dc:creator or <author> in RSS feeds */
+  author?: string;
+  /** URL-safe slug derived from author name, e.g. "vitalik-buterin" */
+  authorSlug?: string;
+  /** Content classification: news (default), opinion, analysis, or press-release */
+  contentType?: 'news' | 'opinion' | 'analysis' | 'press-release';
   // Quality metadata
   tier?: string; // e.g. 'tier1', 'tier2', 'tier3', 'research'
   credibility?: number; // 0-1, source credibility score
@@ -2475,6 +2481,66 @@ function safeDate(value: string | number): Date {
   return isNaN(date.getTime()) ? new Date() : date;
 }
 
+// ─── Author & Content Type Helpers ──────────────────────────────────────────
+
+/**
+ * Normalize an author name: trim, strip "By " prefix, title-case.
+ * Collapses "Staff Writer", "CoinDesk Staff" etc. to their canonical form.
+ */
+export function normalizeAuthorName(raw: string): string {
+  let name = raw.trim();
+  // Strip common "By " prefix
+  name = name.replace(/^by\s+/i, '');
+  // Strip email in angle brackets: "John <john@example.com>" → "John"
+  name = name.replace(/<[^>]+>/, '').trim();
+  // Title-case
+  name = name
+    .toLowerCase()
+    .replace(/(?:^|\s|-)\S/g, (ch) => ch.toUpperCase());
+  return name;
+}
+
+/**
+ * Convert an author name to a URL-safe slug: "Vitalik Buterin" → "vitalik-buterin"
+ */
+export function toAuthorSlug(name: string): string {
+  return name
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '');
+}
+
+const OPINION_KEYWORDS = ['opinion', 'editorial', 'commentary', 'op-ed', 'column', 'perspective'];
+const ANALYSIS_KEYWORDS = ['analysis', 'research', 'report', 'deep dive', 'explainer'];
+const OPINION_PATH_RE = /\/(opinion|editorial|commentary)\//i;
+
+/**
+ * Detect content type from RSS item categories, URL path, and title.
+ */
+function detectContentType(
+  itemCategories: string[],
+  url: string,
+  title: string,
+): NewsArticle['contentType'] {
+  const lowerCats = itemCategories.map((c) => c.toLowerCase());
+
+  // Check categories first (most reliable signal from the source)
+  if (lowerCats.some((c) => OPINION_KEYWORDS.some((k) => c.includes(k)))) return 'opinion';
+  if (lowerCats.some((c) => c === 'press release' || c === 'press-release')) return 'press-release';
+
+  // Check URL path
+  if (OPINION_PATH_RE.test(url)) return 'opinion';
+
+  // Check title prefix patterns
+  const lowerTitle = title.toLowerCase();
+  if (lowerTitle.startsWith('opinion:') || lowerTitle.startsWith('editorial:')) return 'opinion';
+
+  // Analysis detection (weaker signal — only from categories)
+  if (lowerCats.some((c) => ANALYSIS_KEYWORDS.some((k) => c.includes(k)))) return 'analysis';
+
+  return 'news';
+}
+
 /**
  * Parse RSS XML to extract articles
  */
@@ -2492,6 +2558,9 @@ function parseRSSFeed(
   const descRegex =
     /<description><!\[CDATA\[([\s\S]*?)\]\]>|<description>([\s\S]*?)<\/description>/i;
   const pubDateRegex = /<pubDate>(.*?)<\/pubDate>/i;
+  const authorRegex =
+    /<dc:creator><!\[CDATA\[(.*?)\]\]><\/dc:creator>|<dc:creator>(.*?)<\/dc:creator>|<author><!\[CDATA\[(.*?)\]\]><\/author>|<author>(.*?)<\/author>/i;
+  const categoryRegex = /<category(?:\s[^>]*)?>(?:<!\[CDATA\[(.*?)\]\]>|(.*?))<\/category>/gi;
 
   let match;
   while ((match = itemRegex.exec(xml)) !== null) {
@@ -2501,6 +2570,16 @@ function parseRSSFeed(
     const linkMatch = itemXml.match(linkRegex);
     const descMatch = itemXml.match(descRegex);
     const pubDateMatch = itemXml.match(pubDateRegex);
+    const authorMatch = itemXml.match(authorRegex);
+
+    // Extract all <category> tags from this item
+    const itemCategories: string[] = [];
+    let catMatch;
+    while ((catMatch = categoryRegex.exec(itemXml)) !== null) {
+      const cat = (catMatch[1] || catMatch[2] || '').trim();
+      if (cat) itemCategories.push(cat);
+    }
+    categoryRegex.lastIndex = 0; // reset for next item
 
     // Extract image from multiple possible locations
     const rawDesc = descMatch?.[1] || descMatch?.[2] || '';
@@ -2510,6 +2589,10 @@ function parseRSSFeed(
     const link = stripCDATA((linkMatch?.[1] || linkMatch?.[2] || '').trim());
     const description = sanitizeDescription(rawDesc);
     const pubDateStr = pubDateMatch?.[1] || '';
+
+    // Extract author from dc:creator or <author>
+    const rawAuthor = (authorMatch?.[1] || authorMatch?.[2] || authorMatch?.[3] || authorMatch?.[4] || '').trim();
+    const normalizedAuthor = rawAuthor ? normalizeAuthorName(rawAuthor) : undefined;
 
     if (title && link) {
       const rawDate = pubDateStr ? new Date(pubDateStr) : new Date();
@@ -2524,6 +2607,9 @@ function parseRSSFeed(
         sourceKey,
         category,
         timeAgo: getTimeAgo(pubDate),
+        author: normalizedAuthor,
+        authorSlug: normalizedAuthor ? toAuthorSlug(normalizedAuthor) : undefined,
+        contentType: detectContentType(itemCategories, link, title),
         tier: getSourceTier(sourceKey) ?? undefined,
         credibility: getSourceCredibility(sourceKey),
         reputation: getSourceReputation(sourceKey),
