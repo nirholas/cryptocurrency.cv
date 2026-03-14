@@ -17,6 +17,7 @@ const FOOTER_SECTIONS = [
       { label: 'Regulation', href: '/category/regulation' },
       { label: 'Altcoins', href: '/category/altcoins' },
       { label: 'Solana', href: '/category/solana' },
+      { label: 'Topics', href: '/tags' },
       { label: 'Podcast', href: '/podcast' },
     ],
   },
@@ -43,6 +44,7 @@ const FOOTER_SECTIONS = [
       { label: 'API Documentation', href: '/developers' },
       { label: 'Widget Builder', href: '/widgets' },
       { label: 'Sources', href: '/sources' },
+      { label: 'Authors', href: '/authors' },
       { label: 'Calculator', href: '/calculator' },
       { label: 'Compare', href: '/compare' },
       { label: 'RSS Feed', href: '/api/rss' },
@@ -58,15 +60,21 @@ const FOOTER_SECTIONS = [
     title: 'Company',
     links: [
       { label: 'About', href: '/about' },
+      { label: 'Team', href: '/team' },
       { label: 'Contact', href: '/contact' },
       { label: 'Pricing', href: '/pricing' },
+      { label: 'Editorial Policy', href: '/editorial-policy' },
+      { label: 'Ethics', href: '/ethics' },
       { label: 'Privacy', href: '/privacy' },
       { label: 'Terms', href: '/terms' },
       { label: 'Learn', href: '/learn' },
+      { label: 'Newsletters', href: '/newsletters' },
       { label: 'Blog', href: '/blog' },
       { label: 'Status', href: '/status' },
       { label: 'Advertise', href: '/advertise' },
       { label: 'Advertising Disclosure', href: '/advertising-disclosure' },
+      { label: 'Press Releases', href: '/press-releases' },
+      { label: 'Submit Press Release', href: '/submit-press-release' },
     ],
   },
 ];
@@ -111,14 +119,14 @@ const SOCIAL_LINKS = [
 ];
 
 const TRENDING_TOPICS = [
-  { label: 'Bitcoin ETF', href: '/search?q=bitcoin+etf' },
-  { label: 'Ethereum L2', href: '/search?q=ethereum+layer+2' },
-  { label: 'Solana DeFi', href: '/search?q=solana+defi' },
-  { label: 'AI Crypto', href: '/search?q=ai+crypto' },
-  { label: 'Stablecoin', href: '/search?q=stablecoin' },
-  { label: 'RWA', href: '/search?q=real+world+assets' },
-  { label: 'Halving', href: '/search?q=bitcoin+halving' },
-  { label: 'Regulation', href: '/search?q=crypto+regulation' },
+  { label: 'Bitcoin ETF', href: '/tags/etf' },
+  { label: 'Ethereum L2', href: '/tags/layer-2' },
+  { label: 'Solana DeFi', href: '/tags/solana' },
+  { label: 'AI Crypto', href: '/tags/ai-crypto' },
+  { label: 'Stablecoin', href: '/tags/stablecoins' },
+  { label: 'Mining', href: '/tags/mining' },
+  { label: 'Halving', href: '/tags/halving' },
+  { label: 'Regulation', href: '/tags/regulation' },
 ];
 
 function FooterStructuredData() {

@@ -19,6 +19,7 @@ const badgeVariants = cva(
         web3: "cat-web3",
         live: "bg-red-100 text-red-700 dark:bg-red-900/40 dark:text-red-400",
         breaking: "bg-red-600 text-white",
+        opinion: "bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-300",
       },
     },
     defaultVariants: {

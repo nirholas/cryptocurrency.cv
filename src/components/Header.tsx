@@ -41,10 +41,14 @@ const NAV_ITEMS = [
       { label: 'NFTs', href: '/category/nft' },
       { label: 'Regulation', href: '/category/regulation' },
       { label: 'Altcoins', href: '/category/altcoins' },
+      { label: 'Topics', href: '/tags' },
       { label: 'Podcast', href: '/podcast' },
       { label: 'Videos', href: '/videos' },
+      { label: 'Press Releases', href: '/press-releases' },
+      { label: 'Submit PR', href: '/submit-press-release' },
     ],
   },
+  { label: 'Opinion', href: '/opinion' },
   { label: 'Intelligence', href: '/intelligence' },
   { label: 'DeFi', href: '/defi' },
   { label: 'Learn', href: '/learn' },
@@ -75,6 +79,7 @@ const NAV_ITEMS = [
     ],
   },
   { label: 'Pricing', href: '/pricing' },
+  { label: 'Newsletters', href: '/newsletters' },
 ] as const;
 
 export default function Header() {

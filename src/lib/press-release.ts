@@ -45,8 +45,20 @@ export function validatePressRelease(submission: Partial<PressReleaseSubmission>
     errors.push('Press release body must be 200-3000 words.');
   if (submission.imageUrl && !/^https?:\/\/.+/.test(submission.imageUrl))
     errors.push('Featured image URL must be valid.');
+  if (submission.tier && !['free', 'priority', 'featured'].includes(submission.tier))
+    errors.push('Invalid tier.');
   return errors;
 }
+
+export function sanitizeInput(input: string): string {
+  return input
+    .replace(/<script[^>]*>.*?<\/script>/gi, '')
+    .replace(/on\w+\s*=/gi, '')
+    .replace(/<\/?(?:iframe|object|embed|form|link|meta)[^>]*>/gi, '');
+}
+
+// In-memory store (shared across routes)
+export const pressReleaseStore: PressReleaseSubmission[] = [];
 
 export function sanitizeInput(input: string): string {
   // Basic sanitization to prevent XSS

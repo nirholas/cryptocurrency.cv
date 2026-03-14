@@ -38,7 +38,7 @@ export default async function VideosPage({ params }: Props) {
           <h1 className="font-serif text-3xl font-bold tracking-tight md:text-4xl">
             Crypto Video News &amp; Analysis
           </h1>
-          <p className="mt-2 max-w-2xl text-base text-[var(--color-text-secondary)] md:text-lg">
+          <p className="mt-2 max-w-2xl text-base text-text-secondary md:text-lg">
             The latest video content from top crypto YouTube channels — news, education, DeFi deep
             dives, and market analysis.
           </p>

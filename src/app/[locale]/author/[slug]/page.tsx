@@ -134,21 +134,21 @@ export default async function AuthorPage({ params }: Props) {
       <Header />
       <main className="container-main py-10">
         {/* Breadcrumbs */}
-        <nav aria-label="Breadcrumb" className="mb-6 text-sm text-[var(--color-text-tertiary)]">
+        <nav aria-label="Breadcrumb" className="mb-6 text-sm text-text-tertiary">
           <ol className="flex items-center gap-1.5">
             <li>
-              <Link href="/" className="transition-colors hover:text-[var(--color-accent)]">
+              <Link href="/" className="transition-colors hover:text-accent">
                 Home
               </Link>
             </li>
             <li aria-hidden="true">/</li>
             <li>
-              <Link href="/authors" className="transition-colors hover:text-[var(--color-accent)]">
+              <Link href="/authors" className="transition-colors hover:text-accent">
                 Authors
               </Link>
             </li>
             <li aria-hidden="true">/</li>
-            <li className="font-medium text-[var(--color-text-primary)]">{author.name}</li>
+            <li className="font-medium text-text-primary">{author.name}</li>
           </ol>
         </nav>
 
@@ -162,21 +162,21 @@ export default async function AuthorPage({ params }: Props) {
             />
           ) : (
             <div
-              className={`flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br ${getInitialColor(author.name)} text-xl font-bold text-white shadow-md`}
+              className={`flex h-16 w-16 items-center justify-center rounded-full bg-linear-to-br ${getInitialColor(author.name)} text-xl font-bold text-white shadow-md`}
             >
               {initials}
             </div>
           )}
           <div>
-            <h1 className="font-serif text-2xl font-bold text-[var(--color-text-primary)] md:text-3xl">
+            <h1 className="font-serif text-2xl font-bold text-text-primary md:text-3xl">
               {author.name}
             </h1>
-            <p className="mt-1 text-sm text-[var(--color-text-secondary)]">
+            <p className="mt-1 text-sm text-text-secondary">
               {author.articleCount} {author.articleCount === 1 ? 'article' : 'articles'}
               {' · Writes for '}
               {author.sources.join(', ')}
             </p>
-            <p className="mt-1 text-xs text-[var(--color-text-tertiary)]">
+            <p className="mt-1 text-xs text-text-tertiary">
               First article: {formatDate(author.firstSeen)}
               {' · Latest: '}
               {formatDate(author.lastSeen)}
@@ -198,12 +198,12 @@ export default async function AuthorPage({ params }: Props) {
 
         {/* Articles */}
         {articles.length === 0 ? (
-          <p className="py-12 text-center text-[var(--color-text-tertiary)]">
+          <p className="py-12 text-center text-text-tertiary">
             No articles found for this author.
           </p>
         ) : (
           <>
-            <h2 className="mb-6 font-serif text-xl font-bold text-[var(--color-text-primary)]">
+            <h2 className="mb-6 font-serif text-xl font-bold text-text-primary">
               Articles by {author.name}
             </h2>
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -212,7 +212,7 @@ export default async function AuthorPage({ params }: Props) {
               ))}
             </div>
             {total > articles.length && (
-              <p className="mt-8 text-center text-sm text-[var(--color-text-tertiary)]">
+              <p className="mt-8 text-center text-sm text-text-tertiary">
                 Showing {articles.length} of {total} articles
               </p>
             )}

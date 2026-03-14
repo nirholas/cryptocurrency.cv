@@ -15,10 +15,7 @@
  * Used by the serve handler in src/app/api/inngest/route.ts.
  */
 
-export {
-  archiveArticlesCron,
-  archiveArticleOnPublish,
-} from './archive-articles';
+export { archiveArticlesCron, archiveArticleOnPublish } from './archive-articles';
 
 export { dailyDigest } from './daily-digest';
 

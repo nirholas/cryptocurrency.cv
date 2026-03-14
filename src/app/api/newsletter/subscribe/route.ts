@@ -19,17 +19,20 @@
 
 import { type NextRequest, NextResponse } from 'next/server';
 import { logger } from '@/lib/logger';
+import { getValidNewsletterIds } from '@/lib/newsletters';
 
 export const runtime = 'edge';
 
 interface SubscriptionRequest {
   email: string;
+  newsletters?: string[];
 }
 
 interface SubscriptionResponse {
   success: boolean;
   message: string;
   subscribed?: boolean;
+  newsletters?: string[];
 }
 
 // Simple email validation regex
@@ -104,7 +107,13 @@ export async function POST(request: NextRequest) {
     
     // Parse request body
     const body = await request.json() as SubscriptionRequest;
-    const { email } = body;
+    const { email, newsletters } = body;
+    
+    // Validate newsletter IDs if provided
+    const validIds = getValidNewsletterIds();
+    const selectedNewsletters = Array.isArray(newsletters)
+      ? newsletters.filter((id): id is string => typeof id === 'string' && validIds.includes(id))
+      : validIds; // Default to all newsletters if none specified
     
     // Validate email
     if (!email || typeof email !== 'string') {
@@ -160,7 +169,7 @@ export async function POST(request: NextRequest) {
           },
           body: JSON.stringify({
             email: normalizedEmail,
-            tags: ['crypto-news', 'website-signup'],
+            tags: ['crypto-news', 'website-signup', ...selectedNewsletters],
           }),
         });
         
@@ -249,12 +258,13 @@ export async function POST(request: NextRequest) {
     
     // If no external service is configured, log and accept the subscription
     // In production, you might want to store this in a database
-    logger.info(`Newsletter subscription: ${normalizedEmail}`);
+    logger.info(`Newsletter subscription: ${normalizedEmail} -> [${selectedNewsletters.join(', ')}]`);
     
     return NextResponse.json({
       success: true,
       message: 'Successfully subscribed! Thank you for joining.',
       subscribed: true,
+      newsletters: selectedNewsletters,
     } as SubscriptionResponse);
     
   } catch (error) {

@@ -37,18 +37,23 @@ describe('ResendProvider', () => {
   });
 
   it('throws on API error', async () => {
-    vi.stubGlobal('fetch', vi.fn().mockResolvedValue({
-      ok: false,
-      status: 422,
-      text: () => Promise.resolve('Validation failed'),
-    }));
+    vi.stubGlobal(
+      'fetch',
+      vi.fn().mockResolvedValue({
+        ok: false,
+        status: 422,
+        text: () => Promise.resolve('Validation failed'),
+      }),
+    );
 
     const provider = new ResendProvider('test_key');
-    await expect(provider.send({
-      to: 'user@test.com',
-      subject: 'Test',
-      html: '<p>Hello</p>',
-    })).rejects.toThrow('Resend API error (422): Validation failed');
+    await expect(
+      provider.send({
+        to: 'user@test.com',
+        subject: 'Test',
+        html: '<p>Hello</p>',
+      }),
+    ).rejects.toThrow('Resend API error (422): Validation failed');
   });
 });
 

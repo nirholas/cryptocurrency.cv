@@ -342,6 +342,8 @@ export default async function AboutPage({ params }: Props) {
           </h2>
           <p className="text-[var(--color-text-secondary)] text-center max-w-2xl mx-auto mb-8">
             We aggregate from the most reputable crypto and financial news outlets worldwide.
+            Learn more about our sourcing methodology in our{" "}
+            <a href="/editorial-policy" className="text-[var(--color-accent)] underline hover:opacity-80">Editorial Policy</a>.
           </p>
           <div className="flex flex-wrap justify-center gap-3 max-w-3xl mx-auto">
             {trustedSources.map((source) => (
@@ -425,11 +427,18 @@ export default async function AboutPage({ params }: Props) {
             translating the interface, or improving documentation — every
             contribution matters.
           </p>
-          <Button variant="outline" asChild>
-            <a href="https://github.com/nirholas/free-crypto-news/graphs/contributors" target="_blank" rel="noopener noreferrer">
-              <Users className="mr-1 h-4 w-4" /> Meet Our Contributors
-            </a>
-          </Button>
+          <div className="flex gap-3 flex-wrap justify-center">
+            <Button variant="primary" asChild>
+              <Link href="/team">
+                <Users className="mr-1 h-4 w-4" /> Meet the Team
+              </Link>
+            </Button>
+            <Button variant="outline" asChild>
+              <a href="https://github.com/nirholas/free-crypto-news/graphs/contributors" target="_blank" rel="noopener noreferrer">
+                <Users className="mr-1 h-4 w-4" /> View Contributors on GitHub
+              </a>
+            </Button>
+          </div>
         </section>
 
         {/* Roadmap */}

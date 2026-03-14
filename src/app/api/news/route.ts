@@ -69,7 +69,7 @@ export const GET = instrumented(
       return validation.error;
     }
 
-    const { limit, source, category, from, to, page, per_page, lang, quality } = validation.data;
+    const { limit, source, category, from, to, page, per_page, lang, quality, contentType } = validation.data;
     const sort = request.nextUrl.searchParams.get('sort'); // 'impact' → sort by AI impact score
     const sources = request.nextUrl.searchParams.get('sources'); // 'homepage' → curated T1/T2 only
 
@@ -92,6 +92,12 @@ export const GET = instrumented(
         homepageOnly: sources === 'homepage',
         quality,
       });
+
+      // Filter by contentType if specified
+      if (contentType) {
+        data.articles = data.articles.filter((a) => a.contentType === contentType);
+        data.totalCount = data.articles.length;
+      }
 
       // Free-tier: cap at 3 articles, strip full content, add upgrade notice
       let articles = data.articles;

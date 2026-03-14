@@ -1,52 +1,213 @@
-import React from 'react';
-import Head from 'next/head';
+import { setRequestLocale } from "next-intl/server";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import { generateSEOMetadata } from "@/lib/seo";
+import { cn } from "@/lib/utils";
+import type { Metadata } from "next";
 
-export default function EthicsPage() {
+type Props = {
+  params: Promise<{ locale: string }>;
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  return generateSEOMetadata({
+    title: "Ethics Statement — Crypto Vision News",
+    description:
+      "Core ethical principles and compliance standards for Crypto Vision News. Accuracy, transparency, independence, accessibility, privacy, and open source.",
+    path: "/ethics",
+    locale,
+    tags: ["ethics", "principles", "compliance", "GDPR", "transparency", "open source", "crypto news"],
+  });
+}
+
+export default async function EthicsPage({ params }: Props) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
   return (
     <>
-      <Head>
-        <title>Ethics Statement | free-crypto-news</title>
-        <meta
-          name="description"
-          content="Core ethical principles and compliance standards for free-crypto-news."
-        />
-      </Head>
-      <main className="prose mx-auto py-8">
-        <h1>Ethics Statement</h1>
-        <section>
-          <h2>Core Principles</h2>
-          <ol>
-            <li>
-              <strong>Accuracy</strong> — We only aggregate from verified news sources
-            </li>
-            <li>
-              <strong>Transparency</strong> — Our algorithms and data sources are documented
-            </li>
-            <li>
-              <strong>Independence</strong> — No commercial relationship influences content ranking
-            </li>
-            <li>
-              <strong>Accessibility</strong> — Free tier always available, no paywalls on aggregated
-              news
-            </li>
-            <li>
-              <strong>Privacy</strong> — Minimal data collection, no tracking beyond analytics
-            </li>
-            <li>
-              <strong>Open Source</strong> — Our code is publicly auditable
-            </li>
-          </ol>
-        </section>
-        <section>
-          <h2>Compliance</h2>
-          <ul>
-            <li>GDPR compliant</li>
-            <li>No misleading financial claims</li>
-            <li>Age-appropriate content only</li>
-            <li>Respect for intellectual property (proper attribution, linking to source)</li>
-          </ul>
-        </section>
+      <Header />
+      <main className="container-main py-10">
+        {/* Hero */}
+        <div className="mb-10">
+          <h1 className="font-serif text-3xl md:text-4xl font-bold mb-3 text-[var(--color-text-primary)]">
+            Ethics Statement
+          </h1>
+          <p className="text-sm text-[var(--color-text-tertiary)]">
+            Last updated: March 1, 2026
+          </p>
+        </div>
+
+        <div className="max-w-3xl">
+          <div className="prose dark:prose-invert max-w-none text-[var(--color-text-secondary)] leading-relaxed [&_a]:text-[var(--color-accent)] [&_a]:underline [&_a]:hover:opacity-80 [&_h2]:text-[var(--color-text-primary)] [&_h3]:text-[var(--color-text-primary)] [&_strong]:text-[var(--color-text-primary)] print:text-black">
+            <p className="text-lg mb-8">
+              This ethics statement outlines the core principles that guide
+              everything we do at Crypto Vision News. For detailed guidelines on
+              how we select sources, curate content, and handle corrections, see
+              our full{" "}
+              <a href="/editorial-policy">Editorial Policy</a>.
+            </p>
+
+            {/* Core Principles */}
+            <section className="mb-10">
+              <h2 className="font-serif text-2xl font-bold mb-6 text-[var(--color-text-primary)]">
+                Core Principles
+              </h2>
+              <div className="space-y-6">
+                <div className="flex gap-4">
+                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[var(--color-accent)]/10 text-sm font-bold text-[var(--color-accent)]">
+                    1
+                  </span>
+                  <div>
+                    <h3 className="font-serif text-lg font-semibold mb-1">Accuracy</h3>
+                    <p>
+                      We only aggregate from verified news sources with
+                      demonstrated editorial standards. Sources are continuously
+                      monitored and can be removed for persistent inaccuracy.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex gap-4">
+                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[var(--color-accent)]/10 text-sm font-bold text-[var(--color-accent)]">
+                    2
+                  </span>
+                  <div>
+                    <h3 className="font-serif text-lg font-semibold mb-1">Transparency</h3>
+                    <p>
+                      Our algorithms and data sources are documented. We
+                      disclose how AI is used in content curation, and our
+                      ranking criteria are publicly explained.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex gap-4">
+                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[var(--color-accent)]/10 text-sm font-bold text-[var(--color-accent)]">
+                    3
+                  </span>
+                  <div>
+                    <h3 className="font-serif text-lg font-semibold mb-1">Independence</h3>
+                    <p>
+                      No commercial relationship influences content ranking.
+                      Advertising and API partnerships are kept strictly
+                      separate from editorial decisions.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex gap-4">
+                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[var(--color-accent)]/10 text-sm font-bold text-[var(--color-accent)]">
+                    4
+                  </span>
+                  <div>
+                    <h3 className="font-serif text-lg font-semibold mb-1">Accessibility</h3>
+                    <p>
+                      A free tier is always available. We do not paywall
+                      aggregated news. Everyone deserves access to timely crypto
+                      news regardless of their ability to pay.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex gap-4">
+                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[var(--color-accent)]/10 text-sm font-bold text-[var(--color-accent)]">
+                    5
+                  </span>
+                  <div>
+                    <h3 className="font-serif text-lg font-semibold mb-1">Privacy</h3>
+                    <p>
+                      We collect minimal data and do not track users beyond
+                      anonymized analytics. No API keys are required for basic
+                      usage. See our <a href="/privacy">Privacy Policy</a> for
+                      details.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex gap-4">
+                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[var(--color-accent)]/10 text-sm font-bold text-[var(--color-accent)]">
+                    6
+                  </span>
+                  <div>
+                    <h3 className="font-serif text-lg font-semibold mb-1">Open Source</h3>
+                    <p>
+                      Our code is publicly auditable on{" "}
+                      <a
+                        href="https://github.com/nirholas/free-crypto-news"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        GitHub
+                      </a>
+                      . Anyone can inspect, fork, self-host, or contribute
+                      to the project. Transparency through code.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            {/* Compliance */}
+            <section className="mb-10">
+              <h2 className="font-serif text-2xl font-bold mb-4 text-[var(--color-text-primary)]">
+                Compliance
+              </h2>
+              <ul className="list-disc pl-5 space-y-2">
+                <li>
+                  <strong>GDPR compliant:</strong> We respect data protection
+                  regulations and provide users with control over their data.
+                </li>
+                <li>
+                  <strong>No misleading financial claims:</strong> We do not
+                  provide financial advice. All market data is informational
+                  only.
+                </li>
+                <li>
+                  <strong>Age-appropriate content only:</strong> We do not
+                  aggregate or promote content inappropriate for general
+                  audiences.
+                </li>
+                <li>
+                  <strong>Intellectual property:</strong> We respect the
+                  intellectual property of source publishers through proper
+                  attribution and always link back to the original article.
+                </li>
+              </ul>
+            </section>
+
+            {/* Related Pages */}
+            <section className="mb-10 rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] p-6">
+              <h2 className="font-serif text-lg font-bold mb-3 text-[var(--color-text-primary)]">
+                Related Policies
+              </h2>
+              <ul className="list-disc pl-5 space-y-2 mb-0">
+                <li>
+                  <a href="/editorial-policy">Editorial Policy</a> — Detailed
+                  guidelines on source selection, content curation, and
+                  corrections
+                </li>
+                <li>
+                  <a href="/privacy">Privacy Policy</a> — How we handle your
+                  data
+                </li>
+                <li>
+                  <a href="/terms">Terms of Service</a> — Usage terms for our
+                  platform and API
+                </li>
+              </ul>
+            </section>
+          </div>
+        </div>
       </main>
+      <Footer />
+
+      {/* Print styles */}
+      <style>{`
+        @media print {
+          header, footer, aside { display: none !important; }
+          main { padding: 0 !important; max-width: 100% !important; }
+          .prose { font-size: 12pt !important; color: black !important; }
+          .prose a { color: black !important; text-decoration: underline !important; }
+          .prose a::after { content: " (" attr(href) ")"; font-size: 10pt; }
+        }
+      `}</style>
     </>
   );
 }

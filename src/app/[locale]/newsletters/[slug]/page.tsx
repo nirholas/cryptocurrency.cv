@@ -146,7 +146,7 @@ export default async function NewsletterSlugPage({ params }: Props) {
         <div className="container-main pt-6">
           <Link
             href="/newsletters"
-            className="inline-flex items-center gap-1.5 text-sm text-[var(--color-text-secondary)] transition-colors hover:text-[var(--color-accent)]"
+            className="inline-flex items-center gap-1.5 text-sm text-text-secondary transition-colors hover:text-accent"
           >
             <ArrowLeft className="h-4 w-4" />
             All Newsletters
@@ -154,32 +154,32 @@ export default async function NewsletterSlugPage({ params }: Props) {
         </div>
 
         {/* Hero */}
-        <section className="border-b border-[var(--color-border)]">
+        <section className="border-b border-border">
           <div className="container-main py-10 lg:py-14">
             <div className="mb-6 flex items-start gap-4">
-              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-[var(--color-surface-secondary)]">
-                <Icon className="h-7 w-7 text-[var(--color-accent)]" />
+              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-surface-secondary">
+                <Icon className="h-7 w-7 text-accent" />
               </div>
               <div>
-                <h1 className="mb-2 font-serif text-3xl font-bold text-[var(--color-text-primary)] md:text-4xl">
+                <h1 className="mb-2 font-serif text-3xl font-bold text-text-primary md:text-4xl">
                   {newsletter.name}
                 </h1>
                 <div className="flex items-center gap-3">
                   <Badge>{FREQUENCY_LABELS[newsletter.frequency]}</Badge>
-                  <span className="text-sm text-[var(--color-text-tertiary)]">
+                  <span className="text-sm text-text-tertiary">
                     {CATEGORY_LABELS[newsletter.category]}
                   </span>
                 </div>
               </div>
             </div>
-            <p className="mb-8 max-w-2xl text-lg text-[var(--color-text-secondary)]">
+            <p className="mb-8 max-w-2xl text-lg text-text-secondary">
               {newsletter.description}
             </p>
 
             {/* Subscribe Form */}
             <div className="max-w-md">
               <NewsletterSubscribeForm newsletterIds={[newsletter.id]} />
-              <p className="mt-2 text-[11px] text-[var(--color-text-tertiary)]">
+              <p className="mt-2 text-[11px] text-text-tertiary">
                 Free forever. No spam. Unsubscribe anytime.
               </p>
             </div>
@@ -187,24 +187,24 @@ export default async function NewsletterSlugPage({ params }: Props) {
         </section>
 
         {/* Sample Issue Preview */}
-        <section className="border-b border-[var(--color-border)]">
+        <section className="border-b border-border">
           <div className="container-main py-8 lg:py-10">
             <h2 className="mb-6 font-serif text-xl font-bold">Sample Issue Preview</h2>
             <Card>
               <CardContent className="p-6">
-                <div className="rounded-lg bg-[var(--color-surface-secondary)] p-4">
-                  <div className="mb-3 flex items-center gap-2 text-xs text-[var(--color-text-tertiary)]">
+                <div className="rounded-lg bg-surface-secondary p-4">
+                  <div className="mb-3 flex items-center gap-2 text-xs text-text-tertiary">
                     <Mail className="h-3.5 w-3.5" />
                     <span>From: Free Crypto News</span>
                   </div>
-                  <div className="mb-1 text-sm font-semibold text-[var(--color-text-primary)]">
+                  <div className="mb-1 text-sm font-semibold text-text-primary">
                     Subject: {newsletter.sampleSubject}
                   </div>
-                  <div className="text-xs text-[var(--color-text-tertiary)]">
+                  <div className="text-xs text-text-tertiary">
                     To: you@example.com
                   </div>
                 </div>
-                <div className="mt-4 text-sm leading-relaxed text-[var(--color-text-secondary)]">
+                <div className="mt-4 text-sm leading-relaxed text-text-secondary">
                   <p>
                     This is a preview of what a typical {newsletter.name} email looks like. Each
                     issue includes curated content tailored to the {newsletter.category} category,
@@ -223,10 +223,10 @@ export default async function NewsletterSlugPage({ params }: Props) {
         </section>
 
         {/* Past Issues */}
-        <section className="border-b border-[var(--color-border)]">
+        <section className="border-b border-border">
           <div className="container-main py-8 lg:py-10">
             <h2 className="mb-6 font-serif text-xl font-bold">Past Issues</h2>
-            <p className="text-sm text-[var(--color-text-tertiary)]">
+            <p className="text-sm text-text-tertiary">
               Past issues will appear here once published.
             </p>
           </div>
@@ -236,16 +236,16 @@ export default async function NewsletterSlugPage({ params }: Props) {
         {faq.length > 0 && (
           <section>
             <div className="container-main py-8 lg:py-10">
-              <h2 className="mb-6 font-serif text-2xl font-bold text-[var(--color-text-primary)]">
+              <h2 className="mb-6 font-serif text-2xl font-bold text-text-primary">
                 Frequently Asked Questions
               </h2>
               <div className="max-w-2xl space-y-6">
                 {faq.map((item) => (
                   <div key={item.q}>
-                    <h3 className="mb-1 text-sm font-bold text-[var(--color-text-primary)]">
+                    <h3 className="mb-1 text-sm font-bold text-text-primary">
                       {item.q}
                     </h3>
-                    <p className="text-sm leading-relaxed text-[var(--color-text-secondary)]">
+                    <p className="text-sm leading-relaxed text-text-secondary">
                       {item.a}
                     </p>
                   </div>

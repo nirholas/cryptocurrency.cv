@@ -1,38 +1,3 @@
-  "advertise": {
-    "title": "Advertise with Free Crypto News",
-    "subtitle": "Reach millions of crypto enthusiasts, developers, and investors.",
-    "cta": "Contact Us About Advertising",
-    "audience": "Audience & Reach",
-    "apiCalls": "API Calls per Day",
-    "monthlyVisitors": "Monthly Visitors",
-    "countries": "Countries Reached",
-    "profile": "Audience Profile",
-    "profileList": [
-      "Crypto developers & engineers",
-      "DeFi traders & investors",
-      "Institutional & enterprise users",
-      "Crypto-native projects & startups"
-    ],
-    "options": "Advertising Options",
-    "sponsoredContent": "Sponsored Content",
-    "newsletter": "Newsletter Sponsorship",
-    "apiPartnership": "API Partnership",
-    "widgetSponsorship": "Widget Sponsorship",
-    "customIntegration": "Custom Integration",
-    "disclosure": "Advertising Disclosure",
-    "disclosureText": "All sponsored content is clearly labeled. Editorial independence is maintained. We reserve the right to reject any ad.",
-    "getInTouch": "Get in Touch",
-    "currentSponsors": "Current Sponsors / Partners"
-  },
-  "advertisingDisclosure": {
-    "title": "Advertising Disclosure",
-    "labeling": "How sponsored content is labeled",
-    "independence": "Editorial independence statement",
-    "influence": "Advertising does not influence editorial decisions",
-    "compensation": "Types of compensation",
-    "identification": "How to identify sponsored content",
-    "complaints": "Contact for advertising complaints"
-  },
 {
   "common": {
     "appName": "Free Crypto News",
@@ -82,7 +47,34 @@
     "about": "About",
     "compare": "Compare",
     "sentiment": "Sentiment",
-    "movers": "Top Movers"
+    "movers": "Top Movers",
+    "business": "Business",
+    "technology": "Technology",
+    "web3": "Web3",
+    "defiNews": "DeFi News"
+  },
+  "verticals": {
+    "business": {
+      "title": "Crypto Business News",
+      "description": "Corporate crypto news, funding rounds, M&A, institutional adoption, and industry partnerships."
+    },
+    "tech": {
+      "title": "Crypto Technology News",
+      "description": "Protocol upgrades, infrastructure development, developer tools, scaling solutions, and technical analysis."
+    },
+    "web3": {
+      "title": "Web3 News",
+      "description": "Decentralized applications, social platforms, gaming, metaverse, digital identity, and the decentralized internet."
+    },
+    "defiNews": {
+      "title": "DeFi News",
+      "description": "Decentralized finance news: protocol updates, yield opportunities, TVL changes, governance, and security incidents."
+    },
+    "allSubcategory": "All",
+    "latestIn": "Latest {name} News",
+    "trendingIn": "Trending in {name}",
+    "related": "Related",
+    "noArticles": "No articles found for this section."
   },
   "home": {
     "hero": {
@@ -109,6 +101,8 @@
     "sponsored": "Sponsored",
     "opinion": "Opinion",
     "analysis": "Analysis",
+    "opinionBadge": "Opinion",
+    "pressRelease": "Press Release",
     "filterBySource": "Filter by source",
     "filterByTopic": "Filter by topic",
     "filterByDate": "Filter by date",
@@ -268,11 +262,40 @@
       "technology": "Technology"
     }
   },
+  "authors": {
+    "title": "Authors",
+    "subtitle": "Browse articles by journalist and analyst across 300+ crypto news sources.",
+    "searchPlaceholder": "Search authors...",
+    "sortMostArticles": "Most Articles",
+    "sortMostRecent": "Most Recent",
+    "sortAlphabetical": "A–Z",
+    "authorsFound": "{count} {count, plural, one {author} other {authors}} found",
+    "searchResults": "for \"{query}\"",
+    "noAuthorsFound": "No authors found.",
+    "articles": "{count} {count, plural, one {article} other {articles}}",
+    "writesFor": "Writes for {sources}",
+    "firstArticle": "First article: {date}",
+    "latestArticle": "Latest: {date}",
+    "allSources": "All Sources",
+    "articlesByAuthor": "Articles by {name}",
+    "showingArticles": "Showing {shown} of {total} articles",
+    "noArticles": "No articles found for this author.",
+    "breadcrumbHome": "Home",
+    "breadcrumbAuthors": "Authors"
+  },
   "topics": {
     "title": "Topics",
     "trending": "Trending Topics",
     "popular": "Popular Topics",
     "all": "All Topics",
+    "allAZ": "All Topics A–Z",
+    "browse": "Browse all cryptocurrency news topics",
+    "articles": "{count} articles",
+    "related": "Related",
+    "relatedTopics": "Related Topics",
+    "aboutTopic": "About this topic",
+    "noArticles": "No articles found for this topic yet.",
+    "topicCount": "{count} topics",
     "bitcoin": "Bitcoin",
     "ethereum": "Ethereum",
     "defi": "DeFi",
@@ -347,6 +370,8 @@
     "disclaimer": "Not financial advice. Always do your own research.",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
+    "editorialPolicy": "Editorial Policy",
+    "ethics": "Ethics",
     "contact": "Contact",
     "api": "API",
     "documentation": "Documentation",
@@ -867,5 +892,88 @@
     "category.analysis": "Analysis",
     "category.interviews": "Interviews",
     "category.defi": "DeFi"
+  },
+  "advertise": {
+    "title": "Advertise with Free Crypto News",
+    "subtitle": "Reach millions of crypto enthusiasts, developers, and investors through our platform.",
+    "cta": "Contact Us About Advertising",
+    "audienceTitle": "Audience & Reach",
+    "apiCalls": "API Calls / Day",
+    "monthlyVisitors": "Monthly Visitors",
+    "countriesReached": "Countries Reached",
+    "profileTitle": "Audience Profile",
+    "optionsTitle": "Advertising Options",
+    "sponsoredContent": "Sponsored Content",
+    "sponsoredContentDesc": "Your article featured in our news feed with clear \"Sponsored\" labeling.",
+    "newsletter": "Newsletter Sponsorship",
+    "newsletterDesc": "Reach our email subscribers with a dedicated section in our newsletters.",
+    "apiPartnership": "API Partnership",
+    "apiPartnershipDesc": "Your data integrated as a named source in our API, reaching all downstream apps.",
+    "widgetSponsorship": "Widget Sponsorship",
+    "widgetSponsorshipDesc": "Branding on our embeddable widgets used across third-party sites.",
+    "customIntegration": "Custom Integration",
+    "customIntegrationDesc": "Bespoke partnerships tailored to your project's needs.",
+    "disclosureTitle": "Advertising Disclosure",
+    "disclosureText": "All sponsored content is clearly labeled. Editorial independence is maintained. We reserve the right to reject any advertisement that does not align with our values.",
+    "getInTouch": "Get in Touch",
+    "getInTouchDesc": "Ready to reach the crypto community? Contact our partnerships team to discuss advertising opportunities.",
+    "currentSponsors": "Current Sponsors & Partners",
+    "noSponsorsYet": "Become our first partner! We're actively looking for sponsors who share our vision for open, transparent crypto media."
+  },
+  "advertisingDisclosure": {
+    "title": "Advertising Disclosure",
+    "subtitle": "Transparency is core to our mission. Here's how we handle advertising and sponsored content.",
+    "labelingTitle": "How Sponsored Content Is Labeled",
+    "labelingText": "All sponsored content on Free Crypto News is clearly marked with a \"Sponsored\" badge. Sponsored articles appear in our news feed with distinct visual indicators so readers can immediately distinguish paid content from editorial content.",
+    "independenceTitle": "Editorial Independence",
+    "independenceText": "Our editorial team operates independently from our advertising and partnerships team. Advertisers have no influence over which stories we cover, how we cover them, or the editorial opinions expressed on our platform. This separation is fundamental to maintaining the trust of our readers.",
+    "influenceTitle": "Advertising & Editorial Separation",
+    "influenceText": "Advertising revenue does not influence our editorial decisions. We do not accept payment in exchange for favorable coverage, reviews, or rankings. Our news aggregation algorithms treat sponsored and non-sponsored sources equally in terms of ranking and display.",
+    "compensationTitle": "Types of Compensation",
+    "compensationDirect": "Direct payment — Fixed fees for sponsored content placement, newsletter sponsorships, and widget branding.",
+    "compensationAffiliate": "Affiliate partnerships — Revenue sharing from referral links, clearly disclosed when present.",
+    "compensationTokens": "Token/equity compensation — In select cases, we may accept token-based compensation from projects, always disclosed.",
+    "identificationTitle": "How to Identify Sponsored Content",
+    "identificationBadge": "Look for the \"Sponsored\" badge on articles in the news feed.",
+    "identificationLabel": "Sponsored newsletter sections are labeled \"Sponsored by [Partner Name]\".",
+    "identificationWidget": "Widget sponsorships display the sponsor's branding alongside our logo.",
+    "identificationAffiliate": "Affiliate links are marked with a disclosure notice.",
+    "complaintsTitle": "Questions or Complaints",
+    "complaintsText": "If you have questions or concerns about advertising on Free Crypto News, or if you believe sponsored content is not properly labeled, please contact us.",
+    "lastUpdated": "Last updated"
+  },
+  "team": {
+    "title": "Our Team",
+    "subtitle": "The people behind Free Crypto News — building the free and open crypto news infrastructure the industry needs.",
+    "leadership": "Leadership",
+    "contributors": "Contributors",
+    "openSourceContributors": "Open Source Contributors",
+    "contributorsCount": "Thanks to our {count} GitHub contributors who have helped build this project.",
+    "viewAllContributors": "View all contributors on GitHub",
+    "commits": "{count} commits",
+    "joinUs": "Join Us",
+    "joinUsDescription": "We're always looking for contributors. Whether you're fixing bugs, adding features, translating, or improving docs — every contribution matters.",
+    "viewOpenIssues": "View open issues on GitHub",
+    "readContributingGuide": "Read our contributing guide",
+    "meetTheTeam": "Meet the Team"
+  },
+  "opinion": {
+    "title": "Opinion & Commentary",
+    "subtitle": "Analysis, editorials, and expert perspectives from across the crypto ecosystem.",
+    "disclaimer": "Articles in this section represent the views of their authors, not Free Crypto News.",
+    "badge": "Opinion",
+    "featured": "Featured Opinion",
+    "recentOpinion": "Recent Opinion Articles",
+    "moreOpinion": "More Opinion",
+    "loadMore": "Load more",
+    "noArticles": "No opinion articles found.",
+    "filterAll": "All",
+    "filterMarkets": "Markets",
+    "filterPolicy": "Policy",
+    "filterTech": "Tech",
+    "filterDefi": "DeFi",
+    "filterBitcoin": "Bitcoin",
+    "filterEthereum": "Ethereum",
+    "byAuthor": "By {author}"
   }
 }

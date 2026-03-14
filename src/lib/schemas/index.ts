@@ -105,6 +105,7 @@ export const newsQuerySchema = z.object({
     ])
     .optional(),
   quality: z.enum(['all', 'high', 'premium']).optional(),
+  contentType: z.enum(['news', 'opinion', 'analysis', 'press-release']).optional(),
   lang: languageSchema.default('en'),
   from: z.string().optional(),
   to: z.string().optional(),

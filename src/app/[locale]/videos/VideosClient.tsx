@@ -87,8 +87,8 @@ export default function VideosClient({ initialSource }: { initialSource?: string
               className={cn(
                 'shrink-0 rounded-full px-4 py-1.5 text-sm font-medium transition-colors',
                 activeCategory === cat.value
-                  ? 'bg-[var(--color-accent)] text-white'
-                  : 'bg-[var(--color-surface-secondary)] text-[var(--color-text-secondary)] hover:bg-[var(--color-surface-tertiary)]',
+                  ? 'bg-accent text-white'
+                  : 'bg-surface-secondary text-text-secondary hover:bg-surface-tertiary',
               )}
             >
               {t(`category.${cat.value}`)}
@@ -122,7 +122,7 @@ export default function VideosClient({ initialSource }: { initialSource?: string
         </div>
       ) : videos.length === 0 ? (
         <div className="py-20 text-center">
-          <p className="text-lg text-[var(--color-text-secondary)]">{t('noVideos')}</p>
+          <p className="text-lg text-text-secondary">{t('noVideos')}</p>
         </div>
       ) : (
         <div className="space-y-10">
@@ -150,7 +150,7 @@ export default function VideosClient({ initialSource }: { initialSource?: string
               <button
                 onClick={() => fetchVideos(false)}
                 disabled={loadingMore}
-                className="rounded-lg bg-[var(--color-surface-secondary)] px-6 py-2.5 text-sm font-medium text-[var(--color-text-primary)] transition-colors hover:bg-[var(--color-surface-tertiary)] disabled:opacity-50"
+                className="rounded-lg bg-surface-secondary px-6 py-2.5 text-sm font-medium text-text-primary transition-colors hover:bg-surface-tertiary disabled:opacity-50"
               >
                 {loadingMore ? t('loading') : t('loadMore')}
               </button>
@@ -158,7 +158,7 @@ export default function VideosClient({ initialSource }: { initialSource?: string
           )}
 
           {/* Total count */}
-          <p className="text-center text-xs text-[var(--color-text-tertiary)]">
+          <p className="text-center text-xs text-text-tertiary">
             {t('showingCount', { shown: videos.length, total })}
           </p>
         </div>

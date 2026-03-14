@@ -183,7 +183,7 @@ export default async function HomePage({ params }: Props) {
 
       <main id="main-content" className="min-h-screen">
         {/* ── Hero section ── */}
-        <section className="relative overflow-hidden border-b border-[var(--color-border)]">
+        <section className="relative overflow-hidden border-b border-border">
           {/* Subtle premium background pattern */}
           <div className="pointer-events-none absolute inset-0">
             <div
@@ -194,14 +194,14 @@ export default async function HomePage({ params }: Props) {
                 backgroundSize: '32px 32px',
               }}
             />
-            <div className="absolute top-0 right-0 h-[600px] w-[600px] translate-x-1/3 -translate-y-1/2 rounded-full bg-[var(--color-accent)] opacity-[0.03] blur-[120px]" />
+            <div className="absolute top-0 right-0 h-150 w-150 translate-x-1/3 -translate-y-1/2 rounded-full bg-accent opacity-[0.03] blur-[120px]" />
           </div>
           <div className="container-main relative z-10 py-8 lg:py-10">
             {featured ? (
               <FeaturedCard article={featured} />
             ) : (
               <div className="grid gap-8 md:grid-cols-2">
-                <Skeleton className="aspect-[16/10] w-full" />
+                <Skeleton className="aspect-16/10 w-full" />
                 <div className="space-y-4">
                   <Skeleton className="h-6 w-24" />
                   <Skeleton className="h-10 w-full" />
@@ -216,7 +216,7 @@ export default async function HomePage({ params }: Props) {
 
         {/* ── Top stories grid ── */}
         {topGrid.length > 0 && (
-          <section className="border-b border-[var(--color-border)]">
+          <section className="border-b border-border">
             <div className="container-main py-8 lg:py-10">
               <SectionHeader title="Top Stories" />
               <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -234,7 +234,7 @@ export default async function HomePage({ params }: Props) {
         {/* ── Markets Snapshot ── */}
         <Suspense
           fallback={
-            <section className="border-b border-[var(--color-border)]">
+            <section className="border-b border-border">
               <div className="container-main py-6">
                 <div className="flex gap-6 overflow-hidden">
                   {Array.from({ length: 6 }).map((_, i) => (
@@ -280,13 +280,13 @@ export default async function HomePage({ params }: Props) {
         />
 
         {/* ── Latest Videos ── */}
-        <section className="border-b border-[var(--color-border)]">
+        <section className="border-b border-border">
           <div className="container-main py-8 lg:py-10">
             <div className="mb-6 flex items-center justify-between">
               <h2 className="font-serif text-xl font-bold">Latest Videos</h2>
               <Link
                 href="/videos"
-                className="text-sm font-medium text-[var(--color-accent)] transition-colors hover:text-[var(--color-accent-hover)]"
+                className="text-sm font-medium text-accent transition-colors hover:text-accent-hover"
               >
                 View all videos →
               </Link>
@@ -312,14 +312,14 @@ export default async function HomePage({ params }: Props) {
         {/* ── Top Movers (Gainers / Losers) ── */}
         <Suspense
           fallback={
-            <section className="border-b border-[var(--color-border)]">
+            <section className="border-b border-border">
               <div className="container-main py-8">
                 <Skeleton className="mb-4 h-7 w-36" />
                 <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
                   {Array.from({ length: 4 }).map((_, i) => (
                     <div
                       key={i}
-                      className="space-y-2 rounded-lg border border-[var(--color-border)] p-4"
+                      className="space-y-2 rounded-lg border border-border p-4"
                     >
                       <Skeleton className="h-5 w-24" />
                       <Skeleton className="h-6 w-20" />
@@ -355,7 +355,7 @@ export default async function HomePage({ params }: Props) {
 
               {/* Categories */}
               <div>
-                <h3 className="mb-4 border-b border-[var(--color-border)] pb-2 font-serif text-base font-bold">
+                <h3 className="mb-4 border-b border-border pb-2 font-serif text-base font-bold">
                   Sections
                 </h3>
                 <div className="flex flex-wrap gap-2">
@@ -383,22 +383,22 @@ export default async function HomePage({ params }: Props) {
               </Suspense>
 
               {/* About — editorial-focused */}
-              <div className="rounded-lg border border-[var(--color-border)] bg-[var(--color-surface-secondary)] p-5">
+              <div className="rounded-lg border border-border bg-surface-secondary p-5">
                 <h3 className="mb-3 font-serif text-base font-bold">About Free Crypto News</h3>
-                <p className="mb-4 text-sm leading-relaxed text-[var(--color-text-secondary)]">
+                <p className="mb-4 text-sm leading-relaxed text-text-secondary">
                   Real-time crypto news aggregated from {sourceCount}+ trusted sources. Covering
                   Bitcoin, Ethereum, DeFi, regulation, and emerging markets — updated every minute.
                 </p>
                 <div className="flex gap-3">
                   <Link
                     href="/about"
-                    className="text-sm font-medium text-[var(--color-accent)] transition-colors hover:text-[var(--color-accent-hover)]"
+                    className="text-sm font-medium text-accent transition-colors hover:text-accent-hover"
                   >
                     About us →
                   </Link>
                   <Link
                     href="/sources"
-                    className="text-sm font-medium text-[var(--color-text-secondary)] transition-colors hover:text-[var(--color-accent)]"
+                    className="text-sm font-medium text-text-secondary transition-colors hover:text-accent"
                   >
                     Our sources →
                   </Link>
@@ -416,7 +416,7 @@ export default async function HomePage({ params }: Props) {
               </Suspense>
 
               {/* Quick Links */}
-              <div className="rounded-lg border border-[var(--color-border)] bg-[var(--color-surface-secondary)] p-5">
+              <div className="rounded-lg border border-border bg-surface-secondary p-5">
                 <h3 className="mb-3 font-serif text-base font-bold">Explore</h3>
                 <div className="space-y-1.5">
                   {[
@@ -429,7 +429,7 @@ export default async function HomePage({ params }: Props) {
                     <Link
                       key={item.href}
                       href={item.href}
-                      className="block py-1 text-sm text-[var(--color-text-secondary)] transition-colors hover:text-[var(--color-accent)]"
+                      className="block py-1 text-sm text-text-secondary transition-colors hover:text-accent"
                     >
                       {item.label} →
                     </Link>

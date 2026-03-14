@@ -67,12 +67,12 @@ export class ResendProvider implements EmailProvider {
 export class ConsoleProvider implements EmailProvider {
   async send(params: SendEmailParams): Promise<{ id: string }> {
     const id = `console_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`;
-    console.log('[EMAIL][ConsoleProvider] Would send email:');
-    console.log(`  To:      ${params.to}`);
-    console.log(`  Subject: ${params.subject}`);
-    console.log(`  ID:      ${id}`);
+    console.info('[EMAIL][ConsoleProvider] Would send email:');
+    console.info(`  To:      ${params.to}`);
+    console.info(`  Subject: ${params.subject}`);
+    console.info(`  ID:      ${id}`);
     if (params.text) {
-      console.log(`  Text:    ${params.text.slice(0, 200)}...`);
+      console.info(`  Text:    ${params.text.slice(0, 200)}...`);
     }
     return { id };
   }

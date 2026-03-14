@@ -68,6 +68,11 @@ const staticPages = [
   { path: '/ai/brief', changeFrequency: 'hourly' as const, priority: 0.7 },
   { path: '/ai/debate', changeFrequency: 'daily' as const, priority: 0.6 },
   { path: '/ai/counter', changeFrequency: 'daily' as const, priority: 0.6 },
+  // News verticals
+  { path: '/business', changeFrequency: 'hourly' as const, priority: 0.8 },
+  { path: '/tech', changeFrequency: 'hourly' as const, priority: 0.8 },
+  { path: '/web3', changeFrequency: 'hourly' as const, priority: 0.8 },
+  { path: '/defi-news', changeFrequency: 'hourly' as const, priority: 0.8 },
   // Category pages
   { path: '/category/bitcoin', changeFrequency: 'hourly' as const, priority: 0.9 },
   { path: '/category/ethereum', changeFrequency: 'hourly' as const, priority: 0.9 },

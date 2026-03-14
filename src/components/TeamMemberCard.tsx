@@ -15,7 +15,7 @@ export function TeamMemberCard({ member, featured }: Props) {
 
   return (
     <div
-      className={`flex ${featured ? 'flex-row gap-6' : 'flex-col items-center'} rounded-xl border border-[var(--color-border)] bg-[var(--color-surface-secondary)] p-6 transition-colors hover:border-[var(--color-accent)]/50`}
+      className={`flex ${featured ? 'flex-row gap-6' : 'flex-col items-center'} rounded-xl border border-border bg-surface-secondary p-6 transition-colors hover:border-accent/50`}
     >
       {avatarUrl ? (
         <img
@@ -27,16 +27,16 @@ export function TeamMemberCard({ member, featured }: Props) {
         />
       ) : (
         <div
-          className={`flex items-center justify-center rounded-full bg-[var(--color-accent)]/10 text-3xl ${featured ? 'h-24 w-24' : 'mb-3 h-20 w-20'} shrink-0`}
+          className={`flex items-center justify-center rounded-full bg-accent/10 text-3xl ${featured ? 'h-24 w-24' : 'mb-3 h-20 w-20'} shrink-0`}
         >
           👤
         </div>
       )}
       <div className={featured ? '' : 'text-center'}>
-        <div className="text-lg font-bold text-[var(--color-text-primary)]">{member.name}</div>
-        <div className="mb-1 text-sm font-medium text-[var(--color-accent)]">{member.role}</div>
+        <div className="text-lg font-bold text-text-primary">{member.name}</div>
+        <div className="mb-1 text-sm font-medium text-accent">{member.role}</div>
         {member.bio && (
-          <p className="mb-3 text-sm leading-relaxed text-[var(--color-text-secondary)]">
+          <p className="mb-3 text-sm leading-relaxed text-text-secondary">
             {member.bio}
           </p>
         )}
@@ -47,7 +47,7 @@ export function TeamMemberCard({ member, featured }: Props) {
               target="_blank"
               rel="noopener noreferrer"
               title="GitHub"
-              className="text-[var(--color-text-tertiary)] transition-colors hover:text-[var(--color-text-primary)]"
+              className="text-text-tertiary transition-colors hover:text-text-primary"
             >
               <Github className="h-4 w-4" />
             </a>
@@ -58,7 +58,7 @@ export function TeamMemberCard({ member, featured }: Props) {
               target="_blank"
               rel="noopener noreferrer"
               title="X (Twitter)"
-              className="text-[var(--color-text-tertiary)] transition-colors hover:text-[var(--color-text-primary)]"
+              className="text-text-tertiary transition-colors hover:text-text-primary"
             >
               <Twitter className="h-4 w-4" />
             </a>
@@ -69,7 +69,7 @@ export function TeamMemberCard({ member, featured }: Props) {
               target="_blank"
               rel="noopener noreferrer"
               title="LinkedIn"
-              className="text-[var(--color-text-tertiary)] transition-colors hover:text-[var(--color-text-primary)]"
+              className="text-text-tertiary transition-colors hover:text-text-primary"
             >
               <Linkedin className="h-4 w-4" />
             </a>
