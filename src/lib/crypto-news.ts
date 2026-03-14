@@ -45,7 +45,13 @@
  */
 
 import sanitizeHtml from 'sanitize-html';
-import { SOURCE_REPUTATION_SCORES, sourcePassesQuality } from './source-tiers';
+import {
+  SOURCE_REPUTATION_SCORES,
+  sourcePassesQuality,
+  getSourceTier,
+  getSourceCredibility,
+  getSourceReputation,
+} from './source-tiers';
 
 // RSS Feed URLs for crypto news sources (200+ sources)
 const RSS_SOURCES = {

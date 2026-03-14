@@ -40,16 +40,8 @@ function tierLabel(tier: SourceTier): { text: string; className: string } {
       return { text: 'Premium', className: 'bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200' };
     case 'tier3':
       return { text: 'Established', className: 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200' };
-    case 'tier4':
-      return { text: 'Aggregator', className: 'bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-300' };
     case 'research':
-      return { text: 'Research', className: 'bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-200' };
-    case 'fintech':
-      return { text: 'Fintech', className: 'bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300' };
-  }
-}
-
-function credibilityBar(score: number): { label: string; color: string; width: string } {
+      return { text: 'Research', className: 'bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-2
   if (score >= 0.9) return { label: 'Very High', color: 'bg-emerald-500', width: `${score * 100}%` };
   if (score >= 0.8) return { label: 'High', color: 'bg-green-500', width: `${score * 100}%` };
   if (score >= 0.7) return { label: 'Good', color: 'bg-lime-500', width: `${score * 100}%` };

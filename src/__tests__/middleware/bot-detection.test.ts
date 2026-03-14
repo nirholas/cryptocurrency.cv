@@ -28,7 +28,10 @@ function createContext(overrides: Partial<MiddlewareContext> = {}): MiddlewareCo
   };
 }
 
-function createContextWithUA(ua: string, overrides: Partial<MiddlewareContext> = {}): MiddlewareContext {
+function createContextWithUA(
+  ua: string,
+  overrides: Partial<MiddlewareContext> = {},
+): MiddlewareContext {
   const url = new URL('http://localhost:3000' + (overrides.pathname || '/api/test'));
   const request = new NextRequest(url, {
     headers: new Headers({ 'user-agent': ua }),
@@ -56,7 +59,9 @@ describe('isBlockedBot', () => {
   });
 
   it('should allow regular browsers', () => {
-    expect(isBlockedBot('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36')).toBe(false);
+    expect(isBlockedBot('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36')).toBe(
+      false,
+    );
   });
 
   it('should allow x402 clients', () => {
@@ -81,7 +86,7 @@ describe('isApiClient', () => {
   it('should detect JSON-accepting clients', () => {
     const url = new URL('http://localhost:3000/api/test');
     const request = new NextRequest(url, {
-      headers: new Headers({ 'accept': 'application/json' }),
+      headers: new Headers({ accept: 'application/json' }),
     });
     expect(isApiClient(request)).toBe(true);
   });
@@ -89,7 +94,7 @@ describe('isApiClient', () => {
   it('should not flag browser visitors', () => {
     const url = new URL('http://localhost:3000/api/test');
     const request = new NextRequest(url, {
-      headers: new Headers({ 'accept': 'text/html, application/json' }),
+      headers: new Headers({ accept: 'text/html, application/json' }),
     });
     expect(isApiClient(request)).toBe(false);
   });

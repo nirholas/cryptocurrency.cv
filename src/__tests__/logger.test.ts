@@ -39,7 +39,7 @@ const mockPino = vi.fn().mockReturnValue({
 });
 
 // Attach stdSerializers to the mock
-mockPino.stdSerializers = {
+(mockPino as unknown as Record<string, unknown>).stdSerializers = {
   err: vi.fn(),
   req: vi.fn(),
   res: vi.fn(),
@@ -117,7 +117,7 @@ describe('Logger', () => {
   it('should use pino-pretty in development', async () => {
     vi.resetModules();
     const prevEnv = process.env.NODE_ENV;
-    process.env.NODE_ENV = 'development';
+    (process.env as Record<string, string | undefined>).NODE_ENV = 'development';
     vi.doMock('pino', () => ({ default: mockPino }));
     await import('@/lib/logger');
 
@@ -127,13 +127,13 @@ describe('Logger', () => {
       options: { colorize: true, translateTime: 'SYS:standard' },
     });
 
-    process.env.NODE_ENV = prevEnv;
+    (process.env as Record<string, string | undefined>).NODE_ENV = prevEnv;
   });
 
   it('should output JSON in production', async () => {
     vi.resetModules();
     const prevEnv = process.env.NODE_ENV;
-    process.env.NODE_ENV = 'production';
+    (process.env as Record<string, string | undefined>).NODE_ENV = 'production';
     vi.doMock('pino', () => ({ default: mockPino }));
     await import('@/lib/logger');
 
@@ -141,7 +141,7 @@ describe('Logger', () => {
     expect(pinoConfig.transport).toBeUndefined();
     expect(pinoConfig.level).toBe('info');
 
-    process.env.NODE_ENV = prevEnv;
+    (process.env as Record<string, string | undefined>).NODE_ENV = prevEnv;
   });
 
   it('should respect LOG_LEVEL environment variable', async () => {

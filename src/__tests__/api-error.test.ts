@@ -115,7 +115,7 @@ describe('createApiError', () => {
 
   it('should exclude details in production', async () => {
     const origEnv = process.env.NODE_ENV;
-    process.env.NODE_ENV = 'production';
+    (process.env as Record<string, string | undefined>).NODE_ENV = 'production';
     const response = createApiError({
       code: 'INTERNAL_ERROR',
       message: 'Error',
@@ -123,7 +123,7 @@ describe('createApiError', () => {
     });
     const body: ApiErrorResponse = await response.json();
     expect(body.details).toBeUndefined();
-    process.env.NODE_ENV = origEnv;
+    (process.env as Record<string, string | undefined>).NODE_ENV = origEnv;
   });
 
   it('should map status codes correctly', async () => {

@@ -10,7 +10,7 @@
 
 /**
  * API Schema Definitions
- * 
+ *
  * Centralized Zod schemas for:
  * - Request validation
  * - Response validation
@@ -45,13 +45,24 @@ export const dateRangeSchema = z.object({
  * Language parameter
  */
 export const languageSchema = z.enum([
-  'en', 'es', 'fr', 'de', 'it', 'pt', 'ru', 'ja', 'ko', 'zh', 'ar',
+  'en',
+  'es',
+  'fr',
+  'de',
+  'it',
+  'pt',
+  'ru',
+  'ja',
+  'ko',
+  'zh',
+  'ar',
 ]);
 
 /**
  * Coin ID parameter
  */
-export const coinIdSchema = z.string()
+export const coinIdSchema = z
+  .string()
   .min(1)
   .max(50)
   .regex(/^[a-z0-9-]+$/, 'Coin ID must be lowercase alphanumeric with hyphens');
@@ -63,13 +74,36 @@ export const coinIdSchema = z.string()
 export const newsQuerySchema = z.object({
   limit: z.coerce.number().int().min(1).max(100).default(10),
   source: z.string().optional(),
-  category: z.enum([
-    'general', 'bitcoin', 'defi', 'nft', 'research', 'institutional',
-    'etf', 'derivatives', 'onchain', 'macro', 'quant',
-    'journalism', 'ethereum', 'asia', 'tradfi', 'mainstream', 'mining',
-    'gaming', 'altl1', 'stablecoin', 'geopolitical', 'security', 'developer',
-    'layer2', 'solana', 'trading',
-  ]).optional(),
+  category: z
+    .enum([
+      'general',
+      'bitcoin',
+      'defi',
+      'nft',
+      'research',
+      'institutional',
+      'etf',
+      'derivatives',
+      'onchain',
+      'macro',
+      'quant',
+      'journalism',
+      'ethereum',
+      'asia',
+      'tradfi',
+      'mainstream',
+      'mining',
+      'gaming',
+      'altl1',
+      'stablecoin',
+      'geopolitical',
+      'security',
+      'developer',
+      'layer2',
+      'solana',
+      'trading',
+    ])
+    .optional(),
   quality: z.enum(['all', 'high', 'premium']).optional(),
   lang: languageSchema.default('en'),
   from: z.string().optional(),
@@ -106,11 +140,9 @@ export const newsResponseSchema = z.object({
 export const v1CoinsQuerySchema = z.object({
   page: z.coerce.number().int().min(1).default(1),
   per_page: z.coerce.number().int().min(1).max(250).default(100),
-  order: z.enum([
-    'market_cap_desc', 'market_cap_asc',
-    'volume_desc', 'volume_asc',
-    'id_asc', 'id_desc',
-  ]).default('market_cap_desc'),
+  order: z
+    .enum(['market_cap_desc', 'market_cap_asc', 'volume_desc', 'volume_asc', 'id_asc', 'id_desc'])
+    .default('market_cap_desc'),
   ids: z.string().optional(), // Comma-separated
   sparkline: z.enum(['true', 'false']).default('false'),
 });
@@ -154,11 +186,13 @@ export const aiSignalSchema = z.object({
 });
 
 export const portfolioAnalyticsRequestSchema = z.object({
-  holdings: z.array(z.object({
-    coinId: z.string(),
-    amount: z.number().positive(),
-    purchasePrice: z.number().positive().optional(),
-  })),
+  holdings: z.array(
+    z.object({
+      coinId: z.string(),
+      amount: z.number().positive(),
+      purchasePrice: z.number().positive().optional(),
+    }),
+  ),
   currency: z.enum(['usd', 'eur', 'gbp', 'jpy']).default('usd'),
   period: z.enum(['24h', '7d', '30d', '90d', '1y']).default('30d'),
 });
@@ -169,9 +203,9 @@ export const portfolioAnalyticsRequestSchema = z.object({
 
 export const marketCompareQuerySchema = z.object({
   coins: z.string().regex(/^[a-z0-9-,]+$/, 'Must be comma-separated coin IDs'),
-  metrics: z.array(z.enum([
-    'price', 'market_cap', 'volume', 'volatility', 'correlation',
-  ])).optional(),
+  metrics: z
+    .array(z.enum(['price', 'market_cap', 'volume', 'volatility', 'correlation']))
+    .optional(),
 });
 
 export const ohlcQuerySchema = z.object({
@@ -195,12 +229,7 @@ export const adminStatsQuerySchema = z.object({
 
 export const webhookCreateSchema = z.object({
   url: z.string().url(),
-  events: z.array(z.enum([
-    'news.published',
-    'price.alert',
-    'whale.alert',
-    'signal.generated',
-  ])),
+  events: z.array(z.enum(['news.published', 'price.alert', 'whale.alert', 'signal.generated'])),
   secret: z.string().min(16).optional(),
   enabled: z.boolean().default(true),
 });
@@ -246,11 +275,35 @@ export const marketCoinsQuerySchema = z.object({
 });
 
 export const marketCompareQuerySchema2 = z.object({
-  ids: z.string().min(1).regex(/^[a-z0-9,-]+$/, 'Invalid coin IDs format'),
+  ids: z
+    .string()
+    .min(1)
+    .regex(/^[a-z0-9,-]+$/, 'Invalid coin IDs format'),
 });
 
 export const internationalNewsQuerySchema = z.object({
-  language: z.enum(['ko', 'zh', 'ja', 'es', 'pt', 'de', 'fr', 'hi', 'fa', 'tr', 'ru', 'it', 'id', 'vi', 'th', 'pl', 'nl', 'ar']).optional(),
+  language: z
+    .enum([
+      'ko',
+      'zh',
+      'ja',
+      'es',
+      'pt',
+      'de',
+      'fr',
+      'hi',
+      'fa',
+      'tr',
+      'ru',
+      'it',
+      'id',
+      'vi',
+      'th',
+      'pl',
+      'nl',
+      'ar',
+    ])
+    .optional(),
   region: z.enum(['asia', 'europe', 'latam', 'all']).default('all'),
   translate: z.enum(['true', 'false']).default('false'),
   limit: z.coerce.number().int().min(1).max(100).default(20),

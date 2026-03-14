@@ -10,7 +10,7 @@
 
 /**
  * Archive V2 Library
- * 
+ *
  * Enhanced archive system with full enrichment support.
  * Provides query capabilities for the new JSONL-based archive format.
  */
@@ -24,29 +24,29 @@ import { type NewsArticle, getLatestNews, getHomepageNews } from './crypto-news'
 /**
  * Generate a URL-friendly slug from article title and date
  * Format: "bitcoin-hits-new-all-time-high-2026-01-24"
- * 
+ *
  * This creates human-readable, SEO-friendly URLs for archived articles.
  */
 export function generateArticleSlug(title: string, date?: string): string {
   // Clean and slugify the title
   let slug = title
     .toLowerCase()
-    .replace(/['']/g, '')                    // Remove apostrophes
-    .replace(/[^a-z0-9\s-]/g, '')           // Remove special chars
-    .replace(/\s+/g, '-')                    // Spaces to dashes
-    .replace(/-+/g, '-')                     // Collapse multiple dashes
-    .replace(/^-|-$/g, '')                   // Trim leading/trailing dashes
-    .slice(0, 60);                           // Limit length
-  
+    .replace(/['']/g, '') // Remove apostrophes
+    .replace(/[^a-z0-9\s-]/g, '') // Remove special chars
+    .replace(/\s+/g, '-') // Spaces to dashes
+    .replace(/-+/g, '-') // Collapse multiple dashes
+    .replace(/^-|-$/g, '') // Trim leading/trailing dashes
+    .slice(0, 60); // Limit length
+
   // Remove trailing dash if we cut mid-word
   slug = slug.replace(/-$/, '');
-  
+
   // Add date suffix for uniqueness (YYYY-MM-DD)
   if (date) {
     const dateStr = new Date(date).toISOString().split('T')[0];
     slug = `${slug}-${dateStr}`;
   }
-  
+
   return slug || 'untitled';
 }
 
@@ -74,7 +74,7 @@ type NextFetchRequestConfig = RequestInit & {
 
 export interface EnrichedArticle {
   id: string;
-  slug?: string;              // SEO-friendly URL slug (e.g., "bitcoin-hits-ath-2026-01-24")
+  slug?: string; // SEO-friendly URL slug (e.g., "bitcoin-hits-ath-2026-01-24")
   schema_version: string;
   title: string;
   link: string;
@@ -193,9 +193,9 @@ const GITHUB_BASE = 'https://raw.githubusercontent.com/nirholas/free-crypto-news
 export async function getArchiveV2Stats(): Promise<ArchiveV2Stats | null> {
   try {
     const response = await fetch(`${GITHUB_BASE}/meta/stats.json`, {
-      next: { revalidate: 300 } // Cache for 5 minutes
+      next: { revalidate: 300 }, // Cache for 5 minutes
     } as NextFetchRequestConfig);
-    
+
     if (!response.ok) return null;
     return await response.json();
   } catch {
@@ -206,12 +206,14 @@ export async function getArchiveV2Stats(): Promise<ArchiveV2Stats | null> {
 /**
  * Fetch V2 archive index (for fast lookups)
  */
-export async function getArchiveV2Index(type: 'by-source' | 'by-ticker' | 'by-date'): Promise<Record<string, string[]> | null> {
+export async function getArchiveV2Index(
+  type: 'by-source' | 'by-ticker' | 'by-date',
+): Promise<Record<string, string[]> | null> {
   try {
     const response = await fetch(`${GITHUB_BASE}/indexes/${type}.json`, {
-      next: { revalidate: 300 }
+      next: { revalidate: 300 },
     } as NextFetchRequestConfig);
-    
+
     if (!response.ok) return null;
     return await response.json();
   } catch {
@@ -224,8 +226,11 @@ export async function getArchiveV2Index(type: 'by-source' | 'by-ticker' | 'by-da
  */
 function parseJsonl(content: string): EnrichedArticle[] {
   const articles: EnrichedArticle[] = [];
-  const lines = content.trim().split('\n').filter(line => line.trim());
-  
+  const lines = content
+    .trim()
+    .split('\n')
+    .filter((line) => line.trim());
+
   for (const line of lines) {
     try {
       articles.push(JSON.parse(line));
@@ -233,7 +238,7 @@ function parseJsonl(content: string): EnrichedArticle[] {
       // Skip malformed lines
     }
   }
-  
+
   return articles;
 }
 
@@ -243,11 +248,11 @@ function parseJsonl(content: string): EnrichedArticle[] {
 export async function getArchiveV2Month(yearMonth: string): Promise<EnrichedArticle[]> {
   try {
     const response = await fetch(`${GITHUB_BASE}/articles/${yearMonth}.jsonl`, {
-      next: { revalidate: 3600 } // Cache for 1 hour
+      next: { revalidate: 3600 }, // Cache for 1 hour
     } as NextFetchRequestConfig);
-    
+
     if (!response.ok) return [];
-    
+
     const content = await response.text();
     return parseJsonl(content);
   } catch {
@@ -262,14 +267,13 @@ export async function getArchiveV2Snapshot(
   year: string,
   month: string,
   day: string,
-  hour: string
+  hour: string,
 ): Promise<ArchiveSnapshot | null> {
   try {
-    const response = await fetch(
-      `${GITHUB_BASE}/snapshots/${year}/${month}/${day}/${hour}.json`,
-      { next: { revalidate: 3600 } } as NextFetchRequestConfig
-    );
-    
+    const response = await fetch(`${GITHUB_BASE}/snapshots/${year}/${month}/${day}/${hour}.json`, {
+      next: { revalidate: 3600 },
+    } as NextFetchRequestConfig);
+
     if (!response.ok) return null;
     return await response.json();
   } catch {
@@ -298,17 +302,15 @@ export async function queryArchiveV2(options: ArchiveV2QueryOptions): Promise<{
     sentiment,
     tags,
     limit = 50,
-    offset = 0
+    offset = 0,
   } = options;
 
   // Determine which months to fetch
   const now = new Date();
-  const startMonth = startDate 
-    ? startDate.substring(0, 7) 
+  const startMonth = startDate
+    ? startDate.substring(0, 7)
     : `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}`;
-  const endMonth = endDate 
-    ? endDate.substring(0, 7) 
-    : startMonth;
+  const endMonth = endDate ? endDate.substring(0, 7) : startMonth;
 
   // Generate list of months to fetch
   const months: string[] = [];
@@ -328,50 +330,50 @@ export async function queryArchiveV2(options: ArchiveV2QueryOptions): Promise<{
   const monthsToFetch = months.slice(-6);
 
   // Fetch articles from each month
-  const articlePromises = monthsToFetch.map(m => getArchiveV2Month(m));
+  const articlePromises = monthsToFetch.map((m) => getArchiveV2Month(m));
   const articleArrays = await Promise.all(articlePromises);
-  
+
   let allArticles = articleArrays.flat();
 
   // Apply filters
   if (startDate) {
-    allArticles = allArticles.filter(a => 
-      (a.first_seen >= startDate) || (a.pub_date && a.pub_date >= startDate)
+    allArticles = allArticles.filter(
+      (a) => a.first_seen >= startDate || (a.pub_date && a.pub_date >= startDate),
     );
   }
 
   if (endDate) {
     const endDatePlusOne = endDate + 'T23:59:59.999Z';
-    allArticles = allArticles.filter(a => 
-      (a.first_seen <= endDatePlusOne) || (a.pub_date && a.pub_date <= endDatePlusOne)
+    allArticles = allArticles.filter(
+      (a) => a.first_seen <= endDatePlusOne || (a.pub_date && a.pub_date <= endDatePlusOne),
     );
   }
 
   if (source) {
     const sourceLower = source.toLowerCase();
-    allArticles = allArticles.filter(a => 
-      a.source.toLowerCase().includes(sourceLower) ||
-      a.source_key.toLowerCase().includes(sourceLower)
+    allArticles = allArticles.filter(
+      (a) =>
+        a.source.toLowerCase().includes(sourceLower) ||
+        a.source_key.toLowerCase().includes(sourceLower),
     );
   }
 
   if (ticker) {
     const tickerUpper = ticker.toUpperCase();
-    allArticles = allArticles.filter(a => 
-      a.tickers.includes(tickerUpper)
-    );
+    allArticles = allArticles.filter((a) => a.tickers.includes(tickerUpper));
   }
 
   if (search) {
     const searchLower = search.toLowerCase();
-    allArticles = allArticles.filter(a =>
-      a.title.toLowerCase().includes(searchLower) ||
-      a.description?.toLowerCase().includes(searchLower)
+    allArticles = allArticles.filter(
+      (a) =>
+        a.title.toLowerCase().includes(searchLower) ||
+        a.description?.toLowerCase().includes(searchLower),
     );
   }
 
   if (sentiment) {
-    allArticles = allArticles.filter(a => {
+    allArticles = allArticles.filter((a) => {
       if (sentiment === 'positive') {
         return a.sentiment.label === 'positive' || a.sentiment.label === 'very_positive';
       } else if (sentiment === 'negative') {
@@ -383,15 +385,11 @@ export async function queryArchiveV2(options: ArchiveV2QueryOptions): Promise<{
   }
 
   if (tags && tags.length > 0) {
-    allArticles = allArticles.filter(a =>
-      tags.some(tag => a.tags.includes(tag))
-    );
+    allArticles = allArticles.filter((a) => tags.some((tag) => a.tags.includes(tag)));
   }
 
   // Sort by first_seen descending
-  allArticles.sort((a, b) => 
-    new Date(b.first_seen).getTime() - new Date(a.first_seen).getTime()
-  );
+  allArticles.sort((a, b) => new Date(b.first_seen).getTime() - new Date(a.first_seen).getTime());
 
   const total = allArticles.length;
   const paginatedArticles = allArticles.slice(offset, offset + limit);
@@ -402,21 +400,18 @@ export async function queryArchiveV2(options: ArchiveV2QueryOptions): Promise<{
     pagination: {
       limit,
       offset,
-      hasMore: offset + limit < total
-    }
+      hasMore: offset + limit < total,
+    },
   };
 }
 
 /**
  * Get articles by ticker
  */
-export async function getArticlesByTicker(
-  ticker: string, 
-  limit = 50
-): Promise<EnrichedArticle[]> {
+export async function getArticlesByTicker(ticker: string, limit = 50): Promise<EnrichedArticle[]> {
   const result = await queryArchiveV2({
     ticker: ticker.toUpperCase(),
-    limit
+    limit,
   });
   return result.articles;
 }
@@ -424,13 +419,10 @@ export async function getArticlesByTicker(
 /**
  * Get articles by source
  */
-export async function getArticlesBySource(
-  source: string, 
-  limit = 50
-): Promise<EnrichedArticle[]> {
+export async function getArticlesBySource(source: string, limit = 50): Promise<EnrichedArticle[]> {
   const result = await queryArchiveV2({
     source,
-    limit
+    limit,
   });
   return result.articles;
 }
@@ -441,7 +433,7 @@ export async function getArticlesBySource(
 export async function getTrendingTickers(hours = 24): Promise<{ ticker: string; count: number }[]> {
   const now = new Date();
   const tickerCounts: Record<string, number> = {};
-  
+
   // Fetch recent snapshots
   for (let i = 0; i < Math.min(hours, 24); i++) {
     const date = new Date(now.getTime() - i * 60 * 60 * 1000);
@@ -449,16 +441,16 @@ export async function getTrendingTickers(hours = 24): Promise<{ ticker: string; 
     const month = String(date.getUTCMonth() + 1).padStart(2, '0');
     const day = String(date.getUTCDate()).padStart(2, '0');
     const hour = String(date.getUTCHours()).padStart(2, '0');
-    
+
     const snapshot = await getArchiveV2Snapshot(year, month, day, hour);
-    
+
     if (snapshot?.top_tickers) {
       for (const { ticker, mention_count } of snapshot.top_tickers) {
         tickerCounts[ticker] = (tickerCounts[ticker] || 0) + mention_count;
       }
     }
   }
-  
+
   return Object.entries(tickerCounts)
     .map(([ticker, count]) => ({ ticker, count }))
     .sort((a, b) => b.count - a.count)
@@ -468,29 +460,36 @@ export async function getTrendingTickers(hours = 24): Promise<{ ticker: string; 
 /**
  * Get market context history
  */
-export async function getMarketHistory(yearMonth: string): Promise<Array<{
-  timestamp: string;
-  btc_price: number | null;
-  eth_price: number | null;
-  fear_greed_index: number | null;
-}>> {
+export async function getMarketHistory(yearMonth: string): Promise<
+  Array<{
+    timestamp: string;
+    btc_price: number | null;
+    eth_price: number | null;
+    fear_greed_index: number | null;
+  }>
+> {
   try {
     const response = await fetch(`${GITHUB_BASE}/market/${yearMonth}.jsonl`, {
-      next: { revalidate: 3600 }
+      next: { revalidate: 3600 },
     } as NextFetchRequestConfig);
-    
+
     if (!response.ok) return [];
-    
+
     const content = await response.text();
-    const lines = content.trim().split('\n').filter(l => l.trim());
-    
-    return lines.map(line => {
-      try {
-        return JSON.parse(line);
-      } catch {
-        return null;
-      }
-    }).filter(Boolean);
+    const lines = content
+      .trim()
+      .split('\n')
+      .filter((l) => l.trim());
+
+    return lines
+      .map((line) => {
+        try {
+          return JSON.parse(line);
+        } catch {
+          return null;
+        }
+      })
+      .filter(Boolean);
   } catch {
     return [];
   }
@@ -508,7 +507,7 @@ export function toNewsArticle(enriched: EnrichedArticle): NewsArticle {
     source: enriched.source,
     sourceKey: enriched.source_key,
     category: enriched.category as 'general' | 'bitcoin' | 'defi',
-    timeAgo: getTimeAgo(enriched.first_seen)
+    timeAgo: getTimeAgo(enriched.first_seen),
   };
 }
 
@@ -520,7 +519,7 @@ export function generateArticleId(url: string): string {
   let hash = 0;
   for (let i = 0; i < url.length; i++) {
     const char = url.charCodeAt(i);
-    hash = ((hash << 5) - hash) + char;
+    hash = (hash << 5) - hash + char;
     hash = hash & hash;
   }
   return Math.abs(hash).toString(16).padStart(16, '0').slice(0, 16);
@@ -556,13 +555,12 @@ export async function getArticleById(idOrSlug: string): Promise<EnrichedArticle 
 
   // 1. Primary: KV-based archive service
   try {
-    const { getArticleById: kvGetById, getArticleBySlug: kvGetBySlug } = await import('./archive-service');
-    
+    const { getArticleById: kvGetById, getArticleBySlug: kvGetBySlug } =
+      await import('./archive-service');
+
     const isLegacy = isLegacyId(idOrSlug);
-    const kvArticle = isLegacy 
-      ? await kvGetById(idOrSlug)
-      : await kvGetBySlug(idOrSlug);
-    
+    const kvArticle = isLegacy ? await kvGetById(idOrSlug) : await kvGetBySlug(idOrSlug);
+
     if (kvArticle) {
       return {
         id: kvArticle.id,
@@ -583,11 +581,13 @@ export async function getArticleById(idOrSlug: string): Promise<EnrichedArticle 
         entities: kvArticle.entities,
         tags: kvArticle.tags,
         sentiment: kvArticle.sentiment,
-        market_context: kvArticle.marketContext ? {
-          btc_price: kvArticle.marketContext.btcPrice,
-          eth_price: kvArticle.marketContext.ethPrice,
-          fear_greed_index: kvArticle.marketContext.fearGreedIndex,
-        } : null,
+        market_context: kvArticle.marketContext
+          ? {
+              btc_price: kvArticle.marketContext.btcPrice,
+              eth_price: kvArticle.marketContext.ethPrice,
+              fear_greed_index: kvArticle.marketContext.fearGreedIndex,
+            }
+          : null,
         content_hash: kvArticle.contentHash,
         meta: {
           word_count: kvArticle.wordCount,
@@ -612,7 +612,10 @@ export async function getArticleById(idOrSlug: string): Promise<EnrichedArticle 
     const found = findInArticles(allArticles);
     if (found) return found;
   } catch (err) {
-    console.warn('[getArticleById] Homepage RSS fallback failed:', err instanceof Error ? err.message : err);
+    console.warn(
+      '[getArticleById] Homepage RSS fallback failed:',
+      err instanceof Error ? err.message : err,
+    );
   }
 
   // 3. Last resort: the article is either in KV or in the homepage feeds.
@@ -669,10 +672,31 @@ function newsArticleToEnriched(article: NewsArticle): EnrichedArticle {
  * Extract cryptocurrency tickers from text
  */
 function extractTickers(text: string): string[] {
-  const commonTickers = ['BTC', 'ETH', 'SOL', 'XRP', 'ADA', 'DOGE', 'DOT', 'AVAX', 'MATIC', 'LINK', 'UNI', 'ATOM', 'LTC', 'BCH', 'NEAR', 'APT', 'ARB', 'OP', 'SUI', 'SEI'];
+  const commonTickers = [
+    'BTC',
+    'ETH',
+    'SOL',
+    'XRP',
+    'ADA',
+    'DOGE',
+    'DOT',
+    'AVAX',
+    'MATIC',
+    'LINK',
+    'UNI',
+    'ATOM',
+    'LTC',
+    'BCH',
+    'NEAR',
+    'APT',
+    'ARB',
+    'OP',
+    'SUI',
+    'SEI',
+  ];
   const found: string[] = [];
   const upperText = text.toUpperCase();
-  
+
   for (const ticker of commonTickers) {
     // Match ticker as a word boundary
     const regex = new RegExp(`\\b${ticker}\\b`);
@@ -680,28 +704,28 @@ function extractTickers(text: string): string[] {
       found.push(ticker);
     }
   }
-  
+
   // Also check for full names
   const nameMap: Record<string, string> = {
-    'BITCOIN': 'BTC',
-    'ETHEREUM': 'ETH',
-    'SOLANA': 'SOL',
-    'RIPPLE': 'XRP',
-    'CARDANO': 'ADA',
-    'DOGECOIN': 'DOGE',
-    'POLKADOT': 'DOT',
-    'AVALANCHE': 'AVAX',
-    'POLYGON': 'MATIC',
-    'CHAINLINK': 'LINK',
-    'UNISWAP': 'UNI',
+    BITCOIN: 'BTC',
+    ETHEREUM: 'ETH',
+    SOLANA: 'SOL',
+    RIPPLE: 'XRP',
+    CARDANO: 'ADA',
+    DOGECOIN: 'DOGE',
+    POLKADOT: 'DOT',
+    AVALANCHE: 'AVAX',
+    POLYGON: 'MATIC',
+    CHAINLINK: 'LINK',
+    UNISWAP: 'UNI',
   };
-  
+
   for (const [name, ticker] of Object.entries(nameMap)) {
     if (upperText.includes(name) && !found.includes(ticker)) {
       found.push(ticker);
     }
   }
-  
+
   return found;
 }
 
@@ -713,16 +737,16 @@ export async function getArticleByUrl(url: string): Promise<EnrichedArticle | nu
     const now = new Date();
     const yearMonth = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}`;
     const articles = await getArchiveV2Month(yearMonth);
-    
-    const article = articles.find(a => a.link === url || a.canonical_link === url);
+
+    const article = articles.find((a) => a.link === url || a.canonical_link === url);
     if (article) return article;
-    
+
     // Try previous month
     const prevMonth = new Date(now.getFullYear(), now.getMonth() - 1, 1);
     const prevYearMonth = `${prevMonth.getFullYear()}-${String(prevMonth.getMonth() + 1).padStart(2, '0')}`;
     const prevArticles = await getArchiveV2Month(prevYearMonth);
-    
-    return prevArticles.find(a => a.link === url || a.canonical_link === url) || null;
+
+    return prevArticles.find((a) => a.link === url || a.canonical_link === url) || null;
   } catch {
     return null;
   }
@@ -733,62 +757,64 @@ export async function getArticleByUrl(url: string): Promise<EnrichedArticle | nu
  */
 export async function getRelatedArticles(
   article: EnrichedArticle,
-  limit: number = 5
+  limit: number = 5,
 ): Promise<EnrichedArticle[]> {
   try {
     const now = new Date();
     const yearMonth = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}`;
     const allArticles = await getArchiveV2Month(yearMonth);
-    
+
     // Score articles by relevance
     const scored = allArticles
-      .filter(a => a.id !== article.id)
-      .map(a => {
+      .filter((a) => a.id !== article.id)
+      .map((a) => {
         let score = 0;
-        
+
         // Ticker overlap (highest weight)
-        const tickerOverlap = a.tickers.filter(t => article.tickers.includes(t)).length;
+        const tickerOverlap = a.tickers.filter((t) => article.tickers.includes(t)).length;
         score += tickerOverlap * 5;
-        
+
         // Company overlap
-        const companyOverlap = a.entities.companies.filter(c => 
-          article.entities.companies.includes(c)
+        const companyOverlap = a.entities.companies.filter((c) =>
+          article.entities.companies.includes(c),
         ).length;
         score += companyOverlap * 3;
-        
+
         // Protocol overlap
-        const protocolOverlap = a.entities.protocols.filter(p => 
-          article.entities.protocols.includes(p)
+        const protocolOverlap = a.entities.protocols.filter((p) =>
+          article.entities.protocols.includes(p),
         ).length;
         score += protocolOverlap * 3;
-        
+
         // People overlap
-        const peopleOverlap = a.entities.people.filter(p => 
-          article.entities.people.includes(p)
+        const peopleOverlap = a.entities.people.filter((p) =>
+          article.entities.people.includes(p),
         ).length;
         score += peopleOverlap * 4;
-        
+
         // Tag overlap
-        const tagOverlap = a.tags.filter(t => article.tags.includes(t)).length;
+        const tagOverlap = a.tags.filter((t) => article.tags.includes(t)).length;
         score += tagOverlap * 2;
-        
+
         // Same source small bonus
         if (a.source === article.source) score += 1;
-        
+
         // Recency bonus (within 48h)
-        const hoursDiff = Math.abs(
-          new Date(article.pub_date || article.first_seen).getTime() - 
-          new Date(a.pub_date || a.first_seen).getTime()
-        ) / (1000 * 60 * 60);
+        const hoursDiff =
+          Math.abs(
+            new Date(article.pub_date || article.first_seen).getTime() -
+              new Date(a.pub_date || a.first_seen).getTime(),
+          ) /
+          (1000 * 60 * 60);
         if (hoursDiff < 48) score += 2;
-        
+
         return { article: a, score };
       })
-      .filter(s => s.score > 0)
+      .filter((s) => s.score > 0)
       .sort((a, b) => b.score - a.score)
       .slice(0, limit)
-      .map(s => s.article);
-    
+      .map((s) => s.article);
+
     return scored;
   } catch {
     return [];
@@ -805,7 +831,7 @@ function getTimeAgo(dateString: string): string {
   const diffMins = Math.floor(diffMs / 60000);
   const diffHours = Math.floor(diffMins / 60);
   const diffDays = Math.floor(diffHours / 24);
-  
+
   if (diffDays > 0) return `${diffDays}d ago`;
   if (diffHours > 0) return `${diffHours}h ago`;
   if (diffMins > 0) return `${diffMins}m ago`;

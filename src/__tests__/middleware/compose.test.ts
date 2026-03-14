@@ -32,9 +32,18 @@ function createContext(overrides: Partial<MiddlewareContext> = {}): MiddlewareCo
 describe('compose', () => {
   it('should run handlers sequentially and return final context', async () => {
     const order: number[] = [];
-    const h1: MiddlewareHandler = (ctx) => { order.push(1); return ctx; };
-    const h2: MiddlewareHandler = (ctx) => { order.push(2); return ctx; };
-    const h3: MiddlewareHandler = (ctx) => { order.push(3); return ctx; };
+    const h1: MiddlewareHandler = (ctx) => {
+      order.push(1);
+      return ctx;
+    };
+    const h2: MiddlewareHandler = (ctx) => {
+      order.push(2);
+      return ctx;
+    };
+    const h3: MiddlewareHandler = (ctx) => {
+      order.push(3);
+      return ctx;
+    };
 
     const pipeline = compose(h1, h2, h3);
     const ctx = createContext();
@@ -46,12 +55,18 @@ describe('compose', () => {
 
   it('should short-circuit when a handler returns a NextResponse', async () => {
     const order: number[] = [];
-    const h1: MiddlewareHandler = (ctx) => { order.push(1); return ctx; };
+    const h1: MiddlewareHandler = (ctx) => {
+      order.push(1);
+      return ctx;
+    };
     const h2: MiddlewareHandler = () => {
       order.push(2);
       return new NextResponse('Blocked', { status: 403 });
     };
-    const h3: MiddlewareHandler = (ctx) => { order.push(3); return ctx; };
+    const h3: MiddlewareHandler = (ctx) => {
+      order.push(3);
+      return ctx;
+    };
 
     const pipeline = compose(h1, h2, h3);
     const ctx = createContext();
@@ -109,7 +124,10 @@ describe('compose', () => {
 
   it('should short-circuit on first handler if it returns NextResponse', async () => {
     const h1: MiddlewareHandler = () => NextResponse.redirect('https://example.com');
-    const h2: MiddlewareHandler = (ctx) => { ctx.headers['X-Should-Not-Run'] = '1'; return ctx; };
+    const h2: MiddlewareHandler = (ctx) => {
+      ctx.headers['X-Should-Not-Run'] = '1';
+      return ctx;
+    };
 
     const pipeline = compose(h1, h2);
     const ctx = createContext();

@@ -56,8 +56,10 @@ function isAllowedUrl(url: string): boolean {
   try {
     const parsed = new URL(url);
     const hostname = parsed.hostname.replace(/^www\./, '');
-    return ALLOWED_DOMAINS.has(hostname) || 
-           Array.from(ALLOWED_DOMAINS).some(d => hostname.endsWith(`.${d}`));
+    return (
+      ALLOWED_DOMAINS.has(hostname) ||
+      Array.from(ALLOWED_DOMAINS).some((d) => hostname.endsWith(`.${d}`))
+    );
   } catch {
     return false;
   }
@@ -67,10 +69,7 @@ export async function GET(request: NextRequest) {
   const feedUrl = request.nextUrl.searchParams.get('url');
 
   if (!feedUrl) {
-    return NextResponse.json(
-      { error: 'Missing required "url" query parameter' },
-      { status: 400 }
-    );
+    return NextResponse.json({ error: 'Missing required "url" query parameter' }, { status: 400 });
   }
 
   // Validate URL
@@ -78,25 +77,19 @@ export async function GET(request: NextRequest) {
   try {
     parsedUrl = new URL(feedUrl);
   } catch {
-    return NextResponse.json(
-      { error: 'Invalid URL provided' },
-      { status: 400 }
-    );
+    return NextResponse.json({ error: 'Invalid URL provided' }, { status: 400 });
   }
 
   // Only allow http/https
   if (!['http:', 'https:'].includes(parsedUrl.protocol)) {
-    return NextResponse.json(
-      { error: 'Only HTTP and HTTPS URLs are allowed' },
-      { status: 400 }
-    );
+    return NextResponse.json({ error: 'Only HTTP and HTTPS URLs are allowed' }, { status: 400 });
   }
 
   // Domain allowlist check
   if (!isAllowedUrl(feedUrl)) {
     return NextResponse.json(
       { error: 'Domain not in allowlist. Only known crypto news feeds can be proxied.' },
-      { status: 403 }
+      { status: 403 },
     );
   }
 
@@ -112,7 +105,7 @@ export async function GET(request: NextRequest) {
     if (!response.ok) {
       return NextResponse.json(
         { error: `Upstream feed returned ${response.status}` },
-        { status: 502 }
+        { status: 502 },
       );
     }
 
@@ -136,7 +129,7 @@ export async function GET(request: NextRequest) {
 
     return NextResponse.json(
       { error: isTimeout ? 'Feed request timed out' : 'Failed to fetch feed' },
-      { status: isTimeout ? 504 : 502 }
+      { status: isTimeout ? 504 : 502 },
     );
   }
 }
