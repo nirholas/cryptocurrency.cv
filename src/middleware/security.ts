@@ -30,7 +30,7 @@ export const SECURITY_HEADERS: Record<string, string> = {
   'X-Permitted-Cross-Domain-Policies': 'none',
   'Permissions-Policy': 'camera=(), microphone=(), geolocation=(), interest-cohort=()',
   'Strict-Transport-Security': 'max-age=63072000; includeSubDomains; preload',
-  'Pragma': 'no-cache',
+  Pragma: 'no-cache',
   // ── Anti-poaching / origin fingerprinting ──────────────────────────────
   'X-Source': 'cryptocurrency.cv',
   'X-Source-Repo': 'https://github.com/nirholas/free-crypto-news',
@@ -76,12 +76,12 @@ export function buildCspHeader(nonce: string): string {
     "font-src 'self' https://fonts.gstatic.com",
     "connect-src 'self' https: wss:",
     "media-src 'self' https:",
-    "frame-src 'self' https://www.youtube.com https://player.vimeo.com https://s.tradingview.com https://www.tradingview.com https://www.tradingview-widget.com",
+    "frame-src 'self' https://www.youtube.com https://player.vimeo.com https://s.tradingview.com https://www.tradingview.com",
     "object-src 'none'",
     "base-uri 'self'",
     "form-action 'self'",
     "frame-ancestors 'self'",
-    "upgrade-insecure-requests",
+    'upgrade-insecure-requests',
   ].join('; ');
 }
 
@@ -95,15 +95,15 @@ export function buildCspHeader(nonce: string): string {
  * provides an early-reject at the edge to cut down on noise.
  */
 const SUSPICIOUS_PATTERNS = [
-  /<script[\s>]/i,                         // XSS probes
-  /javascript:/i,                          // javascript: protocol
-  /\bon\w+\s*=/i,                          // inline event handlers
-  /union\s+select/i,                       // SQL injection
+  /<script[\s>]/i, // XSS probes
+  /javascript:/i, // javascript: protocol
+  /\bon\w+\s*=/i, // inline event handlers
+  /union\s+select/i, // SQL injection
   /;\s*(drop|alter|delete|insert|update)\s/i, // SQL injection
-  /\.\.\//,                                // Path traversal
-  /%2e%2e%2f/i,                           // URL-encoded path traversal
-  /%00/,                                   // Null byte injection
-  /\0/,                                    // Literal null byte
+  /\.\.\//, // Path traversal
+  /%2e%2e%2f/i, // URL-encoded path traversal
+  /%00/, // Null byte injection
+  /\0/, // Literal null byte
 ];
 
 /**
