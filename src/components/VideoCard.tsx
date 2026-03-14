@@ -41,7 +41,7 @@ export default function VideoCard({ video, onPlay, featured }: VideoCardProps) {
         }}
       >
         {/* Thumbnail */}
-        <div className="relative aspect-video w-full overflow-hidden rounded-xl bg-[var(--color-surface-tertiary)]">
+        <div className="relative aspect-video w-full overflow-hidden rounded-xl bg-surface-tertiary">
           <img
             src={video.thumbnailUrl}
             alt={video.title}
@@ -62,15 +62,15 @@ export default function VideoCard({ video, onPlay, featured }: VideoCardProps) {
 
         {/* Info */}
         <div className="flex flex-col gap-3">
-          <h2 className="font-serif text-2xl leading-[1.15] font-bold tracking-tight transition-colors group-hover:text-[var(--color-accent)] md:text-3xl">
+          <h2 className="font-serif text-2xl leading-[1.15] font-bold tracking-tight transition-colors group-hover:text-accent md:text-3xl">
             {video.title}
           </h2>
           {video.description && (
-            <p className="line-clamp-3 text-base leading-relaxed text-[var(--color-text-secondary)]">
+            <p className="line-clamp-3 text-base leading-relaxed text-text-secondary">
               {video.description}
             </p>
           )}
-          <span className="text-xs text-[var(--color-text-tertiary)]">
+          <span className="text-xs text-text-tertiary">
             {video.source.name} &middot; {timeAgo(video.publishedAt)}
           </span>
         </div>
@@ -92,7 +92,7 @@ export default function VideoCard({ video, onPlay, featured }: VideoCardProps) {
       }}
     >
       {/* Thumbnail */}
-      <div className="relative aspect-video w-full overflow-hidden rounded-lg bg-[var(--color-surface-tertiary)]">
+      <div className="relative aspect-video w-full overflow-hidden rounded-lg bg-surface-tertiary">
         <img
           src={video.thumbnailUrl}
           alt={video.title}
@@ -113,10 +113,10 @@ export default function VideoCard({ video, onPlay, featured }: VideoCardProps) {
 
       {/* Info */}
       <div className="flex flex-col gap-1.5">
-        <h3 className="line-clamp-2 font-serif text-base leading-snug font-bold transition-colors group-hover:text-[var(--color-accent)]">
+        <h3 className="line-clamp-2 font-serif text-base leading-snug font-bold transition-colors group-hover:text-accent">
           {video.title}
         </h3>
-        <span className="text-xs text-[var(--color-text-tertiary)]">
+        <span className="text-xs text-text-tertiary">
           {video.source.name} &middot; {timeAgo(video.publishedAt)}
         </span>
       </div>

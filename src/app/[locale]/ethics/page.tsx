@@ -39,14 +39,14 @@ export default async function EthicsPage({ params }: Props) {
       <main className="container-main py-10">
         {/* Hero */}
         <div className="mb-10">
-          <h1 className="mb-3 font-serif text-3xl font-bold text-[var(--color-text-primary)] md:text-4xl">
+          <h1 className="mb-3 font-serif text-3xl font-bold text-text-primary md:text-4xl">
             Ethics Statement
           </h1>
-          <p className="text-sm text-[var(--color-text-tertiary)]">Last updated: March 1, 2026</p>
+          <p className="text-sm text-text-tertiary">Last updated: March 1, 2026</p>
         </div>
 
         <div className="max-w-3xl">
-          <div className="prose dark:prose-invert max-w-none leading-relaxed text-[var(--color-text-secondary)] print:text-black [&_a]:text-[var(--color-accent)] [&_a]:underline [&_a]:hover:opacity-80 [&_h2]:text-[var(--color-text-primary)] [&_h3]:text-[var(--color-text-primary)] [&_strong]:text-[var(--color-text-primary)]">
+          <div className="prose dark:prose-invert max-w-none leading-relaxed text-text-secondary print:text-black [&_a]:text-accent [&_a]:underline [&_a]:hover:opacity-80 [&_h2]:text-text-primary [&_h3]:text-text-primary [&_strong]:text-text-primary">
             <p className="mb-8 text-lg">
               This ethics statement outlines the core principles that guide everything we do at
               Crypto Vision News. For detailed guidelines on how we select sources, curate content,
@@ -55,12 +55,12 @@ export default async function EthicsPage({ params }: Props) {
 
             {/* Core Principles */}
             <section className="mb-10">
-              <h2 className="mb-6 font-serif text-2xl font-bold text-[var(--color-text-primary)]">
+              <h2 className="mb-6 font-serif text-2xl font-bold text-text-primary">
                 Core Principles
               </h2>
               <div className="space-y-6">
                 <div className="flex gap-4">
-                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[var(--color-accent)]/10 text-sm font-bold text-[var(--color-accent)]">
+                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent/10 text-sm font-bold text-accent">
                     1
                   </span>
                   <div>
@@ -73,7 +73,7 @@ export default async function EthicsPage({ params }: Props) {
                   </div>
                 </div>
                 <div className="flex gap-4">
-                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[var(--color-accent)]/10 text-sm font-bold text-[var(--color-accent)]">
+                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent/10 text-sm font-bold text-accent">
                     2
                   </span>
                   <div>
@@ -85,7 +85,7 @@ export default async function EthicsPage({ params }: Props) {
                   </div>
                 </div>
                 <div className="flex gap-4">
-                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[var(--color-accent)]/10 text-sm font-bold text-[var(--color-accent)]">
+                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent/10 text-sm font-bold text-accent">
                     3
                   </span>
                   <div>
@@ -97,7 +97,7 @@ export default async function EthicsPage({ params }: Props) {
                   </div>
                 </div>
                 <div className="flex gap-4">
-                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[var(--color-accent)]/10 text-sm font-bold text-[var(--color-accent)]">
+                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent/10 text-sm font-bold text-accent">
                     4
                   </span>
                   <div>
@@ -109,7 +109,7 @@ export default async function EthicsPage({ params }: Props) {
                   </div>
                 </div>
                 <div className="flex gap-4">
-                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[var(--color-accent)]/10 text-sm font-bold text-[var(--color-accent)]">
+                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent/10 text-sm font-bold text-accent">
                     5
                   </span>
                   <div>
@@ -122,7 +122,7 @@ export default async function EthicsPage({ params }: Props) {
                   </div>
                 </div>
                 <div className="flex gap-4">
-                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[var(--color-accent)]/10 text-sm font-bold text-[var(--color-accent)]">
+                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent/10 text-sm font-bold text-accent">
                     6
                   </span>
                   <div>
@@ -146,7 +146,7 @@ export default async function EthicsPage({ params }: Props) {
 
             {/* Compliance */}
             <section className="mb-10">
-              <h2 className="mb-4 font-serif text-2xl font-bold text-[var(--color-text-primary)]">
+              <h2 className="mb-4 font-serif text-2xl font-bold text-text-primary">
                 Compliance
               </h2>
               <ul className="list-disc space-y-2 pl-5">
@@ -171,8 +171,8 @@ export default async function EthicsPage({ params }: Props) {
             </section>
 
             {/* Related Pages */}
-            <section className="mb-10 rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] p-6">
-              <h2 className="mb-3 font-serif text-lg font-bold text-[var(--color-text-primary)]">
+            <section className="mb-10 rounded-lg border border-border bg-(--color-surface) p-6">
+              <h2 className="mb-3 font-serif text-lg font-bold text-text-primary">
                 Related Policies
               </h2>
               <ul className="mb-0 list-disc space-y-2 pl-5">

@@ -39,7 +39,7 @@ function SectionHeading({ id, number, title }: { id: string; number: number; tit
   return (
     <h2
       id={id}
-      className="font-serif text-2xl font-bold mb-4 text-[var(--color-text-primary)] scroll-mt-28"
+      className="font-serif text-2xl font-bold mb-4 text-text-primary scroll-mt-28"
     >
       {number}. {title}
     </h2>
@@ -56,10 +56,10 @@ export default async function TermsPage({ params }: Props) {
       <main className="container-main py-10">
         {/* Hero */}
         <div className="mb-10">
-          <h1 className="font-serif text-3xl md:text-4xl font-bold mb-3 text-[var(--color-text-primary)]">
+          <h1 className="font-serif text-3xl md:text-4xl font-bold mb-3 text-text-primary">
             Terms of Service
           </h1>
-          <p className="text-sm text-[var(--color-text-tertiary)]">
+          <p className="text-sm text-text-tertiary">
             Last updated: March 1, 2026
           </p>
         </div>
@@ -67,7 +67,7 @@ export default async function TermsPage({ params }: Props) {
         <div className="flex gap-10">
           {/* Main Content */}
           <div className="flex-1 min-w-0">
-            <div className="prose dark:prose-invert max-w-none text-[var(--color-text-secondary)] leading-relaxed [&_a]:text-[var(--color-accent)] [&_a]:underline [&_a]:hover:opacity-80 [&_h2]:text-[var(--color-text-primary)] [&_h3]:text-[var(--color-text-primary)] [&_strong]:text-[var(--color-text-primary)] print:text-black">
+            <div className="prose dark:prose-invert max-w-none text-text-secondary leading-relaxed [&_a]:text-accent [&_a]:underline [&_a]:hover:opacity-80 [&_h2]:text-text-primary [&_h3]:text-text-primary [&_strong]:text-text-primary print:text-black">
               <p className="text-lg mb-8">
                 These Terms of Service (&ldquo;Terms&rdquo;) govern your access
                 to and use of Crypto Vision News, operating at{" "}
@@ -294,7 +294,7 @@ export default async function TermsPage({ params }: Props) {
               {/* 6. Disclaimer of Warranties */}
               <section className="mb-10">
                 <SectionHeading id="disclaimer-of-warranties" number={6} title="Disclaimer of Warranties" />
-                <div className="rounded-lg border border-[var(--color-border)] bg-[var(--color-surface-secondary)] p-4 my-4">
+                <div className="rounded-lg border border-border bg-surface-secondary p-4 my-4">
                   <p className="font-semibold mb-2">
                     IMPORTANT: NOT FINANCIAL ADVICE
                   </p>
@@ -453,11 +453,11 @@ export default async function TermsPage({ params }: Props) {
               <nav
                 aria-label="Table of contents"
                 className={cn(
-                  "rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] p-5",
+                  "rounded-lg border border-border bg-(--color-surface) p-5",
                   "print:hidden"
                 )}
               >
-                <h2 className="font-serif text-sm font-bold mb-3 text-[var(--color-text-primary)] uppercase tracking-wide">
+                <h2 className="font-serif text-sm font-bold mb-3 text-text-primary uppercase tracking-wide">
                   Contents
                 </h2>
                 <ul className="space-y-2">
@@ -465,7 +465,7 @@ export default async function TermsPage({ params }: Props) {
                     <li key={item.id}>
                       <a
                         href={`#${item.id}`}
-                        className="text-sm text-[var(--color-text-secondary)] hover:text-[var(--color-accent)] transition-colors"
+                        className="text-sm text-text-secondary hover:text-accent transition-colors"
                       >
                         {item.label}
                       </a>

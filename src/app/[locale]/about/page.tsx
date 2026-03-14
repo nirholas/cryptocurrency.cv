@@ -201,12 +201,12 @@ export default async function AboutPage({ params }: Props) {
         {/* Hero */}
         <section className="mb-20 pt-8 text-center">
           <Badge className="mb-4">Open Source &middot; MIT License</Badge>
-          <h1 className="mb-6 font-serif text-4xl leading-tight font-bold text-[var(--color-text-primary)] md:text-5xl lg:text-6xl">
+          <h1 className="mb-6 font-serif text-4xl leading-tight font-bold text-text-primary md:text-5xl lg:text-6xl">
             Real-time crypto news for everyone.
             <br />
-            <span className="text-[var(--color-accent)]">Free. Forever.</span>
+            <span className="text-accent">Free. Forever.</span>
           </h1>
-          <p className="mx-auto mb-8 max-w-3xl text-lg leading-relaxed text-[var(--color-text-secondary)] md:text-xl">
+          <p className="mx-auto mb-8 max-w-3xl text-lg leading-relaxed text-text-secondary md:text-xl">
             The only 100% free crypto news aggregator API. No API keys, no rate limits, no hidden
             costs. Aggregating headlines from 300+ trusted sources — open source and
             community-driven.
@@ -227,7 +227,7 @@ export default async function AboutPage({ params }: Props) {
               </a>
             </Button>
           </div>
-          <p className="text-xs text-[var(--color-text-tertiary)]">
+          <p className="text-xs text-text-tertiary">
             No credit card &middot; No sign-up &middot; Start in 30 seconds
           </p>
         </section>
@@ -240,13 +240,13 @@ export default async function AboutPage({ params }: Props) {
               return (
                 <div
                   key={stat.label}
-                  className="group rounded-xl border border-[var(--color-border)] bg-[var(--color-surface-secondary)] p-5 text-center transition-colors hover:border-[var(--color-accent)]/50"
+                  className="group rounded-xl border border-border bg-surface-secondary p-5 text-center transition-colors hover:border-accent/50"
                 >
-                  <Icon className="mx-auto mb-2 h-5 w-5 text-[var(--color-accent)] opacity-70 transition-opacity group-hover:opacity-100" />
-                  <div className="mb-0.5 text-2xl font-bold text-[var(--color-text-primary)] md:text-3xl">
+                  <Icon className="mx-auto mb-2 h-5 w-5 text-accent opacity-70 transition-opacity group-hover:opacity-100" />
+                  <div className="mb-0.5 text-2xl font-bold text-text-primary md:text-3xl">
                     {stat.value}
                   </div>
-                  <div className="text-xs font-medium tracking-wider text-[var(--color-text-secondary)] uppercase">
+                  <div className="text-xs font-medium tracking-wider text-text-secondary uppercase">
                     {stat.label}
                   </div>
                 </div>
@@ -257,29 +257,29 @@ export default async function AboutPage({ params }: Props) {
 
         {/* How It Works */}
         <section className="mb-20">
-          <h2 className="mb-3 text-center font-serif text-2xl font-bold text-[var(--color-text-primary)] md:text-3xl">
+          <h2 className="mb-3 text-center font-serif text-2xl font-bold text-text-primary md:text-3xl">
             How It Works
           </h2>
-          <p className="mx-auto mb-12 max-w-2xl text-center text-[var(--color-text-secondary)]">
+          <p className="mx-auto mb-12 max-w-2xl text-center text-text-secondary">
             From source to your app in three simple steps.
           </p>
           <div className="relative mx-auto grid max-w-4xl gap-8 md:grid-cols-3">
             {/* Connecting line (desktop) */}
-            <div className="absolute top-12 right-[20%] left-[20%] hidden h-px bg-[var(--color-border)] md:block" />
+            <div className="absolute top-12 right-[20%] left-[20%] hidden h-px bg-border md:block" />
             {howItWorks.map((step) => {
               const Icon = step.icon;
               return (
                 <div key={step.step} className="relative text-center">
-                  <div className="relative z-10 mb-4 inline-flex h-14 w-14 items-center justify-center rounded-full bg-[var(--color-accent)] text-white">
+                  <div className="relative z-10 mb-4 inline-flex h-14 w-14 items-center justify-center rounded-full bg-accent text-white">
                     <Icon className="h-6 w-6" />
                   </div>
-                  <div className="mb-1 text-xs font-bold tracking-wider text-[var(--color-accent)] uppercase">
+                  <div className="mb-1 text-xs font-bold tracking-wider text-accent uppercase">
                     Step {step.step}
                   </div>
-                  <h3 className="mb-2 text-lg font-bold text-[var(--color-text-primary)]">
+                  <h3 className="mb-2 text-lg font-bold text-text-primary">
                     {step.title}
                   </h3>
-                  <p className="text-sm leading-relaxed text-[var(--color-text-secondary)]">
+                  <p className="text-sm leading-relaxed text-text-secondary">
                     {step.description}
                   </p>
                 </div>
@@ -290,10 +290,10 @@ export default async function AboutPage({ params }: Props) {
 
         {/* Features */}
         <section className="mb-20">
-          <h2 className="mb-3 text-center font-serif text-2xl font-bold text-[var(--color-text-primary)] md:text-3xl">
+          <h2 className="mb-3 text-center font-serif text-2xl font-bold text-text-primary md:text-3xl">
             Everything You Need
           </h2>
-          <p className="mx-auto mb-10 max-w-2xl text-center text-[var(--color-text-secondary)]">
+          <p className="mx-auto mb-10 max-w-2xl text-center text-text-secondary">
             A complete toolkit for crypto news — built for developers, researchers, traders, and AI
             applications.
           </p>
@@ -305,16 +305,16 @@ export default async function AboutPage({ params }: Props) {
                   <CardContent className="p-6">
                     <div
                       className={cn(
-                        'mb-4 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-[var(--color-surface-secondary)] transition-transform group-hover:scale-110',
+                        'mb-4 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-surface-secondary transition-transform group-hover:scale-110',
                         f.color,
                       )}
                     >
                       <Icon className="h-5 w-5" />
                     </div>
-                    <h3 className="mb-2 text-base font-bold text-[var(--color-text-primary)]">
+                    <h3 className="mb-2 text-base font-bold text-text-primary">
                       {f.title}
                     </h3>
-                    <p className="text-sm leading-relaxed text-[var(--color-text-secondary)]">
+                    <p className="text-sm leading-relaxed text-text-secondary">
                       {f.description}
                     </p>
                   </CardContent>
@@ -326,10 +326,10 @@ export default async function AboutPage({ params }: Props) {
 
         {/* Use Cases */}
         <section className="mb-20">
-          <h2 className="mb-3 text-center font-serif text-2xl font-bold text-[var(--color-text-primary)] md:text-3xl">
+          <h2 className="mb-3 text-center font-serif text-2xl font-bold text-text-primary md:text-3xl">
             Built For Every Use Case
           </h2>
-          <p className="mx-auto mb-10 max-w-2xl text-center text-[var(--color-text-secondary)]">
+          <p className="mx-auto mb-10 max-w-2xl text-center text-text-secondary">
             From algorithmic trading to academic research — our API powers thousands of
             applications.
           </p>
@@ -339,16 +339,16 @@ export default async function AboutPage({ params }: Props) {
               return (
                 <div
                   key={uc.title}
-                  className="flex gap-4 rounded-xl border border-[var(--color-border)] bg-[var(--color-surface-secondary)] p-6 transition-colors hover:border-[var(--color-accent)]/40"
+                  className="flex gap-4 rounded-xl border border-border bg-surface-secondary p-6 transition-colors hover:border-accent/40"
                 >
-                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-[var(--color-accent)]/10 text-[var(--color-accent)]">
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-accent/10 text-accent">
                     <Icon className="h-5 w-5" />
                   </div>
                   <div>
-                    <h3 className="mb-1 text-sm font-bold text-[var(--color-text-primary)]">
+                    <h3 className="mb-1 text-sm font-bold text-text-primary">
                       {uc.title}
                     </h3>
-                    <p className="text-sm leading-relaxed text-[var(--color-text-secondary)]">
+                    <p className="text-sm leading-relaxed text-text-secondary">
                       {uc.description}
                     </p>
                   </div>
@@ -360,15 +360,15 @@ export default async function AboutPage({ params }: Props) {
 
         {/* Trusted Sources */}
         <section className="mb-20">
-          <h2 className="mb-3 text-center font-serif text-2xl font-bold text-[var(--color-text-primary)] md:text-3xl">
+          <h2 className="mb-3 text-center font-serif text-2xl font-bold text-text-primary md:text-3xl">
             Trusted Sources
           </h2>
-          <p className="mx-auto mb-8 max-w-2xl text-center text-[var(--color-text-secondary)]">
+          <p className="mx-auto mb-8 max-w-2xl text-center text-text-secondary">
             We aggregate from the most reputable crypto and financial news outlets worldwide. Learn
             more about our sourcing methodology in our{' '}
             <a
               href="/editorial-policy"
-              className="text-[var(--color-accent)] underline hover:opacity-80"
+              className="text-accent underline hover:opacity-80"
             >
               Editorial Policy
             </a>
@@ -378,12 +378,12 @@ export default async function AboutPage({ params }: Props) {
             {trustedSources.map((source) => (
               <span
                 key={source}
-                className="inline-flex items-center rounded-full border border-[var(--color-border)] bg-[var(--color-surface-secondary)] px-4 py-2 text-sm font-medium text-[var(--color-text-secondary)] transition-colors hover:border-[var(--color-accent)]/40 hover:text-[var(--color-text-primary)]"
+                className="inline-flex items-center rounded-full border border-border bg-surface-secondary px-4 py-2 text-sm font-medium text-text-secondary transition-colors hover:border-accent/40 hover:text-text-primary"
               >
                 {source}
               </span>
             ))}
-            <span className="inline-flex items-center rounded-full border border-dashed border-[var(--color-border)] px-4 py-2 text-sm text-[var(--color-text-tertiary)]">
+            <span className="inline-flex items-center rounded-full border border-dashed border-border px-4 py-2 text-sm text-text-tertiary">
               +288 more
             </span>
           </div>
@@ -391,17 +391,17 @@ export default async function AboutPage({ params }: Props) {
 
         {/* Open Source */}
         <section className="mb-20">
-          <div className="overflow-hidden rounded-xl border border-[var(--color-border)] bg-[var(--color-surface-secondary)]">
+          <div className="overflow-hidden rounded-xl border border-border bg-surface-secondary">
             <div className="grid md:grid-cols-2">
               <div className="flex flex-col justify-center p-8 md:p-12">
                 <div className="mb-4 flex items-center gap-2">
-                  <GitBranch className="h-5 w-5 text-[var(--color-accent)]" />
+                  <GitBranch className="h-5 w-5 text-accent" />
                   <Badge>MIT License</Badge>
                 </div>
-                <h2 className="mb-4 font-serif text-2xl font-bold text-[var(--color-text-primary)] md:text-3xl">
+                <h2 className="mb-4 font-serif text-2xl font-bold text-text-primary md:text-3xl">
                   Open Source &amp; Community-Driven
                 </h2>
-                <p className="mb-6 leading-relaxed text-[var(--color-text-secondary)]">
+                <p className="mb-6 leading-relaxed text-text-secondary">
                   Every line of code is public. Inspect it, self-host it, fork it, or contribute
                   back. We believe crypto infrastructure should be transparent and owned by the
                   community.
@@ -427,8 +427,8 @@ export default async function AboutPage({ params }: Props) {
                   </Button>
                 </div>
               </div>
-              <div className="border-t border-[var(--color-border)] bg-[var(--color-surface)] p-8 md:border-t-0 md:border-l md:p-12">
-                <h3 className="mb-5 text-sm font-bold tracking-wider text-[var(--color-text-tertiary)] uppercase">
+              <div className="border-t border-border bg-(--color-surface) p-8 md:border-t-0 md:border-l md:p-12">
+                <h3 className="mb-5 text-sm font-bold tracking-wider text-text-tertiary uppercase">
                   Ways to Contribute
                 </h3>
                 <ul className="space-y-4">
@@ -454,10 +454,10 @@ export default async function AboutPage({ params }: Props) {
                     <li key={item.label} className="flex gap-3">
                       <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-green-500" />
                       <div>
-                        <div className="text-sm font-medium text-[var(--color-text-primary)]">
+                        <div className="text-sm font-medium text-text-primary">
                           {item.label}
                         </div>
-                        <div className="text-xs text-[var(--color-text-secondary)]">
+                        <div className="text-xs text-text-secondary">
                           {item.desc}
                         </div>
                       </div>
@@ -471,11 +471,11 @@ export default async function AboutPage({ params }: Props) {
 
         {/* Community */}
         <section className="mx-auto mb-20 max-w-3xl text-center">
-          <Users className="mx-auto mb-4 h-8 w-8 text-[var(--color-accent)]" />
-          <h2 className="mb-4 font-serif text-2xl font-bold text-[var(--color-text-primary)] md:text-3xl">
+          <Users className="mx-auto mb-4 h-8 w-8 text-accent" />
+          <h2 className="mb-4 font-serif text-2xl font-bold text-text-primary md:text-3xl">
             Built by the Community
           </h2>
-          <p className="mb-6 leading-relaxed text-[var(--color-text-secondary)]">
+          <p className="mb-6 leading-relaxed text-text-secondary">
             Crypto Vision News is maintained by a global community of open source contributors.
             Whether you&apos;re fixing a bug, adding a new source, translating the interface, or
             improving documentation — every contribution matters.
@@ -500,15 +500,15 @@ export default async function AboutPage({ params }: Props) {
 
         {/* Roadmap */}
         <section className="mx-auto mb-20 max-w-3xl">
-          <h2 className="mb-3 text-center font-serif text-2xl font-bold text-[var(--color-text-primary)] md:text-3xl">
+          <h2 className="mb-3 text-center font-serif text-2xl font-bold text-text-primary md:text-3xl">
             Roadmap
           </h2>
-          <p className="mx-auto mb-10 max-w-2xl text-center text-[var(--color-text-secondary)]">
+          <p className="mx-auto mb-10 max-w-2xl text-center text-text-secondary">
             Where we&apos;ve been and where we&apos;re headed.
           </p>
           <div className="relative">
             {/* Vertical line */}
-            <div className="absolute top-0 bottom-0 left-5 w-px bg-[var(--color-border)]" />
+            <div className="absolute top-0 bottom-0 left-5 w-px bg-border" />
             <div className="space-y-6">
               {roadmap.map((item, i) => (
                 <div key={i} className="relative flex gap-4">
@@ -518,8 +518,8 @@ export default async function AboutPage({ params }: Props) {
                       item.done
                         ? 'border-green-500 bg-green-500/10 text-green-500'
                         : item.label === 'In Progress'
-                          ? 'border-[var(--color-accent)] bg-[var(--color-accent)]/10 text-[var(--color-accent)]'
-                          : 'border-[var(--color-border)] bg-[var(--color-surface-secondary)] text-[var(--color-text-tertiary)]',
+                          ? 'border-accent bg-accent/10 text-accent'
+                          : 'border-border bg-surface-secondary text-text-tertiary',
                     )}
                   >
                     {item.done ? (
@@ -532,7 +532,7 @@ export default async function AboutPage({ params }: Props) {
                   </div>
                   <div className="pt-2">
                     <div className="mb-0.5 flex items-center gap-2">
-                      <span className="text-sm font-bold text-[var(--color-text-primary)]">
+                      <span className="text-sm font-bold text-text-primary">
                         {item.title}
                       </span>
                       <Badge
@@ -541,7 +541,7 @@ export default async function AboutPage({ params }: Props) {
                           item.done
                             ? 'bg-green-500/10 text-green-600 dark:text-green-400'
                             : item.label === 'In Progress'
-                              ? 'bg-[var(--color-accent)]/10 text-[var(--color-accent)]'
+                              ? 'bg-accent/10 text-accent'
                               : '',
                         )}
                       >
@@ -557,19 +557,19 @@ export default async function AboutPage({ params }: Props) {
 
         {/* Tech Stack */}
         <section className="mb-20">
-          <h2 className="mb-8 text-center font-serif text-2xl font-bold text-[var(--color-text-primary)]">
+          <h2 className="mb-8 text-center font-serif text-2xl font-bold text-text-primary">
             Tech Stack
           </h2>
           <div className="mx-auto grid max-w-3xl grid-cols-2 gap-3 sm:grid-cols-4">
             {techStack.map((tech) => (
               <div
                 key={tech.name}
-                className="rounded-lg border border-[var(--color-border)] bg-[var(--color-surface-secondary)] p-4 text-center transition-colors hover:border-[var(--color-accent)]/40"
+                className="rounded-lg border border-border bg-surface-secondary p-4 text-center transition-colors hover:border-accent/40"
               >
-                <div className="text-sm font-bold text-[var(--color-text-primary)]">
+                <div className="text-sm font-bold text-text-primary">
                   {tech.name}
                 </div>
-                <div className="mt-0.5 text-xs text-[var(--color-text-tertiary)]">
+                <div className="mt-0.5 text-xs text-text-tertiary">
                   {tech.description}
                 </div>
               </div>
@@ -579,7 +579,7 @@ export default async function AboutPage({ params }: Props) {
 
         {/* CTA */}
         <section className="mb-10">
-          <div className="rounded-xl bg-[var(--color-accent)] p-8 text-center text-white md:p-12">
+          <div className="rounded-xl bg-accent p-8 text-center text-white md:p-12">
             <h2 className="mb-3 font-serif text-2xl font-bold md:text-3xl">
               Ready to Get Started?
             </h2>
@@ -592,7 +592,7 @@ export default async function AboutPage({ params }: Props) {
                 variant="outline"
                 size="lg"
                 asChild
-                className="border-white bg-white text-[var(--color-accent)] hover:bg-white/90"
+                className="border-white bg-white text-accent hover:bg-white/90"
               >
                 <Link href="/developers">
                   Read the Docs <ArrowRight className="ml-1 h-4 w-4" />

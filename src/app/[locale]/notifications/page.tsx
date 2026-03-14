@@ -177,14 +177,14 @@ export default function NotificationsPage() {
         {/* Page Header */}
         <div className="mb-8">
           <div className="mb-2 flex items-center gap-3">
-            <div className="rounded-lg bg-[var(--color-accent)]/10 p-2">
-              <Bell className="h-6 w-6 text-[var(--color-accent)]" aria-hidden="true" />
+            <div className="rounded-lg bg-accent/10 p-2">
+              <Bell className="h-6 w-6 text-accent" aria-hidden="true" />
             </div>
             <div>
-              <h1 className="text-2xl font-bold text-[var(--color-text-primary)]">
+              <h1 className="text-2xl font-bold text-text-primary">
                 Notification Preferences
               </h1>
-              <p className="text-sm text-[var(--color-text-tertiary)]">
+              <p className="text-sm text-text-tertiary">
                 Manage how and when you receive notifications
               </p>
             </div>
@@ -196,7 +196,7 @@ export default function NotificationsPage() {
           <Card className="lg:col-span-2">
             <CardHeader>
               <CardTitle className="flex items-center gap-2 text-base">
-                <Shield className="h-5 w-5 text-[var(--color-accent)]" aria-hidden="true" />
+                <Shield className="h-5 w-5 text-accent" aria-hidden="true" />
                 Push Notification Permission
               </CardTitle>
             </CardHeader>
@@ -220,15 +220,15 @@ export default function NotificationsPage() {
                   ) : permissionStatus === 'unsupported' ? (
                     <div className="flex items-center gap-2">
                       <BellOff
-                        className="h-4 w-4 text-[var(--color-text-tertiary)]"
+                        className="h-4 w-4 text-text-tertiary"
                         aria-hidden="true"
                       />
-                      <span className="text-sm text-[var(--color-text-tertiary)]">
+                      <span className="text-sm text-text-tertiary">
                         Push notifications not supported in this browser
                       </span>
                     </div>
                   ) : (
-                    <span className="text-sm text-[var(--color-text-secondary)]">
+                    <span className="text-sm text-text-secondary">
                       Allow push notifications to stay updated on breaking news
                     </span>
                   )}
@@ -265,7 +265,7 @@ export default function NotificationsPage() {
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2 text-base">
-                <BellRing className="h-5 w-5 text-[var(--color-accent)]" aria-hidden="true" />
+                <BellRing className="h-5 w-5 text-accent" aria-hidden="true" />
                 Notification Types
               </CardTitle>
             </CardHeader>
@@ -305,7 +305,7 @@ export default function NotificationsPage() {
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2 text-base">
-                <Smartphone className="h-5 w-5 text-[var(--color-accent)]" aria-hidden="true" />
+                <Smartphone className="h-5 w-5 text-accent" aria-hidden="true" />
                 Delivery Channels
               </CardTitle>
             </CardHeader>
@@ -365,7 +365,7 @@ export default function NotificationsPage() {
           <Card className="lg:col-span-2">
             <CardHeader>
               <CardTitle className="flex items-center gap-2 text-base">
-                <Moon className="h-5 w-5 text-[var(--color-accent)]" aria-hidden="true" />
+                <Moon className="h-5 w-5 text-accent" aria-hidden="true" />
                 Quiet Hours
               </CardTitle>
             </CardHeader>
@@ -384,25 +384,25 @@ export default function NotificationsPage() {
                 <div className="mt-4 flex flex-wrap items-center gap-3 pl-8">
                   <div className="flex items-center gap-2">
                     <Moon
-                      className="h-4 w-4 text-[var(--color-text-tertiary)]"
+                      className="h-4 w-4 text-text-tertiary"
                       aria-hidden="true"
                     />
-                    <label className="text-sm text-[var(--color-text-secondary)]">From</label>
+                    <label className="text-sm text-text-secondary">From</label>
                     <input
                       type="time"
                       value={prefs.quietHoursStart}
                       onChange={(e) => savePrefs({ ...prefs, quietHoursStart: e.target.value })}
-                      className="rounded-md border border-[var(--color-border)] bg-[var(--color-surface-secondary)] px-2 py-1 text-sm text-[var(--color-text-primary)]"
+                      className="rounded-md border border-border bg-surface-secondary px-2 py-1 text-sm text-text-primary"
                     />
                   </div>
                   <div className="flex items-center gap-2">
-                    <Sun className="h-4 w-4 text-[var(--color-text-tertiary)]" aria-hidden="true" />
-                    <label className="text-sm text-[var(--color-text-secondary)]">To</label>
+                    <Sun className="h-4 w-4 text-text-tertiary" aria-hidden="true" />
+                    <label className="text-sm text-text-secondary">To</label>
                     <input
                       type="time"
                       value={prefs.quietHoursEnd}
                       onChange={(e) => savePrefs({ ...prefs, quietHoursEnd: e.target.value })}
-                      className="rounded-md border border-[var(--color-border)] bg-[var(--color-surface-secondary)] px-2 py-1 text-sm text-[var(--color-text-primary)]"
+                      className="rounded-md border border-border bg-surface-secondary px-2 py-1 text-sm text-text-primary"
                     />
                   </div>
                 </div>
@@ -439,22 +439,22 @@ function ToggleRow({
     <div
       className={cn(
         'flex items-center justify-between gap-4 rounded-lg px-3 py-3 transition-colors',
-        !disabled && 'hover:bg-[var(--color-surface-secondary)]',
+        !disabled && 'hover:bg-surface-secondary',
         disabled && 'opacity-50',
       )}
     >
       <div className="flex min-w-0 items-center gap-3">
-        <div className="flex-shrink-0">{icon}</div>
+        <div className="shrink-0">{icon}</div>
         <div className="min-w-0">
           <div className="flex items-center gap-2">
-            <span className="text-sm font-medium text-[var(--color-text-primary)]">{label}</span>
+            <span className="text-sm font-medium text-text-primary">{label}</span>
             {badge && (
               <Badge variant="default" className="px-1.5 py-0 text-[10px]">
                 {badge}
               </Badge>
             )}
           </div>
-          <p className="mt-0.5 text-xs text-[var(--color-text-tertiary)]">{description}</p>
+          <p className="mt-0.5 text-xs text-text-tertiary">{description}</p>
         </div>
       </div>
 
@@ -465,9 +465,9 @@ function ToggleRow({
         onClick={onToggle}
         disabled={disabled}
         className={cn(
-          'relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full transition-colors duration-200 ease-in-out',
-          'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-accent)]',
-          enabled ? 'bg-[var(--color-accent)]' : 'bg-[var(--color-border)]',
+          'relative inline-flex h-6 w-11 shrink-0 cursor-pointer rounded-full transition-colors duration-200 ease-in-out',
+          'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent',
+          enabled ? 'bg-accent' : 'bg-border',
           disabled && 'cursor-not-allowed',
         )}
       >
@@ -480,9 +480,9 @@ function ToggleRow({
           )}
         >
           {enabled ? (
-            <Check className="h-3 w-3 text-[var(--color-accent)]" aria-hidden="true" />
+            <Check className="h-3 w-3 text-accent" aria-hidden="true" />
           ) : (
-            <X className="h-3 w-3 text-[var(--color-text-tertiary)]" aria-hidden="true" />
+            <X className="h-3 w-3 text-text-tertiary" aria-hidden="true" />
           )}
         </span>
       </button>

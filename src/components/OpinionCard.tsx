@@ -18,7 +18,7 @@ export function FeaturedOpinionCard({ article }: { article: NewsArticle }) {
       <Link href={article.link} target="_blank" rel="noopener noreferrer" className="block">
         <article className="grid items-center gap-6 md:grid-cols-2 md:gap-10">
           {article.imageUrl && (
-            <div className="aspect-[16/10] w-full overflow-hidden rounded-xl bg-[var(--color-surface-tertiary)] shadow-lg">
+            <div className="aspect-16/10 w-full overflow-hidden rounded-xl bg-surface-tertiary shadow-lg">
               <img
                 src={article.imageUrl}
                 alt={article.title}
@@ -31,24 +31,24 @@ export function FeaturedOpinionCard({ article }: { article: NewsArticle }) {
             <Badge variant="opinion" className="w-fit">
               Opinion
             </Badge>
-            <h2 className="font-serif text-2xl leading-[1.15] font-bold tracking-tight italic transition-colors duration-200 group-hover:text-[var(--color-accent)] md:text-3xl lg:text-4xl">
+            <h2 className="font-serif text-2xl leading-[1.15] font-bold tracking-tight italic transition-colors duration-200 group-hover:text-accent md:text-3xl lg:text-4xl">
               &ldquo;{article.title}&rdquo;
             </h2>
             {article.description && (
-              <p className="line-clamp-3 text-sm leading-relaxed text-[var(--color-text-secondary)] md:text-base">
+              <p className="line-clamp-3 text-sm leading-relaxed text-text-secondary md:text-base">
                 {article.description}
               </p>
             )}
             <div className="flex items-center gap-2 text-sm">
               {article.author && (
-                <span className="font-semibold text-[var(--color-text-primary)]">
+                <span className="font-semibold text-text-primary">
                   By {article.author}
                 </span>
               )}
-              <span className="text-[var(--color-text-tertiary)]">&middot;</span>
-              <span className="text-[var(--color-text-tertiary)]">{article.source}</span>
-              <span className="text-[var(--color-text-tertiary)]">&middot;</span>
-              <span className="text-[var(--color-text-tertiary)]">{article.timeAgo}</span>
+              <span className="text-text-tertiary">&middot;</span>
+              <span className="text-text-tertiary">{article.source}</span>
+              <span className="text-text-tertiary">&middot;</span>
+              <span className="text-text-tertiary">{article.timeAgo}</span>
             </div>
           </div>
         </article>
@@ -68,7 +68,7 @@ export function OpinionCard({ article }: { article: NewsArticle }) {
       <Link href={article.link} target="_blank" rel="noopener noreferrer" className="block">
         <article className="flex flex-col gap-3">
           {article.imageUrl && (
-            <div className="aspect-[16/10] w-full overflow-hidden rounded-lg bg-[var(--color-surface-tertiary)]">
+            <div className="aspect-16/10 w-full overflow-hidden rounded-lg bg-surface-tertiary">
               <img
                 src={article.imageUrl}
                 alt={article.title}
@@ -81,24 +81,24 @@ export function OpinionCard({ article }: { article: NewsArticle }) {
             <Badge variant="opinion" className="w-fit">
               Opinion
             </Badge>
-            <h3 className="line-clamp-3 font-serif text-lg leading-snug font-bold tracking-tight italic transition-colors group-hover:text-[var(--color-accent)]">
+            <h3 className="line-clamp-3 font-serif text-lg leading-snug font-bold tracking-tight italic transition-colors group-hover:text-accent">
               &ldquo;{article.title}&rdquo;
             </h3>
             {article.description && (
-              <p className="line-clamp-2 text-sm text-[var(--color-text-secondary)]">
+              <p className="line-clamp-2 text-sm text-text-secondary">
                 {article.description}
               </p>
             )}
             <div className="flex items-center gap-1.5 text-xs">
               {article.author && (
-                <span className="font-semibold text-[var(--color-text-primary)]">
+                <span className="font-semibold text-text-primary">
                   {article.author}
                 </span>
               )}
-              <span className="text-[var(--color-text-tertiary)]">&middot;</span>
-              <span className="text-[var(--color-text-tertiary)]">{article.source}</span>
-              <span className="text-[var(--color-text-tertiary)]">&middot;</span>
-              <span className="text-[var(--color-text-tertiary)]">{article.timeAgo}</span>
+              <span className="text-text-tertiary">&middot;</span>
+              <span className="text-text-tertiary">{article.source}</span>
+              <span className="text-text-tertiary">&middot;</span>
+              <span className="text-text-tertiary">{article.timeAgo}</span>
             </div>
           </div>
         </article>

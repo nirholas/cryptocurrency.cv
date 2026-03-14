@@ -30,17 +30,17 @@ export default async function AdvertisePage({ params }: Props) {
       <main className="container-main py-10">
         {/* Hero */}
         <div className="mb-10">
-          <h1 className="mb-3 font-serif text-3xl font-bold text-[var(--color-text-primary)] md:text-4xl">
+          <h1 className="mb-3 font-serif text-3xl font-bold text-text-primary md:text-4xl">
             Advertise with Us
           </h1>
-          <p className="max-w-2xl text-lg text-[var(--color-text-secondary)]">
+          <p className="max-w-2xl text-lg text-text-secondary">
             Connect your brand with a highly engaged crypto audience. We offer transparent, clearly
             labeled advertising placements across our platform.
           </p>
         </div>
 
         <div className="max-w-3xl">
-          <div className="prose dark:prose-invert max-w-none leading-relaxed text-[var(--color-text-secondary)] [&_a]:text-[var(--color-accent)] [&_a]:underline [&_a]:hover:opacity-80 [&_h2]:text-[var(--color-text-primary)] [&_h3]:text-[var(--color-text-primary)] [&_strong]:text-[var(--color-text-primary)]">
+          <div className="prose dark:prose-invert max-w-none leading-relaxed text-text-secondary [&_a]:text-accent [&_a]:underline [&_a]:hover:opacity-80 [&_h2]:text-text-primary [&_h3]:text-text-primary [&_strong]:text-text-primary">
             {/* Audience Stats */}
             <section className="mb-10 grid gap-4 sm:grid-cols-3">
               {[
@@ -50,10 +50,10 @@ export default async function AdvertisePage({ params }: Props) {
               ].map((stat) => (
                 <div
                   key={stat.label}
-                  className="rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] p-6 text-center"
+                  className="rounded-lg border border-border bg-(--color-surface) p-6 text-center"
                 >
-                  <p className="text-3xl font-bold text-[var(--color-accent)]">{stat.value}</p>
-                  <p className="mt-1 text-sm text-[var(--color-text-tertiary)]">{stat.label}</p>
+                  <p className="text-3xl font-bold text-accent">{stat.value}</p>
+                  <p className="mt-1 text-sm text-text-tertiary">{stat.label}</p>
                 </div>
               ))}
             </section>
@@ -102,15 +102,15 @@ export default async function AdvertisePage({ params }: Props) {
             </section>
 
             {/* Contact */}
-            <section className="mb-10 rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] p-6">
-              <h2 className="mb-3 font-serif text-lg font-bold text-[var(--color-text-primary)]">
+            <section className="mb-10 rounded-lg border border-border bg-(--color-surface) p-6">
+              <h2 className="mb-3 font-serif text-lg font-bold text-text-primary">
                 Get in Touch
               </h2>
               <p>
                 For advertising inquiries, rate cards, and custom packages, please contact us at{' '}
                 <a href="mailto:ads@cryptovisionnews.com">ads@cryptovisionnews.com</a>.
               </p>
-              <p className="mt-3 text-sm text-[var(--color-text-tertiary)]">
+              <p className="mt-3 text-sm text-text-tertiary">
                 See our <a href="/advertising-disclosure">Advertising Disclosure</a> for full
                 transparency on how we handle advertising.
               </p>

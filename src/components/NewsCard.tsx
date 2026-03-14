@@ -65,7 +65,7 @@ function VerticalBadges({ article }: { article: NewsArticle }) {
 function ArticleImage({ src, alt, className }: { src?: string; alt: string; className?: string }) {
   if (!src) return null;
   return (
-    <div className={cn('overflow-hidden rounded-lg bg-[var(--color-surface-tertiary)]', className)}>
+    <div className={cn('overflow-hidden rounded-lg bg-surface-tertiary', className)}>
       <img
         src={src}
         alt={alt}
@@ -90,11 +90,11 @@ function SourceMeta({
   authorSlug?: string;
 }) {
   return (
-    <span className="text-xs text-[var(--color-text-tertiary)]">
+    <span className="text-xs text-text-tertiary">
       {sourceKey ? (
         <Link
           href={`/source/${sourceKey}`}
-          className="font-medium text-[var(--color-text-secondary)] transition-colors hover:text-[var(--color-accent)]"
+          className="font-medium text-text-secondary transition-colors hover:text-accent"
         >
           {source}
         </Link>
@@ -107,7 +107,7 @@ function SourceMeta({
           &middot;{' '}
           <Link
             href={`/author/${authorSlug}`}
-            className="font-medium text-[var(--color-text-secondary)] transition-colors hover:text-[var(--color-accent)]"
+            className="font-medium text-text-secondary transition-colors hover:text-accent"
             onClick={(e) => e.stopPropagation()}
           >
             {author}
@@ -133,7 +133,7 @@ export function FeaturedCard({ article }: { article: NewsArticle }) {
           <ArticleImage
             src={article.imageUrl}
             alt={article.title}
-            className="aspect-[16/10] w-full rounded-xl shadow-lg"
+            className="aspect-16/10 w-full rounded-xl shadow-lg"
           />
           <div className="flex flex-col gap-4">
             <div className="flex flex-wrap items-center gap-1.5">
@@ -141,11 +141,11 @@ export function FeaturedCard({ article }: { article: NewsArticle }) {
               <ContentTypeBadge contentType={article.contentType} />
               <VerticalBadges article={article} />
             </div>
-            <h2 className="font-serif text-2xl leading-[1.15] font-bold tracking-tight transition-colors duration-200 group-hover:text-[var(--color-accent)] md:text-3xl lg:text-4xl">
+            <h2 className="font-serif text-2xl leading-[1.15] font-bold tracking-tight transition-colors duration-200 group-hover:text-accent md:text-3xl lg:text-4xl">
               {article.title}
             </h2>
             {article.description && (
-              <p className="line-clamp-3 text-sm leading-relaxed text-[var(--color-text-secondary)] md:text-base">
+              <p className="line-clamp-3 text-sm leading-relaxed text-text-secondary md:text-base">
                 {article.description}
               </p>
             )}{' '}
@@ -184,7 +184,7 @@ export function NewsCardDefault({ article }: { article: NewsArticle }) {
           <ArticleImage
             src={article.imageUrl}
             alt={article.title}
-            className="aspect-[16/10] w-full"
+            className="aspect-16/10 w-full"
           />
           <div className="flex flex-col gap-2">
             <div className="flex flex-wrap items-center gap-1.5">
@@ -192,11 +192,11 @@ export function NewsCardDefault({ article }: { article: NewsArticle }) {
               <ContentTypeBadge contentType={article.contentType} />
               <VerticalBadges article={article} />
             </div>
-            <h3 className="line-clamp-3 font-serif text-lg leading-snug font-bold tracking-tight transition-colors group-hover:text-[var(--color-accent)]">
+            <h3 className="line-clamp-3 font-serif text-lg leading-snug font-bold tracking-tight transition-colors group-hover:text-accent">
               {article.title}
             </h3>
             {article.description && (
-              <p className="line-clamp-2 text-sm text-[var(--color-text-secondary)]">
+              <p className="line-clamp-2 text-sm text-text-secondary">
                 {article.description}
               </p>
             )}{' '}
@@ -243,7 +243,7 @@ export function NewsCardCompact({ article }: { article: NewsArticle }) {
               </Badge>
               <ContentTypeBadge contentType={article.contentType} />
             </div>
-            <h3 className="line-clamp-2 text-sm leading-snug font-semibold transition-colors group-hover:text-[var(--color-accent)]">
+            <h3 className="line-clamp-2 text-sm leading-snug font-semibold transition-colors group-hover:text-accent">
               {article.title}
             </h3>
             <SourceMeta
@@ -269,12 +269,12 @@ export function NewsCardHeadline({ article, index }: { article: NewsArticle; ind
     <Link href={article.link} target="_blank" rel="noopener noreferrer" className="group block">
       <article className="flex items-baseline gap-3">
         {typeof index === 'number' && (
-          <span className="shrink-0 font-serif text-2xl leading-none font-bold text-[var(--color-accent)]/30 tabular-nums">
+          <span className="shrink-0 font-serif text-2xl leading-none font-bold text-accent/30 tabular-nums">
             {String(index + 1).padStart(2, '0')}
           </span>
         )}
         <div className="flex flex-col gap-1">
-          <h3 className="line-clamp-2 text-sm leading-snug font-semibold transition-colors group-hover:text-[var(--color-accent)]">
+          <h3 className="line-clamp-2 text-sm leading-snug font-semibold transition-colors group-hover:text-accent">
             {article.title}
           </h3>
           <SourceMeta

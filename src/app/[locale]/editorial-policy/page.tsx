@@ -44,7 +44,7 @@ function SectionHeading({ id, number, title }: { id: string; number: number; tit
   return (
     <h2
       id={id}
-      className="mb-4 scroll-mt-28 font-serif text-2xl font-bold text-[var(--color-text-primary)]"
+      className="mb-4 scroll-mt-28 font-serif text-2xl font-bold text-text-primary"
     >
       {number}. {title}
     </h2>
@@ -61,16 +61,16 @@ export default async function EditorialPolicyPage({ params }: Props) {
       <main className="container-main py-10">
         {/* Hero */}
         <div className="mb-10">
-          <h1 className="mb-3 font-serif text-3xl font-bold text-[var(--color-text-primary)] md:text-4xl">
+          <h1 className="mb-3 font-serif text-3xl font-bold text-text-primary md:text-4xl">
             Editorial Policy
           </h1>
-          <p className="text-sm text-[var(--color-text-tertiary)]">Last updated: March 1, 2026</p>
+          <p className="text-sm text-text-tertiary">Last updated: March 1, 2026</p>
         </div>
 
         <div className="flex gap-10">
           {/* Main Content */}
           <div className="min-w-0 flex-1">
-            <div className="prose dark:prose-invert max-w-none leading-relaxed text-[var(--color-text-secondary)] print:text-black [&_a]:text-[var(--color-accent)] [&_a]:underline [&_a]:hover:opacity-80 [&_h2]:text-[var(--color-text-primary)] [&_h3]:text-[var(--color-text-primary)] [&_strong]:text-[var(--color-text-primary)]">
+            <div className="prose dark:prose-invert max-w-none leading-relaxed text-text-secondary print:text-black [&_a]:text-accent [&_a]:underline [&_a]:hover:opacity-80 [&_h2]:text-text-primary [&_h3]:text-text-primary [&_strong]:text-text-primary">
               <p className="mb-8 text-lg">
                 Crypto Vision News is committed to providing free, unbiased, and comprehensive
                 crypto news aggregation. This editorial policy explains how we select sources,
@@ -341,11 +341,11 @@ export default async function EditorialPolicyPage({ params }: Props) {
               <nav
                 aria-label="Table of contents"
                 className={cn(
-                  'rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] p-5',
+                  'rounded-lg border border-border bg-(--color-surface) p-5',
                   'print:hidden',
                 )}
               >
-                <h2 className="mb-3 font-serif text-sm font-bold tracking-wide text-[var(--color-text-primary)] uppercase">
+                <h2 className="mb-3 font-serif text-sm font-bold tracking-wide text-text-primary uppercase">
                   Contents
                 </h2>
                 <ul className="space-y-2">
@@ -353,7 +353,7 @@ export default async function EditorialPolicyPage({ params }: Props) {
                     <li key={item.id}>
                       <a
                         href={`#${item.id}`}
-                        className="text-sm text-[var(--color-text-secondary)] transition-colors hover:text-[var(--color-accent)]"
+                        className="text-sm text-text-secondary transition-colors hover:text-accent"
                       >
                         {item.label}
                       </a>
@@ -363,15 +363,15 @@ export default async function EditorialPolicyPage({ params }: Props) {
               </nav>
 
               {/* Related Pages */}
-              <div className="mt-4 rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] p-5 print:hidden">
-                <h2 className="mb-3 font-serif text-sm font-bold tracking-wide text-[var(--color-text-primary)] uppercase">
+              <div className="mt-4 rounded-lg border border-border bg-(--color-surface) p-5 print:hidden">
+                <h2 className="mb-3 font-serif text-sm font-bold tracking-wide text-text-primary uppercase">
                   Related
                 </h2>
                 <ul className="space-y-2">
                   <li>
                     <a
                       href="/ethics"
-                      className="text-sm text-[var(--color-text-secondary)] transition-colors hover:text-[var(--color-accent)]"
+                      className="text-sm text-text-secondary transition-colors hover:text-accent"
                     >
                       Ethics Statement
                     </a>
@@ -379,7 +379,7 @@ export default async function EditorialPolicyPage({ params }: Props) {
                   <li>
                     <a
                       href="/privacy"
-                      className="text-sm text-[var(--color-text-secondary)] transition-colors hover:text-[var(--color-accent)]"
+                      className="text-sm text-text-secondary transition-colors hover:text-accent"
                     >
                       Privacy Policy
                     </a>
@@ -387,7 +387,7 @@ export default async function EditorialPolicyPage({ params }: Props) {
                   <li>
                     <a
                       href="/terms"
-                      className="text-sm text-[var(--color-text-secondary)] transition-colors hover:text-[var(--color-accent)]"
+                      className="text-sm text-text-secondary transition-colors hover:text-accent"
                     >
                       Terms of Service
                     </a>

@@ -65,15 +65,15 @@ export default function VerticalPage({ vertical, articles, total, locale }: Vert
       <Header />
       <main className="container-main space-y-10 py-10">
         {/* Breadcrumbs */}
-        <nav aria-label="Breadcrumb" className="text-sm text-[var(--color-text-tertiary)]">
+        <nav aria-label="Breadcrumb" className="text-sm text-text-tertiary">
           <ol className="flex items-center gap-1.5">
             <li>
-              <Link href="/" className="transition-colors hover:text-[var(--color-accent)]">
+              <Link href="/" className="transition-colors hover:text-accent">
                 Home
               </Link>
             </li>
             <li aria-hidden="true">/</li>
-            <li className="font-medium text-[var(--color-text-primary)]">{vertical.name}</li>
+            <li className="font-medium text-text-primary">{vertical.name}</li>
           </ol>
         </nav>
 
@@ -86,11 +86,11 @@ export default function VerticalPage({ vertical, articles, total, locale }: Vert
             >
               <Icon className="h-5 w-5" />
             </div>
-            <h1 className="font-serif text-3xl font-bold text-[var(--color-text-primary)] md:text-4xl">
+            <h1 className="font-serif text-3xl font-bold text-text-primary md:text-4xl">
               {vertical.name}
             </h1>
           </div>
-          <p className="max-w-2xl text-[var(--color-text-secondary)]">{vertical.description}</p>
+          <p className="max-w-2xl text-text-secondary">{vertical.description}</p>
         </header>
 
         {/* Subcategory filters */}
@@ -103,7 +103,7 @@ export default function VerticalPage({ vertical, articles, total, locale }: Vert
               'rounded-full px-4 py-1.5 text-sm font-medium transition-colors',
               activeSubcategory === null
                 ? 'text-white'
-                : 'bg-[var(--color-surface-secondary)] text-[var(--color-text-secondary)] hover:bg-[var(--color-surface-tertiary)]',
+                : 'bg-surface-secondary text-text-secondary hover:bg-surface-tertiary',
             )}
             style={activeSubcategory === null ? { backgroundColor: vertical.color } : undefined}
           >
@@ -119,7 +119,7 @@ export default function VerticalPage({ vertical, articles, total, locale }: Vert
                 'rounded-full px-4 py-1.5 text-sm font-medium capitalize transition-colors',
                 activeSubcategory === sub
                   ? 'text-white'
-                  : 'bg-[var(--color-surface-secondary)] text-[var(--color-text-secondary)] hover:bg-[var(--color-surface-tertiary)]',
+                  : 'bg-surface-secondary text-text-secondary hover:bg-surface-tertiary',
               )}
               style={activeSubcategory === sub ? { backgroundColor: vertical.color } : undefined}
             >
@@ -129,7 +129,7 @@ export default function VerticalPage({ vertical, articles, total, locale }: Vert
         </div>
 
         {filteredArticles.length === 0 ? (
-          <p className="py-12 text-center text-[var(--color-text-tertiary)]">
+          <p className="py-12 text-center text-text-tertiary">
             No articles found for this section.
           </p>
         ) : (
@@ -138,13 +138,13 @@ export default function VerticalPage({ vertical, articles, total, locale }: Vert
             <div className="min-w-0 flex-1">
               {/* Featured Article */}
               {featuredArticle && (
-                <div className="mb-10 border-b border-[var(--color-border)] pb-10">
+                <div className="mb-10 border-b border-border pb-10">
                   <FeaturedCard article={featuredArticle} />
                 </div>
               )}
 
               {/* Latest heading */}
-              <h2 className="mb-6 font-serif text-xl font-bold text-[var(--color-text-primary)]">
+              <h2 className="mb-6 font-serif text-xl font-bold text-text-primary">
                 Latest {vertical.name} News
               </h2>
 
@@ -163,7 +163,7 @@ export default function VerticalPage({ vertical, articles, total, locale }: Vert
               <div className="sticky top-24 space-y-8">
                 {/* Trending in Vertical */}
                 <div>
-                  <h3 className="mb-4 font-serif text-lg font-bold text-[var(--color-text-primary)]">
+                  <h3 className="mb-4 font-serif text-lg font-bold text-text-primary">
                     Trending in {vertical.name}
                   </h3>
                   <div className="space-y-4">
@@ -176,7 +176,7 @@ export default function VerticalPage({ vertical, articles, total, locale }: Vert
                 {/* Related Sections */}
                 {related.length > 0 && (
                   <div>
-                    <h3 className="mb-3 font-serif text-sm font-bold tracking-wider text-[var(--color-text-tertiary)] uppercase">
+                    <h3 className="mb-3 font-serif text-sm font-bold tracking-wider text-text-tertiary uppercase">
                       Related
                     </h3>
                     <div className="flex flex-wrap gap-2">
@@ -184,7 +184,7 @@ export default function VerticalPage({ vertical, articles, total, locale }: Vert
                         <Link
                           key={r.href}
                           href={r.href}
-                          className="rounded-full border border-[var(--color-border)] px-3 py-1 text-sm text-[var(--color-text-secondary)] transition-colors hover:bg-[var(--color-surface-secondary)] hover:text-[var(--color-text-primary)]"
+                          className="rounded-full border border-border px-3 py-1 text-sm text-text-secondary transition-colors hover:bg-surface-secondary hover:text-text-primary"
                         >
                           {r.label}
                         </Link>

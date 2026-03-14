@@ -68,11 +68,11 @@ export default async function OpinionPage({ params, searchParams }: Props) {
         {/* Page Header */}
         <div className="mb-8">
           <div className="mb-4 h-1 w-16 rounded-full bg-amber-500" aria-hidden="true" />
-          <h1 className="mb-2 font-serif text-3xl font-bold text-[var(--color-text-primary)] md:text-4xl">
+          <h1 className="mb-2 font-serif text-3xl font-bold text-text-primary md:text-4xl">
             <span className="mr-2">💬</span>
             Opinion &amp; Commentary
           </h1>
-          <p className="max-w-2xl text-[var(--color-text-secondary)]">
+          <p className="max-w-2xl text-text-secondary">
             Analysis, editorials, and expert perspectives from across the crypto ecosystem.
           </p>
         </div>
@@ -104,7 +104,7 @@ export default async function OpinionPage({ params, searchParams }: Props) {
                 'inline-flex items-center rounded-full px-4 py-1.5 text-sm font-medium transition-colors',
                 activeTopic === f.key
                   ? 'bg-amber-500 text-white'
-                  : 'bg-[var(--color-surface-secondary)] text-[var(--color-text-secondary)] hover:bg-[var(--color-surface-tertiary)] hover:text-[var(--color-text-primary)]',
+                  : 'bg-surface-secondary text-text-secondary hover:bg-surface-tertiary hover:text-text-primary',
               )}
             >
               {f.label}
@@ -113,7 +113,7 @@ export default async function OpinionPage({ params, searchParams }: Props) {
         </div>
 
         {articles.length === 0 ? (
-          <p className="py-12 text-center text-[var(--color-text-tertiary)]">
+          <p className="py-12 text-center text-text-tertiary">
             No opinion articles found. Opinion content is auto-detected from feed categories and URL
             paths — check back later.
           </p>
@@ -121,7 +121,7 @@ export default async function OpinionPage({ params, searchParams }: Props) {
           <div>
             {/* Featured Opinion */}
             {featuredArticle && (
-              <div className="mb-10 border-b border-[var(--color-border)] pb-10">
+              <div className="mb-10 border-b border-border pb-10">
                 <FeaturedOpinionCard article={featuredArticle} />
               </div>
             )}
@@ -140,7 +140,7 @@ export default async function OpinionPage({ params, searchParams }: Props) {
               <div className="mt-10 flex justify-center">
                 <a
                   href={`/${locale}/opinion?${activeTopic !== 'all' ? `topic=${activeTopic}&` : ''}page=${currentPage + 1}`}
-                  className="inline-flex items-center gap-2 rounded-lg border border-[var(--color-border)] px-6 py-3 text-sm font-medium text-[var(--color-text-secondary)] transition-colors hover:bg-[var(--color-surface-secondary)] hover:text-[var(--color-text-primary)]"
+                  className="inline-flex items-center gap-2 rounded-lg border border-border px-6 py-3 text-sm font-medium text-text-secondary transition-colors hover:bg-surface-secondary hover:text-text-primary"
                 >
                   Load more
                 </a>
