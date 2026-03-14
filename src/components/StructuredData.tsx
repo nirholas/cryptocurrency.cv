@@ -1,3 +1,5 @@
+import { NonceScript } from './NonceScript';
+
 export function WebsiteStructuredData() {
   const data = {
     "@context": "https://schema.org",
@@ -12,7 +14,7 @@ export function WebsiteStructuredData() {
     },
   };
   return (
-    <script
+    <NonceScript
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
     />
@@ -37,7 +39,7 @@ export function OrganizationStructuredData() {
     },
   };
   return (
-    <script
+    <NonceScript
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
     />
@@ -62,7 +64,7 @@ export function NewsListStructuredData({ articles }: { articles: { title: string
     })),
   };
   return (
-    <script
+    <NonceScript
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
     />
@@ -88,7 +90,7 @@ export function BreadcrumbStructuredData({
     })),
   };
   return (
-    <script
+    <NonceScript
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
     />
@@ -116,7 +118,7 @@ export function FAQStructuredData({
     })),
   };
   return (
-    <script
+    <NonceScript
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
     />
@@ -179,7 +181,7 @@ export function ArticleStructuredData({
     ...(keywords && keywords.length > 0 ? { keywords: keywords.join(", ") } : {}),
   };
   return (
-    <script
+    <NonceScript
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
     />
@@ -221,7 +223,7 @@ export function SoftwareApplicationStructuredData() {
     ],
   };
   return (
-    <script
+    <NonceScript
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
     />

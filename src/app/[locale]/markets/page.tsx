@@ -1,20 +1,13 @@
-import { setRequestLocale } from "next-intl/server";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import { generateSEOMetadata } from "@/lib/seo";
-import { SITE_URL } from "@/lib/constants";
-import { Card } from "@/components/ui/Card";
-import { formatLargeNumber, formatPercent } from "@/lib/format";
-import MarketTable, { type CoinRow } from "@/components/MarketTable";
-import {
-  TrendingUp,
-  BarChart3,
-  Bitcoin,
-  Activity,
-  Gauge,
-  Coins,
-} from "lucide-react";
-import type { Metadata } from "next";
+import { setRequestLocale } from 'next-intl/server';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import { generateSEOMetadata } from '@/lib/seo';
+import { SITE_URL } from '@/lib/constants';
+import { Card } from '@/components/ui/Card';
+import { formatLargeNumber, formatPercent } from '@/lib/format';
+import MarketTable, { type CoinRow } from '@/components/MarketTable';
+import { TrendingUp, BarChart3, Bitcoin, Activity, Gauge, Coins } from 'lucide-react';
+import type { Metadata } from 'next';
 
 export const revalidate = 120;
 
@@ -60,17 +53,17 @@ async function fetchJSON<T>(path: string): Promise<T | null> {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   return generateSEOMetadata({
-    title: "Markets — Crypto Vision News",
+    title: 'Markets — Crypto Vision News',
     description:
-      "Live cryptocurrency market data, prices, and trends. Track Bitcoin, Ethereum, and top altcoins in real time.",
-    path: "/markets",
+      'Live cryptocurrency market data, prices, and trends. Track Bitcoin, Ethereum, and top altcoins in real time.',
+    path: '/markets',
     locale,
     tags: [
-      "crypto markets",
-      "bitcoin price",
-      "ethereum price",
-      "market data",
-      "cryptocurrency prices",
+      'crypto markets',
+      'bitcoin price',
+      'ethereum price',
+      'market data',
+      'cryptocurrency prices',
     ],
   });
 }
@@ -89,16 +82,12 @@ function StatCard({ title, value, change, icon }: StatCardProps) {
     <Card className="p-5">
       <div className="flex items-start justify-between">
         <div>
-          <p className="text-xs font-medium uppercase tracking-wider text-text-tertiary mb-1">
+          <p className="text-text-tertiary mb-1 text-xs font-medium tracking-wider uppercase">
             {title}
           </p>
-          <p className="text-2xl font-bold text-text-primary">
-            {value}
-          </p>
+          <p className="text-text-primary text-2xl font-bold">{value}</p>
           {change && (
-            <p className={`mt-1 text-sm font-medium ${change.className}`}>
-              {change.text}
-            </p>
+            <p className={`mt-1 text-sm font-medium ${change.className}`}>{change.text}</p>
           )}
         </div>
         <div className="text-accent opacity-60">{icon}</div>
@@ -115,14 +104,14 @@ export default async function MarketsPage({ params }: Props) {
 
   // Fetch all data in parallel — use allSettled so one failure doesn't crash the page
   const [globalResult, fgResult, coinsResult] = await Promise.allSettled([
-    fetchJSON<GlobalData>("/api/global"),
-    fetchJSON<FearGreedData>("/api/fear-greed"),
-    fetchJSON<{ coins: CoinRow[] }>("/api/market/coins?type=top&limit=50"),
+    fetchJSON<GlobalData>('/api/global'),
+    fetchJSON<FearGreedData>('/api/fear-greed'),
+    fetchJSON<{ coins: CoinRow[] }>('/api/market/coins?type=top&limit=50'),
   ]);
 
-  const globalData = globalResult.status === "fulfilled" ? globalResult.value : null;
-  const fearGreedData = fgResult.status === "fulfilled" ? fgResult.value : null;
-  const topCoinsData = coinsResult.status === "fulfilled" ? coinsResult.value : null;
+  const globalData = globalResult.status === 'fulfilled' ? globalResult.value : null;
+  const fearGreedData = fgResult.status === 'fulfilled' ? fgResult.value : null;
+  const topCoinsData = coinsResult.status === 'fulfilled' ? coinsResult.value : null;
 
   // ---- Derived values -------------------------------------------------------
 
@@ -131,23 +120,21 @@ export default async function MarketsPage({ params }: Props) {
   const btcDominance = globalData?.market_cap_percentage?.btc ?? null;
   const ethDominance = globalData?.market_cap_percentage?.eth ?? null;
   const activeCryptos = globalData?.active_cryptocurrencies ?? null;
-  const marketCapChange24h =
-    globalData?.market_cap_change_percentage_24h_usd ?? null;
+  const marketCapChange24h = globalData?.market_cap_change_percentage_24h_usd ?? null;
 
   const fearGreedValue = fearGreedData?.current?.value ?? null;
-  const fearGreedLabel =
-    fearGreedData?.current?.valueClassification ?? "Unknown";
+  const fearGreedLabel = fearGreedData?.current?.valueClassification ?? 'Unknown';
 
   const coins: CoinRow[] = topCoinsData?.coins ?? [];
 
   // Fear & greed color
   function fgColor(v: number | null) {
-    if (v == null) return "text-text-secondary";
-    if (v <= 25) return "text-red-500 dark:text-red-400";
-    if (v <= 45) return "text-orange-500 dark:text-orange-400";
-    if (v <= 55) return "text-yellow-500 dark:text-yellow-400";
-    if (v <= 75) return "text-green-400 dark:text-green-300";
-    return "text-green-500 dark:text-green-400";
+    if (v == null) return 'text-text-secondary';
+    if (v <= 25) return 'text-red-500 dark:text-red-400';
+    if (v <= 45) return 'text-orange-500 dark:text-orange-400';
+    if (v <= 55) return 'text-yellow-500 dark:text-yellow-400';
+    if (v <= 75) return 'text-green-400 dark:text-green-300';
+    return 'text-green-500 dark:text-green-400';
   }
 
   return (
@@ -155,59 +142,49 @@ export default async function MarketsPage({ params }: Props) {
       <Header />
       <main className="container-main py-10">
         {/* Page heading */}
-        <h1 className="font-serif text-3xl md:text-4xl font-bold mb-2 text-text-primary">
+        <h1 className="text-text-primary mb-2 font-serif text-3xl font-bold md:text-4xl">
           Markets
         </h1>
         <p className="text-text-secondary mb-8 max-w-2xl">
-          Real-time cryptocurrency market data — prices, trends, and global
-          overview for hundreds of digital assets.
+          Real-time cryptocurrency market data — prices, trends, and global overview for hundreds of
+          digital assets.
         </p>
 
         {/* ---- Stats bar ---- */}
         <section
-          className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 mb-10"
+          className="mb-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6"
           aria-label="Market statistics"
         >
           <StatCard
             title="Total Market Cap"
             value={
-              totalMarketCap != null
-                ? formatLargeNumber(totalMarketCap, { prefix: "$" })
-                : "—"
+              totalMarketCap != null ? formatLargeNumber(totalMarketCap, { prefix: '$' }) : '—'
             }
-            change={
-              marketCapChange24h != null
-                ? formatPercent(marketCapChange24h)
-                : null
-            }
+            change={marketCapChange24h != null ? formatPercent(marketCapChange24h) : null}
             icon={<TrendingUp className="h-5 w-5" />}
           />
 
           <StatCard
             title="24h Volume"
-            value={
-              totalVolume != null
-                ? formatLargeNumber(totalVolume, { prefix: "$" })
-                : "—"
-            }
+            value={totalVolume != null ? formatLargeNumber(totalVolume, { prefix: '$' }) : '—'}
             icon={<BarChart3 className="h-5 w-5" />}
           />
 
           <StatCard
             title="BTC Dominance"
-            value={btcDominance != null ? `${btcDominance.toFixed(1)}%` : "—"}
+            value={btcDominance != null ? `${btcDominance.toFixed(1)}%` : '—'}
             icon={<Bitcoin className="h-5 w-5" />}
           />
 
           <StatCard
             title="ETH Dominance"
-            value={ethDominance != null ? `${ethDominance.toFixed(1)}%` : "—"}
+            value={ethDominance != null ? `${ethDominance.toFixed(1)}%` : '—'}
             icon={<Coins className="h-5 w-5" />}
           />
 
           <StatCard
             title="Fear & Greed"
-            value={fearGreedValue != null ? String(fearGreedValue) : "—"}
+            value={fearGreedValue != null ? String(fearGreedValue) : '—'}
             change={
               fearGreedValue != null
                 ? {
@@ -221,25 +198,21 @@ export default async function MarketsPage({ params }: Props) {
 
           <StatCard
             title="Active Coins"
-            value={
-              activeCryptos != null
-                ? activeCryptos.toLocaleString("en-US")
-                : "—"
-            }
+            value={activeCryptos != null ? activeCryptos.toLocaleString('en-US') : '—'}
             icon={<Activity className="h-5 w-5" />}
           />
         </section>
 
         {/* ---- Top Coins Table ---- */}
         <section aria-label="Top cryptocurrencies by market cap">
-          <h2 className="font-serif text-xl font-bold mb-4 text-text-primary">
+          <h2 className="text-text-primary mb-4 font-serif text-xl font-bold">
             Top Cryptocurrencies
           </h2>
 
           {coins.length > 0 ? (
             <MarketTable coins={coins} />
           ) : (
-            <div className="rounded-lg border border-border bg-(--color-surface) p-12 text-center text-text-secondary">
+            <div className="border-border text-text-secondary rounded-lg border bg-(--color-surface) p-12 text-center">
               Market data is temporarily unavailable. Please try again shortly.
             </div>
           )}

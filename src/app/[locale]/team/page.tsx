@@ -49,6 +49,8 @@ async function fetchContributors() {
   }
 }
 
+import { NonceScript } from '@/components/NonceScript';
+
 function TeamStructuredData() {
   const structuredData = {
     '@context': 'https://schema.org',
@@ -68,7 +70,7 @@ function TeamStructuredData() {
   };
 
   return (
-    <script
+    <NonceScript
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
     />

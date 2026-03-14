@@ -416,7 +416,9 @@ function CategoryDistribution({
 /* ─── Page ─── */
 
 export default async function StatusPage() {
-  const [health, stats] = await Promise.all([getHealth(), getStats()]);
+  const [healthResult, statsResult] = await Promise.allSettled([getHealth(), getStats()]);
+  const health = healthResult.status === 'fulfilled' ? healthResult.value : null;
+  const stats = statsResult.status === 'fulfilled' ? statsResult.value : null;
 
   const overallStatus = health?.status || 'unhealthy';
   const uptimePct = health ? formatUptimePercent(health.uptime) : '—';

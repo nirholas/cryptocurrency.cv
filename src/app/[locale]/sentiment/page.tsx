@@ -351,8 +351,8 @@ export default async function SentimentPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
 
-  // Fetch data in parallel
-  const [sentimentData, narrativesData, socialData] = await Promise.all([
+  // Fetch data in parallel — use allSettled so one failure doesn't crash the page
+  const [sentimentResult, narrativesResult, socialResult] = await Promise.allSettled([
     fetchJSON<{
       market?: MarketSentiment;
       meta?: { articlesAnalyzed?: number };
@@ -367,6 +367,10 @@ export default async function SentimentPage({ params }: Props) {
       };
     }>("/api/social?view=trends&limit=30"),
   ]);
+
+  const sentimentData = sentimentResult.status === "fulfilled" ? sentimentResult.value : null;
+  const narrativesData = narrativesResult.status === "fulfilled" ? narrativesResult.value : null;
+  const socialData = socialResult.status === "fulfilled" ? socialResult.value : null;
 
   // Derive values with fallbacks
   const market = sentimentData?.market ?? MOCK_SENTIMENT;

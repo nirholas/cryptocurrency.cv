@@ -218,8 +218,8 @@ export default async function LocaleLayout({ children, params }: Props) {
               </ToastProvider>
             </ThemeProvider>
           </NextIntlClientProvider>
-          <Analytics />
-          <SpeedInsights />
+          <Analytics nonce={nonce} />
+          <SpeedInsights nonce={nonce} />
         </ClientOnly>
       </body>
     </html>

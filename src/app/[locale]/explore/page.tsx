@@ -135,7 +135,9 @@ export default async function ExplorePage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
 
-  const [tags, trendingConnections] = await Promise.all([fetchTags(), fetchTrendingConnections()]);
+  const [tagsResult, connectionsResult] = await Promise.allSettled([fetchTags(), fetchTrendingConnections()]);
+  const tags = tagsResult.status === "fulfilled" ? tagsResult.value : [];
+  const trendingConnections = connectionsResult.status === "fulfilled" ? connectionsResult.value : [];
 
   return (
     <>

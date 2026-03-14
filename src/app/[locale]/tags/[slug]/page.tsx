@@ -5,6 +5,7 @@ import Footer from '@/components/Footer';
 import PageShareSection from '@/components/PageShareSection';
 import { FeaturedCard, NewsCardDefault } from '@/components/NewsCard';
 import { TagChip } from '@/components/TagChip';
+import { NonceScript } from '@/components/NonceScript';
 import {
   getTagBySlug,
   getAllTags,
@@ -73,7 +74,7 @@ export default async function TagPage({ params }: Props) {
     <>
       <Header />
       <main className="container-main py-10">
-        <script
+        <NonceScript
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />

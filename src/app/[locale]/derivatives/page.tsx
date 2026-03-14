@@ -86,14 +86,19 @@ export default async function DerivativesPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
 
-  // Fetch data server-side
-  const [derivativesData, btcOptions, ethOptions, hyperliquidData] =
-    await Promise.all([
+  // Fetch data server-side — use allSettled so one failure doesn't crash the page
+  const [derivResult, btcOptResult, ethOptResult, hlResult] =
+    await Promise.allSettled([
       fetchJSON<DerivativesTicker[]>("/api/derivatives"),
       fetchJSON<OptionsData>("/api/options?underlying=BTC&view=dashboard"),
       fetchJSON<OptionsData>("/api/options?underlying=ETH&view=dashboard"),
       fetchJSON<HyperliquidResponse>("/api/hyperliquid?type=oi"),
     ]);
+
+  const derivativesData = derivResult.status === "fulfilled" ? derivResult.value : null;
+  const btcOptions = btcOptResult.status === "fulfilled" ? btcOptResult.value : null;
+  const ethOptions = ethOptResult.status === "fulfilled" ? ethOptResult.value : null;
+  const hyperliquidData = hlResult.status === "fulfilled" ? hlResult.value : null;
 
   // Calculate open interest totals by symbol
   const oiMap: Record<string, number> = {};

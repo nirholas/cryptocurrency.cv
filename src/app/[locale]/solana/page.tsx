@@ -162,7 +162,10 @@ export default async function SolanaPage({ params }: Props) {
 
   const solanaData = solResult.status === 'fulfilled' ? solResult.value : null;
   const networkStats = netResult.status === 'fulfilled' ? netResult.value : {};
-  const newsResponse = newsResult.status === 'fulfilled' ? newsResult.value : { articles: [], totalCount: 0, sources: [], fetchedAt: new Date().toISOString() };
+  const newsResponse =
+    newsResult.status === 'fulfilled'
+      ? newsResult.value
+      : { articles: [], totalCount: 0, sources: [], fetchedAt: new Date().toISOString() };
 
   const md = solanaData?.market_data;
   const price = md?.current_price?.usd;

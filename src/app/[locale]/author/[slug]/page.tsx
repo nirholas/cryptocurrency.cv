@@ -85,6 +85,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 /*  Structured Data                                                   */
 /* ------------------------------------------------------------------ */
 
+import { NonceScript } from '@/components/NonceScript';
+
 function AuthorStructuredData({ name, slug }: { name: string; slug: string }) {
   const structuredData = {
     '@context': 'https://schema.org',
@@ -100,7 +102,7 @@ function AuthorStructuredData({ name, slug }: { name: string; slug: string }) {
   };
 
   return (
-    <script
+    <NonceScript
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
     />

@@ -165,10 +165,13 @@ export default async function L2Page({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
 
-  const [l2Data, bridgeData] = await Promise.all([
+  const [l2Result, bridgeResult] = await Promise.allSettled([
     fetchJSON<L2Summary>("/api/l2"),
     fetchJSON<BridgesSummary>("/api/bridges"),
   ]);
+
+  const l2Data = l2Result.status === "fulfilled" ? l2Result.value : null;
+  const bridgeData = bridgeResult.status === "fulfilled" ? bridgeResult.value : null;
 
   const topProjects = l2Data?.topProjects ?? [];
   const activityMetrics = l2Data?.activityMetrics ?? [];

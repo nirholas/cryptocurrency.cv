@@ -234,7 +234,9 @@ function BreakdownCard({
 }
 
 async function FearGreedContent() {
-  const [fgData, btcPrice] = await Promise.all([fetchFearGreed(), fetchBtcPrice()]);
+  const [fgResult, btcResult] = await Promise.allSettled([fetchFearGreed(), fetchBtcPrice()]);
+  const fgData = fgResult.status === 'fulfilled' ? fgResult.value : null;
+  const btcPrice = btcResult.status === 'fulfilled' ? btcResult.value : null;
 
   if (!fgData) {
     return (

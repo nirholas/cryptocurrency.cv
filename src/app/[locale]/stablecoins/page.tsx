@@ -362,7 +362,13 @@ export default async function StablecoinsPage({ params }: Props) {
           <h2 className="font-serif text-2xl font-bold mb-4 text-text-primary">
             📋 All Stablecoins
           </h2>
-          <StablecoinTable stablecoins={stablecoins} />
+          {stablecoins.length > 0 ? (
+            <StablecoinTable stablecoins={stablecoins} />
+          ) : (
+            <div className="rounded-lg border border-border bg-(--color-surface) p-12 text-center text-text-secondary">
+              Stablecoin data is temporarily unavailable. Please try again shortly.
+            </div>
+          )}
         </section>
       </main>
       <Footer />

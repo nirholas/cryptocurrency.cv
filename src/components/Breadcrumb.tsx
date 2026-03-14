@@ -1,6 +1,8 @@
 import { Link } from "@/i18n/navigation";
 import { ChevronRight, Home } from "lucide-react";
 
+import { NonceScript } from './NonceScript';
+
 interface BreadcrumbItem {
   label: string;
   href?: string;
@@ -30,7 +32,7 @@ export default function Breadcrumb({ items }: BreadcrumbProps) {
 
   return (
     <>
-      <script
+      <NonceScript
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />

@@ -61,7 +61,10 @@ export enum SpanStatusCode {
 }
 
 interface Tracer {
-  startSpan(name: string, options?: { attributes?: Record<string, string | number | boolean> }): Span;
+  startSpan(
+    name: string,
+    options?: { attributes?: Record<string, string | number | boolean> },
+  ): Span;
 }
 
 interface Counter {
@@ -182,11 +185,13 @@ export async function initTelemetry(): Promise<void> {
   try {
     // Dynamic imports to avoid bundling OTel in Edge/client builds
     const { NodeSDK } = await import('@opentelemetry/sdk-node');
-     
-    const resourcesModule = await import('@opentelemetry/resources') as any;
-     
-    const Resource = (resourcesModule as any).Resource ?? (resourcesModule as any).default?.Resource;
-    const { ATTR_SERVICE_NAME, ATTR_SERVICE_VERSION } = await import('@opentelemetry/semantic-conventions');
+
+    const resourcesModule = (await import('@opentelemetry/resources')) as any;
+
+    const Resource =
+      (resourcesModule as any).Resource ?? (resourcesModule as any).default?.Resource;
+    const { ATTR_SERVICE_NAME, ATTR_SERVICE_VERSION } =
+      await import('@opentelemetry/semantic-conventions');
     const { OTLPTraceExporter } = await import('@opentelemetry/exporter-trace-otlp-http');
     const { OTLPMetricExporter } = await import('@opentelemetry/exporter-metrics-otlp-http');
     const { PeriodicExportingMetricReader } = await import('@opentelemetry/sdk-metrics');
@@ -225,18 +230,51 @@ export async function initTelemetry(): Promise<void> {
     // Wire up our metrics
     const meter = otelApi.metrics.getMeter('free-crypto-news', '2.0.0');
 
-    metrics.apiRequests = meter.createCounter('api.requests', { description: 'Total API requests', unit: '1' });
-    metrics.apiLatency = meter.createHistogram('api.latency', { description: 'API request latency', unit: 'ms' });
-    metrics.aiInferences = meter.createCounter('ai.inferences', { description: 'AI model inferences', unit: '1' });
-    metrics.aiLatency = meter.createHistogram('ai.latency', { description: 'AI inference latency', unit: 'ms' });
-    metrics.aiCostMicro = meter.createCounter('ai.cost', { description: 'AI cost in micro-USD', unit: 'uUSD' });
+    metrics.apiRequests = meter.createCounter('api.requests', {
+      description: 'Total API requests',
+      unit: '1',
+    });
+    metrics.apiLatency = meter.createHistogram('api.latency', {
+      description: 'API request latency',
+      unit: 'ms',
+    });
+    metrics.aiInferences = meter.createCounter('ai.inferences', {
+      description: 'AI model inferences',
+      unit: '1',
+    });
+    metrics.aiLatency = meter.createHistogram('ai.latency', {
+      description: 'AI inference latency',
+      unit: 'ms',
+    });
+    metrics.aiCostMicro = meter.createCounter('ai.cost', {
+      description: 'AI cost in micro-USD',
+      unit: 'uUSD',
+    });
     metrics.cacheHits = meter.createCounter('cache.hits', { description: 'Cache hits', unit: '1' });
-    metrics.cacheMisses = meter.createCounter('cache.misses', { description: 'Cache misses', unit: '1' });
-    metrics.upstreamFetches = meter.createCounter('upstream.fetches', { description: 'Upstream API fetches', unit: '1' });
-    metrics.upstreamLatency = meter.createHistogram('upstream.latency', { description: 'Upstream fetch latency', unit: 'ms' });
-    metrics.circuitBreakerTrips = meter.createCounter('circuit_breaker.trips', { description: 'Circuit breaker trips', unit: '1' });
-    metrics.wsConnections = meter.createCounter('ws.connections', { description: 'WebSocket connections', unit: '1' });
-    metrics.rateLimitBlocks = meter.createCounter('rate_limit.blocks', { description: 'Rate limit blocks', unit: '1' });
+    metrics.cacheMisses = meter.createCounter('cache.misses', {
+      description: 'Cache misses',
+      unit: '1',
+    });
+    metrics.upstreamFetches = meter.createCounter('upstream.fetches', {
+      description: 'Upstream API fetches',
+      unit: '1',
+    });
+    metrics.upstreamLatency = meter.createHistogram('upstream.latency', {
+      description: 'Upstream fetch latency',
+      unit: 'ms',
+    });
+    metrics.circuitBreakerTrips = meter.createCounter('circuit_breaker.trips', {
+      description: 'Circuit breaker trips',
+      unit: '1',
+    });
+    metrics.wsConnections = meter.createCounter('ws.connections', {
+      description: 'WebSocket connections',
+      unit: '1',
+    });
+    metrics.rateLimitBlocks = meter.createCounter('rate_limit.blocks', {
+      description: 'Rate limit blocks',
+      unit: '1',
+    });
 
     console.info('[OTel] Initialized — traces → %s, metrics every 30s', otlpEndpoint || 'GCP');
 
@@ -250,7 +288,10 @@ export async function initTelemetry(): Promise<void> {
     }
   } catch (err) {
     // OTel packages not installed — degrade gracefully
-    console.debug('[OTel] SDK not available (install @opentelemetry/sdk-node to enable):', (err as Error).message);
+    console.debug(
+      '[OTel] SDK not available (install @opentelemetry/sdk-node to enable):',
+      (err as Error).message,
+    );
   }
 }
 
@@ -326,9 +367,14 @@ export function log(level: LogLevel, message: string, data?: Record<string, unkn
     ...data,
   };
 
-  const fn = level === 'error' ? console.error :
-             level === 'warn' ? console.warn :
-             level === 'debug' ? console.debug : console.info;
+  const fn =
+    level === 'error'
+      ? console.error
+      : level === 'warn'
+        ? console.warn
+        : level === 'debug'
+          ? console.debug
+          : console.info;
 
   if (process.env.NODE_ENV === 'production') {
     fn(JSON.stringify(entry));
@@ -357,27 +403,31 @@ export function traceHandler(
     const start = Date.now();
     const url = new URL(request.url);
 
-    return withSpan(operationName, {
-      'http.method': request.method,
-      'http.url': url.pathname,
-      'http.host': url.host,
-    }, async (span) => {
-      try {
-        const response = await handler(request);
+    return withSpan(
+      operationName,
+      {
+        'http.method': request.method,
+        'http.url': url.pathname,
+        'http.host': url.host,
+      },
+      async (span) => {
+        try {
+          const response = await handler(request);
 
-        const latency = Date.now() - start;
-        span.setAttribute('http.status_code', response.status);
-        span.setAttribute('http.response_time_ms', latency);
+          const latency = Date.now() - start;
+          span.setAttribute('http.status_code', response.status);
+          span.setAttribute('http.response_time_ms', latency);
 
-        metrics.apiRequests.add(1, { endpoint: url.pathname, status: response.status });
-        metrics.apiLatency.record(latency, { endpoint: url.pathname });
+          metrics.apiRequests.add(1, { endpoint: url.pathname, status: response.status });
+          metrics.apiLatency.record(latency, { endpoint: url.pathname });
 
-        return response;
-      } catch (err) {
-        metrics.apiRequests.add(1, { endpoint: url.pathname, status: 500 });
-        throw err;
-      }
-    });
+          return response;
+        } catch (err) {
+          metrics.apiRequests.add(1, { endpoint: url.pathname, status: 500 });
+          throw err;
+        }
+      },
+    );
   };
 }
 
