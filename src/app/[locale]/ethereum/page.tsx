@@ -159,11 +159,15 @@ export default async function EthereumPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
 
-  const [ethData, networkStats, newsResponse] = await Promise.all([
+  const [ethResult, netResult, newsResult] = await Promise.allSettled([
     fetchEthereumData(),
     fetchEthNetworkStats(),
     getEthereumNews(10),
   ]);
+
+  const ethData = ethResult.status === "fulfilled" ? ethResult.value : null;
+  const networkStats = netResult.status === "fulfilled" ? netResult.value : {};
+  const newsResponse = newsResult.status === "fulfilled" ? newsResult.value : { articles: [], totalCount: 0, sources: [], fetchedAt: new Date().toISOString() };
 
   const md = ethData?.market_data;
   const price = md?.current_price?.usd;

@@ -37,6 +37,7 @@ import { TrendingTopicsWidget } from '@/components/TrendingTopics';
 import { SentimentBanner } from '@/components/SentimentIndicator';
 import { LiveActivityFeed } from '@/components/LiveActivityFeed';
 import { SmartFeed, FeedStatsWidget } from '@/components/SmartFeed';
+import DataUnavailable from '@/components/DataUnavailable';
 import {
   getHomepageNews,
   getSourceCount,
@@ -166,6 +167,22 @@ export default async function HomePage({ params }: Props) {
 
   // Editor's picks — highest quality trending articles
   const editorsPicks = trending.slice(0, 3);
+
+  // If primary data failed, show a clear message instead of empty layout
+  if (articles.length === 0) {
+    return (
+      <>
+        <Header />
+        <main id="main-content" className="min-h-screen">
+          <DataUnavailable
+            title="News feed temporarily unavailable"
+            message="We're having trouble loading the latest news. Our sources will be back shortly — please try again in a moment."
+          />
+        </main>
+        <Footer />
+      </>
+    );
+  }
 
   return (
     <>

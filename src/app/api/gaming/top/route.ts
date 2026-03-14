@@ -18,6 +18,7 @@
 import { NextResponse } from 'next/server';
 import { gamingDataChain } from '@/lib/providers/adapters/gaming-data';
 
+export const dynamic = 'force-dynamic';
 export const revalidate = 300; // ISR: top games refreshes every 5 min
 
 export async function GET(request: Request) {

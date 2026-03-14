@@ -154,11 +154,15 @@ export default async function SolanaPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
 
-  const [solanaData, networkStats, newsResponse] = await Promise.all([
+  const [solResult, netResult, newsResult] = await Promise.allSettled([
     fetchSolanaData(),
     fetchSolanaNetworkStats(),
     getNewsByCategory('solana', 10),
   ]);
+
+  const solanaData = solResult.status === 'fulfilled' ? solResult.value : null;
+  const networkStats = netResult.status === 'fulfilled' ? netResult.value : {};
+  const newsResponse = newsResult.status === 'fulfilled' ? newsResult.value : { articles: [], totalCount: 0, sources: [], fetchedAt: new Date().toISOString() };
 
   const md = solanaData?.market_data;
   const price = md?.current_price?.usd;

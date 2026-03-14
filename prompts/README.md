@@ -11,6 +11,8 @@ Critical path — everything else depends on this.
 | #   | Prompt                                                                                                                  | Goal                                                                                            | Difficulty |
 | --- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ---------- |
 | 1   | [01-migrate-direct-apis-to-provider-framework.md](./high-priority/01-migrate-direct-apis-to-provider-framework.md)      | Wire all 366 API routes through ProviderChain with circuit breakers, caching, anomaly detection | Hard       |
+| 59  | [59-fix-csp-inline-script-violation.md](./high-priority/59-fix-csp-inline-script-violation.md)                          | Fix CSP nonce propagation so inline scripts aren't blocked in production                        | Medium     |
+| 60  | [60-fix-server-components-render-error.md](./high-priority/60-fix-server-components-render-error.md)                    | Diagnose and fix production Server Components render error with recursive stack trace           | Hard       |
 
 ## Medium Priority (`medium-priority/`)
 
@@ -31,6 +33,13 @@ Critical path — everything else depends on this.
 | 43  | [43-knip-dead-code-tighten.md](./medium-priority/43-knip-dead-code-tighten.md)                     | Tighten knip config to remove dead code ignore patterns                            | Medium     |
 | 44  | [44-api-versioning.md](./medium-priority/44-api-versioning.md)                                     | Complete API v1 versioning with backward-compat redirects                          | Medium     |
 | 46  | [46-websocket-resilience.md](./medium-priority/46-websocket-resilience.md)                         | Harden WebSocket server with health endpoints, structured shutdown, monitoring     | Medium     |
+
+### Production Bug Fixes
+
+| #   | Prompt                                                                                             | Goal                                                                               | Difficulty |
+| --- | -------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------- |
+| 61  | [61-create-more-page-bottomnav-404.md](./medium-priority/61-create-more-page-bottomnav-404.md)     | Create missing `/more` page that BottomNav links to (currently 404)                | Easy       |
+| 62  | [62-investigate-excessive-rsc-fetch-requests.md](./medium-priority/62-investigate-excessive-rsc-fetch-requests.md) | Diagnose and reduce excessive RSC fetch requests flooding the browser console | Medium     |
 
 ### Distribution & Growth
 
@@ -81,6 +90,12 @@ Critical path — everything else depends on this.
 | 56  | [56-masthead-team-page.md](./low-priority/56-masthead-team-page.md)                                          | Create team page with bios, GitHub contributors integration, and join-us CTA              | Easy       |
 | 57  | [57-press-release-submission.md](./low-priority/57-press-release-submission.md)                              | Build self-serve PR submission system with form, review workflow, and listing page         | Hard       |
 | 58  | [58-news-verticals.md](./low-priority/58-news-verticals.md)                                                  | Split news into Business, Tech, Web3, DeFi verticals with auto-classification             | Medium     |
+
+### PWA & UX Polish
+
+| #   | Prompt                                                                                                       | Goal                                                                                      | Difficulty |
+| --- | ------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------- | ---------- |
+| 63  | [63-fix-pwa-install-banner-suppression.md](./low-priority/63-fix-pwa-install-banner-suppression.md)          | Fix PWA install prompt — currently captured but never shown to users                      | Easy       |
 
 ## Archived — Completed (`archive/`)
 
@@ -135,7 +150,7 @@ Each prompt is self-contained with:
 
 | Folder            | Count | Status                  |
 | ----------------- | ----- | ----------------------- |
-| `high-priority/`  | 1     | Critical path           |
-| `medium-priority/` | 16   | Infrastructure + Growth |
-| `low-priority/`   | 22    | Features + Parity       |
+| `high-priority/`  | 3     | Critical path           |
+| `medium-priority/` | 18   | Infrastructure + Growth |
+| `low-priority/`   | 23    | Features + Parity       |
 | `archive/`        | 25    | Done                    |

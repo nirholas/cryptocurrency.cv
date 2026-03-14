@@ -113,12 +113,16 @@ export default async function MarketsPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
 
-  // Fetch all data in parallel
-  const [globalData, fearGreedData, topCoinsData] = await Promise.all([
+  // Fetch all data in parallel — use allSettled so one failure doesn't crash the page
+  const [globalResult, fgResult, coinsResult] = await Promise.allSettled([
     fetchJSON<GlobalData>("/api/global"),
     fetchJSON<FearGreedData>("/api/fear-greed"),
     fetchJSON<{ coins: CoinRow[] }>("/api/market/coins?type=top&limit=50"),
   ]);
+
+  const globalData = globalResult.status === "fulfilled" ? globalResult.value : null;
+  const fearGreedData = fgResult.status === "fulfilled" ? fgResult.value : null;
+  const topCoinsData = coinsResult.status === "fulfilled" ? coinsResult.value : null;
 
   // ---- Derived values -------------------------------------------------------
 

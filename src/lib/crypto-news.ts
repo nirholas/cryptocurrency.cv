@@ -261,6 +261,7 @@ const RSS_SOURCES = {
     name: 'Crypto Daily',
     url: 'https://cryptodaily.co.uk/feed',
     category: 'general',
+    noDataCache: true, // ~2.5MB feed exceeds Next.js 2MB data cache limit
   },
   usethebitcoin: {
     name: 'UseTheBitcoin',

@@ -144,11 +144,15 @@ export default async function BitcoinPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
 
-  const [bitcoinData, networkStats, newsResponse] = await Promise.all([
+  const [btcResult, netResult, newsResult] = await Promise.allSettled([
     fetchBitcoinData(),
     fetchBitcoinNetworkStats(),
     getBitcoinNews(10),
   ]);
+
+  const bitcoinData = btcResult.status === "fulfilled" ? btcResult.value : null;
+  const networkStats = netResult.status === "fulfilled" ? netResult.value : {};
+  const newsResponse = newsResult.status === "fulfilled" ? newsResult.value : { articles: [], totalCount: 0, sources: [], fetchedAt: new Date().toISOString() };
 
   const md = bitcoinData?.market_data;
   const price = md?.current_price?.usd;

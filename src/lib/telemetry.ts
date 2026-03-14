@@ -240,12 +240,14 @@ export async function initTelemetry(): Promise<void> {
 
     console.info('[OTel] Initialized — traces → %s, metrics every 30s', otlpEndpoint || 'GCP');
 
-    // Graceful shutdown
-    const shutdown = async () => {
-      await sdk.shutdown();
-    };
-    process.on('SIGTERM', shutdown);
-    process.on('SIGINT', shutdown);
+    // Graceful shutdown (guarded for Edge Runtime compatibility)
+    if (typeof process !== 'undefined' && typeof process.on === 'function') {
+      const shutdown = async () => {
+        await sdk.shutdown();
+      };
+      process.on('SIGTERM', shutdown);
+      process.on('SIGINT', shutdown);
+    }
   } catch (err) {
     // OTel packages not installed — degrade gracefully
     console.debug('[OTel] SDK not available (install @opentelemetry/sdk-node to enable):', (err as Error).message);
