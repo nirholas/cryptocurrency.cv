@@ -20,7 +20,7 @@ export async function POST(request: NextRequest) {
   }
 
   const payload = await verifyJwt(refreshToken);
-  if (!payload || payload.type !== 'refresh') {
+  if (payload?.type !== 'refresh') {
     return NextResponse.json(
       { error: 'Invalid or expired refresh token', code: 'INVALID_REFRESH' },
       { status: 401 }

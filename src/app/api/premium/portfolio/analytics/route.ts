@@ -192,7 +192,7 @@ async function generateRebalancingSuggestions(
 
   // Fetch real market caps from CoinGecko for proper weighting
   const coinIds = assets.map(a => a.coinId).join(',');
-  let marketCaps: Record<string, number> = {};
+  const marketCaps: Record<string, number> = {};
   try {
     const res = await fetch(
       `https://api.coingecko.com/api/v3/simple/price?ids=${coinIds}&vs_currencies=usd&include_market_cap=true`

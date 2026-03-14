@@ -40,7 +40,7 @@ export async function getSession(): Promise<Session | null> {
   if (!accessToken) return null;
 
   const payload = await verifyJwt(accessToken);
-  if (!payload || payload.type !== 'access') return null;
+  if (payload?.type !== 'access') return null;
 
   return {
     userId: payload.sub,
@@ -92,10 +92,10 @@ export function withAuth<T extends unknown[]>(
   return async (req: NextRequest, ...args: T): Promise<NextResponse> => {
     // Try access token first
     const accessToken = req.cookies.get(ACCESS_COOKIE)?.value;
-    let payload = accessToken ? await verifyJwt(accessToken) : null;
+    const payload = accessToken ? await verifyJwt(accessToken) : null;
 
     // If access token expired, try refresh token
-    if (!payload || payload.type !== 'access') {
+    if (payload?.type !== 'access') {
       const refreshToken = req.cookies.get(REFRESH_COOKIE)?.value;
       if (!refreshToken) {
         return NextResponse.json(
@@ -105,7 +105,7 @@ export function withAuth<T extends unknown[]>(
       }
 
       const refreshPayload = await verifyJwt(refreshToken);
-      if (!refreshPayload || refreshPayload.type !== 'refresh') {
+      if (refreshPayload?.type !== 'refresh') {
         return NextResponse.json(
           { error: 'Session expired. Please log in again.', code: 'TOKEN_EXPIRED' },
           { status: 401 }

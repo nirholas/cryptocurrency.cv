@@ -13,7 +13,7 @@
  * GET /api/airdrops — returns airdrop tracker data
  */
 
-import { NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 
 const AIRDROPS = [
   { id: '1', name: 'LayerZero Season 2', token: 'ZRO', chain: 'Multi-chain', status: 'upcoming', estimatedValue: '$200-2,000', difficulty: 'medium', verified: false },

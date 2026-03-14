@@ -63,7 +63,7 @@ export async function generateSourcesToken(): Promise<string> {
  * correctly signed, and younger than TOKEN_TTL_MS.
  */
 export async function validateSourcesToken(token: string): Promise<boolean> {
-  if (!token || !token.includes('.')) return false;
+  if (!token?.includes('.')) return false;
   const [ts, sig] = token.split('.', 2);
   if (!ts || !sig) return false;
 

@@ -135,14 +135,14 @@ export default function CryptoCalculator() {
 
   // Current rate
   const rate = useMemo(() => {
-    if (!prices || !prices[fromCoin]) return null;
+    if (!prices?.[fromCoin]) return null;
     const coinData = prices[fromCoin];
     return coinData[toCurrency] ?? coinData.usd ?? null;
   }, [prices, fromCoin, toCurrency]);
 
   // Crypto-to-crypto rate
   const cryptoCryptoRate = useMemo(() => {
-    if (!prices || !prices[fromCoin] || !prices[toCoin]) return null;
+    if (!prices?.[fromCoin] || !prices[toCoin]) return null;
     const fromUsd = prices[fromCoin].usd;
     const toUsd = prices[toCoin].usd;
     if (!fromUsd || !toUsd) return null;
@@ -222,7 +222,7 @@ export default function CryptoCalculator() {
 
   // Investment calculation
   const investmentCalc = useMemo(() => {
-    if (!prices || !prices[fromCoin]) return null;
+    if (!prices?.[fromCoin]) return null;
     const amount = parseFloat(investAmount);
     if (isNaN(amount) || amount <= 0) return null;
     const price = prices[fromCoin].usd;

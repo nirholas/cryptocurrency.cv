@@ -13,7 +13,7 @@
  * GET /api/exchanges — returns exchange reviews and comparison data
  */
 
-import { NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 
 const EXCHANGES = [
   { id: 'coinbase', name: 'Coinbase', trustScore: 10, rating: 4.5, makerFee: '0.40%', takerFee: '0.60%', coins: 250, volume24h: '$2.1B', kyc: 'required', regulated: true, proofOfReserves: true, founded: 2012, headquarters: 'San Francisco, USA' },

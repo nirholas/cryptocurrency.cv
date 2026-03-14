@@ -159,8 +159,8 @@ function simulationTick(
     for (let j = i + 1; j < nodes.length; j++) {
       const a = nodes[i];
       const b = nodes[j];
-      let dx = b.x - a.x;
-      let dy = b.y - a.y;
+      const dx = b.x - a.x;
+      const dy = b.y - a.y;
       let dist = Math.sqrt(dx * dx + dy * dy);
       if (dist < 1) dist = 1;
       const force = (repulsionStrength * alpha) / (dist * dist);
@@ -181,8 +181,8 @@ function simulationTick(
     const a = nodeMap.get(link.source);
     const b = nodeMap.get(link.target);
     if (!a || !b) continue;
-    let dx = b.x - a.x;
-    let dy = b.y - a.y;
+    const dx = b.x - a.x;
+    const dy = b.y - a.y;
     let dist = Math.sqrt(dx * dx + dy * dy);
     if (dist < 1) dist = 1;
     const displacement = dist - springLength;

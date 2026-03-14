@@ -13,7 +13,7 @@
  * GET /api/events — returns crypto events calendar data
  */
 
-import { NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 
 const EVENTS = [
   { id: '1', title: 'ETH Denver 2026', date: '2026-02-23', endDate: '2026-03-01', category: 'conference', location: 'Denver, CO', importance: 'high', tags: ['ethereum', 'hackathon'] },

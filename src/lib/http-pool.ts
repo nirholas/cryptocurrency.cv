@@ -63,7 +63,7 @@ let _agent: UndiciAgent | undefined;
 function getAgent(): UndiciAgent {
   if (_agent) return _agent;
 
-  // eslint-disable-next-line @typescript-eslint/no-require-imports
+   
   const { Agent } = require('undici') as { Agent: new (opts: Record<string, unknown>) => UndiciAgent };
 
   _agent = new Agent({

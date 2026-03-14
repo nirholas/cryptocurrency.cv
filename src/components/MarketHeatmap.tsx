@@ -84,7 +84,7 @@ function computeTreemap(
     const sideLength = horizontal ? h : w;
 
     // Take items for this row greedily until aspect ratio worsens
-    let row: CoinData[] = [];
+    const row: CoinData[] = [];
     let rowMcap = 0;
     const totalRemaining = remaining.reduce(
       (sum, c) => sum + c.market_cap,

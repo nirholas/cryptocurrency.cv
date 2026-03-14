@@ -184,7 +184,7 @@ async function verifyKeyOwnership(
   }
 
   const keyData = await validateApiKey(authKey);
-  if (!keyData || keyData.email !== email) {
+  if (keyData?.email !== email) {
     // Generic error — don't reveal whether the key is invalid vs wrong email
     return [
       NextResponse.json(

@@ -13,7 +13,7 @@
  * GET /api/glossary — returns crypto glossary terms
  */
 
-import { NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 
 const TERMS = [
   { term: 'HODL', definition: 'A misspelling of "hold" that became crypto slang for holding assets long-term rather than selling during volatility.', category: 'Culture' },

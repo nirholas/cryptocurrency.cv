@@ -13,7 +13,7 @@
  * GET /api/token-unlocks — returns token vesting/unlock schedule data
  */
 
-import { NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse } from 'next/server';
 
 const UNLOCKS = [
   { id: '1', token: 'Arbitrum', symbol: 'ARB', unlockDate: '2026-03-16', unlockAmount: '92.65M ARB', unlockValue: '~$120M', percentOfSupply: '0.93%', recipient: 'Team & Advisors', vestingType: 'cliff', impact: 'high' },
