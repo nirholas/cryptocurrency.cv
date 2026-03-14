@@ -12,7 +12,7 @@ export function PressReleaseCard({ release }: Props) {
   return (
     <article className="mb-4 rounded-lg border border-gray-200 bg-white p-5 shadow-sm dark:border-gray-700 dark:bg-gray-800">
       <div className="mb-2 flex items-center gap-2">
-        <span className="rounded bg-yellow-400 px-2 py-0.5 text-xs font-bold uppercase text-yellow-900">
+        <span className="rounded bg-yellow-400 px-2 py-0.5 text-xs font-bold text-yellow-900 uppercase">
           Press Release
         </span>
         <span className="rounded bg-gray-100 px-2 py-0.5 text-xs text-gray-600 dark:bg-gray-700 dark:text-gray-300">
@@ -30,9 +30,7 @@ export function PressReleaseCard({ release }: Props) {
       <div className="mb-2 flex items-center gap-3 text-sm text-gray-500 dark:text-gray-400">
         <span>{release.projectName}</span>
         <span>·</span>
-        <time dateTime={release.createdAt}>
-          {new Date(release.createdAt).toLocaleDateString()}
-        </time>
+        <time dateTime={release.createdAt}>{new Date(release.createdAt).toLocaleDateString()}</time>
       </div>
       <p className="mb-3 text-sm leading-relaxed text-gray-700 dark:text-gray-300">{excerpt}</p>
       {release.projectUrl && (

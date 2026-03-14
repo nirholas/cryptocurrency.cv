@@ -134,21 +134,21 @@ export default async function AuthorPage({ params }: Props) {
       <Header />
       <main className="container-main py-10">
         {/* Breadcrumbs */}
-        <nav aria-label="Breadcrumb" className="mb-6 text-sm text-text-tertiary">
+        <nav aria-label="Breadcrumb" className="text-text-tertiary mb-6 text-sm">
           <ol className="flex items-center gap-1.5">
             <li>
-              <Link href="/" className="transition-colors hover:text-accent">
+              <Link href="/" className="hover:text-accent transition-colors">
                 Home
               </Link>
             </li>
             <li aria-hidden="true">/</li>
             <li>
-              <Link href="/authors" className="transition-colors hover:text-accent">
+              <Link href="/authors" className="hover:text-accent transition-colors">
                 Authors
               </Link>
             </li>
             <li aria-hidden="true">/</li>
-            <li className="font-medium text-text-primary">{author.name}</li>
+            <li className="text-text-primary font-medium">{author.name}</li>
           </ol>
         </nav>
 
@@ -168,15 +168,15 @@ export default async function AuthorPage({ params }: Props) {
             </div>
           )}
           <div>
-            <h1 className="font-serif text-2xl font-bold text-text-primary md:text-3xl">
+            <h1 className="text-text-primary font-serif text-2xl font-bold md:text-3xl">
               {author.name}
             </h1>
-            <p className="mt-1 text-sm text-text-secondary">
+            <p className="text-text-secondary mt-1 text-sm">
               {author.articleCount} {author.articleCount === 1 ? 'article' : 'articles'}
               {' · Writes for '}
               {author.sources.join(', ')}
             </p>
-            <p className="mt-1 text-xs text-text-tertiary">
+            <p className="text-text-tertiary mt-1 text-xs">
               First article: {formatDate(author.firstSeen)}
               {' · Latest: '}
               {formatDate(author.lastSeen)}
@@ -198,12 +198,10 @@ export default async function AuthorPage({ params }: Props) {
 
         {/* Articles */}
         {articles.length === 0 ? (
-          <p className="py-12 text-center text-text-tertiary">
-            No articles found for this author.
-          </p>
+          <p className="text-text-tertiary py-12 text-center">No articles found for this author.</p>
         ) : (
           <>
-            <h2 className="mb-6 font-serif text-xl font-bold text-text-primary">
+            <h2 className="text-text-primary mb-6 font-serif text-xl font-bold">
               Articles by {author.name}
             </h2>
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -212,7 +210,7 @@ export default async function AuthorPage({ params }: Props) {
               ))}
             </div>
             {total > articles.length && (
-              <p className="mt-8 text-center text-sm text-text-tertiary">
+              <p className="text-text-tertiary mt-8 text-center text-sm">
                 Showing {articles.length} of {total} articles
               </p>
             )}

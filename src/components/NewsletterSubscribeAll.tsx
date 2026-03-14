@@ -9,7 +9,7 @@ export default function NewsletterSubscribeAll() {
   return (
     <div className="mx-auto max-w-md">
       <NewsletterSubscribeForm newsletterIds={allIds} />
-      <p className="mt-2 text-center text-[11px] text-[var(--color-text-tertiary)]">
+      <p className="mt-2 text-center text-[11px] text-text-tertiary">
         Subscribe to all 5 newsletters at once. Free forever. Unsubscribe anytime.
       </p>
     </div>

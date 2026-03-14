@@ -122,7 +122,7 @@ export default function VideosClient({ initialSource }: { initialSource?: string
         </div>
       ) : videos.length === 0 ? (
         <div className="py-20 text-center">
-          <p className="text-lg text-text-secondary">{t('noVideos')}</p>
+          <p className="text-text-secondary text-lg">{t('noVideos')}</p>
         </div>
       ) : (
         <div className="space-y-10">
@@ -150,7 +150,7 @@ export default function VideosClient({ initialSource }: { initialSource?: string
               <button
                 onClick={() => fetchVideos(false)}
                 disabled={loadingMore}
-                className="rounded-lg bg-surface-secondary px-6 py-2.5 text-sm font-medium text-text-primary transition-colors hover:bg-surface-tertiary disabled:opacity-50"
+                className="bg-surface-secondary text-text-primary hover:bg-surface-tertiary rounded-lg px-6 py-2.5 text-sm font-medium transition-colors disabled:opacity-50"
               >
                 {loadingMore ? t('loading') : t('loadMore')}
               </button>
@@ -158,7 +158,7 @@ export default function VideosClient({ initialSource }: { initialSource?: string
           )}
 
           {/* Total count */}
-          <p className="text-center text-xs text-text-tertiary">
+          <p className="text-text-tertiary text-center text-xs">
             {t('showingCount', { shown: videos.length, total })}
           </p>
         </div>

@@ -69,7 +69,8 @@ export const GET = instrumented(
       return validation.error;
     }
 
-    const { limit, source, category, from, to, page, per_page, lang, quality, contentType } = validation.data;
+    const { limit, source, category, from, to, page, per_page, lang, quality, contentType } =
+      validation.data;
     const sort = request.nextUrl.searchParams.get('sort'); // 'impact' → sort by AI impact score
     const sources = request.nextUrl.searchParams.get('sources'); // 'homepage' → curated T1/T2 only
 

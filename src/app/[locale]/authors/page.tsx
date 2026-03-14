@@ -104,25 +104,25 @@ export default async function AuthorsPage({ params, searchParams }: Props) {
       <Header />
       <main className="container-main py-10">
         {/* Breadcrumbs */}
-        <nav aria-label="Breadcrumb" className="mb-6 text-sm text-text-tertiary">
+        <nav aria-label="Breadcrumb" className="text-text-tertiary mb-6 text-sm">
           <ol className="flex items-center gap-1.5">
             <li>
-              <Link href="/" className="transition-colors hover:text-accent">
+              <Link href="/" className="hover:text-accent transition-colors">
                 Home
               </Link>
             </li>
             <li aria-hidden="true">/</li>
-            <li className="font-medium text-text-primary">Authors</li>
+            <li className="text-text-primary font-medium">Authors</li>
           </ol>
         </nav>
 
         {/* Page Header */}
         <div className="mb-10">
-          <div className="mb-4 h-1 w-16 rounded-full bg-accent" aria-hidden="true" />
-          <h1 className="mb-2 font-serif text-3xl font-bold text-text-primary md:text-4xl">
+          <div className="bg-accent mb-4 h-1 w-16 rounded-full" aria-hidden="true" />
+          <h1 className="text-text-primary mb-2 font-serif text-3xl font-bold md:text-4xl">
             ✍️ Authors
           </h1>
-          <p className="max-w-2xl text-text-secondary">
+          <p className="text-text-secondary max-w-2xl">
             Browse articles by journalist and analyst across 300+ crypto news sources.
           </p>
         </div>
@@ -137,7 +137,7 @@ export default async function AuthorsPage({ params, searchParams }: Props) {
               name="search"
               placeholder="Search authors..."
               defaultValue={search}
-              className="w-full rounded-lg border border-border bg-(--color-surface) px-4 py-2 text-sm text-text-primary placeholder:text-text-tertiary focus:ring-2 focus:ring-accent/50 focus:outline-none"
+              className="border-border text-text-primary placeholder:text-text-tertiary focus:ring-accent/50 w-full rounded-lg border bg-(--color-surface) px-4 py-2 text-sm focus:ring-2 focus:outline-none"
             />
           </form>
 
@@ -160,14 +160,14 @@ export default async function AuthorsPage({ params, searchParams }: Props) {
         </div>
 
         {/* Results count */}
-        <p className="mb-6 text-sm text-text-tertiary">
+        <p className="text-text-tertiary mb-6 text-sm">
           {total} {total === 1 ? 'author' : 'authors'} found
           {search && <> for &ldquo;{search}&rdquo;</>}
         </p>
 
         {/* Author Grid */}
         {authors.length === 0 ? (
-          <p className="py-12 text-center text-text-tertiary">No authors found.</p>
+          <p className="text-text-tertiary py-12 text-center">No authors found.</p>
         ) : (
           <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             {authors.map((author) => (

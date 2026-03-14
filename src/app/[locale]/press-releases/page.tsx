@@ -31,8 +31,7 @@ export default function PressReleasesPage() {
     load();
   }, []);
 
-  const filtered =
-    category === 'All' ? releases : releases.filter((r) => r.category === category);
+  const filtered = category === 'All' ? releases : releases.filter((r) => r.category === category);
   const totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
   const paginated = filtered.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
 

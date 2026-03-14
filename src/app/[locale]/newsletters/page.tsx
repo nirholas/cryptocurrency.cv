@@ -70,15 +70,15 @@ export default async function NewslettersPage({ params }: Props) {
       <Header />
       <main id="main-content" className="min-h-screen">
         {/* Hero */}
-        <section className="border-b border-border">
+        <section className="border-border border-b">
           <div className="container-main py-10 text-center lg:py-14">
             <Badge className="mb-4">
               <Mail className="mr-1 h-3 w-3" /> Newsletters
             </Badge>
-            <h1 className="mb-4 font-serif text-3xl font-bold text-text-primary md:text-4xl lg:text-5xl">
+            <h1 className="text-text-primary mb-4 font-serif text-3xl font-bold md:text-4xl lg:text-5xl">
               Newsletters
             </h1>
-            <p className="mx-auto mb-6 max-w-2xl text-lg text-text-secondary">
+            <p className="text-text-secondary mx-auto mb-6 max-w-2xl text-lg">
               Stay informed with curated crypto intelligence delivered to your inbox.
             </p>
             <NewsletterSubscribeAll />
@@ -86,7 +86,7 @@ export default async function NewslettersPage({ params }: Props) {
         </section>
 
         {/* Newsletter Grid */}
-        <section className="border-b border-border">
+        <section className="border-border border-b">
           <div className="container-main py-8 lg:py-12">
             <div className="grid gap-6 sm:grid-cols-2">
               {NEWSLETTERS.map((newsletter) => (
@@ -99,18 +99,14 @@ export default async function NewslettersPage({ params }: Props) {
         {/* FAQ */}
         <section>
           <div className="container-main py-8 lg:py-12">
-            <h2 className="mb-8 text-center font-serif text-2xl font-bold text-text-primary md:text-3xl">
+            <h2 className="text-text-primary mb-8 text-center font-serif text-2xl font-bold md:text-3xl">
               Frequently Asked Questions
             </h2>
             <div className="mx-auto max-w-2xl space-y-6">
               {FAQ.map((item) => (
                 <div key={item.q}>
-                  <h3 className="mb-1 text-sm font-bold text-text-primary">
-                    {item.q}
-                  </h3>
-                  <p className="text-sm leading-relaxed text-text-secondary">
-                    {item.a}
-                  </p>
+                  <h3 className="text-text-primary mb-1 text-sm font-bold">{item.q}</h3>
+                  <p className="text-text-secondary text-sm leading-relaxed">{item.a}</p>
                 </div>
               ))}
             </div>

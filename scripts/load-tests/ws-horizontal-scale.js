@@ -75,7 +75,11 @@ function createConnection(id) {
 
     const timeout = setTimeout(() => {
       metrics.failed++;
-      try { ws.terminate(); } catch { /* noop */ }
+      try {
+        ws.terminate();
+      } catch {
+        /* noop */
+      }
       resolve(false);
     }, 15000);
 
@@ -119,7 +123,9 @@ function createConnection(id) {
         if (msg.type === 'reconnect') {
           metrics.reconnectMessages++;
         }
-      } catch { /* ignore */ }
+      } catch {
+        /* ignore */
+      }
     });
 
     ws.on('error', () => {
@@ -146,7 +152,7 @@ function printMetrics(phase) {
   const p95 = sorted.length > 0 ? sorted[Math.floor(sorted.length * 0.95)] : 0;
   const p99 = sorted.length > 0 ? sorted[Math.floor(sorted.length * 0.99)] : 0;
 
-  const active = [...connections.values()].filter(c => c.ws.readyState === WebSocket.OPEN).length;
+  const active = [...connections.values()].filter((c) => c.ws.readyState === WebSocket.OPEN).length;
 
   console.log(`
 ┌─────────────────────────────────────────────────┐
@@ -170,7 +176,9 @@ function printMetrics(phase) {
 }
 
 async function rampUp() {
-  console.log(`\n🔄 Ramping up to ${TARGET_CONNECTIONS} connections over ${RAMP_DURATION_S}s (batch size: ${BATCH_SIZE})`);
+  console.log(
+    `\n🔄 Ramping up to ${TARGET_CONNECTIONS} connections over ${RAMP_DURATION_S}s (batch size: ${BATCH_SIZE})`,
+  );
 
   const totalBatches = Math.ceil(TARGET_CONNECTIONS / BATCH_SIZE);
   const delayPerBatch = (RAMP_DURATION_S * 1000) / totalBatches;
@@ -187,7 +195,9 @@ async function rampUp() {
     await Promise.all(batchPromises);
 
     if ((batch + 1) % 10 === 0 || batch === totalBatches - 1) {
-      const active = [...connections.values()].filter(c => c.ws.readyState === WebSocket.OPEN).length;
+      const active = [...connections.values()].filter(
+        (c) => c.ws.readyState === WebSocket.OPEN,
+      ).length;
       console.log(`  Batch ${batch + 1}/${totalBatches}: ${active} active connections`);
     }
 
@@ -214,7 +224,9 @@ async function holdPeak() {
           conn.ws.send(JSON.stringify({ type: 'ping' }));
           metrics.messagesSent++;
           pingSent++;
-        } catch { /* ignore */ }
+        } catch {
+          /* ignore */
+        }
       }
     }
   }, 15000);
@@ -224,7 +236,9 @@ async function holdPeak() {
 
   const elapsed = (Date.now() - startHold) / 1000;
   const msgsReceived = metrics.messagesReceived - msgsAtStart;
-  console.log(`  Messages received during hold: ${msgsReceived} (${Math.round(msgsReceived / elapsed)}/s)`);
+  console.log(
+    `  Messages received during hold: ${msgsReceived} (${Math.round(msgsReceived / elapsed)}/s)`,
+  );
 
   printMetrics('HOLD COMPLETE');
 }
@@ -234,20 +248,22 @@ async function tearDown() {
   const closePromises = [];
 
   for (const [id, conn] of connections) {
-    closePromises.push(new Promise((resolve) => {
-      try {
-        if (conn.ws.readyState === WebSocket.OPEN) {
-          conn.ws.close(1000, 'Load test complete');
-          conn.ws.on('close', resolve);
-          setTimeout(resolve, 5000);
-        } else {
-          conn.ws.terminate();
+    closePromises.push(
+      new Promise((resolve) => {
+        try {
+          if (conn.ws.readyState === WebSocket.OPEN) {
+            conn.ws.close(1000, 'Load test complete');
+            conn.ws.on('close', resolve);
+            setTimeout(resolve, 5000);
+          } else {
+            conn.ws.terminate();
+            resolve();
+          }
+        } catch {
           resolve();
         }
-      } catch {
-        resolve();
-      }
-    }));
+      }),
+    );
   }
 
   await Promise.allSettled(closePromises);
@@ -264,10 +280,22 @@ function evaluateResults() {
 
   console.log('\n📋 PASS/FAIL Criteria:');
   const checks = [
-    { name: 'Connection success rate ≥ 95%', pass: successRate >= 0.95, value: `${(successRate * 100).toFixed(1)}%` },
+    {
+      name: 'Connection success rate ≥ 95%',
+      pass: successRate >= 0.95,
+      value: `${(successRate * 100).toFixed(1)}%`,
+    },
     { name: 'P95 connect time < 5000ms', pass: p95 < 5000, value: `${p95}ms` },
-    { name: 'Received messages > 0', pass: metrics.messagesReceived > 0, value: String(metrics.messagesReceived) },
-    { name: 'No excessive errors (<5%)', pass: metrics.errors / Math.max(1, metrics.attempted) < 0.05, value: `${((metrics.errors / Math.max(1, metrics.attempted)) * 100).toFixed(1)}%` },
+    {
+      name: 'Received messages > 0',
+      pass: metrics.messagesReceived > 0,
+      value: String(metrics.messagesReceived),
+    },
+    {
+      name: 'No excessive errors (<5%)',
+      pass: metrics.errors / Math.max(1, metrics.attempted) < 0.05,
+      value: `${((metrics.errors / Math.max(1, metrics.attempted)) * 100).toFixed(1)}%`,
+    },
   ];
 
   let allPass = true;

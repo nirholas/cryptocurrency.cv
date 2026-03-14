@@ -44,7 +44,7 @@ export default async function VideoSourcePage({ params }: Props) {
         {/* Back link */}
         <Link
           href="/videos"
-          className="mb-6 inline-flex items-center gap-1 text-sm text-text-secondary transition-colors hover:text-accent"
+          className="text-text-secondary hover:text-accent mb-6 inline-flex items-center gap-1 text-sm transition-colors"
         >
           <ChevronLeft className="h-4 w-4" />
           All Videos
@@ -55,7 +55,7 @@ export default async function VideoSourcePage({ params }: Props) {
           <h1 className="font-serif text-3xl font-bold tracking-tight md:text-4xl">
             {source.name}
           </h1>
-          <p className="mt-2 text-base text-text-secondary">
+          <p className="text-text-secondary mt-2 text-base">
             {source.category.charAt(0).toUpperCase() + source.category.slice(1)} videos from{' '}
             <a
               href={source.channelUrl}

@@ -43,7 +43,7 @@ export default function AuthorCard({ author }: { author: Author }) {
   return (
     <Link
       href={`/author/${author.slug}`}
-      className="group block rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] p-5 transition-all hover:border-[var(--color-accent)]/40 hover:shadow-md"
+      className="group block rounded-xl border border-border bg-(--color-surface) p-5 transition-all hover:border-accent/40 hover:shadow-md"
     >
       <div className="mb-3 flex items-center gap-3">
         {/* Avatar */}
@@ -55,19 +55,19 @@ export default function AuthorCard({ author }: { author: Author }) {
           />
         ) : (
           <div
-            className={`flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br ${getInitialColor(author.name)} text-sm font-bold text-white`}
+            className={`flex h-10 w-10 items-center justify-center rounded-full bg-linear-to-br ${getInitialColor(author.name)} text-sm font-bold text-white`}
           >
             {initials}
           </div>
         )}
         <div className="min-w-0">
-          <h3 className="truncate text-sm font-semibold text-[var(--color-text-primary)] transition-colors group-hover:text-[var(--color-accent)]">
+          <h3 className="truncate text-sm font-semibold text-text-primary transition-colors group-hover:text-accent">
             {author.name}
           </h3>
-          <p className="truncate text-xs text-[var(--color-text-tertiary)]">{sourcesLabel}</p>
+          <p className="truncate text-xs text-text-tertiary">{sourcesLabel}</p>
         </div>
       </div>
-      <p className="text-xs text-[var(--color-text-secondary)]">
+      <p className="text-xs text-text-secondary">
         {author.articleCount} {author.articleCount === 1 ? 'article' : 'articles'}
       </p>
     </Link>

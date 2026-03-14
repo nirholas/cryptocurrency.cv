@@ -10,7 +10,7 @@
 
 /**
  * Dynamic Sitemap Generator
- * 
+ *
  * Generates sitemap.xml for search engine discovery
  * @see https://nextjs.org/docs/app/api-reference/file-conventions/metadata/sitemap
  */
@@ -22,7 +22,26 @@ import { loadTagScoresFromFile } from '@/lib/tagScoring';
 import { SITE_URL } from '@/lib/constants';
 
 // Supported locales
-const locales = ['en', 'es', 'fr', 'de', 'ja', 'ko', 'zh-CN', 'zh-TW', 'pt', 'ru', 'ar', 'it', 'nl', 'pl', 'tr', 'id', 'th', 'vi'];
+const locales = [
+  'en',
+  'es',
+  'fr',
+  'de',
+  'ja',
+  'ko',
+  'zh-CN',
+  'zh-TW',
+  'pt',
+  'ru',
+  'ar',
+  'it',
+  'nl',
+  'pl',
+  'tr',
+  'id',
+  'th',
+  'vi',
+];
 
 // Static pages with their update frequencies
 const staticPages = [
@@ -126,10 +145,28 @@ const staticPages = [
 
 // Top coins to include in sitemap
 const topCoins = [
-  'bitcoin', 'ethereum', 'binancecoin', 'solana', 'ripple', 'cardano',
-  'dogecoin', 'polkadot', 'avalanche-2', 'chainlink', 'polygon',
-  'uniswap', 'litecoin', 'cosmos', 'near', 'arbitrum', 'optimism',
-  'aptos', 'sui', 'injective', 'render-token', 'immutable-x',
+  'bitcoin',
+  'ethereum',
+  'binancecoin',
+  'solana',
+  'ripple',
+  'cardano',
+  'dogecoin',
+  'polkadot',
+  'avalanche-2',
+  'chainlink',
+  'polygon',
+  'uniswap',
+  'litecoin',
+  'cosmos',
+  'near',
+  'arbitrum',
+  'optimism',
+  'aptos',
+  'sui',
+  'injective',
+  'render-token',
+  'immutable-x',
 ];
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
@@ -168,7 +205,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: 'daily',
       priority: 0.8,
     });
-    
+
     // Individual blog posts (high priority for SEO)
     for (const slug of blogSlugs) {
       entries.push({
@@ -178,7 +215,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         priority: 0.9,
       });
     }
-    
+
     // Blog categories
     for (const category of Object.keys(CATEGORIES)) {
       entries.push({
@@ -189,7 +226,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       });
     }
   }
-  
+
   // Add tag pages for SEO
   const allTags = getAllTags();
   for (const locale of locales) {
@@ -200,14 +237,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: 'daily',
       priority: 0.8,
     });
-    
+
     // Individual tag pages (important for SEO)
     for (const tag of allTags) {
       entries.push({
         url: `${SITE_URL}/${locale}/tags/${tag.slug}`,
         lastModified: now,
         changeFrequency: 'hourly',
-        priority: Math.round(Math.min(0.9, 0.6 + (tag.priority / 250)) * 1000) / 1000, // Higher priority tags get higher sitemap priority
+        priority: Math.round(Math.min(0.9, 0.6 + tag.priority / 250) * 1000) / 1000, // Higher priority tags get higher sitemap priority
       });
     }
   }

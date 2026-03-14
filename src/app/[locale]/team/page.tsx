@@ -1,11 +1,11 @@
-import { setRequestLocale } from "next-intl/server";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import { TEAM } from "@/data/team";
-import { TeamMemberCard } from "@/components/TeamMemberCard";
-import { generateSEOMetadata } from "@/lib/seo";
-import { Users, ArrowRight, ExternalLink, BookOpen } from "lucide-react";
-import type { Metadata } from "next";
+import { setRequestLocale } from 'next-intl/server';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import { TEAM } from '@/data/team';
+import { TeamMemberCard } from '@/components/TeamMemberCard';
+import { generateSEOMetadata } from '@/lib/seo';
+import { Users, ArrowRight, ExternalLink, BookOpen } from 'lucide-react';
+import type { Metadata } from 'next';
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -14,12 +14,12 @@ type Props = {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   return generateSEOMetadata({
-    title: "Our Team — Free Crypto News",
+    title: 'Our Team — Free Crypto News',
     description:
-      "Meet the people behind Free Crypto News. Our leadership, core contributors, and open source community building the free crypto news infrastructure.",
-    path: "/team",
+      'Meet the people behind Free Crypto News. Our leadership, core contributors, and open source community building the free crypto news infrastructure.',
+    path: '/team',
     locale,
-    tags: ["team", "contributors", "masthead", "open source", "crypto news"],
+    tags: ['team', 'contributors', 'masthead', 'open source', 'crypto news'],
   });
 }
 
@@ -32,13 +32,10 @@ interface GitHubContributor {
 
 async function fetchContributors() {
   try {
-    const res = await fetch(
-      "https://api.github.com/repos/nirholas/free-crypto-news/contributors",
-      {
-        headers: { Accept: "application/vnd.github+json" },
-        next: { revalidate: 86400 },
-      },
-    );
+    const res = await fetch('https://api.github.com/repos/nirholas/free-crypto-news/contributors', {
+      headers: { Accept: 'application/vnd.github+json' },
+      next: { revalidate: 86400 },
+    });
     if (!res.ok) return [];
     const data: GitHubContributor[] = await res.json();
     return data.map((c) => ({
@@ -54,13 +51,13 @@ async function fetchContributors() {
 
 function TeamStructuredData() {
   const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    name: "Free Crypto News",
-    url: "https://cryptocurrency.cv",
-    logo: "https://cryptocurrency.cv/logo.png",
-    member: TEAM.filter((m) => m.type === "leadership").map((m) => ({
-      "@type": "Person",
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Free Crypto News',
+    url: 'https://cryptocurrency.cv',
+    logo: 'https://cryptocurrency.cv/logo.png',
+    member: TEAM.filter((m) => m.type === 'leadership').map((m) => ({
+      '@type': 'Person',
       name: m.name,
       jobTitle: m.role,
       description: m.bio,
@@ -83,10 +80,8 @@ export default async function TeamPage({ params }: Props) {
   setRequestLocale(locale);
 
   const contributors = await fetchContributors();
-  const leadership = TEAM.filter((m) => m.type === "leadership");
-  const coreContributors = TEAM.filter(
-    (m) => m.type === "core" || m.type === "contributor",
-  );
+  const leadership = TEAM.filter((m) => m.type === 'leadership');
+  const coreContributors = TEAM.filter((m) => m.type === 'core' || m.type === 'contributor');
 
   return (
     <>
@@ -100,8 +95,8 @@ export default async function TeamPage({ params }: Props) {
             Our Team
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-[var(--color-text-secondary)]">
-            The people behind Free Crypto News — building the free and open
-            crypto news infrastructure the industry needs.
+            The people behind Free Crypto News — building the free and open crypto news
+            infrastructure the industry needs.
           </p>
         </section>
 
@@ -137,10 +132,8 @@ export default async function TeamPage({ params }: Props) {
             Open Source Contributors
           </h2>
           <p className="mb-6 text-[var(--color-text-secondary)]">
-            Thanks to our{" "}
-            <strong className="text-[var(--color-text-primary)]">
-              {contributors.length}
-            </strong>{" "}
+            Thanks to our{' '}
+            <strong className="text-[var(--color-text-primary)]">{contributors.length}</strong>{' '}
             GitHub contributors who have helped build this project.
           </p>
           <div className="grid grid-cols-3 gap-4 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8">
@@ -188,9 +181,8 @@ export default async function TeamPage({ params }: Props) {
               Join Us
             </h2>
             <p className="mb-6 max-w-2xl text-[var(--color-text-secondary)]">
-              We&apos;re always looking for contributors. Whether you&apos;re
-              fixing bugs, adding features, translating, or improving docs —
-              every contribution matters.
+              We&apos;re always looking for contributors. Whether you&apos;re fixing bugs, adding
+              features, translating, or improving docs — every contribution matters.
             </p>
             <div className="flex flex-wrap gap-4">
               <a

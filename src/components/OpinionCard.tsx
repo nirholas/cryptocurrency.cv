@@ -1,11 +1,11 @@
-import { Link } from "@/i18n/navigation";
-import { Badge } from "@/components/ui/Badge";
-import { BookmarkButton } from "@/components/BookmarkButton";
-import { cn } from "@/lib/utils";
-import type { NewsArticle } from "@/lib/crypto-news";
+import { Link } from '@/i18n/navigation';
+import { Badge } from '@/components/ui/Badge';
+import { BookmarkButton } from '@/components/BookmarkButton';
+import { cn } from '@/lib/utils';
+import type { NewsArticle } from '@/lib/crypto-news';
 
 const BOOKMARK_BTN =
-  "absolute top-2 right-2 z-10 opacity-0 group-hover:opacity-100 focus-within:opacity-100 transition-opacity";
+  'absolute top-2 right-2 z-10 opacity-0 group-hover:opacity-100 focus-within:opacity-100 transition-opacity';
 
 /* ------------------------------------------------
    FEATURED OPINION — large hero card
@@ -15,15 +15,10 @@ export function FeaturedOpinionCard({ article }: { article: NewsArticle }) {
   return (
     <div className="group relative" role="article" aria-label={article.title}>
       <BookmarkButton article={article} className={BOOKMARK_BTN} />
-      <Link
-        href={article.link}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="block"
-      >
-        <article className="grid gap-6 md:grid-cols-2 md:gap-10 items-center">
+      <Link href={article.link} target="_blank" rel="noopener noreferrer" className="block">
+        <article className="grid items-center gap-6 md:grid-cols-2 md:gap-10">
           {article.imageUrl && (
-            <div className="overflow-hidden rounded-xl bg-[var(--color-surface-tertiary)] aspect-[16/10] w-full shadow-lg">
+            <div className="aspect-[16/10] w-full overflow-hidden rounded-xl bg-[var(--color-surface-tertiary)] shadow-lg">
               <img
                 src={article.imageUrl}
                 alt={article.title}
@@ -32,15 +27,15 @@ export function FeaturedOpinionCard({ article }: { article: NewsArticle }) {
               />
             </div>
           )}
-          <div className={cn("flex flex-col gap-4", !article.imageUrl && "md:col-span-2")}>
+          <div className={cn('flex flex-col gap-4', !article.imageUrl && 'md:col-span-2')}>
             <Badge variant="opinion" className="w-fit">
               Opinion
             </Badge>
-            <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl font-bold italic leading-[1.15] tracking-tight group-hover:text-[var(--color-accent)] transition-colors duration-200">
+            <h2 className="font-serif text-2xl leading-[1.15] font-bold tracking-tight italic transition-colors duration-200 group-hover:text-[var(--color-accent)] md:text-3xl lg:text-4xl">
               &ldquo;{article.title}&rdquo;
             </h2>
             {article.description && (
-              <p className="text-[var(--color-text-secondary)] text-sm md:text-base leading-relaxed line-clamp-3">
+              <p className="line-clamp-3 text-sm leading-relaxed text-[var(--color-text-secondary)] md:text-base">
                 {article.description}
               </p>
             )}
@@ -70,15 +65,10 @@ export function OpinionCard({ article }: { article: NewsArticle }) {
   return (
     <div className="group relative" role="article" aria-label={article.title}>
       <BookmarkButton article={article} className={BOOKMARK_BTN} />
-      <Link
-        href={article.link}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="block"
-      >
+      <Link href={article.link} target="_blank" rel="noopener noreferrer" className="block">
         <article className="flex flex-col gap-3">
           {article.imageUrl && (
-            <div className="overflow-hidden rounded-lg bg-[var(--color-surface-tertiary)] aspect-[16/10] w-full">
+            <div className="aspect-[16/10] w-full overflow-hidden rounded-lg bg-[var(--color-surface-tertiary)]">
               <img
                 src={article.imageUrl}
                 alt={article.title}
@@ -91,11 +81,11 @@ export function OpinionCard({ article }: { article: NewsArticle }) {
             <Badge variant="opinion" className="w-fit">
               Opinion
             </Badge>
-            <h3 className="font-serif text-lg font-bold italic leading-snug tracking-tight group-hover:text-[var(--color-accent)] transition-colors line-clamp-3">
+            <h3 className="line-clamp-3 font-serif text-lg leading-snug font-bold tracking-tight italic transition-colors group-hover:text-[var(--color-accent)]">
               &ldquo;{article.title}&rdquo;
             </h3>
             {article.description && (
-              <p className="text-sm text-[var(--color-text-secondary)] line-clamp-2">
+              <p className="line-clamp-2 text-sm text-[var(--color-text-secondary)]">
                 {article.description}
               </p>
             )}

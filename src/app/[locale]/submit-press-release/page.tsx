@@ -46,8 +46,7 @@ export default function SubmitPressReleasePage() {
     if (!form.projectName.trim()) errs.push('Project name is required.');
     if (!/^https?:\/\/.+/.test(form.projectUrl))
       errs.push('Valid project website URL is required.');
-    if (!/^\S+@\S+\.\S+$/.test(form.contactEmail))
-      errs.push('Valid contact email is required.');
+    if (!/^\S+@\S+\.\S+$/.test(form.contactEmail)) errs.push('Valid contact email is required.');
     if (!form.contactName.trim()) errs.push('Contact name is required.');
     if (!form.title.trim()) errs.push('Press release title is required.');
     if (wordCount < 200 || wordCount > 3000)
@@ -82,7 +81,9 @@ export default function SubmitPressReleasePage() {
         setSubmitted(true);
       } else {
         const data = await res.json().catch(() => null);
-        setErrors(data?.errors ?? data?.error ? [data.error] : ['Submission failed. Please try again.']);
+        setErrors(
+          (data?.errors ?? data?.error) ? [data.error] : ['Submission failed. Please try again.'],
+        );
       }
     } catch {
       setErrors(['Network error. Please try again.']);
@@ -156,58 +157,122 @@ export default function SubmitPressReleasePage() {
 
       {/* Submission Form */}
       <form className="space-y-5" onSubmit={handleSubmit}>
-        <h2 className="text-lg font-semibold text-gray-900 dark:text-gray-100">
-          Submission Form
-        </h2>
+        <h2 className="text-lg font-semibold text-gray-900 dark:text-gray-100">Submission Form</h2>
 
         <div className="grid gap-5 sm:grid-cols-2">
           <div>
-            <label htmlFor="projectName" className="mb-1 block text-sm font-medium text-gray-700 dark:text-gray-300">
+            <label
+              htmlFor="projectName"
+              className="mb-1 block text-sm font-medium text-gray-700 dark:text-gray-300"
+            >
               Project Name *
             </label>
-            <input id="projectName" name="projectName" value={form.projectName} onChange={handleChange} placeholder="e.g. My Protocol" className={INPUT_CLASS} />
+            <input
+              id="projectName"
+              name="projectName"
+              value={form.projectName}
+              onChange={handleChange}
+              placeholder="e.g. My Protocol"
+              className={INPUT_CLASS}
+            />
           </div>
           <div>
-            <label htmlFor="projectUrl" className="mb-1 block text-sm font-medium text-gray-700 dark:text-gray-300">
+            <label
+              htmlFor="projectUrl"
+              className="mb-1 block text-sm font-medium text-gray-700 dark:text-gray-300"
+            >
               Project Website *
             </label>
-            <input id="projectUrl" name="projectUrl" value={form.projectUrl} onChange={handleChange} placeholder="https://example.com" className={INPUT_CLASS} />
+            <input
+              id="projectUrl"
+              name="projectUrl"
+              value={form.projectUrl}
+              onChange={handleChange}
+              placeholder="https://example.com"
+              className={INPUT_CLASS}
+            />
           </div>
           <div>
-            <label htmlFor="contactEmail" className="mb-1 block text-sm font-medium text-gray-700 dark:text-gray-300">
+            <label
+              htmlFor="contactEmail"
+              className="mb-1 block text-sm font-medium text-gray-700 dark:text-gray-300"
+            >
               Contact Email *
             </label>
-            <input id="contactEmail" name="contactEmail" type="email" value={form.contactEmail} onChange={handleChange} placeholder="you@example.com" className={INPUT_CLASS} />
+            <input
+              id="contactEmail"
+              name="contactEmail"
+              type="email"
+              value={form.contactEmail}
+              onChange={handleChange}
+              placeholder="you@example.com"
+              className={INPUT_CLASS}
+            />
           </div>
           <div>
-            <label htmlFor="contactName" className="mb-1 block text-sm font-medium text-gray-700 dark:text-gray-300">
+            <label
+              htmlFor="contactName"
+              className="mb-1 block text-sm font-medium text-gray-700 dark:text-gray-300"
+            >
               Contact Name *
             </label>
-            <input id="contactName" name="contactName" value={form.contactName} onChange={handleChange} placeholder="Your name" className={INPUT_CLASS} />
+            <input
+              id="contactName"
+              name="contactName"
+              value={form.contactName}
+              onChange={handleChange}
+              placeholder="Your name"
+              className={INPUT_CLASS}
+            />
           </div>
         </div>
 
         <div>
-          <label htmlFor="title" className="mb-1 block text-sm font-medium text-gray-700 dark:text-gray-300">
+          <label
+            htmlFor="title"
+            className="mb-1 block text-sm font-medium text-gray-700 dark:text-gray-300"
+          >
             Press Release Title *
           </label>
-          <input id="title" name="title" value={form.title} onChange={handleChange} placeholder="Announcement headline" className={INPUT_CLASS} />
+          <input
+            id="title"
+            name="title"
+            value={form.title}
+            onChange={handleChange}
+            placeholder="Announcement headline"
+            className={INPUT_CLASS}
+          />
         </div>
 
         <div>
-          <label htmlFor="category" className="mb-1 block text-sm font-medium text-gray-700 dark:text-gray-300">
+          <label
+            htmlFor="category"
+            className="mb-1 block text-sm font-medium text-gray-700 dark:text-gray-300"
+          >
             Category *
           </label>
-          <select id="category" name="category" value={form.category} onChange={handleChange} className={INPUT_CLASS}>
+          <select
+            id="category"
+            name="category"
+            value={form.category}
+            onChange={handleChange}
+            className={INPUT_CLASS}
+          >
             {PRESS_RELEASE_CATEGORIES.map((cat) => (
-              <option key={cat} value={cat}>{cat}</option>
+              <option key={cat} value={cat}>
+                {cat}
+              </option>
             ))}
           </select>
         </div>
 
         <div>
-          <label htmlFor="body" className="mb-1 block text-sm font-medium text-gray-700 dark:text-gray-300">
-            Press Release Body * <span className="font-normal text-gray-400">({wordCount} / 200–3,000 words)</span>
+          <label
+            htmlFor="body"
+            className="mb-1 block text-sm font-medium text-gray-700 dark:text-gray-300"
+          >
+            Press Release Body *{' '}
+            <span className="font-normal text-gray-400">({wordCount} / 200–3,000 words)</span>
           </label>
           <textarea
             id="body"
@@ -221,10 +286,20 @@ export default function SubmitPressReleasePage() {
         </div>
 
         <div>
-          <label htmlFor="imageUrl" className="mb-1 block text-sm font-medium text-gray-700 dark:text-gray-300">
+          <label
+            htmlFor="imageUrl"
+            className="mb-1 block text-sm font-medium text-gray-700 dark:text-gray-300"
+          >
             Featured Image URL <span className="font-normal text-gray-400">(optional)</span>
           </label>
-          <input id="imageUrl" name="imageUrl" value={form.imageUrl} onChange={handleChange} placeholder="https://example.com/image.png" className={INPUT_CLASS} />
+          <input
+            id="imageUrl"
+            name="imageUrl"
+            value={form.imageUrl}
+            onChange={handleChange}
+            placeholder="https://example.com/image.png"
+            className={INPUT_CLASS}
+          />
         </div>
 
         {/* Tier selection */}
@@ -233,11 +308,13 @@ export default function SubmitPressReleasePage() {
             Submission Tier
           </legend>
           <div className="grid gap-3 sm:grid-cols-3">
-            {([
-              { value: 'free', label: 'Free', desc: 'Published within 48h' },
-              { value: 'priority', label: '$99 Priority', desc: 'Published within 4h' },
-              { value: 'featured', label: '$299 Featured', desc: 'Pinned 24h + social' },
-            ] as const).map((tier) => (
+            {(
+              [
+                { value: 'free', label: 'Free', desc: 'Published within 48h' },
+                { value: 'priority', label: '$99 Priority', desc: 'Published within 4h' },
+                { value: 'featured', label: '$299 Featured', desc: 'Pinned 24h + social' },
+              ] as const
+            ).map((tier) => (
               <label
                 key={tier.value}
                 className={`cursor-pointer rounded-lg border p-3 text-center transition-colors ${
@@ -254,7 +331,9 @@ export default function SubmitPressReleasePage() {
                   onChange={handleChange}
                   className="sr-only"
                 />
-                <div className="text-sm font-semibold text-gray-900 dark:text-gray-100">{tier.label}</div>
+                <div className="text-sm font-semibold text-gray-900 dark:text-gray-100">
+                  {tier.label}
+                </div>
                 <div className="text-xs text-gray-500 dark:text-gray-400">{tier.desc}</div>
               </label>
             ))}
@@ -264,11 +343,23 @@ export default function SubmitPressReleasePage() {
         {/* Checkboxes */}
         <div className="space-y-2">
           <label className="flex items-start gap-2 text-sm text-gray-700 dark:text-gray-300">
-            <input type="checkbox" name="agree" checked={form.agree} onChange={handleChange} className="mt-0.5" />
+            <input
+              type="checkbox"
+              name="agree"
+              checked={form.agree}
+              onChange={handleChange}
+              className="mt-0.5"
+            />
             I agree to the terms and guidelines above
           </label>
           <label className="flex items-start gap-2 text-sm text-gray-700 dark:text-gray-300">
-            <input type="checkbox" name="confirm" checked={form.confirm} onChange={handleChange} className="mt-0.5" />
+            <input
+              type="checkbox"
+              name="confirm"
+              checked={form.confirm}
+              onChange={handleChange}
+              className="mt-0.5"
+            />
             I confirm this is not spam or misleading content
           </label>
         </div>
@@ -298,15 +389,21 @@ export default function SubmitPressReleasePage() {
         <h2 className="mb-4 text-lg font-semibold text-gray-900 dark:text-gray-100">Pricing</h2>
         <div className="space-y-3 text-sm text-gray-700 dark:text-gray-300">
           <div className="flex justify-between">
-            <span><strong>Free</strong> — Standard listing</span>
+            <span>
+              <strong>Free</strong> — Standard listing
+            </span>
             <span>Published within 48h</span>
           </div>
           <div className="flex justify-between">
-            <span><strong>$99</strong> — Priority review</span>
+            <span>
+              <strong>$99</strong> — Priority review
+            </span>
             <span>Published within 4h</span>
           </div>
           <div className="flex justify-between">
-            <span><strong>$299</strong> — Featured placement</span>
+            <span>
+              <strong>$299</strong> — Featured placement
+            </span>
             <span>Pinned for 24h + social</span>
           </div>
         </div>

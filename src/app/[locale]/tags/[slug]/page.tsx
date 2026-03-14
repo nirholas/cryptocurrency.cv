@@ -79,33 +79,33 @@ export default async function TagPage({ params }: Props) {
         />
 
         {/* Breadcrumbs */}
-        <nav aria-label="Breadcrumb" className="mb-6 text-sm text-text-tertiary">
+        <nav aria-label="Breadcrumb" className="text-text-tertiary mb-6 text-sm">
           <ol className="flex items-center gap-1.5">
             <li>
-              <Link href="/" className="transition-colors hover:text-accent">
+              <Link href="/" className="hover:text-accent transition-colors">
                 Home
               </Link>
             </li>
             <li aria-hidden="true">/</li>
             <li>
-              <Link href="/tags" className="transition-colors hover:text-accent">
+              <Link href="/tags" className="hover:text-accent transition-colors">
                 Topics
               </Link>
             </li>
             <li aria-hidden="true">/</li>
-            <li className="font-medium text-text-primary">{tag.name}</li>
+            <li className="text-text-primary font-medium">{tag.name}</li>
           </ol>
         </nav>
 
         {/* Tag Header */}
         <div className="mb-10">
-          <div className="mb-4 h-1 w-16 rounded-full bg-accent" aria-hidden="true" />
-          <h1 className="mb-2 font-serif text-3xl font-bold text-text-primary md:text-4xl">
+          <div className="bg-accent mb-4 h-1 w-16 rounded-full" aria-hidden="true" />
+          <h1 className="text-text-primary mb-2 font-serif text-3xl font-bold md:text-4xl">
             <span className="mr-2">{tag.icon}</span>
             {tag.name}
           </h1>
-          <p className="mb-4 max-w-2xl text-text-secondary">{tag.description}</p>
-          <p className="text-sm text-text-tertiary">
+          <p className="text-text-secondary mb-4 max-w-2xl">{tag.description}</p>
+          <p className="text-text-tertiary text-sm">
             {totalCount} {totalCount === 1 ? 'article' : 'articles'}
           </p>
         </div>
@@ -113,7 +113,7 @@ export default async function TagPage({ params }: Props) {
         {/* Related Tags */}
         {relatedTags.length > 0 && (
           <div className="mb-8 flex flex-wrap items-center gap-2">
-            <span className="mr-1 text-xs font-semibold tracking-wider text-text-tertiary uppercase">
+            <span className="text-text-tertiary mr-1 text-xs font-semibold tracking-wider uppercase">
               Related
             </span>
             {relatedTags.map((related) => (
@@ -123,7 +123,7 @@ export default async function TagPage({ params }: Props) {
         )}
 
         {totalCount === 0 ? (
-          <p className="py-12 text-center text-text-tertiary">
+          <p className="text-text-tertiary py-12 text-center">
             No articles found for this topic yet.
           </p>
         ) : (
@@ -132,7 +132,7 @@ export default async function TagPage({ params }: Props) {
             <div className="min-w-0 flex-1">
               {/* Featured Article */}
               {featuredArticle && (
-                <div className="mb-10 border-b border-border pb-10">
+                <div className="border-border mb-10 border-b pb-10">
                   <FeaturedCard article={featuredArticle} />
                 </div>
               )}
@@ -150,7 +150,7 @@ export default async function TagPage({ params }: Props) {
             {/* Sidebar (desktop) */}
             <aside className="hidden w-64 shrink-0 lg:block">
               <div className="sticky top-24">
-                <h2 className="mb-4 font-serif text-lg font-bold text-text-primary">
+                <h2 className="text-text-primary mb-4 font-serif text-lg font-bold">
                   Related Topics
                 </h2>
                 <nav aria-label="Related topics">
@@ -159,7 +159,7 @@ export default async function TagPage({ params }: Props) {
                       <li key={related.slug}>
                         <Link
                           href={`/tags/${related.slug}`}
-                          className="flex items-center gap-2 rounded-md px-3 py-2 text-sm text-text-secondary transition-colors hover:bg-surface-secondary hover:text-text-primary"
+                          className="text-text-secondary hover:bg-surface-secondary hover:text-text-primary flex items-center gap-2 rounded-md px-3 py-2 text-sm transition-colors"
                         >
                           <span>{related.icon}</span>
                           <span>{related.name}</span>
@@ -170,14 +170,10 @@ export default async function TagPage({ params }: Props) {
                 </nav>
 
                 {/* Tag info */}
-                <div className="mt-8 rounded-lg bg-surface-secondary p-4">
-                  <h3 className="mb-2 text-sm font-semibold text-text-primary">
-                    About this topic
-                  </h3>
-                  <p className="text-xs leading-relaxed text-text-tertiary">
-                    {tag.description}
-                  </p>
-                  <div className="mt-3 flex items-center gap-2 text-xs text-text-tertiary">
+                <div className="bg-surface-secondary mt-8 rounded-lg p-4">
+                  <h3 className="text-text-primary mb-2 text-sm font-semibold">About this topic</h3>
+                  <p className="text-text-tertiary text-xs leading-relaxed">{tag.description}</p>
+                  <div className="text-text-tertiary mt-3 flex items-center gap-2 text-xs">
                     <span className="capitalize">{tag.category}</span>
                     <span>&middot;</span>
                     <span>Priority {tag.priority}</span>

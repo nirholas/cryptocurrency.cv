@@ -1,12 +1,12 @@
-import { setRequestLocale } from "next-intl/server";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import PageShareSection from "@/components/PageShareSection";
-import { getAllTags, getTagsByCategory, type Tag } from "@/lib/tags";
-import { generateSEOMetadata } from "@/lib/seo";
-import { Link } from "@/i18n/navigation";
-import { TagChip } from "@/components/TagChip";
-import type { Metadata } from "next";
+import { setRequestLocale } from 'next-intl/server';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import PageShareSection from '@/components/PageShareSection';
+import { getAllTags, getTagsByCategory, type Tag } from '@/lib/tags';
+import { generateSEOMetadata } from '@/lib/seo';
+import { Link } from '@/i18n/navigation';
+import { TagChip } from '@/components/TagChip';
+import type { Metadata } from 'next';
 
 export const revalidate = 300;
 
@@ -18,31 +18,31 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
 
   return generateSEOMetadata({
-    title: "Topics — Browse Crypto News by Topic",
+    title: 'Topics — Browse Crypto News by Topic',
     description:
-      "Browse cryptocurrency news by topic. Explore Bitcoin, Ethereum, DeFi, NFTs, regulation, and 100+ more crypto topics.",
-    path: "/tags",
+      'Browse cryptocurrency news by topic. Explore Bitcoin, Ethereum, DeFi, NFTs, regulation, and 100+ more crypto topics.',
+    path: '/tags',
     locale,
-    tags: ["crypto topics", "cryptocurrency tags", "bitcoin news", "ethereum news", "defi", "nft"],
+    tags: ['crypto topics', 'cryptocurrency tags', 'bitcoin news', 'ethereum news', 'defi', 'nft'],
   });
 }
 
-const CATEGORY_LABELS: Record<Tag["category"], { label: string; icon: string }> = {
-  asset: { label: "Assets", icon: "💰" },
-  topic: { label: "Topics", icon: "📰" },
-  event: { label: "Events", icon: "📅" },
-  technology: { label: "Technology", icon: "⚙️" },
-  entity: { label: "Entities & People", icon: "🏢" },
-  sentiment: { label: "Sentiment", icon: "📊" },
+const CATEGORY_LABELS: Record<Tag['category'], { label: string; icon: string }> = {
+  asset: { label: 'Assets', icon: '💰' },
+  topic: { label: 'Topics', icon: '📰' },
+  event: { label: 'Events', icon: '📅' },
+  technology: { label: 'Technology', icon: '⚙️' },
+  entity: { label: 'Entities & People', icon: '🏢' },
+  sentiment: { label: 'Sentiment', icon: '📊' },
 };
 
-const CATEGORY_ORDER: Tag["category"][] = [
-  "asset",
-  "topic",
-  "event",
-  "technology",
-  "entity",
-  "sentiment",
+const CATEGORY_ORDER: Tag['category'][] = [
+  'asset',
+  'topic',
+  'event',
+  'technology',
+  'entity',
+  'sentiment',
 ];
 
 export default async function TagsPage({ params }: Props) {
@@ -59,42 +59,29 @@ export default async function TagsPage({ params }: Props) {
       <Header />
       <main className="container-main py-10">
         {/* Breadcrumbs */}
-        <nav
-          aria-label="Breadcrumb"
-          className="mb-6 text-sm text-[var(--color-text-tertiary)]"
-        >
+        <nav aria-label="Breadcrumb" className="mb-6 text-sm text-[var(--color-text-tertiary)]">
           <ol className="flex items-center gap-1.5">
             <li>
-              <Link
-                href="/"
-                className="transition-colors hover:text-[var(--color-accent)]"
-              >
+              <Link href="/" className="transition-colors hover:text-[var(--color-accent)]">
                 Home
               </Link>
             </li>
             <li aria-hidden="true">/</li>
-            <li className="font-medium text-[var(--color-text-primary)]">
-              Topics
-            </li>
+            <li className="font-medium text-[var(--color-text-primary)]">Topics</li>
           </ol>
         </nav>
 
         {/* Page Header */}
         <div className="mb-10">
-          <div
-            className="mb-4 h-1 w-16 rounded-full bg-[var(--color-accent)]"
-            aria-hidden="true"
-          />
+          <div className="mb-4 h-1 w-16 rounded-full bg-[var(--color-accent)]" aria-hidden="true" />
           <h1 className="mb-2 font-serif text-3xl font-bold text-[var(--color-text-primary)] md:text-4xl">
             🏷️ Topics
           </h1>
           <p className="max-w-2xl text-[var(--color-text-secondary)]">
-            Browse all cryptocurrency news topics. Discover trending tags and
-            explore articles by subject.
+            Browse all cryptocurrency news topics. Discover trending tags and explore articles by
+            subject.
           </p>
-          <p className="mt-2 text-sm text-[var(--color-text-tertiary)]">
-            {allTags.length} topics
-          </p>
+          <p className="mt-2 text-sm text-[var(--color-text-tertiary)]">{allTags.length} topics</p>
         </div>
 
         {/* Tag Cloud — Top Tags */}
@@ -146,10 +133,10 @@ export default async function TagsPage({ params }: Props) {
                   >
                     <span className="text-xl">{tag.icon}</span>
                     <div className="min-w-0 flex-1">
-                      <p className="text-sm font-semibold text-[var(--color-text-primary)] group-hover:text-[var(--color-accent)] transition-colors truncate">
+                      <p className="truncate text-sm font-semibold text-[var(--color-text-primary)] transition-colors group-hover:text-[var(--color-accent)]">
                         {tag.name}
                       </p>
-                      <p className="text-xs text-[var(--color-text-tertiary)] line-clamp-1">
+                      <p className="line-clamp-1 text-xs text-[var(--color-text-tertiary)]">
                         {tag.description}
                       </p>
                     </div>
@@ -167,9 +154,7 @@ export default async function TagsPage({ params }: Props) {
           </h2>
           <div className="columns-1 gap-8 sm:columns-2 md:columns-3 lg:columns-4">
             {(() => {
-              const sorted = [...allTags].sort((a, b) =>
-                a.name.localeCompare(b.name)
-              );
+              const sorted = [...allTags].sort((a, b) => a.name.localeCompare(b.name));
               const grouped: Record<string, typeof sorted> = {};
               for (const tag of sorted) {
                 const letter = tag.name[0].toUpperCase();
@@ -179,9 +164,7 @@ export default async function TagsPage({ params }: Props) {
 
               return Object.entries(grouped).map(([letter, tags]) => (
                 <div key={letter} className="mb-4 break-inside-avoid">
-                  <h3 className="mb-1 text-sm font-bold text-[var(--color-accent)]">
-                    {letter}
-                  </h3>
+                  <h3 className="mb-1 text-sm font-bold text-[var(--color-accent)]">{letter}</h3>
                   <ul className="space-y-0.5">
                     {tags.map((tag) => (
                       <li key={tag.slug}>

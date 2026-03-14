@@ -33,23 +33,23 @@ export default function NewsletterCard({ newsletter }: { newsletter: Newsletter 
   const Icon = ICON_MAP[newsletter.icon] || MailIcon;
 
   return (
-    <Card className="group h-full transition-colors hover:border-[var(--color-accent)]/50">
+    <Card className="group h-full transition-colors hover:border-accent/50">
       <CardContent className="flex h-full flex-col p-6">
         {/* Icon + Name */}
         <div className="mb-3 flex items-start gap-3">
-          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[var(--color-surface-secondary)] transition-transform group-hover:scale-110">
-            <Icon className="h-5 w-5 text-[var(--color-accent)]" />
+          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-surface-secondary transition-transform group-hover:scale-110">
+            <Icon className="h-5 w-5 text-accent" />
           </div>
           <div className="min-w-0">
             <Link
               href={`/newsletters/${newsletter.slug}`}
-              className="font-bold text-[var(--color-text-primary)] transition-colors hover:text-[var(--color-accent)]"
+              className="font-bold text-text-primary transition-colors hover:text-accent"
             >
               {newsletter.name}
             </Link>
             <div className="mt-1 flex items-center gap-2">
               <Badge>{FREQUENCY_LABELS[newsletter.frequency]}</Badge>
-              <span className="text-[11px] text-[var(--color-text-tertiary)]">
+              <span className="text-[11px] text-text-tertiary">
                 {CATEGORY_LABELS[newsletter.category]}
               </span>
             </div>
@@ -57,14 +57,14 @@ export default function NewsletterCard({ newsletter }: { newsletter: Newsletter 
         </div>
 
         {/* Description */}
-        <p className="mb-4 flex-1 text-sm leading-relaxed text-[var(--color-text-secondary)]">
+        <p className="mb-4 flex-1 text-sm leading-relaxed text-text-secondary">
           {newsletter.description}
         </p>
 
         {/* Sample Subject  */}
-        <div className="mb-4 rounded-lg bg-[var(--color-surface-secondary)] p-3 text-xs">
-          <span className="mb-0.5 block text-[var(--color-text-tertiary)]">Sample subject:</span>
-          <span className="font-medium text-[var(--color-text-primary)]">
+        <div className="mb-4 rounded-lg bg-surface-secondary p-3 text-xs">
+          <span className="mb-0.5 block text-text-tertiary">Sample subject:</span>
+          <span className="font-medium text-text-primary">
             {newsletter.sampleSubject}
           </span>
         </div>
@@ -78,7 +78,7 @@ export default function NewsletterCard({ newsletter }: { newsletter: Newsletter 
             href={newsletter.previewUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-3 text-xs text-[var(--color-accent)] hover:underline"
+            className="mt-3 text-xs text-accent hover:underline"
           >
             Preview latest issue &rarr;
           </a>

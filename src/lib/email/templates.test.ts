@@ -23,7 +23,13 @@ describe('Email Templates', () => {
       const result = notificationDigestEmail(
         [
           { title: 'BTC hits 100k', link: 'https://a.com', source: 'CoinDesk', timeAgo: '2h ago' },
-          { title: 'ETH update', link: 'https://b.com', source: 'Decrypt', description: 'Some desc', timeAgo: '5h ago' },
+          {
+            title: 'ETH update',
+            link: 'https://b.com',
+            source: 'Decrypt',
+            description: 'Some desc',
+            timeAgo: '5h ago',
+          },
         ],
         'https://example.com/unsub',
       );
