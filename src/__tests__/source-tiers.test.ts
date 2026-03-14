@@ -36,7 +36,7 @@ describe('SOURCE_TIERS', () => {
   });
 
   it('every source should have all required fields', () => {
-    for (const [key, entry] of Object.entries(SOURCE_TIERS)) {
+    for (const [_key, entry] of Object.entries(SOURCE_TIERS)) {
       expect(entry.tier).toBeTruthy();
       expect(entry.displayName).toBeTruthy();
       expect(entry.credibility).toBeGreaterThanOrEqual(0);

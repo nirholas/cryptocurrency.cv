@@ -3,7 +3,6 @@ import {
   categories,
   getCategoryBySlug,
   matchArticleToCategories,
-  type Category,
 } from '@/lib/categories';
 
 describe('categories', () => {
@@ -14,14 +13,14 @@ describe('categories', () => {
   it('should include bitcoin category', () => {
     const btc = categories.find((c) => c.slug === 'bitcoin');
     expect(btc).toBeDefined();
-    expect(btc!.name).toBe('Bitcoin');
-    expect(btc!.icon).toBe('₿');
+    expect(btc?.name).toBe('Bitcoin');
+    expect(btc?.icon).toBe('₿');
   });
 
   it('should include ethereum category', () => {
     const eth = categories.find((c) => c.slug === 'ethereum');
     expect(eth).toBeDefined();
-    expect(eth!.name).toBe('Ethereum');
+    expect(eth?.name).toBe('Ethereum');
   });
 
   it('should include all expected categories', () => {
@@ -54,7 +53,7 @@ describe('getCategoryBySlug', () => {
   it('should return category for valid slug', () => {
     const result = getCategoryBySlug('bitcoin');
     expect(result).toBeDefined();
-    expect(result!.slug).toBe('bitcoin');
+    expect(result?.slug).toBe('bitcoin');
   });
 
   it('should return undefined for invalid slug', () => {
@@ -63,8 +62,8 @@ describe('getCategoryBySlug', () => {
 
   it('should return correct category data', () => {
     const defi = getCategoryBySlug('defi');
-    expect(defi!.name).toBe('DeFi');
-    expect(defi!.icon).toBe('🏦');
+    expect(defi?.name).toBe('DeFi');
+    expect(defi?.icon).toBe('🏦');
   });
 });
 

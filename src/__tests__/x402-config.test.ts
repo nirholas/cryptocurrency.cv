@@ -1,4 +1,4 @@
-import { describe, it, expect, vi } from 'vitest';
+import { describe, it, expect } from 'vitest';
 import {
   NETWORKS,
   FACILITATORS,
@@ -6,8 +6,8 @@ import {
   isSolanaNetwork,
   getNetworkDisplayName,
   getConfigSummary,
-  IS_TESTNET,
-  IS_BUILD_TIME,
+  IS_TESTNET as _IS_TESTNET,
+  IS_BUILD_TIME as _IS_BUILD_TIME,
   USDC_ADDRESSES,
   PAYMENT_ADDRESS,
 } from '@/lib/x402/config';

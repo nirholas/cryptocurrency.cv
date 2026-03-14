@@ -168,7 +168,7 @@ describe('Logger', () => {
       headers: {
         get: vi.fn().mockReturnValue(null),
       },
-    } as any;
+    } as unknown as Parameters<typeof createRequestLogger>[0];
 
     const reqLogger = createRequestLogger(mockReq);
     expect(reqLogger.info).toBeInstanceOf(Function);

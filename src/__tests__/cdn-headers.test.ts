@@ -4,7 +4,6 @@ import {
   buildCacheControl,
   setCdnHeaders,
   applyCacheForPath,
-  type CachePreset,
 } from '@/lib/cache/cdn-headers';
 
 describe('getPresetForPath', () => {

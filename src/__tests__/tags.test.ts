@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { TAGS, type Tag } from '@/lib/tags';
+import { TAGS } from '@/lib/tags';
 
 describe('TAGS', () => {
   it('should export a non-empty record of tags', () => {
@@ -26,7 +26,7 @@ describe('TAGS', () => {
   });
 
   it('every tag should have required fields', () => {
-    for (const [key, tag] of Object.entries(TAGS)) {
+    for (const [_key, tag] of Object.entries(TAGS)) {
       expect(tag.slug).toBeTruthy();
       expect(tag.name).toBeTruthy();
       expect(tag.description).toBeTruthy();
@@ -53,7 +53,7 @@ describe('TAGS', () => {
   it('should have tags with relatedTags', () => {
     const btc = TAGS['bitcoin'];
     expect(btc.relatedTags).toBeDefined();
-    expect(btc.relatedTags!.length).toBeGreaterThan(0);
+    expect(btc.relatedTags?.length).toBeGreaterThan(0);
   });
 
   it('priority should be a positive number', () => {

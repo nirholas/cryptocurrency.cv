@@ -6,6 +6,7 @@ import {
   clearCredibilityHistory,
   getCredibilityStats,
 } from '@/lib/source-credibility';
+import type { NewsArticle } from '@/lib/crypto-news';
 
 describe('calculateClickbaitScore', () => {
   it('should return 0 for normal headlines', () => {
@@ -77,7 +78,7 @@ describe('updateSourceHistory', () => {
         source: 'CoinDesk',
         sourceKey: 'coindesk',
         pubDate: new Date().toISOString(),
-      } as any,
+      } as unknown as NewsArticle,
     ]);
     const stats = getCredibilityStats();
     expect(stats.sourcesTracked).toBeGreaterThanOrEqual(1);
@@ -89,7 +90,7 @@ describe('updateSourceHistory', () => {
       source: 'CoinDesk',
       sourceKey: 'coindesk',
       pubDate: '2025-01-01T00:00:00Z',
-    } as any;
+    } as unknown as NewsArticle;
     updateSourceHistory([article]);
     updateSourceHistory([article]);
     const stats = getCredibilityStats();
@@ -103,13 +104,13 @@ describe('updateSourceHistory', () => {
         source: 'CoinDesk',
         sourceKey: 'coindesk',
         pubDate: new Date().toISOString(),
-      } as any,
+      } as unknown as NewsArticle,
       {
         title: 'Article 2',
         source: 'The Block',
         sourceKey: 'theblock',
         pubDate: new Date().toISOString(),
-      } as any,
+      } as unknown as NewsArticle,
     ]);
     const stats = getCredibilityStats();
     expect(stats.sourcesTracked).toBeGreaterThanOrEqual(2);
@@ -129,19 +130,19 @@ describe('calculateSourceCredibility', () => {
   it('should return credibility for source with baseline', () => {
     const result = calculateSourceCredibility('coindesk');
     expect(result).toBeDefined();
-    expect(result!.sourceKey).toBe('coindesk');
-    expect(result!.overallScore).toBeGreaterThan(0);
-    expect(result!.overallScore).toBeLessThanOrEqual(100);
+    expect(result?.sourceKey).toBe('coindesk');
+    expect(result?.overallScore).toBeGreaterThan(0);
+    expect(result?.overallScore).toBeLessThanOrEqual(100);
   });
 
   it('should include all metric fields', () => {
     const result = calculateSourceCredibility('theblock');
     expect(result).toBeDefined();
-    expect(result!.metrics.accuracy).toBeGreaterThanOrEqual(0);
-    expect(result!.metrics.timeliness).toBeGreaterThanOrEqual(0);
-    expect(result!.metrics.consistency).toBeGreaterThanOrEqual(0);
-    expect(result!.metrics.bias).toBeDefined();
-    expect(result!.metrics.clickbait).toBeGreaterThanOrEqual(0);
+    expect(result?.metrics.accuracy).toBeGreaterThanOrEqual(0);
+    expect(result?.metrics.timeliness).toBeGreaterThanOrEqual(0);
+    expect(result?.metrics.consistency).toBeGreaterThanOrEqual(0);
+    expect(result?.metrics.bias).toBeDefined();
+    expect(result?.metrics.clickbait).toBeGreaterThanOrEqual(0);
   });
 
   it('should return credibility for source with history', () => {
@@ -151,28 +152,28 @@ describe('calculateSourceCredibility', () => {
         source: 'CoinDesk',
         sourceKey: 'coindesk',
         pubDate: '2025-01-01T00:00:00Z',
-      } as any,
+      } as unknown as NewsArticle,
       {
         title: 'Normal headline 2',
         source: 'CoinDesk',
         sourceKey: 'coindesk',
         pubDate: '2025-01-01T01:00:00Z',
-      } as any,
+      } as unknown as NewsArticle,
       {
         title: 'Normal headline 3',
         source: 'CoinDesk',
         sourceKey: 'coindesk',
         pubDate: '2025-01-01T02:00:00Z',
-      } as any,
+      } as unknown as NewsArticle,
     ]);
     const result = calculateSourceCredibility('coindesk');
     expect(result).toBeDefined();
-    expect(result!.articleCount).toBe(3);
+    expect(result?.articleCount).toBe(3);
   });
 
   it('should have a trend field', () => {
     const result = calculateSourceCredibility('coindesk');
-    expect(['improving', 'declining', 'stable']).toContain(result!.trend);
+    expect(['improving', 'declining', 'stable']).toContain(result?.trend);
   });
 });
 
@@ -184,7 +185,7 @@ describe('clearCredibilityHistory', () => {
         source: 'CoinDesk',
         sourceKey: 'coindesk',
         pubDate: new Date().toISOString(),
-      } as any,
+      } as unknown as NewsArticle,
     ]);
     clearCredibilityHistory();
     const stats = getCredibilityStats();
@@ -210,19 +211,19 @@ describe('getCredibilityStats', () => {
         source: 'CoinDesk',
         sourceKey: 'coindesk',
         pubDate: new Date().toISOString(),
-      } as any,
+      } as unknown as NewsArticle,
       {
         title: 'A2',
         source: 'CoinDesk',
         sourceKey: 'coindesk',
         pubDate: new Date().toISOString(),
-      } as any,
+      } as unknown as NewsArticle,
       {
         title: 'A3',
         source: 'The Block',
         sourceKey: 'theblock',
         pubDate: new Date().toISOString(),
-      } as any,
+      } as unknown as NewsArticle,
     ]);
     const stats = getCredibilityStats();
     expect(stats.sourcesTracked).toBe(2);

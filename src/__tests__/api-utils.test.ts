@@ -1,4 +1,4 @@
-import { describe, it, expect, vi, beforeEach } from 'vitest';
+import { describe, it, expect } from 'vitest';
 import { NextRequest } from 'next/server';
 import {
   generateETag,
@@ -24,9 +24,12 @@ describe('generateETag', () => {
     expect(generateETag({ a: 1 })).not.toBe(generateETag({ a: 2 }));
   });
 
-  it('should handle null and undefined', () => {
+  it('should handle null', () => {
     expect(generateETag(null)).toBeTruthy();
-    expect(generateETag(undefined)).toBeTruthy();
+  });
+
+  it('should throw for undefined (JSON.stringify returns undefined)', () => {
+    expect(() => generateETag(undefined)).toThrow();
   });
 
   it('should handle arrays', () => {

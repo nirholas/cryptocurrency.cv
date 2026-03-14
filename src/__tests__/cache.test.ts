@@ -202,7 +202,7 @@ describe('withCache', () => {
     const p1 = withCache(testCacheInstance, 'dedup-key', 60, fetchFn);
     const p2 = withCache(testCacheInstance, 'dedup-key', 60, fetchFn);
 
-    resolvePromise!('deduped');
+    resolvePromise?.('deduped');
     const [r1, r2] = await Promise.all([p1, p2]);
     expect(r1).toBe('deduped');
     expect(r2).toBe('deduped');

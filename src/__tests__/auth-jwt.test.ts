@@ -38,7 +38,7 @@ vi.mock('jose', () => {
 });
 
 import { signJwt, verifyJwt, createAccessToken, createRefreshToken } from '@/lib/auth/jwt';
-import type { JwtPayload } from '@/lib/auth/jwt';
+
 
 describe('JWT auth', () => {
   const testUser = {
@@ -97,10 +97,10 @@ describe('JWT auth', () => {
       });
       const payload = await verifyJwt('valid.token.here');
       expect(payload).not.toBeNull();
-      expect(payload!.sub).toBe('user-123');
-      expect(payload!.email).toBe('test@example.com');
-      expect(payload!.role).toBe('admin');
-      expect(payload!.type).toBe('access');
+      expect(payload?.sub).toBe('user-123');
+      expect(payload?.email).toBe('test@example.com');
+      expect(payload?.role).toBe('admin');
+      expect(payload?.type).toBe('access');
     });
 
     it('should return null for invalid token', async () => {

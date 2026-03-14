@@ -78,7 +78,7 @@ describe('getPendingCount', () => {
         }),
     );
     expect(getPendingCount()).toBe(1);
-    resolveFn!('done');
+    resolveFn?.('done');
     await promise;
     expect(getPendingCount()).toBe(0);
   });

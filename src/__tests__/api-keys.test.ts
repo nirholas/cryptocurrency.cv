@@ -126,7 +126,7 @@ describe('hashApiKeySync', () => {
 });
 
 describe('isKvConfigured', () => {
-  const originalEnv = process.env;
+  const _originalEnv = process.env;
 
   beforeEach(() => {
     vi.stubEnv('KV_REST_API_URL', '');
