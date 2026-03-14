@@ -12,6 +12,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import AuthorCard from '@/components/AuthorCard';
 import { Link } from '@/i18n/navigation';
+import { NonceScript } from '@/components/NonceScript';
 import { generateSEOMetadata } from '@/lib/seo';
 import { getAuthors } from '@/lib/authors';
 import type { Metadata } from 'next';
@@ -43,8 +44,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 /* ------------------------------------------------------------------ */
 /*  Structured Data                                                   */
 /* ------------------------------------------------------------------ */
-
-import { NonceScript } from '@/components/NonceScript';
 
 function AuthorsStructuredData() {
   const structuredData = {

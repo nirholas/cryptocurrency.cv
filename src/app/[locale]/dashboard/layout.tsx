@@ -32,7 +32,12 @@ export default async function DashboardLayout({ params, children }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
 
-  const session = await getSession();
+  let session: Awaited<ReturnType<typeof getSession>> = null;
+  try {
+    session = await getSession();
+  } catch {
+    // Auth check failed — redirect to login
+  }
 
   if (!session) {
     redirect(`/${locale}/login`);

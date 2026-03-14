@@ -3,6 +3,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { TEAM } from '@/data/team';
 import { TeamMemberCard } from '@/components/TeamMemberCard';
+import { NonceScript } from '@/components/NonceScript';
 import { generateSEOMetadata } from '@/lib/seo';
 import { Users, ArrowRight, ExternalLink, BookOpen } from 'lucide-react';
 import type { Metadata } from 'next';
@@ -48,8 +49,6 @@ async function fetchContributors() {
     return [];
   }
 }
-
-import { NonceScript } from '@/components/NonceScript';
 
 function TeamStructuredData() {
   const structuredData = {

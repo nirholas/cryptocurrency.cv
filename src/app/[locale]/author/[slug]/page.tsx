@@ -14,6 +14,7 @@ import Footer from '@/components/Footer';
 import { NewsCardDefault } from '@/components/NewsCard';
 import { Badge } from '@/components/ui/Badge';
 import { Link } from '@/i18n/navigation';
+import { NonceScript } from '@/components/NonceScript';
 import { generateSEOMetadata } from '@/lib/seo';
 import { getAuthorBySlug } from '@/lib/authors';
 import type { Metadata } from 'next';
@@ -59,7 +60,12 @@ function formatDate(iso: string): string {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, slug } = await params;
-  const data = await getAuthorBySlug(slug);
+  let data: Awaited<ReturnType<typeof getAuthorBySlug>> = null;
+  try {
+    data = await getAuthorBySlug(slug);
+  } catch {
+    // Fall through to not-found metadata
+  }
 
   if (!data) {
     return generateSEOMetadata({
@@ -84,8 +90,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 /* ------------------------------------------------------------------ */
 /*  Structured Data                                                   */
 /* ------------------------------------------------------------------ */
-
-import { NonceScript } from '@/components/NonceScript';
 
 function AuthorStructuredData({ name, slug }: { name: string; slug: string }) {
   const structuredData = {
@@ -117,7 +121,12 @@ export default async function AuthorPage({ params }: Props) {
   const { locale, slug } = await params;
   setRequestLocale(locale);
 
-  const data = await getAuthorBySlug(slug);
+  let data: Awaited<ReturnType<typeof getAuthorBySlug>> = null;
+  try {
+    data = await getAuthorBySlug(slug);
+  } catch {
+    // Fall through to notFound
+  }
   if (!data) {
     notFound();
   }
