@@ -45,6 +45,8 @@
     "i18n:validate": "npx tsx scripts/i18n/validate.ts",
     "i18n:check": "node scripts/i18n-check.js",
     "i18n:check:fix": "node scripts/i18n-check.js --fix --verbose",
+    "i18n:freshness": "node scripts/translation-freshness.js",
+    "i18n:freshness:strict": "STALE_THRESHOLD_DAYS=7 node scripts/translation-freshness.js",
     "i18n:watch": "npx tsx scripts/i18n/watch.ts",
     "docs:translate": "node scripts/translate-docs.js",
     "docs:translate:api": "node scripts/translate-docs.js --file docs/API.md --locales zh-CN,es,de,ja,ko",

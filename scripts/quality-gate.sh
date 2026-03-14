@@ -69,7 +69,7 @@ while [[ $# -gt 0 ]]; do
 done
 
 # ── State ────────────────────────────────────────────────────────────────
-TOTAL=9
+TOTAL=10
 PASSED=0
 FAILED=0
 SKIPPED=0
@@ -205,6 +205,17 @@ run_gate 8 "npm dependency audit" audit_deps
 # Gate 9 — i18n key validation
 # ─────────────────────────────────────────────────────────────────────────
 run_gate 9 "i18n key validation" node scripts/i18n-check.js
+
+# ─────────────────────────────────────────────────────────────────────────
+# Gate 10 — Translation freshness (non-blocking)
+# ─────────────────────────────────────────────────────────────────────────
+check_translation_freshness() {
+  node scripts/translation-freshness.js || {
+    echo -e "${YELLOW}  ⚠ Some translations are stale (non-blocking)${NC}"
+    return 0
+  }
+}
+run_gate 10 "Translation freshness (non-blocking)" check_translation_freshness
 
 # ── Summary ──────────────────────────────────────────────────────────────
 END_TIME=$(date +%s)
