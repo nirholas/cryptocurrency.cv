@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import { useState, useEffect, useRef, useCallback, useMemo } from "react";
-import { cn } from "@/lib/utils";
+import { useState, useEffect, useRef, useCallback, useMemo } from 'react';
+import { cn } from '@/lib/utils';
 
 interface OHLCCandle {
   0: number; // timestamp
@@ -12,23 +12,24 @@ interface OHLCCandle {
 }
 
 const TIME_RANGES = [
-  { label: "24H", days: 1 },
-  { label: "7D", days: 7 },
-  { label: "30D", days: 30 },
-  { label: "90D", days: 90 },
-  { label: "1Y", days: 365 },
+  { label: '24H', days: 1 },
+  { label: '7D', days: 7 },
+  { label: '30D', days: 30 },
+  { label: '90D', days: 90 },
+  { label: '1Y', days: 365 },
 ] as const;
 
 function formatChartPrice(n: number): string {
-  if (n >= 1) return `$${n.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+  if (n >= 1)
+    return `$${n.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
   return `$${n.toPrecision(4)}`;
 }
 
 function formatDate(ts: number, days: number): string {
   const d = new Date(ts);
-  if (days <= 1) return d.toLocaleTimeString("en-US", { hour: "2-digit", minute: "2-digit" });
-  if (days <= 30) return d.toLocaleDateString("en-US", { month: "short", day: "numeric" });
-  return d.toLocaleDateString("en-US", { month: "short", year: "2-digit" });
+  if (days <= 1) return d.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
+  if (days <= 30) return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+  return d.toLocaleDateString('en-US', { month: 'short', year: '2-digit' });
 }
 
 export default function PriceChart({ coinId }: { coinId: string }) {
@@ -51,13 +52,13 @@ export default function PriceChart({ coinId }: { coinId: string }) {
 
     fetch(`/api/ohlc?coinId=${encodeURIComponent(coinId)}&days=${days}`)
       .then((res) => {
-        if (!res.ok) throw new Error("Failed to load chart data");
+        if (!res.ok) throw new Error('Failed to load chart data');
         return res.json();
       })
       .then((json) => {
         if (cancelled) return;
         // API returns array of [timestamp, open, high, low, close]
-        const candles: OHLCCandle[] = Array.isArray(json) ? json : json.data ?? [];
+        const candles: OHLCCandle[] = Array.isArray(json) ? json : (json.data ?? []);
         setData(candles);
         setLoading(false);
       })
@@ -84,8 +85,8 @@ export default function PriceChart({ coinId }: { coinId: string }) {
           minPrice: 0,
           maxPrice: 0,
           priceRange: 0,
-          path: "",
-          areaPath: "",
+          path: '',
+          areaPath: '',
           isPositive: true,
           changePercent: 0,
         };
@@ -109,7 +110,7 @@ export default function PriceChart({ coinId }: { coinId: string }) {
         return { x, y };
       });
 
-      const linePath = points.map((p, i) => `${i === 0 ? "M" : "L"}${p.x},${p.y}`).join(" ");
+      const linePath = points.map((p, i) => `${i === 0 ? 'M' : 'L'}${p.x},${p.y}`).join(' ');
 
       const area =
         linePath +
@@ -134,22 +135,16 @@ export default function PriceChart({ coinId }: { coinId: string }) {
       const rect = svgRef.current.getBoundingClientRect();
       const mouseX = ((e.clientX - rect.left) / rect.width) * chartWidth;
       const usableWidth = chartWidth - padding.left - padding.right;
-      const index = Math.round(
-        ((mouseX - padding.left) / usableWidth) * (data.length - 1)
-      );
+      const index = Math.round(((mouseX - padding.left) / usableWidth) * (data.length - 1));
       const clampedIndex = Math.max(0, Math.min(data.length - 1, index));
       const candle = data[clampedIndex];
       const price = candle[4];
       const usableHeight = chartHeight - padding.top - padding.bottom;
-      const x =
-        padding.left + (clampedIndex / (data.length - 1)) * usableWidth;
-      const y =
-        padding.top +
-        usableHeight -
-        ((price - minPrice) / priceRange) * usableHeight;
+      const x = padding.left + (clampedIndex / (data.length - 1)) * usableWidth;
+      const y = padding.top + usableHeight - ((price - minPrice) / priceRange) * usableHeight;
       setTooltip({ x, y, price, date: candle[0] });
     },
-    [data, minPrice, priceRange]
+    [data, minPrice, priceRange],
   );
 
   const handleMouseLeave = useCallback(() => setTooltip(null), []);
@@ -166,27 +161,23 @@ export default function PriceChart({ coinId }: { coinId: string }) {
     });
   }, [data, minPrice, priceRange]);
 
-  const strokeColor = isPositive
-    ? "var(--chart-green, #22c55e)"
-    : "var(--chart-red, #ef4444)";
+  const strokeColor = isPositive ? 'var(--chart-green, #22c55e)' : 'var(--chart-red, #ef4444)';
   const fillGradientId = `chart-gradient-${coinId}`;
 
   return (
-    <div className="rounded-xl border border-border bg-(--color-surface) p-4 md:p-6">
+    <div className="border-border rounded-xl border bg-(--color-surface) p-4 md:p-6">
       {/* Time range selector */}
-      <div className="flex items-center justify-between mb-4 flex-wrap gap-2">
+      <div className="mb-4 flex flex-wrap items-center justify-between gap-2">
         <div className="flex items-center gap-2">
-          <span className="text-sm font-medium text-text-secondary">
-            Price Chart
-          </span>
+          <span className="text-text-secondary text-sm font-medium">Price Chart</span>
           {data.length > 0 && (
             <span
               className={cn(
-                "text-sm font-semibold",
-                isPositive ? "text-green-500" : "text-red-500"
+                'text-sm font-semibold',
+                isPositive ? 'text-green-500' : 'text-red-500',
               )}
             >
-              {changePercent >= 0 ? "+" : ""}
+              {changePercent >= 0 ? '+' : ''}
               {changePercent.toFixed(2)}%
             </span>
           )}
@@ -198,10 +189,10 @@ export default function PriceChart({ coinId }: { coinId: string }) {
               onClick={() => setDays(range.days)}
               aria-pressed={days === range.days}
               className={cn(
-                "px-3 py-1.5 text-xs font-medium rounded-md transition-colors cursor-pointer",
+                'cursor-pointer rounded-md px-3 py-1.5 text-xs font-medium transition-colors',
                 days === range.days
-                  ? "bg-accent text-white"
-                  : "text-text-secondary hover:bg-(--color-bg-secondary)"
+                  ? 'bg-accent text-white'
+                  : 'text-text-secondary hover:bg-(--color-bg-secondary)',
               )}
             >
               {range.label}
@@ -213,7 +204,7 @@ export default function PriceChart({ coinId }: { coinId: string }) {
       {/* Chart area */}
       <div className="relative">
         {loading && (
-          <div className="flex items-center justify-center h-75 text-text-tertiary">
+          <div className="text-text-tertiary flex h-75 items-center justify-center">
             <div className="flex items-center gap-2">
               <div className="h-4 w-4 animate-spin rounded-full border-2 border-current border-t-transparent" />
               Loading chart…
@@ -222,7 +213,7 @@ export default function PriceChart({ coinId }: { coinId: string }) {
         )}
 
         {error && !loading && (
-          <div className="flex items-center justify-center h-75 text-text-tertiary">
+          <div className="text-text-tertiary flex h-75 items-center justify-center">
             Chart data unavailable
           </div>
         )}
@@ -231,30 +222,16 @@ export default function PriceChart({ coinId }: { coinId: string }) {
           <svg
             ref={svgRef}
             viewBox={`0 0 ${chartWidth} ${chartHeight}`}
-            className="w-full h-auto select-none"
+            className="h-auto w-full select-none"
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
             role="img"
             aria-label={`Price chart for ${coinId} over ${days} days. ${changePercent != null ? `Change: ${changePercent >= 0 ? '+' : ''}${changePercent.toFixed(2)}%` : ''}`}
           >
             <defs>
-              <linearGradient
-                id={fillGradientId}
-                x1="0"
-                x2="0"
-                y1="0"
-                y2="1"
-              >
-                <stop
-                  offset="0%"
-                  stopColor={strokeColor}
-                  stopOpacity="0.2"
-                />
-                <stop
-                  offset="100%"
-                  stopColor={strokeColor}
-                  stopOpacity="0.02"
-                />
+              <linearGradient id={fillGradientId} x1="0" x2="0" y1="0" y2="1">
+                <stop offset="0%" stopColor={strokeColor} stopOpacity="0.2" />
+                <stop offset="100%" stopColor={strokeColor} stopOpacity="0.02" />
               </linearGradient>
             </defs>
 
@@ -283,10 +260,7 @@ export default function PriceChart({ coinId }: { coinId: string }) {
             ))}
 
             {/* Area fill */}
-            <path
-              d={areaPath}
-              fill={`url(#${fillGradientId})`}
-            />
+            <path d={areaPath} fill={`url(#${fillGradientId})`} />
 
             {/* Price line */}
             <path
@@ -326,19 +300,15 @@ export default function PriceChart({ coinId }: { coinId: string }) {
         {/* Tooltip overlay */}
         {tooltip && (
           <div
-            className="absolute pointer-events-none z-10 rounded-lg bg-(--color-surface) border border-border shadow-md px-3 py-2 text-xs"
+            className="border-border pointer-events-none absolute z-10 rounded-lg border bg-(--color-surface) px-3 py-2 text-xs shadow-md"
             style={{
               left: `${(tooltip.x / chartWidth) * 100}%`,
-              top: "0",
-              transform: "translateX(-50%)",
+              top: '0',
+              transform: 'translateX(-50%)',
             }}
           >
-            <p className="font-semibold text-text-primary">
-              {formatChartPrice(tooltip.price)}
-            </p>
-            <p className="text-text-tertiary">
-              {formatDate(tooltip.date, days)}
-            </p>
+            <p className="text-text-primary font-semibold">{formatChartPrice(tooltip.price)}</p>
+            <p className="text-text-tertiary">{formatDate(tooltip.date, days)}</p>
           </div>
         )}
       </div>

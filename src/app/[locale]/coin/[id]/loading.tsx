@@ -1,10 +1,10 @@
-import { Skeleton } from "@/components/ui/Skeleton";
+import { Skeleton } from '@/components/ui/Skeleton';
 
 export default function CoinLoading() {
   return (
     <div className="container-main py-10">
       {/* Breadcrumbs skeleton */}
-      <div className="flex items-center gap-2 mb-6">
+      <div className="mb-6 flex items-center gap-2">
         <Skeleton className="h-4 w-12" />
         <Skeleton className="h-3 w-3" />
         <Skeleton className="h-4 w-16" />
@@ -13,9 +13,9 @@ export default function CoinLoading() {
       </div>
 
       {/* Coin header skeleton */}
-      <div className="flex items-start gap-4 mb-8">
-        <Skeleton className="h-16 w-16 rounded-full shrink-0" />
-        <div className="flex-1 min-w-0 space-y-3">
+      <div className="mb-8 flex items-start gap-4">
+        <Skeleton className="h-16 w-16 shrink-0 rounded-full" />
+        <div className="min-w-0 flex-1 space-y-3">
           <div className="flex items-center gap-3">
             <Skeleton className="h-10 w-40" />
             <Skeleton className="h-8 w-14" />
@@ -39,13 +39,10 @@ export default function CoinLoading() {
       </div>
 
       {/* Stats grid skeleton */}
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 mb-10">
+      <div className="mb-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {Array.from({ length: 8 }).map((_, i) => (
-          <div
-            key={i}
-            className="rounded-lg border border-border bg-(--color-surface) p-4"
-          >
-            <Skeleton className="h-3 w-20 mb-2" />
+          <div key={i} className="border-border rounded-lg border bg-(--color-surface) p-4">
+            <Skeleton className="mb-2 h-3 w-20" />
             <Skeleton className="h-6 w-28" />
           </div>
         ))}
@@ -62,7 +59,7 @@ export default function CoinLoading() {
 
       {/* Related news skeleton */}
       <div>
-        <Skeleton className="h-7 w-40 mb-4" />
+        <Skeleton className="mb-4 h-7 w-40" />
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {Array.from({ length: 4 }).map((_, i) => (
             <div key={i} className="space-y-3">

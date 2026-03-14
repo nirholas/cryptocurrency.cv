@@ -80,7 +80,9 @@ async function fetchTrendingConnections(): Promise<TrendingPair[]> {
     const data = await res.json();
     // Build trending connections from relationships sorted by weight
     const entities = new Map<string, string>(
-      (data.entities || []).map((e: { id: string; name: string }) => [e.id, e.name] as [string, string]),
+      (data.entities || []).map(
+        (e: { id: string; name: string }) => [e.id, e.name] as [string, string],
+      ),
     );
     const relationships = (data.relationships || []) as {
       source: string;
@@ -90,7 +92,7 @@ async function fetchTrendingConnections(): Promise<TrendingPair[]> {
     return relationships
       .sort((a, b) => b.weight - a.weight)
       .slice(0, 10)
-      .map(r => ({
+      .map((r) => ({
         source: r.source,
         sourceLabel: String(entities.get(r.source) ?? r.source),
         target: r.target,
@@ -133,10 +135,7 @@ export default async function ExplorePage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
 
-  const [tags, trendingConnections] = await Promise.all([
-    fetchTags(),
-    fetchTrendingConnections(),
-  ]);
+  const [tags, trendingConnections] = await Promise.all([fetchTags(), fetchTrendingConnections()]);
 
   return (
     <>
@@ -144,13 +143,12 @@ export default async function ExplorePage({ params }: Props) {
       <main id="main-content" className="container-main py-6 md:py-10">
         {/* Page heading */}
         <div className="mb-8">
-          <h1 className="text-3xl md:text-4xl font-bold text-text-primary mb-2">
+          <h1 className="text-text-primary mb-2 text-3xl font-bold md:text-4xl">
             Knowledge Graph Explorer
           </h1>
           <p className="text-text-secondary max-w-2xl">
-            Visualize connections between entities in crypto news — coins, people,
-            companies, and protocols. Click nodes to inspect, drag to rearrange,
-            scroll to zoom.
+            Visualize connections between entities in crypto news — coins, people, companies, and
+            protocols. Click nodes to inspect, drag to rearrange, scroll to zoom.
           </p>
         </div>
 
@@ -162,10 +160,7 @@ export default async function ExplorePage({ params }: Props) {
             </div>
           }
         >
-          <ExploreClient
-            tags={tags}
-            trendingConnections={trendingConnections}
-          />
+          <ExploreClient tags={tags} trendingConnections={trendingConnections} />
         </Suspense>
       </main>
       <Footer />

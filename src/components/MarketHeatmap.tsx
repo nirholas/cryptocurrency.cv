@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import { useState, useMemo, useCallback } from "react";
-import { cn } from "@/lib/utils";
+import { useState, useMemo, useCallback } from 'react';
+import { cn } from '@/lib/utils';
 
 interface CoinData {
   id: string;
@@ -20,13 +20,13 @@ interface MarketHeatmapProps {
   className?: string;
 }
 
-type TimeRange = "1h" | "24h" | "7d";
+type TimeRange = '1h' | '24h' | '7d';
 
 function getChangeValue(coin: CoinData, range: TimeRange): number {
   switch (range) {
-    case "1h":
+    case '1h':
       return coin.price_change_percentage_1h_in_currency ?? 0;
-    case "7d":
+    case '7d':
       return coin.price_change_percentage_7d_in_currency ?? 0;
     default:
       return coin.price_change_percentage_24h ?? 0;
@@ -34,14 +34,14 @@ function getChangeValue(coin: CoinData, range: TimeRange): number {
 }
 
 function getBlockColor(change: number): string {
-  if (change >= 10) return "rgba(13, 138, 94, 0.9)";
-  if (change >= 5) return "rgba(22, 199, 132, 0.85)";
-  if (change >= 2) return "rgba(22, 199, 132, 0.6)";
-  if (change >= 0) return "rgba(22, 199, 132, 0.35)";
-  if (change >= -2) return "rgba(234, 57, 67, 0.35)";
-  if (change >= -5) return "rgba(234, 57, 67, 0.6)";
-  if (change >= -10) return "rgba(234, 57, 67, 0.85)";
-  return "rgba(234, 57, 67, 0.9)";
+  if (change >= 10) return 'rgba(13, 138, 94, 0.9)';
+  if (change >= 5) return 'rgba(22, 199, 132, 0.85)';
+  if (change >= 2) return 'rgba(22, 199, 132, 0.6)';
+  if (change >= 0) return 'rgba(22, 199, 132, 0.35)';
+  if (change >= -2) return 'rgba(234, 57, 67, 0.35)';
+  if (change >= -5) return 'rgba(234, 57, 67, 0.6)';
+  if (change >= -10) return 'rgba(234, 57, 67, 0.85)';
+  return 'rgba(234, 57, 67, 0.9)';
 }
 
 function formatCompact(n: number): string {
@@ -63,7 +63,7 @@ interface TreemapBlock {
 function computeTreemap(
   coins: CoinData[],
   containerWidth: number,
-  containerHeight: number
+  containerHeight: number,
 ): TreemapBlock[] {
   if (coins.length === 0) return [];
 
@@ -86,10 +86,7 @@ function computeTreemap(
     // Take items for this row greedily until aspect ratio worsens
     const row: CoinData[] = [];
     let rowMcap = 0;
-    const totalRemaining = remaining.reduce(
-      (sum, c) => sum + c.market_cap,
-      0
-    );
+    const totalRemaining = remaining.reduce((sum, c) => sum + c.market_cap, 0);
 
     for (let i = 0; i < remaining.length; i++) {
       const candidate = [...row, remaining[i]];
@@ -114,10 +111,7 @@ function computeTreemap(
         for (const c of row) {
           const frac = c.market_cap / rowMcap;
           const blockSize = frac * sideLength;
-          const ar = Math.max(
-            prevRowSize / blockSize,
-            blockSize / prevRowSize
-          );
+          const ar = Math.max(prevRowSize / blockSize, blockSize / prevRowSize);
           prevWorstAR = Math.max(prevWorstAR, ar);
         }
 
@@ -176,11 +170,8 @@ function computeTreemap(
   return blocks;
 }
 
-export default function MarketHeatmap({
-  coins,
-  className,
-}: MarketHeatmapProps) {
-  const [timeRange, setTimeRange] = useState<TimeRange>("24h");
+export default function MarketHeatmap({ coins, className }: MarketHeatmapProps) {
+  const [timeRange, setTimeRange] = useState<TimeRange>('24h');
   const [hoveredId, setHoveredId] = useState<string | null>(null);
   const [tooltipPos, setTooltipPos] = useState({ x: 0, y: 0 });
 
@@ -190,55 +181,49 @@ export default function MarketHeatmap({
         .filter((c) => c.market_cap > 0)
         .sort((a, b) => b.market_cap - a.market_cap)
         .slice(0, 50),
-    [coins]
+    [coins],
   );
 
   const containerW = 900;
   const containerH = 500;
 
-  const blocks = useMemo(
-    () => computeTreemap(sortedCoins, containerW, containerH),
-    [sortedCoins]
-  );
+  const blocks = useMemo(() => computeTreemap(sortedCoins, containerW, containerH), [sortedCoins]);
 
   const hoveredCoin = useMemo(
     () => sortedCoins.find((c) => c.id === hoveredId) ?? null,
-    [sortedCoins, hoveredId]
+    [sortedCoins, hoveredId],
   );
 
-  const handleMouseMove = useCallback(
-    (e: React.MouseEvent<SVGRectElement>, coinId: string) => {
-      const svg = e.currentTarget.closest("svg");
-      if (!svg) return;
-      const rect = svg.getBoundingClientRect();
-      setTooltipPos({
-        x: e.clientX - rect.left,
-        y: e.clientY - rect.top,
-      });
-      setHoveredId(coinId);
-    },
-    []
-  );
+  const handleMouseMove = useCallback((e: React.MouseEvent<SVGRectElement>, coinId: string) => {
+    const svg = e.currentTarget.closest('svg');
+    if (!svg) return;
+    const rect = svg.getBoundingClientRect();
+    setTooltipPos({
+      x: e.clientX - rect.left,
+      y: e.clientY - rect.top,
+    });
+    setHoveredId(coinId);
+  }, []);
 
   const ranges: { key: TimeRange; label: string }[] = [
-    { key: "1h", label: "1H" },
-    { key: "24h", label: "24H" },
-    { key: "7d", label: "7D" },
+    { key: '1h', label: '1H' },
+    { key: '24h', label: '24H' },
+    { key: '7d', label: '7D' },
   ];
 
   return (
-    <div className={cn("space-y-4", className)}>
+    <div className={cn('space-y-4', className)}>
       {/* Time range toggle */}
-      <div className="flex gap-1 p-1 rounded-lg bg-(--color-surface) border border-border w-fit">
+      <div className="border-border flex w-fit gap-1 rounded-lg border bg-(--color-surface) p-1">
         {ranges.map((r) => (
           <button
             key={r.key}
             onClick={() => setTimeRange(r.key)}
             className={cn(
-              "px-3 py-1.5 text-sm font-medium rounded-md transition-colors",
+              'rounded-md px-3 py-1.5 text-sm font-medium transition-colors',
               timeRange === r.key
-                ? "bg-accent text-white"
-                : "text-text-secondary hover:text-text-primary"
+                ? 'bg-accent text-white'
+                : 'text-text-secondary hover:text-text-primary',
             )}
           >
             {r.label}
@@ -247,7 +232,7 @@ export default function MarketHeatmap({
       </div>
 
       {/* Heatmap */}
-      <div className="relative overflow-hidden rounded-lg border border-border">
+      <div className="border-border relative overflow-hidden rounded-lg border">
         <svg
           viewBox={`0 0 ${containerW} ${containerH}`}
           className="w-full"
@@ -268,21 +253,15 @@ export default function MarketHeatmap({
                   height={Math.max(0, block.height - 2)}
                   fill={getBlockColor(change)}
                   rx={3}
-                  className="transition-opacity cursor-pointer"
-                  opacity={
-                    hoveredId && hoveredId !== block.coin.id ? 0.5 : 1
-                  }
+                  className="cursor-pointer transition-opacity"
+                  opacity={hoveredId && hoveredId !== block.coin.id ? 0.5 : 1}
                   onMouseMove={(e) => handleMouseMove(e, block.coin.id)}
                   onMouseEnter={() => setHoveredId(block.coin.id)}
                 />
                 {showSymbol && (
                   <text
                     x={block.x + block.width / 2}
-                    y={
-                      block.y +
-                      block.height / 2 -
-                      (showChange ? 6 : 0)
-                    }
+                    y={block.y + block.height / 2 - (showChange ? 6 : 0)}
                     textAnchor="middle"
                     dominantBaseline="central"
                     fill="white"
@@ -303,9 +282,9 @@ export default function MarketHeatmap({
                     fill="rgba(255,255,255,0.85)"
                     fontSize={Math.min(11, minDim / 5)}
                     pointerEvents="none"
-                    className="select-none tabular-nums"
+                    className="tabular-nums select-none"
                   >
-                    {change >= 0 ? "+" : ""}
+                    {change >= 0 ? '+' : ''}
                     {change.toFixed(1)}%
                   </text>
                 )}
@@ -317,26 +296,23 @@ export default function MarketHeatmap({
         {/* Tooltip */}
         {hoveredCoin && (
           <div
-            className="absolute pointer-events-none z-10 bg-(--color-surface) border border-border rounded-lg shadow-lg p-3 text-sm min-w-45"
+            className="border-border pointer-events-none absolute z-10 min-w-45 rounded-lg border bg-(--color-surface) p-3 text-sm shadow-lg"
             style={{
               left: `${Math.min(tooltipPos.x + 12, containerW - 200)}px`,
               top: `${tooltipPos.y + 12}px`,
-              transform:
-                tooltipPos.x > containerW * 0.7
-                  ? "translateX(-110%)"
-                  : "none",
+              transform: tooltipPos.x > containerW * 0.7 ? 'translateX(-110%)' : 'none',
             }}
           >
-            <div className="font-semibold text-text-primary">
-              {hoveredCoin.name}{" "}
+            <div className="text-text-primary font-semibold">
+              {hoveredCoin.name}{' '}
               <span className="text-text-secondary font-normal">
                 {hoveredCoin.symbol.toUpperCase()}
               </span>
             </div>
-            <div className="mt-1 space-y-0.5 text-text-secondary">
+            <div className="text-text-secondary mt-1 space-y-0.5">
               <div className="flex justify-between gap-4">
                 <span>Price</span>
-                <span className="font-medium text-text-primary tabular-nums">
+                <span className="text-text-primary font-medium tabular-nums">
                   $
                   {hoveredCoin.current_price.toLocaleString(undefined, {
                     maximumFractionDigits: 2,
@@ -345,13 +321,13 @@ export default function MarketHeatmap({
               </div>
               <div className="flex justify-between gap-4">
                 <span>Market Cap</span>
-                <span className="font-medium text-text-primary">
+                <span className="text-text-primary font-medium">
                   {formatCompact(hoveredCoin.market_cap)}
                 </span>
               </div>
               <div className="flex justify-between gap-4">
                 <span>Volume</span>
-                <span className="font-medium text-text-primary">
+                <span className="text-text-primary font-medium">
                   {formatCompact(hoveredCoin.total_volume)}
                 </span>
               </div>
@@ -359,13 +335,11 @@ export default function MarketHeatmap({
                 <span>Change ({timeRange})</span>
                 <span
                   className={cn(
-                    "font-medium tabular-nums",
-                    getChangeValue(hoveredCoin, timeRange) >= 0
-                      ? "text-green-500"
-                      : "text-red-500"
+                    'font-medium tabular-nums',
+                    getChangeValue(hoveredCoin, timeRange) >= 0 ? 'text-green-500' : 'text-red-500',
                   )}
                 >
-                  {getChangeValue(hoveredCoin, timeRange) >= 0 ? "+" : ""}
+                  {getChangeValue(hoveredCoin, timeRange) >= 0 ? '+' : ''}
                   {getChangeValue(hoveredCoin, timeRange).toFixed(2)}%
                 </span>
               </div>
@@ -375,23 +349,19 @@ export default function MarketHeatmap({
       </div>
 
       {/* Legend */}
-      <div className="flex items-center justify-center gap-1 text-xs text-text-secondary">
+      <div className="text-text-secondary flex items-center justify-center gap-1 text-xs">
         <span>-10%+</span>
         <div className="flex gap-0.5">
           {[
-            "rgba(234,57,67,0.9)",
-            "rgba(234,57,67,0.6)",
-            "rgba(234,57,67,0.35)",
-            "rgba(22,199,132,0.35)",
-            "rgba(22,199,132,0.6)",
-            "rgba(22,199,132,0.85)",
-            "rgba(13,138,94,0.9)",
+            'rgba(234,57,67,0.9)',
+            'rgba(234,57,67,0.6)',
+            'rgba(234,57,67,0.35)',
+            'rgba(22,199,132,0.35)',
+            'rgba(22,199,132,0.6)',
+            'rgba(22,199,132,0.85)',
+            'rgba(13,138,94,0.9)',
           ].map((color, i) => (
-            <div
-              key={i}
-              className="w-6 h-3 rounded-sm"
-              style={{ backgroundColor: color }}
-            />
+            <div key={i} className="h-3 w-6 rounded-sm" style={{ backgroundColor: color }} />
           ))}
         </div>
         <span>+10%+</span>

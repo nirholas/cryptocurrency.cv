@@ -59,36 +59,34 @@ export default async function TagsPage({ params }: Props) {
       <Header />
       <main className="container-main py-10">
         {/* Breadcrumbs */}
-        <nav aria-label="Breadcrumb" className="mb-6 text-sm text-text-tertiary">
+        <nav aria-label="Breadcrumb" className="text-text-tertiary mb-6 text-sm">
           <ol className="flex items-center gap-1.5">
             <li>
-              <Link href="/" className="transition-colors hover:text-accent">
+              <Link href="/" className="hover:text-accent transition-colors">
                 Home
               </Link>
             </li>
             <li aria-hidden="true">/</li>
-            <li className="font-medium text-text-primary">Topics</li>
+            <li className="text-text-primary font-medium">Topics</li>
           </ol>
         </nav>
 
         {/* Page Header */}
         <div className="mb-10">
-          <div className="mb-4 h-1 w-16 rounded-full bg-accent" aria-hidden="true" />
-          <h1 className="mb-2 font-serif text-3xl font-bold text-text-primary md:text-4xl">
+          <div className="bg-accent mb-4 h-1 w-16 rounded-full" aria-hidden="true" />
+          <h1 className="text-text-primary mb-2 font-serif text-3xl font-bold md:text-4xl">
             🏷️ Topics
           </h1>
-          <p className="max-w-2xl text-text-secondary">
+          <p className="text-text-secondary max-w-2xl">
             Browse all cryptocurrency news topics. Discover trending tags and explore articles by
             subject.
           </p>
-          <p className="mt-2 text-sm text-text-tertiary">{allTags.length} topics</p>
+          <p className="text-text-tertiary mt-2 text-sm">{allTags.length} topics</p>
         </div>
 
         {/* Tag Cloud — Top Tags */}
         <section className="mb-12">
-          <h2 className="mb-4 font-serif text-xl font-bold text-text-primary">
-            Popular Topics
-          </h2>
+          <h2 className="text-text-primary mb-4 font-serif text-xl font-bold">Popular Topics</h2>
           <div className="flex flex-wrap gap-2">
             {topTags.map((tag, index) => {
               // Scale font size based on priority rank
@@ -97,7 +95,7 @@ export default async function TagsPage({ params }: Props) {
                 <Link
                   key={tag.slug}
                   href={`/tags/${tag.slug}`}
-                  className="inline-flex items-center gap-1.5 rounded-full bg-surface-secondary px-4 py-2 font-medium text-text-secondary transition-all hover:bg-surface-tertiary hover:text-text-primary hover:shadow-sm"
+                  className="bg-surface-secondary text-text-secondary hover:bg-surface-tertiary hover:text-text-primary inline-flex items-center gap-1.5 rounded-full px-4 py-2 font-medium transition-all hover:shadow-sm"
                   style={{ fontSize: `${scale}rem` }}
                 >
                   <span>{tag.icon}</span>
@@ -117,28 +115,24 @@ export default async function TagsPage({ params }: Props) {
 
           return (
             <section key={category} className="mb-10">
-              <h2 className="mb-4 flex items-center gap-2 font-serif text-xl font-bold text-text-primary">
+              <h2 className="text-text-primary mb-4 flex items-center gap-2 font-serif text-xl font-bold">
                 <span>{meta.icon}</span>
                 {meta.label}
-                <span className="ml-2 text-sm font-normal text-text-tertiary">
-                  ({tags.length})
-                </span>
+                <span className="text-text-tertiary ml-2 text-sm font-normal">({tags.length})</span>
               </h2>
               <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
                 {tags.map((tag) => (
                   <Link
                     key={tag.slug}
                     href={`/tags/${tag.slug}`}
-                    className="group flex items-center gap-3 rounded-lg border border-border bg-surface p-3 transition-all hover:border-accent hover:shadow-sm"
+                    className="group border-border bg-surface hover:border-accent flex items-center gap-3 rounded-lg border p-3 transition-all hover:shadow-sm"
                   >
                     <span className="text-xl">{tag.icon}</span>
                     <div className="min-w-0 flex-1">
-                      <p className="truncate text-sm font-semibold text-text-primary transition-colors group-hover:text-accent">
+                      <p className="text-text-primary group-hover:text-accent truncate text-sm font-semibold transition-colors">
                         {tag.name}
                       </p>
-                      <p className="line-clamp-1 text-xs text-text-tertiary">
-                        {tag.description}
-                      </p>
+                      <p className="text-text-tertiary line-clamp-1 text-xs">{tag.description}</p>
                     </div>
                   </Link>
                 ))}
@@ -149,9 +143,7 @@ export default async function TagsPage({ params }: Props) {
 
         {/* All Tags A-Z */}
         <section className="mt-12">
-          <h2 className="mb-4 font-serif text-xl font-bold text-text-primary">
-            All Topics A–Z
-          </h2>
+          <h2 className="text-text-primary mb-4 font-serif text-xl font-bold">All Topics A–Z</h2>
           <div className="columns-1 gap-8 sm:columns-2 md:columns-3 lg:columns-4">
             {(() => {
               const sorted = [...allTags].sort((a, b) => a.name.localeCompare(b.name));
@@ -164,13 +156,13 @@ export default async function TagsPage({ params }: Props) {
 
               return Object.entries(grouped).map(([letter, tags]) => (
                 <div key={letter} className="mb-4 break-inside-avoid">
-                  <h3 className="mb-1 text-sm font-bold text-accent">{letter}</h3>
+                  <h3 className="text-accent mb-1 text-sm font-bold">{letter}</h3>
                   <ul className="space-y-0.5">
                     {tags.map((tag) => (
                       <li key={tag.slug}>
                         <Link
                           href={`/tags/${tag.slug}`}
-                          className="text-sm text-text-secondary transition-colors hover:text-accent"
+                          className="text-text-secondary hover:text-accent text-sm transition-colors"
                         >
                           {tag.icon} {tag.name}
                         </Link>

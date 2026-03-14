@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import { useEffect, useState } from "react";
-import { cn } from "@/lib/utils";
-import { Card } from "@/components/ui/Card";
-import { ArrowUp, ArrowDown, Minus, RefreshCw } from "lucide-react";
+import { useEffect, useState } from 'react';
+import { cn } from '@/lib/utils';
+import { Card } from '@/components/ui/Card';
+import { ArrowUp, ArrowDown, Minus, RefreshCw } from 'lucide-react';
 
 /* ------------------------------------------------------------------ */
 /*  Types                                                              */
@@ -24,27 +24,27 @@ interface CoinSentiment {
 /* ------------------------------------------------------------------ */
 
 function getScoreColor(score: number): string {
-  if (score >= 75) return "bg-emerald-500";
-  if (score >= 55) return "bg-green-400";
-  if (score >= 45) return "bg-yellow-400";
-  if (score >= 25) return "bg-orange-400";
-  return "bg-red-500";
+  if (score >= 75) return 'bg-emerald-500';
+  if (score >= 55) return 'bg-green-400';
+  if (score >= 45) return 'bg-yellow-400';
+  if (score >= 25) return 'bg-orange-400';
+  return 'bg-red-500';
 }
 
 function getScoreLabel(score: number): string {
-  if (score >= 75) return "Very Bullish";
-  if (score >= 55) return "Bullish";
-  if (score >= 45) return "Neutral";
-  if (score >= 25) return "Bearish";
-  return "Very Bearish";
+  if (score >= 75) return 'Very Bullish';
+  if (score >= 55) return 'Bullish';
+  if (score >= 45) return 'Neutral';
+  if (score >= 25) return 'Bearish';
+  return 'Very Bearish';
 }
 
 function getScoreTextColor(score: number): string {
-  if (score >= 75) return "text-emerald-600 dark:text-emerald-400";
-  if (score >= 55) return "text-green-500 dark:text-green-400";
-  if (score >= 45) return "text-yellow-500 dark:text-yellow-400";
-  if (score >= 25) return "text-orange-500 dark:text-orange-400";
-  return "text-red-500 dark:text-red-400";
+  if (score >= 75) return 'text-emerald-600 dark:text-emerald-400';
+  if (score >= 55) return 'text-green-500 dark:text-green-400';
+  if (score >= 45) return 'text-yellow-500 dark:text-yellow-400';
+  if (score >= 25) return 'text-orange-500 dark:text-orange-400';
+  return 'text-red-500 dark:text-red-400';
 }
 
 function formatVolume(n: number): string {
@@ -59,18 +59,18 @@ function formatVolume(n: number): string {
 
 function generateMockData(): CoinSentiment[] {
   const coins = [
-    { coin: "Bitcoin", symbol: "BTC" },
-    { coin: "Ethereum", symbol: "ETH" },
-    { coin: "Solana", symbol: "SOL" },
-    { coin: "XRP", symbol: "XRP" },
-    { coin: "Cardano", symbol: "ADA" },
-    { coin: "Avalanche", symbol: "AVAX" },
-    { coin: "Chainlink", symbol: "LINK" },
-    { coin: "Polygon", symbol: "MATIC" },
-    { coin: "Dogecoin", symbol: "DOGE" },
-    { coin: "Polkadot", symbol: "DOT" },
-    { coin: "Uniswap", symbol: "UNI" },
-    { coin: "Litecoin", symbol: "LTC" },
+    { coin: 'Bitcoin', symbol: 'BTC' },
+    { coin: 'Ethereum', symbol: 'ETH' },
+    { coin: 'Solana', symbol: 'SOL' },
+    { coin: 'XRP', symbol: 'XRP' },
+    { coin: 'Cardano', symbol: 'ADA' },
+    { coin: 'Avalanche', symbol: 'AVAX' },
+    { coin: 'Chainlink', symbol: 'LINK' },
+    { coin: 'Polygon', symbol: 'MATIC' },
+    { coin: 'Dogecoin', symbol: 'DOGE' },
+    { coin: 'Polkadot', symbol: 'DOT' },
+    { coin: 'Uniswap', symbol: 'UNI' },
+    { coin: 'Litecoin', symbol: 'LTC' },
   ];
 
   return coins.map((c) => {
@@ -82,7 +82,7 @@ function generateMockData(): CoinSentiment[] {
       newsMentions: Math.floor(Math.random() * 200) + 5,
       change24h: parseFloat((Math.random() * 30 - 15).toFixed(1)),
       history: Array.from({ length: 7 }, () =>
-        Math.max(5, Math.min(95, baseScore + Math.floor(Math.random() * 20 - 10)))
+        Math.max(5, Math.min(95, baseScore + Math.floor(Math.random() * 20 - 10))),
       ),
     };
   });
@@ -95,12 +95,12 @@ function generateMockData(): CoinSentiment[] {
 function SparklineBars({ data }: { data: number[] }) {
   const max = Math.max(...data, 1);
   return (
-    <div className="flex items-end gap-0.5 h-6">
+    <div className="flex h-6 items-end gap-0.5">
       {data.map((v, i) => (
         <div
           key={i}
-          className={cn("w-1.5 rounded-t-sm transition-all", getScoreColor(v))}
-          style={{ height: `${(v / max) * 100}%`, minHeight: "2px" }}
+          className={cn('w-1.5 rounded-t-sm transition-all', getScoreColor(v))}
+          style={{ height: `${(v / max) * 100}%`, minHeight: '2px' }}
           title={`Day ${i + 1}: ${v}`}
         />
       ))}
@@ -115,8 +115,10 @@ function SparklineBars({ data }: { data: number[] }) {
 export default function SentimentTable({ className }: { className?: string }) {
   const [coins, setCoins] = useState<CoinSentiment[]>([]);
   const [loading, setLoading] = useState(true);
-  const [sortKey, setSortKey] = useState<"score" | "socialVolume" | "newsMentions" | "change24h">("score");
-  const [sortDir, setSortDir] = useState<"asc" | "desc">("desc");
+  const [sortKey, setSortKey] = useState<'score' | 'socialVolume' | 'newsMentions' | 'change24h'>(
+    'score',
+  );
+  const [sortDir, setSortDir] = useState<'asc' | 'desc'>('desc');
 
   useEffect(() => {
     let cancelled = false;
@@ -124,24 +126,31 @@ export default function SentimentTable({ className }: { className?: string }) {
     async function load() {
       setLoading(true);
       try {
-        const res = await fetch("/api/sentiment?limit=30");
-        if (!res.ok) throw new Error("Failed");
+        const res = await fetch('/api/sentiment?limit=30');
+        if (!res.ok) throw new Error('Failed');
         const json = await res.json();
 
         // Map API data to our shape, or fallback to mock
         if (json.articles && json.articles.length > 0) {
           // Group by affected asset
-          const assetMap = new Map<string, { scores: number[]; mentions: number; volume: number }>();
+          const assetMap = new Map<
+            string,
+            { scores: number[]; mentions: number; volume: number }
+          >();
           for (const a of json.articles) {
             for (const ticker of a.affectedAssets || []) {
               const key = ticker.toUpperCase();
               const existing = assetMap.get(key) || { scores: [], mentions: 0, volume: 0 };
               const sentimentScore =
-                a.sentiment === "very_bullish" ? 90
-                : a.sentiment === "bullish" ? 70
-                : a.sentiment === "neutral" ? 50
-                : a.sentiment === "bearish" ? 30
-                : 10;
+                a.sentiment === 'very_bullish'
+                  ? 90
+                  : a.sentiment === 'bullish'
+                    ? 70
+                    : a.sentiment === 'neutral'
+                      ? 50
+                      : a.sentiment === 'bearish'
+                        ? 30
+                        : 10;
               existing.scores.push(sentimentScore);
               existing.mentions += 1;
               existing.volume += Math.floor(Math.random() * 50_000 + 5_000);
@@ -159,7 +168,7 @@ export default function SentimentTable({ className }: { className?: string }) {
               newsMentions: data.mentions,
               change24h: parseFloat((Math.random() * 20 - 10).toFixed(1)),
               history: Array.from({ length: 7 }, () =>
-                Math.max(5, Math.min(95, avg + Math.floor(Math.random() * 20 - 10)))
+                Math.max(5, Math.min(95, avg + Math.floor(Math.random() * 20 - 10))),
               ),
             };
           });
@@ -181,76 +190,75 @@ export default function SentimentTable({ className }: { className?: string }) {
     }
 
     load();
-    return () => { cancelled = true; };
+    return () => {
+      cancelled = true;
+    };
   }, []);
 
   const sorted = [...coins].sort((a, b) => {
-    const dir = sortDir === "desc" ? -1 : 1;
+    const dir = sortDir === 'desc' ? -1 : 1;
     return (a[sortKey] - b[sortKey]) * dir;
   });
 
   function handleSort(key: typeof sortKey) {
     if (key === sortKey) {
-      setSortDir((d) => (d === "desc" ? "asc" : "desc"));
+      setSortDir((d) => (d === 'desc' ? 'asc' : 'desc'));
     } else {
       setSortKey(key);
-      setSortDir("desc");
+      setSortDir('desc');
     }
   }
 
   function SortIcon({ col }: { col: typeof sortKey }) {
     if (col !== sortKey) return null;
-    return sortDir === "desc" ? (
-      <ArrowDown className="inline h-3 w-3 ml-0.5" />
+    return sortDir === 'desc' ? (
+      <ArrowDown className="ml-0.5 inline h-3 w-3" />
     ) : (
-      <ArrowUp className="inline h-3 w-3 ml-0.5" />
+      <ArrowUp className="ml-0.5 inline h-3 w-3" />
     );
   }
 
   return (
-    <Card className={cn("overflow-hidden", className)}>
-      <div className="overflow-x-auto -webkit-overflow-scrolling-touch">
-        <table className="w-full text-sm min-w-120">
+    <Card className={cn('overflow-hidden', className)}>
+      <div className="-webkit-overflow-scrolling-touch overflow-x-auto">
+        <table className="w-full min-w-120 text-sm">
           <thead>
-            <tr className="border-b border-border text-left text-xs uppercase tracking-wider text-text-tertiary">
+            <tr className="border-border text-text-tertiary border-b text-left text-xs tracking-wider uppercase">
               <th className="px-4 py-3 font-medium">Coin</th>
               <th
-                className="px-4 py-3 font-medium cursor-pointer select-none hover:text-text-primary"
-                onClick={() => handleSort("score")}
+                className="hover:text-text-primary cursor-pointer px-4 py-3 font-medium select-none"
+                onClick={() => handleSort('score')}
               >
                 Sentiment <SortIcon col="score" />
               </th>
               <th
-                className="hidden sm:table-cell px-4 py-3 font-medium cursor-pointer select-none hover:text-text-primary"
-                onClick={() => handleSort("socialVolume")}
+                className="hover:text-text-primary hidden cursor-pointer px-4 py-3 font-medium select-none sm:table-cell"
+                onClick={() => handleSort('socialVolume')}
               >
                 Social Vol <SortIcon col="socialVolume" />
               </th>
               <th
-                className="hidden md:table-cell px-4 py-3 font-medium cursor-pointer select-none hover:text-text-primary"
-                onClick={() => handleSort("newsMentions")}
+                className="hover:text-text-primary hidden cursor-pointer px-4 py-3 font-medium select-none md:table-cell"
+                onClick={() => handleSort('newsMentions')}
               >
                 News <SortIcon col="newsMentions" />
               </th>
               <th
-                className="px-4 py-3 font-medium cursor-pointer select-none hover:text-text-primary"
-                onClick={() => handleSort("change24h")}
+                className="hover:text-text-primary cursor-pointer px-4 py-3 font-medium select-none"
+                onClick={() => handleSort('change24h')}
               >
                 24h Chg <SortIcon col="change24h" />
               </th>
-              <th className="hidden lg:table-cell px-4 py-3 font-medium">7d Trend</th>
+              <th className="hidden px-4 py-3 font-medium lg:table-cell">7d Trend</th>
             </tr>
           </thead>
           <tbody>
             {loading
               ? Array.from({ length: 8 }).map((_, i) => (
-                  <tr
-                    key={i}
-                    className="border-b border-border last:border-0"
-                  >
+                  <tr key={i} className="border-border border-b last:border-0">
                     {Array.from({ length: 6 }).map((_, j) => (
                       <td key={j} className="px-4 py-3">
-                        <div className="h-4 w-16 animate-pulse rounded bg-border" />
+                        <div className="bg-border h-4 w-16 animate-pulse rounded" />
                       </td>
                     ))}
                   </tr>
@@ -258,12 +266,12 @@ export default function SentimentTable({ className }: { className?: string }) {
               : sorted.map((c) => (
                   <tr
                     key={c.symbol}
-                    className="border-b border-border last:border-0 hover:bg-(--color-surface-hover,var(--color-border))/30 transition-colors"
+                    className="border-border border-b transition-colors last:border-0 hover:bg-(--color-surface-hover,var(--color-border))/30"
                   >
                     {/* Coin */}
-                    <td className="px-4 py-3 font-medium text-text-primary">
+                    <td className="text-text-primary px-4 py-3 font-medium">
                       <span className="font-semibold">{c.symbol}</span>
-                      <span className="ml-1.5 text-xs text-text-tertiary hidden sm:inline">
+                      <span className="text-text-tertiary ml-1.5 hidden text-xs sm:inline">
                         {c.coin}
                       </span>
                     </td>
@@ -271,41 +279,47 @@ export default function SentimentTable({ className }: { className?: string }) {
                     {/* Sentiment Score */}
                     <td className="px-4 py-3">
                       <div className="flex items-center gap-2">
-                        <div className="w-16 h-2 rounded-full bg-border overflow-hidden">
+                        <div className="bg-border h-2 w-16 overflow-hidden rounded-full">
                           <div
-                            className={cn("h-full rounded-full transition-all", getScoreColor(c.score))}
+                            className={cn(
+                              'h-full rounded-full transition-all',
+                              getScoreColor(c.score),
+                            )}
                             style={{ width: `${c.score}%` }}
                           />
                         </div>
-                        <span className={cn("text-xs font-semibold tabular-nums", getScoreTextColor(c.score))}>
+                        <span
+                          className={cn(
+                            'text-xs font-semibold tabular-nums',
+                            getScoreTextColor(c.score),
+                          )}
+                        >
                           {c.score}
                         </span>
-                        <span className="text-[10px] text-text-tertiary hidden md:inline">
+                        <span className="text-text-tertiary hidden text-[10px] md:inline">
                           {getScoreLabel(c.score)}
                         </span>
                       </div>
                     </td>
 
                     {/* Social Volume */}
-                    <td className="px-4 py-3 text-text-secondary tabular-nums">
+                    <td className="text-text-secondary px-4 py-3 tabular-nums">
                       {formatVolume(c.socialVolume)}
                     </td>
 
                     {/* News Mentions */}
-                    <td className="px-4 py-3 text-text-secondary tabular-nums">
-                      {c.newsMentions}
-                    </td>
+                    <td className="text-text-secondary px-4 py-3 tabular-nums">{c.newsMentions}</td>
 
                     {/* 24h Change */}
                     <td className="px-4 py-3">
                       <span
                         className={cn(
-                          "inline-flex items-center gap-0.5 text-xs font-medium tabular-nums",
+                          'inline-flex items-center gap-0.5 text-xs font-medium tabular-nums',
                           c.change24h > 0
-                            ? "text-green-500 dark:text-green-400"
+                            ? 'text-green-500 dark:text-green-400'
                             : c.change24h < 0
-                            ? "text-red-500 dark:text-red-400"
-                            : "text-text-tertiary"
+                              ? 'text-red-500 dark:text-red-400'
+                              : 'text-text-tertiary',
                         )}
                       >
                         {c.change24h > 0 ? (
@@ -330,8 +344,8 @@ export default function SentimentTable({ className }: { className?: string }) {
       </div>
 
       {!loading && coins.length === 0 && (
-        <div className="p-12 text-center text-text-secondary">
-          <RefreshCw className="h-6 w-6 mx-auto mb-2 opacity-40" />
+        <div className="text-text-secondary p-12 text-center">
+          <RefreshCw className="mx-auto mb-2 h-6 w-6 opacity-40" />
           No sentiment data available.
         </div>
       )}
