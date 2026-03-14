@@ -15,9 +15,9 @@
  * convenience aliases for use in API routes and background jobs.
  *
  * Chains:
- * - `fundingRateChain` — Funding rates from Binance, Bybit, OKX, dYdX, Hyperliquid
- * - `derivativesChain` — Open interest from Hyperliquid + CoinGlass
- * - `liquidationsChain` — Liquidation data from Binance
+ * - `fundingRateChain` — Funding rates from Binance, Bybit, OKX, dYdX, Hyperliquid, CoinGlass
+ * - `derivativesChain` — Open interest from Hyperliquid, CoinGlass, Bybit, OKX, dYdX
+ * - `liquidationsChain` — Liquidation data from Binance + Hyperliquid
  *
  * @module providers/chains/derivatives
  */
@@ -30,6 +30,7 @@ export {
 
 export {
   derivativesChain,
+  derivativesFallbackChain,
   derivativesConsensusChain,
   createDerivativesChain,
   liquidationsChain,
@@ -37,4 +38,9 @@ export {
 } from '../adapters/derivatives';
 
 export type { FundingRate, FundingRateHistory } from '../adapters/funding-rate';
-export type { OpenInterest, LiquidationSummary, Liquidation, ExchangeOI } from '../adapters/derivatives';
+export type {
+  OpenInterest,
+  LiquidationSummary,
+  Liquidation,
+  ExchangeOI,
+} from '../adapters/derivatives';

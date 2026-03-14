@@ -29,7 +29,11 @@ import { ProviderChain } from '../../provider-chain';
 import type { OpenInterest, LiquidationSummary } from './types';
 import { hyperliquidAdapter } from './hyperliquid.adapter';
 import { coinglassAdapter } from './coinglass.adapter';
+import { bybitOIAdapter } from './bybit-oi.adapter';
+import { okxOIAdapter } from './okx-oi.adapter';
+import { dydxOIAdapter } from './dydx-oi.adapter';
 import { binanceLiquidationsAdapter } from './binance-liquidations.adapter';
+import { hyperliquidLiquidationsAdapter } from './hyperliquid-liquidations.adapter';
 
 export type { OpenInterest, LiquidationSummary, Liquidation, ExchangeOI } from './types';
 
@@ -48,8 +52,8 @@ export function createDerivativesChain(
   options: DerivativesChainOptions = {},
 ): ProviderChain<OpenInterest[]> {
   const {
-    strategy = 'fallback',
-    cacheTtlSeconds = 30,
+    strategy = 'broadcast',
+    cacheTtlSeconds = 60,
     staleWhileError = true,
     includeCoinglass = true,
   } = options;
@@ -63,11 +67,21 @@ export function createDerivativesChain(
     chain.addProvider(coinglassAdapter);
   }
 
+  chain.addProvider(bybitOIAdapter);
+  chain.addProvider(okxOIAdapter);
+  chain.addProvider(dydxOIAdapter);
+
   return chain;
 }
 
-/** Default derivatives chain (fallback: Hyperliquid → CoinGlass) */
+/** Default derivatives chain (broadcast: fetches OI from all exchanges) */
 export const derivativesChain = createDerivativesChain();
+
+/** Fallback chain for resilient OI fetching */
+export const derivativesFallbackChain = createDerivativesChain({
+  strategy: 'fallback',
+  cacheTtlSeconds: 30,
+});
 
 /** Consensus chain for cross-exchange OI verification */
 export const derivativesConsensusChain = createDerivativesChain({
@@ -88,17 +102,14 @@ export interface LiquidationsChainOptions {
 export function createLiquidationsChain(
   options: LiquidationsChainOptions = {},
 ): ProviderChain<LiquidationSummary[]> {
-  const {
-    strategy = 'fallback',
-    cacheTtlSeconds = 15,
-    staleWhileError = true,
-  } = options;
+  const { strategy = 'broadcast', cacheTtlSeconds = 15, staleWhileError = true } = options;
 
   const config: Partial<ProviderChainConfig> = { strategy, cacheTtlSeconds, staleWhileError };
   const chain = new ProviderChain<LiquidationSummary[]>('liquidations', config);
   chain.addProvider(binanceLiquidationsAdapter);
+  chain.addProvider(hyperliquidLiquidationsAdapter);
   return chain;
 }
 
-/** Default liquidations chain */
+/** Default liquidations chain (broadcast: Binance + Hyperliquid) */
 export const liquidationsChain = createLiquidationsChain();

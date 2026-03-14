@@ -9,28 +9,46 @@
  */
 
 import { type NextRequest, NextResponse } from 'next/server';
-import { getAggregatedFundingRates } from '@/lib/derivatives';
+import { fundingRateChain, createFundingRateChain } from '@/lib/providers/chains/derivatives';
+import type { FundingRate } from '@/lib/providers/chains/derivatives';
 
 export const runtime = 'edge';
 export const revalidate = 300;
 
 /**
  * GET /api/derivatives/aggregated/funding
- * Returns funding rates aggregated across Binance, Bybit, OKX, and dYdX
+ * Returns funding rates aggregated across Binance, Bybit, OKX, dYdX, Hyperliquid, and CoinGlass
+ * via the provider chain framework (circuit breakers, caching, health monitoring)
  */
-export async function GET(_request: NextRequest): Promise<NextResponse> {
+export async function GET(request: NextRequest): Promise<NextResponse> {
+  const searchParams = request.nextUrl.searchParams;
+  const symbol = searchParams.get('symbol') || undefined;
+
   try {
-    const data = await getAggregatedFundingRates();
-    return NextResponse.json(data, {
-      headers: {
-        'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=600',
-        'Access-Control-Allow-Origin': '*',
+    const params = symbol ? { symbols: [symbol] } : {};
+    const result = await fundingRateChain.fetch(params);
+
+    return NextResponse.json(
+      {
+        data: result.data,
+        provider: result.lineage.provider,
+        providers: result.lineage.contributors?.map((c) => c.provider) ?? [result.lineage.provider],
+        confidence: result.lineage.confidence,
+        cached: result.cached,
+        latencyMs: result.latencyMs,
+        timestamp: result.lineage.fetchedAt,
       },
-    });
+      {
+        headers: {
+          'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=600',
+          'Access-Control-Allow-Origin': '*',
+        },
+      },
+    );
   } catch (error) {
     return NextResponse.json(
       { error: 'Failed to fetch aggregated funding rates' },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }
