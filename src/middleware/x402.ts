@@ -18,6 +18,8 @@
  */
 
 import { type NextRequest, NextResponse } from 'next/server';
+import type { MiddlewareContext, MiddlewareHandler } from './types';
+import { EXEMPT_PATTERNS, FREE_TIER_PATTERNS, matchesPattern } from './config';
 import { paymentProxyFromConfig } from '@x402/next';
 import type { RouteConfig } from '@x402/next';
 
@@ -50,16 +52,12 @@ let _x402: ReturnType<typeof paymentProxyFromConfig> | null = null;
 export function getX402Proxy(): (req: NextRequest) => any {
   if (!_x402) {
     try {
-      _x402 = paymentProxyFromConfig(
-        apiRoutes,
-        undefined,
-        undefined,
-        undefined,
-        undefined,
-        false,
-      );
+      _x402 = paymentProxyFromConfig(apiRoutes, undefined, undefined, undefined, undefined, false);
     } catch (err) {
-      console.warn('[x402] Proxy init deferred — scheme not yet available:', (err as Error).message);
+      console.warn(
+        '[x402] Proxy init deferred — scheme not yet available:',
+        (err as Error).message,
+      );
       return (_req: NextRequest) =>
         NextResponse.json(
           {
@@ -73,3 +71,36 @@ export function getX402Proxy(): (req: NextRequest) => any {
   }
   return _x402;
 }
+
+// =============================================================================
+// COMPOSABLE HANDLER
+// =============================================================================
+
+/**
+ * Middleware handler: applies x402 USDC micropayment gate to non-exempt,
+ * non-free-tier API routes without a paid key.
+ */
+export const x402Gate: MiddlewareHandler = async (ctx) => {
+  if (!ctx.isApiRoute) return ctx;
+
+  const { pathname } = ctx;
+
+  if (
+    !ctx.isSperaxOS &&
+    !ctx.isTrustedOrigin &&
+    !ctx.isAlibabaGateway &&
+    !ctx.apiKeyId &&
+    !matchesPattern(pathname, EXEMPT_PATTERNS) &&
+    !matchesPattern(pathname, FREE_TIER_PATTERNS)
+  ) {
+    const paymentResponse = await getX402Proxy()(ctx.request);
+    const verified = paymentResponse.headers.get('x-middleware-next') === '1';
+    if (!verified) {
+      Object.entries(ctx.headers).forEach(([k, v]) => paymentResponse.headers.set(k, v));
+      paymentResponse.headers.set('X-Response-Time', `${Date.now() - ctx.startTime}ms`);
+      return paymentResponse;
+    }
+  }
+
+  return ctx;
+};

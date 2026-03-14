@@ -18,8 +18,7 @@
 import { NextResponse } from 'next/server';
 import { gamingDataChain } from '@/lib/providers/adapters/gaming-data';
 
-export const revalidate = 300;
-export const dynamic = 'force-dynamic';
+export const revalidate = 300; // ISR: gaming chain data refreshes every 5 min
 
 export async function GET() {
   try {
@@ -48,18 +47,24 @@ export async function GET() {
       }))
       .sort((a, b) => b.totalDau - a.totalDau);
 
-    return NextResponse.json({
-      data: chains,
-      count: chains.length,
-      _lineage: result.lineage,
-      _cached: result.cached,
-    }, {
-      headers: { 'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=600' },
-    });
+    return NextResponse.json(
+      {
+        data: chains,
+        count: chains.length,
+        _lineage: result.lineage,
+        _cached: result.cached,
+      },
+      {
+        headers: { 'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=600' },
+      },
+    );
   } catch (error) {
     console.error('[Gaming/Chains] Error:', error);
     return NextResponse.json(
-      { error: 'Failed to fetch gaming chain data', message: error instanceof Error ? error.message : 'Unknown' },
+      {
+        error: 'Failed to fetch gaming chain data',
+        message: error instanceof Error ? error.message : 'Unknown',
+      },
       { status: 502 },
     );
   }

@@ -27,6 +27,7 @@ import { getPipelineStatus } from '@/lib/data-pipeline';
 import { requireAdminAuth } from '@/lib/admin-auth';
 
 export const runtime = 'nodejs';
+// force-dynamic: admin dashboard, always fresh
 export const dynamic = 'force-dynamic';
 
 export async function GET(request: NextRequest) {

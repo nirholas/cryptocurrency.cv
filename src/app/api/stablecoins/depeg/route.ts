@@ -17,7 +17,7 @@
 import { NextResponse } from 'next/server';
 import { depegMonitor } from '@/lib/stablecoin/depeg-monitor';
 
-export const dynamic = 'force-dynamic';
+export const revalidate = 60; // ISR: depeg alerts refresh every 1 min
 
 export async function GET() {
   try {

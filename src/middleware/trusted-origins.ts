@@ -20,11 +20,14 @@
  */
 
 import type { NextRequest } from 'next/server';
+import type { MiddlewareContext, MiddlewareHandler } from './types';
 
 // Exact-match origins that bypass x402 and rate limiting entirely
 const TRUSTED_EXACT_ORIGINS = new Set([
   'https://chat.sperax.io',
-  ...(process.env.X402_BYPASS_ORIGINS?.split(',').map((s) => s.trim()).filter(Boolean) ?? []),
+  ...(process.env.X402_BYPASS_ORIGINS?.split(',')
+    .map((s) => s.trim())
+    .filter(Boolean) ?? []),
 ]);
 
 // Apex domains whose subdomains are ALSO trusted
@@ -74,3 +77,31 @@ export async function isSperaxOSRequest(request: NextRequest): Promise<boolean> 
 
   return false;
 }
+
+// =============================================================================
+// COMPOSABLE HANDLER
+// =============================================================================
+
+/**
+ * Middleware handler: checks SperaxOS token and browser origin trust.
+ * Sets context flags and priority headers for trusted callers.
+ */
+export const trustedOriginHandler: MiddlewareHandler = async (ctx) => {
+  if (!ctx.isApiRoute) return ctx;
+
+  ctx.isSperaxOS = await isSperaxOSRequest(ctx.request);
+
+  const reqOrigin = ctx.request.headers.get('origin') ?? '';
+  ctx.isTrustedOrigin = !ctx.isSperaxOS && !!reqOrigin && isTrustedOrigin(reqOrigin);
+
+  if (ctx.isSperaxOS || ctx.isTrustedOrigin) {
+    ctx.headers['X-Priority'] = 'speraxos';
+    ctx.headers['X-SperaxOS'] = '1';
+    ctx.headers['Vary'] = 'Origin';
+    if (reqOrigin) {
+      ctx.headers['Access-Control-Allow-Origin'] = reqOrigin;
+    }
+  }
+
+  return ctx;
+};

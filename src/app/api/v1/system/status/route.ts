@@ -21,7 +21,7 @@
 import { type NextRequest, NextResponse } from 'next/server';
 
 export const runtime = 'edge';
-export const dynamic = 'force-dynamic';
+export const revalidate = 30; // ISR: system status refreshes every 30 sec
 
 interface SourceHealth {
   name: string;
@@ -60,12 +60,28 @@ const SOURCES = [
   { name: 'CoinGecko', url: 'https://api.coingecko.com/api/v3/ping', timeout: 5000 },
   { name: 'Binance', url: 'https://api.binance.com/api/v3/ping', timeout: 3000 },
   { name: 'DefiLlama', url: 'https://api.llama.fi/protocols', timeout: 5000 },
-  { name: 'DexScreener', url: 'https://api.dexscreener.com/latest/dex/search?q=btc', timeout: 5000 },
+  {
+    name: 'DexScreener',
+    url: 'https://api.dexscreener.com/latest/dex/search?q=btc',
+    timeout: 5000,
+  },
   { name: 'CoinCap', url: 'https://api.coincap.io/v2/assets?limit=1', timeout: 5000 },
-  { name: 'CryptoCompare', url: 'https://min-api.cryptocompare.com/data/price?fsym=BTC&tsyms=USD', timeout: 5000 },
-  { name: 'Etherscan', url: 'https://api.etherscan.io/api?module=gastracker&action=gasoracle', timeout: 5000 },
+  {
+    name: 'CryptoCompare',
+    url: 'https://min-api.cryptocompare.com/data/price?fsym=BTC&tsyms=USD',
+    timeout: 5000,
+  },
+  {
+    name: 'Etherscan',
+    url: 'https://api.etherscan.io/api?module=gastracker&action=gasoracle',
+    timeout: 5000,
+  },
   { name: 'Alternative.me', url: 'https://api.alternative.me/fng/?limit=1', timeout: 5000 },
-  { name: 'Bybit', url: 'https://api.bybit.com/v5/market/tickers?category=spot&symbol=BTCUSDT', timeout: 5000 },
+  {
+    name: 'Bybit',
+    url: 'https://api.bybit.com/v5/market/tickers?category=spot&symbol=BTCUSDT',
+    timeout: 5000,
+  },
   { name: 'OKX', url: 'https://www.okx.com/api/v5/public/time', timeout: 5000 },
   { name: 'Blockchain.info', url: 'https://blockchain.info/q/getblockcount', timeout: 5000 },
   { name: 'Mempool.space', url: 'https://mempool.space/api/blocks/tip/height', timeout: 5000 },
@@ -112,13 +128,15 @@ export async function GET(_request: NextRequest) {
   );
 
   const sources: SourceHealth[] = sourceResults.map((r) =>
-    r.status === 'fulfilled' ? r.value : {
-      name: 'unknown',
-      status: 'unknown' as const,
-      latencyMs: 0,
-      lastChecked: new Date().toISOString(),
-      errorRate: 1,
-    },
+    r.status === 'fulfilled'
+      ? r.value
+      : {
+          name: 'unknown',
+          status: 'unknown' as const,
+          latencyMs: 0,
+          lastChecked: new Date().toISOString(),
+          errorRate: 1,
+        },
   );
 
   const operational = sources.filter((s) => s.status === 'operational').length;

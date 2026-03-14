@@ -23,8 +23,7 @@
 import { NextResponse } from 'next/server';
 import { macroChain } from '@/lib/providers/adapters/macro';
 
-export const revalidate = 300;
-export const dynamic = 'force-dynamic';
+export const revalidate = 300; // ISR: DXY data refreshes every 5 min
 
 export async function GET(request: Request) {
   try {
@@ -47,30 +46,41 @@ export async function GET(request: Request) {
     const current = dxyData[0] as Record<string, unknown> | undefined;
     const currentValue = (current?.value as number) ?? (current?.price as number) ?? 0;
 
-    return NextResponse.json({
-      data: {
-        current: {
-          value: currentValue,
-          change24h: (current?.change as number) ?? 0,
-          changePercent24h: (current?.changePercent as number) ?? 0,
+    return NextResponse.json(
+      {
+        data: {
+          current: {
+            value: currentValue,
+            change24h: (current?.change as number) ?? 0,
+            changePercent24h: (current?.changePercent as number) ?? 0,
+          },
+          historical: dxyData,
+          context: {
+            description: 'US Dollar Index — measures USD against basket of 6 major currencies',
+            cryptoCorrelation: 'BTC typically inversely correlated with DXY',
+            strongDollar:
+              currentValue > 105
+                ? 'Headwind for crypto'
+                : currentValue < 100
+                  ? 'Tailwind for crypto'
+                  : 'Neutral',
+          },
         },
-        historical: dxyData,
-        context: {
-          description: 'US Dollar Index — measures USD against basket of 6 major currencies',
-          cryptoCorrelation: 'BTC typically inversely correlated with DXY',
-          strongDollar: currentValue > 105 ? 'Headwind for crypto' : currentValue < 100 ? 'Tailwind for crypto' : 'Neutral',
-        },
+        count: dxyData.length,
+        _lineage: result.lineage,
+        _cached: result.cached,
       },
-      count: dxyData.length,
-      _lineage: result.lineage,
-      _cached: result.cached,
-    }, {
-      headers: { 'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=600' },
-    });
+      {
+        headers: { 'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=600' },
+      },
+    );
   } catch (error) {
     console.error('[Macro/DXY] Error:', error);
     return NextResponse.json(
-      { error: 'Failed to fetch DXY data', message: error instanceof Error ? error.message : 'Unknown' },
+      {
+        error: 'Failed to fetch DXY data',
+        message: error instanceof Error ? error.message : 'Unknown',
+      },
       { status: 502 },
     );
   }

@@ -10,22 +10,22 @@
 
 /**
  * Social Intelligence API
- * 
+ *
  * Enterprise-grade social data aggregation from Discord, Telegram,
  * LunarCrush, and Santiment.
- * 
+ *
  * GET /api/social - Get aggregated social intelligence
  * GET /api/social?view=trends - Get social trends only
  * GET /api/social?view=metrics - Get detailed metrics by ticker
  * GET /api/social?view=messages - Get messages from configured channels
- * 
+ *
  * Query Parameters:
  * - view: 'full' | 'trends' | 'metrics' | 'messages' | 'trending' (default: 'full')
  * - symbols: Comma-separated ticker symbols (default: top 10)
  * - limit: Number of results (default: 20, max: 100)
  * - platform: 'all' | 'discord' | 'telegram' | 'lunarcrush' | 'santiment'
  * - format: 'json' | 'minimal' (default: 'json')
- * 
+ *
  * @module api/social
  */
 
@@ -43,8 +43,7 @@ import {
   type SocialMessage,
 } from '@/lib/social-intelligence';
 
-export const dynamic = 'force-dynamic';
-export const revalidate = 60;
+export const revalidate = 60; // ISR: social data refreshes every 1 min
 
 // Configured channels from environment
 const CONFIGURED_CHANNELS = {
@@ -54,18 +53,18 @@ const CONFIGURED_CHANNELS = {
 
 export async function GET(request: NextRequest) {
   const startTime = Date.now();
-  
+
   try {
     const { searchParams } = new URL(request.url);
-    
+
     const view = searchParams.get('view') || 'full';
     const symbols = searchParams.get('symbols')?.split(',').filter(Boolean);
     const limit = Math.min(parseInt(searchParams.get('limit') || '20'), 100);
     const platform = searchParams.get('platform') || 'all';
     const format = searchParams.get('format') || 'json';
-    
+
     let responseData: Record<string, unknown> = {};
-    
+
     switch (view) {
       case 'trends': {
         const trends = await getSocialTrends();
@@ -75,19 +74,30 @@ export async function GET(request: NextRequest) {
         };
         break;
       }
-      
+
       case 'metrics': {
-        const targetSymbols = symbols || ['BTC', 'ETH', 'SOL', 'XRP', 'DOGE', 'ADA', 'AVAX', 'DOT', 'LINK', 'MATIC'];
-        
+        const targetSymbols = symbols || [
+          'BTC',
+          'ETH',
+          'SOL',
+          'XRP',
+          'DOGE',
+          'ADA',
+          'AVAX',
+          'DOT',
+          'LINK',
+          'MATIC',
+        ];
+
         const [lunarcrush, santiment] = await Promise.all([
           platform === 'all' || platform === 'lunarcrush'
             ? getLunarCrushMetrics(targetSymbols)
             : [],
           platform === 'all' || platform === 'santiment'
-            ? getSantimentMetrics(targetSymbols.map(s => s.toLowerCase()))
+            ? getSantimentMetrics(targetSymbols.map((s) => s.toLowerCase()))
             : [],
         ]);
-        
+
         responseData = {
           lunarcrush,
           santiment,
@@ -95,31 +105,37 @@ export async function GET(request: NextRequest) {
         };
         break;
       }
-      
+
       case 'messages': {
         const messages: SocialMessage[] = [];
-        
+
         // Fetch from Discord channels
-        if ((platform === 'all' || platform === 'discord') && CONFIGURED_CHANNELS.discord.length > 0) {
-          const discordPromises = CONFIGURED_CHANNELS.discord.map(channelId =>
-            fetchDiscordMessages(channelId, Math.ceil(limit / CONFIGURED_CHANNELS.discord.length))
+        if (
+          (platform === 'all' || platform === 'discord') &&
+          CONFIGURED_CHANNELS.discord.length > 0
+        ) {
+          const discordPromises = CONFIGURED_CHANNELS.discord.map((channelId) =>
+            fetchDiscordMessages(channelId, Math.ceil(limit / CONFIGURED_CHANNELS.discord.length)),
           );
           const discordResults = await Promise.all(discordPromises);
           messages.push(...discordResults.flat());
         }
-        
+
         // Fetch from Telegram chats
-        if ((platform === 'all' || platform === 'telegram') && CONFIGURED_CHANNELS.telegram.length > 0) {
-          const telegramPromises = CONFIGURED_CHANNELS.telegram.map(chatId =>
-            fetchTelegramMessages(chatId, Math.ceil(limit / CONFIGURED_CHANNELS.telegram.length))
+        if (
+          (platform === 'all' || platform === 'telegram') &&
+          CONFIGURED_CHANNELS.telegram.length > 0
+        ) {
+          const telegramPromises = CONFIGURED_CHANNELS.telegram.map((chatId) =>
+            fetchTelegramMessages(chatId, Math.ceil(limit / CONFIGURED_CHANNELS.telegram.length)),
           );
           const telegramResults = await Promise.all(telegramPromises);
           messages.push(...telegramResults.flat());
         }
-        
+
         // Sort by timestamp and limit
         messages.sort((a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime());
-        
+
         responseData = {
           messages: messages.slice(0, limit),
           total: messages.length,
@@ -130,7 +146,7 @@ export async function GET(request: NextRequest) {
         };
         break;
       }
-      
+
       case 'trending': {
         const trending = await getLunarCrushTrending(limit);
         responseData = {
@@ -139,11 +155,11 @@ export async function GET(request: NextRequest) {
         };
         break;
       }
-      
+
       case 'full':
       default: {
         const intelligence = await getSocialIntelligence();
-        
+
         // Apply limits
         responseData = {
           trends: intelligence.trends.slice(0, limit),
@@ -156,10 +172,10 @@ export async function GET(request: NextRequest) {
         break;
       }
     }
-    
+
     // Add metadata
     const processingTime = Date.now() - startTime;
-    
+
     const response = {
       success: true,
       data: responseData,
@@ -188,12 +204,12 @@ export async function GET(request: NextRequest) {
         },
       },
     };
-    
+
     // Minimal format strips metadata
     if (format === 'minimal') {
       return NextResponse.json(responseData);
     }
-    
+
     return NextResponse.json(response, {
       headers: {
         'Cache-Control': 'public, s-maxage=60, stale-while-revalidate=300',
@@ -202,7 +218,7 @@ export async function GET(request: NextRequest) {
     });
   } catch (error) {
     console.error('[Social API] Error:', error);
-    
+
     return NextResponse.json(
       {
         success: false,
@@ -210,39 +226,39 @@ export async function GET(request: NextRequest) {
         message: error instanceof Error ? error.message : 'Unknown error',
         timestamp: new Date().toISOString(),
       },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }
 
 /**
  * POST /api/social
- * 
+ *
  * Analyze custom text for tickers and sentiment
  */
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    
+
     const { text, options = {} } = body;
-    
+
     if (!text || typeof text !== 'string') {
       return NextResponse.json(
         { success: false, error: 'Missing or invalid "text" field' },
-        { status: 400 }
+        { status: 400 },
       );
     }
-    
+
     const result: Record<string, unknown> = {};
-    
+
     if (options.extractTickers !== false) {
       result.tickers = extractTickers(text);
     }
-    
+
     if (options.analyzeSentiment !== false) {
       result.sentiment = analyzeSentiment(text);
     }
-    
+
     return NextResponse.json({
       success: true,
       data: result,
@@ -253,14 +269,14 @@ export async function POST(request: NextRequest) {
     });
   } catch (error) {
     console.error('[Social API] POST Error:', error);
-    
+
     return NextResponse.json(
       {
         success: false,
         error: 'Failed to analyze text',
         message: error instanceof Error ? error.message : 'Unknown error',
       },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }

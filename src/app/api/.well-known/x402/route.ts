@@ -30,8 +30,7 @@ import {
   getNetworkDisplayName,
 } from '@/lib/x402';
 
-export const dynamic = 'force-dynamic'; // Dynamic to reflect current config
-export const revalidate = 60; // Revalidate every minute
+export const revalidate = 300; // ISR: x402 discovery config refreshes every 5 min
 
 // Simplified route definitions for discovery
 const DISCOVERABLE_ENDPOINTS = [
@@ -78,7 +77,7 @@ export async function GET() {
       name: 'AI Analysis',
       icon: '🤖',
       endpoints: resources.filter(
-        (r) => r.path.includes('analysis') || r.path.includes('sentiment')
+        (r) => r.path.includes('analysis') || r.path.includes('sentiment'),
       ),
     },
     { name: 'Alerts', icon: '🔔', endpoints: resources.filter((r) => r.path.includes('alert')) },
@@ -114,7 +113,11 @@ export async function GET() {
       environment: {
         production: IS_PRODUCTION,
         testnet: IS_TESTNET,
-        mode: IS_PRODUCTION ? (IS_TESTNET ? 'production-testnet' : 'production-mainnet') : 'development',
+        mode: IS_PRODUCTION
+          ? IS_TESTNET
+            ? 'production-testnet'
+            : 'production-mainnet'
+          : 'development',
       },
 
       // Pricing summary
@@ -166,6 +169,6 @@ response = x402.get('https://cryptocurrency.cv/api/v1/news', wallet=wallet)`,
         'X-X402-Network': CURRENT_NETWORK,
         'X-X402-Environment': IS_PRODUCTION ? 'production' : 'development',
       },
-    }
+    },
   );
 }

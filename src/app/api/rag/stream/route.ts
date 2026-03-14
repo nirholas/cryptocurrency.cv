@@ -11,7 +11,7 @@
 /**
  * API Route: RAG Streaming
  * POST /api/rag/stream
- * 
+ *
  * Server-Sent Events endpoint for streaming RAG responses
  * with real-time updates on reasoning steps
  */
@@ -19,14 +19,18 @@
 import { type NextRequest } from 'next/server';
 import { ragService, createRAGService } from '@/lib/rag';
 import { processQuery } from '@/lib/rag/query-processor';
-import { contextualizeQuery, conversationMemory, generateConversationId } from '@/lib/rag/conversation-memory';
+import {
+  contextualizeQuery,
+  conversationMemory,
+  generateConversationId,
+} from '@/lib/rag/conversation-memory';
 import { rerankResults } from '@/lib/rag/reranker';
 import { callGroq, streamGroq } from '@/lib/groq';
 import type { ScoredDocument, SearchResult, NewsDocument } from '@/lib/rag/types';
 
 // Convert ScoredDocument to SearchResult format
 function toSearchResults(docs: ScoredDocument[]): SearchResult[] {
-  return docs.map(doc => ({
+  return docs.map((doc) => ({
     document: {
       id: doc.id,
       content: doc.content,
@@ -37,7 +41,7 @@ function toSearchResults(docs: ScoredDocument[]): SearchResult[] {
         source: doc.source,
         sourceKey: doc.source.toLowerCase().replace(/[^a-z0-9]/g, ''),
         voteScore: doc.voteScore || 0,
-        ...(doc.metadata as Record<string, unknown> || {}),
+        ...((doc.metadata as Record<string, unknown>) || {}),
       },
     } as NewsDocument,
     score: doc.score,
@@ -45,6 +49,7 @@ function toSearchResults(docs: ScoredDocument[]): SearchResult[] {
 }
 
 export const runtime = 'nodejs';
+// force-dynamic required: SSE streaming response
 export const dynamic = 'force-dynamic';
 
 // SSE Helper
@@ -74,10 +79,10 @@ export async function POST(request: NextRequest) {
   const { query, conversationId, options = {} } = await request.json();
 
   if (!query || typeof query !== 'string') {
-    return new Response(
-      JSON.stringify({ error: 'Query is required' }),
-      { status: 400, headers: { 'Content-Type': 'application/json' } }
-    );
+    return new Response(JSON.stringify({ error: 'Query is required' }), {
+      status: 400,
+      headers: { 'Content-Type': 'application/json' },
+    });
   }
 
   const { stream, send, close } = createSSEStream();
@@ -90,7 +95,7 @@ export async function POST(request: NextRequest) {
 
       // Step 1: Query Processing
       send('step', { type: 'processing', message: 'Understanding your question...' });
-      
+
       const [processedQuery, contextualizedQuery] = await Promise.all([
         processQuery(query, {
           useHyDE: options.useHyDE ?? true,
@@ -110,12 +115,12 @@ export async function POST(request: NextRequest) {
 
       // Step 2: Retrieval
       send('step', { type: 'searching', message: 'Searching news archives...' });
-      
+
       const service = ragService || createRAGService();
-      const searchQuery = contextualizedQuery.isFollowUp 
-        ? contextualizedQuery.contextualized 
+      const searchQuery = contextualizedQuery.isFollowUp
+        ? contextualizedQuery.contextualized
         : query;
-      
+
       const searchResults = await service.searchNews(searchQuery, {
         limit: 15,
         currencies: processedQuery.classification.entities,
@@ -123,7 +128,7 @@ export async function POST(request: NextRequest) {
 
       send('retrieval', {
         documentsFound: searchResults.length,
-        topSources: searchResults.slice(0, 3).map(d => ({
+        topSources: searchResults.slice(0, 3).map((d) => ({
           id: d.id,
           title: d.title,
           source: d.source,
@@ -134,7 +139,7 @@ export async function POST(request: NextRequest) {
       // Step 3: Reranking
       if (searchResults.length > 0) {
         send('step', { type: 'reranking', message: 'Analyzing relevance...' });
-        
+
         const rerankedResults = await rerankResults(searchQuery, toSearchResults(searchResults), {
           useTimeDecay: true,
           useSourceCredibility: true,
@@ -143,7 +148,7 @@ export async function POST(request: NextRequest) {
         });
 
         send('reranking', {
-          reranked: rerankedResults.slice(0, 5).map(d => ({
+          reranked: rerankedResults.slice(0, 5).map((d) => ({
             id: d.document.id,
             title: d.document.metadata.title,
             score: d.score,
@@ -159,16 +164,19 @@ export async function POST(request: NextRequest) {
 
         // Stream the LLM response
         let fullResponse = '';
-        
+
         try {
           // Try streaming if available
-          const streamResponse = await streamGroq([
-            { role: 'system', content: systemPrompt },
-            { role: 'user', content: userPrompt },
-          ], {
-            temperature: 0.4,
-            maxTokens: 800,
-          });
+          const streamResponse = await streamGroq(
+            [
+              { role: 'system', content: systemPrompt },
+              { role: 'user', content: userPrompt },
+            ],
+            {
+              temperature: 0.4,
+              maxTokens: 800,
+            },
+          );
 
           for await (const chunk of streamResponse) {
             fullResponse += chunk;
@@ -176,13 +184,16 @@ export async function POST(request: NextRequest) {
           }
         } catch {
           // Fallback to regular call
-          const response = await callGroq([
-            { role: 'system', content: systemPrompt },
-            { role: 'user', content: userPrompt },
-          ], {
-            temperature: 0.4,
-            maxTokens: 800,
-          });
+          const response = await callGroq(
+            [
+              { role: 'system', content: systemPrompt },
+              { role: 'user', content: userPrompt },
+            ],
+            {
+              temperature: 0.4,
+              maxTokens: 800,
+            },
+          );
           fullResponse = response.content;
           send('token', { content: fullResponse });
         }
@@ -196,18 +207,26 @@ export async function POST(request: NextRequest) {
           role: 'assistant',
           content: fullResponse,
           metadata: {
-            documentsUsed: rerankedResults.slice(0, 5).map(d => d.document.id),
+            documentsUsed: rerankedResults.slice(0, 5).map((d) => d.document.id),
             cryptosDiscussed: processedQuery.classification.entities,
           },
         });
 
         // Final response with confidence and suggestions
-        const confidence = calculateConfidence(rerankedResults.slice(0, 5), fullResponse, processedQuery);
-        const followUpSuggestions = generateFollowUpSuggestions(query, fullResponse, processedQuery.classification);
+        const confidence = calculateConfidence(
+          rerankedResults.slice(0, 5),
+          fullResponse,
+          processedQuery,
+        );
+        const followUpSuggestions = generateFollowUpSuggestions(
+          query,
+          fullResponse,
+          processedQuery.classification,
+        );
 
         send('complete', {
           answer: fullResponse,
-          sources: rerankedResults.slice(0, 5).map(d => ({
+          sources: rerankedResults.slice(0, 5).map((d) => ({
             id: d.document.id,
             title: d.document.metadata.title,
             source: d.document.metadata.source,
@@ -218,7 +237,7 @@ export async function POST(request: NextRequest) {
           })),
           confidence,
           suggestions: followUpSuggestions,
-          relatedArticles: rerankedResults.slice(5, 9).map(d => ({
+          relatedArticles: rerankedResults.slice(5, 9).map((d) => ({
             id: d.document.id,
             title: d.document.metadata.title,
             source: d.document.metadata.source,
@@ -235,7 +254,8 @@ export async function POST(request: NextRequest) {
         });
       } else {
         send('complete', {
-          answer: "I couldn't find any relevant news articles for your question. Try rephrasing or asking about a different topic.",
+          answer:
+            "I couldn't find any relevant news articles for your question. Try rephrasing or asking about a different topic.",
           sources: [],
           metadata: {
             conversationId: convId,
@@ -256,7 +276,7 @@ export async function POST(request: NextRequest) {
     headers: {
       'Content-Type': 'text/event-stream',
       'Cache-Control': 'no-cache',
-      'Connection': 'keep-alive',
+      Connection: 'keep-alive',
     },
   });
 }
@@ -301,7 +321,7 @@ Please provide a comprehensive answer based on these articles:`;
 function calculateConfidence(
   results: SearchResult[],
   response: string,
-  processedQuery: { classification: { intent: string; complexity: string } }
+  processedQuery: { classification: { intent: string; complexity: string } },
 ): {
   overall: number;
   level: 'high' | 'medium' | 'low' | 'uncertain';
@@ -314,20 +334,19 @@ function calculateConfidence(
   warnings?: string[];
 } {
   const warnings: string[] = [];
-  
+
   // Source quality: average score of top documents
-  const avgScore = results.length > 0 
-    ? results.reduce((sum, r) => sum + r.score, 0) / results.length 
-    : 0;
+  const avgScore =
+    results.length > 0 ? results.reduce((sum, r) => sum + r.score, 0) / results.length : 0;
   const sourceQuality = Math.min(avgScore * 1.2, 1);
-  
+
   // Relevance: based on how many high-scoring docs we have
-  const highScoringDocs = results.filter(r => r.score > 0.7).length;
+  const highScoringDocs = results.filter((r) => r.score > 0.7).length;
   const relevance = Math.min(highScoringDocs / 3, 1);
-  
+
   // Recency: check how fresh the sources are
   const now = new Date();
-  const recencyScores = results.map(r => {
+  const recencyScores = results.map((r) => {
     const d = r.document;
     const pubDateStr = d.metadata?.pubDate;
     if (!pubDateStr) return 0.5;
@@ -339,10 +358,11 @@ function calculateConfidence(
     if (daysDiff < 90) return 0.5;
     return 0.3;
   });
-  const recency: number = recencyScores.length > 0 
-    ? recencyScores.reduce((a, b) => a + b, 0) / recencyScores.length 
-    : 0.5;
-  
+  const recency: number =
+    recencyScores.length > 0
+      ? recencyScores.reduce((a, b) => a + b, 0) / recencyScores.length
+      : 0.5;
+
   // Consistency: check if response length is reasonable for the query
   const responseLength = response.length;
   let consistency = 0.8;
@@ -352,32 +372,38 @@ function calculateConfidence(
   } else if (responseLength > 2000) {
     consistency = 0.7;
   }
-  
+
   // Check for uncertainty phrases
-  const uncertaintyPhrases = ['i\'m not sure', 'unclear', 'couldn\'t find', 'no information', 'uncertain'];
-  const hasUncertainty = uncertaintyPhrases.some(phrase => 
-    response.toLowerCase().includes(phrase)
+  const uncertaintyPhrases = [
+    "i'm not sure",
+    'unclear',
+    "couldn't find",
+    'no information',
+    'uncertain',
+  ];
+  const hasUncertainty = uncertaintyPhrases.some((phrase) =>
+    response.toLowerCase().includes(phrase),
   );
   if (hasUncertainty) {
     consistency -= 0.2;
     warnings.push('Response expresses uncertainty');
   }
-  
+
   // Calculate overall score (weighted average)
-  const overall = (sourceQuality * 0.35 + relevance * 0.3 + recency * 0.2 + consistency * 0.15);
-  
+  const overall = sourceQuality * 0.35 + relevance * 0.3 + recency * 0.2 + consistency * 0.15;
+
   // Add warnings based on factors
   if (sourceQuality < 0.5) warnings.push('Source relevance is limited');
   if (recency < 0.5) warnings.push('Information may be outdated');
   if (results.length < 2) warnings.push('Limited source coverage');
-  
+
   // Determine level
   let level: 'high' | 'medium' | 'low' | 'uncertain';
   if (overall >= 0.75) level = 'high';
   else if (overall >= 0.5) level = 'medium';
   else if (overall >= 0.25) level = 'low';
   else level = 'uncertain';
-  
+
   return {
     overall: Math.round(overall * 100) / 100,
     level,
@@ -397,11 +423,11 @@ function calculateConfidence(
 function generateFollowUpSuggestions(
   originalQuery: string,
   response: string,
-  classification: { intent: string; entities: string[]; complexity: string }
+  classification: { intent: string; entities: string[]; complexity: string },
 ): Array<{ text: string; category: string }> {
   const suggestions: Array<{ text: string; category: string }> = [];
   const entities = classification.entities || [];
-  
+
   // Entity-based suggestions
   if (entities.length > 0) {
     const mainEntity = entities[0];
@@ -414,7 +440,7 @@ function generateFollowUpSuggestions(
       category: 'market',
     });
   }
-  
+
   // Intent-based suggestions
   switch (classification.intent) {
     case 'price_inquiry':
@@ -447,13 +473,13 @@ function generateFollowUpSuggestions(
         category: 'news',
       });
   }
-  
+
   // Always add some general follow-ups
   suggestions.push({
     text: 'What are the risks to consider?',
     category: 'analysis',
   });
-  
+
   // Return unique suggestions (max 4)
   return suggestions.slice(0, 4);
 }

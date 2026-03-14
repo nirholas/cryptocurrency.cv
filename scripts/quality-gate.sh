@@ -11,7 +11,7 @@
 #
 # Quality Gate — local pre-push verification
 #
-# Runs eight checks in order. Exits non-zero on the first failure unless
+# Runs nine checks in order. Exits non-zero on the first failure unless
 # --continue-on-error is passed, in which case every check runs and the
 # script exits non-zero if ANY check failed.
 #
@@ -21,15 +21,16 @@
 #   ./scripts/quality-gate.sh --skip-e2e        # skip Playwright E2E tests
 #   ./scripts/quality-gate.sh --skip-e2e --continue
 #
-# The eight gates:
+# The nine gates:
 #   1. TypeScript type-check       (tsc --noEmit)
 #   2. ESLint                      (eslint src/)
-#   3. Vitest unit tests + coverage (vitest run --coverage)
-#   4. Playwright critical E2E     (playwright test)
-#   5. OpenAPI spec validation     (swagger-cli validate)
-#   6. Secret detection            (secretlint)
-#   7. npm dependency audit        (npm audit --audit-level=high)
-#   8. i18n key validation         (node scripts/i18n-check.js)
+#   3. Prettier formatting         (prettier --check)
+#   4. Vitest unit tests + coverage (vitest run --coverage)
+#   5. Playwright critical E2E     (playwright test)
+#   6. OpenAPI spec validation     (swagger-cli validate)
+#   7. Secret detection            (secretlint)
+#   8. npm dependency audit        (npm audit --audit-level=high)
+#   9. i18n key validation         (node scripts/i18n-check.js)
 #
 
 set -uo pipefail
@@ -68,7 +69,7 @@ while [[ $# -gt 0 ]]; do
 done
 
 # ── State ────────────────────────────────────────────────────────────────
-TOTAL=8
+TOTAL=9
 PASSED=0
 FAILED=0
 SKIPPED=0
@@ -146,17 +147,22 @@ run_gate 1 "TypeScript type-check" bunx tsc --noEmit
 run_gate 2 "ESLint" bun run lint
 
 # ─────────────────────────────────────────────────────────────────────────
-# Gate 3 — Vitest unit tests + coverage thresholds
+# Gate 3 — Prettier formatting check
 # ─────────────────────────────────────────────────────────────────────────
-run_gate 3 "Vitest (unit tests + coverage)" bun run test:coverage
+run_gate 3 "Prettier formatting" bunx prettier --check "src/**/*.{ts,tsx,css}"
 
 # ─────────────────────────────────────────────────────────────────────────
-# Gate 4 — Playwright critical E2E specs
+# Gate 4 — Vitest unit tests + coverage thresholds
+# ─────────────────────────────────────────────────────────────────────────
+run_gate 4 "Vitest (unit tests + coverage)" bun run test:coverage
+
+# ─────────────────────────────────────────────────────────────────────────
+# Gate 5 — Playwright critical E2E specs
 # ─────────────────────────────────────────────────────────────────────────
 if [[ "$SKIP_E2E" == true ]]; then
-  skip_gate 4 "Playwright E2E tests"
+  skip_gate 5 "Playwright E2E tests"
 else
-  run_gate 4 "Playwright E2E tests (critical)" bunx playwright test \
+  run_gate 5 "Playwright E2E tests (critical)" bunx playwright test \
     --project=chromium \
     e2e/home.spec.ts \
     e2e/api.spec.ts \
@@ -165,7 +171,7 @@ else
 fi
 
 # ─────────────────────────────────────────────────────────────────────────
-# Gate 5 — OpenAPI spec validation
+# Gate 6 — OpenAPI spec validation
 # ─────────────────────────────────────────────────────────────────────────
 validate_openapi() {
   local spec="chatgpt/openapi.yaml"
@@ -176,15 +182,15 @@ validate_openapi() {
   # Use bunx to run swagger-cli without requiring a global install
   bunx --bun @apidevtools/swagger-cli validate "$spec"
 }
-run_gate 5 "OpenAPI spec validation" validate_openapi
+run_gate 6 "OpenAPI spec validation" validate_openapi
 
 # ─────────────────────────────────────────────────────────────────────────
-# Gate 6 — Secret detection (secretlint)
+# Gate 7 — Secret detection (secretlint)
 # ─────────────────────────────────────────────────────────────────────────
-run_gate 6 "Secret detection (secretlint)" bunx secretlint "**/*"
+run_gate 7 "Secret detection (secretlint)" bunx secretlint "**/*"
 
 # ─────────────────────────────────────────────────────────────────────────
-# Gate 7 — npm dependency audit
+# Gate 8 — npm dependency audit
 # ─────────────────────────────────────────────────────────────────────────
 audit_deps() {
   # Only fail on high/critical severity vulnerabilities
@@ -193,12 +199,12 @@ audit_deps() {
     return 1
   }
 }
-run_gate 7 "npm dependency audit" audit_deps
+run_gate 8 "npm dependency audit" audit_deps
 
 # ─────────────────────────────────────────────────────────────────────────
-# Gate 8 — i18n key validation
+# Gate 9 — i18n key validation
 # ─────────────────────────────────────────────────────────────────────────
-run_gate 8 "i18n key validation" node scripts/i18n-check.js
+run_gate 9 "i18n key validation" node scripts/i18n-check.js
 
 # ── Summary ──────────────────────────────────────────────────────────────
 END_TIME=$(date +%s)

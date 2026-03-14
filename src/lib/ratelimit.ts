@@ -27,6 +27,7 @@
 import { Ratelimit } from '@upstash/ratelimit';
 import { Redis } from '@upstash/redis';
 import { type NextRequest, NextResponse } from 'next/server';
+import { rateLimitLogger } from '@/lib/logger';
 
 // ============================================================================
 // Types
@@ -219,7 +220,7 @@ export async function checkRateLimit(
 
   // Check if Redis is configured
   if (!isRedisConfigured()) {
-    console.warn('[RateLimit] Redis not configured, allowing request');
+    rateLimitLogger.warn('Redis not configured, allowing request');
     return {
       allowed: true,
       remaining: tierConfig.requestsPerDay,
@@ -234,7 +235,7 @@ export async function checkRateLimit(
     const minuteLimiter = getMinuteLimiter(tierConfig.name, tierConfig.requestsPerMinute);
 
     if (!dailyLimiter) {
-      console.warn('[RateLimit] Failed to create rate limiter');
+      rateLimitLogger.warn('Failed to create rate limiter');
       return {
         allowed: true,
         remaining: tierConfig.requestsPerDay,
@@ -266,7 +267,7 @@ export async function checkRateLimit(
       resetAt: result.reset,
     };
   } catch (error) {
-    console.error('[RateLimit] Error checking rate limit:', error);
+    rateLimitLogger.error({ err: error instanceof Error ? error : new Error(String(error)) }, 'Error checking rate limit');
     // Fail open - allow request on error
     return {
       allowed: true,
@@ -294,7 +295,7 @@ export async function checkTierRateLimit(
   const tierConfig = tiers[tier];
 
   if (!tierConfig) {
-    console.warn(`[RateLimit] Unknown tier: ${tier}, using default limits`);
+    rateLimitLogger.warn({ tier }, 'Unknown tier, using default limits');
     return checkRateLimit(identifier, {
       name: tier,
       requestsPerDay: 100,
@@ -334,7 +335,7 @@ export async function getUsage(
       resetAt: result.reset,
     };
   } catch (error) {
-    console.error('[RateLimit] Error getting usage:', error);
+    rateLimitLogger.error({ err: error instanceof Error ? error : new Error(String(error)) }, 'Error getting usage');
     return null;
   }
 }
@@ -357,7 +358,7 @@ export async function resetRateLimit(
     await limiter.resetUsedTokens(identifier);
     return true;
   } catch (error) {
-    console.error('[RateLimit] Error resetting rate limit:', error);
+    rateLimitLogger.error({ err: error instanceof Error ? error : new Error(String(error)) }, 'Error resetting rate limit');
     return false;
   }
 }
@@ -380,7 +381,7 @@ export async function blockIdentifier(
     });
     return true;
   } catch (error) {
-    console.error('[RateLimit] Error blocking identifier:', error);
+    rateLimitLogger.error({ err: error instanceof Error ? error : new Error(String(error)) }, 'Error blocking identifier');
     return false;
   }
 }

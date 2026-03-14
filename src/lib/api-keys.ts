@@ -20,6 +20,7 @@
 
 import { kv } from '@vercel/kv';
 import { sendWebhook, webhookPayloads } from './webhooks';
+import { authLogger } from '@/lib/logger';
 import {
   checkRateLimit as checkUpstashRateLimit,
   isRedisConfigured,
@@ -275,12 +276,12 @@ export async function createApiKey(params: {
         email,
       })
     ).catch((err) => {
-      console.error('[API Keys] Failed to send key.created webhook:', err);
+      authLogger.error({ err: err instanceof Error ? err : new Error(String(err)) }, 'Failed to send key.created webhook');
     });
 
     return { key: rawKey, data: keyData };
   } catch (error) {
-    console.error('Failed to create API key:', error);
+    authLogger.error({ err: error instanceof Error ? error : new Error(String(error)) }, 'Failed to create API key');
     return { error: 'Failed to create API key. Please try again.' };
   }
 }
@@ -290,7 +291,7 @@ export async function createApiKey(params: {
  */
 export async function validateApiKey(rawKey: string): Promise<ApiKeyData | null> {
   if (!isKvConfigured()) {
-    console.warn('[API Keys] KV not configured, skipping validation');
+    authLogger.warn('KV not configured, skipping validation');
     return null;
   }
 
@@ -309,7 +310,7 @@ export async function validateApiKey(rawKey: string): Promise<ApiKeyData | null>
 
     // Check key expiration
     if (keyData.expiresAt && new Date(keyData.expiresAt) < new Date()) {
-      console.warn(`[API Keys] Key ${keyData.keyPrefix}… expired at ${keyData.expiresAt}`);
+      authLogger.warn({ keyPrefix: keyData.keyPrefix, expiresAt: keyData.expiresAt }, 'Key expired');
       // Deactivate expired key (non-blocking)
       kv.set(`${KV_PREFIX.key}${hashedKey}`, {
         ...keyData,
@@ -326,7 +327,7 @@ export async function validateApiKey(rawKey: string): Promise<ApiKeyData | null>
 
     return keyData;
   } catch (error) {
-    console.error('Failed to validate API key:', error);
+    authLogger.error({ err: error instanceof Error ? error : new Error(String(error)) }, 'Failed to validate API key');
     return null;
   }
 }
@@ -352,7 +353,7 @@ export async function getKeysByEmail(email: string): Promise<ApiKeyData[]> {
 
     return keys;
   } catch (error) {
-    console.error('Failed to get keys by email:', error);
+    authLogger.error({ err: error instanceof Error ? error : new Error(String(error)) }, 'Failed to get keys by email');
     return [];
   }
 }
@@ -378,7 +379,7 @@ export async function revokeApiKey(keyId: string, email: string): Promise<boolea
 
     return true;
   } catch (error) {
-    console.error('Failed to revoke API key:', error);
+    authLogger.error({ err: error instanceof Error ? error : new Error(String(error)) }, 'Failed to revoke API key');
     return false;
   }
 }
@@ -462,11 +463,9 @@ async function sendRateLimitNotifications(
           limitType: '100%',
         })
       ).catch((err) => {
-        console.error('[API Keys] Failed to send key.usage.limit webhook:', err);
+        authLogger.error({ err: err instanceof Error ? err : new Error(String(err)), limitType: '100%' }, 'Failed to send key.usage.limit webhook');
       });
-
-      await kv.set(notifiedKey, { ...notified, at100: true });
-      await kv.expire(notifiedKey, 90000);
+      await kv.set(notifiedKey, { ...notified, at100: true });      await kv.expire(notifiedKey, 90000);
     }
     // Check 90% threshold
     else if (percentage >= 90 && percentage < 100 && !notified.at90) {
@@ -482,15 +481,13 @@ async function sendRateLimitNotifications(
           limitType: '90%',
         })
       ).catch((err) => {
-        console.error('[API Keys] Failed to send key.usage.limit webhook:', err);
+        authLogger.error({ err: err instanceof Error ? err : new Error(String(err)), limitType: '90%' }, 'Failed to send key.usage.limit webhook');
       });
-
-      await kv.set(notifiedKey, { ...notified, at90: true });
-      await kv.expire(notifiedKey, 90000);
+      await kv.set(notifiedKey, { ...notified, at90: true });      await kv.expire(notifiedKey, 90000);
     }
   } catch (error) {
     // Non-fatal - don't fail the request if notifications fail
-    console.error('[API Keys] Failed to send rate limit notifications:', error);
+    authLogger.error({ err: error instanceof Error ? error : new Error(String(error)) }, 'Failed to send rate limit notifications');
   }
 }
 
@@ -581,7 +578,7 @@ export async function getKeyById(keyId: string): Promise<ApiKeyData | null> {
     const keyData = await kv.get<ApiKeyData>(`${KV_PREFIX.key}${hashedKey}`);
     return keyData;
   } catch (error) {
-    console.error('Failed to get key by ID:', error);
+    authLogger.error({ err: error instanceof Error ? error : new Error(String(error)) }, 'Failed to get key by ID');
     return null;
   }
 }
@@ -656,7 +653,7 @@ export async function rotateApiKey(
 
     return { key: newRawKey, data: newKeyData };
   } catch (error) {
-    console.error('Failed to rotate API key:', error);
+    authLogger.error({ err: error instanceof Error ? error : new Error(String(error)) }, 'Failed to rotate API key');
     return { error: 'Failed to rotate API key. Please try again.' };
   }
 }
@@ -690,7 +687,7 @@ export async function incrementUsage(keyId: string): Promise<void> {
     await pipeline.exec();
   } catch (error) {
     // Non-fatal — don't block request if usage tracking fails
-    console.error('[API Keys] Failed to increment usage:', error);
+    authLogger.error({ err: error instanceof Error ? error : new Error(String(error)) }, 'Failed to increment usage');
   }
 }
 
@@ -749,7 +746,7 @@ export async function getUsageStats(keyId: string): Promise<{
       resetAt: tomorrow.toISOString(),
     };
   } catch (error) {
-    console.error('[API Keys] Failed to get usage stats:', error);
+    authLogger.error({ err: error instanceof Error ? error : new Error(String(error)) }, 'Failed to get usage stats');
     return null;
   }
 }
@@ -808,12 +805,12 @@ export async function upgradeKeyTier(
         newTier,
       })
     ).catch((err) => {
-      console.error('[API Keys] Failed to send key.upgraded webhook:', err);
+      authLogger.error({ err: err instanceof Error ? err : new Error(String(err)) }, 'Failed to send key.upgraded webhook');
     });
 
     return { success: true, data: updatedKeyData };
   } catch (error) {
-    console.error('Failed to upgrade key tier:', error);
+    authLogger.error({ err: error instanceof Error ? error : new Error(String(error)) }, 'Failed to upgrade key tier');
     return { success: false, error: 'Failed to upgrade key tier' };
   }
 }
@@ -850,7 +847,7 @@ export async function downgradeKeyToFree(keyId: string): Promise<boolean> {
 
     return true;
   } catch (error) {
-    console.error('Failed to downgrade key:', error);
+    authLogger.error({ err: error instanceof Error ? error : new Error(String(error)) }, 'Failed to downgrade key');
     return false;
   }
 }
@@ -883,7 +880,7 @@ export async function checkSubscriptionExpiry(): Promise<string[]> {
 
     return expiredKeyIds;
   } catch (error) {
-    console.error('Failed to check subscription expiry:', error);
+    authLogger.error({ err: error instanceof Error ? error : new Error(String(error)) }, 'Failed to check subscription expiry');
     return [];
   }
 }

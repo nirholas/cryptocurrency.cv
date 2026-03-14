@@ -15,7 +15,7 @@
  */
 
 import { newsCache, aiCache, translationCache, withCache as memoryWithCache } from './cache';
-import { logger } from '@/lib/logger';
+import { cacheLogger } from '@/lib/logger';
 
 // Redis client placeholder - initialized lazily
 let _redisClient: any = null;
@@ -27,7 +27,7 @@ let initPromise: Promise<boolean> | null = null;
  */
 export async function initRedis(): Promise<boolean> {
   if (!process.env.REDIS_URL) {
-    logger.info('[Redis] REDIS_URL not set, using memory cache');
+    cacheLogger.info('REDIS_URL not set, using memory cache');
     return false;
   }
 
@@ -46,7 +46,7 @@ export async function initRedis(): Promise<boolean> {
           keepAlive: true,
           reconnectStrategy: (retries: number) => {
             if (retries > 10) {
-              logger.error('[Redis] Max retries reached, falling back to memory');
+              cacheLogger.error('Max retries reached, falling back to memory');
               return new Error('Max retries');
             }
             // Exponential back-off with jitter: 200, 400, 800 … capped at 5 s
@@ -59,26 +59,26 @@ export async function initRedis(): Promise<boolean> {
       });
 
       _redisClient.on('error', (err: Error) => {
-        logger.error('[Redis] Error', new Error(err.message));
+        cacheLogger.error({ err }, 'Redis connection error');
         redisAvailable = false;
       });
 
       _redisClient.on('connect', () => {
-        logger.info('[Redis] Connected');
+        cacheLogger.info('Redis connected');
         redisAvailable = true;
       });
 
       _redisClient.on('disconnect', () => {
-        logger.info('[Redis] Disconnected');
+        cacheLogger.info('Redis disconnected');
         redisAvailable = false;
       });
 
       await _redisClient.connect();
       redisAvailable = true;
-      logger.info('[Redis] Initialization successful');
+      cacheLogger.info('Redis initialization successful');
       return true;
     } catch (error) {
-      logger.error('[Redis] Init failed', error instanceof Error ? error : undefined);
+      cacheLogger.error({ err: error instanceof Error ? error : new Error(String(error)) }, 'Redis init failed');
       redisAvailable = false;
       return false;
     }
@@ -99,7 +99,7 @@ export async function redisGet<T>(key: string): Promise<T | null> {
       }
     }
   } catch (error) {
-    logger.error('[Redis] Get error', error instanceof Error ? error : undefined);
+    cacheLogger.error({ err: error instanceof Error ? error : new Error(String(error)) }, 'Redis get error');
   }
   
   // Fallback to memory cache
@@ -125,7 +125,7 @@ export async function redisSet<T>(
       return true;
     }
   } catch (error) {
-    logger.error('[Redis] Set error', error instanceof Error ? error : undefined);
+    cacheLogger.error({ err: error instanceof Error ? error : new Error(String(error)) }, 'Redis set error');
   }
 
   return true; // Memory cache succeeded
@@ -159,7 +159,7 @@ export async function redisDel(key: string): Promise<boolean> {
       await _redisClient.del(key);
     }
   } catch (error) {
-    logger.error('[Redis] Del error', error instanceof Error ? error : undefined);
+    cacheLogger.error({ err: error instanceof Error ? error : new Error(String(error)) }, 'Redis del error');
   }
 
   return true;
@@ -179,7 +179,7 @@ export async function redisDelPattern(pattern: string): Promise<number> {
       }
     }
   } catch (error) {
-    logger.error('[Redis] Del pattern error', error instanceof Error ? error : undefined);
+    cacheLogger.error({ err: error instanceof Error ? error : new Error(String(error)) }, 'Redis del pattern error');
   }
 
   return count;

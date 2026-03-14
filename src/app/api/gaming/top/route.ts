@@ -18,8 +18,7 @@
 import { NextResponse } from 'next/server';
 import { gamingDataChain } from '@/lib/providers/adapters/gaming-data';
 
-export const revalidate = 300;
-export const dynamic = 'force-dynamic';
+export const revalidate = 300; // ISR: top games refreshes every 5 min
 
 export async function GET(request: Request) {
   try {
@@ -37,34 +36,42 @@ export async function GET(request: Request) {
     const games = Array.isArray(result.data) ? result.data : [];
 
     // Sort by chosen metric
-    const sorted = [...games].sort((a, b) => {
-      const aVal = (a as Record<string, unknown>);
-      const bVal = (b as Record<string, unknown>);
-      switch (sortBy) {
-        case 'volume':
-          return ((bVal.volume as number) ?? 0) - ((aVal.volume as number) ?? 0);
-        case 'players':
-          return ((bVal.users as number) ?? 0) - ((aVal.users as number) ?? 0);
-        case 'dau':
-        default:
-          return ((bVal.dau as number) ?? 0) - ((aVal.dau as number) ?? 0);
-      }
-    }).slice(0, limit);
+    const sorted = [...games]
+      .sort((a, b) => {
+        const aVal = a as Record<string, unknown>;
+        const bVal = b as Record<string, unknown>;
+        switch (sortBy) {
+          case 'volume':
+            return ((bVal.volume as number) ?? 0) - ((aVal.volume as number) ?? 0);
+          case 'players':
+            return ((bVal.users as number) ?? 0) - ((aVal.users as number) ?? 0);
+          case 'dau':
+          default:
+            return ((bVal.dau as number) ?? 0) - ((aVal.dau as number) ?? 0);
+        }
+      })
+      .slice(0, limit);
 
-    return NextResponse.json({
-      data: sorted,
-      count: sorted.length,
-      sortBy,
-      chain: chain || 'all',
-      _lineage: result.lineage,
-      _cached: result.cached,
-    }, {
-      headers: { 'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=600' },
-    });
+    return NextResponse.json(
+      {
+        data: sorted,
+        count: sorted.length,
+        sortBy,
+        chain: chain || 'all',
+        _lineage: result.lineage,
+        _cached: result.cached,
+      },
+      {
+        headers: { 'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=600' },
+      },
+    );
   } catch (error) {
     console.error('[Gaming/Top] Error:', error);
     return NextResponse.json(
-      { error: 'Failed to fetch top games', message: error instanceof Error ? error.message : 'Unknown' },
+      {
+        error: 'Failed to fetch top games',
+        message: error instanceof Error ? error.message : 'Unknown',
+      },
       { status: 502 },
     );
   }

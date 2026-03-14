@@ -19,6 +19,7 @@
 import { type NextRequest } from 'next/server';
 import { getMarketOverview } from '@/lib/market-data';
 
+// force-dynamic required: SSE streaming response
 export const dynamic = 'force-dynamic';
 
 const POLL_INTERVAL = 30000; // 30 seconds
@@ -27,10 +28,7 @@ export async function GET(_request: NextRequest): Promise<Response> {
   const encoder = new TextEncoder();
   let isConnected = true;
 
-  const safeEnqueue = (
-    controller: ReadableStreamDefaultController,
-    data: Uint8Array,
-  ): boolean => {
+  const safeEnqueue = (controller: ReadableStreamDefaultController, data: Uint8Array): boolean => {
     if (!isConnected || controller.desiredSize === null) {
       isConnected = false;
       return false;
@@ -120,7 +118,7 @@ export async function GET(_request: NextRequest): Promise<Response> {
     headers: {
       'Content-Type': 'text/event-stream',
       'Cache-Control': 'no-cache, no-transform',
-      'Connection': 'keep-alive',
+      Connection: 'keep-alive',
       'Access-Control-Allow-Origin': '*',
       'X-Accel-Buffering': 'no',
     },

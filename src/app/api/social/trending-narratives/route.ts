@@ -23,7 +23,7 @@ import { NextResponse } from 'next/server';
 import { getLatestNews } from '@/lib/crypto-news';
 import { detectNarratives, getNarrativeSummary, type Narrative } from '@/lib/narrative-detector';
 
-export const dynamic = 'force-dynamic';
+export const revalidate = 120; // ISR: trending narratives refresh every 2 min
 
 // ---------------------------------------------------------------------------
 // In-memory 2-hour cache
@@ -78,7 +78,7 @@ export async function GET() {
           const coinMatch =
             narrative.coins.length === 0 ||
             narrative.coins.some((coin) =>
-              (a.title + ' ' + (a.description ?? '')).toUpperCase().includes(coin)
+              (a.title + ' ' + (a.description ?? '')).toUpperCase().includes(coin),
             );
           return coinMatch;
         })
@@ -115,8 +115,11 @@ export async function GET() {
   } catch (error) {
     console.error('[trending-narratives] Error:', error);
     return NextResponse.json(
-      { error: 'Failed to detect narratives', details: process.env.NODE_ENV === 'development' ? String(error) : 'Internal server error' },
-      { status: 500 }
+      {
+        error: 'Failed to detect narratives',
+        details: process.env.NODE_ENV === 'development' ? String(error) : 'Internal server error',
+      },
+      { status: 500 },
     );
   }
 }

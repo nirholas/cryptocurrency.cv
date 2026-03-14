@@ -9,207 +9,172 @@
  */
 
 /**
- * Structured Logging System
- * 
- * Provides consistent logging across the application with:
- * - Log levels (debug, info, warn, error)
- * - Structured JSON output
- * - Request context tracking
- * - Performance timing
+ * Structured Logging System (Pino)
+ *
+ * Canonical logging module for the entire application.
+ * - Structured JSON in production (Vercel / Docker log aggregation)
+ * - Pretty-printed human-readable output in development (pino-pretty)
+ * - Automatic redaction of sensitive fields
+ * - Domain-specific child loggers
+ * - Backward-compatible helpers for existing callers
  */
 
-import { type NextRequest } from 'next/server';
+import pino from "pino";
+import { type NextRequest } from "next/server";
 
-export enum LogLevel {
-  DEBUG = 'debug',
-  INFO = 'info',
-  WARN = 'warn',
-  ERROR = 'error',
-}
+// =============================================================================
+// CONFIGURATION
+// =============================================================================
 
-interface LogContext {
-  requestId?: string;
-  userId?: string;
-  endpoint?: string;
-  method?: string;
-  ip?: string;
-  userAgent?: string;
-  [key: string]: unknown;
-}
+const isProduction = process.env.NODE_ENV === "production";
 
-interface LogEntry {
-  level: LogLevel;
-  message: string;
-  timestamp: string;
-  context?: LogContext;
-  error?: {
-    message: string;
-    stack?: string;
-    code?: string;
-  };
-  duration?: number;
-  meta?: Record<string, unknown>;
-}
+export const logger = pino({
+  level: process.env.LOG_LEVEL || (isProduction ? "info" : "debug"),
 
-/**
- * Format log entry as JSON
- */
-function formatLogEntry(entry: LogEntry): string {
-  return JSON.stringify(entry);
-}
-
-/**
- * Logger class
- */
-class Logger {
-  private context: LogContext = {};
-
-  /**
-   * Set context for subsequent logs
-   */
-  setContext(context: LogContext): void {
-    this.context = { ...this.context, ...context };
-  }
-
-  /**
-   * Clear context
-   */
-  clearContext(): void {
-    this.context = {};
-  }
-
-  /**
-   * Get context from NextRequest
-   */
-  setRequestContext(request: NextRequest): void {
-    this.setContext({
-      requestId: request.headers.get('x-request-id') || undefined,
-      endpoint: request.nextUrl.pathname,
-      method: request.method,
-      ip: request.headers.get('x-forwarded-for')?.split(',')[0]?.trim(),
-      userAgent: request.headers.get('user-agent') || undefined,
-    });
-  }
-
-  /**
-   * Log debug message
-   */
-  debug(message: string, meta?: Record<string, unknown>): void {
-    if (process.env.NODE_ENV === 'development') {
-      const entry: LogEntry = {
-        level: LogLevel.DEBUG,
-        message,
-        timestamp: new Date().toISOString(),
-        context: this.context,
-        meta,
-      };
-      console.debug(formatLogEntry(entry));
-    }
-  }
-
-  /**
-   * Log info message
-   */
-  info(message: string, meta?: Record<string, unknown>): void {
-    const entry: LogEntry = {
-      level: LogLevel.INFO,
-      message,
-      timestamp: new Date().toISOString(),
-      context: this.context,
-      meta,
-    };
-    console.log(formatLogEntry(entry));
-  }
-
-  /**
-   * Log warning message
-   */
-  warn(message: string, meta?: Record<string, unknown>): void {
-    const entry: LogEntry = {
-      level: LogLevel.WARN,
-      message,
-      timestamp: new Date().toISOString(),
-      context: this.context,
-      meta,
-    };
-    console.warn(formatLogEntry(entry));
-  }
-
-  /**
-   * Log error message
-   */
-  error(message: string, error?: Error | unknown, meta?: Record<string, unknown>): void {
-    const entry: LogEntry = {
-      level: LogLevel.ERROR,
-      message,
-      timestamp: new Date().toISOString(),
-      context: this.context,
-      meta,
-    };
-
-    if (error) {
-      if (error instanceof Error) {
-        entry.error = {
-          message: error.message,
-          stack: error.stack,
-          code: (error as any).code,
-        };
-      } else {
-        entry.error = {
-          message: String(error),
-        };
-      }
-    }
-
-    console.error(formatLogEntry(entry));
-  }
-
-  /**
-   * Log request with timing
-   */
-  request(
-    method: string,
-    path: string,
-    status: number,
-    duration: number,
-    meta?: Record<string, unknown>
-  ): void {
-    const entry: LogEntry = {
-      level: status >= 500 ? LogLevel.ERROR : status >= 400 ? LogLevel.WARN : LogLevel.INFO,
-      message: `${method} ${path} ${status}`,
-      timestamp: new Date().toISOString(),
-      context: this.context,
-      duration,
-      meta: {
-        ...meta,
-        method,
-        path,
-        status,
+  // Structured JSON in production, pretty-printed in development
+  transport: isProduction
+    ? undefined // JSON to stdout (Vercel/Docker picks this up)
+    : {
+        target: "pino-pretty",
+        options: { colorize: true, translateTime: "SYS:standard" },
       },
-    };
-    console.log(formatLogEntry(entry));
-  }
 
-  /**
-   * Create child logger with additional context
-   */
-  child(context: LogContext): Logger {
-    const childLogger = new Logger();
-    childLogger.setContext({ ...this.context, ...context });
-    return childLogger;
-  }
+  // Redact sensitive fields
+  redact: {
+    paths: [
+      "req.headers.authorization",
+      "req.headers.cookie",
+      "apiKey",
+      "password",
+      "token",
+      "secret",
+      "DATABASE_URL",
+      "REDIS_URL",
+    ],
+    censor: "[REDACTED]",
+  },
+
+  // Base fields on every log line
+  base: {
+    service: "free-crypto-news",
+    env: process.env.NODE_ENV || "development",
+    version: process.env.npm_package_version,
+  },
+
+  // Serializers for common objects
+  serializers: {
+    err: pino.stdSerializers.err,
+    req: pino.stdSerializers.req,
+    res: pino.stdSerializers.res,
+  },
+});
+
+// =============================================================================
+// CHILD LOGGERS — domain-specific
+// =============================================================================
+
+export const apiLogger = logger.child({ module: "api" });
+export const cacheLogger = logger.child({ module: "cache" });
+export const dbLogger = logger.child({ module: "database" });
+export const wsLogger = logger.child({ module: "websocket" });
+export const authLogger = logger.child({ module: "auth" });
+export const rateLimitLogger = logger.child({ module: "rate-limit" });
+export const aiLogger = logger.child({ module: "ai" });
+export const archiveLogger = logger.child({ module: "archive" });
+
+// =============================================================================
+// BACKWARD-COMPATIBLE HELPERS
+// =============================================================================
+
+/** Legacy LogLevel enum — kept for existing imports */
+export enum LogLevel {
+  DEBUG = "debug",
+  INFO = "info",
+  WARN = "warn",
+  ERROR = "error",
 }
 
-// Export singleton logger
-export const logger = new Logger();
+/**
+ * Create a request-scoped logger (backward-compatible wrapper).
+ *
+ * Returns an object with the same method signatures the old Logger class had,
+ * so existing route handlers continue to work without changes.
+ */
+export function createRequestLogger(request: NextRequest) {
+  const child = apiLogger.child({
+    requestId: request.headers.get("x-request-id") || undefined,
+    endpoint: request.nextUrl.pathname,
+    method: request.method,
+    ip: request.headers.get("x-forwarded-for")?.split(",")[0]?.trim(),
+    userAgent: request.headers.get("user-agent") || undefined,
+  });
+
+  return {
+    debug(message: string, meta?: Record<string, unknown>) {
+      child.debug(meta ?? {}, message);
+    },
+    info(message: string, meta?: Record<string, unknown>) {
+      child.info(meta ?? {}, message);
+    },
+    warn(message: string, meta?: Record<string, unknown>) {
+      child.warn(meta ?? {}, message);
+    },
+    error(
+      message: string,
+      error?: Error | unknown,
+      meta?: Record<string, unknown>,
+    ) {
+      child.error(
+        {
+          ...(meta ?? {}),
+          err: error instanceof Error ? error : error != null ? new Error(String(error)) : undefined,
+        },
+        message,
+      );
+    },
+    request(
+      method: string,
+      path: string,
+      status: number,
+      duration: number,
+      meta?: Record<string, unknown>,
+    ) {
+      const lvl = status >= 500 ? "error" : status >= 400 ? "warn" : "info";
+      child[lvl]({ method, path, status, duration, ...(meta ?? {}) }, `${method} ${path} ${status}`);
+    },
+    /** Expose the underlying Pino child for native API usage */
+    pino: child,
+  };
+}
 
 /**
- * Create logger for specific request
+ * Legacy createLogger(module) — returns an adapter with the old interface.
  */
-export function createRequestLogger(request: NextRequest): Logger {
-  const requestLogger = new Logger();
-  requestLogger.setRequestContext(request);
-  return requestLogger;
+export function createLogger(module: string) {
+  const child = logger.child({ module });
+
+  return {
+    debug(message: string, data?: unknown) {
+      child.debug(typeof data === "object" && data !== null ? (data as Record<string, unknown>) : {}, `[${module}] ${message}`);
+    },
+    info(message: string, data?: unknown) {
+      child.info(typeof data === "object" && data !== null ? (data as Record<string, unknown>) : {}, `[${module}] ${message}`);
+    },
+    warn(message: string, data?: unknown) {
+      child.warn(typeof data === "object" && data !== null ? (data as Record<string, unknown>) : {}, `[${module}] ${message}`);
+    },
+    error(message: string, data?: unknown) {
+      child.error(
+        {
+          err: data instanceof Error ? data : undefined,
+          ...(typeof data === "object" && data !== null && !(data instanceof Error)
+            ? (data as Record<string, unknown>)
+            : {}),
+        },
+        `[${module}] ${message}`,
+      );
+    },
+  };
 }
 
 /**
@@ -217,48 +182,28 @@ export function createRequestLogger(request: NextRequest): Logger {
  */
 export function measureTime<T>(
   fn: () => T | Promise<T>,
-  label: string
+  label: string,
 ): Promise<{ result: T; duration: number }> {
   const start = Date.now();
-  
+
   const execute = async () => {
     const result = await fn();
     const duration = Date.now() - start;
-    
-    logger.debug(`${label} completed`, { duration });
-    
+    logger.debug({ duration }, `${label} completed`);
     return { result, duration };
   };
 
   return execute();
 }
 
-// Legacy compatibility export
-export function createLogger(module: string) {
-  return {
-    debug(message: string, data?: unknown): void {
-      logger.debug(`[${module}] ${message}`, data as Record<string, unknown>);
-    },
-    info(message: string, data?: unknown): void {
-      logger.info(`[${module}] ${message}`, data as Record<string, unknown>);
-    },
-    warn(message: string, data?: unknown): void {
-      logger.warn(`[${module}] ${message}`, data as Record<string, unknown>);
-    },
-    error(message: string, data?: unknown): void {
-      logger.error(`[${module}] ${message}`, data instanceof Error ? data : undefined, typeof data === 'object' ? data as Record<string, unknown> : undefined);
-    },
-  };
-}
-
 /**
- * Pre-configured loggers for common modules
+ * Pre-configured loggers for common modules (legacy)
  */
 export const loggers = {
-  api: createLogger('API'),
-  auth: createLogger('Auth'),
-  ws: createLogger('WebSocket'),
-  cache: createLogger('Cache'),
-  pwa: createLogger('PWA'),
-  admin: createLogger('Admin'),
+  api: createLogger("API"),
+  auth: createLogger("Auth"),
+  ws: createLogger("WebSocket"),
+  cache: createLogger("Cache"),
+  pwa: createLogger("PWA"),
+  admin: createLogger("Admin"),
 } as const;

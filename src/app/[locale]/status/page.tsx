@@ -63,8 +63,7 @@ export const metadata = generateSEOMetadata({
   tags: ["system status", "API status", "service health", "uptime"],
 });
 
-export const dynamic = "force-dynamic";
-export const revalidate = 0;
+export const revalidate = 30; // ISR: status page refreshes every 30 sec
 
 /* ─── Types ─── */
 

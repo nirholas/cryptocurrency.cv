@@ -43,12 +43,11 @@ function getAdminToken(): string | null {
     return token;
   }
 
-  // Only allow dev fallback in development
+  // No fallback tokens — require explicit configuration in all environments
   if (!isProduction) {
     console.warn(
-      '[Admin Auth] Using dev fallback token. Set ADMIN_API_KEY or ADMIN_TOKEN in production.'
+      '[Admin Auth] No ADMIN_API_KEY or ADMIN_TOKEN configured. Admin endpoints are disabled.',
     );
-    return 'dev-admin-token';
   }
 
   return null;
@@ -147,7 +146,7 @@ export function requireAdminAuth(request: NextRequest): NextResponse | null {
           ? 'Admin functionality is not configured'
           : 'Set ADMIN_API_KEY or ADMIN_TOKEN environment variable',
       },
-      { status: 503 }
+      { status: 503 },
     );
   }
 
@@ -157,7 +156,7 @@ export function requireAdminAuth(request: NextRequest): NextResponse | null {
         error: 'Unauthorized',
         message: 'Invalid or missing admin credentials',
       },
-      { status: 401 }
+      { status: 401 },
     );
   }
 
@@ -178,6 +177,6 @@ export function adminErrorResponse(error: unknown, context: string): NextRespons
       error: 'Internal Server Error',
       message: isProduction ? 'An error occurred' : message,
     },
-    { status: 500 }
+    { status: 500 },
   );
 }

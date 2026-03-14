@@ -23,6 +23,7 @@
  */
 
 import { aiCache } from './cache';
+import { dbLogger } from '@/lib/logger';
 
 // =============================================================================
 // CONFIGURATION
@@ -359,7 +360,7 @@ class FileBackend extends MemoryBackend {
       
       await fs.writeFile(this.filePath, JSON.stringify(data, null, 2));
     } catch (error) {
-      console.error('Failed to save database to file:', error);
+      dbLogger.error({ err: error instanceof Error ? error : new Error(String(error)) }, 'Failed to save database to file');
     }
   }
 
@@ -399,7 +400,7 @@ class VercelKVBackend {
       this.kv = vercelKv.kv;
       this.initialized = true;
     } catch (error) {
-      console.warn('Vercel KV not available, falling back to memory backend');
+      dbLogger.warn({ err: error instanceof Error ? error : new Error(String(error)) }, 'Vercel KV not available, falling back to memory backend');
       throw error;
     }
   }
@@ -535,7 +536,7 @@ class DatabaseClient {
       try {
         return new VercelKVBackend();
       } catch {
-        console.warn('Vercel KV initialization failed, using memory backend');
+        dbLogger.warn('Vercel KV initialization failed, using memory backend');
       }
     }
 

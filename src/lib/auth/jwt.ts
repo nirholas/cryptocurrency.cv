@@ -7,9 +7,22 @@
 
 import { SignJWT, jwtVerify, type JWTPayload } from 'jose';
 
-const JWT_SECRET = new TextEncoder().encode(
-  process.env.JWT_SECRET || 'fcn-dev-secret-change-in-production-32chars!'
-);
+function getJwtSecret(): Uint8Array {
+  const secret = process.env.JWT_SECRET;
+  if (!secret) {
+    if (process.env.NODE_ENV === 'production') {
+      throw new Error('JWT_SECRET environment variable is required in production');
+    }
+    // Only allow fallback in local development with a clear warning
+    console.warn(
+      '[JWT] WARNING: JWT_SECRET not set — using insecure dev-only fallback. DO NOT use in production.',
+    );
+    return new TextEncoder().encode('fcn-dev-secret-change-in-production-32chars!');
+  }
+  return new TextEncoder().encode(secret);
+}
+
+const JWT_SECRET = getJwtSecret();
 
 const ISSUER = 'cryptocurrency.cv';
 const AUDIENCE = 'cryptocurrency.cv';
@@ -27,7 +40,7 @@ export interface JwtPayload extends JWTPayload {
  */
 export async function signJwt(
   payload: Omit<JwtPayload, 'iss' | 'aud' | 'iat' | 'exp'>,
-  expiresIn: string = '15m'
+  expiresIn: string = '15m',
 ): Promise<string> {
   return new SignJWT(payload as unknown as Record<string, unknown>)
     .setProtectedHeader({ alg: 'HS256' })
@@ -62,13 +75,16 @@ export function createAccessToken(user: {
   name?: string | null;
   role: string;
 }): Promise<string> {
-  return signJwt({
-    sub: user.id,
-    email: user.email,
-    name: user.name || undefined,
-    role: user.role,
-    type: 'access',
-  }, '15m');
+  return signJwt(
+    {
+      sub: user.id,
+      email: user.email,
+      name: user.name || undefined,
+      role: user.role,
+      type: 'access',
+    },
+    '15m',
+  );
 }
 
 /**
@@ -80,11 +96,14 @@ export function createRefreshToken(user: {
   name?: string | null;
   role: string;
 }): Promise<string> {
-  return signJwt({
-    sub: user.id,
-    email: user.email,
-    name: user.name || undefined,
-    role: user.role,
-    type: 'refresh',
-  }, '7d');
+  return signJwt(
+    {
+      sub: user.id,
+      email: user.email,
+      name: user.name || undefined,
+      role: user.role,
+      type: 'refresh',
+    },
+    '7d',
+  );
 }

@@ -23,8 +23,7 @@
 import { NextResponse } from 'next/server';
 import { macroChain } from '@/lib/providers/adapters/macro';
 
-export const revalidate = 900; // 15min cache — Fed data changes infrequently
-export const dynamic = 'force-dynamic';
+export const revalidate = 3600; // ISR: Fed data changes infrequently (1 hour)
 
 const FED_SERIES = ['FEDFUNDS', 'DFF', 'DGS2', 'DGS5', 'DGS10', 'DGS30', 'WALCL'];
 
@@ -39,42 +38,58 @@ export async function GET() {
     // Extract Fed-specific indicators
     const fedData: Record<string, unknown>[] = allData.filter((d: Record<string, unknown>) => {
       const name = ((d.symbol as string) || (d.name as string) || '').toUpperCase();
-      return FED_SERIES.some(s => name.includes(s)) ||
+      return (
+        FED_SERIES.some((s) => name.includes(s)) ||
         name.includes('FED') ||
         name.includes('TREASURY') ||
-        name.includes('YIELD');
+        name.includes('YIELD')
+      );
     });
 
     // Compute yield curve slope (10Y - 2Y)
-    const t2y = fedData.find((d: Record<string, unknown>) =>
-      ((d.symbol as string) || '').includes('DGS2') || ((d.name as string) || '').includes('2-Year'));
-    const t10y = fedData.find((d: Record<string, unknown>) =>
-      ((d.symbol as string) || '').includes('DGS10') || ((d.name as string) || '').includes('10-Year'));
+    const t2y = fedData.find(
+      (d: Record<string, unknown>) =>
+        ((d.symbol as string) || '').includes('DGS2') ||
+        ((d.name as string) || '').includes('2-Year'),
+    );
+    const t10y = fedData.find(
+      (d: Record<string, unknown>) =>
+        ((d.symbol as string) || '').includes('DGS10') ||
+        ((d.name as string) || '').includes('10-Year'),
+    );
 
     const yieldCurve = {
-      spread2s10s: t2y && t10y
-        ? ((t10y as Record<string, unknown>).value as number ?? 0) -
-          ((t2y as Record<string, unknown>).value as number ?? 0)
-        : null,
-      inverted: t2y && t10y
-        ? ((t10y as Record<string, unknown>).value as number ?? 0) <
-          ((t2y as Record<string, unknown>).value as number ?? 0)
-        : null,
+      spread2s10s:
+        t2y && t10y
+          ? (((t10y as Record<string, unknown>).value as number) ?? 0) -
+            (((t2y as Record<string, unknown>).value as number) ?? 0)
+          : null,
+      inverted:
+        t2y && t10y
+          ? (((t10y as Record<string, unknown>).value as number) ?? 0) <
+            (((t2y as Record<string, unknown>).value as number) ?? 0)
+          : null,
     };
 
-    return NextResponse.json({
-      data: fedData,
-      yieldCurve,
-      count: fedData.length,
-      _lineage: result.lineage,
-      _cached: result.cached,
-    }, {
-      headers: { 'Cache-Control': 'public, s-maxage=900, stale-while-revalidate=1800' },
-    });
+    return NextResponse.json(
+      {
+        data: fedData,
+        yieldCurve,
+        count: fedData.length,
+        _lineage: result.lineage,
+        _cached: result.cached,
+      },
+      {
+        headers: { 'Cache-Control': 'public, s-maxage=900, stale-while-revalidate=1800' },
+      },
+    );
   } catch (error) {
     console.error('[Macro/Fed] Error:', error);
     return NextResponse.json(
-      { error: 'Failed to fetch Fed data', message: error instanceof Error ? error.message : 'Unknown' },
+      {
+        error: 'Failed to fetch Fed data',
+        message: error instanceof Error ? error.message : 'Unknown',
+      },
       { status: 502 },
     );
   }

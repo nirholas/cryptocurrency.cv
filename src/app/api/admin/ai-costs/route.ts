@@ -19,6 +19,7 @@
  * Requires admin auth (X-Admin-Key header or Authorization: Bearer token).
  */
 
+// force-dynamic: admin dashboard, always fresh
 export const dynamic = 'force-dynamic';
 export const runtime = 'nodejs';
 

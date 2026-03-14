@@ -10,13 +10,13 @@
 
 /**
  * X/Twitter Sentiment Analysis API
- * 
+ *
  * Get real-time sentiment analysis from your influencer lists.
  * Uses Nitter RSS feeds (no API key required) + Groq AI for analysis.
- * 
+ *
  * GET /api/social/x/sentiment?list=default - Get sentiment for a list
  * GET /api/social/x/sentiment?list=default&refresh=true - Force refresh
- * 
+ *
  * @example Response:
  * {
  *   "aggregateSentiment": 0.42,
@@ -34,17 +34,14 @@ import {
   DEFAULT_CRYPTO_INFLUENCERS,
 } from '@/lib/x-scraper';
 
-export const dynamic = 'force-dynamic';
+export const revalidate = 60; // ISR: sentiment data refreshes every 1 min
 export const maxDuration = 60; // Allow longer execution for scraping
 
 export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;
   const listId = searchParams.get('list') || 'default';
   const forceRefresh = searchParams.get('refresh') === 'true';
-  const tweetsPerUser = Math.min(
-    parseInt(searchParams.get('tweets') || '10', 10),
-    20
-  );
+  const tweetsPerUser = Math.min(parseInt(searchParams.get('tweets') || '10', 10), 20);
 
   try {
     // Check if list exists
@@ -56,7 +53,7 @@ export async function GET(request: NextRequest) {
           error: `List not found: ${listId}`,
           hint: 'Use GET /api/social/x/lists to see available lists',
         },
-        { status: 404 }
+        { status: 404 },
       );
     }
 
@@ -69,7 +66,7 @@ export async function GET(request: NextRequest) {
     if (!result) {
       return NextResponse.json(
         { success: false, error: 'Failed to fetch sentiment' },
-        { status: 500 }
+        { status: 500 },
       );
     }
 
@@ -109,14 +106,17 @@ export async function GET(request: NextRequest) {
     });
   } catch (error) {
     console.error('Sentiment API error:', error);
-    
-    return NextResponse.json({
-      error: 'Failed to fetch sentiment data',
-      message: 'X/Twitter API or Nitter instances unavailable',
-      meta: {
-        endpoint: '/api/social/x/sentiment',
+
+    return NextResponse.json(
+      {
+        error: 'Failed to fetch sentiment data',
+        message: 'X/Twitter API or Nitter instances unavailable',
+        meta: {
+          endpoint: '/api/social/x/sentiment',
+        },
       },
-    }, { status: 503 });
+      { status: 503 },
+    );
   }
 }
 

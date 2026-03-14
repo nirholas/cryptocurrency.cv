@@ -17,6 +17,7 @@
 import { type NextRequest, NextResponse } from "next/server";
 import { getKeyById, isKvConfigured } from "@/lib/api-keys";
 
+// force-dynamic: reads x-api-key header for user-specific data
 export const dynamic = "force-dynamic";
 
 export async function GET(request: NextRequest) {

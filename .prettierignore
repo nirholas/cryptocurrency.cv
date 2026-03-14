@@ -1,0 +1,32 @@
+# Build outputs
+.next/
+dist/
+out/
+build/
+coverage/
+
+# Dependencies
+node_modules/
+pnpm-lock.yaml
+
+# Generated
+drizzle/
+archive/
+public/sw.js
+public/workbox-*.js
+
+# SDK packages (have their own formatting)
+sdk/
+mcp/
+cli/
+widget/
+
+# Non-code
+*.md
+*.json
+*.yaml
+*.yml
+*.svg
+*.png
+*.ico
+LICENSE

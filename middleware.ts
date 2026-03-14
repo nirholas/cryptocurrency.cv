@@ -156,7 +156,8 @@ export default async function middleware(request: NextRequest) {
 
   // Browser-based trusted origin bypass (Origin is reliable in browser context)
   const reqOrigin = request.headers.get("origin") ?? "";
-  const trustedOriginRequest = !speraxos && !!reqOrigin && isTrustedOrigin(reqOrigin);
+  const trustedOriginRequest =
+    !speraxos && !!reqOrigin && isTrustedOrigin(reqOrigin);
 
   const headers: Record<string, string> = {
     "X-Request-ID": requestId,
@@ -190,7 +191,11 @@ export default async function middleware(request: NextRequest) {
   // Bot check — skip for marketplace SPI + Alibaba API Gateway (X-Ca-Key header)
   const ua = request.headers.get("user-agent") || "";
   const isAlibabaGateway = !!request.headers.get("x-ca-key");
-  if (isBlockedBot(ua) && !pathname.startsWith("/api/marketplace/") && !isAlibabaGateway) {
+  if (
+    isBlockedBot(ua) &&
+    !pathname.startsWith("/api/marketplace/") &&
+    !isAlibabaGateway
+  ) {
     return NextResponse.json(
       { error: "Forbidden", code: "BOT_BLOCKED", requestId },
       { status: 403, headers },
@@ -568,7 +573,10 @@ export default async function middleware(request: NextRequest) {
 
   // Forward tier metadata to route handlers
   const isFreeTierRequest =
-    !speraxos && !trustedOriginRequest && matchesPattern(pathname, FREE_TIER_PATTERNS) && !resolvedKeyId;
+    !speraxos &&
+    !trustedOriginRequest &&
+    matchesPattern(pathname, FREE_TIER_PATTERNS) &&
+    !resolvedKeyId;
   const requestHeaders = new Headers(request.headers);
   if (isFreeTierRequest) requestHeaders.set("x-free-tier", "1");
   if (apiClient) requestHeaders.set("x-api-client", "1");

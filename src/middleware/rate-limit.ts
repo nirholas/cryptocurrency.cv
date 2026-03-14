@@ -19,12 +19,21 @@
 
 import { Ratelimit } from '@upstash/ratelimit';
 import { Redis } from '@upstash/redis';
+import { NextResponse } from 'next/server';
+import type { MiddlewareContext, MiddlewareHandler } from './types';
 import {
   PUBLIC_RATE_LIMIT,
   API_CLIENT_RATE_LIMIT,
   REPEAT_429_THRESHOLD,
   REPEAT_429_WINDOW_MS,
   REPEAT_429_BLOCK_MS,
+  FREE_TIER_PATTERNS,
+  EXEMPT_PATTERNS,
+  MAX_BODY_SIZE,
+  TIER_LIMITS,
+  REGISTER_RATE_LIMIT,
+  matchesPattern,
+  findRouteRateLimit,
 } from './config';
 
 // =============================================================================
@@ -39,7 +48,10 @@ interface RateLimitOffender {
 const offenderMap = new Map<string, RateLimitOffender>();
 
 // In-memory fallback when Redis/Upstash is unavailable
-interface FallbackEntry { count: number; resetAt: number; }
+interface FallbackEntry {
+  count: number;
+  resetAt: number;
+}
 const inMemoryFallbackMap = new Map<string, FallbackEntry>();
 
 const MAX_OFFENDER_MAP_SIZE = 10_000;
@@ -229,3 +241,206 @@ export async function checkTierRateLimit(
     return inMemoryRateCheck(`tier-fallback:${keyId}`, fallbackLimit, 86400000);
   }
 }
+
+// =============================================================================
+// COMPOSABLE HANDLER
+// =============================================================================
+
+/**
+ * Middleware handler: all rate limiting — register, body size, tier-aware,
+ * free-tier, per-route, and usage tracking.
+ */
+export const rateLimitHandler: MiddlewareHandler = async (ctx) => {
+  if (!ctx.isApiRoute) return ctx;
+
+  const { pathname } = ctx;
+
+  // /api/register rate limit — prevent abuse / key enumeration
+  if (pathname === '/api/register' && !ctx.isSperaxOS && !ctx.isTrustedOrigin) {
+    const regIp = ctx.clientIp;
+    const regRl = await checkRateLimit(`register:${regIp}`, 'public');
+    if (regRl.remaining <= 0 || !regRl.allowed) {
+      const retry = Math.ceil((regRl.resetAt - Date.now()) / 1000);
+      return NextResponse.json(
+        {
+          error: 'Rate Limit Exceeded',
+          code: 'REGISTER_RATE_LIMIT',
+          message: `API key registration is limited to ${REGISTER_RATE_LIMIT.requests} requests per hour per IP`,
+          retryAfter: retry,
+          requestId: ctx.requestId,
+        },
+        {
+          status: 429,
+          headers: { ...ctx.headers, 'Retry-After': retry.toString() },
+        },
+      );
+    }
+  }
+
+  // Exempt patterns — skip rate limiting / size check
+  if (matchesPattern(pathname, EXEMPT_PATTERNS)) return ctx;
+
+  // Body size check
+  if (['POST', 'PUT', 'PATCH'].includes(ctx.request.method)) {
+    const len = ctx.request.headers.get('content-length');
+    if (len && parseInt(len, 10) > MAX_BODY_SIZE) {
+      return NextResponse.json(
+        {
+          error: 'Request Entity Too Large',
+          code: 'REQUEST_TOO_LARGE',
+          requestId: ctx.requestId,
+        },
+        { status: 413, headers: ctx.headers },
+      );
+    }
+  }
+
+  // Tier-aware rate limiting
+  if (ctx.isSperaxOS || ctx.isTrustedOrigin || ctx.isAlibabaGateway) {
+    ctx.headers['X-RateLimit-Limit'] = 'unlimited';
+    ctx.headers['X-RateLimit-Remaining'] = 'unlimited';
+  } else if (ctx.apiKeyTier && ctx.apiKeyId) {
+    const tierLimit = TIER_LIMITS[ctx.apiKeyTier] ?? TIER_LIMITS.free;
+    const rl = await checkTierRateLimit(ctx.apiKeyId, tierLimit.daily);
+    ctx.headers['X-RateLimit-Limit'] = tierLimit.daily.toString();
+    ctx.headers['X-RateLimit-Remaining'] = rl.remaining.toString();
+    ctx.headers['X-RateLimit-Reset'] = new Date(rl.resetAt).toISOString();
+    ctx.headers['X-RateLimit-Tier'] = ctx.apiKeyTier;
+    ctx.headers['X-Key-Tier'] = ctx.apiKeyTier;
+
+    if (!rl.allowed) {
+      const retry = Math.ceil((rl.resetAt - Date.now()) / 1000);
+      if (record429(ctx.clientIp)) {
+        return NextResponse.json(
+          {
+            error: 'Forbidden',
+            code: 'REPEAT_RATE_LIMIT_ABUSE',
+            message: 'Too many rate-limited requests. You are temporarily blocked.',
+            retryAfter: Math.ceil(REPEAT_429_BLOCK_MS / 1000),
+            requestId: ctx.requestId,
+          },
+          {
+            status: 403,
+            headers: {
+              ...ctx.headers,
+              'Retry-After': Math.ceil(REPEAT_429_BLOCK_MS / 1000).toString(),
+            },
+          },
+        );
+      }
+      return NextResponse.json(
+        {
+          error: 'Rate Limit Exceeded',
+          code: 'RATE_LIMIT_EXCEEDED',
+          tier: ctx.apiKeyTier,
+          limit: tierLimit.daily,
+          retryAfter: retry,
+          upgrade:
+            ctx.apiKeyTier === 'free'
+              ? 'Upgrade to Pro for 50,000 req/day at /api/keys/upgrade'
+              : ctx.apiKeyTier === 'pro'
+                ? 'Upgrade to Enterprise for 500,000 req/day'
+                : undefined,
+          requestId: ctx.requestId,
+        },
+        {
+          status: 429,
+          headers: { ...ctx.headers, 'Retry-After': retry.toString() },
+        },
+      );
+    }
+
+    // Usage tracking (fire-and-forget)
+    try {
+      const creds = getRedisCredentials();
+      if (creds) {
+        const redis = new Redis(creds);
+        const today = new Date().toISOString().split('T')[0];
+        const month = today.substring(0, 7);
+        const pipe = redis.pipeline();
+        pipe.incr(`usage:${ctx.apiKeyId}:${today}`);
+        pipe.expire(`usage:${ctx.apiKeyId}:${today}`, 172800);
+        pipe.incr(`usage:${ctx.apiKeyId}:${month}`);
+        pipe.expire(`usage:${ctx.apiKeyId}:${month}`, 3024000);
+        pipe.incr(`usage:${ctx.apiKeyId}:total`);
+        pipe.incr(`stats:requests:${today}`);
+        pipe.incr(`stats:requests:${month}`);
+        pipe.exec().catch(() => {});
+      }
+    } catch {
+      // Usage tracking failure is non-fatal
+    }
+  } else if (matchesPattern(pathname, FREE_TIER_PATTERNS)) {
+    const tier = ctx.isApiClient ? 'api' : 'public';
+    const rl = await checkRateLimit(`${ctx.clientIp}:${pathname}`, tier);
+    ctx.headers['X-RateLimit-Limit'] = rl.limit.toString();
+    ctx.headers['X-RateLimit-Remaining'] = rl.remaining.toString();
+    ctx.headers['X-RateLimit-Reset'] = new Date(rl.resetAt).toISOString();
+    ctx.headers['X-RateLimit-Tier'] = tier;
+
+    if (!rl.allowed) {
+      const retry = Math.ceil((rl.resetAt - Date.now()) / 1000);
+      if (record429(ctx.clientIp)) {
+        return NextResponse.json(
+          {
+            error: 'Forbidden',
+            code: 'REPEAT_RATE_LIMIT_ABUSE',
+            message: 'Too many rate-limited requests. You are temporarily blocked.',
+            retryAfter: Math.ceil(REPEAT_429_BLOCK_MS / 1000),
+            requestId: ctx.requestId,
+          },
+          {
+            status: 403,
+            headers: {
+              ...ctx.headers,
+              'Retry-After': Math.ceil(REPEAT_429_BLOCK_MS / 1000).toString(),
+            },
+          },
+        );
+      }
+      return NextResponse.json(
+        {
+          error: 'Rate Limit Exceeded',
+          code: 'RATE_LIMIT_EXCEEDED',
+          retryAfter: retry,
+          tier,
+          requestId: ctx.requestId,
+        },
+        {
+          status: 429,
+          headers: { ...ctx.headers, 'Retry-After': retry.toString() },
+        },
+      );
+    }
+  }
+
+  // Per-route rate limits for expensive endpoints
+  if (!ctx.isSperaxOS && !ctx.isTrustedOrigin && !ctx.isAlibabaGateway) {
+    const routeLimit = findRouteRateLimit(pathname);
+    if (routeLimit) {
+      const routeKey = ctx.apiKeyId
+        ? `route:${routeLimit.label}:${ctx.apiKeyId}`
+        : `route:${routeLimit.label}:${ctx.clientIp}`;
+      const routeRl = await checkRateLimit(routeKey, 'public');
+      if (!routeRl.allowed) {
+        const retry = Math.ceil((routeRl.resetAt - Date.now()) / 1000);
+        return NextResponse.json(
+          {
+            error: 'Rate Limit Exceeded',
+            code: 'ROUTE_RATE_LIMIT',
+            message: `This endpoint is limited to ${routeLimit.requests} requests per minute`,
+            endpoint: routeLimit.label,
+            retryAfter: retry,
+            requestId: ctx.requestId,
+          },
+          {
+            status: 429,
+            headers: { ...ctx.headers, 'Retry-After': retry.toString() },
+          },
+        );
+      }
+    }
+  }
+
+  return ctx;
+};

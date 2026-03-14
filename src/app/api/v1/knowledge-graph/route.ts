@@ -20,7 +20,7 @@
  * POST /api/v1/knowledge-graph/ingest — Ingest an article
  */
 
-export const dynamic = 'force-dynamic';
+export const revalidate = 600; // ISR: knowledge graph refreshes every 10 min
 export const runtime = 'nodejs';
 
 import { NextResponse } from 'next/server';

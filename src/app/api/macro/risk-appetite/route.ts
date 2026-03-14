@@ -18,28 +18,27 @@
 import { NextResponse } from 'next/server';
 import { macroChain } from '@/lib/providers/adapters/macro';
 
-export const revalidate = 300;
-export const dynamic = 'force-dynamic';
+export const revalidate = 300; // ISR: risk appetite refreshes every 5 min
 
 export async function GET() {
   try {
     const result = await macroChain.fetch({});
 
-    return NextResponse.json({
-      ...result.data.riskAppetite,
-      indicators: result.data.indicators
-        .filter(i => ['VIX', 'DXY', 'US10Y', 'US2Y', 'SP500'].includes(i.id))
-        .map(i => ({ id: i.id, name: i.name, value: i.value, change: i.changePercent })),
-      source: result.lineage.provider,
-      timestamp: new Date().toISOString(),
-    }, {
-      headers: { 'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=600' },
-    });
+    return NextResponse.json(
+      {
+        ...result.data.riskAppetite,
+        indicators: result.data.indicators
+          .filter((i) => ['VIX', 'DXY', 'US10Y', 'US2Y', 'SP500'].includes(i.id))
+          .map((i) => ({ id: i.id, name: i.name, value: i.value, change: i.changePercent })),
+        source: result.lineage.provider,
+        timestamp: new Date().toISOString(),
+      },
+      {
+        headers: { 'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=600' },
+      },
+    );
   } catch (error) {
     console.error('[Risk Appetite] Error:', error);
-    return NextResponse.json(
-      { error: 'Failed to compute risk appetite' },
-      { status: 502 },
-    );
+    return NextResponse.json({ error: 'Failed to compute risk appetite' }, { status: 502 });
   }
 }

@@ -34,6 +34,7 @@ import {
   getServerStatus,
 } from '@/lib/x402';
 
+// force-dynamic: checks live facilitator connectivity
 export const dynamic = 'force-dynamic';
 
 export async function GET() {

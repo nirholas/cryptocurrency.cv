@@ -20,27 +20,32 @@
 import { NextResponse } from 'next/server';
 import { macroChain } from '@/lib/providers/adapters/macro';
 
-export const revalidate = 300;
-export const dynamic = 'force-dynamic';
+export const revalidate = 300; // ISR: macro data refreshes every 5 min
 
 export async function GET() {
   try {
     const result = await macroChain.fetch({});
 
-    return NextResponse.json({
-      ...result.data,
-      _lineage: result.lineage,
-      _cached: result.cached,
-      _latencyMs: result.latencyMs,
-    }, {
-      headers: {
-        'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=600',
+    return NextResponse.json(
+      {
+        ...result.data,
+        _lineage: result.lineage,
+        _cached: result.cached,
+        _latencyMs: result.latencyMs,
       },
-    });
+      {
+        headers: {
+          'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=600',
+        },
+      },
+    );
   } catch (error) {
     console.error('[Macro] Fetch error:', error);
     return NextResponse.json(
-      { error: 'Failed to fetch macro data', message: error instanceof Error ? error.message : 'Unknown' },
+      {
+        error: 'Failed to fetch macro data',
+        message: error instanceof Error ? error.message : 'Unknown',
+      },
       { status: 502 },
     );
   }

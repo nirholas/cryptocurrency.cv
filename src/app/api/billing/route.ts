@@ -16,7 +16,7 @@
  */
 import { NextResponse } from 'next/server';
 
-export const dynamic = 'force-dynamic';
+export const revalidate = 300; // ISR: payment config refreshes every 5 min
 
 const RECEIVE_ADDRESS =
   process.env.X402_RECEIVE_ADDRESS ?? '0x40252CFDF8B20Ed757D61ff157719F33Ec332402';

@@ -18,8 +18,7 @@
 import { NextResponse } from 'next/server';
 import { computeCorrelations, type TimeSeries } from '@/lib/macro/correlation';
 
-export const revalidate = 3600; // 1 hour
-export const dynamic = 'force-dynamic';
+export const revalidate = 600; // ISR: correlation data refreshes every 10 min
 
 export async function GET() {
   try {
@@ -56,34 +55,46 @@ export async function GET() {
             const json = await res.json();
             const tsData = json['Time Series (Daily)'];
             if (tsData) {
-              const entries = Object.entries(tsData).slice(0, 90) as [string, Record<string, string>][];
+              const entries = Object.entries(tsData).slice(0, 90) as [
+                string,
+                Record<string, string>,
+              ][];
               macroPrices[ids[i]] = {
                 dates: entries.map(([d]) => d),
                 values: entries.map(([, v]) => parseFloat(v['4. close'])),
               };
             }
           }
-          await new Promise(r => setTimeout(r, 500)); // Rate limit
-        } catch { /* skip */ }
+          await new Promise((r) => setTimeout(r, 500)); // Rate limit
+        } catch {
+          /* skip */
+        }
       }
     }
 
     const correlations = computeCorrelations(btcPrices, macroPrices);
 
-    return NextResponse.json({
-      correlations,
-      pairs: correlations.length,
-      note: correlations.length === 0
-        ? 'Set ALPHA_VANTAGE_API_KEY for macro correlation data'
-        : undefined,
-      timestamp: new Date().toISOString(),
-    }, {
-      headers: { 'Cache-Control': 'public, s-maxage=3600, stale-while-revalidate=7200' },
-    });
+    return NextResponse.json(
+      {
+        correlations,
+        pairs: correlations.length,
+        note:
+          correlations.length === 0
+            ? 'Set ALPHA_VANTAGE_API_KEY for macro correlation data'
+            : undefined,
+        timestamp: new Date().toISOString(),
+      },
+      {
+        headers: { 'Cache-Control': 'public, s-maxage=3600, stale-while-revalidate=7200' },
+      },
+    );
   } catch (error) {
     console.error('[Macro Correlations] Error:', error);
     return NextResponse.json(
-      { error: 'Failed to compute correlations', message: error instanceof Error ? error.message : 'Unknown' },
+      {
+        error: 'Failed to compute correlations',
+        message: error instanceof Error ? error.message : 'Unknown',
+      },
       { status: 502 },
     );
   }

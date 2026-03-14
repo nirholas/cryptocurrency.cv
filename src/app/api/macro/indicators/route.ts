@@ -23,8 +23,7 @@ import { NextResponse } from 'next/server';
 import { macroChain } from '@/lib/providers/adapters/macro';
 import type { MacroIndicator } from '@/lib/providers/adapters/macro/types';
 
-export const revalidate = 300;
-export const dynamic = 'force-dynamic';
+export const revalidate = 600; // ISR: macro indicators refresh every 10 min
 
 export async function GET(request: Request) {
   try {
@@ -37,26 +36,36 @@ export async function GET(request: Request) {
 
     // Filter by requested indicators
     if (filterStr) {
-      const requested = filterStr.split(',').map(s => s.trim().toUpperCase());
+      const requested = filterStr.split(',').map((s) => s.trim().toUpperCase());
       indicators = indicators.filter((ind: MacroIndicator) => {
-        const sym = ((ind as MacroIndicator & { symbol?: string }).symbol || ind.name || '').toUpperCase();
-        return requested.some(r => sym.includes(r));
+        const sym = (
+          (ind as MacroIndicator & { symbol?: string }).symbol ||
+          ind.name ||
+          ''
+        ).toUpperCase();
+        return requested.some((r) => sym.includes(r));
       });
     }
 
-    return NextResponse.json({
-      data: indicators,
-      count: indicators.length,
-      period,
-      _lineage: result.lineage,
-      _cached: result.cached,
-    }, {
-      headers: { 'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=600' },
-    });
+    return NextResponse.json(
+      {
+        data: indicators,
+        count: indicators.length,
+        period,
+        _lineage: result.lineage,
+        _cached: result.cached,
+      },
+      {
+        headers: { 'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=600' },
+      },
+    );
   } catch (error) {
     console.error('[Macro/Indicators] Error:', error);
     return NextResponse.json(
-      { error: 'Failed to fetch macro indicators', message: error instanceof Error ? error.message : 'Unknown' },
+      {
+        error: 'Failed to fetch macro indicators',
+        message: error instanceof Error ? error.message : 'Unknown',
+      },
       { status: 502 },
     );
   }

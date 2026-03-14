@@ -145,7 +145,7 @@ export async function generateSignature(payload: string, secret: string): Promis
     keyData,
     { name: 'HMAC', hash: 'SHA-256' },
     false,
-    ['sign']
+    ['sign'],
   );
 
   const signature = await crypto.subtle.sign('HMAC', key, messageData);
@@ -159,7 +159,7 @@ export async function generateSignature(payload: string, secret: string): Promis
 export async function verifySignature(
   payload: string,
   signature: string,
-  secret: string
+  secret: string,
 ): Promise<boolean> {
   const expectedSignature = await generateSignature(payload, secret);
 
@@ -199,19 +199,87 @@ function generateSecret(): string {
 // ============================================================================
 
 /**
+ * Check if a URL points to a private/internal network (SSRF protection).
+ */
+function isPrivateUrl(url: string): boolean {
+  try {
+    const parsed = new URL(url);
+    const hostname = parsed.hostname.toLowerCase();
+
+    // Block non-HTTPS schemes (except for testing)
+    if (!['https:'].includes(parsed.protocol)) {
+      return true;
+    }
+
+    // Block localhost and loopback
+    if (
+      hostname === 'localhost' ||
+      hostname === '127.0.0.1' ||
+      hostname === '[::1]' ||
+      hostname === '::1' ||
+      hostname === '0.0.0.0' ||
+      hostname.endsWith('.localhost') ||
+      hostname.endsWith('.local')
+    ) {
+      return true;
+    }
+
+    // Block private IPv4 ranges
+    const ipv4Match = hostname.match(/^(\d+)\.(\d+)\.(\d+)\.(\d+)$/);
+    if (ipv4Match) {
+      const [, a, b] = ipv4Match.map(Number);
+      if (
+        a === 10 || // 10.0.0.0/8
+        (a === 172 && b >= 16 && b <= 31) || // 172.16.0.0/12
+        (a === 192 && b === 168) || // 192.168.0.0/16
+        a === 127 || // 127.0.0.0/8
+        a === 0 || // 0.0.0.0/8
+        (a === 169 && b === 254) || // 169.254.0.0/16 (link-local)
+        (a === 100 && b >= 64 && b <= 127) // 100.64.0.0/10 (CGN)
+      ) {
+        return true;
+      }
+    }
+
+    // Block AWS/cloud metadata endpoints
+    if (hostname === '169.254.169.254' || hostname === 'metadata.google.internal') {
+      return true;
+    }
+
+    // Block nip.io, sslip.io and similar DNS rebinding services
+    if (
+      hostname.endsWith('.nip.io') ||
+      hostname.endsWith('.sslip.io') ||
+      hostname.endsWith('.xip.io')
+    ) {
+      return true;
+    }
+
+    return false;
+  } catch {
+    return true;
+  }
+}
+
+/**
  * Register a new webhook for an API key
  */
 export async function registerWebhook(
   keyId: string,
   url: string,
   events: WebhookEvent[],
-  metadata?: Record<string, unknown>
+  metadata?: Record<string, unknown>,
 ): Promise<WebhookSubscription> {
   // Validate URL
   try {
     new URL(url);
   } catch {
     throw new Error('Invalid webhook URL');
+  }
+
+  // SSRF protection: block private/internal URLs
+  if (isPrivateUrl(url)) {
+    throw new Error('Webhook URL must be a public HTTPS endpoint');
   }
 
   // Validate events
@@ -306,7 +374,7 @@ export async function getWebhookById(webhookId: string): Promise<WebhookSubscrip
 export async function updateWebhook(
   webhookId: string,
   keyId: string,
-  updates: Partial<Pick<WebhookSubscription, 'url' | 'events' | 'active' | 'metadata'>>
+  updates: Partial<Pick<WebhookSubscription, 'url' | 'events' | 'active' | 'metadata'>>,
 ): Promise<WebhookSubscription | null> {
   const webhook = await getWebhookById(webhookId);
 
@@ -318,6 +386,10 @@ export async function updateWebhook(
       new URL(updates.url);
     } catch {
       throw new Error('Invalid webhook URL');
+    }
+    // SSRF protection: block private/internal URLs
+    if (isPrivateUrl(updates.url)) {
+      throw new Error('Webhook URL must be a public HTTPS endpoint');
     }
   }
 
@@ -440,7 +512,7 @@ export async function deleteWebhook(webhookId: string, keyId: string): Promise<b
  */
 export async function regenerateWebhookSecret(
   webhookId: string,
-  keyId: string
+  keyId: string,
 ): Promise<string | null> {
   const webhook = await getWebhookById(webhookId);
   if (webhook?.keyId !== keyId) return null;
@@ -466,7 +538,7 @@ export async function regenerateWebhookSecret(
  */
 async function deliverWebhook(
   webhook: WebhookSubscription,
-  payload: WebhookPayload
+  payload: WebhookPayload,
 ): Promise<WebhookDeliveryLog> {
   const startTime = Date.now();
   const payloadStr = JSON.stringify(payload);
@@ -548,7 +620,7 @@ async function deliverWebhook(
  */
 export async function sendWebhook(
   event: WebhookEvent,
-  data: unknown
+  data: unknown,
 ): Promise<WebhookDeliveryLog[]> {
   const payload: WebhookPayload = {
     event,
@@ -607,7 +679,7 @@ export async function getDeliveryLogs(webhookId: string): Promise<WebhookDeliver
  */
 export async function testWebhook(
   keyId: string,
-  webhookId: string
+  webhookId: string,
 ): Promise<WebhookDeliveryLog | null> {
   const webhook = await getWebhookById(webhookId);
   if (webhook?.keyId !== keyId) return null;
@@ -769,7 +841,7 @@ export function createWebhook(
   userId: string,
   url: string,
   events: WebhookEvent[],
-  metadata?: Record<string, unknown>
+  metadata?: Record<string, unknown>,
 ): WebhookSubscription {
   // Validate URL
   try {
