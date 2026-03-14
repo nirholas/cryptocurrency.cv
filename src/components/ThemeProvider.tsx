@@ -49,7 +49,7 @@ export function ThemeScript({ nonce }: { nonce?: string }) {
           var dark = theme === 'dark' || (theme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches);
           if (dark) root.classList.add('dark');
         }
-      } catch(e) {}
+      } catch(e) { /* localStorage may be unavailable in private browsing */ }
     })();
   `;
   return <script nonce={nonce} dangerouslySetInnerHTML={{ __html: script }} />;

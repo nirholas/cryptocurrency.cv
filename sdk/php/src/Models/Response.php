@@ -2,7 +2,7 @@
 
 namespace CryptoNews\Models;
 
-class Response
+class Response implements \JsonSerializable
 {
     /** @var array<string, mixed> */
     private array $data;
@@ -49,6 +49,14 @@ class Response
      * @return array<string, mixed>
      */
     public function toArray(): array
+    {
+        return $this->data;
+    }
+
+    /**
+     * @return array<string, mixed>
+     */
+    public function jsonSerialize(): array
     {
         return $this->data;
     }

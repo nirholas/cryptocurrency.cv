@@ -256,8 +256,7 @@ http://localhost:3000/api/news を開く
 
 | 変数 | デフォルト | 説明 |
 |----------|---------|-------------|
-| `GROQ_API_KEY` | - | i18n自動翻訳を有効化（18言語）。**無料！** [console.groq.com/keys](https://console.groq.com/keys)で取得 |
-| `FEATURE_TRANSLATION` | `false` | `true`に設定してリアルタイム翻訳を有効化 |
+| `GROQ_API_KEY` | - | AI要約・分類・リアルタイム翻訳を有効化（40+言語）。**無料！** [console.groq.com/keys](https://console.groq.com/keys)で取得 |
 
 ---
 

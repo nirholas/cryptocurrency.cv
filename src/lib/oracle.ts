@@ -200,7 +200,7 @@ const STRUCTURED_RESPONSE_PROMPT = `Additionally, after your natural language re
  * Generate a unique query ID
  */
 function generateQueryId(): string {
-  return `oracle_${Date.now()}_${Math.random().toString(36).substring(2, 9)}`;
+  return `oracle_${Date.now()}_${crypto.randomUUID().slice(0, 8)}`;
 }
 
 /**
@@ -371,7 +371,7 @@ async function getRecentNews(maxArticles: number): Promise<NewsArticle[]> {
  * Get or create a session
  */
 async function getOrCreateSession(sessionId?: string): Promise<OracleSession> {
-  const id = sessionId || `session_${Date.now()}_${Math.random().toString(36).substring(2, 9)}`;
+  const id = sessionId || `session_${Date.now()}_${crypto.randomUUID().slice(0, 8)}`;
   
   const existing = await db.get<OracleSession>(`oracle:session:${id}`);
   

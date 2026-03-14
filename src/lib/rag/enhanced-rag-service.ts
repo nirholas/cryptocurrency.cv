@@ -422,7 +422,7 @@ export class EnhancedRAGService {
     let ingested = 0;
 
     for (const article of articles) {
-      const id = article.id || `news-${Date.now()}-${Math.random().toString(36).slice(2)}`;
+      const id = article.id || `news-${Date.now()}-${crypto.randomUUID().slice(0, 8)}`;
       const content = article.title + (article.description ? '\n' + article.description : '');
       const embedding = await generateEmbedding(content);
 

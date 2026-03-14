@@ -2,6 +2,7 @@
 
 namespace CryptoNews;
 
+use CryptoNews\Cache\CacheInterface;
 use CryptoNews\Endpoints\DeFi;
 use CryptoNews\Endpoints\Market;
 use CryptoNews\Endpoints\News;
@@ -18,10 +19,20 @@ class Client
     public DeFi $defi;
     public OnChain $onchain;
 
-    public function __construct(string $baseUrl = 'https://cryptocurrency.cv', int $timeout = 30)
-    {
+    /**
+     * @param string $baseUrl API base URL
+     * @param int $timeout Request timeout in seconds
+     * @param CacheInterface|null $cache Optional cache implementation
+     * @param int $cacheTtl Default cache TTL in seconds (0 to disable)
+     */
+    public function __construct(
+        string $baseUrl = 'https://cryptocurrency.cv',
+        int $timeout = 30,
+        ?CacheInterface $cache = null,
+        int $cacheTtl = 60
+    ) {
         $this->baseUrl = rtrim($baseUrl, '/');
-        $this->http = new HttpClient($this->baseUrl, $timeout);
+        $this->http = new HttpClient($this->baseUrl, $timeout, 2, $cache, $cacheTtl);
         $this->news = new News($this->http);
         $this->market = new Market($this->http);
         $this->defi = new DeFi($this->http);
@@ -68,5 +79,15 @@ class Client
             return $this->baseUrl . '/api/atom';
         }
         return $this->baseUrl . '/api/atom?feed=' . urlencode($feed);
+    }
+
+    /**
+     * Get rate limit info from the most recent API response.
+     *
+     * @return array{remaining: int|null, limit: int|null, reset: int|null}
+     */
+    public function rateLimitInfo(): array
+    {
+        return $this->http->getRateLimitInfo();
     }
 }

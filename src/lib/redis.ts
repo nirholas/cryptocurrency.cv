@@ -17,8 +17,10 @@
 import { newsCache, aiCache, translationCache, withCache as memoryWithCache } from './cache';
 import { cacheLogger } from '@/lib/logger';
 
+import type { RedisClientType } from 'redis';
+
 // Redis client placeholder - initialized lazily
-let _redisClient: any = null;
+let _redisClient: RedisClientType | null = null;
 let redisAvailable = false;
 let initPromise: Promise<boolean> | null = null;
 

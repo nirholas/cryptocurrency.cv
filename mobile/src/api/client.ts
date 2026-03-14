@@ -91,7 +91,7 @@ class CryptoNewsClient {
 
     const response = await fetch(url.toString(), {
       headers: {
-        'Accept': 'application/json',
+        Accept: 'application/json',
         'User-Agent': 'CryptoNews-Mobile/1.0',
       },
     });

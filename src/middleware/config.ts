@@ -199,7 +199,7 @@ export function matchesPattern(pathname: string, patterns: RegExp[]): boolean {
 }
 
 export function generateRequestId(): string {
-  return `req_${Date.now().toString(36)}_${Math.random().toString(36).slice(2, 10)}`;
+  return `req_${Date.now().toString(36)}_${crypto.randomUUID().slice(0, 8)}`;
 }
 
 export function getClientIp(request: {

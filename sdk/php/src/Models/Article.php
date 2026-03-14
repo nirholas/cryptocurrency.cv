@@ -2,7 +2,7 @@
 
 namespace CryptoNews\Models;
 
-class Article
+class Article implements \JsonSerializable
 {
     public string $title;
     public string $link;
@@ -43,5 +43,13 @@ class Article
             'sentiment' => $this->sentiment,
             'publishedAt' => $this->publishedAt,
         ];
+    }
+
+    /**
+     * @return array<string, mixed>
+     */
+    public function jsonSerialize(): array
+    {
+        return $this->toArray();
     }
 }

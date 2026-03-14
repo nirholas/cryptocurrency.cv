@@ -130,7 +130,7 @@ class JobQueue {
     options?: { priority?: JobPriority; maxAttempts?: number; metadata?: Record<string, unknown> },
   ): Job<T> {
     const job: Job<T> = {
-      id: `${type}:${Date.now()}:${Math.random().toString(36).slice(2, 8)}`,
+      id: `${type}:${Date.now()}:${crypto.randomUUID().slice(0, 8)}`,
       type,
       payload,
       status: 'pending',

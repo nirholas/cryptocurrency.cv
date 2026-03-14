@@ -14,6 +14,10 @@ import {
   ChevronRight,
   Sparkles,
   Radio,
+  Share2,
+  Link2,
+  Check,
+  Filter,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import {
@@ -137,6 +141,16 @@ That's your briefing. Stay informed, stay safe, and we'll see you tomorrow.`,
 
 const EPISODES_PER_PAGE = 4;
 
+const FORMAT_FILTERS = [
+  { value: "all", label: "All" },
+  { value: "flash", label: "Flash" },
+  { value: "deep-dive", label: "Deep Dive" },
+  { value: "market-open", label: "Market Open" },
+  { value: "weekly-recap", label: "Weekly Recap" },
+] as const;
+
+type FormatFilter = (typeof FORMAT_FILTERS)[number]["value"];
+
 /* ---------- Helpers ---------- */
 
 function formatDurationShort(seconds: number) {
@@ -168,6 +182,9 @@ export default function PodcastClient() {
   const [page, setPage] = useState(0);
   const [briefingPlaying, setBriefingPlaying] = useState(false);
   const [showTranscript, setShowTranscript] = useState(false);
+  const [formatFilter, setFormatFilter] = useState<FormatFilter>("all");
+  const [copiedEpisodeId, setCopiedEpisodeId] = useState<string | null>(null);
+  const [showShareMenu, setShowShareMenu] = useState<string | null>(null);
 
   // Fetch episodes
   useEffect(() => {
@@ -215,15 +232,44 @@ export default function PodcastClient() {
     };
   }, []);
 
-  const totalPages = Math.ceil(episodes.length / EPISODES_PER_PAGE);
-  const paginatedEpisodes = episodes.slice(
+  const filteredEpisodes =
+    formatFilter === "all"
+      ? episodes
+      : episodes.filter((ep) => ep.format === formatFilter);
+
+  const totalPages = Math.ceil(filteredEpisodes.length / EPISODES_PER_PAGE);
+  const paginatedEpisodes = filteredEpisodes.slice(
     page * EPISODES_PER_PAGE,
     (page + 1) * EPISODES_PER_PAGE
   );
 
+  // Reset page when filter changes
+  useEffect(() => {
+    setPage(0);
+  }, [formatFilter]);
+
   const selectEpisode = useCallback((ep: Episode) => {
     setActiveEpisode(ep);
     window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
+
+  const copyEpisodeLink = useCallback((ep: Episode) => {
+    const url = `${window.location.origin}/podcast?episode=${ep.id}`;
+    navigator.clipboard.writeText(url);
+    setCopiedEpisodeId(ep.id);
+    setTimeout(() => setCopiedEpisodeId(null), 2000);
+  }, []);
+
+  const shareEpisode = useCallback((ep: Episode, platform: "x" | "telegram") => {
+    const url = `${window.location.origin}/podcast?episode=${ep.id}`;
+    const text = encodeURIComponent(ep.title);
+    const encodedUrl = encodeURIComponent(url);
+    const shareUrl =
+      platform === "x"
+        ? `https://x.com/intent/tweet?text=${text}&url=${encodedUrl}`
+        : `https://t.me/share/url?url=${encodedUrl}&text=${text}`;
+    window.open(shareUrl, "_blank", "noopener,noreferrer");
+    setShowShareMenu(null);
   }, []);
 
   /* ---------- Skeleton loader ---------- */

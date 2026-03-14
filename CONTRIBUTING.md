@@ -129,6 +129,38 @@ npm run dev
 
 6. **Push to your fork** and open a PR
 
+### Test Coverage Ratchet
+
+This project uses a coverage ratchet — test coverage thresholds automatically increase
+as you add tests and can never decrease. If your PR reduces coverage, the quality gate
+will fail.
+
+- Check current thresholds: see `vitest.config.ts` → `coverage.thresholds`
+- After adding tests: run `bun run coverage:ratchet` to update thresholds
+- The pre-push hook automatically verifies coverage hasn't dropped via the quality gate
+
+### Database Changes
+
+If your PR modifies `src/lib/db/schema.ts`:
+
+1. Run `bun run db:generate` to create a migration file
+2. Review the generated SQL in `src/lib/db/migrations/`
+3. Include the migration file in your PR
+4. Test the migration locally with `bun run db:migrate`
+5. Note any data migration needs in the PR description
+
+See [docs/DATABASE-MIGRATIONS.md](docs/DATABASE-MIGRATIONS.md) for the full workflow.
+
+### Test Coverage Ratchet
+
+This project uses a coverage ratchet — test coverage thresholds automatically increase
+as you add tests and can never decrease. If your PR reduces coverage, the quality gate
+will fail.
+
+- Check current thresholds: see `vitest.config.ts` → `coverage.thresholds`
+- After adding tests: run `bun run coverage:ratchet` to update thresholds
+- The pre-push hook automatically verifies coverage hasn't dropped
+
 ## 🔄 Pull Request Process
 
 1. **Update documentation** if you're changing functionality

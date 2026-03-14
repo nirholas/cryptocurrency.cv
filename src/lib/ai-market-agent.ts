@@ -567,7 +567,7 @@ export class AIMarketAgent {
           const sentiment = this.analyzeNewsSentiment(article.title, article.description);
           if (Math.abs(sentiment.score) > 0.5) {
             signals.push({
-              id: `news-${Date.now()}-${Math.random().toString(36).slice(2)}`,
+              id: `news-${Date.now()}-${crypto.randomUUID().slice(0, 8)}`,
               source: 'news',
               type: 'news-catalyst',
               asset: sentiment.asset || 'MARKET',

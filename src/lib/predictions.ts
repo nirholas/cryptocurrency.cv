@@ -178,8 +178,7 @@ const POINTS = {
  */
 function generatePredictionId(): string {
   const timestamp = Date.now().toString(36);
-  const random = Math.random().toString(36).substring(2, 9);
-  return `pred_${timestamp}_${random}`;
+  return `pred_${timestamp}_${crypto.randomUUID().slice(0, 8)}`;
 }
 
 /**

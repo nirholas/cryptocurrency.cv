@@ -454,8 +454,7 @@ Abre http://localhost:3000/api/news
 
 | Variable | Por Defecto | Descripción |
 |----------|---------|-------------|
-| `GROQ_API_KEY` | - | Habilita auto-traducción i18n (18 idiomas). **¡GRATIS!** Obtén la tuya en [console.groq.com/keys](https://console.groq.com/keys) |
-| `FEATURE_TRANSLATION` | `false` | Establecer a `true` para habilitar traducción en tiempo real |
+| `GROQ_API_KEY` | - | Habilita resumen IA, clasificación y traducción en tiempo real (40+ idiomas). **¡GRATIS!** Obtén la tuya en [console.groq.com/keys](https://console.groq.com/keys) |
 
 ---
 

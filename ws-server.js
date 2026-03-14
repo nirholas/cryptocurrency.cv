@@ -603,6 +603,8 @@ const COIN_TO_ID = {
   AAVE: 'aave',
   ATOM: 'cosmos',
 };
+// Precomputed reverse map: coinGecko ID → symbol (avoids O(n) lookup per price per client)
+const ID_TO_COIN = Object.fromEntries(Object.entries(COIN_TO_ID).map(([sym, id]) => [id, sym]));
 
 function isValidTopic(topic) {
   const [prefix, suffix] = topic.split(':');
@@ -1941,9 +1943,10 @@ function localBroadcastRaw(type, payload, timestamp, meta = {}) {
       localBroadcastAlert(payload);
       break;
     default:
-      // Generic: send raw to every open socket
+      // Generic: pre-serialize once and send to every open socket
+      const rawMsg = JSON.stringify({ type, payload, timestamp });
       clients.forEach((client, clientId) => {
-        safeSend(client, clientId, { type, payload, timestamp });
+        safeSend(client, clientId, rawMsg);
       });
   }
 }
@@ -1977,33 +1980,31 @@ function broadcastToChannel(channelId, articles) {
 // Local news broadcast (called from localBroadcastRaw) — also deliver to topic subscribers
 function localBroadcastNews(articles, isBreaking = false) {
   const type = isBreaking ? WS_MSG_TYPES.BREAKING : WS_MSG_TYPES.NEWS;
+  const ts = new Date().toISOString();
+  // Pre-serialize the full payload once for unfiltered clients
+  const fullMsg = JSON.stringify({ type, payload: { articles }, timestamp: ts });
 
   clients.forEach((client, clientId) => {
     // ── Topic-based news filtering ──
     // If client has news:breaking topic and this IS breaking → deliver all
     if (isBreaking && (client.topics.has('news:breaking') || client.topics.has('news:*'))) {
-      safeSend(client, clientId, {
-        type,
-        payload: { articles },
-        timestamp: new Date().toISOString(),
-      });
+      safeSend(client, clientId, fullMsg);
       return;
     }
     // news:* wildcard gets everything
     if (client.topics.has('news:*')) {
-      safeSend(client, clientId, {
-        type,
-        payload: { articles },
-        timestamp: new Date().toISOString(),
-      });
+      safeSend(client, clientId, fullMsg);
       return;
     }
 
     const sub = client.subscription;
+    // Fast path: no filters → send pre-serialized full message
+    if (sub.sources.length === 0 && sub.categories.length === 0 && sub.keywords.length === 0) {
+      safeSend(client, clientId, fullMsg);
+      return;
+    }
+
     const filteredArticles = articles.filter((article) => {
-      if (sub.sources.length === 0 && sub.categories.length === 0 && sub.keywords.length === 0) {
-        return true;
-      }
       if (
         sub.sources.length > 0 &&
         sub.sources.includes(article.sourceKey || article.source.toLowerCase())
@@ -2022,12 +2023,15 @@ function localBroadcastNews(articles, isBreaking = false) {
       return false;
     });
 
-    if (filteredArticles.length > 0) {
-      safeSend(client, clientId, {
+    if (filteredArticles.length === articles.length) {
+      // All articles matched — reuse pre-serialized message
+      safeSend(client, clientId, fullMsg);
+    } else if (filteredArticles.length > 0) {
+      safeSend(client, clientId, JSON.stringify({
         type,
         payload: { articles: filteredArticles },
-        timestamp: new Date().toISOString(),
-      });
+        timestamp: ts,
+      }));
     }
   });
 }
@@ -2041,19 +2045,19 @@ function broadcastNews(articles, isBreaking = false) {
 // Local alert broadcast (called from localBroadcastRaw)
 function localBroadcastAlert(alertEvent) {
   let delivered = 0;
+  // Pre-serialize once for all recipients
+  const msg = JSON.stringify({
+    type: WS_MSG_TYPES.ALERT,
+    data: alertEvent,
+    timestamp: new Date().toISOString(),
+  });
 
   clients.forEach((client, clientId) => {
     const isSubscribed =
       client.alertSubscriptions.has('*') || client.alertSubscriptions.has(alertEvent.ruleId);
 
     if (isSubscribed) {
-      if (
-        safeSend(client, clientId, {
-          type: WS_MSG_TYPES.ALERT,
-          data: alertEvent,
-          timestamp: new Date().toISOString(),
-        })
-      ) {
+      if (safeSend(client, clientId, msg)) {
         delivered++;
       }
     }
@@ -2108,7 +2112,7 @@ function localBroadcastPrices(prices) {
       let hasAny = false;
       for (const [coinId, data] of Object.entries(prices)) {
         // Find symbol for this coinId
-        const sym = Object.entries(COIN_TO_ID).find(([, id]) => id === coinId)?.[0];
+        const sym = ID_TO_COIN[coinId];
         if (sym && client.topics.has(`prices:${sym}`)) {
           filtered[coinId] = data;
           hasAny = true;

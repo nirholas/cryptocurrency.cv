@@ -40,7 +40,12 @@
     "lighthouse",
     "pa11y",
     "stylelint",
-    "stylelint-config-standard"
+    "stylelint-config-standard",
+    "critters",
+    "pino-pretty",
+    "@next/bundle-analyzer",
+    "@secretlint/secretlint-rule-preset-recommend",
+    "prettier-plugin-tailwindcss"
   ],
   "ignoreWorkspaces": [
     "sdk/*",

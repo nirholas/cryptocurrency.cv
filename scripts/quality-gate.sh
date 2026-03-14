@@ -21,7 +21,7 @@
 #   ./scripts/quality-gate.sh --skip-e2e        # skip Playwright E2E tests
 #   ./scripts/quality-gate.sh --skip-e2e --continue
 #
-# The nine gates:
+# The eleven gates:
 #   1. TypeScript type-check       (tsc --noEmit)
 #   2. ESLint                      (eslint src/)
 #   3. Prettier formatting         (prettier --check)
@@ -69,7 +69,7 @@ while [[ $# -gt 0 ]]; do
 done
 
 # ── State ────────────────────────────────────────────────────────────────
-TOTAL=10
+TOTAL=11
 PASSED=0
 FAILED=0
 SKIPPED=0
@@ -155,6 +155,19 @@ run_gate 3 "Prettier formatting" bunx prettier --check "src/**/*.{ts,tsx,css}"
 # Gate 4 — Vitest unit tests + coverage thresholds
 # ─────────────────────────────────────────────────────────────────────────
 run_gate 4 "Vitest (unit tests + coverage)" bun run test:coverage
+
+# ─────────────────────────────────────────────────────────────────────────
+# Gate 4b — Coverage ratchet check
+# ─────────────────────────────────────────────────────────────────────────
+check_coverage_ratchet() {
+  if [[ -x "$PROJECT_ROOT/scripts/coverage-ratchet.sh" ]]; then
+    "$PROJECT_ROOT/scripts/coverage-ratchet.sh" --check
+  else
+    echo -e "${YELLOW}  ⚠ coverage-ratchet.sh not found or not executable — skipping${NC}"
+    return 0
+  fi
+}
+run_gate 4b "Coverage ratchet (no regression)" check_coverage_ratchet
 
 # ─────────────────────────────────────────────────────────────────────────
 # Gate 5 — Playwright critical E2E specs

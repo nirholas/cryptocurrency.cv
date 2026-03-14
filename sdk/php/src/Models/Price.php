@@ -2,7 +2,7 @@
 
 namespace CryptoNews\Models;
 
-class Price
+class Price implements \JsonSerializable
 {
     public string $symbol;
     public float $price;
@@ -34,5 +34,13 @@ class Price
             'marketCap' => $this->marketCap,
             'volume24h' => $this->volume24h,
         ];
+    }
+
+    /**
+     * @return array<string, mixed>
+     */
+    public function jsonSerialize(): array
+    {
+        return $this->toArray();
     }
 }

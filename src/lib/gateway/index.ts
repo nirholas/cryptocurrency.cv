@@ -141,11 +141,9 @@ export const TIER_CONFIG: Record<ApiTier, {
  * Format: `fcn_<tier>_<random32hex>`
  */
 export function generateApiKey(tier: ApiTier = 'free'): string {
-  const chars = 'abcdef0123456789';
-  let random = '';
-  for (let i = 0; i < 32; i++) {
-    random += chars[Math.floor(Math.random() * chars.length)];
-  }
+  const bytes = new Uint8Array(16);
+  crypto.getRandomValues(bytes);
+  const random = Array.from(bytes, (b) => b.toString(16).padStart(2, '0')).join('');
   return `fcn_${tier}_${random}`;
 }
 

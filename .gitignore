@@ -67,6 +67,9 @@ enrichment-*.json
 playwright-report/
 test-results/
 
+# Coverage reports
+coverage/
+
 # ═══════════════════════════════════════════════════════════════
 # Security — prevent accidental secret commits
 # ═══════════════════════════════════════════════════════════════

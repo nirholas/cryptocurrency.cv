@@ -188,17 +188,7 @@ const SIGNIFICANCE_LEVEL = 0.05;
  * Generate a unique ID using cryptographic randomness (Edge Runtime compatible)
  */
 function generateId(): string {
-  // Use globalThis.crypto which works in both Node.js and Edge Runtime
-  if (typeof globalThis.crypto !== 'undefined' && globalThis.crypto.randomUUID) {
-    return `caus_${globalThis.crypto.randomUUID()}`;
-  }
-  // Fallback for older environments
-  const uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, (c) => {
-    const r = Math.random() * 16 | 0;
-    const v = c === 'x' ? r : (r & 0x3 | 0x8);
-    return v.toString(16);
-  });
-  return `caus_${uuid}`;
+  return `caus_${crypto.randomUUID()}`;
 }
 
 /**

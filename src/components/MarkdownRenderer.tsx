@@ -1,7 +1,8 @@
 "use client";
 
-import React from "react";
+import React, { useState, useCallback } from "react";
 import { cn } from "@/lib/utils";
+import { Check, Copy } from "lucide-react";
 
 interface MarkdownRendererProps {
   content: string;
@@ -10,8 +11,8 @@ interface MarkdownRendererProps {
 
 /**
  * Lightweight regex-based Markdown renderer.
- * Handles: headings, bold, italic, inline code, code blocks,
- * unordered/ordered lists, links, blockquotes, horizontal rules, and paragraphs.
+ * Handles: headings, bold, italic, inline code, code blocks, tables,
+ * unordered/ordered lists, links, blockquotes, horizontal rules, strikethrough, and paragraphs.
  * No external dependencies.
  */
 export function MarkdownRenderer({ content, className }: MarkdownRendererProps) {
@@ -34,6 +35,7 @@ type MdBlock =
   | { type: "blockquote"; text: string }
   | { type: "ul"; items: string[] }
   | { type: "ol"; items: string[] }
+  | { type: "table"; headers: string[]; rows: string[][] }
   | { type: "hr" }
   | { type: "paragraph"; text: string };
 
@@ -120,6 +122,22 @@ function parseBlocks(raw: string): MdBlock[] {
       continue;
     }
 
+    // Table (pipe-delimited)
+    if (line.includes("|") && i + 1 < lines.length && /^\|?\s*[-:]+[-|:\s]+$/.test(lines[i + 1])) {
+      const parseRow = (row: string): string[] =>
+        row.split("|").map(c => c.trim()).filter((_, idx, arr) => idx > 0 && idx < arr.length);
+
+      const headers = parseRow(line);
+      i += 2; // skip header + separator
+      const rows: string[][] = [];
+      while (i < lines.length && lines[i].includes("|") && lines[i].trim() !== "") {
+        rows.push(parseRow(lines[i]));
+        i++;
+      }
+      blocks.push({ type: "table", headers, rows });
+      continue;
+    }
+
     // Paragraph — collect consecutive non-blank, non-special lines
     const paraLines: string[] = [];
     while (
@@ -153,22 +171,18 @@ function Block({ block }: { block: MdBlock }) {
         6: "text-xs font-medium uppercase tracking-wide",
       };
       return (
-        <Tag className={cn(sizes[block.level] ?? sizes[3], "text-[var(--color-text-primary)]")}>
+        <Tag className={cn(sizes[block.level] ?? sizes[3], "text-text-primary")}>
           <InlineContent text={block.text} />
         </Tag>
       );
     }
 
     case "code":
-      return (
-        <pre className="overflow-x-auto rounded-md bg-[var(--color-surface-tertiary)] p-3 text-xs font-mono leading-relaxed">
-          <code>{block.code}</code>
-        </pre>
-      );
+      return <CodeBlock lang={block.lang} code={block.code} />;
 
     case "blockquote":
       return (
-        <blockquote className="border-l-3 border-[var(--color-accent)] pl-4 italic text-[var(--color-text-secondary)]">
+        <blockquote className="border-l-3 border-accent pl-4 italic text-text-secondary">
           <InlineContent text={block.text} />
         </blockquote>
       );
@@ -177,7 +191,7 @@ function Block({ block }: { block: MdBlock }) {
       return (
         <ul className="list-disc pl-5 space-y-1">
           {block.items.map((item, i) => (
-            <li key={i} className="text-[var(--color-text-primary)]">
+            <li key={i} className="text-text-primary">
               <InlineContent text={item} />
             </li>
           ))}
@@ -188,7 +202,7 @@ function Block({ block }: { block: MdBlock }) {
       return (
         <ol className="list-decimal pl-5 space-y-1">
           {block.items.map((item, i) => (
-            <li key={i} className="text-[var(--color-text-primary)]">
+            <li key={i} className="text-text-primary">
               <InlineContent text={item} />
             </li>
           ))}
@@ -196,18 +210,89 @@ function Block({ block }: { block: MdBlock }) {
       );
 
     case "hr":
-      return <hr className="border-[var(--color-border)]" />;
+      return <hr className="border-border" />;
+
+    case "table":
+      return (
+        <div className="overflow-x-auto rounded-md border border-[var(--color-border)]">
+          <table className="w-full text-xs">
+            <thead>
+              <tr className="bg-[var(--color-surface-tertiary)]">
+                {block.headers.map((h, i) => (
+                  <th key={i} className="px-3 py-2 text-left font-semibold text-[var(--color-text-primary)] border-b border-[var(--color-border)]">
+                    <InlineContent text={h} />
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {block.rows.map((row, ri) => (
+                <tr key={ri} className={ri % 2 === 1 ? "bg-[var(--color-surface-secondary)]" : ""}>
+                  {row.map((cell, ci) => (
+                    <td key={ci} className="px-3 py-2 text-[var(--color-text-primary)] border-b border-[var(--color-border)]/30">
+                      <InlineContent text={cell} />
+                    </td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      );
 
     case "paragraph":
       return (
-        <p className="text-[var(--color-text-primary)]">
+        <p className="text-text-primary">
           <InlineContent text={block.text} />
         </p>
       );
   }
 }
 
-// ── Inline Parsing (bold, italic, code, links) ────────────────────
+// ── Code Block with Copy Button ───────────────────────────────────
+
+function CodeBlock({ lang, code }: { lang: string; code: string }) {
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = useCallback(async () => {
+    try {
+      await navigator.clipboard.writeText(code);
+    } catch {
+      const ta = document.createElement("textarea");
+      ta.value = code;
+      ta.style.position = "fixed";
+      ta.style.opacity = "0";
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand("copy");
+      document.body.removeChild(ta);
+    }
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  }, [code]);
+
+  return (
+    <div className="relative group rounded-md bg-[var(--color-surface-tertiary)] overflow-hidden">
+      {lang && (
+        <div className="flex items-center justify-between px-3 py-1.5 border-b border-[var(--color-border)]/30">
+          <span className="text-[10px] font-mono text-[var(--color-text-tertiary)] uppercase tracking-wide">{lang}</span>
+        </div>
+      )}
+      <button
+        onClick={handleCopy}
+        className="absolute top-1.5 right-1.5 p-1 rounded bg-[var(--color-surface-secondary)] border border-[var(--color-border)] opacity-0 group-hover:opacity-100 transition-opacity text-[var(--color-text-tertiary)] hover:text-[var(--color-text-primary)]"
+        title="Copy code"
+      >
+        {copied ? <Check className="w-3 h-3 text-green-500" /> : <Copy className="w-3 h-3" />}
+      </button>
+      <pre className="overflow-x-auto p-3 text-xs font-mono leading-relaxed">
+        <code>{code}</code>
+      </pre>
+    </div>
+  );
+}
+
+// ── Inline Parsing (bold, italic, code, links, strikethrough) ─────
 
 function InlineContent({ text }: { text: string }) {
   return <>{parseInline(text)}</>;
@@ -232,7 +317,7 @@ function parseInline(text: string): React.ReactNode[] {
       nodes.push(
         <code
           key={match.index}
-          className="rounded bg-[var(--color-surface-tertiary)] px-1.5 py-0.5 text-xs font-mono"
+          className="rounded bg-surface-tertiary px-1.5 py-0.5 text-xs font-mono"
         >
           {code}
         </code>
@@ -269,7 +354,7 @@ function parseInline(text: string): React.ReactNode[] {
           href={match[8]}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[var(--color-accent)] underline underline-offset-2 hover:opacity-80"
+          className="text-accent underline underline-offset-2 hover:opacity-80"
         >
           {match[7]}
         </a>

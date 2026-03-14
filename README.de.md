@@ -256,8 +256,7 @@ pnpm dev
 
 | Variable | Standard | Beschreibung |
 |----------|---------|-------------|
-| `GROQ_API_KEY` | - | Aktiviert i18n-Auto-Übersetzung (18 Sprachen). **KOSTENLOS!** Holen Sie sich Ihren auf [console.groq.com/keys](https://console.groq.com/keys) |
-| `FEATURE_TRANSLATION` | `false` | Auf `true` setzen für Echtzeit-Übersetzung |
+| `GROQ_API_KEY` | - | Aktiviert KI-Zusammenfassung, Klassifizierung und Echtzeit-Übersetzung (40+ Sprachen). **KOSTENLOS!** Holen Sie sich Ihren auf [console.groq.com/keys](https://console.groq.com/keys) |
 
 ---
 

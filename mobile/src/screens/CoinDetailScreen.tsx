@@ -8,24 +8,29 @@
  * For licensing inquiries: nirholas@users.noreply.github.com
  */
 
-import React from 'react';
+import React, { useCallback, useMemo } from 'react';
 import {
   View,
-  FlatList,
   ScrollView,
   StyleSheet,
   Text,
   useColorScheme,
   ActivityIndicator,
   RefreshControl,
+  TouchableOpacity,
+  Dimensions,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useRoute, RouteProp } from '@react-navigation/native';
 import { Ionicons } from '@expo/vector-icons';
+import { LineChart } from 'react-native-wagmi-charts';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { useCoinPrice } from '../hooks/useMarket';
+import { useChartData, TimeRange } from '../hooks/useChartData';
 import { useNews } from '../hooks/useNews';
 import NewsCard from '../components/NewsCard';
 import Badge from '../components/Badge';
+import { ChartSkeleton, StatsSkeleton, NewsListSkeleton } from '../components/Skeleton';
 import type { RootStackParamList } from '../../App';
 import type { Article } from '../api/client';
 
@@ -37,6 +42,16 @@ interface StatItem {
   icon: keyof typeof Ionicons.glyphMap;
 }
 
+const TIME_RANGES: { label: string; value: TimeRange }[] = [
+  { label: '1H', value: '1h' },
+  { label: '24H', value: '24h' },
+  { label: '7D', value: '7d' },
+  { label: '30D', value: '30d' },
+  { label: '1Y', value: '1y' },
+];
+
+const SCREEN_WIDTH = Dimensions.get('window').width;
+
 export default function CoinDetailScreen() {
   const route = useRoute<CoinDetailRouteProp>();
   const colorScheme = useColorScheme();
@@ -44,6 +59,7 @@ export default function CoinDetailScreen() {
   const { symbol, name } = route.params;
 
   const { coin, loading, error, refresh } = useCoinPrice(symbol);
+  const chart = useChartData(symbol.toLowerCase(), '24h');
   const relatedNews = useNews({ ticker: symbol.toUpperCase(), limit: 10 });
 
   const styles = createStyles(isDark);
@@ -86,8 +102,6 @@ export default function CoinDetailScreen() {
       </SafeAreaView>
     );
   }
-
-  const isPositive = coin ? coin.change24h >= 0 : true;
 
   const stats: StatItem[] = coin
     ? [
@@ -141,9 +155,21 @@ export default function CoinDetailScreen() {
     </View>
   );
 
-  const handleRefresh = async () => {
-    await Promise.all([refresh(), relatedNews.refresh()]);
-  };
+  const handleRefresh = useCallback(async () => {
+    await Promise.all([refresh(), chart.refresh(), relatedNews.refresh()]);
+  }, [refresh, chart, relatedNews]);
+
+  // Transform chart data for react-native-wagmi-charts
+  const chartData = useMemo(() => {
+    if (!chart.data || chart.data.length === 0) return [];
+    return chart.data.map((point) => ({
+      timestamp: point.timestamp,
+      value: point.price,
+    }));
+  }, [chart.data]);
+
+  const isPositive = coin ? coin.change24h >= 0 : true;
+  const chartColor = isPositive ? '#22c55e' : '#ef4444';
 
   return (
     <SafeAreaView style={styles.container} edges={['left', 'right']}>
@@ -199,24 +225,120 @@ export default function CoinDetailScreen() {
           )}
         </View>
 
-        {/* Simple Price Indicator */}
-        <View style={styles.chartPlaceholder}>
-          <View style={styles.priceBar}>
-            <View
-              style={[
-                styles.priceBarFill,
-                {
-                  width: `${Math.min(Math.max(50 + (coin?.change24h || 0) * 5, 10), 90)}%`,
-                  backgroundColor: isPositive ? '#22c55e' : '#ef4444',
-                },
-              ]}
+        {/* Interactive Price Chart */}
+        {chart.loading && chartData.length === 0 ? (
+          <ChartSkeleton />
+        ) : chartData.length > 0 ? (
+          <GestureHandlerRootView style={styles.chartContainer}>
+            {/* Time Range Selector */}
+            <View style={styles.timeRangeRow}>
+              {TIME_RANGES.map((tr) => (
+                <TouchableOpacity
+                  key={tr.value}
+                  style={[
+                    styles.timeRangeBtn,
+                    chart.range === tr.value && styles.timeRangeBtnActive,
+                  ]}
+                  onPress={() => chart.setRange(tr.value)}
+                >
+                  <Text
+                    style={[
+                      styles.timeRangeText,
+                      chart.range === tr.value && styles.timeRangeTextActive,
+                    ]}
+                  >
+                    {tr.label}
+                  </Text>
+                </TouchableOpacity>
+              ))}
+            </View>
+
+            {/* Chart */}
+            <LineChart.Provider data={chartData}>
+              <LineChart width={SCREEN_WIDTH - 64} height={200}>
+                <LineChart.Path color={chartColor}>
+                  <LineChart.Gradient color={chartColor} />
+                </LineChart.Path>
+                <LineChart.CursorCrosshair color={chartColor}>
+                  <LineChart.Tooltip
+                    style={styles.chartTooltip}
+                    textStyle={styles.chartTooltipText}
+                  />
+                </LineChart.CursorCrosshair>
+              </LineChart>
+              <LineChart.PriceText
+                style={styles.chartPriceText}
+                format={({ value }) => {
+                  'worklet';
+                  const num = Number(value);
+                  if (num >= 1) return `$${num.toFixed(2)}`;
+                  return `$${num.toFixed(6)}`;
+                }}
+              />
+              <LineChart.DatetimeText
+                style={styles.chartDateText}
+                locale="en-US"
+              />
+            </LineChart.Provider>
+
+            {/* Chart Stats */}
+            {chart.stats && (
+              <View style={styles.chartStats}>
+                <View style={styles.chartStatItem}>
+                  <Text style={styles.chartStatLabel}>High</Text>
+                  <Text style={[styles.chartStatValue, { color: '#22c55e' }]}>
+                    {formatPrice(chart.stats.high)}
+                  </Text>
+                </View>
+                <View style={styles.chartStatItem}>
+                  <Text style={styles.chartStatLabel}>Low</Text>
+                  <Text style={[styles.chartStatValue, { color: '#ef4444' }]}>
+                    {formatPrice(chart.stats.low)}
+                  </Text>
+                </View>
+                <View style={styles.chartStatItem}>
+                  <Text style={styles.chartStatLabel}>Change</Text>
+                  <Text
+                    style={[
+                      styles.chartStatValue,
+                      {
+                        color:
+                          chart.stats.changePercent >= 0
+                            ? '#22c55e'
+                            : '#ef4444',
+                      },
+                    ]}
+                  >
+                    {chart.stats.changePercent >= 0 ? '+' : ''}
+                    {chart.stats.changePercent.toFixed(2)}%
+                  </Text>
+                </View>
+              </View>
+            )}
+
+            {chart.fromCache && (
+              <View style={styles.cacheIndicator}>
+                <Ionicons
+                  name="cloud-offline-outline"
+                  size={12}
+                  color={isDark ? '#666' : '#999'}
+                />
+                <Text style={styles.cacheText}>Cached data</Text>
+              </View>
+            )}
+          </GestureHandlerRootView>
+        ) : (
+          <View style={styles.chartEmpty}>
+            <Ionicons
+              name="analytics-outline"
+              size={32}
+              color={isDark ? '#444' : '#ccc'}
             />
+            <Text style={styles.chartEmptyText}>
+              Chart data unavailable
+            </Text>
           </View>
-          <View style={styles.priceBarLabels}>
-            <Text style={styles.priceBarLabel}>24h Low</Text>
-            <Text style={styles.priceBarLabel}>24h High</Text>
-          </View>
-        </View>
+        )}
 
         {/* Stats Grid */}
         {renderStatsGrid()}

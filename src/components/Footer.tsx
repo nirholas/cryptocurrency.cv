@@ -17,6 +17,7 @@ const FOOTER_SECTIONS = [
       { label: "Regulation", href: "/category/regulation" },
       { label: "Altcoins", href: "/category/altcoins" },
       { label: "Solana", href: "/category/solana" },
+      { label: "Podcast", href: "/podcast" },
     ],
   },
   {

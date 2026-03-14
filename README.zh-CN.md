@@ -256,8 +256,7 @@ pnpm dev
 
 | 变量 | 默认值 | 描述 |
 |----------|---------|-------------|
-| `GROQ_API_KEY` | - | 启用 i18n 自动翻译（18 种语言）。**免费！** 在 [console.groq.com/keys](https://console.groq.com/keys) 获取 |
-| `FEATURE_TRANSLATION` | `false` | 设置为 `true` 启用实时翻译 |
+| `GROQ_API_KEY` | - | 启用 AI 摘要、分类和实时翻译（40+ 种语言）。**免费！** 在 [console.groq.com/keys](https://console.groq.com/keys) 获取 |
 
 ---
 

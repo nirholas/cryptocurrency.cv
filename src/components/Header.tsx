@@ -51,6 +51,7 @@ const NAV_ITEMS = [
       { label: "NFTs", href: "/category/nft" },
       { label: "Regulation", href: "/category/regulation" },
       { label: "Altcoins", href: "/category/altcoins" },
+      { label: "Podcast", href: "/podcast" },
     ],
   },
   { label: "Intelligence", href: "/intelligence" },

@@ -113,7 +113,7 @@ export class ABTestingEngine {
     trafficSplit?: Record<string, number>;
     minSamplesPerVariant?: number;
   }): Experiment {
-    const id = `exp_${Date.now()}_${Math.random().toString(36).slice(2, 6)}`;
+    const id = `exp_${Date.now()}_${crypto.randomUUID().slice(0, 6)}`;
 
     // Default to equal traffic split
     const trafficSplit =
