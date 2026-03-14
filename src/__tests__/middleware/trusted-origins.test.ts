@@ -4,7 +4,11 @@
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import { NextResponse, NextRequest } from 'next/server';
-import { isTrustedOrigin, isSperaxOSRequest, trustedOriginHandler } from '@/middleware/trusted-origins';
+import {
+  isTrustedOrigin,
+  isSperaxOSRequest,
+  trustedOriginHandler,
+} from '@/middleware/trusted-origins';
 import type { MiddlewareContext } from '@/middleware/types';
 
 function createContext(

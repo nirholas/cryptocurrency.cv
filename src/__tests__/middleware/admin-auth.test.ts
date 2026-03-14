@@ -101,20 +101,20 @@ describe('adminAuth handler', () => {
   });
 
   it('should restrict CORS on sensitive routes for untrusted origins', () => {
-    const ctx = createContext(
-      '/api/keys/rotate',
-      { origin: 'https://evil.com', Authorization: `Bearer ${ADMIN_TOKEN}` },
-    );
+    const ctx = createContext('/api/keys/rotate', {
+      origin: 'https://evil.com',
+      Authorization: `Bearer ${ADMIN_TOKEN}`,
+    });
     const result = adminAuth(ctx) as MiddlewareContext;
 
     expect(result.headers['Access-Control-Allow-Origin']).toBe('null');
   });
 
   it('should allow CORS on sensitive routes for trusted origins', () => {
-    const ctx = createContext(
-      '/api/keys/rotate',
-      { origin: 'https://chat.sperax.io', Authorization: `Bearer ${ADMIN_TOKEN}` },
-    );
+    const ctx = createContext('/api/keys/rotate', {
+      origin: 'https://chat.sperax.io',
+      Authorization: `Bearer ${ADMIN_TOKEN}`,
+    });
     const result = adminAuth(ctx) as MiddlewareContext;
 
     expect(result.headers['Access-Control-Allow-Origin']).toBe('https://chat.sperax.io');

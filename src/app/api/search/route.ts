@@ -36,7 +36,10 @@ interface StoredArticleEmbedding {
  * Scan KV for up to `maxKeys` article embedding keys using cursor-based iteration.
  * Returns the raw keys (e.g. "article_emb:abc123").
  */
-async function scanArticleEmbeddingKeys(kv: import('@vercel/kv').VercelKV, maxKeys = 200): Promise<string[]> {
+async function scanArticleEmbeddingKeys(
+  kv: import('@vercel/kv').VercelKV,
+  maxKeys = 200,
+): Promise<string[]> {
   const keys: string[] = [];
   let cursor = 0;
   do {
@@ -100,31 +103,31 @@ async function semanticSearch(query: string): Promise<StoredArticleEmbedding[] |
 // Route handler
 // ---------------------------------------------------------------------------
 
-export async function GET(request: NextRequest) {
+export const GET = instrumented(async function GET(request: NextRequest) {
   // Validate query parameters
   const validation = validateQuery(request, searchQuerySchema);
   if (!validation.success) {
     return validation.error;
   }
-  
+
   const { q: sanitizedQuery, limit, lang } = validation.data;
 
   // Read semantic flag directly from URL (not schema-validated to avoid breaking changes)
   const url = new URL(request.url);
   const useSemantic = url.searchParams.get('semantic') === 'true';
-  
+
   // Validate language parameter
   if (lang !== 'en' && !isLanguageSupported(lang)) {
     return NextResponse.json(
-      { 
-        error: 'Unsupported language', 
+      {
+        error: 'Unsupported language',
         message: `Language '${lang}' is not supported`,
         supported: Object.keys(SUPPORTED_LANGUAGES),
       },
-      { status: 400 }
+      { status: 400 },
     );
   }
-  
+
   // --- Parallel search: run semantic, Postgres FTS, and keyword search concurrently ---
   // Whichever returns results first wins. This eliminates the ~3-layer sequential
   // waterfall that was causing 25s TTFB on /api/search.
@@ -136,14 +139,20 @@ export async function GET(request: NextRequest) {
   if (useSemantic) {
     searchPromises.push(
       semanticSearch(sanitizedQuery)
-        .then((results): SearchResult =>
-          results && results.length > 0
-            ? {
-                articles: results.map((r) => ({ title: r.title, url: r.url, date: r.date, tags: r.tags })),
-                search_type: 'semantic',
-                total: results.length,
-              }
-            : null,
+        .then(
+          (results): SearchResult =>
+            results && results.length > 0
+              ? {
+                  articles: results.map((r) => ({
+                    title: r.title,
+                    url: r.url,
+                    date: r.date,
+                    tags: r.tags,
+                  })),
+                  search_type: 'semantic',
+                  total: results.length,
+                }
+              : null,
         )
         .catch(() => null),
     );
@@ -153,25 +162,26 @@ export async function GET(request: NextRequest) {
   if (isDbAvailable()) {
     searchPromises.push(
       pgFullTextSearch(sanitizedQuery, { limit })
-        .then((pgResult): SearchResult =>
-          pgResult.total > 0
-            ? {
-                articles: pgResult.results.map((r) => ({
-                  title: r.title,
-                  link: r.link,
-                  description: r.description,
-                  pubDate: r.pubDate?.toISOString() ?? r.firstSeen.toISOString(),
-                  source: r.source,
-                  sourceKey: r.sourceKey,
-                  tickers: r.tickers,
-                  tags: r.tags,
-                  sentiment: r.sentimentLabel,
-                  relevance: r.rank,
-                })),
-                search_type: 'fulltext',
-                total: pgResult.total,
-              }
-            : null,
+        .then(
+          (pgResult): SearchResult =>
+            pgResult.total > 0
+              ? {
+                  articles: pgResult.results.map((r) => ({
+                    title: r.title,
+                    link: r.link,
+                    description: r.description,
+                    pubDate: r.pubDate?.toISOString() ?? r.firstSeen.toISOString(),
+                    source: r.source,
+                    sourceKey: r.sourceKey,
+                    tickers: r.tickers,
+                    tags: r.tags,
+                    sentiment: r.sentimentLabel,
+                    relevance: r.rank,
+                  })),
+                  search_type: 'fulltext',
+                  total: pgResult.total,
+                }
+              : null,
         )
         .catch(() => null),
     );
@@ -216,11 +226,11 @@ export async function GET(request: NextRequest) {
   // --- Keyword search (default / fallback) ---
   try {
     const data = await searchNews(sanitizedQuery, limit);
-    
+
     // Translate articles if language is not English
     let articles = data.articles;
     let translatedLang = 'en';
-    
+
     if (lang !== 'en' && articles.length > 0) {
       try {
         articles = await translateArticles(articles, lang);
@@ -229,7 +239,7 @@ export async function GET(request: NextRequest) {
         console.error('Translation failed:', translateError);
       }
     }
-    
+
     return NextResponse.json(
       {
         ...data,
@@ -243,12 +253,9 @@ export async function GET(request: NextRequest) {
           'Cache-Control': 'public, s-maxage=60, stale-while-revalidate=120',
           'Access-Control-Allow-Origin': '*',
         },
-      }
+      },
     );
   } catch {
-    return NextResponse.json(
-      { error: 'Failed to search news' },
-      { status: 500 }
-    );
+    return NextResponse.json({ error: 'Failed to search news' }, { status: 500 });
   }
 }

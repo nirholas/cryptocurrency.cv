@@ -104,11 +104,7 @@ export class RedisQueueAdapter implements QueueAdapter {
 
     for (let i = 0; i < count; i++) {
       // Get the lowest-scored (highest priority, earliest) pending job
-      const results = await this.redis.zrange(
-        this.key(`pending:${type}`),
-        0,
-        0,
-      );
+      const results = await this.redis.zrange(this.key(`pending:${type}`), 0, 0);
 
       if (results.length === 0) break;
 

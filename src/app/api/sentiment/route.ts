@@ -12,6 +12,7 @@ import { type NextRequest, NextResponse } from 'next/server';
 import { getLatestNews } from '@/lib/crypto-news';
 import { promptAIJson, isAIConfigured, AIAuthError } from '@/lib/ai-provider';
 import { aiNotConfiguredResponse, aiAuthErrorResponse } from '@/app/api/_utils';
+import { instrumented } from '@/lib/telemetry-middleware';
 
 export const runtime = 'edge';
 export const revalidate = 300;
@@ -62,7 +63,7 @@ Be objective. Don't overreact to minor news. Consider the source reliability.
 
 Respond with JSON: { "articles": [...], "market": {...} }`;
 
-export async function GET(request: NextRequest) {
+export const GET = instrumented(async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;
   const limit = Math.min(parseInt(searchParams.get('limit') || '20'), 50);
   const asset = searchParams.get('asset')?.toUpperCase(); // Filter by asset (BTC, ETH, etc.)

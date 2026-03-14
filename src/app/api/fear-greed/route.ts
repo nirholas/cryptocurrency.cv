@@ -18,6 +18,7 @@ import { type NextRequest, NextResponse } from 'next/server';
 import { getPipelineFearGreed } from '@/lib/data-pipeline';
 import { registry } from '@/lib/providers/registry';
 import type { FearGreedIndex } from '@/lib/providers/adapters/fear-greed';
+import { instrumented } from '@/lib/telemetry-middleware';
 
 interface FearGreedData {
   value: number;
@@ -56,7 +57,7 @@ function getClassification(value: number): FearGreedData['valueClassification'] 
   return 'Extreme Greed';
 }
 
-export async function GET(request: NextRequest) {
+export const GET = instrumented(async function GET(request: NextRequest) {
   try {
     const { searchParams } = new URL(request.url);
     const days = parseInt(searchParams.get('days') || '30');

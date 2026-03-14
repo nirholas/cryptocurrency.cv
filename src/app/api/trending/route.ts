@@ -13,6 +13,7 @@ import { getLatestNews } from '@/lib/crypto-news';
 import { ApiError } from '@/lib/api-error';
 import { createRequestLogger } from '@/lib/logger';
 import { staleCache, generateCacheKey } from '@/lib/cache';
+import { instrumented } from '@/lib/telemetry-middleware';
 
 export const runtime = 'edge';
 export const revalidate = 300; // 5 minutes — trending topics don't change minute-to-minute
@@ -71,7 +72,7 @@ function analyzeSentiment(text: string): 'bullish' | 'bearish' | 'neutral' {
   return 'neutral';
 }
 
-export async function GET(request: NextRequest) {
+export const GET = instrumented(async function GET(request: NextRequest) {
   const logger = createRequestLogger(request);
   const startTime = Date.now();
   const searchParams = request.nextUrl.searchParams;

@@ -30,9 +30,14 @@ Guidelines:
 - Don't speculate beyond what's in the articles`;
 
 /** Build the news context block shared by GET and POST. */
-function buildNewsContext(articles: Array<{ source: string; title: string; description?: string | null; timeAgo?: string }>): string {
+function buildNewsContext(
+  articles: Array<{ source: string; title: string; description?: string | null; timeAgo?: string }>,
+): string {
   return articles
-    .map((a, i) => `[${i + 1}] ${a.source}: "${a.title}" - ${a.description || 'No description'} (${a.timeAgo ?? ''})`)
+    .map(
+      (a, i) =>
+        `[${i + 1}] ${a.source}: "${a.title}" - ${a.description || 'No description'} (${a.timeAgo ?? ''})`,
+    )
     .join('\n\n');
 }
 
@@ -70,7 +75,7 @@ function streamResponse(groqStream: ReadableStream<string>): Response {
   });
 }
 
-export async function GET(request: NextRequest) {
+export const GET = instrumented(async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;
   const question = searchParams.get('q');
   const wantStream = searchParams.get('stream') === 'true';
@@ -96,7 +101,10 @@ export async function GET(request: NextRequest) {
   }
 
   try {
-    const answer = await promptGroq(SYSTEM_PROMPT, userPrompt, { maxTokens: 2048, temperature: 0.4 });
+    const answer = await promptGroq(SYSTEM_PROMPT, userPrompt, {
+      maxTokens: 2048,
+      temperature: 0.4,
+    });
     return NextResponse.json(
       {
         question,
@@ -109,7 +117,7 @@ export async function GET(request: NextRequest) {
           'Cache-Control': 'public, s-maxage=30, stale-while-revalidate=60',
           'Access-Control-Allow-Origin': '*',
         },
-      }
+      },
     );
   } catch (error) {
     console.error('Ask GET error:', error);
@@ -117,7 +125,7 @@ export async function GET(request: NextRequest) {
   }
 }
 
-export async function POST(request: NextRequest) {
+export const POST = instrumented(async function POST(request: NextRequest) {
   // Support POST for longer questions, conversation history, or streaming
   try {
     const body = await request.json();
@@ -147,7 +155,10 @@ export async function POST(request: NextRequest) {
       return streamResponse(callGroqStream(messages, { maxTokens: 2048, temperature: 0.4 }));
     }
 
-    const answer = await promptGroq(SYSTEM_PROMPT, userPrompt, { maxTokens: 2048, temperature: 0.4 });
+    const answer = await promptGroq(SYSTEM_PROMPT, userPrompt, {
+      maxTokens: 2048,
+      temperature: 0.4,
+    });
     return NextResponse.json({
       question,
       answer,

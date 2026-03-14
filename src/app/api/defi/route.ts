@@ -11,6 +11,7 @@
 import { type NextRequest, NextResponse } from 'next/server';
 import { getDefiNews } from '@/lib/crypto-news';
 import { translateArticles, isLanguageSupported, SUPPORTED_LANGUAGES } from '@/lib/translate';
+import { instrumented } from '@/lib/telemetry-middleware';
 
 export const runtime = 'edge';
 export const revalidate = 300;

@@ -22,6 +22,7 @@ import { readFileSync } from 'fs';
 import { join } from 'path';
 import { isRedisAvailable, redisGet, redisSet } from '@/lib/redis';
 import { COINGECKO_BASE } from '@/lib/constants';
+import { instrumented } from '@/lib/telemetry-middleware';
 
 export const runtime = 'nodejs';
 export const revalidate = 0; // Always fresh
@@ -138,7 +139,7 @@ async function checkExternalAPIs(): Promise<HealthCheck> {
 /**
  * GET /api/health
  */
-export async function GET() {
+export const GET = instrumented(async function GET() {
   const startTime = Date.now();
   
   const [cache, external] = await Promise.all([
