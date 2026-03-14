@@ -4,29 +4,65 @@
     "src/app/**/*.tsx",
     "src/app/**/*.ts",
     "src/components/**/*.tsx",
-    "src/lib/**/*.ts"
+    "src/lib/**/*.ts",
+    "middleware.ts",
+    "instrumentation.ts",
+    "ws-server.js",
+    "next.config.js",
+    "vitest.config.ts",
+    "vitest.setup.ts",
+    "drizzle.config.ts",
+    "eslint.config.mjs",
+    "postcss.config.js",
+    "tailwind.config.js",
+    "playwright.config.ts"
   ],
   "project": [
-    "src/**/*.{ts,tsx}"
+    "src/**/*.{ts,tsx}",
+    "scripts/**/*.{ts,js,mjs,sh}",
+    "e2e/**/*.{ts,tsx}"
   ],
   "ignore": [
     "examples/**",
     "sdk/**",
     "widget/**",
     "mcp/**",
-    "scripts/**",
-    "public/**"
+    "public/**",
+    "archive/**",
+    "cli/**",
+    "copilot-extension/**",
+    "mobile/**",
+    "telegram/**",
+    "contracts/**"
   ],
   "ignoreDependencies": [
     "@axe-core/cli",
-    "eslint-plugin-jsx-a11y",
     "lighthouse",
     "pa11y",
     "stylelint",
-    "stylelint-config-standard",
-    "@typescript-eslint/parser",
-    "@typescript-eslint/eslint-plugin",
-    "@eslint/eslintrc"
-  ]
+    "stylelint-config-standard"
+  ],
+  "ignoreWorkspaces": [
+    "sdk/*",
+    "mcp",
+    "cli",
+    "widget",
+    "copilot-extension"
+  ],
+  "rules": {
+    "files": "warn",
+    "dependencies": "error",
+    "devDependencies": "warn",
+    "optionalPeerDependencies": "off",
+    "unlisted": "warn",
+    "binaries": "warn",
+    "unresolved": "error",
+    "exports": "warn",
+    "types": "warn",
+    "duplicates": "warn"
+  },
+  "paths": {
+    "@/*": ["./src/*"]
+  }
 }
 

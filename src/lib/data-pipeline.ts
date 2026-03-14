@@ -194,7 +194,6 @@ const TOP_RSS_FEEDS = [
   // New high-signal sources
   'https://watcher.guru/news/feed',
   'https://www.cryptopolitan.com/feed/',
-  'https://coinedition.com/feed/',
   'https://techcrunch.com/category/cryptocurrency/feed/',
   'https://www.coincenter.org/feed/',
   'https://dydx.exchange/blog/feed',

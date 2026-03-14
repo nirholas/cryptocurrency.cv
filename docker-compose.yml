@@ -119,10 +119,18 @@ services:
     # No container_name — allows multiple replicas
     expose:
       - "8080"
+      - "8081"
     environment:
       - PORT=8080
+      - WS_HEALTH_PORT=8081
       - REDIS_URL=redis://redis:6379
       - NEWS_API=http://app:3000
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8081/health"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
     deploy:
       replicas: 2
       resources:

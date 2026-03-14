@@ -1,9 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import {
-  categories,
-  getCategoryBySlug,
-  matchArticleToCategories,
-} from '@/lib/categories';
+import { categories, getCategoryBySlug, matchArticleToCategories } from '@/lib/categories';
 
 describe('categories', () => {
   it('should have 9 categories', () => {

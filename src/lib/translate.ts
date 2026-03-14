@@ -14,8 +14,8 @@
  * Translates news articles to different languages using Groq (free, fast inference).
  * Includes caching to avoid re-translating the same articles.
  * 
- * FEATURE FLAG: Set FEATURE_TRANSLATION=true to enable real-time translation.
- * Default is disabled - translations are done at archive time instead.
+ * Translation is enabled automatically when GROQ_API_KEY is set.
+ * When no API key is configured, returns original untranslated content.
  * 
  * SETUP: Set GROQ_API_KEY environment variable with your free Groq API key.
  * Get one at: https://console.groq.com/keys
@@ -35,11 +35,84 @@ interface TranslatableArticle {
   link: string;
 }
 
-// Feature flag - disabled by default
-const TRANSLATION_ENABLED = process.env.FEATURE_TRANSLATION === 'true';
+// TTL-based cache to prevent unbounded memory growth
+class TranslationCache {
+  private cache = new Map<string, { value: TranslatedArticle; expiresAt: number }>();
+  private maxSize = 10_000;
+  private ttlMs = 24 * 60 * 60 * 1000; // 24 hours
 
-// In-memory cache for translations
-const translationCache = new Map<string, TranslatedArticle>();
+  get(key: string): TranslatedArticle | null {
+    const entry = this.cache.get(key);
+    if (!entry) return null;
+    if (Date.now() > entry.expiresAt) {
+      this.cache.delete(key);
+      return null;
+    }
+    return entry.value;
+  }
+
+  set(key: string, value: TranslatedArticle): void {
+    if (this.cache.size >= this.maxSize) {
+      this.evict();
+    }
+    this.cache.set(key, { value, expiresAt: Date.now() + this.ttlMs });
+  }
+
+  private evict(): void {
+    const now = Date.now();
+    // First pass: remove expired entries
+    for (const [key, entry] of this.cache) {
+      if (now > entry.expiresAt) {
+        this.cache.delete(key);
+      }
+    }
+    // If still over capacity, remove oldest entries
+    if (this.cache.size >= this.maxSize) {
+      const toRemove = this.cache.size - this.maxSize + 1;
+      let removed = 0;
+      for (const key of this.cache.keys()) {
+        if (removed >= toRemove) break;
+        this.cache.delete(key);
+        removed++;
+      }
+    }
+  }
+
+  get size(): number {
+    return this.cache.size;
+  }
+
+  keys(): IterableIterator<string> {
+    return this.cache.keys();
+  }
+
+  clear(): void {
+    this.cache.clear();
+  }
+}
+
+const translationCache = new TranslationCache();
+
+// Sliding window rate limiter for Groq free tier
+class SlidingWindowRateLimiter {
+  private timestamps: number[] = [];
+  constructor(private maxRequests: number, private windowMs: number) {}
+
+  async acquire(): Promise<void> {
+    const now = Date.now();
+    this.timestamps = this.timestamps.filter(t => now - t < this.windowMs);
+    if (this.timestamps.length >= this.maxRequests) {
+      const oldestInWindow = this.timestamps[0];
+      const waitMs = this.windowMs - (now - oldestInWindow);
+      await new Promise(resolve => setTimeout(resolve, waitMs));
+      return this.acquire();
+    }
+    this.timestamps.push(now);
+  }
+}
+
+// Max 30 translation requests per minute (Groq free tier)
+const rateLimiter = new SlidingWindowRateLimiter(30, 60_000);
 
 // Supported languages with display names
 export const SUPPORTED_LANGUAGES: Record<string, string> = {
@@ -76,10 +149,10 @@ export const SUPPORTED_LANGUAGES: Record<string, string> = {
 };
 
 /**
- * Check if real-time translation is enabled
+ * Check if real-time translation is enabled (GROQ_API_KEY is set)
  */
 export function isTranslationEnabled(): boolean {
-  return TRANSLATION_ENABLED;
+  return !!process.env.GROQ_API_KEY;
 }
 
 /**
@@ -109,6 +182,9 @@ async function translateWithGroq(
   if (!apiKey) {
     throw new Error('GROQ_API_KEY not configured. Get a free key at https://console.groq.com/keys');
   }
+
+  // Rate limit before making the API call
+  await rateLimiter.acquire();
 
   const langName = SUPPORTED_LANGUAGES[targetLang] || targetLang;
 
@@ -165,19 +241,33 @@ ${JSON.stringify(texts, null, 2)}`;
 }
 
 /**
+ * Translate text with fallback - returns original text if Groq fails
+ */
+async function translateWithFallback(
+  texts: { title: string; description: string }[],
+  targetLang: string
+): Promise<{ title: string; description: string }[]> {
+  try {
+    return await translateWithGroq(texts, targetLang);
+  } catch (error) {
+    console.warn(`[TRANSLATE] Groq failed, returning original text:`, error);
+    return texts;
+  }
+}
+
+/**
  * Translate an array of articles to the target language
  * 
  * Returns original articles if:
- * - FEATURE_TRANSLATION is not enabled
+ * - GROQ_API_KEY is not set
  * - Target language is English
- * - No OPENAI_API_KEY configured
  */
 export async function translateArticles<T extends TranslatableArticle>(
   articles: T[],
   targetLang: string
 ): Promise<T[]> {
-  // Feature flag check - return original if disabled
-  if (!TRANSLATION_ENABLED) {
+  // Return original if no API key configured (graceful no-op)
+  if (!process.env.GROQ_API_KEY) {
     return articles;
   }
   
@@ -225,7 +315,7 @@ export async function translateArticles<T extends TranslatableArticle>(
     }));
 
     try {
-      const translations = await translateWithGroq(textsToTranslate, targetLang);
+      const translations = await translateWithFallback(textsToTranslate, targetLang);
 
       for (let j = 0; j < batch.length; j++) {
         const { index, article } = batch[j];
@@ -287,7 +377,7 @@ export function getTranslationCacheStats(): { size: number; languages: string[] 
   const languages = new Set<string>();
   for (const key of translationCache.keys()) {
     const lang = key.split(':')[0];
-    languages.add(lang);
+    if (lang) languages.add(lang);
   }
   return {
     size: translationCache.size,

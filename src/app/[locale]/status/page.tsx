@@ -164,7 +164,7 @@ function formatTimeAgo(dateString: string): string {
 }
 
 function responseTimeColor(ms: number | undefined): string {
-  if (ms === undefined) return 'text-[var(--color-text-tertiary)]';
+  if (ms === undefined) return 'text-text-tertiary';
   if (ms < 100) return 'text-green-600 dark:text-green-400';
   if (ms < 300) return 'text-yellow-600 dark:text-yellow-400';
   return 'text-red-600 dark:text-red-400';
@@ -214,15 +214,13 @@ function StatusRow({
     <div className="flex items-center justify-between gap-4 px-6 py-4">
       <div className="flex min-w-0 items-center gap-3">
         {Icon && (
-          <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[var(--color-surface-tertiary)]">
-            <Icon className="h-4 w-4 text-[var(--color-text-secondary)]" />
+          <div className="bg-surface-tertiary flex h-8 w-8 shrink-0 items-center justify-center rounded-lg">
+            <Icon className="text-text-secondary h-4 w-4" />
           </div>
         )}
         <div className="min-w-0">
-          <div className="font-medium text-[var(--color-text-primary)]">{name}</div>
-          {message && (
-            <div className="truncate text-sm text-[var(--color-text-tertiary)]">{message}</div>
-          )}
+          <div className="text-text-primary font-medium">{name}</div>
+          {message && <div className="text-text-tertiary truncate text-sm">{message}</div>}
         </div>
       </div>
       <div className="flex shrink-0 items-center gap-3">
@@ -231,14 +229,12 @@ function StatusRow({
             <span className={cn('font-mono text-sm', responseTimeColor(responseTime))}>
               {responseTime}ms
             </span>
-            <div className="text-[10px] text-[var(--color-text-tertiary)]">
-              {responseTimeLabel(responseTime)}
-            </div>
+            <div className="text-text-tertiary text-[10px]">{responseTimeLabel(responseTime)}</div>
           </div>
         )}
         {/* Response time bar */}
         {responseTime !== undefined && (
-          <div className="hidden h-2 w-16 overflow-hidden rounded-full bg-[var(--color-surface-tertiary)] md:block">
+          <div className="bg-surface-tertiary hidden h-2 w-16 overflow-hidden rounded-full md:block">
             <div
               className={cn(
                 'h-full rounded-full transition-all',
@@ -275,17 +271,17 @@ function MetricCard({
     <Card className="transition-shadow hover:shadow-md">
       <CardContent className="p-4">
         <div className="mb-2 flex items-center justify-between">
-          <span className="text-xs font-medium tracking-wider text-[var(--color-text-tertiary)] uppercase">
+          <span className="text-text-tertiary text-xs font-medium tracking-wider uppercase">
             {label}
           </span>
           {Icon && (
-            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-[var(--color-accent)]/10">
-              <Icon className="h-4 w-4 text-[var(--color-accent)]" />
+            <div className="bg-accent/10 flex h-8 w-8 items-center justify-center rounded-lg">
+              <Icon className="text-accent h-4 w-4" />
             </div>
           )}
         </div>
         <div className="flex items-baseline gap-2">
-          <span className="text-2xl font-bold text-[var(--color-text-primary)]">{value}</span>
+          <span className="text-text-primary text-2xl font-bold">{value}</span>
           {trend && (
             <span
               className={cn(
@@ -294,14 +290,14 @@ function MetricCard({
                   ? 'text-green-600 dark:text-green-400'
                   : trend === 'down'
                     ? 'text-red-600 dark:text-red-400'
-                    : 'text-[var(--color-text-tertiary)]',
+                    : 'text-text-tertiary',
               )}
             >
               {trend === 'up' ? '▲' : trend === 'down' ? '▼' : '—'}
             </span>
           )}
         </div>
-        {subtext && <div className="mt-1 text-xs text-[var(--color-text-tertiary)]">{subtext}</div>}
+        {subtext && <div className="text-text-tertiary mt-1 text-xs">{subtext}</div>}
       </CardContent>
     </Card>
   );
@@ -323,18 +319,18 @@ function EndpointRow({
       <div className="min-w-0">
         <div className="flex items-center gap-2">
           {method && (
-            <span className="rounded bg-[var(--color-surface-tertiary)] px-1.5 py-0.5 font-mono text-[10px] font-bold text-[var(--color-text-secondary)] uppercase">
+            <span className="bg-surface-tertiary text-text-secondary rounded px-1.5 py-0.5 font-mono text-[10px] font-bold uppercase">
               {method}
             </span>
           )}
-          <code className="truncate font-mono text-sm text-[var(--color-accent)]">{endpoint}</code>
+          <code className="text-accent truncate font-mono text-sm">{endpoint}</code>
         </div>
-        <div className="text-sm text-[var(--color-text-tertiary)]">{description}</div>
+        <div className="text-text-tertiary text-sm">{description}</div>
       </div>
       {apiStatus ? (
         <StatusBadge status={apiStatus} />
       ) : (
-        <span className="text-xs text-[var(--color-text-tertiary)]">—</span>
+        <span className="text-text-tertiary text-xs">—</span>
       )}
     </div>
   );
@@ -358,7 +354,7 @@ function UptimeBar({ status }: { status: 'healthy' | 'degraded' | 'unhealthy' })
         <div
           key={i}
           className={cn(
-            'h-7 min-w-[3px] flex-1 rounded-[2px] transition-colors',
+            'h-7 min-w-0.75 flex-1 rounded-xs transition-colors',
             day === 'healthy'
               ? 'bg-green-500'
               : day === 'degraded'
@@ -398,19 +394,17 @@ function CategoryDistribution({
     <div className="space-y-2">
       {sorted.map((cat, i) => (
         <div key={cat.category} className="flex items-center gap-3">
-          <span className="w-20 truncate text-xs text-[var(--color-text-secondary)] capitalize">
+          <span className="text-text-secondary w-20 truncate text-xs capitalize">
             {cat.category}
           </span>
-          <div className="h-5 flex-1 overflow-hidden rounded bg-[var(--color-surface-tertiary)]">
+          <div className="bg-surface-tertiary h-5 flex-1 overflow-hidden rounded">
             <div
               className={cn('h-full rounded transition-all', barColors[i % barColors.length])}
               style={{ width: `${(cat.count / max) * 100}%` }}
             />
           </div>
-          <span className="w-12 text-right font-mono text-xs text-[var(--color-text-tertiary)]">
-            {cat.count}
-          </span>
-          <span className="w-10 text-right text-[10px] text-[var(--color-text-tertiary)]">
+          <span className="text-text-tertiary w-12 text-right font-mono text-xs">{cat.count}</span>
+          <span className="text-text-tertiary w-10 text-right text-[10px]">
             {((cat.count / total) * 100).toFixed(0)}%
           </span>
         </div>
@@ -473,10 +467,10 @@ export default async function StatusPage() {
             className={cn(
               'absolute inset-0 opacity-[0.03]',
               overallStatus === 'healthy'
-                ? 'bg-gradient-to-br from-green-500 to-transparent'
+                ? 'bg-linear-to-br from-green-500 to-transparent'
                 : overallStatus === 'degraded'
-                  ? 'bg-gradient-to-br from-yellow-500 to-transparent'
-                  : 'bg-gradient-to-br from-red-500 to-transparent',
+                  ? 'bg-linear-to-br from-yellow-500 to-transparent'
+                  : 'bg-linear-to-br from-red-500 to-transparent',
             )}
           />
           <div className="relative">
@@ -491,17 +485,17 @@ export default async function StatusPage() {
                       : 'bg-red-500',
                 )}
               />
-              <h1 className="font-serif text-3xl font-bold text-[var(--color-text-primary)] md:text-4xl">
+              <h1 className="text-text-primary font-serif text-3xl font-bold md:text-4xl">
                 {overallStatus === 'healthy' && 'All Systems Operational'}
                 {overallStatus === 'degraded' && 'Some Systems Degraded'}
                 {overallStatus === 'unhealthy' && 'System Issues Detected'}
               </h1>
             </div>
-            <p className="mb-2 text-sm text-[var(--color-text-secondary)]">
+            <p className="text-text-secondary mb-2 text-sm">
               {healthyCount}/{serviceCount} services operational · {uptimePct}% uptime (30d)
             </p>
             {health && (
-              <p className="text-xs text-[var(--color-text-tertiary)]">
+              <p className="text-text-tertiary text-xs">
                 Last checked: {new Date(health.timestamp).toLocaleString()} · Auto-refreshes every
                 30s
               </p>
@@ -513,16 +507,16 @@ export default async function StatusPage() {
         <Card className="mb-8">
           <CardContent className="p-6">
             <div className="mb-3 flex items-center justify-between">
-              <h2 className="flex items-center gap-2 font-serif text-lg font-bold text-[var(--color-text-primary)]">
+              <h2 className="text-text-primary flex items-center gap-2 font-serif text-lg font-bold">
                 <CheckCircle className="h-4 w-4 text-green-500" />
                 30-Day Uptime
               </h2>
-              <span className="text-sm text-[var(--color-text-tertiary)]">{uptimePct}%</span>
+              <span className="text-text-tertiary text-sm">{uptimePct}%</span>
             </div>
             <UptimeBar status={overallStatus} />
             <div className="mt-2 flex justify-between">
-              <span className="text-[10px] text-[var(--color-text-tertiary)]">30 days ago</span>
-              <div className="flex items-center gap-3 text-[10px] text-[var(--color-text-tertiary)]">
+              <span className="text-text-tertiary text-[10px]">30 days ago</span>
+              <div className="text-text-tertiary flex items-center gap-3 text-[10px]">
                 <span className="flex items-center gap-1">
                   <span className="h-2 w-2 rounded-[1px] bg-green-500" /> Operational
                 </span>
@@ -533,7 +527,7 @@ export default async function StatusPage() {
                   <span className="h-2 w-2 rounded-[1px] bg-red-500" /> Down
                 </span>
               </div>
-              <span className="text-[10px] text-[var(--color-text-tertiary)]">Today</span>
+              <span className="text-text-tertiary text-[10px]">Today</span>
             </div>
           </CardContent>
         </Card>
@@ -610,16 +604,16 @@ export default async function StatusPage() {
 
         {/* ── Service Status ── */}
         <Card className="mb-8 overflow-hidden">
-          <div className="flex items-center justify-between border-b border-[var(--color-border)] bg-[var(--color-surface-secondary)] px-6 py-4">
-            <h2 className="flex items-center gap-2 font-serif text-lg font-bold text-[var(--color-text-primary)]">
-              <Server className="h-4 w-4 text-[var(--color-accent)]" />
+          <div className="border-border bg-surface-secondary flex items-center justify-between border-b px-6 py-4">
+            <h2 className="text-text-primary flex items-center gap-2 font-serif text-lg font-bold">
+              <Server className="text-accent h-4 w-4" />
               Service Status
             </h2>
-            <span className="text-xs text-[var(--color-text-tertiary)]">
+            <span className="text-text-tertiary text-xs">
               {healthyCount}/{serviceCount} healthy
             </span>
           </div>
-          <div className="divide-y divide-[var(--color-border)]">
+          <div className="divide-border divide-y">
             {health ? (
               <>
                 <StatusRow
@@ -655,8 +649,8 @@ export default async function StatusPage() {
             ) : (
               <div className="px-6 py-12 text-center">
                 <AlertTriangle className="mx-auto mb-3 h-8 w-8 text-yellow-500" />
-                <p className="text-[var(--color-text-tertiary)]">Unable to fetch health status</p>
-                <p className="mt-1 text-xs text-[var(--color-text-tertiary)]">
+                <p className="text-text-tertiary">Unable to fetch health status</p>
+                <p className="text-text-tertiary mt-1 text-xs">
                   The health endpoint may be temporarily unavailable
                 </p>
               </div>
@@ -666,14 +660,14 @@ export default async function StatusPage() {
 
         {/* ── API Endpoints ── */}
         <Card className="mb-8 overflow-hidden">
-          <div className="flex items-center justify-between border-b border-[var(--color-border)] bg-[var(--color-surface-secondary)] px-6 py-4">
-            <h2 className="flex items-center gap-2 font-serif text-lg font-bold text-[var(--color-text-primary)]">
-              <Wifi className="h-4 w-4 text-[var(--color-accent)]" />
+          <div className="border-border bg-surface-secondary flex items-center justify-between border-b px-6 py-4">
+            <h2 className="text-text-primary flex items-center gap-2 font-serif text-lg font-bold">
+              <Wifi className="text-accent h-4 w-4" />
               API Endpoints
             </h2>
             <Badge>REST &amp; Streaming</Badge>
           </div>
-          <div className="divide-y divide-[var(--color-border)]">
+          <div className="divide-border divide-y">
             {(() => {
               const apiStatus = health?.checks.api.status;
               return (
@@ -766,9 +760,9 @@ export default async function StatusPage() {
           {/* ── Category Distribution ── */}
           {stats && stats.byCategory && stats.byCategory.length > 0 && (
             <Card className="overflow-hidden">
-              <div className="border-b border-[var(--color-border)] bg-[var(--color-surface-secondary)] px-6 py-4">
-                <h2 className="flex items-center gap-2 font-serif text-lg font-bold text-[var(--color-text-primary)]">
-                  <BarChart3 className="h-4 w-4 text-[var(--color-accent)]" />
+              <div className="border-border bg-surface-secondary border-b px-6 py-4">
+                <h2 className="text-text-primary flex items-center gap-2 font-serif text-lg font-bold">
+                  <BarChart3 className="text-accent h-4 w-4" />
                   Articles by Category
                 </h2>
               </div>
@@ -781,31 +775,31 @@ export default async function StatusPage() {
           {/* ── Source Activity (24h) ── */}
           {stats && stats.bySource.length > 0 && (
             <Card className="overflow-hidden">
-              <div className="flex items-center justify-between border-b border-[var(--color-border)] bg-[var(--color-surface-secondary)] px-6 py-4">
-                <h2 className="flex items-center gap-2 font-serif text-lg font-bold text-[var(--color-text-primary)]">
-                  <TrendingUp className="h-4 w-4 text-[var(--color-accent)]" />
+              <div className="border-border bg-surface-secondary flex items-center justify-between border-b px-6 py-4">
+                <h2 className="text-text-primary flex items-center gap-2 font-serif text-lg font-bold">
+                  <TrendingUp className="text-accent h-4 w-4" />
                   Top Sources (24h)
                 </h2>
-                <span className="text-sm text-[var(--color-text-tertiary)]">
+                <span className="text-text-tertiary text-sm">
                   {stats.summary.activeSources} active
                 </span>
               </div>
-              <div className="divide-y divide-[var(--color-border)]">
+              <div className="divide-border divide-y">
                 {stats.bySource.slice(0, 8).map((source, i) => (
                   <div
                     key={source.source}
                     className="flex items-center justify-between gap-4 px-6 py-3"
                   >
                     <div className="flex min-w-0 items-center gap-3">
-                      <span className="w-5 text-right font-mono text-xs text-[var(--color-text-tertiary)]">
+                      <span className="text-text-tertiary w-5 text-right font-mono text-xs">
                         {i + 1}
                       </span>
                       <div className="min-w-0">
-                        <div className="truncate text-sm font-medium text-[var(--color-text-primary)]">
+                        <div className="text-text-primary truncate text-sm font-medium">
                           {source.source}
                         </div>
                         {source.latestTime && (
-                          <div className="text-xs text-[var(--color-text-tertiary)]">
+                          <div className="text-text-tertiary text-xs">
                             {formatTimeAgo(source.latestTime)}
                           </div>
                         )}
@@ -813,18 +807,18 @@ export default async function StatusPage() {
                     </div>
                     <div className="flex shrink-0 items-center gap-3">
                       {/* Mini bar */}
-                      <div className="hidden h-1.5 w-16 overflow-hidden rounded-full bg-[var(--color-surface-tertiary)] sm:block">
+                      <div className="bg-surface-tertiary hidden h-1.5 w-16 overflow-hidden rounded-full sm:block">
                         <div
-                          className="h-full rounded-full bg-[var(--color-accent)]"
+                          className="bg-accent h-full rounded-full"
                           style={{
                             width: `${source.percentage}%`,
                           }}
                         />
                       </div>
-                      <span className="w-8 text-right font-mono text-sm font-medium text-[var(--color-text-primary)]">
+                      <span className="text-text-primary w-8 text-right font-mono text-sm font-medium">
                         {source.articleCount}
                       </span>
-                      <span className="w-10 text-right text-xs text-[var(--color-text-tertiary)]">
+                      <span className="text-text-tertiary w-10 text-right text-xs">
                         {source.percentage}%
                       </span>
                     </div>
@@ -838,11 +832,9 @@ export default async function StatusPage() {
         {/* ── Incident & Contact Footer ── */}
         <Card className="text-center">
           <CardContent className="p-8">
-            <Headphones className="mx-auto mb-3 h-6 w-6 text-[var(--color-accent)]" />
-            <h3 className="mb-2 font-serif text-lg font-bold text-[var(--color-text-primary)]">
-              Need Help?
-            </h3>
-            <p className="mx-auto mb-5 max-w-lg text-sm text-[var(--color-text-tertiary)]">
+            <Headphones className="text-accent mx-auto mb-3 h-6 w-6" />
+            <h3 className="text-text-primary mb-2 font-serif text-lg font-bold">Need Help?</h3>
+            <p className="text-text-tertiary mx-auto mb-5 max-w-lg text-sm">
               Report issues, request features, or check for known incidents on GitHub.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-3">

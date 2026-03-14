@@ -1,0 +1,33 @@
+{
+  "name": "nirholas/crypto-news",
+  "description": "Free Crypto News PHP SDK — real-time crypto news aggregator API. No API key required.",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "nirholas",
+      "email": "22895867+nirholas@users.noreply.github.com"
+    }
+  ],
+  "homepage": "https://cryptocurrency.cv",
+  "keywords": ["crypto", "news", "bitcoin", "ethereum", "api", "rss", "free"],
+  "require": {
+    "php": ">=7.4",
+    "ext-json": "*",
+    "ext-curl": "*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.0 || ^10.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "CryptoNews\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "CryptoNews\\Tests\\": "tests/"
+    }
+  },
+  "minimum-stability": "stable"
+}

@@ -39,7 +39,6 @@ vi.mock('jose', () => {
 
 import { signJwt, verifyJwt, createAccessToken, createRefreshToken } from '@/lib/auth/jwt';
 
-
 describe('JWT auth', () => {
   const testUser = {
     id: 'user-123',

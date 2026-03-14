@@ -1,0 +1,69 @@
+{
+  "name": "Free Crypto News API",
+  "description": "Real-time crypto news from 200+ sources. Free, no auth.",
+  "url": "https://cryptocurrency.cv",
+  "image": "https://cryptocurrency.cv/favicon.ico",
+  "tags": [
+    "cryptocurrency",
+    "crypto",
+    "bitcoin",
+    "ethereum",
+    "news",
+    "api",
+    "free",
+    "open-source"
+  ],
+  "created": "2024-01-01",
+  "modified": "2026-03-14",
+  "specificationVersion": "0.15",
+  "apis": [
+    {
+      "name": "Free Crypto News",
+      "description": "Crypto news aggregation API with 150+ endpoints, AI sentiment analysis, real-time feeds, 662k+ article archive, market data, and SDKs in 13 languages.",
+      "image": "https://cryptocurrency.cv/favicon.ico",
+      "humanURL": "https://cryptocurrency.cv",
+      "baseURL": "https://cryptocurrency.cv/api",
+      "tags": [
+        "cryptocurrency",
+        "news",
+        "bitcoin",
+        "ethereum",
+        "defi",
+        "sentiment-analysis",
+        "market-data",
+        "rss"
+      ],
+      "properties": [
+        {
+          "type": "X-documentation",
+          "url": "https://cryptocurrency.cv/api/docs"
+        },
+        {
+          "type": "OpenAPI",
+          "url": "https://cryptocurrency.cv/api/openapi.json"
+        },
+        {
+          "type": "X-github",
+          "url": "https://github.com/nirholas/free-crypto-news"
+        },
+        {
+          "type": "X-postman",
+          "url": "https://github.com/nirholas/free-crypto-news/tree/main/postman"
+        }
+      ],
+      "contact": [
+        {
+          "FN": "Free Crypto News",
+          "url": "https://cryptocurrency.cv",
+          "X-github": "https://github.com/nirholas"
+        }
+      ]
+    }
+  ],
+  "maintainers": [
+    {
+      "FN": "nirholas",
+      "url": "https://github.com/nirholas"
+    }
+  ]
+}
