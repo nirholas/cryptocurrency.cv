@@ -70,7 +70,8 @@ export async function PUT(request: NextRequest) {
   if (typeof body.emailEnabled === 'boolean') update.emailEnabled = body.emailEnabled;
   if (typeof body.pushEnabled === 'boolean') update.pushEnabled = body.pushEnabled;
   if (typeof body.inAppEnabled === 'boolean') update.inAppEnabled = body.inAppEnabled;
-  if (typeof body.quietHoursEnabled === 'boolean') update.quietHoursEnabled = body.quietHoursEnabled;
+  if (typeof body.quietHoursEnabled === 'boolean')
+    update.quietHoursEnabled = body.quietHoursEnabled;
 
   if (typeof body.emailDigestFrequency === 'string') {
     if (!ALLOWED_FREQUENCIES.includes(body.emailDigestFrequency)) {

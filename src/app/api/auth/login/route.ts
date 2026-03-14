@@ -92,43 +92,18 @@ export async function POST(request: NextRequest) {
       console.log(`[AUTH] Magic link generated for ${normalizedEmail} (token redacted)`);
     }
 
-    // If an email service is configured, send email
-    if (process.env.RESEND_API_KEY) {
-      try {
-        await fetch('https://api.resend.com/emails', {
-          method: 'POST',
-          headers: {
-            Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            from: process.env.EMAIL_FROM || 'Crypto Vision News <noreply@cryptocurrency.cv>',
-            to: normalizedEmail,
-            subject: 'Sign in to Crypto Vision News',
-            html: `
-              <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 480px; margin: 0 auto; padding: 40px 20px;">
-                <h1 style="font-size: 24px; font-weight: 700; color: #1e293b; margin-bottom: 16px;">Sign in to Crypto Vision News</h1>
-                <p style="color: #64748b; font-size: 16px; line-height: 1.5; margin-bottom: 24px;">
-                  Click the button below to sign in to your developer dashboard. This link expires in 15 minutes.
-                </p>
-                <a href="${magicLink}" style="display: inline-block; background: #3b82f6; color: white; padding: 12px 32px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 16px;">
-                  Sign In
-                </a>
-                <p style="color: #94a3b8; font-size: 13px; margin-top: 32px; line-height: 1.5;">
-                  If you didn't request this email, you can safely ignore it.<br/>
-                  This link will expire in 15 minutes.
-                </p>
-                <hr style="border: none; border-top: 1px solid #e2e8f0; margin: 32px 0;" />
-                <p style="color: #94a3b8; font-size: 12px;">
-                  Crypto Vision News — <a href="https://cryptocurrency.cv" style="color: #3b82f6;">cryptocurrency.cv</a>
-                </p>
-              </div>
-            `,
-          }),
-        });
-      } catch (emailError) {
-        console.error('[AUTH] Failed to send magic link email:', emailError);
-      }
+    // Send magic link email (Resend in prod, console fallback in dev)
+    try {
+      const template = magicLinkEmail(magicLink);
+      await sendEmail({
+        to: normalizedEmail,
+        subject: template.subject,
+        html: template.html,
+        text: template.text,
+        tags: [{ name: 'type', value: 'magic-link' }],
+      });
+    } catch (emailError) {
+      console.error('[AUTH] Failed to send magic link email:', emailError);
     }
 
     return NextResponse.json({

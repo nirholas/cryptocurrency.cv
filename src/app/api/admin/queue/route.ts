@@ -10,7 +10,7 @@
 
 import { type NextRequest, NextResponse } from 'next/server';
 import { requireAdminAuth } from '@/lib/admin-auth';
-import { jobQueue } from '@/lib/scale';
+import { jobQueue } from '@/lib/scale/index';
 
 export const runtime = 'nodejs';
 

@@ -41,7 +41,12 @@ function createContext(
 /**
  * Compute HMAC-SHA256 hex digest using Web Crypto API (same as the middleware).
  */
-async function signPayload(secret: string, timestamp: string, method: string, path: string): Promise<string> {
+async function signPayload(
+  secret: string,
+  timestamp: string,
+  method: string,
+  path: string,
+): Promise<string> {
   const payload = `${timestamp}\n${method}\n${path}`;
   const enc = new TextEncoder();
   const key = await crypto.subtle.importKey(

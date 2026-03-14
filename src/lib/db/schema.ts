@@ -67,8 +67,12 @@ export const articles = pgTable(
     firstSeen: timestamp('first_seen', { withTimezone: true }).notNull(),
     lastSeen: timestamp('last_seen', { withTimezone: true }).notNull(),
     fetchCount: integer('fetch_count').default(1),
-    tickers: text('tickers').array().default(sql`'{}'::text[]`),
-    tags: text('tags').array().default(sql`'{}'::text[]`),
+    tickers: text('tickers')
+      .array()
+      .default(sql`'{}'::text[]`),
+    tags: text('tags')
+      .array()
+      .default(sql`'{}'::text[]`),
     /** Entities extracted from article */
     entities: jsonb('entities').$type<{
       people: string[];
@@ -104,7 +108,7 @@ export const articles = pgTable(
     index('idx_articles_tags').using('gin', table.tags),
     uniqueIndex('idx_articles_slug').on(table.slug),
     // GIN index on the tsvector column (created via raw SQL in migration)
-  ]
+  ],
 );
 
 // ────────────────────────────────────────────────────────────────────────────
@@ -128,7 +132,7 @@ export const pricesHistory = pgTable(
     index('idx_prices_ticker').on(table.ticker),
     index('idx_prices_timestamp').on(table.timestamp),
     index('idx_prices_ticker_ts').on(table.ticker, table.timestamp),
-  ]
+  ],
 );
 
 // ────────────────────────────────────────────────────────────────────────────
@@ -142,7 +146,9 @@ export const marketSnapshots = pgTable(
     timestamp: timestamp('timestamp', { withTimezone: true }).notNull(),
     hour: integer('hour').notNull(),
     articleCount: integer('article_count').default(0),
-    topArticles: text('top_articles').array().default(sql`'{}'::text[]`),
+    topArticles: text('top_articles')
+      .array()
+      .default(sql`'{}'::text[]`),
     topTickers: jsonb('top_tickers').$type<{ ticker: string; mention_count: number }[]>(),
     sourceCounts: jsonb('source_counts').$type<Record<string, number>>(),
     btcPrice: real('btc_price'),
@@ -153,7 +159,7 @@ export const marketSnapshots = pgTable(
   (table) => [
     index('idx_snapshots_timestamp').on(table.timestamp),
     index('idx_snapshots_hour').on(table.hour),
-  ]
+  ],
 );
 
 // ────────────────────────────────────────────────────────────────────────────
@@ -180,7 +186,7 @@ export const predictions = pgTable(
   (table) => [
     index('idx_predictions_ticker').on(table.ticker),
     index('idx_predictions_ts').on(table.timestamp),
-  ]
+  ],
 );
 
 // ────────────────────────────────────────────────────────────────────────────
@@ -196,9 +202,7 @@ export const tagScores = pgTable(
     articleCount: integer('article_count').default(0),
     lastUpdated: timestamp('last_updated', { withTimezone: true }).defaultNow(),
   },
-  (table) => [
-    uniqueIndex('idx_tag_scores_tag').on(table.tag),
-  ]
+  (table) => [uniqueIndex('idx_tag_scores_tag').on(table.tag)],
 );
 
 // ────────────────────────────────────────────────────────────────────────────
@@ -210,14 +214,14 @@ export const userWatchlists = pgTable(
   {
     id: uuid('id').defaultRandom().primaryKey(),
     userId: varchar('user_id', { length: 255 }).notNull(),
-    tickers: text('tickers').array().default(sql`'{}'::text[]`),
+    tickers: text('tickers')
+      .array()
+      .default(sql`'{}'::text[]`),
     name: varchar('name', { length: 128 }).default('Default'),
     createdAt: timestamp('created_at', { withTimezone: true }).defaultNow(),
     updatedAt: timestamp('updated_at', { withTimezone: true }).defaultNow(),
   },
-  (table) => [
-    index('idx_watchlists_user').on(table.userId),
-  ]
+  (table) => [index('idx_watchlists_user').on(table.userId)],
 );
 
 // ────────────────────────────────────────────────────────────────────────────
@@ -234,7 +238,9 @@ export const coins = pgTable(
     coingeckoId: varchar('coingecko_id', { length: 128 }),
     coinmarketcapId: integer('coinmarketcap_id'),
     category: varchar('category', { length: 64 }),
-    chains: text('chains').array().default(sql`'{}'::text[]`),
+    chains: text('chains')
+      .array()
+      .default(sql`'{}'::text[]`),
     contractAddresses: jsonb('contract_addresses').$type<Record<string, string>>(),
     logo: text('logo'),
     website: text('website'),
@@ -252,7 +258,7 @@ export const coins = pgTable(
     index('idx_coins_coingecko').on(table.coingeckoId),
     index('idx_coins_category').on(table.category),
     index('idx_coins_rank').on(table.rank),
-  ]
+  ],
 );
 
 // ────────────────────────────────────────────────────────────────────────────
@@ -283,7 +289,7 @@ export const providerHealth = pgTable(
     index('idx_provider_health_chain').on(table.chain),
     index('idx_provider_health_ts').on(table.timestamp),
     index('idx_provider_health_state').on(table.circuitState),
-  ]
+  ],
 );
 
 // ────────────────────────────────────────────────────────────────────────────
@@ -314,7 +320,7 @@ export const alerts = pgTable(
     index('idx_alerts_ticker').on(table.ticker),
     index('idx_alerts_active').on(table.isActive),
     index('idx_alerts_type').on(table.alertType),
-  ]
+  ],
 );
 
 // ────────────────────────────────────────────────────────────────────────────
@@ -345,7 +351,7 @@ export const socialMetrics = pgTable(
     index('idx_social_source').on(table.source),
     index('idx_social_ts').on(table.timestamp),
     index('idx_social_ticker_ts').on(table.ticker, table.timestamp),
-  ]
+  ],
 );
 
 // ────────────────────────────────────────────────────────────────────────────
@@ -367,9 +373,8 @@ export const derivativesSnapshots = pgTable(
     fundingRate: real('funding_rate'),
     markPrice: real('mark_price'),
     source: varchar('source', { length: 64 }).notNull(),
-    exchangeBreakdown: jsonb('exchange_breakdown').$type<
-      { exchange: string; oiUsd: number; oiCoin: number }[]
-    >(),
+    exchangeBreakdown:
+      jsonb('exchange_breakdown').$type<{ exchange: string; oiUsd: number; oiCoin: number }[]>(),
     timestamp: timestamp('timestamp', { withTimezone: true }).notNull(),
     createdAt: timestamp('created_at', { withTimezone: true }).defaultNow(),
   },
@@ -378,7 +383,7 @@ export const derivativesSnapshots = pgTable(
     index('idx_derivatives_ts').on(table.timestamp),
     index('idx_derivatives_ticker_ts').on(table.ticker, table.timestamp),
     index('idx_derivatives_source').on(table.source),
-  ]
+  ],
 );
 
 // ────────────────────────────────────────────────────────────────────────────
@@ -397,9 +402,7 @@ export const stablecoinSnapshots = pgTable(
     circulatingChange7d: real('circulating_change_7d'),
     price: real('price'),
     rank: integer('rank'),
-    chainDistribution: jsonb('chain_distribution').$type<
-      { chain: string; amount: number }[]
-    >(),
+    chainDistribution: jsonb('chain_distribution').$type<{ chain: string; amount: number }[]>(),
     source: varchar('source', { length: 64 }).notNull(),
     timestamp: timestamp('timestamp', { withTimezone: true }).notNull(),
     createdAt: timestamp('created_at', { withTimezone: true }).defaultNow(),
@@ -408,7 +411,7 @@ export const stablecoinSnapshots = pgTable(
     index('idx_stablecoin_symbol').on(table.symbol),
     index('idx_stablecoin_ts').on(table.timestamp),
     index('idx_stablecoin_symbol_ts').on(table.symbol, table.timestamp),
-  ]
+  ],
 );
 
 // ────────────────────────────────────────────────────────────────────────────
@@ -435,7 +438,7 @@ export const gasFeesHistory = pgTable(
     index('idx_gas_chain').on(table.chain),
     index('idx_gas_ts').on(table.timestamp),
     index('idx_gas_chain_ts').on(table.chain, table.timestamp),
-  ]
+  ],
 );
 
 // ────────────────────────────────────────────────────────────────────────────
@@ -453,8 +456,12 @@ export const newsArticles = pgTable(
     publishedAt: timestamp('published_at', { withTimezone: true }),
     description: text('description'),
     imageUrl: text('image_url'),
-    currencies: text('currencies').array().default(sql`'{}'::text[]`),
-    categories: text('categories').array().default(sql`'{}'::text[]`),
+    currencies: text('currencies')
+      .array()
+      .default(sql`'{}'::text[]`),
+    categories: text('categories')
+      .array()
+      .default(sql`'{}'::text[]`),
     sentiment: real('sentiment'),
     votesPositive: integer('votes_positive').default(0),
     votesNegative: integer('votes_negative').default(0),
@@ -469,7 +476,7 @@ export const newsArticles = pgTable(
     index('idx_news_provider').on(table.provider),
     index('idx_news_currencies').using('gin', table.currencies),
     index('idx_news_sentiment').on(table.sentiment),
-  ]
+  ],
 );
 
 // ────────────────────────────────────────────────────────────────────────────
@@ -496,7 +503,7 @@ export const users = pgTable(
     uniqueIndex('idx_users_email').on(table.email),
     index('idx_users_provider').on(table.provider),
     index('idx_users_role').on(table.role),
-  ]
+  ],
 );
 
 // ────────────────────────────────────────────────────────────────────────────
@@ -514,7 +521,9 @@ export const apiKeys = pgTable(
     keyPrefix: varchar('key_prefix', { length: 16 }).notNull(),
     name: varchar('name', { length: 128 }).notNull().default('Default'),
     tier: varchar('tier', { length: 32 }).notNull().default('pro'),
-    permissions: text('permissions').array().default(sql`'{}'::text[]`),
+    permissions: text('permissions')
+      .array()
+      .default(sql`'{}'::text[]`),
     rateLimitDay: integer('rate_limit_day').notNull().default(50000),
     active: boolean('active').notNull().default(true),
     expiresAt: timestamp('expires_at', { withTimezone: true }),
@@ -527,7 +536,7 @@ export const apiKeys = pgTable(
     uniqueIndex('idx_apikeys_hash').on(table.keyHash),
     index('idx_apikeys_tier').on(table.tier),
     index('idx_apikeys_active').on(table.active),
-  ]
+  ],
 );
 
 // ────────────────────────────────────────────────────────────────────────────
@@ -554,7 +563,7 @@ export const authTokens = pgTable(
     index('idx_authtokens_user').on(table.userId),
     index('idx_authtokens_type').on(table.type),
     index('idx_authtokens_expires').on(table.expiresAt),
-  ]
+  ],
 );
 
 // ────────────────────────────────────────────────────────────────────────────
@@ -581,7 +590,5 @@ export const notificationPreferences = pgTable(
     createdAt: timestamp('created_at', { withTimezone: true }).defaultNow(),
     updatedAt: timestamp('updated_at', { withTimezone: true }).defaultNow(),
   },
-  (table) => [
-    uniqueIndex('idx_notif_prefs_user').on(table.userId),
-  ]
+  (table) => [uniqueIndex('idx_notif_prefs_user').on(table.userId)],
 );

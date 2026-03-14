@@ -113,9 +113,16 @@ export interface AlertData {
   direction?: 'up' | 'down';
 }
 
-export function alertTriggeredEmail(alert: AlertData): { subject: string; html: string; text: string } {
+export function alertTriggeredEmail(alert: AlertData): {
+  subject: string;
+  html: string;
+  text: string;
+} {
   const emoji = alert.direction === 'up' ? '🟢' : alert.direction === 'down' ? '🔴' : '⚠️';
-  const formatted = alert.currentValue.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
+  const formatted = alert.currentValue.toLocaleString('en-US', {
+    style: 'currency',
+    currency: 'USD',
+  });
 
   return {
     subject: `${emoji} ${alert.ticker} Alert — ${alert.condition} ${alert.threshold}`,
@@ -160,7 +167,11 @@ export function welcomeEmail(name: string): { subject: string; html: string; tex
 
 /* ─── Email Verification ─── */
 
-export function emailVerificationEmail(verifyUrl: string): { subject: string; html: string; text: string } {
+export function emailVerificationEmail(verifyUrl: string): {
+  subject: string;
+  html: string;
+  text: string;
+} {
   return {
     subject: `Verify your email — ${BRAND_NAME}`,
     html: baseLayout(`

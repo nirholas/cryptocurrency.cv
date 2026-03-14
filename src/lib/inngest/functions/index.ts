@@ -32,6 +32,8 @@ export { tagScoreRecalculation } from './tag-score-recalculation';
 
 export { enrichArticlesCron, enrichArticleOnEvent } from './enrich-article';
 
+export { sendDailyEmailDigest } from './send-email-digest';
+
 export { derivativesSnapshot } from './derivatives-snapshot';
 
 export { stablecoinSnapshot, gasFeeSnapshot } from './market-data-snapshot';
@@ -83,6 +85,7 @@ export const allFunctions = [
   tagScoreRecalculation,
   enrichArticlesCron,
   enrichArticleOnEvent,
+  sendDailyEmailDigest,
   derivativesSnapshot,
   stablecoinSnapshot,
   gasFeeSnapshot,

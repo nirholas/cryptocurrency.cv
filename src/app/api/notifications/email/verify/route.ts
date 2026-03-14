@@ -10,7 +10,7 @@ import { type NextRequest, NextResponse } from 'next/server';
 import { getSession } from '@/lib/auth/session';
 import { getDb } from '@/lib/db';
 import { notificationPreferences, users } from '@/lib/db/schema';
-import { eq, and } from 'drizzle-orm';
+import { eq } from 'drizzle-orm';
 import { sendEmail, emailVerificationEmail } from '@/lib/email';
 import { randomBytes, createHash } from 'crypto';
 
@@ -64,7 +64,8 @@ export async function POST() {
     expiresAt: Date.now() + 60 * 60 * 1000, // 1 hour
   });
 
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || process.env.NEXTAUTH_URL || 'https://cryptocurrency.cv';
+  const baseUrl =
+    process.env.NEXT_PUBLIC_SITE_URL || process.env.NEXTAUTH_URL || 'https://cryptocurrency.cv';
   const verifyUrl = `${baseUrl}/api/notifications/email/verify?token=${rawToken}`;
 
   const template = emailVerificationEmail(verifyUrl);
