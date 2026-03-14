@@ -60,6 +60,7 @@ import { tagScoreRecalculation } from './tag-score-recalculation';
 import { enrichArticlesCron, enrichArticleOnEvent } from './enrich-article';
 import { sendDailyEmailDigest } from './send-email-digest';
 import { sendDailyEmailDigest } from './send-email-digest';
+import { sendDailyEmailDigest } from './send-email-digest';
 import { derivativesSnapshot } from './derivatives-snapshot';
 import { stablecoinSnapshot, gasFeeSnapshot } from './market-data-snapshot';
 import {

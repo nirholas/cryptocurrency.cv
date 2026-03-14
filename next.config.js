@@ -288,11 +288,6 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
 
-  // Skip linting during build — run `bun run lint` separately
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-
   // Disable x-powered-by header
   poweredByHeader: false,
 
