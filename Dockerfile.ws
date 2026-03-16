@@ -4,7 +4,7 @@
 # Build:  docker build -f Dockerfile.ws -t crypto-news-ws .
 # Run:    docker run -p 8080:8080 -e REDIS_URL=redis://redis:6379 crypto-news-ws
 
-FROM node:22-alpine AS base
+FROM node:25-alpine AS base
 
 RUN apk add --no-cache wget
 
