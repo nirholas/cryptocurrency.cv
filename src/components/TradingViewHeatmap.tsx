@@ -27,7 +27,7 @@ export default function TradingViewHeatmap({
 }: TradingViewHeatmapProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const { resolvedTheme } = useTheme();
-  const theme = colorTheme || (resolvedTheme === "dark" ? "dark" : "light");
+  const theme = colorTheme || (resolvedTheme === "dark" || resolvedTheme === "midnight" ? "dark" : "light");
 
   const renderWidget = useCallback(() => {
     const container = containerRef.current;

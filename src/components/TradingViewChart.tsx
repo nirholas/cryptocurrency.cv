@@ -73,7 +73,7 @@ export default function TradingViewChart({
   const [styleOpen, setStyleOpen] = useState(false);
   const [isFullscreen, setIsFullscreen] = useState(false);
 
-  const theme = resolvedTheme === "dark" ? "dark" : "light";
+  const theme = resolvedTheme === "dark" || resolvedTheme === "midnight" ? "dark" : "light";
 
   // ---- Build the widget -----------------------------------------------------
 

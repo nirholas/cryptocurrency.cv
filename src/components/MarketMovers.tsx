@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback, useMemo } from "react";
+import { useState, useEffect, useCallback } from "react";
 import {
   TrendingUp,
   TrendingDown,
@@ -46,79 +46,49 @@ function formatCompact(num: number): string {
 }
 
 /* ------------------------------------------------------------------ */
-/*  MiniBar — visual bar for volume/market cap comparison              */
+/*  MoverRow — compact sidebar row                                     */
 /* ------------------------------------------------------------------ */
 
-function MiniBar({ value, max, color }: { value: number; max: number; color: string }) {
-  const pct = max > 0 ? Math.min(100, (value / max) * 100) : 0;
-  return (
-    <div className="h-1 w-full rounded-full bg-border overflow-hidden">
-      <div
-        className={cn("h-full rounded-full transition-all duration-500", color)}
-        style={{ width: `${pct}%` }}
-      />
-    </div>
-  );
-}
-
-/* ------------------------------------------------------------------ */
-/*  MoverCard                                                          */
-/* ------------------------------------------------------------------ */
-
-function MoverCard({ coin, rank, maxVolume }: { coin: Mover; rank: number; maxVolume: number }) {
+function MoverRow({ coin, rank }: { coin: Mover; rank: number }) {
   const isPositive = coin.change24h >= 0;
 
   return (
     <Link
       href={`/coin/${coin.id}`}
-      className="group flex items-center gap-3 p-3 rounded-lg border border-border hover:border-accent/30 bg-(--color-surface) hover:bg-surface-secondary transition-all duration-200"
+      className="flex items-center gap-3 py-2 px-2 -mx-2 rounded-md hover:bg-surface-secondary transition-colors group"
     >
-      <span className={cn(
-        "flex items-center justify-center w-7 h-7 rounded-full text-xs font-bold shrink-0",
-        isPositive ? "bg-emerald-500/10 text-emerald-500" : "bg-red-500/10 text-red-500"
-      )}>
+      {/* Rank */}
+      <span className="text-xs font-bold text-text-tertiary w-4 text-right tabular-nums">
         {rank}
       </span>
 
+      {/* Coin info */}
       <div className="flex-1 min-w-0">
-        <div className="flex items-center gap-2">
-          <span className="font-semibold text-sm truncate">{coin.symbol.toUpperCase()}</span>
-          <span className="text-xs text-text-tertiary truncate hidden sm:inline">
-            {coin.name}
-          </span>
-        </div>
-        <div className="flex items-center gap-2 mt-0.5">
-          <span className="text-xs text-text-secondary tabular-nums">
+        <div className="flex items-center gap-1.5">
+          <span className="text-sm font-semibold truncate">{coin.symbol.toUpperCase()}</span>
+          <span className="text-xs text-text-tertiary truncate">
             {formatPrice(coin.price)}
           </span>
-          {coin.volume24h && (
-            <span className="text-[10px] text-text-tertiary">
-              Vol {formatCompact(coin.volume24h)}
-            </span>
-          )}
         </div>
-        {coin.volume24h && (
-          <div className="mt-1">
-            <MiniBar
-              value={coin.volume24h}
-              max={maxVolume}
-              color={isPositive ? "bg-emerald-500" : "bg-red-500"}
-            />
-          </div>
-        )}
+        {coin.volume24h ? (
+          <span className="text-[10px] text-text-tertiary">
+            Vol {formatCompact(coin.volume24h)}
+          </span>
+        ) : null}
       </div>
 
-      <div className="text-right shrink-0">
-        <span
-          className={cn(
-            "inline-flex items-center gap-0.5 text-sm font-semibold tabular-nums",
-            isPositive ? "text-emerald-500" : "text-red-500"
-          )}
-        >
-          {isPositive ? <TrendingUp className="h-3.5 w-3.5" /> : <TrendingDown className="h-3.5 w-3.5" />}
-          {Math.abs(coin.change24h).toFixed(2)}%
-        </span>
-      </div>
+      {/* Change badge */}
+      <span
+        className={cn(
+          "inline-flex items-center gap-0.5 text-xs font-medium tabular-nums px-1.5 py-0.5 rounded shrink-0",
+          isPositive
+            ? "text-emerald-500 bg-emerald-500/10"
+            : "text-red-500 bg-red-500/10"
+        )}
+      >
+        {isPositive ? <TrendingUp className="h-3 w-3" /> : <TrendingDown className="h-3 w-3" />}
+        {Math.abs(coin.change24h).toFixed(2)}%
+      </span>
     </Link>
   );
 }
@@ -200,92 +170,101 @@ export default function MarketMovers() {
   };
 
   const activeList = tab === "gainers" ? gainers : losers;
-  const maxVolume = useMemo(
-    () => Math.max(...activeList.map((c) => c.volume24h || 0), 1),
-    [activeList]
-  );
+
+  if (loading) {
+    return (
+      <div>
+        <h3 className="text-base font-bold font-serif mb-4 pb-2 border-b border-border flex items-center gap-2">
+          <Flame className="h-4 w-4 text-orange-500" />
+          Market Movers
+        </h3>
+        <div className="space-y-3">
+          {Array.from({ length: 6 }).map((_, i) => (
+            <div key={i} className="flex items-center gap-3 animate-pulse">
+              <span className="w-4 h-4 rounded bg-border" />
+              <div className="flex-1 space-y-1.5">
+                <div className="h-3 w-20 rounded bg-border" />
+                <div className="h-2.5 w-14 rounded bg-border" />
+              </div>
+              <div className="h-5 w-14 rounded bg-border" />
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+  }
 
   return (
-    <section className="border-b border-border">
-      <div className="container-main py-8 lg:py-10">
-        {/* Section header */}
-        <div className="flex items-center justify-between mb-6">
-          <div className="flex items-center gap-3">
-            <div className="flex items-center gap-2">
-              <Flame className="h-5 w-5 text-orange-500" />
-              <h2 className="text-xl font-bold font-serif">Market Movers</h2>
-            </div>
-            <div className="flex rounded-lg border border-border overflow-hidden">
-              <button
-                onClick={() => setTab("gainers")}
-                className={cn(
-                  "flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium transition-colors cursor-pointer",
-                  tab === "gainers"
-                    ? "bg-emerald-500/10 text-emerald-500"
-                    : "text-text-tertiary hover:bg-surface-secondary"
-                )}
-              >
-                <TrendingUp className="h-3 w-3" />
-                Gainers
-              </button>
-              <button
-                onClick={() => setTab("losers")}
-                className={cn(
-                  "flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium transition-colors cursor-pointer border-l border-border",
-                  tab === "losers"
-                    ? "bg-red-500/10 text-red-500"
-                    : "text-text-tertiary hover:bg-surface-secondary"
-                )}
-              >
-                <TrendingDown className="h-3 w-3" />
-                Losers
-              </button>
-            </div>
-          </div>
-
-          <div className="flex items-center gap-2">
-            <button
-              onClick={handleRefresh}
-              className="p-2 rounded-md hover:bg-surface-secondary text-text-tertiary transition-colors cursor-pointer"
-              title="Refresh"
-            >
-              <RefreshCw className={cn("h-4 w-4", refreshing && "animate-spin")} />
-            </button>
-            <Link
-              href="/screener"
-              className="hidden sm:flex items-center gap-1 text-xs font-medium text-accent hover:text-accent-hover transition-colors"
-            >
-              Full Screener
-              <ArrowRight className="h-3 w-3" />
-            </Link>
-          </div>
+    <div>
+      {/* Header */}
+      <div className="flex items-center justify-between mb-4 pb-2 border-b border-border">
+        <h3 className="text-base font-bold font-serif flex items-center gap-2">
+          <Flame className="h-4 w-4 text-orange-500" />
+          Market Movers
+        </h3>
+        <div className="flex items-center gap-1.5">
+          <button
+            onClick={handleRefresh}
+            className="p-1 rounded hover:bg-surface-secondary text-text-tertiary transition-colors cursor-pointer"
+            title="Refresh"
+          >
+            <RefreshCw className={cn("h-3.5 w-3.5", refreshing && "animate-spin")} />
+          </button>
         </div>
-
-        {/* Content */}
-        {loading ? (
-          <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-5">
-            {Array.from({ length: 10 }).map((_, i) => (
-              <div
-                key={i}
-                className="h-[88px] rounded-lg border border-border bg-(--color-surface) animate-pulse"
-              />
-            ))}
-          </div>
-        ) : activeList.length === 0 ? (
-          <div className="flex flex-col items-center justify-center py-12 text-center">
-            <BarChart3 className="h-8 w-8 text-text-tertiary mb-3 opacity-40" />
-            <p className="text-sm text-text-tertiary">
-              Market data temporarily unavailable
-            </p>
-          </div>
-        ) : (
-          <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-5">
-            {activeList.slice(0, 10).map((coin, i) => (
-              <MoverCard key={coin.id} coin={coin} rank={i + 1} maxVolume={maxVolume} />
-            ))}
-          </div>
-        )}
       </div>
-    </section>
+
+      {/* Tabs */}
+      <div className="flex rounded-lg border border-border overflow-hidden mb-3">
+        <button
+          onClick={() => setTab("gainers")}
+          className={cn(
+            "flex-1 flex items-center justify-center gap-1.5 px-3 py-1.5 text-xs font-medium transition-colors cursor-pointer",
+            tab === "gainers"
+              ? "bg-emerald-500/10 text-emerald-500"
+              : "text-text-tertiary hover:bg-surface-secondary"
+          )}
+        >
+          <TrendingUp className="h-3 w-3" />
+          Gainers
+        </button>
+        <button
+          onClick={() => setTab("losers")}
+          className={cn(
+            "flex-1 flex items-center justify-center gap-1.5 px-3 py-1.5 text-xs font-medium transition-colors cursor-pointer border-l border-border",
+            tab === "losers"
+              ? "bg-red-500/10 text-red-500"
+              : "text-text-tertiary hover:bg-surface-secondary"
+          )}
+        >
+          <TrendingDown className="h-3 w-3" />
+          Losers
+        </button>
+      </div>
+
+      {/* List */}
+      {activeList.length === 0 ? (
+        <div className="flex flex-col items-center justify-center py-8 text-center">
+          <BarChart3 className="h-6 w-6 text-text-tertiary mb-2 opacity-40" />
+          <p className="text-xs text-text-tertiary">
+            Market data temporarily unavailable
+          </p>
+        </div>
+      ) : (
+        <div className="space-y-0.5">
+          {activeList.slice(0, 10).map((coin, i) => (
+            <MoverRow key={coin.id} coin={coin} rank={i + 1} />
+          ))}
+        </div>
+      )}
+
+      {/* Footer link */}
+      <Link
+        href="/screener"
+        className="flex items-center justify-center gap-1 mt-4 pt-3 border-t border-border text-xs font-medium text-accent hover:text-accent-hover transition-colors"
+      >
+        Full Screener
+        <ArrowRight className="h-3 w-3" />
+      </Link>
+    </div>
   );
 }
