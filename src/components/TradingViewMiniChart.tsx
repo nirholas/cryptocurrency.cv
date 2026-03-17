@@ -1,64 +1,65 @@
-"use client";
+'use client';
 
-import { useEffect, useRef, useCallback } from "react";
-import { cn } from "@/lib/utils";
-import { useTheme } from "@/components/ThemeProvider";
+import { useEffect, useRef, useCallback } from 'react';
+import { cn } from '@/lib/utils';
+import { useTheme } from '@/components/ThemeProvider';
 
 interface TradingViewMiniChartProps {
   symbol?: string;
   width?: string | number;
   height?: number;
-  dateRange?: "1D" | "1M" | "3M" | "12M" | "60M" | "ALL";
+  dateRange?: '1D' | '1M' | '3M' | '12M' | '60M' | 'ALL';
   className?: string;
-  colorTheme?: "dark" | "light";
+  colorTheme?: 'dark' | 'light';
   trendLineColor?: string;
   underLineColor?: string;
 }
 
 export default function TradingViewMiniChart({
-  symbol = "BINANCE:BTCUSDT",
-  width = "100%",
+  symbol = 'BINANCE:BTCUSDT',
+  width = '100%',
   height = 220,
-  dateRange = "1M",
+  dateRange = '1M',
   className,
   colorTheme,
-  trendLineColor = "rgba(41, 98, 255, 1)",
-  underLineColor = "rgba(41, 98, 255, 0.07)",
+  trendLineColor = 'rgba(41, 98, 255, 1)',
+  underLineColor = 'rgba(41, 98, 255, 0.07)',
 }: TradingViewMiniChartProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const { resolvedTheme } = useTheme();
-  const theme = colorTheme || (resolvedTheme === "dark" || resolvedTheme === "midnight" ? "dark" : "light");
+  const theme =
+    colorTheme || (resolvedTheme === 'dark' || resolvedTheme === 'midnight' ? 'dark' : 'light');
 
   const renderWidget = useCallback(() => {
     const container = containerRef.current;
     if (!container) return;
-    container.innerHTML = "";
+    container.innerHTML = '';
 
-    const widgetDiv = document.createElement("div");
-    widgetDiv.className = "tradingview-widget-container";
+    const widgetDiv = document.createElement('div');
+    widgetDiv.className = 'tradingview-widget-container';
 
-    const innerDiv = document.createElement("div");
-    innerDiv.className = "tradingview-widget-container__widget";
+    const innerDiv = document.createElement('div');
+    innerDiv.className = 'tradingview-widget-container__widget';
     widgetDiv.appendChild(innerDiv);
 
-    const script = document.createElement("script");
+    const script = document.createElement('script');
     script.src =
-      "https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js";
-    script.type = "text/javascript";
+      'https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js';
+    script.type = 'text/javascript';
     script.async = true;
     script.innerHTML = JSON.stringify({
       symbol,
-      width: typeof width === "number" ? width : "100%",
+      width: typeof width === 'number' ? width : '100%',
       height,
-      locale: "en",
+      locale: 'en',
       dateRange,
       colorTheme: theme,
       trendLineColor,
       underLineColor,
-      underLineBottomColor: "rgba(41, 98, 255, 0)",
+      underLineBottomColor: 'rgba(41, 98, 255, 0)',
       isTransparent: true,
-      autosize: typeof width !== "number",
-      largeChartUrl: "",
+      autosize: typeof width !== 'number',
+      largeChartUrl: '',
       noTimeScale: false,
     });
 
@@ -73,8 +74,8 @@ export default function TradingViewMiniChart({
   return (
     <div
       ref={containerRef}
-      className={cn("overflow-hidden", className)}
-      style={{ width: typeof width === "number" ? width : "100%" }}
+      className={cn('overflow-hidden', className)}
+      style={{ width: typeof width === 'number' ? width : '100%' }}
     />
   );
 }
