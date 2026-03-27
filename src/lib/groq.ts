@@ -412,14 +412,4 @@ export async function* streamGroq(
   }
 }
 
-/**
- * Alias for promptGroq for backward compatibility
- */
-export const generateGroqResponse = promptGroq;
-
-/**
- * Alias for callGroq for backward compatibility
- */
-export const askGroq = callGroq;
-
 export { CACHE_TTL };

@@ -26,6 +26,7 @@ export function getProgress(): GuideProgressData {
 }
 
 export function markArticleComplete(seriesSlug: string, articleSlug: string): void {
+  if (typeof window === 'undefined') return;
   const data = getProgress();
   const completed = new Set(data[seriesSlug] ?? []);
   completed.add(articleSlug);
@@ -34,6 +35,7 @@ export function markArticleComplete(seriesSlug: string, articleSlug: string): vo
 }
 
 export function markArticleIncomplete(seriesSlug: string, articleSlug: string): void {
+  if (typeof window === 'undefined') return;
   const data = getProgress();
   const completed = new Set(data[seriesSlug] ?? []);
   completed.delete(articleSlug);

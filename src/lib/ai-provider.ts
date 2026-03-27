@@ -14,7 +14,7 @@
  * across ai-brief, ai-counter, ai-debate, ai-enhanced, claim-extractor, event-classifier.
  */
 
-import { parseGroqJson, simpleHash } from './groq';
+import { parseGroqJson, simpleHash, CACHE_TTL as AI_CACHE_TTL } from './groq';
 import { aiCache, generateCacheKey, withCache } from './cache';
 
 export type AIProvider = 'openai' | 'anthropic' | 'groq' | 'openrouter' | 'gemini';
@@ -528,16 +528,6 @@ export async function aiCompleteWithRetry(
   throw lastError;
 }
 
-// Cache TTLs (in seconds)
-const AI_CACHE_TTL: Record<string, number> = {
-  summarize: 60,
-  sentiment: 60,
-  entities: 120,
-  digest: 120,
-  narratives: 120,
-  default: 60,
-};
-
 /**
  * JSON prompt helper — returns parsed JSON using the multi-provider fallback chain.
  * Drop-in replacement for `promptGroqJson` with automatic provider failover on auth errors.
@@ -570,7 +560,7 @@ export async function promptAIJsonCached<T>(
 ): Promise<T> {
   const promptHash = simpleHash(systemPrompt + userPrompt);
   const cacheKey = generateCacheKey(cachePrefix, { hash: promptHash });
-  const ttl = AI_CACHE_TTL[cachePrefix] || AI_CACHE_TTL.default;
+  const ttl = AI_CACHE_TTL[cachePrefix as keyof typeof AI_CACHE_TTL] || AI_CACHE_TTL.default;
 
   return withCache(aiCache, cacheKey, ttl, async () => {
     return promptAIJson<T>(systemPrompt, userPrompt, options, preferGroq);

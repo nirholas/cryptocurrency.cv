@@ -92,6 +92,36 @@ export interface PerpMarket {
 }
 
 // ═══════════════════════════════════════════════════════════════
+// EXTERNAL API RESPONSE TYPES
+// ═══════════════════════════════════════════════════════════════
+
+interface CoinglassFundingItem {
+  exchangeName?: string;
+  symbol?: string;
+  rate?: number;
+  nextFundingTime?: number;
+}
+
+interface CoinglassOIItem {
+  exchangeName?: string;
+  symbol?: string;
+  openInterest?: number;
+  openInterestChange24h?: number;
+}
+
+interface CoinglassLiquidationData {
+  longLiquidationUsd?: number;
+  shortLiquidationUsd?: number;
+}
+
+interface CoinglassLongShortItem {
+  exchangeName?: string;
+  longAccount?: number;
+  shortAccount?: number;
+  longShortRatio?: number;
+}
+
+// ═══════════════════════════════════════════════════════════════
 // COINGLASS — AGGREGATED DERIVATIVES DATA
 // ═══════════════════════════════════════════════════════════════
 
@@ -100,8 +130,8 @@ export interface PerpMarket {
  */
 export async function getAggregatedFundingRates(symbol = 'BTC'): Promise<FundingRate[]> {
   try {
-    const data = await coinglass.fetch<{ data: any[] }>('/funding', { symbol });
-    return (data.data || []).map((item: any) => ({
+    const data = await coinglass.fetch<{ data: CoinglassFundingItem[] }>('/funding', { symbol });
+    return (data.data || []).map((item) => ({
       exchange: item.exchangeName || '',
       symbol: item.symbol || symbol,
       rate: item.rate || 0,
@@ -119,8 +149,8 @@ export async function getAggregatedFundingRates(symbol = 'BTC'): Promise<Funding
  */
 export async function getAggregatedOpenInterest(symbol = 'BTC'): Promise<OpenInterest[]> {
   try {
-    const data = await coinglass.fetch<{ data: any[] }>('/open_interest', { symbol });
-    return (data.data || []).map((item: any) => ({
+    const data = await coinglass.fetch<{ data: CoinglassOIItem[] }>('/open_interest', { symbol });
+    return (data.data || []).map((item) => ({
       exchange: item.exchangeName || '',
       symbol: item.symbol || symbol,
       openInterest: item.openInterest || 0,
@@ -137,7 +167,7 @@ export async function getAggregatedOpenInterest(symbol = 'BTC'): Promise<OpenInt
  */
 export async function getLiquidations(symbol = 'BTC'): Promise<LiquidationSummary> {
   try {
-    const data = await coinglass.fetch<{ data: any }>('/liquidation', { symbol });
+    const data = await coinglass.fetch<{ data: CoinglassLiquidationData }>('/liquidation', { symbol });
     const d = data.data || {};
     return {
       symbol,
@@ -164,8 +194,8 @@ export async function getLiquidations(symbol = 'BTC'): Promise<LiquidationSummar
  */
 export async function getLongShortRatio(symbol = 'BTC'): Promise<LongShortRatio[]> {
   try {
-    const data = await coinglass.fetch<{ data: any[] }>('/long_short', { symbol });
-    return (data.data || []).map((item: any) => ({
+    const data = await coinglass.fetch<{ data: CoinglassLongShortItem[] }>('/long_short', { symbol });
+    return (data.data || []).map((item) => ({
       exchange: item.exchangeName || '',
       symbol,
       longAccount: item.longAccount || 0,
@@ -182,6 +212,14 @@ export async function getLongShortRatio(symbol = 'BTC'): Promise<LongShortRatio[
 // DERIBIT — OPTIONS
 // ═══════════════════════════════════════════════════════════════
 
+interface DeribitInstrument {
+  instrument_name: string;
+  strike?: number;
+  option_type?: string;
+  expiration_timestamp?: number;
+  open_interest?: number;
+}
+
 /**
  * Get BTC/ETH options from Deribit
  */
@@ -191,14 +229,14 @@ export async function getOptionsChain(
 ): Promise<OptionsData[]> {
   try {
     const data = await deribit.fetch<{
-      result: any[];
+      result: DeribitInstrument[];
     }>(`/get_instruments?currency=${currency}&kind=${kind}&expired=false`);
 
-    return (data.result || []).slice(0, 100).map((inst: any) => ({
+    return (data.result || []).slice(0, 100).map((inst) => ({
       instrument: inst.instrument_name,
       underlying: currency,
       strikePrice: inst.strike || 0,
-      optionType: inst.option_type === 'call' ? 'call' : 'put',
+      optionType: inst.option_type === 'call' ? ('call' as const) : ('put' as const),
       expirationDate: inst.expiration_timestamp || 0,
       markPrice: 0, // Need separate ticker call
       impliedVolatility: 0,
@@ -254,6 +292,21 @@ export async function getVolatilityIndex(currency: 'BTC' | 'ETH' = 'BTC'): Promi
 // BYBIT — PERPS & FUTURES
 // ═══════════════════════════════════════════════════════════════
 
+interface BybitTicker {
+  symbol: string;
+  markPrice: string;
+  indexPrice: string;
+  fundingRate: string;
+  openInterest: string;
+  turnover24h: string;
+}
+
+interface BybitFundingRecord {
+  symbol: string;
+  fundingRate: string;
+  fundingRateTimestamp: string;
+}
+
 /**
  * Get Bybit perpetual market tickers
  */
@@ -264,23 +317,24 @@ export async function getBybitPerps(
   if (symbol) params.symbol = `${symbol}USDT`;
 
   const data = await bybit.fetch<{
-    result: { list: any[] };
+    result: { list: BybitTicker[] };
   }>('/market/tickers', params);
 
-  return (data.result?.list || []).slice(0, 50).map((t: any) => ({
-    exchange: 'bybit',
-    symbol: t.symbol,
-    markPrice: parseFloat(t.markPrice) || 0,
-    indexPrice: parseFloat(t.indexPrice) || 0,
-    basis: (parseFloat(t.markPrice) || 0) - (parseFloat(t.indexPrice) || 0),
-    basisPercentage:
-      parseFloat(t.indexPrice) > 0
-        ? ((parseFloat(t.markPrice) - parseFloat(t.indexPrice)) / parseFloat(t.indexPrice)) * 100
-        : 0,
-    fundingRate: parseFloat(t.fundingRate) || 0,
-    openInterest: parseFloat(t.openInterest) || 0,
-    volume24h: parseFloat(t.turnover24h) || 0,
-  }));
+  return (data.result?.list || []).slice(0, 50).map((t) => {
+    const markPrice = parseFloat(t.markPrice) || 0;
+    const indexPrice = parseFloat(t.indexPrice) || 0;
+    return {
+      exchange: 'bybit' as const,
+      symbol: t.symbol,
+      markPrice,
+      indexPrice,
+      basis: markPrice - indexPrice,
+      basisPercentage: indexPrice > 0 ? ((markPrice - indexPrice) / indexPrice) * 100 : 0,
+      fundingRate: parseFloat(t.fundingRate) || 0,
+      openInterest: parseFloat(t.openInterest) || 0,
+      volume24h: parseFloat(t.turnover24h) || 0,
+    };
+  });
 }
 
 /**
@@ -291,15 +345,15 @@ export async function getBybitFundingHistory(
   limit = 20,
 ): Promise<FundingRate[]> {
   const data = await bybit.fetch<{
-    result: { list: any[] };
+    result: { list: BybitFundingRecord[] };
   }>('/market/funding/history', {
     category: 'linear',
     symbol: `${symbol}USDT`,
     limit: String(limit),
   });
 
-  return (data.result?.list || []).map((f: any) => ({
-    exchange: 'bybit',
+  return (data.result?.list || []).map((f) => ({
+    exchange: 'bybit' as const,
     symbol: f.symbol,
     rate: parseFloat(f.fundingRate) || 0,
     annualized: (parseFloat(f.fundingRate) || 0) * 3 * 365 * 100,
@@ -312,6 +366,24 @@ export async function getBybitFundingHistory(
 // OKX — PERPS & FUTURES
 // ═══════════════════════════════════════════════════════════════
 
+interface OKXTicker {
+  instId: string;
+  last: string;
+  openInterest: string;
+  vol24h: string;
+}
+
+interface OKXIndexTicker {
+  instId: string;
+  idxPx: string;
+}
+
+interface OKXFundingRateData {
+  fundingRate?: string;
+  nextFundingTime?: string;
+  fundingTime?: string;
+}
+
 /**
  * Get OKX perpetual tickers
  */
@@ -319,24 +391,24 @@ export async function getOKXPerps(instId?: string): Promise<PerpMarket[]> {
   const params: Record<string, string> = { instType: 'SWAP' };
   if (instId) params.instId = instId;
 
-  const data = await okx.fetch<{ data: any[] }>('/market/tickers', params);
+  const data = await okx.fetch<{ data: OKXTicker[] }>('/market/tickers', params);
 
   // Also fetch index prices for basis calculation
   const indexMap = new Map<string, number>();
   try {
-    const indexRes = await okx.fetch<{ data: any[] }>('/market/index-tickers', { instType: 'SWAP' });
+    const indexRes = await okx.fetch<{ data: OKXIndexTicker[] }>('/market/index-tickers', { instType: 'SWAP' });
     for (const idx of (indexRes.data || [])) {
       indexMap.set(idx.instId, parseFloat(idx.idxPx) || 0);
     }
   } catch { /* index prices unavailable — will use 0 */ }
 
-  return (data.data || []).slice(0, 50).map((t: any) => {
+  return (data.data || []).slice(0, 50).map((t) => {
     const markPrice = parseFloat(t.last) || 0;
     const indexPrice = indexMap.get(t.instId) || 0;
     const basis = indexPrice > 0 ? markPrice - indexPrice : 0;
     const basisPercentage = indexPrice > 0 ? (basis / indexPrice) * 100 : 0;
     return {
-      exchange: 'okx',
+      exchange: 'okx' as const,
       symbol: t.instId,
       markPrice,
       indexPrice,
@@ -353,22 +425,34 @@ export async function getOKXPerps(instId?: string): Promise<PerpMarket[]> {
  * Get OKX funding rate
  */
 export async function getOKXFundingRate(instId = 'BTC-USDT-SWAP'): Promise<FundingRate> {
-  const data = await okx.fetch<{ data: any[] }>('/public/funding-rate', { instId });
+  const data = await okx.fetch<{ data: OKXFundingRateData[] }>('/public/funding-rate', { instId });
   const d = data.data?.[0] || {};
 
   return {
     exchange: 'okx',
     symbol: instId,
-    rate: parseFloat(d.fundingRate) || 0,
-    annualized: (parseFloat(d.fundingRate) || 0) * 3 * 365 * 100,
-    nextFundingTime: parseInt(d.nextFundingTime) || 0,
-    timestamp: parseInt(d.fundingTime) || Date.now(),
+    rate: parseFloat(d.fundingRate || '0') || 0,
+    annualized: (parseFloat(d.fundingRate || '0') || 0) * 3 * 365 * 100,
+    nextFundingTime: parseInt(d.nextFundingTime || '0') || 0,
+    timestamp: parseInt(d.fundingTime || '0') || Date.now(),
   };
 }
 
 // ═══════════════════════════════════════════════════════════════
 // HYPERLIQUID — DECENTRALIZED PERPS
 // ═══════════════════════════════════════════════════════════════
+
+interface HyperliquidMeta {
+  name: string;
+}
+
+interface HyperliquidAssetCtx {
+  markPx?: string;
+  oraclePx?: string;
+  funding?: string;
+  openInterest?: string;
+  dayNtlVlm?: string;
+}
 
 /**
  * Get Hyperliquid market data — posted via JSON body
@@ -383,26 +467,25 @@ export async function getHyperliquidMarkets(): Promise<PerpMarket[]> {
     });
 
     if (!response.ok) return [];
-    const data = await response.json();
+    const data: [{ universe: HyperliquidMeta[] }, HyperliquidAssetCtx[]] = await response.json();
 
-    const meta = data?.[0]?.universe || [];
-    const ctxs = data?.[1] || [];
+    const meta = data[0]?.universe || [];
+    const ctxs = data[1] || [];
 
-    return meta.map((m: any, i: number) => {
+    return meta.map((m, i) => {
       const ctx = ctxs[i] || {};
+      const markPrice = parseFloat(ctx.markPx || '0') || 0;
+      const oraclePrice = parseFloat(ctx.oraclePx || '0') || 0;
       return {
-        exchange: 'hyperliquid',
+        exchange: 'hyperliquid' as const,
         symbol: m.name,
-        markPrice: parseFloat(ctx.markPx) || 0,
-        indexPrice: parseFloat(ctx.oraclePx) || 0,
-        basis: (parseFloat(ctx.markPx) || 0) - (parseFloat(ctx.oraclePx) || 0),
-        basisPercentage:
-          parseFloat(ctx.oraclePx) > 0
-            ? ((parseFloat(ctx.markPx) - parseFloat(ctx.oraclePx)) / parseFloat(ctx.oraclePx)) * 100
-            : 0,
-        fundingRate: parseFloat(ctx.funding) || 0,
-        openInterest: parseFloat(ctx.openInterest) || 0,
-        volume24h: parseFloat(ctx.dayNtlVlm) || 0,
+        markPrice,
+        indexPrice: oraclePrice,
+        basis: markPrice - oraclePrice,
+        basisPercentage: oraclePrice > 0 ? ((markPrice - oraclePrice) / oraclePrice) * 100 : 0,
+        fundingRate: parseFloat(ctx.funding || '0') || 0,
+        openInterest: parseFloat(ctx.openInterest || '0') || 0,
+        volume24h: parseFloat(ctx.dayNtlVlm || '0') || 0,
       };
     });
   } catch {
