@@ -1,5 +1,4 @@
 import { Link } from '@/i18n/navigation';
-import { NonceScript } from './NonceScript';
 import FooterNewsletter from '@/components/FooterNewsletter';
 import FooterSection from '@/components/FooterSection';
 import LanguageSelector from '@/components/LanguageSelector';
@@ -171,7 +170,7 @@ function FooterStructuredData() {
   };
 
   return (
-    <NonceScript
+    <script
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
     />
