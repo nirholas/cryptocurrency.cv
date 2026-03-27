@@ -31,7 +31,7 @@ const RECEIVE_ADDRESS =
   (process.env.X402_RECEIVE_ADDRESS as `0x${string}`) ??
   '0x40252CFDF8B20Ed757D61ff157719F33Ec332402';
 
-const NETWORK = (process.env.X402_NETWORK ?? 'eip155:8453') as never;
+const NETWORK = (process.env.X402_NETWORK ?? 'eip155:42161') as never;
 
 /** Build per-route pricing config from API_PRICING + PREMIUM_PRICING */
 function buildApiRoutes(): Record<string, RouteConfig> {
@@ -52,7 +52,7 @@ function buildApiRoutes(): Record<string, RouteConfig> {
   // Catch-all fallback for routes not in explicit pricing
   routes['/api/:path*'] = {
     accepts: [{ scheme: 'exact', payTo: RECEIVE_ADDRESS, price: '$0.001', network: NETWORK }],
-    description: 'Crypto Vision API — pay per request in USDC on Base',
+    description: 'Crypto Vision API — pay per request in USDs on Arbitrum',
   };
 
   return routes;
@@ -71,7 +71,7 @@ export function getX402Proxy(): (req: NextRequest) => any {
       _x402 = paymentProxyFromConfig(
         buildApiRoutes(),
         facilitator,
-        [{ network: 'eip155:*' as never, server: new ExactEvmScheme() as never }],
+        [{ network: 'eip155:*' as never, server: new ExactEvmScheme() }],
       );
     } catch (err) {
       console.warn(

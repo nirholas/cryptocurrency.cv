@@ -39,8 +39,8 @@ export async function GET() {
         'All API endpoints require x402 micropayment in USDC. ' +
         'Use @x402/fetch (npm), x402-client (Python/Go), or any x402-compatible SDK. ' +
         'Prices range from $0.001 to $0.20 per request — see x-payment-info on each OpenAPI operation.',
-      network: 'eip155:8453',
-      networkName: 'Base',
+      network: 'eip155:42161',
+      networkName: 'Arbitrum',
       asset: 'USDC',
       defaultPrice: '$0.001',
       sdks: {
