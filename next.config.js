@@ -303,6 +303,10 @@ const nextConfig = {
           destination: '/api/well-known/agents',
         },
         {
+          source: '/.well-known/agent.json',
+          destination: '/api/well-known/agents',
+        },
+        {
           source: '/.well-known/ai-plugin.json',
           destination: '/api/well-known/ai-plugin',
         },

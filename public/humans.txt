@@ -1,0 +1,48 @@
+/* TEAM */
+
+Creator: nirholas
+GitHub: https://github.com/nirholas
+Location: Global
+
+/* SITE */
+
+Name: Free Crypto News API
+URL: https://cryptocurrency.cv
+Description: Free, real-time cryptocurrency news API aggregating 200+ sources
+Last update: 2026-03-27
+Language: English (42 locales supported)
+Standards: HTML5, CSS3, TypeScript, REST, GraphQL, RSS, Atom, MCP, OpenAPI 3.1
+License: MIT
+
+/* TECHNOLOGY */
+
+Framework: Next.js 16
+Language: TypeScript
+Runtime: Bun / Node.js
+Package Manager: pnpm
+Database: Neon (PostgreSQL), Drizzle ORM
+Cache: Vercel KV / Upstash Redis
+AI: Claude (Anthropic), GPT-4 (OpenAI)
+Search: Vector embeddings, full-text search
+Hosting: Vercel
+CDN: Vercel Edge Network
+Monitoring: Vercel Analytics
+
+/* AI INTEGRATIONS */
+
+MCP Server: npx @anthropic-ai/mcp-server-crypto-news
+ChatGPT Plugin: https://cryptocurrency.cv/.well-known/ai-plugin.json
+OpenAPI Spec: https://cryptocurrency.cv/api/openapi.json
+LLM Docs: https://cryptocurrency.cv/llms.txt
+Agent Card: https://cryptocurrency.cv/.well-known/agent.json
+AI Permissions: https://cryptocurrency.cv/ai.txt
+
+/* DATA */
+
+News Sources: 200+
+API Endpoints: 150+
+Archived Articles: 24,000+
+Date Range: 2010-present
+Update Frequency: Real-time
+Languages: 42 locales
+SDKs: TypeScript, Python, Go, React, PHP

@@ -37,87 +37,87 @@ export default function robots(): MetadataRoute.Robots {
       // OpenAI bots
       {
         userAgent: 'GPTBot',
-        allow: ['/api/news', '/api/search', '/api/trending', '/api/llms.txt', '/llms.txt', '/llms-full.txt', '/api/llms-full.txt'],
+        allow: ['/api/news', '/api/search', '/api/trending', '/api/llms.txt', '/llms.txt', '/llms-full.txt', '/api/llms-full.txt', '/.well-known/agent.json', '/.well-known/agents.json', '/.well-known/ai-plugin.json', '/ai.txt', '/humans.txt'],
       },
       {
         userAgent: 'ChatGPT-User',
-        allow: ['/api/news', '/api/search', '/api/trending', '/api/llms.txt', '/llms.txt'],
+        allow: ['/api/news', '/api/search', '/api/trending', '/api/llms.txt', '/llms.txt', '/.well-known/agent.json', '/.well-known/agents.json', '/ai.txt'],
       },
       // Anthropic bots (Claude)
       {
         userAgent: 'Claude-Web',
-        allow: ['/api/news', '/api/search', '/api/trending', '/api/llms.txt', '/llms.txt', '/llms-full.txt', '/api/llms-full.txt'],
+        allow: ['/api/news', '/api/search', '/api/trending', '/api/llms.txt', '/llms.txt', '/llms-full.txt', '/api/llms-full.txt', '/.well-known/agent.json', '/.well-known/agents.json', '/.well-known/ai-plugin.json', '/ai.txt', '/humans.txt'],
       },
       {
         userAgent: 'ClaudeBot',
-        allow: ['/api/news', '/api/search', '/api/trending', '/api/llms.txt', '/llms.txt', '/llms-full.txt', '/api/llms-full.txt'],
+        allow: ['/api/news', '/api/search', '/api/trending', '/api/llms.txt', '/llms.txt', '/llms-full.txt', '/api/llms-full.txt', '/.well-known/agent.json', '/.well-known/agents.json', '/.well-known/ai-plugin.json', '/ai.txt', '/humans.txt'],
       },
       {
         userAgent: 'anthropic-ai',
-        allow: ['/api/news', '/api/search', '/api/trending', '/api/llms.txt', '/llms.txt', '/llms-full.txt', '/api/llms-full.txt'],
+        allow: ['/api/news', '/api/search', '/api/trending', '/api/llms.txt', '/llms.txt', '/llms-full.txt', '/api/llms-full.txt', '/.well-known/agent.json', '/.well-known/agents.json', '/.well-known/ai-plugin.json', '/ai.txt', '/humans.txt'],
       },
       // xAI bots (Grok)
       {
         userAgent: 'Grok',
-        allow: ['/api/news', '/api/search', '/api/trending', '/api/llms.txt', '/llms.txt', '/llms-full.txt', '/api/llms-full.txt'],
+        allow: ['/api/news', '/api/search', '/api/trending', '/api/llms.txt', '/llms.txt', '/llms-full.txt', '/api/llms-full.txt', '/.well-known/agent.json', '/.well-known/agents.json', '/.well-known/ai-plugin.json', '/ai.txt', '/humans.txt'],
       },
       {
         userAgent: 'xAI-Grok',
-        allow: ['/api/news', '/api/search', '/api/trending', '/api/llms.txt', '/llms.txt'],
+        allow: ['/api/news', '/api/search', '/api/trending', '/api/llms.txt', '/llms.txt', '/.well-known/agent.json', '/.well-known/agents.json', '/ai.txt'],
       },
       // Google AI bots (Gemini)
       {
         userAgent: 'Google-Extended',
-        allow: ['/api/news', '/api/search', '/api/trending', '/api/llms.txt', '/llms.txt', '/llms-full.txt', '/api/llms-full.txt'],
+        allow: ['/api/news', '/api/search', '/api/trending', '/api/llms.txt', '/llms.txt', '/llms-full.txt', '/api/llms-full.txt', '/.well-known/agent.json', '/.well-known/agents.json', '/.well-known/ai-plugin.json', '/ai.txt', '/humans.txt'],
       },
       // Meta AI
       {
         userAgent: 'FacebookBot',
-        allow: ['/api/news', '/api/search', '/api/trending', '/api/llms.txt', '/llms.txt'],
+        allow: ['/api/news', '/api/search', '/api/trending', '/api/llms.txt', '/llms.txt', '/.well-known/agent.json', '/.well-known/agents.json', '/ai.txt'],
       },
       {
         userAgent: 'Meta-ExternalAgent',
-        allow: ['/api/news', '/api/search', '/api/trending', '/api/llms.txt', '/llms.txt'],
+        allow: ['/api/news', '/api/search', '/api/trending', '/api/llms.txt', '/llms.txt', '/.well-known/agent.json', '/.well-known/agents.json', '/ai.txt'],
       },
       // Perplexity AI
       {
         userAgent: 'PerplexityBot',
-        allow: ['/api/news', '/api/search', '/api/trending', '/api/llms.txt', '/llms.txt', '/llms-full.txt', '/api/llms-full.txt'],
+        allow: ['/api/news', '/api/search', '/api/trending', '/api/llms.txt', '/llms.txt', '/llms-full.txt', '/api/llms-full.txt', '/.well-known/agent.json', '/.well-known/agents.json', '/.well-known/ai-plugin.json', '/ai.txt', '/humans.txt'],
       },
       // Cohere
       {
         userAgent: 'cohere-ai',
-        allow: ['/api/news', '/api/search', '/api/trending', '/api/llms.txt', '/llms.txt'],
+        allow: ['/api/news', '/api/search', '/api/trending', '/api/llms.txt', '/llms.txt', '/.well-known/agent.json', '/.well-known/agents.json', '/ai.txt'],
       },
       // You.com
       {
         userAgent: 'YouBot',
-        allow: ['/api/news', '/api/search', '/api/trending', '/api/llms.txt', '/llms.txt'],
+        allow: ['/api/news', '/api/search', '/api/trending', '/api/llms.txt', '/llms.txt', '/.well-known/agent.json', '/.well-known/agents.json', '/ai.txt'],
       },
       // Mistral AI
       {
         userAgent: 'mistral-crawler',
-        allow: ['/api/news', '/api/search', '/api/trending', '/api/llms.txt', '/llms.txt', '/llms-full.txt', '/api/llms-full.txt'],
+        allow: ['/api/news', '/api/search', '/api/trending', '/api/llms.txt', '/llms.txt', '/llms-full.txt', '/api/llms-full.txt', '/.well-known/agent.json', '/.well-known/agents.json', '/.well-known/ai-plugin.json', '/ai.txt', '/humans.txt'],
       },
       // Amazon AI
       {
         userAgent: 'Amazonbot',
-        allow: ['/api/news', '/api/search', '/api/trending', '/api/llms.txt', '/llms.txt'],
+        allow: ['/api/news', '/api/search', '/api/trending', '/api/llms.txt', '/llms.txt', '/.well-known/agent.json', '/.well-known/agents.json', '/ai.txt'],
       },
       // Apple AI
       {
         userAgent: 'Applebot-Extended',
-        allow: ['/api/news', '/api/search', '/api/trending', '/api/llms.txt', '/llms.txt', '/llms-full.txt', '/api/llms-full.txt'],
+        allow: ['/api/news', '/api/search', '/api/trending', '/api/llms.txt', '/llms.txt', '/llms-full.txt', '/api/llms-full.txt', '/.well-known/agent.json', '/.well-known/agents.json', '/.well-known/ai-plugin.json', '/ai.txt', '/humans.txt'],
       },
       // ByteDance/TikTok AI
       {
         userAgent: 'Bytespider',
-        allow: ['/api/news', '/api/search', '/api/trending', '/api/llms.txt', '/llms.txt'],
+        allow: ['/api/news', '/api/search', '/api/trending', '/api/llms.txt', '/llms.txt', '/.well-known/agent.json', '/.well-known/agents.json', '/ai.txt'],
       },
       // OpenAI SearchGPT
       {
         userAgent: 'OAI-SearchBot',
-        allow: ['/api/news', '/api/search', '/api/trending', '/api/llms.txt', '/llms.txt', '/llms-full.txt', '/api/llms-full.txt'],
+        allow: ['/api/news', '/api/search', '/api/trending', '/api/llms.txt', '/llms.txt', '/llms-full.txt', '/api/llms-full.txt', '/.well-known/agent.json', '/.well-known/agents.json', '/.well-known/ai-plugin.json', '/ai.txt', '/humans.txt'],
       },
       // Common Crawl (training data)
       {

@@ -1,0 +1,93 @@
+{
+  "$schema": "https://open-agents.org/schema/agent-card/v1",
+  "name": "Free Crypto News",
+  "description": "Free, real-time cryptocurrency news API aggregating 200+ sources. No API key required. REST JSON, RSS/Atom, WebSocket, GraphQL, AI analysis, RAG, MCP server, ChatGPT plugin. Open source (MIT).",
+  "url": "https://cryptocurrency.cv",
+  "provider": {
+    "name": "nirholas",
+    "url": "https://github.com/nirholas"
+  },
+  "version": "1.0.2",
+  "license": "MIT",
+  "authentication": {
+    "type": "none",
+    "description": "No authentication required. All endpoints are free and public."
+  },
+  "capabilities": [
+    {
+      "name": "news_retrieval",
+      "description": "Fetch, search, and filter real-time crypto news from 200+ sources",
+      "skills": ["get_latest_news", "search_news", "semantic_search", "get_bitcoin_news", "get_defi_news", "get_breaking_news"]
+    },
+    {
+      "name": "ai_analysis",
+      "description": "AI-powered summarization, sentiment analysis, research, and RAG",
+      "skills": ["ai_briefing", "ai_research", "ai_narratives", "ai_synthesize", "rag_ask", "rag_search", "ask_question"]
+    },
+    {
+      "name": "market_data",
+      "description": "Real-time prices, market caps, Fear & Greed, gas, yields, derivatives",
+      "skills": ["get_market_coins", "get_prices", "get_fear_greed", "get_gas_prices", "get_defi_yields"]
+    },
+    {
+      "name": "sentiment",
+      "description": "AI sentiment analysis from news and social media",
+      "skills": ["get_sentiment", "get_trending", "get_social_sentiment", "get_x_sentiment"]
+    },
+    {
+      "name": "on_chain",
+      "description": "Whale alerts, liquidations, exchange flows, token unlocks",
+      "skills": ["get_whale_alerts", "get_liquidations", "get_exchange_flows", "get_token_unlocks"]
+    },
+    {
+      "name": "historical",
+      "description": "News archive from 2010-present, AI predictions, backtesting",
+      "skills": ["get_archive", "get_predictions", "get_backtest"]
+    }
+  ],
+  "protocols": {
+    "mcp": {
+      "description": "Model Context Protocol server for Claude, ChatGPT Dev Mode",
+      "install": "npx -y @smithery/cli install cryptocurrency-news",
+      "tools": 20
+    },
+    "openai_plugin": {
+      "manifest": "https://cryptocurrency.cv/.well-known/ai-plugin.json",
+      "openapi": "https://cryptocurrency.cv/api/openapi.json"
+    },
+    "openapi": {
+      "version": "3.1.0",
+      "url": "https://cryptocurrency.cv/api/openapi.json"
+    },
+    "graphql": {
+      "url": "https://cryptocurrency.cv/api/graphql"
+    },
+    "rss": {
+      "url": "https://cryptocurrency.cv/api/rss"
+    },
+    "atom": {
+      "url": "https://cryptocurrency.cv/api/atom"
+    },
+    "sse": {
+      "url": "https://cryptocurrency.cv/api/sse"
+    },
+    "x402": {
+      "discovery": "https://cryptocurrency.cv/.well-known/x402"
+    }
+  },
+  "documentation": {
+    "llms_txt": "https://cryptocurrency.cv/llms.txt",
+    "llms_full_txt": "https://cryptocurrency.cv/llms-full.txt",
+    "api_docs": "https://cryptocurrency.cv/docs/api",
+    "quickstart": "https://cryptocurrency.cv/docs/quickstart",
+    "skills": "https://github.com/nirholas/free-crypto-news/blob/main/SKILLS.md",
+    "agents": "https://github.com/nirholas/free-crypto-news/blob/main/AGENTS.md"
+  },
+  "repository": "https://github.com/nirholas/free-crypto-news",
+  "contact": "nirholas@users.noreply.github.com",
+  "keywords": [
+    "cryptocurrency", "news", "api", "bitcoin", "ethereum", "defi", "solana",
+    "sentiment", "ai", "llm", "mcp", "rag", "real-time", "free", "open-source",
+    "market-data", "whale-alerts", "trading-signals", "nft", "web3"
+  ]
+}
