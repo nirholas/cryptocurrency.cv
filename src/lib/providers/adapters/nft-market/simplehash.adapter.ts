@@ -55,7 +55,7 @@ export const simplehashAdapter: DataProvider<NFTMarketOverview> = {
   async fetch(params: FetchParams): Promise<NFTMarketOverview> {
     const apiKey = process.env.SIMPLEHASH_API_KEY;
     if (!apiKey) {
-      throw new Error('SIMPLEHASH_API_KEY environment variable is required');
+      throw new Error('SIMPLEHASH_API_KEY environment variable is not configured');
     }
 
     const limit = params.limit ?? 25;

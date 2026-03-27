@@ -55,7 +55,7 @@ export const dappradarAdapter: DataProvider<GamingOverview> = {
   async fetch(params: FetchParams): Promise<GamingOverview> {
     const apiKey = process.env.DAPPRADAR_API_KEY;
     if (!apiKey) {
-      throw new Error('DAPPRADAR_API_KEY environment variable is required');
+      throw new Error('DAPPRADAR_API_KEY environment variable is not configured');
     }
 
     const limit = params.limit ?? 25;

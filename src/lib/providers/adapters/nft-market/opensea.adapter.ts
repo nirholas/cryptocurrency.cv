@@ -55,7 +55,7 @@ export const openseaAdapter: DataProvider<NFTMarketOverview> = {
   async fetch(params: FetchParams): Promise<NFTMarketOverview> {
     const apiKey = process.env.OPENSEA_API_KEY;
     if (!apiKey) {
-      throw new Error('OPENSEA_API_KEY environment variable is required');
+      throw new Error('OPENSEA_API_KEY environment variable is not configured');
     }
 
     const limit = params.limit ?? 25;

@@ -308,7 +308,7 @@ class FileBackend extends MemoryBackend {
     if (typeof EdgeRuntime !== 'undefined') return;
 
     try {
-      const fs = await import(/* webpackIgnore: true */ 'fs/promises');
+      const fs = await import('fs/promises');
       const data = await fs.readFile(this.filePath, 'utf-8');
       const parsed = JSON.parse(data);
 
@@ -345,8 +345,8 @@ class FileBackend extends MemoryBackend {
     if (typeof EdgeRuntime !== 'undefined') return;
 
     try {
-      const fs = await import(/* webpackIgnore: true */ 'fs/promises');
-      const pathModule = await import(/* webpackIgnore: true */ 'path');
+      const fs = await import('fs/promises');
+      const pathModule = await import('path');
       // Handle both ESM default export and CommonJS module
       const path = pathModule.default || pathModule;
 
