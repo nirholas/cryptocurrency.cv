@@ -4000,10 +4000,27 @@ export async function getBreakingNews(limit: number = 5): Promise<NewsResponse> 
       new Date(article.pubDate) <= now, // exclude future-dated articles
   );
 
+  // Quality filter: only include articles with crypto relevance.
+  // This prevents generic macro/government press releases (e.g. ECB consumer
+  // surveys, generic central-bank publications) from appearing as "breaking"
+  // crypto news.
+  const qualityArticles = recentArticles.filter((article) => {
+    const text = `${article.title} ${article.description || ''}`.toLowerCase();
+    const hasCryptoKeyword = CRYPTO_KEYWORDS.some((kw) => text.includes(kw));
+    return hasCryptoKeyword;
+  });
+
+  // Score remaining articles by trending score and sort best-first
+  const scored = qualityArticles
+    .map((article) => ({ article, score: calculateTrendingScore(article) }))
+    .sort((a, b) => b.score - a.score);
+
+  const articles = scored.slice(0, normalizedLimit).map((s) => s.article);
+
   return {
-    articles: recentArticles.slice(0, normalizedLimit),
-    totalCount: recentArticles.length,
-    sources: [...new Set(recentArticles.map((a) => a.source))],
+    articles,
+    totalCount: qualityArticles.length,
+    sources: [...new Set(articles.map((a) => a.source))],
     fetchedAt: new Date().toISOString(),
   };
 }
