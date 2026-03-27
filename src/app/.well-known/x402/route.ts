@@ -9,46 +9,38 @@
  */
 
 /**
- * x402 Well-Known Discovery Endpoint
+ * x402 Well-Known Discovery Endpoint (Standard Location)
  *
- * Returns the x402scan v1 discovery format so x402scan can register
- * all paid resources. The OpenAPI spec at /openapi.json is canonical;
- * this endpoint is the compatibility fallback.
+ * Also served via rewrite /.well-known/x402 → /api/.well-known/x402.
+ * This route exists as a direct fallback in case the rewrite doesn't apply.
  *
  * @see https://github.com/Merit-Systems/x402scan
  */
 
 import { NextResponse } from 'next/server';
-import { API_PRICING, PREMIUM_PRICING } from '@/lib/x402/pricing';
+import { ROUTE_MANIFEST } from '@/lib/openapi/routes.generated';
 
 export const runtime = 'edge';
 export const revalidate = 300;
 
+const POST_ROUTES = new Set([
+  '/api/premium/portfolio/analytics',
+  '/api/premium/alerts/create',
+  '/api/batch',
+  '/api/rag/batch',
+  '/api/rag/feedback',
+  '/api/portfolio/holding',
+  '/api/webhooks',
+]);
+
 export async function GET() {
-  // Build "METHOD /path" resource entries from pricing configs
-  const resources: string[] = [];
-
-  // v1 API endpoints (all GET)
-  for (const path of Object.keys(API_PRICING)) {
-    resources.push(`GET ${path}`);
-  }
-
-  // Premium endpoints (all GET except known POST routes)
-  const postRoutes = new Set([
-    '/api/premium/portfolio/analytics',
-    '/api/premium/alerts/create',
-  ]);
-
-  for (const path of Object.keys(PREMIUM_PRICING)) {
-    const method = postRoutes.has(path) ? 'POST' : 'GET';
-    resources.push(`${method} ${path}`);
-  }
+  const resources = ROUTE_MANIFEST.map(({ path }) => {
+    const method = POST_ROUTES.has(path) ? 'POST' : 'GET';
+    return `${method} ${path}`;
+  });
 
   return NextResponse.json(
-    {
-      version: 1,
-      resources,
-    },
+    { version: 1, resources },
     {
       headers: {
         'Cache-Control': 'public, max-age=300, s-maxage=300',

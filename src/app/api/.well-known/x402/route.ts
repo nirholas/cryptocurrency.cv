@@ -19,26 +19,25 @@
  */
 
 import { NextResponse } from 'next/server';
-import { API_PRICING, PREMIUM_PRICING } from '@/lib/x402/pricing';
+import { ROUTE_MANIFEST } from '@/lib/openapi/routes.generated';
 
 export const revalidate = 300;
 
+const POST_ROUTES = new Set([
+  '/api/premium/portfolio/analytics',
+  '/api/premium/alerts/create',
+  '/api/batch',
+  '/api/rag/batch',
+  '/api/rag/feedback',
+  '/api/portfolio/holding',
+  '/api/webhooks',
+]);
+
 export async function GET() {
-  const resources: string[] = [];
-
-  for (const path of Object.keys(API_PRICING)) {
-    resources.push(`GET ${path}`);
-  }
-
-  const postRoutes = new Set([
-    '/api/premium/portfolio/analytics',
-    '/api/premium/alerts/create',
-  ]);
-
-  for (const path of Object.keys(PREMIUM_PRICING)) {
-    const method = postRoutes.has(path) ? 'POST' : 'GET';
-    resources.push(`${method} ${path}`);
-  }
+  const resources = ROUTE_MANIFEST.map(({ path }) => {
+    const method = POST_ROUTES.has(path) ? 'POST' : 'GET';
+    return `${method} ${path}`;
+  });
 
   return NextResponse.json(
     { version: 1, resources },
