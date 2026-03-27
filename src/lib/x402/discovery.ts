@@ -175,6 +175,8 @@ export interface X402Discovery {
  */
 export interface X402WellKnownV1 {
   version: 1;
+  name?: string;
+  description?: string;
   resources: string[];
   ownershipProofs?: string[];
 }
@@ -205,6 +207,9 @@ export function buildX402WellKnownV1(): X402WellKnownV1 {
 
   return {
     version: 1,
+    name: 'Crypto Vision — Live Crypto Prices, Breaking News & Market Intelligence',
+    description:
+      'Live cryptocurrency prices, breaking news, and market analysis. 350+ free API endpoints, developer SDKs, embeddable widgets, and AI integrations. Bitcoin, Ethereum, DeFi & more — updated every minute.',
     resources,
     ...(ownershipProofs && { ownershipProofs }),
   };
