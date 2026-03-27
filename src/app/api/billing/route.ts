@@ -19,7 +19,7 @@ import { NextResponse } from 'next/server';
 export const revalidate = 300; // ISR: payment config refreshes every 5 min
 
 const RECEIVE_ADDRESS =
-  process.env.X402_RECEIVE_ADDRESS ?? '0x40252CFDF8B20Ed757D61ff157719F33Ec332402';
+  process.env.X402_RECEIVE_ADDRESS ?? '0x4027FdaC1a5216e264A00a5928b8366aE59cE888';
 
 export async function GET() {
   return NextResponse.json({

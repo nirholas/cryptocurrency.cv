@@ -93,7 +93,7 @@ export async function GET() {
         payment: {
           address: PAYMENT_ADDRESS,
           configured:
-            !!PAYMENT_ADDRESS && PAYMENT_ADDRESS !== '0x40252CFDF8B20Ed757D61ff157719F33Ec332402',
+            !!PAYMENT_ADDRESS && PAYMENT_ADDRESS !== '0x0000000000000000000000000000000000000000',
           // Obscure address in production responses for safety
           displayAddress: PAYMENT_ADDRESS
             ? IS_PRODUCTION

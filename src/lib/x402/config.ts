@@ -10,10 +10,10 @@
 
 /**
  * x402 Configuration - SINGLE SOURCE OF TRUTH
- * 
+ *
  * All x402 configuration constants must be imported from this file.
  * DO NOT define x402 constants anywhere else in the codebase.
- * 
+ *
  * @module lib/x402/config
  * @see https://docs.x402.org
  */
@@ -26,29 +26,25 @@
  * Production environment detection
  * Checks Vercel deployment environment first, then NODE_ENV
  */
-export const IS_PRODUCTION = 
-  process.env.VERCEL_ENV === 'production' || 
-  process.env.NODE_ENV === 'production';
+export const IS_PRODUCTION =
+  process.env.VERCEL_ENV === 'production' || process.env.NODE_ENV === 'production';
 
 /**
  * Testnet mode detection
  * Explicit testnet flag OR non-production environment
  */
-export const IS_TESTNET = 
-  process.env.X402_TESTNET === 'true' || 
-  !IS_PRODUCTION;
+export const IS_TESTNET = process.env.X402_TESTNET === 'true' || !IS_PRODUCTION;
 
 /**
  * Development mode detection
  */
-export const IS_DEVELOPMENT = 
-  process.env.NODE_ENV === 'development';
+export const IS_DEVELOPMENT = process.env.NODE_ENV === 'development';
 
 /**
  * Build-time detection (Next.js build phase)
  * Used to suppress verbose logging during static generation
  */
-export const IS_BUILD_TIME = 
+export const IS_BUILD_TIME =
   process.env.NEXT_PHASE === 'phase-production-build' ||
   process.env.npm_lifecycle_event === 'build' ||
   process.env.CI === 'true' ||
@@ -75,7 +71,9 @@ export const NETWORKS = {
 
 export type NetworkId = (typeof NETWORKS)[keyof typeof NETWORKS];
 export type EvmNetworkId = 'eip155:8453' | 'eip155:84532' | 'eip155:42161';
-export type SolanaNetworkId = 'solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp' | 'solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1';
+export type SolanaNetworkId =
+  | 'solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp'
+  | 'solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1';
 
 /**
  * Current active network
@@ -156,7 +154,7 @@ export const FACILITATOR_URL: string = (() => {
 
 /**
  * EVM payment receiving address (your wallet)
- * 
+ *
  * CRITICAL: Set X402_PAYMENT_ADDRESS in production environment!
  * Payments will fail if this is the zero address.
  */
@@ -165,20 +163,19 @@ export const PAYMENT_ADDRESS: `0x${string}` = (() => {
   if (addr && /^0x[a-fA-F0-9]{40}$/.test(addr)) {
     return addr as `0x${string}`;
   }
-  return '0x40252CFDF8B20Ed757D61ff157719F33Ec332402' as `0x${string}`;
+  return '0x0000000000000000000000000000000000000000' as `0x${string}`;
 })();
 
 /**
  * Solana payment receiving address
  */
-export const SOLANA_PAYMENT_ADDRESS: string = 
-  process.env.X402_SOLANA_PAYMENT_ADDRESS || '';
+export const SOLANA_PAYMENT_ADDRESS: string = process.env.X402_SOLANA_PAYMENT_ADDRESS || '';
 
 // Validate payment address in production at runtime only (not during build)
 // We use a function that's called at request time, not module load time
 export function validatePaymentConfig(): void {
   if (typeof window === 'undefined' && IS_PRODUCTION) {
-    if (PAYMENT_ADDRESS === '0x40252CFDF8B20Ed757D61ff157719F33Ec332402') {
+    if (PAYMENT_ADDRESS === '0x0000000000000000000000000000000000000000') {
       const errorMessage = [
         '━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━',
         '[x402] WARNING: X402_PAYMENT_ADDRESS not configured!',
@@ -200,7 +197,7 @@ export function validatePaymentConfig(): void {
  * USDC implements EIP-3009 (transferWithAuthorization) required for x402
  */
 export const USDC_ADDRESSES: Record<EvmNetworkId, `0x${string}`> = {
-  'eip155:8453': '0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913',  // Base Mainnet
+  'eip155:8453': '0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913', // Base Mainnet
   'eip155:84532': '0x036CbD53842c5426634e7929541eC2318f3dCF7e', // Base Sepolia
   'eip155:42161': '0xaf88d065e77c8cC2239327C5EDb3A432268e5831', // Arbitrum
 };
@@ -216,13 +213,13 @@ export const USDS_ADDRESS: `0x${string}` = '0xD74f5255D557944cf7Dd0E45FF52152000
  */
 export const SOLANA_USDC_ADDRESSES: Record<SolanaNetworkId, string> = {
   'solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp': 'EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v', // Mainnet
-  'solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1': '4zMMC9srt5Ri5X14GAgXhaHii3GnPAEERYPJgZJDncDU',   // Devnet
+  'solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1': '4zMMC9srt5Ri5X14GAgXhaHii3GnPAEERYPJgZJDncDU', // Devnet
 };
 
 /**
  * Get USDC address for current network
  */
-export const USDC_ADDRESS: `0x${string}` = 
+export const USDC_ADDRESS: `0x${string}` =
   USDC_ADDRESSES[CURRENT_NETWORK as EvmNetworkId] || USDC_ADDRESSES['eip155:84532'];
 
 /**
@@ -294,7 +291,7 @@ export function getOwnershipProofs(): string[] | undefined {
  * Check if x402 payments are properly configured
  */
 export function isX402Enabled(): boolean {
-  return PAYMENT_ADDRESS !== '0x40252CFDF8B20Ed757D61ff157719F33Ec332402';
+  return PAYMENT_ADDRESS !== '0x0000000000000000000000000000000000000000';
 }
 
 /**
@@ -329,7 +326,7 @@ export function getNetworkDisplayName(networkId: NetworkId = CURRENT_NETWORK): s
  * Get accepted assets for a specific network
  */
 export function getAcceptedAssets(networkId: NetworkId = CURRENT_NETWORK): PaymentAsset[] {
-  return ACCEPTED_ASSETS.filter(asset => asset.network === networkId);
+  return ACCEPTED_ASSETS.filter((asset) => asset.network === networkId);
 }
 
 /**

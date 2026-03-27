@@ -34,7 +34,7 @@ import { FACILITATOR_URL } from '@/lib/x402/config';
 
 const RECEIVE_ADDRESS =
   (process.env.X402_RECEIVE_ADDRESS as `0x${string}`) ??
-  '0x40252CFDF8B20Ed757D61ff157719F33Ec332402';
+  '0x4027FdaC1a5216e264A00a5928b8366aE59cE888';
 
 const NETWORK = (process.env.X402_NETWORK ?? 'eip155:42161') as never;
 
@@ -44,10 +44,10 @@ const NETWORK = (process.env.X402_NETWORK ?? 'eip155:42161') as never;
 
 /** Map named networks (from Sperax facilitator) to CAIP-2 identifiers (SDK format) */
 const NAMED_TO_CAIP2: Record<string, string> = {
-  'base': 'eip155:8453',
+  base: 'eip155:8453',
   'base-sepolia': 'eip155:84532',
-  'arbitrum': 'eip155:42161',
-  'ethereum': 'eip155:1',
+  arbitrum: 'eip155:42161',
+  ethereum: 'eip155:1',
 };
 
 /**
@@ -56,7 +56,9 @@ const NAMED_TO_CAIP2: Record<string, string> = {
  */
 class Caip2FacilitatorBridge {
   private inner: HTTPFacilitatorClient;
-  constructor(inner: HTTPFacilitatorClient) { this.inner = inner; }
+  constructor(inner: HTTPFacilitatorClient) {
+    this.inner = inner;
+  }
 
   async getSupported() {
     const supported = await this.inner.getSupported();
@@ -125,7 +127,14 @@ function buildApiRoutes(): Record<string, RouteConfig> {
   }
   for (const [path, config] of Object.entries(PREMIUM_PRICING)) {
     routes[path] = {
-      accepts: [{ scheme: 'exact', payTo: RECEIVE_ADDRESS, price: toX402Price(config.price), network: NETWORK }],
+      accepts: [
+        {
+          scheme: 'exact',
+          payTo: RECEIVE_ADDRESS,
+          price: toX402Price(config.price),
+          network: NETWORK,
+        },
+      ],
     };
   }
 

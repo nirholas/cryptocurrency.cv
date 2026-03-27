@@ -10,10 +10,10 @@
 
 /**
  * x402 Resource Server - SINGLE SOURCE OF TRUTH
- * 
+ *
  * Handles payment verification and settlement for protected API routes.
  * Uses the official @x402 SDK from Coinbase.
- * 
+ *
  * @module lib/x402/server
  * @see https://docs.x402.org
  * @see https://github.com/coinbase/x402
@@ -45,7 +45,7 @@ let _hasLoggedInit = false;
 /**
  * HTTP client for communicating with the facilitator service
  * The facilitator handles payment verification and on-chain settlement
- * 
+ *
  * Lazily initialized to avoid network I/O during Next.js static generation.
  */
 let _facilitatorClient: HTTPFacilitatorClient | null = null;
@@ -76,7 +76,7 @@ export const facilitatorClient = new Proxy({} as HTTPFacilitatorClient, {
 
 /**
  * x402 Resource Server singleton
- * 
+ *
  * This server instance handles:
  * - Payment verification (checking payment signatures)
  * - Settlement (submitting payments to blockchain via facilitator)
@@ -92,7 +92,7 @@ export function getX402Server(): x402ResourceServer {
   if (IS_BUILD_TIME) {
     throw new Error(
       '[x402] Server cannot be initialized at build time. ' +
-      'Ensure x402 is only accessed in request-time code paths.',
+        'Ensure x402 is only accessed in request-time code paths.',
     );
   }
   if (!_serverInstance) {
@@ -111,18 +111,23 @@ function createX402Server(): x402ResourceServer {
   }
 
   const server = new x402ResourceServer(getFacilitatorClient());
-  
+
   // Register EVM payment scheme for current network
   if (isEvmNetwork(CURRENT_NETWORK)) {
     registerExactEvmScheme(server);
   }
-  
+
   // In testnet mode, also register mainnet scheme for future-proofing
-  if (IS_TESTNET && CURRENT_NETWORK === NETWORKS.BASE_SEPOLIA && !IS_BUILD_TIME && !_hasLoggedInit) {
+  if (
+    IS_TESTNET &&
+    CURRENT_NETWORK === NETWORKS.BASE_SEPOLIA &&
+    !IS_BUILD_TIME &&
+    !_hasLoggedInit
+  ) {
     // Mainnet scheme is already registered by registerExactEvmScheme
     logger.info('[x402] Testnet mode: Base Sepolia scheme registered');
   }
-  
+
   // Log server initialization (only once, not during build)
   if (IS_PRODUCTION && !IS_BUILD_TIME && !_hasLoggedInit) {
     _hasLoggedInit = true;
@@ -130,7 +135,7 @@ function createX402Server(): x402ResourceServer {
     logger.info(`[x402] Network: ${CURRENT_NETWORK}`);
     logger.info(`[x402] Facilitator: ${FACILITATOR_URL}`);
   }
-  
+
   return server;
 }
 
@@ -140,7 +145,7 @@ export const x402Server = new Proxy({} as x402ResourceServer, {
     if (IS_BUILD_TIME) {
       // During static generation, return no-op functions / undefined values
       // so that modules importing x402Server don't crash at build time.
-      return typeof prop === 'string' ? (() => undefined) : undefined;
+      return typeof prop === 'string' ? () => undefined : undefined;
     }
     return (getX402Server() as unknown as Record<string | symbol, unknown>)[prop];
   },
@@ -156,11 +161,11 @@ export const x402Server = new Proxy({} as x402ResourceServer, {
 export function validateConfig(): { valid: boolean; errors: string[]; warnings: string[] } {
   const errors: string[] = [];
   const warnings: string[] = [];
-  
+
   if (!FACILITATOR_URL) {
     errors.push('FACILITATOR_URL is not configured');
   }
-  
+
   // Check facilitator is reachable (async check, just validate URL format here)
   try {
     new URL(FACILITATOR_URL);
@@ -169,10 +174,10 @@ export function validateConfig(): { valid: boolean; errors: string[]; warnings: 
   }
 
   // Add warnings for non-critical issues
-  if (!PAYMENT_ADDRESS || PAYMENT_ADDRESS === '0x40252CFDF8B20Ed757D61ff157719F33Ec332402') {
+  if (!PAYMENT_ADDRESS || PAYMENT_ADDRESS === '0x0000000000000000000000000000000000000000') {
     warnings.push('PAYMENT_ADDRESS is not set - payments will not work');
   }
-  
+
   return {
     valid: errors.length === 0,
     errors,

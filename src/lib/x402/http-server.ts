@@ -66,8 +66,13 @@ function createHttpServer(): x402HTTPResourceServer {
   // - Invalid/rate-limited keys: { abort: true, reason } returns 403
   // - No API key: void continues to x402 payment verification
   // Note: Hook registration depends on x402 SDK version
-  if ('onProtectedRequest' in server && typeof (server as unknown as { onProtectedRequest: unknown }).onProtectedRequest === 'function') {
-    (server as unknown as { onProtectedRequest: (handler: typeof handleProtectedRequest) => void }).onProtectedRequest(handleProtectedRequest);
+  if (
+    'onProtectedRequest' in server &&
+    typeof (server as unknown as { onProtectedRequest: unknown }).onProtectedRequest === 'function'
+  ) {
+    (
+      server as unknown as { onProtectedRequest: (handler: typeof handleProtectedRequest) => void }
+    ).onProtectedRequest(handleProtectedRequest);
   }
 
   return server;
@@ -97,7 +102,7 @@ export const httpServer = new Proxy({} as x402HTTPResourceServer, {
   get(_, prop) {
     if (IS_BUILD_TIME) {
       // Return no-op stubs during build to prevent RouteConfigurationError
-      return typeof prop === 'string' ? (() => undefined) : undefined;
+      return typeof prop === 'string' ? () => undefined : undefined;
     }
     return (getHttpServer() as unknown as Record<string | symbol, unknown>)[prop];
   },
@@ -112,7 +117,7 @@ export const httpServer = new Proxy({} as x402HTTPResourceServer, {
  * Returns the key data if valid and within limits, null otherwise
  */
 export async function validateApiKeyForRequest(
-  apiKey: string
+  apiKey: string,
 ): Promise<{ valid: true; keyData: ApiKeyData } | { valid: false; error: string; status: number }> {
   // Check for valid API key prefix
   if (!apiKey.startsWith('cda_')) {
@@ -192,12 +197,15 @@ if (typeof window === 'undefined' && !IS_BUILD_TIME) {
     if (ctx.result.isValid) {
       // Payment verified successfully
       if (!IS_PRODUCTION) {
-        logger.debug({
-          network: ctx.requirements.network,
-          amount: ctx.requirements.amount,
-          asset: ctx.requirements.asset,
-          resource: ctx.paymentPayload.resource,
-        }, '[x402] Payment verified');
+        logger.debug(
+          {
+            network: ctx.requirements.network,
+            amount: ctx.requirements.amount,
+            asset: ctx.requirements.asset,
+            resource: ctx.paymentPayload.resource,
+          },
+          '[x402] Payment verified',
+        );
       }
     }
   });
@@ -206,10 +214,13 @@ if (typeof window === 'undefined' && !IS_BUILD_TIME) {
     if (ctx.result.success) {
       // Payment settled successfully
       if (!IS_PRODUCTION) {
-        logger.debug({
-          network: ctx.result.network,
-          transaction: ctx.result.transaction,
-        }, '[x402] Payment settled');
+        logger.debug(
+          {
+            network: ctx.result.network,
+            transaction: ctx.result.transaction,
+          },
+          '[x402] Payment settled',
+        );
       }
     }
   });
@@ -231,7 +242,7 @@ export function validateHttpServerConfig(): {
   const warnings: string[] = [];
 
   // Check payment address
-  if (!PAYMENT_ADDRESS || PAYMENT_ADDRESS === '0x40252CFDF8B20Ed757D61ff157719F33Ec332402') {
+  if (!PAYMENT_ADDRESS || PAYMENT_ADDRESS === '0x0000000000000000000000000000000000000000') {
     if (IS_PRODUCTION) {
       errors.push('X402_PAYMENT_ADDRESS not set - all payments will fail');
     } else {

@@ -103,14 +103,14 @@ export async function POST(request: NextRequest) {
         error: 'API key required',
         message: 'Provide your API key via X-API-Key header. Get a free key at /api/register',
       },
-      { status: 401 }
+      { status: 401 },
     );
   }
 
   if (!isKvConfigured()) {
     return NextResponse.json(
       { error: 'Service unavailable', message: 'KV storage not configured' },
-      { status: 503 }
+      { status: 503 },
     );
   }
 
@@ -120,7 +120,7 @@ export async function POST(request: NextRequest) {
   } catch {
     return NextResponse.json(
       { error: 'Invalid JSON', message: 'Request body must be valid JSON' },
-      { status: 400 }
+      { status: 400 },
     );
   }
 
@@ -133,17 +133,14 @@ export async function POST(request: NextRequest) {
         message: 'targetTier must be "pro" or "enterprise"',
         availableTiers: ['pro', 'enterprise'],
       },
-      { status: 400 }
+      { status: 400 },
     );
   }
 
   // Validate current key
   const keyData = await validateApiKey(rawKey);
   if (!keyData) {
-    return NextResponse.json(
-      { error: 'Invalid or revoked API key' },
-      { status: 401 }
-    );
+    return NextResponse.json({ error: 'Invalid or revoked API key' }, { status: 401 });
   }
 
   // Check that this is an upgrade, not a downgrade
@@ -157,7 +154,7 @@ export async function POST(request: NextRequest) {
         message: `Cannot upgrade from ${keyData.tier} to ${targetTier}. Current tier is equal or higher.`,
         currentTier: keyData.tier,
       },
-      { status: 400 }
+      { status: 400 },
     );
   }
 
@@ -181,7 +178,7 @@ export async function POST(request: NextRequest) {
           priceUsdc: (price * 1_000_000).toString(),
           currency: 'USDC',
           network: 'eip155:8453',
-          payTo: process.env.X402_RECEIVE_ADDRESS || '0x40252CFDF8B20Ed757D61ff157719F33Ec332402',
+          payTo: process.env.X402_RECEIVE_ADDRESS || '0x4027FdaC1a5216e264A00a5928b8366aE59cE888',
           description: `${tierConfig.name} tier upgrade for ${months} month(s)`,
           months,
           targetTier,
@@ -189,7 +186,7 @@ export async function POST(request: NextRequest) {
         currentTier: keyData.tier,
         docs: 'https://docs.x402.org',
       },
-      { status: 402 }
+      { status: 402 },
     );
   }
 
@@ -205,7 +202,7 @@ export async function POST(request: NextRequest) {
         code: 'PAYMENT_MISMATCH',
         message: `Expected ${expectedAmountMicro} micro-USDC ($${price}), received ${paidAmount}`,
       },
-      { status: 402 }
+      { status: 402 },
     );
   }
 
@@ -218,14 +215,11 @@ export async function POST(request: NextRequest) {
     const result = await upgradeKeyTier(
       keyData.id,
       targetTier as 'pro' | 'enterprise',
-      expiresAt.toISOString()
+      expiresAt.toISOString(),
     );
 
     if (!result.success) {
-      return NextResponse.json(
-        { error: 'Upgrade failed', message: result.error },
-        { status: 500 }
-      );
+      return NextResponse.json({ error: 'Upgrade failed', message: result.error }, { status: 500 });
     }
 
     return NextResponse.json(
@@ -255,13 +249,10 @@ export async function POST(request: NextRequest) {
         headers: {
           'Cache-Control': 'private, no-store',
         },
-      }
+      },
     );
   } catch (error) {
     console.error('[API Keys] Upgrade endpoint error:', error);
-    return NextResponse.json(
-      { error: 'Failed to process upgrade' },
-      { status: 500 }
-    );
+    return NextResponse.json({ error: 'Failed to process upgrade' }, { status: 500 });
   }
 }

@@ -47,7 +47,7 @@ GET /.well-known/x402
     "provider": "Coinbase"
   },
   
-  "payTo": "0x40252CFDF8B20Ed757D61ff157719F33Ec332402",
+  "payTo": "0x4027FdaC1a5216e264A00a5928b8366aE59cE888",
   
   "resources": [
     {
