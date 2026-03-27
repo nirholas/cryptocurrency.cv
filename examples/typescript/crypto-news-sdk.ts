@@ -389,16 +389,6 @@ class AIAPI {
         return this.http.post('/api/ai/counter', { claim, context });
     }
 
-    /** AI Agent query */
-    async agent(options: { format?: string } = {}): Promise<any> {
-        return this.http.get('/api/ai/agent', options);
-    }
-
-    /** Query AI Agent with natural language */
-    async queryAgent(question: string, options: { assets?: string[]; timeHorizon?: string; focusAreas?: string[] } = {}): Promise<any> {
-        return this.http.post('/api/ai/agent', { question, ...options });
-    }
-
     /** Detect AI-generated content */
     async detectAIContent(text: string | string[], quick?: boolean): Promise<any> {
         const body = Array.isArray(text) ? { texts: text, quick } : { text, quick };

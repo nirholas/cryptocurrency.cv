@@ -92,9 +92,6 @@ Free Crypto News API 的完整文档。所有端点都是 **100% 免费** 的，
   - [POST /api/newsletter](#post-apinewsletter)
   - [GET /api/newsletter](#get-apinewsletter)
   - [POST /api/newsletter/subscribe](#post-apinewslettersubscribe)
-  - [POST /api/webhooks](#post-apiwebhooks)
-  - [POST /api/webhooks/test](#post-apiwebhookstest)
-  - [GET /api/webhooks/queue](#get-apiwebhooksqueue)
 - [存档端点](#存档端点)
   - [GET /api/archive](#get-apiarchive)
   - [GET /api/archive/v2](#get-apiarchivev2) (重定向)
@@ -500,7 +497,7 @@ curl "https://cryptocurrency.cv/api/digest?period=24h&format=full"
 undefined
 ### POST /api/警报/[id]?action=test
 
-测试触发警报（用于测试Webhooks）。
+测试触发警报。
 
 ```bash
 curl -X POST "https://cryptocurrency.cv/api/alerts/alert_123?action=test"
@@ -617,114 +614,6 @@ curl "https://cryptocurrency.cv/api/portfolio?id=portfolio-123"
     "profitLossPercent": 10.53
   },
   "relatedNews": [...]
-}
-```
-
----
-
-### POST /api/webhooks
-
-注册Webhooks以接收服务器到服务器的通知。
-
-**请求体：**
-
-```json
-{
-  "url": "https://your-server.com/webhook",
-  "events": ["news.breaking", "news.new"],
-  "secret": "your-webhook-secret",
-  "filters": {
-    "sources": ["coindesk"],
-    "keywords": ["SEC", "ETF"]
-  }
-}
-```
-
-**响应：**
-
-```json
-{
-  "success": true,
-  "webhook": {
-    "id": "wh-abc123",
-    "url": "https://your-server.com/webhook",
-    "events": ["news.breaking", "news.new"],
-    "active": true
-  }
-}
-```
-
-**Webhook有效载荷：**
-
-```json
-{
-  "event": "news.breaking",
-  "timestamp": "2026-01-22T10:00:00Z",
-  "signature": "sha256=...",
-  "data": {
-    "article": {
-      "title": "SEC批准比特币ETF",
-      "link": "https://..."
-    }
-  }
-}
-```
-
----
-
-### POST /api/webhooks/test
-
-向注册的Webhook发送测试有效载荷（需要身份验证）。
-
-**头部：**
-
-```
-X-API-Key: YOUR_API_KEY
-```
-
-**请求体：**
-
-```json
-{
-  "webhookId": "wh-abc123"
-}
-```
-
-**响应：**
-
-```json
-{
-  "success": true,
-  "message": "测试Webhook已投递",
-  "webhookId": "wh-abc123",
-  "statusCode": 200,
-  "responseTime": 245
-}
-```
-
----
-
-### GET /api/webhooks/queue
-
-检查异步Webhook投递队列状态。
-
-**响应：**
-
-```json
-{
-  "pending": 3,
-  "processing": 1,
-  "completed": 145,
-  "failed": 2,
-  "jobs": [
-    {
-      "id": "wh_job_abc123",
-      "url": "https://your-server.com/webhook",
-      "status": "pending",
-      "retries": 0,
-      "createdAt": 1706012400000
-    }
-  ]
 }
 ```
 

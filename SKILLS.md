@@ -10,7 +10,7 @@
 | Category | Skills | Description |
 |----------|--------|-------------|
 | [News Retrieval](#news-retrieval) | 8 | Fetch, search, filter, and browse crypto news |
-| [AI Analysis](#ai-analysis) | 12 | Summarization, sentiment, research, RAG |
+| [AI Analysis](#ai-analysis) | 11 | Summarization, sentiment, research, RAG |
 | [Market Data](#market-data) | 10 | Prices, charts, derivatives, gas, yields |
 | [Sentiment & Social](#sentiment--social) | 6 | Fear/Greed, social sentiment, trending |
 | [On-Chain & Whales](#on-chain--whales) | 5 | Whale alerts, flows, liquidations, unlocks |

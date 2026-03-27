@@ -21,7 +21,6 @@ Documentation for the core library modules in Free Crypto News.
 - [AI & Analysis](#ai-analysis)
   - [alpha-signal-engine.ts](#alpha-signal-enginets)
   - [ai-enhanced.ts](#ai-enhancedts)
-  - [ai-market-agent.ts](#ai-market-agentts)
   - [claim-extractor.ts](#claim-extractorts)
   - [anomaly-detector.ts](#anomaly-detectorts)
   - [causal-inference.ts](#causal-inferencets)
@@ -480,30 +479,6 @@ const analysis = await analyzeArticle({
   readingLevel: 'intermediate',
   keyEntities: [...]
 }
-```
-
----
-
-### ai-market-agent.ts
-
-Autonomous AI agent for market analysis.
-
-```typescript
-import { 
-  MarketAgent,
-  createAgent 
-} from '@/lib/ai-market-agent';
-```
-
-#### Usage
-
-```typescript
-const agent = createAgent({
-  model: 'gpt-4',
-  tools: ['news', 'prices', 'onchain'],
-});
-
-const analysis = await agent.analyze('What is driving BTC price today?');
 ```
 
 ---

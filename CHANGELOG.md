@@ -221,21 +221,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Multi-API Fallback Chain** - CoinGecko → CoinPaprika → Binance → CryptoCompare
 - **Rate Limit Resilience** - Individual coin pages no longer fail during traffic spikes
 
-#### AI Market Intelligence Agent (Jan 24, 2026)
-- **Revolutionary AI Market Agent** - `/ai-agent` page with comprehensive market analysis dashboard
-- **Multi-Source Signal Aggregation** - Synthesizes news, social sentiment, on-chain data, and derivatives into unified intelligence
-- **Market Regime Detection** - Automatically classifies market phase (accumulation, markup, distribution, markdown, ranging, capitulation, euphoria)
-- **Fear & Greed Index** - Real-time calculation with visual gauge component
-- **Trading Opportunity Identification** - AI-generated trade ideas with entry, target, and stop-loss levels
-- **Risk Alert System** - Proactive warnings for funding extremes, sentiment extremes, correlation breakdowns
-- **Correlation Anomaly Detection** - Identifies unusual correlation patterns between asset pairs
-- **Sector Rotation Analysis** - Tracks capital flow across DeFi, L1, L2, Meme sectors with leading/lagging assets
-- **Natural Language Query Interface** - Ask questions like "Should I buy BTC?" or "What are the current risks?"
-- **Upcoming Catalysts Tracker** - Monitors macro events, upgrades, regulatory dates, governance votes
-- **`/api/ai/agent`** - New REST API endpoint (GET for intelligence, POST for queries)
-- **`AIMarketAgentDashboard`** - Interactive dashboard component with tabs (Overview, Signals, Opportunities, Risks, Chat)
-- **`ai-market-agent.ts`** - 1,300+ line market intelligence engine library
-
 #### Coverage Gap Analysis (Jan 24, 2026)
 - **Coverage Gap Detection** - `/coverage-gap` page to identify under-covered crypto topics
 - **Topic Trend Tracking** - Monitor rising/falling coverage trends by topic
@@ -416,8 +401,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Coin Compare** - `/compare` page to compare multiple cryptocurrencies side-by-side
 - **Settings Page** - `/settings` for user preferences and notification settings
 - **Empty States** - Polished empty state components for all lists
-- **Agent Prompts Guide** - `docs/AGENT-PROMPTS.md` for AI agent integration patterns
-
 #### Previous Additions
 - **Keyboard Shortcuts** - Power user navigation with `j`/`k` for articles, `/` for search, `g+h/t/s/b` for quick access, `d` for dark mode, `?` for help modal
 - **Reading Progress Bar** - Visual scroll indicator on article pages with gradient styling

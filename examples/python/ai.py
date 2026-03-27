@@ -199,47 +199,6 @@ def get_counter_arguments(claim: str) -> dict:
 
 
 # =============================================================================
-# GET /api/ai/agent - AI Agent
-# =============================================================================
-
-def ai_agent(task: str) -> dict:
-    """
-    Use AI agent for complex analysis tasks.
-    
-    Args:
-        task: Task description
-    
-    Returns:
-        Agent response
-    """
-    response = requests.get(f"{BASE_URL}/api/ai/agent", params={"task": task})
-    return response.json()
-
-
-def ai_agent_post(task: str, data: Optional[dict] = None) -> dict:
-    """
-    Use AI agent with custom data.
-    
-    Args:
-        task: Task description
-        data: Additional data for the task
-    
-    Returns:
-        Agent response
-    """
-    payload = {"task": task}
-    if data:
-        payload["data"] = data
-    
-    response = requests.post(
-        f"{BASE_URL}/api/ai/agent",
-        json=payload,
-        headers={"Content-Type": "application/json"}
-    )
-    return response.json()
-
-
-# =============================================================================
 # GET /api/ai/oracle - Price Oracle/Prediction
 # =============================================================================
 

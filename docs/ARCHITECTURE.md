@@ -56,7 +56,6 @@ src/
 │   │   ├── v1/ , v2/            # Versioned stable endpoints
 │   │   ├── og/                  # /api/og — dynamic Open Graph images
 │   │   ├── cron/                # Scheduled jobs (archive sync, sentiment)
-│   │   ├── webhooks/            # Webhook delivery
 │   │   └── ...
 │   └── layout.tsx               # Root layout + providers
 ├── components/                  # 170+ React components
@@ -313,7 +312,6 @@ X-RateLimit-Reset: 1709312400
 - **SSE** (Server-Sent Events) — primary real-time channel on Vercel (Edge Runtime, no WebSocket support)
 - **WebSocket** — full-duplex channel available on Railway / Docker / self-hosted deployments
 - **Push notifications** — VAPID-based web push via Service Worker
-- **Webhooks** — outbound HTTP POST to registered URLs on new articles
 
 ---
 
@@ -450,5 +448,5 @@ The standalone output (`next.config.js: output: 'standalone'`) produces a minima
 - [Developer Guide](DEVELOPER-GUIDE.md) — component reference, extending the app
 - [API Reference](API.md) — endpoint catalogue (150+ endpoints)
 - [Deployment](DEPLOYMENT.md) — hosting options and configuration
-- [Real-Time](REALTIME.md) — SSE, WebSocket, push notifications, webhooks
+- [Real-Time](REALTIME.md) — SSE, WebSocket, push notifications
 - [Security](SECURITY.md) — security policy and reporting

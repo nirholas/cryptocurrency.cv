@@ -39,8 +39,6 @@ from .ai import (
     get_market_brief,
     ai_debate,
     get_counter_arguments,
-    ai_agent,
-    ai_agent_post,
     get_oracle_prediction,
     extract_entities,
     get_relationships,
@@ -217,7 +215,7 @@ __all__ = [
     # AI
     "ai_request", "get_sentiment", "analyze_text_sentiment", "summarize_article",
     "summarize_text", "ask_ai", "get_market_brief", "ai_debate", "get_counter_arguments",
-    "ai_agent", "ai_agent_post", "get_oracle_prediction", "extract_entities",
+    "get_oracle_prediction", "extract_entities",
     "get_relationships", "get_narratives", "get_claims", "detect_clickbait",
     "factcheck", "detect_ai_content", "classify_article", "get_origins",
     

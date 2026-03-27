@@ -72,7 +72,7 @@ const PRESETS: Record<CachePreset, CacheConfig> = {
     staleWhileRevalidate: 86400,
     surrogateControl: true,
   },
-  /** No caching at all: admin, auth, user-specific data */
+  /** No caching at all: auth, user-specific data */
   NONE: {
     sMaxAge: 0,
     maxAge: 0,
@@ -122,7 +122,6 @@ const ROUTE_PRESETS: Array<{ pattern: RegExp; preset: CachePreset }> = [
   { pattern: /^\/api\/health/, preset: 'FAST' },
 
   // No cache
-  { pattern: /^\/api\/admin/, preset: 'NONE' },
   { pattern: /^\/api\/keys/, preset: 'NONE' },
   { pattern: /^\/api\/register/, preset: 'NONE' },
   { pattern: /^\/api\/billing/, preset: 'NONE' },

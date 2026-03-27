@@ -141,13 +141,8 @@ curl -s -X POST "$BASE_URL/api/ai/counter" \
   -d '{"claim": "Bitcoin is too volatile for institutional adoption"}'
 echo -e "\n"
 
-# GET /api/ai/agent - AI agent
-echo "7. Use AI agent"
-curl -s "$BASE_URL/api/ai/agent?task=Analyze%20Bitcoin%20market%20trends"
-echo -e "\n"
-
 # GET /api/ai/oracle - Price oracle
-echo "8. Get BTC oracle prediction"
+echo "7. Get BTC oracle prediction"
 curl -s "$BASE_URL/api/ai/oracle?asset=BTC"
 echo -e "\n"
 

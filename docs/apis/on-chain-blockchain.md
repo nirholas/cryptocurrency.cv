@@ -165,7 +165,6 @@
 | Endpoint | Purpose | Source Files |
 |---|---|---|
 | `GET /ownership/{coin}` | Ownership concentration | `src/app/api/premium/alerts/whales/route.ts` |
-| `GET /metrics/bitcoin` | Bitcoin on-chain metrics | `src/lib/ai-market-agent.ts` |
 
 ---
 

@@ -107,24 +107,6 @@ async function getCounterArguments(claim) {
 }
 
 // =============================================================================
-// GET /api/ai/agent - AI Agent
-// =============================================================================
-
-async function aiAgent(task) {
-  const response = await fetch(`${BASE_URL}/api/ai/agent?task=${encodeURIComponent(task)}`);
-  return response.json();
-}
-
-async function aiAgentPost(task, data) {
-  const response = await fetch(`${BASE_URL}/api/ai/agent`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ task, data })
-  });
-  return response.json();
-}
-
-// =============================================================================
 // GET /api/ai/oracle - Price Oracle/Prediction
 // =============================================================================
 
@@ -247,8 +229,6 @@ module.exports = {
   getMarketBrief,
   aiDebate,
   getCounterArguments,
-  aiAgent,
-  aiAgentPost,
   getOraclePrediction,
   extractEntities,
   getRelationships,

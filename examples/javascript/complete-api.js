@@ -173,18 +173,6 @@ export async function aiCounter(claim, context) {
     return post("/api/ai/counter", { claim, context });
 }
 
-/** AI Market Intelligence Agent */
-export async function aiAgent(options = {}) {
-    const { format = "full" } = options;
-    return get("/api/ai/agent", { format });
-}
-
-/** Query AI Agent with natural language */
-export async function queryAIAgent(question, options = {}) {
-    const { assets, timeHorizon, focusAreas } = options;
-    return post("/api/ai/agent", { question, assets, timeHorizon, focusAreas });
-}
-
 /** Natural language oracle queries */
 export async function queryOracle(question, options = {}) {
     const { context, format } = options;
@@ -748,8 +736,6 @@ export default {
     getAIBrief,
     aiDebate,
     aiCounter,
-    aiAgent,
-    queryAIAgent,
     queryOracle,
     detectAIContent,
     getArbitrage,

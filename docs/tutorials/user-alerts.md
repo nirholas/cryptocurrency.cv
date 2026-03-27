@@ -393,333 +393,6 @@ Trigger a test notification for an alert:
 
 ---
 
-## Register Webhooks
-
-Register a webhook to receive events:
-
-=== "Python"
-
-    ```python
-    def register_webhook(
-        url: str,
-        events: List[str],
-        secret: Optional[str] = None,
-        filters: Optional[dict] = None
-    ) -> dict:
-        """
-        Register a webhook endpoint.
-        
-        Args:
-            url: Your webhook endpoint URL
-            events: Events to subscribe to (news, breaking, price, whale, etc.)
-            secret: Secret for signature verification
-            filters: Optional filters (sources, assets, etc.)
-        
-        Returns:
-            Webhook registration response
-        """
-        payload = {
-            "url": url,
-            "events": events
-        }
-        
-        if secret:
-            payload["secret"] = secret
-        if filters:
-            payload["filters"] = filters
-        
-        response = requests.post(
-            f"{BASE_URL}/api/webhooks",
-            json=payload,
-            headers={"Content-Type": "application/json"}
-        )
-        return response.json()
-    
-    
-    # Register for all news events
-    webhook = register_webhook(
-        url="https://your-server.com/webhook",
-        events=["news", "breaking", "price"],
-        secret="your-webhook-secret-123",
-        filters={
-            "sources": ["coindesk", "theblock"],
-            "assets": ["BTC", "ETH"]
-        }
-    )
-    
-    print(f"✅ Webhook registered: {webhook.get('webhook', {}).get('id')}")
-    ```
-
-=== "JavaScript"
-
-    ```javascript
-    async function registerWebhook(options) {
-        const { url, events, secret, filters } = options;
-        
-        const payload = { url, events };
-        if (secret) payload.secret = secret;
-        if (filters) payload.filters = filters;
-        
-        const response = await fetch(`${BASE_URL}/api/webhooks`, {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(payload)
-        });
-        
-        return response.json();
-    }
-    
-    const webhook = await registerWebhook({
-        url: "https://your-server.com/webhook",
-        events: ["news", "breaking", "whale"],
-        secret: "your-webhook-secret"
-    });
-    
-    console.log(`✅ Webhook ID: ${webhook.webhook?.id}`);
-    ```
-
-=== "cURL"
-
-    ```bash
-    curl -X POST "https://cryptocurrency.cv/api/webhooks" \
-      -H "Content-Type: application/json" \
-      -d '{
-        "url": "https://your-server.com/webhook",
-        "events": ["news", "breaking", "price"],
-        "secret": "your-webhook-secret",
-        "filters": {
-          "sources": ["coindesk"],
-          "assets": ["BTC", "ETH"]
-        }
-      }'
-    ```
-
----
-
-## Webhook Event Types
-
-| Event | Description | Payload |
-|-------|-------------|---------|
-| `news` | New article published | Article object |
-| `breaking` | Breaking news alert | Article object |
-| `price` | Price update | Price data |
-| `whale` | Large transaction | Transaction data |
-| `liquidation` | Liquidation event | Liquidation data |
-| `sentiment` | Sentiment change | Sentiment data |
-
----
-
-## Webhook Payload Format
-
-Your endpoint will receive POST requests with this format:
-
-```json
-{
-  "event": "news",
-  "timestamp": "2026-02-02T12:00:00Z",
-  "data": {
-    "title": "Bitcoin Surges to New High",
-    "link": "https://...",
-    "source": "CoinDesk",
-    "pubDate": "2026-02-02T11:55:00Z"
-  },
-  "signature": "sha256=abc123..."
-}
-```
-
----
-
-## Verify Webhook Signature
-
-=== "Python"
-
-    ```python
-    import hmac
-    import hashlib
-    from flask import Flask, request
-    
-    app = Flask(__name__)
-    WEBHOOK_SECRET = "your-webhook-secret"
-    
-    
-    def verify_signature(payload: bytes, signature: str) -> bool:
-        """Verify webhook signature."""
-        expected = hmac.new(
-            WEBHOOK_SECRET.encode(),
-            payload,
-            hashlib.sha256
-        ).hexdigest()
-        
-        return hmac.compare_digest(f"sha256={expected}", signature)
-    
-    
-    @app.route("/webhook", methods=["POST"])
-    def handle_webhook():
-        # Get signature from header
-        signature = request.headers.get("X-Webhook-Signature", "")
-        
-        # Verify signature
-        if not verify_signature(request.data, signature):
-            return {"error": "Invalid signature"}, 401
-        
-        # Parse payload
-        event = request.json
-        event_type = event.get("event")
-        data = event.get("data")
-        
-        print(f"📥 Received {event_type} event")
-        
-        if event_type == "breaking":
-            print(f"🔴 BREAKING: {data.get('title')}")
-            # Handle breaking news
-        
-        elif event_type == "news":
-            print(f"📰 {data.get('title')}")
-            # Handle regular news
-        
-        elif event_type == "whale":
-            print(f"🐋 Whale alert: ${data.get('value'):,.0f}")
-            # Handle whale transaction
-        
-        return {"received": True}, 200
-    
-    
-    if __name__ == "__main__":
-        app.run(port=5000)
-    ```
-
-=== "JavaScript (Express)"
-
-    ```javascript
-    const express = require("express");
-    const crypto = require("crypto");
-    
-    const app = express();
-    const WEBHOOK_SECRET = "your-webhook-secret";
-    
-    // Raw body for signature verification
-    app.use(express.json({
-        verify: (req, res, buf) => {
-            req.rawBody = buf;
-        }
-    }));
-    
-    function verifySignature(payload, signature) {
-        const expected = crypto
-            .createHmac("sha256", WEBHOOK_SECRET)
-            .update(payload)
-            .digest("hex");
-        
-        return signature === `sha256=${expected}`;
-    }
-    
-    app.post("/webhook", (req, res) => {
-        const signature = req.headers["x-webhook-signature"] || "";
-        
-        // Verify signature
-        if (!verifySignature(req.rawBody, signature)) {
-            return res.status(401).json({ error: "Invalid signature" });
-        }
-        
-        const { event, data } = req.body;
-        
-        console.log(`📥 Received ${event} event`);
-        
-        switch (event) {
-            case "breaking":
-                console.log(`🔴 BREAKING: ${data.title}`);
-                break;
-            case "news":
-                console.log(`📰 ${data.title}`);
-                break;
-            case "whale":
-                console.log(`🐋 Whale: $${data.value?.toLocaleString()}`);
-                break;
-        }
-        
-        res.json({ received: true });
-    });
-    
-    app.listen(5000, () => {
-        console.log("Webhook server running on port 5000");
-    });
-    ```
-
----
-
-## Test Webhook
-
-Test your webhook endpoint:
-
-=== "Python"
-
-    ```python
-    def test_webhook(webhook_id: str) -> dict:
-        """Send a test webhook delivery."""
-        response = requests.post(
-            f"{BASE_URL}/api/webhooks/test",
-            json={"webhookId": webhook_id},
-            headers={"Content-Type": "application/json"}
-        )
-        return response.json()
-    
-    
-    result = test_webhook("webhook_abc123")
-    
-    if result.get("success"):
-        print("✅ Test webhook sent!")
-        print(f"   Response: {result.get('response')}")
-    else:
-        print(f"❌ Test failed: {result.get('error')}")
-    ```
-
-=== "cURL"
-
-    ```bash
-    curl -X POST "https://cryptocurrency.cv/api/webhooks/test" \
-      -H "Content-Type: application/json" \
-      -d '{"webhookId": "webhook_abc123"}'
-    ```
-
----
-
-## Webhook Queue Status
-
-Monitor your webhook delivery queue:
-
-=== "Python"
-
-    ```python
-    def get_webhook_queue() -> dict:
-        """Get webhook queue status."""
-        response = requests.get(f"{BASE_URL}/api/webhooks/queue")
-        return response.json()
-    
-    
-    queue = get_webhook_queue()
-    
-    print("📊 WEBHOOK QUEUE STATUS")
-    print("=" * 50)
-    print(f"Pending:    {queue.get('pending', 0)}")
-    print(f"Processing: {queue.get('processing', 0)}")
-    print(f"Completed:  {queue.get('completed', 0)}")
-    print(f"Failed:     {queue.get('failed', 0)}")
-    
-    print("\n📋 Recent Jobs:")
-    for job in queue.get("jobs", [])[:10]:
-        status = job.get("status", "unknown")
-        emoji = "✅" if status == "completed" else "❌" if status == "failed" else "⏳"
-        print(f"   {emoji} {job.get('event')} - {status}")
-    ```
-
-=== "cURL"
-
-    ```bash
-    curl "https://cryptocurrency.cv/api/webhooks/queue"
-    ```
-
----
-
 ## Complete Alert System Example
 
 === "Python"
@@ -730,48 +403,42 @@ Monitor your webhook delivery queue:
     Complete Alert System
     Demonstrates creating and managing a full alert workflow.
     """
-    
+
     import requests
-    from flask import Flask, request
-    import hmac
-    import hashlib
-    
+
     BASE_URL = "https://cryptocurrency.cv"
-    WEBHOOK_SECRET = "your-secret-key"
-    
-    
+
+
     class AlertManager:
-        def __init__(self, webhook_url: str):
-            self.webhook_url = webhook_url
+        def __init__(self):
             self.alerts = {}
-        
+
         def create_alert(self, name: str, condition: dict) -> dict:
             response = requests.post(
                 f"{BASE_URL}/api/alerts",
                 json={
                     "name": name,
                     "condition": condition,
-                    "channels": ["webhook"],
-                    "webhookUrl": self.webhook_url,
+                    "channels": ["websocket"],
                     "cooldown": 300
                 }
             )
             result = response.json()
-            
+
             if result.get("alert"):
                 self.alerts[result["alert"]["id"]] = result["alert"]
-            
+
             return result
-        
+
         def setup_standard_alerts(self):
             """Set up a standard set of alerts."""
-            
+
             # 1. Breaking news
             self.create_alert(
                 "All Breaking News",
                 {"type": "breaking"}
             )
-            
+
             # 2. Bitcoin price alerts
             self.create_alert(
                 "BTC Above $100K",
@@ -782,7 +449,7 @@ Monitor your webhook delivery queue:
                     "value": 100000
                 }
             )
-            
+
             # 3. ETF news
             self.create_alert(
                 "ETF News",
@@ -792,7 +459,7 @@ Monitor your webhook delivery queue:
                     "operator": "OR"
                 }
             )
-            
+
             # 4. Whale alerts
             self.create_alert(
                 "Large BTC Movements",
@@ -802,7 +469,7 @@ Monitor your webhook delivery queue:
                     "minValue": 10000000
                 }
             )
-            
+
             # 5. Sentiment shift
             self.create_alert(
                 "Bearish Sentiment",
@@ -812,66 +479,14 @@ Monitor your webhook delivery queue:
                     "operator": "below"
                 }
             )
-            
+
             print(f"✅ Created {len(self.alerts)} alerts")
-    
-    
-    # Flask webhook handler
-    app = Flask(__name__)
-    
-    @app.route("/webhook", methods=["POST"])
-    def handle_alert():
-        # Verify signature
-        signature = request.headers.get("X-Webhook-Signature", "")
-        expected = f"sha256={hmac.new(WEBHOOK_SECRET.encode(), request.data, hashlib.sha256).hexdigest()}"
-        
-        if not hmac.compare_digest(expected, signature):
-            return {"error": "Invalid signature"}, 401
-        
-        event = request.json
-        event_type = event.get("event")
-        data = event.get("data")
-        
-        # Handle different event types
-        if event_type == "breaking":
-            handle_breaking_news(data)
-        elif event_type == "price":
-            handle_price_alert(data)
-        elif event_type == "whale":
-            handle_whale_alert(data)
-        elif event_type == "sentiment":
-            handle_sentiment_alert(data)
-        
-        return {"received": True}
-    
-    
-    def handle_breaking_news(data):
-        print(f"🔴 BREAKING: {data.get('title')}")
-        # Send to Discord, Slack, Telegram, etc.
-    
-    
-    def handle_price_alert(data):
-        print(f"💰 PRICE ALERT: {data.get('asset')} = ${data.get('price'):,.2f}")
-        # Execute trading logic
-    
-    
-    def handle_whale_alert(data):
-        print(f"🐋 WHALE: ${data.get('value'):,.0f} {data.get('asset')}")
-        # Analyze whale movement
-    
-    
-    def handle_sentiment_alert(data):
-        print(f"📊 SENTIMENT: {data.get('sentiment')} ({data.get('score')})")
-        # Adjust trading strategy
-    
-    
+
+
     if __name__ == "__main__":
         # Setup alerts
-        manager = AlertManager("https://your-server.com/webhook")
+        manager = AlertManager()
         manager.setup_standard_alerts()
-        
-        # Start webhook server
-        app.run(port=5000)
     ```
 
 ---

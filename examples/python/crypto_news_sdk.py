@@ -274,20 +274,6 @@ class AIAPI:
             payload["context"] = context
         return self.http.post("/api/ai/counter", payload)
     
-    def agent_query(
-        self,
-        question: str,
-        assets: List[str] = None,
-        time_horizon: str = None
-    ) -> Dict[str, Any]:
-        """Query AI research agent."""
-        payload = {"question": question}
-        if assets:
-            payload["assets"] = assets
-        if time_horizon:
-            payload["timeHorizon"] = time_horizon
-        return self.http.post("/api/ai/agent", payload)
-    
     def detect_ai_content(
         self,
         text: Union[str, List[str]],

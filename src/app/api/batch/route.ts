@@ -58,7 +58,7 @@ const MAX_BATCH_SIZE = 10;
 const BATCH_TIMEOUT_MS = 15_000; // 15 s total for the batch
 const ALLOWED_PATH_PREFIX = '/api/';
 // Paths that cannot be batched (admin, webhooks, batch itself)
-const BLOCKED_PATHS = ['/api/batch', '/api/admin', '/api/webhooks', '/api/cron', '/api/ws', '/api/sse'];
+const BLOCKED_PATHS = ['/api/batch', '/api/webhooks', '/api/cron', '/api/ws', '/api/sse'];
 
 interface BatchSubRequest {
   /** Caller-assigned ID echoed back in the response for matching */

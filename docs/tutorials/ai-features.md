@@ -713,14 +713,6 @@ class CryptoAIAnalyzer:
         )
         return response.json()
     
-    def agent_query(self, question: str) -> dict:
-        """Query AI agent."""
-        response = self.session.post(
-            f"{self.BASE_URL}/api/ai/agent",
-            json={"question": question}
-        )
-        return response.json()
-    
     def run_full_analysis(self):
         """Run complete AI analysis."""
         print("🤖 AI-Powered Crypto Analysis")
@@ -756,16 +748,6 @@ class CryptoAIAnalyzer:
                 print(f"  A: {answer.get('answer', 'No answer')[:150]}...")
             except Exception as e:
                 print(f"  Error: {e}")
-        
-        # Agent Research
-        print("\n🔬 Agent Research:")
-        try:
-            research = self.agent_query(
-                "What are the top narratives in crypto this week?"
-            )
-            print(f"  {research.get('analysis', 'No analysis')[:200]}...")
-        except Exception as e:
-            print(f"  Error: {e}")
         
         print("\n" + "=" * 60)
         print("✅ Analysis complete!")

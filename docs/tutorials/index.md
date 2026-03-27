@@ -60,7 +60,7 @@ Leverage AI for analysis, summarization, and insights.
 | Tutorial | Description | Endpoints |
 |----------|-------------|-----------|
 | [AI Sentiment Analysis](ai-sentiment.md) | Analyze market sentiment | `/api/sentiment`, `/api/sentiment/analysis` |
-| [AI Features](ai-features.md) | Full AI capabilities | `/api/digest`, `/api/summarize`, `/api/ask`, `/api/ai/brief`, `/api/ai/debate`, `/api/ai/agent` |
+| [AI Features](ai-features.md) | Full AI capabilities | `/api/digest`, `/api/summarize`, `/api/ask`, `/api/ai/brief`, `/api/ai/debate` |
 
 ### 📊 Trading & Market Data
 Access real-time market intelligence.

@@ -17,7 +17,7 @@ Complete documentation for the Free Crypto News API with **180+ endpoints**.
 curl https://cryptocurrency.cv/api/news
 ```
 
-> Some advanced endpoints (portfolio, alerts, webhooks) use optional API keys for personalization. See [API Key Management](#api-key-management) for details.
+> Some advanced endpoints (portfolio, alerts) use optional API keys for personalization. See [API Key Management](#api-key-management) for details.
 
 ### Quick Try
 
@@ -153,7 +153,7 @@ The API is organized into these categories:
 | [NFT](#nft-market-apis) | 8 | Collections, sales, market data |
 | [L2](#l2-scaling-apis) | 5 | Layer 2 projects, activity, risk |
 | [Real-Time](#real-time-endpoints) | 4+ | SSE, WebSocket, streaming |
-| [User Features](#user-features) | 8+ | Alerts, newsletter, webhooks |
+| [User Features](#user-features) | 5+ | Alerts, newsletter |
 | [Feeds](#feed-formats) | 3 | RSS, Atom, OPML |
 | [Utility](#utility-endpoints) | 5 | Health, stats, cache |
 
@@ -251,9 +251,6 @@ The API is organized into these categories:
   - [POST /api/newsletter](#post-apinewsletter)
   - [GET /api/newsletter](#get-apinewsletter)
   - [POST /api/newsletter/subscribe](#post-apinewslettersubscribe)
-  - [POST /api/webhooks](#post-apiwebhooks)
-  - [POST /api/webhooks/test](#post-apiwebhookstest)
-  - [GET /api/webhooks/queue](#get-apiwebhooksqueue)
 - [Archive Endpoints](#archive-endpoints)
   - [GET /api/archive](#get-apiarchive)
   - [GET /api/archive/v2](#get-apiarchivev2) (Redirect)
@@ -1635,8 +1632,7 @@ curl -X POST https://cryptocurrency.cv/api/alerts \
       "coin": "bitcoin",
       "threshold": 100000
     },
-    "channels": ["websocket", "webhook"],
-    "webhookUrl": "https://your-server.com/alerts",
+    "channels": ["websocket"],
     "cooldown": 300
   }'
 ```
@@ -1653,8 +1649,7 @@ curl -X POST https://cryptocurrency.cv/api/alerts \
       "coin": "bitcoin",
       "threshold": 100000
     },
-    "channels": ["websocket", "webhook"],
-    "webhookUrl": "https://your-server.com/alerts",
+    "channels": ["websocket"],
     "cooldown": 300,
     "enabled": true,
     "createdAt": "2026-01-22T00:00:00.000Z"
@@ -1747,7 +1742,7 @@ curl -X DELETE https://cryptocurrency.cv/api/alerts/alert_123
 
 ### POST /api/alerts/[id]?action=test
 
-Test trigger an alert (for testing webhooks).
+Test trigger an alert.
 
 ```bash
 curl -X POST "https://cryptocurrency.cv/api/alerts/alert_123?action=test"
@@ -1864,114 +1859,6 @@ curl "https://cryptocurrency.cv/api/portfolio?id=portfolio-123"
     "profitLossPercent": 10.53
   },
   "relatedNews": [...]
-}
-```
-
----
-
-### POST /api/webhooks
-
-Register webhooks for server-to-server notifications.
-
-**Request Body:**
-
-```json
-{
-  "url": "https://your-server.com/webhook",
-  "events": ["news.breaking", "news.new"],
-  "secret": "your-webhook-secret",
-  "filters": {
-    "sources": ["coindesk"],
-    "keywords": ["SEC", "ETF"]
-  }
-}
-```
-
-**Response:**
-
-```json
-{
-  "success": true,
-  "webhook": {
-    "id": "wh-abc123",
-    "url": "https://your-server.com/webhook",
-    "events": ["news.breaking", "news.new"],
-    "active": true
-  }
-}
-```
-
-**Webhook Payload:**
-
-```json
-{
-  "event": "news.breaking",
-  "timestamp": "2026-01-22T10:00:00Z",
-  "signature": "sha256=...",
-  "data": {
-    "article": {
-      "title": "SEC Approves Bitcoin ETF",
-      "link": "https://..."
-    }
-  }
-}
-```
-
----
-
-### POST /api/webhooks/test
-
-Send a test payload to a registered webhook (requires authentication).
-
-**Headers:**
-
-```
-X-API-Key: YOUR_API_KEY
-```
-
-**Request Body:**
-
-```json
-{
-  "webhookId": "wh-abc123"
-}
-```
-
-**Response:**
-
-```json
-{
-  "success": true,
-  "message": "Test webhook delivered",
-  "webhookId": "wh-abc123",
-  "statusCode": 200,
-  "responseTime": 245
-}
-```
-
----
-
-### GET /api/webhooks/queue
-
-Check the async webhook delivery queue status.
-
-**Response:**
-
-```json
-{
-  "pending": 3,
-  "processing": 1,
-  "completed": 145,
-  "failed": 2,
-  "jobs": [
-    {
-      "id": "wh_job_abc123",
-      "url": "https://your-server.com/webhook",
-      "status": "pending",
-      "retries": 0,
-      "createdAt": 1706012400000
-    }
-  ]
 }
 ```
 

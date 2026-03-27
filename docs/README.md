@@ -52,7 +52,7 @@ Free Crypto News is a **100% free, open-source** cryptocurrency news API and web
 | [All Features](./FEATURES.md) | Complete feature catalog |
 | [AI Features](./AI-FEATURES.md) | Summarization, sentiment, fact-checking, RAG |
 | [Advanced Features](./ADVANCED-FEATURES.md) | Terminal CLI, trading signals, Farcaster Frames, oracles |
-| [Real-Time](./REALTIME.md) | WebSocket, SSE, push notifications, webhooks |
+| [Real-Time](./REALTIME.md) | WebSocket, SSE, push notifications |
 
 
 ---

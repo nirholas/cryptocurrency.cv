@@ -170,9 +170,6 @@ AI credibility scoring for news sources.
 ### GET /api/ai/blog-generator
 AI-powered crypto blog post generator.
 
-### GET /api/ai/agent
-Autonomous AI agent for multi-step crypto research tasks.
-
 ### GET /api/ai/summarize
 Standalone article summarisation endpoint.
 
