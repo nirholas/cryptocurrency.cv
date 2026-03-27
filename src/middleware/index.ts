@@ -30,7 +30,6 @@ export { cors } from './cors';
 export { requestValidation } from './request-validation';
 export { botDetection } from './bot-detection';
 export { intl } from './intl';
-export { adminAuth } from './admin-auth';
 export { apiKey } from './api-key';
 export { rateLimitHandler } from './rate-limit';
 export { x402Gate } from './x402';

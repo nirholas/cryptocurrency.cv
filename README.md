@@ -28,7 +28,6 @@ mcp_server: "@anthropic-ai/mcp-server-crypto-news"
   <a href="https://github.com/nirholas/free-crypto-news/commits/main"><img src="https://img.shields.io/github/last-commit/nirholas/free-crypto-news?style=flat-square" alt="Last Commit"></a>
   <a href="https://github.com/nirholas/free-crypto-news/graphs/contributors"><img src="https://img.shields.io/github/contributors/nirholas/free-crypto-news?style=flat-square" alt="Contributors"></a>
   <a href="https://github.com/nirholas/free-crypto-news"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat-square" alt="PRs Welcome"></a>
-  <a href="https://cryptocurrency.cv/api/graphql"><img src="https://img.shields.io/badge/GraphQL-API-e10098?style=flat-square&logo=graphql" alt="GraphQL"></a>
   <a href="https://www.npmjs.com/package/@anthropic-ai/mcp-server-crypto-news"><img src="https://img.shields.io/badge/MCP-Server-5B4EFF?style=flat-square" alt="MCP Server"></a>
 </p>
 
@@ -40,7 +39,6 @@ mcp_server: "@anthropic-ai/mcp-server-crypto-news"
   <a href="#-quick-start">Quick Start</a> •
   <a href="#-sdks">SDKs</a> •
   <a href="#-api-endpoints">API</a> •
-  <a href="#-graphql-api">GraphQL</a> •
   <a href="#-cli">CLI</a> •
   <a href="#-docker">Docker</a> •
   <a href="#%EF%B8%8F-kubernetes-deployment">K8s</a> •
@@ -74,7 +72,6 @@ curl https://cryptocurrency.cv/api/news
 | **Self-host**     | ✅ One click (Vercel/Docker/K8s) | No           | No       |
 | **PWA**           | ✅ Installable                  | No           | No       |
 | **MCP**           | ✅ Claude + ChatGPT             | No           | No       |
-| **GraphQL**       | ✅ Full schema                  | No           | No       |
 | **SDKs**          | 13 languages                    | 0            | 1-2      |
 | **AI Features**   | 30+ AI endpoints (FREE)         | No           | No       |
 | **Voice**         | ✅ Alexa + Podcasts             | No           | No       |
@@ -1089,16 +1086,6 @@ curl -H "X-Payment: <base64-payment>" https://fcn.dev/api/premium/ai/sentiment
 
 ### 🔐 Admin API
 
-| Endpoint               | Description                |
-| ---------------------- | -------------------------- |
-| `/api/admin`           | Admin dashboard & API info |
-| `/api/admin/analytics` | System-wide analytics      |
-| `/api/admin/keys`      | API key management (CRUD)  |
-| `/api/admin/licenses`  | License management         |
-| `/api/admin/stats`     | Usage statistics           |
-
-> ⚠️ Admin endpoints require `ADMIN_TOKEN` authentication
-
 ### 🔢 Versioned API (v1)
 
 Stable versioned API with x402 micropayment support for production integrations.
@@ -1236,7 +1223,6 @@ The web app includes **95+ pages** for market data, portfolio management, AI too
 
 | Page          | Description                       |
 | ------------- | --------------------------------- |
-| `/admin`      | Admin dashboard                   |
 | `/billing`    | Billing & subscription management |
 | `/pricing`    | Pricing plans                     |
 | `/developers` | Developer documentation           |
@@ -1261,7 +1247,7 @@ The web app includes **95+ pages** for market data, portfolio management, AI too
 - alerts/: 4 price alert components
 - billing/: 3 subscription management
 - sidebar/: 4 sidebar widgets
-- admin/: 1 admin dashboard
+
 
 **Library Categories:**
 
@@ -1310,28 +1296,6 @@ The web app includes **95+ pages** for market data, portfolio management, AI too
 | Main Widget | iframe     | Full news feed embed    |
 | Ticker      | JavaScript | Scrolling header ticker |
 | Carousel    | JavaScript | Featured news rotator   |
-
-### 🔗 GraphQL API
-
-Full GraphQL endpoint with schema for articles, prices, sentiment, and fear-greed data:
-
-```bash
-# Query latest articles with sentiment
-curl -X POST https://cryptocurrency.cv/api/graphql \
-  -H "Content-Type: application/json" \
-  -d '{
-    "query": "{ articles(limit: 5) { title source sentiment { score label } } }"
-  }'
-
-# Get market data with fear & greed
-curl -X POST https://cryptocurrency.cv/api/graphql \
-  -H "Content-Type: application/json" \
-  -d '{
-    "query": "{ fearGreed { value classification } prices(coins: [\"bitcoin\", \"ethereum\"]) { id price change24h } }"
-  }'
-```
-
-**Interactive Playground:** Visit `https://cryptocurrency.cv/api/graphql` in your browser to explore the schema with the built-in GraphQL playground.
 
 ### 📡 Nostr Integration
 
@@ -3755,11 +3719,7 @@ Building the definitive open crypto intelligence platform.
 - [x] Admin usage dashboard
 - [x] API key management system (self-service registration)
 - [x] Tiered API access (Free/Pro/Enterprise)
-- [x] Admin key management endpoints
-- [x] Admin usage statistics dashboard
 - [x] Subscription expiry cron job
-- [x] Webhook testing endpoint
-- [x] Centralized admin authentication
 - [x] CoinCap API integration (free market data)
 - [x] CoinPaprika API integration (free market data)
 - [x] Bitcoin on-chain data (Mempool.space)
@@ -3793,7 +3753,6 @@ Building the definitive open crypto intelligence platform.
 - [x] Self-service API key registration ✅
 - [x] Tiered rate limiting (Free/Pro/Enterprise) ✅
 - [x] Usage tracking & statistics ✅
-- [x] Admin management dashboard ✅
 - [x] Webhook delivery system ✅
 - [x] API key analytics & insights ✅
 - [x] Usage-based billing integration (Stripe) ✅

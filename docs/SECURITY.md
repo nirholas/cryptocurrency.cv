@@ -101,7 +101,6 @@ Additional security headers:
 The API supports configurable CORS:
 
 - **Public endpoints** (`/api/news`, `/api/search`, etc.) — open to all origins
-- **Admin endpoints** (`/api/admin/*`) — restricted to configured origins
 - **Write endpoints** (`POST /api/alerts`, etc.) — validated `Origin` header
 
 ### Rate Limiting

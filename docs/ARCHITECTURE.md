@@ -52,7 +52,6 @@ src/
 │   │   ├── defi/                # /api/defi — yields, TVL, DEX volumes
 │   │   ├── sentiment/           # /api/sentiment — market sentiment analysis
 │   │   ├── sse/                 # /api/sse — Server-Sent Events stream
-│   │   ├── graphql/             # /api/graphql — GraphQL endpoint
 │   │   ├── rss/ , atom/ , opml/ # Feed endpoints (RSS, Atom, OPML)
 │   │   ├── v1/ , v2/            # Versioned stable endpoints
 │   │   ├── og/                  # /api/og — dynamic Open Graph images

@@ -503,7 +503,7 @@ Create a worker system that:
 3. Article enricher runs AI sentiment/entity extraction on new articles
 4. Market data worker polls CoinGecko, Binance, DeFiLlama every minute
 5. All workers have exponential backoff retry (3 attempts)
-6. Implements a dashboard API at /api/admin/workers showing queue depth, throughput
+6. Workers expose queue depth and throughput metrics via logging
 7. Uses Redis connection from REDIS_URL env var
 8. Graceful shutdown on SIGTERM
 
@@ -588,7 +588,7 @@ Create:
 5. Response compression — auto gzip/brotli
 6. CORS configuration per tier
 7. Webhook delivery for pro/enterprise (new article, price alert)
-8. Admin dashboard at /api/admin/gateway
+8. Gateway metrics available via logging
 
 Currently using Upstash Redis for rate limiting in middleware.ts.
 Enhance this to support API keys and tiers.

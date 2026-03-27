@@ -17,7 +17,7 @@
  * - Keyword mention alerts
  * - Multiple notification channels
  * - Advanced alert rules with configurable conditions
- * - WebSocket and webhook delivery
+ * - WebSocket delivery
  * - Database persistence via unified database layer
  */
 
@@ -52,7 +52,7 @@ export interface PriceAlert {
   coinId: string;
   condition: 'above' | 'below' | 'percent_up' | 'percent_down';
   threshold: number;
-  notifyVia: ('push' | 'email' | 'webhook')[];
+  notifyVia: ('push' | 'email')[];
   active: boolean;
   triggered: boolean;
   triggeredAt?: string;
@@ -64,7 +64,7 @@ export interface KeywordAlert {
   userId: string;
   keywords: string[];
   sources?: string[];
-  notifyVia: ('push' | 'email' | 'webhook')[];
+  notifyVia: ('push' | 'email')[];
   active: boolean;
   lastTriggeredAt?: string;
   createdAt: string;
@@ -164,7 +164,7 @@ export async function createPriceAlert(
     coinId: string;
     condition: 'above' | 'below' | 'percent_up' | 'percent_down';
     threshold: number;
-    notifyVia?: ('push' | 'email' | 'webhook')[];
+    notifyVia?: ('push' | 'email')[];
   }
 ): Promise<PriceAlert> {
   const alert: PriceAlert = {
@@ -192,7 +192,7 @@ export async function createKeywordAlert(
   options: {
     keywords: string[];
     sources?: string[];
-    notifyVia?: ('push' | 'email' | 'webhook')[];
+    notifyVia?: ('push' | 'email')[];
   }
 ): Promise<KeywordAlert> {
   const alert: KeywordAlert = {
@@ -540,7 +540,6 @@ export async function createAlertRule(
   condition: AlertCondition,
   channels: AlertChannel[],
   options?: {
-    webhookUrl?: string;
     cooldown?: number;
     enabled?: boolean;
   }
@@ -555,7 +554,6 @@ export async function createAlertRule(
     name,
     condition,
     channels,
-    webhookUrl: options?.webhookUrl,
     cooldown: options?.cooldown ?? 300, // Default 5 minutes
     enabled: options?.enabled ?? true,
     createdAt: new Date().toISOString(),
@@ -917,32 +915,6 @@ export async function createAlertEvent(
 }
 
 /**
- * Send webhook notification
- */
-export async function sendWebhook(url: string, event: AlertEvent): Promise<boolean> {
-  try {
-    const response = await fetch(url, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'X-Alert-Event-Id': event.id,
-        'X-Alert-Rule-Id': event.ruleId,
-      },
-      body: JSON.stringify({
-        type: 'alert',
-        event,
-        timestamp: new Date().toISOString(),
-      }),
-    });
-
-    return response.ok;
-  } catch (error) {
-    console.error('Webhook delivery failed:', error);
-    return false;
-  }
-}
-
-/**
  * Evaluate all enabled alert rules
  * Returns events for rules that triggered
  */
@@ -960,11 +932,6 @@ export async function evaluateAllAlerts(): Promise<AlertEvent[]> {
         const event = await createAlertEvent(rule, result);
         events.push(event);
         await updateLastTriggered(rule.id);
-
-        // Send webhook if configured
-        if (rule.channels.includes('webhook') && rule.webhookUrl) {
-          await sendWebhook(rule.webhookUrl, event);
-        }
       }
     } catch (error) {
       console.error(`Error evaluating rule ${rule.id}:`, error);
@@ -986,11 +953,6 @@ export async function testTriggerAlert(ruleId: string): Promise<AlertEvent | nul
     currentValue: 'test',
     context: { testMode: true },
   });
-
-  // Send webhook if configured (but don't update lastTriggered)
-  if (rule.channels.includes('webhook') && rule.webhookUrl) {
-    await sendWebhook(rule.webhookUrl, event);
-  }
 
   return event;
 }

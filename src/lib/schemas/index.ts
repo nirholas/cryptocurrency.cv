@@ -225,17 +225,6 @@ export const adminStatsQuerySchema = z.object({
 });
 
 // =============================================================================
-// WEBHOOK SCHEMAS
-// =============================================================================
-
-export const webhookCreateSchema = z.object({
-  url: z.string().url(),
-  events: z.array(z.enum(['news.published', 'price.alert', 'whale.alert', 'signal.generated'])),
-  secret: z.string().min(16).optional(),
-  enabled: z.boolean().default(true),
-});
-
-// =============================================================================
 // BREAKING NEWS SCHEMAS
 // =============================================================================
 
@@ -327,7 +316,6 @@ export type PortfolioAnalyticsRequest = z.infer<typeof portfolioAnalyticsRequest
 export type MarketCompareQuery = z.infer<typeof marketCompareQuerySchema>;
 export type OhlcQuery = z.infer<typeof ohlcQuerySchema>;
 export type AdminStatsQuery = z.infer<typeof adminStatsQuerySchema>;
-export type WebhookCreate = z.infer<typeof webhookCreateSchema>;
 export type BreakingNewsQuery = z.infer<typeof breakingNewsQuerySchema>;
 export type TrendingQuery = z.infer<typeof trendingQuerySchema>;
 export type SearchQuery = z.infer<typeof searchQuerySchema>;

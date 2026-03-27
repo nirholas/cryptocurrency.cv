@@ -111,7 +111,7 @@ export type AlertCondition =
 /**
  * Available notification channels
  */
-export type AlertChannel = 'websocket' | 'webhook';
+export type AlertChannel = 'websocket';
 
 /**
  * Alert rule configuration
@@ -125,8 +125,6 @@ export interface AlertRule {
   condition: AlertCondition;
   /** Channels to deliver notifications */
   channels: AlertChannel[];
-  /** Optional webhook URL for webhook channel */
-  webhookUrl?: string;
   /** Minimum seconds between triggers (cooldown) */
   cooldown: number;
   /** Whether the alert is active */

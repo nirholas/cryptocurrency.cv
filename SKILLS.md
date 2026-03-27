@@ -139,7 +139,6 @@
 | **LangChain Tools** | See [AGENTS.md](AGENTS.md#langchain-integration) | Production |
 | **Google A2A** | `/.well-known/agent.json` | Production |
 | **x402 Payments** | `/.well-known/x402` | Production |
-| **GraphQL** | `/api/graphql` | Production |
 | **RSS/Atom** | `/api/rss`, `/api/atom` | Production |
 | **SSE Streaming** | `/api/sse` | Production |
 

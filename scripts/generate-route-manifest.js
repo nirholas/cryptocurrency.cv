@@ -47,7 +47,6 @@ const EXCLUDE_PATTERNS = [
   /\/stats$/,
   /\/docs$/,
   /\/views$/,
-  /\/graphql$/,
   /\/i18n\//,
   /\/frames$/,
   /\/premium\/api-keys/,

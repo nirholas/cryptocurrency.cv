@@ -27,7 +27,7 @@ import { kv } from '@vercel/kv';
 
 export type AlertType = 'price_above' | 'price_below' | 'percent_change' | 'volume_spike';
 export type AlertStatus = 'active' | 'triggered' | 'expired' | 'cancelled';
-export type NotificationChannel = 'email' | 'push' | 'webhook' | 'none';
+export type NotificationChannel = 'email' | 'push' | 'none';
 
 export interface PriceAlert {
   id: string;
@@ -44,7 +44,6 @@ export interface PriceAlert {
   triggeredPrice?: number;
   expiresAt?: string;
   notificationChannel: NotificationChannel;
-  webhookUrl?: string;
   email?: string;
   notes?: string;
   repeatCount: number;

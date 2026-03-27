@@ -30,7 +30,6 @@ import { cors } from './src/middleware/cors';
 import { requestValidation } from './src/middleware/request-validation';
 import { botDetection } from './src/middleware/bot-detection';
 import { intl } from './src/middleware/intl';
-import { adminAuth } from './src/middleware/admin-auth';
 import { apiKey } from './src/middleware/api-key';
 import { rateLimitHandler } from './src/middleware/rate-limit';
 import { x402Gate } from './src/middleware/x402';
@@ -47,7 +46,6 @@ const pipeline = compose(
   requestValidation, // Suspicious payload detection
   botDetection, // Bot blocking + repeat-429 escalation
   intl, // Non-API: locale routing + CSP (short-circuit)
-  adminAuth, // Admin auth + sensitive-route CORS
   apiKey, // API key tier resolution
   rateLimitHandler, // Rate limiting (register, tier, free, per-route)
   x402Gate, // USDC micropayment gate

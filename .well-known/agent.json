@@ -1,7 +1,7 @@
 {
   "$schema": "https://open-agents.org/schema/agent-card/v1",
   "name": "Free Crypto News",
-  "description": "Free, real-time cryptocurrency news API aggregating 200+ sources. No API key required. REST JSON, RSS/Atom, WebSocket, GraphQL, AI analysis, RAG, MCP server, ChatGPT plugin. Open source (MIT).",
+  "description": "Free, real-time cryptocurrency news API aggregating 200+ sources. No API key required. REST JSON, RSS/Atom, WebSocket, AI analysis, RAG, MCP server, ChatGPT plugin. Open source (MIT).",
   "url": "https://cryptocurrency.cv",
   "provider": {
     "name": "nirholas",
@@ -58,9 +58,6 @@
     "openapi": {
       "version": "3.1.0",
       "url": "https://cryptocurrency.cv/api/openapi.json"
-    },
-    "graphql": {
-      "url": "https://cryptocurrency.cv/api/graphql"
     },
     "rss": {
       "url": "https://cryptocurrency.cv/api/rss"

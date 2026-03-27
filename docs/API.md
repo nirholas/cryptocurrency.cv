@@ -256,8 +256,6 @@ The API is organized into these categories:
   - [POST /api/webhooks](#post-apiwebhooks)
   - [POST /api/webhooks/test](#post-apiwebhookstest)
   - [GET /api/webhooks/queue](#get-apiwebhooksqueue)
-- [Admin Endpoints](#admin-endpoints)
-  - [GET /api/admin](#get-apiadmin)
 - [Archive Endpoints](#archive-endpoints)
   - [GET /api/archive](#get-apiarchive)
   - [GET /api/archive/v2](#get-apiarchivev2) (Redirect)

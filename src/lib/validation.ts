@@ -21,7 +21,6 @@ export const MAX_LENGTHS = {
   topic: 100,
   url: 2000,
   coins: 500,
-  webhook: 500,
 } as const;
 
 // Allowed characters patterns

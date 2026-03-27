@@ -25,14 +25,6 @@ export const ROUTE_MANIFEST: { path: string; category: string }[] = [
     "category": "Other"
   },
   {
-    "path": "/api/ai/agent",
-    "category": "AI Analysis"
-  },
-  {
-    "path": "/api/ai/agent/orchestrator",
-    "category": "AI Analysis"
-  },
-  {
     "path": "/api/ai/blog-generator",
     "category": "AI Analysis"
   },
@@ -1407,10 +1399,6 @@ export const ROUTE_MANIFEST: { path: string; category: string }[] = [
   {
     "path": "/api/watchlist",
     "category": "Portfolio & Alerts"
-  },
-  {
-    "path": "/api/webhooks",
-    "category": "Other"
   },
   {
     "path": "/api/whale-alerts",

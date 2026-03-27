@@ -70,7 +70,6 @@ const POST_ROUTES = new Set([
   '/api/rag/batch',
   '/api/rag/feedback',
   '/api/portfolio/holding',
-  '/api/webhooks',
 ]);
 
 // ---------------------------------------------------------------------------

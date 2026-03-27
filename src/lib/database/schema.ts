@@ -186,8 +186,7 @@ export const alerts = pgTable(
     coinId: varchar('coin_id', { length: 128 }),
     condition: varchar('condition', { length: 16 }).notNull(), // 'above' | 'below' | 'cross'
     threshold: doublePrecision('threshold').notNull(),
-    channel: varchar('channel', { length: 32 }).default('webhook'), // 'webhook' | 'email' | 'ws'
-    webhookUrl: text('webhook_url'),
+    channel: varchar('channel', { length: 32 }).default('push'), // 'email' | 'push' | 'ws'
     active: boolean('active').default(true),
     lastTriggeredAt: timestamp('last_triggered_at', { withTimezone: true }),
     createdAt: timestamp('created_at', { withTimezone: true }).defaultNow(),

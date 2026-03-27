@@ -9,7 +9,12 @@
  */
 
 import { NextResponse } from 'next/server';
+import { lookup } from 'dns/promises';
+import DOMPurify from 'isomorphic-dompurify';
 import { aiComplete, getAIConfigOrNull } from '@/lib/ai-provider';
+
+const MAX_RESPONSE_BYTES = 5 * 1024 * 1024; // 5 MB
+const FETCH_TIMEOUT_MS = 10_000; // 10 seconds
 
 interface ArticleContent {
   url: string;
@@ -42,9 +47,6 @@ function isPrivateOrReservedUrl(urlString: string): boolean {
   ];
   if (blockedHostnames.includes(hostname)) return true;
 
-  // Block IPv6 loopback
-  if (hostname === '::1' || hostname === '[::1]') return true;
-
   // Parse IPv4 octets
   const ipv4Match = hostname.match(/^(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})$/);
   if (ipv4Match) {
@@ -61,12 +63,32 @@ function isPrivateOrReservedUrl(urlString: string): boolean {
     }
   }
 
-  // Block IPv6 private ranges (fc00::/7, fe80::/10)
-  if (/^(fc|fd|fe[89ab])/i.test(hostname) || /^\[?(fc|fd|fe[89ab])/i.test(hostname)) {
+  // Block IPv6 private ranges (fc00::/7, fe80::/10, ::1)
+  const bare = hostname.replace(/^\[|\]$/g, '');
+  if (
+    bare === '::1' ||
+    /^(fc|fd)/i.test(bare) ||
+    /^fe[89ab]/i.test(bare)
+  ) {
     return true;
   }
 
   return false;
+}
+
+/**
+ * Resolve hostname and verify the resolved IP is not private (prevents DNS rebinding).
+ */
+async function assertPublicDns(hostname: string): Promise<void> {
+  // Skip DNS check for raw IP addresses (already checked by isPrivateOrReservedUrl)
+  if (/^\d{1,3}(\.\d{1,3}){3}$/.test(hostname) || hostname.includes(':')) return;
+
+  const { address } = await lookup(hostname);
+
+  // Build a synthetic URL so we can reuse the existing check
+  if (isPrivateOrReservedUrl(`http://${address}/`)) {
+    throw new Error('URL resolved to a private or reserved address');
+  }
 }
 
 /**
@@ -77,13 +99,24 @@ async function fetchArticleContent(url: string): Promise<string> {
     throw new Error('URL targets a private or reserved address');
   }
 
+  // DNS rebinding protection: resolve hostname and verify it's public
+  const hostname = new URL(url).hostname;
+  await assertPublicDns(hostname);
+
   try {
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), FETCH_TIMEOUT_MS);
+
     const response = await fetch(url, {
       headers: {
         'User-Agent': 'Mozilla/5.0 (compatible; FreeCryptoNews/1.0)',
         'Accept': 'text/html,application/xhtml+xml',
       },
+      signal: controller.signal,
+      redirect: 'follow',
     });
+
+    clearTimeout(timeout);
 
     if (!response.ok) {
       if (response.status === 429) {
@@ -92,32 +125,42 @@ async function fetchArticleContent(url: string): Promise<string> {
       throw new Error(`Failed to fetch: ${response.status}`);
     }
 
+    // Validate Content-Type is HTML
+    const contentType = response.headers.get('content-type') ?? '';
+    if (!contentType.includes('text/html') && !contentType.includes('application/xhtml+xml')) {
+      throw new Error(`Unexpected content type: ${contentType}`);
+    }
+
+    // Enforce response size limit
+    const contentLength = response.headers.get('content-length');
+    if (contentLength && parseInt(contentLength, 10) > MAX_RESPONSE_BYTES) {
+      throw new Error('Response too large');
+    }
+
     const html = await response.text();
-    
-    // Basic content extraction - remove scripts, styles, and extract text
-    let content = html
-      // Remove scripts and styles
-      .replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '')
-      .replace(/<style\b[^<]*(?:(?!<\/style>)<[^<]*)*<\/style>/gi, '')
-      .replace(/<noscript\b[^<]*(?:(?!<\/noscript>)<[^<]*)*<\/noscript>/gi, '')
-      // Remove comments
-      .replace(/<!--[\s\S]*?-->/g, '')
-      // Remove nav, header, footer, aside
-      .replace(/<(nav|header|footer|aside)\b[^<]*(?:(?!<\/\1>)<[^<]*)*<\/\1>/gi, '')
-      // Get article or main content if available
-      .match(/<(article|main)[^>]*>([\s\S]*?)<\/\1>/i)?.[2] || html;
-    
-    // Remove remaining HTML tags
-    content = content
+    if (html.length > MAX_RESPONSE_BYTES) {
+      throw new Error('Response too large');
+    }
+
+    // Extract article/main content if available, otherwise use full body
+    const articleMatch = html.match(/<(article|main)[^>]*>([\s\S]*?)<\/\1>/i);
+    const rawSection = articleMatch?.[2] ?? html;
+
+    // Sanitize HTML with DOMPurify – only allow safe formatting tags
+    const cleanHtml = DOMPurify.sanitize(rawSection, {
+      ALLOWED_TAGS: ['p', 'br', 'b', 'i', 'em', 'strong', 'a', 'ul', 'ol', 'li', 'h1', 'h2', 'h3'],
+      ALLOWED_ATTR: ['href'],
+    });
+
+    // Strip remaining tags to get plain text for downstream analysis
+    const content = cleanHtml
       .replace(/<[^>]+>/g, ' ')
-      // Decode HTML entities
       .replace(/&nbsp;/g, ' ')
       .replace(/&amp;/g, '&')
       .replace(/&lt;/g, '<')
       .replace(/&gt;/g, '>')
       .replace(/&quot;/g, '"')
       .replace(/&#39;/g, "'")
-      // Clean up whitespace
       .replace(/\s+/g, ' ')
       .trim();
 

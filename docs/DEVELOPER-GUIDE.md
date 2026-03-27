@@ -67,7 +67,6 @@ src/
 │   │   ├── onchain/             # On-chain metrics, whale alerts
 │   │   ├── defi/                # Yields, TVL, DEX volumes
 │   │   ├── sse/                 # Server-Sent Events stream
-│   │   ├── graphql/             # GraphQL endpoint
 │   │   ├── rss/ , atom/         # Feed endpoints
 │   │   ├── v1/ , v2/            # Versioned endpoints
 │   │   ├── og/                  # Dynamic OpenGraph images
@@ -501,7 +500,6 @@ All API routes are in `src/app/api/`. The project has **150+ endpoints** organis
 | `/api/atom` | GET | Atom feed |
 | `/api/opml` | GET | OPML subscription list |
 | `/api/export` | GET | Data export (CSV/JSON) |
-| `/api/graphql` | POST | GraphQL endpoint |
 | `/api/openapi.json` | GET | OpenAPI specification |
 
 ### Adding a New Endpoint
