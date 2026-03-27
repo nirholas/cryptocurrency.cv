@@ -262,6 +262,30 @@ export const ACCEPTED_ASSETS: PaymentAsset[] = [
 ];
 
 // =============================================================================
+// OWNERSHIP PROOF CONFIGURATION
+// =============================================================================
+
+/**
+ * Ownership proof for x402scan discovery registration.
+ *
+ * Proves you control the payTo address by signing the origin URL
+ * with the payTo wallet's private key (EIP-191 personal_sign).
+ *
+ * Generate with: bun run scripts/generate-ownership-proof.ts
+ * Set via: X402_OWNERSHIP_PROOF environment variable
+ */
+export const OWNERSHIP_PROOF: string | undefined = process.env.X402_OWNERSHIP_PROOF;
+
+/**
+ * Get ownershipProofs array for discovery documents.
+ * Returns undefined if no proof is configured (field is omitted from response).
+ */
+export function getOwnershipProofs(): string[] | undefined {
+  if (!OWNERSHIP_PROOF) return undefined;
+  return [OWNERSHIP_PROOF];
+}
+
+// =============================================================================
 // HELPER FUNCTIONS
 // =============================================================================
 

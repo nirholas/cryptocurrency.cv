@@ -1,6586 +1,4502 @@
-# 📚 API Reference
+# Crypto Vision API Reference
 
-Complete documentation for the Free Crypto News API with **180+ endpoints**.
+> Auto-generated from endpoint metadata. Do not edit manually.
+> Run: `node scripts/generate-api-docs.js`
+>
+> Generated: 2026-03-27T06:21:34.424Z
+> Total endpoints: 353
+
+## Overview
+
+This API provides 353 endpoints across 30 categories covering cryptocurrency news, market data, DeFi, derivatives, on-chain analytics, AI analysis, social intelligence, NFTs, multi-chain data, and premium features.
 
 **Base URL:** `https://cryptocurrency.cv`
 
----
-
-## Before You Start
-
-### Authentication
-
-**None required.** All public endpoints work without API keys, tokens, or signup. Just make HTTP requests.
-
-```bash
-# This just works — no auth needed
-curl https://cryptocurrency.cv/api/news
-```
-
-> Some advanced endpoints (portfolio, alerts) use optional API keys for personalization. See [API Key Management](#api-key-management) for details.
-
-### Quick Try
-
-Try these right now in your terminal:
-
-```bash
-# Latest crypto news
-curl https://cryptocurrency.cv/api/news?limit=3
-
-# Bitcoin news
-curl https://cryptocurrency.cv/api/bitcoin
-
-# AI daily digest
-curl https://cryptocurrency.cv/api/digest
-
-# Market sentiment
-curl https://cryptocurrency.cv/api/sentiment
-
-# Search articles
-curl "https://cryptocurrency.cv/api/search?q=ethereum+ETF"
-
-# Fear & Greed index
-curl https://cryptocurrency.cv/api/fear-greed
-```
-
-### Response Format
-
-All endpoints return JSON. Typical response structure:
-
-```json
-{
-  "articles": [ ... ],
-  "count": 50,
-  "fetchedAt": "2026-03-01T12:30:00Z",
-  "responseTime": "245ms"
-}
-```
-
-### Error Responses
-
-Errors return a JSON body with `error`, `message`, and `status`:
-
-```json
-{
-  "error": "Bad Request",
-  "message": "Invalid 'limit' parameter — must be between 1 and 100",
-  "status": 400
-}
-```
-
-| Status | Meaning | What to do |
-|--------|---------|------------|
-| 400 | Bad Request | Check your parameters |
-| 404 | Not Found | Endpoint or resource doesn't exist |
-| 429 | Rate Limited | Wait and retry with backoff |
-| 500 | Server Error | Retry after a moment |
-| 503 | Service Unavailable | Upstream source is down — retry later |
-
-### Rate Limits
-
-| Tier | Limit |
-|------|-------|
-| **Anonymous (no key)** | 10 requests/hour per IP (only `/api/sample`) |
-| **x402 micropayment** | Unlimited (pay $0.001/req in USDC on Base) |
-| **Pro API key** | 50,000 requests/day (500/min burst) |
-| **Enterprise API key** | 500,000 requests/day (2,000/min burst) |
-
-> **Free API keys are no longer issued.** Use `/api/sample` for a free preview, x402 micropayment for pay-per-request access, or subscribe to a Pro/Enterprise key.
-
-Additionally, expensive endpoints (AI, search, export) have stricter per-route limits — see individual endpoint documentation.
-
-Rate limit headers are included in every response:
-
-```
-X-RateLimit-Limit: 50000
-X-RateLimit-Remaining: 49950
-X-RateLimit-Reset: 2026-03-02T00:00:00.000Z
-X-RateLimit-Tier: pro
-```
-
-> **Tip:** Most endpoints cache for 5 minutes. Respect `Cache-Control` headers to avoid unnecessary requests.
-
-### Common Parameters
-
-These parameters work on most endpoints:
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `limit` | integer | Number of results (1-100, default: 10) |
-| `page` | integer | Page number for pagination |
-| `per_page` | integer | Results per page |
-| `from` | ISO date | Start date filter |
-| `to` | ISO date | End date filter |
-| `lang` | string | Language code (18 supported — see [Language Support](#language-support)) |
-| `source` | string | Filter by source key |
-| `category` | string | Filter by category |
-| `quality` | string | Quality filter: `premium` (T1 + research), `high` (T1 + T2 + research), `all` (default, all tiers) |
-
-**Quality filter example:**
-```
-GET /api/news?quality=high&limit=20
-```
-
-Each article includes tier metadata:
-- `tier`: Source quality tier (`tier1`, `tier2`, `tier3`, `research`)
-- `credibility`: Source credibility score (0-1)
-- `reputation`: Source reputation score (0-100)
-
-### Tools & Collections
-
-- **Postman Collection:** Import from [`/postman`](../postman/) for interactive API testing
-- **OpenAPI Spec:** Available at [`/chatgpt/openapi.yaml`](../chatgpt/openapi.yaml)
-- **SDKs:** [Python](./sdks/python.md) · [JavaScript](./sdks/javascript.md) · [TypeScript](./sdks/typescript.md) · [Go](./sdks/go.md) · [PHP](./sdks/php.md) · [React](./sdks/react.md) · [Ruby](./sdks/ruby.md) · [Rust](./sdks/rust.md)
-
----
-
-## Endpoint Categories
-
-The API is organized into these categories:
-
-| Category | Endpoints | Description |
-|----------|-----------|-------------|
-| [News](#news-endpoints) | 9 | Core news aggregation, search, trending |
-| [AI-Powered](#ai-powered-endpoints) | 17 | Sentiment, summaries, digests, research |
-| [Trading & Market](#trading-market-apis) | 8 | Arbitrage, signals, funding, liquidations |
-| [AI Analysis](#ai-analysis-apis) | 9 | Content detection, entities, narratives |
-| [Research & Analytics](#research-analytics-apis) | 6 | Regulatory, predictions, academic |
-| [Intelligence](#intelligence-apis) | 4 | Anomalies, headlines, credibility |
-| [Social](#social-intelligence-apis) | 2+ | Social sentiment, influencers |
-| [Market Data](#market-data-apis) | 4+ | Coins, OHLC, exchanges, derivatives |
-| [DeFi](#defi-apis) | 15+ | Yields, stablecoins, DEX volumes, bridges |
-| [On-Chain](#bitcoin-on-chain-apis) | 10+ | Mempool, blocks, addresses, network stats |
-| [NFT](#nft-market-apis) | 8 | Collections, sales, market data |
-| [L2](#l2-scaling-apis) | 5 | Layer 2 projects, activity, risk |
-| [Real-Time](#real-time-endpoints) | 4+ | SSE, WebSocket, streaming |
-| [User Features](#user-features) | 5+ | Alerts, newsletter |
-| [Feeds](#feed-formats) | 3 | RSS, Atom, OPML |
-| [Utility](#utility-endpoints) | 5 | Health, stats, cache |
+**Authentication:** All endpoints require either an API key (`X-API-Key` header) or x402 micropayment (`X-PAYMENT` header).
 
 ---
 
 ## Table of Contents
 
-- [News Endpoints](#news-endpoints)
-  - [GET /api/news](#get-apinews)
-  - [GET /api/news/international](#get-apinewsinternational)
-  - [POST /api/news/extract](#post-apinewsextract)
-  - [GET /api/news/categories](#get-apinewscategories)
-  - [GET /api/bitcoin](#get-apibitcoin)
-  - [GET /api/defi](#get-apidefi)
-  - [GET /api/breaking](#get-apibreaking)
-  - [GET /api/search](#get-apisearch)
-  - [GET /api/trending](#get-apitrending)
-- [AI-Powered Endpoints](#ai-powered-endpoints)
-  - [GET /api/digest](#get-apidigest)
-  - [GET /api/sentiment](#get-apisentiment)
-  - [GET /api/summarize](#get-apisummarize)
-  - [GET /api/ask](#get-apiask)
-  - [POST /api/ai](#post-apiai)
-  - [GET /api/ai/brief](#get-apiaibrief)
-  - [POST /api/ai/debate](#post-apiaidebate)
-  - [POST /api/ai/counter](#post-apiaicounter)
-  - [GET /api/ai/synthesize](#get-apiaisynthesize)
-  - [GET /api/ai/explain](#get-apiaiexplain)
-  - [POST /api/ai/portfolio-news](#post-apiaiportfolio-news)
-  - [GET /api/ai/correlation](#get-apiaicorrelation)
-  - [GET /api/ai/flash-briefing](#get-apiaiflash-briefing)
-  - [GET /api/ai/narratives](#get-apiainarratives)
-  - [GET /api/ai/cross-lingual](#get-apiaicross-lingual)
-  - [GET /api/ai/source-quality](#get-apiaisource-quality)
-  - [GET /api/ai/research](#get-apiairesearch)
-- [Trading & Market APIs](#trading-market-apis)
-  - [GET /api/arbitrage](#get-apiarbitrage)
-  - [GET /api/signals](#get-apisignals)
-  - [GET /api/funding](#get-apifunding)
-  - [GET /api/options](#get-apioptions)
-  - [GET /api/liquidations](#get-apiliquidations)
-  - [GET /api/whale-alerts](#get-apiwhale-alerts)
-  - [GET /api/orderbook](#get-apiorderbook)
-  - [GET /api/fear-greed](#get-apifear-greed)
-- [AI Analysis APIs](#ai-analysis-apis)
-  - [POST /api/detect/ai-content](#post-apidetectai-content)
-  - [GET /api/narratives](#get-apinarratives)
-  - [GET /api/entities](#get-apientities)
-  - [GET /api/claims](#get-apiclaims)
-  - [GET /api/clickbait](#get-apiclickbait)
-  - [GET /api/origins](#get-apiorigins)
-  - [GET /api/relationships](#get-apirelationships)
-- [Research & Analytics APIs](#research-analytics-apis)
-  - [GET /api/regulatory](#get-apiregulatory)
-  - [GET /api/predictions](#get-apipredictions)
-  - [GET /api/influencers](#get-apiinfluencers)
-  - [GET /api/academic](#get-apiacademic)
-  - [GET /api/citations](#get-apicitations)
-  - [GET /api/coverage-gap](#get-apicoverage-gap)
-- [Intelligence APIs](#intelligence-apis)
-  - [GET /api/analytics/anomalies](#get-apianalyticsanomalies)
-  - [GET /api/analytics/headlines](#get-apianalyticsheadlines)
-  - [GET /api/analytics/causality](#get-apianalyticscausality)
-  - [GET /api/analytics/credibility](#get-apianalyticscredibility)
-- [Social Intelligence APIs](#social-intelligence-apis)
-  - [GET /api/social](#get-apisocial)
-  - [GET /api/social/x/sentiment](#get-apisocialxsentiment)
-- [Premium API Endpoints](#premium-api-endpoints)
-  - [GET /api/premium](#get-apipremium)
-  - [GET /api/premium/ai/signals](#get-apipremiumaisignals)
-  - [GET /api/premium/whales/transactions](#get-apipremiumwhalestransactions)
-  - [GET /api/premium/screener/advanced](#get-apipremiumscreeneradvanced)
-  - [GET /api/premium/smart-money](#get-apipremiumsmart-money)
-- [Portfolio APIs](#portfolio-apis)
-  - [POST /api/portfolio](#post-apiportfolio)
-  - [GET /api/portfolio/performance](#get-apiportfolioperformance)
-  - [GET /api/portfolio/tax](#get-apiportfoliotax)
-- [Market Data APIs](#market-data-apis)
-  - [GET /api/market/coins](#get-apimarketcoins)
-  - [GET /api/market/ohlc/[coinId]](#get-apimarketohlccoinid)
-  - [GET /api/market/exchanges](#get-apimarketexchanges)
-  - [GET /api/market/derivatives](#get-apimarketderivatives)
-- [DeFi APIs](#defi-apis)
-  - [GET /api/defi/protocol-health](#get-apidefiprotocol-health)
-  - [GET /api/onchain/events](#get-apionchainevents)
-- [Real-Time Endpoints](#real-time-endpoints)
-  - [GET /api/sse](#get-apisse)
-  - [GET /api/ws](#get-apiws)
-- [User Features](#user-features)
-  - [POST /api/alerts](#post-apialerts)
-  - [GET /api/alerts](#get-apialerts)
-  - [GET /api/alerts/[id]](#get-apialertsid)
-  - [PUT /api/alerts/[id]](#put-apialertsid)
-  - [DELETE /api/alerts/[id]](#delete-apialertsid)
-  - [POST /api/newsletter](#post-apinewsletter)
-  - [GET /api/newsletter](#get-apinewsletter)
-  - [POST /api/newsletter/subscribe](#post-apinewslettersubscribe)
-- [Archive Endpoints](#archive-endpoints)
-  - [GET /api/archive](#get-apiarchive)
-  - [GET /api/archive/v2](#get-apiarchivev2) (Redirect)
-  - [GET /api/archive/status](#get-apiarchivestatus)
-  - [GET /api/cron/archive](#get-apicronarchive)
-  - [POST /api/archive/webhook](#post-apiarchivewebhook)
-- [Analytics & Intelligence](#analytics-intelligence)
-  - [GET /api/analytics/headlines](#get-apianalyticsheadlines)
-  - [GET /api/analytics/credibility](#get-apianalyticscredibility)
-  - [GET /api/analytics/anomalies](#get-apianalyticsanomalies)
-- [V1 API (Legacy)](#v1-api-legacy)
-- [Storage & Export](#storage-export)
-  - [GET /api/storage/cas](#get-apistoragecas)
-  - [GET /api/export](#get-apiexport)
-  - [GET /api/export/jobs](#get-apiexportjobs)
-  - [GET /api/exports](#get-apiexports)
-  - [GET /api/exports/[id]](#get-apiexportsid)
-- [Feed Formats](#feed-formats)
-  - [GET /api/rss](#get-apirss)
-  - [GET /api/atom](#get-apiatom)
-  - [GET /api/opml](#get-apiopml)
-- [Utility Endpoints](#utility-endpoints)
-  - [GET /api/health](#get-apihealth)
-  - [GET /api/stats](#get-apistats)
-  - [GET /api/cache](#get-apicache)
-  - [DELETE /api/cache](#delete-apicache)
-  - [GET /status](#get-status)
-- [Tags & Discovery](#tags-discovery)
-  - [GET /api/tags](#get-apitags)
-  - [GET /api/tags/[slug]](#get-apitagsslug)
-- [Gateway & Integration](#gateway-integration)
-  - [POST /api/gateway](#post-apigateway)
-- [API Key Management](#api-key-management)
-  - [GET /api/register](#get-apiregister)
-  - [POST /api/register](#post-apiregister)
-  - [GET /api/keys](#get-apikeys)
-  - [POST /api/keys](#post-apikeys)
-- [Analytics Tracking](#analytics-tracking)
-  - [GET /api/views](#get-apiviews)
-  - [POST /api/views](#post-apiviews)
-- [Common Parameters](#common-parameters)
-- [Response Format](#response-format)
-- [Error Handling](#error-handling)
-- [Rate Limits](#rate-limits)
-- [Bitcoin On-Chain APIs](#bitcoin-on-chain-apis)
-  - [GET /api/bitcoin/mempool/fees](#get-apibitcoinmempoolfees)
-  - [GET /api/bitcoin/mempool/blocks](#get-apibitcoinmempoolblocks)
-  - [GET /api/bitcoin/mempool/info](#get-apibitcoinmempoolinfo)
-  - [GET /api/bitcoin/blocks](#get-apibitcoinblocks)
-  - [GET /api/bitcoin/blocks/[hash]](#get-apibitcoinblockshash)
-  - [GET /api/bitcoin/block-height](#get-apibitcoinblock-height)
-  - [GET /api/bitcoin/difficulty](#get-apibitcoindifficulty)
-  - [GET /api/bitcoin/address/[address]](#get-apibitcoinaddressaddress)
-  - [GET /api/bitcoin/tx/[txid]](#get-apibitcointxtxid)
-  - [GET /api/bitcoin/network-stats](#get-apibitcoinnetwork-stats)
-  - [GET /api/bitcoin/stats](#get-apibitcoinstats)
-- [DeFi Yields & Protocol Data](#defi-yields--protocol-data)
-  - [GET /api/defi/yields](#get-apideyields)
-  - [GET /api/defi/yields/[poolId]/chart](#get-apidefiyeldspooidchart)
-  - [GET /api/defi/yields/median](#get-apidefiyeldsmedian)
-  - [GET /api/defi/yields/stablecoins](#get-apidefiyelsdstablecoins)
-  - [GET /api/defi/yields/stats](#get-apideyieldsstats)
-  - [GET /api/defi/yields/chains](#get-apidefiyieldschains)
-  - [GET /api/defi/yields/projects](#get-apidefiyieldsprojects)
-  - [GET /api/defi/yields/search](#get-apidefiyieldssearch)
-  - [GET /api/defi/stablecoins](#get-apidestablecoins)
-  - [GET /api/defi/dex-volumes](#get-apidedex-volumes)
-  - [GET /api/defi/bridges](#get-apidebridges)
-  - [GET /api/defi/summary](#get-apidesummary)
-- [NFT Market APIs](#nft-market-apis)
-  - [GET /api/nft/market](#get-apinftmarket)
-  - [GET /api/nft/collections/trending](#get-apinftcollectionstrending)
-  - [GET /api/nft/collections/search](#get-apinftcollectionssearch)
-  - [GET /api/nft/collections/[slug]](#get-apinftcollectionsslug)
-  - [GET /api/nft/collections/[slug]/stats](#get-apinftcollectionsslugstats)
-  - [GET /api/nft/collections/[slug]/activity](#get-apinftcollectionsslugactivity)
-  - [GET /api/nft/sales/recent](#get-apinftsalesrecent)
-  - [GET /api/nft](#get-apinft)
-- [L2 Scaling APIs](#l2-scaling-apis)
-  - [GET /api/l2](#get-apil2)
-  - [GET /api/l2/projects](#get-apil2projects)
-  - [GET /api/l2/projects/[projectId]](#get-apil2projectsprojectid)
-  - [GET /api/l2/activity](#get-apil2activity)
-  - [GET /api/l2/risk](#get-apil2risk)
-- [Glassnode On-Chain Metrics](#glassnode-on-chain-metrics)
-  - [GET /api/onchain/exchange-flows](#get-apionchainexchange-flows)
-  - [GET /api/onchain/metrics](#get-apionchainmetrics)
-  - [GET /api/onchain/miner-metrics](#get-apionchainminer-metrics)
-  - [GET /api/onchain/lth-metrics](#get-apionchainlth-metrics)
-  - [GET /api/onchain/whale-metrics](#get-apionchainwhale-metrics)
-  - [GET /api/onchain/funding-metrics](#get-apionchainyfunding-metrics)
-  - [GET /api/onchain/health](#get-apionchainhealth)
-- [LunarCrush Social Intelligence](#lunarcrush-social-intelligence)
-  - [GET /api/social/coins](#get-apisocialcoins)
-  - [GET /api/social/coins/[symbol]](#get-apisocialcoinssymbol)
-  - [GET /api/social/coins/[symbol]/feed](#get-apisocialcoinssymbolfeed)
-  - [GET /api/social/influencers](#get-apisocialinfluencers)
-  - [GET /api/social/topics/trending](#get-apisocialtopicstrending)
-  - [GET /api/social/sentiment/market](#get-apisocialsentimentmarket)
-- [The Graph Protocol APIs](#the-graph-protocol-apis)
-  - [GET /api/onchain/uniswap/pools](#get-apionchainuniswappools)
-  - [GET /api/onchain/uniswap/swaps](#get-apionchainuniswapswaps)
-  - [GET /api/onchain/aave/markets](#get-apionchainaavemarkets)
-  - [GET /api/onchain/aave/rates](#get-apionchainaaaverates)
-  - [GET /api/onchain/curve/pools](#get-apionchainurvepools)
-  - [GET /api/onchain/protocol/[protocol]](#get-apionchainprotocolprotocol)
-  - [GET /api/onchain/cross-protocol](#get-apionchainoross-protocol)
-- [Market Data Enhancements](#market-data-enhancements)
-  - [GET /api/market/gainers](#get-apimarketgainers)
-  - [GET /api/market/losers](#get-apimarketlosers)
-  - [GET /api/market/movers](#get-apimarketmovers)
-  - [GET /api/market/dominance](#get-apimarketdominance)
-  - [GET /api/market/heatmap](#get-apimarketheatmap)
-  - [GET /api/market/coins/[coinId]/developer](#get-apimarketcoinscoiniddeveloper)
-  - [GET /api/market/coins/[coinId]/community](#get-apimarketcoinscoinidcommunity)
-  - [GET /api/market/global-defi](#get-apimarketglobal-defi)
-- [CoinPaprika APIs](#coinpaprika-apis)
-  - [GET /api/coinpaprika](#get-apicoinpaprika)
-  - [GET /api/coinpaprika/coins](#get-apicoinpaprikacoins)
-  - [GET /api/coinpaprika/tickers](#get-apicoinpaprikatickers)
-  - [GET /api/coinpaprika/tickers/[coinId]](#get-apicoinpaprikatickerscoinid)
-  - [GET /api/coinpaprika/tickers/[coinId]/ohlcv](#get-apicoinpaprikatickerscoinidohlcv)
-  - [GET /api/coinpaprika/exchanges](#get-apicoinpaprikaexchanges)
-  - [GET /api/coinpaprika/search](#get-apicoinpaprikasearch)
-- [Derivatives Exchange-Specific APIs](#derivatives-exchange-specific-apis)
-  - [GET /api/derivatives/bybit/tickers](#get-apiderivativesbybitrickers)
-  - [GET /api/derivatives/bybit/funding/[symbol]](#get-apiderivativesbybifundingsymbol)
-  - [GET /api/derivatives/bybit/open-interest/[symbol]](#get-apiderivativesbybiopeninterestsymbol)
-  - [GET /api/derivatives/okx/tickers](#get-apiderivativesokxtickers)
-  - [GET /api/derivatives/okx/funding](#get-apiderivativesokxfunding)
-  - [GET /api/derivatives/okx/open-interest](#get-apiderivativesokxopen-interest)
-  - [GET /api/derivatives/dydx/markets](#get-apiderivativesdydxmarkets)
-  - [GET /api/derivatives/aggregated/funding](#get-apiderivativesaggregatedfunding)
-  - [GET /api/derivatives/aggregated/open-interest](#get-apiderivativesaggregatedopen-interest)
-  - [GET /api/derivatives/opportunities](#get-apiderivativesopportunities)
-  - [GET /api/funding/dashboard](#get-apifundingdashboard)
-  - [GET /api/funding/history/[symbol]](#get-apifundinghistorysymbol)
-- [Binance Exchange APIs](#binance-exchange-apis)
-  - [GET /api/binance](#get-apibinance)
-  - [GET /api/binance/prices](#get-apibinanceprices)
-  - [GET /api/binance/prices/[symbol]](#get-apibinancepricessymbol)
-  - [GET /api/binance/tickers](#get-apibinancetickers)
-  - [GET /api/binance/tickers/[symbol]](#get-apibinancetickerssymbol)
-- [Streaming & Real-Time Additions](#streaming--real-time-additions)
-  - [GET /api/prices/stream](#get-apipricesstream)
-  - [GET /api/market/stream](#get-apimarketstream)
-  - [GET /api/alerts/stream](#get-apialertsstream)
-  - [GET /api/news/stream](#get-apinewsstream)
+- [AI Analysis](#ai-analysis) (52 endpoints)
+- [API v1](#api-v1) (5 endpoints)
+- [Analytics & Intelligence](#analytics-intelligence) (17 endpoints)
+- [Aptos](#aptos) (4 endpoints)
+- [Bitcoin](#bitcoin) (8 endpoints)
+- [Data Export](#data-export) (4 endpoints)
+- [DeFi](#defi) (20 endpoints)
+- [Gaming & Metaverse](#gaming-metaverse) (3 endpoints)
+- [Layer 2](#layer-2) (4 endpoints)
+- [Macro & Traditional](#macro-traditional) (6 endpoints)
+- [Market Data](#market-data) (51 endpoints)
+- [NFTs](#nfts) (6 endpoints)
+- [News & Content](#news-content) (31 endpoints)
+- [On-Chain & Whales](#on-chain-whales) (22 endpoints)
+- [Oracles](#oracles) (3 endpoints)
+- [Other](#other) (23 endpoints)
+- [Portfolio & Alerts](#portfolio-alerts) (15 endpoints)
+- [Premium](#premium) (1 endpoints)
+- [Premium AI](#premium-ai) (5 endpoints)
+- [Premium Alerts](#premium-alerts) (2 endpoints)
+- [Premium Analytics](#premium-analytics) (3 endpoints)
+- [Premium Data](#premium-data) (1 endpoints)
+- [Premium DeFi](#premium-defi) (1 endpoints)
+- [Premium Market](#premium-market) (2 endpoints)
+- [Premium Whales](#premium-whales) (3 endpoints)
+- [Social Intelligence](#social-intelligence) (14 endpoints)
+- [Solana](#solana) (9 endpoints)
+- [Stablecoins](#stablecoins) (5 endpoints)
+- [Sui](#sui) (4 endpoints)
+- [Trading & Derivatives](#trading-derivatives) (29 endpoints)
 
 ---
 
-## News Endpoints
+## AI Analysis
 
-### GET /api/news
+### `POST /api/ai/blog-generator`
+### `GET /api/ai/blog-generator`
 
-Fetch aggregated news from all sources.
+AI blog post generator from clustered crypto news topics
 
-**Parameters:**
+**Price:** `$0.001/request`
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `limit` | integer | 10 | Number of articles (1-100) |
-| `source` | string | all | Filter by source key |
-| `page` | integer | 1 | Page number for pagination |
-| `per_page` | integer | 10 | Articles per page |
-| `from` | ISO date | - | Start date filter |
-| `to` | ISO date | - | End date filter |
-| `lang` | string | en | Language code (18 supported) |
-
-**Example:**
-
-```bash
-curl "https://cryptocurrency.cv/api/news?limit=5&source=coindesk"
-```
-
-**Response:**
-
-```json
-{
-  "articles": [
-    {
-      "title": "Bitcoin Surges Past $100K",
-      "link": "https://coindesk.com/...",
-      "description": "Bitcoin reached a new all-time high...",
-      "pubDate": "2026-01-22T10:30:00Z",
-      "source": "CoinDesk",
-      "sourceKey": "coindesk",
-      "category": "general",
-      "timeAgo": "2 hours ago",
-      "tier": "tier2",
-      "credibility": 0.95,
-      "reputation": 90
-    }
-  ],
-  "totalCount": 150,
-  "sources": ["CoinDesk", "The Block", "Decrypt", ...],
-  "fetchedAt": "2026-01-22T12:30:00Z",
-  "pagination": {
-    "page": 1,
-    "perPage": 10,
-    "totalPages": 15,
-    "hasMore": true
-  },
-  "lang": "en",
-  "availableLanguages": ["en", "zh-CN", "ja-JP", "ko-KR", ...],
-  "responseTime": "245ms"
-}
-```
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `topics` | number | No | `3` | Number of topics or comma-separated topic list |
+| `days` | number | No | `7` | Number of days of historical data |
+| `commit` | string | No | — | Commit changes (true/false) |
 
 ---
 
-### GET /api/news/international
+### `GET /api/ai/brief`
 
-Fetch news from international crypto news sources with optional translation to English.
+Generate a daily AI-powered crypto news brief
 
-**Supported Sources (75 total across 18 languages):**
+**Price:** `$0.001/request`
 
-| Language | Code | Sources | Examples |
-|----------|------|---------|----------|
-| Chinese | zh | 10 | 8BTC, Jinse Finance, Odaily, ChainNews, PANews, TechFlow, BlockBeats, MarsBit, Wu Blockchain, Foresight News |
-| Korean | ko | 9 | Block Media, TokenPost, CoinDesk Korea, Decenter, Cobak, The B.Chain, Upbit Blog |
-| Japanese | ja | 6 | CoinPost, CoinDesk Japan, Cointelegraph Japan, btcnews.jp, Crypto Times Japan, CoinJinja |
-| Portuguese | pt | 5 | Cointelegraph Brasil, Livecoins, Portal do Bitcoin, BeInCrypto Brasil |
-| Hindi | hi | 5 | CoinSwitch, CoinDCX, WazirX, ZebPay, Crypto News India |
-| Spanish | es | 5 | Cointelegraph Español, Diario Bitcoin, CriptoNoticias, BeInCrypto Español |
-| German | de | 4 | BTC-ECHO, Cointelegraph Deutsch, Coincierge, CryptoMonday |
-| French | fr | 4 | Journal du Coin, Cryptonaute, Cointelegraph France, Cryptoast |
-| Persian | fa | 4 | Arz Digital, Mihan Blockchain, Ramz Arz, Nobitex |
-| Turkish | tr | 3 | Cointelegraph Türkçe, Koin Medya, Coinsider |
-| Russian | ru | 3 | ForkLog, Cointelegraph Russia, Bits.Media |
-| Italian | it | 3 | Cointelegraph Italia, The Cryptonomist, Criptovalute.it |
-| Indonesian | id | 3 | Cointelegraph Indonesia, Blockchain Media, Pintu Academy |
-| Vietnamese | vi | 2 | Tạp chí Bitcoin, Coin68 |
-| Thai | th | 2 | Siam Blockchain, Bitcoin Addict Thailand |
-| Polish | pl | 2 | Kryptowaluty.pl, Bitcoin.pl |
-| Dutch | nl | 2 | Bitcoin Magazine NL, Crypto Insiders |
-| Arabic | ar | 2 | Cointelegraph Arabic, ArabiCrypto |
-
-**Regions:**
-- `asia` - Korean, Chinese, Japanese, Hindi sources (30 sources)
-- `europe` - German, French, Russian, Turkish, Italian, Dutch, Polish sources (23 sources)
-- `latam` - Spanish, Portuguese sources (10 sources)
-- `mena` - Arabic, Persian sources (6 sources)
-- `sea` - Indonesian, Vietnamese, Thai sources (7 sources)
-
-**Parameters:**
-
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `language` | string | all | Filter by language: `ko`, `zh`, `ja`, `es`, `pt`, `de`, `fr`, `ru`, `tr`, `it`, `id`, `nl`, `pl`, `vi`, `th`, `ar`, `hi`, `fa`, or `all` |
-| `region` | string | all | Filter by region: `asia`, `europe`, `latam`, `mena`, `sea`, or `all` |
-| `translate` | boolean | false | Translate titles/descriptions to English |
-| `limit` | integer | 20 | Number of articles (1-100) |
-| `sources` | boolean | false | Return source info instead of articles |
-
-**Example - Get Korean news:**
-
-```bash
-curl "https://cryptocurrency.cv/api/news/international?language=ko&limit=10"
-```
-
-**Example - Get all Asian news with translation:**
-
-```bash
-curl "https://cryptocurrency.cv/api/news/international?region=asia&translate=true"
-```
-
-**Example - Get source information:**
-
-```bash
-curl "https://cryptocurrency.cv/api/news/international?sources=true"
-```
-
-**Response:**
-
-```json
-{
-  "articles": [
-    {
-      "id": "blockmedia-abc123",
-      "title": "비트코인 가격 상승",
-      "titleEnglish": "Bitcoin Price Rises",
-      "description": "비트코인이 새로운 고점에 도달...",
-      "descriptionEnglish": "Bitcoin reaches new highs...",
-      "link": "https://blockmedia.co.kr/...",
-      "source": "Block Media",
-      "sourceKey": "blockmedia",
-      "language": "ko",
-      "pubDate": "2026-01-22T10:30:00Z",
-      "category": "general",
-      "region": "asia",
-      "timeAgo": "2h ago"
-    }
-  ],
-  "meta": {
-    "total": 45,
-    "languages": ["ko", "zh", "ja"],
-    "regions": ["asia"],
-    "translationEnabled": true,
-    "translationAvailable": true,
-    "translated": true
-  },
-  "_links": {
-    "self": "/api/news/international?language=all&region=asia&limit=20&translate=true",
-    "sources": "/api/news/international?sources=true"
-  },
-  "_meta": {
-    "responseTimeMs": 1250
-  }
-}
-```
-
-**Translation Notes:**
-- Translation requires `GROQ_API_KEY` environment variable
-- Translations are cached for 7 days
-- Rate limited to 1 translation request per second
-- Original text is always preserved alongside translations
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `date` | string | No | — | Date in YYYY-MM-DD format |
+| `format` | string | No | `full` | Response format |
 
 ---
 
-### POST /api/news/extract
+### `GET /api/ai/correlation`
 
-Extract full article content from a URL, including metadata.
+AI-driven correlation analysis between crypto assets
 
-**Request Body:**
-
-| Field | Type | Required | Description |
-|-------|------|----------|-------------|
-| `url` | string | Yes | Article URL to extract |
-
-**Example:**
-
-```bash
-curl -X POST "https://cryptocurrency.cv/api/news/extract" \
-  -H "Content-Type: application/json" \
-  -d '{"url": "https://coindesk.com/article/..."}'
-```
-
-**Response:**
-
-```json
-{
-  "url": "https://coindesk.com/article/...",
-  "title": "Bitcoin Surges Past $100K",
-  "content": "Bitcoin experienced a historic surge...",
-  "author": "Jane Doe",
-  "published_date": "2026-01-22T10:00:00Z",
-  "word_count": 850,
-  "reading_time_minutes": 4
-}
-```
+**Price:** `$0.001/request`
 
 ---
 
-### GET /api/bitcoin
+### `POST /api/ai/counter`
+### `GET /api/ai/counter`
 
-Bitcoin-specific news from all sources.
+AI counter-argument generation for crypto narratives
 
-**Parameters:**
-
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `limit` | integer | 10 | Number of articles |
-| `lang` | string | en | Language code |
-
-**Example:**
-
-```bash
-curl "https://cryptocurrency.cv/api/bitcoin?limit=5"
-```
+**Price:** `$0.001/request`
 
 ---
 
-### GET /api/defi
+### `GET /api/ai/cross-lingual`
 
-DeFi and decentralized finance news.
+Cross-lingual crypto news analysis and translation
 
-**Parameters:**
-
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `limit` | integer | 10 | Number of articles |
-| `lang` | string | en | Language code |
-
-**Example:**
-
-```bash
-curl "https://cryptocurrency.cv/api/defi?limit=10"
-```
+**Price:** `$0.001/request`
 
 ---
 
-### GET /api/breaking
+### `POST /api/ai/debate`
+### `GET /api/ai/debate`
 
-Latest breaking news (higher refresh rate).
+AI-powered debate between bull and bear perspectives
 
-**Parameters:**
-
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `limit` | integer | 5 | Number of articles |
-| `lang` | string | en | Language code |
-
-**Cache:** 1 minute (vs 5 minutes for other endpoints)
-
-**Example:**
-
-```bash
-curl "https://cryptocurrency.cv/api/breaking"
-```
+**Price:** `$0.001/request`
 
 ---
 
-### GET /api/search
+### `GET /api/ai/digest`
 
-Search news by keywords.
+AI-generated daily market digest with streaming
 
-**Parameters:**
+**Price:** `$0.001/request`
+  
+**Type:** Server-Sent Events (streaming)
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `q` | string | **required** | Search query |
-| `limit` | integer | 10 | Number of results |
-| `lang` | string | en | Language code |
-
-**Example:**
-
-```bash
-curl "https://cryptocurrency.cv/api/search?q=ethereum+etf&limit=20"
-```
-
-**Response includes:**
-
-```json
-{
-  "query": "ethereum etf",
-  "articles": [...],
-  "totalCount": 42,
-  "searchTime": "89ms"
-}
-```
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `topic` | string | No | — | Topic or subject to analyze |
+| `coins` | string | No | — | Comma-separated cryptocurrency IDs |
+| `limit` | number | No | `60` | Maximum number of results to return |
 
 ---
 
-### GET /api/trending
+### `POST /api/ai/entities`
+### `GET /api/ai/entities`
 
-Trending topics extracted from recent news.
+Extract and analyze named entities from crypto news
 
-**Parameters:**
+**Price:** `$0.001/request`
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `limit` | integer | 10 | Number of topics |
-
-**Example:**
-
-```bash
-curl "https://cryptocurrency.cv/api/trending"
-```
-
-**Response:**
-
-```json
-{
-  "topics": [
-    {
-      "topic": "Bitcoin",
-      "count": 45,
-      "sentiment": "bullish",
-      "recentHeadlines": [
-        "Bitcoin Hits New ATH",
-        "Institutional Buying Accelerates"
-      ]
-    },
-    {
-      "topic": "ETF",
-      "count": 32,
-      "sentiment": "bullish",
-      "recentHeadlines": [...]
-    }
-  ],
-  "fetchedAt": "2026-01-22T12:30:00Z"
-}
-```
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `text` | number | No | — | Filter by text |
+| `types` | string | No | — | Filter by types |
 
 ---
 
-## AI-Powered Endpoints
+### `GET /api/ai/entities/extract`
+### `POST /api/ai/entities/extract`
 
-> **Note:** AI endpoints require `GROQ_API_KEY` environment variable for self-hosted deployments.
+Extract named entities from provided text
 
-### GET /api/digest
+**Price:** `$0.001/request`
 
-AI-generated daily news digest.
-
-**Parameters:**
-
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `period` | string | 24h | Time period: `6h`, `12h`, `24h` |
-| `format` | string | full | Output format: `full`, `brief`, `newsletter` |
-
-**Example:**
-
-```bash
-curl "https://cryptocurrency.cv/api/digest?period=24h&format=full"
-```
-
-**Response:**
-
-```json
-{
-  "headline": "Bitcoin ETF Approval Sparks Historic Rally",
-  "tldr": "The SEC approved the first spot Bitcoin ETF today, triggering a 15% surge in BTC price. Institutional adoption is accelerating as major banks announce crypto custody services.",
-  "marketSentiment": {
-    "overall": "bullish",
-    "reasoning": "Regulatory clarity and institutional adoption driving positive sentiment"
-  },
-  "sections": [
-    {
-      "title": "Bitcoin & ETFs",
-      "summary": "Historic day for Bitcoin...",
-      "articles": ["https://..."]
-    }
-  ],
-  "mustRead": [
-    {
-      "title": "SEC Approves Spot Bitcoin ETF",
-      "source": "CoinDesk",
-      "why": "Market-moving regulatory decision"
-    }
-  ],
-  "tickers": [
-    { "symbol": "BTC", "mentions": 89, "sentiment": "bullish" },
-    { "symbol": "ETH", "mentions": 45, "sentiment": "neutral" }
-  ]
-}
-```
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `action` | string | No | — | API action to perform |
+| `name` | string | Yes | — | Filter by name |
+| `context` | string | No | — | Filter by context |
 
 ---
 
-### GET /api/sentiment
+### `GET /api/ai/explain`
 
-AI-powered sentiment analysis of news.
+AI explanation of complex crypto concepts and events
 
-**Parameters:**
+**Price:** `$0.001/request`
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `limit` | integer | 20 | Articles to analyze |
-
-**Response:**
-
-```json
-{
-  "articles": [
-    {
-      "title": "Bitcoin Surges 10%",
-      "link": "...",
-      "source": "CoinDesk",
-      "sentiment": "very_bullish",
-      "confidence": 95,
-      "reasoning": "Price appreciation with institutional flow",
-      "impactLevel": "high",
-      "timeHorizon": "immediate",
-      "affectedAssets": ["BTC", "ETH"]
-    }
-  ],
-  "market": {
-    "overall": "bullish",
-    "score": 65,
-    "confidence": 82,
-    "summary": "Strong bullish momentum driven by ETF news",
-    "keyDrivers": ["ETF approval", "Institutional buying", "Technical breakout"]
-  }
-}
-```
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `topic` | string | No | — | Topic or subject to analyze |
+| `includePrice` | string | No | — | Filter by includePrice |
 
 ---
 
-### GET /api/summarize
+### `GET /api/ai/flash-briefing`
 
-Summarize a specific article.
+Flash briefing format for voice assistants
 
-**Parameters:**
+**Price:** `$0.001/request`
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `url` | string | **required** | Article URL to summarize |
-
-**Example:**
-
-```bash
-curl "https://cryptocurrency.cv/api/summarize?url=https://coindesk.com/article/..."
-```
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `stories` | number | No | `5` | Filter by stories |
 
 ---
 
-### GET /api/ask
+### `GET /api/ai/narratives`
 
-Ask questions about recent crypto news.
+AI-identified market narratives and themes
 
-**Parameters:**
+**Price:** `$0.001/request`
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `q` | string | **required** | Natural language question |
-
-**Example:**
-
-```bash
-curl "https://cryptocurrency.cv/api/ask?q=What%20happened%20with%20Bitcoin%20today"
-```
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `predict` | string | No | — | Filter by predict |
 
 ---
 
-### POST /api/ai
+### `POST /api/ai/oracle`
+### `GET /api/ai/oracle`
 
-Unified AI endpoint for advanced analysis.
+AI oracle for crypto market predictions
 
-**Request Body:**
+**Price:** `$0.001/request`
 
-| Field | Type | Required | Description |
-|-------|------|----------|-------------|
-| `action` | string | Yes | One of: summarize, sentiment, facts, factcheck, questions, categorize, translate |
-| `title` | string | No | Article title (improves accuracy) |
-| `content` | string | Yes | Article content to analyze |
-| `options.length` | string | No | For summarize: short, medium, long |
-| `options.targetLanguage` | string | No | For translate: target language |
-
-**Example:**
-
-```bash
-curl -X POST "https://cryptocurrency.cv/api/ai" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "action": "sentiment",
-    "title": "Bitcoin Crashes 20%",
-    "content": "Bitcoin experienced its largest drop since..."
-  }'
-```
-
-**Response:**
-
-```json
-{
-  "success": true,
-  "action": "sentiment",
-  "provider": { "provider": "openai", "model": "gpt-4o-mini" },
-  "result": {
-    "sentiment": "bearish",
-    "confidence": 0.92,
-    "reasoning": "Large price drop indicates selling pressure",
-    "marketImpact": "high",
-    "affectedAssets": ["BTC", "ETH"]
-  }
-}
-```
-
-> 📖 See [AI Features Guide](./AI-FEATURES.md) for detailed documentation.
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `q` | string | No | — | Search query string |
 
 ---
 
-### GET /api/ai/brief
+### `POST /api/ai/portfolio-news`
+### `GET /api/ai/portfolio-news`
 
-Generate a comprehensive daily crypto news brief.
+AI-curated news relevant to a specific portfolio
 
-**Parameters:**
-
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `date` | string | today | Date in YYYY-MM-DD format |
-| `format` | string | full | `full` or `summary` |
-
-**Example:**
-
-```bash
-curl "https://cryptocurrency.cv/api/ai/brief?date=2026-01-22&format=full"
-```
-
-**Response:**
-
-```json
-{
-  "success": true,
-  "brief": {
-    "date": "2026-01-22",
-    "executiveSummary": "Crypto markets showed strength with BTC leading...",
-    "marketOverview": {
-      "sentiment": "bullish",
-      "btcTrend": "upward",
-      "keyMetrics": {
-        "fearGreedIndex": 65,
-        "btcDominance": 52.5,
-        "totalMarketCap": "$2.5T"
-      }
-    },
-    "topStories": [...],
-    "sectorsInFocus": [...],
-    "upcomingEvents": [...],
-    "riskAlerts": [...],
-    "generatedAt": "2026-01-22T10:30:00Z"
-  }
-}
-```
+**Price:** `$0.001/request`
 
 ---
 
-### POST /api/ai/debate
+### `POST /api/ai/relationships`
 
-Generate balanced bull vs bear perspectives on any article or topic.
+AI-detected relationships between crypto entities and events
 
-**Request Body:**
-
-| Field | Type | Required | Description |
-|-------|------|----------|-------------|
-| `article` | object | No* | Article to debate (`title` and `content`) |
-| `topic` | string | No* | Topic to debate |
-
-*At least one of `article` or `topic` is required.
-
-**Example:**
-
-```bash
-curl -X POST "https://cryptocurrency.cv/api/ai/debate" \
-  -H "Content-Type: application/json" \
-  -d '{"topic": "Bitcoin reaching $200k in 2026"}'
-```
-
-**Response:**
-
-```json
-{
-  "success": true,
-  "debate": {
-    "topic": "Bitcoin reaching $200k in 2026",
-    "bullCase": {
-      "thesis": "Bitcoin is positioned for significant gains...",
-      "arguments": [...],
-      "supportingEvidence": [...],
-      "priceTarget": "$200,000",
-      "timeframe": "12 months",
-      "confidence": 0.7
-    },
-    "bearCase": {
-      "thesis": "Macro headwinds pose significant risks...",
-      "arguments": [...],
-      "supportingEvidence": [...],
-      "priceTarget": "$80,000",
-      "timeframe": "6 months",
-      "confidence": 0.5
-    },
-    "neutralAnalysis": {
-      "keyUncertainties": [...],
-      "whatToWatch": [...],
-      "consensus": "Market divided with slight bullish bias"
-    },
-    "generatedAt": "2026-01-22T10:30:00Z"
-  }
-}
-```
+**Price:** `$0.001/request`
 
 ---
 
-### POST /api/ai/counter
+### `GET /api/ai/research`
 
-Challenge any claim with structured counter-arguments.
+Deep AI research reports on crypto topics
 
-**Request Body:**
+**Price:** `$0.001/request`
 
-| Field | Type | Required | Description |
-|-------|------|----------|-------------|
-| `claim` | string | Yes | The claim to challenge |
-| `context` | string | No | Additional context |
-
-**Example:**
-
-```bash
-curl -X POST "https://cryptocurrency.cv/api/ai/counter" \
-  -H "Content-Type: application/json" \
-  -d '{"claim": "Bitcoin will replace the US dollar by 2030"}'
-```
-
-**Response:**
-
-```json
-{
-  "success": true,
-  "counter": {
-    "originalClaim": "Bitcoin will replace the US dollar by 2030",
-    "counterArguments": [
-      {
-        "argument": "The US dollar is backed by the world's largest economy...",
-        "type": "factual",
-        "strength": "strong"
-      },
-      ...
-    ],
-    "assumptions": [
-      {
-        "assumption": "Governments will not effectively regulate Bitcoin",
-        "challenge": "Many governments have already shown willingness to restrict crypto"
-      }
-    ],
-    "alternativeInterpretations": [...],
-    "missingContext": [...],
-    "overallAssessment": {
-      "claimStrength": "weak",
-      "mainVulnerability": "Underestimates institutional inertia"
-    },
-    "generatedAt": "2026-01-22T10:30:00Z"
-  }
-}
-```
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `topic` | string | No | — | Topic or subject to analyze |
+| `mode` | string | No | — | Filter by mode |
+| `compare` | string | No | — | Filter by compare |
+| `contrarian` | string | No | — | Filter by contrarian |
 
 ---
 
-### GET /api/ai/synthesize
+### `POST /api/ai/social`
+### `GET /api/ai/social`
 
-Auto-clusters duplicate news articles and synthesizes them into comprehensive summaries.
+AI analysis of social media crypto sentiment
 
-**Parameters:**
-
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `limit` | integer | 5 | Number of stories to synthesize (max 10) |
-| `threshold` | float | 0.4 | Similarity threshold for clustering |
-
-**Example:**
-
-```bash
-curl "https://cryptocurrency.cv/api/ai/synthesize?limit=5"
-```
-
-**Response:**
-
-```json
-{
-  "success": true,
-  "synthesizedStories": [
-    {
-      "headline": "SEC Approves Spot Bitcoin ETF Applications",
-      "summary": "The SEC approved multiple spot Bitcoin ETF applications from major asset managers...",
-      "keyFacts": ["11 ETFs approved simultaneously", "BlackRock's iShares leads volume", "Trading begins tomorrow"],
-      "sourceCount": 8,
-      "sources": [
-        {"name": "CoinDesk", "url": "..."},
-        {"name": "The Block", "url": "..."}
-      ],
-      "sentiment": "bullish",
-      "confidence": 0.92,
-      "marketImpact": "high",
-      "relatedCoins": ["BTC", "ETH"],
-      "disagreements": ["Some sources report 10 ETFs, others 11"]
-    }
-  ],
-  "clustersFound": 12,
-  "articlesAnalyzed": 100,
-  "generatedAt": "2026-02-02T10:30:00Z"
-}
-```
+**Price:** `$0.001/request`
 
 ---
 
-### GET /api/ai/explain
+### `GET /api/ai/source-quality`
+### `POST /api/ai/source-quality`
 
-AI-powered explanation for why a topic is trending with full context.
+AI assessment of news source credibility and quality
 
-**Parameters:**
+**Price:** `$0.001/request`
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `topic` | string | **required** | Topic to explain (e.g., "Bitcoin", "ETF", "Solana") |
-| `includePrice` | boolean | false | Include price change context |
-
-**Example:**
-
-```bash
-curl "https://cryptocurrency.cv/api/ai/explain?topic=Bitcoin&includePrice=true"
-```
-
-**Response:**
-
-```json
-{
-  "success": true,
-  "explanation": {
-    "topic": "Bitcoin",
-    "whyTrending": "ETF approval driving unprecedented institutional interest",
-    "background": "After years of SEC rejections, spot Bitcoin ETFs were finally approved...",
-    "keyEvents": [
-      {"event": "SEC approves 11 spot ETFs", "date": "2024-01-10", "significance": "Historic regulatory milestone"}
-    ],
-    "marketImplications": "Opens Bitcoin to traditional investment portfolios",
-    "sentiment": "bullish",
-    "priceContext": "Up 15% in 24 hours following approval",
-    "whatToWatch": ["ETF trading volume", "Institutional inflows", "SEC commentary"],
-    "relatedTopics": ["ETF", "SEC", "Institutions"]
-  },
-  "articleCount": 45,
-  "recentHeadlines": ["...", "..."],
-  "generatedAt": "2026-02-02T10:30:00Z"
-}
-```
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `source` | string | No | — | Filter by news source |
+| `category` | string | No | — | Filter by category |
+| `clickbait` | string | No | — | Filter by clickbait |
 
 ---
 
-### POST /api/ai/portfolio-news
+### `POST /api/ai/summarize`
+### `GET /api/ai/summarize`
 
-Scores news articles by relevance to your portfolio holdings.
+AI-powered article summarization
 
-**Request Body:**
+**Price:** `$0.001/request`
 
-| Field | Type | Required | Description |
-|-------|------|----------|-------------|
-| `holdings` | array | Yes | Array of holdings with symbol, name, allocation |
-
-**Example:**
-
-```bash
-curl -X POST "https://cryptocurrency.cv/api/ai/portfolio-news" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "holdings": [
-      {"symbol": "BTC", "name": "Bitcoin", "allocation": 0.5},
-      {"symbol": "ETH", "name": "Ethereum", "allocation": 0.3},
-      {"symbol": "SOL", "name": "Solana", "allocation": 0.2}
-    ]
-  }'
-```
-
-**Response:**
-
-```json
-{
-  "success": true,
-  "portfolioSize": 3,
-  "articlesAnalyzed": 50,
-  "relevantArticles": 12,
-  "byUrgency": {
-    "immediate": 2,
-    "important": 5,
-    "informational": 5
-  },
-  "articles": {
-    "immediate": [
-      {
-        "articleTitle": "Solana Network Outage Reported",
-        "relevanceScore": 95,
-        "relevantHoldings": [
-          {"symbol": "SOL", "impact": "negative", "reason": "Direct impact on Solana holdings"}
-        ],
-        "urgency": "immediate",
-        "actionSuggestion": "Monitor network status before trading"
-      }
-    ],
-    "important": [...],
-    "informational": [...]
-  },
-  "generatedAt": "2026-02-02T10:30:00Z"
-}
-```
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `url` | string | No | — | Filter by url |
+| `text` | string | No | — | Filter by text |
+| `type` | string | No | — | Data or content type |
 
 ---
 
-### GET /api/ai/correlation
+### `POST /api/ai/summarize/stream`
 
-Detects potential correlations between news articles and price movements.
+Streaming AI article summarization
 
-**Example:**
-
-```bash
-curl "https://cryptocurrency.cv/api/ai/correlation"
-```
-
-**Response:**
-
-```json
-{
-  "success": true,
-  "correlations": [
-    {
-      "article": "SEC Chair Hints at Ethereum ETF Approval",
-      "coin": "ETH",
-      "priceMove": 8.5,
-      "confidence": 0.85,
-      "explanation": "Regulatory news directly impacted price",
-      "timing": "News came 15 mins before price surge"
-    }
-  ],
-  "summary": "Strong correlation between regulatory news and large-cap price movements today",
-  "significantMovers": [
-    {"symbol": "ETH", "price": 3500, "change1h": 5.2, "change24h": 12.3}
-  ],
-  "articlesAnalyzed": 50,
-  "coinsAnalyzed": 50,
-  "generatedAt": "2026-02-02T10:30:00Z"
-}
-```
+**Price:** `$0.001/request`
+  
+**Type:** Server-Sent Events (streaming)
 
 ---
 
-### GET /api/ai/flash-briefing
+### `GET /api/ai/synthesize`
+### `POST /api/ai/synthesize`
 
-Ultra-short AI-generated summary of top crypto stories. Perfect for voice assistants or quick updates.
+AI synthesis of multiple news sources into unified report
 
-**Parameters:**
+**Price:** `$0.001/request`
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `stories` | integer | 5 | Number of stories to include (max 10) |
-
-**Example:**
-
-```bash
-curl "https://cryptocurrency.cv/api/ai/flash-briefing?stories=3"
-```
-
-**Response:**
-
-```json
-{
-  "success": true,
-  "briefing": "Crypto markets are buzzing today with Bitcoin pushing past $100k and major ETF inflows continuing.",
-  "stories": [
-    {
-      "headline": "Bitcoin Breaks $100k",
-      "oneLineSummary": "BTC hits all-time high on institutional demand",
-      "sentiment": "bullish"
-    },
-    {
-      "headline": "Ethereum L2 TVL Hits Record",
-      "oneLineSummary": "Layer 2 networks now hold $50B in value",
-      "sentiment": "bullish"
-    }
-  ],
-  "marketMood": "bullish",
-  "articlesAnalyzed": 50,
-  "generatedAt": "2026-02-02T10:30:00Z"
-}
-```
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `limit` | number | No | `5` | Maximum number of results to return |
+| `threshold` | number | No | `0.4` | Filter by threshold |
 
 ---
 
-### GET /api/ai/narratives
+### `GET /api/analyze`
 
-Tracks crypto narratives through their lifecycle: emerging, growing, peak, declining.
+General-purpose crypto analysis endpoint
 
-**Parameters:**
+**Price:** `$0.001/request`
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `predict` | string | - | Optional: Get prediction for specific narrative |
-
-**Example:**
-
-```bash
-curl "https://cryptocurrency.cv/api/ai/narratives"
-```
-
-**Response:**
-
-```json
-{
-  "success": true,
-  "activeNarratives": [
-    {
-      "id": "bitcoin-etf",
-      "name": "Bitcoin ETF",
-      "lifecycle": "peak",
-      "strength": 95,
-      "velocity": 0.1,
-      "sentiment": 0.8,
-      "relatedCoins": ["BTC"],
-      "prediction": {
-        "nextPhase": "Narrative will stabilize as ETF becomes normalized",
-        "confidence": 0.7,
-        "timeframe": "2-4 weeks",
-        "reasoning": "Initial excitement fading as trading volume stabilizes"
-      }
-    }
-  ],
-  "emergingNarratives": [
-    {
-      "id": "ai-crypto",
-      "name": "AI + Crypto Convergence",
-      "lifecycle": "emerging",
-      "strength": 45,
-      "velocity": 0.6
-    }
-  ],
-  "decliningNarratives": [...],
-  "marketCycle": {
-    "cyclePhase": "markup",
-    "confidence": 0.7,
-    "dominantNarratives": ["Bitcoin ETF", "Institutional Adoption"],
-    "historicalAnalog": "Similar to Q4 2020 - Early 2021 bull run"
-  },
-  "generatedAt": "2026-02-02T10:30:00Z"
-}
-```
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `limit` | number | No | `20` | Maximum number of results to return |
+| `topic` | string | No | — | Topic or subject to analyze |
+| `sentiment` | string | No | — | Filter by sentiment |
 
 ---
 
-### GET /api/ai/cross-lingual
+### `GET /api/ask`
 
-Detects when Asian/European sources break news before Western sources. Identifies regional sentiment divergence.
+Ask natural language questions about crypto markets
 
-**Example:**
+**Price:** `$0.001/request`
+  
+**Type:** Server-Sent Events (streaming)
 
-```bash
-curl "https://cryptocurrency.cv/api/ai/cross-lingual"
-```
-
-**Response:**
-
-```json
-{
-  "success": true,
-  "alphaSignals": [
-    {
-      "topic": "New Binance regulatory compliance",
-      "firstRegion": "asia",
-      "firstSource": "Block Media (Korea)",
-      "confidence": 0.85,
-      "potentialImpact": "medium",
-      "summary": "First reported 2 hours before English sources",
-      "relatedCoins": ["BNB"]
-    }
-  ],
-  "regionalSentiments": [
-    {
-      "region": "asia",
-      "overallSentiment": "bullish",
-      "confidence": 0.75,
-      "topTopics": ["Bitcoin ETF", "Korean adoption"],
-      "divergenceFromGlobal": 0.15
-    }
-  ],
-  "divergenceAlerts": [
-    {
-      "topic": "Altcoin season",
-      "asianSentiment": "bullish",
-      "westernSentiment": "neutral",
-      "significance": "Asian traders may be front-running altcoin moves"
-    }
-  ],
-  "articleCounts": {
-    "asia": 45,
-    "europe": 30,
-    "anglosphere": 80,
-    "total": 175
-  },
-  "generatedAt": "2026-02-02T10:30:00Z"
-}
-```
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `q` | string | No | — | Search query string |
+| `stream` | string | No | — | Filter by stream |
 
 ---
 
-### GET /api/ai/source-quality
+### `POST /api/classify`
+### `GET /api/classify`
 
-AI-powered scoring of news sources and clickbait detection.
+Classify crypto news articles by category and relevance
 
-**Parameters:**
-
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `source` | string | - | Analyze specific source quality |
-| `category` | string | - | Rank sources for a category |
-| `clickbait` | boolean | false | Detect clickbait across all articles |
-
-**Example:**
-
-```bash
-# Analyze specific source
-curl "https://cryptocurrency.cv/api/ai/source-quality?source=CoinDesk"
-
-# Detect clickbait
-curl "https://cryptocurrency.cv/api/ai/source-quality?clickbait=true"
-```
-
-**Response (source analysis):**
-
-```json
-{
-  "success": true,
-  "sourceQuality": {
-    "sourceName": "CoinDesk",
-    "overallScore": 85,
-    "accuracyScore": 88,
-    "speedScore": 82,
-    "originalityScore": 90,
-    "clickbaitScore": 15,
-    "strengths": ["Original reporting", "Fast breaking news", "Reliable sources"],
-    "weaknesses": ["Occasional sponsored content"],
-    "bestFor": ["Breaking news", "Regulatory coverage", "Market analysis"],
-    "trustLevel": "high",
-    "verificationStatus": "verified"
-  }
-}
-```
-
-**Response (clickbait detection):**
-
-```json
-{
-  "success": true,
-  "articlesAnalyzed": 50,
-  "clickbaitCount": 8,
-  "clickbaitPercentage": "16.0",
-  "averageClickbaitScore": "25.3",
-  "worstOffenders": [
-    {
-      "title": "YOU WON'T BELIEVE What Bitcoin Did Next!!!",
-      "source": "CryptoHype",
-      "isClickbait": true,
-      "score": 85,
-      "reasons": ["Sensational keywords", "Excessive punctuation", "Curiosity gap"]
-    }
-  ]
-}
-```
+**Price:** `$0.001/request`
 
 ---
 
-### GET /api/ai/research
+### `GET /api/clickbait`
 
-Deep-dive research on any crypto topic with comprehensive analysis.
+Detect clickbait in crypto news headlines
 
-**Parameters:**
+**Price:** `$0.001/request`
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `topic` | string | **required** | Topic to research |
-| `mode` | string | full | `full` for complete report, `quick` for quick take |
-| `compare` | string | - | Compare two assets: `BTC,ETH` |
-| `contrarian` | boolean | false | Find contrarian opportunities |
-
-**Examples:**
-
-```bash
-# Full research report
-curl "https://cryptocurrency.cv/api/ai/research?topic=Solana"
-
-# Quick take
-curl "https://cryptocurrency.cv/api/ai/research?topic=DeFi&mode=quick"
-
-# Compare assets
-curl "https://cryptocurrency.cv/api/ai/research?compare=BTC,ETH"
-
-# Contrarian opportunities
-curl "https://cryptocurrency.cv/api/ai/research?contrarian=true"
-```
-
-**Response (full report):**
-
-```json
-{
-  "success": true,
-  "report": {
-    "topic": "Solana",
-    "executiveSummary": "Solana is experiencing renewed institutional interest following network stability improvements and DeFi growth...",
-    "newsAnalysis": {
-      "totalArticles": 35,
-      "sentimentBreakdown": {"bullish": 60, "bearish": 15, "neutral": 25},
-      "keyThemes": ["Network reliability", "DeFi growth", "NFT marketplace"],
-      "recentDevelopments": [
-        {"date": "2026-02-01", "event": "Solana TVL hits $10B", "significance": "high"}
-      ]
-    },
-    "investmentThesis": {
-      "bullCase": {
-        "summary": "Technical improvements and ecosystem growth position Solana for continued gains",
-        "arguments": ["Improved uptime", "Growing DeFi TVL", "Institutional adoption"],
-        "priceTarget": "$300-400",
-        "confidence": 0.65
-      },
-      "bearCase": {
-        "summary": "Competition and past reliability issues remain concerns",
-        "arguments": ["Ethereum L2 competition", "Historical outages", "Centralization concerns"],
-        "confidence": 0.55
-      },
-      "verdict": "bullish"
-    },
-    "risks": [
-      {"risk": "Network outage", "severity": "high", "probability": 0.2, "mitigation": "Monitor uptime stats"}
-    ],
-    "opportunities": [
-      {"opportunity": "DeFi TVL growth", "timeframe": "medium term", "potentialReturn": "50-100%", "confidence": 0.6}
-    ],
-    "confidence": 0.7,
-    "disclaimer": "This is AI-generated research for informational purposes only..."
-  }
-}
-```
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `limit` | number | No | `10` | Maximum number of results to return |
+| `threshold` | number | No | `0` | Filter by threshold |
 
 ---
 
-## Real-Time Endpoints
+### `POST /api/detect/ai-content`
+### `GET /api/detect/ai-content`
 
-### GET /api/sse
+Detect AI-generated content in crypto news
 
-Server-Sent Events stream for real-time news updates.
-
-**Example (JavaScript):**
-
-```javascript
-const eventSource = new EventSource('/api/sse');
-
-eventSource.addEventListener('news', (event) => {
-  const data = JSON.parse(event.data);
-  console.log('New articles:', data.articles);
-});
-
-eventSource.addEventListener('breaking', (event) => {
-  const article = JSON.parse(event.data);
-  alert(`Breaking: ${article.title}`);
-});
-```
-
-**Events:**
-
-| Event | Description |
-|-------|-------------|
-| `connected` | Connection established |
-| `news` | New articles available |
-| `breaking` | Breaking news alert |
-| `price` | Price updates |
-| `heartbeat` | Keep-alive ping |
+**Price:** `$0.001/request`
 
 ---
 
-### GET /api/ws
+### `GET /api/digest`
 
-WebSocket connection info (for standalone WS server).
+Daily crypto market digest
 
-**Response:**
+**Price:** `$0.001/request`
 
-```json
-{
-  "message": "WebSocket connections require a dedicated server",
-  "documentation": "https://github.com/nirholas/free-crypto-news/blob/main/docs/REALTIME.md",
-  "sse_endpoint": "/api/sse"
-}
-```
-
-> 📖 See [Real-Time Guide](./REALTIME.md) for WebSocket server setup.
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `period` | string | No | `24h` | Time period for data aggregation |
+| `format` | string | No | `full` | Response format |
 
 ---
 
-## User Features
+### `GET /api/factcheck`
 
-### POST /api/alerts
+AI fact-checking of crypto claims and news
 
-Create configurable alert rules with various conditions.
+**Price:** `$0.001/request`
 
-**Alert Condition Types:**
-
-| Type | Description |
-|------|-------------|
-| `price_above` | Price exceeds threshold |
-| `price_below` | Price drops below threshold |
-| `price_change_pct` | Percentage change in 1h or 24h |
-| `volume_spike` | Volume exceeds multiplier of baseline |
-| `breaking_news` | Breaking news with optional keywords |
-| `ticker_mention` | Ticker mentioned with optional sentiment filter |
-| `whale_movement` | Large transfers above USD threshold |
-| `fear_greed_change` | Fear & Greed index change |
-
-**Create Alert Rule:**
-
-```bash
-curl -X POST https://cryptocurrency.cv/api/alerts \
-  -H "Content-Type: application/json" \
-  -d '{
-    "name": "BTC Above 100k",
-    "condition": {
-      "type": "price_above",
-      "coin": "bitcoin",
-      "threshold": 100000
-    },
-    "channels": ["websocket"],
-    "cooldown": 300
-  }'
-```
-
-**Response:**
-
-```json
-{
-  "alert": {
-    "id": "alert_1737507600_abc123def",
-    "name": "BTC Above 100k",
-    "condition": {
-      "type": "price_above",
-      "coin": "bitcoin",
-      "threshold": 100000
-    },
-    "channels": ["websocket"],
-    "cooldown": 300,
-    "enabled": true,
-    "createdAt": "2026-01-22T00:00:00.000Z"
-  }
-}
-```
-
-**Legacy User-Based Alerts (still supported):**
-
-```json
-{
-  "type": "price",
-  "userId": "user-123",
-  "coinId": "bitcoin",
-  "condition": "above",
-  "threshold": 100000
-}
-```
-
-### GET /api/alerts
-
-List all alert rules or get user alerts.
-
-**Query Parameters:**
-
-| Parameter | Description |
-|-----------|-------------|
-| `action=evaluate` | Trigger alert evaluation |
-| `action=stats` | Get alert statistics |
-| `action=events` | Get recent alert events |
-| `userId=xxx` | Get legacy user alerts |
-
-**Example:**
-
-```bash
-curl "https://cryptocurrency.cv/api/alerts"
-```
-
-**Response:**
-
-```json
-{
-  "alerts": [
-    {
-      "id": "alert_123",
-      "name": "BTC Above 100k",
-      "condition": { "type": "price_above", "coin": "bitcoin", "threshold": 100000 },
-      "channels": ["websocket"],
-      "cooldown": 300,
-      "enabled": true,
-      "createdAt": "2026-01-22T00:00:00.000Z"
-    }
-  ],
-  "total": 1
-}
-```
-
-### GET /api/alerts/[id]
-
-Get a single alert rule.
-
-```bash
-curl "https://cryptocurrency.cv/api/alerts/alert_123"
-```
-
-### PUT /api/alerts/[id]
-
-Update an alert rule.
-
-```bash
-curl -X PUT https://cryptocurrency.cv/api/alerts/alert_123 \
-  -H "Content-Type: application/json" \
-  -d '{
-    "name": "BTC Above 120k",
-    "condition": {
-      "type": "price_above",
-      "coin": "bitcoin",
-      "threshold": 120000
-    }
-  }'
-```
-
-### DELETE /api/alerts/[id]
-
-Delete an alert rule.
-
-```bash
-curl -X DELETE https://cryptocurrency.cv/api/alerts/alert_123
-```
-
-### POST /api/alerts/[id]?action=test
-
-Test trigger an alert.
-
-```bash
-curl -X POST "https://cryptocurrency.cv/api/alerts/alert_123?action=test"
-```
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `limit` | number | No | `15` | Maximum number of results to return |
+| `type` | string | No | — | Data or content type |
+| `confidence` | string | No | — | Filter by confidence |
 
 ---
 
-### POST /api/newsletter
+### `GET /api/forecast`
+### `POST /api/forecast`
 
-Subscribe to email digests.
+AI-powered price forecasting for cryptocurrencies
 
-**Request Body:**
+**Price:** `$0.001/request`
 
-```json
-{
-  "action": "subscribe",
-  "email": "user@example.com",
-  "frequency": "daily",
-  "categories": ["bitcoin", "defi"]
-}
-```
-
-**Response:**
-
-```json
-{
-  "success": true,
-  "message": "Verification email sent",
-  "subscriptionId": "sub-xyz789"
-}
-```
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `asset` | string | No | — | Asset identifier (e.g., BTC, ETH) |
+| `horizon` | string | No | `1d` | Filter by horizon |
+| `action` | string | No | — | API action to perform |
 
 ---
 
-### GET /api/newsletter
+### `GET /api/narratives`
 
-Newsletter API information and verification endpoints.
+Current market narratives and trending themes
 
-**Query Parameters:**
+**Price:** `$0.001/request`
 
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `action` | string | `verify`, `unsubscribe`, or `stats` |
-| `token` | string | Verification/unsubscribe token |
-
-**Example - Verify subscription:**
-
-```bash
-curl "https://cryptocurrency.cv/api/newsletter?action=verify&token=xxx"
-```
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `limit` | number | No | `40` | Maximum number of results to return |
+| `emerging` | string | No | — | Filter by emerging |
 
 ---
 
-### POST /api/newsletter/subscribe
+### `POST /api/rag/ask`
 
-Direct subscription endpoint with rate limiting.
+Ask questions with AI-powered retrieval-augmented generation
 
-**Request Body:**
-
-```json
-{
-  "email": "user@example.com"
-}
-```
-
-**Response:**
-
-```json
-{
-  "success": true,
-  "message": "Subscribed successfully",
-  "subscribed": true
-}
-```
-
-**Rate Limits:** 5 attempts per minute per IP
+**Price:** `$0.001/request`
 
 ---
 
-### POST /api/portfolio
+### `POST /api/rag/batch`
 
-Track portfolio holdings and get relevant news.
+Batch RAG queries for multiple questions
 
-**Request Body:**
-
-```json
-{
-  "action": "add",
-  "portfolioId": "portfolio-123",
-  "holding": {
-    "coinId": "bitcoin",
-    "symbol": "BTC",
-    "amount": 0.5,
-    "purchasePrice": 95000
-  }
-}
-```
-
-**Get portfolio value:**
-
-```bash
-curl "https://cryptocurrency.cv/api/portfolio?id=portfolio-123"
-```
-
-**Response:**
-
-```json
-{
-  "portfolio": {
-    "holdings": [...],
-    "totalValue": 52500,
-    "totalCost": 47500,
-    "profitLoss": 5000,
-    "profitLossPercent": 10.53
-  },
-  "relatedNews": [...]
-}
-```
+**Price:** `$0.001/request`
 
 ---
 
-## Market Data
+### `GET /api/rag/eval`
+### `POST /api/rag/eval`
 
-### GET /api/sources
+Evaluate RAG system quality and relevance
 
-List all available news sources.
-
-**Example:**
-
-```bash
-curl "https://cryptocurrency.cv/api/sources"
-```
-
-**Response:**
-
-```json
-{
-  "sources": [
-    {
-      "key": "coindesk",
-      "name": "CoinDesk",
-      "url": "https://coindesk.com",
-      "category": "general",
-      "status": "active"
-    },
-    {
-      "key": "theblock",
-      "name": "The Block",
-      "url": "https://theblock.co",
-      "category": "general",
-      "status": "active"
-    }
-  ],
-  "count": 7
-}
-```
+**Price:** `$0.001/request`
 
 ---
 
-### GET /api/stats
+### `POST /api/rag/feedback`
+### `GET /api/rag/feedback`
 
-API usage statistics and detailed metrics.
+Submit feedback on RAG response quality
 
-**Response:**
+**Price:** `$0.001/request`
 
-```json
-{
-  "summary": {
-    "totalArticles": 100,
-    "activeSources": 18,
-    "totalSources": 20,
-    "avgArticlesPerHour": 4.2,
-    "timeRange": "24h"
-  },
-  "bySource": [
-    {
-      "source": "CoinDesk",
-      "articleCount": 25,
-      "percentage": 25,
-      "latestArticle": "Bitcoin Hits $100K Milestone",
-      "latestTime": "2026-01-22T12:00:00Z"
-    }
-  ],
-  "byCategory": [
-    { "category": "general", "count": 45 },
-    { "category": "bitcoin", "count": 25 },
-    { "category": "defi", "count": 15 }
-  ],
-  "hourlyDistribution": [
-    { "hour": "2026-01-22T00:00", "count": 3 },
-    { "hour": "2026-01-22T01:00", "count": 5 }
-  ],
-  "fetchedAt": "2026-01-22T12:30:00Z"
-}
-```
-
-**Cache:** 5 minutes
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `alerts` | string | No | — | Filter by alerts |
+| `all` | string | No | — | Filter by all |
+| `variant` | string | No | — | Filter by variant |
+| `compare` | string | No | — | Filter by compare |
+| `export` | string | No | — | Filter by export |
+| `includeNegatives` | string | No | — | Filter by includeNegatives |
+| `limit` | number | No | `5000` | Maximum number of results to return |
+| `ack` | string | No | — | Filter by ack |
 
 ---
 
-## Archive Endpoints
+### `POST /api/rag/personalization`
+### `GET /api/rag/personalization`
+### `DELETE /api/rag/personalization`
 
-Historical news archive with **zero-configuration** setup. No API keys required!
+Personalized RAG based on user preferences
 
-### GET /api/archive
+**Price:** `$0.001/request`
 
-Query historical archived news articles.
-
-**Parameters:**
-
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `date` | string | - | Specific date (YYYY-MM-DD) |
-| `start` | string | - | Start date for range |
-| `end` | string | - | End date for range |
-| `source` | string | - | Filter by source |
-| `ticker` | string | - | Filter by ticker (BTC, ETH, etc.) |
-| `search` | string | - | Full-text search |
-| `limit` | integer | 50 | Max results (1-200) |
-| `offset` | integer | 0 | Pagination offset |
-| `stats` | boolean | false | Return stats only |
-| `index` | boolean | false | Return index only |
-
-**Example:**
-
-```bash
-# Get articles from a specific date
-curl "https://cryptocurrency.cv/api/archive?date=2026-01-15"
-
-# Search Bitcoin news from last week
-curl "https://cryptocurrency.cv/api/archive?ticker=BTC&start=2026-01-17"
-
-# Get archive stats
-curl "https://cryptocurrency.cv/api/archive?stats=true"
-```
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `userId` | string | No | — | User identifier |
+| `export` | string | No | — | Filter by export |
+| `privacy` | string | No | — | Filter by privacy |
 
 ---
 
-### GET /api/archive/status
+### `POST /api/rag/search`
 
-Check archive health and get setup instructions.
+RAG vector search without LLM generation
 
-**Example:**
-
-```bash
-curl "https://cryptocurrency.cv/api/archive/status"
-```
-
-**Response:**
-
-```json
-{
-  "healthy": true,
-  "storage": "github",
-  "lastArchived": "2026-01-24",
-  "totalDays": 16,
-  "totalArticles": 3500,
-  "dateRange": {
-    "earliest": "2026-01-08",
-    "latest": "2026-01-24"
-  },
-  "zeroConfigMode": true,
-  "setupInstructions": {
-    "zeroConfig": {
-      "description": "No configuration needed!",
-      "testNow": "Visit /api/cron/archive in your browser"
-    },
-    "cronJobOrg": {
-      "url": "https://cron-job.org (FREE)",
-      "steps": ["..."]
-    }
-  }
-}
-```
+**Price:** `$0.001/request`
 
 ---
 
-### GET /api/archive/v2
+### `POST /api/rag/stream`
 
-> **Redirect:** This endpoint permanently redirects (308) to `/api/archive`. Use `/api/archive` for all new integrations.
+Streaming RAG responses via Server-Sent Events
 
-For backwards compatibility, all requests to `/api/archive/v2` are automatically redirected to the main `/api/archive` endpoint with full feature support.
-
-See [GET /api/archive](#get-apiarchive) for parameters and examples.
-
----
-
-### GET /api/archive (Full Features)
-
-Query the enriched archive with advanced filtering, sentiment analysis, and ticker tracking.
-
-**Parameters:**
-
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `start_date` | string | - | Start date (YYYY-MM-DD) |
-| `end_date` | string | - | End date (YYYY-MM-DD) |
-| `source` | string | - | Filter by source name |
-| `ticker` | string | - | Filter by ticker (BTC, ETH, etc.) |
-| `q` | string | - | Search query |
-| `sentiment` | string | - | Filter: `positive`, `negative`, `neutral` |
-| `tags` | string | - | Comma-separated tag filters |
-| `limit` | integer | 50 | Max results (1-200) |
-| `offset` | integer | 0 | Pagination offset |
-| `format` | string | full | Response format: `full`, `simple`, `minimal` |
-| `lang` | string | en | Language code for translation |
-| `stats` | boolean | false | Return archive statistics only |
-| `trending` | boolean | false | Return trending tickers |
-| `hours` | integer | 24 | Hours for trending (with `trending=true`) |
-| `market` | string | - | Get market history for month (YYYY-MM) |
-
-**Example - Get enriched articles:**
-
-```bash
-curl "https://cryptocurrency.cv/api/archive?ticker=BTC&sentiment=positive&limit=20"
-```
-
-**Example - Get trending tickers:**
-
-```bash
-curl "https://cryptocurrency.cv/api/archive?trending=true&hours=24"
-```
-
-**Response (trending):**
-
-```json
-{
-  "success": true,
-  "hours": 24,
-  "tickers": [
-    { "ticker": "BTC", "mentions": 145, "sentiment_avg": 0.65 },
-    { "ticker": "ETH", "mentions": 89, "sentiment_avg": 0.42 }
-  ]
-}
-```
-
-**Example - Get archive stats:**
-
-```bash
-curl "https://cryptocurrency.cv/api/archive?stats=true"
-```
-
-**Response (stats):**
-
-```json
-{
-  "success": true,
-  "version": "2.0.0",
-  "stats": {
-    "totalArticles": 5420,
-    "dateRange": { "start": "2026-01-01", "end": "2026-01-22" },
-    "sources": 25,
-    "tickers": 150
-  }
-}
-```
+**Price:** `$0.001/request`
+  
+**Type:** Server-Sent Events (streaming)
 
 ---
 
-### GET /api/cron/archive
+### `POST /api/rag/timeline`
 
-Trigger news archiving. Works with external cron services.
+Timeline-aware RAG for chronological crypto analysis
 
-> **Zero-Config Mode:** If `CRON_SECRET` is not set, this endpoint is public and can be called without authentication. Perfect for testing!
-
-**Authentication (optional):**
-
-If `CRON_SECRET` environment variable is set:
-- Query param: `?secret=YOUR_SECRET`
-- Header: `Authorization: Bearer YOUR_SECRET`
-
-**Example:**
-
-```bash
-# Zero-config mode (no auth)
-curl "https://cryptocurrency.cv/api/cron/archive"
-
-# With authentication
-curl "https://cryptocurrency.cv/api/cron/archive?secret=YOUR_SECRET"
-```
-
-**Response:**
-
-```json
-{
-  "success": true,
-  "timestamp": "2026-01-24T15:30:00Z",
-  "stats": {
-    "fetched": 87,
-    "archived": 85,
-    "duplicates": 2,
-    "sources": ["CoinDesk", "The Block", "Decrypt", "Cointelegraph"]
-  },
-  "duration": 1250,
-  "articles": [...]
-}
-```
-
-**Setting up automated archiving:**
-
-| Service | Free? | Setup |
-|---------|-------|-------|
-| [cron-job.org](https://cron-job.org) | ✅ Yes | Create job → URL: `/api/cron/archive` → Every hour |
-| [Uptime Robot](https://uptimerobot.com) | ✅ Yes | Add monitor → HTTP(s) → 1 hour interval |
-| [EasyCron](https://easycron.com) | ✅ 200/mo | Similar to cron-job.org |
+**Price:** `$0.001/request`
 
 ---
 
-### POST /api/archive/webhook
+### `GET /api/sentiment`
 
-Archive news with optional GitHub commit. Returns archived articles in response for external storage.
+Market sentiment analysis and indicators
 
-**Authentication:** Same as `/api/cron/archive`
+**Price:** `$0.001/request`
 
-**Example:**
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `limit` | number | No | `20` | Maximum number of results to return |
+| `asset` | string | No | — | Asset identifier (e.g., BTC, ETH) |
 
-```bash
-curl -X POST "https://cryptocurrency.cv/api/archive/webhook"
-```
+---
 
-**Response:**
+### `GET /api/social/sentiment`
 
-```json
-{
-  "success": true,
-  "timestamp": "2026-01-24T15:30:00Z",
-  "stats": {
-    "fetched": 87,
-    "processed": 87,
-    "sources": ["CoinDesk", "The Block"]
-  },
-  "github": {
-    "success": true,
-    "message": "Committed 42 new articles to archive/articles/2026-01.jsonl"
-  }
-}
-```
+Aggregated social media sentiment analysis
 
-> **Note:** GitHub commits only work if `GITHUB_TOKEN` is set. Without it, articles are returned in the response for you to store elsewhere.
+**Price:** `$0.001/request`
+
+---
+
+### `GET /api/social/sentiment/market`
+
+Market-wide social sentiment overview
+
+**Price:** `$0.001/request`
+
+---
+
+### `GET /api/social/x/sentiment`
+
+X/Twitter-specific crypto sentiment analysis
+
+**Price:** `$0.001/request`
+
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `list` | string | No | `default` | Filter by list |
+| `refresh` | string | No | — | Filter by refresh |
+| `tweets` | number | No | `10` | Filter by tweets |
+
+---
+
+### `GET /api/summarize`
+
+Summarize crypto news articles
+
+**Price:** `$0.001/request`
+
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `limit` | number | No | `5` | Maximum number of results to return |
+| `source` | string | No | — | Filter by news source |
+| `style` | string | No | `brief` | Output style or format |
+
+---
+
+### `GET /api/v1/ai/explain`
+
+AI explanation of crypto concepts
+
+**Price:** `$0.003/request`
+
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `term` | string | No | — | Filter by term |
+| `q` | string | No | — | Search query string |
+| `level` | string | No | `beginner` | Filter by level |
+
+---
+
+### `GET /api/v1/ai/research`
+
+AI deep research on crypto topics
+
+**Price:** `$0.01/request`
+
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `topic` | string | No | — | Topic or subject to analyze |
+| `q` | string | No | — | Search query string |
+| `depth` | string | No | `standard` | Filter by depth |
+
+---
+
+### `GET /api/v1/ask`
+
+Ask natural language questions about crypto
+
+**Price:** `$0.005/request`
+
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `q` | string | No | — | Search query string |
+| `question` | string | No | — | Filter by question |
+| `context_size` | number | No | `20` | Filter by context size |
+
+---
+
+### `GET /api/v1/classify`
+
+Classify text or articles by crypto topic
+
+**Price:** `$0.002/request`
+
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `limit` | number | No | `10` | Maximum number of results to return |
+| `source` | string | No | — | Filter by news source |
+
+---
+
+### `GET /api/v1/digest`
+
+AI-generated market digest
+
+**Price:** `$0.005/request`
+
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `limit` | number | No | `50` | Maximum number of results to return |
+
+---
+
+### `GET /api/v1/forecast`
+
+AI price forecasting
+
+**Price:** `$0.005/request`
+
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `asset` | string | No | — | Asset identifier (e.g., BTC, ETH) |
+| `horizon` | string | No | `1d` | Filter by horizon |
+| `action` | string | No | — | API action to perform |
+
+---
+
+### `GET /api/v1/narratives`
+
+AI-identified market narratives
+
+**Price:** `$0.005/request`
+
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `limit` | number | No | `40` | Maximum number of results to return |
+| `emerging` | string | No | — | Filter by emerging |
+
+---
+
+### `GET /api/v1/sentiment`
+
+AI sentiment analysis for crypto assets
+
+**Price:** `$0.005/request`
+
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `limit` | number | No | `20` | Maximum number of results to return |
+| `asset` | string | No | — | Asset identifier (e.g., BTC, ETH) |
+
+---
+
+### `GET /api/v1/summarize`
+
+AI article summarization
+
+**Price:** `$0.003/request`
+
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `limit` | number | No | `10` | Maximum number of results to return |
+| `source` | string | No | — | Filter by news source |
+| `style` | string | No | `brief` | Output style or format |
+
+---
+
+## API v1
+
+### `GET /api/v1/assets`
+
+Cryptocurrency asset listings and metadata
+
+**Price:** `$0.001/request`
+
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `id` | string | No | — | Unique identifier |
+| `limit` | number | No | `100` | Maximum number of results to return |
+
+---
+
+### `GET /api/v1/fundamentals`
+
+Crypto project fundamentals and metrics
+
+**Price:** `$0.003/request`
+
+---
+
+### `GET /api/v1/system/status`
+
+API system health and status
+
+**Price:** `$0.001/request`
+
+---
+
+### `GET /api/v1/usage`
+
+API usage statistics for your key
+
+**Price:** `$0.001/request`
+
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `api_key` | string | No | — | Filter by api key |
+
+---
+
+### `GET /api/v1/x402`
+
+x402 micropayment protocol info and status
+
+**Price:** `$0.001/request`
 
 ---
 
 ## Analytics & Intelligence
 
-Advanced analytics features for tracking headline evolution, source credibility, and anomaly detection.
-
-### GET /api/analytics/headlines
-
-Track how article headlines change over time.
-
-**Parameters:**
-
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `hours` | integer | 24 | Time window to look back (1-168) |
-| `changesOnly` | boolean | false | Only return headlines that changed |
-
-**Example:**
-
-```bash
-curl "https://cryptocurrency.cv/api/analytics/headlines?hours=24&changesOnly=true"
-```
-
-**Response:**
-
-```json
-{
-  "tracked": [
-    {
-      "articleId": "art_abc123",
-      "originalTitle": "Bitcoin Hits $100K",
-      "currentTitle": "Bitcoin Surges Past $100K Milestone",
-      "changes": [
-        {
-          "title": "Bitcoin Surges Past $100K Milestone",
-          "detectedAt": "2026-01-22T14:30:00Z",
-          "changeType": "moderate",
-          "sentiment_shift": "more_positive"
-        }
-      ],
-      "totalChanges": 1,
-      "firstSeen": "2026-01-22T12:00:00Z",
-      "lastChecked": "2026-01-22T14:30:00Z",
-      "url": "https://example.com/article",
-      "source": "CoinDesk"
-    }
-  ],
-  "recentChanges": [
-    {
-      "articleId": "art_abc123",
-      "from": "Bitcoin Hits $100K",
-      "to": "Bitcoin Surges Past $100K Milestone",
-      "changedAt": "2026-01-22T14:30:00Z"
-    }
-  ],
-  "stats": {
-    "totalTracked": 150,
-    "withChanges": 12,
-    "avgChangesPerArticle": 0.08
-  },
-  "generatedAt": "2026-01-22T15:00:00Z"
-}
-```
-
----
-
-### GET /api/analytics/credibility
-
-Get credibility scores for news sources based on accuracy, timeliness, consistency, and bias.
-
-**Parameters:**
-
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `source` | string | all | Specific source key (optional) |
-| `sortBy` | string | score | Sort by: `score`, `accuracy`, `timeliness` |
-
-**Example:**
-
-```bash
-curl "https://cryptocurrency.cv/api/analytics/credibility?sortBy=accuracy"
-```
-
-**Response:**
-
-```json
-{
-  "sources": [
-    {
-      "source": "The Block",
-      "sourceKey": "theblock",
-      "overallScore": 88,
-      "metrics": {
-        "accuracy": 88,
-        "timeliness": 85,
-        "consistency": 90,
-        "bias": {
-          "score": 0.1,
-          "confidence": 0.75
-        },
-        "clickbait": 0.12
-      },
-      "articleCount": 245,
-      "lastUpdated": "2026-01-22T15:00:00Z",
-      "trend": "stable"
-    }
-  ],
-  "averageScore": 78.5,
-  "topSources": ["The Block", "CoinDesk", "Blockworks"],
-  "bottomSources": ["NewsBTC", "Bitcoinist"],
-  "generatedAt": "2026-01-22T15:00:00Z"
-}
-```
-
-**Metrics Explained:**
-
-| Metric | Range | Description |
-|--------|-------|-------------|
-| `accuracy` | 0-100 | Factual accuracy score |
-| `timeliness` | 0-100 | Publishing speed |
-| `consistency` | 0-100 | Quality consistency |
-| `bias.score` | -1 to 1 | Bearish (-1) to bullish (+1) |
-| `clickbait` | 0-1 | Higher = more clickbait |
-
----
-
-### GET /api/analytics/anomalies
-
-Detect unusual patterns in news flow including volume spikes, coordinated publishing, and sentiment shifts.
-
-**Parameters:**
-
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `hours` | integer | 24 | Time window (1-168) |
-| `severity` | string | all | Filter: `high`, `medium`, `low` |
-
-**Example:**
-
-```bash
-curl "https://cryptocurrency.cv/api/analytics/anomalies?hours=24&severity=high"
-```
-
-**Response:**
-
-```json
-{
-  "anomalies": [
-    {
-      "id": "anomaly_volume_spike_abc123",
-      "type": "volume_spike",
-      "severity": "high",
-      "detectedAt": "2026-01-22T14:00:00Z",
-      "description": "Article volume is 4.2 standard deviations above normal",
-      "data": {
-        "expected": 12,
-        "actual": 48,
-        "deviation": 4.2,
-        "affectedEntities": ["all_sources"]
-      },
-      "possibleCauses": [
-        "Major market event or breaking news",
-        "Multiple coordinated announcements",
-        "Market crash or major price movement"
-      ]
-    },
-    {
-      "id": "anomaly_coordinated_publishing_def456",
-      "type": "coordinated_publishing",
-      "severity": "medium",
-      "detectedAt": "2026-01-22T13:30:00Z",
-      "description": "5 sources published similar headlines within 5 minutes",
-      "data": {
-        "expected": 1,
-        "actual": 5,
-        "deviation": 5,
-        "affectedEntities": ["CoinDesk", "The Block", "Decrypt", "CoinTelegraph", "Blockworks"]
-      },
-      "possibleCauses": [
-        "Press release distribution",
-        "Major announcement from project or company"
-      ]
-    }
-  ],
-  "summary": {
-    "totalAnomalies": 2,
-    "bySeverity": { "high": 1, "medium": 1, "low": 0 },
-    "byType": { "volume_spike": 1, "coordinated_publishing": 1 }
-  },
-  "systemHealth": {
-    "normalArticleRate": 11.5,
-    "currentRate": 48,
-    "activeSources": 12,
-    "totalSources": 12
-  },
-  "generatedAt": "2026-01-22T15:00:00Z"
-}
-```
-
-**Anomaly Types:**
-
-| Type | Description |
-|------|-------------|
-| `volume_spike` | Article volume >3 std dev above normal |
-| `coordinated_publishing` | Multiple sources publish similar headlines within 5 min |
-| `sentiment_shift` | Market sentiment shifts >40% |
-| `ticker_surge` | Ticker mentions spike 5x above baseline |
-| `source_outage` | Source silent for >12 hours |
-| `unusual_timing` | Publishing at unusual hours |
-
----
-
-## AI Agents & Oracle
-
-### GET /api/oracle
-
-The Oracle - Natural language queries over all crypto intelligence.
-
-**Parameters:**
-
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `q` | string | required | Natural language query |
-| `context` | string | - | Additional context (market, news, onchain) |
-| `format` | string | text | Response format: `text`, `json`, `markdown` |
-
-**Example:**
-
-```bash
-curl "https://cryptocurrency.cv/api/oracle?q=What%20are%20VCs%20investing%20in%20this%20month"
-```
-
-**Response:**
-
-```json
-{
-  "answer": "Based on recent news, VCs are focusing on...",
-  "sources": [
-    { "title": "a]6z Leads $50M Round", "source": "CoinDesk", "relevance": 0.95 }
-  ],
-  "confidence": 0.85,
-  "generatedAt": "2026-01-22T15:00:00Z"
-}
-```
+### `GET /api/analytics/anomalies`
 
----
+Detect anomalies in news and market data patterns
 
-## Social Monitoring
+**Price:** `$0.001/request`
 
-### GET /api/social/monitor
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `hours` | number | No | `24` | Filter by hours |
+| `severity` | string | No | — | Filter by severity |
 
-Monitor Discord and Telegram channels for crypto sentiment.
+---
+
+### `GET /api/analytics/causality`
+### `POST /api/analytics/causality`
 
-**Parameters:**
+Causal relationship analysis between events
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `platform` | string | all | Platform: `discord`, `telegram`, `all` |
-| `hours` | integer | 24 | Time range in hours |
-| `sentiment` | string | - | Filter: `bullish`, `bearish`, `neutral` |
+**Price:** `$0.001/request`
 
-**POST Parameters (webhook ingestion):**
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `eventId` | string | No | — | Filter by eventId |
+| `type` | string | No | — | Data or content type |
+| `asset` | string | No | — | Asset identifier (e.g., BTC, ETH) |
+| `limit` | number | No | `50` | Maximum number of results to return |
 
-| Field | Type | Description |
-|-------|------|-------------|
-| `platform` | string | `discord` or `telegram` |
-| `channel` | string | Channel name/ID |
-| `content` | string | Message content |
-| `author` | string | Message author (optional) |
-| `timestamp` | string | ISO timestamp (optional) |
+---
 
-**Example:**
+### `GET /api/analytics/credibility`
 
-```bash
-# Get monitored sentiment
-curl "https://cryptocurrency.cv/api/social/monitor?platform=discord"
+News source credibility scoring and analysis
 
-# Ingest message via webhook
-curl -X POST "https://cryptocurrency.cv/api/social/monitor" \
-  -H "Content-Type: application/json" \
-  -d '{"platform": "discord", "channel": "alpha", "content": "BTC looking strong"}'
-```
+**Price:** `$0.001/request`
 
----
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `source` | string | No | — | Filter by news source |
+| `sortBy` | string | No | `score` | Filter by sortBy |
 
-### GET /api/social/influencer-score
+---
 
-Get influencer reliability and prediction accuracy scores.
+### `POST /api/analytics/events`
+### `GET /api/analytics/events`
 
-**Parameters:**
+Event detection and impact analysis
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `username` | string | - | Specific influencer username |
-| `platform` | string | twitter | Platform: `twitter`, `youtube`, `telegram` |
-| `limit` | integer | 50 | Number of influencers to return |
-| `sort` | string | accuracy | Sort by: `accuracy`, `followers`, `influence` |
+**Price:** `$0.001/request`
 
 ---
-
-## Storage & Export
 
-### GET /api/storage/cas
+### `GET /api/analytics/forensics`
+### `POST /api/analytics/forensics`
 
-Content-addressable storage using IPFS-style hashing.
+News forensics - coordination detection and origin tracing
 
-**Parameters:**
+**Price:** `$0.001/request`
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `hash` | string | - | Content hash to retrieve |
-| `action` | string | get | Action: `get`, `put`, `verify` |
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `action` | string | No | `report` | API action to perform |
+| `source` | string | No | — | Filter by news source |
+| `article` | string | No | — | Filter by article |
 
-**POST (store content):**
+---
 
-```bash
-curl -X POST "https://cryptocurrency.cv/api/storage/cas" \
-  -H "Content-Type: application/json" \
-  -d '{"content": "Article content...", "metadata": {"source": "coindesk"}}'
-```
+### `GET /api/analytics/gaps`
 
-**Response:**
+Coverage gap detection in crypto news
 
-```json
-{
-  "hash": "sha256:abc123def456...",
-  "size": 1024,
-  "storedAt": "2026-01-22T15:00:00Z"
-}
-```
+**Price:** `$0.001/request`
 
 ---
 
-### GET /api/export
+### `GET /api/analytics/headlines`
 
-Export data in various formats.
+Headline analytics and trend detection
 
-**Parameters:**
+**Price:** `$0.001/request`
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `type` | string | news | Data type: `news`, `portfolio`, `watchlist`, `alerts` |
-| `format` | string | json | Format: `json`, `csv`, `parquet` |
-| `from` | string | - | Start date (ISO 8601) |
-| `to` | string | - | End date (ISO 8601) |
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `hours` | number | No | `24` | Filter by hours |
+| `changesOnly` | string | No | — | Filter by changesOnly |
 
 ---
-
-### GET /api/exports
 
-List export jobs or get schemas.
+### `GET /api/analytics/usage`
 
-**Parameters:**
+API usage analytics and statistics
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `schema` | boolean | false | Return available export schemas |
-| `archives` | boolean | false | Return monthly archives |
+**Price:** `$0.001/request`
 
-**Example - List jobs:**
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `key_prefix` | string | No | — | Filter by key prefix |
+| `key_id` | string | No | — | Filter by key id |
+| `days` | number | No | `30` | Number of days of historical data |
+| `api_key` | string | No | — | Filter by api key |
 
-```bash
-curl "https://cryptocurrency.cv/api/exports"
-```
+---
 
-**Response:**
+### `GET /api/anomalies`
+### `POST /api/anomalies`
 
-```json
-{
-  "success": true,
-  "jobs": [
-    {
-      "id": "export_abc123",
-      "status": "completed",
-      "format": "json",
-      "createdAt": "2026-01-22T10:00:00Z"
-    }
-  ],
-  "count": 1
-}
-```
+Anomaly detection across market and news data
 
-**Example - Get schemas:**
+**Price:** `$0.001/request`
 
-```bash
-curl "https://cryptocurrency.cv/api/exports?schema=true"
-```
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `action` | string | No | — | API action to perform |
+| `limit` | number | No | `50` | Maximum number of results to return |
+| `signal` | string | No | — | Filter by signal |
+| `severity` | string | No | — | Filter by severity |
+| `since` | string | No | — | Start timestamp or date |
 
 ---
 
-### GET /api/exports/[id]
+### `GET /api/citations`
+### `POST /api/citations`
 
-Get export job status or download result.
+Citation verification and source attribution
 
-**Parameters:**
+**Price:** `$0.001/request`
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `download` | boolean | false | Download the export result |
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `action` | string | No | `stats` | API action to perform |
+| `year` | number | No | — | Filter by year |
+| `keyword` | string | No | — | Filter by keyword |
+| `author` | string | No | — | Filter by author |
+| `limit` | number | No | `50` | Maximum number of results to return |
+| `id` | string | No | — | Unique identifier |
+| `name` | string | No | — | Filter by name |
+| `min` | number | No | `2` | Filter by min |
+| `window` | number | No | `3` | Filter by window |
+| `from` | string | No | — | Start date (ISO 8601 or YYYY-MM-DD) |
+| `to` | string | No | — | End date (ISO 8601 or YYYY-MM-DD) |
+| `format` | string | No | `bibtex` | Response format |
+| `ids` | string | No | — | Comma-separated IDs |
 
-**Example:**
+---
 
-```bash
-curl "https://cryptocurrency.cv/api/exports/export_abc123"
-```
+### `POST /api/claims`
+### `GET /api/claims`
 
-**Response:**
+Fact-checkable claims extracted from crypto news
 
-```json
-{
-  "success": true,
-  "job": {
-    "id": "export_abc123",
-    "status": "completed",
-    "progress": 100,
-    "format": "json",
-    "createdAt": "2026-01-22T10:00:00Z",
-    "completedAt": "2026-01-22T10:02:00Z",
-    "result": {
-      "filename": "export_abc123.json",
-      "size": 125000,
-      "rowCount": 500
-    }
-  }
-}
-```
+**Price:** `$0.001/request`
 
 ---
 
-### GET /api/export/jobs
+### `GET /api/coverage-gap`
 
-List and manage export jobs.
+Identify underreported crypto stories and events
 
-**Parameters:**
+**Price:** `$0.001/request`
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `status` | string | - | Filter: `pending`, `processing`, `completed`, `failed` |
-| `cleanup` | boolean | false | Remove old jobs |
-| `maxAge` | integer | 3600000 | Max age in ms for cleanup (default: 1 hour) |
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `action` | string | No | `report` | API action to perform |
+| `period` | string | No | `24h` | Time period for data aggregation |
+| `topic` | string | No | — | Topic or subject to analyze |
+| `severity` | string | No | — | Filter by severity |
+
+---
 
-**Example:**
+### `GET /api/entities`
 
-```bash
-curl "https://cryptocurrency.cv/api/export/jobs?status=completed"
-```
+Named entity database for crypto organizations and people
 
-**Response:**
+**Price:** `$0.001/request`
 
-```json
-{
-  "success": true,
-  "count": 3,
-  "jobs": [
-    {
-      "id": "job_abc123",
-      "status": "completed",
-      "progress": 100,
-      "format": "csv",
-      "createdAt": "2026-01-22T10:00:00Z",
-      "completedAt": "2026-01-22T10:01:30Z",
-      "result": {
-        "filename": "export.csv",
-        "size": 45000,
-        "sizeHuman": "43.95 KB",
-        "rowCount": 200
-      }
-    }
-  ]
-}
-```
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `limit` | number | No | `30` | Maximum number of results to return |
+| `type` | string | No | — | Data or content type |
+| `min_mentions` | number | No | `1` | Filter by min mentions |
 
 ---
 
-## Research Endpoints
+### `GET /api/events`
 
-### GET /api/research/backtest
+Crypto market events and calendar
 
-Backtest trading strategies using historical news data.
+**Price:** `$0.001/request`
 
-**POST Parameters:**
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `category` | string | No | — | Filter by category |
+| `importance` | string | No | — | Filter by importance |
+| `limit` | number | No | `50` | Maximum number of results to return |
 
-| Field | Type | Description |
-|-------|------|-------------|
-| `strategy` | string | Strategy type: `sentiment_momentum`, `narrative_follow`, `whale_tracking` |
-| `asset` | string | Asset to backtest (BTC, ETH, etc.) |
-| `startDate` | string | Start date (ISO 8601) |
-| `endDate` | string | End date (ISO 8601) |
-| `initialCapital` | number | Starting capital (default: 10000) |
+---
 
-**Example:**
+### `GET /api/knowledge-graph`
+### `POST /api/knowledge-graph`
 
-```bash
-curl -X POST "https://cryptocurrency.cv/api/research/backtest" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "strategy": "sentiment_momentum",
-    "asset": "BTC",
-    "startDate": "2025-01-01",
-    "endDate": "2025-12-31"
-  }'
-```
+Crypto knowledge graph of entities, events, and relationships
 
----
+**Price:** `$0.001/request`
 
-### GET /api/academic
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `entity` | string | No | — | Filter by entity |
+| `type` | string | No | — | Data or content type |
+| `depth` | number | No | — | Filter by depth |
+| `minMentions` | number | No | — | Filter by minMentions |
+| `minWeight` | number | No | — | Filter by minWeight |
 
-Academic access program for researchers.
+---
 
-**Parameters:**
+### `GET /api/relationships`
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `action` | string | info | Action: `info`, `register`, `projects`, `usage` |
+Entity relationship mapping in crypto ecosystem
 
-**POST (register):**
+**Price:** `$0.001/request`
 
-```bash
-curl -X POST "https://cryptocurrency.cv/api/academic" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "name": "Dr. Jane Smith",
-    "institution": "MIT",
-    "email": "jane@mit.edu",
-    "researchArea": "crypto market microstructure"
-  }'
-```
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `limit` | number | No | `20` | Maximum number of results to return |
+| `actor_type` | string | No | — | Filter by actor type |
+| `action` | string | No | — | API action to perform |
+| `sentiment` | string | No | — | Filter by sentiment |
 
 ---
 
-### GET /api/citations
+### `GET /api/v1/knowledge-graph`
 
-Academic citation network for papers citing our data.
+Crypto entity knowledge graph
 
-**Parameters:**
+**Price:** `$0.001/request`
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `action` | string | list | Action: `list`, `add`, `graph`, `metrics` |
-| `format` | string | json | Export format: `json`, `bibtex`, `ris` |
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `stats` | string | No | — | Filter by stats |
+| `from` | string | No | — | Start date (ISO 8601 or YYYY-MM-DD) |
+| `to` | string | No | — | End date (ISO 8601 or YYYY-MM-DD) |
+| `entity` | string | No | — | Filter by entity |
+| `impact` | string | No | — | Filter by impact |
+| `hops` | number | No | `2` | Filter by hops |
+| `q` | string | No | — | Search query string |
+| `search` | number | No | — | Filter by search |
+| `format` | string | No | `d3` | Response format |
 
 ---
-
-### GET /api/predictions
 
-Prediction tracking with accuracy scoring.
+## Aptos
 
-**Parameters:**
+### `GET /api/aptos`
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `action` | string | list | Action: `list`, `submit`, `verify`, `leaderboard` |
-| `asset` | string | - | Filter by asset |
-| `predictor` | string | - | Filter by predictor |
+Aptos blockchain overview and statistics
 
-**POST (submit prediction):**
+**Price:** `$0.001/request`
 
-```bash
-curl -X POST "https://cryptocurrency.cv/api/predictions" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "asset": "BTC",
-    "prediction": "above",
-    "target": 150000,
-    "deadline": "2026-06-30",
-    "reasoning": "ETF inflows + halving cycle"
-  }'
-```
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `address` | string | No | — | Wallet or contract address |
+| `tx` | string | No | — | Filter by tx |
+| `block` | string | No | — | Filter by block |
+| `view` | string | No | — | Filter by view |
+| `with_transactions` | string | No | — | Filter by with transactions |
+| `limit` | number | No | `25` | Maximum number of results to return |
+| `start` | string | No | — | Start position for pagination |
 
 ---
 
-## Feed Formats
+### `GET /api/aptos/events`
 
-### GET /api/rss
+Aptos blockchain event data
 
-RSS 2.0 feed output.
+**Price:** `$0.001/request`
 
-**Parameters:**
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `address` | number | No | — | Wallet or contract address |
+| `limit` | number | No | `25` | Maximum number of results to return |
+| `start` | number | No | — | Start position for pagination |
+| `handle` | string | No | — | Filter by handle |
+| `field` | string | No | — | Filter by field |
+| `creation_number` | string | No | — | Filter by creation number |
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `feed` | string | all | Feed type: `all`, `bitcoin`, `defi` |
-| `limit` | integer | 20 | Number of items |
+---
+
+### `GET /api/aptos/resources`
 
-**Example:**
+Aptos account resources and state
 
-```bash
-curl "https://cryptocurrency.cv/api/rss?feed=bitcoin"
-```
+**Price:** `$0.001/request`
 
-Returns XML RSS feed.
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `address` | string | No | — | Wallet or contract address |
+| `type` | string | No | — | Data or content type |
 
 ---
 
-### GET /api/atom
+### `GET /api/aptos/transactions`
 
-Atom feed output.
+Aptos transaction history and details
 
-**Parameters:**
+**Price:** `$0.001/request`
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `feed` | string | all | Feed type: `all`, `bitcoin`, `defi` |
-| `limit` | integer | 20 | Number of items |
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `address` | string | No | — | Wallet or contract address |
+| `hash` | string | No | — | Transaction hash |
+| `limit` | number | No | `25` | Maximum number of results to return |
+| `start` | string | No | — | Start position for pagination |
 
 ---
 
-### GET /api/opml
+## Bitcoin
 
-OPML export of all source feeds.
+### `GET /api/bitcoin`
 
-**Example:**
+Bitcoin network overview and market data
 
-```bash
-curl "https://cryptocurrency.cv/api/opml" > crypto-feeds.opml
-```
+**Price:** `$0.001/request`
 
-Import this into any RSS reader to subscribe to all sources.
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `limit` | number | No | `10` | Maximum number of results to return |
+| `lang` | string | No | `en` | Language code (e.g., en, es, zh) |
 
 ---
 
-## Utility Endpoints
+### `GET /api/bitcoin/block-height`
 
-### GET /api/health
+Current Bitcoin block height
 
-Comprehensive health check endpoint with source status and system metrics.
+**Price:** `$0.001/request`
 
-**Response:**
+---
 
-```json
-{
-  "status": "healthy",
-  "timestamp": "2026-01-22T12:30:00Z",
-  "totalResponseTime": 2450,
-  "summary": {
-    "healthy": 18,
-    "degraded": 2,
-    "down": 0,
-    "total": 20
-  },
-  "system": {
-    "cache": {
-      "news": { "hits": 1250, "misses": 45, "staleHits": 12, "errors": 0, "backend": "memory" },
-      "market": { "hits": 890, "misses": 23, "staleHits": 5, "errors": 0, "backend": "memory" },
-      "ai": { "hits": 320, "misses": 12, "staleHits": 2, "errors": 0, "backend": "memory" },
-      "global": { "hits": 156, "misses": 8, "staleHits": 1, "errors": 0, "backend": "memory" }
-    },
-    "monitoring": {
-      "sentry": true,
-      "environment": "production",
-      "release": "1.0.0"
-    }
-  },
-  "sources": [
-    {
-      "source": "coindesk",
-      "status": "healthy",
-      "responseTime": 245,
-      "lastArticle": "Bitcoin Surges Past $100K"
-    }
-  ]
-}
-```
+### `GET /api/bitcoin/blocks`
 
-**Status Codes:**
-- `200` - Healthy or degraded
-- `503` - Down (fewer than 3 healthy sources)
+Recent Bitcoin block data and details
 
----
+**Price:** `$0.001/request`
 
-### GET /api/cache
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `start_height` | string | No | — | Starting block height |
 
-Get cache statistics for news, AI, and translation caches.
+---
 
-**Response:**
+### `GET /api/bitcoin/difficulty`
 
-```json
-{
-  "caches": {
-    "news": { "hits": 1250, "misses": 45, "size": 128 },
-    "ai": { "hits": 320, "misses": 12, "size": 64 },
-    "translation": { "hits": 890, "misses": 23, "size": 256 }
-  },
-  "timestamp": "2026-01-22T12:30:00Z"
-}
-```
+Bitcoin mining difficulty and adjustment data
 
----
+**Price:** `$0.001/request`
 
-### DELETE /api/cache
+---
 
-Clear all caches (news, AI, and translation).
+### `GET /api/bitcoin/mempool/blocks`
 
-**Response:**
+Bitcoin mempool projected blocks
 
-```json
-{
-  "message": "All caches cleared",
-  "timestamp": "2026-01-22T12:30:00Z"
-}
-```
+**Price:** `$0.001/request`
 
 ---
 
-### GET /status
+### `GET /api/bitcoin/mempool/fees`
 
-Visual system status dashboard showing real-time health of all services.
+Bitcoin mempool fee estimates
 
-**URL:** `https://cryptocurrency.cv/status`
+**Price:** `$0.001/request`
 
-This is a **UI page** (not a JSON API) that displays:
+---
 
-| Section | Description |
-|---------|-------------|
-| **Overall Status** | Green/Yellow/Red indicator with system state |
-| **Service Status** | Health of API, Cache, External APIs, x402 Facilitator |
-| **System Metrics** | Version, uptime, active sources, 24h article count |
-| **API Endpoints** | Status of all major endpoints |
-| **News Sources** | Top 10 sources with article counts and last update time |
+### `GET /api/bitcoin/mempool/info`
 
-**Use Cases:**
-- Monitor service health before integrating
-- Debug connectivity issues
-- Verify sources are active
-- Check system uptime
+Bitcoin mempool size and transaction count
 
-For programmatic health checks, use [GET /api/health](#get-apihealth) instead.
+**Price:** `$0.001/request`
 
 ---
 
-## Tags & Discovery
+### `GET /api/v1/bitcoin`
 
-### GET /api/tags
+Bitcoin network data and statistics
 
-Get all tags with categories for filtering news.
+**Price:** `$0.001/request`
 
-**Parameters:**
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `limit` | number | No | `10` | Maximum number of results to return |
+| `lang` | string | No | `en` | Language code (e.g., en, es, zh) |
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `slug` | string | - | Get a single tag by slug |
-| `category` | string | - | Filter by category: `asset`, `topic`, `event`, `technology`, `entity`, `sentiment` |
+---
+
+## Data Export
 
-**Example - Get all tags:**
+### `GET /api/export`
+### `POST /api/export`
 
-```bash
-curl "https://cryptocurrency.cv/api/tags"
-```
+Export market, news, and analytics data
 
-**Response:**
+**Price:** `$0.001/request`
 
-```json
-{
-  "totalCount": 85,
-  "categories": [
-    { "name": "asset", "count": 25 },
-    { "name": "topic", "count": 20 },
-    { "name": "event", "count": 15 },
-    { "name": "technology", "count": 12 },
-    { "name": "entity", "count": 8 },
-    { "name": "sentiment", "count": 5 }
-  ],
-  "tags": [
-    {
-      "slug": "bitcoin",
-      "name": "Bitcoin",
-      "icon": "₿",
-      "category": "asset",
-      "priority": 1,
-      "url": "/tags/bitcoin"
-    }
-  ]
-}
-```
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `type` | string | No | `news` | Data or content type |
+| `format` | string | No | `json` | Response format |
+| `limit` | number | No | `100` | Maximum number of results to return |
+| `from` | string | No | — | Start date (ISO 8601 or YYYY-MM-DD) |
+| `to` | string | No | — | End date (ISO 8601 or YYYY-MM-DD) |
+| `download` | string | No | — | Set to true for file download response |
 
-**Example - Get single tag:**
+---
 
-```bash
-curl "https://cryptocurrency.cv/api/tags?slug=bitcoin"
-```
+### `GET /api/export/jobs`
 
-**Response:**
+Check status of async export jobs
 
-```json
-{
-  "tag": {
-    "slug": "bitcoin",
-    "name": "Bitcoin",
-    "icon": "₿",
-    "category": "asset",
-    "priority": 1
-  },
-  "url": "/tags/bitcoin"
-}
-```
+**Price:** `$0.001/request`
 
-**Cache:** 1 hour
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `status` | string | No | — | Filter by status |
+| `cleanup` | string | No | — | Filter by cleanup |
+| `maxAge` | number | No | `3600000` | Filter by maxAge |
 
 ---
+
+### `GET /api/exports`
+### `POST /api/exports`
 
-### GET /api/tags/[slug]
+Manage and list data exports
 
-Get detailed tag information with matching articles.
+**Price:** `$0.001/request`
 
-**Example:**
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `schema` | string | No | — | Filter by schema |
+| `archives` | string | No | — | Filter by archives |
 
-```bash
-curl "https://cryptocurrency.cv/api/tags/bitcoin"
-```
+---
+
+### `GET /api/v1/export`
 
-**Response:**
+Bulk data export in JSON or CSV format
 
-```json
-{
-  "tag": {
-    "slug": "bitcoin",
-    "name": "Bitcoin",
-    "icon": "₿",
-    "category": "asset",
-    "priority": 1,
-    "url": "/tags/bitcoin"
-  },
-  "articles": [
-    {
-      "title": "Bitcoin Hits $100K Milestone",
-      "link": "https://coindesk.com/...",
-      "description": "Bitcoin reached a historic...",
-      "source": "CoinDesk",
-      "pubDate": "2026-01-22T10:00:00Z",
-      "timeAgo": "2 hours ago"
-    }
-  ],
-  "articleCount": 25,
-  "relatedTags": [
-    { "slug": "ethereum", "name": "Ethereum", "icon": "⟠", "url": "/tags/ethereum" }
-  ],
-  "structuredData": { "@context": "https://schema.org", ... },
-  "meta": {
-    "title": "Bitcoin Crypto News | Latest Bitcoin Updates",
-    "description": "The original cryptocurrency...",
-    "canonical": "/tags/bitcoin"
-  }
-}
-```
+**Price:** `$0.01/request`
 
-**Cache:** 5 minutes
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `format` | string | No | `json` | Response format |
+| `type` | string | No | `coins` | Data or content type |
+| `limit` | number | No | `100` | Maximum number of results to return |
 
 ---
 
-## Gateway & Integration
+## DeFi
 
-### POST /api/gateway
+### `GET /api/bridges`
 
-Unified gateway endpoint for calling multiple API functions. Useful for MCP integrations and ChatGPT plugins.
+Cross-chain bridge volume and activity data
 
-**Request Body:**
+**Price:** `$0.001/request`
 
-| Field | Type | Required | Description |
-|-------|------|----------|-------------|
-| `apiName` | string | Yes | API function: `getLatestNews`, `searchNews`, `getDefiNews`, `getBitcoinNews`, `getBreakingNews`, `getSources` |
-| `arguments` | string | No | JSON-encoded arguments |
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `bridgeId` | number | No | — | Filter by bridgeId |
+
+---
 
-**Example:**
+### `GET /api/defi`
 
-```bash
-curl -X POST "https://cryptocurrency.cv/api/gateway" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "apiName": "getLatestNews",
-    "arguments": "{\"limit\": 5, \"source\": \"coindesk\"}"
-  }'
-```
+DeFi protocol overview and aggregate statistics
 
-**Supported API Names:**
+**Price:** `$0.001/request`
 
-| API Name | Arguments | Description |
-|----------|-----------|-------------|
-| `getLatestNews` | `limit`, `source` | Fetch latest news |
-| `searchNews` | `keywords`, `limit` | Search news |
-| `getDefiNews` | `limit` | DeFi news |
-| `getBitcoinNews` | `limit` | Bitcoin news |
-| `getBreakingNews` | `limit` | Breaking news |
-| `getSources` | - | List sources |
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `limit` | number | No | `10` | Maximum number of results to return |
+| `lang` | string | No | `en` | Language code (e.g., en, es, zh) |
 
 ---
 
-## API Key Management
+### `GET /api/defi/bridges`
 
-### GET /api/register
+DeFi bridge volumes and cross-chain flows
 
-Get API key registration information and available tiers.
+**Price:** `$0.001/request`
 
-**Response:**
+---
+
+### `GET /api/defi/dex-volumes`
 
-```json
-{
-  "endpoint": "/api/register",
-  "status": "Free key registration discontinued",
-  "description": "Free API keys are no longer issued. Use x402 micropayment or subscribe to Pro/Enterprise.",
-  "freePreview": {
-    "endpoint": "/api/sample",
-    "description": "2 headline snippets + 2 coin prices — no key required"
-  },
-  "tiers": [
-    {
-      "id": "pro",
-      "name": "Pro",
-      "requestsPerDay": 50000,
-      "features": ["All endpoints", "AI access", "Priority support"]
-    }
-  ],
-  "x402": {
-    "price": "$0.001 per request",
-    "currency": "USDC on Base"
-  },
-  "notes": [
-    "Free API keys are no longer issued",
-    "Use /api/sample for a free preview",
-    "x402 micropayment: $0.001/req, no signup"
-  ]
-}
-```
+DEX trading volume across chains and protocols
 
+**Price:** `$0.001/request`
+
 ---
+
+### `GET /api/defi/stablecoins`
 
-### POST /api/register
+Stablecoin market data and supply statistics
 
-Create a new API key or manage existing keys.
+**Price:** `$0.001/request`
 
-**Request Body (Create Key):**
+---
+
+### `GET /api/defi/summary`
 
-```json
-{
-  "email": "user@example.com",
-  "name": "My App Key"
-}
-```
+DeFi market summary with key metrics
 
-**Response:**
+**Price:** `$0.001/request`
 
-```json
-{
-  "key": "cda_free_xxxxxxxxxxxx",
-  "tier": "free",
-  "rateLimit": "100 requests/day",
-  "docs": "/docs/api",
-  "message": "Save this key - it will only be shown once!"
-}
-```
+---
 
-**Request Body (List Keys):**
+### `GET /api/defi/yields`
 
-```json
-{
-  "action": "list",
-  "email": "user@example.com"
-}
-```
+DeFi yield farming opportunities with filtering
 
-**Request Body (Revoke Key):**
+**Price:** `$0.001/request`
 
-```json
-{
-  "action": "revoke",
-  "email": "user@example.com",
-  "keyId": "key_123456"
-}
-```
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `type` | string | No | — | Data or content type |
+| `limit` | number | No | `20` | Maximum number of results to return |
+| `chain` | string | No | — | Blockchain network (e.g., ethereum, solana) |
+| `project` | string | No | — | DeFi project or protocol name |
+| `stable` | string | No | — | Filter for stablecoin pools only |
+| `min_tvl` | number | No | — | Minimum total value locked in USD |
+| `min_apy` | number | No | — | Minimum annual percentage yield |
+| `max_apy` | number | No | — | Maximum annual percentage yield |
 
 ---
+
+### `GET /api/defi/yields/chains`
 
-### GET /api/keys
+Yield data aggregated by blockchain
 
-List API keys (requires authentication).
+**Price:** `$0.001/request`
 
-**Headers:**
+---
 
-```
-Authorization: Bearer <YOUR_TOKEN>
-```
+### `GET /api/defi/yields/median`
 
-**Response:**
+Median yield statistics across DeFi protocols
 
-```json
-{
-  "keys": [
-    {
-      "id": "key_abc123",
-      "name": "Production Key",
-      "tier": "pro",
-      "createdAt": "2026-01-15T00:00:00Z",
-      "lastUsed": "2026-01-22T10:30:00Z",
-      "usage": { "today": 450, "limit": 10000 }
-    }
-  ],
-  "total": 1
-}
-```
+**Price:** `$0.001/request`
 
 ---
+
+### `GET /api/defi/yields/projects`
 
-### POST /api/keys
+Yield data aggregated by DeFi project
 
-Create a new API key.
+**Price:** `$0.001/request`
+
+---
 
-**Request Body:**
+### `GET /api/defi/yields/search`
 
-```json
-{
-  "name": "My New Key",
-  "tier": "free"
-}
-```
+Search DeFi yield opportunities by criteria
 
-**Response:**
+**Price:** `$0.001/request`
 
-```json
-{
-  "key": {
-    "id": "key_xyz789",
-    "key": "cda_free_xxxxxxxxxxxx",
-    "name": "My New Key",
-    "tier": "free",
-    "rateLimit": {
-      "requestsPerDay": 100,
-      "remaining": 100
-    },
-    "createdAt": "2026-01-22T12:30:00Z"
-  }
-}
-```
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `q` | string | No | — | Search query string |
 
 ---
 
-## Analytics Tracking
+### `GET /api/defi/yields/stablecoins`
 
-### GET /api/views
+Stablecoin-specific yield opportunities
 
-Get article view counts for popularity metrics.
+**Price:** `$0.001/request`
 
-**Parameters:**
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `min_tvl` | number | No | `1000000` | Minimum total value locked in USD |
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `ids` | string | - | Comma-separated article IDs (optional, returns all if not provided) |
-| `limit` | integer | 50 | Maximum results (max: 100) |
-| `sort` | string | views | Sort by: `views`, `recent` |
+---
 
-**Example:**
+### `GET /api/dex-volumes`
 
-```bash
-curl "https://cryptocurrency.cv/api/views?limit=10&sort=views"
-```
+Decentralized exchange trading volumes
 
-**Response:**
+**Price:** `$0.001/request`
 
-```json
-{
-  "views": [
-    {
-      "id": "article_abc123",
-      "views": 1250,
-      "views24h": 340,
-      "views7d": 890
-    }
-  ],
-  "total": 150,
-  "fetchedAt": "2026-01-22T12:30:00Z"
-}
-```
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `chain` | string | No | — | Blockchain network (e.g., ethereum, solana) |
+| `top` | number | No | — | Filter by top |
 
 ---
+
+### `GET /api/market/defi`
 
-### POST /api/views
+DeFi sector market overview
 
-Record a view for an article.
+**Price:** `$0.001/request`
+
+---
 
-**Request Body:**
+### `GET /api/solana/defi`
 
-```json
-{
-  "articleId": "article_abc123"
-}
-```
+Solana DeFi protocol data and yields
 
-**Response:**
+**Price:** `$0.001/request`
 
-```json
-{
-  "success": true,
-  "articleId": "article_abc123",
-  "totalViews": 1251
-}
-```
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `address` | string | No | — | Wallet or contract address |
 
 ---
 
-## Trading & Market APIs
+### `GET /api/token-unlocks`
 
-### GET /api/arbitrage
+Upcoming token unlock schedules and amounts
 
-Scan for cross-exchange arbitrage opportunities.
+**Price:** `$0.001/request`
 
-**Parameters:**
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `impact` | string | No | — | Filter by impact |
+| `symbol` | string | No | — | Trading symbol (e.g., BTC, ETH) |
+| `limit` | number | No | `50` | Maximum number of results to return |
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `pairs` | string | BTC,ETH | Comma-separated trading pairs |
-| `minSpread` | number | 0.5 | Minimum spread percentage |
-| `exchanges` | string | all | Filter by exchanges |
+---
 
-**Example:**
+### `GET /api/unlocks`
 
-```bash
-curl "https://cryptocurrency.cv/api/arbitrage?pairs=BTC,ETH&minSpread=1"
-```
+Token unlock events and vesting schedules
 
-**Response:**
+**Price:** `$0.001/request`
 
-```json
-{
-  "opportunities": [
-    {
-      "pair": "BTC/USDT",
-      "buyExchange": "Binance",
-      "sellExchange": "Coinbase",
-      "buyPrice": 98500,
-      "sellPrice": 99200,
-      "spreadPercent": 0.71,
-      "potentialProfit": 700,
-      "volume24h": 15000000,
-      "lastUpdated": "2026-01-22T12:30:00Z"
-    }
-  ],
-  "scanTime": "145ms"
-}
-```
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `limit` | number | No | `10` | Maximum number of results to return |
+| `project` | string | No | — | DeFi project or protocol name |
+| `calendar` | string | No | — | Filter by calendar |
 
 ---
 
-### GET /api/signals
+### `GET /api/v1/defi`
 
-AI-generated trading signals based on news sentiment and market data.
+DeFi protocol data and statistics
 
-**Parameters:**
+**Price:** `$0.002/request`
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `asset` | string | BTC | Asset to analyze |
-| `timeframe` | string | 4h | Signal timeframe: 1h, 4h, 1d |
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `limit` | number | No | `50` | Maximum number of results to return |
+| `chain` | string | No | — | Blockchain network (e.g., ethereum, solana) |
+| `category` | string | No | — | Filter by category |
 
-**Response:**
+---
 
-```json
-{
-  "asset": "BTC",
-  "signal": "buy",
-  "confidence": 0.78,
-  "factors": [
-    { "type": "sentiment", "value": "bullish", "weight": 0.4 },
-    { "type": "technical", "value": "breakout", "weight": 0.3 },
-    { "type": "onchain", "value": "accumulation", "weight": 0.3 }
-  ],
-  "priceTarget": 105000,
-  "stopLoss": 94000,
-  "riskReward": 2.1,
-  "generatedAt": "2026-01-22T12:30:00Z"
-}
-```
+### `GET /api/v1/dex`
 
----
+DEX trading data and analytics
 
-### GET /api/funding
+**Price:** `$0.002/request`
 
-Funding rates across perpetual exchanges.
+---
 
-**Parameters:**
+### `GET /api/yields`
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `symbol` | string | BTCUSDT | Trading pair |
-| `exchanges` | string | all | Filter exchanges |
+DeFi yield farming opportunities
 
-**Response:**
+**Price:** `$0.001/request`
 
-```json
-{
-  "rates": [
-    {
-      "exchange": "Binance",
-      "symbol": "BTCUSDT",
-      "fundingRate": 0.0012,
-      "nextFundingTime": "2026-01-22T16:00:00Z",
-      "markPrice": 98750,
-      "openInterest": 45000000000
-    },
-    {
-      "exchange": "Bybit",
-      "symbol": "BTCUSDT",
-      "fundingRate": 0.0015,
-      "nextFundingTime": "2026-01-22T16:00:00Z"
-    }
-  ],
-  "avgFundingRate": 0.00135,
-  "sentiment": "bullish"
-}
-```
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `chain` | string | No | — | Blockchain network (e.g., ethereum, solana) |
+| `limit` | number | No | `10` | Maximum number of results to return |
 
 ---
 
-### GET /api/options
+## Gaming & Metaverse
 
-Options flow data from major derivatives exchanges.
+### `GET /api/gaming`
 
-**Parameters:**
+Blockchain gaming ecosystem overview
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `asset` | string | BTC | Underlying asset |
-| `exchange` | string | deribit | deribit, okx, bybit |
-| `type` | string | all | call, put, or all |
+**Price:** `$0.001/request`
 
-**Response:**
+---
 
-```json
-{
-  "flows": [
-    {
-      "exchange": "Deribit",
-      "asset": "BTC",
-      "type": "call",
-      "strike": 120000,
-      "expiry": "2026-03-28",
-      "premium": 2500,
-      "size": 100,
-      "impliedVol": 65.5,
-      "timestamp": "2026-01-22T12:25:00Z"
-    }
-  ],
-  "putCallRatio": 0.65,
-  "maxPain": 95000,
-  "totalVolume": 125000000
-}
-```
+### `GET /api/gaming/chains`
 
----
+Gaming activity by blockchain
 
-### GET /api/liquidations
+**Price:** `$0.001/request`
 
-Real-time and historical liquidation data.
+---
 
-**Parameters:**
+### `GET /api/gaming/top`
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `symbol` | string | all | Trading pair filter |
-| `side` | string | all | long, short, or all |
-| `minValue` | number | 10000 | Minimum USD value |
-| `period` | string | 1h | 1h, 4h, 24h |
+Top blockchain games by activity and volume
 
-**Response:**
+**Price:** `$0.001/request`
 
-```json
-{
-  "liquidations": [
-    {
-      "exchange": "Binance",
-      "symbol": "BTCUSDT",
-      "side": "long",
-      "quantity": 2.5,
-      "price": 97500,
-      "value": 243750,
-      "timestamp": "2026-01-22T12:28:00Z"
-    }
-  ],
-  "summary": {
-    "totalLongs": 45000000,
-    "totalShorts": 12000000,
-    "netLiquidations": "long",
-    "largestSingle": 2500000
-  }
-}
-```
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `limit` | number | No | `25` | Maximum number of results to return |
+| `sort` | string | No | `dau` | Sort field |
+| `chain` | string | No | — | Blockchain network (e.g., ethereum, solana) |
 
 ---
+
+## Layer 2
 
-### GET /api/whale-alerts
+### `GET /api/l2`
 
-Large blockchain transactions and whale movements.
+Layer 2 ecosystem overview
 
-**Parameters:**
+**Price:** `$0.001/request`
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `asset` | string | all | BTC, ETH, USDT, etc. |
-| `minValue` | number | 1000000 | Minimum USD value |
-| `type` | string | all | transfer, exchange_in, exchange_out |
+---
+
+### `GET /api/l2/activity`
 
-**Response:**
+Layer 2 transaction activity and growth metrics
 
-```json
-{
-  "alerts": [
-    {
-      "txHash": "abc123...",
-      "asset": "BTC",
-      "amount": 500,
-      "valueUsd": 49500000,
-      "from": "unknown wallet",
-      "to": "Coinbase",
-      "type": "exchange_in",
-      "timestamp": "2026-01-22T12:20:00Z",
-      "sentiment": "bearish"
-    }
-  ],
-  "hourlyFlow": {
-    "exchangeInflow": 125000000,
-    "exchangeOutflow": 95000000,
-    "netFlow": "inflow"
-  }
-}
-```
+**Price:** `$0.001/request`
 
 ---
+
+### `GET /api/l2/projects`
+
+Layer 2 project listings and comparisons
 
-### GET /api/orderbook
+**Price:** `$0.001/request`
 
-Aggregated order book depth across exchanges.
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `limit` | number | No | — | Maximum number of results to return |
 
-**Parameters:**
+---
+
+### `GET /api/l2/risk`
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `symbol` | string | BTCUSDT | Trading pair |
-| `depth` | number | 20 | Number of levels |
-| `exchanges` | string | all | Comma-separated exchanges |
+Layer 2 risk assessment and security scores
 
-**Response:**
+**Price:** `$0.001/request`
 
-```json
-{
-  "symbol": "BTCUSDT",
-  "bids": [
-    { "price": 98500, "quantity": 15.5, "exchanges": ["Binance", "Coinbase"] }
-  ],
-  "asks": [
-    { "price": 98550, "quantity": 12.3, "exchanges": ["Binance", "Kraken"] }
-  ],
-  "spread": 0.05,
-  "imbalance": 0.12,
-  "aggregatedAt": "2026-01-22T12:30:00Z"
-}
-```
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `sort` | string | No | — | Sort field |
+| `limit` | number | No | `20` | Maximum number of results to return |
 
 ---
+
+## Macro & Traditional
+
+### `GET /api/macro`
 
-### GET /api/fear-greed
+Macroeconomic overview relevant to crypto markets
 
-Crypto Fear & Greed Index.
+**Price:** `$0.001/request`
 
-**Parameters:**
+---
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `days` | number | 1 | Historical days (1-365) |
+### `GET /api/macro/correlations`
 
-**Response:**
+Crypto-macro correlation analysis
 
-```json
-{
-  "value": 72,
-  "classification": "Greed",
-  "previousClose": 68,
-  "change": 4,
-  "history": [
-    { "date": "2026-01-21", "value": 68, "classification": "Greed" }
-  ],
-  "components": {
-    "volatility": 25,
-    "momentum": 80,
-    "social": 75,
-    "dominance": 55,
-    "trends": 70
-  }
-}
-```
+**Price:** `$0.001/request`
 
 ---
+
+### `GET /api/macro/dxy`
+
+US Dollar Index (DXY) data and crypto correlation
+
+**Price:** `$0.001/request`
 
-## AI Analysis APIs
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `days` | number | No | `30` | Number of days of historical data |
 
-### POST /api/detect/ai-content
+---
 
-Detect AI-generated content using statistical and linguistic analysis. Works entirely offline - no external AI API required.
+### `GET /api/macro/fed`
 
-**Request Body:**
+Federal Reserve data, rates, and yield curves
 
-| Field | Type | Required | Description |
-|-------|------|----------|-------------|
-| `text` | string | Yes* | Single text to analyze (min 100 chars) |
-| `texts` | array | Yes* | Array of texts for batch analysis (max 50) |
-| `quick` | boolean | No | Use quick mode for faster, less detailed results |
+**Price:** `$0.001/request`
 
-*One of `text` or `texts` is required.
+---
 
-**Single Text Example:**
+### `GET /api/macro/indicators`
 
-```bash
-curl -X POST "https://cryptocurrency.cv/api/detect/ai-content" \
-  -H "Content-Type: application/json" \
-  -d '{"text": "In today'\''s fast-paced world of cryptocurrency, it'\''s important to note that markets are constantly evolving..."}'
-```
+Key macroeconomic indicators
 
-**Batch Analysis Example:**
+**Price:** `$0.001/request`
 
-```bash
-curl -X POST "https://cryptocurrency.cv/api/detect/ai-content" \
-  -H "Content-Type: application/json" \
-  -d '{"texts": ["First article content...", "Second article content..."]}'
-```
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `indicators` | string | No | — | Filter by indicators |
+| `period` | string | No | `1d` | Time period for data aggregation |
 
-**Response (Full Mode):**
+---
 
-```json
-{
-  "mode": "full",
-  "isLikelyAI": true,
-  "confidence": 78,
-  "humanScore": 22,
-  "verdict": "likely_ai",
-  "analysis": {
-    "perplexity": {
-      "score": 0.35,
-      "ngramFrequency": 0.8,
-      "unusualWordRatio": 0.05,
-      "description": "Low perplexity suggests predictable text patterns"
-    },
-    "burstiness": {
-      "score": 0.25,
-      "sentenceLengthVariance": 12,
-      "paragraphLengthVariance": 8,
-      "rhythmScore": 0.3,
-      "description": "Low burstiness indicates uniform sentence structure"
-    },
-    "vocabulary": {
-      "typeTokenRatio": 0.45,
-      "hapaxLegomena": 15,
-      "richness": 0.4,
-      "sophistication": 0.6,
-      "description": "Average vocabulary diversity"
-    },
-    "stylometry": {
-      "avgSentenceLength": 22.5,
-      "avgWordLength": 5.2,
-      "punctuationDensity": 0.08,
-      "functionWordRatio": 0.55,
-      "passiveVoiceRatio": 0.15,
-      "description": "Typical AI writing patterns detected"
-    },
-    "patterns": {
-      "repetitiveStructures": 3,
-      "formulaicOpenings": 2,
-      "listPatterns": 1,
-      "transitionOveruse": 4,
-      "description": "Multiple structural patterns typical of AI"
-    },
-    "phrases": {
-      "aiPhrasesFound": ["in today's fast-paced world", "it's important to note"],
-      "aiPhraseCount": 2,
-      "hedgingLanguage": 0.15,
-      "overlyFormalTone": 0.6,
-      "description": "High-confidence AI phrases detected"
-    }
-  },
-  "signals": [
-    { "type": "phrase", "indicator": "in today's fast-paced world", "weight": 0.9, "confidence": 0.95 }
-  ],
-  "explanation": "Text shows multiple characteristics typical of AI generation including formulaic phrases and uniform structure.",
-  "recommendations": ["Verify source attribution", "Check for original reporting"],
-  "timestamp": "2026-01-22T10:30:00Z"
-}
-```
+### `GET /api/macro/risk-appetite`
 
-**Verdict Scale:**
+Market risk appetite index combining macro and crypto signals
 
-| Verdict | Confidence | Description |
-|---------|------------|-------------|
-| `human` | 0-20% | Very likely human-written |
-| `likely_human` | 20-40% | Probably human-written |
-| `uncertain` | 40-60% | Cannot determine |
-| `likely_ai` | 60-80% | Probably AI-generated |
-| `ai` | 80-100% | Very likely AI-generated |
+**Price:** `$0.001/request`
 
 ---
 
-### GET /api/narratives
+## Market Data
 
-AI-detected narrative clusters in crypto news.
+### `GET /api/charts`
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `period` | string | 24h | Time window: 6h, 12h, 24h, 7d |
-| `limit` | number | 10 | Number of narratives |
+Price chart data for cryptocurrencies
 
-**Response:**
+**Price:** `$0.001/request`
 
-```json
-{
-  "narratives": [
-    {
-      "id": "etf-adoption",
-      "title": "Bitcoin ETF Institutional Adoption",
-      "summary": "Major institutions increasing BTC exposure through ETFs",
-      "sentiment": "bullish",
-      "strength": 0.89,
-      "articleCount": 45,
-      "tickers": ["BTC", "GBTC", "IBIT"],
-      "keyPhrases": ["institutional buying", "ETF inflows", "BlackRock"],
-      "trendDirection": "rising"
-    }
-  ],
-  "emergingNarratives": [...],
-  "fadingNarratives": [...]
-}
-```
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `coin` | string | No | — | Cryptocurrency ID or symbol |
+| `range` | string | No | `24h` | Filter by range |
 
 ---
+
+### `GET /api/coincap`
 
-### GET /api/entities
+CoinCap market data aggregation
 
-Named entity recognition in news articles.
+**Price:** `$0.001/request`
 
-**Parameters:**
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `limit` | number | No | `100` | Maximum number of results to return |
+| `search` | number | No | — | Filter by search |
+| `offset` | number | No | `0` | Number of results to skip |
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `url` | string | - | Article URL to analyze |
-| `text` | string | - | Raw text to analyze |
+---
+
+### `GET /api/coinmarketcap`
 
-**Response:**
+CoinMarketCap market data aggregation
 
-```json
-{
-  "entities": [
-    { "text": "BlackRock", "type": "ORGANIZATION", "count": 5 },
-    { "text": "Bitcoin", "type": "CRYPTO_ASSET", "count": 12 },
-    { "text": "Gary Gensler", "type": "PERSON", "count": 3 },
-    { "text": "SEC", "type": "REGULATOR", "count": 8 }
-  ],
-  "relationships": [
-    { "subject": "BlackRock", "predicate": "filed", "object": "ETF application" }
-  ]
-}
-```
+**Price:** `$0.001/request`
 
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `action` | string | No | `summary` | API action to perform |
+| `limit` | number | No | `50` | Maximum number of results to return |
+| `sort` | string | No | — | Sort field |
+| `tag` | string | No | — | Filter by tag |
+| `symbol` | string | Yes | — | Trading symbol (e.g., BTC, ETH) |
+| `id` | string | Yes | — | Unique identifier |
+| `category` | string | Yes | — | Filter by category |
+| `period` | string | No | — | Time period for data aggregation |
+| `q` | string | Yes | — | Search query string |
+
 ---
+
+### `GET /api/coinpaprika`
 
-### GET /api/claims
+CoinPaprika overview and market data
 
-Extract and verify claims from articles.
+**Price:** `$0.001/request`
 
-**Parameters:**
+---
+
+### `GET /api/coinpaprika/coins`
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `url` | string | required | Article URL |
+CoinPaprika coin listings and details
 
-**Response:**
+**Price:** `$0.001/request`
 
-```json
-{
-  "claims": [
-    {
-      "text": "Bitcoin hash rate reached all-time high",
-      "type": "factual",
-      "verifiable": true,
-      "confidence": 0.95,
-      "sources": ["blockchain.com", "glassnode.com"]
-    },
-    {
-      "text": "BTC will reach $200K by end of year",
-      "type": "prediction",
-      "verifiable": false,
-      "confidence": 0.30
-    }
-  ]
-}
-```
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `limit` | number | No | — | Maximum number of results to return |
 
 ---
+
+### `GET /api/coinpaprika/exchanges`
+
+CoinPaprika exchange data
 
-### GET /api/clickbait
+**Price:** `$0.001/request`
 
-Detect clickbait and sensationalism in headlines.
+---
 
-**Parameters:**
+### `GET /api/coinpaprika/search`
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `headline` | string | required | Headline to analyze |
+Search CoinPaprika for coins, exchanges, and people
 
-**Response:**
+**Price:** `$0.001/request`
 
-```json
-{
-  "isClickbait": false,
-  "score": 0.23,
-  "factors": {
-    "sensationalWords": 0,
-    "exaggeration": false,
-    "emotionalManipulation": false,
-    "misleadingClaims": false
-  },
-  "suggestion": "Headline appears factual and balanced"
-}
-```
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `q` | string | No | — | Search query string |
 
 ---
 
-### GET /api/origins
+### `GET /api/coinpaprika/tickers`
 
-Detect original source of a news story.
-
-**Parameters:**
-
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `url` | string | required | Article URL |
+CoinPaprika ticker data with prices and volume
 
-**Response:**
+**Price:** `$0.001/request`
 
-```json
-{
-  "originalSource": {
-    "url": "https://sec.gov/news/...",
-    "title": "SEC Press Release",
-    "publishedAt": "2026-01-22T09:00:00Z",
-    "type": "primary_source"
-  },
-  "derivedFrom": [
-    {
-      "url": "https://coindesk.com/...",
-      "publishedAt": "2026-01-22T09:15:00Z",
-      "similarity": 0.85
-    }
-  ],
-  "isOriginal": false,
-  "propagationChain": [...]
-}
-```
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `quotes` | string | No | `USD` | Filter by quotes |
 
 ---
 
-### GET /api/relationships
-
-Extract "who did what" relationships from articles.
-
-**Parameters:**
-
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `url` | string | required | Article URL |
+### `GET /api/compare`
 
-**Response:**
+Compare multiple cryptocurrencies side by side
 
-```json
-{
-  "relationships": [
-    {
-      "subject": "BlackRock",
-      "action": "purchased",
-      "object": "500 BTC",
-      "context": "for iShares ETF",
-      "confidence": 0.92
-    },
-    {
-      "subject": "SEC",
-      "action": "approved",
-      "object": "spot Bitcoin ETF",
-      "context": "historic ruling",
-      "confidence": 0.98
-    }
-  ]
-}
-```
-
----
-
-## Research & Analytics APIs
+**Price:** `$0.001/request`
 
-### GET /api/regulatory
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `coins` | string | No | — | Comma-separated cryptocurrency IDs |
 
-Regulatory news and intelligence.
+---
 
-**Parameters:**
+### `GET /api/cryptocompare`
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `jurisdiction` | string | all | us, eu, uk, asia, all |
-| `type` | string | all | ruling, proposal, enforcement |
+CryptoCompare market data aggregation
 
-**Response:**
+**Price:** `$0.001/request`
 
-```json
-{
-  "updates": [
-    {
-      "title": "SEC Approves Spot Bitcoin ETF",
-      "jurisdiction": "US",
-      "regulator": "SEC",
-      "type": "ruling",
-      "impact": "high",
-      "affectedAssets": ["BTC", "ETH"],
-      "summary": "Historic approval opens door to institutional investment",
-      "sourceUrl": "https://sec.gov/...",
-      "date": "2026-01-22"
-    }
-  ],
-  "upcomingDeadlines": [...],
-  "sentimentByJurisdiction": {
-    "US": "positive",
-    "EU": "neutral",
-    "Asia": "mixed"
-  }
-}
-```
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `action` | string | No | `overview` | API action to perform |
+| `fsyms` | string | No | — | Filter by fsyms |
+| `tsyms` | string | No | — | Filter by tsyms |
+| `fsym` | string | No | `BTC` | Filter by fsym |
+| `tsym` | string | No | `USD` | Filter by tsym |
+| `interval` | string | No | — | Data interval (e.g., hourly, daily) |
+| `limit` | number | No | `100` | Maximum number of results to return |
+| `exchange` | string | No | `coinbase` | Filter by exchange |
+| `categories` | string | No | — | Filter by categories |
+| `feeds` | string | No | — | Filter by feeds |
+| `sort` | string | No | — | Sort field |
+| `coinId` | number | No | `1182` | Cryptocurrency ID (e.g., bitcoin, ethereum) |
 
 ---
+
+### `GET /api/cryptopanic`
+
+CryptoPanic news feed aggregation
 
-### GET /api/academic
+**Price:** `$0.001/request`
 
-Academic research access for researchers.
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `action` | string | No | `dashboard` | API action to perform |
+| `currencies` | string | No | — | Filter by currencies |
+| `page` | number | No | `1` | Page number for pagination |
+| `filter` | string | No | — | Filter by filter |
+| `kind` | string | No | — | Filter by kind |
+| `regions` | string | No | — | Filter by regions |
+| `source` | string | No | — | Filter by news source |
+| `limit` | number | No | `10` | Maximum number of results to return |
+| `country` | string | No | — | Filter by country code |
 
-**Parameters:**
+---
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `tier` | string | basic | basic, researcher, institution |
-| `format` | string | json | json, csv, parquet |
+### `GET /api/exchange-rates`
 
-**Response:**
+Fiat and crypto exchange rates
 
-```json
-{
-  "access": {
-    "tier": "researcher",
-    "dailyLimit": 10000,
-    "features": ["historical", "bulk_export", "raw_data"],
-    "formats": ["json", "csv", "parquet"]
-  },
-  "endpoints": {
-    "historical": "/api/academic/historical",
-    "bulk": "/api/academic/bulk",
-    "stream": "/api/academic/stream"
-  }
-}
-```
-
----
-
-### GET /api/citations
-
-Citation network for research articles.
-
-**Parameters:**
-
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `articleId` | string | required | Article ID or URL |
-
-**Response:**
-
-```json
-{
-  "article": {
-    "id": "abc123",
-    "title": "Bitcoin ETF Analysis",
-    "citations": 15
-  },
-  "citedBy": [
-    { "title": "Market Impact Study", "url": "...", "date": "2026-01-23" }
-  ],
-  "references": [
-    { "title": "SEC Filing", "url": "...", "type": "primary" }
-  ]
-}
-```
-
----
-
-### GET /api/coverage-gap
-
-Analyze topics with insufficient news coverage.
-
-**Response:**
-
-```json
-{
-  "underreported": [
-    {
-      "topic": "Layer 2 Security Audits",
-      "currentCoverage": 3,
-      "expectedCoverage": 15,
-      "gap": 0.80,
-      "suggestedAngles": [...]
-    }
-  ],
-  "overreported": [
-    {
-      "topic": "Bitcoin Price Predictions",
-      "coverageRatio": 3.5
-    }
-  ]
-}
-```
-
----
-
-## Intelligence APIs
-
-### GET /api/analytics/anomalies
-
-Detect unusual patterns in news flow including volume spikes, coordinated publishing, and sentiment shifts.
-
-**Parameters:**
-
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `hours` | integer | 24 | Time window (1-168) |
-| `severity` | string | - | Filter by: `high`, `medium`, `low` |
-
-**Example:**
-
-```bash
-curl "https://cryptocurrency.cv/api/analytics/anomalies?hours=12&severity=high"
-```
-
-**Response:**
-
-```json
-{
-  "anomalies": [
-    {
-      "id": "anomaly_volume_spike_1737507600",
-      "type": "volume_spike",
-      "severity": "high",
-      "detectedAt": "2026-01-22T10:00:00Z",
-      "description": "Article volume 4.2 standard deviations above normal",
-      "data": {
-        "expected": 12,
-        "actual": 45,
-        "deviation": 4.2,
-        "affectedEntities": ["BTC", "ETF"]
-      },
-      "possibleCauses": ["Breaking news event", "Coordinated release"]
-    }
-  ],
-  "systemHealth": {
-    "normalArticleRate": 8.5,
-    "currentRate": 45,
-    "activeSources": 11,
-    "totalSources": 12
-  },
-  "summary": {
-    "totalAnomalies": 3,
-    "bySeverity": { "high": 1, "medium": 2, "low": 0 },
-    "byType": { "volume_spike": 1, "sentiment_shift": 2 }
-  },
-  "generatedAt": "2026-01-22T10:30:00Z"
-}
-```
-
-**Anomaly Types:**
-
-| Type | Description |
-|------|-------------|
-| `volume_spike` | Article volume >3 std dev above normal |
-| `coordinated_publishing` | Multiple sources publish similar content within 5 min |
-| `sentiment_shift` | Market sentiment shifts >40% in 6 hours |
-| `ticker_surge` | Ticker mentions spike 5x above baseline |
-| `source_outage` | Source silent for >12 hours |
-| `unusual_timing` | Publishing at unusual hours |
-
----
-
-### GET /api/analytics/headlines
-
-Track how article headlines change over time.
-
-**Parameters:**
-
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `hours` | integer | 24 | Time window (1-168) |
-| `changesOnly` | boolean | false | Only show articles with headline changes |
-
-**Example:**
-
-```bash
-curl "https://cryptocurrency.cv/api/analytics/headlines?changesOnly=true"
-```
-
-**Response:**
-
-```json
-{
-  "tracked": [
-    {
-      "articleId": "art_abc123",
-      "originalTitle": "Bitcoin Drops 5%",
-      "currentTitle": "Bitcoin Recovers After 5% Dip",
-      "changes": [
-        {
-          "title": "Bitcoin Recovers After 5% Dip",
-          "detectedAt": "2026-01-22T12:00:00Z",
-          "changeType": "moderate",
-          "sentiment_shift": "more_positive"
-        }
-      ],
-      "totalChanges": 1,
-      "url": "https://coindesk.com/...",
-      "source": "CoinDesk"
-    }
-  ],
-  "recentChanges": [...],
-  "stats": {
-    "totalTracked": 150,
-    "withChanges": 12,
-    "avgChangesPerArticle": 0.08
-  }
-}
-```
-
----
-
-### GET /api/analytics/causality
-
-Perform causal analysis between news events and market movements.
-
-**Parameters:**
-
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `eventId` | string | - | Specific event ID to analyze |
-| `type` | string | - | Filter by event type |
-| `asset` | string | - | Filter by asset |
-| `limit` | integer | 50 | Number of events to return |
-
-**Example:**
-
-```bash
-curl "https://cryptocurrency.cv/api/analytics/causality?asset=BTC&limit=10"
-```
-
-**POST Request (Perform Analysis):**
-
-```bash
-curl -X POST "https://cryptocurrency.cv/api/analytics/causality" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "action": "analyze",
-    "eventId": "caus_abc123",
-    "assets": ["BTC"],
-    "windowBefore": 24,
-    "windowAfter": 48,
-    "method": "event_study"
-  }'
-```
-
-**Response:**
-
-```json
-{
-  "eventId": "caus_abc123",
-  "event": {
-    "timestamp": "2026-01-22T09:00:00Z",
-    "eventType": "regulatory",
-    "description": "SEC approves spot Bitcoin ETF",
-    "assets": ["BTC"]
-  },
-  "method": "event_study",
-  "causalEffect": {
-    "direction": "positive",
-    "magnitude": 8.5,
-    "absoluteChange": 8500,
-    "peakEffect": 12.3,
-    "peakTime": "2026-01-22T14:00:00Z",
-    "halfLife": 6,
-    "persistence": 72
-  },
-  "confidence": 0.92,
-  "pValue": 0.003,
-  "isSignificant": true,
-  "metrics": {
-    "preEventMean": 98000,
-    "postEventMean": 106500,
-    "cumulativeAbnormalReturn": 0.085,
-    "tStatistic": 3.45
-  }
-}
-```
-
-**Analysis Methods:**
-
-| Method | Description |
-|--------|-------------|
-| `granger` | Granger causality test |
-| `diff_in_diff` | Difference-in-differences |
-| `event_study` | Event study with abnormal returns |
-| `synthetic_control` | Synthetic control method |
-| `regression_discontinuity` | Regression discontinuity design |
-
----
-
-### GET /api/analytics/credibility
-
-Get credibility scores for news sources.
-
-**Parameters:**
-
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `source` | string | - | Specific source to check |
-| `sortBy` | string | score | Sort by: `score`, `accuracy`, `timeliness` |
-
-**Example:**
-
-```bash
-curl "https://cryptocurrency.cv/api/analytics/credibility?sortBy=accuracy"
-```
-
-**Response:**
-
-```json
-{
-  "sources": [
-    {
-      "sourceKey": "coindesk",
-      "name": "CoinDesk",
-      "credibilityScore": 92,
-      "metrics": {
-        "accuracy": 0.94,
-        "timeliness": 0.88,
-        "sourceDiversity": 0.85,
-        "correctionRate": 0.02
-      },
-      "tier": "tier1",
-      "totalArticles": 15230,
-      "lastUpdated": "2026-01-22T10:00:00Z"
-    }
-  ],
-  "stats": {
-    "avgScore": 78,
-    "tier1Count": 7,
-    "tier2Count": 5,
-    "tier3Count": 3
-  }
-}
-```
-
----
-
-### GET /api/predictions
-
-Track and score user predictions with leaderboards.
-
-**Parameters:**
-
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `action` | string | list | Action: `list`, `leaderboard`, `analytics` |
-| `userId` | string | - | Get predictions for specific user |
-| `asset` | string | - | Filter by asset |
-| `status` | string | - | Filter by: `pending`, `correct`, `incorrect` |
-| `limit` | integer | 50 | Number of predictions |
-
-**Example:**
-
-```bash
-# Get leaderboard
-curl "https://cryptocurrency.cv/api/predictions?action=leaderboard"
-
-# Get user predictions
-curl "https://cryptocurrency.cv/api/predictions?userId=user_123"
-```
-
-**POST Request (Create Prediction):**
-
-```bash
-curl -X POST "https://cryptocurrency.cv/api/predictions" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "userId": "user_123",
-    "type": "price_above",
-    "asset": "BTC",
-    "targetValue": 150000,
-    "targetDate": "2026-06-01",
-    "timeframe": "3m",
-    "confidence": 75,
-    "reasoning": "ETF inflows continue strong",
-    "isPublic": true
-  }'
-```
-
-**Prediction Types:**
-
-| Type | Description |
-|------|-------------|
-| `price_above` | Price exceeds target by date |
-| `price_below` | Price drops below target |
-| `price_range` | Price stays within range |
-| `percentage_up` | Asset increases by X% |
-| `percentage_down` | Asset decreases by X% |
-| `event` | Specific event occurs |
-| `trend` | General trend prediction |
-| `dominance` | Market dominance prediction |
-
----
-
-### GET /api/influencers
-
-Track influencer prediction reliability and accuracy.
-
-**Parameters:**
-
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `view` | string | - | Use `stats` for overall statistics |
-| `sortBy` | string | reliability | Sort: `reliability`, `accuracy`, `returns`, `sharpe` |
-| `limit` | integer | 50 | Number of influencers (max 100) |
-| `minCalls` | integer | 0 | Minimum trading calls required |
-| `platform` | string | - | Filter: `twitter`, `discord`, `telegram` |
-| `ticker` | string | - | Filter by ticker expertise |
-
-**Example:**
-
-```bash
-# Get top reliable influencers
-curl "https://cryptocurrency.cv/api/influencers?sortBy=accuracy&minCalls=10"
-
-# Get overall stats
-curl "https://cryptocurrency.cv/api/influencers?view=stats"
-```
-
-**Response:**
-
-```json
-{
-  "success": true,
-  "data": {
-    "influencers": [
-      {
-        "id": "inf_abc123",
-        "platform": "twitter",
-        "username": "@cryptoexpert",
-        "displayName": "Crypto Expert",
-        "followers": 125000,
-        "isVerified": true,
-        "reliabilityScore": 85,
-        "accuracyRate": 0.72,
-        "avgReturn": 0.15,
-        "sharpeRatio": 1.8,
-        "maxDrawdown": -0.12,
-        "totalPosts": 450,
-        "postsWithCalls": 120,
-        "topTickers": [
-          { "ticker": "BTC", "calls": 45, "accuracy": 0.78, "avgReturn": 0.18 }
-        ],
-        "sentimentBias": 0.3,
-        "overallRank": 5
-      }
-    ],
-    "total": 150,
-    "returned": 50
-  }
-}
-```
-
----
-
-## Social Intelligence APIs
-
-### GET /api/social
-
-Aggregated social media sentiment.
-
-**Parameters:**
-
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `asset` | string | BTC | Asset to analyze |
-| `platforms` | string | all | twitter, discord, telegram, reddit |
-
-**Response:**
-
-```json
-{
-  "asset": "BTC",
-  "overallSentiment": 0.72,
-  "platforms": {
-    "twitter": { "sentiment": 0.75, "volume": 125000, "trending": true },
-    "discord": { "sentiment": 0.68, "messages": 45000 },
-    "telegram": { "sentiment": 0.70, "messages": 32000 },
-    "reddit": { "sentiment": 0.65, "posts": 1200, "comments": 15000 }
-  },
-  "topInfluencers": [...],
-  "viralPosts": [...]
-}
-```
-
----
-
-### GET /api/social/x/sentiment
-
-X (Twitter) sentiment via Nitter scraping (no API key required).
-
-**Parameters:**
-
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `query` | string | bitcoin | Search query |
-| `accounts` | string | - | Comma-separated accounts to monitor |
-
-**Response:**
-
-```json
-{
-  "query": "bitcoin",
-  "sentiment": {
-    "overall": 0.68,
-    "bullish": 0.45,
-    "bearish": 0.12,
-    "neutral": 0.43
-  },
-  "volume": {
-    "tweets": 15000,
-    "engagement": 250000,
-    "trending": true
-  },
-  "topTweets": [...],
-  "scrapedAt": "2026-01-22T12:30:00Z"
-}
-```
-
----
-
-### GET /api/influencers
-
-Crypto influencer tracking and scoring.
-
-**Parameters:**
-
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `platform` | string | all | twitter, youtube, all |
-| `limit` | number | 20 | Number of influencers |
-
-**Response:**
-
-```json
-{
-  "influencers": [
-    {
-      "name": "PlanB",
-      "handle": "@100trillionUSD",
-      "platform": "twitter",
-      "followers": 1800000,
-      "credibilityScore": 0.72,
-      "accuracy": 0.65,
-      "recentPredictions": [...],
-      "sentiment": "bullish"
-    }
-  ]
-}
-```
-
----
-
-## Premium API Endpoints
-
-Premium endpoints require authentication via API key.
-
-### Authentication
-
-Include your API key in the header:
-
-```bash
-curl -H "Authorization: Bearer YOUR_API_KEY" \
-  "https://cryptocurrency.cv/api/premium/..."
-```
-
----
-
-### GET /api/premium
-
-Get premium subscription status.
-
-**Response:**
-
-```json
-{
-  "subscription": {
-    "tier": "pro",
-    "status": "active",
-    "features": ["advanced_signals", "whale_alerts", "priority_support"],
-    "usage": { "requests": 5000, "limit": 50000 },
-    "expiresAt": "2026-02-22T00:00:00Z"
-  }
-}
-```
-
----
-
-### GET /api/premium/ai/signals
-
-Advanced AI trading signals with backtesting.
-
-**Parameters:**
-
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `assets` | string | all | Comma-separated assets |
-| `strategy` | string | momentum | momentum, mean_reversion, trend |
-| `backtest` | boolean | false | Include historical performance |
-
----
-
-### GET /api/premium/whales/transactions
-
-Real-time whale transaction feed.
-
-**Parameters:**
-
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `minValue` | number | 100000 | Minimum USD value |
-| `assets` | string | all | Asset filter |
-| `realtime` | boolean | false | WebSocket stream |
+**Price:** `$0.001/request`
 
 ---
 
-### GET /api/premium/screener/advanced
+### `GET /api/exchange-rates/convert`
 
-Advanced token screener with custom filters.
+Currency conversion calculator
 
-**Parameters:**
+**Price:** `$0.001/request`
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `filters` | object | - | Custom filter criteria |
-| `sort` | string | volume | Sort field |
-| `limit` | number | 50 | Results limit |
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `from` | string | No | — | Start date (ISO 8601 or YYYY-MM-DD) |
+| `to` | string | No | — | End date (ISO 8601 or YYYY-MM-DD) |
+| `amount` | number | No | `1` | Filter by amount |
 
 ---
 
-### GET /api/premium/smart-money
+### `GET /api/exchanges`
 
-Smart money wallet tracking.
+Cryptocurrency exchange listings and data
 
-**Response:**
+**Price:** `$0.001/request`
 
-```json
-{
-  "wallets": [
-    {
-      "address": "0x...",
-      "label": "Galaxy Digital",
-      "holdings": [...],
-      "recentTrades": [...],
-      "pnl30d": 12.5
-    }
-  ]
-}
-```
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `sort` | string | No | `trust` | Sort field |
+| `limit` | number | No | `50` | Maximum number of results to return |
 
 ---
+
+### `GET /api/fear-greed`
+
+Crypto Fear & Greed Index with historical data
+
+**Price:** `$0.001/request`
 
-## Portfolio APIs
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `days` | number | No | `30` | Number of days of historical data |
 
-### POST /api/portfolio
+---
 
-Create or update portfolio.
+### `GET /api/gas`
 
-**Request Body:**
+Ethereum gas prices and network congestion
 
-```json
-{
-  "name": "Main Portfolio",
-  "holdings": [
-    { "asset": "BTC", "quantity": 2.5, "avgPrice": 45000 },
-    { "asset": "ETH", "quantity": 10, "avgPrice": 2500 }
-  ]
-}
-```
+**Price:** `$0.001/request`
 
 ---
 
-### GET /api/portfolio/performance
+### `GET /api/gas/estimate`
 
-Portfolio performance analytics.
+Gas fee estimation for Ethereum and Bitcoin
 
-**Response:**
+**Price:** `$0.001/request`
 
-```json
-{
-  "totalValue": 350000,
-  "totalCost": 287500,
-  "pnl": 62500,
-  "pnlPercent": 21.74,
-  "breakdown": [...],
-  "allocation": {
-    "BTC": 0.70,
-    "ETH": 0.30
-  }
-}
-```
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `network` | string | No | `ethereum` | Network name (e.g., ethereum, bitcoin) |
 
 ---
 
-### GET /api/portfolio/tax
+### `GET /api/gas/history`
 
-Tax reporting data.
+Historical gas price data
 
-**Parameters:**
+**Price:** `$0.001/request`
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `year` | number | current | Tax year |
-| `jurisdiction` | string | US | Tax jurisdiction |
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `network` | string | No | `ethereum` | Network name (e.g., ethereum, bitcoin) |
+| `days` | number | No | `7` | Number of days of historical data |
 
 ---
 
-## V1 API (Legacy)
+### `GET /api/geckoterminal`
 
-The `/api/v1/*` endpoints provide backwards compatibility.
+GeckoTerminal DEX data aggregation
 
-### GET /api/v1/coins
+**Price:** `$0.001/request`
 
-Legacy coin data endpoint.
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `network` | string | No | `eth` | Network name (e.g., ethereum, bitcoin) |
+| `type` | string | No | `trending` | Data or content type |
+| `dex` | string | No | — | Filter by dex |
 
-### GET /api/v1/global
+---
 
-Global market data.
+### `GET /api/global`
 
-### GET /api/v1/trending
+Global cryptocurrency market statistics
 
-Trending coins.
+**Price:** `$0.001/request`
 
-### GET /api/v1/defi
+---
 
-DeFi protocol data.
+### `GET /api/market/coins`
 
-### GET /api/v1/gas
+Coin market data with advanced filtering
 
-Ethereum gas prices.
+**Price:** `$0.001/request`
 
 ---
+
+### `GET /api/market/compare`
 
-## Market Data APIs
+Side-by-side coin comparison with market data
 
-### GET /api/market/coins
+**Price:** `$0.001/request`
 
-Detailed coin market data.
+---
+
+### `GET /api/market/dominance`
 
-**Parameters:**
+Bitcoin and altcoin market dominance data
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `ids` | string | - | Comma-separated coin IDs |
-| `vs_currency` | string | usd | Quote currency |
-| `order` | string | market_cap_desc | Sort order |
-| `per_page` | number | 100 | Results per page |
+**Price:** `$0.001/request`
 
 ---
 
-### GET /api/market/ohlc/[coinId]
+### `GET /api/market/exchanges`
 
-OHLC candlestick data.
+Exchange market data and rankings
 
-**Parameters:**
+**Price:** `$0.001/request`
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `days` | number | 1 | Historical days |
-| `interval` | string | auto | 1m, 5m, 1h, 1d |
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `per_page` | number | No | `100` | Results per page |
+| `page` | number | No | `1` | Page number for pagination |
 
 ---
 
-### GET /api/market/exchanges
+### `GET /api/market/gainers`
 
-Exchange data and rankings.
+Top gaining cryptocurrencies by timeframe
 
-**Response:**
+**Price:** `$0.001/request`
 
-```json
-{
-  "exchanges": [
-    {
-      "id": "binance",
-      "name": "Binance",
-      "volume24h": 15000000000,
-      "trustScore": 10,
-      "pairs": 1500
-    }
-  ]
-}
-```
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `limit` | number | No | `10` | Maximum number of results to return |
+| `timeframe` | string | No | `24h` | Time period (e.g., 1h, 24h, 7d, 30d) |
 
 ---
 
-### GET /api/market/derivatives
+### `GET /api/market/global-defi`
 
-Derivatives market overview.
+Global DeFi market statistics
 
-**Response:**
+**Price:** `$0.001/request`
 
-```json
-{
-  "openInterest": 45000000000,
-  "volume24h": 120000000000,
-  "topPairs": [...],
-  "fundingRates": [...]
-}
-```
-
 ---
+
+### `GET /api/market/heatmap`
 
-## DeFi APIs
+Market heatmap data by sector and market cap
 
-### GET /api/defi/protocol-health
+**Price:** `$0.001/request`
 
-DeFi protocol health monitoring.
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `limit` | number | No | `100` | Maximum number of results to return |
 
-**Parameters:**
+---
+
+### `GET /api/market/losers`
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `protocol` | string | all | Protocol name |
-| `chain` | string | all | Blockchain filter |
+Top losing cryptocurrencies by timeframe
 
-**Response:**
+**Price:** `$0.001/request`
 
-```json
-{
-  "protocols": [
-    {
-      "name": "Aave",
-      "chain": "Ethereum",
-      "tvl": 12500000000,
-      "healthScore": 0.95,
-      "auditStatus": "audited",
-      "risks": ["smart_contract", "oracle"],
-      "recentEvents": [...]
-    }
-  ]
-}
-```
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `limit` | number | No | `10` | Maximum number of results to return |
+| `timeframe` | string | No | `24h` | Time period (e.g., 1h, 24h, 7d, 30d) |
 
 ---
 
-### GET /api/onchain/events
+### `GET /api/market/movers`
 
-On-chain events and alerts.
+Biggest market movers combining gainers and losers
 
-**Parameters:**
+**Price:** `$0.001/request`
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `chain` | string | ethereum | Blockchain |
-| `type` | string | all | Event type filter |
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `limit` | number | No | `5` | Maximum number of results to return |
+| `timeframe` | string | No | `24h` | Time period (e.g., 1h, 24h, 7d, 30d) |
 
 ---
 
-## News Categories
+### `GET /api/market/orderbook`
+### `POST /api/market/orderbook`
 
-### GET /api/news/categories
+Order book depth data for trading pairs
 
-List all available news categories.
+**Price:** `$0.001/request`
 
-**Response:**
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `symbol` | string | No | — | Trading symbol (e.g., BTC, ETH) |
+| `action` | string | No | `aggregate` | API action to perform |
+| `exchanges` | string | No | — | Filter by exchanges |
+| `depth` | number | No | `25` | Filter by depth |
+| `limit` | number | No | `20` | Maximum number of results to return |
 
-```json
-{
-  "categories": [
-    { "id": "general", "name": "General", "sourceCount": 25 },
-    { "id": "bitcoin", "name": "Bitcoin", "sourceCount": 15 },
-    { "id": "defi", "name": "DeFi", "sourceCount": 12 },
-    { "id": "nft", "name": "NFT", "sourceCount": 8 },
-    { "id": "research", "name": "Research", "sourceCount": 18 },
-    { "id": "institutional", "name": "Institutional", "sourceCount": 10 },
-    { "id": "etf", "name": "ETF", "sourceCount": 6 },
-    { "id": "derivatives", "name": "Derivatives", "sourceCount": 5 },
-    { "id": "onchain", "name": "On-Chain", "sourceCount": 7 },
-    { "id": "fintech", "name": "Fintech", "sourceCount": 8 },
-    { "id": "macro", "name": "Macro", "sourceCount": 6 },
-    { "id": "quant", "name": "Quant", "sourceCount": 4 },
-    { "id": "journalism", "name": "Journalism", "sourceCount": 5 }
-  ],
-  "totalCategories": 21,
-  "totalSources": 120
-}
-```
+---
 
-Use the category parameter in `/api/news?category=defi` to filter by category.
+### `GET /api/market/pumps`
 
----
+Unusual price pump detection
 
-## Common Parameters
+**Price:** `$0.001/request`
 
-### Language Support
+---
 
-The `lang` parameter supports 18 languages:
+### `GET /api/market/search`
 
-| Code | Language |
-|------|----------|
-| `en` | English (default) |
-| `zh-CN` | Chinese (Simplified) |
-| `zh-TW` | Chinese (Traditional) |
-| `ja-JP` | Japanese |
-| `ko-KR` | Korean |
-| `es-ES` | Spanish |
-| `fr-FR` | French |
-| `de-DE` | German |
-| `pt-BR` | Portuguese (Brazil) |
-| `ru-RU` | Russian |
-| `ar` | Arabic |
-| `hi-IN` | Hindi |
-| `vi-VN` | Vietnamese |
-| `th-TH` | Thai |
-| `id-ID` | Indonesian |
-| `tr-TR` | Turkish |
-| `nl-NL` | Dutch |
-| `pl-PL` | Polish |
+Search for coins, exchanges, and tokens
 
-**Example:**
+**Price:** `$0.001/request`
 
-```bash
-curl "https://cryptocurrency.cv/api/news?lang=ja-JP"
-```
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `q` | string | No | — | Search query string |
 
 ---
+
+### `GET /api/market/stream`
 
-## Response Format
+Real-time market data via Server-Sent Events
 
-All JSON responses include:
+**Price:** `$0.001/request`
+  
+**Type:** Server-Sent Events (streaming)
 
-```json
-{
-  "data": { ... },
-  "fetchedAt": "2026-01-22T12:30:00Z",
-  "responseTime": "245ms"
-}
-```
+---
 
-### HTTP Headers
+### `GET /api/ohlc`
 
-| Header | Value |
-|--------|-------|
-| `Content-Type` | `application/json` |
-| `Cache-Control` | `public, s-maxage=300, stale-while-revalidate=600` |
-| `Access-Control-Allow-Origin` | `*` |
+OHLC candlestick data for crypto trading pairs
 
----
+**Price:** `$0.001/request`
 
-## Error Handling
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `coinId` | string | No | — | Cryptocurrency ID (e.g., bitcoin, ethereum) |
+| `days` | number | No | — | Number of days of historical data |
 
-### Error Response Format
+---
+
+### `GET /api/orderbook`
 
-```json
-{
-  "error": "Error type",
-  "message": "Detailed error message",
-  "status": 400
-}
-```
+Order book depth and liquidity data
 
-### Common Errors
+**Price:** `$0.001/request`
 
-| Status | Error | Description |
-|--------|-------|-------------|
-| 400 | Bad Request | Invalid parameters |
-| 400 | Unsupported language | Language code not supported |
-| 404 | Not Found | Resource doesn't exist |
-| 429 | Too Many Requests | Rate limit exceeded |
-| 500 | Internal Error | Server-side error |
-| 503 | Service Unavailable | Upstream source unavailable |
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `symbol` | string | No | `BTC` | Trading symbol (e.g., BTC, ETH) |
+| `market` | string | No | `spot` | Filter by market |
+| `view` | string | No | `aggregated` | Filter by view |
+| `exchanges` | string | No | — | Filter by exchanges |
+| `orderSize` | number | No | — | Filter by orderSize |
+| `side` | string | No | `buy` | Filter by side |
+| `depth` | number | No | `20` | Filter by depth |
 
 ---
+
+### `GET /api/orderbook/stream`
+
+Real-time order book updates via Server-Sent Events
 
-## Rate Limits
+**Price:** `$0.001/request`
 
-The public API has generous rate limits:
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `symbol` | string | No | — | Trading symbol (e.g., BTC, ETH) |
 
-| Tier | Limit |
-|------|-------|
-| **Public** | 1000 requests/minute |
-| **Per IP** | 100 requests/minute |
-| **Burst** | 50 requests/second |
+---
 
-### Rate Limit Headers
+### `GET /api/prices`
 
-```
-X-RateLimit-Limit: 100
-X-RateLimit-Remaining: 95
-X-RateLimit-Reset: 1706012400
-```
+Real-time cryptocurrency prices
 
-### Best Practices
+**Price:** `$0.001/request`
 
-1. **Cache responses** - Most endpoints have 5-minute cache
-2. **Use pagination** - Don't fetch all articles at once
-3. **Respect cache headers** - Check `Cache-Control` before re-fetching
-4. **Handle errors gracefully** - Implement exponential backoff
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `coins` | string | No | — | Comma-separated cryptocurrency IDs |
 
 ---
 
-## Internal Data APIs
+### `GET /api/prices/stream`
 
-For developers extending the codebase, we provide 10+ professional data API integrations:
+Real-time price updates via Server-Sent Events
 
-| API | File | Best For |
-|-----|------|----------|
-| DefiLlama | `src/lib/apis/defillama.ts` | DeFi TVL, yields, protocols |
-| L2Beat | `src/lib/apis/l2beat.ts` | Layer 2 analytics, risk |
-| Glassnode | `src/lib/apis/glassnode.ts` | On-chain metrics |
-| CryptoQuant | `src/lib/apis/cryptoquant.ts` | Exchange flows |
-| LunarCrush | `src/lib/apis/lunarcrush.ts` | Social sentiment |
-| Messari | `src/lib/apis/messari.ts` | Research-grade data |
-| The Graph | `src/lib/apis/thegraph.ts` | DeFi subgraphs |
-| NFT Markets | `src/lib/apis/nft-markets.ts` | NFT collections |
-| News Feeds | `src/lib/apis/news-feeds.ts` | Aggregated news |
-| CoinMarketCap | `src/lib/apis/coinmarketcap.ts` | Market rankings |
+**Price:** `$0.001/request`
+  
+**Type:** Server-Sent Events (streaming)
 
-### Usage
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `symbols` | string | No | — | Comma-separated trading symbols |
 
-```typescript
-import { defillama, glassnode, l2beat } from '@/lib/apis';
+---
 
-// Get DeFi TVL data
-const defi = await defillama.getDefiSummary();
+### `GET /api/search`
 
-// Get on-chain health
-const health = await glassnode.getOnChainHealthAssessment('BTC');
+Full-text search across news, articles, and data
 
-// Get L2 ecosystem
-const l2 = await l2beat.getL2Summary();
-```
+**Price:** `$0.001/request`
 
-[:material-arrow-right: Full Data API Documentation](integrations/data-apis.md)
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `semantic` | string | No | — | Enable semantic search |
 
 ---
+
+### `POST /api/search/semantic`
+
+Semantic search using vector embeddings
 
-## TradingView UDF API
+**Price:** `$0.001/request`
 
-Universal Data Feed (UDF) protocol for TradingView charting integration.
+---
 
-### GET /api/tradingview
+### `GET /api/search/v2`
+### `POST /api/search/v2`
 
-TradingView widget configuration and data.
+Enhanced search with advanced filtering and relevance
 
-| Action | Description |
-|--------|-------------|
-| `?action=config` | Server configuration |
-| `?action=time` | Server time |
-| `?action=symbols&symbol=BTC` | Symbol resolution |
-| `?action=search&query=bitcoin` | Symbol search |
-| `?action=history&symbol=BTC&from=...&to=...&resolution=D` | Historical OHLCV |
-| `?action=quotes&symbols=BTC,ETH` | Real-time quotes |
-| `?action=marks&symbol=BTC&from=...&to=...` | Chart marks (news) |
+**Price:** `$0.001/request`
 
 ---
+
+### `GET /api/tokenterminal`
 
-## Watchlist API
+Token Terminal fundamental data
 
-User watchlist management with local storage fallback.
+**Price:** `$0.001/request`
 
-### GET /api/watchlist
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `action` | string | No | `summary` | API action to perform |
+| `protocol` | string | No | — | Filter by protocol |
+| `limit` | number | No | — | Maximum number of results to return |
+
+---
 
-Get user's watchlist.
+### `GET /api/v1/coins`
 
-| Parameter | Description |
-|-----------|-------------|
-| `check` | Check if specific coin is watched |
-| `prices` | Include current prices |
+List all cryptocurrencies with market data, pagination, and sorting
 
-### POST /api/watchlist
+**Price:** `$0.001/request`
 
-Add coin to watchlist.
+---
 
-```json
-{ "coinId": "bitcoin", "notes": "Long-term hold" }
-```
+### `GET /api/v1/exchanges`
 
-### DELETE /api/watchlist
+Exchange listings and market data
 
-Remove coin from watchlist.
+**Price:** `$0.002/request`
 
-```json
-{ "coinId": "bitcoin" }
-```
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `page` | number | No | `1` | Page number for pagination |
+| `per_page` | number | No | `50` | Results per page |
 
 ---
+
+### `GET /api/v1/fear-greed`
 
-## Billing API
+Fear & Greed Index with historical trend
 
-Subscription and billing management (authenticated).
+**Price:** `$0.002/request`
 
-### GET /api/billing
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `days` | number | No | `30` | Number of days of historical data |
 
-Get current subscription status.
+---
 
-### POST /api/billing/subscribe
+### `GET /api/v1/gas`
 
-Create new subscription.
+Gas price data
 
-### POST /api/billing/cancel
+**Price:** `$0.001/request`
 
-Cancel subscription.
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `network` | string | No | — | Network name (e.g., ethereum, bitcoin) |
 
 ---
 
----
+### `GET /api/v1/global`
 
-## Bitcoin On-Chain APIs
+Global crypto market statistics
 
-Real-time Bitcoin network data sourced from [mempool.space](https://mempool.space). All endpoints use Edge runtime with short cache TTLs appropriate for block-level data.
+**Price:** `$0.001/request`
 
-### GET /api/bitcoin/mempool/fees
+---
 
-Recommended fee rates for Bitcoin transaction confirmation.
+### `GET /api/v1/market-data`
 
-**Response:**
+Global cryptocurrency market statistics and trending coins
 
-```json
-{
-  "fastestFee": 45,
-  "halfHourFee": 32,
-  "hourFee": 20,
-  "economyFee": 12,
-  "minimumFee": 5
-}
-```
+**Price:** `$0.002/request`
 
 ---
 
-### GET /api/bitcoin/mempool/blocks
+### `GET /api/v1/ohlcv`
 
-Projected next blocks in the mempool with fee range estimates.
+OHLCV candlestick market data
 
-**Response:** Array of projected blocks with `blockSize`, `blockVSize`, `nTx`, `totalFees`, `medianFee`, `feeRange`.
+**Price:** `$0.002/request`
 
 ---
-
-### GET /api/bitcoin/mempool/info
 
-Current mempool size and fee distribution.
+### `GET /api/v1/orderbook`
 
-**Response:**
+Order book depth data
 
-```json
-{
-  "loaded": true,
-  "size": 12450,
-  "bytes": 8234000,
-  "usage": 9200000,
-  "maxmempool": 300000000,
-  "mempoolminfee": 0.00001000,
-  "minrelaytxfee": 0.00001000
-}
-```
+**Price:** `$0.003/request`
 
 ---
 
-### GET /api/bitcoin/blocks
+### `GET /api/v1/search`
 
-Recently confirmed Bitcoin blocks.
+Search across news and market data
 
-**Parameters:**
+**Price:** `$0.001/request`
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `start_height` | integer | latest | Start from this block height |
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `q` | string | No | — | Search query string |
+| `query` | string | No | — | Search query string |
 
 ---
 
-### GET /api/bitcoin/blocks/[hash]
+## NFTs
 
-Get a specific Bitcoin block by its hash.
+### `GET /api/nft`
 
-**Example:** `GET /api/bitcoin/blocks/000000000000000000024bead8df69990852c202db0e0097c1a12ea637d7e96d`
+NFT market overview and statistics
 
-**Response:** Full block data including `id`, `height`, `timestamp`, `tx_count`, `size`, `weight`, `merkle_root`, `previousblockhash`, `difficulty`, `nonce`.
+**Price:** `$0.001/request`
 
 ---
 
-### GET /api/bitcoin/block-height
+### `GET /api/nft/collections/search`
 
-Current Bitcoin blockchain tip height.
+Search NFT collections by name or attributes
 
-**Response:**
+**Price:** `$0.001/request`
 
-```json
-{ "blockHeight": 878432 }
-```
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `q` | string | No | — | Search query string |
+| `limit` | number | No | `20` | Maximum number of results to return |
 
 ---
 
-### GET /api/bitcoin/difficulty
+### `GET /api/nft/collections/trending`
 
-Next difficulty adjustment estimate.
+Trending NFT collections by volume and sales
 
-**Response:**
+**Price:** `$0.001/request`
 
-```json
-{
-  "progressPercent": 67.4,
-  "difficultyChange": 2.3,
-  "estimatedRetargetDate": 1708012800,
-  "remainingBlocks": 658,
-  "remainingTime": 384720,
-  "previousRetarget": -1.2,
-  "currentDifficulty": 72006146478567
-}
-```
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `limit` | number | No | `20` | Maximum number of results to return |
+| `chain` | string | No | — | Blockchain network (e.g., ethereum, solana) |
+| `category` | string | No | — | Filter by category |
+| `sort_by` | string | No | — | Field to sort results by |
 
 ---
+
+### `GET /api/nft/market`
+
+NFT market aggregate statistics
 
-### GET /api/bitcoin/address/[address]
+**Price:** `$0.001/request`
 
-Bitcoin address balance and stats.
+---
+
+### `GET /api/nft/sales/recent`
 
-**Parameters:**
+Recent notable NFT sales
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `include_txs` | boolean | false | Include transaction history |
+**Price:** `$0.001/request`
 
-**Example:** `GET /api/bitcoin/address/bc1q...?include_txs=true`
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `limit` | number | No | `50` | Maximum number of results to return |
 
 ---
 
-### GET /api/bitcoin/tx/[txid]
+### `GET /api/solana/nfts`
 
-Get a specific Bitcoin transaction by TXID.
+Solana NFT market data
 
-**Example:** `GET /api/bitcoin/tx/4a5e1e4baab89f3a32518a88c31bc87f618f76673e2cc77ab2127b7afdeda33b`
+**Price:** `$0.001/request`
 
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `address` | string | No | — | Wallet or contract address |
+| `source` | string | No | — | Filter by news source |
+
 ---
+
+## News & Content
 
-### GET /api/bitcoin/network-stats
+### `GET /api/academic`
+### `POST /api/academic`
 
-Full Bitcoin network statistics.
+Academic - News & Content
 
-**Response:**
+**Price:** `$0.001/request`
 
-```json
-{
-  "difficulty": 72006146478567,
-  "hashrate": 612000000000000000000,
-  "blockCount": 878432,
-  "totalFees24h": 145000000,
-  "avgTxFee": 8500,
-  "mempoolSize": 12450
-}
-```
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `action` | string | No | `stats` | API action to perform |
+| `type` | string | No | — | Data or content type |
+| `country` | string | No | — | Filter by country code |
+| `verified` | string | No | — | Filter for verified entries only |
+| `id` | string | No | — | Unique identifier |
+| `project` | string | No | — | DeFi project or protocol name |
+| `style` | string | No | `apa` | Output style or format |
+| `status` | string | No | — | Filter by status |
+| `limit` | number | No | `50` | Maximum number of results to return |
+| `endpoint` | string | No | — | Specific endpoint to query |
 
 ---
 
-### GET /api/bitcoin/stats
+### `GET /api/analytics/news-onchain`
 
-Bundled Bitcoin dashboard data (price + network + fees in one call).
+Correlation between news events and on-chain activity
 
-**Response:**
+**Price:** `$0.001/request`
 
-```json
-{
-  "price": { "usd": 102500, "change24h": 2.3 },
-  "stats": { "hashrate": "612 EH/s", "difficulty": "72.0T", "blockHeight": 878432 },
-  "fees": { "fast": 45, "standard": 32, "slow": 20 }
-}
-```
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `hours` | number | No | `24` | Filter by hours |
 
 ---
 
-## DeFi Yields & Protocol Data
+### `GET /api/archive`
 
-Yield farming and liquidity pool data from [DeFiLlama](https://defillama.com). Pool data covers 300+ protocols across all major chains.
+News article archive and historical data
 
-### GET /api/defi/yields
+**Price:** `$0.001/request`
 
-Top yield farming opportunities.
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `stats` | string | No | — | Filter by stats |
+| `index` | string | No | — | Filter by index |
+| `type` | string | No | — | Data or content type |
+| `trending` | string | No | — | Filter by trending |
+| `hours` | number | No | `24` | Filter by hours |
+| `market` | string | No | — | Filter by market |
+| `start_date` | string | No | — | Filter by start date |
+| `end_date` | string | No | — | Filter by end date |
+| `source` | string | No | — | Filter by news source |
+| `ticker` | string | No | — | Filter by ticker |
+| `q` | string | No | — | Search query string |
+| `sentiment` | string | No | — | Filter by sentiment |
+| `tags` | string | No | — | Filter by tags |
+| `limit` | number | No | `50` | Maximum number of results to return |
+| `offset` | number | No | `0` | Number of results to skip |
+| `format` | string | No | `full` | Response format |
+| `lang` | string | No | `en` | Language code (e.g., en, es, zh) |
 
-**Parameters:**
+---
+
+### `GET /api/archive/ipfs`
+### `POST /api/archive/ipfs`
+
+IPFS-pinned news archive for permanent storage
+
+**Price:** `$0.001/request`
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `limit` | integer | 20 | Number of results (max 100) |
-| `chain` | string | - | Filter by chain (ethereum, arbitrum, etc.) |
-| `project` | string | - | Filter by protocol name |
-| `stable` | boolean | - | Only stablecoin pools |
-| `min_tvl` | number | - | Minimum TVL in USD |
-| `min_apy` | number | - | Minimum APY |
-| `max_apy` | number | - | Maximum APY (filter out unsustainable yields) |
-| `type` | string | top | `top` for filtered, `all` for full list |
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `action` | string | No | `list` | API action to perform |
+| `cid` | string | Yes | — | Filter by cid |
+| `storage` | string | No | — | Filter by storage |
+| `type` | string | No | — | Data or content type |
+| `limit` | number | No | `20` | Maximum number of results to return |
 
-**Example:**
+---
 
-```bash
-curl "https://cryptocurrency.cv/api/defi/yields?chain=ethereum&stable=true&min_tvl=1000000"
-```
+### `GET /api/archive/status`
 
-**Response:**
+Archive indexing status and statistics
 
-```json
-{
-  "pools": [
-    {
-      "pool": "0x...",
-      "project": "aave-v3",
-      "symbol": "USDC",
-      "chain": "Ethereum",
-      "tvlUsd": 850000000,
-      "apy": 4.82,
-      "apyBase": 3.1,
-      "apyReward": 1.72,
-      "stablecoin": true
-    }
-  ],
-  "count": 20
-}
-```
+**Price:** `$0.001/request`
 
 ---
 
-### GET /api/defi/yields/[poolId]/chart
+### `GET /api/archive/v2`
 
-7-day APY and TVL history for a specific pool.
+Enhanced news archive with improved search and filtering
 
-**Example:** `GET /api/defi/yields/747c1d2a-c668-4682-b9f9-296708a3dd90/chart`
+**Price:** `$0.001/request`
 
 ---
+
+### `POST /api/archive/webhook`
+### `GET /api/archive/webhook`
 
-### GET /api/defi/yields/median
+Webhook notifications for archive updates
 
-Median APY by chain — useful for market rate benchmarking.
+**Price:** `$0.001/request`
 
 ---
 
-### GET /api/defi/yields/stablecoins
+### `GET /api/articles`
 
-Stablecoin-only yield pools, sorted by APY.
+Browse and filter crypto news articles
 
-**Parameters:**
+**Price:** `$0.001/request`
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `min_tvl` | number | 1000000 | Minimum pool TVL |
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `slug` | string | No | — | Filter by slug |
+| `id` | string | No | — | Unique identifier |
+| `stats` | string | No | — | Filter by stats |
+| `limit` | number | No | `50` | Maximum number of results to return |
+| `date` | string | No | — | Date in YYYY-MM-DD format |
+| `ticker` | string | No | — | Filter by ticker |
+| `source` | string | No | — | Filter by news source |
+| `q` | string | No | — | Search query string |
 
 ---
+
+### `GET /api/atom`
+
+Atom/RSS feed for crypto news
 
-### GET /api/defi/yields/stats
+**Price:** `$0.001/request`
 
-Yield statistics aggregated by chain (avg APY, median APY, total TVL, pool count).
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `feed` | string | No | `all` | Filter by feed |
+| `limit` | number | No | `20` | Maximum number of results to return |
 
 ---
 
-### GET /api/defi/yields/chains
+### `GET /api/blog/posts`
 
-All chains that have yield pools indexed by DeFiLlama.
+Blog posts about cryptocurrency markets and analysis
 
+**Price:** `$0.001/request`
+
 ---
 
-### GET /api/defi/yields/projects
+### `GET /api/breaking`
 
-All DeFi projects/protocols that have yield pools.
+Breaking crypto news headlines
 
----
+**Price:** `$0.001/request`
 
-### GET /api/defi/yields/search
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `lang` | string | No | `en` | Language code (e.g., en, es, zh) |
+
+---
 
-Search yield pools by token symbol, project name, or chain.
+### `GET /api/commentary`
 
-**Parameters:**
+Expert commentary and opinion pieces on crypto
 
-| Parameter | Type | Required | Description |
-|-----------|------|----------|-------------|
-| `q` | string | Yes | Search query |
+**Price:** `$0.001/request`
+  
+**Type:** Server-Sent Events (streaming)
 
 ---
 
-### GET /api/defi/stablecoins
+### `GET /api/market/categories`
 
-All tracked stablecoins with peg status, market cap, and chain distribution.
+Crypto market categories and sector performance
 
+**Price:** `$0.001/request`
+
 ---
+
+### `GET /api/news`
+
+Latest crypto news from 300+ sources
+
+**Price:** `$0.001/request`
 
-### GET /api/defi/dex-volumes
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `sort` | string | No | — | Sort field |
+| `sources` | string | No | — | Comma-separated list of sources |
 
-24h and 7d trading volumes across all indexed DEXes.
+---
+
+### `GET /api/news/categories`
 
-**Response:**
+News categorized by topic
 
-```json
-{
-  "dexes": [
-    { "name": "Uniswap V3", "volume24h": 1200000000, "volume7d": 7800000000, "chains": ["Ethereum", "Arbitrum"] }
-  ],
-  "totalVolume24h": 8500000000
-}
-```
+**Price:** `$0.001/request`
 
 ---
 
-### GET /api/defi/bridges
+### `POST /api/news/extract`
 
-Cross-chain bridge volume and statistics.
+Extract structured data from a news URL
 
+**Price:** `$0.001/request`
+
 ---
 
-### GET /api/defi/summary
+### `GET /api/news/international`
 
-Full DeFi market summary in one call.
+International crypto news with language filtering
 
-**Response:**
+**Price:** `$0.001/request`
 
-```json
-{
-  "totalTVL": 95000000000,
-  "change24h": 1.8,
-  "protocolCount": 3200,
-  "chainCount": 85,
-  "topProtocols": [...],
-  "topChains": [...],
-  "totalVolume24h": 12000000000
-}
-```
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `language` | string | No | `all` | Filter by language |
+| `translate` | string | No | — | Filter by translate |
+| `limit` | number | No | `20` | Maximum number of results to return |
+| `region` | string | No | `all` | Filter by region |
+| `sources` | string | No | — | Comma-separated list of sources |
 
 ---
+
+### `GET /api/news/stream`
 
-## NFT Market APIs
+Real-time news stream via Server-Sent Events
 
-NFT collection and market data. Aggregates data from OpenSea, Blur, and other marketplaces.
+**Price:** `$0.001/request`
+  
+**Type:** Server-Sent Events (streaming)
 
-### GET /api/nft
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `categories` | string | No | — | Filter by categories |
+| `limit` | number | No | `5` | Maximum number of results to return |
 
-NFT market summary plus top 5 trending collections.
+---
+
+### `GET /api/opml`
 
-**Response:**
+OPML feed list for RSS readers
 
-```json
-{
-  "market": { "totalVolume24h": 45000000, "totalSales24h": 12400, "activeCollections": 8200 },
-  "trending": [...]
-}
-```
+**Price:** `$0.001/request`
 
 ---
+
+### `GET /api/podcast`
+
+Crypto podcast feed and episodes
 
-### GET /api/nft/market
+**Price:** `$0.001/request`
 
-Full NFT market overview metrics.
+---
+
+### `POST /api/press-release`
+### `GET /api/press-release`
 
-**Response:**
+Crypto press release aggregation
 
-```json
-{
-  "totalVolume24h": 45000000,
-  "totalVolume7d": 280000000,
-  "totalSales24h": 12400,
-  "averageSalePrice": 3629,
-  "activeCollections": 8200,
-  "totalWallets24h": 28000,
-  "topChains": [
-    { "chain": "ethereum", "volume24h": 30000000 },
-    { "chain": "solana", "volume24h": 8000000 }
-  ]
-}
-```
+**Price:** `$0.001/request`
 
 ---
 
-### GET /api/nft/collections/trending
+### `GET /api/regulatory`
 
-Trending NFT collections.
+Regulatory news and policy updates
 
-**Parameters:**
+**Price:** `$0.001/request`
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `limit` | integer | 20 | Number of results (max 100) |
-| `chain` | string | - | Filter by chain |
-| `category` | string | - | Filter by category (art, gaming, pfp, etc.) |
-| `sort_by` | string | volume | Sort field |
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `action` | string | No | `events` | API action to perform |
+| `jurisdiction` | string | No | — | Filter by jurisdiction |
+| `agency` | string | No | — | Filter by agency |
+| `actionType` | string | No | — | Filter by actionType |
+| `impact` | string | No | — | Filter by impact |
+| `sector` | string | No | — | Filter by sector |
+| `limit` | number | No | `50` | Maximum number of results to return |
+| `offset` | number | No | `0` | Number of results to skip |
+| `days` | number | No | `7` | Number of days of historical data |
+| `text` | string | No | — | Filter by text |
+| `title` | string | No | — | Filter by title |
+| `description` | string | No | — | Filter by description |
 
 ---
 
-### GET /api/nft/collections/search
+### `GET /api/rss`
 
-Search NFT collections by name.
+RSS feed for crypto news
 
-**Parameters:**
+**Price:** `$0.001/request`
 
-| Parameter | Type | Required | Description |
-|-----------|------|----------|-------------|
-| `q` | string | Yes | Collection name search |
-| `limit` | integer | No | Max results (default 20) |
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `feed` | string | No | `all` | Filter by feed |
+| `limit` | number | No | `20` | Maximum number of results to return |
 
 ---
 
-### GET /api/nft/collections/[slug]
+### `GET /api/rss-proxy`
 
-Full collection details.
+RSS feed proxy with CORS support
 
-**Example:** `GET /api/nft/collections/boredapeyachtclub`
+**Price:** `$0.001/request`
 
-**Response:** `{ name, slug, description, imageUrl, bannerUrl, floorPrice, totalSupply, totalVolume, totalSales, numOwners, royaltyFee, chain, contractAddress, verified, socialLinks }`
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `url` | string | No | — | Filter by url |
 
 ---
 
-### GET /api/nft/collections/[slug]/stats
+### `GET /api/sources`
 
-Real-time collection statistics.
+News source listings and metadata
 
-**Response:** `{ floorPrice, floorPriceChange24h, volume24h, volume7d, sales24h, averagePrice24h, marketCap, numOwners, totalSupply, listedCount, uniqueBuyers24h }`
+**Price:** `$0.001/request`
 
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `token` | string | No | — | Filter by token |
+
 ---
 
-### GET /api/nft/collections/[slug]/activity
+### `GET /api/tags`
 
-Recent collection events (sales, listings, transfers, bids).
+News tag listings and tag-based browsing
 
-**Parameters:**
+**Price:** `$0.001/request`
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `limit` | integer | 50 | Number of events (max 200) |
-| `event_type` | string | all | `sale`, `listing`, `transfer`, `bid` |
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `slug` | string | No | — | Filter by slug |
+| `category` | string | No | — | Filter by category |
+| `sort` | string | No | — | Sort field |
 
 ---
-
-### GET /api/nft/sales/recent
 
-Most recent NFT sales across all tracked collections.
+### `GET /api/v1/categories`
 
-**Parameters:**
+News and market category listings
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `limit` | integer | 50 | Number of sales (max 200) |
+**Price:** `$0.001/request`
 
 ---
 
-## L2 Scaling APIs
+### `GET /api/v1/news`
 
-Layer 2 scaling solution data from [L2Beat](https://l2beat.com). Covers TVL, risk assessments, and activity metrics for Optimistic and ZK rollups.
+Latest crypto news with filtering and pagination
 
-### GET /api/l2
+**Price:** `$0.001/request`
 
-L2 ecosystem summary.
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `limit` | number | No | `20` | Maximum number of results to return |
+| `source` | string | No | — | Filter by news source |
+| `category` | string | No | — | Filter by category |
+| `from` | string | No | — | Start date (ISO 8601 or YYYY-MM-DD) |
+| `to` | string | No | — | End date (ISO 8601 or YYYY-MM-DD) |
+| `page` | number | No | `1` | Page number for pagination |
+| `per_page` | number | No | `20` | Results per page |
+| `lang` | string | No | `en` | Language code (e.g., en, es, zh) |
+| `sort` | string | No | — | Sort field |
 
-**Response:**
+---
+
+### `GET /api/v1/sources`
 
-```json
-{
-  "totalTVL": 45000000000,
-  "projectCount": 52,
-  "topProjects": ["Arbitrum", "Optimism", "Base", "zkSync Era", "Linea"],
-  "tpsLeader": "Arbitrum",
-  "totalTPS": 85.4
-}
-```
+News source listings
 
+**Price:** `$0.001/request`
+
 ---
+
+### `GET /api/v1/tags`
 
-### GET /api/l2/projects
+Tag-based content browsing
 
-All tracked L2 projects with TVL and risk scores.
+**Price:** `$0.001/request`
 
-**Parameters:**
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `slug` | string | No | — | Filter by slug |
+| `category` | string | No | — | Filter by category |
+| `sort` | string | No | — | Sort field |
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `limit` | integer | all | Max results |
+---
+
+### `GET /api/videos`
 
-**Response:**
+Crypto video content aggregation
 
-```json
-{
-  "projects": [
-    {
-      "id": "arbitrum",
-      "name": "Arbitrum One",
-      "type": "Optimistic Rollup",
-      "tvl": 18000000000,
-      "riskScore": 2,
-      "technology": "Optimistic Rollup",
-      "stage": "Stage 1"
-    }
-  ]
-}
-```
+**Price:** `$0.001/request`
 
 ---
 
-### GET /api/l2/projects/[projectId]
+## On-Chain & Whales
 
-Detailed risk assessment for a specific L2.
+### `GET /api/arkham`
 
-**Example:** `GET /api/l2/projects/arbitrum`
+Arkham Intelligence on-chain entity tracking
 
-**Response:** `{ id, name, type, tvl, risks: { stateValidation, dataAvailability, upgradeability, sequencerFailure, proposerFailure }, stage, contracts, permissions }`
+**Price:** `$0.001/request`
 
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `action` | string | No | `smart-money-flows` | API action to perform |
+| `address` | string | No | — | Wallet or contract address |
+| `entity` | string | No | — | Filter by entity |
+| `chain` | string | No | — | Blockchain network (e.g., ethereum, solana) |
+| `token` | string | No | — | Filter by token |
+| `minValueUsd` | number | No | — | Filter by minValueUsd |
+| `limit` | number | No | — | Maximum number of results to return |
+
 ---
 
-### GET /api/l2/activity
+### `GET /api/data-sources/onchain`
 
-Transaction count and TPS per L2 over the recent period.
+On-chain data source status and coverage
 
-**Response:**
+**Price:** `$0.001/request`
 
-```json
-{
-  "projects": [
-    { "id": "arbitrum", "name": "Arbitrum One", "tps": 14.2, "txCount30d": 36720000 }
-  ],
-  "totalTPS": 85.4,
-  "totalTx30d": 220000000
-}
-```
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `view` | string | No | `dashboard` | Filter by view |
+| `address` | string | No | — | Wallet or contract address |
+| `chain` | string | No | `ethereum` | Blockchain network (e.g., ethereum, solana) |
+| `transfers` | string | No | — | Filter by transfers |
+| `minEth` | number | No | `100` | Filter by minEth |
 
 ---
 
-### GET /api/l2/risk
+### `GET /api/dune`
 
-L2 projects sorted by risk score (safest first by default).
+Dune Analytics query results and dashboards
 
-**Parameters:**
+**Price:** `$0.001/request`
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `sort` | string | asc | `asc` = safest first, `desc` = riskiest first |
-| `limit` | integer | 20 | Number of results |
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `query` | number | No | — | Search query string |
+| `queryId` | number | No | — | Filter by queryId |
+| `executionId` | string | No | — | Filter by executionId |
+| `execute` | number | No | — | Filter by execute |
 
 ---
+
+### `GET /api/flows`
 
-## Glassnode On-Chain Metrics
+Capital flow tracking across exchanges and wallets
 
-On-chain analytics for BTC and ETH. Requires `GLASSNODE_API_KEY` environment variable — endpoints return `null` data gracefully when key is absent.
+**Price:** `$0.001/request`
 
-### GET /api/onchain/exchange-flows
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `coin` | string | No | — | Cryptocurrency ID or symbol |
 
-Net BTC/ETH flows into and out of exchanges (whale accumulation signal).
+---
 
-**Parameters:**
+### `GET /api/nansen`
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `asset` | string | BTC | `BTC` or `ETH` |
+Nansen on-chain analytics data
 
-**Response:**
+**Price:** `$0.001/request`
 
-```json
-{
-  "asset": "BTC",
-  "netFlow24h": -4250,
-  "inflow24h": 18500,
-  "outflow24h": 22750,
-  "exchangeBalance": 2180000,
-  "trend": "accumulation"
-}
-```
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `action` | string | No | `smart-money` | API action to perform |
+| `chain` | string | No | — | Blockchain network (e.g., ethereum, solana) |
+| `token` | string | No | — | Filter by token |
+| `txAction` | string | No | — | Filter by txAction |
+| `limit` | number | No | — | Maximum number of results to return |
+| `address` | string | No | — | Wallet or contract address |
 
 ---
 
-### GET /api/onchain/metrics
+### `GET /api/onchain/aave/markets`
 
-Core on-chain health metrics.
+Aave lending market data
 
-**Parameters:** `asset` — `BTC` or `ETH` (default `BTC`)
+**Price:** `$0.001/request`
 
-**Response:** `{ nvt, sopr, mvrv, activeAddresses24h, newAddresses24h, transactionCount24h, transferVolume24h }`
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `limit` | number | No | `20` | Maximum number of results to return |
 
 ---
 
-### GET /api/onchain/miner-metrics
+### `GET /api/onchain/aave/rates`
 
-Bitcoin miner revenue, hashrate, and puell multiple.
+Aave lending and borrowing rates
 
-**Response:**
+**Price:** `$0.001/request`
 
-```json
-{
-  "hashrate": 612000000000000000000,
-  "difficulty": 72006146478567,
-  "minerRevenue24h": 48500000,
-  "blockReward": 3.125,
-  "puellMultiple": 1.42,
-  "thermocapMultiple": 0.0000034
-}
-```
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `chain` | string | No | `ethereum` | Blockchain network (e.g., ethereum, solana) |
 
 ---
+
+### `GET /api/onchain/compound/markets`
+
+Compound lending market data
+
+**Price:** `$0.001/request`
 
-### GET /api/onchain/lth-metrics
+---
 
-Long-term holder (LTH) supply and behavior metrics.
+### `GET /api/onchain/correlate`
 
-**Parameters:** `asset` — `BTC` or `ETH` (default `BTC`)
+Correlate on-chain metrics with price and news events
 
-**Response:** `{ lthSupply, lthSupplyPercent, lthNetPositionChange, coinDaysDestroyed, hodlWaves }`
+**Price:** `$0.001/request`
 
 ---
+
+### `GET /api/onchain/cross-protocol`
+
+Cross-protocol DeFi analytics and comparisons
+
+**Price:** `$0.001/request`
 
-### GET /api/onchain/whale-metrics
+---
 
-Whale wallet activity and concentration metrics.
+### `GET /api/onchain/curve/pools`
 
-**Parameters:** `asset` — `BTC` or `ETH` (default `BTC`)
+Curve Finance pool data and yields
 
-**Response:** `{ addressesOver1k, addressesOver10k, whaleNetFlow24h, top10HoldersPercent, giniCoefficient }`
+**Price:** `$0.001/request`
 
 ---
+
+### `GET /api/onchain/events`
 
-### GET /api/onchain/funding-metrics
+Significant on-chain events and transactions
 
-On-chain funding rate data (cross-referenced with derivatives).
+**Price:** `$0.001/request`
 
-**Parameters:** `asset` — `BTC` or `ETH` (default `BTC`)
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `limit` | number | No | `30` | Maximum number of results to return |
+| `chain` | string | No | — | Blockchain network (e.g., ethereum, solana) |
+| `type` | string | No | — | Data or content type |
+| `min_value` | number | No | `0` | Filter by min value |
+| `min_confidence` | number | No | `50` | Filter by min confidence |
 
 ---
+
+### `GET /api/onchain/exchange-flows`
+
+Exchange inflow/outflow data for BTC and ETH
 
-### GET /api/onchain/health
+**Price:** `$0.001/request`
 
-Composite on-chain health score (0–100) with signal breakdown.
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `asset` | string | No | `BTC` | Asset identifier (e.g., BTC, ETH) |
 
-**Parameters:** `asset` — `BTC` or `ETH` (default `BTC`)
+---
+
+### `GET /api/onchain/multichain`
 
-**Response:**
+Multi-chain on-chain analytics
 
-```json
-{
-  "asset": "BTC",
-  "score": 72,
-  "signals": {
-    "mvrv": { "value": 2.1, "signal": "neutral" },
-    "sopr": { "value": 1.02, "signal": "bullish" },
-    "exchangeFlows": { "value": -4250, "signal": "bullish" },
-    "lthAccumulation": { "value": true, "signal": "bullish" }
-  },
-  "summary": "Moderately bullish on-chain conditions with steady accumulation"
-}
-```
+**Price:** `$0.001/request`
 
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `protocol` | string | No | `uniswap` | Filter by protocol |
+
 ---
+
+### `GET /api/onchain/uniswap/pools`
 
-## LunarCrush Social Intelligence
+Uniswap pool data and liquidity metrics
 
-Social media metrics for cryptocurrencies powered by [LunarCrush](https://lunarcrush.com). Requires `LUNARCRUSH_API_KEY` environment variable.
+**Price:** `$0.001/request`
 
-### GET /api/social/coins
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `limit` | number | No | `20` | Maximum number of results to return |
+| `order_by` | string | No | `totalValueLockedUSD` | Filter by order by |
+| `order_direction` | string | No | `desc` | Filter by order direction |
+| `min_liquidity` | string | No | — | Filter by min liquidity |
 
-Top coins ranked by social activity, or bulk social metrics.
+---
 
-**Parameters:**
+### `GET /api/onchain/uniswap/swaps`
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `limit` | integer | 50 | Top coins to return (max 100) |
-| `symbols` | string | - | Comma-separated symbols for bulk fetch (e.g. `BTC,ETH,SOL`) |
+Recent Uniswap swap transactions
 
-**Example:**
+**Price:** `$0.001/request`
 
-```bash
-curl "https://cryptocurrency.cv/api/social/coins?symbols=BTC,ETH,SOL"
-```
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `limit` | number | No | `20` | Maximum number of results to return |
+| `pool` | string | No | — | Filter by pool |
+| `min_usd` | string | No | — | Filter by min usd |
 
 ---
+
+### `GET /api/stablecoins/flows`
+
+Stablecoin capital flow tracking
+
+**Price:** `$0.001/request`
 
-### GET /api/social/coins/[symbol]
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `limit` | number | No | `20` | Maximum number of results to return |
 
-Social metrics for a specific coin.
+---
 
-**Example:** `GET /api/social/coins/BTC`
+### `GET /api/v1/onchain`
 
-**Response:**
+On-chain analytics data
 
-```json
-{
-  "symbol": "BTC",
-  "name": "Bitcoin",
-  "socialVolume24h": 245000,
-  "socialEngagement24h": 1850000,
-  "socialDominance": 32.4,
-  "twitterVolume24h": 128000,
-  "redditPosts24h": 3200,
-  "newsVolume24h": 450,
-  "sentimentScore": 68,
-  "galaxyScore": 74.2,
-  "altRank": 1,
-  "priceCorrelation": 0.72
-}
-```
+**Price:** `$0.003/request`
 
 ---
 
-### GET /api/social/coins/[symbol]/feed
+### `GET /api/v1/whale-alerts`
 
-Recent social posts and news for a specific coin.
+Large cryptocurrency transaction alerts
 
-**Parameters:**
+**Price:** `$0.003/request`
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `limit` | integer | 50 | Posts to return (max 200) |
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `blockchain` | string | No | `all` | Blockchain to filter by |
+| `minValue` | number | No | `100000` | Minimum transaction value in USD |
+| `limit` | number | No | `50` | Maximum number of results to return |
 
 ---
+
+### `GET /api/whale-alerts`
+
+Real-time large transaction monitoring
+
+**Price:** `$0.001/request`
 
-### GET /api/social/influencers
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `blockchain` | string | No | `all` | Blockchain to filter by |
+| `minValue` | number | No | `100000` | Minimum transaction value in USD |
+| `limit` | number | No | `50` | Maximum number of results to return |
 
-Top crypto influencers ranked by engagement and reach.
+---
 
-**Parameters:**
+### `GET /api/whale-alerts/context`
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `limit` | integer | 50 | Number of influencers (max 100) |
+Whale alert enrichment with market context and AI analysis
 
-**Response:**
+**Price:** `$0.001/request`
 
-```json
-{
-  "influencers": [
-    {
-      "id": "12345",
-      "username": "CryptoPerson",
-      "platform": "twitter",
-      "followers": 850000,
-      "engagementRate": 4.2,
-      "influenceScore": 88.5,
-      "topCoins": ["BTC", "ETH"]
-    }
-  ]
-}
-```
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `coin` | string | No | — | Cryptocurrency ID or symbol |
+| `amount` | number | No | — | Filter by amount |
+| `amountUsd` | number | No | — | Filter by amountUsd |
+| `type` | string | No | — | Data or content type |
+| `from` | string | No | — | Start date (ISO 8601 or YYYY-MM-DD) |
+| `to` | string | No | — | End date (ISO 8601 or YYYY-MM-DD) |
 
 ---
 
-### GET /api/social/topics/trending
+### `GET /api/whales`
 
-Trending topics across all crypto social media.
+Whale wallet tracking and analysis
 
-**Response:**
+**Price:** `$0.001/request`
 
-```json
-{
-  "topics": [
-    { "topic": "bitcoin etf", "volume24h": 48000, "change24h": 32.1, "sentiment": "bullish" },
-    { "topic": "ethereum merge", "volume24h": 22000, "change24h": -5.2, "sentiment": "neutral" }
-  ]
-}
-```
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `limit` | string | No | `10` | Maximum number of results to return |
+| `min_usd` | string | No | `1000000` | Filter by min usd |
 
 ---
+
+## Oracles
 
-### GET /api/social/sentiment/market
+### `POST /api/oracle`
+### `GET /api/oracle`
 
-Overall crypto market social sentiment.
+Price oracle overview and comparison
 
-**Response:**
+**Price:** `$0.001/request`
 
-```json
-{
-  "overall": "bullish",
-  "bullish": 58,
-  "bearish": 22,
-  "neutral": 20,
-  "topBullish": ["BTC", "SOL", "AVAX"],
-  "topBearish": ["SHIB", "DOGE"],
-  "timestamp": 1708012800000
-}
-```
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `action` | string | No | — | API action to perform |
 
 ---
 
-## The Graph Protocol APIs
+### `GET /api/oracle/chainlink`
+### `POST /api/oracle/chainlink`
 
-On-chain DeFi protocol data via [The Graph](https://thegraph.com) subgraphs. Covers Uniswap V3, Aave V3, and Curve Finance.
+Chainlink oracle data feed for crypto sentiment
 
-### GET /api/onchain/uniswap/pools
+**Price:** `$0.001/request`
 
-Top Uniswap V3 liquidity pools.
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `format` | string | No | `standard` | Response format |
+
+---
 
-**Parameters:**
+### `GET /api/oracle/prices`
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `limit` | integer | 20 | Number of pools (max 100) |
-| `order_by` | string | totalValueLockedUSD | Sort field |
-| `order_direction` | string | desc | `asc` or `desc` |
-| `min_liquidity` | number | - | Minimum liquidity in USD |
+Aggregated oracle price feeds
 
-**Response:**
+**Price:** `$0.001/request`
 
-```json
-{
-  "pools": [
-    {
-      "id": "0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8",
-      "token0": "USDC",
-      "token1": "WETH",
-      "feeTier": 3000,
-      "tvl": 185000000,
-      "volume24h": 420000000,
-      "feesUSD24h": 1260000,
-      "txCount": 48200
-    }
-  ]
-}
-```
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `assets` | string | No | `bitcoin,ethereum,binancecoin,solana,ripple` | Filter by assets |
+| `currency` | string | No | `usd` | Filter by currency |
 
 ---
 
-### GET /api/onchain/uniswap/swaps
+## Other
 
-Recent Uniswap V3 swap transactions.
+### `GET /api/.well-known/x402`
 
-**Parameters:**
+x402 protocol discovery endpoint
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `limit` | integer | 20 | Number of swaps (max 100) |
-| `pool` | string | - | Filter by pool address |
-| `min_usd` | number | - | Minimum swap value in USD |
+**Price:** `$0.001/request`
 
 ---
 
-### GET /api/onchain/aave/markets
+### `GET /api/ai`
+### `POST /api/ai`
 
-Aave V3 lending markets overview.
+AI-powered analysis and intelligence
 
-**Parameters:**
+**Price:** `$0.001/request`
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `limit` | integer | 20 | Number of markets (max 100) |
+---
+
+### `GET /api/ai-anchor`
+### `POST /api/ai-anchor`
 
-**Response:**
+AI news anchor video generation from crypto news
 
-```json
-{
-  "markets": [
-    {
-      "reserve": "USDC",
-      "totalSupply": 2800000000,
-      "totalBorrow": 1900000000,
-      "utilization": 67.8,
-      "supplyAPY": 4.12,
-      "borrowAPY": 5.89,
-      "liquidationThreshold": 0.85
-    }
-  ]
-}
-```
+**Price:** `$0.001/request`
 
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `action` | string | No | `info` | API action to perform |
+| `jobId` | string | No | — | Async job identifier |
+
 ---
 
-### GET /api/onchain/aave/rates
+### `GET /api/airdrops`
 
-Aave V3 lending and borrowing rates.
+Upcoming and active cryptocurrency airdrops
 
-**Parameters:**
+**Price:** `$0.001/request`
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `reserve` | string | - | Filter by reserve (e.g. `USDC`, `WETH`) |
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `status` | string | No | — | Filter by status |
+| `limit` | number | No | `50` | Maximum number of results to return |
 
 ---
 
-### GET /api/onchain/curve/pools
+### `POST /api/alexa`
+### `GET /api/alexa`
 
-Curve Finance liquidity pools.
+Alexa skill integration endpoint
 
-**Response:** Array of pool objects with `name`, `coins`, `tvl`, `volume24h`, `apy`, `baseApy`, `rewardApy`.
+**Price:** `$0.001/request`
 
 ---
 
-### GET /api/onchain/protocol/[protocol]
+### `GET /api/article`
 
-Aggregated protocol data for a single DeFi protocol.
+Single article retrieval by ID or URL
 
-**Supported protocols:** `uniswap`, `aave`, `curve`
+**Price:** `$0.001/request`
 
-**Example:** `GET /api/onchain/protocol/uniswap`
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `url` | string | No | — | Filter by url |
+| `title` | string | No | `Untitled` | Filter by title |
+| `source` | string | No | `Unknown` | Filter by news source |
 
 ---
 
-### GET /api/onchain/cross-protocol
+### `GET /api/authors`
 
-Comparative analysis across Uniswap, Aave, and Curve simultaneously.
+News author profiles and statistics
 
-**Response:**
+**Price:** `$0.001/request`
 
-```json
-{
-  "protocols": {
-    "uniswap": { "tvl": 5800000000, "volume24h": 1200000000 },
-    "aave": { "tvl": 12500000000, "totalBorrows": 8200000000 },
-    "curve": { "tvl": 4200000000, "volume24h": 280000000 }
-  },
-  "insights": ["Aave has highest TVL at $12.5B", "Uniswap leads in 24h volume"],
-  "totalTVL": 22500000000
-}
-```
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `limit` | number | No | — | Maximum number of results to return |
+| `offset` | number | No | — | Number of results to skip |
+| `sort` | string | No | — | Sort field |
+| `search` | number | No | — | Filter by search |
 
 ---
+
+### `POST /api/batch`
 
-## Market Data Enhancements
+Batch multiple API requests into a single call
 
-Additional market data endpoints extending the base `/api/market/coins` capabilities.
+**Price:** `$0.001/request`
 
-### GET /api/market/gainers
+---
 
-Top gaining coins by price change.
+### `POST /api/chart-analysis`
+### `GET /api/chart-analysis`
 
-**Parameters:**
+Technical chart pattern analysis
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `limit` | integer | 10 | Number of results (max 50) |
-| `timeframe` | string | 24h | `1h`, `24h`, or `7d` |
+**Price:** `$0.001/request`
 
-**Example:**
+---
 
-```bash
-curl "https://cryptocurrency.cv/api/market/gainers?limit=10&timeframe=24h"
-```
+### `GET /api/contributors`
 
-**Response:**
+Platform contributor profiles and statistics
 
-```json
-{
-  "gainers": [
-    {
-      "id": "solana",
-      "symbol": "SOL",
-      "name": "Solana",
-      "current_price": 185.4,
-      "price_change_percentage_24h": 12.8,
-      "market_cap": 85000000000,
-      "image": "https://..."
-    }
-  ],
-  "timeframe": "24h",
-  "timestamp": 1708012800000
-}
-```
+**Price:** `$0.001/request`
 
 ---
 
-### GET /api/market/losers
+### `GET /api/data-sources`
 
-Top losing coins by price change.
+Available data sources and their status
 
-**Parameters:**
+**Price:** `$0.001/request`
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `limit` | integer | 10 | Number of results (max 50) |
-| `timeframe` | string | 24h | `1h`, `24h`, or `7d` |
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `action` | string | No | — | API action to perform |
+| `category` | string | No | — | Filter by category |
 
 ---
+
+### `GET /api/extract`
+
+Extract structured data from crypto news articles
 
-### GET /api/market/movers
+**Price:** `$0.001/request`
 
-Gainers and losers combined in a single request.
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `url` | string | No | — | Filter by url |
 
-**Parameters:**
+---
+
+### `GET /api/glossary`
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `limit` | integer | 5 | Count of each (max 25 each) |
-| `timeframe` | string | 24h | `1h`, `24h`, or `7d` |
+Cryptocurrency glossary and term definitions
 
-**Response:**
+**Price:** `$0.001/request`
 
-```json
-{
-  "gainers": [...],
-  "losers": [...],
-  "timeframe": "24h",
-  "timestamp": 1708012800000
-}
-```
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `category` | string | No | — | Filter by category |
+| `q` | string | No | — | Search query string |
+| `limit` | number | No | `100` | Maximum number of results to return |
 
 ---
 
-### GET /api/market/dominance
+### `GET /api/keys`
+### `POST /api/keys`
+### `DELETE /api/keys`
 
-Bitcoin and altcoin market dominance breakdown.
+API key management
 
-**Response:**
+**Price:** `$0.001/request`
 
-```json
-{
-  "dominance": {
-    "btc": 52.4,
-    "eth": 17.1,
-    "usdt": 4.2,
-    "bnb": 3.1,
-    "sol": 2.8,
-    "others": 20.4
-  },
-  "totalMarketCap": 2850000000000,
-  "timestamp": 1708012800000
-}
-```
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `id` | string | No | — | Unique identifier |
 
 ---
+
+### `GET /api/on-chain`
+
+On-chain analytics overview
 
-### GET /api/market/heatmap
+**Price:** `$0.001/request`
 
-Top coins with sparkline data for treemap/heatmap visualization.
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `chain` | string | No | — | Blockchain network (e.g., ethereum, solana) |
+| `metric` | string | No | — | Filter by metric |
 
-**Parameters:**
+---
+
+### `GET /api/oneinch`
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `limit` | integer | 100 | Number of coins (max 250) |
+1inch DEX aggregator data
 
-**Response:** Array of `{ id, symbol, name, current_price, price_change_percentage_24h, market_cap, sparkline_in_7d: { price: number[] } }`
+**Price:** `$0.001/request`
 
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `action` | string | No | `prices` | API action to perform |
+| `chainId` | number | No | — | Filter by chainId |
+| `src` | string | No | — | Filter by src |
+| `dst` | string | No | — | Filter by dst |
+| `amount` | string | No | — | Filter by amount |
+| `from` | string | No | — | Start date (ISO 8601 or YYYY-MM-DD) |
+| `slippage` | number | No | — | Filter by slippage |
+
 ---
+
+### `POST /api/rag`
+### `GET /api/rag`
 
-### GET /api/market/coins/[coinId]/developer
+RAG (Retrieval-Augmented Generation) system overview
 
-GitHub and development activity stats for a coin.
+**Price:** `$0.001/request`
 
-**Example:** `GET /api/market/coins/bitcoin/developer`
+---
+
+### `GET /api/sse`
 
-**Response:**
+Server-Sent Events connection for real-time updates
 
-```json
-{
-  "forks": 36000,
-  "stars": 78000,
-  "subscribers": 4200,
-  "total_issues": 8400,
-  "closed_issues": 7900,
-  "pull_requests_merged": 12500,
-  "pull_request_contributors": 850,
-  "commit_count_4_weeks": 142,
-  "last_4_weeks_commit_activity_series": [12, 8, 18, 24, ...]
-}
-```
+**Price:** `$0.001/request`
+  
+**Type:** Server-Sent Events (streaming)
 
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `sources` | string | No | — | Comma-separated list of sources |
+| `categories` | string | No | — | Filter by categories |
+| `breaking` | string | No | — | Filter by breaking |
+
 ---
+
+### `POST /api/translate`
+### `GET /api/translate`
 
-### GET /api/market/coins/[coinId]/community
+Translate crypto news across languages
 
-Community and social media stats for a coin.
+**Price:** `$0.001/request`
 
-**Example:** `GET /api/market/coins/ethereum/community`
+---
+
+### `GET /api/v1`
 
-**Response:**
+API v1 root - version info and available endpoints
 
-```json
-{
-  "twitter_followers": 3200000,
-  "reddit_average_posts_48h": 450,
-  "reddit_average_comments_48h": 8200,
-  "reddit_subscribers": 1850000,
-  "telegram_channel_user_count": 42000
-}
-```
+**Price:** `$0.001/request`
 
 ---
 
-### GET /api/market/global-defi
+### `GET /api/validators`
 
-Global DeFi market statistics.
+Blockchain validator data and statistics
 
-**Response:**
+**Price:** `$0.001/request`
 
-```json
-{
-  "defi_market_cap": 142000000000,
-  "eth_market_cap": 420000000000,
-  "defi_to_eth_ratio": 0.338,
-  "trading_volume_24h": 12000000000,
-  "defi_dominance": 4.98,
-  "top_defi_coins": [...]
-}
-```
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `view` | string | No | — | Filter by view |
+| `limit` | number | No | `50` | Maximum number of results to return |
 
 ---
+
+### `GET /api/vector-search`
+### `POST /api/vector-search`
+
+Vector similarity search across crypto content
 
-## CoinPaprika APIs
+**Price:** `$0.001/request`
 
-Alternative market data source from [CoinPaprika](https://coinpaprika.com). Provides independent price feeds and market data as a CoinGecko alternative.
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `q` | string | No | — | Search query string |
+| `action` | string | No | — | API action to perform |
+| `articleId` | string | No | — | Article unique identifier |
+| `topK` | number | No | `10` | Filter by topK |
+| `alpha` | number | No | `0.7` | Filter by alpha |
+| `temporalDecay` | number | No | `0` | Filter by temporalDecay |
+| `minScore` | number | No | `0.3` | Filter by minScore |
+| `numTopics` | number | No | `8` | Filter by numTopics |
+| `dateStart` | string | No | — | Filter by dateStart |
+| `dateEnd` | string | No | — | Filter by dateEnd |
+| `categories` | string | No | — | Filter by categories |
+| `sources` | string | No | — | Comma-separated list of sources |
 
-### GET /api/coinpaprika
+---
+
+### `GET /api/ws`
 
-Global crypto market stats from CoinPaprika.
+WebSocket connection for real-time data streams
 
-**Response:**
+**Price:** `$0.001/request`
+  
+**Type:** Server-Sent Events (streaming)
 
-```json
-{
-  "market_cap_usd": 2850000000000,
-  "volume_24h_usd": 125000000000,
-  "bitcoin_dominance_percentage": 52.4,
-  "cryptocurrencies_number": 26800,
-  "market_cap_ath_value": 3010000000000,
-  "volume_24h_ath_value": 185000000000
-}
-```
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `mode` | string | No | — | Filter by mode |
 
 ---
 
-### GET /api/coinpaprika/coins
+## Portfolio & Alerts
 
-Full list of all tracked coins with basic info (useful for autocomplete and coin lookups).
+### `GET /api/alerts`
+### `POST /api/alerts`
+### `DELETE /api/alerts`
+### `PATCH /api/alerts`
 
-**Parameters:**
+Price and event alert management
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `limit` | integer | all | Max results (up to 500) |
+**Price:** `$0.001/request`
 
-**Response:** Array of `{ id, name, symbol, rank, is_active, is_new, type }`
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `action` | string | No | — | API action to perform |
+| `userId` | string | No | — | User identifier |
+| `limit` | number | No | `100` | Maximum number of results to return |
+| `alertId` | string | No | — | Filter by alertId |
+| `id` | string | No | — | Unique identifier |
 
 ---
 
-### GET /api/coinpaprika/tickers
+### `GET /api/alerts/stream`
 
-Price tickers for all coins with market data.
+Real-time alert notifications via Server-Sent Events
 
-**Parameters:**
+**Price:** `$0.001/request`
+  
+**Type:** Server-Sent Events (streaming)
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `quotes` | string | USD | Quote currencies (e.g. `USD,BTC,ETH`) |
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `user_id` | string | No | — | Filter by user id |
+| `session_id` | string | No | — | Filter by session id |
 
 ---
 
-### GET /api/coinpaprika/tickers/[coinId]
+### `GET /api/portfolio`
 
-Ticker for a specific coin.
+Portfolio tracking and management
 
-**Parameters:**
+**Price:** `$0.001/request`
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `quotes` | string | USD | Quote currencies |
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `coins` | string | No | — | Comma-separated cryptocurrency IDs |
+| `limit` | number | No | `10` | Maximum number of results to return |
+| `prices` | string | No | — | Filter by prices |
 
-**Example:** `GET /api/coinpaprika/tickers/btc-bitcoin`
+---
 
-**Response:**
+### `GET /api/portfolio/benchmark`
 
-```json
-{
-  "id": "btc-bitcoin",
-  "name": "Bitcoin",
-  "symbol": "BTC",
-  "rank": 1,
-  "quotes": {
-    "USD": {
-      "price": 102500,
-      "volume_24h": 48000000000,
-      "percent_change_24h": 2.3,
-      "market_cap": 2030000000000,
-      "ath_price": 108000,
-      "percent_from_price_ath": -5.1
-    }
-  }
-}
-```
+Portfolio performance benchmarking against indices
 
----
+**Price:** `$0.001/request`
 
-### GET /api/coinpaprika/tickers/[coinId]/ohlcv
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `coins` | string | No | — | Comma-separated cryptocurrency IDs |
+| `weights` | string | No | — | Filter by weights |
+| `days` | number | No | `30` | Number of days of historical data |
+| `benchmarks` | string | No | `bitcoin,ethereum` | Filter by benchmarks |
 
-OHLCV candlestick data.
+---
+
+### `GET /api/portfolio/correlation`
 
-**Parameters:**
+Intra-portfolio asset correlation analysis
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `quote` | string | usd | Quote currency |
-| `start` | ISO date | - | Start date for historical (triggers historical mode) |
-| `end` | ISO date | - | End date for historical |
-| `limit` | integer | 365 | Candles to return (max 5000) |
+**Price:** `$0.001/request`
 
-When `start` is omitted, returns the latest 7-day OHLCV. When `start` is provided, returns historical OHLCV.
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `coins` | string | No | — | Comma-separated cryptocurrency IDs |
+| `days` | number | No | `90` | Number of days of historical data |
 
 ---
 
-### GET /api/coinpaprika/exchanges
+### `POST /api/portfolio/holding`
+### `PATCH /api/portfolio/holding`
+### `DELETE /api/portfolio/holding`
 
-All crypto exchanges tracked by CoinPaprika.
+Add or update portfolio holdings
 
-**Response:** Array of `{ id, name, active, website, volume_24h_usd, rank, coins, markets, reportedVolume24h }`
+**Price:** `$0.001/request`
 
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `portfolioId` | string | No | — | Filter by portfolioId |
+| `coinId` | string | No | — | Cryptocurrency ID (e.g., bitcoin, ethereum) |
+
 ---
+
+### `POST /api/portfolio/performance`
 
-### GET /api/coinpaprika/search
+Portfolio performance charts and metrics
 
-Search across coins, exchanges, ICOs, people, and tags.
+**Price:** `$0.001/request`
 
-**Parameters:**
+---
+
+### `GET /api/portfolio/tax`
+### `POST /api/portfolio/tax`
+### `DELETE /api/portfolio/tax`
 
-| Parameter | Type | Required | Description |
-|-----------|------|----------|-------------|
-| `q` | string | Yes | Search query |
+Portfolio tax implications calculator
 
-**Response:**
+**Price:** `$0.001/request`
 
-```json
-{
-  "currencies": [...],
-  "icos": [...],
-  "exchanges": [...],
-  "people": [...],
-  "tags": [...]
-}
-```
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `portfolio_id` | string | No | `demo` | Filter by portfolio id |
+| `year` | number | No | — | Filter by year |
+| `jurisdiction` | string | No | `US` | Filter by jurisdiction |
+| `method` | string | No | — | Filter by method |
+| `format` | string | No | `json` | Response format |
 
 ---
 
-## Derivatives Exchange-Specific APIs
+### `POST /api/portfolio/tax-report`
 
-Exchange-specific derivatives data sourced directly from Bybit, OKX, and dYdX APIs.
+Generate comprehensive portfolio tax reports
 
-### GET /api/derivatives/bybit/tickers
+**Price:** `$0.001/request`
 
-Bybit derivatives market tickers.
+---
 
-**Parameters:**
+### `GET /api/predictions`
+### `POST /api/predictions`
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `category` | string | - | Market category filter |
+Crypto price prediction market data
 
----
+**Price:** `$0.001/request`
 
-### GET /api/derivatives/bybit/funding/[symbol]
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `userId` | string | No | — | User identifier |
+| `asset` | string | No | — | Asset identifier (e.g., BTC, ETH) |
+| `status` | string | No | — | Filter by status |
+| `view` | string | No | `list` | Filter by view |
+| `limit` | number | No | `50` | Maximum number of results to return |
+| `minPredictions` | number | No | `5` | Filter by minPredictions |
 
-Historical funding rate data for a Bybit perpetual contract.
+---
 
-**Parameters:**
+### `GET /api/predictions/history`
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `limit` | integer | 200 | Number of periods |
-| `start_time` | integer | - | Start timestamp (ms) |
-| `end_time` | integer | - | End timestamp (ms) |
+Historical prediction accuracy tracking
 
-**Example:** `GET /api/derivatives/bybit/funding/BTCUSDT?limit=100`
+**Price:** `$0.001/request`
 
 ---
 
-### GET /api/derivatives/bybit/open-interest/[symbol]
+### `GET /api/predictions/markets`
+### `POST /api/predictions/markets`
 
-Open interest history for a Bybit symbol.
+Prediction market listings and odds
 
-**Parameters:**
+**Price:** `$0.001/request`
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `interval` | string | 1h | Time interval |
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `action` | string | No | `list` | API action to perform |
+| `userId` | string | No | `demo_user` | User identifier |
+| `id` | string | No | — | Unique identifier |
+| `status` | string | No | — | Filter by status |
+| `category` | string | No | — | Filter by category |
 
 ---
-
-### GET /api/derivatives/okx/tickers
 
-OKX derivatives tickers.
+### `GET /api/v1/alerts`
 
-**Parameters:**
+Alert management for price and event triggers
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `type` | string | SWAP | `SWAP` or `FUTURES` |
+**Price:** `$0.001/request`
 
 ---
+
+### `GET /api/v1/predictions`
+### `POST /api/v1/predictions`
+
+Price prediction submissions and data
 
-### GET /api/derivatives/okx/funding
+**Price:** `$0.003/request`
 
-Current OKX funding rates for all perpetual swaps.
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `userId` | string | No | — | User identifier |
+| `asset` | string | No | — | Asset identifier (e.g., BTC, ETH) |
+| `status` | string | No | — | Filter by status |
+| `view` | string | No | `list` | Filter by view |
+| `limit` | number | No | `50` | Maximum number of results to return |
+| `minPredictions` | number | No | `5` | Filter by minPredictions |
 
 ---
 
-### GET /api/derivatives/okx/open-interest
+### `GET /api/watchlist`
+### `POST /api/watchlist`
+### `DELETE /api/watchlist`
+### `PUT /api/watchlist`
 
-OKX open interest data.
+Watchlist management for tracking assets
 
-**Parameters:**
+**Price:** `$0.001/request`
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `type` | string | SWAP | `SWAP` or `FUTURES` |
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `check` | string | No | — | Filter by check |
+| `prices` | string | No | — | Filter by prices |
+| `clear` | string | No | — | Filter by clear |
+| `coinId` | string | No | — | Cryptocurrency ID (e.g., bitcoin, ethereum) |
 
 ---
 
-### GET /api/derivatives/dydx/markets
+## Premium
 
-All available dYdX perpetual markets.
+### `GET /api/premium`
 
+Premium tier overview and features
+
+**Price:** `$0.001/request`
+
 ---
 
-### GET /api/derivatives/aggregated/funding
+## Premium AI
 
-Funding rates aggregated across Binance, Bybit, and OKX — the most comprehensive view.
+### `GET /api/premium/ai/analyze`
 
-**Response:**
+Premium deep AI market analysis with full reports
 
-```json
-{
-  "rates": [
-    {
-      "symbol": "BTC",
-      "binance": 0.01,
-      "bybit": 0.0098,
-      "okx": 0.0102,
-      "average": 0.01,
-      "nextFundingTime": 1708027200000
-    }
-  ],
-  "timestamp": 1708012800000
-}
-```
+**Price:** `$0.05/request`
 
 ---
+
+### `GET /api/premium/ai/compare`
+
+Premium AI-powered multi-asset comparison
 
-### GET /api/derivatives/aggregated/open-interest
+**Price:** `$0.03/request`
 
-Open interest aggregated across all major exchanges.
+---
+
+### `GET /api/premium/ai/sentiment`
 
-**Response:**
+Premium granular AI sentiment analysis
 
-```json
-{
-  "openInterest": [
-    {
-      "symbol": "BTC",
-      "totalOI": 28500000000,
-      "byExchange": {
-        "binance": 12000000000,
-        "bybit": 8500000000,
-        "okx": 5000000000,
-        "dydx": 3000000000
-      }
-    }
-  ]
-}
-```
+**Price:** `$0.02/request`
 
 ---
 
-### GET /api/derivatives/opportunities
+### `GET /api/premium/ai/signals`
 
-Top funding rate arbitrage opportunities across exchanges.
+Premium AI trading signals with confidence scores
 
-**Parameters:**
+**Price:** `$0.05/request`
+
+---
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `limit` | integer | 10 | Number of opportunities (max 50) |
+### `GET /api/premium/ai/summary`
 
-**Response:**
+Premium AI executive market summary
 
-```json
-{
-  "opportunities": [
-    {
-      "symbol": "SOL",
-      "rateDiff": 0.085,
-      "exchanges": { "long": "bybit", "short": "okx" },
-      "longRate": -0.02,
-      "shortRate": 0.065,
-      "annualizedReturn": 31.2,
-      "recommendation": "Long SOL on Bybit, Short on OKX"
-    }
-  ]
-}
-```
+**Price:** `$0.01/request`
 
 ---
 
-### GET /api/funding/dashboard
+## Premium Alerts
 
-Full funding rate dashboard with alerts — ideal for derivatives traders.
+### `GET /api/premium/alerts/custom`
 
-**Response:**
+Premium custom alert rule configuration
 
-```json
-{
-  "dashboard": {
-    "averageFunding": 0.012,
-    "extremeRates": [...],
-    "topPositive": [...],
-    "topNegative": [...]
-  },
-  "alerts": [
-    { "symbol": "BTC", "type": "high_funding", "rate": 0.085, "message": "BTC funding rate exceeds 0.08%" }
-  ]
-}
-```
+**Price:** `$0.001/request`
 
 ---
 
-### GET /api/funding/history/[symbol]
+### `GET /api/premium/alerts/whales`
 
-Historical funding rates for a specific symbol.
+Premium whale activity alerts
 
-**Parameters:**
+**Price:** `$0.01/request`
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `exchange` | string | - | Filter by exchange |
-| `limit` | integer | 100 | Number of entries (max 1000) |
-| `start` | ISO date | - | Start date |
-| `end` | ISO date | - | End date |
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `coins` | string | No | `bitcoin,ethereum` | Comma-separated cryptocurrency IDs |
+| `minThreshold` | number | No | `1000000` | Filter by minThreshold |
+| `concentration` | string | No | — | Filter by concentration |
 
-**Example:** `GET /api/funding/history/BTC?exchange=binance&limit=500`
+---
+
+## Premium Analytics
+
+### `GET /api/premium/analytics/screener`
+
+Premium advanced crypto screener
 
+**Price:** `$0.01/request`
+
 ---
+
+### `GET /api/premium/portfolio/analytics`
 
-## Binance Exchange APIs
+Premium portfolio analytics and insights
 
-Real-time market data directly from Binance REST API. All symbols use Binance format (e.g. `BTCUSDT`).
+**Price:** `$0.01/request`
 
-### GET /api/binance
+---
 
-Quick snapshot of BTC, ETH, and BNB 24hr stats.
+### `GET /api/premium/screener/advanced`
 
-**Response:**
+Premium advanced multi-factor crypto screener
 
-```json
-{
-  "symbols": [
-    {
-      "symbol": "BTCUSDT",
-      "lastPrice": "102500.00",
-      "priceChange": "2345.00",
-      "priceChangePercent": "2.34",
-      "volume": "48234.123",
-      "quoteVolume": "4823412300.00",
-      "highPrice": "103200.00",
-      "lowPrice": "99800.00"
-    }
-  ],
-  "timestamp": 1708012800000
-}
-```
+**Price:** `$0.02/request`
 
 ---
+
+## Premium Data
 
-### GET /api/binance/prices
+### `GET /api/premium/export/portfolio`
 
-Spot prices for all or selected Binance symbols.
+Premium portfolio data export
 
-**Parameters:**
+**Price:** `$0.1/request`
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `symbols` | string | all | Comma-separated symbols (e.g. `BTCUSDT,ETHUSDT`) |
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `format` | string | No | `json` | Response format |
+| `portfolio_id` | string | No | — | Filter by portfolio id |
 
 ---
 
-### GET /api/binance/prices/[symbol]
+## Premium DeFi
 
-Spot price for a single Binance symbol.
+### `GET /api/premium/defi/protocols`
 
-**Example:** `GET /api/binance/prices/BTCUSDT`
+Premium detailed DeFi protocol analytics
 
-**Response:**
+**Price:** `$0.002/request`
 
-```json
-{ "symbol": "BTCUSDT", "price": "102500.00" }
-```
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `limit` | number | No | `500` | Maximum number of results to return |
+| `category` | string | No | — | Filter by category |
+| `chain` | string | No | — | Blockchain network (e.g., ethereum, solana) |
+| `chains` | string | No | — | Filter by chains |
+| `minTvl` | number | No | `0` | Filter by minTvl |
 
 ---
 
-### GET /api/binance/tickers
+## Premium Market
 
-24hr price change statistics for all or selected symbols.
+### `GET /api/premium/market/coins`
 
-**Parameters:**
+Premium enhanced coin market data
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `symbols` | string | all | Comma-separated symbols |
-| `limit` | integer | all | Max results (up to 500) |
+**Price:** `$0.001/request`
 
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `limit` | number | No | `100` | Maximum number of results to return |
+| `details` | string | No | — | Filter by details |
+
 ---
 
-### GET /api/binance/tickers/[symbol]
+### `GET /api/premium/market/history`
 
-24hr stats for a single Binance symbol.
+Premium historical market data with full depth
 
-**Example:** `GET /api/binance/tickers/ETHUSDT`
+**Price:** `$0.005/request`
 
-**Response:** `{ symbol, priceChange, priceChangePercent, weightedAvgPrice, prevClosePrice, lastPrice, volume, quoteVolume, openTime, closeTime, highPrice, lowPrice, count }`
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `coinId` | string | No | — | Cryptocurrency ID (e.g., bitcoin, ethereum) |
+| `range` | string | No | `1y` | Filter by range |
+| `currency` | string | No | `usd` | Filter by currency |
+| `ohlc` | string | No | — | Filter by ohlc |
 
 ---
+
+## Premium Whales
 
-## Streaming & Real-Time Additions
+### `GET /api/premium/smart-money`
 
-Server-Sent Events (SSE) endpoints for live data streams. Connect once and receive pushed updates. These endpoints do **not** use Edge runtime — use `Cache-Control: no-cache` on the client.
+Premium smart money and institutional flow tracking
 
-**Client example (JavaScript):**
+**Price:** `$0.05/request`
 
-```javascript
-const es = new EventSource('https://cryptocurrency.cv/api/prices/stream?symbols=BTC,ETH');
-es.onmessage = (event) => {
-  const data = JSON.parse(event.data);
-  console.log(data); // { symbol: 'BTC', price: 102500, change24h: 2.3, timestamp: 1708012800000 }
-};
-```
+---
 
-### GET /api/prices/stream
+### `GET /api/premium/whales/alerts`
 
-Live price updates pushed every 5 seconds.
+Premium whale movement alert configuration
 
-**Parameters:**
+**Price:** `$0.05/request`
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `symbols` | string | BTC,ETH,BNB,SOL,XRP | Comma-separated coin symbols |
+---
 
-**Stream format:**
+### `GET /api/premium/whales/transactions`
 
-```
-data: {"symbol":"BTC","price":102500,"change24h":2.3,"timestamp":1708012800000}
+Premium detailed whale transaction data
 
-data: {"symbol":"ETH","price":3820,"change24h":1.8,"timestamp":1708012800000}
-```
+**Price:** `$0.05/request`
 
 ---
 
-### GET /api/market/stream
+## Social Intelligence
 
-Market overview updates pushed every 30 seconds.
+### `GET /api/analytics/influencers`
 
-**Stream format:**
+Influencer impact and reach analytics
 
-```
-data: {"totalMarketCap":2850000000000,"btcDominance":52.4,"fearGreed":68,"topCoins":[...],"timestamp":1708012800000}
-```
+**Price:** `$0.001/request`
 
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `limit` | number | No | `30` | Maximum number of results to return |
+| `min_credibility` | number | No | `0` | Filter by min credibility |
+| `category` | string | No | — | Filter by category |
+| `platform` | string | No | — | Filter by platform |
+| `sort` | string | No | `credibility` | Sort field |
+
 ---
 
-### GET /api/alerts/stream
+### `GET /api/data-sources/social`
 
-Real-time alert notifications stream.
+Social data source status and coverage
 
-**Parameters:**
+**Price:** `$0.001/request`
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `session_id` | string | - | Filter alerts for a specific session |
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `view` | string | No | `dashboard` | Filter by view |
+| `days` | number | No | `30` | Number of days of historical data |
+| `limit` | number | No | `20` | Maximum number of results to return |
+| `symbol` | string | No | — | Trading symbol (e.g., BTC, ETH) |
+| `space` | string | No | — | Filter by space |
 
 ---
-
-### GET /api/news/stream
 
-Live news article stream, pushed as new articles are detected.
+### `GET /api/influencers`
+### `POST /api/influencers`
 
-**Parameters:**
+Crypto influencer rankings and analysis
 
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `categories` | string | all | Comma-separated category filters |
-| `limit` | integer | 5 | Articles per poll |
+**Price:** `$0.001/request`
 
-**Stream format:**
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `sortBy` | string | No | `reliability` | Filter by sortBy |
+| `limit` | number | No | `50` | Maximum number of results to return |
+| `minCalls` | number | No | `0` | Filter by minCalls |
+| `platform` | string | No | — | Filter by platform |
+| `ticker` | string | No | — | Filter by ticker |
+| `view` | string | No | — | Filter by view |
 
-```
-data: {"title":"Bitcoin Hits New High","source":"CoinDesk","pubDate":"2026-02-21T10:00:00Z","link":"https://..."}
-```
-
 ---
 
-## SDKs
+### `GET /api/nostr`
+### `POST /api/nostr`
 
-Official SDKs are available for quick integration:
+Nostr protocol integration for decentralized publishing
 
-- [Python SDK](sdks/python.md)
-- [JavaScript SDK](sdks/javascript.md)
-- [TypeScript SDK](sdks/typescript.md)
-- [React Hooks](sdks/react.md)
-- [Go SDK](sdks/go.md)
-- [PHP SDK](sdks/php.md)
+**Price:** `$0.001/request`
 
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `action` | string | No | — | API action to perform |
+| `limit` | number | No | `20` | Maximum number of results to return |
+
 ---
+
+### `GET /api/social`
+### `POST /api/social`
 
-## Need Help?
+Social media analytics overview
+
+**Price:** `$0.001/request`
+
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `view` | string | No | `full` | Filter by view |
+| `symbols` | string | No | — | Comma-separated trading symbols |
+| `limit` | number | No | `20` | Maximum number of results to return |
+| `platform` | string | No | `all` | Filter by platform |
+| `format` | string | No | `json` | Response format |
+
+---
+
+### `GET /api/social/coins`
+
+Social metrics for individual cryptocurrencies
+
+**Price:** `$0.001/request`
+
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `symbols` | string | No | — | Comma-separated trading symbols |
+| `limit` | number | No | `50` | Maximum number of results to return |
+
+---
+
+### `GET /api/social/discord`
+
+Discord community analytics for crypto projects
+
+**Price:** `$0.001/request`
+
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `channel_id` | string | No | — | Filter by channel id |
+| `guild_id` | string | No | — | Filter by guild id |
+| `limit` | number | No | `100` | Maximum number of results to return |
+| `keyword` | string | No | — | Filter by keyword |
+| `ticker` | string | No | — | Filter by ticker |
+
+---
+
+### `GET /api/social/influencer-score`
+### `POST /api/social/influencer-score`
+
+Calculate influencer impact score
+
+**Price:** `$0.001/request`
+
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `handle` | string | No | — | Filter by handle |
+| `platform` | string | No | `twitter` | Filter by platform |
+| `min_score` | number | No | `0` | Filter by min score |
+
+---
+
+### `GET /api/social/influencers`
+
+Crypto social media influencer rankings
+
+**Price:** `$0.001/request`
+
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `limit` | number | No | `50` | Maximum number of results to return |
+
+---
+
+### `GET /api/social/topics/trending`
+
+Trending topics across crypto social media
+
+**Price:** `$0.001/request`
+
+---
+
+### `GET /api/social/trending-narratives`
+
+Trending narratives and themes from social data
+
+**Price:** `$0.001/request`
+
+---
+
+### `GET /api/social/x/lists`
+### `POST /api/social/x/lists`
+
+X/Twitter crypto list management and monitoring
+
+**Price:** `$0.001/request`
+
+---
+
+### `GET /api/trending`
+
+Trending cryptocurrencies and topics
+
+**Price:** `$0.001/request`
+
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `limit` | number | No | `10` | Maximum number of results to return |
+| `hours` | number | No | `24` | Filter by hours |
+
+---
+
+### `GET /api/v1/trending`
+
+Trending cryptocurrencies and topics
+
+**Price:** `$0.001/request`
+
+---
+
+## Solana
+
+### `GET /api/solana`
+
+Solana blockchain overview and statistics
+
+**Price:** `$0.001/request`
+
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `address` | string | No | — | Wallet or contract address |
+| `mint` | string | No | — | Token mint address |
+| `view` | string | No | — | Filter by view |
+| `limit` | number | No | `20` | Maximum number of results to return |
+
+---
+
+### `GET /api/solana/assets`
+
+Solana digital asset data
+
+**Price:** `$0.001/request`
+
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `address` | string | No | — | Wallet or contract address |
+| `id` | string | No | — | Unique identifier |
+| `page` | number | No | `1` | Page number for pagination |
+| `limit` | number | No | `100` | Maximum number of results to return |
+
+---
+
+### `GET /api/solana/balances`
+
+Solana wallet token balances
+
+**Price:** `$0.001/request`
+
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `address` | string | No | — | Wallet or contract address |
+
+---
+
+### `GET /api/solana/collections`
+
+Solana NFT collection data
+
+**Price:** `$0.001/request`
+
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `groupKey` | string | No | — | Filter by groupKey |
+| `groupValue` | string | No | — | Filter by groupValue |
+| `creator` | string | No | — | Filter by creator |
+| `authority` | string | No | — | Filter by authority |
+| `proof` | string | No | — | Filter by proof |
+| `page` | number | No | `1` | Page number for pagination |
+| `limit` | number | No | `100` | Maximum number of results to return |
+
+---
+
+### `GET /api/solana/priority-fees`
+
+Solana priority fee estimates
+
+**Price:** `$0.001/request`
+
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `accounts` | string | No | — | Filter by accounts |
+
+---
+
+### `GET /api/solana/search`
+
+Search Solana tokens and accounts
+
+**Price:** `$0.001/request`
+
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `owner` | string | No | — | Wallet owner address |
+| `creator` | string | No | — | Filter by creator |
+| `collection` | string | No | — | Filter by collection |
+| `compressed` | string | No | — | Filter by compressed |
+| `frozen` | string | No | — | Filter by frozen |
+| `burnt` | string | No | — | Filter by burnt |
+| `page` | number | No | `1` | Page number for pagination |
+| `limit` | number | No | `100` | Maximum number of results to return |
+
+---
+
+### `GET /api/solana/tokens`
+
+Solana token data with filtering and pagination
+
+**Price:** `$0.001/request`
+
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `owner` | string | No | — | Wallet owner address |
+| `mint` | string | No | — | Token mint address |
+| `page` | number | No | `1` | Page number for pagination |
+| `limit` | number | No | `100` | Maximum number of results to return |
+
+---
+
+### `GET /api/solana/transactions`
+
+Solana transaction history
+
+**Price:** `$0.001/request`
+
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `address` | string | No | — | Wallet or contract address |
+| `limit` | number | No | `20` | Maximum number of results to return |
+| `source` | string | No | — | Filter by news source |
+
+---
+
+### `GET /api/solana/wallet`
+
+Solana wallet portfolio and transaction overview
+
+**Price:** `$0.001/request`
+
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `address` | string | No | — | Wallet or contract address |
+
+---
+
+## Stablecoins
+
+### `GET /api/stablecoins`
+
+Stablecoin market overview and supply data
+
+**Price:** `$0.001/request`
+
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `chains` | string | No | — | Filter by chains |
+| `limit` | number | No | `50` | Maximum number of results to return |
+
+---
+
+### `GET /api/stablecoins/chains`
+
+Stablecoin distribution across blockchains
+
+**Price:** `$0.001/request`
+
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `limit` | number | No | `25` | Maximum number of results to return |
+
+---
+
+### `GET /api/stablecoins/depeg`
+
+Stablecoin depeg monitoring and alerts
+
+**Price:** `$0.001/request`
+
+---
+
+### `GET /api/stablecoins/dominance`
+
+Stablecoin market dominance metrics
+
+**Price:** `$0.001/request`
+
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `limit` | number | No | `10` | Maximum number of results to return |
+
+---
+
+### `GET /api/v1/stablecoins`
+
+Stablecoin market data
+
+**Price:** `$0.002/request`
+
+---
+
+## Sui
+
+### `GET /api/sui`
+
+Sui blockchain overview and statistics
+
+**Price:** `$0.001/request`
+
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `address` | string | No | — | Wallet or contract address |
+| `object` | string | No | — | Filter by object |
+| `tx` | string | No | — | Filter by tx |
+| `coin` | string | No | — | Cryptocurrency ID or symbol |
+| `view` | string | No | — | Filter by view |
+| `limit` | number | No | `50` | Maximum number of results to return |
+| `cursor` | string | No | — | Filter by cursor |
+
+---
+
+### `GET /api/sui/balances`
+
+Sui wallet balances and token holdings
+
+**Price:** `$0.001/request`
+
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `address` | string | No | — | Wallet or contract address |
+| `coin` | string | No | — | Cryptocurrency ID or symbol |
+
+---
+
+### `GET /api/sui/objects`
+
+Sui object data and state
+
+**Price:** `$0.001/request`
+
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `address` | string | No | — | Wallet or contract address |
+| `id` | string | No | — | Unique identifier |
+| `ids` | string | No | — | Comma-separated IDs |
+| `limit` | number | No | `50` | Maximum number of results to return |
+| `cursor` | string | No | — | Filter by cursor |
+
+---
+
+### `GET /api/sui/transactions`
+
+Sui transaction history and details
+
+**Price:** `$0.001/request`
+
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `address` | string | No | — | Wallet or contract address |
+| `digest` | string | No | — | Filter by digest |
+| `limit` | number | No | `20` | Maximum number of results to return |
+| `cursor` | string | No | — | Filter by cursor |
+
+---
+
+## Trading & Derivatives
+
+### `GET /api/arbitrage`
+### `POST /api/arbitrage`
+
+Cross-exchange arbitrage opportunity detection
+
+**Price:** `$0.001/request`
+
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `symbol` | string | No | — | Trading symbol (e.g., BTC, ETH) |
+| `minProfit` | number | No | `0.1` | Filter by minProfit |
+| `exchange` | string | No | — | Filter by exchange |
+| `limit` | number | No | `50` | Maximum number of results to return |
+| `includeTriangular` | string | No | — | Filter by includeTriangular |
+| `monitor` | string | No | — | Filter by monitor |
+
+---
+
+### `GET /api/backtest`
+### `POST /api/backtest`
+
+Strategy backtesting with historical market data
+
+**Price:** `$0.001/request`
+
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `action` | string | No | `backtest` | API action to perform |
+| `strategy` | string | No | `sentiment_momentum` | Filter by strategy |
+| `asset` | string | No | `BTC` | Asset identifier (e.g., BTC, ETH) |
+| `start` | string | No | `2025-01-01` | Start position for pagination |
+| `end` | string | No | `2026-02-01` | Filter by end |
+| `capital` | number | No | `10000` | Filter by capital |
+
+---
+
+### `GET /api/data-sources/derivatives`
+
+Derivatives data source status and coverage
+
+**Price:** `$0.001/request`
+
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `view` | string | No | `dashboard` | Filter by view |
+| `symbol` | string | No | `BTC` | Trading symbol (e.g., BTC, ETH) |
+| `currency` | string | No | `BTC` | Filter by currency |
+
+---
+
+### `GET /api/derivatives`
+
+Crypto derivatives market overview
+
+**Price:** `$0.001/request`
+
+---
+
+### `GET /api/derivatives/aggregated/funding`
+
+Aggregated funding rates across exchanges
+
+**Price:** `$0.001/request`
+
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `symbol` | string | No | — | Trading symbol (e.g., BTC, ETH) |
+
+---
+
+### `GET /api/derivatives/aggregated/open-interest`
+
+Aggregated open interest across exchanges
+
+**Price:** `$0.001/request`
+
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `symbol` | string | No | — | Trading symbol (e.g., BTC, ETH) |
+
+---
+
+### `GET /api/derivatives/bybit/tickers`
+
+Bybit derivatives ticker data
+
+**Price:** `$0.001/request`
+
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `category` | string | No | `linear` | Filter by category |
+
+---
+
+### `GET /api/derivatives/dydx/markets`
+
+dYdX perpetual market data
+
+**Price:** `$0.001/request`
+
+---
+
+### `GET /api/derivatives/okx/funding`
+
+OKX funding rate data
+
+**Price:** `$0.001/request`
+
+---
+
+### `GET /api/derivatives/okx/open-interest`
+
+OKX open interest data
+
+**Price:** `$0.001/request`
+
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `type` | string | No | `SWAP` | Data or content type |
+
+---
+
+### `GET /api/derivatives/okx/tickers`
+
+OKX derivatives ticker data
+
+**Price:** `$0.001/request`
+
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `type` | string | No | `SWAP` | Data or content type |
+
+---
+
+### `GET /api/derivatives/opportunities`
+
+Derivatives trading opportunities and spreads
+
+**Price:** `$0.001/request`
+
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `limit` | number | No | `10` | Maximum number of results to return |
+
+---
+
+### `GET /api/funding`
+### `POST /api/funding`
+
+Venture capital funding rounds in crypto
+
+**Price:** `$0.001/request`
+
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `exchange` | string | No | — | Filter by exchange |
+| `symbol` | string | No | — | Trading symbol (e.g., BTC, ETH) |
+| `minSpread` | number | No | `0` | Filter by minSpread |
+| `alerts` | string | No | — | Filter by alerts |
+| `history` | string | No | — | Filter by history |
+| `historyExchange` | string | No | `binance` | Filter by historyExchange |
+| `limit` | number | No | `100` | Maximum number of results to return |
+
+---
+
+### `GET /api/funding-rates`
+
+Perpetual futures funding rates across exchanges
+
+**Price:** `$0.001/request`
+
+---
+
+### `GET /api/hyperliquid`
+
+Hyperliquid perpetual DEX data
+
+**Price:** `$0.001/request`
+
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `type` | string | No | `all` | Data or content type |
+| `symbol` | string | No | — | Trading symbol (e.g., BTC, ETH) |
+
+---
+
+### `GET /api/integrations/tradingview`
+### `POST /api/integrations/tradingview`
+
+TradingView webhook integration for alerts and signals
+
+**Price:** `$0.001/request`
+
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `action` | string | No | — | API action to perform |
+| `symbol` | string | No | — | Trading symbol (e.g., BTC, ETH) |
+| `timeframe` | string | No | `D` | Time period (e.g., 1h, 24h, 7d, 30d) |
+| `type` | string | No | `chart` | Data or content type |
+| `theme` | string | No | `dark` | Filter by theme |
+| `width` | string | No | `100%` | Filter by width |
+| `height` | number | No | `500` | Filter by height |
+| `symbols` | string | No | — | Comma-separated trading symbols |
+| `tags` | string | No | — | Filter by tags |
+| `overlay` | string | No | — | Filter by overlay |
+| `id` | string | No | — | Unique identifier |
+| `enabled` | string | No | — | Filter by enabled |
+| `fast` | number | No | `9` | Filter by fast |
+| `slow` | number | No | `21` | Filter by slow |
+
+---
+
+### `GET /api/liquidations`
+
+Liquidation data from perpetual futures markets
+
+**Price:** `$0.001/request`
+
+---
+
+### `GET /api/market/derivatives`
+
+Derivatives market overview and statistics
+
+**Price:** `$0.001/request`
+
+---
+
+### `GET /api/options`
+
+Crypto options market data and analytics
+
+**Price:** `$0.001/request`
+
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `underlying` | string | No | — | Filter by underlying |
+| `view` | string | No | `dashboard` | Filter by view |
+| `expiry` | string | No | — | Filter by expiry |
+| `limit` | number | No | `100` | Maximum number of results to return |
+
+---
+
+### `POST /api/research/backtest`
+
+Research-grade strategy backtesting
+
+**Price:** `$0.001/request`
+
+---
+
+### `GET /api/signals`
+
+Trading signal generation and analysis
+
+**Price:** `$0.001/request`
+
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `limit` | number | No | `30` | Maximum number of results to return |
+| `min_confidence` | number | No | `50` | Filter by min confidence |
+| `ticker` | string | No | — | Filter by ticker |
+
+---
+
+### `GET /api/signals/narrative`
+
+Narrative-based trading signals
+
+**Price:** `$0.001/request`
+
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `signals` | string | No | — | Filter by signals |
+
+---
+
+### `GET /api/trading/arbitrage`
+
+Trading arbitrage opportunity detection
+
+**Price:** `$0.001/request`
+
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `type` | string | No | `all` | Data or content type |
+| `symbol` | string | No | — | Trading symbol (e.g., BTC, ETH) |
+| `minSpread` | number | No | `0` | Filter by minSpread |
+| `minProfit` | number | No | `0` | Filter by minProfit |
+| `exchange` | string | No | — | Filter by exchange |
+| `limit` | number | No | `50` | Maximum number of results to return |
+| `sortBy` | string | No | `score` | Filter by sortBy |
+| `view` | string | No | `opportunities` | Filter by view |
+
+---
+
+### `GET /api/trading/options`
+
+Options trading data and strategies
+
+**Price:** `$0.001/request`
+
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `view` | string | No | `dashboard` | Filter by view |
+| `underlying` | string | No | `BTC` | Filter by underlying |
+| `expiry` | string | No | — | Filter by expiry |
+| `limit` | number | No | `50` | Maximum number of results to return |
+| `unusual` | string | No | — | Filter by unusual |
+| `blocks` | string | No | — | Filter by blocks |
+| `minPremium` | number | No | `0` | Filter by minPremium |
+
+---
+
+### `GET /api/trading/orderbook`
+
+Trading order book analysis
+
+**Price:** `$0.001/request`
+
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `symbol` | string | No | — | Trading symbol (e.g., BTC, ETH) |
+| `view` | string | No | `aggregated` | Filter by view |
+| `depth` | number | No | `25` | Filter by depth |
+| `exchanges` | string | No | — | Filter by exchanges |
+| `market` | string | No | `spot` | Filter by market |
+| `size` | number | No | `10000` | Filter by size |
+| `side` | string | No | `both` | Filter by side |
+
+---
+
+### `GET /api/tradingview`
+
+TradingView integration and chart data
+
+**Price:** `$0.001/request`
+
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `action` | string | No | `config` | API action to perform |
+| `symbol` | string | No | — | Trading symbol (e.g., BTC, ETH) |
+| `query` | string | No | — | Search query string |
+| `type` | string | No | — | Data or content type |
+| `exchange` | string | No | — | Filter by exchange |
+| `limit` | number | No | `30` | Maximum number of results to return |
+| `from` | number | No | `0` | Start date (ISO 8601 or YYYY-MM-DD) |
+| `to` | number | No | — | End date (ISO 8601 or YYYY-MM-DD) |
+| `resolution` | string | No | `D` | Filter by resolution |
+| `countback` | number | No | — | Filter by countback |
+| `symbols` | string | No | — | Comma-separated trading symbols |
+| `theme` | string | No | `dark` | Filter by theme |
+
+---
+
+### `GET /api/v1/derivatives`
+
+Derivatives market data
+
+**Price:** `$0.003/request`
+
+---
+
+### `GET /api/v1/liquidations`
+
+Liquidation data from futures markets
+
+**Price:** `$0.003/request`
+
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `symbol` | string | No | — | Trading symbol (e.g., BTC, ETH) |
+| `limit` | number | No | `20` | Maximum number of results to return |
+| `min_value` | number | No | `0` | Filter by min value |
+
+---
+
+### `GET /api/v1/signals`
+
+Trading signals with confidence scores
+
+**Price:** `$0.005/request`
+
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `limit` | number | No | `30` | Maximum number of results to return |
+| `min_confidence` | number | No | `50` | Filter by min confidence |
+
+---
+
+## Summary
+
+| Category | Endpoints |
+|----------|-----------|
+| AI Analysis | 52 |
+| API v1 | 5 |
+| Analytics & Intelligence | 17 |
+| Aptos | 4 |
+| Bitcoin | 8 |
+| Data Export | 4 |
+| DeFi | 20 |
+| Gaming & Metaverse | 3 |
+| Layer 2 | 4 |
+| Macro & Traditional | 6 |
+| Market Data | 51 |
+| NFTs | 6 |
+| News & Content | 31 |
+| On-Chain & Whales | 22 |
+| Oracles | 3 |
+| Other | 23 |
+| Portfolio & Alerts | 15 |
+| Premium | 1 |
+| Premium AI | 5 |
+| Premium Alerts | 2 |
+| Premium Analytics | 3 |
+| Premium Data | 1 |
+| Premium DeFi | 1 |
+| Premium Market | 2 |
+| Premium Whales | 3 |
+| Social Intelligence | 14 |
+| Solana | 9 |
+| Stablecoins | 5 |
+| Sui | 4 |
+| Trading & Derivatives | 29 |
+| **Total** | **353** |
+
+---
 
-- 📖 [Main Documentation](index.md)
-- 💬 [GitHub Discussions](https://github.com/nirholas/free-crypto-news/discussions)
-- 🐛 [Report Issues](https://github.com/nirholas/free-crypto-news/issues)
+*Generated by [scripts/generate-api-docs.js](../scripts/generate-api-docs.js) from [endpoint-metadata.generated.ts](../src/lib/openapi/endpoint-metadata.generated.ts)*

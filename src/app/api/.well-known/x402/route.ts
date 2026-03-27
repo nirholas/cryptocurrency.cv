@@ -20,6 +20,7 @@
 
 import { NextResponse } from 'next/server';
 import { ROUTE_MANIFEST } from '@/lib/openapi/routes.generated';
+import { getOwnershipProofs } from '@/lib/x402/config';
 
 export const revalidate = 300;
 
@@ -39,8 +40,14 @@ export async function GET() {
     return `${method} ${path}`;
   });
 
+  const ownershipProofs = getOwnershipProofs();
+
   return NextResponse.json(
-    { version: 1, resources },
+    {
+      version: 1,
+      resources,
+      ...(ownershipProofs && { ownershipProofs }),
+    },
     {
       headers: {
         'Cache-Control': 'public, max-age=300, s-maxage=300',

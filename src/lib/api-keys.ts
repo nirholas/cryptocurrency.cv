@@ -19,7 +19,6 @@
  */
 
 import { kv } from '@vercel/kv';
-import { sendWebhook, webhookPayloads } from './webhooks';
 import { authLogger } from '@/lib/logger';
 import {
   checkRateLimit as checkUpstashRateLimit,
@@ -269,21 +268,6 @@ export async function createApiKey(params: {
     // Also store by keyId for reverse lookup
     await kv.set(`${KV_PREFIX.key}id:${keyId}`, hashedKey);
 
-    // Emit webhook event for key creation (non-blocking)
-    sendWebhook(
-      'key.created',
-      webhookPayloads.keyCreated({
-        keyId,
-        keyPrefix: keyData.keyPrefix,
-        tier,
-        email,
-      }),
-    ).catch((err) => {
-      authLogger.error(
-        { err: err instanceof Error ? err : new Error(String(err)) },
-        'Failed to send key.created webhook',
-      );
-    });
 
     return { key: rawKey, data: keyData };
   } catch (error) {
@@ -470,47 +454,13 @@ async function sendRateLimitNotifications(
       at100: false,
     };
 
-    // Check 100% threshold
+    // Track 100% threshold notification
     if (!result.allowed && !notified.at100) {
-      sendWebhook(
-        'key.usage.limit',
-        webhookPayloads.keyUsageLimit({
-          keyId: keyData.id,
-          keyPrefix: keyData.keyPrefix,
-          tier: keyData.tier,
-          usage: used,
-          limit: tierConfig.requestsPerDay,
-          percentage: 100,
-          limitType: '100%',
-        }),
-      ).catch((err) => {
-        authLogger.error(
-          { err: err instanceof Error ? err : new Error(String(err)), limitType: '100%' },
-          'Failed to send key.usage.limit webhook',
-        );
-      });
       await kv.set(notifiedKey, { ...notified, at100: true });
       await kv.expire(notifiedKey, 90000);
     }
-    // Check 90% threshold
+    // Track 90% threshold notification
     else if (percentage >= 90 && percentage < 100 && !notified.at90) {
-      sendWebhook(
-        'key.usage.limit',
-        webhookPayloads.keyUsageLimit({
-          keyId: keyData.id,
-          keyPrefix: keyData.keyPrefix,
-          tier: keyData.tier,
-          usage: used,
-          limit: tierConfig.requestsPerDay,
-          percentage,
-          limitType: '90%',
-        }),
-      ).catch((err) => {
-        authLogger.error(
-          { err: err instanceof Error ? err : new Error(String(err)), limitType: '90%' },
-          'Failed to send key.usage.limit webhook',
-        );
-      });
       await kv.set(notifiedKey, { ...notified, at90: true });
       await kv.expire(notifiedKey, 90000);
     }

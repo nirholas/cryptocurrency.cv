@@ -19,7 +19,9 @@
  */
 
 import { API_PRICING, PREMIUM_PRICING, ENDPOINT_METADATA } from '@/lib/x402/pricing';
+import { getOwnershipProofs } from '@/lib/x402/config';
 import { ROUTE_MANIFEST, ROUTE_CATEGORIES } from './routes.generated';
+import { ENDPOINT_METADATA_FULL } from './endpoint-metadata.generated';
 
 // ---------------------------------------------------------------------------
 // Helpers
@@ -45,6 +47,19 @@ function getPrice(path: string): string {
   return '0.001';
 }
 
+/** Generate a unique operationId from path and method */
+function pathToOperationId(path: string, method: string): string {
+  const segments = path.replace(/^\/api\//, '').split('/').filter(Boolean);
+  const camelCase = segments
+    .map((s, i) => {
+      const clean = s.replace(/[^a-zA-Z0-9]/g, '');
+      return i === 0 ? clean : clean.charAt(0).toUpperCase() + clean.slice(1);
+    })
+    .join('');
+  const prefix = method === 'GET' ? 'get' : method === 'POST' ? 'create' : method === 'PUT' ? 'update' : method === 'DELETE' ? 'delete' : method.toLowerCase();
+  return `${prefix}${camelCase.charAt(0).toUpperCase()}${camelCase.slice(1)}`;
+}
+
 /** Convert ENDPOINT_METADATA parameters to OpenAPI parameters */
 function toOpenAPIParams(
   params: Record<string, { type: string; description: string; required?: boolean; default?: string }> | undefined,
@@ -62,16 +77,6 @@ function toOpenAPIParams(
   }));
 }
 
-/** Known POST routes */
-const POST_ROUTES = new Set([
-  '/api/premium/portfolio/analytics',
-  '/api/premium/alerts/create',
-  '/api/batch',
-  '/api/rag/batch',
-  '/api/rag/feedback',
-  '/api/portfolio/holding',
-]);
-
 // ---------------------------------------------------------------------------
 // Spec generator
 // ---------------------------------------------------------------------------
@@ -81,32 +86,95 @@ export function generateOpenAPISpec() {
 
   for (const { path, category } of ROUTE_MANIFEST) {
     const price = getPrice(path);
-    const meta = (ENDPOINT_METADATA as Record<string, { description?: string; parameters?: Record<string, { type: string; description: string; required?: boolean; default?: string }> }>)[path];
+
+    // Use comprehensive metadata (generated), fall back to legacy pricing metadata
+    const fullMeta = (ENDPOINT_METADATA_FULL as Record<string, {
+      description?: string;
+      methods?: string[];
+      streaming?: boolean;
+      parameters?: Record<string, { type: string; description: string; required?: boolean; default?: string }>;
+      outputSchema?: object;
+    }>)[path];
+    const legacyMeta = (ENDPOINT_METADATA as Record<string, { description?: string; parameters?: Record<string, { type: string; description: string; required?: boolean; default?: string }>; outputSchema?: object }>)[path];
     const premiumMeta = (PREMIUM_PRICING as Record<string, { description?: string }>)[path];
-    const description = meta?.description ?? premiumMeta?.description ?? `${category} endpoint`;
-    const method = POST_ROUTES.has(path) ? 'post' : 'get';
 
-    const operation: Record<string, unknown> = {
-      summary: description,
-      tags: [category],
-      responses: {
-        '200': { description: 'Successful response' },
-        '402': { description: 'Payment Required' },
-      },
-      'x-payment-info': paymentInfo(price),
-      security: [{ X402Payment: [] }],
-    };
+    const description = fullMeta?.description ?? legacyMeta?.description ?? premiumMeta?.description ?? `${category} endpoint`;
+    const params = fullMeta?.parameters ?? legacyMeta?.parameters;
+    const outputSchema = legacyMeta?.outputSchema ?? fullMeta?.outputSchema;
 
-    if (meta?.parameters) {
-      operation.parameters = toOpenAPIParams(meta.parameters);
+    // Determine HTTP methods from comprehensive metadata
+    const methods = fullMeta?.methods ?? ['GET'];
+
+    // Build path item with all methods
+    const pathItem: Record<string, unknown> = {};
+
+    for (const method of methods) {
+      const methodLower = method.toLowerCase();
+
+      const operation: Record<string, unknown> = {
+        summary: description,
+        operationId: pathToOperationId(path, method),
+        tags: [category],
+        responses: {
+          '200': outputSchema
+            ? {
+                description: fullMeta?.streaming ? 'Server-Sent Events stream' : 'Successful response',
+                content: fullMeta?.streaming
+                  ? { 'text/event-stream': { schema: { type: 'string' } } }
+                  : { 'application/json': { schema: outputSchema } },
+              }
+            : {
+                description: fullMeta?.streaming ? 'Server-Sent Events stream' : 'Successful response',
+              },
+          '402': { description: 'Payment Required' },
+        },
+        'x-payment-info': paymentInfo(price),
+        security: [{ X402Payment: [] }],
+      };
+
+      // Add parameters for GET requests
+      if (params && (methodLower === 'get')) {
+        operation.parameters = toOpenAPIParams(params);
+      }
+
+      // Add request body hint for POST requests with parameters
+      if (params && (methodLower === 'post')) {
+        operation.requestBody = {
+          description: 'Request payload',
+          content: {
+            'application/json': {
+              schema: {
+                type: 'object',
+                properties: Object.fromEntries(
+                  Object.entries(params).map(([name, p]) => [
+                    name,
+                    {
+                      type: p.type === 'number' ? 'number' : 'string',
+                      description: p.description,
+                      ...(p.default !== undefined ? { default: p.default } : {}),
+                    },
+                  ]),
+                ),
+              },
+            },
+          },
+        };
+      }
+
+      // Mark streaming endpoints
+      if (fullMeta?.streaming) {
+        operation['x-streaming'] = true;
+      }
+
+      // v1 + non-premium routes also accept API key auth
+      if (!path.startsWith('/api/premium/')) {
+        operation.security = [{ ApiKeyAuth: [] }, { X402Payment: [] }];
+      }
+
+      pathItem[methodLower] = operation;
     }
 
-    // v1 + non-premium routes also accept API key auth
-    if (!path.startsWith('/api/premium/')) {
-      operation.security = [{ ApiKeyAuth: [] }, { X402Payment: [] }];
-    }
-
-    paths[path] = { [method]: operation };
+    paths[path] = pathItem;
   }
 
   // Build tags from categories
@@ -214,6 +282,9 @@ export function generateOpenAPISpec() {
     servers: [
       { url: 'https://cryptocurrency.cv', description: 'Production' },
     ],
+    ...(getOwnershipProofs() && {
+      'x-discovery': { ownershipProofs: getOwnershipProofs() },
+    }),
     tags,
     paths,
     components: {
