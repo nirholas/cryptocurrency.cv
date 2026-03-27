@@ -11,8 +11,13 @@
 /**
  * x402 Payment Gate
  *
- * Wraps the @x402/next SDK for USDC micropayments on Base.
+ * Wraps the @x402/next SDK for USDC micropayments on Arbitrum.
  * Lazy-initialised to avoid build-time errors.
+ *
+ * Uses a CAIP-2 bridging facilitator wrapper because Sperax returns
+ * x402Version:1 with named networks ("arbitrum") while the SDK expects
+ * x402Version:2 with CAIP-2 format ("eip155:42161"). The wrapper
+ * translates the format gap so the SDK can build valid payment requirements.
  *
  * @module middleware/x402
  */
@@ -33,6 +38,81 @@ const RECEIVE_ADDRESS =
 
 const NETWORK = (process.env.X402_NETWORK ?? 'eip155:42161') as never;
 
+// ---------------------------------------------------------------------------
+// Named → CAIP-2 network bridging
+// ---------------------------------------------------------------------------
+
+/** Map named networks (from Sperax facilitator) to CAIP-2 identifiers (SDK format) */
+const NAMED_TO_CAIP2: Record<string, string> = {
+  'base': 'eip155:8453',
+  'base-sepolia': 'eip155:84532',
+  'arbitrum': 'eip155:42161',
+  'ethereum': 'eip155:1',
+};
+
+/**
+ * Wraps a real facilitator client and normalises its `getSupported()` response
+ * from v1/named-network format to v2/CAIP-2 format that the SDK expects.
+ */
+class Caip2FacilitatorBridge {
+  private inner: HTTPFacilitatorClient;
+  constructor(inner: HTTPFacilitatorClient) { this.inner = inner; }
+
+  async getSupported() {
+    const supported = await this.inner.getSupported();
+    return {
+      ...supported,
+      kinds: supported.kinds.map((kind: Record<string, unknown>) => ({
+        ...kind,
+        x402Version: 2,
+        network: NAMED_TO_CAIP2[kind.network as string] ?? kind.network,
+      })),
+    };
+  }
+  async verify(...args: Parameters<HTTPFacilitatorClient['verify']>) {
+    return this.inner.verify(...args);
+  }
+  async settle(...args: Parameters<HTTPFacilitatorClient['settle']>) {
+    return this.inner.settle(...args);
+  }
+  async createAuthHeaders(path: string) {
+    return this.inner.createAuthHeaders(path);
+  }
+}
+
+// ---------------------------------------------------------------------------
+// ExactEvmScheme with Arbitrum USDC support
+// ---------------------------------------------------------------------------
+
+/** Arbitrum USDC (6 decimals, EIP-3009) */
+const ARBITRUM_USDC = {
+  address: '0xaf88d065e77c8cC2239327C5EDb3A432268e5831',
+  name: 'USD Coin',
+  version: '2',
+  decimals: 6,
+};
+
+/** Create an ExactEvmScheme with a custom money parser for Arbitrum USDC */
+function createArbitrumScheme(): ExactEvmScheme {
+  const scheme = new ExactEvmScheme();
+  scheme.registerMoneyParser(async (amount: number, network: string) => {
+    if (network === 'eip155:42161') {
+      const tokenAmount = Math.round(amount * 10 ** ARBITRUM_USDC.decimals).toString();
+      return {
+        amount: tokenAmount,
+        asset: ARBITRUM_USDC.address,
+        extra: { name: ARBITRUM_USDC.name, version: ARBITRUM_USDC.version },
+      };
+    }
+    return null; // fallback to default for other networks
+  });
+  return scheme;
+}
+
+// ---------------------------------------------------------------------------
+// Route config builder
+// ---------------------------------------------------------------------------
+
 /** Build per-route pricing config from API_PRICING + PREMIUM_PRICING */
 function buildApiRoutes(): Record<string, RouteConfig> {
   const routes: Record<string, RouteConfig> = {};
@@ -52,11 +132,15 @@ function buildApiRoutes(): Record<string, RouteConfig> {
   // Catch-all fallback for routes not in explicit pricing
   routes['/api/:path*'] = {
     accepts: [{ scheme: 'exact', payTo: RECEIVE_ADDRESS, price: '$0.001', network: NETWORK }],
-    description: 'Crypto Vision API — pay per request in USDs on Arbitrum',
+    description: 'Crypto Vision API — pay per request in USDC on Arbitrum',
   };
 
   return routes;
 }
+
+// ---------------------------------------------------------------------------
+// Proxy initialisation
+// ---------------------------------------------------------------------------
 
 let _x402: ReturnType<typeof paymentProxyFromConfig> | null = null;
 
@@ -67,11 +151,14 @@ let _x402: ReturnType<typeof paymentProxyFromConfig> | null = null;
 export function getX402Proxy(): (req: NextRequest) => any {
   if (!_x402) {
     try {
-      const facilitator = new HTTPFacilitatorClient({ url: FACILITATOR_URL });
+      const realFacilitator = new HTTPFacilitatorClient({ url: FACILITATOR_URL });
+      const bridgedFacilitator = new Caip2FacilitatorBridge(realFacilitator);
+      const arbitrumScheme = createArbitrumScheme();
+
       _x402 = paymentProxyFromConfig(
         buildApiRoutes(),
-        facilitator,
-        [{ network: 'eip155:*' as never, server: new ExactEvmScheme() }],
+        bridgedFacilitator as unknown as HTTPFacilitatorClient,
+        [{ network: 'eip155:*' as never, server: arbitrumScheme }],
       );
     } catch (err) {
       console.warn(

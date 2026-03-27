@@ -43,27 +43,34 @@ describe('Critical Agent Fixes', () => {
         expect(config.requestsPerDay).toBeDefined();
         expect(typeof config.requestsPerMinute).toBe('number');
         expect(typeof config.requestsPerDay).toBe('number');
-        
+
         // Required string fields
         expect(config.id).toBe(tier);
         expect(config.name).toBeDefined();
         expect(config.name.length).toBeGreaterThan(0);
-        
+
         // Permissions array
         expect(Array.isArray(config.permissions)).toBe(true);
-        expect(config.permissions.length).toBeGreaterThan(0);
+        // Discontinued tiers (requestsPerDay === 0) may have empty permissions
+        if (config.requestsPerDay > 0) {
+          expect(config.permissions.length).toBeGreaterThan(0);
+        }
       });
     });
 
     it('should have sane rate limit values', () => {
       Object.entries(API_TIERS).forEach(([tierName, config]) => {
-        if (config.requestsPerDay !== -1) {
+        if (config.requestsPerDay !== -1 && config.requestsPerDay > 0) {
           // Daily limit should be >= minute limit
           expect(config.requestsPerDay).toBeGreaterThanOrEqual(config.requestsPerMinute);
         }
-        
-        // Minute limits should be positive
-        expect(config.requestsPerMinute).toBeGreaterThan(0);
+
+        // Minute limits should be non-negative (discontinued tiers may be 0)
+        expect(config.requestsPerMinute).toBeGreaterThanOrEqual(0);
+        // Active tiers must have positive rate limits
+        if (config.requestsPerDay > 0) {
+          expect(config.requestsPerMinute).toBeGreaterThan(0);
+        }
       });
     });
   });

@@ -113,9 +113,8 @@ describe('Liquidations Registry', () => {
 
 describe('Liquidations Chain Fallback', () => {
   it('falls back to Hyperliquid when Binance fails', async () => {
-    // Binance fails for all 3 symbols
-    mockFetch.mockRejectedValueOnce(new Error('Binance down'));
-    mockFetch.mockRejectedValueOnce(new Error('Binance down'));
+    // Binance adapter throws on the first fetch call (BTCUSDT),
+    // so only one rejection is consumed before fallback kicks in.
     mockFetch.mockRejectedValueOnce(new Error('Binance down'));
 
     // Hyperliquid succeeds (metaAndAssetCtxs)

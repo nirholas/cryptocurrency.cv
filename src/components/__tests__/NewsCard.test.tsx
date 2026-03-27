@@ -66,8 +66,12 @@ describe("FeaturedCard", () => {
 
   it("links to the article", () => {
     render(<FeaturedCard article={mockArticle} />);
-    const link = screen.getByRole("link");
-    expect(link).toHaveAttribute("href", mockArticle.link);
+    const links = screen.getAllByRole("link");
+    const articleLink = links.find(
+      (l) => l.getAttribute("href") === mockArticle.link
+    );
+    expect(articleLink).toBeDefined();
+    expect(articleLink).toHaveAttribute("href", mockArticle.link);
   });
 
   it("renders article image", () => {

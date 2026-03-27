@@ -66,7 +66,7 @@ describe('ResendProvider', () => {
 
 describe('ConsoleProvider', () => {
   it('logs email and returns a console ID', async () => {
-    const logSpy = vi.spyOn(console, 'log').mockImplementation(() => {});
+    const infoSpy = vi.spyOn(console, 'info').mockImplementation(() => {});
     const provider = new ConsoleProvider();
 
     const result = await provider.send({
@@ -77,7 +77,7 @@ describe('ConsoleProvider', () => {
     });
 
     expect(result.id).toMatch(/^console_/);
-    expect(logSpy).toHaveBeenCalled();
-    logSpy.mockRestore();
+    expect(infoSpy).toHaveBeenCalled();
+    infoSpy.mockRestore();
   });
 });

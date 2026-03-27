@@ -56,11 +56,53 @@ function getNestedValue(obj: Record<string, unknown>, key: string): unknown {
 }
 
 /**
- * Extract interpolation placeholders from a string
+ * Extract top-level interpolation variable names from an ICU message string.
+ *
+ * Walks the string tracking brace depth so that nested content inside
+ * plural / select clauses (e.g. `{count, plural, one {article} other {articles}}`)
+ * is not mistaken for interpolation placeholders.
+ *
+ * Returns a sorted array of unique `{varName}` and `{varName, ...}` tokens
+ * (only the variable name portion) so that translated files can be compared
+ * against English without being tripped up by translated inner text.
  */
 function extractPlaceholders(str: string): string[] {
-  const matches = str.match(/\{[^}]+\}/g);
-  return matches ? matches.sort() : [];
+  const placeholders: string[] = [];
+  let depth = 0;
+  let i = 0;
+
+  while (i < str.length) {
+    if (str[i] === '{') {
+      if (depth === 0) {
+        // Start of a top-level placeholder — extract the variable name
+        const start = i + 1;
+        // Find the matching closing brace (respecting nesting)
+        let inner = 1;
+        let j = start;
+        while (j < str.length && inner > 0) {
+          if (str[j] === '{') inner++;
+          else if (str[j] === '}') inner--;
+          j++;
+        }
+        // The content between the outermost braces
+        const content = str.slice(start, j - 1).trim();
+        // The variable name is the first word (before comma or space)
+        const varName = content.split(/[\s,]/)[0];
+        if (varName) {
+          placeholders.push(varName);
+        }
+        // Skip past the closing brace
+        i = j;
+        continue;
+      }
+      depth++;
+    } else if (str[i] === '}') {
+      if (depth > 0) depth--;
+    }
+    i++;
+  }
+
+  return [...new Set(placeholders)].sort();
 }
 
 describe('i18n Configuration', () => {
