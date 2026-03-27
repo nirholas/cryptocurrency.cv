@@ -171,6 +171,15 @@ export interface X402Discovery {
 }
 
 /**
+ * x402 Well-Known v1 Discovery response shape.
+ */
+export interface X402WellKnownV1 {
+  version: 1;
+  resources: string[];
+  ownershipProofs?: string[];
+}
+
+/**
  * Build the v1 well-known discovery document for x402scan compatibility.
  *
  * Returns the simple format expected by x402scan:
@@ -178,9 +187,10 @@ export interface X402Discovery {
  * { "version": 1, "resources": ["GET /api/v1/coins", "POST /api/v1/ask"] }
  * ```
  *
+ * Uses "METHOD /path" entries per x402scan spec.
  * x402scan resolves OpenAPI first (canonical), then falls back to this.
  */
-export function buildX402WellKnownV1(): { version: 1; resources: string[] } {
+export function buildX402WellKnownV1(): X402WellKnownV1 {
   const resources: string[] = [];
 
   for (const { path } of ROUTE_MANIFEST) {

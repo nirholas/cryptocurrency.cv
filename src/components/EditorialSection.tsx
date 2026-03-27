@@ -17,6 +17,12 @@ import { getTranslations } from 'next-intl/server';
 import { Badge, categoryToBadgeVariant } from '@/components/ui/Badge';
 import { BookmarkButton } from '@/components/BookmarkButton';
 import type { NewsArticle } from '@/lib/crypto-news';
+import { getUnsplashFallback } from '@/lib/unsplash-fallback';
+
+/** Resolve an article's display image — real URL or deterministic fallback. */
+function resolveImageUrl(article: NewsArticle): string {
+  return article.imageUrl || getUnsplashFallback(article.title || article.source || 'crypto');
+}
 
 /* ------------------------------------------------------------------ */
 /*  Section Header — editorial-style divider with title + "See all →" */
@@ -117,6 +123,7 @@ export async function EditorsPicks({ articles }: { articles: NewsArticle[] }) {
 }
 
 function EditorsPickCard({ article }: { article: NewsArticle }) {
+  const imgSrc = resolveImageUrl(article);
   return (
     <div className="group relative" role="article" aria-label={article.title}>
       <BookmarkButton
@@ -125,19 +132,17 @@ function EditorsPickCard({ article }: { article: NewsArticle }) {
       />
       <Link href={article.link} target="_blank" rel="noopener noreferrer" className="block">
         <article className="flex items-start gap-4">
-          {article.imageUrl && (
-            <div className="bg-surface-tertiary relative h-24 w-24 shrink-0 overflow-hidden rounded-md">
-              <Image
-                src={article.imageUrl}
-                alt={article.title}
-                fill
-                sizes="96px"
-                quality={80}
-                loading="lazy"
-                className="object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-            </div>
-          )}
+          <div className="bg-surface-tertiary relative h-24 w-24 shrink-0 overflow-hidden rounded-md">
+            <Image
+              src={imgSrc}
+              alt={article.title}
+              fill
+              sizes="96px"
+              quality={80}
+              loading="lazy"
+              className="object-cover transition-transform duration-300 group-hover:scale-105"
+            />
+          </div>
           <div className="flex min-w-0 flex-col gap-1.5">
             <Badge variant={categoryToBadgeVariant(article.category)} className="w-fit text-[10px]">
               {article.category}
@@ -194,20 +199,18 @@ export function CategorySection({
             />
             <Link href={lead.link} target="_blank" rel="noopener noreferrer" className="block">
               <article>
-                {lead.imageUrl && (
-                  <div className="bg-surface-tertiary relative mb-4 overflow-hidden rounded-md">
-                    <Image
-                      src={lead.imageUrl}
-                      alt={lead.title}
-                      width={800}
-                      height={450}
-                      sizes="(max-width: 1024px) 100vw, 60vw"
-                      quality={80}
-                      loading="lazy"
-                      className="aspect-video w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                    />
-                  </div>
-                )}
+                <div className="bg-surface-tertiary relative mb-4 overflow-hidden rounded-md">
+                  <Image
+                    src={resolveImageUrl(lead)}
+                    alt={lead.title}
+                    width={800}
+                    height={450}
+                    sizes="(max-width: 1024px) 100vw, 60vw"
+                    quality={80}
+                    loading="lazy"
+                    className="aspect-video w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                </div>
                 <Badge variant={categoryToBadgeVariant(lead.category)} className="mb-2">
                   {lead.category}
                 </Badge>
@@ -247,19 +250,17 @@ export function CategorySection({
                   className="block"
                 >
                   <article className="flex items-start gap-4">
-                    {article.imageUrl && (
-                      <div className="bg-surface-tertiary relative h-20 w-20 shrink-0 overflow-hidden rounded-md">
-                        <Image
-                          src={article.imageUrl}
-                          alt={article.title}
-                          fill
-                          sizes="80px"
-                          quality={80}
-                          loading="lazy"
-                          className="object-cover transition-transform duration-300 group-hover:scale-105"
-                        />
-                      </div>
-                    )}
+                    <div className="bg-surface-tertiary relative h-20 w-20 shrink-0 overflow-hidden rounded-md">
+                      <Image
+                        src={resolveImageUrl(article)}
+                        alt={article.title}
+                        fill
+                        sizes="80px"
+                        quality={80}
+                        loading="lazy"
+                        className="object-cover transition-transform duration-300 group-hover:scale-105"
+                      />
+                    </div>
                     <div className="flex min-w-0 flex-col gap-1">
                       <h4 className="group-hover:text-accent line-clamp-2 text-sm leading-snug font-semibold transition-colors">
                         {article.title}

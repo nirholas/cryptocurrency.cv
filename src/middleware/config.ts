@@ -30,6 +30,7 @@ export const FREE_TIER_PATTERNS = [
 export const EXEMPT_PATTERNS = [
   /^\/api\/health/,
   /^\/api\/\.well-known/,
+  /^\/api\/openapi\.json$/, // OpenAPI spec — must be freely accessible for x402scan discovery
   /^\/api\/cron/,
   /^\/api\/sse/,
   /^\/api\/ws/,
