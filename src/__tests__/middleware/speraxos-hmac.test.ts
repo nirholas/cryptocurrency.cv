@@ -242,14 +242,34 @@ describe('speraxosHmac handler (v2)', () => {
     expect((result as NextResponse).status).toBe(401);
   });
 
-  // ── Static token rejection ─────────────────────────────────────────────
+  // ── x-speraxos-token authentication ─────────────────────────────────────
 
-  it('should NOT accept a static token (removed in v2)', async () => {
+  it('should accept a valid x-speraxos-token and set isSperaxOS', async () => {
     const ctx = createContext('/api/news', {
       'x-speraxos-token': SECRET,
     });
     const result = await speraxosHmac(ctx);
-    // No signature header → passes through as non-speraxos (not authenticated)
+    expect(result).not.toBeInstanceOf(NextResponse);
+    expect((result as MiddlewareContext).isSperaxOS).toBe(true);
+    expect((result as MiddlewareContext).speraxosKeyId).toBe('token');
+  });
+
+  it('should fall through to anonymous when x-speraxos-token is invalid', async () => {
+    const ctx = createContext('/api/news', {
+      'x-speraxos-token': 'wrong-secret',
+    });
+    const result = await speraxosHmac(ctx);
+    expect(result).not.toBeInstanceOf(NextResponse);
+    expect((result as MiddlewareContext).isSperaxOS).toBe(false);
+  });
+
+  it('should ignore x-speraxos-token when SPERAXOS_API_SECRET is unset', async () => {
+    vi.stubEnv('SPERAXOS_API_SECRET', '');
+    _resetForTesting();
+    const ctx = createContext('/api/news', {
+      'x-speraxos-token': 'any-value',
+    });
+    const result = await speraxosHmac(ctx);
     expect(result).not.toBeInstanceOf(NextResponse);
     expect((result as MiddlewareContext).isSperaxOS).toBe(false);
   });

@@ -243,7 +243,7 @@ export const speraxosHmac: MiddlewareHandler = async (ctx) => {
       ctx.speraxosKeyId = 'token';
       return ctx;
     } else {
-      // Token present but invalid — reject immediately
+      // Token present but wrong — reject to surface misconfiguration
       return NextResponse.json(
         { error: 'Unauthorized', code: 'INVALID_TOKEN', requestId },
         { status: 401, headers: ctx.headers },
