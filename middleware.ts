@@ -57,7 +57,12 @@ export default async function middleware(request: NextRequest) {
 
   // Discovery endpoints must be freely accessible to x402scan, agentcash,
   // and other automated discovery tools — skip entire middleware pipeline.
-  if (pathname === '/.well-known/x402' || pathname === '/openapi.json') {
+  if (
+    pathname === '/.well-known/x402' ||
+    pathname === '/openapi.json' ||
+    pathname === '/api/openapi.json' ||
+    pathname === '/api/.well-known/x402'
+  ) {
     return NextResponse.next();
   }
 

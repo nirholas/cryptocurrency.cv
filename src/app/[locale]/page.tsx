@@ -145,15 +145,14 @@ export default async function HomePage({ params }: Props) {
     );
   }
 
-  // ── Collect used indexes so downstream sections skip them ──
-  const usedForHeroAndGrid = new Set([0, ...Array.from({ length: nextIdx - 1 }, (_, i) => i + 1)]);
-  const latestFeed = articles.filter((_, i) => !usedForHeroAndGrid.has(i)).slice(0, 15);
+  // ── Collect used links so downstream sections skip them ──
+  const heroAndGridLinks = new Set([featured, ...topGrid].filter(Boolean).map((a) => a.link));
+  const latestFeed = articles.filter((a) => !heroAndGridLinks.has(a.link)).slice(0, 15);
   const trending = data?.trending?.articles ?? [];
   const sourceCount = getSourceCount();
 
   // ── Partition articles by category for editorial sections ──
-  const usedLinks = new Set([featured, ...topGrid].filter(Boolean).map((a) => a.link));
-  const remainingArticles = articles.filter((a) => !usedLinks.has(a.link));
+  const remainingArticles = articles.filter((a) => !heroAndGridLinks.has(a.link));
 
   const marketsArticles = remainingArticles
     .filter((a) => {

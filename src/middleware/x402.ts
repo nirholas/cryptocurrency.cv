@@ -23,7 +23,7 @@
  */
 
 import { type NextRequest, NextResponse } from 'next/server';
-import type { MiddlewareContext, MiddlewareHandler } from './types';
+import type { MiddlewareHandler } from './types';
 import { EXEMPT_PATTERNS, FREE_TIER_PATTERNS, matchesPattern } from './config';
 import { paymentProxyFromConfig } from '@x402/next';
 import type { RouteConfig } from '@x402/next';
@@ -201,8 +201,11 @@ function getRoutePrice(path: string): string {
 }
 
 /**
- * Build a standards-compliant 402 response with accepts array.
- * Matches the x402 v2 format expected by x402scan.
+ * Build a standards-compliant x402 v1 402 response with accepts array.
+ * Used as fallback when the SDK proxy cannot initialise, and as the
+ * safety net when the proxy throws at request time.
+ *
+ * @see https://github.com/Merit-Systems/x402scan — validation schema
  */
 function buildFallback402(req: NextRequest): NextResponse {
   const pathname = req.nextUrl.pathname;
@@ -211,12 +214,12 @@ function buildFallback402(req: NextRequest): NextResponse {
 
   return NextResponse.json(
     {
-      x402Version: 2,
+      x402Version: 1,
       error: 'Payment Required',
       accepts: [
         {
           scheme: 'exact',
-          network: NETWORK,
+          network: CURRENT_NETWORK,
           maxAmountRequired,
           asset: USDC_ASSET,
           payTo: RECEIVE_ADDRESS,
@@ -273,7 +276,16 @@ export const x402Gate: MiddlewareHandler = async (ctx) => {
     !matchesPattern(pathname, EXEMPT_PATTERNS) &&
     !matchesPattern(pathname, FREE_TIER_PATTERNS)
   ) {
-    const paymentResponse = await getX402Proxy()(ctx.request);
+    let paymentResponse: NextResponse;
+    try {
+      paymentResponse = await getX402Proxy()(ctx.request);
+    } catch (err) {
+      // Proxy threw at request time (facilitator unreachable, SDK error, etc.)
+      // Fall back to locally-built 402 so the client always sees payment requirements.
+      console.warn('[x402] Proxy error, using fallback 402:', (err as Error).message);
+      paymentResponse = buildFallback402(ctx.request);
+    }
+
     const verified = paymentResponse.headers.get('x-middleware-next') === '1';
     if (!verified) {
       Object.entries(ctx.headers).forEach(([k, v]) => paymentResponse.headers.set(k, v));

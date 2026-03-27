@@ -182,29 +182,32 @@ export interface X402WellKnownV1 {
 /**
  * Build the v1 well-known discovery document for x402scan compatibility.
  *
- * Returns the simple format expected by x402scan:
+ * Returns the format expected by x402scan:
  * ```json
- * { "version": 1, "resources": ["GET /api/v1/coins", "POST /api/v1/ask"] }
+ * { "version": 1, "resources": ["https://cryptocurrency.cv/api/v1/coins", ...], "ownershipProofs": ["0x..."] }
  * ```
  *
- * Uses "METHOD /path" entries per x402scan spec.
- * x402scan resolves OpenAPI first (canonical), then falls back to this.
+ * @see https://github.com/Merit-Systems/x402scan
  */
 export function buildX402WellKnownV1(): X402WellKnownV1 {
+  const seen = new Set<string>();
   const resources: string[] = [];
 
   for (const { path } of ROUTE_MANIFEST) {
     if (!isX402Protected(path)) continue;
-
-    const meta = (ENDPOINT_METADATA_FULL as Record<string, { methods?: string[] }>)[path];
-    const methods = meta?.methods ?? ['GET'];
-
-    for (const method of methods) {
-      resources.push(`${method} ${path}`);
-    }
+    const url = `${BASE_URL}${path}`;
+    if (seen.has(url)) continue;
+    seen.add(url);
+    resources.push(url);
   }
 
-  return { version: 1, resources };
+  const ownershipProofs = getOwnershipProofs();
+
+  return {
+    version: 1,
+    resources,
+    ...(ownershipProofs && { ownershipProofs }),
+  };
 }
 
 /**
