@@ -11,6 +11,7 @@
  * that give the homepage the feel of a professional news publication.
  */
 
+import Image from 'next/image';
 import { Link } from "@/i18n/navigation";
 import { getTranslations } from "next-intl/server";
 import { Badge, categoryToBadgeVariant } from "@/components/ui/Badge";
@@ -125,12 +126,15 @@ function EditorsPickCard({ article }: { article: NewsArticle }) {
       >
         <article className="flex gap-4 items-start">
           {article.imageUrl && (
-            <div className="overflow-hidden rounded-md bg-surface-tertiary shrink-0 w-24 h-24">
-              <img
+            <div className="relative overflow-hidden rounded-md bg-surface-tertiary shrink-0 w-24 h-24">
+              <Image
                 src={article.imageUrl}
                 alt={article.title}
+                fill
+                sizes="96px"
+                quality={80}
                 loading="lazy"
-                className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                className="object-cover transition-transform duration-300 group-hover:scale-105"
               />
             </div>
           )}
@@ -190,12 +194,16 @@ export function CategorySection({
             >
               <article>
                 {lead.imageUrl && (
-                  <div className="overflow-hidden rounded-md bg-surface-tertiary mb-4">
-                    <img
+                  <div className="relative overflow-hidden rounded-md bg-surface-tertiary mb-4">
+                    <Image
                       src={lead.imageUrl}
                       alt={lead.title}
+                      width={800}
+                      height={450}
+                      sizes="(max-width: 1024px) 100vw, 60vw"
+                      quality={80}
                       loading="lazy"
-                      className="w-full aspect-[16/9] object-cover transition-transform duration-300 group-hover:scale-105"
+                      className="w-full aspect-video object-cover transition-transform duration-300 group-hover:scale-105"
                     />
                   </div>
                 )}
@@ -233,12 +241,15 @@ export function CategorySection({
                 >
                   <article className="flex gap-4 items-start">
                     {article.imageUrl && (
-                      <div className="overflow-hidden rounded-md bg-surface-tertiary shrink-0 w-20 h-20">
-                        <img
+                      <div className="relative overflow-hidden rounded-md bg-surface-tertiary shrink-0 w-20 h-20">
+                        <Image
                           src={article.imageUrl}
                           alt={article.title}
+                          fill
+                          sizes="80px"
+                          quality={80}
                           loading="lazy"
-                          className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                          className="object-cover transition-transform duration-300 group-hover:scale-105"
                         />
                       </div>
                     )}
@@ -312,7 +323,7 @@ export async function OpinionSection({ articles }: { articles: NewsArticle[] }) 
 
   const t = await getTranslations("editorial");
   return (
-    <section className="border-b border-border bg-gradient-to-r from-amber-50/50 to-orange-50/50 dark:from-amber-950/20 dark:to-orange-950/20">
+    <section className="border-b border-border bg-linear-to-r from-amber-50/50 to-orange-50/50 dark:from-amber-950/20 dark:to-orange-950/20">
       <div className="container-main py-8 lg:py-10">
         <div className="flex items-center gap-3 mb-6">
           <div className="w-1 h-8 bg-amber-500 rounded-full" />

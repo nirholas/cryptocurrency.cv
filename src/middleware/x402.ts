@@ -30,13 +30,9 @@ import type { RouteConfig } from '@x402/next';
 import { HTTPFacilitatorClient } from '@x402/core/server';
 import { ExactEvmScheme } from '@x402/evm/exact/server';
 import { API_PRICING, PREMIUM_PRICING, toX402Price, usdToUsdc } from '@/lib/x402/pricing';
-import { FACILITATOR_URL, USDC_ADDRESSES } from '@/lib/x402/config';
+import { FACILITATOR_URL, RECEIVE_ADDRESS, CURRENT_NETWORK, USDC_ADDRESSES } from '@/lib/x402/config';
 
-const RECEIVE_ADDRESS =
-  (process.env.X402_RECEIVE_ADDRESS as `0x${string}`) ??
-  '0x4027FdaC1a5216e264A00a5928b8366aE59cE888';
-
-const NETWORK = (process.env.X402_NETWORK ?? 'eip155:42161') as never;
+const NETWORK = CURRENT_NETWORK as never;
 
 // ---------------------------------------------------------------------------
 // Named → CAIP-2 network bridging

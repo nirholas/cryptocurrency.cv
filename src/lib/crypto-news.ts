@@ -2322,11 +2322,9 @@ const HOMEPAGE_SOURCE_KEYS = new Set([
   'yahoo_crypto',
   'techcrunch_crypto',
   'wired_crypto',
-  'guardian_tech',
-  'bbc_business',
-  'cnn_business',
-  'barrons',
-  'business_insider_markets',
+  // NOTE: Generic mainstream feeds (BBC Business, CNN Business, Guardian Tech,
+  // Barrons, Business Insider) removed — their RSS feeds are NOT crypto-specific
+  // and flood the homepage with ECB, interest-rate, and macro noise.
   'fortune_crypto',
   'axios_crypto',
   'entrepreneur_crypto',
@@ -4795,6 +4793,23 @@ function isActualNews(a: NewsArticle): boolean {
   return true;
 }
 
+/** Crypto-relevance keywords — articles must mention at least one to appear on homepage */
+const CRYPTO_RELEVANCE_KEYWORDS = /\b(crypt|bitcoin|btc|ethereum|eth|blockchain|defi|nft|web3|stablecoin|altcoin|token|mining|wallet|exchange|binance|coinbase|solana|sol\b|cardano|ada\b|polkadot|avalanche|polygon|matic|ripple|xrp|tether|usdt|usdc|doge|shib|memecoin|dao|airdrop|halving|layer.?[12]|lightning|rollup|zk-|proof.of|staking|yield|liquidity|protocol|on.chain|digital.asset|cbdc|dex|cex|ledger|satoshi|hodl|bull.?run|bear.?market)s?\b/i;
+
+/**
+ * Returns true if the article is plausibly crypto-related.
+ * Uses title + description to decide. Tier-1 crypto-native sources (CoinDesk etc.)
+ * are always considered relevant; the check is mainly for mainstream feeds.
+ */
+function isCryptoRelevant(a: NewsArticle): boolean {
+  // Crypto-native sources are always relevant
+  const cryptoNativeCategories = new Set(['bitcoin', 'defi', 'ethereum', 'nft', 'trading', 'mining', 'altcoins', 'general']);
+  if (cryptoNativeCategories.has(a.category)) return true;
+
+  const text = `${a.title} ${a.description || ''}`;
+  return CRYPTO_RELEVANCE_KEYWORDS.test(text);
+}
+
 /**
  * Optimized homepage data loader.
  * Fetches ALL sources ONCE and derives latest, breaking, and trending from the same dataset.
@@ -4816,23 +4831,28 @@ export async function getHomepageNews(options?: {
   const sourceKeys = (Object.keys(RSS_SOURCES) as SourceKey[]).filter((k) =>
     HOMEPAGE_SOURCE_KEYS.has(k),
   );
-  const allArticles = await fetchMultipleSources(sourceKeys, true);
+  // Homepage uses ONLY the curated RSS sources — no unfiltered API aggregators
+  // (CryptoCompare, CoinGecko etc. inject articles from arbitrary sources like
+  // "ECB Press Releases" that bypass the HOMEPAGE_SOURCE_KEYS whitelist)
+  const allArticles = await fetchMultipleSources(sourceKeys, false);
 
-  // --- Latest (filtered to remove spam/metadata items) ---
-  const latestArticles = allArticles.filter(isActualNews).slice(0, latestLimit);
+  // --- Latest (filtered to remove spam/metadata + non-crypto articles) ---
+  const latestArticles = allArticles.filter(isActualNews).filter(isCryptoRelevant).slice(0, latestLimit);
 
   // --- Breaking (last 2 hours) ---
   const twoHoursAgo = new Date(Date.now() - 2 * 60 * 60 * 1000);
   const breakingArticles = allArticles
     .filter((a) => a?.pubDate && new Date(a.pubDate) > twoHoursAgo)
     .filter(isActualNews)
+    .filter(isCryptoRelevant)
     .slice(0, breakingLimit);
 
   // --- Trending (last 24 hours, scored) ---
   const oneDayAgo = new Date(Date.now() - 24 * 60 * 60 * 1000);
   const recentArticles = allArticles
     .filter((a) => a?.pubDate && new Date(a.pubDate) > oneDayAgo)
-    .filter(isActualNews);
+    .filter(isActualNews)
+    .filter(isCryptoRelevant);
 
   const scoredArticles = recentArticles
     .map((article) => ({ article, score: calculateTrendingScore(article) }))

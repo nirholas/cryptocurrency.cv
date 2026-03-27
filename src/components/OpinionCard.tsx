@@ -4,6 +4,7 @@
  * @see https://github.com/nirholas/free-crypto-news
  */
 
+import Image from 'next/image';
 import { Link } from '@/i18n/navigation';
 import { Badge } from '@/components/ui/Badge';
 import { BookmarkButton } from '@/components/BookmarkButton';
@@ -24,12 +25,15 @@ export function FeaturedOpinionCard({ article }: { article: NewsArticle }) {
       <Link href={article.link} target="_blank" rel="noopener noreferrer" className="block">
         <article className="grid items-center gap-6 md:grid-cols-2 md:gap-10">
           {article.imageUrl && (
-            <div className="aspect-16/10 w-full overflow-hidden rounded-xl bg-surface-tertiary shadow-lg">
-              <img
+            <div className="relative aspect-16/10 w-full overflow-hidden rounded-xl bg-surface-tertiary shadow-lg">
+              <Image
                 src={article.imageUrl}
                 alt={article.title}
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                quality={80}
                 loading="lazy"
-                className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+                className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]"
               />
             </div>
           )}
@@ -74,12 +78,15 @@ export function OpinionCard({ article }: { article: NewsArticle }) {
       <Link href={article.link} target="_blank" rel="noopener noreferrer" className="block">
         <article className="flex flex-col gap-3">
           {article.imageUrl && (
-            <div className="aspect-16/10 w-full overflow-hidden rounded-lg bg-surface-tertiary">
-              <img
+            <div className="relative aspect-16/10 w-full overflow-hidden rounded-lg bg-surface-tertiary">
+              <Image
                 src={article.imageUrl}
                 alt={article.title}
+                fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                quality={80}
                 loading="lazy"
-                className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+                className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]"
               />
             </div>
           )}

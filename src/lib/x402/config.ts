@@ -167,6 +167,18 @@ export const PAYMENT_ADDRESS: `0x${string}` = (() => {
 })();
 
 /**
+ * Receive address — where x402 payments are sent.
+ * Falls back to PAYMENT_ADDRESS so a single env var works everywhere.
+ */
+export const RECEIVE_ADDRESS: `0x${string}` = (() => {
+  const addr = process.env.X402_RECEIVE_ADDRESS;
+  if (addr && /^0x[a-fA-F0-9]{40}$/.test(addr)) {
+    return addr as `0x${string}`;
+  }
+  return PAYMENT_ADDRESS;
+})();
+
+/**
  * Solana payment receiving address
  */
 export const SOLANA_PAYMENT_ADDRESS: string = process.env.X402_SOLANA_PAYMENT_ADDRESS || '';

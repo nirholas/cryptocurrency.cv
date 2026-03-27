@@ -22,13 +22,12 @@
 
 import { ROUTE_MANIFEST } from '@/lib/openapi/routes.generated';
 import { ENDPOINT_METADATA_FULL } from '@/lib/openapi/endpoint-metadata.generated';
-import { getOwnershipProofs, PAYMENT_ADDRESS, USDC_ADDRESSES } from '@/lib/x402/config';
+import { getOwnershipProofs, RECEIVE_ADDRESS, CURRENT_NETWORK, USDC_ADDRESSES } from '@/lib/x402/config';
 import { API_PRICING, PREMIUM_PRICING, usdToUsdc, ENDPOINT_METADATA } from '@/lib/x402/pricing';
 import { EXEMPT_PATTERNS, FREE_TIER_PATTERNS, matchesPattern } from '@/middleware/config';
 
 const BASE_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://cryptocurrency.cv';
-const NETWORK = process.env.X402_NETWORK ?? 'eip155:42161';
-const RECEIVE_ADDRESS = (process.env.X402_RECEIVE_ADDRESS ?? PAYMENT_ADDRESS) as string;
+const NETWORK = CURRENT_NETWORK as string;
 
 /** USDC contract address for the active network */
 const USDC_ASSET =

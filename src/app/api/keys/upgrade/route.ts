@@ -43,6 +43,7 @@ import {
   API_KEY_TIERS,
 } from '@/lib/api-keys';
 import { API_TIERS } from '@/lib/x402/pricing';
+import { RECEIVE_ADDRESS } from '@/lib/x402/config';
 
 export const runtime = 'nodejs';
 
@@ -178,7 +179,7 @@ export async function POST(request: NextRequest) {
           priceUsdc: (price * 1_000_000).toString(),
           currency: 'USDC',
           network: 'eip155:8453',
-          payTo: process.env.X402_RECEIVE_ADDRESS || '0x4027FdaC1a5216e264A00a5928b8366aE59cE888',
+          payTo: RECEIVE_ADDRESS,
           description: `${tierConfig.name} tier upgrade for ${months} month(s)`,
           months,
           targetTier,

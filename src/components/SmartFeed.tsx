@@ -500,7 +500,7 @@ export function SmartFeed({ initialArticles, className }: SmartFeedProps) {
             onClick={loadMore}
             disabled={loadingMore}
             variant="outline"
-            className="min-w-[200px]"
+            className="min-w-50"
           >
             {loadingMore ? (
               <span className="flex items-center gap-2">

@@ -11,7 +11,7 @@ import FooterSection from '@/components/FooterSection';
 import LanguageSelector from '@/components/LanguageSelector';
 import BackToTop from '@/components/BackToTop';
 import Logo from '@/components/Logo';
-import { Github, TrendingUp, Smartphone } from 'lucide-react';
+import { TrendingUp, Smartphone } from 'lucide-react';
 
 const FOOTER_SECTIONS = [
   {
@@ -191,9 +191,7 @@ function ApiStatusBadge({ label }: { label: string }) {
         <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75" />
         <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500" />
       </span>
-      <span className="text-xs font-medium text-green-600 dark:text-green-400">
-        {label}
-      </span>
+      <span className="text-xs font-medium text-green-600 dark:text-green-400">{label}</span>
     </div>
   );
 }
@@ -244,7 +242,9 @@ export default async function Footer() {
 
               {/* Mini newsletter */}
               <div className="mt-4">
-                <p className="text-text-primary mb-2 text-xs font-semibold">{t('subscribeUpdates')}</p>
+                <p className="text-text-primary mb-2 text-xs font-semibold">
+                  {t('subscribeUpdates')}
+                </p>
                 <FooterNewsletter />
               </div>
 
@@ -299,25 +299,10 @@ export default async function Footer() {
           </div>
 
           {/* Bottom bar */}
-          <div className="border-border mt-8 flex flex-col items-center justify-between gap-4 border-t pt-8 sm:flex-row">
+          <div className="border-border mt-8 border-t pt-8 text-center">
             <p className="text-text-tertiary text-xs tracking-wide">
               {t('copyright', { year: new Date().getFullYear() })}
             </p>
-            <div className="text-text-tertiary flex items-center gap-3 text-xs">
-              <span>{t('sourcesCount')}</span>
-              <span className="text-border">|</span>
-              <span>{t('noApiKey')}</span>
-              <span className="text-border">|</span>
-              <a
-                href="https://github.com/nirholas/free-crypto-news"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-text-primary inline-flex items-center gap-1 transition-colors"
-              >
-                <Github className="h-3.5 w-3.5" />
-                {t('starOnGithub')}
-              </a>
-            </div>
           </div>
         </div>
       </footer>

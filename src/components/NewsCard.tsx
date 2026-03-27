@@ -7,6 +7,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { Badge, categoryToBadgeVariant } from '@/components/ui/Badge';
@@ -79,24 +80,32 @@ function ArticleImage({
   alt,
   className,
   source,
+  sizes = '(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw',
+  priority = false,
 }: {
   src?: string;
   alt: string;
   className?: string;
   source?: string;
+  sizes?: string;
+  priority?: boolean;
 }) {
   const fallback = getUnsplashFallback(source || alt);
   const [failed, setFailed] = useState(false);
   const imgSrc = !src || failed ? fallback : src;
 
   return (
-    <div className={cn('bg-surface-tertiary overflow-hidden rounded-lg', className)}>
-      <img
+    <div className={cn('bg-surface-tertiary relative overflow-hidden rounded-lg', className)}>
+      <Image
         src={imgSrc}
         alt={alt}
-        loading="lazy"
+        fill
+        sizes={sizes}
+        quality={80}
+        loading={priority ? 'eager' : 'lazy'}
+        priority={priority}
         onError={() => setFailed(true)}
-        className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+        className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]"
       />
     </div>
   );
@@ -161,6 +170,8 @@ export function FeaturedCard({ article }: { article: NewsArticle }) {
             alt={article.title}
             source={article.source}
             className="aspect-16/10 w-full rounded-xl shadow-lg"
+            sizes="(max-width: 768px) 100vw, 50vw"
+            priority
           />
           <div className="flex flex-col gap-4">
             <div className="flex flex-wrap items-center gap-1.5">

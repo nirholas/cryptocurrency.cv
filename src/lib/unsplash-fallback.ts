@@ -82,7 +82,7 @@ export function getUnsplashFallback(seed: string, width = 800, height = 450): st
     hash = hash >>> 0; // keep unsigned 32-bit
   }
   const id = CRYPTO_PHOTOS[hash % CRYPTO_PHOTOS.length];
-  return `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${width}&h=${height}&q=70`;
+  return `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${width}&h=${height}&q=80`;
 }
 
 /**
@@ -96,5 +96,5 @@ export function getNatureUnsplashFallback(seed: string, width = 800, height = 45
     hash = hash >>> 0;
   }
   const id = NATURE_PHOTOS[hash % NATURE_PHOTOS.length];
-  return `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${width}&h=${height}&q=70`;
+  return `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${width}&h=${height}&q=80`;
 }
