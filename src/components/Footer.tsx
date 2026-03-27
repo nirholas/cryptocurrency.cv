@@ -1,4 +1,5 @@
 import { Link } from '@/i18n/navigation';
+import { getTranslations } from 'next-intl/server';
 import FooterNewsletter from '@/components/FooterNewsletter';
 import FooterSection from '@/components/FooterSection';
 import LanguageSelector from '@/components/LanguageSelector';
@@ -177,7 +178,7 @@ function FooterStructuredData() {
   );
 }
 
-function ApiStatusBadge() {
+function ApiStatusBadge({ label }: { label: string }) {
   return (
     <div className="inline-flex items-center gap-2 rounded-full border border-green-500/20 bg-green-500/10 px-3 py-1">
       <span className="relative flex h-2 w-2">
@@ -185,13 +186,14 @@ function ApiStatusBadge() {
         <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500" />
       </span>
       <span className="text-xs font-medium text-green-600 dark:text-green-400">
-        API Operational
+        {label}
       </span>
     </div>
   );
 }
 
-export default function Footer() {
+export default async function Footer() {
+  const t = await getTranslations('footer');
   return (
     <>
       <footer className="border-border bg-surface-secondary border-t" role="contentinfo">
@@ -205,7 +207,7 @@ export default function Footer() {
           >
             <div className="flex flex-wrap items-center gap-2">
               <span className="text-text-tertiary mr-2 inline-flex items-center gap-1.5 text-[11px] font-semibold tracking-[0.15em] uppercase">
-                <TrendingUp className="h-3.5 w-3.5" /> Trending
+                <TrendingUp className="h-3.5 w-3.5" /> {t('trending')}
               </span>
               {TRENDING_TOPICS.map((topic) => (
                 <Link
@@ -226,17 +228,17 @@ export default function Footer() {
                 <Logo size="md" />
               </Link>
               <p className="text-text-secondary mt-4 max-w-xs text-sm leading-relaxed">
-                Real-time crypto prices, news, and market data. 350+ free API endpoints. No API keys required.
+                {t('description')}
               </p>
 
               {/* API status */}
               <div className="mt-3">
-                <ApiStatusBadge />
+                <ApiStatusBadge label={t('apiOperational')} />
               </div>
 
               {/* Mini newsletter */}
               <div className="mt-4">
-                <p className="text-text-primary mb-2 text-xs font-semibold">Subscribe to updates</p>
+                <p className="text-text-primary mb-2 text-xs font-semibold">{t('subscribeUpdates')}</p>
                 <FooterNewsletter />
               </div>
 
@@ -268,20 +270,20 @@ export default function Footer() {
             {/* Download App */}
             <div>
               <p className="text-text-primary mb-2 flex items-center gap-1 text-xs font-semibold">
-                <Smartphone className="h-3 w-3" /> Download App
+                <Smartphone className="h-3 w-3" /> {t('downloadApp')}
               </p>
               <div className="flex gap-3">
                 <span className="border-border text-text-secondary inline-flex items-center gap-1.5 rounded-lg border bg-(--color-surface) px-3 py-1.5 text-xs">
                   <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
                   </svg>
-                  Coming Soon
+                  {t('comingSoon')}
                 </span>
                 <span className="border-border text-text-secondary inline-flex items-center gap-1.5 rounded-lg border bg-(--color-surface) px-3 py-1.5 text-xs">
                   <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M3.609 1.814L13.792 12 3.609 22.186a.996.996 0 0 1-.609-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-1.6l2.573 1.49c.906.524.906 1.282 0 1.806l-2.573 1.49-2.573-2.393 2.573-2.393zM5.864 2.658L16.8 8.991l-2.302 2.302-8.634-8.635z" />
                   </svg>
-                  Coming Soon
+                  {t('comingSoon')}
                 </span>
               </div>
             </div>
@@ -293,12 +295,12 @@ export default function Footer() {
           {/* Bottom bar */}
           <div className="border-border mt-8 flex flex-col items-center justify-between gap-4 border-t pt-8 sm:flex-row">
             <p className="text-text-tertiary text-xs tracking-wide">
-              &copy; {new Date().getFullYear()} Crypto Vision. Open source under MIT license.
+              {t('copyright', { year: new Date().getFullYear() })}
             </p>
             <div className="text-text-tertiary flex items-center gap-3 text-xs">
-              <span>300+ sources</span>
+              <span>{t('sourcesCount')}</span>
               <span className="text-border">|</span>
-              <span>No API key</span>
+              <span>{t('noApiKey')}</span>
               <span className="text-border">|</span>
               <a
                 href="https://github.com/nirholas/free-crypto-news"
@@ -307,7 +309,7 @@ export default function Footer() {
                 className="hover:text-text-primary inline-flex items-center gap-1 transition-colors"
               >
                 <Github className="h-3.5 w-3.5" />
-                Star on GitHub
+                {t('starOnGithub')}
               </a>
             </div>
           </div>

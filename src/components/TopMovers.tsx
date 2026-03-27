@@ -4,6 +4,7 @@ import { useState, useEffect, useCallback } from "react";
 import { Link } from "@/i18n/navigation";
 import { TrendingUp, TrendingDown, ArrowRight, Flame } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useTranslations } from "next-intl";
 
 interface Mover {
   id: string;
@@ -35,6 +36,7 @@ export default function TopMovers() {
   const [gainers, setGainers] = useState<Mover[]>([]);
   const [losers, setLosers] = useState<Mover[]>([]);
   const [tab, setTab] = useState<"gainers" | "losers">("gainers");
+  const t = useTranslations("topMovers");
 
   const fetchData = useCallback(async () => {
     try {
@@ -73,7 +75,7 @@ export default function TopMovers() {
         <div className="flex items-center justify-between mb-5">
           <div className="flex items-center gap-3">
             <Flame className="h-5 w-5 text-orange-500" />
-            <h2 className="text-xl font-bold font-serif">Top Movers</h2>
+            <h2 className="text-xl font-bold font-serif">{t("title")}</h2>
           </div>
           <div className="flex rounded-lg border border-border overflow-hidden text-sm">
             <button
@@ -85,7 +87,7 @@ export default function TopMovers() {
                   : "text-text-secondary hover:bg-surface-secondary",
               )}
             >
-              Gainers
+              {t("gainers")}
             </button>
             <button
               onClick={() => setTab("losers")}
@@ -96,7 +98,7 @@ export default function TopMovers() {
                   : "text-text-secondary hover:bg-surface-secondary",
               )}
             >
-              Losers
+              {t("losers")}
             </button>
           </div>
         </div>
@@ -143,7 +145,7 @@ export default function TopMovers() {
             href="/markets"
             className="inline-flex items-center gap-1 text-sm font-medium text-accent hover:text-accent-hover transition-colors"
           >
-            View all markets <ArrowRight className="h-3.5 w-3.5" />
+            {t("viewAllMarkets")} <ArrowRight className="h-3.5 w-3.5" />
           </Link>
         </div>
       </div>

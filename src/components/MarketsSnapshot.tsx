@@ -11,6 +11,7 @@ import {
   RefreshCw,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 
 /* ------------------------------------------------------------------ */
@@ -163,6 +164,7 @@ export default function MarketsSnapshot() {
   const [loading, setLoading] = useState(true);
   const [lastUpdated, setLastUpdated] = useState<Date | null>(null);
   const [sortBy, setSortBy] = useState<"marketCap" | "change">("marketCap");
+  const t = useTranslations("marketsSnapshot");
 
   const fetchPrices = useCallback(async () => {
     try {
@@ -249,7 +251,7 @@ export default function MarketsSnapshot() {
         {/* Header row */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-5">
           <div className="flex items-center gap-3">
-            <h2 className="text-lg font-bold font-serif">Markets</h2>
+            <h2 className="text-lg font-bold font-serif">{t("markets")}</h2>
             {!loading && (
               <div className="flex items-center gap-2 text-xs">
                 <span className="flex items-center gap-1 text-emerald-500 font-medium">
@@ -277,7 +279,7 @@ export default function MarketsSnapshot() {
                     : "text-text-secondary hover:text-text-primary"
                 )}
               >
-                Market Cap
+                {t("marketCap")}
               </button>
               <button
                 onClick={() => setSortBy("change")}
@@ -288,7 +290,7 @@ export default function MarketsSnapshot() {
                     : "text-text-secondary hover:text-text-primary"
                 )}
               >
-                Top Movers
+                {t("topMovers")}
               </button>
             </div>
 
@@ -304,7 +306,7 @@ export default function MarketsSnapshot() {
               href="/markets"
               className="flex items-center gap-1 text-sm font-medium text-accent hover:text-accent-hover transition-colors"
             >
-              View all <ArrowRight className="h-3.5 w-3.5" />
+              {t("viewAll")} <ArrowRight className="h-3.5 w-3.5" />
             </Link>
           </div>
         </div>
@@ -315,21 +317,21 @@ export default function MarketsSnapshot() {
             <div className="flex items-center gap-2 rounded-lg border border-border bg-(--color-surface) px-3 py-2">
               <BarChart2 className="h-4 w-4 text-accent shrink-0" />
               <div>
-                <p className="text-[10px] text-text-tertiary uppercase tracking-wider">Market Cap</p>
+                <p className="text-[10px] text-text-tertiary uppercase tracking-wider">{t("marketCap")}</p>
                 <p className="text-sm font-bold">{formatCompact(globals.totalMarketCap)}</p>
               </div>
             </div>
             <div className="flex items-center gap-2 rounded-lg border border-border bg-(--color-surface) px-3 py-2">
               <Activity className="h-4 w-4 text-accent shrink-0" />
               <div>
-                <p className="text-[10px] text-text-tertiary uppercase tracking-wider">24h Volume</p>
+                <p className="text-[10px] text-text-tertiary uppercase tracking-wider">{t("volume24h")}</p>
                 <p className="text-sm font-bold">{formatCompact(globals.totalVolume24h)}</p>
               </div>
             </div>
             <div className="flex items-center gap-2 rounded-lg border border-border bg-(--color-surface) px-3 py-2">
               <Zap className="h-4 w-4 text-[#f7931a] shrink-0" />
               <div>
-                <p className="text-[10px] text-text-tertiary uppercase tracking-wider">BTC Dominance</p>
+                <p className="text-[10px] text-text-tertiary uppercase tracking-wider">{t("btcDominance")}</p>
                 <p className="text-sm font-bold">{globals.btcDominance.toFixed(1)}%</p>
               </div>
             </div>
@@ -404,7 +406,7 @@ export default function MarketsSnapshot() {
 
         {/* Data attribution */}
         <div className="mt-4 flex items-center justify-between text-[10px] text-text-tertiary">
-          <span>Market data via CoinGecko API. Prices update every 30s.</span>
+          <span>{t("dataAttribution")}</span>
           {lastUpdated && (
             <span className="flex items-center gap-1">
               <RefreshCw className="h-2.5 w-2.5" />

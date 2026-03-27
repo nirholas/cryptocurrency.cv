@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { Badge, categoryToBadgeVariant } from '@/components/ui/Badge';
 import { BookmarkButton } from '@/components/BookmarkButton';
@@ -20,11 +21,12 @@ const BOOKMARK_BTN =
    ------------------------------------------------ */
 
 function ContentTypeBadge({ contentType }: { contentType?: NewsArticle['contentType'] }) {
+  const t = useTranslations('newsCard');
   if (!contentType || contentType === 'news') return null;
   const labels: Record<string, string> = {
-    opinion: 'Opinion',
-    analysis: 'Analysis',
-    'press-release': 'Press Release',
+    opinion: t('opinion'),
+    analysis: t('analysis'),
+    'press-release': t('pressRelease'),
   };
   return (
     <Badge variant="opinion" className="w-fit">

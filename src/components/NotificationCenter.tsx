@@ -26,6 +26,7 @@ import {
   Info,
   Newspaper,
 } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { cn } from "@/lib/utils";
 import { useAlerts, type TriggeredAlert } from "@/components/alerts";
 import { Link } from "@/i18n/navigation";
@@ -191,6 +192,7 @@ export function addNotification(
 /* ------------------------------------------------------------------ */
 
 export default function NotificationCenter() {
+  const t = useTranslations("notifications");
   const [open, setOpen] = useState(false);
   const [notifications, setNotifications] = useState<AppNotification[]>([]);
   const [soundEnabled, setSoundEnabled] = useState(true);
@@ -354,6 +356,13 @@ export default function NotificationCenter() {
 
   const grouped = useMemo(() => groupNotifications(filtered), [filtered]);
 
+  const groupLabels: Record<string, string> = {
+    Today: t("today"),
+    Yesterday: t("yesterday"),
+    "This Week": t("thisWeek"),
+    Earlier: t("earlier"),
+  };
+
   const markAllRead = useCallback(() => {
     setNotifications((prev) => {
       const updated = prev.map((n) => ({ ...n, read: true }));
@@ -440,7 +449,7 @@ export default function NotificationCenter() {
           {/* Header */}
           <div className="flex items-center justify-between px-4 py-3 border-b border-border">
             <h3 className="text-sm font-bold text-text-primary">
-              Notifications
+              {t("title")}
               {unreadCount > 0 && (
                 <span className="ml-2 inline-flex items-center justify-center rounded-full bg-red-500/10 text-red-500 px-2 py-0.5 text-xs font-medium">
                   {unreadCount}
@@ -451,7 +460,7 @@ export default function NotificationCenter() {
               <button
                 onClick={toggleSound}
                 className="p-1.5 rounded-md hover:bg-surface-secondary text-text-tertiary transition-colors cursor-pointer"
-                title={soundEnabled ? "Mute" : "Unmute"}
+                title={soundEnabled ? t("mute") : t("unmute")}
                 aria-label={soundEnabled ? "Mute notifications" : "Unmute notifications"}
               >
                 {soundEnabled ? (
@@ -464,7 +473,7 @@ export default function NotificationCenter() {
                 <button
                   onClick={markAllRead}
                   className="p-1.5 rounded-md hover:bg-surface-secondary text-text-tertiary transition-colors cursor-pointer"
-                  title="Mark all as read"
+                  title={t("markAllRead")}
                   aria-label="Mark all as read"
                 >
                   <CheckCheck className="h-3.5 w-3.5" aria-hidden="true" />
@@ -474,7 +483,7 @@ export default function NotificationCenter() {
                 <button
                   onClick={clearAll}
                   className="p-1.5 rounded-md hover:bg-surface-secondary text-text-tertiary hover:text-red-500 transition-colors cursor-pointer"
-                  title="Clear all"
+                  title={t("clearAll")}
                   aria-label="Clear all notifications"
                 >
                   <Trash2 className="h-3.5 w-3.5" aria-hidden="true" />
@@ -483,8 +492,8 @@ export default function NotificationCenter() {
               <Link
                 href="/notifications"
                 className="p-1.5 rounded-md hover:bg-surface-secondary text-text-tertiary transition-colors"
-                title="Notification Preferences"
-                aria-label="Notification Preferences"
+                title={t("preferences")}
+                aria-label={t("preferences")}
                 onClick={() => setOpen(false)}
               >
                 <Settings className="h-3.5 w-3.5" aria-hidden="true" />
@@ -505,7 +514,7 @@ export default function NotificationCenter() {
                     : "text-text-tertiary hover:bg-surface-secondary"
                 )}
               >
-                {f === "all" ? "All" : `Unread (${unreadCount})`}
+                {f === "all" ? t("all") : t("unread", { count: unreadCount })}
               </button>
             ))}
           </div>
@@ -516,17 +525,17 @@ export default function NotificationCenter() {
               <div className="flex flex-col items-center justify-center py-12 text-center">
                 <BellOff className="h-10 w-10 text-text-tertiary mb-3 opacity-40" aria-hidden="true" />
                 <p className="text-sm font-medium text-text-secondary">
-                  {filter === "unread" ? "No unread notifications" : "No notifications yet"}
+                  {filter === "unread" ? t("noUnread") : t("empty")}
                 </p>
                 <p className="text-xs text-text-tertiary mt-1">
-                  Breaking news and alerts will appear here
+                  {t("emptyHint")}
                 </p>
               </div>
             ) : (
               grouped.map((group) => (
                 <div key={group.label}>
                   <div className="sticky top-0 bg-surface-secondary px-4 py-1.5 text-[10px] font-semibold text-text-tertiary uppercase tracking-wider">
-                    {group.label}
+                    {groupLabels[group.label] ?? group.label}
                   </div>
                   {group.items.map((notif) => (
                     <NotificationItem
@@ -550,7 +559,7 @@ export default function NotificationCenter() {
                 onClick={() => setOpen(false)}
                 className="flex items-center justify-center gap-1 text-xs font-medium text-accent hover:text-accent-hover transition-colors"
               >
-                Notification Preferences
+                {t("preferences")}
                 <ChevronRight className="h-3 w-3" aria-hidden="true" />
               </Link>
             </div>

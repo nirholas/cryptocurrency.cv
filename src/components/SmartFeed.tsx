@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback, useRef, useMemo } from "react";
+import { useTranslations } from "next-intl";
 import { NewsCardCompact } from "@/components/NewsCard";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
@@ -30,18 +31,18 @@ interface SmartFeedProps {
 /*  Constants                                                         */
 /* ------------------------------------------------------------------ */
 
-const FEED_MODES: { id: FeedMode; label: string; icon: string; desc: string }[] = [
-  { id: "latest", label: "Latest", icon: "⚡", desc: "Newest first, real-time updates" },
-  { id: "personalized", label: "For You", icon: "✨", desc: "Based on your reading history" },
-  { id: "trending", label: "Trending", icon: "🔥", desc: "Most discussed right now" },
-  { id: "deep-dive", label: "Deep Dive", icon: "🔬", desc: "Long-form analysis & research" },
+const FEED_MODES: { id: FeedMode; labelKey: string; icon: string; descKey: string }[] = [
+  { id: "latest", labelKey: "latest", icon: "⚡", descKey: "latestDesc" },
+  { id: "personalized", labelKey: "forYou", icon: "✨", descKey: "forYouDesc" },
+  { id: "trending", labelKey: "trending", icon: "🔥", descKey: "trendingDesc" },
+  { id: "deep-dive", labelKey: "deepDive", icon: "🔬", descKey: "deepDiveDesc" },
 ];
 
 const AUTO_REFRESH_INTERVALS = [
-  { label: "Off", value: 0 },
-  { label: "30s", value: 30000 },
-  { label: "1m", value: 60000 },
-  { label: "5m", value: 300000 },
+  { labelKey: "autoOff", label: "Off", value: 0 },
+  { labelKey: "auto30s", label: "30s", value: 30000 },
+  { labelKey: "auto1m", label: "1m", value: 60000 },
+  { labelKey: "auto5m", label: "5m", value: 300000 },
 ] as const;
 
 const READ_ARTICLES_KEY = "fcn-read-articles";
@@ -109,6 +110,7 @@ function NewArticlesBanner({
   count: number;
   onClick: () => void;
 }) {
+  const t = useTranslations("smartFeed");
   if (count === 0) return null;
 
   return (
@@ -127,7 +129,7 @@ function NewArticlesBanner({
         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75" />
         <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500" />
       </span>
-      {count} new {count === 1 ? "article" : "articles"} — tap to load
+      {t("newArticles", { count })}
     </button>
   );
 }
@@ -143,17 +145,18 @@ function ArticleReadIndicator({
   article: NewsArticle;
   isRead: boolean;
 }) {
+  const t = useTranslations("smartFeed");
   return (
     <div className="relative group">
       <NewsCardCompact article={article} />
       {isRead && (
         <div className="absolute top-2 right-2 flex items-center gap-1 px-2 py-0.5 rounded-full bg-green-100 dark:bg-green-900/40 text-green-700 dark:text-green-300 text-[10px] font-medium opacity-0 group-hover:opacity-100 transition-opacity">
-          ✓ Read
+          ✓ {t("read")}
         </div>
       )}
       <div className="absolute bottom-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity">
         <span className="text-[10px] text-text-tertiary">
-          ~{estimateReadingTime(article.title + " " + (article.description ?? ""))} min read
+          {t("minRead", { minutes: estimateReadingTime(article.title + " " + (article.description ?? "")) })}
         </span>
       </div>
     </div>
@@ -165,6 +168,7 @@ function ArticleReadIndicator({
 /* ------------------------------------------------------------------ */
 
 export function SmartFeed({ initialArticles, className }: SmartFeedProps) {
+  const t = useTranslations("smartFeed");
   const [mode, setMode] = useState<FeedMode>("latest");
   const [articles, setArticles] = useState<NewsArticle[]>(initialArticles);
   const [newArticles, setNewArticles] = useState<NewsArticle[]>([]);
@@ -326,7 +330,7 @@ export function SmartFeed({ initialArticles, className }: SmartFeedProps) {
           <button
             key={m.id}
             onClick={() => setMode(m.id)}
-            title={m.desc}
+            title={t(m.descKey)}
             className={cn(
               "flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium whitespace-nowrap transition-all",
               mode === m.id
@@ -335,7 +339,7 @@ export function SmartFeed({ initialArticles, className }: SmartFeedProps) {
             )}
           >
             <span>{m.icon}</span>
-            {m.label}
+            {t(m.labelKey)}
           </button>
         ))}
       </div>
@@ -377,7 +381,7 @@ export function SmartFeed({ initialArticles, className }: SmartFeedProps) {
               "p-1 rounded hover:bg-surface-secondary transition-colors",
               isRefreshing && "animate-spin",
             )}
-            title="Refresh now"
+            title={t("refreshNow")}
           >
             🔄
           </button>
@@ -386,7 +390,7 @@ export function SmartFeed({ initialArticles, className }: SmartFeedProps) {
           <button
             onClick={() => setShowPrefs(!showPrefs)}
             className="p-1 rounded hover:bg-surface-secondary transition-colors"
-            title="Feed preferences"
+            title={t("feedPrefs")}
           >
             ⚙️
           </button>
@@ -397,7 +401,7 @@ export function SmartFeed({ initialArticles, className }: SmartFeedProps) {
       {showPrefs && (
         <div className="p-4 rounded-lg border border-border bg-surface-secondary space-y-3 animate-in slide-in-from-top duration-200">
           <div className="flex items-center justify-between">
-            <h4 className="text-sm font-semibold">Feed Preferences</h4>
+            <h4 className="text-sm font-semibold">{t("feedPreferences")}</h4>
             <button
               onClick={() => {
                 setPrefs({ categories: [], sources: [], hideRead: false });
@@ -421,12 +425,12 @@ export function SmartFeed({ initialArticles, className }: SmartFeedProps) {
               }}
               className="rounded border-border"
             />
-            Hide articles I&apos;ve already read
+            {t("hideRead")}
           </label>
 
           {/* Category quick-filters */}
           <div>
-            <p className="text-xs text-text-tertiary mb-1.5">Focus categories:</p>
+            <p className="text-xs text-text-tertiary mb-1.5">{t("focusCategories")}</p>
             <div className="flex flex-wrap gap-1.5">
               {["Bitcoin", "Ethereum", "DeFi", "NFT", "Regulation", "Trading", "Altcoins"].map((cat) => (
                 <button
@@ -477,8 +481,8 @@ export function SmartFeed({ initialArticles, className }: SmartFeedProps) {
           ))
         ) : (
           <div className="py-12 text-center text-text-tertiary">
-            <p className="text-lg mb-2">No articles match your filters</p>
-            <p className="text-sm">Try adjusting your feed preferences or switching modes</p>
+            <p className="text-lg mb-2">{t("noMatch")}</p>
+            <p className="text-sm">{t("noMatchHint")}</p>
           </div>
         )}
       </div>
@@ -498,7 +502,7 @@ export function SmartFeed({ initialArticles, className }: SmartFeedProps) {
                 Loading...
               </span>
             ) : (
-              "Load More Articles"
+              t("loadMore")
             )}
           </Button>
         </div>
@@ -512,6 +516,7 @@ export function SmartFeed({ initialArticles, className }: SmartFeedProps) {
 /* ------------------------------------------------------------------ */
 
 export function FeedStatsWidget({ className }: { className?: string }) {
+  const t = useTranslations("smartFeed");
   const [stats, setStats] = useState({
     articlesToday: 0,
     readToday: 0,
@@ -532,22 +537,22 @@ export function FeedStatsWidget({ className }: { className?: string }) {
 
   return (
     <div className={cn("rounded-lg border border-border p-4 bg-surface-secondary", className)}>
-      <h4 className="text-sm font-semibold mb-3">📊 Your Feed Stats</h4>
+      <h4 className="text-sm font-semibold mb-3">📊 {t("yourFeedStats")}</h4>
       <dl className="space-y-2 text-sm">
         <div className="flex justify-between">
-          <dt className="text-text-secondary">Articles today</dt>
+          <dt className="text-text-secondary">{t("articlesToday")}</dt>
           <dd className="font-medium">{stats.articlesToday}</dd>
         </div>
         <div className="flex justify-between">
-          <dt className="text-text-secondary">You&apos;ve read</dt>
+          <dt className="text-text-secondary">{t("youveRead")}</dt>
           <dd className="font-medium">{stats.readToday}</dd>
         </div>
         <div className="flex justify-between">
-          <dt className="text-text-secondary">Top source</dt>
+          <dt className="text-text-secondary">{t("topSource")}</dt>
           <dd className="font-medium">{stats.topSource}</dd>
         </div>
         <div className="flex justify-between">
-          <dt className="text-text-secondary">Mood</dt>
+          <dt className="text-text-secondary">{t("mood")}</dt>
           <dd className="font-medium">😐 {stats.avgSentiment}</dd>
         </div>
       </dl>

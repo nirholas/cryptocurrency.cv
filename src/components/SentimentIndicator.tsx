@@ -1,6 +1,7 @@
 "use client";
 
 import { cn } from "@/lib/utils";
+import { useTranslations } from "next-intl";
 
 /* ------------------------------------------------------------------ */
 /*  Sentiment types & utilities                                       */
@@ -24,7 +25,7 @@ interface SentimentConfig {
 
 const SENTIMENT_MAP: Record<SentimentLevel, SentimentConfig> = {
   very_positive: {
-    label: "Very Bullish",
+    label: "veryBullish",
     emoji: "🚀",
     color: "text-green-700 dark:text-green-300",
     bgColor: "bg-green-100 dark:bg-green-900/40",
@@ -32,7 +33,7 @@ const SENTIMENT_MAP: Record<SentimentLevel, SentimentConfig> = {
     score: 90,
   },
   positive: {
-    label: "Bullish",
+    label: "bullish",
     emoji: "📈",
     color: "text-green-600 dark:text-green-400",
     bgColor: "bg-green-50 dark:bg-green-900/20",
@@ -40,7 +41,7 @@ const SENTIMENT_MAP: Record<SentimentLevel, SentimentConfig> = {
     score: 70,
   },
   neutral: {
-    label: "Neutral",
+    label: "neutral",
     emoji: "➡️",
     color: "text-gray-600 dark:text-gray-400",
     bgColor: "bg-gray-100 dark:bg-gray-800/40",
@@ -48,7 +49,7 @@ const SENTIMENT_MAP: Record<SentimentLevel, SentimentConfig> = {
     score: 50,
   },
   negative: {
-    label: "Bearish",
+    label: "bearish",
     emoji: "📉",
     color: "text-red-600 dark:text-red-400",
     bgColor: "bg-red-50 dark:bg-red-900/20",
@@ -56,7 +57,7 @@ const SENTIMENT_MAP: Record<SentimentLevel, SentimentConfig> = {
     score: 30,
   },
   very_negative: {
-    label: "Very Bearish",
+    label: "veryBearish",
     emoji: "🔻",
     color: "text-red-700 dark:text-red-300",
     bgColor: "bg-red-100 dark:bg-red-900/40",
@@ -81,6 +82,7 @@ export function SentimentBadge({
   className?: string;
 }) {
   const config = getSentimentConfig(sentiment);
+  const t = useTranslations("sentimentIndicator");
 
   return (
     <span
@@ -92,7 +94,7 @@ export function SentimentBadge({
       )}
     >
       <span aria-hidden="true">{config.emoji}</span>
-      {config.label}
+      {t(config.label)}
     </span>
   );
 }
@@ -111,12 +113,13 @@ export function SentimentMeter({
   className?: string;
 }) {
   const config = getSentimentConfig(sentiment);
+  const t = useTranslations("sentimentIndicator");
 
   return (
     <div className={cn("flex flex-col gap-1.5", className)}>
       <div className="flex items-center justify-between">
         <span className={cn("text-sm font-medium", config.color)}>
-          {config.emoji} {config.label}
+          {config.emoji} {t(config.label)}
         </span>
         {confidence != null && (
           <span className="text-[11px] text-text-tertiary">
@@ -131,9 +134,9 @@ export function SentimentMeter({
         />
       </div>
       <div className="flex justify-between text-[10px] text-text-tertiary">
-        <span>Bearish</span>
-        <span>Neutral</span>
-        <span>Bullish</span>
+        <span>{t("bearish")}</span>
+        <span>{t("neutral")}</span>
+        <span>{t("bullish")}</span>
       </div>
     </div>
   );
@@ -162,6 +165,7 @@ export function SentimentBanner({ className }: { className?: string }) {
   // Default to neutral - in production this would come from API
   const sentiment = "neutral" as const;
   const config = getSentimentConfig(sentiment);
+  const t = useTranslations("sentimentIndicator");
 
   return (
     <section className={cn("border-b border-border", className)}>
@@ -169,7 +173,7 @@ export function SentimentBanner({ className }: { className?: string }) {
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
             <span className="text-sm font-semibold text-text-secondary">
-              Market Mood
+              {t("marketMood")}
             </span>
             <span className={cn("px-2.5 py-0.5 rounded-full text-xs font-bold", config.bgColor, config.color)}>
               {config.emoji} {config.label}
@@ -183,6 +187,7 @@ export function SentimentBanner({ className }: { className?: string }) {
 }
 
 export function SentimentDistribution({ counts, className }: SentimentDistProps) {
+  const t = useTranslations("sentimentIndicator");
   const total = Object.values(counts).reduce((a, b) => a + (b ?? 0), 0);
   if (total === 0) return null;
 
@@ -191,9 +196,9 @@ export function SentimentDistribution({ counts, className }: SentimentDistProps)
   const neutral = counts.neutral ?? 0;
 
   const segments: { label: string; value: number; color: string }[] = [
-    { label: "Bullish", value: bullish, color: "bg-green-500" },
-    { label: "Neutral", value: neutral, color: "bg-gray-400 dark:bg-gray-500" },
-    { label: "Bearish", value: bearish, color: "bg-red-500" },
+    { label: t("bullish"), value: bullish, color: "bg-green-500" },
+    { label: t("neutral"), value: neutral, color: "bg-gray-400 dark:bg-gray-500" },
+    { label: t("bearish"), value: bearish, color: "bg-red-500" },
   ];
 
   return (

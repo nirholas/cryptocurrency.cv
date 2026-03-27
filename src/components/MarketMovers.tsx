@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { TrendingUp, TrendingDown, ArrowRight, RefreshCw, Flame, BarChart3 } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 
 /* ------------------------------------------------------------------ */
@@ -93,6 +94,7 @@ export default function MarketMovers() {
   const [loading, setLoading] = useState(true);
   const [tab, setTab] = useState<'gainers' | 'losers'>('gainers');
   const [refreshing, setRefreshing] = useState(false);
+  const t = useTranslations("marketMovers");
 
   const fetchMovers = useCallback(async () => {
     try {
@@ -169,7 +171,7 @@ export default function MarketMovers() {
       <div>
         <h3 className="border-border mb-4 flex items-center gap-2 border-b pb-2 font-serif text-base font-bold">
           <Flame className="h-4 w-4 text-orange-500" />
-          Market Movers
+          {t("title")}
         </h3>
         <div className="space-y-3">
           {Array.from({ length: 6 }).map((_, i) => (
@@ -193,13 +195,13 @@ export default function MarketMovers() {
       <div className="border-border mb-4 flex items-center justify-between border-b pb-2">
         <h3 className="flex items-center gap-2 font-serif text-base font-bold">
           <Flame className="h-4 w-4 text-orange-500" />
-          Market Movers
+          {t("title")}
         </h3>
         <div className="flex items-center gap-1.5">
           <button
             onClick={handleRefresh}
             className="hover:bg-surface-secondary text-text-tertiary cursor-pointer rounded p-1 transition-colors"
-            title="Refresh"
+            title={t("refresh")}
           >
             <RefreshCw className={cn('h-3.5 w-3.5', refreshing && 'animate-spin')} />
           </button>
@@ -218,7 +220,7 @@ export default function MarketMovers() {
           )}
         >
           <TrendingUp className="h-3 w-3" />
-          Gainers
+          {t("gainers")}
         </button>
         <button
           onClick={() => setTab('losers')}
@@ -230,7 +232,7 @@ export default function MarketMovers() {
           )}
         >
           <TrendingDown className="h-3 w-3" />
-          Losers
+          {t("losers")}
         </button>
       </div>
 
@@ -238,7 +240,7 @@ export default function MarketMovers() {
       {activeList.length === 0 ? (
         <div className="flex flex-col items-center justify-center py-8 text-center">
           <BarChart3 className="text-text-tertiary mb-2 h-6 w-6 opacity-40" />
-          <p className="text-text-tertiary text-xs">Market data temporarily unavailable</p>
+          <p className="text-text-tertiary text-xs">{t("unavailable")}</p>
         </div>
       ) : (
         <div className="space-y-0.5">
@@ -253,7 +255,7 @@ export default function MarketMovers() {
         href="/screener"
         className="border-border text-accent hover:text-accent-hover mt-4 flex items-center justify-center gap-1 border-t pt-3 text-xs font-medium transition-colors"
       >
-        Full Screener
+        {t("fullScreener")}
         <ArrowRight className="h-3 w-3" />
       </Link>
     </div>

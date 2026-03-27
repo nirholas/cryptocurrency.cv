@@ -10,25 +10,27 @@ import {
   Clock,
   Sparkles,
 } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
 
 const INTEREST_TAGS = [
-  { id: "bitcoin", label: "Bitcoin", emoji: "₿" },
-  { id: "ethereum", label: "Ethereum", emoji: "Ξ" },
-  { id: "defi", label: "DeFi", emoji: "🔄" },
-  { id: "nft", label: "NFTs", emoji: "🎨" },
-  { id: "regulation", label: "Regulation", emoji: "⚖️" },
-  { id: "altcoins", label: "Altcoins", emoji: "🪙" },
+  { id: "bitcoin", labelKey: "bitcoin", emoji: "₿" },
+  { id: "ethereum", labelKey: "ethereum", emoji: "Ξ" },
+  { id: "defi", labelKey: "defi", emoji: "🔄" },
+  { id: "nft", labelKey: "nfts", emoji: "🎨" },
+  { id: "regulation", labelKey: "regulation", emoji: "⚖️" },
+  { id: "altcoins", labelKey: "altcoins", emoji: "🪙" },
 ] as const;
 
 const PERKS = [
-  { icon: Zap, text: "Breaking news first" },
-  { icon: Clock, text: "Daily market recap" },
-  { icon: Shield, text: "No spam, unsubscribe anytime" },
+  { icon: Zap, textKey: "breakingFirst" },
+  { icon: Clock, textKey: "dailyRecap" },
+  { icon: Shield, textKey: "noSpam" },
 ] as const;
 
 export default function NewsletterCTA() {
+  const t = useTranslations("newsletter");
   const [email, setEmail] = useState("");
   const [selectedTags, setSelectedTags] = useState<Set<string>>(new Set());
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
@@ -60,16 +62,16 @@ export default function NewsletterCTA() {
 
       if (res.ok) {
         setStatus("success");
-        setMessage("Welcome aboard! Check your inbox for confirmation.");
+        setMessage(t("successMessage"));
         setEmail("");
       } else {
-        const data = await res.json().catch(() => ({}));
+        await res.json().catch(() => ({}));
         setStatus("error");
-        setMessage(data.error || "Something went wrong. Try again.");
+        setMessage(t("errorMessage"));
       }
     } catch {
       setStatus("error");
-      setMessage("Network error. Please try again.");
+      setMessage(t("networkError"));
     }
   };
 
@@ -103,15 +105,15 @@ export default function NewsletterCTA() {
                 <div>
                   <div className="inline-flex items-center gap-1.5 bg-white/15 backdrop-blur-sm rounded-full px-3 py-1 text-xs font-medium text-white mb-4">
                     <Sparkles className="h-3 w-3" />
-                    Free forever — No credit card
+                    {t("freeForever")}
                   </div>
 
                   <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold font-serif text-white mb-3 leading-tight">
-                    Stay Ahead of the<br className="hidden sm:block" /> Crypto Market
+                    {t("heading")}
                   </h2>
 
                   <p className="text-white/75 text-sm md:text-base mb-5 max-w-md">
-                    Get daily market insights, breaking news alerts, and expert analysis delivered to your inbox.
+                    {t("description")}
                   </p>
 
                   {/* Perks */}
@@ -119,9 +121,9 @@ export default function NewsletterCTA() {
                     {PERKS.map((perk) => {
                       const Icon = perk.icon;
                       return (
-                        <span key={perk.text} className="flex items-center gap-1.5 text-xs text-white/70">
+                        <span key={perk.textKey} className="flex items-center gap-1.5 text-xs text-white/70">
                           <Icon className="h-3.5 w-3.5 text-white/50" />
-                          {perk.text}
+                          {t(perk.textKey)}
                         </span>
                       );
                     })}
@@ -133,9 +135,9 @@ export default function NewsletterCTA() {
                   {PERKS.map((perk) => {
                     const Icon = perk.icon;
                     return (
-                      <span key={perk.text} className="flex items-center gap-2 text-sm text-white/80">
+                      <span key={perk.textKey} className="flex items-center gap-2 text-sm text-white/80">
                         <Icon className="h-4 w-4 text-white/60" />
-                        {perk.text}
+                        {t(perk.textKey)}
                       </span>
                     );
                   })}
@@ -151,7 +153,7 @@ export default function NewsletterCTA() {
                     <p className="font-semibold text-white text-sm">{message}</p>
                     {selectedTags.size > 0 && (
                       <p className="text-xs text-white/60 mt-0.5">
-                        Personalized for: {Array.from(selectedTags).join(", ")}
+                        {t("personalizedFor")} {Array.from(selectedTags).join(", ")}
                       </p>
                     )}
                   </div>
@@ -161,7 +163,7 @@ export default function NewsletterCTA() {
                   {/* Interest tags */}
                   <div className="mb-4">
                     <p className="text-xs text-white/50 mb-2">
-                      Personalize your digest (optional):
+                      {t("personalize")}
                     </p>
                     <div className="flex flex-wrap gap-2">
                       {INTEREST_TAGS.map((tag) => (
@@ -177,7 +179,7 @@ export default function NewsletterCTA() {
                           )}
                         >
                           <span>{tag.emoji}</span>
-                          {tag.label}
+                          {t(tag.labelKey)}
                         </button>
                       ))}
                     </div>
@@ -208,7 +210,7 @@ export default function NewsletterCTA() {
                         <Loader2 className="h-4 w-4 animate-spin" />
                       ) : (
                         <>
-                          Subscribe
+                          {t("subscribe")}
                           <Sparkles className="h-3.5 w-3.5 ml-1.5" />
                         </>
                       )}
@@ -222,7 +224,7 @@ export default function NewsletterCTA() {
               )}
 
               <p className="mt-4 text-[11px] text-white/30">
-                By subscribing, you agree to our Privacy Policy. We respect your inbox.
+                {t("privacyNote")}
               </p>
             </div>
           </div>

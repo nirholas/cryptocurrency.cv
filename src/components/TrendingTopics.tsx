@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
+import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { Badge } from "@/components/ui/Badge";
 import { cn } from "@/lib/utils";
@@ -122,6 +123,7 @@ function MomentumIcon({ direction }: { direction: string }) {
 /* ------------------------------------------------------------------ */
 
 export function TrendingTopics({ className }: { className?: string }) {
+  const t = useTranslations("trendingTopics");
   const { topics, narratives, loading } = useTrendingTopics();
 
   if (loading) {
@@ -143,7 +145,7 @@ export function TrendingTopics({ className }: { className?: string }) {
       {topics.length > 0 && (
         <div>
           <h3 className="text-base font-bold font-serif mb-3 pb-2 border-b border-border flex items-center gap-2">
-            <span aria-hidden="true">🔥</span> Hot Topics
+            <span aria-hidden="true">🔥</span> {t("hotTopics")}
           </h3>
           <div className="space-y-2">
             {topics.map((topic) => (
@@ -157,7 +159,7 @@ export function TrendingTopics({ className }: { className?: string }) {
                     {topic.name}
                   </span>
                   <span className="text-[11px] text-text-tertiary tabular-nums">
-                    {topic.count} articles
+                    {topic.count} {t("articles")}
                   </span>
                 </div>
                 <span
@@ -179,7 +181,7 @@ export function TrendingTopics({ className }: { className?: string }) {
       {narratives.length > 0 && (
         <div>
           <h3 className="text-base font-bold font-serif mb-3 pb-2 border-b border-border flex items-center gap-2">
-            <span aria-hidden="true">🧵</span> Narratives
+            <span aria-hidden="true">🧵</span> {t("narratives")}
           </h3>
           <div className="space-y-3">
             {narratives.map((n) => (
@@ -210,7 +212,7 @@ export function TrendingTopics({ className }: { className?: string }) {
                     {n.sentiment}
                   </Badge>
                   <span className="text-[10px] text-text-tertiary">
-                    {n.articleCount} articles · {n.timeRange}
+                    {n.articleCount} {t("articles")} · {n.timeRange}
                   </span>
                 </div>
               </div>

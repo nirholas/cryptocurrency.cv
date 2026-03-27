@@ -9,6 +9,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 
 /* ------------------------------------------------------------------ */
@@ -44,6 +45,7 @@ function formatPrice(price: number): string {
 export default function TrendingCoins() {
   const [coins, setCoins] = useState<TrendingCoin[]>([]);
   const [loading, setLoading] = useState(true);
+  const t = useTranslations("trendingCoins");
 
   const fetchTrending = useCallback(async () => {
     try {
@@ -89,7 +91,7 @@ export default function TrendingCoins() {
       <div>
         <h3 className="text-base font-bold font-serif mb-4 pb-2 border-b border-border flex items-center gap-2">
           <Flame className="h-4 w-4 text-orange-500" />
-          Trending
+          {t("trending")}
         </h3>
         <div className="space-y-3">
           {Array.from({ length: 6 }).map((_, i) => (
@@ -112,10 +114,10 @@ export default function TrendingCoins() {
       <div>
         <h3 className="text-base font-bold font-serif mb-4 pb-2 border-b border-border flex items-center gap-2">
           <Flame className="h-4 w-4 text-orange-500" />
-          Trending
+          {t("trending")}
         </h3>
         <p className="text-sm text-text-tertiary">
-          Trending data unavailable
+          {t("unavailable")}
         </p>
       </div>
     );
@@ -125,7 +127,7 @@ export default function TrendingCoins() {
     <div>
       <h3 className="text-base font-bold font-serif mb-4 pb-2 border-b border-border flex items-center gap-2">
         <Flame className="h-4 w-4 text-orange-500" />
-        Trending Coins
+        {t("trendingCoins")}
       </h3>
 
       <div className="space-y-1">
@@ -191,7 +193,7 @@ export default function TrendingCoins() {
         href="/screener"
         className="flex items-center justify-center gap-1 mt-4 pt-3 border-t border-border text-xs font-medium text-accent hover:text-accent-hover transition-colors"
       >
-        View Full Screener
+        {t("viewFullScreener")}
         <ArrowRight className="h-3 w-3" />
       </Link>
     </div>

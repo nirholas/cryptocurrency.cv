@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import { Link, usePathname } from '@/i18n/navigation';
+import { useTranslations } from 'next-intl';
 import { useTheme } from '@/components/ThemeProvider';
 import { GlobalSearch } from '@/components/GlobalSearch';
 import { Menu, X, Search, Sun, Moon, ChevronDown, Star, Briefcase, User } from 'lucide-react';
@@ -10,84 +11,93 @@ import NotificationCenter from '@/components/NotificationCenter';
 import PriceTickerStrip from '@/components/PriceTickerStrip';
 import Logo from '@/components/Logo';
 
-const NAV_ITEMS = [
-  { label: 'Home', href: '/' },
+type NavItemKey = 'home' | 'markets' | 'news' | 'opinion' | 'intelligence' | 'defi' | 'learn' | 'tools' | 'account' | 'pricing' | 'newsletters' | 'overview' | 'tradingCharts' | 'fearGreed' | 'heatmap' | 'screener' | 'gasTracker' | 'tokenUnlocks' | 'derivatives' | 'stablecoins' | 'l2Rollups' | 'whales' | 'macro' | 'exchanges' | 'latest' | 'business' | 'technology' | 'web3' | 'defiNews' | 'regulation' | 'bitcoin' | 'ethereum' | 'nfts' | 'altcoins' | 'topics' | 'podcast' | 'videos' | 'pressReleases' | 'submitPR' | 'apiDocs' | 'widgetBuilder' | 'calculator' | 'compare' | 'sources' | 'explore' | 'sentiment' | 'archive' | 'watchlist' | 'portfolio' | 'bookmarks' | 'alerts' | 'settings' | 'dashboard' | 'more' | 'search';
+
+interface NavItem {
+  key: NavItemKey;
+  href: string;
+  children?: { key: NavItemKey; href: string }[];
+}
+
+const NAV_ITEMS: NavItem[] = [
+  { key: 'home', href: '/' },
   {
-    label: 'Markets',
+    key: 'markets',
     href: '/markets',
     children: [
-      { label: 'Overview', href: '/markets' },
-      { label: 'Trading & Charts', href: '/trading' },
-      { label: 'Fear & Greed', href: '/fear-greed' },
-      { label: 'Heatmap', href: '/heatmap' },
-      { label: 'Screener', href: '/screener' },
-      { label: 'Gas Tracker', href: '/gas' },
-      { label: 'Token Unlocks', href: '/unlocks' },
-      { label: 'Derivatives', href: '/derivatives' },
-      { label: 'Stablecoins', href: '/stablecoins' },
-      { label: 'L2 / Rollups', href: '/l2' },
-      { label: 'Whales', href: '/whales' },
-      { label: 'Macro', href: '/macro' },
-      { label: 'Exchanges', href: '/exchanges' },
+      { key: 'overview', href: '/markets' },
+      { key: 'tradingCharts', href: '/trading' },
+      { key: 'fearGreed', href: '/fear-greed' },
+      { key: 'heatmap', href: '/heatmap' },
+      { key: 'screener', href: '/screener' },
+      { key: 'gasTracker', href: '/gas' },
+      { key: 'tokenUnlocks', href: '/unlocks' },
+      { key: 'derivatives', href: '/derivatives' },
+      { key: 'stablecoins', href: '/stablecoins' },
+      { key: 'l2Rollups', href: '/l2' },
+      { key: 'whales', href: '/whales' },
+      { key: 'macro', href: '/macro' },
+      { key: 'exchanges', href: '/exchanges' },
     ],
   },
   {
-    label: 'News',
+    key: 'news',
     href: '/category/bitcoin',
     children: [
-      { label: 'Latest', href: '/category/bitcoin' },
-      { label: 'Business', href: '/business' },
-      { label: 'Technology', href: '/tech' },
-      { label: 'Web3', href: '/web3' },
-      { label: 'DeFi News', href: '/defi-news' },
-      { label: 'Regulation', href: '/regulation' },
-      { label: 'Bitcoin', href: '/category/bitcoin' },
-      { label: 'Ethereum', href: '/category/ethereum' },
-      { label: 'NFTs', href: '/category/nft' },
-      { label: 'Altcoins', href: '/category/altcoins' },
-      { label: 'Topics', href: '/tags' },
-      { label: 'Podcast', href: '/podcast' },
-      { label: 'Videos', href: '/videos' },
-      { label: 'Press Releases', href: '/press-releases' },
-      { label: 'Submit PR', href: '/submit-press-release' },
+      { key: 'latest', href: '/category/bitcoin' },
+      { key: 'business', href: '/business' },
+      { key: 'technology', href: '/tech' },
+      { key: 'web3', href: '/web3' },
+      { key: 'defiNews', href: '/defi-news' },
+      { key: 'regulation', href: '/regulation' },
+      { key: 'bitcoin', href: '/category/bitcoin' },
+      { key: 'ethereum', href: '/category/ethereum' },
+      { key: 'nfts', href: '/category/nft' },
+      { key: 'altcoins', href: '/category/altcoins' },
+      { key: 'topics', href: '/tags' },
+      { key: 'podcast', href: '/podcast' },
+      { key: 'videos', href: '/videos' },
+      { key: 'pressReleases', href: '/press-releases' },
+      { key: 'submitPR', href: '/submit-press-release' },
     ],
   },
-  { label: 'Opinion', href: '/opinion' },
-  { label: 'Intelligence', href: '/intelligence' },
-  { label: 'DeFi', href: '/defi' },
-  { label: 'Learn', href: '/learn' },
+  { key: 'opinion', href: '/opinion' },
+  { key: 'intelligence', href: '/intelligence' },
+  { key: 'defi', href: '/defi' },
+  { key: 'learn', href: '/learn' },
   {
-    label: 'Tools',
+    key: 'tools',
     href: '/developers',
     children: [
-      { label: 'API Docs', href: '/developers' },
-      { label: 'Widget Builder', href: '/widgets' },
-      { label: 'Calculator', href: '/calculator' },
-      { label: 'Compare', href: '/compare' },
-      { label: 'Gas Tracker', href: '/gas' },
-      { label: 'Sources', href: '/sources' },
-      { label: 'Explore', href: '/explore' },
-      { label: 'Sentiment', href: '/sentiment' },
-      { label: 'Archive', href: '/archive' },
+      { key: 'apiDocs', href: '/developers' },
+      { key: 'widgetBuilder', href: '/widgets' },
+      { key: 'calculator', href: '/calculator' },
+      { key: 'compare', href: '/compare' },
+      { key: 'gasTracker', href: '/gas' },
+      { key: 'sources', href: '/sources' },
+      { key: 'explore', href: '/explore' },
+      { key: 'sentiment', href: '/sentiment' },
+      { key: 'archive', href: '/archive' },
     ],
   },
   {
-    label: 'Account',
+    key: 'account',
     href: '/watchlist',
     children: [
-      { label: 'Watchlist', href: '/watchlist' },
-      { label: 'Portfolio', href: '/portfolio' },
-      { label: 'Bookmarks', href: '/bookmarks' },
-      { label: 'Alerts', href: '/alerts' },
-      { label: 'Settings', href: '/settings' },
+      { key: 'watchlist', href: '/watchlist' },
+      { key: 'portfolio', href: '/portfolio' },
+      { key: 'bookmarks', href: '/bookmarks' },
+      { key: 'alerts', href: '/alerts' },
+      { key: 'settings', href: '/settings' },
     ],
   },
-  { label: 'Pricing', href: '/pricing' },
-  { label: 'Newsletters', href: '/newsletters' },
-] as const;
+  { key: 'pricing', href: '/pricing' },
+  { key: 'newsletters', href: '/newsletters' },
+];
 
 export default function Header() {
   const pathname = usePathname();
+  const t = useTranslations('nav');
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [searchOpen, setSearchOpen] = useState(false);
@@ -193,27 +203,27 @@ export default function Header() {
           <nav className="hidden items-center gap-0.5 lg:flex" aria-label="Main navigation">
             {NAV_ITEMS.map((item) => (
               <div
-                key={item.label}
+                key={item.key}
                 className="relative"
-                onMouseEnter={() => ('children' in item ? setOpenDropdown(item.label) : undefined)}
+                onMouseEnter={() => (item.children ? setOpenDropdown(item.key) : undefined)}
                 onMouseLeave={() => setOpenDropdown(null)}
               >
-                {'children' in item ? (
+                {item.children ? (
                   <button
                     type="button"
-                    onClick={() => setOpenDropdown(openDropdown === item.label ? null : item.label)}
-                    aria-expanded={openDropdown === item.label}
+                    onClick={() => setOpenDropdown(openDropdown === item.key ? null : item.key)}
+                    aria-expanded={openDropdown === item.key}
                     aria-haspopup="true"
                     className={cn(
                       'flex cursor-pointer items-center gap-1 rounded-md px-3 py-2 text-sm font-medium transition-colors',
                       'text-text-secondary hover:text-text-primary hover:bg-surface-secondary',
                     )}
                   >
-                    {item.label}
+                    {t(item.key)}
                     <ChevronDown
                       className={cn(
                         'h-3.5 w-3.5 opacity-50 transition-transform duration-200',
-                        openDropdown === item.label && 'rotate-180',
+                        openDropdown === item.key && 'rotate-180',
                       )}
                       aria-hidden="true"
                     />
@@ -226,12 +236,12 @@ export default function Header() {
                       'text-text-secondary hover:text-text-primary hover:bg-surface-secondary',
                     )}
                   >
-                    {item.label}
+                    {t(item.key)}
                   </Link>
                 )}
 
                 {/* Dropdown with animation */}
-                {'children' in item && openDropdown === item.label && (
+                {item.children && openDropdown === item.key && (
                   <div className="absolute top-full left-0 z-50 pt-1.5" role="menu">
                     <div className="border-border animate-dropdown min-w-55 rounded-xl border bg-(--color-surface) py-1.5 shadow-(--shadow-dropdown)">
                       {item.children.map((child) => (
@@ -241,7 +251,7 @@ export default function Header() {
                           role="menuitem"
                           className="text-text-secondary hover:text-text-primary hover:bg-surface-secondary mx-1 flex items-center gap-2 rounded-md px-4 py-2 text-sm transition-colors"
                         >
-                          {child.label}
+                          {t(child.key)}
                         </Link>
                       ))}
                     </div>
@@ -256,8 +266,8 @@ export default function Header() {
             <Link
               href="/watchlist"
               className="hover:bg-surface-secondary text-text-secondary hidden rounded-md p-2 transition-colors sm:flex"
-              aria-label="Watchlist"
-              title="Watchlist"
+              aria-label={t('watchlist')}
+              title={t('watchlist')}
             >
               <Star className="h-4.5 w-4.5" aria-hidden="true" />
             </Link>
@@ -265,8 +275,8 @@ export default function Header() {
             <Link
               href="/portfolio"
               className="hover:bg-surface-secondary text-text-secondary hidden rounded-md p-2 transition-colors md:flex"
-              aria-label="Portfolio"
-              title="Portfolio"
+              aria-label={t('portfolio')}
+              title={t('portfolio')}
             >
               <Briefcase className="h-4.5 w-4.5" aria-hidden="true" />
             </Link>
@@ -280,11 +290,11 @@ export default function Header() {
             <Link
               href="/dashboard"
               className="bg-accent hover:bg-accent-hover hidden items-center gap-1.5 rounded-md px-3 py-1.5 text-sm font-medium text-white transition-colors sm:flex"
-              aria-label="Dashboard"
-              title="Dashboard"
+              aria-label={t('dashboard')}
+              title={t('dashboard')}
             >
               <User className="h-4 w-4" aria-hidden="true" />
-              <span className="hidden md:inline">Dashboard</span>
+              <span className="hidden md:inline">{t('dashboard')}</span>
             </Link>
 
             <div className="bg-border mx-1 hidden h-5 w-px sm:block" />
@@ -292,8 +302,8 @@ export default function Header() {
             <button
               onClick={() => setSearchOpen(true)}
               className="hover:bg-surface-secondary text-text-secondary flex cursor-pointer items-center gap-2 rounded-md p-2 transition-colors"
-              aria-label="Search (Cmd+K)"
-              title="Search"
+              aria-label={t('searchCmdK')}
+              title={t('search')}
             >
               <Search className="h-4.5 w-4.5" aria-hidden="true" />
               <kbd className="border-border bg-surface-secondary text-text-tertiary hidden items-center gap-0.5 rounded border px-1.5 py-0.5 font-mono text-[10px] sm:inline-flex">
@@ -304,8 +314,8 @@ export default function Header() {
             <button
               onClick={toggleTheme}
               className="hover:bg-surface-secondary text-text-secondary cursor-pointer rounded-md p-2 transition-colors"
-              aria-label={resolvedTheme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
-              title={resolvedTheme === 'dark' ? 'Light mode' : 'Dark mode'}
+              aria-label={resolvedTheme === 'dark' ? t('switchToLight') : t('switchToDark')}
+              title={resolvedTheme === 'dark' ? t('lightMode') : t('darkMode')}
             >
               {resolvedTheme === 'dark' ? (
                 <Sun className="h-4.5 w-4.5" aria-hidden="true" />
@@ -322,7 +332,7 @@ export default function Header() {
                 document.body.classList.toggle('menu-open', next);
               }}
               className="hover:bg-surface-secondary text-text-secondary flex min-h-11 min-w-11 cursor-pointer items-center justify-center rounded-md p-2 transition-colors lg:hidden"
-              aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
+              aria-label={mobileOpen ? t('menuClose') : t('menuOpen')}
               aria-expanded={mobileOpen}
               aria-controls="mobile-nav"
             >
@@ -365,28 +375,28 @@ export default function Header() {
                   document.body.classList.remove('menu-open');
                 }}
                 className="border-border bg-surface-secondary text-text-tertiary flex w-full cursor-pointer items-center gap-3 rounded-lg border px-3 py-2.5 text-sm transition-colors"
-                aria-label="Search news, topics, coins"
+                aria-label={t('searchPlaceholder')}
               >
                 <Search className="h-4 w-4" aria-hidden="true" />
-                Search news, topics, coins…
+                {t('searchPlaceholder')}
               </button>
             </div>
 
-            <nav className="container-main space-y-0.5 py-3" aria-label="Mobile navigation">
+            <nav className="container-main space-y-0.5 py-3" aria-label={t('mobileNavigation')}>
               {NAV_ITEMS.map((item) => (
-                <div key={item.label}>
-                  {'children' in item ? (
+                <div key={item.key}>
+                  {item.children ? (
                     /* Accordion-style: button toggles children visibility */
                     <button
-                      onClick={() => toggleMobileAccordion(item.label)}
+                      onClick={() => toggleMobileAccordion(item.key)}
                       className="text-text-secondary hover:text-text-primary hover:bg-surface-secondary flex min-h-11 w-full cursor-pointer items-center justify-between rounded-md px-3 py-2.5 text-sm font-medium transition-colors"
-                      aria-expanded={mobileAccordion === item.label}
+                      aria-expanded={mobileAccordion === item.key}
                     >
-                      {item.label}
+                      {t(item.key)}
                       <ChevronDown
                         className={cn(
                           'h-3.5 w-3.5 opacity-60 transition-transform duration-200',
-                          mobileAccordion === item.label && 'rotate-180',
+                          mobileAccordion === item.key && 'rotate-180',
                         )}
                         aria-hidden="true"
                       />
@@ -397,15 +407,15 @@ export default function Header() {
                       onClick={() => setMobileOpen(false)}
                       className="text-text-secondary hover:text-text-primary hover:bg-surface-secondary flex min-h-11 items-center justify-between rounded-md px-3 py-2.5 text-sm font-medium transition-colors"
                     >
-                      {item.label}
+                      {t(item.key)}
                     </Link>
                   )}
 
-                  {'children' in item && (
+                  {item.children && (
                     <div
                       className={cn(
                         'border-border ml-4 space-y-0.5 overflow-hidden border-l-2 pl-3 transition-all duration-200',
-                        mobileAccordion === item.label
+                        mobileAccordion === item.key
                           ? 'mt-0.5 max-h-96 opacity-100'
                           : 'max-h-0 opacity-0',
                       )}
@@ -417,7 +427,7 @@ export default function Header() {
                           onClick={() => setMobileOpen(false)}
                           className="text-text-tertiary hover:text-text-primary flex min-h-11 items-center px-3 py-2.5 text-sm transition-colors"
                         >
-                          {child.label}
+                          {t(child.key)}
                         </Link>
                       ))}
                     </div>
@@ -433,7 +443,7 @@ export default function Header() {
                   className="border-border text-text-secondary hover:bg-surface-secondary flex min-h-11 flex-1 items-center justify-center gap-2 rounded-md border py-2.5 text-sm transition-colors"
                 >
                   <Star className="h-4 w-4" aria-hidden="true" />
-                  Watchlist
+                  {t('watchlist')}
                 </Link>
                 <Link
                   href="/portfolio"
@@ -441,7 +451,7 @@ export default function Header() {
                   className="border-border text-text-secondary hover:bg-surface-secondary flex min-h-11 flex-1 items-center justify-center gap-2 rounded-md border py-2.5 text-sm transition-colors"
                 >
                   <Briefcase className="h-4 w-4" aria-hidden="true" />
-                  Portfolio
+                  {t('portfolio')}
                 </Link>
               </div>
             </nav>

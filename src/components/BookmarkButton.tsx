@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { useBookmarks } from "@/components/BookmarksProvider";
 import { useToast } from "@/components/Toast";
 import { cn } from "@/lib/utils";
@@ -16,6 +17,7 @@ interface BookmarkButtonProps {
 }
 
 export function BookmarkButton({ article, className }: BookmarkButtonProps) {
+  const t = useTranslations("bookmarkButton");
   const { addBookmark, removeBookmark, isBookmarked } = useBookmarks();
   const { addToast } = useToast();
 
@@ -27,10 +29,10 @@ export function BookmarkButton({ article, className }: BookmarkButtonProps) {
 
     if (bookmarked) {
       removeBookmark(article.link);
-      addToast("Bookmark removed", "info");
+      addToast(t("removed"), "info");
     } else {
       addBookmark(article);
-      addToast("Article bookmarked", "success");
+      addToast(t("added"), "success");
     }
   }
 
@@ -38,7 +40,7 @@ export function BookmarkButton({ article, className }: BookmarkButtonProps) {
     <button
       type="button"
       onClick={handleClick}
-      aria-label={bookmarked ? "Remove bookmark" : "Add bookmark"}
+      aria-label={bookmarked ? t("remove") : t("add")}
       className={cn(
         "inline-flex items-center justify-center rounded-md p-1.5 transition-colors",
         "bg-(--color-surface)/80 backdrop-blur-sm border border-border",

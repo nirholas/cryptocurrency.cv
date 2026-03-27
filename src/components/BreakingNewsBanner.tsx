@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
+import { useTranslations } from 'next-intl';
 import { X, AlertTriangle, Clock, ExternalLink, ChevronLeft, ChevronRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
@@ -27,6 +28,7 @@ function timeAgo(dateStr?: string): string {
 }
 
 export default function BreakingNewsBanner({ articles }: BreakingNewsBannerProps) {
+  const t = useTranslations('breakingNews');
   const [dismissed, setDismissed] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
@@ -80,7 +82,7 @@ export default function BreakingNewsBanner({ articles }: BreakingNewsBannerProps
         {/* Badge */}
         <span className="flex shrink-0 items-center gap-1.5 rounded-md bg-amber-500/15 px-2.5 py-1 text-[11px] font-bold tracking-wider text-amber-600 uppercase dark:text-amber-400">
           <AlertTriangle className="h-3 w-3" />
-          Breaking
+          {t('breaking')}
           {articles.length > 1 && (
             <span className="ml-0.5 rounded-full bg-amber-500/20 px-1.5 py-0.5 text-[10px] leading-none">
               {articles.length}
@@ -124,7 +126,7 @@ export default function BreakingNewsBanner({ articles }: BreakingNewsBannerProps
                 setActiveIndex((prev) => (prev - 1 + articles.length) % articles.length)
               }
               className="hover:bg-surface-tertiary cursor-pointer rounded p-1 transition-colors"
-              aria-label="Previous breaking news"
+              aria-label={t('previous')}
             >
               <ChevronLeft className="h-3.5 w-3.5" />
             </button>
@@ -140,14 +142,14 @@ export default function BreakingNewsBanner({ articles }: BreakingNewsBannerProps
                       ? 'w-4 bg-amber-500'
                       : 'bg-border hover:bg-border-hover w-1.5',
                   )}
-                  aria-label={`Go to breaking news ${i + 1}`}
+                  aria-label={t('goTo', { index: i + 1 })}
                 />
               ))}
             </div>
             <button
               onClick={() => setActiveIndex((prev) => (prev + 1) % articles.length)}
               className="hover:bg-surface-tertiary cursor-pointer rounded p-1 transition-colors"
-              aria-label="Next breaking news"
+              aria-label={t('next')}
             >
               <ChevronRight className="h-3.5 w-3.5" />
             </button>
@@ -158,7 +160,7 @@ export default function BreakingNewsBanner({ articles }: BreakingNewsBannerProps
         <button
           onClick={handleDismiss}
           className="hover:bg-surface-tertiary shrink-0 cursor-pointer rounded p-1 transition-colors"
-          aria-label="Dismiss breaking news"
+          aria-label={t('dismiss')}
         >
           <X className="h-3.5 w-3.5" />
         </button>

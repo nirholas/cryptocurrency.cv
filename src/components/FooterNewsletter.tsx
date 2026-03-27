@@ -2,10 +2,12 @@
 
 import { useState, type FormEvent } from "react";
 import { Loader2, CheckCircle } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
 
 export default function FooterNewsletter() {
+  const t = useTranslations("footerNewsletter");
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
@@ -34,7 +36,7 @@ export default function FooterNewsletter() {
     return (
       <div className="flex items-center gap-2 text-sm text-emerald-500" role="status" aria-live="polite">
         <CheckCircle className="h-4 w-4" aria-hidden="true" />
-        <span>Subscribed!</span>
+        <span>{t("subscribed")}</span>
       </div>
     );
   }
@@ -42,7 +44,7 @@ export default function FooterNewsletter() {
   return (
     <form onSubmit={handleSubmit} className="flex flex-col gap-2">
       <div className="flex gap-2">
-        <label htmlFor="footer-newsletter-email" className="sr-only">Email address</label>
+        <label htmlFor="footer-newsletter-email" className="sr-only">{t("emailLabel")}</label>
         <input
           id="footer-newsletter-email"
           type="email"
@@ -60,12 +62,12 @@ export default function FooterNewsletter() {
           )}
         />
         <Button type="submit" size="sm" variant="primary" disabled={status === "loading"} aria-label={status === "loading" ? "Subscribing..." : "Subscribe to newsletter"}>
-          {status === "loading" ? <Loader2 className="h-3.5 w-3.5 animate-spin" aria-hidden="true" /> : "Subscribe"}
+          {status === "loading" ? <Loader2 className="h-3.5 w-3.5 animate-spin" aria-hidden="true" /> : t("subscribe")}
         </Button>
       </div>
       {status === "error" && (
         <p id="footer-newsletter-error" className="text-xs text-red-500" role="alert">
-          Subscription failed. Please try again.
+          {t("error")}
         </p>
       )}
     </form>

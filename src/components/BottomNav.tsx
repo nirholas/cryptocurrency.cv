@@ -1,6 +1,7 @@
 'use client';
 
 import { useCallback, useEffect, useRef, useState } from 'react';
+import { useTranslations } from 'next-intl';
 import { cn } from '@/lib/utils';
 import { Link, usePathname } from '@/i18n/navigation';
 import { Home, BarChart3, Search, Bookmark, MoreHorizontal, type LucideIcon } from 'lucide-react';
@@ -19,16 +20,17 @@ interface NavItem {
 }
 
 const NAV_ITEMS: NavItem[] = [
-  { href: '/', label: 'Home', icon: Home },
-  { href: '/markets', label: 'Markets', icon: BarChart3 },
-  { href: '/search', label: 'Search', icon: Search },
-  { href: '/bookmarks', label: 'Bookmarks', icon: Bookmark, badge: 'bookmarks' },
-  { href: '/settings', label: 'More', icon: MoreHorizontal, badge: 'alerts' },
+  { href: '/', label: 'home', icon: Home },
+  { href: '/markets', label: 'markets', icon: BarChart3 },
+  { href: '/search', label: 'search', icon: Search },
+  { href: '/bookmarks', label: 'bookmarks', icon: Bookmark, badge: 'bookmarks' },
+  { href: '/settings', label: 'more', icon: MoreHorizontal, badge: 'alerts' },
 ];
 
 /* ─── Component ─── */
 
 export function BottomNav() {
+  const t = useTranslations('bottomNav');
   const pathname = usePathname();
   const { bookmarks } = useBookmarks();
   const { triggered } = useAlerts();
@@ -93,7 +95,7 @@ export function BottomNav() {
                   isActive ? 'text-accent' : 'text-text-tertiary active:scale-90',
                 )}
                 aria-current={isActive ? 'page' : undefined}
-                aria-label={count > 0 ? `${label} (${count} new)` : label}
+                aria-label={count > 0 ? `${t(label)} (${count})` : t(label)}
               >
                 {/* Active indicator pill */}
                 {isActive && (
@@ -115,7 +117,7 @@ export function BottomNav() {
                     </span>
                   )}
                 </span>
-                <span className={cn('leading-none', isActive && 'font-semibold')}>{label}</span>
+                <span className={cn('leading-none', isActive && 'font-semibold')}>{t(label)}</span>
               </Link>
             </li>
           );

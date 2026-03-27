@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback, useRef } from "react";
 import { cn } from "@/lib/utils";
+import { useTranslations } from "next-intl";
 
 /* ------------------------------------------------------------------ */
 /*  Types                                                             */
@@ -24,12 +25,12 @@ interface ActivityEvent {
 /* ------------------------------------------------------------------ */
 
 const EVENT_CONFIG: Record<ActivityEvent["type"], { icon: string; color: string; label: string }> = {
-  whale: { icon: "🐋", color: "border-l-blue-500", label: "Whale Move" },
-  liquidation: { icon: "💥", color: "border-l-red-500", label: "Liquidation" },
-  volume_spike: { icon: "📊", color: "border-l-purple-500", label: "Volume Spike" },
-  price_alert: { icon: "🔔", color: "border-l-yellow-500", label: "Price Alert" },
-  listing: { icon: "🆕", color: "border-l-green-500", label: "New Listing" },
-  governance: { icon: "🏛️", color: "border-l-indigo-500", label: "Governance" },
+  whale: { icon: "🐋", color: "border-l-blue-500", label: "whaleMove" },
+  liquidation: { icon: "💥", color: "border-l-red-500", label: "liquidation" },
+  volume_spike: { icon: "📊", color: "border-l-purple-500", label: "volumeSpike" },
+  price_alert: { icon: "🔔", color: "border-l-yellow-500", label: "priceAlert" },
+  listing: { icon: "🆕", color: "border-l-green-500", label: "newListing" },
+  governance: { icon: "🏛️", color: "border-l-indigo-500", label: "governance" },
 };
 
 /* ------------------------------------------------------------------ */
@@ -141,13 +142,14 @@ export function LiveActivityFeed({
   const { events: allEvents, loading, newEventIds } = useLiveActivity();
   const events = maxItems ? allEvents.slice(0, maxItems) : allEvents;
   const [paused, setPaused] = useState(false);
+  const t = useTranslations("liveActivity");
 
   if (loading) {
     return (
       <div className={cn("space-y-3", className)}>
         <div className="flex items-center gap-2 mb-3">
           <span className="live-dot" />
-          <span className="text-xs font-semibold text-text-tertiary">Live Activity</span>
+          <span className="text-xs font-semibold text-text-tertiary">{t("liveActivity")}</span>
         </div>
         {Array.from({ length: 4 }).map((_, i) => (
           <div key={i} className="animate-pulse border-l-2 border-border pl-3 py-2">
@@ -164,10 +166,10 @@ export function LiveActivityFeed({
       <div className={cn("", className)}>
         <div className="flex items-center gap-2 mb-3">
           <span className="live-dot" />
-          <span className="text-xs font-semibold text-text-tertiary">Live Activity</span>
+          <span className="text-xs font-semibold text-text-tertiary">{t("liveActivity")}</span>
         </div>
         <p className="text-xs text-text-tertiary text-center py-6">
-          No recent activity detected
+          {t("noActivity")}
         </p>
       </div>
     );
@@ -183,11 +185,11 @@ export function LiveActivityFeed({
         <div className="flex items-center gap-2">
           <span className={cn("live-dot", paused && "opacity-50")} />
           <span className="text-xs font-semibold text-text-tertiary">
-            Live Activity
+            {t("liveActivity")}
           </span>
         </div>
         {paused && (
-          <span className="text-[10px] text-text-tertiary">Paused</span>
+          <span className="text-[10px] text-text-tertiary">{t("paused")}</span>
         )}
       </div>
 

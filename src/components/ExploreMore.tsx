@@ -16,87 +16,88 @@ import {
   Flame,
   Star,
 } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 
 type ToolItem = {
-  title: string;
-  description: string;
+  titleKey: string;
+  descKey: string;
   href: string;
   icon: React.ComponentType<{ className?: string }>;
   badge?: "new" | "popular" | "beta";
   color: string;
-  stat?: string;
+  statKey?: string;
 };
 
 const TOOLS: ToolItem[] = [
   {
-    title: "Markets",
-    description: "Real-time prices, charts, and market data for thousands of cryptocurrencies.",
+    titleKey: "markets",
+    descKey: "marketsDesc",
     href: "/markets",
     icon: BarChart3,
     badge: "popular",
     color: "from-blue-500 to-cyan-500",
-    stat: "10K+ coins tracked",
+    statKey: "marketsStat",
   },
   {
-    title: "DeFi Dashboard",
-    description: "Track DeFi protocols, TVL, yields, and decentralized exchange volumes.",
+    titleKey: "defiDashboard",
+    descKey: "defiDesc",
     href: "/defi",
     icon: Layers,
     color: "from-purple-500 to-pink-500",
-    stat: "500+ protocols",
+    statKey: "defiStat",
   },
   {
-    title: "Portfolio",
-    description: "Monitor your portfolio, track PnL, and view allocation breakdowns.",
+    titleKey: "portfolio",
+    descKey: "portfolioDesc",
     href: "/portfolio",
     icon: Briefcase,
     badge: "new",
     color: "from-emerald-500 to-teal-500",
   },
   {
-    title: "Gas Tracker",
-    description: "Live gas fees for Ethereum, BSC, Polygon, and other EVM chains.",
+    titleKey: "gasTracker",
+    descKey: "gasDesc",
     href: "/gas",
     icon: Fuel,
     color: "from-orange-500 to-red-500",
-    stat: "Live gas prices",
+    statKey: "gasStat",
   },
   {
-    title: "Calculator",
-    description: "Convert between cryptocurrencies and fiat currencies instantly.",
+    titleKey: "calculator",
+    descKey: "calculatorDesc",
     href: "/calculator",
     icon: Calculator,
     color: "from-amber-500 to-yellow-500",
   },
   {
-    title: "API Docs",
-    description: "Free REST API, RSS feeds, GraphQL, and WebSocket for developers.",
+    titleKey: "apiDocs",
+    descKey: "apiDesc",
     href: "/developers",
     icon: Code2,
     badge: "popular",
     color: "from-slate-500 to-zinc-500",
-    stat: "100% free",
+    statKey: "apiStat",
   },
   {
-    title: "Learn",
-    description: "Crypto education hub with guides, glossary, and tutorials for beginners.",
+    titleKey: "learn",
+    descKey: "learnDesc",
     href: "/learn",
     icon: BookOpen,
     color: "from-green-500 to-lime-500",
   },
   {
-    title: "News Sources",
-    description: "Browse our 300+ verified crypto news sources with reliability ratings.",
+    titleKey: "newsSources",
+    descKey: "newsSourcesDesc",
     href: "/sources",
     icon: Newspaper,
     color: "from-indigo-500 to-violet-500",
-    stat: "300+ sources",
+    statKey: "newsSourcesStat",
   },
   {
-    title: "Fear & Greed",
-    description: "Market sentiment index based on volatility, momentum, and social signals.",
+    titleKey: "fearGreed",
+    descKey: "fearGreedDesc",
     href: "/fear-greed",
     icon: Gauge,
     badge: "new",
@@ -105,12 +106,13 @@ const TOOLS: ToolItem[] = [
 ];
 
 const BADGE_CONFIG = {
-  new: { label: "New", icon: Sparkles, className: "bg-emerald-500/10 text-emerald-600 border-emerald-500/20" },
-  popular: { label: "Popular", icon: Flame, className: "bg-orange-500/10 text-orange-600 border-orange-500/20" },
-  beta: { label: "Beta", icon: Star, className: "bg-blue-500/10 text-blue-600 border-blue-500/20" },
+  new: { labelKey: "new", icon: Sparkles, className: "bg-emerald-500/10 text-emerald-600 border-emerald-500/20" },
+  popular: { labelKey: "popular", icon: Flame, className: "bg-orange-500/10 text-orange-600 border-orange-500/20" },
+  beta: { labelKey: "beta", icon: Star, className: "bg-blue-500/10 text-blue-600 border-blue-500/20" },
 } as const;
 
 export default function ExploreMore() {
+  const t = useTranslations("exploreMore");
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
@@ -118,11 +120,11 @@ export default function ExploreMore() {
       <div className="text-center mb-10">
         <div className="inline-flex items-center gap-1.5 bg-surface-secondary rounded-full px-3 py-1 text-xs font-medium text-text-secondary mb-3 border border-border">
           <Sparkles className="h-3 w-3 text-accent" />
-          All tools free — No limits
+          {t("badge")}
         </div>
-        <h2 className="text-2xl md:text-3xl font-bold font-serif mb-2">Explore More</h2>
+        <h2 className="text-2xl md:text-3xl font-bold font-serif mb-2">{t("heading")}</h2>
         <p className="text-sm text-text-secondary max-w-lg mx-auto">
-          Powerful tools, real-time data, and intelligent insights to help you navigate the crypto market.
+          {t("description")}
         </p>
       </div>
 
@@ -168,7 +170,7 @@ export default function ExploreMore() {
               <div className="relative flex-1 min-w-0">
                 <div className="flex items-center gap-2 mb-1">
                   <h3 className="font-semibold text-text-primary group-hover:text-accent transition-colors">
-                    {tool.title}
+                    {t(tool.titleKey)}
                   </h3>
                   {badge && (
                     <span className={cn(
@@ -176,21 +178,21 @@ export default function ExploreMore() {
                       badge.className
                     )}>
                       <badge.icon className="h-2.5 w-2.5" />
-                      {badge.label}
+                      {t(badge.labelKey)}
                     </span>
                   )}
                 </div>
                 <p className="text-xs text-text-secondary line-clamp-2 mb-2">
-                  {tool.description}
+                  {t(tool.descKey)}
                 </p>
                 <div className="flex items-center justify-between">
-                  {tool.stat && (
+                  {tool.statKey && (
                     <span className="text-[10px] text-text-tertiary font-medium">
-                      {tool.stat}
+                      {t(tool.statKey)}
                     </span>
                   )}
                   <span className="inline-flex items-center gap-1 text-xs font-medium text-accent opacity-0 group-hover:opacity-100 transition-opacity ml-auto">
-                    Explore
+                    {t("explore")}
                     <ArrowRight className="h-3 w-3 group-hover:translate-x-0.5 transition-transform" />
                   </span>
                 </div>
@@ -210,7 +212,7 @@ export default function ExploreMore() {
           )}
         >
           <Code2 className="h-4 w-4" />
-          Build with our Free API
+          {t("buildWithApi")}
           <ArrowRight className="h-3.5 w-3.5" />
         </Link>
       </div>
