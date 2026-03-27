@@ -22,7 +22,11 @@ function getJwtSecret(): Uint8Array {
   return new TextEncoder().encode(secret);
 }
 
-const JWT_SECRET = getJwtSecret();
+let _jwtSecret: Uint8Array | undefined;
+function getSecret(): Uint8Array {
+  if (!_jwtSecret) _jwtSecret = getJwtSecret();
+  return _jwtSecret;
+}
 
 const ISSUER = 'cryptocurrency.cv';
 const AUDIENCE = 'cryptocurrency.cv';
@@ -48,7 +52,7 @@ export async function signJwt(
     .setIssuer(ISSUER)
     .setAudience(AUDIENCE)
     .setExpirationTime(expiresIn)
-    .sign(JWT_SECRET);
+    .sign(getSecret());
 }
 
 /**
@@ -56,7 +60,7 @@ export async function signJwt(
  */
 export async function verifyJwt(token: string): Promise<JwtPayload | null> {
   try {
-    const { payload } = await jwtVerify(token, JWT_SECRET, {
+    const { payload } = await jwtVerify(token, getSecret(), {
       issuer: ISSUER,
       audience: AUDIENCE,
     });
