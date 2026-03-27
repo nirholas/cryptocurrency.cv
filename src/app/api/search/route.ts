@@ -68,7 +68,7 @@ async function semanticSearch(query: string): Promise<StoredArticleEmbedding[] |
     const mod = await import('@vercel/kv');
     kv = mod.kv;
   } catch {
-    // @vercel/kv not available or env vars not set
+    // @vercel/kv not available or env vars not set — expected in local dev
     return null;
   }
 
@@ -93,8 +93,8 @@ async function semanticSearch(query: string): Promise<StoredArticleEmbedding[] |
 
     scored.sort((a, b) => b.score - a.score);
     return scored.slice(0, 10).map((s) => s.article);
-  } catch {
-    // Any KV or API error — fall back to keyword search
+  } catch (err) {
+    console.warn('[search] Semantic search failed, falling back to keyword search', err);
     return null;
   }
 }

@@ -78,8 +78,8 @@ export const GET = instrumented(
           );
         }
       }
-    } catch {
-      /* pipeline miss — fall through */
+    } catch (err) {
+      console.warn('[prices] Pipeline miss, falling back to CoinGecko', err);
     }
 
     // 1. Short-lived in-memory cache

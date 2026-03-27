@@ -80,7 +80,7 @@ export async function GET(request: NextRequest) {
           'X-Cache': result.cached ? 'HIT' : 'MISS',
         },
       });
-    } catch { /* provider chain miss — fall through to direct fetch */ }
+    } catch (err) { console.warn('[on-chain] Provider chain miss, falling back to direct API', err); }
 
     // Layer 2: Direct API fallback (legacy)
     const results: Record<string, unknown>[] = [];

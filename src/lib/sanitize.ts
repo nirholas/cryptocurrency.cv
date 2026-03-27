@@ -298,8 +298,10 @@ export function sanitizeObject<T extends Record<string, unknown>>(
   const { maxStringLength = 10000, allowMarkdown = false } = options;
   
   const sanitized: Record<string, unknown> = {};
-  
+
   for (const [key, value] of Object.entries(obj)) {
+    // Prevent prototype pollution
+    if (key === '__proto__' || key === 'constructor' || key === 'prototype') continue;
     if (typeof value === 'string') {
       sanitized[key] = allowMarkdown
         ? sanitizeMarkdown(value, maxStringLength)

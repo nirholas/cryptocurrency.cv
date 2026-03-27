@@ -40,7 +40,9 @@ export default function EmbedLayout({
         <script dangerouslySetInnerHTML={{ __html: `
           (function() {
             var params = new URLSearchParams(window.location.search);
-            var theme = params.get('theme') || 'dark';
+            var raw = params.get('theme') || 'dark';
+            var valid = ['dark', 'light', 'auto'];
+            var theme = valid.indexOf(raw) !== -1 ? raw : 'dark';
             if (theme === 'auto') {
               theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
             }

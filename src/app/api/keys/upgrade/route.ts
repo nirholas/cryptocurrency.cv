@@ -193,9 +193,21 @@ export async function POST(request: NextRequest) {
     );
   }
 
-  // Payment header present — in a production system, we'd verify the payment
-  // via the x402 facilitator. For now, we trust the middleware verification.
-  // The middleware already validates x402 payments before requests reach here.
+  // Payment header present — verify the payment amount matches the expected price.
+  // The middleware validates the x402 signature, but we also verify the amount
+  // to prevent underpayment or mismatched tier/price combinations.
+  const expectedAmountMicro = (price * 1_000_000).toString();
+  const paidAmount = request.headers.get('x-402-amount');
+  if (paidAmount && paidAmount !== expectedAmountMicro) {
+    return NextResponse.json(
+      {
+        error: 'Payment amount mismatch',
+        code: 'PAYMENT_MISMATCH',
+        message: `Expected ${expectedAmountMicro} micro-USDC ($${price}), received ${paidAmount}`,
+      },
+      { status: 402 }
+    );
+  }
 
   try {
     // Calculate expiry date

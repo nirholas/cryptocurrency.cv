@@ -100,11 +100,9 @@ export async function POST(request: NextRequest) {
       { status: 201 },
     );
   } catch (error) {
+    console.error("[Admin Gateway] Failed to create API key:", error);
     return NextResponse.json(
-      {
-        error: "Failed to create API key",
-        message: error instanceof Error ? error.message : "Unknown error",
-      },
+      { error: "Failed to create API key" },
       { status: 500 },
     );
   }
