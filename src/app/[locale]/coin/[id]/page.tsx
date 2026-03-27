@@ -78,9 +78,8 @@ async function fetchCoinData(coinId: string): Promise<CoinData | null> {
 async function fetchRelatedNews(coinName: string): Promise<NewsArticle[]> {
   try {
     const baseUrl =
-      process.env.NEXT_PUBLIC_BASE_URL || process.env.VERCEL_URL
-        ? `https://${process.env.VERCEL_URL}`
-        : 'http://localhost:3000';
+      process.env.NEXT_PUBLIC_BASE_URL ||
+      (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000');
     const res = await fetch(`${baseUrl}/api/news?search=${encodeURIComponent(coinName)}&limit=8`, {
       next: { revalidate: 120 },
     });

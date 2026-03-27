@@ -24,9 +24,11 @@ export const intl: MiddlewareHandler = (ctx) => {
 
   // Expose nonce to server components via headers()
   response.headers.set('x-middleware-request-x-nonce', nonce);
-  // Let the Next.js renderer read the CSP to auto-add nonces to framework scripts
-  response.headers.set('x-middleware-request-content-security-policy', csp);
-  // Send the CSP to the browser
+  // Send the CSP to the browser.
+  // NOTE: Do NOT set x-middleware-request-content-security-policy — Next.js 16
+  // strips SHA-256 hashes from it and overwrites the Content-Security-Policy
+  // response header with the hash-stripped version, breaking the inline
+  // bootstrap script allowlist.
   response.headers.set('Content-Security-Policy', csp);
 
   // Prevent search engines from indexing the sources page (anti-scrape)

@@ -1,3 +1,6 @@
+'use client';
+
+import { useState } from 'react';
 import { Link } from '@/i18n/navigation';
 import { Badge, categoryToBadgeVariant } from '@/components/ui/Badge';
 import { BookmarkButton } from '@/components/BookmarkButton';
@@ -5,6 +8,7 @@ import { TagChip } from '@/components/TagChip';
 import { cn } from '@/lib/utils';
 import type { NewsArticle } from '@/lib/crypto-news';
 import { extractTagsFromArticle } from '@/lib/tags';
+import { getUnsplashFallback } from '@/lib/unsplash-fallback';
 import { classifyArticle } from '@/lib/article-classifier';
 import { NEWS_VERTICALS } from '@/lib/verticals';
 
@@ -62,14 +66,28 @@ function VerticalBadges({ article }: { article: NewsArticle }) {
    Shared helpers
    ------------------------------------------------ */
 
-function ArticleImage({ src, alt, className }: { src?: string; alt: string; className?: string }) {
-  if (!src) return null;
+function ArticleImage({
+  src,
+  alt,
+  className,
+  source,
+}: {
+  src?: string;
+  alt: string;
+  className?: string;
+  source?: string;
+}) {
+  const fallback = getUnsplashFallback(source || alt);
+  const [failed, setFailed] = useState(false);
+  const imgSrc = (!src || failed) ? fallback : src;
+
   return (
     <div className={cn('overflow-hidden rounded-lg bg-surface-tertiary', className)}>
       <img
-        src={src}
+        src={imgSrc}
         alt={alt}
         loading="lazy"
+        onError={() => setFailed(true)}
         className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]"
       />
     </div>
@@ -133,6 +151,7 @@ export function FeaturedCard({ article }: { article: NewsArticle }) {
           <ArticleImage
             src={article.imageUrl}
             alt={article.title}
+            source={article.source}
             className="aspect-16/10 w-full rounded-xl shadow-lg"
           />
           <div className="flex flex-col gap-4">
@@ -184,6 +203,7 @@ export function NewsCardDefault({ article }: { article: NewsArticle }) {
           <ArticleImage
             src={article.imageUrl}
             alt={article.title}
+            source={article.source}
             className="aspect-16/10 w-full"
           />
           <div className="flex flex-col gap-2">
@@ -234,6 +254,7 @@ export function NewsCardCompact({ article }: { article: NewsArticle }) {
           <ArticleImage
             src={article.imageUrl}
             alt={article.title}
+            source={article.source}
             className="aspect-square w-20 shrink-0"
           />
           <div className="flex min-w-0 flex-col gap-1.5">

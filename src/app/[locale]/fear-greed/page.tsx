@@ -55,9 +55,8 @@ interface FearGreedResponse {
 async function fetchFearGreed(): Promise<FearGreedResponse | null> {
   try {
     const baseUrl =
-      process.env.NEXT_PUBLIC_BASE_URL || process.env.VERCEL_URL
-        ? `https://${process.env.VERCEL_URL}`
-        : 'http://localhost:3000';
+      process.env.NEXT_PUBLIC_BASE_URL ||
+      (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000');
     const res = await fetch(`${baseUrl}/api/fear-greed?days=30`, {
       next: { revalidate: 300 },
     });
@@ -71,9 +70,8 @@ async function fetchFearGreed(): Promise<FearGreedResponse | null> {
 async function fetchBtcPrice(): Promise<{ usd: number; usd_24h_change: number } | null> {
   try {
     const baseUrl =
-      process.env.NEXT_PUBLIC_BASE_URL || process.env.VERCEL_URL
-        ? `https://${process.env.VERCEL_URL}`
-        : 'http://localhost:3000';
+      process.env.NEXT_PUBLIC_BASE_URL ||
+      (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000');
     const res = await fetch(`${baseUrl}/api/prices?coins=bitcoin`, {
       next: { revalidate: 120 },
     });

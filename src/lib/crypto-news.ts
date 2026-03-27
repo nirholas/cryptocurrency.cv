@@ -2439,6 +2439,9 @@ function decodeHTMLEntities(text: string): string {
  * Extract the best image URL from an RSS item.
  * Checks: media:content, media:thumbnail, enclosure, img in description
  */
+/** Image URL blocklist — skip tracking pixels, beacons, and known non-image URLs */
+const IMAGE_BLOCKLIST = /feeds\.feedburner|pixel|tracker|badge|spacer|blank\.|1x1|beacon/i;
+
 function extractImageUrl(itemXml: string, rawDescription: string): string | null {
   // Priority 1: media:content (most reliable, used by major RSS feeds)
   const mediaContent = itemXml.match(/<media:content[^>]+url=["']([^"']+)["']/i);
@@ -2454,20 +2457,31 @@ function extractImageUrl(itemXml: string, rawDescription: string): string | null
 
   // Priority 4: enclosure without type check (many feeds omit type)
   const enclosureAny = itemXml.match(
-    /<enclosure[^>]+url=["']([^"']+\.(?:jpg|jpeg|png|webp|gif))[^"']*["']/i,
+    /<enclosure[^>]+url=["']([^"']+\.(?:jpg|jpeg|png|webp|gif|avif|svg))[^"']*["']/i,
   );
   if (enclosureAny?.[1]) return enclosureAny[1];
 
-  // Priority 5: img tag inside description CDATA
-  if (rawDescription) {
-    const imgMatch = rawDescription.match(/<img[^>]+src=["']([^"']+)["']/i);
-    if (
-      imgMatch?.[1] &&
-      !imgMatch[1].includes('feeds.feedburner') &&
-      !imgMatch[1].includes('pixel') &&
-      !imgMatch[1].includes('tracker')
-    ) {
+  // Priority 5: <itunes:image> (used by podcast-style feeds)
+  const itunesImage = itemXml.match(/<itunes:image[^>]+href=["']([^"']+)["']/i);
+  if (itunesImage?.[1]) return itunesImage[1];
+
+  // Priority 6: img tag inside description/content:encoded CDATA
+  const contentEncoded = itemXml.match(
+    /<content:encoded><!\[CDATA\[([\s\S]*?)\]\]><\/content:encoded>/i,
+  );
+  const htmlContent = contentEncoded?.[1] || rawDescription;
+  if (htmlContent) {
+    const imgMatch = htmlContent.match(/<img[^>]+src=["']([^"']+)["']/i);
+    if (imgMatch?.[1] && !IMAGE_BLOCKLIST.test(imgMatch[1])) {
       return imgMatch[1];
+    }
+  }
+
+  // Priority 7: <figure> / <picture> source inside content
+  if (htmlContent) {
+    const sourceMatch = htmlContent.match(/<source[^>]+srcset=["']([^\s"']+)/i);
+    if (sourceMatch?.[1] && !IMAGE_BLOCKLIST.test(sourceMatch[1])) {
+      return sourceMatch[1];
     }
   }
 
