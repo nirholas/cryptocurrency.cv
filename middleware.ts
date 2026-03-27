@@ -57,6 +57,12 @@ const pipeline = compose(
 export default async function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
 
+  // Discovery endpoints must be freely accessible to x402scan, agentcash,
+  // and other automated discovery tools — skip entire middleware pipeline.
+  if (pathname === '/.well-known/x402' || pathname === '/openapi.json') {
+    return NextResponse.next();
+  }
+
   const ctx: MiddlewareContext = {
     request,
     requestId: generateRequestId(),
