@@ -92,7 +92,7 @@ Sentiment analysis, automatic summaries, daily digests, fact-checking, narrative
 
 ### :electric_plug: Easy Integration
 
-SDKs for Python, JavaScript, TypeScript, React, Go, PHP, Ruby, and Rust. Plus WebSocket, SSE, webhooks, RSS, and Atom feeds.
+SDKs for Python, JavaScript, TypeScript, React, Go, PHP, Ruby, and Rust. Plus WebSocket, SSE, RSS, and Atom feeds.
 
 </div>
 

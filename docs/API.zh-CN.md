@@ -41,8 +41,6 @@ Free Crypto News API 的完整文档。所有端点都是 **100% 免费** 的，
   - [GET /api/fear-greed](#get-apifear-greed)
 - [AI 分析 API](#ai-分析-api)
   - [POST /api/detect/ai-content](#post-apidetectai-content)
-  - [GET /api/ai/agent](#get-apiaiagent)
-  - [POST /api/ai/agent](#post-apiaiagent)
   - [GET /api/narratives](#get-apinarratives)
   - [GET /api/entities](#get-apientities)
   - [GET /api/claims](#get-apiclaims)
@@ -97,8 +95,6 @@ Free Crypto News API 的完整文档。所有端点都是 **100% 免费** 的，
   - [POST /api/webhooks](#post-apiwebhooks)
   - [POST /api/webhooks/test](#post-apiwebhookstest)
   - [GET /api/webhooks/queue](#get-apiwebhooksqueue)
-- [管理员端点](#管理员端点)
-  - [GET /api/admin](#get-apiadmin)
 - [存档端点](#存档端点)
   - [GET /api/archive](#get-apiarchive)
   - [GET /api/archive/v2](#get-apiarchivev2) (重定向)
@@ -731,41 +727,6 @@ X-API-Key: YOUR_API_KEY
   ]
 }
 ```
-
----
-
-## 管理端点
-
-### GET /api/admin
-
-仪表板分析（需要身份验证令牌）。
-
-**头部：**
-
-```
-Authorization: Bearer <ADMIN_TOKEN>
-```
-
-**响应：**
-
-```json
-{
-  "stats": {
-    "totalRequests": 145231,
-    "uniqueUsers": 3456,
-    "avgResponseTime": 156,
-    "cacheHitRate": 0.72,
-    "errorRate": 0.02
-  },
-  "topEndpoints": [...],
-  "health": {
-    "memory": { "used": 245, "total": 512 },
-    "services": { "redis": "connected", "sources": "ok" }
-  }
-}
-```
-
-> 📖 参见 [管理指南](./ADMIN.md) 以获取仪表板使用方法。
 
 ---
 

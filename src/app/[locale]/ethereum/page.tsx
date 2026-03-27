@@ -1,3 +1,9 @@
+/**
+ * @copyright 2024-2026 nirholas. All rights reserved.
+ * @license SPDX-License-Identifier: SEE LICENSE IN LICENSE
+ * @see https://github.com/nirholas/free-crypto-news
+ */
+
 import { Suspense } from 'react';
 import { setRequestLocale } from 'next-intl/server';
 import Header from '@/components/Header';

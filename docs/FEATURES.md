@@ -404,20 +404,6 @@ Price oracle data.
 
 ## AI Features
 
-### 🤖 AI Agent
-
-Conversational AI assistant that understands crypto markets and news — ask it anything.
-
-**URL:** `/ai-agent`
-
-**Features:**
-- Natural language queries ("What's happening with Ethereum today?")
-- Real-time market analysis with news context
-- News summarization across multiple sources
-- Custom research queries with cited sources
-
-**API:** [`GET /api/ai/agent`](./API.md#get-apiaiagent) · [`POST /api/ai/agent`](./API.md#post-apiaiagent)
-
 ### 📝 Digest
 
 AI-generated daily news digest — get caught up on everything important in 2 minutes.

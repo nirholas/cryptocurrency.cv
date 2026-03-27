@@ -105,14 +105,13 @@ Advanced premium capabilities.
 |----------|-------------|-----------|
 | [Premium Features](premium-features.md) | Premium API access | `/api/premium/status`, `/api/premium/usage`, `/api/premium/analytics`, `/api/premium/reports` |
 
-### ⚡ Real-time & Webhooks
+### ⚡ Real-time & Streaming
 Build real-time streaming applications.
 
 | Tutorial | Description | Endpoints |
 |----------|-------------|-----------|
 | [Real-time SSE](realtime-sse.md) | Server-Sent Events | `/api/sse`, `/api/stream` |
 | [User Alerts](user-alerts.md) | Alert configuration | `/api/alerts`, `/api/alerts/rules` |
-| [Webhooks](webhooks-integrations.md) | Webhook integrations | `/api/webhooks`, `/api/webhooks/create`, `/api/webhooks/events` |
 
 ### 🔧 Utility & Meta
 API configuration and metadata.

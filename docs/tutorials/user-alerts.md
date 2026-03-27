@@ -1,6 +1,6 @@
-# 👤 User Alerts & Webhooks Tutorial
+# 👤 User Alerts Tutorial
 
-Create custom alerts and receive real-time notifications via webhooks.
+Create custom alerts and receive real-time notifications.
 
 ---
 
@@ -10,9 +10,6 @@ Create custom alerts and receive real-time notifications via webhooks.
 |----------|--------|-------------|
 | `/api/alerts` | GET/POST | List/create alerts |
 | `/api/alerts/[id]` | GET/PUT/DELETE | Manage specific alert |
-| `/api/webhooks` | POST | Register webhooks |
-| `/api/webhooks/test` | POST | Test webhook delivery |
-| `/api/webhooks/queue` | GET | View webhook queue |
 
 ---
 
@@ -31,40 +28,35 @@ Create custom alerts and receive real-time notifications via webhooks.
         name: str,
         condition: dict,
         channels: List[str] = None,
-        webhook_url: Optional[str] = None,
         cooldown: int = 300
     ) -> dict:
         """
         Create a new alert rule.
-        
+
         Args:
             name: Alert name
             condition: Alert condition (see examples below)
-            channels: Notification channels (email, webhook, push)
-            webhook_url: Webhook URL for notifications
+            channels: Notification channels (websocket, email, push)
             cooldown: Minimum seconds between alerts (default: 300)
-        
+
         Returns:
             Created alert object
         """
         payload = {
             "name": name,
             "condition": condition,
-            "channels": channels or ["webhook"],
+            "channels": channels or ["websocket"],
             "cooldown": cooldown
         }
-        
-        if webhook_url:
-            payload["webhookUrl"] = webhook_url
-        
+
         response = requests.post(
             f"{BASE_URL}/api/alerts",
             json=payload,
             headers={"Content-Type": "application/json"}
         )
         return response.json()
-    
-    
+
+
     # Example: Create keyword alert
     alert = create_alert(
         name="Bitcoin ETF News",
@@ -73,13 +65,12 @@ Create custom alerts and receive real-time notifications via webhooks.
             "keywords": ["bitcoin", "btc", "etf"],
             "operator": "AND"  # or "OR"
         },
-        webhook_url="https://your-server.com/webhook",
         cooldown=600  # 10 minutes between alerts
     )
-    
+
     print(f"✅ Created alert: {alert.get('alert', {}).get('id', 'N/A')}")
-    
-    
+
+
     # Example: Price alert
     price_alert = create_alert(
         name="BTC Above $100K",
@@ -88,11 +79,10 @@ Create custom alerts and receive real-time notifications via webhooks.
             "asset": "BTC",
             "operator": "above",
             "value": 100000
-        },
-        webhook_url="https://your-server.com/webhook"
+        }
     )
-    
-    
+
+
     # Example: Sentiment alert
     sentiment_alert = create_alert(
         name="Market Sentiment Shift",
@@ -101,11 +91,10 @@ Create custom alerts and receive real-time notifications via webhooks.
             "asset": "BTC",
             "threshold": -0.5,  # Alert when sentiment drops below -0.5
             "operator": "below"
-        },
-        webhook_url="https://your-server.com/webhook"
+        }
     )
-    
-    
+
+
     # Example: Breaking news alert
     breaking_alert = create_alert(
         name="All Breaking News",
@@ -113,8 +102,7 @@ Create custom alerts and receive real-time notifications via webhooks.
             "type": "breaking",
             "sources": ["coindesk", "theblock", "cointelegraph"]
         },
-        channels=["webhook", "email"],
-        webhook_url="https://your-server.com/webhook",
+        channels=["websocket", "email"],
         cooldown=0  # Immediate for breaking news
     )
     ```
@@ -125,28 +113,24 @@ Create custom alerts and receive real-time notifications via webhooks.
     const BASE_URL = "https://cryptocurrency.cv";
     
     async function createAlert(options) {
-        const { name, condition, channels = ["webhook"], webhookUrl, cooldown = 300 } = options;
-        
+        const { name, condition, channels = ["websocket"], cooldown = 300 } = options;
+
         const payload = {
             name,
             condition,
             channels,
             cooldown
         };
-        
-        if (webhookUrl) {
-            payload.webhookUrl = webhookUrl;
-        }
-        
+
         const response = await fetch(`${BASE_URL}/api/alerts`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(payload)
         });
-        
+
         return response.json();
     }
-    
+
     // Create keyword alert
     const alert = await createAlert({
         name: "Bitcoin ETF News",
@@ -154,13 +138,12 @@ Create custom alerts and receive real-time notifications via webhooks.
             type: "keyword",
             keywords: ["bitcoin", "btc", "etf"],
             operator: "AND"
-        },
-        webhookUrl: "https://your-server.com/webhook"
+        }
     });
-    
+
     console.log(`✅ Created alert: ${alert.alert?.id}`);
-    
-    
+
+
     // Whale transaction alert
     const whaleAlert = await createAlert({
         name: "Large BTC Transactions",
@@ -168,8 +151,7 @@ Create custom alerts and receive real-time notifications via webhooks.
             type: "whale",
             asset: "BTC",
             minValue: 10000000  // $10M+
-        },
-        webhookUrl: "https://your-server.com/webhook"
+        }
     });
     ```
 
@@ -186,11 +168,10 @@ Create custom alerts and receive real-time notifications via webhooks.
           "keywords": ["bitcoin", "etf"],
           "operator": "AND"
         },
-        "channels": ["webhook"],
-        "webhookUrl": "https://your-server.com/webhook",
+        "channels": ["websocket"],
         "cooldown": 600
       }'
-    
+
     # Create price alert
     curl -X POST "https://cryptocurrency.cv/api/alerts" \
       -H "Content-Type: application/json" \
@@ -201,8 +182,7 @@ Create custom alerts and receive real-time notifications via webhooks.
           "asset": "BTC",
           "operator": "above",
           "value": 100000
-        },
-        "webhookUrl": "https://your-server.com/webhook"
+        }
       }'
     ```
 

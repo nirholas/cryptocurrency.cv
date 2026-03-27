@@ -1,3 +1,9 @@
+/**
+ * @copyright 2024-2026 nirholas. All rights reserved.
+ * @license SPDX-License-Identifier: SEE LICENSE IN LICENSE
+ * @see https://github.com/nirholas/free-crypto-news
+ */
+
 import { locales } from "@/i18n/config";
 
 const BASE_URL = process.env.NEXT_PUBLIC_APP_URL || "https://cryptocurrency.cv";

@@ -30,7 +30,6 @@ export const FREE_TIER_PATTERNS = [
 export const EXEMPT_PATTERNS = [
   /^\/api\/health/,
   /^\/api\/\.well-known/,
-  /^\/api\/admin/,
   /^\/api\/cron/,
   /^\/api\/sse/,
   /^\/api\/ws/,

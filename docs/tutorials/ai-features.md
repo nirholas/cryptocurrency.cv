@@ -1,6 +1,6 @@
 # AI Features Tutorial
 
-This tutorial covers all AI-powered features of the Crypto News API, including summarization, sentiment analysis, AI agents, and content detection.
+This tutorial covers all AI-powered features of the Crypto News API, including summarization, sentiment analysis, and content detection.
 
 ## Endpoints Covered
 
@@ -13,7 +13,6 @@ This tutorial covers all AI-powered features of the Crypto News API, including s
 | `/api/ai/brief` | AI market brief |
 | `/api/ai/debate` | AI-generated debates |
 | `/api/ai/counter` | Counter-argument generator |
-| `/api/ai/agent` | AI research agent |
 | `/api/detect/ai-content` | AI content detection |
 
 ---
@@ -447,97 +446,7 @@ Generate counter-arguments to any claim.
 
 ---
 
-## 7. AI Research Agent
-
-Query an AI agent that can perform complex research tasks.
-
-=== "Python"
-    ```python
-    import requests
-    
-    def query_ai_agent(question: str, assets: list = None, time_horizon: str = None):
-        """Query AI research agent."""
-        payload = {"question": question}
-        if assets:
-            payload["assets"] = assets
-        if time_horizon:
-            payload["timeHorizon"] = time_horizon
-        
-        response = requests.post(
-            "https://cryptocurrency.cv/api/ai/agent",
-            json=payload
-        )
-        return response.json()
-    
-    # Example research queries
-    research = query_ai_agent(
-        question="What are the key factors affecting BTC price this week?",
-        assets=["BTC", "ETH"],
-        time_horizon="1w"
-    )
-    
-    print("🤖 AI Agent Research")
-    print("=" * 60)
-    print(f"Query: {research.get('query')}")
-    print(f"\n📝 Analysis:\n{research.get('analysis')}")
-    
-    if 'sources' in research:
-        print("\n📚 Sources:")
-        for source in research['sources'][:5]:
-            print(f"  • {source.get('title')}")
-    
-    if 'recommendations' in research:
-        print("\n💡 Recommendations:")
-        for rec in research['recommendations']:
-            print(f"  • {rec}")
-    ```
-
-=== "JavaScript"
-    ```javascript
-    async function queryAIAgent(question, options = {}) {
-        const response = await fetch(
-            'https://cryptocurrency.cv/api/ai/agent',
-            {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    question,
-                    assets: options.assets,
-                    timeHorizon: options.timeHorizon,
-                    focusAreas: options.focusAreas
-                })
-            }
-        );
-        return response.json();
-    }
-    
-    // Research query
-    const research = await queryAIAgent(
-        "What are the key factors affecting BTC price this week?",
-        { assets: ["BTC", "ETH"], timeHorizon: "1w" }
-    );
-    
-    console.log("🤖 AI Agent Research");
-    console.log("=".repeat(60));
-    console.log(`Query: ${research.query}`);
-    console.log(`\n📝 Analysis:\n${research.analysis}`);
-    ```
-
-=== "cURL"
-    ```bash
-    # Query AI agent
-    curl -X POST "https://cryptocurrency.cv/api/ai/agent" \
-      -H "Content-Type: application/json" \
-      -d '{
-        "question": "What are the key factors affecting BTC price?",
-        "assets": ["BTC", "ETH"],
-        "timeHorizon": "1w"
-      }' | jq
-    ```
-
----
-
-## 8. AI Content Detection
+## 7. AI Content Detection
 
 Detect AI-generated content in articles or text.
 
@@ -638,7 +547,7 @@ Detect AI-generated content in articles or text.
 
 ---
 
-## 9. Unified AI Interface
+## 8. Unified AI Interface
 
 Use the unified `/api/ai` endpoint for any AI action.
 

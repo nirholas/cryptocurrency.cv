@@ -22,7 +22,7 @@
  *   - Cost optimization recommendations
  *   - Projected monthly spend
  *
- * API Endpoint: GET /api/admin/ai-costs
+ * Previously exposed via GET /api/admin/ai-costs (removed).
  *
  * @module ai-cost-dashboard
  */
@@ -421,7 +421,7 @@ export function getAICostTracker(): AICostTracker {
 // ---------------------------------------------------------------------------
 
 /**
- * GET /api/admin/ai-costs — Returns the cost dashboard.
+ * Returns the cost dashboard data.
  *
  * Query params:
  *   hours (default 24) — lookback period

@@ -1,4 +1,10 @@
 /**
+ * @copyright 2024-2026 nirholas. All rights reserved.
+ * @license SPDX-License-Identifier: SEE LICENSE IN LICENSE
+ * @see https://github.com/nirholas/free-crypto-news
+ */
+
+/**
  * GET /api/dashboard/keys — List API keys for the authenticated user
  * POST /api/dashboard/keys — Create a new API key
  */

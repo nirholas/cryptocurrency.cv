@@ -1,4 +1,10 @@
 /**
+ * @copyright 2024-2026 nirholas. All rights reserved.
+ * @license SPDX-License-Identifier: SEE LICENSE IN LICENSE
+ * @see https://github.com/nirholas/free-crypto-news
+ */
+
+/**
  * POST /api/notifications/email/verify — Send email verification
  * GET  /api/notifications/email/verify?token=... — Verify email
  *

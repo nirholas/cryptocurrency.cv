@@ -1,3 +1,9 @@
+/**
+ * @copyright 2024-2026 nirholas. All rights reserved.
+ * @license SPDX-License-Identifier: SEE LICENSE IN LICENSE
+ * @see https://github.com/nirholas/free-crypto-news
+ */
+
 import { describe, it, expect, vi, beforeEach } from 'vitest';
 
 // jose v6 requires Web Crypto APIs not fully available in jsdom

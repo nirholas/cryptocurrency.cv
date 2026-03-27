@@ -1,4 +1,10 @@
 /**
+ * @copyright 2024-2026 nirholas. All rights reserved.
+ * @license SPDX-License-Identifier: SEE LICENSE IN LICENSE
+ * @see https://github.com/nirholas/free-crypto-news
+ */
+
+/**
  * Tests for middleware config utility functions
  */
 
@@ -31,7 +37,6 @@ describe('matchesPattern', () => {
   it('should match exempt routes', () => {
     expect(matchesPattern('/api/health', EXEMPT_PATTERNS)).toBe(true);
     expect(matchesPattern('/api/.well-known/x402', EXEMPT_PATTERNS)).toBe(true);
-    expect(matchesPattern('/api/admin/stats', EXEMPT_PATTERNS)).toBe(true);
     expect(matchesPattern('/api/register', EXEMPT_PATTERNS)).toBe(true);
   });
 

@@ -12,7 +12,6 @@ Guide for WebSocket, Server-Sent Events (SSE), real-time news updates, and confi
 - [Alert System](#alert-system)
 - [Client Integration](#client-integration)
 - [Push Notifications](#push-notifications)
-- [Webhooks](#webhooks)
 - [Deployment](#deployment)
 
 ---
@@ -25,9 +24,8 @@ Free Crypto News supports multiple real-time delivery methods:
 |--------|----------|---------------------|
 | **SSE** | Simple streaming | Vercel, Cloudflare, all Edge |
 | **WebSocket** | Bi-directional, subscriptions, alerts | Railway, Render, VPS |
-| **Alerts** | Configurable conditions, webhooks | All platforms |
+| **Alerts** | Configurable conditions | All platforms |
 | **Push** | Mobile/browser notifications | All with service worker |
-| **Webhooks** | Server-to-server | Any backend |
 
 ---
 
@@ -460,7 +458,7 @@ curl https://your-ws-server.railway.app/stats
 
 ## Alert System
 
-Configurable alerts for price movements, breaking news, and custom conditions with WebSocket and webhook delivery.
+Configurable alerts for price movements, breaking news, and custom conditions with WebSocket delivery.
 
 ### Alert Condition Types
 
@@ -487,8 +485,7 @@ curl -X POST https://cryptocurrency.cv/api/alerts \
       "coin": "bitcoin",
       "threshold": 100000
     },
-    "channels": ["websocket", "webhook"],
-    "webhookUrl": "https://your-server.com/alerts",
+    "channels": ["websocket"],
     "cooldown": 300
   }'
 ```
@@ -505,8 +502,7 @@ curl -X POST https://cryptocurrency.cv/api/alerts \
       "coin": "bitcoin",
       "threshold": 100000
     },
-    "channels": ["websocket", "webhook"],
-    "webhookUrl": "https://your-server.com/alerts",
+    "channels": ["websocket"],
     "cooldown": 300,
     "enabled": true,
     "createdAt": "2026-01-22T00:00:00.000Z"
@@ -661,34 +657,6 @@ When an alert triggers, this event is broadcast:
 | `critical` | Large deviation (>10% price, >5x volume) |
 | `warning` | Moderate deviation (5-10% price, 3-5x volume) |
 | `info` | Small deviation or informational |
-
-### Webhook Delivery
-
-Alert webhooks are sent as POST requests:
-
-```json
-{
-  "type": "alert",
-  "event": {
-    "id": "evt_1737507600_xyz789",
-    "ruleId": "alert_123",
-    "ruleName": "BTC Above 100k",
-    "condition": { "type": "price_above", "coin": "bitcoin", "threshold": 100000 },
-    "triggeredAt": "2026-01-22T10:30:00.000Z",
-    "data": { "currentValue": 105000, "threshold": 100000 },
-    "severity": "warning"
-  },
-  "timestamp": "2026-01-22T10:30:00.000Z"
-}
-```
-
-**Headers:**
-
-```
-Content-Type: application/json
-X-Alert-Event-Id: evt_1737507600_xyz789
-X-Alert-Rule-Id: alert_123
-```
 
 ### Cooldown
 
@@ -900,111 +868,6 @@ self.addEventListener('notificationclick', (event) => {
 
 ---
 
-## Webhooks
-
-Server-to-server notifications with HMAC signatures.
-
-### Register Webhook
-
-```bash
-curl -X POST https://cryptocurrency.cv/api/webhooks \
-  -H "Content-Type: application/json" \
-  -d '{
-    "url": "https://your-server.com/webhook",
-    "events": ["news.breaking", "news.new"],
-    "secret": "your-webhook-secret",
-    "filters": {
-      "sources": ["coindesk"],
-      "keywords": ["SEC", "ETF"]
-    }
-  }'
-```
-
-### Event Types
-
-| Event | Description |
-|-------|-------------|
-| `news.new` | New article published |
-| `news.breaking` | Breaking news detected |
-| `price.alert` | Price threshold reached |
-| `market.significant` | Major market movement |
-| `system.health` | System status change |
-
-### Webhook Payload
-
-```json
-{
-  "event": "news.breaking",
-  "timestamp": "2026-01-22T10:00:00Z",
-  "data": {
-    "article": {
-      "title": "SEC Approves Bitcoin ETF",
-      "link": "https://...",
-      "source": "CoinDesk",
-      "pubDate": "2026-01-22T09:58:00Z"
-    }
-  }
-}
-```
-
-### Verify Signature
-
-```javascript
-const crypto = require('crypto');
-
-function verifyWebhook(payload, signature, secret) {
-  const expected = crypto
-    .createHmac('sha256', secret)
-    .update(payload)
-    .digest('hex');
-  
-  return crypto.timingSafeEqual(
-    Buffer.from(signature),
-    Buffer.from(`sha256=${expected}`)
-  );
-}
-
-// Express middleware
-app.post('/webhook', (req, res) => {
-  const signature = req.headers['x-webhook-signature'];
-  const payload = JSON.stringify(req.body);
-  
-  if (!verifyWebhook(payload, signature, process.env.WEBHOOK_SECRET)) {
-    return res.status(401).send('Invalid signature');
-  }
-  
-  const { event, data } = req.body;
-  
-  switch (event) {
-    case 'news.breaking':
-      handleBreakingNews(data.article);
-      break;
-    case 'news.new':
-      handleNewArticle(data.article);
-      break;
-  }
-  
-  res.status(200).send('OK');
-});
-```
-
-**Python:**
-
-```python
-import hmac
-import hashlib
-
-def verify_webhook(payload: bytes, signature: str, secret: str) -> bool:
-    expected = hmac.new(
-        secret.encode(),
-        payload,
-        hashlib.sha256
-    ).hexdigest()
-    return hmac.compare_digest(signature, f'sha256={expected}')
-```
-
----
-
 ## Deployment
 
 ### SSE on Vercel
@@ -1099,7 +962,6 @@ docker run -p 8080:8080 -e NEWS_API_URL=https://cryptocurrency.cv crypto-news-ws
 | SSE | Unlimited connections |
 | WebSocket | 1000 concurrent |
 | Push | 10,000 subscribers |
-| Webhooks | 100 per account |
 
 ---
 

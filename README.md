@@ -352,7 +352,6 @@ The web interface provides rich, interactive pages for exploring crypto data:
 | Page            | Description                   |
 | --------------- | ----------------------------- |
 | `/ai`           | AI analysis dashboard         |
-| `/ai-agent`     | AI agent interface            |
 | `/factcheck`    | Claim verification dashboard  |
 | `/entities`     | Entity extraction viewer      |
 | `/claims`       | Extracted claims browser      |
@@ -615,7 +614,6 @@ curl "https://cryptocurrency.cv/api/bitcoin?lang=zh-CN"
 | `/api/ai/counter`        | Counter-arguments with strength scoring                                                                                                        | All      |
 | `/api/ai/debate`         | Bull vs Bear debate generation                                                                                                                 | All      |
 | `/api/ai/oracle`         | The Oracle - natural language crypto intelligence chat                                                                                         | Groq     |
-| `/api/ai/agent`          | AI Market Agent for signal aggregation & regime detection                                                                                      | All      |
 | `/api/ai/summarize`      | Enterprise summarization with compression ratio                                                                                                | Groq     |
 | `/api/ai/entities`       | Enterprise entity extraction with graph support                                                                                                | Groq     |
 | `/api/ai/relationships`  | Relationship extraction (11 types) with clustering                                                                                             | Groq     |
@@ -1170,7 +1168,6 @@ The web app includes **95+ pages** for market data, portfolio management, AI too
 | `/ai/brief`            | AI-generated market brief         |
 | `/ai/debate`           | AI Bull vs Bear debate generator  |
 | `/ai/counter`          | AI counter-argument generator     |
-| `/ai-agent`            | AI Market Agent dashboard         |
 | `/sentiment`           | Sentiment analysis dashboard      |
 | `/analytics`           | News analytics overview           |
 | `/analytics/headlines` | 🆕 Headline tracking & mutations  |

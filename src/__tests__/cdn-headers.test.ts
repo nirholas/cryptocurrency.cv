@@ -1,3 +1,9 @@
+/**
+ * @copyright 2024-2026 nirholas. All rights reserved.
+ * @license SPDX-License-Identifier: SEE LICENSE IN LICENSE
+ * @see https://github.com/nirholas/free-crypto-news
+ */
+
 import { describe, it, expect } from 'vitest';
 import {
   getPresetForPath,
@@ -29,8 +35,7 @@ describe('getPresetForPath', () => {
     expect(getPresetForPath('/api/openapi')).toBe('STATIC');
   });
 
-  it('should return NONE for admin routes', () => {
-    expect(getPresetForPath('/api/admin')).toBe('NONE');
+  it('should return NONE for keys routes', () => {
     expect(getPresetForPath('/api/keys')).toBe('NONE');
   });
 

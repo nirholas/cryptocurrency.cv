@@ -136,7 +136,6 @@ OpenAPI: `https://cryptocurrency.cv/api/openapi.json`
 | `GET /api/ai/synthesize` | Multi-article synthesis |
 | `GET /api/ai/explain` | Plain-English explainer |
 | `GET /api/ai/correlation` | News-price correlation |
-| `GET /api/ai/agent` | Autonomous research agent |
 | `GET /api/rag/ask?q={question}` | RAG-powered Q&A |
 | `GET /api/rag/search?q={query}` | Semantic archive search |
 | `GET /api/rag/stream?q={query}` | Streaming RAG (SSE) |

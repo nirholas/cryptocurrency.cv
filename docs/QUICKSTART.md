@@ -209,7 +209,7 @@ eventSource.addEventListener('breaking', (event) => {
 });
 ```
 
-> See [Real-Time docs](./REALTIME.md) for WebSocket and webhook options.
+> See [Real-Time docs](./REALTIME.md) for WebSocket and push notification options.
 
 ### 5. Add AI Analysis
 

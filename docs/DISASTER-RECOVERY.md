@@ -113,21 +113,6 @@ The full backup system (`scripts/backup-full.sh`) captures three critical compon
 ./scripts/archive-pitr.sh --date "2026-02-15" --dry-run
 ```
 
-### Check Backup Status (API)
-
-```bash
-# Get backup status (requires admin auth)
-curl -H "Authorization: Bearer $ADMIN_TOKEN" \
-  https://your-domain.com/api/admin/backup-status
-
-# Verify latest backup
-curl -X POST \
-  -H "Authorization: Bearer $ADMIN_TOKEN" \
-  -H "Content-Type: application/json" \
-  -d '{"action": "verify"}' \
-  https://your-domain.com/api/admin/backup-status
-```
-
 ## Environment Variables
 
 | Variable                | Required      | Default                  | Description                              |
@@ -229,7 +214,7 @@ Run manual verification:
 
 ## Monitoring
 
-The `/api/admin/backup-status` endpoint returns:
+Backup status response format:
 
 ```json
 {

@@ -47,7 +47,6 @@
 | `ai_synthesize` | `GET /api/ai/synthesize` | — | Multi-article synthesis into unified narrative |
 | `ai_explain` | `GET /api/ai/explain` | `topic` | Plain-English explanation of crypto concepts |
 | `ai_correlation` | `GET /api/ai/correlation` | — | News-price correlation analysis |
-| `ai_agent` | `GET /api/ai/agent` | `q` | Autonomous multi-step research agent |
 | `rag_ask` | `GET /api/rag/ask` | `q` (required) | RAG-powered Q&A over news archive |
 | `rag_search` | `GET /api/rag/search` | `q`, `limit` | Semantic search over archived articles |
 | `rag_stream` | `GET /api/rag/stream` | `q` (required) | Streaming RAG response (SSE) |

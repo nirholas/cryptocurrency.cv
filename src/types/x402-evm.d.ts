@@ -1,4 +1,10 @@
 /**
+ * @copyright 2024-2026 nirholas. All rights reserved.
+ * @license SPDX-License-Identifier: SEE LICENSE IN LICENSE
+ * @see https://github.com/nirholas/free-crypto-news
+ */
+
+/**
  * Type declarations for @x402/evm subpath exports
  * 
  * These declarations help TypeScript resolve the subpath exports
