@@ -36,8 +36,8 @@ interface AlertRule {
   type: 'price_above' | 'price_below' | 'percent_change' | 'volume_spike';
   threshold: number;
   timeframe?: '1h' | '4h' | '24h';
-  notifyVia?: ('webhook' | 'email')[];
-  webhookUrl?: string;
+  notifyVia?: ('email')[];
+
   email?: string;
   enabled: boolean;
 }
@@ -304,8 +304,7 @@ async function handler(
  *       "coinId": "bitcoin",
  *       "type": "price_above",
  *       "threshold": 100000,
- *       "enabled": true,
- *       "webhookUrl": "https://example.com/webhook"
+ *       "enabled": true
  *     },
  *     {
  *       "coinId": "ethereum",

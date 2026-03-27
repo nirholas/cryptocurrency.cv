@@ -16,7 +16,6 @@
  *   2. **Tiered rate limits** — anonymous (60/hr), free (300/hr), pro (3K/hr), enterprise (30K/hr)
  *   3. **Usage tracking** — per-key request counting with daily/hourly windows
  *   4. **Burst protection** — sliding window rate limiter with Redis
- *   5. **Webhook delivery** — notify API consumers of events
  *
  * Architecture:
  *   Request → extractApiKey() → validateKey() → checkRateLimit() → route handler
@@ -49,7 +48,6 @@ export interface ApiKey {
   burstLimit: number;     // max concurrent requests
   allowedOrigins: string[];
   allowedEndpoints: string[];  // empty = all
-  webhookUrl?: string;
   createdAt: number;
   lastUsedAt?: number;
   usageCount: number;
@@ -83,7 +81,6 @@ export interface ApiKeyCreateRequest {
   ownerEmail?: string;
   allowedOrigins?: string[];
   allowedEndpoints?: string[];
-  webhookUrl?: string;
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -118,7 +115,7 @@ export const TIER_CONFIG: Record<ApiTier, {
     requestsPerHour: 3_000,
     requestsPerDay: 50_000,
     burstLimit: 100,
-    features: ['news', 'prices', 'fear-greed', 'defi', 'onchain', 'social', 'derivatives', 'ai', 'websocket', 'webhooks', 'search', 'archive'],
+    features: ['news', 'prices', 'fear-greed', 'defi', 'onchain', 'social', 'derivatives', 'ai', 'websocket', 'search', 'archive'],
     maxResponseSize: 5_000_000,
     cacheTtlMultiplier: 0.5,  // fresher cache for pro users
   },
@@ -181,7 +178,6 @@ export async function createApiKey(req: ApiKeyCreateRequest): Promise<{ key: str
     burstLimit: config.burstLimit,
     allowedOrigins: req.allowedOrigins ?? [],
     allowedEndpoints: req.allowedEndpoints ?? [],
-    webhookUrl: req.webhookUrl,
     createdAt: Date.now(),
     usageCount: 0,
   };
@@ -363,102 +359,6 @@ export async function getUsageStats(keyId: string, days = 7): Promise<{
   }
 
   return { daily, total };
-}
-
-// ─────────────────────────────────────────────────────────────────────────────
-// Webhook Delivery
-// ─────────────────────────────────────────────────────────────────────────────
-
-export interface WebhookEvent {
-  type: 'news.published' | 'price.alert' | 'market.milestone' | 'sentiment.shift';
-  data: Record<string, unknown>;
-  timestamp: number;
-}
-
-/**
- * Deliver a webhook to all subscribed API keys.
- * Uses exponential backoff with 3 retry attempts.
- */
-export async function deliverWebhook(event: WebhookEvent): Promise<{
-  delivered: number;
-  failed: number;
-}> {
-  // Get all keys with webhook URLs
-  const subscribers = await cache.get<string[]>('webhook:subscribers') ?? [];
-  let delivered = 0;
-  let failed = 0;
-
-  for (const keyHash of subscribers) {
-    const record = await cache.get<ApiKey>(`apikey:${keyHash}`);
-    if (!record?.webhookUrl || !record.isActive) continue;
-
-    // Check if this tier has webhook access
-    const tierConfig = TIER_CONFIG[record.tier];
-    if (!tierConfig.features.includes('webhooks') && !tierConfig.features.includes('*')) continue;
-
-    const success = await deliverSingleWebhook(record.webhookUrl, event);
-    if (success) delivered++;
-    else failed++;
-  }
-
-  return { delivered, failed };
-}
-
-async function deliverSingleWebhook(url: string, event: WebhookEvent, attempt = 0): Promise<boolean> {
-  const MAX_ATTEMPTS = 3;
-
-  try {
-    const payload = JSON.stringify({
-      ...event,
-      delivery_id: `wh_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`,
-      attempt: attempt + 1,
-    });
-
-    // Generate HMAC signature
-    const encoder = new TextEncoder();
-    const secret = process.env.WEBHOOK_SECRET ?? 'fcn-webhook-secret';
-    const key = await crypto.subtle.importKey(
-      'raw',
-      encoder.encode(secret),
-      { name: 'HMAC', hash: 'SHA-256' },
-      false,
-      ['sign'],
-    );
-    const signature = await crypto.subtle.sign('HMAC', key, encoder.encode(payload));
-    const sig = Array.from(new Uint8Array(signature))
-      .map((b) => b.toString(16).padStart(2, '0'))
-      .join('');
-
-    const res = await fetch(url, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'X-FCN-Signature': `sha256=${sig}`,
-        'X-FCN-Event': event.type,
-        'User-Agent': 'FreeCryptoNews-Webhook/1.0',
-      },
-      body: payload,
-      signal: AbortSignal.timeout(10_000),
-    });
-
-    if (res.ok || res.status < 500) return true;
-
-    // Server error — retry with backoff
-    if (attempt < MAX_ATTEMPTS - 1) {
-      const delay = Math.pow(2, attempt) * 1000;
-      await new Promise((r) => setTimeout(r, delay));
-      return deliverSingleWebhook(url, event, attempt + 1);
-    }
-
-    return false;
-  } catch {
-    if (attempt < MAX_ATTEMPTS - 1) {
-      const delay = Math.pow(2, attempt) * 1000;
-      await new Promise((r) => setTimeout(r, delay));
-      return deliverSingleWebhook(url, event, attempt + 1);
-    }
-    return false;
-  }
 }
 
 // ─────────────────────────────────────────────────────────────────────────────

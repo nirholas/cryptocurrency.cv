@@ -401,8 +401,6 @@ export async function revokeApiKey(keyId: string, email: string): Promise<boolea
  * - Sliding window algorithm (fair rate limiting)
  * - Distributed state across all instances
  * - DDoS protection
- *
- * Also triggers webhook notifications at 90% and 100% thresholds.
  */
 export async function checkRateLimit(keyData: ApiKeyData): Promise<RateLimitResult> {
   const tierConfig = API_KEY_TIERS[keyData.tier];
@@ -424,14 +422,14 @@ export async function checkRateLimit(keyData: ApiKeyData): Promise<RateLimitResu
     requestsPerMinute: tierConfig.requestsPerMinute,
   });
 
-  // Send webhook notifications for rate limit thresholds
+  // Send notifications for rate limit thresholds
   await sendRateLimitNotifications(keyData, result, tierConfig);
 
   return result;
 }
 
 /**
- * Send webhook notifications when rate limit thresholds are hit
+ * Send notifications when rate limit thresholds are hit
  */
 async function sendRateLimitNotifications(
   keyData: ApiKeyData,

@@ -1842,7 +1842,6 @@ export default function DevelopersContent() {
                             ["Historical Data", "30 days", "Full archive"],
                             ["WebSocket Streaming", "—", "✓"],
                             ["Priority Support", "—", "✓"],
-                            ["Custom Webhooks", "—", "✓"],
                           ].map(([feature, free, premium], i) => (
                             <tr key={i} className="border-b border-border last:border-b-0">
                               <td className="py-2 pr-6">{feature}</td>

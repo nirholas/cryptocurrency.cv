@@ -79,7 +79,6 @@ export async function GET() {
             'No per-request fees',
             'Highest rate limits',
             'Priority support',
-            'Webhook support',
           ],
         },
       ],

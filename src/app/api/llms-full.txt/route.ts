@@ -82,7 +82,7 @@ async function loadSourceKeys(): Promise<string[]> {
 
 /** Top-level namespaces that are operational/internal — listed in a separate section. */
 const INTERNAL_PREFIXES = new Set([
-  'cron', 'admin', 'webhooks', 'billing', 'frames', 'push',
+  'cron', 'admin', 'billing', 'frames', 'push',
   '.well-known', 'register', 'keys', 'upgrade', 'views', 'cache',
   'storage', 'ws', 'gateway', 'metrics', 'stats',
 ]);
@@ -690,7 +690,7 @@ function buildDocument(
     if (internalRoutes.length > 0) {
       L.push(
         `### Internal / Operational (${internalRoutes.length} endpoints)`,
-        '_Not intended for external use: cron jobs, admin, webhooks, billing._',
+        '_Not intended for external use: cron jobs, admin, billing._',
         '',
       );
       for (const r of internalRoutes) L.push(`- \`${r}\``);

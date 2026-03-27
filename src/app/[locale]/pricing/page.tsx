@@ -116,7 +116,6 @@ const tiers: Tier[] = [
       { text: "Everything in Free", icon: Check, included: true },
       { text: "AI-powered analysis", icon: Brain, included: true },
       { text: "Historical archive (90 days)", icon: Clock, included: true },
-      { text: "Webhook notifications", icon: Server, included: true },
       { text: "Priority support", icon: Headphones, included: true },
       { text: "Custom feed builder", icon: Code, included: true },
       { text: "Higher rate limits", icon: Zap, included: true },
@@ -213,13 +212,6 @@ const comparisonFeatures: ComparisonRow[] = [
     free: { value: "—", type: "dash" },
     pro: { value: "90 days", type: "text" },
     enterprise: { value: "Unlimited", type: "text" },
-  },
-  {
-    name: "Webhooks",
-    icon: Server,
-    free: { value: "—", type: "dash" },
-    pro: { value: "✓", type: "check" },
-    enterprise: { value: "✓", type: "check" },
   },
   {
     name: "Analytics dashboard",

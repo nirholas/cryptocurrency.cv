@@ -103,14 +103,13 @@ export async function PUT(
 
   try {
     const body = await request.json();
-    const { name, condition, channels, webhookUrl, cooldown, enabled } = body;
+    const { name, condition, channels, cooldown, enabled } = body;
 
     // Build updates object
     const updates: {
       name?: string;
       condition?: AlertCondition;
       channels?: AlertChannel[];
-      webhookUrl?: string;
       cooldown?: number;
       enabled?: boolean;
     } = {};
@@ -119,10 +118,9 @@ export async function PUT(
     if (condition !== undefined) updates.condition = condition as AlertCondition;
     if (channels !== undefined) {
       updates.channels = Array.isArray(channels)
-        ? channels.filter((c: string) => c === 'websocket' || c === 'webhook')
+        ? channels.filter((c: string) => c === 'websocket')
         : undefined;
     }
-    if (webhookUrl !== undefined) updates.webhookUrl = webhookUrl;
     if (cooldown !== undefined && typeof cooldown === 'number') updates.cooldown = cooldown;
     if (enabled !== undefined && typeof enabled === 'boolean') updates.enabled = enabled;
 

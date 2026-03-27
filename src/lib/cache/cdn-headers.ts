@@ -126,7 +126,6 @@ const ROUTE_PRESETS: Array<{ pattern: RegExp; preset: CachePreset }> = [
   { pattern: /^\/api\/register/, preset: 'NONE' },
   { pattern: /^\/api\/billing/, preset: 'NONE' },
   { pattern: /^\/api\/inngest/, preset: 'NONE' },
-  { pattern: /^\/api\/webhooks/, preset: 'NONE' },
 ];
 
 // =============================================================================

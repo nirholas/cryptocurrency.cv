@@ -102,7 +102,7 @@ const features = [
     icon: Rss,
     title: 'Multi-Format Feeds',
     description:
-      'RSS, Atom, JSON Feed, and custom webhook delivery. Embed news in any platform, app, or dashboard with zero effort.',
+      'RSS, Atom, and JSON Feed. Embed news in any platform, app, or dashboard with zero effort.',
     color: 'text-orange-500',
   },
 ];
@@ -190,7 +190,7 @@ const roadmap = [
   { label: 'Launched', title: 'ChatGPT Plugin & Claude MCP', done: true },
   { label: 'Launched', title: '100+ Language Support', done: true },
   { label: 'In Progress', title: 'AI Sentiment & Summary Engine', done: false },
-  { label: 'Coming Soon', title: 'Webhooks & Real-Time Alerts', done: false },
+  { label: 'Coming Soon', title: 'Real-Time Alerts', done: false },
   { label: 'Coming Soon', title: 'Pro Tier with Advanced Analytics', done: false },
   { label: 'Planned', title: 'On-Chain Data Integration', done: false },
 ];

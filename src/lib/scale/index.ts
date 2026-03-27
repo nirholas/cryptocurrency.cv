@@ -859,7 +859,6 @@ export const RATE_LIMIT_TIERS: Record<string, RateLimitTier> = {
       'derivatives',
       'ai',
       'websocket',
-      'webhooks',
     ],
   },
   enterprise: {

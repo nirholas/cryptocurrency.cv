@@ -20,24 +20,30 @@
 
 import { NextResponse } from 'next/server';
 import { ROUTE_MANIFEST } from '@/lib/openapi/routes.generated';
+import { ENDPOINT_METADATA_FULL } from '@/lib/openapi/endpoint-metadata.generated';
 import { getOwnershipProofs } from '@/lib/x402/config';
 
 export const revalidate = 300;
 
-const POST_ROUTES = new Set([
-  '/api/premium/portfolio/analytics',
-  '/api/premium/alerts/create',
-  '/api/batch',
-  '/api/rag/batch',
-  '/api/rag/feedback',
-  '/api/portfolio/holding',
+/** Routes excluded from x402 discovery (free/internal endpoints) */
+const EXCLUDED = new Set([
+  '/api/.well-known/x402',
+  '/api/health',
+  '/api/sample',
+  '/api/register',
+  '/api/cron',
 ]);
 
 export async function GET() {
-  const resources = ROUTE_MANIFEST.map(({ path }) => {
-    const method = POST_ROUTES.has(path) ? 'POST' : 'GET';
-    return `${method} ${path}`;
-  });
+  const resources: string[] = [];
+  for (const { path } of ROUTE_MANIFEST) {
+    if (EXCLUDED.has(path)) continue;
+    const meta = (ENDPOINT_METADATA_FULL as Record<string, { methods?: string[] }>)[path];
+    const methods = meta?.methods ?? ['GET'];
+    for (const method of methods) {
+      resources.push(`${method} ${path}`);
+    }
+  }
 
   const ownershipProofs = getOwnershipProofs();
 

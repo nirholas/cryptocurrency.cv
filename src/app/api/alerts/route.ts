@@ -164,7 +164,7 @@ export async function GET(request: NextRequest) {
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { type, userId, name, condition, channels, webhookUrl, cooldown, ...options } = body;
+    const { type, userId, name, condition, channels, cooldown, ...options } = body;
 
     // Enhanced alert rule creation
     if (type === 'rule' || condition) {
@@ -183,12 +183,11 @@ export async function POST(request: NextRequest) {
       }
 
       const alertChannels: AlertChannel[] = Array.isArray(channels) 
-        ? channels.filter((c: string) => c === 'websocket' || c === 'webhook')
+        ? channels.filter((c: string) => c === 'websocket')
         : ['websocket'];
 
       try {
         const alert = createAlertRule(name, condition as AlertCondition, alertChannels, {
-          webhookUrl,
           cooldown: typeof cooldown === 'number' ? cooldown : undefined,
         });
         return NextResponse.json({ alert }, { status: 201 });

@@ -3,7 +3,7 @@
 > Auto-generated from endpoint metadata. Do not edit manually.
 > Run: `node scripts/generate-api-docs.js`
 >
-> Generated: 2026-03-27T06:21:34.424Z
+> Generated: 2026-03-27T06:27:12.833Z
 > Total endpoints: 353
 
 ## Overview
