@@ -78,6 +78,32 @@ function toOpenAPIParams(
 }
 
 // ---------------------------------------------------------------------------
+// Discovery-exempt routes (free endpoints not behind x402 gate)
+// ---------------------------------------------------------------------------
+
+const DISCOVERY_EXCLUDED = new Set([
+  '/api/.well-known/x402',
+  '/api/health',
+  '/api/sample',
+  '/api/register',
+  '/api/cron',
+]);
+
+/** Default query parameters for GET endpoints without explicit schemas */
+const DEFAULT_GET_PARAMS: Record<string, { type: string; description: string; required?: boolean; default?: string }> = {
+  limit: { type: 'number', description: 'Maximum number of results to return', default: '50' },
+  offset: { type: 'number', description: 'Number of results to skip for pagination', default: '0' },
+};
+
+/** Default request body schema for POST endpoints without explicit schemas */
+const DEFAULT_POST_BODY = {
+  type: 'object' as const,
+  properties: {
+    data: { type: 'object', description: 'Request payload' },
+  },
+};
+
+// ---------------------------------------------------------------------------
 // Spec generator
 // ---------------------------------------------------------------------------
 
@@ -85,6 +111,9 @@ export function generateOpenAPISpec() {
   const paths: Record<string, Record<string, unknown>> = {};
 
   for (const { path, category } of ROUTE_MANIFEST) {
+    // Skip discovery/internal endpoints — they are free and not behind x402
+    if (DISCOVERY_EXCLUDED.has(path)) continue;
+
     const price = getPrice(path);
 
     // Use comprehensive metadata (generated), fall back to legacy pricing metadata
@@ -132,33 +161,42 @@ export function generateOpenAPISpec() {
         security: [{ X402Payment: [] }],
       };
 
-      // Add parameters for GET requests
-      if (params && (methodLower === 'get')) {
-        operation.parameters = toOpenAPIParams(params);
+      // Add parameters for GET requests — fall back to default pagination params
+      if (methodLower === 'get') {
+        operation.parameters = toOpenAPIParams(params ?? DEFAULT_GET_PARAMS);
       }
 
-      // Add request body hint for POST requests with parameters
-      if (params && (methodLower === 'post')) {
-        operation.requestBody = {
-          description: 'Request payload',
-          content: {
-            'application/json': {
-              schema: {
-                type: 'object',
-                properties: Object.fromEntries(
-                  Object.entries(params).map(([name, p]) => [
-                    name,
-                    {
-                      type: p.type === 'number' ? 'number' : 'string',
-                      description: p.description,
-                      ...(p.default !== undefined ? { default: p.default } : {}),
-                    },
-                  ]),
-                ),
+      // Add request body for POST requests — fall back to default JSON body
+      if (methodLower === 'post') {
+        if (params) {
+          operation.requestBody = {
+            description: 'Request payload',
+            content: {
+              'application/json': {
+                schema: {
+                  type: 'object',
+                  properties: Object.fromEntries(
+                    Object.entries(params).map(([name, p]) => [
+                      name,
+                      {
+                        type: p.type === 'number' ? 'number' : 'string',
+                        description: p.description,
+                        ...(p.default !== undefined ? { default: p.default } : {}),
+                      },
+                    ]),
+                  ),
+                },
               },
             },
-          },
-        };
+          };
+        } else {
+          operation.requestBody = {
+            description: 'Request payload',
+            content: {
+              'application/json': { schema: DEFAULT_POST_BODY },
+            },
+          };
+        }
       }
 
       // Mark streaming endpoints

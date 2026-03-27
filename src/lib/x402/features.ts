@@ -365,15 +365,6 @@ export const PREMIUM_ENDPOINTS: PremiumEndpointInfo[] = [
     category: 'alerts',
     parameters: ['coin', 'type'],
   },
-  {
-    path: '/api/v1/webhooks',
-    method: 'POST',
-    description: 'Webhook subscriptions',
-    rateLimit: 'Per API tier',
-    price: '$0.002',
-    category: 'alerts',
-    parameters: ['url', 'events'],
-  },
 
   // Data Export
   {
@@ -474,13 +465,6 @@ export const FEATURE_COMPARISON: FeatureComparison[] = [
     enterprise: 'Unlimited',
   },
   {
-    feature: 'Webhooks',
-    description: 'Real-time webhook notifications',
-    free: false,
-    pro: '10 active',
-    enterprise: 'Unlimited',
-  },
-  {
     feature: 'Price Alerts',
     description: 'Custom price alert notifications',
     free: '5 alerts',
@@ -574,7 +558,6 @@ export const SUBSCRIPTION_TIERS: TierInfo[] = [
       'Full historical data (1 year)',
       'CSV/JSON bulk exports',
       'AI-powered analysis',
-      'Webhooks (10 active)',
       '100 price alerts',
       'Priority email support',
       '99.5% SLA',
@@ -596,7 +579,7 @@ export const SUBSCRIPTION_TIERS: TierInfo[] = [
       'Everything in Pro',
       'Unlimited API requests',
       'Full historical data (all time)',
-      'Unlimited webhooks & alerts',
+      'Unlimited alerts',
       'Custom endpoints available',
       'Dedicated account manager',
       'White-label options',
@@ -672,7 +655,7 @@ export const ENDPOINT_CATEGORIES = {
   alerts: {
     name: 'Alerts',
     icon: '🔔',
-    description: 'Price alerts and webhook notifications',
+    description: 'Price alerts and notifications',
   },
   export: {
     name: 'Export',

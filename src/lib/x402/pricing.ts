@@ -181,7 +181,6 @@ export const API_PRICING = {
   // ---------------------------------------------------------------------------
   "/api/v1/portfolio": "$0.003",
   "/api/v1/watchlist": "$0.002",
-  "/api/v1/webhooks": "$0.005",
   "/api/v1/predictions": "$0.003",
   "/api/v1/alerts": "$0.001",
 
@@ -314,7 +313,6 @@ export const PREMIUM_PRICING: Record<string, PremiumEndpointConfig> = {
     category: "whales",
     rateLimit: 10,
     features: [
-      "Webhook notifications",
       "Customizable thresholds",
       "24h subscription",
       "Multi-asset support",
@@ -447,7 +445,6 @@ export const PREMIUM_PRICING: Record<string, PremiumEndpointConfig> = {
     rateLimit: 100,
     features: [
       "Custom conditions",
-      "Webhook delivery",
       "Multi-asset",
       "Complex triggers",
     ],
@@ -460,17 +457,15 @@ export const PREMIUM_PRICING: Record<string, PremiumEndpointConfig> = {
     features: [
       "Whale tracking",
       "Threshold alerts",
-      "Webhook delivery",
       "Historical data",
     ],
   },
   "/api/premium/alerts/create": {
     price: 0.01,
-    description: "Create a premium price alert with webhooks",
+    description: "Create a premium price alert",
     category: "alerts",
     rateLimit: 30,
     features: [
-      "Webhook delivery",
       "Complex conditions",
       "Multi-asset",
       "7-day duration",
@@ -559,7 +554,6 @@ export const PREMIUM_PRICING: Record<string, PremiumEndpointConfig> = {
       "No per-request fees",
       "Highest rate limits",
       "Priority support",
-      "Webhook support",
     ],
   },
 } as const;
@@ -609,7 +603,7 @@ export const PREMIUM_CATEGORIES = {
   alerts: {
     name: "Premium Alerts",
     icon: "bell",
-    description: "Advanced alerting with webhooks",
+    description: "Advanced alerting and notifications",
   },
   realtime: {
     name: "Real-Time Feeds",
@@ -692,7 +686,6 @@ export const API_TIERS: Record<string, TierConfig> = {
       "AI endpoint access",
       "Historical data (1 year)",
       "CSV/JSON exports",
-      "Webhooks (10 active)",
       "Priority support",
     ],
     permissions: [
@@ -705,7 +698,6 @@ export const API_TIERS: Record<string, TierConfig> = {
       "ai:analyze",
       "alerts:read",
       "alerts:write",
-      "webhooks:manage",
     ],
   },
   enterprise: {
@@ -724,7 +716,6 @@ export const API_TIERS: Record<string, TierConfig> = {
       "Priority routing",
       "Dedicated cache",
       "Custom endpoints",
-      "Unlimited webhooks",
       "SLA guarantee (99.9%)",
       "Dedicated support",
       "White-label options",

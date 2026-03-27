@@ -215,7 +215,6 @@ function convertToWildcardPattern(endpoint: string): string {
  */
 function shouldSupportPost(endpoint: string): boolean {
   const postEndpoints = [
-    '/api/v1/webhooks',
     '/api/v1/alerts',
     '/api/v1/portfolio',
     '/api/v1/export',

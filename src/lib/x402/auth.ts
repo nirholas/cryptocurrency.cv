@@ -586,7 +586,6 @@ export const middlewareConfig = {
     '/api/v1/screener/:path*',
     '/api/v1/sentiment/:path*',
     '/api/v1/alerts/:path*',
-    '/api/v1/webhooks/:path*',
     '/api/v1/portfolio/:path*',
   ],
 };
