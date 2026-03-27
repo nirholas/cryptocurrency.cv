@@ -47,8 +47,8 @@ const pipeline = compose(
   botDetection, // Bot blocking + repeat-429 escalation
   intl, // Non-API: locale routing + CSP (short-circuit)
   apiKey, // API key tier resolution
+  x402Gate, // USDC micropayment gate (before rate limit so 402 is always returned)
   rateLimitHandler, // Rate limiting (register, tier, free, per-route)
-  x402Gate, // USDC micropayment gate
   apiResponse, // Final response assembly
 );
 
