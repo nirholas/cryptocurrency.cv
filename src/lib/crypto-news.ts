@@ -2340,16 +2340,6 @@ const HOMEPAGE_SOURCE_KEYS = new Set([
   'franklin_templeton_digital',
 
   // ═══════════════════════════════════════════════════════════════
-  // Tier 1 — Geopolitical / Central Banks
-  // ═══════════════════════════════════════════════════════════════
-  'bis_speeches',
-  'imf_blog',
-  'ecb_press',
-  'treasury_press',
-  'boe_speeches',
-  'atlantic_council_crypto',
-
-  // ═══════════════════════════════════════════════════════════════
   // Tier 2 — Established crypto (quality editorial only)
   // ═══════════════════════════════════════════════════════════════
   'unchained_crypto',
