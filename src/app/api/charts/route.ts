@@ -199,10 +199,10 @@ export async function GET(request: NextRequest) {
     // Calculate stats
     const allPrices = prices.map(p => p[1]);
     const stats = {
-      high: Math.max(...allPrices),
-      low: Math.min(...allPrices),
-      open: allPrices[0],
-      close: allPrices[allPrices.length - 1],
+      high: allPrices.length > 0 ? Math.max(...allPrices) : 0,
+      low: allPrices.length > 0 ? Math.min(...allPrices) : 0,
+      open: allPrices[0] ?? 0,
+      close: allPrices[allPrices.length - 1] ?? 0,
       change: allPrices.length > 0 
         ? allPrices[allPrices.length - 1] - allPrices[0] 
         : 0,

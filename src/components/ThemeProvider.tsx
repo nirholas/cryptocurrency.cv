@@ -16,7 +16,7 @@ interface ThemeContextType {
 
 const ThemeContext = createContext<ThemeContextType>({
   theme: "system",
-  resolvedTheme: "light",
+  resolvedTheme: "dark",
   setTheme: () => {},
 });
 
@@ -57,7 +57,7 @@ export function ThemeScript({ nonce }: { nonce?: string }) {
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [theme, setThemeState] = useState<Theme>("system");
-  const [resolvedTheme, setResolvedTheme] = useState<ResolvedTheme>("light");
+  const [resolvedTheme, setResolvedTheme] = useState<ResolvedTheme>("dark");
 
   useEffect(() => {
     const stored = (localStorage.getItem("theme") as Theme) || "system";

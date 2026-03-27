@@ -153,7 +153,7 @@ export const localeNames: Record<Locale, string> = {
   'hi': 'हिन्दी',
   'hr': 'Hrvatski',
   'hu': 'Magyar',
-  'hy': 'Հայdelays',
+  'hy': 'Հայերեն',
   'id': 'Indonesia',
   'ig': 'Igbo',
   'is': 'Íslenska',

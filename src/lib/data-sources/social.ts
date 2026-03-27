@@ -93,6 +93,29 @@ export interface TrendingToken {
 }
 
 // ═══════════════════════════════════════════════════════════════
+// LUNARCRUSH — API RESPONSE TYPES
+// ═══════════════════════════════════════════════════════════════
+
+interface LunarCrushCoin {
+  symbol?: string;
+  name?: string;
+  galaxy_score?: number;
+  alt_rank?: number;
+  social_volume?: number;
+  social_dominance?: number;
+  social_score?: number;
+  tweet_volume?: number;
+  reddit_volume?: number;
+  news_volume?: number;
+  sentiment?: number;
+  bullish_sentiment?: number;
+  bearish_sentiment?: number;
+  social_volume_change?: number;
+  price_change_24h?: number;
+  category?: string;
+}
+
+// ═══════════════════════════════════════════════════════════════
 // LUNARCRUSH — SOCIAL METRICS
 // ═══════════════════════════════════════════════════════════════
 
@@ -101,7 +124,7 @@ export interface TrendingToken {
  */
 export async function getTokenSocial(symbol: string): Promise<SocialMetrics | null> {
   try {
-    const data = await lunarcrush.fetch<{ data: any[] }>(
+    const data = await lunarcrush.fetch<{ data: LunarCrushCoin[] }>(
       `/coins/${symbol.toLowerCase()}/v1`,
     );
     const coin = data.data?.[0];
@@ -133,8 +156,8 @@ export async function getTokenSocial(symbol: string): Promise<SocialMetrics | nu
  */
 export async function getTrendingSocial(limit = 20): Promise<TrendingToken[]> {
   try {
-    const data = await lunarcrush.fetch<{ data: any[] }>('/coins/list/v2');
-    return (data.data || []).slice(0, limit).map((coin: any) => ({
+    const data = await lunarcrush.fetch<{ data: LunarCrushCoin[] }>('/coins/list/v2');
+    return (data.data || []).slice(0, limit).map((coin) => ({
       symbol: coin.symbol || '',
       name: coin.name || '',
       socialVolume24h: coin.social_volume || 0,
@@ -207,6 +230,38 @@ export async function getFearGreedHistory(days = 30): Promise<FearGreedHistory[]
 }
 
 // ═══════════════════════════════════════════════════════════════
+// SNAPSHOT — GRAPHQL RESPONSE TYPES
+// ═══════════════════════════════════════════════════════════════
+
+interface SnapshotProposalResponse {
+  id: string;
+  title: string;
+  body?: string;
+  state: string;
+  author: string;
+  space?: { id: string };
+  start: number;
+  end: number;
+  choices?: string[];
+  scores?: number[];
+  scores_total?: number;
+  votes?: number;
+  quorum?: number;
+  link?: string;
+}
+
+interface SnapshotSpaceResponse {
+  id: string;
+  name: string;
+  about?: string;
+  network?: string;
+  symbol?: string;
+  followersCount?: number;
+  proposalsCount?: number;
+  categories?: string[];
+}
+
+// ═══════════════════════════════════════════════════════════════
 // SNAPSHOT — GOVERNANCE
 // ═══════════════════════════════════════════════════════════════
 
@@ -253,13 +308,13 @@ export async function getActiveProposals(
     });
 
     if (!response.ok) return [];
-    const data = await response.json();
+    const data: { data?: { proposals?: SnapshotProposalResponse[] } } = await response.json();
 
-    return (data.data?.proposals || []).map((p: any) => ({
+    return (data.data?.proposals || []).map((p) => ({
       id: p.id,
       title: p.title,
       body: (p.body || '').slice(0, 500),
-      state: p.state,
+      state: p.state as GovernanceProposal['state'],
       author: p.author,
       space: p.space?.id || '',
       start: p.start * 1000,
@@ -311,9 +366,9 @@ export async function getTopSpaces(limit = 20): Promise<GovernanceSpace[]> {
     });
 
     if (!response.ok) return [];
-    const data = await response.json();
+    const data: { data?: { spaces?: SnapshotSpaceResponse[] } } = await response.json();
 
-    return (data.data?.spaces || []).map((s: any) => ({
+    return (data.data?.spaces || []).map((s) => ({
       id: s.id,
       name: s.name,
       about: (s.about || '').slice(0, 300),

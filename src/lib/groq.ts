@@ -323,7 +323,7 @@ export async function promptGroqJsonCached<T>(
 /**
  * Simple string hash for cache keys
  */
-function simpleHash(str: string): string {
+export function simpleHash(str: string): string {
   let hash = 0;
   for (let i = 0; i < str.length; i++) {
     const char = str.charCodeAt(i);

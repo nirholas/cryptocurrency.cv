@@ -14,7 +14,7 @@
  * across ai-brief, ai-counter, ai-debate, ai-enhanced, claim-extractor, event-classifier.
  */
 
-import { parseGroqJson } from './groq';
+import { parseGroqJson, simpleHash } from './groq';
 import { aiCache, generateCacheKey, withCache } from './cache';
 
 export type AIProvider = 'openai' | 'anthropic' | 'groq' | 'openrouter' | 'gemini';
@@ -53,6 +53,37 @@ export interface AICompleteOptions {
   signal?: AbortSignal;
 }
 
+/** Provider factory functions — each returns a config when the env var is set. */
+const providerFactories: Record<AIProvider, () => AIConfig | null> = {
+  openai: () =>
+    process.env.OPENAI_API_KEY
+      ? { provider: 'openai', model: process.env.OPENAI_MODEL || 'gpt-4o', apiKey: process.env.OPENAI_API_KEY }
+      : null,
+  anthropic: () =>
+    process.env.ANTHROPIC_API_KEY
+      ? { provider: 'anthropic', model: process.env.ANTHROPIC_MODEL || 'claude-3-5-sonnet-20241022', apiKey: process.env.ANTHROPIC_API_KEY }
+      : null,
+  groq: () =>
+    process.env.GROQ_API_KEY
+      ? { provider: 'groq', model: process.env.GROQ_MODEL || 'llama-3.3-70b-versatile', apiKey: process.env.GROQ_API_KEY, baseUrl: 'https://api.groq.com/openai/v1' }
+      : null,
+  openrouter: () =>
+    process.env.OPENROUTER_API_KEY
+      ? { provider: 'openrouter', model: process.env.OPENROUTER_MODEL || 'meta-llama/llama-3.3-70b-instruct', apiKey: process.env.OPENROUTER_API_KEY, baseUrl: 'https://openrouter.ai/api/v1' }
+      : null,
+  gemini: () =>
+    process.env.GEMINI_API_KEY || process.env.GOOGLE_AI_API_KEY
+      ? { provider: 'gemini', model: process.env.GEMINI_MODEL || 'gemini-2.5-pro', apiKey: (process.env.GEMINI_API_KEY || process.env.GOOGLE_AI_API_KEY)! }
+      : null,
+};
+
+/** Returns the provider priority order based on preference. */
+function getProviderOrder(preferGroq: boolean): AIProvider[] {
+  return preferGroq
+    ? ['groq', 'openai', 'anthropic', 'gemini', 'openrouter']
+    : ['openai', 'anthropic', 'gemini', 'groq', 'openrouter'];
+}
+
 /**
  * Returns AI config or null when no provider is configured.
  *
@@ -60,37 +91,8 @@ export interface AICompleteOptions {
  *                     When false (default), OpenAI is tried first.
  */
 export function getAIConfigOrNull(preferGroq = false): AIConfig | null {
-  const openai = (): AIConfig | null =>
-    process.env.OPENAI_API_KEY
-      ? { provider: 'openai', model: process.env.OPENAI_MODEL || 'gpt-4o', apiKey: process.env.OPENAI_API_KEY }
-      : null;
-
-  const anthropic = (): AIConfig | null =>
-    process.env.ANTHROPIC_API_KEY
-      ? { provider: 'anthropic', model: process.env.ANTHROPIC_MODEL || 'claude-3-5-sonnet-20241022', apiKey: process.env.ANTHROPIC_API_KEY }
-      : null;
-
-  const groq = (): AIConfig | null =>
-    process.env.GROQ_API_KEY
-      ? { provider: 'groq', model: process.env.GROQ_MODEL || 'llama-3.3-70b-versatile', apiKey: process.env.GROQ_API_KEY, baseUrl: 'https://api.groq.com/openai/v1' }
-      : null;
-
-  const openrouter = (): AIConfig | null =>
-    process.env.OPENROUTER_API_KEY
-      ? { provider: 'openrouter', model: process.env.OPENROUTER_MODEL || 'meta-llama/llama-3.3-70b-instruct', apiKey: process.env.OPENROUTER_API_KEY, baseUrl: 'https://openrouter.ai/api/v1' }
-      : null;
-
-  const gemini = (): AIConfig | null =>
-    process.env.GEMINI_API_KEY || process.env.GOOGLE_AI_API_KEY
-      ? { provider: 'gemini', model: process.env.GEMINI_MODEL || 'gemini-2.5-pro', apiKey: (process.env.GEMINI_API_KEY || process.env.GOOGLE_AI_API_KEY)! }
-      : null;
-
-  const order = preferGroq
-    ? [groq, openai, anthropic, gemini, openrouter]
-    : [openai, anthropic, gemini, groq, openrouter];
-
-  for (const fn of order) {
-    const cfg = fn();
+  for (const provider of getProviderOrder(preferGroq)) {
+    const cfg = providerFactories[provider]();
     if (cfg) return cfg;
   }
   return null;
@@ -101,38 +103,9 @@ export function getAIConfigOrNull(preferGroq = false): AIConfig | null {
  * Used by aiComplete to fall back through providers on auth errors.
  */
 export function getAllAIConfigs(preferGroq = false): AIConfig[] {
-  const openai = (): AIConfig | null =>
-    process.env.OPENAI_API_KEY
-      ? { provider: 'openai', model: process.env.OPENAI_MODEL || 'gpt-4o', apiKey: process.env.OPENAI_API_KEY }
-      : null;
-
-  const anthropic = (): AIConfig | null =>
-    process.env.ANTHROPIC_API_KEY
-      ? { provider: 'anthropic', model: process.env.ANTHROPIC_MODEL || 'claude-3-5-sonnet-20241022', apiKey: process.env.ANTHROPIC_API_KEY }
-      : null;
-
-  const groq = (): AIConfig | null =>
-    process.env.GROQ_API_KEY
-      ? { provider: 'groq', model: process.env.GROQ_MODEL || 'llama-3.3-70b-versatile', apiKey: process.env.GROQ_API_KEY, baseUrl: 'https://api.groq.com/openai/v1' }
-      : null;
-
-  const openrouter = (): AIConfig | null =>
-    process.env.OPENROUTER_API_KEY
-      ? { provider: 'openrouter', model: process.env.OPENROUTER_MODEL || 'meta-llama/llama-3.3-70b-instruct', apiKey: process.env.OPENROUTER_API_KEY, baseUrl: 'https://openrouter.ai/api/v1' }
-      : null;
-
-  const gemini = (): AIConfig | null =>
-    (process.env.GEMINI_API_KEY || process.env.GOOGLE_AI_API_KEY)
-      ? { provider: 'gemini', model: process.env.GEMINI_MODEL || 'gemini-2.5-pro', apiKey: (process.env.GEMINI_API_KEY || process.env.GOOGLE_AI_API_KEY)! }
-      : null;
-
-  const order = preferGroq
-    ? [groq, openai, anthropic, gemini, openrouter]
-    : [openai, anthropic, gemini, groq, openrouter];
-
   const configs: AIConfig[] = [];
-  for (const fn of order) {
-    const cfg = fn();
+  for (const provider of getProviderOrder(preferGroq)) {
+    const cfg = providerFactories[provider]();
     if (cfg) configs.push(cfg);
   }
   return configs;
@@ -564,19 +537,6 @@ const AI_CACHE_TTL: Record<string, number> = {
   narratives: 120,
   default: 60,
 };
-
-/**
- * Simple string hash for cache keys (matches groq.ts implementation)
- */
-function simpleHash(str: string): string {
-  let hash = 0;
-  for (let i = 0; i < str.length; i++) {
-    const char = str.charCodeAt(i);
-    hash = ((hash << 5) - hash) + char;
-    hash = hash & hash;
-  }
-  return Math.abs(hash).toString(36);
-}
 
 /**
  * JSON prompt helper — returns parsed JSON using the multi-provider fallback chain.

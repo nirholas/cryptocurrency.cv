@@ -270,7 +270,9 @@ export async function POST(request: NextRequest) {
     } finally {
       close();
     }
-  })();
+  })().catch(() => {
+    try { close(); } catch { /* stream already closed */ }
+  });
 
   return new Response(stream, {
     headers: {
