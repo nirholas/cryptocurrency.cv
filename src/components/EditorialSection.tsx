@@ -18,6 +18,7 @@ import { Badge, categoryToBadgeVariant } from '@/components/ui/Badge';
 import { BookmarkButton } from '@/components/BookmarkButton';
 import type { NewsArticle } from '@/lib/crypto-news';
 import { getUnsplashFallback } from '@/lib/unsplash-fallback';
+import { getArticlePath } from '@/lib/article-url';
 
 /** Resolve an article's display image — real URL or deterministic fallback. */
 function resolveImageUrl(article: NewsArticle): string {
@@ -130,7 +131,7 @@ function EditorsPickCard({ article }: { article: NewsArticle }) {
         article={article}
         className="absolute top-2 right-2 z-10 opacity-0 transition-opacity group-hover:opacity-100 focus-within:opacity-100"
       />
-      <Link href={article.link} target="_blank" rel="noopener noreferrer" className="block">
+      <Link href={getArticlePath(article.title, article.pubDate)} className="block">
         <article className="flex items-start gap-4">
           <div className="bg-surface-tertiary relative h-24 w-24 shrink-0 overflow-hidden rounded-md">
             <Image
@@ -197,7 +198,7 @@ export function CategorySection({
               article={lead}
               className="absolute top-2 right-2 z-10 opacity-0 transition-opacity group-hover:opacity-100 focus-within:opacity-100"
             />
-            <Link href={lead.link} target="_blank" rel="noopener noreferrer" className="block">
+            <Link href={getArticlePath(lead.title, lead.pubDate)} className="block">
               <article>
                 <div className="bg-surface-tertiary relative mb-4 overflow-hidden rounded-md">
                   <Image
@@ -244,9 +245,7 @@ export function CategorySection({
                   className="absolute top-2 right-2 z-10 opacity-0 transition-opacity group-hover:opacity-100 focus-within:opacity-100"
                 />
                 <Link
-                  href={article.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href={getArticlePath(article.title, article.pubDate)}
                   className="block"
                 >
                   <article className="flex items-start gap-4">
@@ -303,9 +302,7 @@ export async function MostRead({ articles }: { articles: NewsArticle[] }) {
         {articles.slice(0, 5).map((article, i) => (
           <Link
             key={article.link}
-            href={article.link}
-            target="_blank"
-            rel="noopener noreferrer"
+            href={getArticlePath(article.title, article.pubDate)}
             className="group block"
           >
             <article className="border-border flex items-start gap-3 border-b py-3 last:border-b-0">
@@ -359,7 +356,7 @@ export async function OpinionSection({ articles }: { articles: NewsArticle[] }) 
               role="article"
               aria-label={article.title}
             >
-              <Link href={article.link} target="_blank" rel="noopener noreferrer" className="block">
+              <Link href={getArticlePath(article.title, article.pubDate)} className="block">
                 <article className="flex flex-col gap-2">
                   <div className="flex items-center gap-2">
                     <span className="h-1.5 w-1.5 rounded-full bg-amber-500" />

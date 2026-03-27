@@ -16,6 +16,7 @@ import { TagChip } from '@/components/TagChip';
 import { cn } from '@/lib/utils';
 import type { NewsArticle } from '@/lib/crypto-news';
 import { extractTagsFromArticle } from '@/lib/tags';
+import { getArticlePath } from '@/lib/article-url';
 import { getUnsplashFallback } from '@/lib/unsplash-fallback';
 import { classifyArticle } from '@/lib/article-classifier';
 import { NEWS_VERTICALS } from '@/lib/verticals';
@@ -163,7 +164,7 @@ export function FeaturedCard({ article }: { article: NewsArticle }) {
   return (
     <div className="group relative" role="article" aria-label={article.title}>
       <BookmarkButton article={article} className={BOOKMARK_BTN} />
-      <Link href={article.link} target="_blank" rel="noopener noreferrer" className="block">
+      <Link href={getArticlePath(article.title, article.pubDate)} className="block">
         <article className="grid items-center gap-6 md:grid-cols-2 md:gap-10">
           <ArticleImage
             src={article.imageUrl}
@@ -217,7 +218,7 @@ export function NewsCardDefault({ article }: { article: NewsArticle }) {
   return (
     <div className="group relative" role="article" aria-label={article.title}>
       <BookmarkButton article={article} className={BOOKMARK_BTN} />
-      <Link href={article.link} target="_blank" rel="noopener noreferrer" className="block">
+      <Link href={getArticlePath(article.title, article.pubDate)} className="block">
         <article className="flex flex-col gap-3">
           <ArticleImage
             src={article.imageUrl}
@@ -266,7 +267,7 @@ export function NewsCardCompact({ article }: { article: NewsArticle }) {
   return (
     <div className="group relative" role="article" aria-label={article.title}>
       <BookmarkButton article={article} className={BOOKMARK_BTN} />
-      <Link href={article.link} target="_blank" rel="noopener noreferrer" className="block">
+      <Link href={getArticlePath(article.title, article.pubDate)} className="block">
         <article className="flex items-start gap-4">
           <ArticleImage
             src={article.imageUrl}
@@ -304,7 +305,7 @@ export function NewsCardCompact({ article }: { article: NewsArticle }) {
 
 export function NewsCardHeadline({ article, index }: { article: NewsArticle; index?: number }) {
   return (
-    <Link href={article.link} target="_blank" rel="noopener noreferrer" className="group block">
+    <Link href={getArticlePath(article.title, article.pubDate)} className="group block">
       <article className="flex items-baseline gap-3">
         {typeof index === 'number' && (
           <span className="text-accent/30 shrink-0 font-serif text-2xl leading-none font-bold tabular-nums">

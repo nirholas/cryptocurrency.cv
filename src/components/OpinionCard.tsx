@@ -10,6 +10,7 @@ import { Badge } from '@/components/ui/Badge';
 import { BookmarkButton } from '@/components/BookmarkButton';
 import { cn } from '@/lib/utils';
 import type { NewsArticle } from '@/lib/crypto-news';
+import { getArticlePath } from '@/lib/article-url';
 
 const BOOKMARK_BTN =
   'absolute top-2 right-2 z-10 opacity-0 group-hover:opacity-100 focus-within:opacity-100 transition-opacity';
@@ -22,7 +23,7 @@ export function FeaturedOpinionCard({ article }: { article: NewsArticle }) {
   return (
     <div className="group relative" role="article" aria-label={article.title}>
       <BookmarkButton article={article} className={BOOKMARK_BTN} />
-      <Link href={article.link} target="_blank" rel="noopener noreferrer" className="block">
+      <Link href={getArticlePath(article.title, article.pubDate)} className="block">
         <article className="grid items-center gap-6 md:grid-cols-2 md:gap-10">
           {article.imageUrl && (
             <div className="bg-surface-tertiary relative aspect-16/10 w-full overflow-hidden rounded-xl shadow-lg">
@@ -73,7 +74,7 @@ export function OpinionCard({ article }: { article: NewsArticle }) {
   return (
     <div className="group relative" role="article" aria-label={article.title}>
       <BookmarkButton article={article} className={BOOKMARK_BTN} />
-      <Link href={article.link} target="_blank" rel="noopener noreferrer" className="block">
+      <Link href={getArticlePath(article.title, article.pubDate)} className="block">
         <article className="flex flex-col gap-3">
           {article.imageUrl && (
             <div className="bg-surface-tertiary relative aspect-16/10 w-full overflow-hidden rounded-lg">
