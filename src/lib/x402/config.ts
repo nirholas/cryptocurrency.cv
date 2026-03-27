@@ -86,9 +86,9 @@ export const CURRENT_NETWORK: NetworkId = (() => {
   if (process.env.X402_NETWORK) {
     return process.env.X402_NETWORK as NetworkId;
   }
-  // Production uses Base mainnet (USDC — supported by @x402/evm ExactEvmScheme)
+  // Production uses Arbitrum (USDs support)
   if (IS_PRODUCTION && !IS_TESTNET) {
-    return NETWORKS.BASE_MAINNET;
+    return NETWORKS.ARBITRUM;
   }
   // Default to testnet
   return NETWORKS.BASE_SEPOLIA;

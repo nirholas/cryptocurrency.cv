@@ -31,19 +31,7 @@ const RECEIVE_ADDRESS =
   (process.env.X402_RECEIVE_ADDRESS as `0x${string}`) ??
   '0x40252CFDF8B20Ed757D61ff157719F33Ec332402';
 
-const NETWORK = (process.env.X402_NETWORK ?? 'eip155:8453') as never;
-
-/**
- * Named-to-CAIP-2 network alias map.
- * The Sperax facilitator returns named networks ("base", "arbitrum")
- * but ExactEvmScheme.getDefaultAsset() expects CAIP-2 keys ("eip155:8453").
- * This money parser bridges the gap by normalizing before the default lookup.
- */
-const NETWORK_ALIASES: Record<string, string> = {
-  base: 'eip155:8453',
-  'base-sepolia': 'eip155:84532',
-  arbitrum: 'eip155:42161',
-};
+const NETWORK = (process.env.X402_NETWORK ?? 'eip155:42161') as never;
 
 /** Build per-route pricing config from API_PRICING + PREMIUM_PRICING */
 function buildApiRoutes(): Record<string, RouteConfig> {
@@ -64,7 +52,7 @@ function buildApiRoutes(): Record<string, RouteConfig> {
   // Catch-all fallback for routes not in explicit pricing
   routes['/api/:path*'] = {
     accepts: [{ scheme: 'exact', payTo: RECEIVE_ADDRESS, price: '$0.001', network: NETWORK }],
-    description: 'Crypto Vision API — pay per request in USDC on Base',
+    description: 'Crypto Vision API — pay per request in USDs on Arbitrum',
   };
 
   return routes;
@@ -80,25 +68,10 @@ export function getX402Proxy(): (req: NextRequest) => any {
   if (!_x402) {
     try {
       const facilitator = new HTTPFacilitatorClient({ url: FACILITATOR_URL });
-      const scheme = new ExactEvmScheme();
-
-      // Register a money parser that normalises named networks (from facilitators
-      // like Sperax) to CAIP-2 before falling through to the default conversion.
-      scheme.registerMoneyParser((amount: number, network: string) => {
-        const canonical = NETWORK_ALIASES[network];
-        if (canonical) {
-          return scheme.defaultMoneyConversion(amount, canonical);
-        }
-        return null; // fall through to default
-      });
-
       _x402 = paymentProxyFromConfig(
         buildApiRoutes(),
         facilitator,
-        [{ network: 'eip155:*' as never, server: scheme as never }],
-        undefined, // paywallConfig
-        undefined, // paywall
-        false,     // syncFacilitatorOnStart — defer to avoid Edge Runtime issues
+        [{ network: 'eip155:*' as never, server: new ExactEvmScheme() }],
       );
     } catch (err) {
       console.warn(
