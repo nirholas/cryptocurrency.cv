@@ -6,6 +6,7 @@
  */
 
 import { Link } from "@/i18n/navigation";
+import { getTranslations } from "next-intl/server";
 import { Badge, categoryToBadgeVariant } from "@/components/ui/Badge";
 import { BookmarkButton } from "@/components/BookmarkButton";
 import type { NewsArticle } from "@/lib/crypto-news";
@@ -14,7 +15,7 @@ import type { NewsArticle } from "@/lib/crypto-news";
 /*  Section Header — editorial-style divider with title + "See all →" */
 /* ------------------------------------------------------------------ */
 
-export function SectionHeader({
+export async function SectionHeader({
   title,
   href,
   icon,
@@ -25,6 +26,7 @@ export function SectionHeader({
   icon?: string;
   className?: string;
 }) {
+  const t = await getTranslations("common");
   return (
     <div className={`flex items-center justify-between mb-6 ${className}`}>
       <h2 className="flex items-center gap-2 font-serif text-xl md:text-2xl font-bold text-text-primary">
@@ -36,7 +38,7 @@ export function SectionHeader({
           href={href}
           className="text-sm font-medium text-accent hover:text-accent-hover transition-colors whitespace-nowrap"
         >
-          See all →
+          {t("seeAll")}
         </Link>
       )}
     </div>
@@ -47,9 +49,12 @@ export function SectionHeader({
 /*  Date Header — "Sunday, March 1, 2026"                             */
 /* ------------------------------------------------------------------ */
 
-export function DateHeader() {
+export async function DateHeader() {
+  const t = await getTranslations("editorial");
+  const { getLocale } = await import("next-intl/server");
+  const locale = await getLocale();
   const today = new Date();
-  const formatted = today.toLocaleDateString("en-US", {
+  const formatted = today.toLocaleDateString(locale, {
     weekday: "long",
     year: "numeric",
     month: "long",
@@ -63,7 +68,7 @@ export function DateHeader() {
           {formatted}
         </p>
         <p className="text-xs text-text-tertiary hidden sm:block">
-          Your trusted source for crypto news & analysis
+          {t("tagline")}
         </p>
       </div>
     </div>
@@ -74,9 +79,10 @@ export function DateHeader() {
 /*  Editor's Picks — horizontal strip of curated stories              */
 /* ------------------------------------------------------------------ */
 
-export function EditorsPicks({ articles }: { articles: NewsArticle[] }) {
+export async function EditorsPicks({ articles }: { articles: NewsArticle[] }) {
   if (articles.length === 0) return null;
 
+  const t = await getTranslations("editorial");
   return (
     <section className="border-b border-border bg-surface-secondary">
       <div className="container-main py-6 lg:py-8">
@@ -85,7 +91,7 @@ export function EditorsPicks({ articles }: { articles: NewsArticle[] }) {
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-3.5 w-3.5">
               <path fillRule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clipRule="evenodd" />
             </svg>
-            Editor&apos;s Picks
+            {t("editorsPicks")}
           </span>
         </div>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -253,13 +259,14 @@ export function CategorySection({
 /*  Most Read — numbered list widget for sidebar                      */
 /* ------------------------------------------------------------------ */
 
-export function MostRead({ articles }: { articles: NewsArticle[] }) {
+export async function MostRead({ articles }: { articles: NewsArticle[] }) {
   if (articles.length === 0) return null;
 
+  const t = await getTranslations("editorial");
   return (
     <div>
       <h3 className="text-base font-bold font-serif mb-4 pb-2 border-b-2 border-accent">
-        Most Read
+        {t("mostRead")}
       </h3>
       <div className="space-y-0">
         {articles.slice(0, 5).map((article, i) => (
@@ -294,22 +301,23 @@ export function MostRead({ articles }: { articles: NewsArticle[] }) {
 /*  Opinion Banner — visual distinction for analysis/opinion content  */
 /* ------------------------------------------------------------------ */
 
-export function OpinionSection({ articles }: { articles: NewsArticle[] }) {
+export async function OpinionSection({ articles }: { articles: NewsArticle[] }) {
   if (articles.length === 0) return null;
 
+  const t = await getTranslations("editorial");
   return (
     <section className="border-b border-border bg-gradient-to-r from-amber-50/50 to-orange-50/50 dark:from-amber-950/20 dark:to-orange-950/20">
       <div className="container-main py-8 lg:py-10">
         <div className="flex items-center gap-3 mb-6">
           <div className="w-1 h-8 bg-amber-500 rounded-full" />
           <h2 className="font-serif text-xl md:text-2xl font-bold text-text-primary">
-            Analysis & Opinion
+            {t("analysisOpinion")}
           </h2>
           <Link
             href="/category/trading"
             className="ml-auto text-sm font-medium text-accent hover:text-accent-hover transition-colors"
           >
-            More analysis →
+            {t("moreAnalysis")}
           </Link>
         </div>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -325,7 +333,7 @@ export function OpinionSection({ articles }: { articles: NewsArticle[] }) {
                   <div className="flex items-center gap-2">
                     <span className="w-1.5 h-1.5 bg-amber-500 rounded-full" />
                     <span className="text-xs font-semibold text-amber-700 dark:text-amber-400 uppercase tracking-wider">
-                      Opinion
+                      {t("opinion")}
                     </span>
                   </div>
                   <h3 className="font-serif text-lg font-bold leading-snug tracking-tight group-hover:text-accent transition-colors line-clamp-3">

@@ -17,6 +17,7 @@
     "share": "Share",
     "copy": "Copy",
     "copied": "Copied!",
+    "seeAll": "See all →",
     "viewAll": "View all",
     "showMore": "Show more",
     "showLess": "Show less",
@@ -86,7 +87,16 @@
     "feedUnavailableHint": "We're having trouble loading the latest news. Please try again shortly.",
     "viewAllNews": "View all news",
     "breakingNews": "Breaking News",
-    "featuredStory": "Featured Story"
+    "featuredStory": "Featured Story",
+    "sections": "Sections",
+    "aboutLink": "About us →",
+    "sourcesLink": "Our sources →",
+    "aboutBody": "Real-time crypto news aggregated from {sourceCount}+ trusted sources. Covering Bitcoin, Ethereum, DeFi, regulation, and emerging markets — updated every minute.",
+    "marketIntelligence": "Market Intelligence",
+    "tokenUnlocks": "Token Unlocks",
+    "defiDashboard": "DeFi Dashboard",
+    "fearGreedIndex": "Fear & Greed Index",
+    "marketHeatmap": "Market Heatmap"
   },
   "news": {
     "title": "Crypto News",
@@ -341,6 +351,14 @@
     "description": "Free, open-source crypto news aggregator with real-time updates from 50+ sources. No API key required. Bitcoin, Ethereum, DeFi, Solana & altcoins.",
     "ogTitle": "Free Crypto News",
     "ogDescription": "Real-time cryptocurrency news from 50+ trusted sources. Free, open-source, no API key required."
+  },
+  "editorial": {
+    "editorsPicks": "Editor's Picks",
+    "mostRead": "Most Read",
+    "analysisOpinion": "Analysis & Opinion",
+    "moreAnalysis": "More analysis →",
+    "opinion": "Opinion",
+    "tagline": "Your trusted source for crypto news & analysis"
   },
   "videos": {
     "category": {

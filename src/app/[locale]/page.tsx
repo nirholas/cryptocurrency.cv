@@ -7,7 +7,7 @@
  */
 
 import { Suspense } from 'react';
-import { setRequestLocale } from 'next-intl/server';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import BreakingNewsBanner from '@/components/BreakingNewsBanner';
@@ -77,6 +77,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function HomePage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
+
+  const t = await getTranslations({ locale, namespace: 'home' });
 
   let data: { latest: NewsResponse; breaking: NewsResponse; trending: NewsResponse } | null = null;
   try {
@@ -175,8 +177,8 @@ export default async function HomePage({ params }: Props) {
         <Header />
         <main id="main-content" className="min-h-screen">
           <DataUnavailable
-            title="News feed temporarily unavailable"
-            message="We're having trouble loading the latest news. Our sources will be back shortly — please try again in a moment."
+            title={t('feedUnavailable')}
+            message={t('feedUnavailableHint')}
           />
         </main>
         <Footer />
@@ -235,7 +237,7 @@ export default async function HomePage({ params }: Props) {
         {topGrid.length > 0 && (
           <section className="border-border border-b">
             <div className="container-main py-8 lg:py-10">
-              <SectionHeader title="Top Stories" />
+              <SectionHeader title={t('topStories')} />
               <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
                 {topGrid.map((article) => (
                   <NewsCard key={article.link} article={article} />
@@ -271,7 +273,7 @@ export default async function HomePage({ params }: Props) {
 
         {/* ── Markets & Trading Section ── */}
         <CategorySection
-          title="Markets & Trading"
+          title={t('marketsTrading')}
           href="/category/trading"
           icon="📈"
           articles={marketsArticles}
@@ -279,7 +281,7 @@ export default async function HomePage({ params }: Props) {
 
         {/* ── DeFi Section ── */}
         <CategorySection
-          title="DeFi & Web3"
+          title={t('defiWeb3')}
           href="/category/defi"
           icon="🏦"
           articles={defiArticles}
@@ -290,7 +292,7 @@ export default async function HomePage({ params }: Props) {
 
         {/* ── Regulation & Policy Section ── */}
         <CategorySection
-          title="Regulation & Policy"
+          title={t('regulationPolicy')}
           href="/category/regulation"
           icon="⚖️"
           articles={regulationArticles}
@@ -329,7 +331,7 @@ export default async function HomePage({ params }: Props) {
           <div className="grid gap-10 lg:grid-cols-[1fr_340px]">
             {/* Smart feed (replaces static list with auto-refresh + modes) */}
             <div>
-              <SectionHeader title="Latest News" />
+              <SectionHeader title={t('latestNews')} />
               <SmartFeed initialArticles={latestFeed} />
             </div>
 
@@ -341,7 +343,7 @@ export default async function HomePage({ params }: Props) {
               {/* Categories */}
               <div>
                 <h3 className="border-border mb-4 border-b pb-2 font-serif text-base font-bold">
-                  Sections
+                  {t('sections')}
                 </h3>
                 <div className="flex flex-wrap gap-2">
                   {categories.map((cat) => (
@@ -369,23 +371,22 @@ export default async function HomePage({ params }: Props) {
 
               {/* About — editorial-focused */}
               <div className="border-border bg-surface-secondary rounded-lg border p-5">
-                <h3 className="mb-3 font-serif text-base font-bold">About Free Crypto News</h3>
+                <h3 className="mb-3 font-serif text-base font-bold">{t('about')}</h3>
                 <p className="text-text-secondary mb-4 text-sm leading-relaxed">
-                  Real-time crypto news aggregated from {sourceCount}+ trusted sources. Covering
-                  Bitcoin, Ethereum, DeFi, regulation, and emerging markets — updated every minute.
+                  {t('aboutBody', { sourceCount })}
                 </p>
                 <div className="flex gap-3">
                   <Link
                     href="/about"
                     className="text-accent hover:text-accent-hover text-sm font-medium transition-colors"
                   >
-                    About us →
+                    {t('aboutLink')}
                   </Link>
                   <Link
                     href="/sources"
                     className="text-text-secondary hover:text-accent text-sm font-medium transition-colors"
                   >
-                    Our sources →
+                    {t('sourcesLink')}
                   </Link>
                 </div>
               </div>
@@ -402,14 +403,14 @@ export default async function HomePage({ params }: Props) {
 
               {/* Quick Links */}
               <div className="border-border bg-surface-secondary rounded-lg border p-5">
-                <h3 className="mb-3 font-serif text-base font-bold">Explore</h3>
+                <h3 className="mb-3 font-serif text-base font-bold">{t('explore')}</h3>
                 <div className="space-y-1.5">
                   {[
-                    { label: 'Market Intelligence', href: '/intelligence' },
-                    { label: 'Token Unlocks', href: '/unlocks' },
-                    { label: 'DeFi Dashboard', href: '/defi' },
-                    { label: 'Fear & Greed Index', href: '/fear-greed' },
-                    { label: 'Market Heatmap', href: '/heatmap' },
+                    { label: t('marketIntelligence'), href: '/intelligence' },
+                    { label: t('tokenUnlocks'), href: '/unlocks' },
+                    { label: t('defiDashboard'), href: '/defi' },
+                    { label: t('fearGreedIndex'), href: '/fear-greed' },
+                    { label: t('marketHeatmap'), href: '/heatmap' },
                   ].map((item) => (
                     <Link
                       key={item.href}
