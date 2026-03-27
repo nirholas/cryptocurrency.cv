@@ -1,12 +1,12 @@
-import { Suspense } from "react";
-import { setRequestLocale } from "next-intl/server";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import { generateSEOMetadata } from "@/lib/seo";
-import { Skeleton } from "@/components/ui";
-import { Card, CardContent } from "@/components/ui";
-import ScreenerTable from "@/components/ScreenerTable";
-import type { Metadata } from "next";
+import { Suspense } from 'react';
+import { setRequestLocale } from 'next-intl/server';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import { generateSEOMetadata } from '@/lib/seo';
+import { Skeleton } from '@/components/ui';
+import { Card, CardContent } from '@/components/ui';
+import ScreenerTable from '@/components/ScreenerTable';
+import type { Metadata } from 'next';
 
 export const revalidate = 60;
 
@@ -17,17 +17,12 @@ type Props = {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   return generateSEOMetadata({
-    title: "Crypto Screener — Filter & Sort 100+ Coins",
+    title: 'Crypto Screener — Filter & Sort 100+ Coins',
     description:
-      "Advanced cryptocurrency screener. Filter and sort 100+ coins by price, market cap, volume, and percentage change. Export to CSV.",
-    path: "/screener",
+      'Advanced cryptocurrency screener. Filter and sort 100+ coins by price, market cap, volume, and percentage change. Export to CSV.',
+    path: '/screener',
     locale,
-    tags: [
-      "crypto screener",
-      "cryptocurrency filter",
-      "coin screener",
-      "crypto scanner",
-    ],
+    tags: ['crypto screener', 'cryptocurrency filter', 'coin screener', 'crypto scanner'],
   });
 }
 
@@ -35,7 +30,7 @@ async function fetchCoins() {
   try {
     const baseUrl =
       process.env.NEXT_PUBLIC_BASE_URL ||
-      (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000");
+      (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000');
     const res = await fetch(`${baseUrl}/api/market/coins?type=top&limit=250`, {
       next: { revalidate: 60 },
     });
@@ -52,9 +47,9 @@ async function ScreenerContent() {
 
   if (!coins || coins.length === 0) {
     return (
-      <div className="text-center py-20 text-text-secondary">
+      <div className="text-text-secondary py-20 text-center">
         <p className="text-lg">Unable to load market data right now.</p>
-        <p className="text-sm mt-2">Please try again later.</p>
+        <p className="mt-2 text-sm">Please try again later.</p>
       </div>
     );
   }
@@ -65,7 +60,7 @@ async function ScreenerContent() {
 function ScreenerSkeleton() {
   return (
     <Card>
-      <CardContent className="pt-6 space-y-3">
+      <CardContent className="space-y-3 pt-6">
         <div className="flex gap-3">
           <Skeleton className="h-9 w-56" />
           <Skeleton className="h-9 w-20" />
@@ -87,12 +82,12 @@ export default async function ScreenerPage({ params }: Props) {
     <>
       <Header />
       <main className="container-main py-10">
-        <h1 className="font-serif text-3xl md:text-4xl font-bold mb-2 text-text-primary">
+        <h1 className="text-text-primary mb-2 font-serif text-3xl font-bold md:text-4xl">
           Crypto Screener
         </h1>
         <p className="text-text-secondary mb-8 max-w-2xl">
-          Filter, sort, and analyze 100+ cryptocurrencies. Use the filters to
-          narrow down coins by price, market cap, volume, and price change.
+          Filter, sort, and analyze 100+ cryptocurrencies. Use the filters to narrow down coins by
+          price, market cap, volume, and price change.
         </p>
 
         <Suspense fallback={<ScreenerSkeleton />}>

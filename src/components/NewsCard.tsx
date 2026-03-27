@@ -79,10 +79,10 @@ function ArticleImage({
 }) {
   const fallback = getUnsplashFallback(source || alt);
   const [failed, setFailed] = useState(false);
-  const imgSrc = (!src || failed) ? fallback : src;
+  const imgSrc = !src || failed ? fallback : src;
 
   return (
-    <div className={cn('overflow-hidden rounded-lg bg-surface-tertiary', className)}>
+    <div className={cn('bg-surface-tertiary overflow-hidden rounded-lg', className)}>
       <img
         src={imgSrc}
         alt={alt}
@@ -108,11 +108,11 @@ function SourceMeta({
   authorSlug?: string;
 }) {
   return (
-    <span className="text-xs text-text-tertiary">
+    <span className="text-text-tertiary text-xs">
       {sourceKey ? (
         <Link
           href={`/source/${sourceKey}`}
-          className="font-medium text-text-secondary transition-colors hover:text-accent"
+          className="text-text-secondary hover:text-accent font-medium transition-colors"
         >
           {source}
         </Link>
@@ -125,7 +125,7 @@ function SourceMeta({
           &middot;{' '}
           <Link
             href={`/author/${authorSlug}`}
-            className="font-medium text-text-secondary transition-colors hover:text-accent"
+            className="text-text-secondary hover:text-accent font-medium transition-colors"
             onClick={(e) => e.stopPropagation()}
           >
             {author}
@@ -160,11 +160,11 @@ export function FeaturedCard({ article }: { article: NewsArticle }) {
               <ContentTypeBadge contentType={article.contentType} />
               <VerticalBadges article={article} />
             </div>
-            <h2 className="font-serif text-2xl leading-[1.15] font-bold tracking-tight transition-colors duration-200 group-hover:text-accent md:text-3xl lg:text-4xl">
+            <h2 className="group-hover:text-accent font-serif text-2xl leading-[1.15] font-bold tracking-tight transition-colors duration-200 md:text-3xl lg:text-4xl">
               {article.title}
             </h2>
             {article.description && (
-              <p className="line-clamp-3 text-sm leading-relaxed text-text-secondary md:text-base">
+              <p className="text-text-secondary line-clamp-3 text-sm leading-relaxed md:text-base">
                 {article.description}
               </p>
             )}{' '}
@@ -212,13 +212,11 @@ export function NewsCardDefault({ article }: { article: NewsArticle }) {
               <ContentTypeBadge contentType={article.contentType} />
               <VerticalBadges article={article} />
             </div>
-            <h3 className="line-clamp-3 font-serif text-lg leading-snug font-bold tracking-tight transition-colors group-hover:text-accent">
+            <h3 className="group-hover:text-accent line-clamp-3 font-serif text-lg leading-snug font-bold tracking-tight transition-colors">
               {article.title}
             </h3>
             {article.description && (
-              <p className="line-clamp-2 text-sm text-text-secondary">
-                {article.description}
-              </p>
+              <p className="text-text-secondary line-clamp-2 text-sm">{article.description}</p>
             )}{' '}
             {tags.length > 0 && (
               <div className="flex flex-wrap gap-1">
@@ -264,7 +262,7 @@ export function NewsCardCompact({ article }: { article: NewsArticle }) {
               </Badge>
               <ContentTypeBadge contentType={article.contentType} />
             </div>
-            <h3 className="line-clamp-2 text-sm leading-snug font-semibold transition-colors group-hover:text-accent">
+            <h3 className="group-hover:text-accent line-clamp-2 text-sm leading-snug font-semibold transition-colors">
               {article.title}
             </h3>
             <SourceMeta
@@ -290,12 +288,12 @@ export function NewsCardHeadline({ article, index }: { article: NewsArticle; ind
     <Link href={article.link} target="_blank" rel="noopener noreferrer" className="group block">
       <article className="flex items-baseline gap-3">
         {typeof index === 'number' && (
-          <span className="shrink-0 font-serif text-2xl leading-none font-bold text-accent/30 tabular-nums">
+          <span className="text-accent/30 shrink-0 font-serif text-2xl leading-none font-bold tabular-nums">
             {String(index + 1).padStart(2, '0')}
           </span>
         )}
         <div className="flex flex-col gap-1">
-          <h3 className="line-clamp-2 text-sm leading-snug font-semibold transition-colors group-hover:text-accent">
+          <h3 className="group-hover:text-accent line-clamp-2 text-sm leading-snug font-semibold transition-colors">
             {article.title}
           </h3>
           <SourceMeta

@@ -46,7 +46,6 @@ __pycache__/
 # Copilot instructions (personal)
 .github/copilot-instructions.md
 .vercel
-.env*.local
 
 # Archive import temp files (large datasets, caches)
 scripts/archive/.temp-import/
@@ -90,80 +89,29 @@ service-account*.json
 firebase-adminsdk*.json
 gcloud-*.json
 
-.mcpregistry_github_token
-
-
-.dockerignore
-.editorconfig
-.env.example
-.gitattributes
-CHANGELOG.md
-Dockerfile
-Dockerfile.ws
-GEMINI.md
-Procfile
-Screenshot 2026-03-01 at 8.33.25 AM.png
-Screenshot 2026-03-01 at 8.33.35 AM.png
-Untitled design.png
-alibaba-openapi.json
-casaos-app.yaml
-docker-compose.observability.yml
-docker-compose.scale.yml
-docker-compose.yml
-drizzle.config.ts
-eslint.config.mjs
-humans.txt
-images-1.jpg
-instrumentation.ts
-knip.json
-lighthouse-budget.json
-logo-1024.png
-logo.png
-logo.svg
-mkdocs.yml
-next.config.analyzer.js
-nginx.conf
-playwright.config.ts
-playwright.errors.config.ts
-pnpm-workspace.yaml
-portainer-template.json
-railway.json
-render.yaml
-s.png
-server.json
-smithery.yaml
-uh.md
-unraid-template.xml
-vercel.md
-vitest.config.ts
-vitest.setup.ts
-ws-server.js
-
+# ═══════════════════════════════════════════════════════════════
+# Large / generated assets (not needed in repo)
+# ═══════════════════════════════════════════════════════════════
 .data/
 .do/
-.git/
-.next/
 .storybook/
 archive/
 content/
 contracts/
 data/
-e2e/
 infra/
-mcp/
-messages/*
-!messages/en.json
 mobile/
-node_modules/
 postman/
 profile-readme/
 prompts/
 raycast/
-scripts/
-sdk/
-site/
 skills/
 telegram/
 terminal/
 
+# i18n — only English messages are committed; others are generated
+messages/*
+!messages/en.json
+
+# Misc generated / personal files
 vercel-logs.json
