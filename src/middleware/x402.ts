@@ -314,13 +314,18 @@ function getEndpointMeta(path: string): {
 /**
  * Build the extensions.bazaar block for a 402 response.
  * Includes both `info` (for UI) and `schema` (for validation).
+ *
+ * `schema` must be a flat JSON Schema (`type: "object"`) describing
+ * the input parameters — x402scan validates this as the "inputSchema".
  */
 function buildBazaarExtensions(path: string, method: string) {
   const meta = getEndpointMeta(path);
   const params = meta.parameters;
 
   const inputInfo: Record<string, unknown> = { type: 'http', method };
-  const schemaInput: Record<string, unknown> = {};
+
+  // Build a flat JSON Schema for input parameters (required by x402scan)
+  let inputSchema: { type: string; properties: Record<string, unknown>; required?: string[] };
 
   if (params) {
     const properties: Record<string, { type: string; description: string }> = {};
@@ -332,7 +337,7 @@ function buildBazaarExtensions(path: string, method: string) {
       };
       if (p.required) required.push(name);
     }
-    const paramSchema = {
+    inputSchema = {
       type: 'object',
       properties,
       ...(required.length > 0 ? { required } : {}),
@@ -340,22 +345,17 @@ function buildBazaarExtensions(path: string, method: string) {
 
     if (method === 'POST' || method === 'PUT' || method === 'PATCH') {
       inputInfo.bodyType = 'json';
-      inputInfo.body = paramSchema;
-      schemaInput.body = paramSchema;
+      inputInfo.body = inputSchema;
     } else {
-      inputInfo.queryParams = paramSchema;
-      schemaInput.queryParams = paramSchema;
+      inputInfo.queryParams = inputSchema;
     }
   } else {
-    // Minimal schema so SCHEMA_INPUT_MISSING is not triggered
-    const defaultSchema = { type: 'object', properties: {} };
+    inputSchema = { type: 'object', properties: {} };
     if (method === 'POST' || method === 'PUT' || method === 'PATCH') {
       inputInfo.bodyType = 'json';
-      inputInfo.body = defaultSchema;
-      schemaInput.body = defaultSchema;
+      inputInfo.body = inputSchema;
     } else {
-      inputInfo.queryParams = defaultSchema;
-      schemaInput.queryParams = defaultSchema;
+      inputInfo.queryParams = inputSchema;
     }
   }
 
@@ -370,12 +370,8 @@ function buildBazaarExtensions(path: string, method: string) {
         input: inputInfo,
         output: outputExample,
       },
-      schema: {
-        properties: {
-          input: { properties: schemaInput },
-          output: { properties: { example: outputExample } },
-        },
-      },
+      // Flat JSON Schema — x402scan reads this as the endpoint's inputSchema
+      schema: inputSchema,
     },
   };
 }
