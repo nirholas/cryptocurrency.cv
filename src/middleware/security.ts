@@ -80,7 +80,7 @@ export function buildCspHeader(nonce: string): string {
     "font-src 'self' https://fonts.gstatic.com",
     "connect-src 'self' https: wss:",
     "media-src 'self' https:",
-    "frame-src 'self' https://www.youtube.com https://player.vimeo.com https://s.tradingview.com https://www.tradingview.com",
+    "frame-src 'self' https://www.youtube.com https://player.vimeo.com https://s.tradingview.com https://www.tradingview.com https://www.tradingview-widget.com",
     "object-src 'none'",
     "base-uri 'self'",
     "form-action 'self'",
