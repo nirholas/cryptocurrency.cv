@@ -15,8 +15,6 @@ import { Card, CardContent } from "@/components/ui/Card";
 import { generateSEOMetadata } from "@/lib/seo";
 import { cn } from "@/lib/utils";
 import {
-  Github,
-  Twitter,
   Mail,
   MessageSquare,
   Clock,
@@ -61,7 +59,7 @@ type ContactMethod = {
 
 const contactMethods: ContactMethod[] = [
   {
-    icon: Github,
+    icon: Code,
     title: "GitHub Issues",
     description: "Report bugs, request features, or browse existing discussions",
     link: "https://github.com/nirholas/free-crypto-news/issues",
@@ -70,7 +68,7 @@ const contactMethods: ContactMethod[] = [
     responseTime: "24-48 hrs",
   },
   {
-    icon: Twitter,
+    icon: MessageSquare,
     title: "Twitter / X",
     description: "Follow us for updates, announcements, and quick questions",
     link: "https://twitter.com/freecryptonews",
@@ -309,7 +307,7 @@ export default async function ContactPage({ params }: Props) {
               </p>
               <Button variant="primary" size="sm" asChild className="w-full">
                 <a href="https://github.com/nirholas/free-crypto-news" target="_blank" rel="noopener noreferrer">
-                  <Github className="mr-1 h-3.5 w-3.5" /> View on GitHub
+                  <Code className="mr-1 h-3.5 w-3.5" /> View on GitHub
                 </a>
               </Button>
             </div>

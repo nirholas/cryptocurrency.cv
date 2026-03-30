@@ -9,7 +9,8 @@
 import { useEffect, useState } from 'react';
 import { cn } from '@/lib/utils';
 import { Card } from '@/components/ui/Card';
-import { Twitter, Youtube, User, ExternalLink, RefreshCw } from 'lucide-react';
+import { User, ExternalLink, RefreshCw } from 'lucide-react';
+import { Twitter, Youtube } from '@/components/icons/BrandIcons';
 
 /* ------------------------------------------------------------------ */
 /*  Types                                                              */

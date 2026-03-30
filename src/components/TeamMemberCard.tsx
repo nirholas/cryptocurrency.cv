@@ -5,7 +5,7 @@
  */
 
 import { type TeamMember } from '@/data/team';
-import { Github, Twitter, Linkedin } from 'lucide-react';
+import { Code, MessageSquare, Briefcase } from 'lucide-react';
 
 interface Props {
   member: TeamMember;
@@ -53,7 +53,7 @@ export function TeamMemberCard({ member, featured }: Props) {
               title="GitHub"
               className="text-text-tertiary hover:text-text-primary transition-colors"
             >
-              <Github className="h-4 w-4" />
+              <Code className="h-4 w-4" />
             </a>
           )}
           {member.twitterHandle && (
@@ -64,7 +64,7 @@ export function TeamMemberCard({ member, featured }: Props) {
               title="X (Twitter)"
               className="text-text-tertiary hover:text-text-primary transition-colors"
             >
-              <Twitter className="h-4 w-4" />
+              <MessageSquare className="h-4 w-4" />
             </a>
           )}
           {member.linkedinUrl && (
@@ -75,7 +75,7 @@ export function TeamMemberCard({ member, featured }: Props) {
               title="LinkedIn"
               className="text-text-tertiary hover:text-text-primary transition-colors"
             >
-              <Linkedin className="h-4 w-4" />
+              <Briefcase className="h-4 w-4" />
             </a>
           )}
         </div>
