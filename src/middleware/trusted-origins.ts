@@ -23,9 +23,13 @@
 
 import type { MiddlewareHandler } from './types';
 
+// The app's own public URL — browser client components fetch same-origin APIs
+const APP_URL = process.env.NEXT_PUBLIC_APP_URL ?? 'https://cryptocurrency.cv';
+
 // Exact-match origins that bypass x402 and rate limiting entirely
 const TRUSTED_EXACT_ORIGINS = new Set([
   'https://chat.sperax.io',
+  APP_URL, // own-origin browser requests (PriceTickerStrip, TrendingCoins, etc.)
   ...(process.env.X402_BYPASS_ORIGINS?.split(',')
     .map((s) => s.trim())
     .filter(Boolean) ?? []),
