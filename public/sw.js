@@ -213,36 +213,40 @@ async function cacheFirstStrategy(request, cacheName, maxAge) {
     const networkResponse = await fetch(request);
     
     if (networkResponse.ok) {
-      const cache = await caches.open(cacheName);
-      
-      const headers = new Headers(networkResponse.headers);
-      headers.set('sw-cache-timestamp', Date.now().toString());
-      
-      const modifiedResponse = new Response(networkResponse.clone().body, {
-        status: networkResponse.status,
-        statusText: networkResponse.statusText,
-        headers,
-      });
-      
-      await cache.put(request, modifiedResponse);
-      
-      if (cacheName === IMAGE_CACHE) {
-        await trimCache(cacheName, MAX_CACHE_ITEMS.images);
+      try {
+        const cache = await caches.open(cacheName);
+
+        const headers = new Headers(networkResponse.headers);
+        headers.set('sw-cache-timestamp', Date.now().toString());
+
+        const modifiedResponse = new Response(networkResponse.clone().body, {
+          status: networkResponse.status,
+          statusText: networkResponse.statusText,
+          headers,
+        });
+
+        await cache.put(request, modifiedResponse);
+
+        if (cacheName === IMAGE_CACHE) {
+          await trimCache(cacheName, MAX_CACHE_ITEMS.images);
+        }
+      } catch {
+        // Ignore caching errors (opaque responses, null bodies, etc.)
       }
     }
-    
+
     return networkResponse;
   } catch (error) {
     // Return cached even if expired, better than nothing
     if (cachedResponse) {
       return cachedResponse;
     }
-    
+
     // Return placeholder for images
     if (isImageRequest(request)) {
       return createPlaceholderImage();
     }
-    
+
     throw error;
   }
 }
@@ -259,22 +263,32 @@ async function staleWhileRevalidate(request, cacheName) {
   const fetchPromise = fetch(request)
     .then(async (networkResponse) => {
       if (networkResponse.ok) {
-        const headers = new Headers(networkResponse.headers);
-        headers.set('sw-cache-timestamp', Date.now().toString());
-        
-        const modifiedResponse = new Response(networkResponse.clone().body, {
-          status: networkResponse.status,
-          statusText: networkResponse.statusText,
-          headers,
-        });
-        
-        await cache.put(request, modifiedResponse);
-        await trimCache(cacheName, MAX_CACHE_ITEMS.dynamic);
+        try {
+          const headers = new Headers(networkResponse.headers);
+          headers.set('sw-cache-timestamp', Date.now().toString());
+
+          const modifiedResponse = new Response(networkResponse.clone().body, {
+            status: networkResponse.status,
+            statusText: networkResponse.statusText,
+            headers,
+          });
+
+          await cache.put(request, modifiedResponse);
+          await trimCache(cacheName, MAX_CACHE_ITEMS.dynamic);
+        } catch {
+          // Ignore caching errors (opaque responses, null bodies, etc.)
+        }
       }
       return networkResponse;
     })
-    .catch(() => cachedResponse);
-  
+    .catch(() => {
+      if (cachedResponse) return cachedResponse;
+      return new Response(
+        JSON.stringify({ error: 'offline', message: 'You are currently offline.' }),
+        { status: 503, headers: { 'Content-Type': 'application/json' } }
+      );
+    });
+
   return cachedResponse || fetchPromise;
 }
 

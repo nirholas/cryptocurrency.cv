@@ -52,15 +52,27 @@ export default function FooterSection({ title, links }: FooterSectionProps) {
       >
         {links.map((link) => (
           <li key={link.href}>
-            <Link
-              href={link.href}
-              className="group flex items-center gap-1 text-sm text-text-secondary transition-colors hover:text-text-primary min-h-11 md:min-h-0"
-            >
-              <span className="inline-block w-0 overflow-hidden text-accent transition-all group-hover:w-3">
-                →
-              </span>
-              {link.label}
-            </Link>
+            {link.href.startsWith('/api/') ? (
+              <a
+                href={link.href}
+                className="group flex items-center gap-1 text-sm text-text-secondary transition-colors hover:text-text-primary min-h-11 md:min-h-0"
+              >
+                <span className="inline-block w-0 overflow-hidden text-accent transition-all group-hover:w-3">
+                  →
+                </span>
+                {link.label}
+              </a>
+            ) : (
+              <Link
+                href={link.href}
+                className="group flex items-center gap-1 text-sm text-text-secondary transition-colors hover:text-text-primary min-h-11 md:min-h-0"
+              >
+                <span className="inline-block w-0 overflow-hidden text-accent transition-all group-hover:w-3">
+                  →
+                </span>
+                {link.label}
+              </Link>
+            )}
           </li>
         ))}
       </ul>
