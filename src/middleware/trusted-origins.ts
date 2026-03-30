@@ -59,15 +59,15 @@ export function isTrustedOrigin(origin: string): boolean {
  * `ctx.isSperaxOS` is set upstream by the speraxos-hmac handler (HMAC-only).
  * This handler only evaluates browser-origin trust for non-HMAC requests.
  *
- * Three signals are used, in priority order:
- *  1. `Origin` header — present on cross-origin requests and some POST requests
- *  2. `Sec-Fetch-Site: same-origin` — present on ALL JS-initiated same-origin
- *     requests (fetch/XHR). Browsers prevent JS from setting `Sec-*` headers,
- *     making this a reliable indicator of a browser same-site request. Non-browser
- *     API clients (curl, SDKs) typically omit this header.
- *  3. `Referer` header — fallback for environments where Sec-Fetch-Site is
- *     stripped (e.g. some CDN/proxy layers). For same-origin GET requests,
- *     Referrer-Policy: strict-origin-when-cross-origin guarantees Referer is sent.
+ * Three signals are checked in order:
+ *  1. `Origin` header — present on cross-origin requests and most POST requests.
+ *  2. `Sec-Fetch-Site: same-origin` — set by Chrome and Firefox on all JS-initiated
+ *     same-origin requests. Browsers prevent JS from forging `Sec-*` headers, making
+ *     this a reliable browser indicator. Non-browser clients (curl, SDKs) omit it.
+ *     NOTE: Safari does not implement `Sec-Fetch-*` headers at all.
+ *  3. `Referer` header — fallback for Safari (no Sec-Fetch-Site) and CDN/proxy
+ *     layers that strip Sec-* headers. All major browsers send Referer for same-origin
+ *     requests unless the page sets `Referrer-Policy: no-referrer`.
  */
 export const trustedOriginHandler: MiddlewareHandler = (ctx) => {
   if (!ctx.isApiRoute) return ctx;
