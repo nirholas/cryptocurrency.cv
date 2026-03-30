@@ -247,7 +247,11 @@ async function cacheFirstStrategy(request, cacheName, maxAge) {
       return createPlaceholderImage();
     }
 
-    throw error;
+    // Return a proper error response instead of rejecting the FetchEvent promise
+    return new Response('Resource unavailable', {
+      status: 503,
+      headers: { 'Content-Type': 'text/plain' },
+    });
   }
 }
 

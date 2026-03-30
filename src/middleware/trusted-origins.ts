@@ -59,12 +59,15 @@ export function isTrustedOrigin(origin: string): boolean {
  * `ctx.isSperaxOS` is set upstream by the speraxos-hmac handler (HMAC-only).
  * This handler only evaluates browser-origin trust for non-HMAC requests.
  *
- * Two signals are used:
+ * Three signals are used, in priority order:
  *  1. `Origin` header — present on cross-origin requests and some POST requests
  *  2. `Sec-Fetch-Site: same-origin` — present on ALL JS-initiated same-origin
  *     requests (fetch/XHR). Browsers prevent JS from setting `Sec-*` headers,
  *     making this a reliable indicator of a browser same-site request. Non-browser
  *     API clients (curl, SDKs) typically omit this header.
+ *  3. `Referer` header — fallback for environments where Sec-Fetch-Site is
+ *     stripped (e.g. some CDN/proxy layers). For same-origin GET requests,
+ *     Referrer-Policy: strict-origin-when-cross-origin guarantees Referer is sent.
  */
 export const trustedOriginHandler: MiddlewareHandler = (ctx) => {
   if (!ctx.isApiRoute) return ctx;
@@ -72,13 +75,26 @@ export const trustedOriginHandler: MiddlewareHandler = (ctx) => {
   // isSperaxOS is already set by speraxosHmac earlier in the pipeline
   const reqOrigin = ctx.request.headers.get('origin') ?? '';
   const secFetchSite = ctx.request.headers.get('sec-fetch-site');
+  const reqReferer = ctx.request.headers.get('referer') ?? '';
 
   // Same-origin browser fetch (GET/HEAD) — no Origin header, but Sec-Fetch-Site is present
   const isSameOriginBrowser = secFetchSite === 'same-origin' || secFetchSite === 'same-site';
+
   // Cross-origin or POST from a trusted domain — Origin header is present
   const isOriginTrusted = !!reqOrigin && isTrustedOrigin(reqOrigin);
 
-  ctx.isTrustedOrigin = !ctx.isSperaxOS && (isSameOriginBrowser || isOriginTrusted);
+  // Fallback: derive origin from Referer when Origin and Sec-Fetch-Site are absent.
+  // Handles environments (some CDNs/proxies) that strip Sec-* headers.
+  let isRefererTrusted = false;
+  if (!isSameOriginBrowser && !isOriginTrusted && reqReferer) {
+    try {
+      isRefererTrusted = isTrustedOrigin(new URL(reqReferer).origin);
+    } catch {
+      // malformed Referer — ignore
+    }
+  }
+
+  ctx.isTrustedOrigin = !ctx.isSperaxOS && (isSameOriginBrowser || isOriginTrusted || isRefererTrusted);
 
   if (ctx.isSperaxOS || ctx.isTrustedOrigin) {
     ctx.headers['X-Priority'] = 'speraxos';
