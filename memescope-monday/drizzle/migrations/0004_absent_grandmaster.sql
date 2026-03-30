@@ -1,0 +1,1 @@
+ALTER TABLE "seo_article" ADD COLUMN "image" text;

@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300" width="900" height="300">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0f23;stop-opacity:1"/>
+      <stop offset="50%" style="stop-color:#1a1a3e;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#0f0f23;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00d4ff"/>
+      <stop offset="50%" style="stop-color:#7b2ff7"/>
+      <stop offset="100%" style="stop-color:#ff6b6b"/>
+      <animate attributeName="x1" values="0%;100%;0%" dur="4s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="100%;200%;100%" dur="4s" repeatCount="indefinite"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ff6b6b"/>
+      <stop offset="100%" style="stop-color:#ffa500"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="300" fill="url(#bg)" rx="16"/>
+
+  <!-- Animated grid lines -->
+  <g opacity="0.06">
+    <line x1="0" y1="60" x2="900" y2="60" stroke="#00d4ff" stroke-width="0.5"/>
+    <line x1="0" y1="120" x2="900" y2="120" stroke="#00d4ff" stroke-width="0.5"/>
+    <line x1="0" y1="180" x2="900" y2="180" stroke="#00d4ff" stroke-width="0.5"/>
+    <line x1="0" y1="240" x2="900" y2="240" stroke="#00d4ff" stroke-width="0.5"/>
+    <line x1="150" y1="0" x2="150" y2="300" stroke="#00d4ff" stroke-width="0.5"/>
+    <line x1="300" y1="0" x2="300" y2="300" stroke="#00d4ff" stroke-width="0.5"/>
+    <line x1="450" y1="0" x2="450" y2="300" stroke="#00d4ff" stroke-width="0.5"/>
+    <line x1="600" y1="0" x2="600" y2="300" stroke="#00d4ff" stroke-width="0.5"/>
+    <line x1="750" y1="0" x2="750" y2="300" stroke="#00d4ff" stroke-width="0.5"/>
+  </g>
+
+  <!-- Floating particles -->
+  <circle cx="80" cy="60" r="2" fill="#00d4ff" opacity="0.5">
+    <animate attributeName="cy" values="60;40;60" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="200" cy="230" r="1.5" fill="#7b2ff7" opacity="0.4">
+    <animate attributeName="cy" values="230;210;230" dur="4s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.4;0.9;0.4" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="720" cy="80" r="2.5" fill="#ff6b6b" opacity="0.3">
+    <animate attributeName="cy" values="80;55;80" dur="3.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.3;0.8;0.3" dur="3.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="820" cy="200" r="1.8" fill="#ffa500" opacity="0.4">
+    <animate attributeName="cy" values="200;180;200" dur="2.8s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.4;0.9;0.4" dur="2.8s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="400" cy="260" r="1.2" fill="#00d4ff" opacity="0.3">
+    <animate attributeName="cy" values="260;245;260" dur="3.2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="550" cy="45" r="2" fill="#7b2ff7" opacity="0.35">
+    <animate attributeName="cy" values="45;28;45" dur="4.2s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Telescope emoji -->
+  <text x="450" y="95" text-anchor="middle" font-size="48" filter="url(#softGlow)">
+    🔭
+    <animate attributeName="y" values="95;88;95" dur="2.5s" repeatCount="indefinite"/>
+  </text>
+
+  <!-- Main title -->
+  <text x="450" y="160" text-anchor="middle" font-family="'Segoe UI', system-ui, -apple-system, sans-serif" font-size="52" font-weight="800" fill="url(#textGrad)" filter="url(#glow)" letter-spacing="-1">
+    MEMESCOPE MONDAY
+  </text>
+
+  <!-- Subtitle -->
+  <text x="450" y="195" text-anchor="middle" font-family="'Segoe UI', system-ui, -apple-system, sans-serif" font-size="16" fill="#8888aa" letter-spacing="4" font-weight="300">
+    COMMUNITY-DRIVEN MEMECOIN DISCOVERY
+  </text>
+
+  <!-- Animated underline -->
+  <rect x="250" y="210" width="0" height="2" rx="1" fill="url(#accentGrad)" opacity="0.7">
+    <animate attributeName="width" values="0;400;0" dur="4s" repeatCount="indefinite"/>
+    <animate attributeName="x" values="450;250;450" dur="4s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Chain badges -->
+  <g transform="translate(275, 235)">
+    <rect width="90" height="28" rx="14" fill="#1a1a3e" stroke="#9945FF" stroke-width="1" opacity="0.8"/>
+    <text x="45" y="19" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" fill="#9945FF" font-weight="600">◎ Solana</text>
+  </g>
+  <g transform="translate(385, 235)">
+    <rect width="80" height="28" rx="14" fill="#1a1a3e" stroke="#0052FF" stroke-width="1" opacity="0.8"/>
+    <text x="40" y="19" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" fill="#0052FF" font-weight="600">⬡ Base</text>
+  </g>
+  <g transform="translate(485, 235)">
+    <rect width="80" height="28" rx="14" fill="#1a1a3e" stroke="#F0B90B" stroke-width="1" opacity="0.8"/>
+    <text x="40" y="19" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" fill="#F0B90B" font-weight="600">⬡ BNB</text>
+  </g>
+
+  <!-- Corner accents -->
+  <path d="M0,16 Q0,0 16,0 L60,0" fill="none" stroke="#00d4ff" stroke-width="1.5" opacity="0.3">
+    <animate attributeName="opacity" values="0.3;0.7;0.3" dur="3s" repeatCount="indefinite"/>
+  </path>
+  <path d="M0,16 Q0,0 16,0 L0,0 Z" fill="none"/>
+  <path d="M900,284 Q900,300 884,300 L840,300" fill="none" stroke="#ff6b6b" stroke-width="1.5" opacity="0.3">
+    <animate attributeName="opacity" values="0.3;0.7;0.3" dur="3s" repeatCount="indefinite" begin="1.5s"/>
+  </path>
+
+  <!-- Subtle border -->
+  <rect width="900" height="300" fill="none" stroke="#ffffff" stroke-width="0.5" opacity="0.05" rx="16"/>
+</svg>

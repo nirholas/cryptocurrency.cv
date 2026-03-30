@@ -1,0 +1,1 @@
+ALTER TABLE "project" ALTER COLUMN "logo_url" DROP NOT NULL;
