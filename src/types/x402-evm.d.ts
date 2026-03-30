@@ -6,33 +6,11 @@
 
 /**
  * Type declarations for @x402/evm subpath exports
- * 
- * These declarations help TypeScript resolve the subpath exports
- * from the @x402/evm package that aren't being resolved automatically.
+ *
+ * The '@x402/evm/exact/server' subpath is fully typed by the package itself
+ * (ExactEvmScheme implements SchemeNetworkServer with parsePrice,
+ * enhancePaymentRequirements, and registerMoneyParser). No stub needed.
  */
-
-declare module '@x402/evm/exact/server' {
-  import type { x402ResourceServer } from '@x402/core/server';
-
-  export interface EvmResourceServerConfig {
-    /**
-     * Optional networks to register. If not provided, registers wildcard support (eip155:*)
-     */
-    networks?: string[];
-  }
-
-  /**
-   * Registers EVM exact payment schemes to an x402ResourceServer instance.
-   */
-  export function registerExactEvmScheme(
-    server: x402ResourceServer,
-    config?: EvmResourceServerConfig
-  ): x402ResourceServer;
-
-  export class ExactEvmScheme {
-    readonly scheme: 'exact';
-  }
-}
 
 declare module '@x402/evm/exact/client' {
   import type { PaymentRequirements, PaymentPayload } from '@x402/core/types';
