@@ -24,6 +24,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     path: "/settings",
     locale,
     tags: ["settings", "preferences", "configuration"],
+    noindex: true,
   });
 }
 

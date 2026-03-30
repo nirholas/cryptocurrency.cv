@@ -27,6 +27,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       "Track your cryptocurrency portfolio in real time. Monitor holdings, profit & loss, allocation breakdown, and performance against live market prices. Free, no sign-up required.",
     path: "/portfolio",
     locale,
+    noindex: true,
     tags: [
       "crypto portfolio tracker",
       "portfolio pnl",

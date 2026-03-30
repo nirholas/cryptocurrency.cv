@@ -99,9 +99,6 @@ const staticPages = [
   { path: '/category/nft', changeFrequency: 'hourly' as const, priority: 0.7 },
   { path: '/category/regulation', changeFrequency: 'daily' as const, priority: 0.8 },
   { path: '/category/technology', changeFrequency: 'daily' as const, priority: 0.7 },
-  // User features
-  { path: '/portfolio', changeFrequency: 'daily' as const, priority: 0.7 },
-  { path: '/watchlist', changeFrequency: 'daily' as const, priority: 0.7 },
   // Regulatory & compliance
   { path: '/regulatory', changeFrequency: 'daily' as const, priority: 0.8 },
   { path: '/protocol-health', changeFrequency: 'daily' as const, priority: 0.7 },
@@ -117,16 +114,11 @@ const staticPages = [
   { path: '/exchanges', changeFrequency: 'daily' as const, priority: 0.7 },
   { path: '/macro', changeFrequency: 'daily' as const, priority: 0.7 },
   // Content & event pages
-  { path: '/search', changeFrequency: 'always' as const, priority: 0.8 },
   { path: '/unlocks', changeFrequency: 'daily' as const, priority: 0.7 },
   { path: '/events', changeFrequency: 'daily' as const, priority: 0.7 },
   { path: '/regulation', changeFrequency: 'daily' as const, priority: 0.7 },
   { path: '/research', changeFrequency: 'daily' as const, priority: 0.7 },
   { path: '/intelligence', changeFrequency: 'daily' as const, priority: 0.7 },
-  // User features
-  { path: '/bookmarks', changeFrequency: 'daily' as const, priority: 0.5 },
-  { path: '/alerts', changeFrequency: 'daily' as const, priority: 0.5 },
-  { path: '/settings', changeFrequency: 'monthly' as const, priority: 0.4 },
   // Info pages
   { path: '/about', changeFrequency: 'monthly' as const, priority: 0.5 },
   { path: '/pricing', changeFrequency: 'monthly' as const, priority: 0.6 },
@@ -169,84 +161,91 @@ const topCoins = [
   'immutable-x',
 ];
 
+/** Build a hreflang languages map for a given path suffix (e.g. "/markets") */
+function buildAlternates(pathSuffix: string): Record<string, string> {
+  const langs: Record<string, string> = { 'x-default': `${SITE_URL}/en${pathSuffix}` };
+  for (const locale of locales) {
+    langs[locale] = `${SITE_URL}/${locale}${pathSuffix}`;
+  }
+  return langs;
+}
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const now = new Date();
   const entries: MetadataRoute.Sitemap = [];
 
-  // Add static pages for each locale
-  for (const locale of locales) {
-    for (const page of staticPages) {
-      entries.push({
-        url: `${SITE_URL}/${locale}${page.path}`,
-        lastModified: now,
-        changeFrequency: page.changeFrequency,
-        priority: page.priority,
-      });
-    }
-
-    // Add coin pages
-    for (const coin of topCoins) {
-      entries.push({
-        url: `${SITE_URL}/${locale}/coin/${coin}`,
-        lastModified: now,
-        changeFrequency: 'hourly',
-        priority: 0.7,
-      });
-    }
+  // Add one canonical entry per static page (en locale), with hreflang alternates
+  for (const page of staticPages) {
+    entries.push({
+      url: `${SITE_URL}/en${page.path}`,
+      lastModified: now,
+      changeFrequency: page.changeFrequency,
+      priority: page.priority,
+      alternates: { languages: buildAlternates(page.path) },
+    });
   }
 
-  // Add blog pages for each locale
+  // Add one canonical entry per coin (en locale), with hreflang alternates
+  for (const coin of topCoins) {
+    entries.push({
+      url: `${SITE_URL}/en/coin/${coin}`,
+      lastModified: now,
+      changeFrequency: 'hourly',
+      priority: 0.7,
+      alternates: { languages: buildAlternates(`/coin/${coin}`) },
+    });
+  }
+
+  // Add blog pages — one canonical entry per slug/category with hreflang alternates
   const blogSlugs = getAllSlugs();
-  for (const locale of locales) {
-    // Blog index
+
+  entries.push({
+    url: `${SITE_URL}/en/blog`,
+    lastModified: now,
+    changeFrequency: 'daily',
+    priority: 0.8,
+    alternates: { languages: buildAlternates('/blog') },
+  });
+
+  for (const slug of blogSlugs) {
     entries.push({
-      url: `${SITE_URL}/${locale}/blog`,
+      url: `${SITE_URL}/en/blog/${slug}`,
       lastModified: now,
-      changeFrequency: 'daily',
-      priority: 0.8,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+      alternates: { languages: buildAlternates(`/blog/${slug}`) },
     });
-
-    // Individual blog posts (high priority for SEO)
-    for (const slug of blogSlugs) {
-      entries.push({
-        url: `${SITE_URL}/${locale}/blog/${slug}`,
-        lastModified: now,
-        changeFrequency: 'weekly',
-        priority: 0.9,
-      });
-    }
-
-    // Blog categories
-    for (const category of Object.keys(CATEGORIES)) {
-      entries.push({
-        url: `${SITE_URL}/${locale}/blog/category/${category}`,
-        lastModified: now,
-        changeFrequency: 'weekly',
-        priority: 0.7,
-      });
-    }
   }
 
-  // Add tag pages for SEO
-  const allTags = getAllTags();
-  for (const locale of locales) {
-    // Tags index page
+  for (const category of Object.keys(CATEGORIES)) {
     entries.push({
-      url: `${SITE_URL}/${locale}/tags`,
+      url: `${SITE_URL}/en/blog/category/${category}`,
       lastModified: now,
-      changeFrequency: 'daily',
-      priority: 0.8,
+      changeFrequency: 'weekly',
+      priority: 0.7,
+      alternates: { languages: buildAlternates(`/blog/category/${category}`) },
     });
+  }
 
-    // Individual tag pages (important for SEO)
-    for (const tag of allTags) {
-      entries.push({
-        url: `${SITE_URL}/${locale}/tags/${tag.slug}`,
-        lastModified: now,
-        changeFrequency: 'hourly',
-        priority: Math.round(Math.min(0.9, 0.6 + tag.priority / 250) * 1000) / 1000, // Higher priority tags get higher sitemap priority
-      });
-    }
+  // Add tag pages — one canonical entry per tag with hreflang alternates
+  const allTags = getAllTags();
+
+  entries.push({
+    url: `${SITE_URL}/en/tags`,
+    lastModified: now,
+    changeFrequency: 'daily',
+    priority: 0.8,
+    alternates: { languages: buildAlternates('/tags') },
+  });
+
+  for (const tag of allTags) {
+    entries.push({
+      url: `${SITE_URL}/en/tags/${tag.slug}`,
+      lastModified: now,
+      changeFrequency: 'hourly',
+      priority: Math.round(Math.min(0.9, 0.6 + tag.priority / 250) * 1000) / 1000,
+      alternates: { languages: buildAlternates(`/tags/${tag.slug}`) },
+    });
   }
 
   return entries;
