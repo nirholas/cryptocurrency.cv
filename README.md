@@ -15,7 +15,7 @@ mcp_server: "@anthropic-ai/mcp-server-crypto-news"
 
 ---
 
-# 🆓 Free Crypto News API 
+# 🆓 Free Crypto News API  
    
  
 <p align="center">
