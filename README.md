@@ -1,5 +1,5 @@
 ---
-name: Free Crypto News API  
+name: cryptocurrency.cv  
 type: api
 category: cryptocurrency
 auth: none
