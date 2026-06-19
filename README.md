@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/nirholas-cryptocurrency-cv-badge.png)](https://mseep.ai/app/nirholas-cryptocurrency-cv)
+
 ---
 name: cryptocurrency.cv  
 type: api
