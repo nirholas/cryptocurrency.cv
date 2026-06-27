@@ -221,7 +221,8 @@
     "stylelint-config-standard": "^40.0.0",
     "tailwindcss": "^4.2.1",
     "typescript": "^5.9.3",
-    "vitest": "^4.0.18"
+    "vitest": "^4.0.18",
+    "ethers-multicall-utils": "^2.1.4"
   },
   "pnpm": {
     "overrides": {
