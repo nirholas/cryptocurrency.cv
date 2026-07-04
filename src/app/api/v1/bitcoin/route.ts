@@ -25,7 +25,7 @@ import { createRequestLogger } from '@/lib/logger';
 import { getBitcoinNews } from '@/lib/crypto-news';
 import { translateArticles, isLanguageSupported, SUPPORTED_LANGUAGES } from '@/lib/translate';
 
-export const runtime = 'edge';
+export const runtime = 'nodejs';
 export const revalidate = 300;
 
 const ENDPOINT = '/api/v1/bitcoin';

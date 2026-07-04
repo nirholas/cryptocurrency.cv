@@ -27,7 +27,7 @@ import { hybridAuthMiddleware } from '@/lib/x402';
 import { ApiError } from '@/lib/api-error';
 import { createRequestLogger } from '@/lib/logger';
 
-export const runtime = 'edge';
+export const runtime = 'nodejs';
 
 const ENDPOINT = '/api/v1/orderbook';
 const VALID_DEPTHS = [5, 10, 20, 50, 100];

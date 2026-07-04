@@ -30,7 +30,7 @@ import {
 } from "@/lib/predictive-intelligence";
 import type { ForecastHorizon } from "@/lib/predictive-intelligence";
 
-export const runtime = "edge";
+export const runtime = 'nodejs';
 export const revalidate = 300;
 
 const ENDPOINT = "/api/v1/forecast";

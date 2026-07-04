@@ -20,7 +20,7 @@
 import { NextResponse } from 'next/server';
 import { buildX402WellKnownV1 } from '@/lib/x402/discovery';
 
-export const runtime = 'edge';
+export const runtime = 'nodejs';
 export const revalidate = 300;
 
 export async function GET() {

@@ -30,7 +30,7 @@ import { hybridAuthMiddleware } from '@/lib/x402';
 import { ApiError } from '@/lib/api-error';
 import { createRequestLogger } from '@/lib/logger';
 
-export const runtime = 'edge';
+export const runtime = 'nodejs';
 export const revalidate = 60;
 
 const ENDPOINT = '/api/v1/dex';

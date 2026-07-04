@@ -24,7 +24,7 @@ import { ApiError } from '@/lib/api-error';
 import { createRequestLogger } from '@/lib/logger';
 import { COINGECKO_BASE } from '@/lib/constants';
 
-export const runtime = 'edge';
+export const runtime = 'nodejs';
 export const revalidate = 60;
 
 const ENDPOINT = '/api/v1/whale-alerts';

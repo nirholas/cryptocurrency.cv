@@ -18,7 +18,7 @@
 import { NextResponse } from 'next/server';
 import { getPremiumPricingInfo, PREMIUM_CATEGORIES } from '@/lib/x402';
 
-export const runtime = 'edge';
+export const runtime = 'nodejs';
 
 export async function GET() {
   const pricingInfo = getPremiumPricingInfo();

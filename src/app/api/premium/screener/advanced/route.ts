@@ -21,7 +21,7 @@ import { advancedScreener } from '@/lib/premium-screener';
 import { ApiError } from '@/lib/api-error';
 import { createRequestLogger } from '@/lib/logger';
 
-export const runtime = 'edge';
+export const runtime = 'nodejs';
 
 async function handler(request: NextRequest) {
   const logger = createRequestLogger(request);

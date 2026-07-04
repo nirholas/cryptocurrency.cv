@@ -26,7 +26,7 @@ import { createRequestLogger } from '@/lib/logger';
 import { registry } from '@/lib/providers/registry';
 import type { FearGreedIndex } from '@/lib/providers/adapters/fear-greed';
 
-export const runtime = 'edge';
+export const runtime = 'nodejs';
 export const revalidate = 300;
 
 const ENDPOINT = '/api/v1/fear-greed';

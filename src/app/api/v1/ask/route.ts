@@ -26,7 +26,7 @@ import { promptAIJson, isAIConfigured, AIAuthError } from "@/lib/ai-provider";
 import { aiNotConfiguredResponse, aiAuthErrorResponse } from "@/app/api/_utils";
 import { getLatestNews } from "@/lib/crypto-news";
 
-export const runtime = "edge";
+export const runtime = 'nodejs';
 export const revalidate = 0; // Dynamic - depends on question
 
 const ENDPOINT = "/api/v1/ask";

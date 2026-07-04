@@ -25,7 +25,7 @@ import { createRequestLogger } from "@/lib/logger";
 import { promptAIJson, isAIConfigured, AIAuthError } from "@/lib/ai-provider";
 import { aiNotConfiguredResponse, aiAuthErrorResponse } from "@/app/api/_utils";
 
-export const runtime = "edge";
+export const runtime = 'nodejs';
 export const revalidate = 3600;
 
 const ENDPOINT = "/api/v1/ai/explain";

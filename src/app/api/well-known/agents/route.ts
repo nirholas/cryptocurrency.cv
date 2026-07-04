@@ -19,7 +19,7 @@ import { NextResponse } from 'next/server';
 import { SITE_URL } from '@/lib/constants';
 import { ROUTE_COUNT } from '@/lib/openapi/routes.generated';
 
-export const runtime = 'edge';
+export const runtime = 'nodejs';
 
 export async function GET() {
   const agents = {

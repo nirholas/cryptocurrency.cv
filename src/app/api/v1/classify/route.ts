@@ -25,7 +25,7 @@ import { createRequestLogger } from "@/lib/logger";
 import { getLatestNews } from "@/lib/crypto-news";
 import { classifyEvent } from "@/lib/event-classifier";
 
-export const runtime = "edge";
+export const runtime = 'nodejs';
 export const revalidate = 300;
 
 const ENDPOINT = "/api/v1/classify";

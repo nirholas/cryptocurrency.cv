@@ -26,7 +26,7 @@ import { getLatestNews } from '@/lib/crypto-news';
 import { promptAIJson, isAIConfigured, AIAuthError } from '@/lib/ai-provider';
 import { aiNotConfiguredResponse, aiAuthErrorResponse } from '@/app/api/_utils';
 
-export const runtime = 'edge';
+export const runtime = 'nodejs';
 export const revalidate = 300;
 
 const ENDPOINT = '/api/v1/digest';

@@ -24,7 +24,7 @@ import { ApiError } from '@/lib/api-error';
 import { createRequestLogger } from '@/lib/logger';
 import { getSources } from '@/lib/crypto-news';
 
-export const runtime = 'edge';
+export const runtime = 'nodejs';
 export const revalidate = 3600;
 
 const ENDPOINT = '/api/v1/sources';

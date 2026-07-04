@@ -26,7 +26,7 @@ import { getLatestNews } from '@/lib/crypto-news';
 import { translateArticles, isLanguageSupported, SUPPORTED_LANGUAGES } from '@/lib/translate';
 import { getBulkEnrichment } from '@/lib/article-enrichment';
 
-export const runtime = 'edge';
+export const runtime = 'nodejs';
 export const revalidate = 60;
 
 const ENDPOINT = '/api/v1/news';

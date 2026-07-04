@@ -18,7 +18,7 @@
 import { NextResponse } from 'next/server';
 import { SITE_URL } from '@/lib/constants';
 
-export const runtime = 'edge';
+export const runtime = 'nodejs';
 
 export async function GET() {
   const plugin = {
