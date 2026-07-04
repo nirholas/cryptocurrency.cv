@@ -89,6 +89,11 @@ export default async function middleware(request: NextRequest) {
 }
 
 export const config = {
+  // Run middleware in the Node.js runtime (not Edge). The x402 payment SDK
+  // (@x402/next → @x402/extensions/bazaar) pulls in Node-only modules that the
+  // Edge runtime does not support, which breaks the Vercel Edge Function
+  // bundle. The Node runtime lifts that restriction.
+  runtime: 'nodejs',
   matcher: [
     '/api/:path*',
     '/',
