@@ -5,17 +5,6 @@
       "path": "/api/cron/warm",
       "schedule": "* * * * *"
     }
-  ],
-  "functions": {
-    "src/app/api/market/pumps/route.ts": {
-      "maxDuration": 60
-    },
-    "src/app/api/news/route.ts": {
-      "maxDuration": 60
-    },
-    "src/app/api/sentiment/route.ts": {
-      "maxDuration": 60
-    }
-  }
+  ]
 }
 
