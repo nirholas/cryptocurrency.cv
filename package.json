@@ -180,7 +180,7 @@
     "@eslint/eslintrc": "^3.3.4",
     "@next/bundle-analyzer": "^16.1.6",
     "@playwright/test": "^1.58.2",
-    "@secretlint/secretlint-rule-preset-recommend": "^11.3.1",
+    "@secretlint/secretlint-rule-preset-recommend": "^13.0.2",
     "@storybook/addon-a11y": "^10.2.13",
     "@storybook/addon-essentials": "^8.6.18",
     "@storybook/addon-interactions": "^8.6.18",
