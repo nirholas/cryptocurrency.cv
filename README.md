@@ -1246,7 +1246,6 @@ The web app includes **95+ pages** for market data, portfolio management, AI too
 - billing/: 3 subscription management
 - sidebar/: 4 sidebar widgets
 
-
 **Library Categories:**
 
 - AI/ML: 12 files, 45 functions (sentiment, summarization, NER, signals)
@@ -4024,26 +4023,8 @@ Please read our [**Contributing Guide**](CONTRIBUTING.md) to get started.
 
 # License
 
-MIT © 2025 [nich](https://github.com/nirholas)
+All rights reserved. See [LICENSE](LICENSE).
 
----
-
-<p align="center">
-  <b>Stop paying for crypto news APIs.</b><br>
-  <sub>Made with 💜 for the community</sub>
-</p>
-
-<p align="center">
-  <br>
-  ⭐ <b>Found this useful? Give it a star!</b> ⭐<br>
-  <sub>It helps others discover this project and keeps development going. Please contribute to the repo, it's beneficial for everyone when you make fixes directly to this repo rather than JUST your own. Thanks!</sub><br><br>
-  <a href="https://github.com/nirholas/free-crypto-news/stargazers">
-    <img src="https://img.shields.io/github/stars/nirholas/free-crypto-news?style=social" alt="Star on GitHub">
-  </a>
-</p>
-
-<details>
-<summary>.</summary>
 # ERC-8004 Keywords & SEO Terms
 
 > Comprehensive keyword list for ERC-8004 Trustless Agents ecosystem
@@ -4272,7 +4253,6 @@ what is blockchain, blockchain explained, blockchain for beginners, blockchain t
 cryptocurrency, bitcoin, ethereum, blockchain, NFT, DeFi, Web3, metaverse, crypto wallet, crypto exchange, buy bitcoin, buy ethereum, buy crypto, crypto price, bitcoin price, ethereum price, altcoin, token, coin, digital currency, virtual currency, digital asset, crypto investment, crypto trading, crypto market, bull market, bear market, crypto crash, crypto recovery, crypto prediction, bitcoin prediction, ethereum prediction, price prediction, technical analysis, fundamental analysis, crypto news, breaking crypto news, crypto announcement, crypto update, crypto launch, new coin, new token, token launch, airdrop, free crypto, earn crypto, crypto rewards, staking, yield farming, liquidity mining, passive income crypto, crypto interest, crypto lending, crypto borrowing, crypto loan, collateral, liquidation, margin call, leverage trading, futures, options, derivatives, perpetual, long position, short position, hedge, arbitrage, market making, liquidity, volume, order book, bid ask, spread, slippage, gas, transaction fee, network fee, miner fee, priority fee, fast transaction, pending transaction, failed transaction, stuck transaction, speed up transaction, cancel transaction, wallet address, public key, private key, seed phrase, recovery phrase, mnemonic, backup wallet, restore wallet, import wallet, export wallet, connect wallet, disconnect wallet, approve transaction, sign transaction, confirm transaction, reject transaction, hardware wallet, software wallet, mobile wallet, desktop wallet, browser wallet, extension wallet, custodial wallet, non-custodial wallet, self-custody, cold storage, hot wallet, paper wallet, multi-sig, threshold signature, social recovery, account abstraction, smart wallet, email wallet, social login wallet, passkey, biometric, face ID, fingerprint, security key, 2FA, two-factor authentication, authenticator app, SMS verification, email verification, KYC, identity verification, compliance, regulated exchange, licensed exchange, centralized exchange, decentralized exchange, DEX, CEX, hybrid exchange, swap, trade, convert, exchange rate, market rate, limit order, market order, stop order, OCO, trailing stop, DCA, dollar cost averaging, recurring buy, auto-invest, savings, earn, rewards program, referral, affiliate, bonus, promotion, discount, fee discount, VIP, tier, level, volume discount, maker fee, taker fee, withdrawal fee, deposit fee, network selection, chain selection, cross-chain, bridge, wrap, unwrap, mint, burn, transfer, send, receive, deposit, withdraw, withdrawal limit, daily limit, monthly limit, verification level, account security, password, PIN, biometric lock, whitelist address, address book, transaction history, trade history, order history, portfolio, balance, available balance, locked balance, in orders, pending, processing, completed, confirmed, unconfirmed, mempool, block confirmation, finality, irreversible, rollback, refund, dispute, support ticket, customer service, help center, FAQ, knowledge base, tutorial, guide, how-to, step by step, beginner guide, advanced guide, pro tips, expert advice, strategy, technique, method, approach, framework, system, indicator, signal, alert, notification, price alert, portfolio alert, whale alert, large transaction, smart money, institutional, retail, sentiment, fear greed index, market sentiment, social sentiment, trending, viral, popular, top, best, worst, gainers, losers, volume leaders, most active, new listing, delisting, trading pair, base currency, quote currency, fiat, USD, EUR, GBP, JPY, CNY, KRW, INR, BRL, CAD, AUD, CHF, stablecoin, USDT, USDC, DAI, BUSD, TUSD, FRAX, LUSD, algorithmic stablecoin, backed stablecoin, collateralized, over-collateralized, under-collateralized, peg, depeg, redemption, reserve, audit, proof of reserves, transparency, trust, security, insurance, fund protection, SAFU, secure asset fund, compensation, recovery, hack, exploit, vulnerability, bug, patch, upgrade, fork, hard fork, soft fork, chain split, snapshot, migration, swap token, old token, new token, legacy, deprecated, sunset, end of life, roadmap, whitepaper, litepaper, documentation, technical documentation, API documentation, developer documentation, SDK, library, framework, tool, utility, resource, template, boilerplate, starter kit, example, sample, demo, tutorial project, test project, mainnet, testnet, devnet, local network, private network, public network, permissioned, permissionless, open source, closed source, proprietary, license, MIT, Apache, GPL, BSL, fair launch, VC backed, community owned, decentralized governance, DAO, proposal, vote, governance token, voting power, delegation, representative, council, committee, foundation, team, core contributors, developers, maintainers, auditors, advisors, investors, backers, supporters, community, ecosystem, network effect, adoption, growth, expansion, partnership, integration, collaboration, announcement, news, press release, blog post, article, report, analysis, research, study, survey, poll, statistics, data, metrics, KPI, benchmark, comparison, ranking, rating, review, feedback, testimonial, case study, success story, use case, application, implementation, deployment, production, live, active, operational, functional, working, available, accessible, usable, user-friendly, intuitive, simple, easy, straightforward, complex, advanced, sophisticated, powerful, flexible, customizable, configurable, scalable, performant, efficient, fast, quick, instant, real-time, near-instant, delayed, slow, congested, overloaded, capacity, throughput, bandwidth, latency, response time, uptime, availability, reliability, stability, consistency, durability, persistence, backup, redundancy, failover, disaster recovery, business continuity, SLA, guarantee, commitment, promise, expectation, requirement, specification, standard, protocol, interface, API, endpoint, method, function, parameter, argument, request, response, error, exception, status, code, message, log, trace, debug, monitor, alert, notification, webhook, callback, event, trigger, action, automation, workflow, process, pipeline, job, task, schedule, cron, timer, interval, delay, timeout, retry, fallback, circuit breaker, rate limit, throttle, quota, limit, cap, maximum, minimum, default, optional, required, mandatory, conditional, dynamic, static, constant, variable, configuration, setting, option, preference, profile, account, user, member, subscriber, customer, client, tenant, organization, team, group, role, permission, access, authorization, authentication, identity, credential, token, session, cookie, JWT, OAuth, OIDC, SAML, SSO, MFA, passwordless, magic link, OTP, TOTP, HOTP, backup code, recovery code, security question, security answer
 
 </details>
-
 
 ---
 

@@ -296,21 +296,4 @@ Les PRs sont les bienvenues ! Idées :
 
 # Licence
 
-MIT © 2025 [nich](https://github.com/nirholas)
-
----
-
-<p align="center">
-  <b>Arrêtez de payer pour les APIs d'actualités crypto.</b><br>
-  <sub>Fait avec 💜 pour la communauté</sub>
-</p>
-
-<p align="center">
-  <br>
-  ⭐ <b>Vous avez trouvé cela utile ? Mettez une étoile !</b> ⭐<br>
-  <sub>Cela aide les autres à découvrir ce projet et maintient le développement actif</sub><br><br>
-  <a href="https://github.com/nirholas/free-crypto-news/stargazers">
-    <img src="https://img.shields.io/github/stars/nirholas/free-crypto-news?style=social" alt="Étoile sur GitHub">
-  </a>
-</p>
-
+All rights reserved. See [LICENSE](LICENSE).
