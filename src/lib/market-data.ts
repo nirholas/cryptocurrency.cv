@@ -1226,7 +1226,8 @@ async function getTopCoinsFallback(limit: number): Promise<TokenPrice[]> {
     }
 
     return data.map((coin: CoinPaprikaCoin) => ({
-      id: coin.id,
+      // Canonicalize to the CoinGecko-style id so /coin/<id> links resolve
+      id: paprikaToGeckoId(coin.id),
       symbol: coin.symbol.toLowerCase(),
       name: coin.name,
       current_price: coin.quotes?.USD?.price || 0,
@@ -1344,18 +1345,12 @@ export async function getCoinDetails(coinId: string) {
 }
 
 /**
- * Fallback: Get coin details from CoinPaprika API
- * @param coinId - Coin ID (will be mapped to CoinPaprika format)
- * @returns Coin details in CoinGecko-compatible format
+ * CoinPaprika id mappings and helpers.
  */
-async function getCoinDetailsFallback(
-  coinId: string,
-): Promise<Record<string, unknown> | null> {
-  try {
-    // CoinPaprika uses different IDs, try common mappings
-    // Note: CoinCap fallback (below) covers ANY coin without a map.
-    // This map just gives richer data (ATH, supply, links) from CoinPaprika for top coins.
-    const paprikaIdMap: Record<string, string> = {
+// CoinPaprika uses different IDs than CoinGecko.
+// Note: the CoinCap fallback covers ANY coin without a map.
+// This map just gives richer data (ATH, supply, links) from CoinPaprika for top coins.
+const GECKO_TO_PAPRIKA: Record<string, string> = {
       // --- Tier 1: Top 10 ---
       bitcoin: "btc-bitcoin",
       ethereum: "eth-ethereum",
@@ -1485,9 +1480,39 @@ async function getCoinDetailsFallback(
       nano: "nano-nano",
       digibyte: "dgb-digibyte",
       wax: "waxp-wax",
-    };
+};
 
-    const paprikaId = paprikaIdMap[coinId];
+/** Inverse map: CoinPaprika id -> CoinGecko id. */
+const PAPRIKA_TO_GECKO: Record<string, string> = Object.fromEntries(
+  Object.entries(GECKO_TO_PAPRIKA).map(([gecko, paprika]) => [paprika, gecko]),
+);
+
+/**
+ * Convert a CoinPaprika id to its CoinGecko equivalent.
+ *
+ * CoinPaprika ids are "<symbol>-<name-slug>" ("btc-bitcoin"). Mapped coins use
+ * the exact table; unmapped ones fall back to the name-slug portion, which
+ * matches the CoinGecko id for the vast majority of coins. Only call this with
+ * ids that came FROM CoinPaprika — CoinGecko ids also contain dashes
+ * ("usd-coin") and must not be stripped.
+ */
+export function paprikaToGeckoId(paprikaId: string): string {
+  const mapped = PAPRIKA_TO_GECKO[paprikaId];
+  if (mapped) return mapped;
+  const dash = paprikaId.indexOf("-");
+  return dash > 0 ? paprikaId.slice(dash + 1) : paprikaId;
+}
+
+/**
+ * Fallback: Get coin details from CoinPaprika API
+ * @param coinId - CoinGecko-style coin ID (mapped to CoinPaprika format)
+ * @returns Coin details in CoinGecko-compatible format
+ */
+async function getCoinDetailsFallback(
+  coinId: string,
+): Promise<Record<string, unknown> | null> {
+  try {
+    const paprikaId = GECKO_TO_PAPRIKA[coinId];
 
     // If no known mapping, don't attempt CoinPaprika (bad IDs always 404)
     if (!paprikaId) {

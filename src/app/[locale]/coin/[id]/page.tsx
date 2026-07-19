@@ -13,7 +13,9 @@ import { NewsCardCompact } from '@/components/NewsCard';
 import { generateCoinMetadata } from '@/lib/seo';
 import { sanitizeMarkdown } from '@/lib/sanitize';
 import { COINGECKO_BASE } from '@/lib/constants';
-import { Link } from '@/i18n/navigation';
+import { Link, routing } from '@/i18n/navigation';
+import { redirect } from 'next/navigation';
+import { getCoinDetails, paprikaToGeckoId } from '@/lib/market-data';
 import { ChevronRight } from 'lucide-react';
 import type { Metadata } from 'next';
 import type { NewsArticle } from '@/lib/crypto-news';
@@ -62,23 +64,11 @@ interface CoinData {
 }
 
 async function fetchCoinData(coinId: string): Promise<CoinData | null> {
-  try {
-    const response = await fetch(
-      `${COINGECKO_BASE}/coins/${coinId}?localization=false&tickers=false&market_data=true&community_data=false&developer_data=false&sparkline=false`,
-      {
-        headers: {
-          Accept: 'application/json',
-          'User-Agent': 'FreeCryptoNews/1.0',
-        },
-        next: { revalidate: 60 },
-      },
-    );
-
-    if (!response.ok) return null;
-    return response.json();
-  } catch {
-    return null;
-  }
+  // Multi-provider chain (CoinGecko -> CoinPaprika -> CoinCap) with caching,
+  // so a keyless CoinGecko 429 degrades to a fallback source instead of a
+  // "Coin not found" page.
+  const details = await getCoinDetails(coinId);
+  return (details as CoinData | null) ?? null;
 }
 
 async function fetchRelatedNews(coinName: string): Promise<NewsArticle[]> {
@@ -97,9 +87,60 @@ async function fetchRelatedNews(coinName: string): Promise<NewsArticle[]> {
   }
 }
 
+/**
+ * Resolve a URL slug to CoinGecko data. Stale or externally shared links may
+ * use CoinPaprika-form ids ("btc-bitcoin"); when the raw id misses, retry with
+ * the CoinGecko equivalent and report which id resolved so the page can
+ * canonicalize the URL.
+ */
+async function resolveCoin(
+  id: string,
+): Promise<{ coin: CoinData | null; canonicalId: string }> {
+  const coin = await fetchCoinData(id);
+  if (coin) return { coin, canonicalId: id };
+
+  const alt = paprikaToGeckoId(id);
+  if (alt !== id) {
+    const altCoin = await fetchCoinData(alt);
+    if (altCoin) return { coin: altCoin, canonicalId: alt };
+  }
+
+  // Last resort: symbol links ("/coin/btc") and unknown slugs via search
+  const searched = await searchCoinId(id);
+  if (searched && searched !== id && searched !== alt) {
+    const searchedCoin = await fetchCoinData(searched);
+    if (searchedCoin) return { coin: searchedCoin, canonicalId: searched };
+  }
+
+  return { coin: null, canonicalId: id };
+}
+
+/** Resolve an arbitrary query (symbol, name, slug) to a CoinGecko id. */
+async function searchCoinId(query: string): Promise<string | null> {
+  try {
+    const res = await fetch(
+      `${COINGECKO_BASE}/search?query=${encodeURIComponent(query)}`,
+      {
+        headers: { Accept: 'application/json', 'User-Agent': 'FreeCryptoNews/1.0' },
+        next: { revalidate: 3600 },
+      },
+    );
+    if (!res.ok) return null;
+    const data = await res.json();
+    const coins: Array<{ id: string; symbol: string }> = data.coins ?? [];
+    if (coins.length === 0) return null;
+    const bySymbol = coins.find(
+      (c) => c.symbol?.toLowerCase() === query.toLowerCase(),
+    );
+    return (bySymbol ?? coins[0]).id;
+  } catch {
+    return null;
+  }
+}
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, id } = await params;
-  const coin = await fetchCoinData(id);
+  const { coin } = await resolveCoin(id);
 
   if (!coin) {
     return generateCoinMetadata({ name: id, symbol: id, locale });
@@ -156,7 +197,15 @@ export default async function CoinPage({ params }: Props) {
   const { locale, id } = await params;
   setRequestLocale(locale);
 
-  const coin = await fetchCoinData(id);
+  const { coin, canonicalId } = await resolveCoin(id);
+
+  if (coin && canonicalId !== id) {
+    redirect(
+      locale === routing.defaultLocale
+        ? `/coin/${canonicalId}`
+        : `/${locale}/coin/${canonicalId}`,
+    );
+  }
 
   if (!coin) {
     return (
