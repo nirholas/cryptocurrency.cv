@@ -1,0 +1,75 @@
+# Cloud Build pipeline for the cryptocurrency.cv Cloud Run service.
+# Usage (repo root):
+#   gcloud builds submit --config cloudbuild.yaml \
+#     --region us-central1 --project aerial-vehicle-466722-p5
+
+steps:
+    - id: pull-cache
+      name: gcr.io/cloud-builders/docker
+      entrypoint: bash
+      args: ['-c', 'docker pull $_IMAGE || exit 0']
+
+    - id: build
+      name: gcr.io/cloud-builders/docker
+      env: ['DOCKER_BUILDKIT=1']
+      args:
+          [
+              'build',
+              '-t',
+              '$_IMAGE',
+              '--cache-from',
+              '$_IMAGE',
+              '--build-arg',
+              'BUILDKIT_INLINE_CACHE=1',
+              '.',
+          ]
+
+    - id: push
+      name: gcr.io/cloud-builders/docker
+      args: ['push', '$_IMAGE']
+
+    - id: deploy
+      name: gcr.io/google.com/cloudsdktool/cloud-sdk:slim
+      entrypoint: gcloud
+      args:
+          [
+              'run',
+              'deploy',
+              'cryptocurrency-cv',
+              '--image',
+              '$_IMAGE',
+              '--project',
+              '$PROJECT_ID',
+              '--region',
+              'us-central1',
+              '--allow-unauthenticated',
+              '--memory',
+              '2Gi',
+              '--cpu',
+              '2',
+              '--timeout',
+              '300',
+              '--min-instances',
+              '1',
+              '--max-instances',
+              '4',
+              # PORT=3000 so the self-warming cron route (which falls back to
+              # http://localhost:3000) warms its own instance correctly.
+              '--port',
+              '3000',
+              '--service-account',
+              'three-ws@aerial-vehicle-466722-p5.iam.gserviceaccount.com',
+          ]
+
+substitutions:
+    _IMAGE: us-central1-docker.pkg.dev/aerial-vehicle-466722-p5/cloud-run-source-deploy/cryptocurrency-cv:latest
+
+options:
+    machineType: E2_HIGHCPU_32
+    logging: CLOUD_LOGGING_ONLY
+
+serviceAccount: projects/aerial-vehicle-466722-p5/serviceAccounts/three-ws-build@aerial-vehicle-466722-p5.iam.gserviceaccount.com
+
+timeout: 2400s
+
+images: ['$_IMAGE']
