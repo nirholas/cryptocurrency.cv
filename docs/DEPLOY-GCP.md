@@ -84,3 +84,17 @@ If using Cloudflare: add the records DNS-only (grey cloud) until the cert is
 ACTIVE, then optionally enable the proxy (orange cloud) with SSL mode
 "Full (strict)". Do not enable the proxy before the cert is ACTIVE or the
 Google cert validation cannot complete.
+
+## Self-hosted Next.js quirks (do not undo)
+
+- The middleware lives at `src/proxy.ts` (Next 16 convention). It used to be
+  a root-level `middleware.ts`, which Vercel's builder picked up but
+  self-hosted `next build` silently ignored: no locale routing, no CSP, no
+  x402 gate, no rate limiting.
+- `patch-next-middleware-rewrite.js` (run from postinstall) patches
+  `next/dist/server/lib/router-utils/resolve-routes.js` so middleware
+  rewrites to loopback hosts resolve internally. Without it, standalone mode
+  turns every middleware rewrite into a 307 and next-intl's default-locale
+  cleanup makes `/` and every unprefixed path an infinite redirect loop
+  (vercel/next.js#91844). If a Next upgrade changes that file, the patch
+  fails loudly during install; re-verify the upstream issue before removing.
