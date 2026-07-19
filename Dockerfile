@@ -8,8 +8,8 @@ WORKDIR /app
 
 RUN npm install -g pnpm@10
 
-# patch-next-write-atomic.js is required by the postinstall hook
-COPY package.json pnpm-lock.yaml .npmrc patch-next-write-atomic.js ./
+# patch-next-*.js are required by the postinstall hook
+COPY package.json pnpm-lock.yaml .npmrc patch-next-write-atomic.js patch-next-middleware-rewrite.js ./
 RUN pnpm install --frozen-lockfile
 
 COPY . .

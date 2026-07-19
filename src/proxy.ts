@@ -19,22 +19,22 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server';
-import type { MiddlewareContext } from './src/middleware/types';
-import { compose } from './src/middleware/compose';
-import { redirects } from './src/middleware/redirects';
-import { embed } from './src/middleware/embed';
-import { observability } from './src/middleware/observability';
-import { speraxosHmac } from './src/middleware/speraxos-hmac';
-import { trustedOriginHandler } from './src/middleware/trusted-origins';
-import { cors } from './src/middleware/cors';
-import { requestValidation } from './src/middleware/request-validation';
-import { botDetection } from './src/middleware/bot-detection';
-import { intl } from './src/middleware/intl';
-import { apiKey } from './src/middleware/api-key';
-import { rateLimitHandler } from './src/middleware/rate-limit';
-import { x402Gate } from './src/middleware/x402';
-import { apiResponse } from './src/middleware/api-response';
-import { generateRequestId } from './src/middleware/config';
+import type { MiddlewareContext } from './middleware/types';
+import { compose } from './middleware/compose';
+import { redirects } from './middleware/redirects';
+import { embed } from './middleware/embed';
+import { observability } from './middleware/observability';
+import { speraxosHmac } from './middleware/speraxos-hmac';
+import { trustedOriginHandler } from './middleware/trusted-origins';
+import { cors } from './middleware/cors';
+import { requestValidation } from './middleware/request-validation';
+import { botDetection } from './middleware/bot-detection';
+import { intl } from './middleware/intl';
+import { apiKey } from './middleware/api-key';
+import { rateLimitHandler } from './middleware/rate-limit';
+import { x402Gate } from './middleware/x402';
+import { apiResponse } from './middleware/api-response';
+import { generateRequestId } from './middleware/config';
 
 const pipeline = compose(
   redirects, // /docs redirect, /dashboard/dashboard fix
@@ -89,11 +89,6 @@ export default async function middleware(request: NextRequest) {
 }
 
 export const config = {
-  // Run middleware in the Node.js runtime (not Edge). The x402 payment SDK
-  // (@x402/next → @x402/extensions/bazaar) pulls in Node-only modules that the
-  // Edge runtime does not support, which breaks the Vercel Edge Function
-  // bundle. The Node runtime lifts that restriction.
-  runtime: 'nodejs',
   matcher: [
     '/api/:path*',
     '/',
