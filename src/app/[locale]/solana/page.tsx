@@ -13,7 +13,7 @@ import PriceChart from '@/components/PriceChart';
 import { NewsCardCompact } from '@/components/NewsCard';
 import { generateSEOMetadata } from '@/lib/seo';
 import { getNewsByCategory } from '@/lib/crypto-news';
-import { COINGECKO_BASE } from '@/lib/constants';
+import { getCoinDetails } from '@/lib/market-data';
 import { Link } from '@/i18n/navigation';
 import {
   ChevronRight,
@@ -67,22 +67,9 @@ interface SolanaProtocol {
 }
 
 async function fetchSolanaData(): Promise<SolanaData | null> {
-  try {
-    const response = await fetch(
-      `${COINGECKO_BASE}/coins/solana?localization=false&tickers=false&market_data=true&community_data=false&developer_data=false&sparkline=false`,
-      {
-        headers: {
-          Accept: 'application/json',
-          'User-Agent': 'FreeCryptoNews/1.0',
-        },
-        next: { revalidate: 300 },
-      },
-    );
-    if (!response.ok) return null;
-    return response.json();
-  } catch {
-    return null;
-  }
+  // getCoinDetails runs CoinGecko -> CoinPaprika -> CoinCap, so the price panel
+  // survives a keyless CoinGecko rate-limit instead of rendering blank.
+  return (await getCoinDetails('solana')) as SolanaData | null;
 }
 
 async function fetchSolanaNetworkStats(): Promise<SolanaNetworkStats> {

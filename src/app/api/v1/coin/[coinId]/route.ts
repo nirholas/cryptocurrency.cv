@@ -22,6 +22,7 @@ import { hybridAuthMiddleware } from '@/lib/x402';
 import { ApiError } from '@/lib/api-error';
 import { createRequestLogger } from '@/lib/logger';
 import { COINGECKO_BASE } from '@/lib/constants';
+import { getCoinDetails } from '@/lib/market-data';
 
 const ENDPOINT = '/api/v1/coin';
 
@@ -56,14 +57,21 @@ export async function GET(
       }
     );
 
-    if (!response.ok) {
-      if (response.status === 404) {
-        return ApiError.notFound(`Coin not found: ${coinId}`);
+    let data: any;
+    if (response.ok) {
+      data = await response.json();
+    } else if (response.status === 404) {
+      return ApiError.notFound(`Coin not found: ${coinId}`);
+    } else {
+      // CoinGecko throttled the keyless tier — fall back to the resilient
+      // provider chain (CoinPaprika -> CoinCap). The transform below is fully
+      // optional-chained, so the narrower fallback shape degrades gracefully
+      // (tickers/community_data simply come back empty) instead of a 502.
+      data = await getCoinDetails(coinId);
+      if (!data || Object.keys(data).length === 0) {
+        return ApiError.upstream('CoinGecko');
       }
-      throw new Error(`Upstream API error: ${response.status}`);
     }
-
-    const data = await response.json();
 
     // Transform to cleaner structure
     const coin = {

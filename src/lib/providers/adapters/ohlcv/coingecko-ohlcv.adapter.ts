@@ -42,7 +42,7 @@ export const coingeckoOhlcvAdapter: DataProvider<OHLCVData[]> = {
       coinIds.map(async (coinId): Promise<OHLCVData> => {
         const url = `${BASE}/coins/${coinId}/ohlc?vs_currency=${vsCurrency}&days=${days}`;
         const headers: Record<string, string> = {};
-        if (API_KEY) headers['x-cg-demo-key'] = API_KEY;
+        if (API_KEY) headers['x-cg-demo-api-key'] = API_KEY;
 
         const res = await fetch(url, { headers });
         if (!res.ok) throw new Error(`CoinGecko OHLC ${coinId}: ${res.status}`);

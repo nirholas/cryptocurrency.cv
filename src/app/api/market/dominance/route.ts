@@ -22,9 +22,17 @@ export async function GET(_request: NextRequest): Promise<NextResponse> {
   try {
     const data = await getGlobalMarketData();
     if (!data) {
+      // getGlobalMarketData already falls back to CoinPaprika, so null means
+      // every upstream is down. Degrade to a 200 empty payload so the
+      // dominance widget renders an empty state instead of a 5xx.
       return NextResponse.json(
-        { error: 'Failed to fetch market data' },
-        { status: 503 }
+        { dominance: {}, totalMarketCap: 0, timestamp: Date.now() },
+        {
+          headers: {
+            'Cache-Control': 'public, s-maxage=30',
+            'Access-Control-Allow-Origin': '*',
+          },
+        }
       );
     }
 

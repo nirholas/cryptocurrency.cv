@@ -581,7 +581,7 @@ export interface CommunityData {
  * Global DeFi market statistics
  */
 export interface GlobalDeFi {
-  /** Total DeFi market cap */
+  /** Total DeFi market cap (CoinGecko; empty when only the DefiLlama fallback is available) */
   defi_market_cap: string;
   /** ETH market cap */
   eth_market_cap: string;
@@ -595,6 +595,14 @@ export interface GlobalDeFi {
   top_coin_name: string;
   /** Top DeFi coin DeFi dominance */
   top_coin_defi_dominance: number;
+  /** Total value locked across all chains (DefiLlama). Always real regardless of source. */
+  defi_tvl?: string;
+  /** 24h change in total TVL, percent (DefiLlama fallback only) */
+  defi_tvl_change_24h?: number;
+  /** Highest-TVL chain by name (DefiLlama fallback only) */
+  top_chain?: string;
+  /** Which upstream produced this payload. */
+  source?: 'coingecko' | 'defillama';
 }
 
 // =============================================================================
@@ -2748,10 +2756,71 @@ export async function getGlobalDeFiData(): Promise<GlobalDeFi | null> {
     }
 
     const { data }: { data: GlobalDeFi } = await response.json();
+    data.source = "coingecko";
     setCache(cacheKey, data, CACHE_TTL.global);
     return data;
   } catch (error) {
-    console.error("Error fetching global DeFi data:", error);
+    // CoinGecko's keyless tier is heavily throttled in production, so fall back
+    // to DefiLlama (free, keyless) for real TVL-based DeFi stats rather than
+    // failing the request. Market-cap-specific fields aren't available from
+    // DefiLlama and are left empty, flagged by `source: 'defillama'`.
+    console.error("CoinGecko global DeFi failed, trying DefiLlama:", error);
+    const fallback = await getGlobalDeFiFromLlama();
+    if (fallback) {
+      setCache(cacheKey, fallback, CACHE_TTL.global);
+      return fallback;
+    }
+    return null;
+  }
+}
+
+/**
+ * Fallback global DeFi stats from DefiLlama (free, keyless). Returns real
+ * total-value-locked figures; the CoinGecko-only market-cap fields are left
+ * empty and the payload is marked `source: 'defillama'`.
+ */
+async function getGlobalDeFiFromLlama(): Promise<GlobalDeFi | null> {
+  try {
+    const { getChainTVL, getDexVolumes } = await import("./apis/defillama");
+    const [chains, dexVolumes] = await Promise.all([
+      getChainTVL(),
+      getDexVolumes().catch(() => [] as Awaited<ReturnType<typeof getDexVolumes>>),
+    ]);
+
+    if (!chains || chains.length === 0) return null;
+
+    const totalTvl = chains.reduce((sum, c) => sum + (c.tvl || 0), 0);
+    const prevTvl = chains.reduce(
+      (sum, c) => sum + (c.tvl || 0) / (1 + (c.tvlChange24h || 0) / 100),
+      0,
+    );
+    const tvlChange24h =
+      prevTvl > 0 ? ((totalTvl - prevTvl) / prevTvl) * 100 : 0;
+    const topChain = chains.reduce(
+      (top, c) => ((c.tvl || 0) > (top.tvl || 0) ? c : top),
+      chains[0],
+    );
+    const dexVolume24h = dexVolumes.reduce(
+      (sum, d) => sum + (d.total24h || 0),
+      0,
+    );
+
+    return {
+      defi_market_cap: "",
+      eth_market_cap: "",
+      defi_to_eth_ratio: "",
+      trading_volume_24h: dexVolume24h > 0 ? String(dexVolume24h) : "",
+      defi_dominance: "",
+      top_coin_name: topChain?.name ?? "",
+      top_coin_defi_dominance:
+        totalTvl > 0 ? ((topChain?.tvl || 0) / totalTvl) * 100 : 0,
+      defi_tvl: String(totalTvl),
+      defi_tvl_change_24h: tvlChange24h,
+      top_chain: topChain?.name ?? "",
+      source: "defillama",
+    };
+  } catch (error) {
+    console.error("DefiLlama global DeFi fallback failed:", error);
     return null;
   }
 }

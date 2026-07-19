@@ -17,26 +17,34 @@
  */
 
 import { NextResponse } from 'next/server';
-import { fetchCoinGecko } from '@/lib/coingecko';
-import { COINGECKO_BASE } from '@/lib/constants';
+import { getGlobalMarketData } from '@/lib/market-data';
 
 export const revalidate = 120; // ISR: revalidate every 2 minutes
 
 export async function GET() {
   try {
-    const json = await fetchCoinGecko<{ data: unknown }>(
-      `${COINGECKO_BASE}/global`,
-      { revalidate: 120 }
-    );
+    // getGlobalMarketData has a CoinGecko -> CoinPaprika fallback chain, so this
+    // header widget keeps working when the keyless CoinGecko tier is throttled.
+    const data = await getGlobalMarketData();
 
-    if (!json?.data) {
+    if (!data) {
+      // Degrade to a 200 empty payload so the header MarketWidget renders an
+      // empty state instead of surfacing a 5xx on every page.
       return NextResponse.json(
-        { error: 'Failed to fetch global market data' },
-        { status: 502 }
+        {
+          active_cryptocurrencies: 0,
+          markets: 0,
+          total_market_cap: {},
+          total_volume: {},
+          market_cap_percentage: {},
+          market_cap_change_percentage_24h_usd: 0,
+          updated_at: 0,
+        },
+        { headers: { 'Cache-Control': 'public, s-maxage=30' } },
       );
     }
 
-    return NextResponse.json(json.data, {
+    return NextResponse.json(data, {
       headers: {
         'Cache-Control': 'public, s-maxage=120, stale-while-revalidate=300',
       },
