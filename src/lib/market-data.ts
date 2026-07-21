@@ -1328,7 +1328,10 @@ export async function getCoinDetails(coinId: string) {
 
   try {
     const response = await fetchWithTimeout(
-      `${COINGECKO_BASE}/coins/${coinId}?localization=false&tickers=false&community_data=false&developer_data=false`,
+      // Full payload in ONE call: market data (with multi-window % changes),
+      // exchange tickers, developer/GitHub stats, community stats, sentiment
+      // votes, categories, and links. Surfaced on the coin detail page.
+      `${COINGECKO_BASE}/coins/${coinId}?localization=false&tickers=true&market_data=true&community_data=true&developer_data=true&sparkline=false&price_change_percentage=1h%2C24h%2C7d%2C14d%2C30d%2C1y`,
       5000, // 5 s — leaves budget for CoinPaprika + CoinCap fallbacks within maxDuration
     );
 

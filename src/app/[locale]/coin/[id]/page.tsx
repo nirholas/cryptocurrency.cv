@@ -20,6 +20,23 @@ import { ChevronRight } from 'lucide-react';
 import type { Metadata } from 'next';
 import type { NewsArticle } from '@/lib/crypto-news';
 import PageShareSection from '@/components/PageShareSection';
+import {
+  PricePerformance,
+  ExtendedStats,
+  SentimentBar,
+  ExchangeTickers,
+  DeveloperStats,
+  CommunityStats,
+  Categories,
+  RichLinks,
+  type MarketData,
+  type Ticker,
+  type DeveloperData,
+  type CommunityData,
+  type CoinLinks,
+} from './sections';
+import { AiCoinAnalysis } from './ai-analysis';
+import { CoinLiveData } from './live';
 
 export const revalidate = 60;
 
@@ -33,32 +50,17 @@ interface CoinData {
   name: string;
   image?: { large?: string; small?: string; thumb?: string };
   description?: { en?: string };
-  links?: {
-    homepage?: string[];
-    blockchain_site?: string[];
-    twitter_screen_name?: string;
-    subreddit_url?: string;
-    telegram_channel_identifier?: string;
-  };
+  links?: CoinLinks;
   categories?: string[];
   market_cap_rank?: number;
-  market_data?: {
-    current_price?: { usd?: number };
-    market_cap?: { usd?: number };
-    total_volume?: { usd?: number };
-    high_24h?: { usd?: number };
-    low_24h?: { usd?: number };
+  sentiment_votes_up_percentage?: number;
+  sentiment_votes_down_percentage?: number;
+  tickers?: Ticker[];
+  developer_data?: DeveloperData;
+  community_data?: CommunityData;
+  platforms?: Record<string, string>;
+  market_data?: MarketData & {
     price_change_24h?: number;
-    price_change_percentage_24h?: number;
-    price_change_percentage_7d?: number;
-    price_change_percentage_30d?: number;
-    circulating_supply?: number;
-    total_supply?: number;
-    max_supply?: number;
-    ath?: { usd?: number };
-    ath_date?: { usd?: string };
-    atl?: { usd?: number };
-    atl_date?: { usd?: string };
   };
   last_updated?: string;
 }
@@ -305,6 +307,26 @@ export default async function CoinPage({ params }: Props) {
           </Suspense>
         </div>
 
+        {/* ── AI Analysis (Groq, streamed) ── */}
+        <Suspense
+          fallback={
+            <div className="border-border mb-10 h-40 animate-pulse rounded-xl border bg-(--color-surface)" />
+          }
+        >
+          <AiCoinAnalysis
+            name={coin.name}
+            symbol={coin.symbol}
+            price={md?.current_price?.usd}
+            change24h={md?.price_change_percentage_24h}
+            change7d={md?.price_change_percentage_7d}
+            change30d={md?.price_change_percentage_30d}
+            marketCap={md?.market_cap?.usd}
+            rank={coin.market_cap_rank}
+            athChange={md?.ath_change_percentage?.usd}
+            headlines={relatedNews.map((a) => a.title).filter(Boolean)}
+          />
+        </Suspense>
+
         {/* ── Section 3: Stats Grid ── */}
         <div className="mb-10">
           <h2 className="text-text-primary mb-4 font-serif text-xl font-bold">Market Stats</h2>
@@ -332,6 +354,38 @@ export default async function CoinPage({ params }: Props) {
             <StatCard label="24h Low" value={formatPrice(md?.low_24h?.usd)} />
           </div>
         </div>
+
+        {/* ── Price performance across windows ── */}
+        <PricePerformance md={md} />
+
+        {/* ── Extended market data ── */}
+        <ExtendedStats md={md} />
+
+        {/* ── Live on-chain / DEX / derivatives (client, graceful) ── */}
+        <CoinLiveData
+          coinId={coin.id}
+          symbol={coin.symbol}
+          name={coin.name}
+          contractPlatforms={coin.platforms}
+        />
+
+        {/* ── Top exchange markets ── */}
+        <ExchangeTickers tickers={coin.tickers} coinName={coin.name} />
+
+        {/* ── Community sentiment ── */}
+        <SentimentBar
+          up={coin.sentiment_votes_up_percentage}
+          down={coin.sentiment_votes_down_percentage}
+        />
+
+        {/* ── Developer activity ── */}
+        <DeveloperStats dev={coin.developer_data} />
+
+        {/* ── Community ── */}
+        <CommunityStats community={coin.community_data} />
+
+        {/* ── Categories ── */}
+        <Categories categories={coin.categories} />
 
         {/* ── Section 4: Related News ── */}
         {relatedNews.length > 0 && (
@@ -363,37 +417,7 @@ export default async function CoinPage({ params }: Props) {
         )}
 
         {/* Links */}
-        {coin.links && (
-          <div className="mb-8">
-            <h2 className="text-text-primary mb-3 font-serif text-xl font-bold">Links</h2>
-            <div className="flex flex-wrap gap-2">
-              {coin.links.homepage?.[0] && (
-                <LinkPill href={coin.links.homepage[0]} label="Website" />
-              )}
-              {coin.links.twitter_screen_name && (
-                <LinkPill
-                  href={`https://twitter.com/${coin.links.twitter_screen_name}`}
-                  label="Twitter"
-                />
-              )}
-              {coin.links.subreddit_url && (
-                <LinkPill href={coin.links.subreddit_url} label="Reddit" />
-              )}
-              {coin.links.telegram_channel_identifier && (
-                <LinkPill
-                  href={`https://t.me/${coin.links.telegram_channel_identifier}`}
-                  label="Telegram"
-                />
-              )}
-              {coin.links.blockchain_site
-                ?.filter(Boolean)
-                .slice(0, 2)
-                .map((url) => (
-                  <LinkPill key={url} href={url} label="Explorer" />
-                ))}
-            </div>
-          </div>
-        )}
+        <RichLinks links={coin.links} coinName={coin.name} />
 
         {/* Last updated */}
         {coin.last_updated && (
@@ -461,15 +485,3 @@ function StatCard({
   );
 }
 
-function LinkPill({ href, label }: { href: string; label: string }) {
-  return (
-    <a
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="border-border text-text-secondary inline-flex items-center gap-1 rounded-full border px-3 py-1.5 text-sm transition-colors hover:bg-(--color-bg-secondary)"
-    >
-      {label} ↗
-    </a>
-  );
-}
