@@ -35,6 +35,23 @@ export class AIAuthError extends Error {
   }
 }
 
+/**
+ * Thrown when a provider is out of quota / rate-limited (HTTP 429 or 402).
+ * Treated like an auth error by aiComplete: skip this provider and try the
+ * next one, so an exhausted free tier (e.g. Groq's daily token cap) fails over
+ * instead of surfacing an error.
+ */
+export class AIRateLimitError extends Error {
+  public readonly statusCode: number;
+  public readonly provider: AIProvider;
+  constructor(provider: AIProvider, statusCode: number, message: string) {
+    super(message);
+    this.name = 'AIRateLimitError';
+    this.provider = provider;
+    this.statusCode = statusCode;
+  }
+}
+
 export interface AIConfig {
   provider: AIProvider;
   model: string;
@@ -253,34 +270,33 @@ export async function aiComplete(
     );
   }
 
-  const authErrors: AIAuthError[] = [];
+  const skipErrors: Error[] = [];
 
   for (const config of configs) {
     try {
       return await aiCompleteWithConfig(config, systemPrompt, userPrompt, options);
     } catch (err) {
-      // Auth errors → try next provider
-      if (err instanceof AIAuthError) {
-        console.warn(`AI provider ${config.provider} auth failed, trying next provider...`, err.message);
-        authErrors.push(err);
+      // Auth errors and rate-limit / quota errors → skip this provider, try next
+      if (err instanceof AIAuthError || err instanceof AIRateLimitError) {
+        console.warn(`AI provider ${config.provider} unavailable (${err.name}), trying next provider...`, err.message);
+        skipErrors.push(err);
         continue;
       }
-      // Import and check GroqAuthError dynamically to avoid circular deps
-      if ((err as Error).name === 'GroqAuthError') {
-        const authErr = new AIAuthError(config.provider, 401, (err as Error).message);
-        console.warn(`AI provider ${config.provider} auth failed, trying next provider...`, authErr.message);
-        authErrors.push(authErr);
+      // Groq's own error classes (dynamic name check to avoid circular deps)
+      if ((err as Error).name === 'GroqAuthError' || (err as Error).name === 'GroqRateLimitError') {
+        console.warn(`AI provider ${config.provider} unavailable (${(err as Error).name}), trying next provider...`, (err as Error).message);
+        skipErrors.push(err as Error);
         continue;
       }
-      throw err; // non-auth errors propagate immediately
+      throw err; // other errors propagate immediately
     }
   }
 
-  // All providers failed with auth errors
+  // Every provider was skipped (auth failure or rate-limit / quota)
   throw new AIAuthError(
-    authErrors[0]?.provider ?? 'groq',
-    401,
-    `All configured AI providers failed authentication: ${authErrors.map(e => `${e.provider}: ${e.message}`).join('; ')}`
+    'groq',
+    503,
+    `All configured AI providers unavailable: ${skipErrors.map((e) => e.message).join('; ')}`
   );
 }
 
@@ -314,6 +330,9 @@ async function aiCompleteWithConfig(
     if (!response.ok) {
       if (response.status === 401) {
         throw new AIAuthError('anthropic', 401, `Anthropic API authentication failed: ${response.status}`);
+      }
+      if (response.status === 429 || response.status === 402) {
+        throw new AIRateLimitError('anthropic', response.status, `Anthropic rate-limited / out of quota: ${response.status}`);
       }
       throw new Error(`Anthropic API error: ${response.status}`);
     }
@@ -368,6 +387,9 @@ async function aiCompleteWithConfig(
     const error = await response.text();
     if (response.status === 401 || response.status === 403) {
       throw new AIAuthError(config.provider, response.status, `${config.provider} API authentication failed (${response.status}): ${error}`);
+    }
+    if (response.status === 429 || response.status === 402) {
+      throw new AIRateLimitError(config.provider, response.status, `${config.provider} rate-limited / out of quota (${response.status}): ${error}`);
     }
     throw new Error(`AI API error: ${response.status} - ${error}`);
   }

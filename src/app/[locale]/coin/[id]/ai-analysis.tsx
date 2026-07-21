@@ -10,7 +10,9 @@
  * degrades to null when Groq is unavailable so the page never breaks.
  */
 
-import { isGroqConfigured, promptGroqJsonCached } from '@/lib/groq';
+import { aiComplete, isAIConfigured } from '@/lib/ai-provider';
+import { parseGroqJson } from '@/lib/groq';
+import { aiCache, generateCacheKey, withCache } from '@/lib/cache';
 import { Sparkles } from 'lucide-react';
 
 interface CoinAnalysis {
@@ -38,7 +40,7 @@ function num(n?: number): string {
 }
 
 export async function AiCoinAnalysis(input: AnalysisInput) {
-  if (!isGroqConfigured()) return null;
+  if (!isAIConfigured()) return null;
 
   const facts = [
     `Coin: ${input.name} (${input.symbol.toUpperCase()})`,
@@ -55,16 +57,31 @@ export async function AiCoinAnalysis(input: AnalysisInput) {
 
   const headlines = input.headlines.slice(0, 6).map((h) => `- ${h}`).join('\n');
 
+  const systemPrompt = `You are a concise, neutral crypto market analyst. Given live market data and recent headlines for a cryptocurrency, produce a short factual briefing. Never give financial advice or price predictions. Base everything strictly on the data provided.
+
+Respond as JSON only: {"summary": string (2-3 sentences on current state), "drivers": string[] (2-4 short bullet phrases explaining recent price action), "outlook": "bullish"|"neutral"|"bearish" (short-term technical read from the momentum data only), "risk": string (one sentence noting a key risk or caveat)}`;
+  const userPrompt = `Market data:\n${facts}\n\nRecent headlines:\n${headlines || '(none available)'}`;
+
+  // Cache per coin+data so repeated views don't re-spend tokens. aiComplete
+  // chains providers (Groq -> OpenRouter -> ...) and skips any that are
+  // rate-limited or out of quota, so a full free tier fails over instead of
+  // dropping the section.
   let analysis: CoinAnalysis;
   try {
-    analysis = await promptGroqJsonCached<CoinAnalysis>(
-      'coin-analysis',
-      `You are a concise, neutral crypto market analyst. Given live market data and recent headlines for a cryptocurrency, produce a short factual briefing. Never give financial advice or price predictions. Base everything strictly on the data provided.
-
-Respond as JSON: {"summary": string (2-3 sentences on current state), "drivers": string[] (2-4 short bullet phrases explaining recent price action), "outlook": "bullish"|"neutral"|"bearish" (short-term technical read from the momentum data only), "risk": string (one sentence noting a key risk or caveat)}`,
-      `Market data:\n${facts}\n\nRecent headlines:\n${headlines || '(none available)'}`,
-      { temperature: 0.4, maxTokens: 500 },
-    );
+    const cacheKey = generateCacheKey('coin-analysis', {
+      c: input.symbol.toLowerCase(),
+      p: Math.round(input.price ?? 0),
+      d: Math.round(input.change24h ?? 0),
+    });
+    analysis = await withCache(aiCache, cacheKey, 600, async () => {
+      const raw = await aiComplete(
+        systemPrompt,
+        userPrompt,
+        { temperature: 0.4, maxTokens: 500, jsonMode: true },
+        true, // preferGroq: try the fast free tier first, then fail over
+      );
+      return parseGroqJson<CoinAnalysis>(raw);
+    });
   } catch {
     return null;
   }
