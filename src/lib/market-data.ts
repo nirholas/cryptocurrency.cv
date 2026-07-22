@@ -1340,7 +1340,7 @@ export async function getCoinDetails(coinId: string) {
       const paprikaResult = await getCoinDetailsFallback(coinId);
       if (paprikaResult) return paprikaResult;
       console.warn(`CoinPaprika failed for ${coinId}, trying CoinCap...`);
-      return await getCoinDetailsCoinCap(coinId);
+      return (await getCoinDetailsCoinCap(coinId)) ?? (await getCoinDetailsCoinLore(coinId));
     }
 
     const data = await response.json();
@@ -1351,7 +1351,7 @@ export async function getCoinDetails(coinId: string) {
     // Try fallback chain: CoinPaprika → CoinCap
     const paprikaResult = await getCoinDetailsFallback(coinId);
     if (paprikaResult) return paprikaResult;
-    return await getCoinDetailsCoinCap(coinId);
+    return (await getCoinDetailsCoinCap(coinId)) ?? (await getCoinDetailsCoinLore(coinId));
   }
 }
 
@@ -1625,6 +1625,73 @@ async function getCoinDetailsFallback(
  *   2. If that 404s → search /assets?search={stripped-id} and pick best match
  *      e.g. "avalanche-2" → searches "avalanche", "wrapped-bitcoin" → "wrapped bitcoin"
  */
+/**
+ * Last-resort fallback: build a CoinGecko-compatible coin object from CoinLore
+ * (fully keyless). Covers the top ~100 coins by market cap, which is where
+ * almost all coin-detail traffic lands. Returns null when the coin isn't in
+ * CoinLore's top list (a rarer coin the higher-priority sources already serve).
+ */
+async function getCoinDetailsCoinLore(
+  coinId: string,
+): Promise<Record<string, unknown> | null> {
+  const NAMEID_ALIASES: Record<string, string> = {
+    binancecoin: 'binance-coin',
+    'avalanche-2': 'avalanche',
+    'matic-network': 'polygon',
+    near: 'near-protocol',
+  };
+  try {
+    const res = await fetchWithTimeout(
+      'https://api.coinlore.net/api/tickers/?start=0&limit=100',
+      5000,
+      true,
+    );
+    if (!res.ok) return null;
+    const body = (await res.json()) as { data?: Array<Record<string, string>> };
+    const list = body.data ?? [];
+    const wantNameid = NAMEID_ALIASES[coinId] ?? coinId;
+    const c = list.find(
+      (t) => t.nameid === wantNameid || t.symbol?.toLowerCase() === coinId.toLowerCase(),
+    );
+    if (!c) return null;
+
+    const price = parseFloat(c.price_usd) || 0;
+    const change24h = parseFloat(c.percent_change_24h) || 0;
+    const marketCap = parseFloat(c.market_cap_usd) || 0;
+    const volume = parseFloat(String(c.volume24)) || 0;
+    const supply = parseFloat(c.csupply) || 0;
+    const maxSupply = c.msupply ? parseFloat(c.msupply) : null;
+    return {
+      id: coinId,
+      symbol: c.symbol.toLowerCase(),
+      name: c.name,
+      market_cap_rank: c.rank ? Number(c.rank) : null,
+      categories: [],
+      description: { en: '' },
+      links: { homepage: [], blockchain_site: [] },
+      market_data: {
+        current_price: { usd: price },
+        price_change_percentage_24h: change24h,
+        price_change_percentage_1h_in_currency: {
+          usd: parseFloat(c.percent_change_1h) || 0,
+        },
+        price_change_percentage_7d: parseFloat(c.percent_change_7d) || 0,
+        market_cap: { usd: marketCap },
+        total_volume: { usd: volume },
+        high_24h: { usd: price * (1 + Math.abs(change24h) / 100) },
+        low_24h: { usd: price * (1 - Math.abs(change24h) / 100) },
+        circulating_supply: supply,
+        total_supply: c.tsupply ? parseFloat(c.tsupply) : null,
+        max_supply: maxSupply,
+        fully_diluted_valuation: maxSupply ? { usd: price * maxSupply } : null,
+      },
+      last_updated: new Date().toISOString(),
+    };
+  } catch {
+    return null;
+  }
+}
+
 async function getCoinDetailsCoinCap(
   coinId: string,
 ): Promise<Record<string, unknown> | null> {

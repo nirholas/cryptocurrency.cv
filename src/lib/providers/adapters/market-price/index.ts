@@ -67,6 +67,7 @@ import { coincapAdapter } from './coincap.adapter';
 import { binanceAdapter } from './binance.adapter';
 import { coinmarketcapAdapter } from './coinmarketcap.adapter';
 import { coinpaprikaAdapter } from './coinpaprika.adapter';
+import { coinloreAdapter } from './coinlore.adapter';
 import { cryptocompareAdapter } from './cryptocompare.adapter';
 import { coinbaseAdapter } from './coinbase.adapter';
 import { krakenAdapter } from './kraken.adapter';
@@ -99,6 +100,7 @@ export interface MarketPriceChainOptions {
   includeCoinMarketCap?: boolean;
   /** Whether to include CoinPaprika adapter. Default: true */
   includeCoinPaprika?: boolean;
+  includeCoinLore?: boolean;
   /** Whether to include CryptoCompare adapter. Default: true */
   includeCryptoCompare?: boolean;
   /** Whether to include Coinbase adapter. Default: true */
@@ -139,6 +141,7 @@ export function createMarketPriceChain(
     includeCoinCap = true,
     includeCoinMarketCap = true,
     includeCoinPaprika = true,
+    includeCoinLore = true,
     includeCryptoCompare = true,
     includeCoinbase = true,
     includeKraken = true,
@@ -175,6 +178,10 @@ export function createMarketPriceChain(
 
   if (includeCoinPaprika) {
     chain.addProvider(coinpaprikaAdapter);
+  }
+
+  if (includeCoinLore) {
+    chain.addProvider(coinloreAdapter);
   }
 
   if (includeCryptoCompare) {
