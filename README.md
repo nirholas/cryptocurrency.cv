@@ -1,6 +1,6 @@
 ---
 name: Free Crypto News API  
-type: api
+type: api 
 category: cryptocurrency
 auth: none
 pricing: free
