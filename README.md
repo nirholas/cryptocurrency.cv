@@ -4327,3 +4327,10 @@ curl -X POST https://modelcontextprotocol.name/mcp/free-crypto-news \
 
 > Powered by [modelcontextprotocol.name](https://modelcontextprotocol.name) — the open MCP HTTP gateway
 
+
+## Documentation
+
+Full documentation site: **https://nirholas.github.io/cryptocurrency.cv/**
+
+- [Getting started](docs/getting-started.md) covers install and first run.
+- [Examples](docs/examples.md) has copy-paste snippets.
