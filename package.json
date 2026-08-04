@@ -162,7 +162,7 @@
     "react-dom": "^19.2.8",
     "reading-time": "^1.5.0",
     "recharts": "^3.10.1",
-    "redis": "^5.12.1",
+    "redis": "^6.2.0",
     "rehype-highlight": "^7.0.2",
     "rehype-slug": "^6.0.0",
     "remark-gfm": "^4.0.1",
