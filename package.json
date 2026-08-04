@@ -1,6 +1,6 @@
 {
   "name": "free-crypto-news",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "mcpName": "io.github.nirholas/free-crypto-news",
   "description": "Real-time crypto news aggregator with AI analysis, 12+ sources, sentiment tracking, and full market data. Works with Claude, ChatGPT, Discord, Telegram & more.",
   "private": false,
@@ -245,5 +245,9 @@
   },
   "engines": {
     "node": ">=20.0.0"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/nirholas/free-crypto-news/issues"
+  },
+  "homepage": "https://github.com/nirholas/free-crypto-news#readme"
 }
