@@ -24,6 +24,8 @@ import type { MiddlewareContext, MiddlewareHandler } from './types';
 import {
   PUBLIC_RATE_LIMIT,
   API_CLIENT_RATE_LIMIT,
+  FREE_TIER_RATE_LIMIT,
+  FREE_TIER_PATTERNS,
   REPEAT_429_THRESHOLD,
   REPEAT_429_WINDOW_MS,
   REPEAT_429_BLOCK_MS,
@@ -120,6 +122,15 @@ export function isRepeat429Blocked(ip: string): number | false {
 
 let _rateLimiter: Ratelimit | null = null;
 let _apiRateLimiter: Ratelimit | null = null;
+let _freeTierRateLimiter: Ratelimit | null = null;
+
+type AnonTier = 'public' | 'api' | 'free-tier';
+
+const ANON_TIER_LIMITS: Record<AnonTier, { requests: number; windowMs: number }> = {
+  public: PUBLIC_RATE_LIMIT,
+  api: API_CLIENT_RATE_LIMIT,
+  'free-tier': FREE_TIER_RATE_LIMIT,
+};
 
 function getRedisCredentials() {
   const url = process.env.KV_REST_API_URL ?? process.env.UPSTASH_REDIS_REST_URL;
@@ -147,15 +158,16 @@ function inMemoryRateCheck(
   return { allowed: true, remaining: maxRequests - entry.count, resetAt: entry.resetAt };
 }
 
-function getRateLimiter(tier: 'public' | 'api' = 'public'): Ratelimit | null {
+function getRateLimiter(tier: AnonTier = 'public'): Ratelimit | null {
   const creds = getRedisCredentials();
   if (!creds) return null; // Use in-memory path instead
 
-  const existing = tier === 'api' ? _apiRateLimiter : _rateLimiter;
+  const existing =
+    tier === 'api' ? _apiRateLimiter : tier === 'free-tier' ? _freeTierRateLimiter : _rateLimiter;
   if (existing) return existing;
 
-  const limit = tier === 'api' ? API_CLIENT_RATE_LIMIT : PUBLIC_RATE_LIMIT;
-  const prefix = tier === 'api' ? 'mw:rl:api' : 'mw:rl';
+  const limit = ANON_TIER_LIMITS[tier];
+  const prefix = tier === 'api' ? 'mw:rl:api' : tier === 'free-tier' ? 'mw:rl:free' : 'mw:rl';
 
   const limiter = new Ratelimit({
     redis: new Redis(creds),
@@ -166,20 +178,23 @@ function getRateLimiter(tier: 'public' | 'api' = 'public'): Ratelimit | null {
   });
 
   if (tier === 'api') _apiRateLimiter = limiter;
+  else if (tier === 'free-tier') _freeTierRateLimiter = limiter;
   else _rateLimiter = limiter;
   return limiter;
 }
 
 export async function checkRateLimit(
   key: string,
-  tier: 'public' | 'api' = 'public',
+  tier: AnonTier = 'public',
 ): Promise<{ allowed: boolean; remaining: number; resetAt: number; limit: number }> {
-  const limit = tier === 'api' ? API_CLIENT_RATE_LIMIT : PUBLIC_RATE_LIMIT;
+  const limit = ANON_TIER_LIMITS[tier];
   const limiter = getRateLimiter(tier);
 
-  // No Redis configured — use proper in-memory rate limiting
+  // No Redis configured — use proper in-memory rate limiting. The key carries
+  // the tier so the same IP gets independent windows per tier, mirroring the
+  // per-tier Redis prefixes.
   if (!limiter) {
-    const result = inMemoryRateCheck(key, limit.requests, limit.windowMs);
+    const result = inMemoryRateCheck(`${tier}:${key}`, limit.requests, limit.windowMs);
     return { ...result, limit: limit.requests };
   }
 
@@ -189,7 +204,7 @@ export async function checkRateLimit(
   } catch {
     // Redis error — conservative in-memory fallback at 50% quota
     const fallbackLimit = Math.max(1, Math.floor(limit.requests * 0.5));
-    const result = inMemoryRateCheck(`fallback:${key}`, fallbackLimit, limit.windowMs);
+    const result = inMemoryRateCheck(`fallback:${tier}:${key}`, fallbackLimit, limit.windowMs);
     return { ...result, limit: fallbackLimit };
   }
 }
@@ -394,9 +409,17 @@ export const rateLimitHandler: MiddlewareHandler = async (ctx) => {
       // Usage tracking failure is non-fatal
     }
   } else {
-    // No API key — apply public rate limit to ALL API routes (not just free-tier patterns).
-    // This prevents unauthenticated abuse of any endpoint.
-    const tier = ctx.isApiClient ? 'api' : 'public';
+    // No API key — every API route is rate limited, but the advertised free
+    // product (FREE_TIER_PATTERNS: news, prices, fear-greed, trending, RSS)
+    // gets its own, honest allowance instead of the tight public cap. Those
+    // routes are CDN-cached and the whole point of the product; clamping them
+    // to 10/hour made the site 429 its own readers mid-browse and then
+    // escalate them to a 1-hour 403 via the repeat-429 blocker.
+    const tier: AnonTier = matchesPattern(pathname, FREE_TIER_PATTERNS)
+      ? 'free-tier'
+      : ctx.isApiClient
+        ? 'api'
+        : 'public';
     const rl = await checkRateLimit(`${ctx.clientIp}`, tier);
     ctx.headers['X-RateLimit-Limit'] = rl.limit.toString();
     ctx.headers['X-RateLimit-Remaining'] = rl.remaining.toString();

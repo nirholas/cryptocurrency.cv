@@ -73,10 +73,21 @@ export const AI_ENDPOINT_PATTERNS = [
 
 export const MAX_BODY_SIZE = 10 * 1024 * 1024; // 10 MB
 
-/** Site visitors: 10 req/hour */
+/** Site visitors: 10 req/hour (non-free-tier routes only, see FREE_TIER_RATE_LIMIT) */
 export const PUBLIC_RATE_LIMIT = { requests: 10, windowMs: 3_600_000 };
-/** Programmatic API consumers (no key): 20 req/hour */
+/** Programmatic API consumers (no key): 20 req/hour (non-free-tier routes only) */
 export const API_CLIENT_RATE_LIMIT = { requests: 20, windowMs: 3_600_000 };
+/**
+ * Anonymous requests to FREE_TIER_PATTERNS routes: 120 req/hour per IP.
+ *
+ * These are the advertised free product (news, prices, fear-greed, trending,
+ * RSS) and they are CDN-cached, so the marginal cost of a hit is trivial.
+ * Clamping them to the global 10/hour made the site 429 its own readers within
+ * a minute of browsing and then escalate them to a 1-hour 403 via the
+ * repeat-429 blocker; scrapers pulling faster than 2 req/min still get
+ * limited, and expensive endpoints keep the tight PUBLIC/API limits above.
+ */
+export const FREE_TIER_RATE_LIMIT = { requests: 120, windowMs: 3_600_000 };
 
 /**
  * Tier rate limits applied when a valid API key is present.

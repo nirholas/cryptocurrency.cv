@@ -31,7 +31,11 @@ describe('matchesPattern', () => {
   });
 
   it('should not match non-free-tier routes', () => {
-    expect(matchesPattern('/api/news', FREE_TIER_PATTERNS)).toBe(false);
+    // /api/news IS free tier (the core product); assert against routes that
+    // genuinely are not.
+    expect(matchesPattern('/api/search', FREE_TIER_PATTERNS)).toBe(false);
+    expect(matchesPattern('/api/ai', FREE_TIER_PATTERNS)).toBe(false);
+    expect(matchesPattern('/api/premium/ai/summary', FREE_TIER_PATTERNS)).toBe(false);
   });
 
   it('should match exempt routes', () => {
