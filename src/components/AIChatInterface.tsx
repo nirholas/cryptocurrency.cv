@@ -52,9 +52,18 @@ const SUGGESTED_QUESTIONS = [
 
 // ── Component ──────────────────────────────────────────────────────
 
-export function AIChatInterface() {
+export interface AIChatInterfaceProps {
+  /**
+   * Question to drop into the composer on mount. The /ask page passes the `q`
+   * search param so its example questions (and any shared link) land the reader
+   * on an editable, ready-to-send prompt instead of an empty box.
+   */
+  initialQuestion?: string;
+}
+
+export function AIChatInterface({ initialQuestion = "" }: AIChatInterfaceProps = {}) {
   const [messages, setMessages] = useState<ChatMessage[]>([]);
-  const [input, setInput] = useState("");
+  const [input, setInput] = useState(initialQuestion);
   const [copied, setCopied] = useState(false);
   const [showScrollBtn, setShowScrollBtn] = useState(false);
 
@@ -226,6 +235,17 @@ export function AIChatInterface() {
     setInput(e.target.value);
     autoResizeTextarea(e.target.value);
   };
+
+  // ── Prefill from the URL ───────────────────────────────────────
+  // Navigating between the /ask example questions reuses this instance, so the
+  // initial useState value alone would not pick up a new `?q=`.
+
+  useEffect(() => {
+    if (!initialQuestion) return;
+    setInput(initialQuestion);
+    autoResizeTextarea(initialQuestion);
+    textareaRef.current?.focus();
+  }, [initialQuestion]);
 
   // ── Empty state ────────────────────────────────────────────────
 
