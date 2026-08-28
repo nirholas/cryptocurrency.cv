@@ -43,12 +43,32 @@ const MAX_DEAD = flag('max-dead', null) === null ? null : Number(flag('max-dead'
 const JSON_OUT = flag('json', null);
 const ONLY = flag('only', null);
 
+/**
+ * Slice the RSS_SOURCES object literal out of crypto-news.ts.
+ *
+ * Brace-counted rather than scanning for the next `};`: RSS_SOURCES closes with
+ * `} as const;` and API_SOURCES follows it, so a naive scan swallowed 24 JSON
+ * API sources that are not RSS feeds at all and reported every one as broken.
+ */
+function rssSourcesBlock(src) {
+  const start = src.indexOf('const RSS_SOURCES = {');
+  if (start === -1) throw new Error('RSS_SOURCES not found in crypto-news.ts');
+  const open = src.indexOf('{', start);
+  let depth = 0;
+  for (let i = open; i < src.length; i++) {
+    if (src[i] === '{') depth++;
+    else if (src[i] === '}') {
+      depth--;
+      if (depth === 0) return { block: src.slice(start, i), start, end: i };
+    }
+  }
+  throw new Error('RSS_SOURCES literal is unbalanced');
+}
+
 /** Reads the RSS_SOURCES object literal without importing the TypeScript module. */
 function readSources() {
   const src = readFileSync(SOURCE_FILE, 'utf8');
-  const start = src.indexOf('const RSS_SOURCES = {');
-  if (start === -1) throw new Error(`RSS_SOURCES not found in ${SOURCE_FILE}`);
-  const block = src.slice(start, src.indexOf('\n};', start));
+  const { block } = rssSourcesBlock(src);
   const entries = [...block.matchAll(/(\w+):\s*\{[^}]*?name:\s*'([^']+)'[^}]*?url:\s*'([^']+)'([^}]*)\}/gs)];
   return entries.map(([, key, name, url, tail]) => ({
     key,

@@ -141,6 +141,8 @@ const RSS_SOURCES = {
   messari: {
     name: 'Messari',
     url: 'https://messari.io/rss',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'research',
   },
   thedefireport: {
@@ -200,6 +202,8 @@ const RSS_SOURCES = {
   binance_blog: {
     name: 'Binance Blog',
     url: 'https://www.binance.com/en/blog/rss.xml',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'institutional',
   },
 
@@ -217,7 +221,7 @@ const RSS_SOURCES = {
   // ═══════════════════════════════════════════════════════════════
   btctimes: {
     name: 'BTC Times',
-    url: 'https://www.btctimes.com/feed/',
+    url: 'https://www.btctimes.com/feed.xml',
     category: 'bitcoin',
   },
 
@@ -290,6 +294,8 @@ const RSS_SOURCES = {
   defipulse: {
     name: 'DeFi Pulse Blog',
     url: 'https://defipulse.com/blog/feed/',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'defi',
   },
   defillama_news: {
@@ -300,6 +306,8 @@ const RSS_SOURCES = {
   uniswap_blog: {
     name: 'Uniswap Blog',
     url: 'https://uniswap.org/blog/feed.xml',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'defi',
   },
   aave_blog: {
@@ -315,6 +323,8 @@ const RSS_SOURCES = {
   makerdao_blog: {
     name: 'MakerDAO Blog',
     url: 'https://blog.makerdao.com/feed/',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'defi',
   },
 
@@ -358,6 +368,8 @@ const RSS_SOURCES = {
   delphi_digital: {
     name: 'Delphi Digital',
     url: 'https://members.delphidigital.io/feed',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'research',
   },
   theblockresearch: {
@@ -372,21 +384,29 @@ const RSS_SOURCES = {
   chainlink_blog: {
     name: 'Chainlink Blog',
     url: 'https://blog.chain.link/feed/',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'developer',
   },
   infura_blog: {
     name: 'Infura Blog',
     url: 'https://blog.infura.io/feed/',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'developer',
   },
   thegraph_blog: {
     name: 'The Graph Blog',
     url: 'https://thegraph.com/blog/feed',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'developer',
   },
   foundry_blog: {
     name: 'Foundry Blog',
     url: 'https://book.getfoundry.sh/feed.xml',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'developer',
   },
 
@@ -396,11 +416,13 @@ const RSS_SOURCES = {
   certik_blog: {
     name: 'CertiK Blog',
     url: 'https://www.certik.com/resources/blog/rss.xml',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'security',
   },
   openzeppelin_blog: {
     name: 'OpenZeppelin Blog',
-    url: 'https://blog.openzeppelin.com/feed/',
+    url: 'https://www.openzeppelin.com/news/rss.xml',
     category: 'security',
   },
   trailofbits: {
@@ -411,6 +433,8 @@ const RSS_SOURCES = {
   samczsun: {
     name: 'samczsun Blog',
     url: 'https://samczsun.com/rss/',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'security',
   },
   immunefi_blog: {
@@ -425,6 +449,8 @@ const RSS_SOURCES = {
   fxstreet_crypto: {
     name: 'FXStreet Crypto',
     url: 'https://www.fxstreet.com/cryptocurrencies/news/feed',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'trading',
   },
   tradingview_crypto: {
@@ -449,6 +475,8 @@ const RSS_SOURCES = {
   compassmining_blog: {
     name: 'Compass Mining Blog',
     url: 'https://compassmining.io/education/feed/',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'mining',
   },
 
@@ -463,6 +491,8 @@ const RSS_SOURCES = {
   entrepreneur_crypto: {
     name: 'Entrepreneur',
     url: 'https://www.entrepreneur.com/topic/cryptocurrency/feed',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'mainstream',
   },
   cnbc_crypto: {
@@ -497,6 +527,8 @@ const RSS_SOURCES = {
   playtoearn: {
     name: 'PlayToEarn',
     url: 'https://playtoearn.net/feed/',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'gaming',
   },
   dappradar_blog: {
@@ -520,6 +552,8 @@ const RSS_SOURCES = {
   near_blog: {
     name: 'NEAR Protocol Blog',
     url: 'https://near.org/blog/feed/',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'altl1',
   },
   avalanche_blog: {
@@ -529,7 +563,7 @@ const RSS_SOURCES = {
   },
   sui_blog: {
     name: 'Sui Blog',
-    url: 'https://blog.sui.io/feed/',
+    url: 'https://www.sui.io/blog/rss.xml',
     category: 'altl1',
   },
   aptos_blog: {
@@ -545,6 +579,8 @@ const RSS_SOURCES = {
   polkadot_blog: {
     name: 'Polkadot Blog',
     url: 'https://polkadot.network/blog/feed/',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'altl1',
   },
 
@@ -554,6 +590,8 @@ const RSS_SOURCES = {
   tether_news: {
     name: 'Tether News',
     url: 'https://tether.to/en/news/feed/',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'stablecoin',
   },
 
@@ -563,11 +601,15 @@ const RSS_SOURCES = {
   galaxy_research: {
     name: 'Galaxy Digital Research',
     url: 'https://www.galaxy.com/insights/feed/',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'institutional',
   },
   pantera_capital: {
     name: 'Pantera Capital',
     url: 'https://panteracapital.com/feed/',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'institutional',
   },
   placeholder_vc: {
@@ -578,6 +620,8 @@ const RSS_SOURCES = {
   variant_fund: {
     name: 'Variant Fund',
     url: 'https://variant.fund/writing/rss',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'institutional',
   },
   dragonfly_research: {
@@ -597,6 +641,8 @@ const RSS_SOURCES = {
   bitwise_research: {
     name: 'Bitwise Research',
     url: 'https://bitwiseinvestments.com/feed/',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'etf',
   },
   coinshares_research: {
@@ -606,12 +652,14 @@ const RSS_SOURCES = {
   },
   ark_invest: {
     name: 'ARK Invest',
-    url: 'https://ark-invest.com/articles/feed/',
+    url: 'https://ark-invest.com/feed',
     category: 'etf',
   },
   twentyone_shares: {
     name: '21Shares Research',
     url: 'https://21shares.com/research/feed/',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'etf',
   },
   wisdomtree_blog: {
@@ -667,6 +715,8 @@ const RSS_SOURCES = {
   aqr_insights: {
     name: 'AQR Insights',
     url: 'https://www.aqr.com/Insights/feed',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'quant',
   },
   alpha_architect: {
@@ -836,6 +886,8 @@ const RSS_SOURCES = {
   okx_blog: {
     name: 'OKX Blog',
     url: 'https://www.okx.com/academy/en/feed',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'institutional',
   },
   bybit_blog: {
@@ -851,6 +903,8 @@ const RSS_SOURCES = {
   gemini_blog: {
     name: 'Gemini Blog',
     url: 'https://www.gemini.com/blog/feed',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'institutional',
   },
 
@@ -885,6 +939,8 @@ const RSS_SOURCES = {
   scroll_blog: {
     name: 'Scroll Blog',
     url: 'https://scroll.io/blog/feed',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'layer2',
   },
   linea_blog: {
@@ -907,6 +963,8 @@ const RSS_SOURCES = {
   injective_blog: {
     name: 'Injective Blog',
     url: 'https://blog.injective.com/feed/',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'altl1',
   },
   celestia_blog: {
@@ -919,6 +977,8 @@ const RSS_SOURCES = {
   nostr_blog: {
     name: 'Nostr Protocol',
     url: 'https://nostr.com/feed.xml',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'bitcoin',
   },
 
@@ -926,6 +986,8 @@ const RSS_SOURCES = {
   zcash_blog: {
     name: 'Zcash Blog',
     url: 'https://electriccoin.co/blog/feed/',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'security',
   },
   aztec_blog: {
@@ -943,6 +1005,8 @@ const RSS_SOURCES = {
   ondo_finance: {
     name: 'Ondo Finance Blog',
     url: 'https://blog.ondo.finance/rss/',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'defi',
   },
 
@@ -950,6 +1014,8 @@ const RSS_SOURCES = {
   fetch_ai_blog: {
     name: 'Fetch.ai Blog',
     url: 'https://fetch.ai/blog/feed',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'altl1',
   },
   render_blog: {
@@ -962,6 +1028,8 @@ const RSS_SOURCES = {
   pyth_blog: {
     name: 'Pyth Network Blog',
     url: 'https://pyth.network/blog/feed',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'developer',
   },
   api3_blog: {
@@ -991,6 +1059,8 @@ const RSS_SOURCES = {
   elliptic_blog: {
     name: 'Elliptic Blog',
     url: 'https://www.elliptic.co/blog/rss.xml',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'security',
   },
   // Payments & Stablecoins Extended
@@ -1001,7 +1071,7 @@ const RSS_SOURCES = {
   },
   paypal_newsroom: {
     name: 'PayPal Newsroom',
-    url: 'https://newsroom.paypal-corp.com/feed',
+    url: 'https://newsroom.paypal-corp.com/news?pagetemplate=rss',
     category: 'fintech',
   },
 
@@ -1032,6 +1102,8 @@ const RSS_SOURCES = {
   coinmarketcap_blog: {
     name: 'CoinMarketCap Blog',
     url: 'https://blog.coinmarketcap.com/feed/',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'institutional',
   },
   coingecko_blog: {
@@ -1042,16 +1114,20 @@ const RSS_SOURCES = {
   kucoin_blog: {
     name: 'KuCoin Blog',
     url: 'https://www.kucoin.com/blog/rss.xml',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'institutional',
   },
   cryptocom_blog: {
     name: 'Crypto.com Blog',
     url: 'https://crypto.com/company-news/feed',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'institutional',
   },
   bitget_blog: {
     name: 'Bitget Blog',
-    url: 'https://www.bitget.com/blog/feed',
+    url: 'https://www.bitget.com/news/feed',
     category: 'institutional',
   },
 
@@ -1066,6 +1142,8 @@ const RSS_SOURCES = {
   oneinch_blog: {
     name: '1inch Blog',
     url: 'https://blog.1inch.io/feed',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'defi',
   },
   yearn_blog: {
@@ -1081,6 +1159,8 @@ const RSS_SOURCES = {
   jupiter_blog: {
     name: 'Jupiter Blog',
     url: 'https://station.jup.ag/blog/rss.xml',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'defi',
   },
   morpho_blog: {
@@ -1116,7 +1196,7 @@ const RSS_SOURCES = {
   },
   cftc_press: {
     name: 'CFTC Press Releases',
-    url: 'https://www.cftc.gov/PressRoom/PressReleases/RSS',
+    url: 'https://www.cftc.gov/rss.xml',
     category: 'geopolitical',
   },
   // =========================================================================
@@ -1125,6 +1205,8 @@ const RSS_SOURCES = {
   phantom_blog: {
     name: 'Phantom Blog',
     url: 'https://phantom.app/blog/feed',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'solana',
   },
   marinade_blog: {
@@ -1157,6 +1239,8 @@ const RSS_SOURCES = {
   artemis_blog: {
     name: 'Artemis Blog',
     url: 'https://www.artemis.xyz/blog/feed',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'onchain',
   },
 
@@ -1171,6 +1255,8 @@ const RSS_SOURCES = {
   cryptotvplus: {
     name: 'CryptoTvPlus',
     url: 'https://cryptotvplus.com/feed/',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'general',
   },
   blocktempo: {
@@ -1214,6 +1300,8 @@ const RSS_SOURCES = {
   ronin_blog: {
     name: 'Ronin Blog',
     url: 'https://roninchain.com/blog/feed',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'gaming',
   },
   gala_blog: {
@@ -1228,6 +1316,8 @@ const RSS_SOURCES = {
   risc_zero_blog: {
     name: 'RISC Zero Blog',
     url: 'https://www.risczero.com/blog/feed',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'security',
   },
   espresso_blog: {
@@ -1307,6 +1397,8 @@ const RSS_SOURCES = {
   safe_blog: {
     name: 'Safe (Gnosis Safe) Blog',
     url: 'https://safe.global/blog/feed',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'security',
   },
   biconomy_blog: {
@@ -1405,7 +1497,7 @@ const RSS_SOURCES = {
   },
   paypal_crypto: {
     name: 'PayPal Crypto Newsroom',
-    url: 'https://newsroom.paypal-corp.com/feed',
+    url: 'https://newsroom.paypal-corp.com/news?pagetemplate=rss',
     category: 'stablecoin',
   },
   first_digital: {
@@ -1425,11 +1517,13 @@ const RSS_SOURCES = {
   chaindebrief: {
     name: 'Chain Debrief',
     url: 'https://chaindebrief.com/feed/',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'asia',
   },
   blockhead_tech: {
     name: 'Blockhead',
-    url: 'https://blockhead.co/feed/',
+    url: 'https://www.blockhead.co/latest/rss/',
     category: 'asia',
   },
   bitpinas: {
@@ -1440,6 +1534,8 @@ const RSS_SOURCES = {
   coinlive: {
     name: 'Coinlive',
     url: 'https://www.coinlive.com/feed',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'asia',
   },
 
@@ -1476,6 +1572,8 @@ const RSS_SOURCES = {
   theminermag: {
     name: 'The Miner Mag',
     url: 'https://www.theminermag.com/feed/',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'mining',
   },
   // =========================================================================
@@ -1484,6 +1582,8 @@ const RSS_SOURCES = {
   milkroad: {
     name: 'Milk Road',
     url: 'https://www.milkroad.com/feed/',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'journalism',
   },
   defiprime: {
@@ -1531,11 +1631,15 @@ const RSS_SOURCES = {
   santiment_blog: {
     name: 'Santiment Blog',
     url: 'https://santiment.net/blog/feed/',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'trading',
   },
   ccdata_research: {
     name: 'CCData Research',
     url: 'https://ccdata.io/blog/feed',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'trading',
   },
   coinalyze_blog: {
@@ -1564,6 +1668,8 @@ const RSS_SOURCES = {
   farcaster_blog: {
     name: 'Farcaster Blog',
     url: 'https://www.farcaster.xyz/blog/feed',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'social',
   },
 
@@ -1589,11 +1695,15 @@ const RSS_SOURCES = {
   mempool_space: {
     name: 'Mempool.space Blog',
     url: 'https://mempool.space/blog/feed',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'bitcoin',
   },
   unchained_capital: {
     name: 'Unchained Capital Blog',
     url: 'https://unchained.com/blog/feed/',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'bitcoin',
   },
   blockstream_blog: {
@@ -1626,36 +1736,48 @@ const RSS_SOURCES = {
   business_insider_markets: {
     name: 'Business Insider Markets',
     url: 'https://www.businessinsider.com/sai/rss',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'mainstream',
   },
   fortune_crypto: {
     name: 'Fortune Crypto',
     url: 'https://fortune.com/section/crypto/feed/',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'mainstream',
   },
   vice_tech: {
     name: 'Vice Motherboard',
-    url: 'https://www.vice.com/en/rss/topic/tech',
+    url: 'https://www.vice.com/en/feed',
     category: 'mainstream',
   },
   axios_crypto: {
     name: 'Axios Crypto',
     url: 'https://api.axios.com/feed/newsletters/axios-crypto',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'mainstream',
   },
   thestreet_crypto: {
     name: 'TheStreet Crypto',
     url: 'https://www.thestreet.com/cryptocurrency/feed',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'mainstream',
   },
   benzinga_crypto: {
     name: 'Benzinga Crypto',
     url: 'https://www.benzinga.com/feed/cryptocurrency',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'mainstream',
   },
   kitco_crypto: {
     name: 'Kitco Crypto',
     url: 'https://www.kitco.com/feed/crypto-news.rss',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'mainstream',
   },
 
@@ -1684,6 +1806,8 @@ const RSS_SOURCES = {
   blockchair_news: {
     name: 'Blockchair News',
     url: 'https://blockchair.com/news/feed',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'onchain',
   },
   defined_fi_blog: {
@@ -1722,6 +1846,8 @@ const RSS_SOURCES = {
   mythical_games_blog: {
     name: 'Mythical Games Blog',
     url: 'https://mythicalgames.com/blog/feed',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'gaming',
   },
   animoca_blog: {
@@ -1746,6 +1872,8 @@ const RSS_SOURCES = {
   paragraph_xyz: {
     name: 'Paragraph Blog',
     url: 'https://paragraph.xyz/blog/feed',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'social',
   },
 
@@ -1760,11 +1888,13 @@ const RSS_SOURCES = {
   ripple_blog: {
     name: 'Ripple Blog',
     url: 'https://ripple.com/insights/feed/',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'fintech',
   },
   stellar_blog: {
     name: 'Stellar Blog',
-    url: 'https://stellar.org/blog/feed',
+    url: 'https://stellar.org/blog/rss.xml',
     category: 'fintech',
   },
 
@@ -1782,6 +1912,8 @@ const RSS_SOURCES = {
   securitize_blog: {
     name: 'Securitize Blog',
     url: 'https://securitize.io/blog/feed',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'tradfi',
   },
   polymesh_blog: {
@@ -1792,11 +1924,15 @@ const RSS_SOURCES = {
   blackrock_digital: {
     name: 'BlackRock Digital Assets',
     url: 'https://www.blackrock.com/corporate/insights/digital-assets/rss',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'tradfi',
   },
   franklin_templeton_digital: {
     name: 'Franklin Templeton Digital',
     url: 'https://www.franklintempleton.com/articles/digital-assets/feed',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'tradfi',
   },
 
@@ -1825,11 +1961,15 @@ const RSS_SOURCES = {
   hashdex_research: {
     name: 'Hashdex Research',
     url: 'https://hashdex.com/en/research/feed',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'etf',
   },
   osprey_funds_blog: {
     name: 'Osprey Funds Blog',
     url: 'https://ospreyfunds.io/blog/feed/',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'etf',
   },
 
@@ -1843,7 +1983,7 @@ const RSS_SOURCES = {
   },
   kr_crypto: {
     name: 'Chain Catcher',
-    url: 'https://www.chaincatcher.com/rss',
+    url: 'https://www.chaincatcher.com/rss.xml',
     category: 'asia',
   },
 
@@ -1862,7 +2002,7 @@ const RSS_SOURCES = {
   },
   amberdata_blog: {
     name: 'Amberdata Blog',
-    url: 'https://blog.amberdata.io/rss/',
+    url: 'https://blog.amberdata.io/rss.xml',
     category: 'derivatives',
   },
 
@@ -1876,7 +2016,7 @@ const RSS_SOURCES = {
   },
   ens_blog: {
     name: 'ENS Blog',
-    url: 'https://blog.ens.domains/feed',
+    url: 'https://blog.ens.domains/rss.xml',
     category: 'ethereum',
   },
 
@@ -1886,11 +2026,15 @@ const RSS_SOURCES = {
   metaplex_blog: {
     name: 'Metaplex Blog',
     url: 'https://www.metaplex.com/blog/feed',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'solana',
   },
   squads_blog: {
     name: 'Squads Blog',
     url: 'https://squads.so/blog/feed',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'solana',
   },
   marginfi_blog: {
@@ -1905,6 +2049,8 @@ const RSS_SOURCES = {
   paxos_blog: {
     name: 'Paxos Blog',
     url: 'https://paxos.com/blog/feed/',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'stablecoin',
   },
   makerdao_gov: {
@@ -1918,12 +2064,14 @@ const RSS_SOURCES = {
   // =========================================================================
   blockware_research: {
     name: 'Blockware Solutions Research',
-    url: 'https://www.blockwaresolutions.com/research-and-publications/feed',
+    url: 'https://blockwaresolutions.com/feed/',
     category: 'mining',
   },
   luxor_tech_blog: {
     name: 'Luxor Technology Blog',
     url: 'https://luxor.tech/blog/feed',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'mining',
   },
 
@@ -1963,11 +2111,15 @@ const RSS_SOURCES = {
   dimo_blog: {
     name: 'DIMO Blog',
     url: 'https://dimo.co/blog/feed',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'depin',
   },
   peaq_blog: {
     name: 'peaq Network Blog',
     url: 'https://www.peaq.network/blog/feed',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'depin',
   },
   geodnet_blog: {
@@ -1992,11 +2144,13 @@ const RSS_SOURCES = {
   near_ai_blog: {
     name: 'NEAR AI Blog',
     url: 'https://pages.near.org/blog/feed/',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'ai_crypto',
   },
   zero_gravity_blog: {
     name: '0G Labs Blog',
-    url: 'https://0g.ai/blog/feed',
+    url: 'https://0g.ai/blog/rss.xml',
     category: 'ai_crypto',
   },
   sentient_blog: {
@@ -2022,11 +2176,15 @@ const RSS_SOURCES = {
   stacks_blog: {
     name: 'Stacks Blog',
     url: 'https://www.stacks.org/blog/feed',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'bitcoin',
   },
   bob_bitcoin_blog: {
     name: 'BOB (Build on Bitcoin) Blog',
     url: 'https://blog.gobob.xyz/rss/',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'bitcoin',
   },
   babylonchain_blog: {
@@ -2051,6 +2209,8 @@ const RSS_SOURCES = {
   karak_blog: {
     name: 'Karak Blog',
     url: 'https://blog.karak.network/feed',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'ethereum',
   },
   puffer_finance_blog: {
@@ -2143,16 +2303,22 @@ const RSS_SOURCES = {
   pimlico_blog: {
     name: 'Pimlico Blog',
     url: 'https://www.pimlico.io/blog/feed',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'developer',
   },
   zerodev_blog: {
     name: 'ZeroDev Blog',
     url: 'https://docs.zerodev.app/blog/atom.xml',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'developer',
   },
   rhinestone_blog: {
     name: 'Rhinestone Blog',
     url: 'https://blog.rhinestone.wtf/feed',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'developer',
   },
 
@@ -2167,6 +2333,8 @@ const RSS_SOURCES = {
   mas_singapore: {
     name: 'MAS Singapore Fintech',
     url: 'https://www.mas.gov.sg/rss/fintech',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'geopolitical',
   },
   rba_speeches: {
@@ -2206,6 +2374,8 @@ const RSS_SOURCES = {
   blocmates: {
     name: 'Blocmates',
     url: 'https://blocmates.com/feed/',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'journalism',
   },
 
@@ -2215,11 +2385,15 @@ const RSS_SOURCES = {
   coin_bureau_yt: {
     name: 'Coin Bureau',
     url: 'https://www.youtube.com/feeds/videos.xml?channel_id=UCqK_GSMbpiV8spgD3ZGloSw',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'journalism',
   },
   benjamin_cowen_yt: {
     name: 'Benjamin Cowen',
     url: 'https://www.youtube.com/feeds/videos.xml?channel_id=UCRvqjQPSeaWn-uEx-w0XOIg',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'journalism',
   },
   raoul_pal_yt: {
@@ -2272,11 +2446,13 @@ const RSS_SOURCES = {
   thevrsoldier: {
     name: 'The VR Soldier',
     url: 'https://thevrsoldier.com/feed/',
+    // Disabled 2026-08-28: no feed at this domain (see scripts/repair-sources.mjs).
+    disabled: true,
     category: 'general',
   },
   blockhead_news: {
     name: 'Blockhead News',
-    url: 'https://blockhead.co/feed/',
+    url: 'https://www.blockhead.co/latest/rss/',
     category: 'general',
   },
   cryptodnes: {
@@ -2982,7 +3158,7 @@ const API_SOURCES: Record<string, ApiSource> = {
   // Etherscan Gas Tracker (free)
   etherscan_gas: {
     name: 'Etherscan Gas',
-    url: 'https://api.etherscan.io/api?module=gastracker&action=gasoracle',
+    url: 'https://api.etherscan.io/v2/api?chainid=1&module=gastracker&action=gasoracle',
     category: 'ethereum',
     parser: (data: unknown) => {
       const response = data as {
