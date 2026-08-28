@@ -32,17 +32,21 @@ import { ExactEvmScheme } from '@x402/evm/exact/server';
 import {
   API_PRICING,
   PREMIUM_PRICING,
-  ENDPOINT_METADATA,
   toX402Price,
   usdToUsdc,
 } from '@/lib/x402/pricing';
+import { FACILITATOR_URL, RECEIVE_ADDRESS, CURRENT_NETWORK } from '@/lib/x402/config';
 import {
-  FACILITATOR_URL,
-  RECEIVE_ADDRESS,
-  CURRENT_NETWORK,
-  USDC_ADDRESSES,
-} from '@/lib/x402/config';
-import { ENDPOINT_METADATA_FULL } from '@/lib/openapi/endpoint-metadata.generated';
+  ARBITRUM_USDC,
+  BASE_URL,
+  buildBazaarExtensions,
+  buildInputSchemaForAccepts,
+  buildMppChallenge,
+  buildPaymentRequiredBody,
+  getEndpointMeta,
+  getRoutePrice,
+  GENERIC_OUTPUT_SCHEMA,
+} from '@/lib/x402/payment-required';
 
 const NETWORK = CURRENT_NETWORK as never;
 
@@ -93,14 +97,6 @@ class Caip2FacilitatorBridge {
 // ---------------------------------------------------------------------------
 // ExactEvmScheme with Arbitrum USDC support
 // ---------------------------------------------------------------------------
-
-/** Arbitrum USDC (6 decimals, EIP-3009) */
-const ARBITRUM_USDC = {
-  address: '0xaf88d065e77c8cC2239327C5EDb3A432268e5831',
-  name: 'USD Coin',
-  version: '2',
-  decimals: 6,
-};
 
 /** Create an ExactEvmScheme with a custom money parser for Arbitrum USDC */
 function createArbitrumScheme(): ExactEvmScheme {
@@ -191,207 +187,10 @@ export function getX402Proxy(): (req: NextRequest) => any {
   return _x402;
 }
 
+
 // ---------------------------------------------------------------------------
 // Fallback 402 builder — used when the proxy cannot initialise
 // ---------------------------------------------------------------------------
-
-const USDC_ASSET =
-  USDC_ADDRESSES[NETWORK as keyof typeof USDC_ADDRESSES] ?? USDC_ADDRESSES['eip155:42161'];
-
-const BASE_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://cryptocurrency.cv';
-
-/** Build input schema for the accepts[].outputSchema.input field (x402scan format) */
-function buildInputSchemaForAccepts(
-  path: string,
-  method: string,
-): { method: string; type: string; url: string; parameters?: Record<string, unknown> } {
-  const fullMeta = (
-    ENDPOINT_METADATA_FULL as Record<
-      string,
-      {
-        parameters?: Record<
-          string,
-          { type: string; description: string; required?: boolean; default?: string }
-        >;
-      }
-    >
-  )[path];
-  const legacyMeta = (
-    ENDPOINT_METADATA as Record<
-      string,
-      {
-        parameters?: Record<
-          string,
-          { type: string; description: string; required?: boolean; default?: string }
-        >;
-      }
-    >
-  )[path];
-
-  const params = fullMeta?.parameters ?? legacyMeta?.parameters;
-  const schema: {
-    method: string;
-    type: string;
-    url: string;
-    parameters?: Record<string, unknown>;
-  } = {
-    method,
-    type: 'http',
-    url: `${BASE_URL}${path}`,
-  };
-
-  if (params) {
-    schema.parameters = Object.fromEntries(
-      Object.entries(params).map(([name, p]) => [
-        name,
-        {
-          type: p.type,
-          description: p.description,
-          ...(p.required ? { required: true } : {}),
-          ...(p.default != null ? { default: p.default } : {}),
-        },
-      ]),
-    );
-  }
-
-  return schema;
-}
-
-/** Get the USD price string for a route path */
-function getRoutePrice(path: string): string {
-  const v1Price = (API_PRICING as Record<string, string>)[path];
-  if (v1Price) return v1Price;
-  const premiumConfig = (PREMIUM_PRICING as Record<string, { price: number }>)[path];
-  if (premiumConfig) return `$${premiumConfig.price}`;
-  return '$0.001';
-}
-
-/** Get endpoint metadata (parameters, description) for Bazaar schema */
-function getEndpointMeta(path: string): {
-  description: string;
-  methods: string[];
-  parameters?: Record<
-    string,
-    { type: string; description: string; required?: boolean; default?: string }
-  >;
-  outputSchema?: object;
-} {
-  const full = (
-    ENDPOINT_METADATA_FULL as Record<
-      string,
-      {
-        description?: string;
-        methods?: string[];
-        parameters?: Record<
-          string,
-          { type: string; description: string; required?: boolean; default?: string }
-        >;
-        outputSchema?: object;
-      }
-    >
-  )[path];
-  const legacy = (
-    ENDPOINT_METADATA as Record<
-      string,
-      {
-        description?: string;
-        parameters?: Record<
-          string,
-          { type: string; description: string; required?: boolean; default?: string }
-        >;
-        outputSchema?: object;
-      }
-    >
-  )[path];
-  return {
-    description: full?.description ?? legacy?.description ?? `API endpoint: ${path}`,
-    methods: full?.methods ?? ['GET'],
-    parameters: full?.parameters ?? legacy?.parameters,
-    outputSchema: legacy?.outputSchema ?? full?.outputSchema,
-  };
-}
-
-/**
- * Build the extensions.bazaar block for a 402 response.
- * Includes both `info` (for UI) and `schema` (for validation).
- *
- * `schema` must be a flat JSON Schema (`type: "object"`) describing
- * the input parameters — x402scan validates this as the "inputSchema".
- */
-function buildBazaarExtensions(path: string, method: string) {
-  const meta = getEndpointMeta(path);
-  const params = meta.parameters;
-
-  const inputInfo: Record<string, unknown> = { type: 'http', method };
-
-  // Build a flat JSON Schema for input parameters (required by x402scan)
-  let inputSchema: { type: string; properties: Record<string, unknown>; required?: string[] };
-
-  if (params) {
-    const properties: Record<string, { type: string; description: string }> = {};
-    const required: string[] = [];
-    for (const [name, p] of Object.entries(params)) {
-      properties[name] = {
-        type: p.type === 'number' ? 'number' : 'string',
-        description: p.description,
-      };
-      if (p.required) required.push(name);
-    }
-    inputSchema = {
-      type: 'object',
-      properties,
-      ...(required.length > 0 ? { required } : {}),
-    };
-
-    if (method === 'POST' || method === 'PUT' || method === 'PATCH') {
-      inputInfo.bodyType = 'json';
-      inputInfo.body = inputSchema;
-    } else {
-      inputInfo.queryParams = inputSchema;
-    }
-  } else {
-    inputSchema = { type: 'object', properties: {} };
-    if (method === 'POST' || method === 'PUT' || method === 'PATCH') {
-      inputInfo.bodyType = 'json';
-      inputInfo.body = inputSchema;
-    } else {
-      inputInfo.queryParams = inputSchema;
-    }
-  }
-
-  const outputExample = meta.outputSchema ?? {
-    type: 'object',
-    properties: { success: { type: 'boolean' }, data: { type: 'object' } },
-  };
-
-  return {
-    bazaar: {
-      info: {
-        input: inputInfo,
-        output: outputExample,
-      },
-      // Flat JSON Schema — x402scan reads this as the endpoint's inputSchema
-      schema: inputSchema,
-    },
-  };
-}
-
-/**
- * Build a proper MPP WWW-Authenticate challenge header value.
- * Includes all required parameters: id, method, intent, realm, expires, request.
- */
-function buildMppChallenge(pathname: string, amountAtomic: string): string {
-  const id = `ch_${Date.now().toString(36)}_${Math.random().toString(36).slice(2, 8)}`;
-  const expires = new Date(Date.now() + 300_000).toISOString(); // 5 minutes
-  const requestObj = {
-    currency: USDC_ASSET,
-    amount: amountAtomic,
-    recipient: RECEIVE_ADDRESS,
-  };
-  // Base64url-encode the request JSON
-  const requestB64 = Buffer.from(JSON.stringify(requestObj)).toString('base64url');
-  return `Payment id="${id}" method="tempo" intent="charge" realm="${BASE_URL}" expires="${expires}" request='${requestB64}'`;
-}
 
 /**
  * Build a standards-compliant x402 v2 402 response with accepts array,
@@ -399,58 +198,18 @@ function buildMppChallenge(pathname: string, amountAtomic: string): string {
  *
  * Used as fallback when the SDK proxy cannot initialise, and as the
  * safety net when the proxy throws at request time.
- *
- * @see https://github.com/Merit-Systems/x402scan — validation schema
  */
 function buildFallback402(req: NextRequest): NextResponse {
   const pathname = req.nextUrl.pathname;
-  const price = getRoutePrice(pathname);
-  const amountAtomic = usdToUsdc(price);
+  const amountAtomic = usdToUsdc(getRoutePrice(pathname));
 
-  const meta = getEndpointMeta(pathname);
-  const inputSchema = buildInputSchemaForAccepts(pathname, req.method);
-  const outputSchema = meta.outputSchema ?? {
-    type: 'object',
-    properties: { success: { type: 'boolean' }, data: { type: 'object' } },
-  };
-
-  return NextResponse.json(
-    {
-      x402Version: 2,
-      error: 'Payment Required',
-      accepts: [
-        {
-          scheme: 'exact',
-          network: CURRENT_NETWORK,
-          amount: amountAtomic,
-          asset: USDC_ASSET,
-          payTo: RECEIVE_ADDRESS,
-          maxTimeoutSeconds: 60,
-          extra: {
-            name: ARBITRUM_USDC.name,
-            version: ARBITRUM_USDC.version,
-          },
-          outputSchema: {
-            input: inputSchema,
-            output: outputSchema,
-          },
-        },
-      ],
-      resource: {
-        url: `${BASE_URL}${pathname}`,
-        description: meta.description,
-        mimeType: 'application/json',
-      },
-      extensions: buildBazaarExtensions(pathname, req.method),
+  return NextResponse.json(buildPaymentRequiredBody(pathname, req.method), {
+    status: 402,
+    headers: {
+      'WWW-Authenticate': buildMppChallenge(pathname, amountAtomic),
+      'X-Payment-Required': 'true',
     },
-    {
-      status: 402,
-      headers: {
-        'WWW-Authenticate': buildMppChallenge(pathname, amountAtomic),
-        'X-Payment-Required': 'true',
-      },
-    },
-  );
+  });
 }
 
 /**
@@ -481,23 +240,20 @@ async function augment402Response(res: NextResponse, req: NextRequest): Promise<
   if (!body.resource) {
     body.resource = {
       url: `${BASE_URL}${pathname}`,
-      description: getEndpointMeta(pathname).description,
+      description: getEndpointMeta(pathname, req.method).description,
       mimeType: 'application/json',
     };
   }
 
   // Ensure outputSchema exists in each accepts entry (required by x402scan)
-  const meta = getEndpointMeta(pathname);
+  const meta = getEndpointMeta(pathname, req.method);
   const accepts = body.accepts as Array<Record<string, unknown>> | undefined;
   if (Array.isArray(accepts)) {
     for (const accept of accepts) {
       if (!accept.outputSchema) {
         accept.outputSchema = {
           input: buildInputSchemaForAccepts(pathname, req.method),
-          output: meta.outputSchema ?? {
-            type: 'object',
-            properties: { success: { type: 'boolean' }, data: { type: 'object' } },
-          },
+          output: meta.outputSchema ?? GENERIC_OUTPUT_SCHEMA,
         };
       }
     }

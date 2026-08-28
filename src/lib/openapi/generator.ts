@@ -20,6 +20,7 @@
 
 import { API_PRICING, PREMIUM_PRICING, ENDPOINT_METADATA } from '@/lib/x402/pricing';
 import { getOwnershipProofs } from '@/lib/x402/config';
+import { EXEMPT_PATTERNS, FREE_TIER_PATTERNS, matchesPattern } from '@/middleware/config';
 import { ROUTE_MANIFEST, ROUTE_CATEGORIES } from './routes.generated';
 import { ENDPOINT_METADATA_FULL } from './endpoint-metadata.generated';
 
@@ -27,12 +28,29 @@ import { ENDPOINT_METADATA_FULL } from './endpoint-metadata.generated';
 // Helpers
 // ---------------------------------------------------------------------------
 
-/** Build an x-payment-info block for a fixed-price endpoint */
+/**
+ * Build an x-payment-info block for a fixed-price endpoint.
+ *
+ * The structured shape is what x402scan's discovery parser reads: a `price`
+ * object carrying the pricing mode, an ISO 4217 currency and a decimal-USD
+ * amount, plus `protocols` as objects rather than bare protocol names. The
+ * flat `{ protocols: ['x402'], pricingMode, price }` form this replaced is
+ * still parsed, but only as a legacy fallback (L2_PAYMENT_INFO_LEGACY).
+ *
+ * The amount here is decimal USD. The runtime 402 challenge quotes the same
+ * price in token atomic units (see `usdToUsdc`), which is the units mismatch
+ * x402scan flags as MALFORMED_RUNTIME_AMOUNT when a server confuses the two.
+ *
+ * @see https://x402scan.com/discovery/spec
+ */
 function paymentInfo(usdPrice: string) {
   return {
-    protocols: ['x402'],
-    pricingMode: 'fixed' as const,
-    price: usdPrice.replace('$', ''),
+    price: {
+      mode: 'fixed' as const,
+      currency: 'USD',
+      amount: Number(usdPrice.replace('$', '')).toFixed(6),
+    },
+    protocols: [{ x402: {} }],
   };
 }
 
@@ -100,18 +118,106 @@ const DISCOVERY_EXCLUDED = new Set([
   '/api/cron',
 ]);
 
+/**
+ * True when a route sits behind the x402 gate at runtime.
+ *
+ * Read from the same patterns the middleware gate uses, never from a list kept
+ * in parallel. x402scan treats the live 402 as authoritative over the spec, so
+ * a route advertised as paid that answers 200 to an unpaid probe fails
+ * registration. The free tier (news, prices, market data, the MCP endpoint,
+ * discovery) is large here, and it used to be advertised at $0.001 a call.
+ */
+function isPaidRoute(path: string): boolean {
+  return !matchesPattern(path, EXEMPT_PATTERNS) && !matchesPattern(path, FREE_TIER_PATTERNS);
+}
+
 /** Default query parameters for GET endpoints without explicit schemas */
 const DEFAULT_GET_PARAMS: Record<string, { type: string; description: string; required?: boolean; default?: string }> = {
   limit: { type: 'number', description: 'Maximum number of results to return', default: '50' },
   offset: { type: 'number', description: 'Number of results to skip for pagination', default: '0' },
 };
 
-/** Default request body schema for POST endpoints without explicit schemas */
+/** Default request body schema for endpoints without explicit schemas */
 const DEFAULT_POST_BODY = {
   type: 'object' as const,
   properties: {
     data: { type: 'object', description: 'Request payload' },
   },
+};
+
+/** HTTP methods that carry a JSON request body. DELETE takes query params. */
+const BODY_METHODS = new Set(['post', 'put', 'patch']);
+
+/**
+ * Response schema for a route whose success body could not be derived from its
+ * handler (it proxies an upstream payload, or builds the body dynamically).
+ * Claiming a concrete property list here would be fiction; "a JSON object" is
+ * what the route actually guarantees.
+ */
+const GENERIC_JSON_OBJECT = {
+  type: 'object' as const,
+  description: 'JSON response payload',
+  additionalProperties: true,
+};
+
+/**
+ * Operations whose input is neither a query string nor a JSON payload the
+ * metadata generator can read off the handler.
+ *
+ * `/api/mcp` speaks MCP Streamable HTTP: POST carries a JSON-RPC envelope,
+ * while GET (stream reattach) and DELETE (session teardown) identify the
+ * session with the `Mcp-Session-Id` header and send no body at all. Without
+ * this, DELETE advertised no input schema and POST advertised a generic
+ * `{ data }` body that no MCP client would ever send.
+ *
+ * @see https://modelcontextprotocol.io/specification/basic/transports
+ */
+const MCP_SESSION_HEADER = {
+  name: 'Mcp-Session-Id',
+  in: 'header' as const,
+  required: false,
+  description: 'Session identifier returned by the initialize response',
+  schema: { type: 'string' },
+};
+
+const MANUAL_OPERATIONS: Record<
+  string,
+  Record<string, { parameters?: unknown[]; requestBody?: unknown }>
+> = {
+  '/api/mcp': {
+    get: { parameters: [MCP_SESSION_HEADER] },
+    delete: { parameters: [MCP_SESSION_HEADER] },
+    post: {
+      parameters: [MCP_SESSION_HEADER],
+      requestBody: {
+        required: true,
+        description: 'JSON-RPC 2.0 request envelope',
+        content: {
+          'application/json': {
+            schema: {
+              type: 'object',
+              properties: {
+                jsonrpc: { type: 'string', const: '2.0' },
+                id: { description: 'Request id (omitted for notifications)' },
+                method: {
+                  type: 'string',
+                  description: 'MCP method, e.g. tools/list, tools/call, resources/read',
+                },
+                params: { type: 'object', description: 'Method parameters' },
+              },
+              required: ['jsonrpc', 'method'],
+            },
+          },
+        },
+      },
+    },
+  },
+};
+
+/** Response schema for Server-Sent Events routes. */
+const SSE_STREAM_SCHEMA = {
+  type: 'string' as const,
+  description: 'Server-Sent Events stream: one `data: <json>` frame per update',
 };
 
 // ---------------------------------------------------------------------------
@@ -125,6 +231,7 @@ export function generateOpenAPISpec() {
     // Skip discovery/internal endpoints — they are free and not behind x402
     if (DISCOVERY_EXCLUDED.has(path)) continue;
 
+    const paid = isPaidRoute(path);
     const price = getPrice(path);
 
     // Use comprehensive metadata (generated), fall back to legacy pricing metadata
@@ -134,6 +241,7 @@ export function generateOpenAPISpec() {
       streaming?: boolean;
       parameters?: Record<string, { type: string; description: string; required?: boolean; default?: string }>;
       outputSchema?: object;
+      outputSchemas?: Record<string, object>;
     }>)[path];
     const legacyMeta = (ENDPOINT_METADATA as Record<string, { description?: string; parameters?: Record<string, { type: string; description: string; required?: boolean; default?: string }>; outputSchema?: object }>)[path];
     const premiumMeta = (PREMIUM_PRICING as Record<string, { description?: string }>)[path];
@@ -151,38 +259,48 @@ export function generateOpenAPISpec() {
     for (const method of methods) {
       const methodLower = method.toLowerCase();
 
+      // Every operation carries a response schema. x402scan errors an operation
+      // with none ("Operation has no input or output schema"), so a route whose
+      // body could not be derived from its handler advertises the honest
+      // permissive shape rather than inventing properties it never returns.
+      const methodOutput = fullMeta?.outputSchemas?.[method] ?? outputSchema ?? GENERIC_JSON_OBJECT;
+
       const operation: Record<string, unknown> = {
         summary: description,
         operationId: pathToOperationId(path, method),
         tags: [category],
         responses: {
-          '200': outputSchema
+          '200': fullMeta?.streaming
             ? {
-                description: fullMeta?.streaming ? 'Server-Sent Events stream' : 'Successful response',
-                content: fullMeta?.streaming
-                  ? { 'text/event-stream': { schema: { type: 'string' } } }
-                  : { 'application/json': { schema: outputSchema } },
+                description: 'Server-Sent Events stream',
+                content: { 'text/event-stream': { schema: SSE_STREAM_SCHEMA } },
               }
             : {
-                description: fullMeta?.streaming ? 'Server-Sent Events stream' : 'Successful response',
+                description: 'Successful response',
+                content: { 'application/json': { schema: methodOutput } },
               },
-          '402': { description: 'Payment Required' },
+          // A 402 on a free route is a promise the runtime never keeps.
+          ...(paid ? { '402': { description: 'Payment Required' } } : {}),
         },
-        'x-payment-info': paymentInfo(price),
-        security: [{ X402Payment: [] }],
+        ...(paid ? { 'x-payment-info': paymentInfo(price) } : {}),
+        // `security: []` marks a route as explicitly public. Omitting it
+        // entirely reads as an undeclared auth mode, not as "free".
+        security: paid ? [{ X402Payment: [] }] : [],
       };
 
       // Path parameters apply to every method: DELETE /api/alerts/{id} needs
-      // {id} declared just as much as the GET does.
+      // {id} declared just as much as the GET does. Query parameters do too:
+      // the DELETE handlers read `searchParams`, so scoping them to GET left
+      // DELETE /api/keys and eight siblings with no input schema at all.
       const inPath = pathParams(path);
-      if (methodLower === 'get') {
-        operation.parameters = [...inPath, ...(toOpenAPIParams(params ?? DEFAULT_GET_PARAMS) ?? [])];
-      } else if (inPath.length > 0) {
-        operation.parameters = inPath;
-      }
+      operation.parameters = [
+        ...inPath,
+        ...(toOpenAPIParams(params ?? (methodLower === 'get' ? DEFAULT_GET_PARAMS : undefined)) ?? []),
+      ];
+      if ((operation.parameters as unknown[]).length === 0) delete operation.parameters;
 
-      // Add request body for POST requests — fall back to default JSON body
-      if (methodLower === 'post') {
+      // Methods that carry a JSON body also declare one.
+      if (BODY_METHODS.has(methodLower)) {
         if (params) {
           operation.requestBody = {
             description: 'Request payload',
@@ -214,13 +332,19 @@ export function generateOpenAPISpec() {
         }
       }
 
+      // Curated overrides win: they describe transports the handler scan
+      // cannot infer (see MANUAL_OPERATIONS).
+      const manual = MANUAL_OPERATIONS[path]?.[methodLower];
+      if (manual?.parameters) operation.parameters = manual.parameters;
+      if (manual?.requestBody) operation.requestBody = manual.requestBody;
+
       // Mark streaming endpoints
       if (fullMeta?.streaming) {
         operation['x-streaming'] = true;
       }
 
-      // v1 + non-premium routes also accept API key auth
-      if (!path.startsWith('/api/premium/')) {
+      // v1 + non-premium paid routes also accept API key auth
+      if (paid && !path.startsWith('/api/premium/')) {
         operation.security = [{ ApiKeyAuth: [] }, { X402Payment: [] }];
       }
 
@@ -245,6 +369,9 @@ export function generateOpenAPISpec() {
         'and premium features. Pay per request with USDC via x402.',
       contact: {
         name: 'Crypto Vision News',
+        // x402scan uses info.contact.email to verify origin ownership and to
+        // reach operators about outages, pricing changes and schema breaks.
+        email: process.env.X402_CONTACT_EMAIL || 'support@cryptocurrency.cv',
         url: 'https://github.com/nirholas/free-crypto-news',
       },
       license: {
@@ -255,9 +382,11 @@ export function generateOpenAPISpec() {
         '# Crypto Vision News API — Agent Guide',
         '',
         '## Payment',
-        'All endpoints require x402 micropayment in USDC on Arbitrum (eip155:42161).',
-        'Each operation has x-payment-info with the exact price.',
+        'Operations carrying x-payment-info require an x402 micropayment in USDC',
+        'on Arbitrum (eip155:42161); that block holds the exact price.',
         'Default: $0.001/request. AI endpoints: $0.003-$0.01. Premium: $0.01-$0.20.',
+        'Operations with security: [] are free and need no payment or key: the',
+        'news, market, archive, RSS/Atom and discovery surfaces (see Free below).',
         'Use @x402/fetch (npm), x402-client (Python/Go), or any x402-compatible SDK.',
         'The facilitator verifies payment signatures automatically.',
         '',
@@ -270,7 +399,7 @@ export function generateOpenAPISpec() {
         '',
         '### Get current crypto news',
         'GET /api/v1/news — latest headlines from 300+ sources ($0.001)',
-        'GET /api/v1/breaking — breaking news only ($0.001)',
+        'GET /api/breaking — breaking news only ($0.001)',
         'GET /api/search?q={keywords} — full-text search ($0.001)',
         '',
         '### Market data & prices',
@@ -278,8 +407,8 @@ export function generateOpenAPISpec() {
         'GET /api/v1/market-data — global market overview ($0.002)',
         'GET /api/v1/trending — trending coins ($0.001)',
         'GET /api/v1/fear-greed — Fear & Greed Index ($0.002)',
-        'GET /api/market/gainers — biggest gainers ($0.001)',
-        'GET /api/market/losers — biggest losers ($0.001)',
+        'GET /api/market/gainers — biggest gainers (free)',
+        'GET /api/market/losers — biggest losers (free)',
         '',
         '### AI analysis',
         'GET /api/v1/sentiment?asset=BTC — sentiment analysis ($0.005)',
@@ -317,12 +446,23 @@ export function generateOpenAPISpec() {
         'GET /api/premium/ai/analyze — deep market analysis ($0.05)',
         'GET /api/premium/whales/transactions — whale tracking ($0.05)',
         'GET /api/premium/smart-money — institutional flows ($0.05)',
-        'GET /api/premium/stream/prices — real-time price SSE ($0.05)',
+        'GET /api/premium/market/history — deep historical market data ($0.05)',
         '',
         '## Response format',
         'All endpoints return JSON. Most include { success: boolean, data: ... }.',
         'Pagination: ?page=1&per_page=100 or ?limit=50&offset=0.',
         'Errors: { error: string, code: string }.',
+        '',
+        '### Free (no payment, no key)',
+        'GET /api/news — headlines, the core free feed',
+        'GET /api/market/* — prices, gainers, losers, dominance, heatmap, tickers',
+        'GET /api/market/coins — coin list and metadata',
+        'GET /api/fear-greed — Fear & Greed Index',
+        'GET /api/trending — trending topics',
+        'GET /api/archive/* — historical news archive',
+        'GET /api/article, /api/articles — individual and listed articles',
+        'GET /api/rss, /api/atom — feeds',
+        'POST /api/mcp — hosted MCP server (Streamable HTTP)',
         '',
         '## Discovery endpoints (free, no payment)',
         'GET /openapi.json — this OpenAPI spec',

@@ -30,6 +30,7 @@ import {
 } from '@/lib/x402/config';
 import { API_PRICING, PREMIUM_PRICING, usdToUsdc, ENDPOINT_METADATA } from '@/lib/x402/pricing';
 import { EXEMPT_PATTERNS, FREE_TIER_PATTERNS, matchesPattern } from '@/middleware/config';
+import { GENERIC_OUTPUT_SCHEMA } from '@/lib/x402/payment-required';
 
 const BASE_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://cryptocurrency.cv';
 const NETWORK = CURRENT_NETWORK as string;
@@ -127,15 +128,30 @@ function buildInputSchema(
   return schema;
 }
 
-/** Build output schema for a route */
-function buildOutputSchema(path: string): object | null {
+/**
+ * Build the response schema for a route's method.
+ *
+ * Prefers the schema derived from the handler's own success bodies, then any
+ * hand-written one, and finally the honest open-object shape. Returning null
+ * (which this used to do for every route without a curated schema) reads to a
+ * consumer as "this endpoint has no documented response".
+ */
+function buildOutputSchema(path: string, method: string): object {
+  const fullMeta = (
+    ENDPOINT_METADATA_FULL as Record<
+      string,
+      { outputSchema?: object; outputSchemas?: Record<string, object> }
+    >
+  )[path];
+  const derived = fullMeta?.outputSchemas?.[method.toUpperCase()];
+  if (derived) return derived;
+
   const legacyMeta = (ENDPOINT_METADATA as Record<string, { outputSchema?: object }>)[path];
   if (legacyMeta?.outputSchema) return legacyMeta.outputSchema;
 
-  const fullMeta = (ENDPOINT_METADATA_FULL as Record<string, { outputSchema?: object }>)[path];
   if (fullMeta?.outputSchema) return fullMeta.outputSchema;
 
-  return null;
+  return GENERIC_OUTPUT_SCHEMA;
 }
 
 export interface X402Resource {
@@ -160,7 +176,7 @@ export interface X402Accept {
   extra: { name: string; version: string };
   outputSchema: {
     input: { method: string; type: string; url: string; parameters?: Record<string, unknown> };
-    output: object | null;
+    output: object;
   };
 }
 
@@ -235,7 +251,7 @@ export function buildX402Discovery(): X402Discovery {
     for (const method of methods) {
       const fullUrl = `${BASE_URL}${path}`;
       const inputSchema = buildInputSchema(path, method);
-      const outputSchema = buildOutputSchema(path);
+      const outputSchema = buildOutputSchema(path, method);
 
       resources.push({
         resource: fullUrl,

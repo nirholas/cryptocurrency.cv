@@ -178,6 +178,151 @@ function isStreaming(content) {
   );
 }
 
+// ─── Response (output) schema extraction ─────────────────────────────────────
+//
+// x402scan rejects an operation with no output schema ("Input/Output Schema
+// Missing"), so every listed route needs one. Rather than hand-write 400
+// schemas that would drift the moment a handler changes, derive them from the
+// handler itself: read the top-level keys of every success JSON body the
+// exported method actually returns, and infer each key's type from its literal.
+// Anything not statically knowable is left untyped rather than guessed.
+
+/** Return the substring inside the bracket that `openIdx` points at. */
+function matchBalanced(src, openIdx) {
+  let depth = 0;
+  let inString = null;
+  let escaped = false;
+  for (let i = openIdx; i < src.length; i++) {
+    const c = src[i];
+    if (escaped) { escaped = false; continue; }
+    if (c === "\\") { escaped = true; continue; }
+    if (inString) { if (c === inString) inString = null; continue; }
+    if (c === '"' || c === "'" || c === "`") { inString = c; continue; }
+    if (c === "(" || c === "{" || c === "[") depth++;
+    else if (c === ")" || c === "}" || c === "]") {
+      depth--;
+      if (depth === 0) return src.slice(openIdx + 1, i);
+    }
+  }
+  return null;
+}
+
+/** Split `a, b, c` on commas that sit outside brackets and strings. */
+function splitTopLevel(src) {
+  const parts = [];
+  let depth = 0;
+  let inString = null;
+  let escaped = false;
+  let start = 0;
+  for (let i = 0; i < src.length; i++) {
+    const c = src[i];
+    if (escaped) { escaped = false; continue; }
+    if (c === "\\") { escaped = true; continue; }
+    if (inString) { if (c === inString) inString = null; continue; }
+    if (c === '"' || c === "'" || c === "`") { inString = c; continue; }
+    if (c === "(" || c === "{" || c === "[") depth++;
+    else if (c === ")" || c === "}" || c === "]") depth--;
+    else if (c === "," && depth === 0) { parts.push(src.slice(start, i)); start = i + 1; }
+  }
+  parts.push(src.slice(start));
+  return parts;
+}
+
+/** Top-level `key: value` pairs of an object literal, or null if not one. */
+function objectLiteralEntries(src) {
+  const trimmed = src.trim();
+  if (!trimmed.startsWith("{") || !trimmed.endsWith("}")) return null;
+  const entries = [];
+  for (let part of splitTopLevel(trimmed.slice(1, -1))) {
+    part = part.replace(/\/\/[^\n]*/g, "").trim();
+    if (!part) continue;
+    if (part.startsWith("...")) { entries.push({ spread: true }); continue; }
+    const key = part.match(/^(?:(['"])([A-Za-z_$][\w$]*)\1|([A-Za-z_$][\w$]*))\s*(:|$)/);
+    if (!key) return null;
+    const name = key[2] || key[3];
+    const value = key[4] === ":" ? part.slice(part.indexOf(":") + 1).trim() : null;
+    entries.push({ name, value });
+  }
+  return entries;
+}
+
+/** Infer a JSON Schema type from a value expression, or null when unknowable. */
+function inferJsonType(expr) {
+  if (expr == null) return null;
+  const s = expr.trim();
+  if (/^(true|false)\b/.test(s)) return "boolean";
+  if (/^-?\d/.test(s)) return "number";
+  if (/^['"`]/.test(s)) return "string";
+  if (s.startsWith("[")) return "array";
+  if (s.startsWith("{")) return "object";
+  if (/^new Date\(/.test(s) || /\.toISOString\(\)$/.test(s)) return "string";
+  if (/^Date\.now\(\)$/.test(s)) return "number";
+  if (/^(String|`)/.test(s)) return "string";
+  if (/^(Number|parseInt|parseFloat)\(/.test(s)) return "number";
+  if (/^(Boolean|!)/.test(s)) return "boolean";
+  if (/^(Object\.(keys|values|entries)|Array\.from)\(/.test(s)) return "array";
+  if (/\.(map|filter|slice|sort|concat)\([\s\S]*\)$/.test(s)) return "array";
+  if (/\.length$/.test(s)) return "number";
+  return null;
+}
+
+/** Body of `export [async] function NAME(...)`, or null when absent. */
+function methodBody(content, method) {
+  const re = new RegExp(`export\\s+(?:async\\s+)?function\\s+${method}\\b`);
+  const m = content.match(re);
+  if (!m) return null;
+  const brace = content.indexOf("{", m.index + m[0].length);
+  if (brace === -1) return null;
+  return matchBalanced(content, brace);
+}
+
+/** Emitters whose first argument is the success body of a 2xx JSON response. */
+const JSON_EMITTERS = /(?:NextResponse|Response)\.json\s*\(|(?<![.\w])jsonResponse\s*\(/g;
+
+/**
+ * Build a JSON Schema for one method's 200 response by unioning the top-level
+ * keys of every non-error JSON body it returns.
+ */
+function extractOutputSchema(content, method) {
+  const scope = methodBody(content, method) ?? content;
+  const properties = {};
+  let sawSpread = false;
+  let matched = false;
+
+  JSON_EMITTERS.lastIndex = 0;
+  let m;
+  while ((m = JSON_EMITTERS.exec(scope)) !== null) {
+    const args = matchBalanced(scope, JSON_EMITTERS.lastIndex - 1);
+    if (args === null) continue;
+    const [bodyArg, ...rest] = splitTopLevel(args);
+    // Error branches carry an explicit non-2xx status in the options argument.
+    if (rest.some((a) => /status\s*:\s*[45]\d\d/.test(a))) continue;
+    const entries = objectLiteralEntries(bodyArg);
+    if (!entries) continue;
+    const names = entries.filter((e) => !e.spread).map((e) => e.name);
+    // `{ error: ... }` with no payload is a failure body regardless of status.
+    if (names.length > 0 && names.every((n) => n === "error" || n === "code" || n === "message")) continue;
+    matched = true;
+    for (const entry of entries) {
+      if (entry.spread) { sawSpread = true; continue; }
+      const type = inferJsonType(entry.value);
+      if (!(entry.name in properties)) properties[entry.name] = type;
+      else if (properties[entry.name] !== type) properties[entry.name] = null;
+    }
+  }
+
+  if (!matched || Object.keys(properties).length === 0) return null;
+
+  const schema = {
+    type: "object",
+    properties: Object.fromEntries(
+      Object.entries(properties).map(([name, type]) => [name, type ? { type } : {}]),
+    ),
+  };
+  if (sawSpread) schema.additionalProperties = true;
+  return schema;
+}
+
 function escapeRegex(str) {
   return str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
@@ -745,6 +890,17 @@ for (const { path: routePath, category } of routeEntries) {
     entry.streaming = true;
   }
 
+  // Per-method response schemas. x402scan rejects operations with no output
+  // schema, and a streaming route's body is an SSE stream, not JSON.
+  if (!streaming) {
+    const outputSchemas = {};
+    for (const method of methods) {
+      const schema = extractOutputSchema(content, method);
+      if (schema) outputSchemas[method] = schema;
+    }
+    if (Object.keys(outputSchemas).length > 0) entry.outputSchemas = outputSchemas;
+  }
+
   metadata[routePath] = entry;
   processedCount++;
 }
@@ -796,6 +952,8 @@ import type { EndpointMeta } from '@/lib/x402/pricing';
 export interface EndpointMetaExtended extends EndpointMeta {
   methods?: string[];
   streaming?: boolean;
+  /** Response schema per HTTP method, derived from the handler's success bodies. */
+  outputSchemas?: Record<string, object>;
 }
 
 /**
@@ -835,6 +993,10 @@ for (const routePath of sortedPaths) {
     lines.push(`    },`);
   }
 
+  if (entry.outputSchemas) {
+    lines.push(`    outputSchemas: ${JSON.stringify(entry.outputSchemas)},`);
+  }
+
   lines.push(`  },\n`);
 }
 
@@ -855,4 +1017,7 @@ console.log(
 );
 console.log(
   `  ${Object.values(metadata).filter((e) => e.methods).length} with non-GET methods`
+);
+console.log(
+  `  ${Object.values(metadata).filter((e) => e.outputSchemas).length} with derived response schemas`
 );

@@ -8,7 +8,7 @@
  * AUTO-GENERATED — Do not edit manually.
  * Run: node scripts/generate-endpoint-metadata.js
  *
- * Generated: 2026-08-27T13:49:47.315Z
+ * Generated: 2026-08-28T02:08:43.532Z
  * Total endpoints: 394
  *
  * Comprehensive endpoint metadata for OpenAPI spec generation,
@@ -20,6 +20,8 @@ import type { EndpointMeta } from '@/lib/x402/pricing';
 export interface EndpointMetaExtended extends EndpointMeta {
   methods?: string[];
   streaming?: boolean;
+  /** Response schema per HTTP method, derived from the handler's success bodies. */
+  outputSchemas?: Record<string, object>;
 }
 
 /**
@@ -46,11 +48,13 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       limit: { type: "number", description: "Maximum number of results to return", default: "50" },
       endpoint: { type: "string", description: "Specific endpoint to query" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"success":{"type":"boolean"},"data":{},"count":{"type":"number"}}},"POST":{"type":"object","properties":{"success":{"type":"boolean"},"data":{}}}},
   },
 
   "/api/ai": {
     description: "AI-powered analysis and intelligence",
     methods: ["GET", "POST"],
+    outputSchemas: {"GET":{"type":"object","properties":{"configured":{},"provider":{},"availableActions":{"type":"array"},"usage":{"type":"object"}}},"POST":{"type":"object","properties":{"success":{"type":"boolean"},"action":{},"provider":{},"result":{}}}},
   },
 
   "/api/ai-anchor": {
@@ -60,6 +64,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       action: { type: "string", description: "API action to perform", default: "info" },
       jobId: { type: "string", description: "Async job identifier" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"success":{"type":"boolean"},"anchors":{},"job":{},"videos":{"type":"array"},"service":{"type":"string"},"description":{"type":"string"},"features":{"type":"array"},"pricing":{"type":"object"},"integrations":{"type":"object"},"_links":{"type":"object"}}},"POST":{"type":"object","properties":{"success":{"type":"boolean"},"jobId":{},"job":{},"message":{"type":"string"},"estimatedTime":{"type":"string"},"checkStatus":{"type":"string"},"script":{},"wordCount":{"type":"number"},"estimatedDuration":{},"articleCount":{"type":"number"}}}},
   },
 
   "/api/ai/blog-generator": {
@@ -70,6 +75,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       days: { type: "number", description: "Number of days of historical data", default: "7" },
       commit: { type: "string", description: "Commit changes (true/false)" },
     },
+    outputSchemas: {"POST":{"type":"object","properties":{"success":{"type":"boolean"},"generated":{"type":"number"},"date":{},"articlesAnalysed":{"type":"number"},"posts":{"type":"array"}},"additionalProperties":true},"GET":{"type":"object","properties":{"endpoint":{"type":"string"},"description":{"type":"string"},"params":{"type":"object"},"requires":{"type":"array"},"optional":{"type":"array"},"example":{"type":"string"}}}},
   },
 
   "/api/ai/brief": {
@@ -78,24 +84,29 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       date: { type: "string", description: "Date in YYYY-MM-DD format" },
       format: { type: "string", description: "Response format", default: "full" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"success":{"type":"boolean"},"brief":{}}}},
   },
 
   "/api/ai/correlation": {
     description: "AI-driven correlation analysis between crypto assets",
+    outputSchemas: {"GET":{"type":"object","properties":{"success":{"type":"boolean"},"correlations":{},"summary":{},"significantMovers":{},"articlesAnalyzed":{"type":"number"},"coinsAnalyzed":{"type":"number"},"generatedAt":{"type":"string"}}}},
   },
 
   "/api/ai/counter": {
     description: "AI counter-argument generation for crypto narratives",
     methods: ["POST", "GET"],
+    outputSchemas: {"POST":{"type":"object","properties":{"success":{"type":"boolean"},"counter":{}}},"GET":{"type":"object","properties":{"endpoint":{"type":"string"},"method":{"type":"string"},"description":{"type":"string"},"configured":{},"usage":{"type":"object"},"response":{"type":"object"}}}},
   },
 
   "/api/ai/cross-lingual": {
     description: "Cross-lingual crypto news analysis and translation",
+    outputSchemas: {"GET":{"type":"object","properties":{"success":{"type":"boolean"},"message":{"type":"string"},"hint":{"type":"string"},"articleCounts":{"type":"object"}},"additionalProperties":true}},
   },
 
   "/api/ai/debate": {
     description: "AI-powered debate between bull and bear perspectives",
     methods: ["POST", "GET"],
+    outputSchemas: {"POST":{"type":"object","properties":{"success":{"type":"boolean"},"debate":{}}},"GET":{"type":"object","properties":{"endpoint":{"type":"string"},"method":{"type":"string"},"description":{"type":"string"},"configured":{},"usage":{"type":"object"},"response":{"type":"object"}}}},
   },
 
   "/api/ai/digest": {
@@ -115,6 +126,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       text: { type: "number", description: "Filter by text" },
       types: { type: "string", description: "Filter by types" },
     },
+    outputSchemas: {"POST":{"type":"object","properties":{"entities":{},"count":{"type":"number"},"types":{"type":"array"}}}},
   },
 
   "/api/ai/entities/extract": {
@@ -133,6 +145,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       topic: { type: "string", description: "Topic or subject to analyze" },
       includePrice: { type: "string", description: "Filter by includePrice" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"success":{"type":"boolean"},"topic":{},"message":{"type":"string"},"suggestion":{"type":"string"},"availableTopics":{"type":"array"},"explanation":{},"articleCount":{"type":"number"},"recentHeadlines":{"type":"array"},"generatedAt":{"type":"string"}}}},
   },
 
   "/api/ai/flash-briefing": {
@@ -140,6 +153,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
     parameters: {
       stories: { type: "number", description: "Filter by stories", default: "5" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"success":{"type":"boolean"},"articlesAnalyzed":{"type":"number"}},"additionalProperties":true}},
   },
 
   "/api/ai/narratives": {
@@ -147,6 +161,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
     parameters: {
       predict: { type: "string", description: "Filter by predict" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"success":{"type":"boolean"},"error":{"type":"string"},"availableNarratives":{"type":"array"},"narrative":{"type":"object"},"prediction":{},"generatedAt":{"type":"string"},"marketCycle":{},"headlinesAnalyzed":{"type":"number"}},"additionalProperties":true}},
   },
 
   "/api/ai/oracle": {
@@ -155,11 +170,13 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
     parameters: {
       q: { type: "string", description: "Search query string" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"answer":{},"sources":{}}}},
   },
 
   "/api/ai/portfolio-news": {
     description: "AI-curated news relevant to a specific portfolio",
     methods: ["POST", "GET"],
+    outputSchemas: {"POST":{"type":"object","properties":{"success":{"type":"boolean"},"portfolioSize":{"type":"number"},"articlesAnalyzed":{"type":"number"},"relevantArticles":{"type":"number"},"byUrgency":{"type":"object"},"articles":{"type":"object"},"generatedAt":{"type":"string"}}}},
   },
 
   "/api/ai/relationships": {
@@ -168,6 +185,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
     parameters: {
       text: { type: "string", description: "Filter by text", required: true },
     },
+    outputSchemas: {"POST":{"type":"object","properties":{"text_length":{"type":"number"},"relationships":{},"count":{"type":"number"}}}},
   },
 
   "/api/ai/research": {
@@ -178,11 +196,13 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       compare: { type: "string", description: "Filter by compare" },
       contrarian: { type: "string", description: "Filter by contrarian" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"success":{"type":"boolean"},"error":{"type":"string"},"asset1Count":{"type":"number"},"asset2Count":{"type":"number"},"suggestion":{"type":"string"},"availableTopics":{"type":"array"},"quickTake":{},"articlesAnalyzed":{"type":"number"},"report":{}},"additionalProperties":true}},
   },
 
   "/api/ai/social": {
     description: "AI analysis of social media crypto sentiment",
     methods: ["POST", "GET"],
+    outputSchemas: {"POST":{"type":"object","properties":{"success":{"type":"boolean"},"meta":{"type":"object"}},"additionalProperties":true},"GET":{"type":"object","properties":{"endpoint":{"type":"string"},"description":{"type":"string"},"body":{"type":"object"},"notes":{"type":"string"},"requires":{"type":"array"},"example":{"type":"object"}}}},
   },
 
   "/api/ai/source-quality": {
@@ -193,6 +213,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       category: { type: "string", description: "Filter by category" },
       clickbait: { type: "string", description: "Filter by clickbait" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"success":{"type":"boolean"},"articlesAnalyzed":{"type":"number"},"clickbaitCount":{"type":"number"},"clickbaitPercentage":{},"averageClickbaitScore":{},"worstOffenders":{"type":"array"},"cleanArticles":{"type":"array"},"generatedAt":{"type":"string"},"error":{"type":"string"},"availableSources":{"type":"array"},"sourceQuality":{},"rankings":{},"totalSources":{"type":"number"},"totalArticles":{"type":"number"},"sources":{"type":"array"},"hint":{"type":"string"}}},"POST":{"type":"object","properties":{"success":{"type":"boolean"},"quality":{},"clickbait":{},"originality":{"type":"object"},"generatedAt":{"type":"string"}}}},
   },
 
   "/api/ai/summarize": {
@@ -203,6 +224,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       text: { type: "string", description: "Filter by text" },
       type: { type: "string", description: "Data or content type" },
     },
+    outputSchemas: {"POST":{"type":"object","properties":{"summary":{},"type":{},"originalLength":{"type":"number"},"summaryLength":{"type":"number"}}}},
   },
 
   "/api/ai/summarize/stream": {
@@ -218,6 +240,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       limit: { type: "number", description: "Maximum number of results to return", default: "5" },
       threshold: { type: "number", description: "Filter by threshold", default: "0.4" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"success":{"type":"boolean"},"synthesizedStories":{"type":"array"},"clustersFound":{"type":"number"},"articlesAnalyzed":{"type":"number"},"generatedAt":{"type":"string"}}},"POST":{"type":"object","properties":{"success":{"type":"boolean"},"synthesis":{},"generatedAt":{"type":"string"}}}},
   },
 
   "/api/airdrops": {
@@ -226,6 +249,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       status: { type: "string", description: "Filter by status" },
       limit: { type: "number", description: "Maximum number of results to return", default: "50" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"airdrops":{},"total":{"type":"number"},"active":{"type":"number"},"upcoming":{"type":"number"}}}},
   },
 
   "/api/alerts": {
@@ -238,6 +262,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       alertId: { type: "string", description: "Filter by alertId" },
       id: { type: "string", description: "Unique identifier" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"checked":{"type":"boolean"},"notifications":{"type":"object"},"results":{},"evaluated":{"type":"boolean"},"eventsTriggered":{"type":"number"},"events":{},"legacy":{},"enhanced":{},"alerts":{},"total":{"type":"number"},"history":{}}},"POST":{"type":"object","properties":{"alert":{},"success":{"type":"boolean"}}},"DELETE":{"type":"object","properties":{"success":{},"message":{}}},"PATCH":{"type":"object","properties":{"success":{},"message":{}}}},
   },
 
   "/api/alerts/stream": {
@@ -262,6 +287,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
   "/api/alexa": {
     description: "Alexa skill integration endpoint",
     methods: ["POST", "GET"],
+    outputSchemas: {"GET":{"type":"object","properties":{"skill":{"type":"string"},"version":{"type":"string"},"description":{"type":"string"},"intents":{"type":"array"},"invocationName":{"type":"string"},"examplePhrases":{"type":"array"},"endpoint":{"type":"string"}}}},
   },
 
   "/api/analytics/anomalies": {
@@ -281,6 +307,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       asset: { type: "string", description: "Asset identifier (e.g., BTC, ETH)" },
       limit: { type: "number", description: "Maximum number of results to return", default: "50" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"event":{},"events":{},"count":{"type":"number"},"timestamp":{"type":"string"}}},"POST":{"type":"object","properties":{"success":{"type":"boolean"},"event":{},"analysis":{},"assessment":{}}}},
   },
 
   "/api/analytics/credibility": {
@@ -294,6 +321,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
   "/api/analytics/events": {
     description: "Event detection and impact analysis",
     methods: ["POST", "GET"],
+    outputSchemas: {"GET":{"type":"object","properties":{"buffered":{"type":"number"},"maxBuffer":{},"eventCounts":{},"oldestEvent":{},"newestEvent":{}}}},
   },
 
   "/api/analytics/forensics": {
@@ -304,10 +332,12 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       source: { type: "string", description: "Filter by news source" },
       article: { type: "string", description: "Filter by article" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"success":{"type":"boolean"},"data":{}}},"POST":{"type":"object","properties":{"success":{"type":"boolean"},"data":{}}}},
   },
 
   "/api/analytics/gaps": {
     description: "Coverage gap detection in crypto news",
+    outputSchemas: {"GET":{"type":"object","properties":{"analysis_time":{"type":"string"},"total_coins_analyzed":{"type":"number"},"total_articles_analyzed":{"type":"number"},"coverage_gaps":{},"high_coverage":{},"coverage_rate":{}}}},
   },
 
   "/api/analytics/headlines": {
@@ -327,6 +357,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       platform: { type: "string", description: "Filter by platform" },
       sort: { type: "string", description: "Sort field", default: "credibility" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"influencers":{},"message":{"type":"string"},"stats":{},"tiers":{},"filters":{"type":"object"},"generatedAt":{"type":"string"},"disclaimer":{"type":"string"}}}},
   },
 
   "/api/analytics/news-onchain": {
@@ -334,6 +365,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
     parameters: {
       hours: { type: "number", description: "Filter by hours", default: "24" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"analysis_period":{"type":"string"},"total_news_analyzed":{"type":"number"},"correlations_found":{"type":"number"},"significant_price_moves":{"type":"number"},"correlations":{}}}},
   },
 
   "/api/analytics/usage": {
@@ -353,6 +385,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       topic: { type: "string", description: "Topic or subject to analyze" },
       sentiment: { type: "string", description: "Filter by sentiment" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"articles":{"type":"array"},"totalCount":{"type":"number"},"analysis":{"type":"object"},"availableTopics":{"type":"array"},"fetchedAt":{"type":"string"}}}},
   },
 
   "/api/anomalies": {
@@ -378,6 +411,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       limit: { type: "number", description: "Maximum number of results to return", default: "25" },
       start: { type: "string", description: "Start position for pagination" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"data":{},"source":{"type":"string"},"timestamp":{"type":"string"},"address":{},"count":{"type":"number"},"balance":{},"balanceApt":{},"chain":{"type":"string"},"endpoints":{"type":"object"},"subroutes":{"type":"object"}},"additionalProperties":true}},
   },
 
   "/api/aptos/events": {
@@ -390,6 +424,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       field: { type: "string", description: "Filter by field" },
       creation_number: { type: "string", description: "Filter by creation number" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"address":{},"handle":{},"field":{},"count":{"type":"number"},"data":{},"source":{"type":"string"},"timestamp":{"type":"string"},"creationNumber":{}}}},
   },
 
   "/api/aptos/resources": {
@@ -398,6 +433,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       address: { type: "string", description: "Wallet or contract address" },
       type: { type: "string", description: "Data or content type" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"address":{},"data":{},"source":{"type":"string"},"timestamp":{"type":"string"},"count":{"type":"number"}}}},
   },
 
   "/api/aptos/transactions": {
@@ -408,6 +444,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       limit: { type: "number", description: "Maximum number of results to return", default: "25" },
       start: { type: "string", description: "Start position for pagination" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"data":{},"source":{"type":"string"},"timestamp":{"type":"string"},"address":{},"count":{"type":"number"}}}},
   },
 
   "/api/arbitrage": {
@@ -421,6 +458,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       includeTriangular: { type: "string", description: "Filter by includeTriangular" },
       monitor: { type: "string", description: "Filter by monitor" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"success":{"type":"boolean"},"data":{}}},"POST":{"type":"object","properties":{"success":{"type":"boolean"},"subscriptionId":{},"message":{"type":"string"},"config":{"type":"object"},"instructions":{"type":"array"},"payload":{}}}},
   },
 
   "/api/archive": {
@@ -444,6 +482,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       format: { type: "string", description: "Response format", default: "full" },
       lang: { type: "string", description: "Language code (e.g., en, es, zh)", default: "en" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"success":{"type":"boolean"},"stats":{},"indexType":{},"index":{},"hours":{},"tickers":{},"month":{},"data_points":{"type":"number"},"history":{},"count":{"type":"number"},"total":{},"pagination":{},"lang":{},"availableLanguages":{"type":"array"},"filters":{"type":"object"},"format":{},"articles":{}}}},
   },
 
   "/api/archive/ipfs": {
@@ -456,10 +495,12 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       type: { type: "string", description: "Data or content type" },
       limit: { type: "number", description: "Maximum number of results to return", default: "20" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"success":{"type":"boolean"},"stats":{"type":"object"},"gateways":{"type":"object"},"verified":{},"item":{},"verificationProof":{"type":"object"},"items":{"type":"array"},"total":{"type":"number"},"configured":{},"setup":{},"_links":{"type":"object"}}},"POST":{"type":"object","properties":{"success":{"type":"boolean"},"archived":{},"message":{"type":"string"},"accessUrls":{"type":"object"},"snapshot":{},"articleCount":{},"pinned":{"type":"boolean"},"cid":{},"service":{"type":"string"}}}},
   },
 
   "/api/archive/status": {
     description: "Archive indexing status and statistics",
+    outputSchemas: {"GET":{"type":"object","properties":{"timestamp":{"type":"string"},"endpoints":{"type":"object"},"zeroConfigMode":{"type":"boolean"},"setupInstructions":{"type":"object"}},"additionalProperties":true}},
   },
 
   "/api/archive/v2": {
@@ -469,6 +510,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
   "/api/archive/webhook": {
     description: "Webhook notifications for archive updates",
     methods: ["POST", "GET"],
+    outputSchemas: {"POST":{"type":"object","properties":{"success":{"type":"boolean"},"message":{"type":"string"},"timestamp":{"type":"string"},"duration":{},"stats":{"type":"object"},"github":{},"articles":{}}},"GET":{"type":"object","properties":{"endpoint":{"type":"string"},"method":{"type":"string"},"authentication":{"type":"string"},"envRequired":{"type":"array"},"envOptional":{"type":"array"},"externalCronServices":{"type":"array"},"example":{"type":"object"}}}},
   },
 
   "/api/arkham": {
@@ -505,6 +547,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       source: { type: "string", description: "Filter by news source" },
       q: { type: "string", description: "Search query string" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"success":{"type":"boolean"},"article":{},"duration":{},"stats":{},"count":{"type":"number"},"articles":{"type":"array"},"ticker":{},"source":{},"query":{}}}},
   },
 
   "/api/ask": {
@@ -554,6 +597,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       end: { type: "string", description: "Filter by end", default: "2026-02-01" },
       capital: { type: "number", description: "Filter by capital", default: "10000" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"success":{"type":"boolean"},"strategies":{"type":"array"},"strategy":{},"performance":{}}}},
   },
 
   "/api/batch": {
@@ -567,6 +611,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       limit: { type: "number", description: "Maximum number of results to return", default: "10" },
       lang: { type: "string", description: "Language code (e.g., en, es, zh)", default: "en" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"articles":{},"lang":{},"availableLanguages":{"type":"array"}},"additionalProperties":true}},
   },
 
   "/api/bitcoin/address/{address}": {
@@ -578,6 +623,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
 
   "/api/bitcoin/block-height": {
     description: "Current Bitcoin block height",
+    outputSchemas: {"GET":{"type":"object","properties":{"blockHeight":{}}}},
   },
 
   "/api/bitcoin/blocks": {
@@ -613,6 +659,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
 
   "/api/blog/posts": {
     description: "Blog posts about cryptocurrency markets and analysis",
+    outputSchemas: {"GET":{"type":"object","properties":{"posts":{},"total":{"type":"number"}}}},
   },
 
   "/api/breaking": {
@@ -620,6 +667,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
     parameters: {
       lang: { type: "string", description: "Language code (e.g., en, es, zh)", default: "en" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"_stale":{"type":"boolean"}},"additionalProperties":true}},
   },
 
   "/api/bridges": {
@@ -627,11 +675,13 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
     parameters: {
       bridgeId: { type: "number", description: "Filter by bridgeId" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"bridgeId":{"type":"number"},"history":{},"timestamp":{"type":"string"}}}},
   },
 
   "/api/chart-analysis": {
     description: "Technical chart pattern analysis",
     methods: ["POST", "GET"],
+    outputSchemas: {"POST":{"type":"object","properties":{"analysis":{}}},"GET":{"type":"object","properties":{"analysis":{}}}},
   },
 
   "/api/charts": {
@@ -640,6 +690,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       coin: { type: "string", description: "Cryptocurrency ID or symbol" },
       range: { type: "string", description: "Filter by range", default: "24h" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"coinId":{},"range":{},"prices":{},"ohlc":{},"stats":{},"updatedAt":{"type":"number"}}}},
   },
 
   "/api/citations": {
@@ -660,16 +711,19 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       format: { type: "string", description: "Response format", default: "bibtex" },
       ids: { type: "string", description: "Comma-separated IDs" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"success":{"type":"boolean"},"data":{},"count":{"type":"number"}}},"POST":{"type":"object","properties":{"success":{"type":"boolean"},"data":{}}}},
   },
 
   "/api/claims": {
     description: "Fact-checkable claims extracted from crypto news",
     methods: ["POST", "GET"],
+    outputSchemas: {"GET":{"type":"object","properties":{"endpoint":{"type":"string"},"method":{"type":"string"},"description":{"type":"string"},"request":{"type":"object"},"response":{"type":"object"},"example":{"type":"object"}}}},
   },
 
   "/api/classify": {
     description: "Classify crypto news articles by category and relevance",
     methods: ["POST", "GET"],
+    outputSchemas: {"GET":{"type":"object","properties":{"endpoint":{"type":"string"},"method":{"type":"string"},"description":{"type":"string"},"request":{"type":"object"},"response":{"type":"object"},"example":{"type":"object"}}}},
   },
 
   "/api/clickbait": {
@@ -678,6 +732,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       limit: { type: "number", description: "Maximum number of results to return", default: "10" },
       threshold: { type: "number", description: "Filter by threshold", default: "0" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"analysis":{"type":"array"},"message":{"type":"string"},"_stale":{"type":"boolean"}},"additionalProperties":true}},
   },
 
   "/api/coincap": {
@@ -687,6 +742,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       search: { type: "number", description: "Filter by search" },
       offset: { type: "number", description: "Number of results to skip", default: "0" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"data":{},"count":{"type":"number"},"source":{"type":"string"},"timestamp":{"type":"number"}}}},
   },
 
   "/api/coincap/assets/{id}": {
@@ -710,6 +766,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       period: { type: "string", description: "Time period for data aggregation" },
       q: { type: "string", description: "Search query string", required: true },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"data":{},"count":{"type":"number"},"timestamp":{"type":"string"}}}},
   },
 
   "/api/coinpaprika": {
@@ -768,6 +825,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
     parameters: {
       coins: { type: "string", description: "Comma-separated cryptocurrency IDs" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"coins":{},"summary":{"type":"object"},"timestamp":{"type":"string"},"source":{"type":"string"}}}},
   },
 
   "/api/contributors": {
@@ -782,6 +840,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       topic: { type: "string", description: "Topic or subject to analyze" },
       severity: { type: "string", description: "Filter by severity" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"success":{"type":"boolean"},"data":{},"meta":{"type":"object"},"count":{"type":"number"}}}},
   },
 
   "/api/cryptocompare": {
@@ -800,6 +859,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       sort: { type: "string", description: "Sort field" },
       coinId: { type: "number", description: "Cryptocurrency ID (e.g., bitcoin, ethereum)", default: "1182" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"data":{},"timestamp":{"type":"string"},"fsym":{},"tsym":{},"interval":{},"count":{"type":"number"}}}},
   },
 
   "/api/cryptopanic": {
@@ -815,6 +875,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       limit: { type: "number", description: "Maximum number of results to return", default: "10" },
       country: { type: "string", description: "Filter by country code" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"data":{},"count":{"type":"number"},"timestamp":{"type":"string"}}}},
   },
 
   "/api/data-sources": {
@@ -823,6 +884,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       action: { type: "string", description: "API action to perform" },
       category: { type: "string", description: "Filter by category" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"status":{"type":"string"},"totalSources":{"type":"number"},"healthy":{},"unhealthy":{},"sources":{},"timestamp":{"type":"string"},"category":{},"count":{"type":"number"},"categories":{}}}},
   },
 
   "/api/data-sources/derivatives": {
@@ -832,6 +894,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       symbol: { type: "string", description: "Trading symbol (e.g., BTC, ETH)", default: "BTC" },
       currency: { type: "string", description: "Filter by currency", default: "BTC" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"status":{"type":"string"},"data":{},"timestamp":{"type":"string"}}}},
   },
 
   "/api/data-sources/onchain": {
@@ -843,6 +906,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       transfers: { type: "string", description: "Filter by transfers" },
       minEth: { type: "number", description: "Filter by minEth", default: "100" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"status":{"type":"string"},"data":{},"timestamp":{"type":"string"}}}},
   },
 
   "/api/data-sources/social": {
@@ -854,6 +918,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       symbol: { type: "string", description: "Trading symbol (e.g., BTC, ETH)" },
       space: { type: "string", description: "Filter by space" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"status":{"type":"string"},"data":{},"timestamp":{"type":"string"}}}},
   },
 
   "/api/defi": {
@@ -862,6 +927,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       limit: { type: "number", description: "Maximum number of results to return", default: "10" },
       lang: { type: "string", description: "Language code (e.g., en, es, zh)", default: "en" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"articles":{},"lang":{},"availableLanguages":{"type":"array"}},"additionalProperties":true}},
   },
 
   "/api/defi/bridges": {
@@ -933,6 +999,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
     parameters: {
       symbol: { type: "string", description: "Trading symbol (e.g., BTC, ETH)" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"data":{},"provider":{},"providers":{},"confidence":{},"cached":{},"latencyMs":{},"timestamp":{}}}},
   },
 
   "/api/derivatives/aggregated/open-interest": {
@@ -940,6 +1007,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
     parameters: {
       symbol: { type: "string", description: "Trading symbol (e.g., BTC, ETH)" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"data":{},"provider":{},"providers":{},"confidence":{},"cached":{},"latencyMs":{},"timestamp":{}}}},
   },
 
   "/api/derivatives/bybit/funding/{symbol}": {
@@ -991,11 +1059,13 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
     parameters: {
       limit: { type: "number", description: "Maximum number of results to return", default: "10" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"highest":{"type":"array"},"lowest":{"type":"array"},"providers":{},"confidence":{},"cached":{},"timestamp":{}}}},
   },
 
   "/api/detect/ai-content": {
     description: "Detect AI-generated content in crypto news",
     methods: ["POST", "GET"],
+    outputSchemas: {"POST":{"type":"object","properties":{"mode":{"type":"string"},"timestamp":{"type":"string"},"results":{},"summary":{"type":"object"}},"additionalProperties":true},"GET":{"type":"object","properties":{"name":{"type":"string"},"version":{"type":"string"},"description":{"type":"string"},"methods":{"type":"array"},"requestBody":{"type":"object"},"response":{"type":"object"}}}},
   },
 
   "/api/dex-volumes": {
@@ -1004,6 +1074,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       chain: { type: "string", description: "Blockchain network (e.g., ethereum, solana)" },
       top: { type: "number", description: "Filter by top" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"count":{"type":"number"},"dexes":{},"timestamp":{"type":"string"}}}},
   },
 
   "/api/digest": {
@@ -1022,6 +1093,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       executionId: { type: "string", description: "Filter by executionId" },
       execute: { type: "number", description: "Filter by execute" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"query":{},"data":{},"timestamp":{"type":"string"},"availableQueries":{"type":"array"},"usage":{"type":"object"}}}},
   },
 
   "/api/entities": {
@@ -1031,6 +1103,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       type: { type: "string", description: "Data or content type" },
       min_mentions: { type: "number", description: "Filter by min mentions", default: "1" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"entities":{},"message":{"type":"string"},"summary":{"type":"object"},"articlesAnalyzed":{"type":"number"},"extractedAt":{"type":"string"}}}},
   },
 
   "/api/events": {
@@ -1041,10 +1114,12 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       includePast: { type: "string", description: "Filter by includePast" },
       limit: { type: "number", description: "Maximum number of results to return", default: "50" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"events":{},"total":{"type":"number"},"categories":{"type":"array"},"source":{"type":"string"},"generatedAt":{"type":"string"}}}},
   },
 
   "/api/exchange-rates": {
     description: "Fiat and crypto exchange rates",
+    outputSchemas: {"GET":{"type":"object","properties":{"rates":{"type":"object"},"degraded":{"type":"boolean"}}}},
   },
 
   "/api/exchange-rates/convert": {
@@ -1054,6 +1129,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       to: { type: "string", description: "End date (ISO 8601 or YYYY-MM-DD)" },
       amount: { type: "number", description: "Filter by amount", default: "1" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"from":{},"to":{},"amount":{},"result":{},"rate":{},"fromName":{},"toName":{},"timestamp":{"type":"number"}}}},
   },
 
   "/api/exchanges": {
@@ -1062,6 +1138,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       sort: { type: "string", description: "Sort field", default: "trust" },
       limit: { type: "number", description: "Maximum number of results to return", default: "50" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"exchanges":{},"total":{"type":"number"}}}},
   },
 
   "/api/export": {
@@ -1075,6 +1152,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       to: { type: "string", description: "End date (ISO 8601 or YYYY-MM-DD)" },
       download: { type: "string", description: "Set to true for file download response" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"success":{"type":"boolean"},"warning":{"type":"string"},"export":{"type":"object"},"data":{},"_links":{"type":"object"}}},"POST":{"type":"object","properties":{"success":{"type":"boolean"},"job":{"type":"object"},"_links":{"type":"object"}}}},
   },
 
   "/api/export/jobs": {
@@ -1084,6 +1162,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       cleanup: { type: "string", description: "Filter by cleanup" },
       maxAge: { type: "number", description: "Filter by maxAge", default: "3600000" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"success":{"type":"boolean"},"count":{"type":"number"},"jobs":{"type":"array"},"_links":{"type":"object"}}}},
   },
 
   "/api/export/jobs/{jobId}": {
@@ -1098,6 +1177,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       schema: { type: "string", description: "Filter by schema" },
       archives: { type: "string", description: "Filter by archives" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"success":{"type":"boolean"},"schemaVersion":{"type":"string"},"schemas":{},"formats":{"type":"array"},"compression":{"type":"array"},"archives":{},"count":{"type":"number"},"jobs":{}}},"POST":{"type":"object","properties":{"success":{"type":"boolean"},"archive":{},"message":{"type":"string"},"job":{},"statusUrl":{"type":"string"},"downloadUrl":{"type":"string"}}}},
   },
 
   "/api/exports/{id}": {
@@ -1121,6 +1201,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       type: { type: "string", description: "Data or content type" },
       confidence: { type: "string", description: "Filter by confidence" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"claims":{},"message":{"type":"string"},"stats":{},"articlesAnalyzed":{"type":"number"},"analyzedAt":{"type":"string"}}}},
   },
 
   "/api/fear-greed": {
@@ -1128,10 +1209,12 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
     parameters: {
       days: { type: "number", description: "Number of days of historical data", default: "30" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"_cache":{"type":"string"},"current":{},"historical":{"type":"array"},"trend":{},"breakdown":{},"lastUpdated":{},"_provider":{},"_confidence":{},"_cached":{}},"additionalProperties":true}},
   },
 
   "/api/feeds": {
     description: "Feeds - Other",
+    outputSchemas: {"GET":{"type":"object","properties":{"count":{"type":"number"},"usage":{"type":"object"},"feeds":{}}}},
   },
 
   "/api/fever": {
@@ -1147,6 +1230,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
     parameters: {
       coin: { type: "string", description: "Cryptocurrency ID or symbol" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"coin":{},"flows":{},"source":{"type":"string"},"timestamp":{"type":"string"},"symbol":{},"period":{"type":"string"},"sources":{"type":"array"},"market":{},"exchangeBalance":{},"dex":{},"interpretation":{},"signal":{}}}},
   },
 
   "/api/forecast": {
@@ -1171,6 +1255,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       historyExchange: { type: "string", description: "Filter by historyExchange", default: "binance" },
       limit: { type: "number", description: "Maximum number of results to return", default: "100" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"success":{"type":"boolean"},"data":{},"meta":{"type":"object"}}},"POST":{"type":"object","properties":{"success":{"type":"boolean"},"subscriptionId":{},"message":{"type":"string"},"config":{"type":"object"}}}},
   },
 
   "/api/funding-rates": {
@@ -1187,10 +1272,12 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
 
   "/api/gaming": {
     description: "Blockchain gaming ecosystem overview",
+    outputSchemas: {"GET":{"type":"object","properties":{"_lineage":{},"_cached":{}},"additionalProperties":true}},
   },
 
   "/api/gaming/chains": {
     description: "Gaming activity by blockchain",
+    outputSchemas: {"GET":{"type":"object","properties":{"data":{},"count":{"type":"number"},"_lineage":{},"_cached":{}}}},
   },
 
   "/api/gaming/top": {
@@ -1200,10 +1287,12 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       sort: { type: "string", description: "Sort field", default: "dau" },
       chain: { type: "string", description: "Blockchain network (e.g., ethereum, solana)" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"data":{},"count":{"type":"number"},"sortBy":{},"chain":{},"_lineage":{},"_cached":{}}}},
   },
 
   "/api/gas": {
     description: "Ethereum gas prices and network congestion",
+    outputSchemas: {"GET":{"type":"object","properties":{"_cache":{"type":"string"},"_provider":{},"_confidence":{},"network":{"type":"string"},"baseFee":{},"low":{"type":"object"},"medium":{"type":"object"},"high":{"type":"object"},"lastBlock":{},"timestamp":{"type":"string"},"source":{"type":"string"},"note":{"type":"string"}},"additionalProperties":true}},
   },
 
   "/api/gas/estimate": {
@@ -1211,6 +1300,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
     parameters: {
       network: { type: "string", description: "Network name (e.g., ethereum, bitcoin)", default: "ethereum" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"network":{"type":"string"},"unit":{"type":"string"},"fast":{"type":"object"},"standard":{"type":"object"},"slow":{"type":"object"},"economy":{"type":"object"},"minimum":{},"timestamp":{"type":"string"},"source":{"type":"string"},"baseFee":{},"lastBlock":{},"note":{"type":"string"}}}},
   },
 
   "/api/gas/history": {
@@ -1219,6 +1309,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       network: { type: "string", description: "Network name (e.g., ethereum, bitcoin)", default: "ethereum" },
       days: { type: "number", description: "Number of days of historical data", default: "7" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"network":{"type":"string"},"current":{},"history":{"type":"array"},"note":{"type":"string"},"days":{},"source":{"type":"string"}}}},
   },
 
   "/api/geckoterminal": {
@@ -1228,10 +1319,12 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       type: { type: "string", description: "Data or content type", default: "trending" },
       dex: { type: "string", description: "Filter by dex" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"network":{},"type":{},"count":{"type":"number"},"data":{},"timestamp":{"type":"string"}}}},
   },
 
   "/api/global": {
     description: "Global cryptocurrency market statistics",
+    outputSchemas: {"GET":{"type":"object","properties":{"active_cryptocurrencies":{"type":"number"},"markets":{"type":"number"},"total_market_cap":{"type":"object"},"total_volume":{"type":"object"},"market_cap_percentage":{"type":"object"},"market_cap_change_percentage_24h_usd":{"type":"number"},"updated_at":{"type":"number"}}}},
   },
 
   "/api/glossary": {
@@ -1241,6 +1334,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       q: { type: "string", description: "Search query string" },
       limit: { type: "number", description: "Maximum number of results to return", default: "100" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"terms":{},"total":{"type":"number"},"categories":{"type":"array"}}}},
   },
 
   "/api/hyperliquid": {
@@ -1249,6 +1343,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       type: { type: "string", description: "Data or content type", default: "all" },
       symbol: { type: "string", description: "Trading symbol (e.g., BTC, ETH)" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"exchange":{"type":"string"},"count":{"type":"number"},"data":{},"timestamp":{"type":"string"}}}},
   },
 
   "/api/influencers": {
@@ -1262,6 +1357,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       ticker: { type: "string", description: "Filter by ticker" },
       view: { type: "string", description: "Filter by view" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"success":{"type":"boolean"},"data":{},"meta":{"type":"object"}}},"POST":{"type":"object","properties":{"success":{"type":"boolean"},"data":{},"meta":{"type":"object"}}}},
   },
 
   "/api/integrations/tradingview": {
@@ -1283,6 +1379,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       fast: { type: "number", description: "Filter by fast", default: "9" },
       slow: { type: "number", description: "Filter by slow", default: "21" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"widget":{},"analysis":{},"indicators":{},"count":{"type":"number"},"indicator":{},"alerts":{},"availableTypes":{"type":"array"},"availableActions":{"type":"array"},"widgetTypes":{"type":"array"}}},"POST":{"type":"object","properties":{"success":{"type":"boolean"},"code":{},"indicator":{},"alert":{},"message":{"type":"string"}}}},
   },
 
   "/api/keys": {
@@ -1291,6 +1388,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
     parameters: {
       id: { type: "string", description: "Unique identifier" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"keys":{},"total":{"type":"number"}}},"DELETE":{"type":"object","properties":{"success":{"type":"boolean"},"message":{"type":"string"}}}},
   },
 
   "/api/knowledge-graph": {
@@ -1303,6 +1401,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       minMentions: { type: "number", description: "Filter by minMentions" },
       minWeight: { type: "number", description: "Filter by minWeight" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"stats":{"type":"object"},"forceGraph":{}},"additionalProperties":true},"POST":{"type":"object","properties":{"success":{"type":"boolean"}},"additionalProperties":true}},
   },
 
   "/api/l2": {
@@ -1330,18 +1429,22 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       sort: { type: "string", description: "Sort field" },
       limit: { type: "number", description: "Maximum number of results to return", default: "20" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"projects":{},"sort":{},"total":{"type":"number"}}}},
   },
 
   "/api/liquidations": {
     description: "Liquidation data from perpetual futures markets",
+    outputSchemas: {"GET":{"type":"object","properties":{"bySymbol":{},"recentEvents":{},"totals":{},"source":{},"timestamp":{"type":"number"}}}},
   },
 
   "/api/macro": {
     description: "Macroeconomic overview relevant to crypto markets",
+    outputSchemas: {"GET":{"type":"object","properties":{"_lineage":{},"_cached":{},"_latencyMs":{}},"additionalProperties":true}},
   },
 
   "/api/macro/correlations": {
     description: "Crypto-macro correlation analysis",
+    outputSchemas: {"GET":{"type":"object","properties":{"correlations":{},"pairs":{"type":"number"},"note":{},"timestamp":{"type":"string"}}}},
   },
 
   "/api/macro/dxy": {
@@ -1349,10 +1452,12 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
     parameters: {
       days: { type: "number", description: "Number of days of historical data", default: "30" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"data":{"type":"object"},"count":{"type":"number"},"_lineage":{},"_cached":{}}}},
   },
 
   "/api/macro/fed": {
     description: "Federal Reserve data, rates, and yield curves",
+    outputSchemas: {"GET":{"type":"object","properties":{"data":{},"yieldCurve":{},"count":{"type":"number"},"_lineage":{},"_cached":{}}}},
   },
 
   "/api/macro/indicators": {
@@ -1361,10 +1466,12 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       indicators: { type: "string", description: "Filter by indicators" },
       period: { type: "string", description: "Time period for data aggregation", default: "1d" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"data":{},"count":{"type":"number"},"period":{},"_lineage":{},"_cached":{}}}},
   },
 
   "/api/macro/risk-appetite": {
     description: "Market risk appetite index combining macro and crypto signals",
+    outputSchemas: {"GET":{"type":"object","properties":{"indicators":{"type":"array"},"source":{},"timestamp":{"type":"string"}},"additionalProperties":true}},
   },
 
   "/api/market/categories": {
@@ -1381,6 +1488,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
 
   "/api/market/coins": {
     description: "Coin market data with advanced filtering",
+    outputSchemas: {"GET":{"type":"object","properties":{"coins":{},"total":{"type":"number"}}}},
   },
 
   "/api/market/coins/{coinId}/community": {
@@ -1405,6 +1513,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
 
   "/api/market/dominance": {
     description: "Bitcoin and altcoin market dominance data",
+    outputSchemas: {"GET":{"type":"object","properties":{"dominance":{},"totalMarketCap":{},"timestamp":{"type":"number"}}}},
   },
 
   "/api/market/exchanges": {
@@ -1425,6 +1534,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       limit: { type: "number", description: "Maximum number of results to return", default: "10" },
       timeframe: { type: "string", description: "Time period (e.g., 1h, 24h, 7d, 30d)", default: "24h" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"gainers":{},"timeframe":{},"count":{"type":"number"},"timestamp":{"type":"number"}}}},
   },
 
   "/api/market/global-defi": {
@@ -1436,6 +1546,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
     parameters: {
       limit: { type: "number", description: "Maximum number of results to return", default: "100" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"coins":{},"count":{"type":"number"},"timestamp":{"type":"number"}}}},
   },
 
   "/api/market/history/{coinId}": {
@@ -1452,6 +1563,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       limit: { type: "number", description: "Maximum number of results to return", default: "10" },
       timeframe: { type: "string", description: "Time period (e.g., 1h, 24h, 7d, 30d)", default: "24h" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"losers":{},"timeframe":{},"count":{"type":"number"},"timestamp":{"type":"number"}}}},
   },
 
   "/api/market/movers": {
@@ -1460,6 +1572,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       limit: { type: "number", description: "Maximum number of results to return", default: "5" },
       timeframe: { type: "string", description: "Time period (e.g., 1h, 24h, 7d, 30d)", default: "24h" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"gainers":{},"losers":{},"timeframe":{},"timestamp":{"type":"number"}}}},
   },
 
   "/api/market/ohlc/{coinId}": {
@@ -1479,6 +1592,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       depth: { type: "number", description: "Filter by depth", default: "25" },
       limit: { type: "number", description: "Maximum number of results to return", default: "20" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"symbol":{},"timestamp":{},"exchanges":{},"nbbo":{},"metrics":{},"exchangeData":{},"topBids":{"type":"array"},"topAsks":{"type":"array"},"orderBook":{"type":"object"},"whaleOrders":{},"priceWalls":{},"snapshots":{"type":"array"},"count":{"type":"number"},"availableActions":{"type":"array"}}},"POST":{"type":"object","properties":{"success":{"type":"boolean"},"recommendation":{},"snapshot":{},"symbol":{},"timestamp":{},"comparison":{},"rankings":{"type":"object"}}}},
   },
 
   "/api/market/pumps": {
@@ -1541,6 +1655,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       limit: { type: "number", description: "Maximum number of results to return", default: "40" },
       emerging: { type: "string", description: "Filter by emerging" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"narratives":{},"message":{"type":"string"},"summary":{"type":"object"},"articlesAnalyzed":{"type":"number"},"analyzedAt":{"type":"string"}}}},
   },
 
   "/api/news": {
@@ -1553,6 +1668,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
 
   "/api/news/categories": {
     description: "News categorized by topic",
+    outputSchemas: {"GET":{"type":"object","properties":{"usage":{"type":"object"}},"additionalProperties":true}},
   },
 
   "/api/news/extract": {
@@ -1585,6 +1701,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
 
   "/api/nft": {
     description: "NFT market overview and statistics",
+    outputSchemas: {"GET":{"type":"object","properties":{"market":{},"trending":{}}}},
   },
 
   "/api/nft/collections/search": {
@@ -1627,6 +1744,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       action: { type: "string", description: "API action to perform" },
       limit: { type: "number", description: "Maximum number of results to return", default: "20" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"success":{"type":"boolean"},"relays":{},"recommended":{},"names":{"type":"object"},"feed":{"type":"object"},"events":{"type":"array"},"count":{"type":"number"}}},"POST":{"type":"object","properties":{"success":{"type":"boolean"},"published":{"type":"number"},"events":{},"relays":{},"message":{"type":"string"},"event":{},"event_id":{},"naddr":{},"relay":{},"connected":{},"filters":{},"subscriptionId":{},"eventCount":{"type":"number"},"reqMessage":{},"usage":{"type":"string"}},"additionalProperties":true}},
   },
 
   "/api/ohlc": {
@@ -1643,6 +1761,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       chain: { type: "string", description: "Blockchain network (e.g., ethereum, solana)" },
       metric: { type: "string", description: "Filter by metric" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"count":{"type":"number"},"data":{},"timestamp":{"type":"string"}}}},
   },
 
   "/api/onchain/aave/markets": {
@@ -1661,6 +1780,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
 
   "/api/onchain/compound/markets": {
     description: "Compound lending market data",
+    outputSchemas: {"GET":{"type":"object","properties":{"protocol":{"type":"string"},"data":{},"count":{"type":"number"},"timestamp":{"type":"string"}}}},
   },
 
   "/api/onchain/correlate": {
@@ -1684,6 +1804,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       min_value: { type: "number", description: "Filter by min value", default: "0" },
       min_confidence: { type: "number", description: "Filter by min confidence", default: "50" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"links":{},"message":{"type":"string"},"stats":{},"significantEvents":{},"filters":{"type":"object"},"generatedAt":{"type":"string"}}}},
   },
 
   "/api/onchain/exchange-flows": {
@@ -1691,6 +1812,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
     parameters: {
       asset: { type: "string", description: "Asset identifier (e.g., BTC, ETH)", default: "BTC" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"data":{},"message":{"type":"string"}}}},
   },
 
   "/api/onchain/multichain": {
@@ -1698,6 +1820,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
     parameters: {
       protocol: { type: "string", description: "Filter by protocol", default: "uniswap" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"protocol":{"type":"string"},"chains":{},"totalTvl":{},"timestamp":{"type":"string"}}}},
   },
 
   "/api/onchain/protocol/{protocol}": {
@@ -1748,6 +1871,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       expiry: { type: "string", description: "Filter by expiry" },
       limit: { type: "number", description: "Maximum number of results to return", default: "100" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"success":{"type":"boolean"},"data":{},"meta":{"type":"object"}}}},
   },
 
   "/api/oracle": {
@@ -1756,6 +1880,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
     parameters: {
       action: { type: "string", description: "API action to perform" },
     },
+    outputSchemas: {"POST":{"type":"object","properties":{"success":{"type":"boolean"},"data":{"type":"object"},"error":{},"message":{},"code":{},"processingTimeMs":{}}},"GET":{"type":"object","properties":{"status":{},"configured":{},"timestamp":{"type":"string"},"success":{"type":"boolean"},"data":{},"name":{"type":"string"},"version":{"type":"string"},"description":{"type":"string"},"endpoints":{"type":"object"},"rateLimits":{"type":"object"},"documentation":{"type":"string"}}}},
   },
 
   "/api/oracle/chainlink": {
@@ -1764,6 +1889,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
     parameters: {
       format: { type: "string", description: "Response format", default: "standard" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"jobRunID":{},"data":{"type":"object"},"result":{},"statusCode":{"type":"number"}}},"POST":{"type":"object","properties":{"jobRunID":{},"data":{"type":"object"},"result":{},"statusCode":{"type":"number"}}}},
   },
 
   "/api/oracle/prices": {
@@ -1772,6 +1898,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       assets: { type: "string", description: "Filter by assets", default: "bitcoin,ethereum,binancecoin,solana,ripple" },
       currency: { type: "string", description: "Filter by currency", default: "usd" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"oracle":{"type":"string"},"version":{"type":"string"},"timestamp":{},"currency":{},"prices":{},"assetsRequested":{"type":"number"},"assetsReturned":{"type":"array"}}}},
   },
 
   "/api/orderbook": {
@@ -1785,6 +1912,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       side: { type: "string", description: "Filter by side", default: "buy" },
       depth: { type: "number", description: "Filter by depth", default: "20" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"symbol":{},"market":{},"timestamp":{"type":"string"},"exchangeCount":{"type":"number"},"orderBooks":{"type":"array"},"estimate":{"type":"object"},"recommendation":{},"liquidity":{"type":"object"},"success":{"type":"boolean"},"data":{"type":"object"},"exchanges":{},"bestBid":{},"bestAsk":{},"spread":{},"spreadPercent":{},"midPrice":{},"imbalance":{},"totalBidDepthUsd":{},"totalAskDepthUsd":{},"bids":{"type":"array"},"asks":{"type":"array"},"exchangeBreakdown":{}}}},
   },
 
   "/api/orderbook/stream": {
@@ -1792,10 +1920,12 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
     parameters: {
       symbol: { type: "string", description: "Trading symbol (e.g., BTC, ETH)" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"success":{"type":"boolean"},"websocket":{"type":"object"},"polling":{"type":"object"},"documentation":{"type":"object"}}}},
   },
 
   "/api/podcast": {
     description: "Crypto podcast feed and episodes",
+    outputSchemas: {"GET":{"type":"object","properties":{"episode":{},"note":{"type":"string"}}}},
   },
 
   "/api/portfolio": {
@@ -1805,6 +1935,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       limit: { type: "number", description: "Maximum number of results to return", default: "10" },
       prices: { type: "string", description: "Filter by prices" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"portfolio":{},"combinedFeed":{},"summary":{"type":"object"},"dataSources":{"type":"object"},"fetchedAt":{"type":"string"}}}},
   },
 
   "/api/portfolio/benchmark": {
@@ -1815,6 +1946,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       days: { type: "number", description: "Number of days of historical data", default: "30" },
       benchmarks: { type: "string", description: "Filter by benchmarks", default: "bitcoin,ethereum" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"days":{},"portfolio":{"type":"object"},"benchmarks":{"type":"array"},"alpha":{},"timestamp":{"type":"number"}}}},
   },
 
   "/api/portfolio/correlation": {
@@ -1823,6 +1955,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       coins: { type: "string", description: "Comma-separated cryptocurrency IDs" },
       days: { type: "number", description: "Number of days of historical data", default: "90" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"coins":{},"days":{},"dataPoints":{},"matrix":{},"stronglyCorrelated":{"type":"array"},"weaklyCorrelated":{"type":"array"},"timestamp":{"type":"number"}}}},
   },
 
   "/api/portfolio/holding": {
@@ -1832,6 +1965,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       portfolioId: { type: "string", description: "Filter by portfolioId" },
       coinId: { type: "string", description: "Cryptocurrency ID (e.g., bitcoin, ethereum)" },
     },
+    outputSchemas: {"POST":{"type":"object","properties":{"success":{"type":"boolean"},"portfolio":{}}},"PATCH":{"type":"object","properties":{"success":{"type":"boolean"},"portfolio":{}}},"DELETE":{"type":"object","properties":{"success":{"type":"boolean"},"portfolio":{}}}},
   },
 
   "/api/portfolio/performance": {
@@ -1849,6 +1983,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       method: { type: "string", description: "Filter by method" },
       format: { type: "string", description: "Response format", default: "json" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"form8949":{},"instructions":{}}},"POST":{"type":"object","properties":{"message":{"type":"string"},"transaction":{},"totalTransactions":{"type":"number"}}},"DELETE":{"type":"object","properties":{"message":{"type":"string"},"portfolio_id":{}}}},
   },
 
   "/api/portfolio/tax-report": {
@@ -1859,6 +1994,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       year: { type: "string", description: "Filter by year", required: true },
       method: { type: "string", description: "Filter by method", default: "fifo" },
     },
+    outputSchemas: {"POST":{"type":"object","properties":{"tax_year":{},"method":{},"summary":{"type":"object"},"events":{},"disclaimer":{"type":"string"}}}},
   },
 
   "/api/predictions": {
@@ -1872,6 +2008,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       limit: { type: "number", description: "Maximum number of results to return", default: "50" },
       minPredictions: { type: "number", description: "Filter by minPredictions", default: "5" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"success":{"type":"boolean"},"data":{},"meta":{"type":"object"}}},"POST":{"type":"object","properties":{"success":{"type":"boolean"},"data":{},"message":{"type":"string"}}}},
   },
 
   "/api/predictions/history": {
@@ -1888,14 +2025,17 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       status: { type: "string", description: "Filter by status" },
       category: { type: "string", description: "Filter by category" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"success":{"type":"boolean"},"leaderboard":{},"period":{"type":"string"},"bets":{},"stats":{"type":"object"},"market":{},"markets":{},"categories":{"type":"array"}}},"POST":{"type":"object","properties":{"success":{"type":"boolean"},"bet":{},"market":{}}}},
   },
 
   "/api/premium": {
     description: "Premium tier overview and features",
+    outputSchemas: {"GET":{"type":"object","properties":{"name":{"type":"string"},"version":{"type":"string"},"description":{"type":"string"},"quickStart":{"type":"object"},"payment":{},"accessPasses":{"type":"array"},"categories":{},"freeEndpoints":{"type":"array"},"valueComparison":{"type":"object"},"sdks":{"type":"object"},"support":{"type":"object"}}}},
   },
 
   "/api/premium/ai/analyze": {
     description: "Premium deep AI market analysis with full reports",
+    outputSchemas: {"GET":{"type":"object","properties":{"coinId":{},"coinName":{},"currentPrice":{},"analysisType":{},"timeframe":{},"technical":{},"sentiment":{},"aiInsights":{},"premium":{"type":"boolean"},"metadata":{"type":"object"}}}},
   },
 
   "/api/premium/ai/compare": {
@@ -1916,6 +2056,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
 
   "/api/premium/alerts/custom": {
     description: "Premium custom alert rule configuration",
+    outputSchemas: {"GET":{"type":"object","properties":{"alerts":{},"activeCount":{"type":"number"},"triggeredCount":{},"premium":{"type":"boolean"},"metadata":{"type":"object"}}}},
   },
 
   "/api/premium/alerts/whales": {
@@ -1925,10 +2066,12 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       minThreshold: { type: "number", description: "Filter by minThreshold", default: "1000000" },
       concentration: { type: "string", description: "Filter by concentration" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"transactions":{},"stats":{},"concentration":{},"premium":{"type":"boolean"},"metadata":{"type":"object"}}}},
   },
 
   "/api/premium/analytics/screener": {
     description: "Premium advanced crypto screener",
+    outputSchemas: {"GET":{"type":"object","properties":{"results":{},"total":{"type":"number"},"filtered":{},"query":{},"premium":{"type":"boolean"},"executionTime":{}}}},
   },
 
   "/api/premium/defi/protocols": {
@@ -1940,6 +2083,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       chains: { type: "string", description: "Filter by chains" },
       minTvl: { type: "number", description: "Filter by minTvl", default: "0" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"protocols":{},"chains":{},"total":{"type":"number"},"premium":{"type":"boolean"},"metadata":{"type":"object"}}}},
   },
 
   "/api/premium/export/portfolio": {
@@ -1956,6 +2100,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       limit: { type: "number", description: "Maximum number of results to return", default: "100" },
       details: { type: "string", description: "Filter by details" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"coins":{},"total":{"type":"number"},"premium":{"type":"boolean"},"metadata":{"type":"object"}}}},
   },
 
   "/api/premium/market/history": {
@@ -1966,10 +2111,12 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       currency: { type: "string", description: "Filter by currency", default: "usd" },
       ohlc: { type: "string", description: "Filter by ohlc" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"coinId":{},"currency":{},"range":{"type":"object"},"prices":{},"ohlc":{},"premium":{"type":"boolean"},"metadata":{"type":"object"}}}},
   },
 
   "/api/premium/portfolio/analytics": {
     description: "Premium portfolio analytics and insights",
+    outputSchemas: {"GET":{"type":"object","properties":{"totalValue":{},"totalReturn":{},"assets":{},"correlations":{},"riskMetrics":{},"rebalancing":{},"premium":{"type":"boolean"},"metadata":{"type":"object"}}}},
   },
 
   "/api/premium/screener/advanced": {
@@ -1991,6 +2138,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
   "/api/press-release": {
     description: "Crypto press release aggregation",
     methods: ["POST", "GET"],
+    outputSchemas: {"POST":{"type":"object","properties":{"id":{}}},"GET":{"type":"object","properties":{"pressReleases":{}}}},
   },
 
   "/api/press-release/{id}": {
@@ -2016,21 +2164,25 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
   "/api/rag": {
     description: "RAG (Retrieval-Augmented Generation) system overview",
     methods: ["POST", "GET"],
+    outputSchemas: {"GET":{"type":"object","properties":{"status":{"type":"string"},"message":{"type":"string"},"stats":{},"endpoints":{"type":"object"}}}},
   },
 
   "/api/rag/ask": {
     description: "Ask questions with AI-powered retrieval-augmented generation",
     methods: ["POST"],
+    outputSchemas: {"POST":{"type":"object","properties":{"processingTime":{}},"additionalProperties":true}},
   },
 
   "/api/rag/batch": {
     description: "Batch RAG queries for multiple questions",
     methods: ["POST"],
+    outputSchemas: {"POST":{"type":"object","properties":{"results":{},"summary":{"type":"object"}}}},
   },
 
   "/api/rag/eval": {
     description: "Evaluate RAG system quality and relevance",
     methods: ["GET", "POST"],
+    outputSchemas: {"GET":{"type":"object","properties":{"version":{},"description":{},"totalCases":{"type":"number"},"testCases":{},"tags":{"type":"array"},"difficulties":{"type":"array"}}},"POST":{"type":"object","properties":{"processingTimeMs":{}},"additionalProperties":true}},
   },
 
   "/api/rag/feedback": {
@@ -2046,6 +2198,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       limit: { type: "number", description: "Maximum number of results to return", default: "5000" },
       ack: { type: "string", description: "Filter by ack" },
     },
+    outputSchemas: {"POST":{"type":"object","properties":{"success":{"type":"boolean"},"feedbackId":{},"queryId":{}}},"GET":{"type":"object","properties":{"alerts":{},"count":{"type":"number"},"acknowledged":{},"recent":{"type":"array"}},"additionalProperties":true}},
   },
 
   "/api/rag/personalization": {
@@ -2056,11 +2209,13 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       export: { type: "string", description: "Filter by export" },
       privacy: { type: "string", description: "Filter by privacy" },
     },
+    outputSchemas: {"POST":{"type":"object","properties":{"success":{"type":"boolean"},"userId":{},"preferences":{},"inferredInterests":{"type":"array"}}},"GET":{"type":"object","properties":{"totalUsers":{},"data":{},"success":{"type":"boolean"},"privacyMode":{}}},"DELETE":{"type":"object","properties":{"success":{"type":"boolean"},"deleted":{},"message":{}}}},
   },
 
   "/api/rag/search": {
     description: "RAG vector search without LLM generation",
     methods: ["POST"],
+    outputSchemas: {"POST":{"type":"object","properties":{"results":{"type":"array"},"extractedFilters":{},"count":{"type":"number"}}}},
   },
 
   "/api/rag/similar/{id}": {
@@ -2086,6 +2241,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
   "/api/rag/timeline": {
     description: "Timeline-aware RAG for chronological crypto analysis",
     methods: ["POST"],
+    outputSchemas: {"POST":{"type":"object","properties":{"success":{"type":"boolean"},"timeline":{},"meta":{"type":"object"}}}},
   },
 
   "/api/regulatory": {
@@ -2114,11 +2270,13 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       action: { type: "string", description: "API action to perform" },
       sentiment: { type: "string", description: "Filter by sentiment" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"relationships":{"type":"array"},"message":{"type":"string"}}}},
   },
 
   "/api/research/backtest": {
     description: "Research-grade strategy backtesting",
     methods: ["POST"],
+    outputSchemas: {"POST":{"type":"object","properties":{"result":{"type":"object"},"parameters_used":{},"disclaimer":{"type":"string"}}}},
   },
 
   "/api/rss": {
@@ -2141,16 +2299,19 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
     parameters: {
       semantic: { type: "string", description: "Enable semantic search" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"query":{},"total":{},"search_type":{},"articles":{},"lang":{},"availableLanguages":{"type":"array"}},"additionalProperties":true}},
   },
 
   "/api/search/semantic": {
     description: "Semantic search using vector embeddings",
     methods: ["POST"],
+    outputSchemas: {"POST":{"type":"object","properties":{"results":{},"query":{},"total":{"type":"number"}}}},
   },
 
   "/api/search/v2": {
     description: "Enhanced search with advanced filtering and relevance",
     methods: ["GET", "POST"],
+    outputSchemas: {"GET":{"type":"object","properties":{"_meta":{"type":"object"}},"additionalProperties":true},"POST":{"type":"object","properties":{"suggestions":{},"engine":{}}}},
   },
 
   "/api/sentiment": {
@@ -2159,6 +2320,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       limit: { type: "number", description: "Maximum number of results to return", default: "20" },
       asset: { type: "string", description: "Asset identifier (e.g., BTC, ETH)" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"articles":{},"market":{},"distribution":{},"highImpactNews":{},"meta":{"type":"object"}}}},
   },
 
   "/api/signals": {
@@ -2168,6 +2330,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       min_confidence: { type: "number", description: "Filter by min confidence", default: "50" },
       ticker: { type: "string", description: "Filter by ticker" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"signals":{},"disclaimer":{},"summary":{"type":"object"},"articlesAnalyzed":{"type":"number"},"generatedAt":{"type":"string"},"unavailable":{"type":"boolean"},"reason":{"type":"string"}}}},
   },
 
   "/api/signals/narrative": {
@@ -2187,6 +2350,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       platform: { type: "string", description: "Filter by platform", default: "all" },
       format: { type: "string", description: "Response format", default: "json" },
     },
+    outputSchemas: {"POST":{"type":"object","properties":{"success":{"type":"boolean"},"data":{},"meta":{"type":"object"}}}},
   },
 
   "/api/social/coins": {
@@ -2217,6 +2381,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       keyword: { type: "string", description: "Filter by keyword" },
       ticker: { type: "string", description: "Filter by ticker" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"filters":{"type":"object"},"fetchedAt":{"type":"string"}},"additionalProperties":true}},
   },
 
   "/api/social/influencer-score": {
@@ -2227,6 +2392,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       platform: { type: "string", description: "Filter by platform", default: "twitter" },
       min_score: { type: "number", description: "Filter by min score", default: "0" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"influencer":{},"total":{"type":"number"},"leaderboard":{"type":"array"},"methodology":{"type":"object"}}},"POST":{"type":"object","properties":{"success":{"type":"boolean"},"score":{}}}},
   },
 
   "/api/social/influencers": {
@@ -2255,6 +2421,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
   "/api/social/x/lists": {
     description: "X/Twitter crypto list management and monitoring",
     methods: ["GET", "POST"],
+    outputSchemas: {"GET":{"type":"object","properties":{"success":{"type":"boolean"},"data":{"type":"object"},"meta":{"type":"object"}}},"POST":{"type":"object","properties":{"success":{"type":"boolean"},"data":{},"meta":{"type":"object"}}}},
   },
 
   "/api/social/x/sentiment": {
@@ -2264,6 +2431,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       refresh: { type: "string", description: "Filter by refresh" },
       tweets: { type: "number", description: "Filter by tweets", default: "10" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"success":{"type":"boolean"},"data":{"type":"object"},"meta":{"type":"object"}}}},
   },
 
   "/api/solana": {
@@ -2274,6 +2442,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       view: { type: "string", description: "Filter by view" },
       limit: { type: "number", description: "Maximum number of results to return", default: "20" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"data":{},"source":{"type":"string"},"timestamp":{"type":"string"},"chain":{"type":"string"},"endpoints":{"type":"object"},"dataSources":{"type":"array"},"subroutes":{"type":"object"},"relatedChains":{"type":"object"},"count":{"type":"number"},"address":{},"helius":{},"shyft":{},"sources":{"type":"array"}}}},
   },
 
   "/api/solana/assets": {
@@ -2284,6 +2453,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       page: { type: "number", description: "Page number for pagination", default: "1" },
       limit: { type: "number", description: "Maximum number of results to return", default: "100" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"data":{},"source":{"type":"string"},"timestamp":{"type":"string"},"address":{}}}},
   },
 
   "/api/solana/balances": {
@@ -2291,6 +2461,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
     parameters: {
       address: { type: "string", description: "Wallet or contract address" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"address":{},"data":{},"source":{"type":"string"},"timestamp":{"type":"string"}}}},
   },
 
   "/api/solana/collections": {
@@ -2304,6 +2475,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       page: { type: "number", description: "Page number for pagination", default: "1" },
       limit: { type: "number", description: "Maximum number of results to return", default: "100" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"assetId":{},"proof":{},"source":{"type":"string"},"timestamp":{"type":"string"},"groupKey":{},"groupValue":{},"data":{},"creator":{},"authority":{}}}},
   },
 
   "/api/solana/defi": {
@@ -2311,6 +2483,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
     parameters: {
       address: { type: "string", description: "Wallet or contract address" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"address":{},"data":{},"source":{"type":"string"},"timestamp":{"type":"string"}}}},
   },
 
   "/api/solana/nfts": {
@@ -2319,6 +2492,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       address: { type: "string", description: "Wallet or contract address" },
       source: { type: "string", description: "Filter by news source" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"address":{},"data":{},"source":{"type":"string"},"timestamp":{"type":"string"},"count":{"type":"number"}}}},
   },
 
   "/api/solana/priority-fees": {
@@ -2326,6 +2500,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
     parameters: {
       accounts: { type: "string", description: "Filter by accounts" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"accounts":{},"fees":{},"source":{"type":"string"},"timestamp":{"type":"string"}}}},
   },
 
   "/api/solana/search": {
@@ -2340,6 +2515,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       page: { type: "number", description: "Page number for pagination", default: "1" },
       limit: { type: "number", description: "Maximum number of results to return", default: "100" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"filters":{"type":"object"},"data":{},"source":{"type":"string"},"timestamp":{"type":"string"}}}},
   },
 
   "/api/solana/tokens": {
@@ -2350,6 +2526,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       page: { type: "number", description: "Page number for pagination", default: "1" },
       limit: { type: "number", description: "Maximum number of results to return", default: "100" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"query":{"type":"object"},"data":{},"source":{"type":"string"},"timestamp":{"type":"string"}}}},
   },
 
   "/api/solana/transactions": {
@@ -2359,6 +2536,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       limit: { type: "number", description: "Maximum number of results to return", default: "20" },
       source: { type: "string", description: "Filter by news source" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"address":{},"count":{"type":"number"},"data":{},"source":{"type":"string"},"timestamp":{"type":"string"}}}},
   },
 
   "/api/solana/wallet": {
@@ -2366,6 +2544,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
     parameters: {
       address: { type: "string", description: "Wallet or contract address" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"address":{},"analysis":{},"source":{"type":"string"},"timestamp":{"type":"string"}}}},
   },
 
   "/api/sources": {
@@ -2374,6 +2553,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       token: { type: "string", description: "Filter by token" },
       status: { type: "string", description: "Filter by status" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"sources":{},"count":{"type":"number"},"statusChecked":{"type":"boolean"}}}},
   },
 
   "/api/sources/health": {
@@ -2401,6 +2581,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       chains: { type: "string", description: "Filter by chains" },
       limit: { type: "number", description: "Maximum number of results to return", default: "50" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"type":{"type":"string"},"count":{},"data":{},"timestamp":{"type":"string"},"totalMarketCap":{}}}},
   },
 
   "/api/stablecoins/chains": {
@@ -2408,10 +2589,12 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
     parameters: {
       limit: { type: "number", description: "Maximum number of results to return", default: "25" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"status":{"type":"string"},"totalTvl":{},"count":{"type":"number"},"chains":{},"timestamp":{"type":"string"}}}},
   },
 
   "/api/stablecoins/depeg": {
     description: "Stablecoin depeg monitoring and alerts",
+    outputSchemas: {"GET":{"type":"object","properties":{"status":{"type":"string"},"running":{},"monitoredSymbols":{},"activeAlerts":{},"alertCount":{"type":"number"},"timestamp":{"type":"string"}}}},
   },
 
   "/api/stablecoins/dominance": {
@@ -2419,6 +2602,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
     parameters: {
       limit: { type: "number", description: "Maximum number of results to return", default: "10" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"status":{"type":"string"},"totalMarketCap":{},"count":{"type":"number"},"dominance":{},"otherPct":{},"timestamp":{"type":"string"}}}},
   },
 
   "/api/stablecoins/flows": {
@@ -2426,6 +2610,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
     parameters: {
       limit: { type: "number", description: "Maximum number of results to return", default: "20" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"status":{"type":"string"},"count":{"type":"number"},"data":{},"timestamp":{"type":"string"}}}},
   },
 
   "/api/stablecoins/{symbol}": {
@@ -2443,6 +2628,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       limit: { type: "number", description: "Maximum number of results to return", default: "50" },
       cursor: { type: "string", description: "Filter by cursor" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"data":{},"source":{"type":"string"},"timestamp":{"type":"string"},"address":{},"balances":{},"chain":{"type":"string"},"endpoints":{"type":"object"},"subroutes":{"type":"object"}},"additionalProperties":true}},
   },
 
   "/api/sui/balances": {
@@ -2451,6 +2637,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       address: { type: "string", description: "Wallet or contract address" },
       coin: { type: "string", description: "Cryptocurrency ID or symbol" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"address":{},"data":{},"source":{"type":"string"},"timestamp":{"type":"string"},"count":{"type":"number"}}}},
   },
 
   "/api/sui/objects": {
@@ -2462,6 +2649,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       limit: { type: "number", description: "Maximum number of results to return", default: "50" },
       cursor: { type: "string", description: "Filter by cursor" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"data":{},"source":{"type":"string"},"timestamp":{"type":"string"},"count":{"type":"number"},"address":{}},"additionalProperties":true}},
   },
 
   "/api/sui/transactions": {
@@ -2472,6 +2660,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       limit: { type: "number", description: "Maximum number of results to return", default: "20" },
       cursor: { type: "string", description: "Filter by cursor" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"data":{},"source":{"type":"string"},"timestamp":{"type":"string"},"address":{}},"additionalProperties":true}},
   },
 
   "/api/summarize": {
@@ -2481,6 +2670,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       source: { type: "string", description: "Filter by news source" },
       style: { type: "string", description: "Output style or format", default: "brief" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"summaries":{"type":"array"},"message":{"type":"string"}}}},
   },
 
   "/api/tags": {
@@ -2490,6 +2680,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       category: { type: "string", description: "Filter by category" },
       sort: { type: "string", description: "Sort field" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"tag":{"type":"object"},"url":{"type":"string"},"category":{},"count":{"type":"number"},"tags":{"type":"array"},"totalCount":{"type":"number"},"categories":{"type":"array"}}}},
   },
 
   "/api/tags/{slug}": {
@@ -2504,6 +2695,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       includePast: { type: "string", description: "Filter by includePast" },
       limit: { type: "number", description: "Maximum number of results to return", default: "50" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"unlocks":{},"total":{"type":"number"},"highImpact":{"type":"number"},"source":{},"generatedAt":{"type":"string"}}}},
   },
 
   "/api/tokenterminal": {
@@ -2527,6 +2719,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       sortBy: { type: "string", description: "Filter by sortBy", default: "score" },
       view: { type: "string", description: "Filter by view", default: "opportunities" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"success":{"type":"boolean"},"data":{},"meta":{"type":"object"}}}},
   },
 
   "/api/trading/options": {
@@ -2540,6 +2733,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       blocks: { type: "string", description: "Filter by blocks" },
       minPremium: { type: "number", description: "Filter by minPremium", default: "0" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"success":{"type":"boolean"},"data":{},"meta":{"type":"object"}}}},
   },
 
   "/api/trading/orderbook": {
@@ -2553,6 +2747,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       size: { type: "number", description: "Filter by size", default: "10000" },
       side: { type: "string", description: "Filter by side", default: "both" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"success":{"type":"boolean"},"data":{},"meta":{"type":"object"}}}},
   },
 
   "/api/tradingview": {
@@ -2576,6 +2771,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
   "/api/translate": {
     description: "Translate crypto news across languages",
     methods: ["POST", "GET"],
+    outputSchemas: {"POST":{"type":"object","properties":{"original":{},"translation":{},"locale":{},"language":{},"translations":{},"count":{"type":"number"}}},"GET":{"type":"object","properties":{"availableLocales":{},"localeNames":{},"totalLanguages":{"type":"number"},"usage":{"type":"object"}}}},
   },
 
   "/api/trending": {
@@ -2584,6 +2780,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       limit: { type: "number", description: "Maximum number of results to return", default: "10" },
       hours: { type: "number", description: "Filter by hours", default: "24" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"_stale":{"type":"boolean"}},"additionalProperties":true}},
   },
 
   "/api/unlocks": {
@@ -2593,10 +2790,12 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       project: { type: "string", description: "DeFi project or protocol name" },
       calendar: { type: "string", description: "Filter by calendar" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"source":{"type":"string"},"timestamp":{"type":"string"},"count":{},"calendar":{},"unlocks":{},"note":{"type":"string"}},"additionalProperties":true}},
   },
 
   "/api/v1": {
     description: "API v1 root - version info and available endpoints",
+    outputSchemas: {"GET":{"type":"object","properties":{"name":{"type":"string"},"version":{"type":"string"},"description":{"type":"string"},"docs":{"type":"string"},"x402":{"type":"object"},"authentication":{"type":"object"},"tiers":{"type":"array"},"endpoints":{"type":"array"},"rateLimit":{"type":"object"},"examples":{"type":"object"},"support":{"type":"object"}}}},
   },
 
   "/api/v1/ai/explain": {
@@ -2606,6 +2805,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       q: { type: "string", description: "Search query string" },
       level: { type: "string", description: "Filter by level", default: "beginner" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"level":{},"version":{"type":"string"},"duration":{},"error":{},"code":{}},"additionalProperties":true}},
   },
 
   "/api/v1/ai/research": {
@@ -2615,10 +2815,12 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       q: { type: "string", description: "Search query string" },
       depth: { type: "string", description: "Filter by depth", default: "standard" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"depth":{},"version":{"type":"string"},"disclaimer":{"type":"string"},"duration":{},"error":{},"code":{}},"additionalProperties":true}},
   },
 
   "/api/v1/alerts": {
     description: "Alert management for price and event triggers",
+    outputSchemas: {"GET":{"type":"object","properties":{"success":{"type":"boolean"},"data":{},"summary":{},"meta":{"type":"object"}}}},
   },
 
   "/api/v1/ask": {
@@ -2628,6 +2830,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       question: { type: "string", description: "Filter by question" },
       context_size: { type: "number", description: "Filter by context size", default: "20" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"question":{},"articlesAnalyzed":{"type":"number"},"version":{"type":"string"},"duration":{},"error":{},"code":{}},"additionalProperties":true}},
   },
 
   "/api/v1/assets": {
@@ -2636,6 +2839,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       id: { type: "string", description: "Unique identifier" },
       limit: { type: "number", description: "Maximum number of results to return", default: "100" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"data":{},"source":{"type":"string"},"timestamp":{"type":"string"},"total":{"type":"number"}}}},
   },
 
   "/api/v1/assets/{assetId}/history": {
@@ -2651,10 +2855,12 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       limit: { type: "number", description: "Maximum number of results to return", default: "10" },
       lang: { type: "string", description: "Language code (e.g., en, es, zh)", default: "en" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"articles":{},"lang":{},"availableLanguages":{"type":"array"},"version":{"type":"string"},"meta":{"type":"object"}},"additionalProperties":true}},
   },
 
   "/api/v1/categories": {
     description: "News and market category listings",
+    outputSchemas: {"GET":{"type":"object","properties":{"usage":{"type":"object"},"version":{"type":"string"},"meta":{"type":"object"}},"additionalProperties":true}},
   },
 
   "/api/v1/classify": {
@@ -2663,6 +2869,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       limit: { type: "number", description: "Maximum number of results to return", default: "10" },
       source: { type: "string", description: "Filter by news source" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"articles":{},"total":{"type":"number"},"version":{"type":"string"},"duration":{},"error":{},"code":{}}}},
   },
 
   "/api/v1/coin/{coinId}": {
@@ -2671,6 +2878,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
 
   "/api/v1/coins": {
     description: "List all cryptocurrencies with market data, pagination, and sorting",
+    outputSchemas: {"GET":{"type":"object","properties":{"success":{"type":"boolean"},"data":{},"meta":{"type":"object"}}}},
   },
 
   "/api/v1/defi": {
@@ -2680,6 +2888,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       chain: { type: "string", description: "Blockchain network (e.g., ethereum, solana)" },
       category: { type: "string", description: "Filter by category" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"success":{"type":"boolean"},"data":{},"summary":{"type":"object"},"meta":{"type":"object"}}}},
   },
 
   "/api/v1/derivatives": {
@@ -2688,6 +2897,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
 
   "/api/v1/dex": {
     description: "DEX trading data and analytics",
+    outputSchemas: {"GET":{"type":"object","properties":{"count":{"type":"number"},"totalVolume24h":{},"totalLiquidity":{},"chain":{},"sort":{},"pools":{},"sources":{},"timestamp":{"type":"string"},"latencyMs":{}}}},
   },
 
   "/api/v1/digest": {
@@ -2695,6 +2905,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
     parameters: {
       limit: { type: "number", description: "Maximum number of results to return", default: "50" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"headline":{"type":"string"},"tldr":{"type":"string"},"sections":{"type":"array"},"mustRead":{"type":"array"},"marketMood":{"type":"string"},"tickers":{"type":"array"},"version":{"type":"string"},"meta":{"type":"object"}},"additionalProperties":true}},
   },
 
   "/api/v1/exchanges": {
@@ -2703,6 +2914,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       page: { type: "number", description: "Page number for pagination", default: "1" },
       per_page: { type: "number", description: "Results per page", default: "50" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"success":{"type":"boolean"},"data":{},"meta":{"type":"object"}}}},
   },
 
   "/api/v1/export": {
@@ -2712,6 +2924,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       type: { type: "string", description: "Data or content type", default: "coins" },
       limit: { type: "number", description: "Maximum number of results to return", default: "100" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"success":{"type":"boolean"},"data":{},"meta":{"type":"object"}}}},
   },
 
   "/api/v1/fear-greed": {
@@ -2719,6 +2932,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
     parameters: {
       days: { type: "number", description: "Number of days of historical data", default: "30" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"current":{},"historical":{},"trend":{},"lastUpdated":{},"version":{"type":"string"},"meta":{"type":"object"}}}},
   },
 
   "/api/v1/forecast": {
@@ -2728,10 +2942,12 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       horizon: { type: "string", description: "Filter by horizon", default: "1d" },
       action: { type: "string", description: "API action to perform" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"success":{"type":"boolean"},"action":{"type":"string"},"narratives":{},"version":{"type":"string"},"duration":{},"metrics":{},"forecast":{},"horizon":{},"asset":{},"disclaimer":{"type":"string"},"error":{},"code":{}}}},
   },
 
   "/api/v1/fundamentals": {
     description: "Crypto project fundamentals and metrics",
+    outputSchemas: {"GET":{"type":"object","properties":{"count":{"type":"number"},"totalTvl":{},"totalAnnualizedRevenue":{},"sort":{},"protocols":{},"sources":{"type":"array"},"timestamp":{"type":"string"},"latencyMs":{}}}},
   },
 
   "/api/v1/gas": {
@@ -2739,10 +2955,12 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
     parameters: {
       network: { type: "string", description: "Network name (e.g., ethereum, bitcoin)" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"success":{"type":"boolean"},"data":{},"meta":{"type":"object"}}}},
   },
 
   "/api/v1/global": {
     description: "Global crypto market statistics",
+    outputSchemas: {"GET":{"type":"object","properties":{"data":{"type":"object"},"sources":{},"timestamp":{}}}},
   },
 
   "/api/v1/historical/{coinId}": {
@@ -2766,6 +2984,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       search: { type: "number", description: "Filter by search" },
       format: { type: "string", description: "Response format", default: "d3" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"from":{},"to":{},"path":{},"length":{},"entities":{"type":"array"},"entity":{},"eventType":{},"impactedEntities":{"type":"array"},"subgraph":{},"relationships":{},"query":{},"results":{}}}},
   },
 
   "/api/v1/liquidations": {
@@ -2775,10 +2994,12 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       limit: { type: "number", description: "Maximum number of results to return", default: "20" },
       min_value: { type: "number", description: "Filter by min value", default: "0" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"liquidations":{},"summary":{"type":"object"},"period":{"type":"string"},"count":{"type":"number"},"version":{"type":"string"},"duration":{},"error":{},"code":{}}}},
   },
 
   "/api/v1/market-data": {
     description: "Global cryptocurrency market statistics and trending coins",
+    outputSchemas: {"GET":{"type":"object","properties":{"success":{"type":"boolean"},"data":{"type":"object"},"meta":{"type":"object"}}}},
   },
 
   "/api/v1/narratives": {
@@ -2787,6 +3008,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       limit: { type: "number", description: "Maximum number of results to return", default: "40" },
       emerging: { type: "string", description: "Filter by emerging" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"narratives":{},"message":{"type":"string"},"version":{"type":"string"},"summary":{"type":"object"},"articlesAnalyzed":{"type":"number"},"analyzedAt":{"type":"string"},"meta":{"type":"object"}}}},
   },
 
   "/api/v1/news": {
@@ -2802,18 +3024,22 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       lang: { type: "string", description: "Language code (e.g., en, es, zh)", default: "en" },
       sort: { type: "string", description: "Sort field" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"articles":{},"lang":{},"availableLanguages":{"type":"array"},"availableCategories":{},"version":{"type":"string"},"meta":{"type":"object"}},"additionalProperties":true}},
   },
 
   "/api/v1/ohlcv": {
     description: "OHLCV candlestick market data",
+    outputSchemas: {"GET":{"type":"object","properties":{"symbol":{},"interval":{},"count":{"type":"number"},"candles":{},"source":{"type":"string"},"timestamp":{"type":"string"},"latencyMs":{}}}},
   },
 
   "/api/v1/onchain": {
     description: "On-chain analytics data",
+    outputSchemas: {"GET":{"type":"object","properties":{"sources":{},"timestamp":{"type":"string"},"latencyMs":{}},"additionalProperties":true}},
   },
 
   "/api/v1/orderbook": {
     description: "Order book depth data",
+    outputSchemas: {"GET":{"type":"object","properties":{"symbol":{},"depth":{},"lastUpdateId":{},"bids":{},"asks":{},"analysis":{},"source":{"type":"string"},"timestamp":{"type":"string"},"latencyMs":{}}}},
   },
 
   "/api/v1/predictions": {
@@ -2827,6 +3053,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       limit: { type: "number", description: "Maximum number of results to return", default: "50" },
       minPredictions: { type: "number", description: "Filter by minPredictions", default: "5" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"success":{"type":"boolean"},"data":{},"version":{"type":"string"},"meta":{"type":"object"}}},"POST":{"type":"object","properties":{"success":{"type":"boolean"},"data":{},"message":{"type":"string"},"version":{"type":"string"}}}},
   },
 
   "/api/v1/search": {
@@ -2835,6 +3062,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       q: { type: "string", description: "Search query string" },
       query: { type: "string", description: "Search query string" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"success":{"type":"boolean"},"data":{"type":"object"},"meta":{"type":"object"}}}},
   },
 
   "/api/v1/sentiment": {
@@ -2843,6 +3071,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       limit: { type: "number", description: "Maximum number of results to return", default: "20" },
       asset: { type: "string", description: "Asset identifier (e.g., BTC, ETH)" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"articles":{},"market":{},"version":{"type":"string"},"distribution":{},"highImpactNews":{},"meta":{"type":"object"}}}},
   },
 
   "/api/v1/signals": {
@@ -2851,14 +3080,17 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       limit: { type: "number", description: "Maximum number of results to return", default: "30" },
       min_confidence: { type: "number", description: "Filter by min confidence", default: "50" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"signals":{},"total":{"type":"number"},"minConfidence":{},"articlesAnalyzed":{"type":"number"},"disclaimer":{},"version":{"type":"string"},"duration":{},"error":{},"code":{}}}},
   },
 
   "/api/v1/sources": {
     description: "News source listings",
+    outputSchemas: {"GET":{"type":"object","properties":{"version":{"type":"string"},"meta":{"type":"object"}},"additionalProperties":true}},
   },
 
   "/api/v1/stablecoins": {
     description: "Stablecoin market data",
+    outputSchemas: {"GET":{"type":"object","properties":{"count":{"type":"number"},"totalSupply":{},"netFlow1d":{},"depeggedTokens":{},"stablecoins":{"type":"array"},"source":{},"timestamp":{"type":"string"},"latencyMs":{}}}},
   },
 
   "/api/v1/summarize": {
@@ -2868,6 +3100,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       source: { type: "string", description: "Filter by news source" },
       style: { type: "string", description: "Output style or format", default: "brief" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"summaries":{},"version":{"type":"string"},"meta":{"type":"object"},"style":{}}}},
   },
 
   "/api/v1/system/status": {
@@ -2881,10 +3114,12 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       category: { type: "string", description: "Filter by category" },
       sort: { type: "string", description: "Sort field" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"tag":{"type":"object"},"version":{"type":"string"},"meta":{"type":"object"},"category":{},"count":{"type":"number"},"tags":{"type":"array"},"totalCount":{"type":"number"},"categories":{"type":"array"}}}},
   },
 
   "/api/v1/trending": {
     description: "Trending cryptocurrencies and topics",
+    outputSchemas: {"GET":{"type":"object","properties":{"success":{"type":"boolean"},"data":{"type":"object"},"meta":{"type":"object"}}}},
   },
 
   "/api/v1/usage": {
@@ -2892,6 +3127,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
     parameters: {
       api_key: { type: "string", description: "Filter by api key" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"tier":{},"usageToday":{},"usageMonth":{},"limit":{},"remaining":{},"resetAt":{"type":"string"},"keyInfo":{"type":"object"}}}},
   },
 
   "/api/v1/whale-alerts": {
@@ -2901,10 +3137,12 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       minValue: { type: "number", description: "Minimum transaction value in USD", default: "100000" },
       limit: { type: "number", description: "Maximum number of results to return", default: "50" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"alerts":{},"summary":{"type":"object"},"lastUpdated":{"type":"string"},"version":{"type":"string"},"meta":{"type":"object"}}}},
   },
 
   "/api/v1/x402": {
     description: "x402 micropayment protocol info and status",
+    outputSchemas: {"GET":{"type":"object","properties":{"status":{},"ready":{},"x402":{"type":"object"},"validation":{"type":"object"},"docs":{"type":"object"},"_meta":{"type":"object"}}}},
   },
 
   "/api/validators": {
@@ -2913,6 +3151,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       view: { type: "string", description: "Filter by view" },
       limit: { type: "number", description: "Maximum number of results to return", default: "50" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"count":{"type":"number"},"validators":{},"timestamp":{"type":"string"}}}},
   },
 
   "/api/vector-search": {
@@ -2936,10 +3175,12 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
 
   "/api/version": {
     description: "Version - Other",
+    outputSchemas: {"GET":{"type":"object","properties":{"name":{"type":"string"},"version":{},"uptimeSeconds":{},"timestamp":{"type":"string"}},"additionalProperties":true}},
   },
 
   "/api/videos": {
     description: "Crypto video content aggregation",
+    outputSchemas: {"GET":{"type":"object","properties":{"videos":{},"total":{},"limit":{},"offset":{},"hasMore":{}}}},
   },
 
   "/api/watchlist": {
@@ -2951,6 +3192,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       clear: { type: "string", description: "Filter by clear" },
       coinId: { type: "string", description: "Cryptocurrency ID (e.g., bitcoin, ethereum)" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"success":{"type":"boolean"},"coinId":{},"isInWatchlist":{},"watchlist":{},"prices":{},"count":{"type":"number"}}},"POST":{"type":"object","properties":{"success":{"type":"boolean"},"message":{},"watchlist":{},"action":{}}},"DELETE":{"type":"object","properties":{"success":{"type":"boolean"},"message":{"type":"string"},"watchlist":{}}},"PUT":{"type":"object","properties":{"success":{"type":"boolean"},"message":{"type":"string"},"watchlist":{}}}},
   },
 
   "/api/whale-alerts": {
@@ -2980,6 +3222,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       limit: { type: "string", description: "Maximum number of results to return", default: "10" },
       min_usd: { type: "string", description: "Filter by min usd", default: "1000000" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"alerts":{"type":"array"},"summary":{},"timestamp":{"type":"string"}}}},
   },
 
   "/api/ws": {
@@ -2996,6 +3239,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       chain: { type: "string", description: "Blockchain network (e.g., ethereum, solana)" },
       limit: { type: "number", description: "Maximum number of results to return", default: "10" },
     },
+    outputSchemas: {"GET":{"type":"object","properties":{"chain":{},"count":{"type":"number"},"yields":{},"timestamp":{"type":"string"},"source":{"type":"string"}}}},
   },
 
 };

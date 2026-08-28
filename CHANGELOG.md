@@ -7,6 +7,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+- **x402scan discovery** - paid endpoints were listed without usable schemas and failed registration probes. Four shapes disagreed with what the discovery parser reads, and every one of them was silent from the outside:
+  - `x-payment-info` used the flat `{ pricingMode, price }` form, which only parses through a legacy fallback. It is now the structured `{ price: { mode, currency, amount }, protocols: [{ x402: {} }] }`.
+  - 416 of 418 operations advertised no response schema at all, which x402scan rejects outright.
+  - `DELETE`, `PATCH` and `PUT` operations advertised no input schema, because query parameters were only attached to `GET`.
+  - The runtime `402` put its input schema at `extensions.bazaar.schema` rather than `schema.properties.input.properties.queryParams`, so a probe reported `SCHEMA_INPUT_MISSING` and `SCHEMA_OUTPUT_MISSING` against every endpoint while both schemas sat three keys away. All 408 paid challenges now validate clean.
+  - 59 operations across 54 free-tier paths (`/api/news`, `/api/market/*`, `/api/archive/*`, the RSS and Atom feeds, `/api/mcp` and the rest) were advertised at $0.001 a call while the gate served them free. A probe calls those and gets `200` where the spec promised `402`, which fails them at registration. Paid-versus-free is now read from the same patterns the middleware gate uses, and free operations declare `security: []` with no price and no `402`.
+- **`/.well-known/x402`** - returned `outputSchema.output: null` for nearly every resource; it now carries the real response schema.
+- **`/api/mcp`** - advertised a generic `{ data }` body no MCP client would send. It now declares the JSON-RPC envelope it actually accepts and the `Mcp-Session-Id` header its `GET` and `DELETE` use.
+
+### Added
+- **Response schemas for 242 endpoints**, derived from each handler's own success bodies by `scripts/generate-endpoint-metadata.js` rather than hand-written, so they cannot drift from the code. Routes that proxy an upstream payload advertise an open object instead of invented properties.
+- **`info.contact.email`** in the OpenAPI document (`X402_CONTACT_EMAIL`, defaulting to the published support address), which lets the origin's ownership be verified.
+- **[docs/x402scan-discovery.md](docs/x402scan-discovery.md)** - the discovery contract, where each schema comes from, the audit commands, and the pre-registration checklist.
+- **Accurate `info.x-guidance`** - the block agents read as context claimed every endpoint required payment, quoted prices for two free endpoints, and named two routes that do not exist. It now describes the free tier, and a test asserts every path it names resolves.
+- **Discovery contract tests** (`src/lib/openapi/__tests__/x402scan-discovery.test.ts`) pinning the exact shapes the parser looks up, so a regression fails the test run instead of surfacing as a silent delisting.
+
 ## [1.0.3] - 2026-08-27
 
 Maintenance release: reliability fixes for API consumers and a documentation cleanup.

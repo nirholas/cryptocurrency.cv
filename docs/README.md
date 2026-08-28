@@ -22,7 +22,7 @@ Free Crypto News is a free, no-auth crypto news and market intelligence API serv
 | Area | Docs |
 |---|---|
 | Real-time | [REALTIME.md](./REALTIME.md), [WEBSOCKET.md](./WEBSOCKET.md) |
-| Payments and premium | [X402.md](./X402.md), [PREMIUM.md](./PREMIUM.md), [WELL-KNOWN.md](./WELL-KNOWN.md) |
+| Payments and premium | [X402.md](./X402.md), [x402scan-discovery.md](./x402scan-discovery.md), [PREMIUM.md](./PREMIUM.md), [WELL-KNOWN.md](./WELL-KNOWN.md) |
 | Data | [SOURCES.md](./SOURCES.md) (news feeds and market-data providers), [DATABASE.md](./DATABASE.md), [RAG.md](./RAG.md) |
 | Frontend | [COMPONENTS.md](./COMPONENTS.md), [HOOKS.md](./HOOKS.md), [LIBRARIES.md](./LIBRARIES.md), [INTERNATIONALIZATION.md](./INTERNATIONALIZATION.md), [SEO.md](./SEO.md) |
 | Integrations | [integrations/](./integrations/index.md): CLI, Alfred, Raycast, widgets, Postman, Copilot |
