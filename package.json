@@ -258,7 +258,7 @@
     ]
   },
   "engines": {
-    "node": ">=20.0.0"
+    "node": ">=22 <25"
   },
   "bugs": {
     "url": "https://github.com/nirholas/cryptocurrency.cv/issues"

@@ -27,7 +27,7 @@ Before creating bug reports, please check existing issues to avoid duplicates. W
 - **Describe the exact steps to reproduce the problem**
 - **Provide specific examples** (curl commands, code snippets)
 - **Describe the behavior you observed and what you expected**
-- **Include your environment** (OS, Node.js version, etc.)
+- **Include your environment** (OS, Node.js version, pnpm version, browser). We target Node 22.
 
 ### 💡 Suggesting Features
 
@@ -54,8 +54,9 @@ We love pull requests! Here are some ideas:
 
 ### Prerequisites
 
-- Node.js 18+
-- npm or yarn
+- **Node.js 22** (the version in `.nvmrc` and the devcontainer image). `package.json` accepts `>=22 <25`.
+- **pnpm 10**. This repo is pnpm-only and pins `packageManager: pnpm@10.32.1`. `npm install` and `yarn install` will fight the lockfile. Enable it with `corepack enable`.
+- **Bun** (optional), used to run scripts and executables (`bun run dev`, `bunx tsc`). Every command below also works with plain `pnpm`.
 
 ### Local Setup
 
@@ -66,26 +67,61 @@ We love pull requests! Here are some ideas:
 git clone https://github.com/YOUR_USERNAME/cryptocurrency.cv.git
 cd cryptocurrency.cv
 
-# 3. Install dependencies
-npm install
+# 3. Install dependencies (pnpm only)
+corepack enable
+pnpm install
 
-# 4. Start development server
-npm run dev
+# 4. Create a local env file
+cp .env.example .env.local
 
-# 5. Open http://localhost:3000
+# 5. Start the dev server
+pnpm dev
+
+# 6. Open http://localhost:3000
 ```
+
+**You do not need any API keys to run the site.** Every news, market, and archive
+endpoint works keyless against the public upstreams. Only the AI endpoints
+(`/api/ask`, summarisation, sentiment, translation) need `GROQ_API_KEY`, which is
+free from https://console.groq.com/keys. Leave it blank and the AI routes return a
+clear "not configured" response instead of crashing.
+
+If you use VS Code or GitHub Codespaces, `.devcontainer/devcontainer.json` runs
+steps 3 and 4 for you on create.
 
 ### Project Structure
 
 ```
 ├── src/
-│   ├── app/           # Next.js pages and API routes
+│   ├── app/           # Next.js App Router
+│   │   ├── [locale]/  # Localised pages (100+ locales via next-intl)
+│   │   ├── api/       # Route handlers: the public REST API
+│   │   ├── api-reference/  # Swagger UI for the OpenAPI spec
+│   │   ├── blog/      # MDX blog
+│   │   └── embed/     # Chrome-less widget routes for iframes
 │   ├── components/    # React components
-│   └── lib/           # Utilities and helpers
-├── sdk/               # Language SDKs
+│   ├── lib/           # Business logic: aggregation, market data, alerts, db
+│   ├── hooks/         # Client React hooks
+│   ├── i18n/          # next-intl routing and navigation helpers
+│   ├── middleware/    # Locale, redirect, and bot-detection middleware
+│   ├── data/          # Static datasets (sources, taxonomies)
+│   ├── types/         # Shared TypeScript types
+│   └── __tests__/     # Vitest suites that span modules
+├── e2e/               # Playwright specs (a11y, console errors, UI audit)
+├── messages/          # Translated UI strings, one JSON file per locale
+├── locales/           # Locale metadata and translation tooling config
+├── content/           # MDX blog posts and long-form content
+├── docs/              # MkDocs site: API reference, tutorials, guides
+├── scripts/           # Build, archive, i18n, db, and audit scripts
+├── sdk/               # Language SDKs (TypeScript, Python, Go, PHP, React, …)
 ├── mcp/               # Model Context Protocol server
-├── scripts/           # Build and archive scripts
-└── docs/              # Documentation
+├── cli/               # Command line client
+├── widget/            # Embeddable JS widget bundle
+├── extension/         # Browser extension
+├── mobile/            # Mobile app shell
+├── examples/          # Runnable integration examples
+├── infra/             # Deployment manifests and observability config
+└── contracts/         # x402 payment contracts
 ```
 
 ## 💻 Development Process
@@ -99,10 +135,25 @@ npm run dev
 
 2. **Make your changes** following our style guidelines
 
-3. **Test your changes** locally:
+3. **Run the checks CI gates on**, in this order:
    ```bash
-   npm run build
-   npm run lint
+   pnpm typecheck   # tsc --noEmit (also regenerates the translated-locale list)
+   pnpm lint        # eslint over src/
+   pnpm test:run    # vitest, single run
+   pnpm build       # next build, the slowest gate: run it last
+   ```
+
+   A pull request that fails any of these will not be merged. `pnpm quality-gate`
+   runs the same set plus formatting, coverage, and secret scanning if you want
+   one command.
+
+   Useful while iterating:
+   ```bash
+   pnpm test              # vitest in watch mode
+   pnpm test:coverage     # coverage report
+   pnpm format            # prettier --write over src/
+   pnpm test:e2e          # Playwright, needs a running dev server
+   pnpm test:errors       # console-error sweep, needs a running dev server
    ```
 
 4. **Commit your changes** with a clear message:
@@ -136,30 +187,20 @@ as you add tests and can never decrease. If your PR reduces coverage, the qualit
 will fail.
 
 - Check current thresholds: see `vitest.config.ts` → `coverage.thresholds`
-- After adding tests: run `bun run coverage:ratchet` to update thresholds
+- After adding tests: run `pnpm coverage:ratchet` to update thresholds
 - The pre-push hook automatically verifies coverage hasn't dropped via the quality gate
 
 ### Database Changes
 
 If your PR modifies `src/lib/db/schema.ts`:
 
-1. Run `bun run db:generate` to create a migration file
+1. Run `pnpm db:generate` to create a migration file
 2. Review the generated SQL in `src/lib/db/migrations/`
 3. Include the migration file in your PR
-4. Test the migration locally with `bun run db:migrate`
+4. Test the migration locally with `pnpm db:migrate`
 5. Note any data migration needs in the PR description
 
 See [docs/DATABASE-MIGRATIONS.md](docs/DATABASE-MIGRATIONS.md) for the full workflow.
-
-### Test Coverage Ratchet
-
-This project uses a coverage ratchet — test coverage thresholds automatically increase
-as you add tests and can never decrease. If your PR reduces coverage, the quality gate
-will fail.
-
-- Check current thresholds: see `vitest.config.ts` → `coverage.thresholds`
-- After adding tests: run `bun run coverage:ratchet` to update thresholds
-- The pre-push hook automatically verifies coverage hasn't dropped
 
 ## 🔄 Pull Request Process
 
