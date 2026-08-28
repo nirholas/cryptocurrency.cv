@@ -119,17 +119,21 @@ describe('verifyPayment', () => {
   });
 
   it('quotes the price to the facilitator in USDC base units', async () => {
-    const fetchSpy = vi.fn(async () =>
-      new Response(JSON.stringify({ isValid: true }), {
-        status: 200,
-        headers: { 'Content-Type': 'application/json' },
+    let sentBody = '';
+    vi.stubGlobal(
+      'fetch',
+      vi.fn(async (_url: string, init: RequestInit) => {
+        sentBody = init.body as string;
+        return new Response(JSON.stringify({ isValid: true }), {
+          status: 200,
+          headers: { 'Content-Type': 'application/json' },
+        });
       }),
     );
-    vi.stubGlobal('fetch', fetchSpy);
 
     await verifyPayment(encode({ scheme: 'exact' }), { ...requirements, priceUsd: 29 });
 
-    const body = JSON.parse(fetchSpy.mock.calls[0][1].body as string);
+    const body = JSON.parse(sentBody);
     expect(body.paymentRequirements.maxAmountRequired).toBe('29000000');
     expect(body.paymentRequirements.scheme).toBe('exact');
   });
