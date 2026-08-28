@@ -40,10 +40,10 @@ import {
   extractApiKey,
   upgradeKeyTier,
   isKvConfigured,
-  API_KEY_TIERS,
 } from '@/lib/api-keys';
 import { API_TIERS } from '@/lib/x402/pricing';
 import { RECEIVE_ADDRESS } from '@/lib/x402/config';
+import { verifyPayment } from '@/lib/x402/verify-payment';
 
 export const runtime = 'nodejs';
 
@@ -191,19 +191,44 @@ export async function POST(request: NextRequest) {
     );
   }
 
-  // Payment header present — verify the payment amount matches the expected price.
-  // The middleware validates the x402 signature, but we also verify the amount
-  // to prevent underpayment or mismatched tier/price combinations.
-  const expectedAmountMicro = (price * 1_000_000).toString();
-  const paidAmount = request.headers.get('x-402-amount');
-  if (paidAmount && paidAmount !== expectedAmountMicro) {
+  // This route is in EXEMPT_PATTERNS, so the global x402 gate never ran for it
+  // and nothing upstream has checked that money moved. The presence of a header
+  // is not proof of payment: before this check existed, `x-402-payment: x` was
+  // enough to be granted an enterprise key for free (reported as issue #43).
+  //
+  // The signed payload is verified with the facilitator against the exact
+  // amount and recipient this upgrade requires. Verification fails closed: an
+  // unreachable facilitator is not evidence of payment, so nothing is granted.
+  const verification = await verifyPayment(
+    request.headers.get('x-payment') ?? paymentHeader,
+    {
+      priceUsd: price,
+      description: `${tierConfig.name} tier upgrade for ${months} month(s)`,
+      payTo: RECEIVE_ADDRESS,
+    },
+  );
+
+  if (!verification.valid) {
+    const unavailable = verification.code === 'UNAVAILABLE';
     return NextResponse.json(
       {
-        error: 'Payment amount mismatch',
-        code: 'PAYMENT_MISMATCH',
-        message: `Expected ${expectedAmountMicro} micro-USDC ($${price}), received ${paidAmount}`,
+        error: unavailable ? 'Payment verification unavailable' : 'Payment verification failed',
+        code: unavailable ? 'VERIFICATION_UNAVAILABLE' : 'PAYMENT_INVALID',
+        message: verification.reason,
+        payment: {
+          protocol: 'x402',
+          price: `$${price}`,
+          priceUsdc: (price * 1_000_000).toString(),
+          currency: 'USDC',
+          network: 'eip155:8453',
+          payTo: RECEIVE_ADDRESS,
+          description: `${tierConfig.name} tier upgrade for ${months} month(s)`,
+          months,
+          targetTier,
+        },
+        docs: 'https://docs.x402.org',
       },
-      { status: 402 },
+      { status: unavailable ? 503 : 402 },
     );
   }
 
