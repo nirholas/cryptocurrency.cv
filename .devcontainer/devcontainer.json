@@ -12,7 +12,7 @@
     "3000": { "label": "Next.js Dev", "onAutoForward": "notify" },
     "6006": { "label": "Storybook", "onAutoForward": "silent" }
   },
-  "postCreateCommand": "pnpm install",
+  "postCreateCommand": "pnpm install && cp -n .env.example .env.local",
   "customizations": {
     "vscode": {
       "extensions": [
