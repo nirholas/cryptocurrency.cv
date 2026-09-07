@@ -14,6 +14,12 @@ import type { SourceInfo } from "@/lib/crypto-news";
 /* ─── Types ─── */
 interface SourcesGridProps {
   sources: SourceInfo[];
+  /**
+   * True once the live feed probe has answered. Before it does, every source
+   * reads "unknown", so a health figure derived from the statuses would report
+   * a healthy category as 0%.
+   */
+  statusChecked: boolean;
 }
 
 type ViewMode = "grid" | "list";
@@ -23,7 +29,7 @@ type StatusFilter = "all" | "active" | "unavailable" | "unknown";
 const ALL_CATEGORY = "all";
 
 /* ─── Main Component ─── */
-export default function SourcesGrid({ sources }: SourcesGridProps) {
+export default function SourcesGrid({ sources, statusChecked }: SourcesGridProps) {
   const [search, setSearch] = useState("");
   const [activeCategory, setActiveCategory] = useState(ALL_CATEGORY);
   const [viewMode, setViewMode] = useState<ViewMode>("grid");
@@ -346,20 +352,23 @@ export default function SourcesGrid({ sources }: SourcesGridProps) {
                     {cat}
                   </h2>
                   <span className="text-sm font-normal text-text-tertiary">
-                    {catSources.length} sources · {activeInCat} active
+                    {catSources.length} sources
+                    {statusChecked ? ` \u00b7 ${activeInCat} active` : ""}
                   </span>
-                  {/* Health bar mini */}
-                  <div className="hidden sm:flex items-center gap-1 ml-2">
-                    <div className="h-1.5 rounded-full bg-surface-tertiary w-20 overflow-hidden">
-                      <div
-                        className="h-full bg-green-500 rounded-full transition-all"
-                        style={{ width: `${catSources.length > 0 ? (activeInCat / catSources.length) * 100 : 0}%` }}
-                      />
+                  {/* Health bar mini, drawn only from a completed probe */}
+                  {statusChecked && (
+                    <div className="hidden sm:flex items-center gap-1 ml-2">
+                      <div className="h-1.5 rounded-full bg-surface-tertiary w-20 overflow-hidden">
+                        <div
+                          className="h-full bg-green-500 rounded-full transition-all"
+                          style={{ width: `${catSources.length > 0 ? (activeInCat / catSources.length) * 100 : 0}%` }}
+                        />
+                      </div>
+                      <span className="text-[10px] text-text-tertiary">
+                        {catSources.length > 0 ? Math.round((activeInCat / catSources.length) * 100) : 0}%
+                      </span>
                     </div>
-                    <span className="text-[10px] text-text-tertiary">
-                      {catSources.length > 0 ? Math.round((activeInCat / catSources.length) * 100) : 0}%
-                    </span>
-                  </div>
+                  )}
                   <span className="ml-auto">
                     <svg
                       className={cn("h-4 w-4 text-text-tertiary transition-transform", isCollapsed ? "" : "rotate-180")}
@@ -416,7 +425,6 @@ function SourceCard({
         {imgError ? (
           <FaviconFallback name={source.name} />
         ) : (
-          /* eslint-disable-next-line @next/next/no-img-element */
           <img
             src={`https://www.google.com/s2/favicons?domain=${domain}&sz=32`}
             alt="" width={20} height={20}
@@ -500,7 +508,6 @@ function SourceListRow({
       {imgError ? (
         <FaviconFallback name={source.name} />
       ) : (
-        /* eslint-disable-next-line @next/next/no-img-element */
         <img
           src={`https://www.google.com/s2/favicons?domain=${domain}&sz=32`}
           alt="" width={16} height={16}

@@ -10,39 +10,108 @@
 
 /**
  * Exchanges API
- * GET /api/exchanges — returns exchange reviews and comparison data
+ * GET /api/exchanges - ranked exchanges with live 24h volume and trust scores.
+ *
+ * This route used to answer with six hardcoded rows whose volumes were strings
+ * frozen at whatever they were the day someone typed them ("$2.1B" for
+ * Coinbase). Two things were wrong with that: the figures were invented, and a
+ * string where the exchange table expects a number is what put six "$NaN"
+ * cells on /exchanges. It now serves the same live CoinGecko ranking that
+ * /api/market/exchanges does, converted to USD.
+ *
+ * Query parameters:
+ * - limit: rows to return (default 50, max 250)
+ * - sort:  'trust' (default) | 'volume' | 'name'
  */
 
 import { type NextRequest, NextResponse } from 'next/server';
+import { getExchanges } from '@/lib/market-data';
+import { fetchCoinGecko } from '@/lib/coingecko';
+import { COINGECKO_BASE } from '@/lib/constants';
+import { createRequestLogger } from '@/lib/logger';
+import { ApiError } from '@/lib/api-error';
 
-const EXCHANGES = [
-  { id: 'coinbase', name: 'Coinbase', trustScore: 10, rating: 4.5, makerFee: '0.40%', takerFee: '0.60%', coins: 250, volume24h: '$2.1B', kyc: 'required', regulated: true, proofOfReserves: true, founded: 2012, headquarters: 'San Francisco, USA' },
-  { id: 'binance', name: 'Binance', trustScore: 8, rating: 4.3, makerFee: '0.10%', takerFee: '0.10%', coins: 600, volume24h: '$12.5B', kyc: 'required', regulated: true, proofOfReserves: true, founded: 2017, headquarters: 'Multiple' },
-  { id: 'kraken', name: 'Kraken', trustScore: 9, rating: 4.4, makerFee: '0.16%', takerFee: '0.26%', coins: 200, volume24h: '$1.8B', kyc: 'required', regulated: true, proofOfReserves: true, founded: 2011, headquarters: 'San Francisco, USA' },
-  { id: 'bybit', name: 'Bybit', trustScore: 7, rating: 4.2, makerFee: '0.10%', takerFee: '0.10%', coins: 500, volume24h: '$5.2B', kyc: 'required', regulated: true, proofOfReserves: true, founded: 2018, headquarters: 'Dubai, UAE' },
-  { id: 'okx', name: 'OKX', trustScore: 7, rating: 4.1, makerFee: '0.08%', takerFee: '0.10%', coins: 350, volume24h: '$3.8B', kyc: 'optional', regulated: true, proofOfReserves: true, founded: 2017, headquarters: 'Seychelles' },
-  { id: 'gemini', name: 'Gemini', trustScore: 9, rating: 4.0, makerFee: '0.20%', takerFee: '0.40%', coins: 100, volume24h: '$200M', kyc: 'required', regulated: true, proofOfReserves: true, founded: 2014, headquarters: 'New York, USA' },
-];
+export const revalidate = 3600;
 
-export async function GET(req: NextRequest) {
-  const { searchParams } = new URL(req.url);
-  const sortBy = searchParams.get('sort') || 'trust';
-  const limit = parseInt(searchParams.get('limit') || '50', 10);
+type SortKey = 'trust' | 'volume' | 'name';
 
-  const sorted = [...EXCHANGES].sort((a, b) => {
-    if (sortBy === 'rating') return b.rating - a.rating;
-    if (sortBy === 'coins') return b.coins - a.coins;
-    if (sortBy === 'fees') return parseFloat(a.takerFee) - parseFloat(b.takerFee);
-    return b.trustScore - a.trustScore;
-  }).slice(0, limit);
+/**
+ * CoinGecko reports exchange volume in BTC. Rendering that as dollars would
+ * understate every exchange by five orders of magnitude, so convert with the
+ * live BTC price and, when that lookup fails, omit the figure rather than
+ * publish a wrong one.
+ */
+async function getBtcPriceUsd(): Promise<number | null> {
+  const data = await fetchCoinGecko<Record<string, { usd?: number }>>(
+    `${COINGECKO_BASE}/simple/price?ids=bitcoin&vs_currencies=usd`,
+    { revalidate: 300 },
+  );
+  const price = data?.bitcoin?.usd;
+  return typeof price === 'number' && Number.isFinite(price) ? price : null;
+}
 
-  return NextResponse.json({
-    exchanges: sorted,
-    total: sorted.length,
-  }, {
-    headers: {
-      'Cache-Control': 'public, s-maxage=3600, stale-while-revalidate=7200',
-      'Access-Control-Allow-Origin': '*',
-    },
-  });
+export async function GET(request: NextRequest) {
+  const logger = createRequestLogger(request);
+  const { searchParams } = new URL(request.url);
+
+  const sort = (searchParams.get('sort') ?? 'trust') as SortKey;
+  const limitRaw = parseInt(searchParams.get('limit') ?? '50', 10);
+  const limit = Math.min(Number.isNaN(limitRaw) ? 50 : Math.max(1, limitRaw), 250);
+
+  try {
+    const [rows, btcUsd] = await Promise.all([getExchanges(limit, 1), getBtcPriceUsd()]);
+
+    if (rows.length === 0) {
+      return ApiError.serviceUnavailable('Exchange rankings are temporarily unavailable');
+    }
+
+    const exchanges = rows.map((row) => {
+      const volumeBtc =
+        typeof row.trade_volume_24h_btc === 'number' && Number.isFinite(row.trade_volume_24h_btc)
+          ? row.trade_volume_24h_btc
+          : null;
+
+      return {
+        id: row.id,
+        name: row.name,
+        url: row.url,
+        image: row.image,
+        country: row.country ?? undefined,
+        yearEstablished: row.year_established ?? null,
+        trustScore: row.trust_score ?? 0,
+        trustScoreRank: row.trust_score_rank ?? null,
+        volume24hBtc: volumeBtc,
+        volume24h: volumeBtc !== null && btcUsd !== null ? volumeBtc * btcUsd : null,
+        hasTradingIncentive: row.has_trading_incentive ?? false,
+      };
+    });
+
+    if (sort === 'volume') {
+      exchanges.sort((a, b) => (b.volume24hBtc ?? 0) - (a.volume24hBtc ?? 0));
+    } else if (sort === 'name') {
+      exchanges.sort((a, b) => a.name.localeCompare(b.name));
+    } else {
+      exchanges.sort((a, b) => b.trustScore - a.trustScore);
+    }
+
+    return NextResponse.json(
+      {
+        exchanges,
+        total: exchanges.length,
+        currency: 'usd',
+        btcPriceUsd: btcUsd,
+        source: 'CoinGecko',
+        fetchedAt: new Date().toISOString(),
+      },
+      {
+        headers: {
+          'Cache-Control': 'public, s-maxage=3600, stale-while-revalidate=7200',
+          'Access-Control-Allow-Origin': '*',
+        },
+      },
+    );
+  } catch (error) {
+    logger.error('Failed to fetch exchanges', error);
+    return ApiError.internal('Failed to fetch exchanges', error);
+  }
 }

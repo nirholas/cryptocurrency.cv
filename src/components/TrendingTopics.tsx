@@ -20,7 +20,8 @@ interface TrendingTopic {
   name: string;
   slug: string;
   count: number;
-  change: number; // % change vs. previous period
+  /** Percent change in mentions vs the earlier half of the window, when measurable. */
+  change: number | null;
   category: string;
   relatedCoins?: string[];
 }
@@ -48,35 +49,24 @@ function useTrendingTopics() {
   const fetchTopics = useCallback(async () => {
     try {
       const [topicsRes, narrativesRes] = await Promise.allSettled([
-        fetch("/api/trending").then((r) => r.json()),
+        fetch("/api/trending?limit=12").then((r) => r.json()),
         fetch("/api/narratives").then((r) => r.json()),
       ]);
 
-      if (topicsRes.status === "fulfilled" && topicsRes.value?.topics) {
-        setTopics(topicsRes.value.topics.slice(0, 12));
-      } else {
-        // Generate topic summaries from trending articles
-        const res = await fetch("/api/trending?limit=20");
-        const data = await res.json();
-        if (data?.articles) {
-          const topicMap = new Map<string, TrendingTopic>();
-          for (const article of data.articles) {
-            const cat = article.category || "general";
-            const existing = topicMap.get(cat);
-            if (existing) {
-              existing.count++;
-            } else {
-              topicMap.set(cat, {
-                name: cat.charAt(0).toUpperCase() + cat.slice(1),
-                slug: cat,
-                count: 1,
-                change: Math.floor(Math.random() * 40) - 10,
-                category: cat,
-              });
-            }
-          }
-          setTopics(Array.from(topicMap.values()).sort((a, b) => b.count - a.count).slice(0, 10));
-        }
+      // `/api/trending` answers with `trending`, never `topics` or `articles`.
+      // Reading the wrong key left this widget permanently empty and sent the
+      // fallback path down a branch that invented its own momentum numbers.
+      if (topicsRes.status === "fulfilled" && Array.isArray(topicsRes.value?.trending)) {
+        const mapped: TrendingTopic[] = topicsRes.value.trending.map(
+          (t: { topic: string; count: number; change: number | null }) => ({
+            name: t.topic,
+            slug: t.topic.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, ""),
+            count: t.count,
+            change: typeof t.change === "number" ? t.change : null,
+            category: t.topic,
+          }),
+        );
+        setTopics(mapped.slice(0, 12));
       }
 
       if (narrativesRes.status === "fulfilled" && narrativesRes.value?.narratives) {
@@ -171,11 +161,16 @@ export function TrendingTopics({ className }: { className?: string }) {
                 <span
                   className={cn(
                     "text-xs font-semibold tabular-nums",
-                    topic.change > 0 ? "text-green-500" : topic.change < 0 ? "text-red-500" : "text-gray-400 dark:text-gray-500",
+                    (topic.change ?? 0) > 0
+                      ? "text-green-500"
+                      : (topic.change ?? 0) < 0
+                        ? "text-red-500"
+                        : "text-gray-400 dark:text-gray-500",
                   )}
                 >
-                  {topic.change > 0 ? "+" : ""}
-                  {topic.change}%
+                  {topic.change === null
+                    ? "new"
+                    : `${topic.change > 0 ? "+" : ""}${topic.change}%`}
                 </span>
               </Link>
             ))}

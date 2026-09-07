@@ -25,12 +25,14 @@ import { Link } from "@/i18n/navigation";
 /* ------------------------------------------------------------------ */
 
 interface CoinPrice {
+  id: string;
   symbol: string;
   name: string;
   price: number;
   change24h: number;
   marketCap?: number;
   volume24h?: number;
+  /** Real 7-day close series from the market endpoint, downsampled for the tile. */
   sparkline?: number[];
 }
 
@@ -38,25 +40,64 @@ interface MarketGlobal {
   totalMarketCap: number;
   totalVolume24h: number;
   btcDominance: number;
-  fearGreedIndex: number;
-  fearGreedLabel: string;
-  activeCurrencies: number;
+}
+
+interface FearGreed {
+  value: number;
+  label: string;
 }
 
 /* ------------------------------------------------------------------ */
 /*  Constants                                                          */
 /* ------------------------------------------------------------------ */
 
-const COINS = [
-  { id: "bitcoin", symbol: "BTC", name: "Bitcoin" },
-  { id: "ethereum", symbol: "ETH", name: "Ethereum" },
-  { id: "solana", symbol: "SOL", name: "Solana" },
-  { id: "binancecoin", symbol: "BNB", name: "BNB" },
-  { id: "ripple", symbol: "XRP", name: "XRP" },
-  { id: "cardano", symbol: "ADA", name: "Cardano" },
-  { id: "dogecoin", symbol: "DOGE", name: "Dogecoin" },
-  { id: "polkadot", symbol: "DOT", name: "Polkadot" },
-] as const;
+/** How many coins the snapshot strip shows, ranked by market cap. */
+const COIN_COUNT = 8;
+
+/** Points kept from the 7-day series when drawing a tile-sized sparkline. */
+const SPARKLINE_POINTS = 24;
+
+/* ------------------------------------------------------------------ */
+/*  Upstream shapes                                                    */
+/* ------------------------------------------------------------------ */
+
+/** The CoinGecko-shaped rows `/api/market/coins?type=top` returns. */
+interface MarketCoin {
+  id: string;
+  symbol: string;
+  name: string;
+  current_price?: number;
+  price_change_percentage_24h?: number;
+  market_cap?: number;
+  total_volume?: number;
+  sparkline_in_7d?: { price?: number[] };
+}
+
+/* ------------------------------------------------------------------ */
+/*  Helpers                                                            */
+/* ------------------------------------------------------------------ */
+
+/** Parse a response body, or null when the request did not answer cleanly. */
+async function readJson(res: Response): Promise<unknown | null> {
+  if (!res.ok) return null;
+  try {
+    return await res.json();
+  } catch {
+    return null;
+  }
+}
+
+/**
+ * Reduce the 7-day hourly series to the handful of points a 60x20 sparkline
+ * can actually show. Returns undefined when there is no series, so the tile
+ * renders without a chart rather than with an invented one.
+ */
+function downsample(series: number[] | undefined): number[] | undefined {
+  if (!series || series.length < 2) return undefined;
+  if (series.length <= SPARKLINE_POINTS) return series;
+  const step = (series.length - 1) / (SPARKLINE_POINTS - 1);
+  return Array.from({ length: SPARKLINE_POINTS }, (_, i) => series[Math.round(i * step)]);
+}
 
 /* ------------------------------------------------------------------ */
 /*  Formatters                                                         */
@@ -167,74 +208,77 @@ function FearGreedGauge({ value, label }: { value: number; label: string }) {
 export default function MarketsSnapshot() {
   const [coins, setCoins] = useState<CoinPrice[]>([]);
   const [globals, setGlobals] = useState<MarketGlobal | null>(null);
+  const [fearGreed, setFearGreed] = useState<FearGreed | null>(null);
   const [loading, setLoading] = useState(true);
   const [lastUpdated, setLastUpdated] = useState<Date | null>(null);
   const [sortBy, setSortBy] = useState<"marketCap" | "change">("marketCap");
   const t = useTranslations("marketsSnapshot");
 
-  const fetchPrices = useCallback(async () => {
-    try {
-      const ids = COINS.map((c) => c.id).join(",");
-      const res = await fetch(`/api/prices?coins=${ids}`);
-      if (!res.ok) return;
-      const data = await res.json();
+  const fetchMarket = useCallback(async () => {
+    // Three independent reads: a coin strip, the global aggregates, and the
+    // sentiment index. Each renders on its own, so a slow or failing one never
+    // blanks the others, and none of them is ever substituted with a
+    // placeholder number.
+    const [coinsResult, globalResult, fearGreedResult] = await Promise.allSettled([
+      fetch(`/api/market/coins?type=top&limit=${COIN_COUNT}`).then(readJson),
+      fetch("/api/v1/global").then(readJson),
+      fetch("/api/fear-greed").then(readJson),
+    ]);
 
-      const parsed: CoinPrice[] = COINS.map((coin) => {
-        const d = data[coin.id];
-        // Generate a synthetic sparkline from the change for visual effect
-        const sparkline: number[] = [];
-        const base = d?.usd ?? 100;
-        const change = d?.usd_24h_change ?? 0;
-        for (let i = 0; i < 12; i++) {
-          const progress = i / 11;
-          const noise = (Math.sin(i * 2.5 + base * 0.01) * 0.5 + 0.5) * Math.abs(change) * 0.3;
-          sparkline.push(base * (1 - (change / 100) * (1 - progress)) + noise);
-        }
-        return {
-          symbol: coin.symbol,
+    if (coinsResult.status === "fulfilled" && coinsResult.value) {
+      const raw = (coinsResult.value as { coins?: MarketCoin[] }).coins ?? [];
+      const parsed = raw
+        .map((coin) => ({
+          id: coin.id,
+          symbol: coin.symbol.toUpperCase(),
           name: coin.name,
-          price: d?.usd ?? 0,
-          change24h: d?.usd_24h_change ?? 0,
-          marketCap: d?.usd_market_cap ?? 0,
-          volume24h: d?.usd_24h_vol ?? 0,
-          sparkline,
-        };
-      }).filter((c) => c.price > 0);
+          price: coin.current_price ?? 0,
+          change24h: coin.price_change_percentage_24h ?? 0,
+          marketCap: coin.market_cap ?? undefined,
+          volume24h: coin.total_volume ?? undefined,
+          sparkline: downsample(coin.sparkline_in_7d?.price),
+        }))
+        .filter((coin) => coin.price > 0);
 
-      setCoins(parsed);
-      setLastUpdated(new Date());
-
-      // Compute globals
-      const totalCap = parsed.reduce((s, c) => s + (c.marketCap ?? 0), 0);
-      const totalVol = parsed.reduce((s, c) => s + (c.volume24h ?? 0), 0);
-      const btcCoin = parsed.find((c) => c.symbol === "BTC");
-      const btcDom = totalCap > 0 && btcCoin?.marketCap ? (btcCoin.marketCap / totalCap) * 100 : 0;
-
-      // Derive Fear & Greed from market changes
-      const avgChange = parsed.reduce((s, c) => s + c.change24h, 0) / (parsed.length || 1);
-      const fgi = Math.max(0, Math.min(100, Math.round(50 + avgChange * 5)));
-      const fgiLabel = fgi <= 25 ? "Extreme Fear" : fgi <= 45 ? "Fear" : fgi <= 55 ? "Neutral" : fgi <= 75 ? "Greed" : "Extreme Greed";
-
-      setGlobals({
-        totalMarketCap: totalCap,
-        totalVolume24h: totalVol,
-        btcDominance: btcDom,
-        fearGreedIndex: fgi,
-        fearGreedLabel: fgiLabel,
-        activeCurrencies: parsed.length,
-      });
-    } catch {
-      // silently fail
-    } finally {
-      setLoading(false);
+      if (parsed.length > 0) {
+        setCoins(parsed);
+        setLastUpdated(new Date());
+      }
     }
+
+    if (globalResult.status === "fulfilled" && globalResult.value) {
+      const data = (globalResult.value as { data?: Record<string, number> }).data;
+      // Total market cap is the one field the banner cannot be drawn without;
+      // an aggregate of zero is a missing upstream field, never a real market.
+      if (data && data.totalMarketCap > 0) {
+        setGlobals({
+          totalMarketCap: data.totalMarketCap,
+          totalVolume24h: data.totalVolume24h,
+          btcDominance: data.btcDominance,
+        });
+      }
+    }
+
+    if (fearGreedResult.status === "fulfilled" && fearGreedResult.value) {
+      const current = (fearGreedResult.value as {
+        current?: { value?: number; valueClassification?: string };
+      }).current;
+      if (typeof current?.value === "number") {
+        setFearGreed({
+          value: current.value,
+          label: current.valueClassification ?? "",
+        });
+      }
+    }
+
+    setLoading(false);
   }, []);
 
   useEffect(() => {
-    fetchPrices();
-    const interval = setInterval(fetchPrices, 30_000); // 30s refresh
+    fetchMarket();
+    const interval = setInterval(fetchMarket, 30_000); // 30s refresh
     return () => clearInterval(interval);
-  }, [fetchPrices]);
+  }, [fetchMarket]);
 
   // Sort coins
   const sortedCoins = useMemo(() => {
@@ -317,33 +361,39 @@ export default function MarketsSnapshot() {
           </div>
         </div>
 
-        {/* Global stats banner */}
-        {globals && !loading && (
+        {/* Global stats banner: only drawn from data that actually arrived */}
+        {(globals || fearGreed) && !loading && (
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-5">
-            <div className="flex items-center gap-2 rounded-lg border border-border bg-(--color-surface) px-3 py-2">
-              <BarChart2 className="h-4 w-4 text-accent shrink-0" />
-              <div>
-                <p className="text-[10px] text-text-tertiary uppercase tracking-wider">{t("marketCap")}</p>
-                <p className="text-sm font-bold">{formatCompact(globals.totalMarketCap)}</p>
+            {globals && (
+              <>
+                <div className="flex items-center gap-2 rounded-lg border border-border bg-(--color-surface) px-3 py-2">
+                  <BarChart2 className="h-4 w-4 text-accent shrink-0" />
+                  <div>
+                    <p className="text-[10px] text-text-tertiary uppercase tracking-wider">{t("marketCap")}</p>
+                    <p className="text-sm font-bold">{formatCompact(globals.totalMarketCap)}</p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-2 rounded-lg border border-border bg-(--color-surface) px-3 py-2">
+                  <Activity className="h-4 w-4 text-accent shrink-0" />
+                  <div>
+                    <p className="text-[10px] text-text-tertiary uppercase tracking-wider">{t("volume24h")}</p>
+                    <p className="text-sm font-bold">{formatCompact(globals.totalVolume24h)}</p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-2 rounded-lg border border-border bg-(--color-surface) px-3 py-2">
+                  <Zap className="h-4 w-4 text-[#f7931a] shrink-0" />
+                  <div>
+                    <p className="text-[10px] text-text-tertiary uppercase tracking-wider">{t("btcDominance")}</p>
+                    <p className="text-sm font-bold">{globals.btcDominance.toFixed(1)}%</p>
+                  </div>
+                </div>
+              </>
+            )}
+            {fearGreed && (
+              <div className="flex items-center gap-2 rounded-lg border border-border bg-(--color-surface) px-3 py-2">
+                <FearGreedGauge value={fearGreed.value} label={fearGreed.label} />
               </div>
-            </div>
-            <div className="flex items-center gap-2 rounded-lg border border-border bg-(--color-surface) px-3 py-2">
-              <Activity className="h-4 w-4 text-accent shrink-0" />
-              <div>
-                <p className="text-[10px] text-text-tertiary uppercase tracking-wider">{t("volume24h")}</p>
-                <p className="text-sm font-bold">{formatCompact(globals.totalVolume24h)}</p>
-              </div>
-            </div>
-            <div className="flex items-center gap-2 rounded-lg border border-border bg-(--color-surface) px-3 py-2">
-              <Zap className="h-4 w-4 text-[#f7931a] shrink-0" />
-              <div>
-                <p className="text-[10px] text-text-tertiary uppercase tracking-wider">{t("btcDominance")}</p>
-                <p className="text-sm font-bold">{globals.btcDominance.toFixed(1)}%</p>
-              </div>
-            </div>
-            <div className="flex items-center gap-2 rounded-lg border border-border bg-(--color-surface) px-3 py-2">
-              <FearGreedGauge value={globals.fearGreedIndex} label={globals.fearGreedLabel} />
-            </div>
+            )}
           </div>
         )}
 
@@ -364,8 +414,8 @@ export default function MarketsSnapshot() {
                 const isPositive = coin.change24h >= 0;
                 return (
                   <Link
-                    key={coin.symbol}
-                    href={`/coin/${coin.symbol.toLowerCase()}`}
+                    key={coin.id}
+                    href={`/coin/${coin.id}`}
                     className={cn(
                       "group rounded-lg border bg-(--color-surface) p-3 transition-all",
                       "hover:shadow-md hover:border-accent",

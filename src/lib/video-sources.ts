@@ -39,25 +39,35 @@ export const VIDEO_CATEGORIES: { value: VideoCategory | 'all'; label: string }[]
   { value: 'defi', label: 'DeFi' },
 ];
 
+/**
+ * The channels the video feed reads, by YouTube channel ID.
+ *
+ * Five of these six IDs were wrong and their RSS feeds answered 404, so
+ * /videos/coindesk, /videos/cointelegraph, /videos/bankless,
+ * /videos/real-vision and /videos/unchained each rendered "No videos found"
+ * while the pages themselves looked healthy. Verify an ID against
+ * `https://www.youtube.com/feeds/videos.xml?channel_id=<id>` before changing
+ * one: a handle in `channelUrl` is not what the feed keys on.
+ */
 export const VIDEO_SOURCES: VideoSource[] = [
   {
     name: 'CoinDesk',
     slug: 'coindesk',
-    channelId: 'UCwF1NqjABYGOpOTC1JF-_rA',
+    channelId: 'UC7TghOL755nBk7HelHoi9LQ',
     channelUrl: 'https://www.youtube.com/@CoinDesk',
     category: 'news',
   },
   {
     name: 'Cointelegraph',
     slug: 'cointelegraph',
-    channelId: 'UCRqBu-grVSxK0B0iGhfeJBg',
-    channelUrl: 'https://www.youtube.com/@caborsky',
+    channelId: 'UCRqBu-grVX1p97WaX4d-OuQ',
+    channelUrl: 'https://www.youtube.com/@Cointelegraph',
     category: 'news',
   },
   {
     name: 'Bankless',
     slug: 'bankless',
-    channelId: 'UCAl9Ld79qaZxp9JzTOBiZQQ',
+    channelId: 'UCAl9Ld79qaZxp9JzEOwd3aA',
     channelUrl: 'https://www.youtube.com/@Bankless',
     category: 'education',
   },
@@ -71,14 +81,14 @@ export const VIDEO_SOURCES: VideoSource[] = [
   {
     name: 'Real Vision',
     slug: 'real-vision',
-    channelId: 'UCXMHZ9oeimRJiPqagWo1Tpw',
+    channelId: 'UCGXWKlq1Oxr3ddEtmKhAkPg',
     channelUrl: 'https://www.youtube.com/@RealVisionFinance',
     category: 'interviews',
   },
   {
     name: 'Unchained',
     slug: 'unchained',
-    channelId: 'UCWiiMnsnw5Isc2PP1wFHGnQ',
+    channelId: 'UCWiiMnsnw5Isc2PP1to9nNw',
     channelUrl: 'https://www.youtube.com/@UnchainedCrypto',
     category: 'analysis',
   },

@@ -20,6 +20,7 @@ import {
   Brain,
   Target,
   ShieldAlert,
+  Activity,
 } from "lucide-react";
 
 // =============================================================================
@@ -277,8 +278,10 @@ export default function PredictionCards() {
       });
 
       if (!res.ok) {
-        // Fall back to mock data when API is unavailable
-        setPredictions(getMockPredictions());
+        setPredictions([]);
+        setError(
+          "Forecasts are unavailable right now. The model could not be reached.",
+        );
         return;
       }
 
@@ -312,12 +315,20 @@ export default function PredictionCards() {
               undefined,
           };
         });
-        setPredictions(coins.length > 0 ? coins : getMockPredictions());
+        // A forecast with no current price carries no information: it renders
+        // every figure as $0.0000. Drop it rather than print a placebo number.
+        const priced = coins.filter((coin) => coin.currentPrice > 0);
+        setPredictions(priced);
+        if (priced.length === 0) {
+          setError("No forecast could be produced for these assets right now.");
+        }
       } else {
-        setPredictions(getMockPredictions());
+        setPredictions([]);
+        setError("No forecast could be produced for these assets right now.");
       }
     } catch {
-      setPredictions(getMockPredictions());
+      setPredictions([]);
+      setError("Forecasts are unavailable right now. The model could not be reached.");
     } finally {
       setLoading(false);
     }
@@ -394,13 +405,13 @@ export function TradingSignals() {
       try {
         const res = await fetch("/api/signals?limit=10&min_confidence=30");
         if (!res.ok) {
-          setSignals(getMockSignals());
+          setSignals([]);
           return;
         }
         const data: SignalsResponse = await res.json();
-        setSignals(data.signals?.length ? data.signals : getMockSignals());
+        setSignals(data.signals ?? []);
       } catch {
-        setSignals(getMockSignals());
+        setSignals([]);
       } finally {
         setLoading(false);
       }
@@ -419,6 +430,19 @@ export function TradingSignals() {
           </div>
         ))}
       </div>
+    );
+  }
+
+  if (signals.length === 0) {
+    return (
+      <Card className="p-8 text-center">
+        <Activity className="h-8 w-8 text-text-tertiary mx-auto mb-3" />
+        <p className="text-text-secondary">No signals clear the confidence bar right now.</p>
+        <p className="text-text-tertiary text-sm mt-1">
+          Signals appear when the model finds a setup it can stand behind. Check back
+          after the next market move.
+        </p>
+      </Card>
     );
   }
 
@@ -489,13 +513,13 @@ export function PredictionHistoryTable() {
       try {
         const res = await fetch("/api/predictions/history?limit=10");
         if (!res.ok) {
-          setHistory(getMockHistory());
+          setHistory([]);
           return;
         }
         const data = await res.json();
-        setHistory(data.history?.length ? data.history : getMockHistory());
+        setHistory(data.history ?? []);
       } catch {
-        setHistory(getMockHistory());
+        setHistory([]);
       } finally {
         setLoading(false);
       }
@@ -555,6 +579,17 @@ export function PredictionHistoryTable() {
           </tr>
         </thead>
         <tbody>
+          {history.length === 0 && (
+            <tr>
+              <td colSpan={5} className="px-4 py-10 text-center">
+                <p className="text-text-secondary">No scored forecasts yet.</p>
+                <p className="text-text-tertiary text-sm mt-1">
+                  A forecast lands here once its horizon closes and the outcome can be
+                  measured against it.
+                </p>
+              </td>
+            </tr>
+          )}
           {history.map((row, idx) => {
             const accuracyColor =
               row.accuracy >= 90
@@ -592,7 +627,7 @@ export function PredictionHistoryTable() {
 }
 
 // =============================================================================
-// Mock Data (fallback when APIs are unavailable)
+// Helpers
 // =============================================================================
 
 function getCoinName(symbol: string): string {
@@ -604,107 +639,5 @@ function getCoinName(symbol: string): string {
   return names[symbol] ?? symbol;
 }
 
-function getMockPredictions(): CoinPrediction[] {
-  return [
-    {
-      coin: "Bitcoin",
-      symbol: "BTC",
-      currentPrice: 87432,
-      prediction7d: 91200,
-      prediction30d: 98500,
-      confidence: 72,
-      direction: "up",
-      reasoning: "Strong institutional inflows, ETF demand, and favorable macro environment support continued upward momentum.",
-    },
-    {
-      coin: "Ethereum",
-      symbol: "ETH",
-      currentPrice: 3245,
-      prediction7d: 3380,
-      prediction30d: 3650,
-      confidence: 65,
-      direction: "up",
-      reasoning: "L2 adoption growing, staking rates increasing, and proto-danksharding improving network efficiency.",
-    },
-    {
-      coin: "Solana",
-      symbol: "SOL",
-      currentPrice: 142,
-      prediction7d: 138,
-      prediction30d: 155,
-      confidence: 48,
-      direction: "neutral",
-      reasoning: "Mixed signals: strong DeFi growth but network congestion concerns. Short-term consolidation expected.",
-    },
-  ];
-}
 
-function getMockSignals(): TradingSignal[] {
-  return [
-    {
-      ticker: "BTC",
-      signal: "buy",
-      confidence: 75,
-      timeframe: "1w",
-      reasoning: "Breakout above key resistance with strong volume. ETF inflows remain positive.",
-      newsEvents: ["ETF inflows hit new record", "Mining difficulty adjustment"],
-      riskLevel: "medium",
-      catalysts: ["FOMC meeting", "Quarterly earnings"],
-    },
-    {
-      ticker: "ETH",
-      signal: "hold",
-      confidence: 60,
-      timeframe: "1w",
-      reasoning: "Consolidating near support. Waiting for clear catalyst before next move.",
-      newsEvents: ["Dencun upgrade adoption accelerating", "Gas fees at yearly low"],
-      riskLevel: "low",
-      catalysts: ["L2 TVL milestones"],
-    },
-    {
-      ticker: "SOL",
-      signal: "buy",
-      confidence: 68,
-      timeframe: "24h",
-      reasoning: "Strong DEX volume growth and ecosystem expansion driving momentum.",
-      newsEvents: ["New DEX volume record on Jupiter", "Firedancer client progress"],
-      riskLevel: "medium",
-      catalysts: ["Token unlock event"],
-    },
-    {
-      ticker: "AVAX",
-      signal: "hold",
-      confidence: 55,
-      timeframe: "1m",
-      reasoning: "Neutral sentiment. Awaiting subnet adoption metrics.",
-      newsEvents: ["Gaming partnerships announced"],
-      riskLevel: "low",
-      catalysts: ["Subnet launches"],
-    },
-    {
-      ticker: "DOGE",
-      signal: "sell",
-      confidence: 62,
-      timeframe: "1w",
-      reasoning: "Memecoin momentum fading. Social volume declining significantly.",
-      newsEvents: ["Social engagement dropping"],
-      riskLevel: "high",
-      catalysts: ["Whale wallet movements"],
-    },
-  ];
-}
 
-function getMockHistory(): PredictionHistory[] {
-  return [
-    { date: "2026-02-22", coin: "BTC", predicted: 85000, actual: 86200, accuracy: 98.6 },
-    { date: "2026-02-22", coin: "ETH", predicted: 3100, actual: 3180, accuracy: 97.5 },
-    { date: "2026-02-22", coin: "SOL", predicted: 150, actual: 142, accuracy: 94.7 },
-    { date: "2026-02-15", coin: "BTC", predicted: 82000, actual: 84500, accuracy: 97.0 },
-    { date: "2026-02-15", coin: "ETH", predicted: 3200, actual: 3050, accuracy: 95.3 },
-    { date: "2026-02-15", coin: "SOL", predicted: 135, actual: 148, accuracy: 91.2 },
-    { date: "2026-02-08", coin: "BTC", predicted: 79000, actual: 81200, accuracy: 97.3 },
-    { date: "2026-02-08", coin: "ETH", predicted: 2900, actual: 3100, accuracy: 93.5 },
-    { date: "2026-02-01", coin: "BTC", predicted: 78000, actual: 79500, accuracy: 98.1 },
-    { date: "2026-02-01", coin: "SOL", predicted: 125, actual: 132, accuracy: 94.7 },
-  ];
-}

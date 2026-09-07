@@ -88,100 +88,6 @@ function ReliabilityDot({ score }: { score: number }) {
 }
 
 /* ------------------------------------------------------------------ */
-/*  Mock data                                                          */
-/* ------------------------------------------------------------------ */
-
-function generateMockInfluencers(): InfluencerEntry[] {
-  return [
-    {
-      id: '1',
-      name: 'Crypto Whale',
-      username: '@CryptoWhale',
-      platform: 'twitter',
-      followers: 1_250_000,
-      reliabilityScore: 78,
-      recentPost:
-        'BTC breakout incoming — watch the $72K resistance level. Accumulation zone looking strong.',
-      lastActive: '2h ago',
-    },
-    {
-      id: '2',
-      name: 'DeFi Dad',
-      username: '@DeFiDad',
-      platform: 'youtube',
-      followers: 890_000,
-      reliabilityScore: 82,
-      recentPost:
-        'New video: Top 5 yield farming strategies for March 2026. SOL ecosystem has the best risk-adjusted APYs right now.',
-      lastActive: '4h ago',
-    },
-    {
-      id: '3',
-      name: 'The Moon Carl',
-      username: '@TheMoonCarl',
-      platform: 'youtube',
-      followers: 1_100_000,
-      reliabilityScore: 55,
-      recentPost: 'ETH to $10K this cycle? Technical analysis says yes. Key support at $3,800.',
-      lastActive: '1h ago',
-    },
-    {
-      id: '4',
-      name: 'Altcoin Sherpa',
-      username: '@AltcoinSherpa',
-      platform: 'twitter',
-      followers: 750_000,
-      reliabilityScore: 85,
-      recentPost:
-        'Layer 2 tokens looking very promising here. ARB and OP approaching key breakout levels.',
-      lastActive: '3h ago',
-    },
-    {
-      id: '5',
-      name: 'Lark Davis',
-      username: '@TheCryptoLark',
-      platform: 'twitter',
-      followers: 980_000,
-      reliabilityScore: 71,
-      recentPost: 'AI + crypto narrative is heating up. Keep an eye on FET, RNDR, and TAO.',
-      lastActive: '5h ago',
-    },
-    {
-      id: '6',
-      name: 'Coin Bureau',
-      username: '@CoinBureau',
-      platform: 'youtube',
-      followers: 2_400_000,
-      reliabilityScore: 88,
-      recentPost:
-        'Institutional adoption is accelerating. BlackRock spot ETH ETF inflows hit new records this week.',
-      lastActive: '6h ago',
-    },
-    {
-      id: '7',
-      name: 'Crypto Banter',
-      username: '@CryptoBanter',
-      platform: 'youtube',
-      followers: 1_050_000,
-      reliabilityScore: 62,
-      recentPost: 'Meme coins are back! DOGE and SHIB seeing massive volume spikes.',
-      lastActive: '30m ago',
-    },
-    {
-      id: '8',
-      name: 'On-Chain Wizard',
-      username: '@OnChainWizard',
-      platform: 'twitter',
-      followers: 420_000,
-      reliabilityScore: 91,
-      recentPost:
-        'Smart money is quietly accumulating LINK. On-chain data shows whale wallets up 15% this week.',
-      lastActive: '1h ago',
-    },
-  ];
-}
-
-/* ------------------------------------------------------------------ */
 /*  InfluencerFeed Component                                           */
 /* ------------------------------------------------------------------ */
 
@@ -203,7 +109,7 @@ export default function InfluencerFeed({ className }: { className?: string }) {
           const mapped: InfluencerEntry[] = json.data.influencers
             .slice(0, 10)
             .map((inf: Record<string, unknown>) => ({
-              id: inf.id || String(Math.random()),
+              id: String(inf.id ?? inf.username ?? inf.displayName),
               name: inf.displayName || inf.username || 'Unknown',
               username: `@${inf.username || 'unknown'}`,
               platform: inf.platform || 'twitter',
@@ -220,10 +126,9 @@ export default function InfluencerFeed({ className }: { className?: string }) {
           }
         }
 
-        // Fallback to mock
-        if (!cancelled) setInfluencers(generateMockInfluencers());
+        if (!cancelled) setInfluencers([]);
       } catch {
-        if (!cancelled) setInfluencers(generateMockInfluencers());
+        if (!cancelled) setInfluencers([]);
       } finally {
         if (!cancelled) setLoading(false);
       }

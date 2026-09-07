@@ -23,32 +23,44 @@ interface TrendingTopic {
   count: number;
   sentiment: 'bullish' | 'bearish' | 'neutral';
   recentHeadlines: string[];
+  /**
+   * Percent change in mentions between the newer and older half of the
+   * window, or null when the older half has nothing to compare against.
+   * Consumers used to invent this number client-side.
+   */
+  change: number | null;
 }
 
-// Common crypto topics to track
+// Common crypto topics to track.
+//
+// Every pattern is word-anchored on purpose. The unanchored versions matched
+// inside ordinary words and made the feed nonsense: /ai/ hit "pair", "said" and
+// "against", /sec/ hit "second" and "sector", /ada/ hit "Canada", /sol/ hit
+// "resolve", and /eth(?!er)/ hit "method". A regulator's pension notice was
+// ranking as the day's top "AI" story.
 const TRACKED_TOPICS = [
-  { pattern: /bitcoin|btc/i, name: 'Bitcoin' },
-  { pattern: /ethereum|eth(?!er)/i, name: 'Ethereum' },
-  { pattern: /solana|sol(?!id|ution)/i, name: 'Solana' },
-  { pattern: /xrp|ripple/i, name: 'XRP' },
-  { pattern: /cardano|ada/i, name: 'Cardano' },
-  { pattern: /dogecoin|doge/i, name: 'Dogecoin' },
-  { pattern: /polygon|matic/i, name: 'Polygon' },
-  { pattern: /avalanche|avax/i, name: 'Avalanche' },
-  { pattern: /chainlink|link/i, name: 'Chainlink' },
-  { pattern: /defi|decentralized finance/i, name: 'DeFi' },
-  { pattern: /nft|non.?fungible/i, name: 'NFTs' },
-  { pattern: /etf/i, name: 'ETF' },
-  { pattern: /sec|securities/i, name: 'SEC/Regulation' },
-  { pattern: /stablecoin|usdt|usdc|tether/i, name: 'Stablecoins' },
-  { pattern: /layer.?2|l2|rollup/i, name: 'Layer 2' },
-  { pattern: /ai|artificial intelligence/i, name: 'AI' },
-  { pattern: /hack|exploit|breach/i, name: 'Security' },
-  { pattern: /airdrop/i, name: 'Airdrops' },
-  { pattern: /memecoin|meme coin/i, name: 'Memecoins' },
-  { pattern: /binance|bnb/i, name: 'Binance' },
-  { pattern: /coinbase/i, name: 'Coinbase' },
-  { pattern: /blackrock|fidelity|grayscale/i, name: 'Institutions' },
+  { pattern: /\b(bitcoin|btc)\b/i, name: 'Bitcoin' },
+  { pattern: /\b(ethereum|eth)\b/i, name: 'Ethereum' },
+  { pattern: /\b(solana|sol)\b/i, name: 'Solana' },
+  { pattern: /\b(xrp|ripple)\b/i, name: 'XRP' },
+  { pattern: /\b(cardano|ada)\b/i, name: 'Cardano' },
+  { pattern: /\b(dogecoin|doge)\b/i, name: 'Dogecoin' },
+  { pattern: /\b(polygon|matic)\b/i, name: 'Polygon' },
+  { pattern: /\b(avalanche|avax)\b/i, name: 'Avalanche' },
+  { pattern: /\b(chainlink|link token)\b/i, name: 'Chainlink' },
+  { pattern: /\b(defi|decentrali[sz]ed finance)\b/i, name: 'DeFi' },
+  { pattern: /\b(nfts?|non.?fungible)\b/i, name: 'NFTs' },
+  { pattern: /\betfs?\b/i, name: 'ETF' },
+  { pattern: /\b(sec|securities and exchange|regulator[sy]|regulation)\b/i, name: 'SEC/Regulation' },
+  { pattern: /\b(stablecoins?|usdt|usdc|tether)\b/i, name: 'Stablecoins' },
+  { pattern: /\b(layer.?2|l2|rollups?|optimism|arbitrum)\b/i, name: 'Layer 2' },
+  { pattern: /\b(ai|artificial intelligence|machine learning)\b/i, name: 'AI' },
+  { pattern: /\b(hacks?|hacked|exploits?|breach(es)?)\b/i, name: 'Security' },
+  { pattern: /\bairdrops?\b/i, name: 'Airdrops' },
+  { pattern: /\b(memecoins?|meme coins?)\b/i, name: 'Memecoins' },
+  { pattern: /\b(binance|bnb)\b/i, name: 'Binance' },
+  { pattern: /\bcoinbase\b/i, name: 'Coinbase' },
+  { pattern: /\b(blackrock|fidelity|grayscale)\b/i, name: 'Institutions' },
 ];
 
 // Sentiment keywords
@@ -130,19 +142,26 @@ export const GET = instrumented(
         }
       });
 
-      // Count topic mentions
+      // Count topic mentions, split at the midpoint of the window so momentum
+      // is measured rather than guessed.
+      const midpoint = new Date(Date.now() - (hours / 2) * 60 * 60 * 1000);
       const topicCounts = new Map<
         string,
-        { count: number; headlines: string[]; texts: string[] }
+        { count: number; recent: number; earlier: number; headlines: string[]; texts: string[] }
       >();
 
       for (const article of recentArticles) {
         const searchText = `${article.title} ${article.description || ''}`;
+        const isRecentHalf = new Date(article.pubDate) > midpoint;
 
         for (const { pattern, name } of TRACKED_TOPICS) {
           if (pattern.test(searchText)) {
-            const existing = topicCounts.get(name) || { count: 0, headlines: [], texts: [] };
+            const existing =
+              topicCounts.get(name) ||
+              { count: 0, recent: 0, earlier: 0, headlines: [] as string[], texts: [] as string[] };
             existing.count++;
+            if (isRecentHalf) existing.recent++;
+            else existing.earlier++;
             if (existing.headlines.length < 3) {
               existing.headlines.push(article.title);
             }
@@ -159,6 +178,10 @@ export const GET = instrumented(
           count: data.count,
           sentiment: analyzeSentiment(data.texts.join(' ')),
           recentHeadlines: data.headlines,
+          change:
+            data.earlier > 0
+              ? Math.round(((data.recent - data.earlier) / data.earlier) * 100)
+              : null,
         }))
         .sort((a, b) => b.count - a.count)
         .slice(0, limit);

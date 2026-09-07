@@ -193,6 +193,19 @@ export async function generatePodcastScript(
 // Text-to-Speech via Google Cloud
 // ---------------------------------------------------------------------------
 
+/**
+ * True when a text-to-speech credential is present, so callers can offer an
+ * audio control only when there is audio to play rather than wiring a button
+ * to a request that answers with JSON.
+ */
+export function isTextToSpeechConfigured(): boolean {
+  return Boolean(
+    process.env.GOOGLE_CLOUD_TTS_API_KEY ||
+      process.env.GEMINI_API_KEY ||
+      process.env.GOOGLE_AI_API_KEY,
+  );
+}
+
 interface TTSOptions {
   voiceGender?: VoiceGender;
   voiceStyle?: VoiceStyle;

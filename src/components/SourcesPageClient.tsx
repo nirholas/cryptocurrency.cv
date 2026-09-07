@@ -86,18 +86,19 @@ export default function SourcesPageClient({ token }: SourcesPageClientProps) {
   const [sources, setSources] = useState<SourceInfo[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
+  const [statusChecked, setStatusChecked] = useState(false);
 
   useEffect(() => {
     let cancelled = false;
 
-    async function fetchSources() {
+    async function loadCatalog() {
+      // The catalog is cached and answers immediately, so the directory paints
+      // without waiting on the probe below.
       try {
-        const res = await fetch(`/api/sources?token=${encodeURIComponent(token)}`);
+        const res = await fetch('/api/sources');
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         const data = await res.json();
-        if (!cancelled) {
-          setSources(data.sources ?? []);
-        }
+        if (!cancelled) setSources(data.sources ?? []);
       } catch {
         if (!cancelled) setError(true);
       } finally {
@@ -105,7 +106,25 @@ export default function SourcesPageClient({ token }: SourcesPageClientProps) {
       }
     }
 
-    fetchSources();
+    async function loadLiveStatus() {
+      // `status=true` is the only branch that actually probes the feeds. Asking
+      // without it is what made every source read "unknown" and every health
+      // figure on the page render as 0%.
+      try {
+        const res = await fetch(
+          `/api/sources?status=true&token=${encodeURIComponent(token)}`,
+        );
+        if (!res.ok) return;
+        const data = await res.json();
+        if (cancelled || !Array.isArray(data.sources) || data.sources.length === 0) return;
+        setSources(data.sources);
+        setStatusChecked(true);
+      } catch {
+        // The directory still stands on the catalog; health figures stay hidden.
+      }
+    }
+
+    loadCatalog().then(loadLiveStatus);
     return () => { cancelled = true; };
   }, [token]);
 
@@ -137,11 +156,18 @@ export default function SourcesPageClient({ token }: SourcesPageClientProps) {
     );
   }
 
-  return <SourcesDashboard sources={sources} />;
+  return <SourcesDashboard sources={sources} statusChecked={statusChecked} />;
 }
 
 /* ─── Dashboard (rendered only after client-side fetch) ─── */
-function SourcesDashboard({ sources }: { sources: SourceInfo[] }) {
+function SourcesDashboard({
+  sources,
+  statusChecked,
+}: {
+  sources: SourceInfo[];
+  /** True once the live probe has answered. Health figures are meaningless before it. */
+  statusChecked: boolean;
+}) {
   const activeCount = sources.filter((s) => s.status === "active").length;
   const unavailableCount = sources.filter((s) => s.status === "unavailable").length;
   const unknownCount = sources.length - activeCount - unavailableCount;
@@ -187,7 +213,7 @@ function SourcesDashboard({ sources }: { sources: SourceInfo[] }) {
         </div>
         <div className="rounded-xl border border-border bg-(--color-surface) p-4 text-center transition-shadow hover:shadow-md">
           <div className="text-3xl font-bold text-green-500">
-            {activeCount}
+            {statusChecked ? activeCount : "..."}
           </div>
           <div className="text-xs text-text-tertiary mt-1">
             Active
@@ -195,7 +221,7 @@ function SourcesDashboard({ sources }: { sources: SourceInfo[] }) {
         </div>
         <div className="rounded-xl border border-border bg-(--color-surface) p-4 text-center transition-shadow hover:shadow-md">
           <div className="text-3xl font-bold text-red-500">
-            {unavailableCount}
+            {statusChecked ? unavailableCount : "..."}
           </div>
           <div className="text-xs text-text-tertiary mt-1">
             Unavailable
@@ -233,26 +259,32 @@ function SourcesDashboard({ sources }: { sources: SourceInfo[] }) {
                   stroke={healthPercent >= 90 ? "#22c55e" : healthPercent >= 70 ? "#eab308" : "#ef4444"}
                   strokeWidth="12"
                   strokeLinecap="round"
-                  strokeDasharray={`${healthPercent * 2.64} 264`}
+                  strokeDasharray={statusChecked ? `${healthPercent * 2.64} 264` : "0 264"}
                 />
               </svg>
               <div className="absolute inset-0 flex items-center justify-center">
-                <span className="text-2xl font-bold text-text-primary">
-                  {healthPercent}%
-                </span>
+                {statusChecked ? (
+                  <span className="text-2xl font-bold text-text-primary">
+                    {healthPercent}%
+                  </span>
+                ) : (
+                  <span className="text-xs font-medium text-text-tertiary">
+                    Checking
+                  </span>
+                )}
               </div>
             </div>
             <div className="space-y-2">
               <div className="flex items-center gap-2">
                 <span className="h-3 w-3 rounded-full bg-green-500 shrink-0" />
                 <span className="text-sm text-text-secondary">
-                  Active — {activeCount}
+                  Active: {statusChecked ? activeCount : "checking"}
                 </span>
               </div>
               <div className="flex items-center gap-2">
                 <span className="h-3 w-3 rounded-full bg-red-500 shrink-0" />
                 <span className="text-sm text-text-secondary">
-                  Unavailable — {unavailableCount}
+                  Unavailable: {statusChecked ? unavailableCount : "checking"}
                 </span>
               </div>
               {unknownCount > 0 && (
@@ -274,10 +306,12 @@ function SourcesDashboard({ sources }: { sources: SourceInfo[] }) {
           </h2>
           <div className="space-y-2.5">
             {sortedCats.slice(0, 7).map(([cat, { total, active }]) => {
-              const pct =
-                sources.length > 0
-                  ? Math.round((total / sources.length) * 100)
-                  : 0;
+              // A category holding one of 358 sources is 0.28%, and rounding
+              // that to "0%" reads as "this category is empty" next to a row
+              // that plainly is not.
+              const share = sources.length > 0 ? (total / sources.length) * 100 : 0;
+              const pct = Math.round(share);
+              const pctLabel = pct === 0 && total > 0 ? "<1" : String(pct);
               const healthPct =
                 total > 0 ? Math.round((active / total) * 100) : 0;
               return (
@@ -287,7 +321,8 @@ function SourcesDashboard({ sources }: { sources: SourceInfo[] }) {
                       {cat}
                     </span>
                     <span className="text-text-tertiary text-xs">
-                      {total} ({pct}%) · {healthPct}% healthy
+                      {total} ({pctLabel}%)
+                      {statusChecked ? ` \u00b7 ${healthPct}% healthy` : ""}
                     </span>
                   </div>
                   <div className="h-2 rounded-full bg-surface-tertiary overflow-hidden">
@@ -318,7 +353,7 @@ function SourcesDashboard({ sources }: { sources: SourceInfo[] }) {
         <a href="/data/feeds-export.csv" tabIndex={-1}>feeds-export.csv</a>
       </div>
 
-      <SourcesGrid sources={sources} />
+      <SourcesGrid sources={sources} statusChecked={statusChecked} />
     </>
   );
 }

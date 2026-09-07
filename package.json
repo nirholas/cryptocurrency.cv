@@ -18,6 +18,8 @@
     "test:a11y": "playwright test e2e/accessibility.spec.ts",
     "test:a11y:headed": "playwright test e2e/accessibility.spec.ts --headed",
     "test:errors": "playwright test e2e/console-errors.spec.ts --config=playwright.errors.config.ts --project=chromium",
+    "audit:pages": "playwright test e2e/page-health.spec.ts --config=playwright.pages.config.ts --project=chromium",
+    "audit:pages:prod": "BASE_URL=https://cryptocurrency.cv playwright test e2e/page-health.spec.ts --config=playwright.pages.config.ts --project=chromium",
     "test:errors:page": "playwright test e2e/console-errors.spec.ts --config=playwright.errors.config.ts --project=chromium -g",
     "audit:a11y": "npx pa11y https://cryptocurrency.cv",
     "audit:a11y:local": "node scripts/a11y-audit.js http://localhost:3000",

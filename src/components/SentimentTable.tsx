@@ -9,21 +9,46 @@
 import { useEffect, useState } from 'react';
 import { cn } from '@/lib/utils';
 import { Card } from '@/components/ui/Card';
-import { ArrowUp, ArrowDown, Minus, RefreshCw } from 'lucide-react';
+import { ArrowUp, ArrowDown, RefreshCw } from 'lucide-react';
 
 /* ------------------------------------------------------------------ */
 /*  Types                                                              */
 /* ------------------------------------------------------------------ */
 
+/**
+ * One asset's sentiment, derived entirely from the classified articles
+ * `/api/sentiment` returns.
+ *
+ * Social volume, a 24h sentiment delta and a 7-day trend used to sit here too,
+ * filled with `Math.random()` because nothing on this deployment measures them.
+ * A column of noise reads exactly like a measurement, so they are gone rather
+ * than guessed.
+ */
 interface CoinSentiment {
   coin: string;
   symbol: string;
-  score: number; // 0-100
-  socialVolume: number;
-  newsMentions: number;
-  change24h: number; // percentage
-  history: number[]; // last 7 days scores
+  /** 0-100, averaged over the article classifications for this asset. */
+  score: number;
+  /** Articles mentioning the asset in the window. */
+  articles: number;
+  bullish: number;
+  bearish: number;
 }
+
+/** One classified article as `/api/sentiment` returns it. */
+interface SentimentArticle {
+  sentiment?: keyof typeof SENTIMENT_SCORES;
+  affectedAssets?: string[];
+}
+
+/** The 0-100 score each classification contributes to an asset's average. */
+const SENTIMENT_SCORES = {
+  very_bullish: 90,
+  bullish: 70,
+  neutral: 50,
+  bearish: 30,
+  very_bearish: 10,
+} as const;
 
 /* ------------------------------------------------------------------ */
 /*  Helpers                                                            */
@@ -53,67 +78,6 @@ function getScoreTextColor(score: number): string {
   return 'text-red-500 dark:text-red-400';
 }
 
-function formatVolume(n: number): string {
-  if (n >= 1_000_000) return `${(n / 1_000_000).toFixed(1)}M`;
-  if (n >= 1_000) return `${(n / 1_000).toFixed(1)}K`;
-  return String(n);
-}
-
-/* ------------------------------------------------------------------ */
-/*  Mock data generator (used when API is unavailable)                 */
-/* ------------------------------------------------------------------ */
-
-function generateMockData(): CoinSentiment[] {
-  const coins = [
-    { coin: 'Bitcoin', symbol: 'BTC' },
-    { coin: 'Ethereum', symbol: 'ETH' },
-    { coin: 'Solana', symbol: 'SOL' },
-    { coin: 'XRP', symbol: 'XRP' },
-    { coin: 'Cardano', symbol: 'ADA' },
-    { coin: 'Avalanche', symbol: 'AVAX' },
-    { coin: 'Chainlink', symbol: 'LINK' },
-    { coin: 'Polygon', symbol: 'MATIC' },
-    { coin: 'Dogecoin', symbol: 'DOGE' },
-    { coin: 'Polkadot', symbol: 'DOT' },
-    { coin: 'Uniswap', symbol: 'UNI' },
-    { coin: 'Litecoin', symbol: 'LTC' },
-  ];
-
-  return coins.map((c) => {
-    const baseScore = 30 + Math.floor(Math.random() * 50);
-    return {
-      ...c,
-      score: baseScore,
-      socialVolume: Math.floor(Math.random() * 500_000) + 10_000,
-      newsMentions: Math.floor(Math.random() * 200) + 5,
-      change24h: parseFloat((Math.random() * 30 - 15).toFixed(1)),
-      history: Array.from({ length: 7 }, () =>
-        Math.max(5, Math.min(95, baseScore + Math.floor(Math.random() * 20 - 10))),
-      ),
-    };
-  });
-}
-
-/* ------------------------------------------------------------------ */
-/*  Sparkline Bars                                                     */
-/* ------------------------------------------------------------------ */
-
-function SparklineBars({ data }: { data: number[] }) {
-  const max = Math.max(...data, 1);
-  return (
-    <div className="flex h-6 items-end gap-0.5">
-      {data.map((v, i) => (
-        <div
-          key={i}
-          className={cn('w-1.5 rounded-t-sm transition-all', getScoreColor(v))}
-          style={{ height: `${(v / max) * 100}%`, minHeight: '2px' }}
-          title={`Day ${i + 1}: ${v}`}
-        />
-      ))}
-    </div>
-  );
-}
-
 /* ------------------------------------------------------------------ */
 /*  SentimentTable Component                                           */
 /* ------------------------------------------------------------------ */
@@ -121,9 +85,7 @@ function SparklineBars({ data }: { data: number[] }) {
 export default function SentimentTable({ className }: { className?: string }) {
   const [coins, setCoins] = useState<CoinSentiment[]>([]);
   const [loading, setLoading] = useState(true);
-  const [sortKey, setSortKey] = useState<'score' | 'socialVolume' | 'newsMentions' | 'change24h'>(
-    'score',
-  );
+  const [sortKey, setSortKey] = useState<'score' | 'articles'>('score');
   const [sortDir, setSortDir] = useState<'asc' | 'desc'>('desc');
 
   useEffect(() => {
@@ -133,63 +95,36 @@ export default function SentimentTable({ className }: { className?: string }) {
       setLoading(true);
       try {
         const res = await fetch('/api/sentiment?limit=30');
-        if (!res.ok) throw new Error('Failed');
+        if (!res.ok) throw new Error(`sentiment responded ${res.status}`);
         const json = await res.json();
+        const articles: SentimentArticle[] = Array.isArray(json.articles) ? json.articles : [];
 
-        // Map API data to our shape, or fallback to mock
-        if (json.articles && json.articles.length > 0) {
-          // Group by affected asset
-          const assetMap = new Map<
-            string,
-            { scores: number[]; mentions: number; volume: number }
-          >();
-          for (const a of json.articles) {
-            for (const ticker of a.affectedAssets || []) {
-              const key = ticker.toUpperCase();
-              const existing = assetMap.get(key) || { scores: [], mentions: 0, volume: 0 };
-              const sentimentScore =
-                a.sentiment === 'very_bullish'
-                  ? 90
-                  : a.sentiment === 'bullish'
-                    ? 70
-                    : a.sentiment === 'neutral'
-                      ? 50
-                      : a.sentiment === 'bearish'
-                        ? 30
-                        : 10;
-              existing.scores.push(sentimentScore);
-              existing.mentions += 1;
-              existing.volume += Math.floor(Math.random() * 50_000 + 5_000);
-              assetMap.set(key, existing);
-            }
-          }
-
-          const mapped: CoinSentiment[] = Array.from(assetMap.entries()).map(([symbol, data]) => {
-            const avg = Math.round(data.scores.reduce((s, v) => s + v, 0) / data.scores.length);
-            return {
-              coin: symbol,
-              symbol,
-              score: avg,
-              socialVolume: data.volume,
-              newsMentions: data.mentions,
-              change24h: parseFloat((Math.random() * 20 - 10).toFixed(1)),
-              history: Array.from({ length: 7 }, () =>
-                Math.max(5, Math.min(95, avg + Math.floor(Math.random() * 20 - 10))),
-              ),
-            };
-          });
-
-          if (!cancelled && mapped.length > 0) {
-            setCoins(mapped);
-            setLoading(false);
-            return;
+        const byAsset = new Map<string, { scores: number[]; bullish: number; bearish: number }>();
+        for (const article of articles) {
+          const score = SENTIMENT_SCORES[article.sentiment ?? 'neutral'];
+          if (score === undefined) continue;
+          for (const ticker of article.affectedAssets ?? []) {
+            const key = ticker.toUpperCase();
+            const entry = byAsset.get(key) ?? { scores: [], bullish: 0, bearish: 0 };
+            entry.scores.push(score);
+            if (score > 55) entry.bullish += 1;
+            if (score < 45) entry.bearish += 1;
+            byAsset.set(key, entry);
           }
         }
 
-        // Fallback
-        if (!cancelled) setCoins(generateMockData());
+        const mapped: CoinSentiment[] = Array.from(byAsset.entries()).map(([symbol, entry]) => ({
+          coin: symbol,
+          symbol,
+          score: Math.round(entry.scores.reduce((sum, v) => sum + v, 0) / entry.scores.length),
+          articles: entry.scores.length,
+          bullish: entry.bullish,
+          bearish: entry.bearish,
+        }));
+
+        if (!cancelled) setCoins(mapped);
       } catch {
-        if (!cancelled) setCoins(generateMockData());
+        if (!cancelled) setCoins([]);
       } finally {
         if (!cancelled) setLoading(false);
       }
@@ -239,30 +174,19 @@ export default function SentimentTable({ className }: { className?: string }) {
               </th>
               <th
                 className="hover:text-text-primary hidden cursor-pointer px-4 py-3 font-medium select-none sm:table-cell"
-                onClick={() => handleSort('socialVolume')}
+                onClick={() => handleSort('articles')}
               >
-                Social Vol <SortIcon col="socialVolume" />
+                Articles <SortIcon col="articles" />
               </th>
-              <th
-                className="hover:text-text-primary hidden cursor-pointer px-4 py-3 font-medium select-none md:table-cell"
-                onClick={() => handleSort('newsMentions')}
-              >
-                News <SortIcon col="newsMentions" />
-              </th>
-              <th
-                className="hover:text-text-primary cursor-pointer px-4 py-3 font-medium select-none"
-                onClick={() => handleSort('change24h')}
-              >
-                24h Chg <SortIcon col="change24h" />
-              </th>
-              <th className="hidden px-4 py-3 font-medium lg:table-cell">7d Trend</th>
+              <th className="hidden px-4 py-3 font-medium md:table-cell">Bullish</th>
+              <th className="hidden px-4 py-3 font-medium md:table-cell">Bearish</th>
             </tr>
           </thead>
           <tbody>
             {loading
               ? Array.from({ length: 8 }).map((_, i) => (
                   <tr key={i} className="border-border border-b last:border-0">
-                    {Array.from({ length: 6 }).map((_, j) => (
+                    {Array.from({ length: 4 }).map((_, j) => (
                       <td key={j} className="px-4 py-3">
                         <div className="bg-border h-4 w-16 animate-pulse rounded" />
                       </td>
@@ -308,40 +232,23 @@ export default function SentimentTable({ className }: { className?: string }) {
                       </div>
                     </td>
 
-                    {/* Social Volume */}
-                    <td className="text-text-secondary px-4 py-3 tabular-nums">
-                      {formatVolume(c.socialVolume)}
+                    {/* Articles in the window */}
+                    <td className="text-text-secondary hidden px-4 py-3 tabular-nums sm:table-cell">
+                      {c.articles}
                     </td>
 
-                    {/* News Mentions */}
-                    <td className="text-text-secondary px-4 py-3 tabular-nums">{c.newsMentions}</td>
-
-                    {/* 24h Change */}
-                    <td className="px-4 py-3">
-                      <span
-                        className={cn(
-                          'inline-flex items-center gap-0.5 text-xs font-medium tabular-nums',
-                          c.change24h > 0
-                            ? 'text-green-500 dark:text-green-400'
-                            : c.change24h < 0
-                              ? 'text-red-500 dark:text-red-400'
-                              : 'text-text-tertiary',
-                        )}
-                      >
-                        {c.change24h > 0 ? (
-                          <ArrowUp className="h-3 w-3" />
-                        ) : c.change24h < 0 ? (
-                          <ArrowDown className="h-3 w-3" />
-                        ) : (
-                          <Minus className="h-3 w-3" />
-                        )}
-                        {Math.abs(c.change24h).toFixed(1)}%
+                    {/* Bullish / bearish split of those articles */}
+                    <td className="hidden px-4 py-3 tabular-nums md:table-cell">
+                      <span className="inline-flex items-center gap-0.5 text-xs font-medium text-green-500 dark:text-green-400">
+                        <ArrowUp className="h-3 w-3" />
+                        {c.bullish}
                       </span>
                     </td>
-
-                    {/* 7-day Sparkline */}
-                    <td className="px-4 py-3">
-                      <SparklineBars data={c.history} />
+                    <td className="hidden px-4 py-3 tabular-nums md:table-cell">
+                      <span className="inline-flex items-center gap-0.5 text-xs font-medium text-red-500 dark:text-red-400">
+                        <ArrowDown className="h-3 w-3" />
+                        {c.bearish}
+                      </span>
                     </td>
                   </tr>
                 ))}

@@ -118,3 +118,26 @@ export function formatLargeNumber(
 
   return `${sign}${prefix}${abs.toFixed(decimals)}`;
 }
+
+/**
+ * Read a value as a finite number, or fall back when it is missing,
+ * non-numeric or NaN.
+ *
+ * Market rows arrive as third-party JSON and routinely omit a field: a coin
+ * with no reported 24h volume, an exchange with no volume figure, a token with
+ * no market cap. Summing those directly poisons the total (`x + undefined` is
+ * NaN), and a `total === 0` guard never fires on NaN, so every percentage
+ * derived from it renders as "NaN%". Coerce at the edge instead.
+ */
+export function toFiniteNumber(value: unknown, fallback = 0): number {
+  return typeof value === 'number' && Number.isFinite(value) ? value : fallback;
+}
+
+/**
+ * Sum one numeric field across rows, skipping the ones that do not carry it.
+ *
+ * @see toFiniteNumber for why a plain `reduce` is not enough.
+ */
+export function sumFinite<T>(rows: readonly T[], pick: (row: T) => unknown): number {
+  return rows.reduce<number>((total, row) => total + toFiniteNumber(pick(row)), 0);
+}

@@ -11,7 +11,12 @@
 /**
  * Simple price lookup API route
  * GET /api/prices?coins=bitcoin,ethereum,solana
- * Returns { bitcoin: { usd: 50000, usd_24h_change: 1.5 }, ... }
+ * Returns { bitcoin: { usd: 50000, usd_24h_change: 1.5, usd_market_cap: 1.0e12,
+ *            usd_24h_vol: 3.1e10 }, ... }
+ *
+ * Market cap and 24h volume ride along on the same upstream call at no extra
+ * cost. Leaving them out is what made the homepage market tiles read $0: the
+ * snapshot widget asked for fields this route never sent and summed undefined.
  *
  * Fallback chain (never returns an error):
  *   1. Short-lived in-memory cache (60 s)
@@ -97,7 +102,7 @@ export const GET = instrumented(
 
     // 2. Fetch from CoinGecko (with its built-in CoinCap/CoinPaprika fallbacks)
     const data = await fetchCoinGecko(
-      `${COINGECKO_BASE}/simple/price?ids=${coinIds.join(',')}&vs_currencies=usd&include_24hr_change=true`,
+      `${COINGECKO_BASE}/simple/price?ids=${coinIds.join(',')}&vs_currencies=usd&include_24hr_change=true&include_market_cap=true&include_24hr_vol=true`,
       { revalidate: 120 },
     );
 

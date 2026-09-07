@@ -8,7 +8,7 @@
 
 import { useState, useEffect, useCallback, useMemo } from "react";
 import { cn } from "@/lib/utils";
-import { formatLargeNumber } from "@/lib/format";
+import { formatLargeNumber, sumFinite, toFiniteNumber } from "@/lib/format";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { Skeleton } from "@/components/ui/Skeleton";
@@ -26,7 +26,8 @@ interface Exchange {
   name: string;
   url?: string;
   volume24h: number;
-  markets: number;
+  /** CoinGecko trust-score rank, 1 = highest. */
+  trustScoreRank: number | null;
   trustScore: number;
   yearEstablished: number | null;
   country?: string;
@@ -40,7 +41,7 @@ interface Exchange {
 type SortKey =
   | "name"
   | "volume24h"
-  | "markets"
+  | "trustScoreRank"
   | "trustScore"
   | "yearEstablished";
 type SortDir = "asc" | "desc";
@@ -71,7 +72,7 @@ function trustBar(score: number) {
         <div className={cn("h-full rounded-full", color)} style={{ width: `${pct}%` }} />
       </div>
       <span className={cn("text-xs font-medium", trustBadge(score).cls)}>
-        {score.toFixed(1)}
+        {Number.isFinite(score) ? score.toFixed(1) : "n/a"}
       </span>
     </div>
   );
@@ -108,7 +109,7 @@ export default function ExchangeTable({
           name: item.name || "Unknown",
           url: item.url || item.website,
           volume24h: item.volume24h || item.trade_volume_24h_btc || item.volume || 0,
-          markets: item.markets || item.pairs || item.coins || 0,
+          trustScoreRank: item.trustScoreRank ?? item.trust_score_rank ?? null,
           trustScore: item.trustScore || item.trust_score || item.trust || 0,
           yearEstablished: item.yearEstablished || item.year_established || item.year || null,
           country: item.country,
@@ -159,8 +160,8 @@ export default function ExchangeTable({
           return mul * a.name.localeCompare(b.name);
         case "volume24h":
           return mul * (a.volume24h - b.volume24h);
-        case "markets":
-          return mul * (a.markets - b.markets);
+        case "trustScoreRank":
+          return mul * ((a.trustScoreRank ?? Infinity) - (b.trustScoreRank ?? Infinity));
         case "trustScore":
           return mul * (a.trustScore - b.trustScore);
         case "yearEstablished":
@@ -173,15 +174,20 @@ export default function ExchangeTable({
 
   // Volume distribution for donut
   const volumeShares = useMemo(() => {
-    const total = exchanges.reduce((s, e) => s + e.volume24h, 0);
-    if (total === 0) return [];
+    // A row whose 24h volume the upstream omitted poisons the sum: one
+    // undefined makes the total NaN, `total === 0` stays false, and every
+    // share in the donut legend renders as "NaN%".
+    const volumeOf = (e: { volume24h?: number }) => toFiniteNumber(e.volume24h);
+
+    const total = sumFinite(exchanges, (e) => e.volume24h);
+    if (total <= 0) return [];
     return exchanges
       .slice()
-      .sort((a, b) => b.volume24h - a.volume24h)
+      .sort((a, b) => volumeOf(b) - volumeOf(a))
       .slice(0, 10)
       .map((e) => ({
         name: e.name,
-        share: (e.volume24h / total) * 100,
+        share: (volumeOf(e) / total) * 100,
       }));
   }, [exchanges]);
 
@@ -300,8 +306,8 @@ export default function ExchangeTable({
                     cls: "",
                   },
                   {
-                    key: "markets" as SortKey,
-                    label: "Markets",
+                    key: "trustScoreRank" as SortKey,
+                    label: "Rank",
                     cls: "hidden md:table-cell",
                   },
                   {
@@ -383,7 +389,7 @@ export default function ExchangeTable({
                     {formatLargeNumber(ex.volume24h, { prefix: "$" })}
                   </td>
                   <td className="hidden whitespace-nowrap px-4 py-3 text-text-secondary md:table-cell">
-                    {ex.markets.toLocaleString()}
+                    {ex.trustScoreRank !== null ? `#${ex.trustScoreRank}` : "n/a"}
                   </td>
                   <td className="whitespace-nowrap px-4 py-3">
                     {trustBar(ex.trustScore)}

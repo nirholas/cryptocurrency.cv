@@ -16,7 +16,7 @@ interface Exchange {
   name: string;
   url?: string;
   volume24h: number;
-  markets: number;
+  trustScoreRank: number | null;
   trustScore: number;
   yearEstablished: number | null;
   country?: string;
@@ -28,7 +28,7 @@ interface Exchange {
 }
 
 function formatFee(fee: number | undefined): string {
-  if (fee == null) return "—";
+  if (fee == null) return "n/a";
   return `${(fee * 100).toFixed(2)}%`;
 }
 
@@ -107,9 +107,9 @@ export default function ExchangesClient() {
                     ),
                   },
                   {
-                    label: "Markets",
+                    label: "Rank",
                     values: compareList.map((e) =>
-                      e.markets.toLocaleString()
+                      e.trustScoreRank !== null ? `#${e.trustScoreRank}` : "n/a",
                     ),
                   },
                   {

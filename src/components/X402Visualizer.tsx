@@ -69,11 +69,15 @@ export default function X402Visualizer() {
   const mouseRef = useRef(new THREE.Vector2(9999, 9999));
   const mouse3DRef = useRef(new THREE.Vector3(9999, 9999, 0));
   const [transactions, setTransactions] = useState<Transaction[]>([]);
-  const [stats, setStats] = useState({ total: 0, volume: 0, tps: 0 });
+  const [stats, setStats] = useState({ total: 0 });
   const [isPaused, setIsPaused] = useState(false);
   const [bgColor, setBgColor] = useState('#0a0a0f');
 
-  // Generate simulated x402 transactions
+  // Build one illustrative payment for the animation.
+  //
+  // Nothing here is a network reading: there is no public x402 transaction
+  // feed to subscribe to, so every field is generated to drive the 3D scene.
+  // The panel says so in the UI rather than presenting these as observations.
   const generateTransaction = useCallback((): Transaction => {
     const fromProtocol = PROTOCOLS[Math.floor(Math.random() * PROTOCOLS.length)];
     let toProtocol = PROTOCOLS[Math.floor(Math.random() * PROTOCOLS.length)];
@@ -354,9 +358,7 @@ export default function X402Visualizer() {
     // Simulation state
     // -----------------------------------------------------------------------
     let txCount = 0;
-    let txVolume = 0;
     let lastTxTime = Date.now();
-    const recentTxTimes: number[] = [];
 
     // Transaction generation interval
     const txInterval = setInterval(() => {
@@ -364,20 +366,9 @@ export default function X402Visualizer() {
 
       const tx = generateTransaction();
       txCount++;
-      txVolume += tx.amount;
-      const now = Date.now();
-      recentTxTimes.push(now);
-      // Keep only last 10 seconds
-      while (recentTxTimes.length > 0 && recentTxTimes[0] < now - 10000) {
-        recentTxTimes.shift();
-      }
 
       setTransactions((prev) => [tx, ...prev].slice(0, 50));
-      setStats({
-        total: txCount,
-        volume: txVolume,
-        tps: recentTxTimes.length / 10,
-      });
+      setStats({ total: txCount });
 
       // Launch a pulse
       const fromNode = protocolNodes.find((n) => n.name === tx.from);
@@ -642,21 +633,9 @@ export default function X402Visualizer() {
       <div className="absolute bottom-0 left-0 right-0 z-10 flex items-center justify-between px-6 py-4 bg-gradient-to-t from-black/60 to-transparent">
         <div className="flex items-center gap-6">
           <div className="flex items-center gap-2">
-            <span className="text-gray-500 text-xs font-mono">TRANSACTIONS</span>
+            <span className="text-gray-500 text-xs font-mono">PAYMENTS SHOWN</span>
             <span className="text-white font-mono font-bold text-sm">
               {stats.total.toLocaleString()}
-            </span>
-          </div>
-          <div className="flex items-center gap-2">
-            <span className="text-gray-500 text-xs font-mono">VOLUME</span>
-            <span className="text-white font-mono font-bold text-sm">
-              ${stats.volume.toLocaleString(undefined, { maximumFractionDigits: 0 })}
-            </span>
-          </div>
-          <div className="flex items-center gap-2">
-            <span className="text-gray-500 text-xs font-mono">TPS</span>
-            <span className="text-white font-mono font-bold text-sm">
-              {stats.tps.toFixed(1)}
             </span>
           </div>
         </div>
@@ -665,13 +644,17 @@ export default function X402Visualizer() {
         </div>
       </div>
 
-      {/* Right sidebar - Live transactions */}
+      {/* Right sidebar: the simulated payment stream driving the scene */}
       <div className="absolute top-16 right-4 bottom-16 w-72 z-10 overflow-hidden">
         <div className="bg-black/40 backdrop-blur-sm rounded-lg border border-gray-800 h-full flex flex-col">
           <div className="px-4 py-3 border-b border-gray-800">
             <h3 className="text-white text-xs font-mono font-bold tracking-wider">
-              LIVE TRANSACTIONS
+              SIMULATED PAYMENT FLOW
             </h3>
+            <p className="mt-1 text-[10px] leading-snug text-gray-500">
+              Illustrative traffic generated to animate the protocol. Not live
+              network data.
+            </p>
           </div>
           <div className="flex-1 overflow-y-auto p-2 space-y-1 scrollbar-thin scrollbar-thumb-gray-700">
             {transactions.map((tx) => (

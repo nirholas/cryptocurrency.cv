@@ -8,6 +8,7 @@
 
 import { useState, useMemo, useCallback } from 'react';
 import { cn } from '@/lib/utils';
+import { sumFinite } from '@/lib/format';
 
 interface CoinData {
   id: string;
@@ -73,7 +74,7 @@ function computeTreemap(
 ): TreemapBlock[] {
   if (coins.length === 0) return [];
 
-  const totalMcap = coins.reduce((sum, c) => sum + c.market_cap, 0);
+  const totalMcap = sumFinite(coins, (c) => c.market_cap);
   const blocks: TreemapBlock[] = [];
 
   // Squarified treemap via slice-and-dice rows
@@ -92,7 +93,7 @@ function computeTreemap(
     // Take items for this row greedily until aspect ratio worsens
     const row: CoinData[] = [];
     let rowMcap = 0;
-    const totalRemaining = remaining.reduce((sum, c) => sum + c.market_cap, 0);
+    const totalRemaining = sumFinite(remaining, (c) => c.market_cap);
 
     for (let i = 0; i < remaining.length; i++) {
       const candidate = [...row, remaining[i]];

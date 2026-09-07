@@ -11,9 +11,7 @@ import {
   Waves,
   TrendingUp,
   TrendingDown,
-  AlertTriangle,
   Zap,
-  ArrowRight,
   RefreshCw,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -28,7 +26,8 @@ interface WhaleAlert {
   symbol: string;
   amount: string;
   direction: string;
-  timestamp: string;
+  /** Epoch milliseconds. */
+  timestamp: number;
 }
 
 interface Signal {
@@ -48,6 +47,25 @@ interface TopMover {
 /* ------------------------------------------------------------------ */
 /*  IntelligenceCards                                                   */
 /* ------------------------------------------------------------------ */
+
+/**
+ * Normalise an alert timestamp to epoch milliseconds, or 0 when it is missing
+ * or unreadable.
+ *
+ * `/api/whale-alerts` reports `timestamp` as a number. Wrapping that in
+ * `String()` and handing it to `new Date()` produced "1788765256000", which
+ * parses as an Invalid Date, and four of those were rendered on the hub.
+ */
+function toEpochMs(value: unknown): number {
+  if (typeof value === "number" && Number.isFinite(value)) return value;
+  if (typeof value === "string") {
+    const numeric = Number(value);
+    if (Number.isFinite(numeric) && value.trim() !== "") return numeric;
+    const parsed = Date.parse(value);
+    if (!Number.isNaN(parsed)) return parsed;
+  }
+  return 0;
+}
 
 export default function IntelligenceCards() {
   const [whales, setWhales] = useState<WhaleAlert[]>([]);
@@ -75,7 +93,7 @@ export default function IntelligenceCards() {
               ? `$${Number(a.amount_usd).toLocaleString()}`
               : String(a.amount || "Unknown"),
             direction: String(a.direction || a.type || "transfer"),
-            timestamp: String(a.timestamp || new Date().toISOString()),
+            timestamp: toEpochMs(a.timestamp),
           })),
         );
       }
@@ -194,10 +212,12 @@ export default function IntelligenceCards() {
                       <div className="text-text-tertiary text-xs">{w.amount}</div>
                     </div>
                     <span className="text-text-tertiary shrink-0 text-[10px]">
-                      {new Date(w.timestamp).toLocaleTimeString([], {
-                        hour: "2-digit",
-                        minute: "2-digit",
-                      })}
+                      {w.timestamp > 0
+                        ? new Date(w.timestamp).toLocaleTimeString([], {
+                            hour: "2-digit",
+                            minute: "2-digit",
+                          })
+                        : ""}
                     </span>
                   </div>
                 ))}

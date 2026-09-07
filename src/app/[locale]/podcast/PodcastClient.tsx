@@ -11,7 +11,6 @@ import {
   Headphones,
   Mic,
   Play,
-  Pause,
   Clock,
   Calendar,
   ChevronDown,
@@ -20,10 +19,6 @@ import {
   ChevronRight,
   Sparkles,
   Radio,
-  Share2,
-  Link2,
-  Check,
-  Filter,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import {
@@ -36,7 +31,7 @@ import {
   CardContent,
   Skeleton,
 } from "@/components/ui";
-import AudioPlayer, { WaveformBars } from "@/components/AudioPlayer";
+import AudioPlayer from "@/components/AudioPlayer";
 
 /* ---------- Types ---------- */
 
@@ -44,10 +39,13 @@ interface Episode {
   id: string;
   title: string;
   description: string;
+  /** Streams the generated MP3. Empty when text-to-speech is not configured. */
   audioUrl: string;
   duration: number; // seconds
   date: string;
   format?: string;
+  /** The generated script, read end to end. */
+  transcript: string;
 }
 
 interface AIBriefing {
@@ -59,91 +57,33 @@ interface AIBriefing {
   duration: number;
 }
 
-/* ---------- Demo data (used until APIs return real data) ---------- */
+/* ---------- Episode formats ---------- */
 
-const DEMO_EPISODES: Episode[] = [
-  {
-    id: "ep-1",
-    title: "Bitcoin Breaks $120K — What's Driving the Rally?",
-    description:
-      "In this episode we break down the macro factors behind Bitcoin's latest all-time high, including institutional inflows, halving after-effects, and geopolitical tailwinds. We also discuss how Ethereum's Pectra upgrade is reshaping the staking landscape.",
-    audioUrl: "/audio/demo-episode.mp3",
-    duration: 1845,
-    date: "2026-02-28",
-    format: "deep-dive",
-  },
-  {
-    id: "ep-2",
-    title: "DeFi Summer 2.0? Lending Protocols Surge",
-    description:
-      "TVL across major DeFi protocols has surged past $250B. We explore the catalysts, major winners, and risks the market may be overlooking. Plus: a deep dive into Solana's new fee market changes.",
-    audioUrl: "/audio/demo-episode.mp3",
-    duration: 1320,
-    date: "2026-02-25",
-    format: "deep-dive",
-  },
-  {
-    id: "ep-3",
-    title: "Weekly Recap — Feb 17-23, 2026",
-    description:
-      "Your weekly summary of the most important crypto events: SEC regulatory updates, Solana outperformance, new L2 launches, and DAO governance battles.",
-    audioUrl: "/audio/demo-episode.mp3",
-    duration: 960,
-    date: "2026-02-23",
-    format: "weekly-recap",
-  },
-  {
-    id: "ep-4",
-    title: "Market Open Flash — Feb 21",
-    description:
-      "A quick 5-minute market open briefing covering overnight moves, funding rates, and key levels to watch today.",
-    audioUrl: "/audio/demo-episode.mp3",
-    duration: 310,
-    date: "2026-02-21",
-    format: "flash",
-  },
-  {
-    id: "ep-5",
-    title: "Ethereum Pectra: Everything You Need to Know",
-    description:
-      "We break down every EIP in the Pectra upgrade, what it means for validators, stakers, and everyday users. Plus: gas fee predictions post-upgrade.",
-    audioUrl: "/audio/demo-episode.mp3",
-    duration: 2100,
-    date: "2026-02-18",
-    format: "deep-dive",
-  },
-  {
-    id: "ep-6",
-    title: "Stablecoin Wars: USDC, USDT, and the New Challengers",
-    description:
-      "Circle's IPO, Tether's reserves controversy, and new entrants from TradFi — an in-depth look at the $200B stablecoin market.",
-    audioUrl: "/audio/demo-episode.mp3",
-    duration: 1650,
-    date: "2026-02-15",
-    format: "deep-dive",
-  },
-];
+/**
+ * The four shows `/api/podcast` can produce. Each is generated on demand from
+ * the live news feed and market snapshot, so the library is exactly these four,
+ * refreshed, rather than a stored back catalogue.
+ */
+const EPISODE_FORMATS = ["flash", "market-open", "deep-dive", "weekly-recap"] as const;
 
-const DEMO_BRIEFING: AIBriefing = {
-  id: "briefing-today",
-  title: "Today's Crypto Briefing — March 1, 2026",
-  audioUrl: "/audio/demo-briefing.mp3",
-  duration: 180,
-  transcript: `Good morning. Here's your crypto briefing for Saturday, March 1st, 2026.
+type EpisodeFormat = (typeof EPISODE_FORMATS)[number];
 
-Bitcoin is trading at $119,850, up 2.3% over the past 24 hours. Institutional buying remains strong with ETF inflows totaling $1.2 billion this week.
-
-Ethereum is at $6,420 following the successful Pectra upgrade. Gas fees have dropped 40% and staking yields are stabilizing around 4.8%.
-
-In DeFi, total value locked across all chains has reached a new record of $265 billion. Aave and MakerDAO are leading the charge with combined TVL exceeding $45 billion.
-
-Solana is making waves with SOL trading at $340, up 5% on the week. The network processed a record 85,000 transactions per second during a memecoin frenzy yesterday.
-
-Regulatory news: the SEC is expected to announce its decision on multiple altcoin ETF applications next week. Markets are pricing in a 70% chance of approval.
-
-That's your briefing. Stay informed, stay safe, and we'll see you tomorrow.`,
-  date: "2026-03-01",
-};
+/** The script-only payload `/api/podcast?audio=false` answers with. */
+interface PodcastScriptResponse {
+  audioAvailable?: boolean;
+  episode?: {
+    id?: string;
+    title?: string;
+    description?: string;
+    format?: string;
+    duration?: number;
+    generatedAt?: string;
+    script?: {
+      segments?: { text?: string }[];
+      totalDuration?: number;
+    };
+  };
+}
 
 const EPISODES_PER_PAGE = 4;
 
@@ -158,6 +98,38 @@ const FORMAT_FILTERS = [
 type FormatFilter = (typeof FORMAT_FILTERS)[number]["value"];
 
 /* ---------- Helpers ---------- */
+
+/**
+ * Turn one `/api/podcast?audio=false` payload into an episode, or null when the
+ * generator produced nothing usable. Returning null keeps an unavailable show
+ * off the page instead of rendering an empty card.
+ */
+function toEpisode(format: EpisodeFormat, body: PodcastScriptResponse): Episode | null {
+  const episode = body.episode;
+  const transcript = (episode?.script?.segments ?? [])
+    .map((segment) => segment.text?.trim())
+    .filter(Boolean)
+    .join("\n\n");
+
+  if (!episode?.title || !transcript) return null;
+
+  const duration = episode.duration ?? episode.script?.totalDuration ?? 0;
+
+  return {
+    id: episode.id ?? `podcast-${format}`,
+    title: episode.title,
+    description: episode.description ?? "",
+    // Same route, audio mode: it answers with the MP3 when Google TTS is
+    // configured. When it is not, the route answers with JSON, so leave the
+    // player unwired rather than pointing it at a request that never plays.
+    audioUrl: body.audioAvailable ? `/api/podcast?format=${format}&voice=neutral` : "",
+    duration,
+    date: episode.generatedAt ?? new Date().toISOString(),
+    format,
+    transcript,
+  };
+}
+
 
 function formatDurationShort(seconds: number) {
   const m = Math.floor(seconds / 60);
@@ -186,53 +158,66 @@ export default function PodcastClient() {
   const [activeEpisode, setActiveEpisode] = useState<Episode | null>(null);
   const [expandedId, setExpandedId] = useState<string | null>(null);
   const [page, setPage] = useState(0);
-  const [briefingPlaying, setBriefingPlaying] = useState(false);
   const [showTranscript, setShowTranscript] = useState(false);
   const [formatFilter, setFormatFilter] = useState<FormatFilter>("all");
   const [copiedEpisodeId, setCopiedEpisodeId] = useState<string | null>(null);
   const [showShareMenu, setShowShareMenu] = useState<string | null>(null);
 
-  // Fetch episodes
+  // Load one episode per show format. Each is generated on demand from the
+  // live feed, so the requests run in parallel and the page renders whichever
+  // ones answer; a format whose generation fails is simply absent, never
+  // stood in for.
   useEffect(() => {
     let cancelled = false;
-    (async () => {
-      try {
-        const res = await fetch("/api/podcast");
-        if (res.ok) {
-          const data = await res.json();
-          if (!cancelled && Array.isArray(data?.episodes) && data.episodes.length > 0) {
-            setEpisodes(data.episodes);
-            setActiveEpisode(data.episodes[0]);
-            setLoading(false);
-            return;
-          }
-        }
-      } catch {
-        // API unavailable — use demo data
-      }
-      if (!cancelled) {
-        setEpisodes(DEMO_EPISODES);
-        setActiveEpisode(DEMO_EPISODES[0]);
-      }
 
-      try {
-        const res = await fetch("/api/ai-anchor");
-        if (res.ok) {
-          const data = await res.json();
-          if (!cancelled && data) {
-            setBriefing(data);
+    (async () => {
+      // Each show is generated on demand and they finish at different times.
+      // Waiting for all four left the page on a bare skeleton for six seconds
+      // or more, which the health sweep read as an empty page, so each one is
+      // rendered as it arrives.
+      const loaded: Episode[] = [];
+
+      await Promise.all(
+        EPISODE_FORMATS.map(async (format) => {
+          try {
+            const res = await fetch(`/api/podcast?format=${format}&audio=false`);
+            if (!res.ok) return;
+            const body = (await res.json()) as PodcastScriptResponse;
+            const episode = toEpisode(format, body);
+            if (!episode || cancelled) return;
+
+            loaded.push(episode);
+            // Keep the library in the declared show order regardless of which
+            // request answered first.
+            loaded.sort(
+              (a, b) =>
+                EPISODE_FORMATS.indexOf(a.format as EpisodeFormat) -
+                EPISODE_FORMATS.indexOf(b.format as EpisodeFormat),
+            );
+
+            setEpisodes([...loaded]);
+            setActiveEpisode((current) => current ?? episode);
             setLoading(false);
-            return;
+
+            if (episode.format === "flash" && episode.transcript) {
+              setBriefing({
+                id: episode.id,
+                title: episode.title,
+                audioUrl: episode.audioUrl,
+                transcript: episode.transcript,
+                date: episode.date,
+                duration: episode.duration,
+              });
+            }
+          } catch {
+            // A format that cannot be generated is simply absent.
           }
-        }
-      } catch {
-        // API unavailable — use demo data
-      }
-      if (!cancelled) {
-        setBriefing(DEMO_BRIEFING);
-        setLoading(false);
-      }
+        }),
+      );
+
+      if (!cancelled) setLoading(false);
     })();
+
     return () => {
       cancelled = true;
     };
@@ -309,6 +294,29 @@ export default function PodcastClient() {
         </p>
       </header>
 
+      {/* ---- Empty state: generation produced nothing ---- */}
+      {episodes.length === 0 && (
+        <Card className="border-dashed">
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2">
+              <Radio className="h-5 w-5 text-text-tertiary" />
+              No episodes available right now
+            </CardTitle>
+            <CardDescription>
+              Every show here is written from the live news feed the moment you ask for
+              it, so this page is empty only while the generator is unreachable. Try
+              again in a minute, or read the same stories in text.
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="flex flex-wrap gap-3">
+            <Button onClick={() => window.location.reload()}>Try again</Button>
+            <Button variant="outline" onClick={() => { window.location.href = "/"; }}>
+              Read the latest news
+            </Button>
+          </CardContent>
+        </Card>
+      )}
+
       {/* ---- SECTION 1: Featured Episode ---- */}
       {activeEpisode && (
         <section className="space-y-4">
@@ -342,11 +350,18 @@ export default function PodcastClient() {
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <AudioPlayer
-                src={activeEpisode.audioUrl}
-                title={activeEpisode.title}
-                subtitle={`${formatDate(activeEpisode.date)} · ${formatDurationShort(activeEpisode.duration)}`}
-              />
+              {activeEpisode.audioUrl ? (
+                <AudioPlayer
+                  src={activeEpisode.audioUrl}
+                  title={activeEpisode.title}
+                  subtitle={`${formatDate(activeEpisode.date)} · ${formatDurationShort(activeEpisode.duration)}`}
+                />
+              ) : (
+                <p className="text-text-tertiary rounded-lg border border-dashed border-border p-4 text-sm">
+                  Narration is unavailable on this deployment, so this episode is
+                  published as a written script. The full transcript is below.
+                </p>
+              )}
             </CardContent>
           </Card>
         </section>
@@ -485,32 +500,21 @@ export default function PodcastClient() {
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
-              {/* Waveform + play */}
-              <div className="flex items-center gap-4 rounded-lg bg-surface-secondary p-4">
-                <button
-                  onClick={() => setBriefingPlaying((p) => !p)}
-                  className={cn(
-                    "flex h-12 w-12 shrink-0 items-center justify-center rounded-full",
-                    "bg-accent text-text-inverse",
-                    "transition-transform hover:scale-105 active:scale-95"
-                  )}
-                  aria-label={briefingPlaying ? "Pause briefing" : "Play briefing"}
-                >
-                  {briefingPlaying ? (
-                    <Pause className="h-5 w-5" />
-                  ) : (
-                    <Play className="h-5 w-5 ml-0.5" />
-                  )}
-                </button>
-
-                <div className="flex-1 space-y-1">
-                  <WaveformBars playing={briefingPlaying} className="h-8" />
-                  <div className="flex items-center justify-between text-xs text-text-tertiary">
-                    <span>{formatDate(briefing.date)}</span>
-                    <span>{formatDurationShort(briefing.duration)}</span>
-                  </div>
+              {/* Playback. The old control here toggled a decorative waveform
+                  and never played anything; a real player replaces it, and
+                  when no narration exists the section says so. */}
+              {briefing.audioUrl ? (
+                <AudioPlayer
+                  src={briefing.audioUrl}
+                  title={briefing.title}
+                  subtitle={`${formatDate(briefing.date)} · ${formatDurationShort(briefing.duration)}`}
+                />
+              ) : (
+                <div className="flex items-center justify-between rounded-lg border border-dashed border-border p-4 text-xs text-text-tertiary">
+                  <span>Written briefing. Narration is unavailable on this deployment.</span>
+                  <span>{formatDate(briefing.date)}</span>
                 </div>
-              </div>
+              )}
 
               {/* Transcript toggle */}
               <div>

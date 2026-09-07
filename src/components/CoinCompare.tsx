@@ -17,7 +17,7 @@ import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
 import { Skeleton } from "@/components/ui/Skeleton";
 import { cn } from "@/lib/utils";
-import { formatCurrency, formatPercent, formatLargeNumber } from "@/lib/format";
+import { formatCurrency, formatPercent, formatLargeNumber, sumFinite, toFiniteNumber } from "@/lib/format";
 import {
   Search,
   X,
@@ -239,6 +239,20 @@ const METRICS: MetricDefinition[] = [
   },
 ];
 
+/**
+ * Read one metric off a coin row as a finite number, or null when the upstream
+ * row simply does not carry it.
+ *
+ * `getValue` is typed `number | null`, but the market rows are third-party JSON:
+ * a coin with no max supply, no all-time-high record or no 24h high arrives with
+ * the field missing rather than null. Passing that straight to a formatter is
+ * what put "undefined", "$NaN" and "NaN%" in the comparison table.
+ */
+function readMetric(metric: MetricDefinition, coin: CoinData): number | null {
+  const value = metric.getValue(coin);
+  return typeof value === 'number' && Number.isFinite(value) ? value : null;
+}
+
 // ---------- Component --------------------------------------------------------
 
 export default function CoinCompare() {
@@ -302,8 +316,8 @@ export default function CoinCompare() {
     const metric = METRICS.find((m) => m.sortKey === sortField);
     if (metric) {
       coins.sort((a, b) => {
-        const va = metric.getValue(a) ?? -Infinity;
-        const vb = metric.getValue(b) ?? -Infinity;
+        const va = readMetric(metric, a) ?? -Infinity;
+        const vb = readMetric(metric, b) ?? -Infinity;
         return sortDir === "asc" ? va - vb : vb - va;
       });
     }
@@ -318,7 +332,7 @@ export default function CoinCompare() {
       let bestId = "";
       let bestVal = metric.higherIsBetter ? -Infinity : Infinity;
       for (const coin of data.coins) {
-        const v = metric.getValue(coin);
+        const v = readMetric(metric, coin);
         if (v === null) continue;
         if (metric.key === "rank") {
           // Lower rank is better
@@ -337,13 +351,15 @@ export default function CoinCompare() {
   // Market dominance
   const dominanceData = useMemo(() => {
     if (!data?.coins) return [];
-    const totalMcap = data.coins.reduce((s, c) => s + c.market_cap, 0);
-    if (totalMcap === 0) return [];
+    // A row missing market_cap makes the total NaN, which slips past a
+    // `=== 0` guard and renders every share as "NaN%".
+    const totalMcap = sumFinite(data.coins, (c) => c.market_cap);
+    if (totalMcap <= 0) return [];
     return data.coins.map((c) => ({
       id: c.id,
       symbol: c.symbol.toUpperCase(),
       name: c.name,
-      pct: (c.market_cap / totalMcap) * 100,
+      pct: (toFiniteNumber(c.market_cap) / totalMcap) * 100,
     }));
   }, [data]);
 
@@ -630,7 +646,7 @@ export default function CoinCompare() {
                         </div>
                       </td>
                       {sortedCoins.map((coin) => {
-                        const value = metric.getValue(coin);
+                        const value = readMetric(metric, coin);
                         const isWinner = winners.get(metric.key) === coin.id;
                         const isChangeMetric = metric.key.startsWith("change") || metric.key === "ath_pct";
                         return (
@@ -649,7 +665,7 @@ export default function CoinCompare() {
                                 isChangeMetric && value !== null && value < 0 && !isWinner && "text-red-500 dark:text-red-400",
                               )}
                             >
-                              {value !== null ? metric.format(value) : "—"}
+                              {value !== null ? metric.format(value) : "n/a"}
                               {isWinner && data.coins.length > 2 && (
                                 <Trophy className="inline-block h-3 w-3 ml-1 text-accent" />
                               )}

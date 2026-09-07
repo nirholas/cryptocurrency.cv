@@ -29,7 +29,8 @@
  * from the error count to reduce noise.
  */
 
-import { test, expect, type Page, type ConsoleMessage } from '@playwright/test';
+import { test, expect, type Page, type ConsoleMessage, type Request } from '@playwright/test';
+import { discoverStaticPages, DYNAMIC_PAGES, NON_LOCALE_PAGES } from './lib/routes';
 
 // ─── Configuration ───────────────────────────────────────────────────────────
 
@@ -58,6 +59,10 @@ const IGNORED_DOMAINS = [
   'fonts.googleapis.com',
   'fonts.gstatic.com',
   'unsplash.com',
+  // Google's favicon service 404s for any domain it has no icon for. That is
+  // the service telling us it has no icon, not a fault on our side, and the
+  // /sources page asks it about every feed we index.
+  'gstatic.com/faviconV2',
 ];
 
 /**
@@ -83,136 +88,24 @@ const IGNORED_CONSOLE_PATTERNS = [
   /next-intl/i, // next-intl locale messages loading
   /NEXT_REDIRECT/i, // Next.js redirect signals
   /text content does not match/i, // SSR/client date mismatch
+  // Chrome hides the status text for cross-origin responses, so a bare
+  // "status of 404 ()" is always a third-party resource — the response
+  // listener already judges those against IGNORED_DOMAINS, but the console
+  // message carries no URL to match on. A same-origin 404 reads
+  // "status of 404 (Not Found)" and is still counted.
+  /Failed to load resource: the server responded with a status of \d+ \(\)$/,
 ];
 
 // ─── All static routes (no dynamic params) ───────────────────────────────────
 
-const STATIC_PAGES: string[] = [
-  '/en',
-  '/en/about',
-  '/en/admin',
-  '/en/ai',
-  '/en/ai/brief',
-  '/en/ai/counter',
-  '/en/ai/debate',
-  '/en/ai/oracle',
-  '/en/ai-agent',
-  '/en/airdrops',
-  '/en/analytics',
-  '/en/analytics/headlines',
-  '/en/arbitrage',
-  '/en/article',
-  '/en/authors',
-  '/en/backtest',
-  '/en/billing',
-  '/en/blog',
-  '/en/bookmarks',
-  '/en/buzz',
-  '/en/calculator',
-  '/en/category',
-  '/en/charts',
-  '/en/citations',
-  '/en/claims',
-  '/en/clickbait',
-  '/en/coin',
-  '/en/compare',
-  '/en/contact',
-  '/en/correlation',
-  '/en/coverage-gap',
-  '/en/defi',
-  '/en/developers',
-  '/en/digest',
-  '/en/dominance',
-  '/en/editorial',
-  '/en/entities',
-  '/en/events',
-  '/en/examples',
-  '/en/examples/cards',
-  '/en/exchanges',
-  '/en/factcheck',
-  '/en/fear-greed',
-  '/en/funding',
-  '/en/gas',
-  '/en/heatmap',
-  '/en/influencers',
-  '/en/install',
-  '/en/learn',
-  '/en/learn/glossary',
-  '/en/liquidations',
-  '/en/markets',
-  '/en/markets/categories',
-  '/en/markets/exchanges',
-  '/en/markets/gainers',
-  '/en/markets/losers',
-  '/en/markets/new',
-  '/en/markets/trending',
-  '/en/movers',
-  '/en/narratives',
-  '/en/offline',
-  '/en/onchain',
-  '/en/options',
-  '/en/oracle',
-  '/en/orderbook',
-  '/en/origins',
-  '/en/portfolio',
-  '/en/predictions',
-  '/en/press',
-  '/en/pricing',
-  '/en/pricing/premium',
-  '/en/pricing/upgrade',
-  '/en/privacy',
-  '/en/protocol-health',
-  '/en/read',
-  '/en/regulatory',
-  '/en/saved',
-  '/en/screener',
-  '/en/search',
-  '/en/sentiment',
-  '/en/settings',
-  '/en/share',
-  '/en/signals',
-  '/en/source',
-  '/en/sources',
-  '/en/status',
-  '/en/tags',
-  '/en/terms',
-  '/en/topic',
-  '/en/topics',
-  '/en/trending',
-  '/en/unlocks',
-  '/en/videos',
-  '/en/watchlist',
-  '/en/whales',
-  '/en/bitcoin',
-  '/en/ethereum',
-  '/en/solana',
-  '/en/stablecoins',
-  '/en/l2',
-  '/en/nft',
-  '/en/derivatives',
-  '/en/macro',
-  '/en/regulation',
-  '/en/research',
-  '/en/alerts',
-  // Non-locale pages
-  '/ask',
-  '/blog',
-  '/docs/api',
-];
-
-/** Dynamic routes with sample params for smoke testing */
-const DYNAMIC_PAGES: string[] = [
-  '/en/coin/bitcoin',
-  '/en/coin/ethereum',
-  '/en/topic/defi',
-  '/en/source/coindesk',
-  '/en/tags/bitcoin',
-  '/en/category/markets',
-  '/en/defi/protocol/aave',
-  '/en/defi/chain/ethereum',
-  '/en/markets/categories/smart-contract-platform',
-  '/en/markets/exchanges/binance',
-];
+/**
+ * The page list is derived from the app directory by `e2e/lib/routes`, shared
+ * with the page-health sweep. It used to be hand-maintained here and it rotted:
+ * 58 of its entries had been deleted from the app and 33 live pages were never
+ * scanned, so the run reported a wall of 404-page noise while real pages went
+ * unchecked.
+ */
+const STATIC_PAGES: string[] = [...discoverStaticPages(), ...NON_LOCALE_PAGES];
 
 const ALL_PAGES = [...STATIC_PAGES, ...DYNAMIC_PAGES];
 
@@ -230,6 +123,39 @@ function isIgnoredDomain(url: string): boolean {
 
 function isIgnoredConsoleMessage(text: string): boolean {
   return IGNORED_CONSOLE_PATTERNS.some((p) => p.test(text));
+}
+
+/**
+ * True when the request is App Router navigation plumbing rather than page
+ * content: a route prefetch, or an RSC payload fetch for a navigation.
+ *
+ * Next fires a prefetch for every <Link> in the viewport and starts an RSC
+ * fetch on hover or click, then cancels whatever is still in flight when the
+ * page is torn down. Those arrive as ERR_ABORTED and say nothing about the
+ * page's health — an RSC route that actually answers 4xx/5xx still surfaces
+ * through the response listener.
+ */
+function isRouterFetch(req: Request): boolean {
+  const headers = req.headers();
+  if (
+    headers['next-router-prefetch'] === '1' ||
+    headers['purpose'] === 'prefetch' ||
+    headers['sec-purpose']?.includes('prefetch') === true ||
+    headers['rsc'] === '1' ||
+    req.url().includes('_rsc=')
+  ) {
+    return true;
+  }
+
+  // A bare `fetch` for a same-origin *page* path is the router following a
+  // server-side redirect: an auth-gated route calls `redirect('/login')` and the
+  // router fetches it. Page paths are never fetched by application code — that
+  // goes to /api — so an aborted one is always the harness tearing the page down
+  // mid-redirect. A page that genuinely fails answers with a status, which the
+  // response listener records.
+  if (req.resourceType() !== 'fetch') return false;
+  const { pathname } = new URL(req.url());
+  return !pathname.startsWith('/api/') && !pathname.startsWith('/_next/');
 }
 
 async function collectPageErrors(page: Page, path: string): Promise<PageError[]> {
@@ -255,6 +181,26 @@ async function collectPageErrors(page: Page, path: string): Promise<PageError[]>
     const url = req.url();
     if (isIgnoredDomain(url)) return;
     const failure = req.failure();
+    // Router prefetches and RSC navigation fetches the browser cancelled on
+    // teardown used to account for ~33 "errors" per page, drowning out the
+    // real ones. See isRouterFetch.
+    if (failure?.errorText === 'net::ERR_ABORTED') {
+      // A cancelled document load is the harness closing the page mid-redirect,
+      // never a page defect: an auth-gated route sends the browser to /login and
+      // the test tears down before it lands. A document that genuinely fails
+      // answers with a status, which the response listener below records.
+      if (
+        req.resourceType() === 'document' ||
+        // Covers the App Router's client-side navigations too, which are
+        // fetches rather than documents: an auth-gated dashboard route pushes
+        // the browser to /login and the harness tears the page down before it
+        // lands.
+        req.isNavigationRequest() ||
+        isRouterFetch(req)
+      ) {
+        return;
+      }
+    }
     errors.push({
       type: 'request-failed',
       message: `${req.method()} ${url} — ${failure?.errorText ?? 'unknown'}`,

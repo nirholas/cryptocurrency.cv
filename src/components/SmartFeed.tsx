@@ -9,9 +9,7 @@
 import { useState, useEffect, useCallback, useRef, useMemo } from 'react';
 import { useTranslations } from 'next-intl';
 import { NewsCardCompact } from '@/components/NewsCard';
-import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
-import { Skeleton } from '@/components/ui/Skeleton';
 import { cn } from '@/lib/utils';
 import type { NewsArticle } from '@/lib/crypto-news';
 
@@ -512,46 +510,90 @@ export function SmartFeed({ initialArticles, className }: SmartFeedProps) {
 /*  Feed Stats Widget (for sidebar)                                   */
 /* ------------------------------------------------------------------ */
 
+/** Emoji for each market mood `/api/sentiment` reports. */
+const MOOD_ICONS: Record<string, string> = {
+  very_bullish: '\u{1F680}',
+  bullish: '\u{1F4C8}',
+  neutral: '\u{1F610}',
+  bearish: '\u{1F4C9}',
+  very_bearish: '\u{1F327}',
+};
+
 export function FeedStatsWidget({ className }: { className?: string }) {
   const t = useTranslations('smartFeed');
-  const [stats, setStats] = useState({
-    articlesToday: 0,
-    readToday: 0,
-    topSource: '',
-    avgSentiment: 'neutral',
-  });
+  const [readToday, setReadToday] = useState(0);
+  const [articlesToday, setArticlesToday] = useState<number | null>(null);
+  const [topSource, setTopSource] = useState<string | null>(null);
+  const [mood, setMood] = useState<string | null>(null);
 
   useEffect(() => {
-    // Calculate reading stats from localStorage
-    const readArticles = getReadArticles();
-    setStats({
-      articlesToday: Math.floor(Math.random() * 50) + 30, // Simulated
-      readToday: readArticles.size,
-      topSource: 'CoinDesk',
-      avgSentiment: 'neutral',
-    });
+    // How many articles this reader has opened is genuinely local.
+    setReadToday(getReadArticles().size);
+
+    let cancelled = false;
+
+    (async () => {
+      // Everything else is measured server-side. It used to be invented here:
+      // `articlesToday` was `Math.random() * 50 + 30` and the top source was
+      // the string "CoinDesk", refreshed on every page load.
+      const [statsResult, sentimentResult] = await Promise.allSettled([
+        fetch('/api/stats').then((res) => (res.ok ? res.json() : null)),
+        fetch('/api/sentiment?limit=30').then((res) => (res.ok ? res.json() : null)),
+      ]);
+
+      if (cancelled) return;
+
+      if (statsResult.status === 'fulfilled' && statsResult.value) {
+        const stats = statsResult.value as {
+          summary?: { totalArticles?: number };
+          bySource?: { source?: string }[];
+        };
+        if (typeof stats.summary?.totalArticles === 'number') {
+          setArticlesToday(stats.summary.totalArticles);
+        }
+        const leader = stats.bySource?.[0]?.source;
+        if (leader) setTopSource(leader);
+      }
+
+      if (sentimentResult.status === 'fulfilled' && sentimentResult.value) {
+        const overall = (sentimentResult.value as { market?: { overall?: string } }).market?.overall;
+        if (overall) setMood(overall);
+      }
+    })();
+
+    return () => {
+      cancelled = true;
+    };
   }, []);
 
   return (
     <div className={cn('border-border bg-surface-secondary rounded-lg border p-4', className)}>
       <h4 className="mb-3 text-sm font-semibold">📊 {t('yourFeedStats')}</h4>
       <dl className="space-y-2 text-sm">
-        <div className="flex justify-between">
-          <dt className="text-text-secondary">{t('articlesToday')}</dt>
-          <dd className="font-medium">{stats.articlesToday}</dd>
-        </div>
+        {articlesToday !== null && (
+          <div className="flex justify-between">
+            <dt className="text-text-secondary">{t('articlesToday')}</dt>
+            <dd className="font-medium">{articlesToday}</dd>
+          </div>
+        )}
         <div className="flex justify-between">
           <dt className="text-text-secondary">{t('youveRead')}</dt>
-          <dd className="font-medium">{stats.readToday}</dd>
+          <dd className="font-medium">{readToday}</dd>
         </div>
-        <div className="flex justify-between">
-          <dt className="text-text-secondary">{t('topSource')}</dt>
-          <dd className="font-medium">{stats.topSource}</dd>
-        </div>
-        <div className="flex justify-between">
-          <dt className="text-text-secondary">{t('mood')}</dt>
-          <dd className="font-medium">😐 {stats.avgSentiment}</dd>
-        </div>
+        {topSource && (
+          <div className="flex justify-between">
+            <dt className="text-text-secondary">{t('topSource')}</dt>
+            <dd className="font-medium">{topSource}</dd>
+          </div>
+        )}
+        {mood && (
+          <div className="flex justify-between">
+            <dt className="text-text-secondary">{t('mood')}</dt>
+            <dd className="font-medium">
+              {MOOD_ICONS[mood] ?? ''} {mood.replace('_', ' ')}
+            </dd>
+          </div>
+        )}
       </dl>
     </div>
   );

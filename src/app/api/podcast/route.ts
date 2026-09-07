@@ -29,6 +29,7 @@ import { type NextRequest, NextResponse } from 'next/server';
 import {
   generatePodcastEpisode,
   generatePodcastScript,
+  isTextToSpeechConfigured,
   type PodcastFormat,
   type VoiceGender,
 } from '@/lib/ai-podcast';
@@ -67,6 +68,10 @@ export async function GET(request: NextRequest) {
             duration: script.totalDuration,
             generatedAt: script.generatedAt,
           },
+          // Without a TTS credential the audio branch of this same route
+          // answers with JSON, so a player wired to it would be a dead
+          // control. Say so up front instead.
+          audioAvailable: isTextToSpeechConfigured(),
         },
         {
           headers: {
