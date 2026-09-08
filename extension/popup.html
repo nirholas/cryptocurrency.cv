@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Free Crypto News</title>
+    <script type="module" src="/src/popup/main.ts"></script>
+  </head>
+  <body class="popup">
+    <header class="ticker" id="ticker" aria-label="Live prices" aria-live="polite"></header>
+    <nav class="tabs" id="tabs" role="tablist" aria-label="News categories"></nav>
+    <main class="feed" id="feed" role="tabpanel" aria-busy="true"></main>
+    <footer class="footer">
+      <span class="footer-status" id="status"></span>
+      <span class="footer-links">
+        <a href="https://cryptocurrency.cv" target="_blank" rel="noopener" id="site-link">cryptocurrency.cv</a>
+        <button type="button" class="link-button" id="open-options">Settings</button>
+      </span>
+    </footer>
+  </body>
+</html>

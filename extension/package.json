@@ -2,11 +2,11 @@
   "name": "free-crypto-news-extension",
   "version": "3.0.0",
   "private": true,
-  "description": "Free Crypto News — Breaking crypto headlines, sentiment indicators, and price alerts right in your browser.",
+  "description": "Free Crypto News: breaking crypto headlines, category feeds, and a live BTC/ETH/SOL price ticker in your browser.",
   "type": "module",
   "scripts": {
     "dev": "vite build --watch",
-    "build": "vite build && vite build --config vite.background.config.ts",
+    "build": "pnpm run generate-icons && vite build && vite build --config vite.background.config.ts",
     "build:popup": "vite build",
     "build:background": "vite build --config vite.background.config.ts",
     "generate-icons": "tsx scripts/generate-icons.ts",
@@ -14,15 +14,9 @@
     "clean": "rm -rf dist",
     "package": "pnpm run build && cd dist && zip -r ../free-crypto-news-extension.zip ."
   },
-  "dependencies": {
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
-  },
   "devDependencies": {
     "@types/chrome": "^0.0.287",
-    "@types/react": "^19.0.0",
-    "@types/react-dom": "^19.0.0",
-    "@vitejs/plugin-react": "^4.3.4",
+    "@types/node": "^22.10.0",
     "sharp": "^0.33.5",
     "tsx": "^4.19.0",
     "typescript": "^5.7.0",

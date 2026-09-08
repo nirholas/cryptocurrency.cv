@@ -1,0 +1,176 @@
+:root {
+  color-scheme: light dark;
+  --bg: #f6f7f9;
+  --card: #ffffff;
+  --text: #111418;
+  --text-muted: #5f6a75;
+  --border: #e3e6ea;
+  --accent: #f7931a;
+  --accent-hover: #e2830f;
+  --focus: #2563eb;
+  --ok: #16a34a;
+  --error: #dc2626;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0e1116;
+    --card: #161b22;
+    --text: #e6edf3;
+    --text-muted: #8b949e;
+    --border: #262c36;
+    --focus: #58a6ff;
+    --ok: #3fb950;
+    --error: #f85149;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body.options {
+  margin: 0;
+  padding: 32px 16px;
+  background: var(--bg);
+  color: var(--text);
+  font: 14px/1.5 system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.options-card {
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 28px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--card);
+}
+
+h1 {
+  margin: 0 0 4px;
+  font-size: 20px;
+}
+
+.lede {
+  margin: 0 0 24px;
+  color: var(--text-muted);
+}
+
+.field {
+  margin-bottom: 18px;
+}
+
+.field label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.field-inline {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 4px;
+}
+
+.field-inline label {
+  margin: 0;
+}
+
+.field-inline input {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  accent-color: var(--accent);
+}
+
+.hint {
+  margin: 6px 0 0;
+  color: var(--text-muted);
+  font-size: 12px;
+}
+
+.hint-indent {
+  margin: 0 0 18px 28px;
+}
+
+select,
+input[type='url'] {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg);
+  color: var(--text);
+  font: inherit;
+  transition: border-color 120ms ease;
+}
+
+select:hover,
+input[type='url']:hover {
+  border-color: var(--text-muted);
+}
+
+input:invalid {
+  border-color: var(--error);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+button {
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 120ms ease, border-color 120ms ease, transform 80ms ease;
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+.button-primary {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: #fff;
+}
+
+.button-primary:hover {
+  background: var(--accent-hover);
+}
+
+.button-secondary {
+  background: var(--bg);
+  color: var(--text);
+}
+
+.button-secondary:hover {
+  border-color: var(--text-muted);
+}
+
+.status {
+  min-height: 1.5em;
+  margin: 12px 0 0;
+  font-size: 13px;
+  transition: opacity 200ms ease;
+}
+
+.status.ok {
+  color: var(--ok);
+}
+
+.status.error {
+  color: var(--error);
+}

@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "Free Crypto News",
+  "short_name": "Crypto News",
+  "version": "3.0.0",
+  "description": "Breaking crypto headlines by category and a live BTC/ETH/SOL price ticker, powered by cryptocurrency.cv. No API key, no tracking.",
+  "homepage_url": "https://cryptocurrency.cv",
+  "minimum_chrome_version": "116",
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_title": "Free Crypto News",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "permissions": ["storage", "alarms", "notifications"],
+  "host_permissions": ["https://cryptocurrency.cv/*"],
+  "optional_host_permissions": ["https://*/*", "http://localhost/*"]
+}

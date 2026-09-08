@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Free Crypto News settings</title>
+    <script type="module" src="/src/options/main.ts"></script>
+  </head>
+  <body class="options">
+    <main class="options-card">
+      <h1>Free Crypto News</h1>
+      <p class="lede">Headlines and prices come from the public cryptocurrency.cv API. No account, no key, no tracking.</p>
+
+      <form id="settings-form" novalidate>
+        <div class="field">
+          <label for="defaultCategory">Default category</label>
+          <select id="defaultCategory" name="defaultCategory"></select>
+          <p class="hint">The tab the popup opens on.</p>
+        </div>
+
+        <div class="field">
+          <label for="refreshMinutes">Refresh interval</label>
+          <select id="refreshMinutes" name="refreshMinutes">
+            <option value="2">Every 2 minutes</option>
+            <option value="5">Every 5 minutes</option>
+            <option value="15">Every 15 minutes</option>
+            <option value="30">Every 30 minutes</option>
+          </select>
+          <p class="hint">How often the background worker checks for new headlines and prices. The public API allows 120 anonymous requests per hour; every check uses two.</p>
+        </div>
+
+        <div class="field field-inline">
+          <input type="checkbox" id="notificationsEnabled" name="notificationsEnabled" />
+          <label for="notificationsEnabled">Desktop notifications for breaking news</label>
+        </div>
+        <p class="hint hint-indent">A notification fires for a newly published headline from a top-tier source or one the API scores as high impact. At most three per check.</p>
+
+        <div class="field">
+          <label for="apiBaseUrl">API base URL</label>
+          <input type="url" id="apiBaseUrl" name="apiBaseUrl" placeholder="https://cryptocurrency.cv" spellcheck="false" />
+          <p class="hint">Point this at a self-hosted free-crypto-news instance. Changing it to another origin asks for permission to reach that site.</p>
+        </div>
+
+        <div class="actions">
+          <button type="submit" class="button-primary" id="save">Save</button>
+          <button type="button" class="button-secondary" id="reset">Restore defaults</button>
+          <button type="button" class="button-secondary" id="test-notification">Send test notification</button>
+        </div>
+        <p class="status" id="status" role="status" aria-live="polite"></p>
+      </form>
+    </main>
+  </body>
+</html>
