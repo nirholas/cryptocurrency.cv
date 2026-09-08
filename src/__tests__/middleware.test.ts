@@ -13,7 +13,7 @@
  * Tests for global middleware and security utilities
  */
 
-import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
+import { describe, it, expect } from 'vitest';
 import { NextRequest } from 'next/server';
 import {
   generateRequestId,

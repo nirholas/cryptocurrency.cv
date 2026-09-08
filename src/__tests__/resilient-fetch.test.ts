@@ -22,7 +22,7 @@ vi.mock('./circuit-breaker', () => ({
   },
 }));
 
-import { resilientFetch, type ResilientFetchOptions } from '@/lib/resilient-fetch';
+import { resilientFetch } from '@/lib/resilient-fetch';
 
 describe('resilientFetch', () => {
   const originalFetch = globalThis.fetch;

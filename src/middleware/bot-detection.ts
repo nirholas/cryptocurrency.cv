@@ -152,7 +152,19 @@ export const botDetection: MiddlewareHandler = (ctx) => {
     );
   }
 
-  // Repeat-429 escalation — hard-block IPs that ignore rate limits
+  // Repeat-429 escalation — hard-block IPs that ignore rate limits.
+  //
+  // First-party traffic is exempt. The block is keyed on client IP, and IPs are
+  // shared: corporate NAT, mobile CGNAT, VPN exits and CDN edges collapse many
+  // readers onto one address. Because this check runs ahead of the
+  // trusted-origin exemption in rateLimitHandler, a single scraper on such an
+  // address took the whole API down for every real reader behind it for an
+  // hour, including the site's own pages. `isSperaxOS` (verified HMAC) and
+  // `isTrustedOrigin` (same-origin browser fetch or allow-listed Origin, both
+  // set by trustedOriginHandler earlier in the pipeline) identify requests that
+  // came from our own pages; those are metered by the trusted tier instead.
+  if (ctx.isSperaxOS || ctx.isTrustedOrigin) return ctx;
+
   const blockedUntil = isRepeat429Blocked(ctx.clientIp);
   if (blockedUntil) {
     const retryEsc = Math.ceil((blockedUntil - Date.now()) / 1000);

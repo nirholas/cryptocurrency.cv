@@ -38,7 +38,7 @@ import {
 import { FACILITATOR_URL, RECEIVE_ADDRESS, CURRENT_NETWORK } from '@/lib/x402/config';
 import {
   ARBITRUM_USDC,
-  BASE_URL,
+  resolveOrigin,
   buildBazaarExtensions,
   buildInputSchemaForAccepts,
   buildMppChallenge,
@@ -202,11 +202,12 @@ export function getX402Proxy(): (req: NextRequest) => any {
 function buildFallback402(req: NextRequest): NextResponse {
   const pathname = req.nextUrl.pathname;
   const amountAtomic = usdToUsdc(getRoutePrice(pathname));
+  const origin = resolveOrigin(req);
 
-  return NextResponse.json(buildPaymentRequiredBody(pathname, req.method), {
+  return NextResponse.json(buildPaymentRequiredBody(pathname, req.method, origin), {
     status: 402,
     headers: {
-      'WWW-Authenticate': buildMppChallenge(pathname, amountAtomic),
+      'WWW-Authenticate': buildMppChallenge(pathname, amountAtomic, origin),
       'X-Payment-Required': 'true',
     },
   });
@@ -222,6 +223,7 @@ async function augment402Response(res: NextResponse, req: NextRequest): Promise<
   const pathname = req.nextUrl.pathname;
   const price = getRoutePrice(pathname);
   const amountAtomic = usdToUsdc(price);
+  const origin = resolveOrigin(req);
 
   let body: Record<string, unknown>;
   try {
@@ -233,13 +235,13 @@ async function augment402Response(res: NextResponse, req: NextRequest): Promise<
 
   // Add extensions.bazaar if missing
   if (!body.extensions) {
-    body.extensions = buildBazaarExtensions(pathname, req.method);
+    body.extensions = buildBazaarExtensions(pathname, req.method, origin);
   }
 
   // Ensure resource block exists (v2)
   if (!body.resource) {
     body.resource = {
-      url: `${BASE_URL}${pathname}`,
+      url: `${origin}${pathname}`,
       description: getEndpointMeta(pathname, req.method).description,
       mimeType: 'application/json',
     };
@@ -252,7 +254,7 @@ async function augment402Response(res: NextResponse, req: NextRequest): Promise<
     for (const accept of accepts) {
       if (!accept.outputSchema) {
         accept.outputSchema = {
-          input: buildInputSchemaForAccepts(pathname, req.method),
+          input: buildInputSchemaForAccepts(pathname, req.method, origin),
           output: meta.outputSchema ?? GENERIC_OUTPUT_SCHEMA,
         };
       }
@@ -265,7 +267,7 @@ async function augment402Response(res: NextResponse, req: NextRequest): Promise<
   });
 
   // Set proper MPP challenge header
-  augmented.headers.set('WWW-Authenticate', buildMppChallenge(pathname, amountAtomic));
+  augmented.headers.set('WWW-Authenticate', buildMppChallenge(pathname, amountAtomic, origin));
 
   return augmented;
 }

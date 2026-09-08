@@ -14,17 +14,41 @@
  */
 
 import createMiddleware from 'next-intl/middleware';
+import { NextResponse } from 'next/server';
 import type { MiddlewareHandler } from './types';
 import { routing } from '../i18n/navigation';
 import { buildCspHeader } from './security';
 
 const intlMiddleware = createMiddleware(routing);
 
+/**
+ * Pages that live outside the `[locale]` segment and must not be locale-routed.
+ *
+ * next-intl rewrites every non-API path into `/<locale>/<path>`. For a route
+ * that has no `[locale]` counterpart that rewrite lands on a path no page
+ * matches, which is why `/api-reference` answered 404 while its file sat right
+ * there in `src/app` — and why `/docs/api`, which 301s here, was a dead link.
+ */
+const NON_LOCALE_ROUTES = [/^\/api-reference\/?$/];
+
 export const intl: MiddlewareHandler = (ctx) => {
   if (ctx.isApiRoute) return ctx;
 
   const nonce = Buffer.from(crypto.randomUUID()).toString('base64');
-  const csp = buildCspHeader(nonce);
+  // `x-forwarded-proto` is what the load balancer sets; fall back to the
+  // request URL's own protocol for direct connections.
+  const forwardedProto = ctx.request.headers.get('x-forwarded-proto');
+  const secureOrigin = forwardedProto
+    ? forwardedProto.split(',')[0].trim() === 'https'
+    : ctx.request.nextUrl.protocol === 'https:';
+  const csp = buildCspHeader(nonce, secureOrigin);
+
+  if (NON_LOCALE_ROUTES.some((r) => r.test(ctx.pathname))) {
+    const passthrough = NextResponse.next();
+    passthrough.headers.set('x-middleware-request-x-nonce', nonce);
+    passthrough.headers.set('Content-Security-Policy', csp);
+    return passthrough;
+  }
 
   const response = intlMiddleware(ctx.request);
 

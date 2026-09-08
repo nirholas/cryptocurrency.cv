@@ -21,6 +21,16 @@ import { generateArticleSlug } from '@/lib/archive-v2';
 
 const BASE_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://cryptocurrency.cv';
 
+/**
+ * next-intl runs with localePrefix 'as-needed', so the default locale lives at the bare
+ * path and `/en/...` only 307-redirects there. Emit the URL Google will actually land on.
+ */
+function localizedArticleUrl(locale: string, articleSlug: string): string {
+  return locale === 'en'
+    ? `${BASE_URL}/article/${articleSlug}`
+    : `${BASE_URL}/${locale}/article/${articleSlug}`;
+}
+
 // Supported locales for Google News
 const locales = ['en', 'es', 'fr', 'de', 'ja', 'ko', 'zh-CN', 'zh-TW', 'pt', 'ru', 'ar', 'it', 'nl', 'pl', 'tr'];
 
@@ -81,7 +91,7 @@ export async function GET() {
       // Add entry for each locale
       for (const locale of locales) {
         const lang = googleNewsLangMap[locale] || 'en';
-        const url = `${BASE_URL}/${locale}/article/${articleSlug}`;
+        const url = localizedArticleUrl(locale, articleSlug);
         
         xml += `  <url>
     <loc>${escapeXml(url)}</loc>
@@ -102,7 +112,7 @@ ${article.imageUrl ? `    <image:image>
         
         // Add hreflang alternates
         for (const altLocale of locales) {
-          const altUrl = `${BASE_URL}/${altLocale}/article/${articleSlug}`;
+          const altUrl = localizedArticleUrl(altLocale, articleSlug);
           const altLang = googleNewsLangMap[altLocale] || 'en';
           xml += `    <xhtml:link rel="alternate" hreflang="${altLang}" href="${escapeXml(altUrl)}"/>
 `;

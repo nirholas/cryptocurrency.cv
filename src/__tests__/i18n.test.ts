@@ -33,6 +33,16 @@ const RTL_LOCALES = ['ar'];
 // Paths
 const MESSAGES_DIR = path.join(process.cwd(), 'messages');
 const ROOT_DIR = process.cwd();
+// Translated READMEs live in locales/ (the repo root keeps only README.md)
+const README_DIRS = [path.join(ROOT_DIR, 'locales'), ROOT_DIR];
+
+/**
+ * Resolve a translated README, checking locales/ first and the repo root second.
+ */
+function readmePath(locale: string): string {
+  const candidates = README_DIRS.map(dir => path.join(dir, `README.${locale}.md`));
+  return candidates.find(p => fs.existsSync(p)) ?? candidates[0];
+}
 
 /**
  * Recursively get all keys from a nested object

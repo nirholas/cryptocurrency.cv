@@ -7,7 +7,7 @@
 /**
  * Redirects Handler
  *
- * Handles /docs → external docs site redirect and
+ * Handles /docs/api → /api-reference, /docs → external docs site redirect and
  * /dashboard/dashboard → /dashboard dedup fix.
  *
  * @module middleware/redirects
@@ -19,13 +19,17 @@ import type { MiddlewareHandler } from './types';
 export const redirects: MiddlewareHandler = (ctx) => {
   const { pathname } = ctx;
 
-  // Redirect /docs to external docs site
-  const docsMatch = pathname.match(/^(?:\/[a-z]{2}(?:-[A-Z]{2})?)?\/docs(\/.*)?$/);
-  if (docsMatch) {
-    const sub = (docsMatch[1] || '').replace(/^\//, '');
-    const dest = sub ? `https://docs.cryptocurrency.cv/${sub}` : 'https://docs.cryptocurrency.cv';
-    return NextResponse.redirect(dest, { status: 301 });
+  // /docs/api is the on-site Swagger reference, now served at /api-reference.
+  // Checked before the external /docs redirect so the catch-all cannot shadow it.
+  if (/^(?:\/[a-z]{2}(?:-[A-Z]{2})?)?\/docs\/api\/?$/.test(pathname)) {
+    const url = ctx.request.nextUrl.clone();
+    url.pathname = '/api-reference';
+    return NextResponse.redirect(url, { status: 301 });
   }
+
+  // /docs is served by this app now. It used to 301 to docs.cryptocurrency.cv,
+  // which stopped resolving, so every documentation link on the site led to a
+  // DNS failure. The markdown under docs/ renders at /docs instead.
 
   // Fix double-dashboard paths (/dashboard/dashboard/… → /dashboard/…)
   const dblDash = pathname.match(/^(\/[a-z]{2}(?:-[A-Z]{2})?)?\/dashboard\/dashboard(\/.*)?$/);

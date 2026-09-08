@@ -57,7 +57,7 @@ export const SECURITY_HEADERS: Record<string, string> = {
  * so we rely on `'self'` to allow same-origin scripts and explicit domains
  * for known third-party sources.
  */
-export function buildCspHeader(nonce: string): string {
+export function buildCspHeader(nonce: string, secureOrigin = true): string {
   return [
     "default-src 'self'",
     [
@@ -85,7 +85,11 @@ export function buildCspHeader(nonce: string): string {
     "base-uri 'self'",
     "form-action 'self'",
     "frame-ancestors 'self' https://cryptocurrency.cv https://www.cryptocurrency.cv",
-    'upgrade-insecure-requests',
+    // Only meaningful on an https origin. On a plain-http origin the browser
+    // rewrites the site's own same-origin requests to https and they fail with
+    // ERR_SSL_PROTOCOL_ERROR — which is exactly what broke every authenticated
+    // dashboard route under `next start` and in the e2e run.
+    ...(secureOrigin ? ['upgrade-insecure-requests'] : []),
   ].join('; ');
 }
 

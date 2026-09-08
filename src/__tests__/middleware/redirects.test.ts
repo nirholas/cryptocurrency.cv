@@ -34,32 +34,49 @@ function createContext(pathname: string): MiddlewareContext {
 }
 
 describe('redirects handler', () => {
-  it('should redirect /docs to external docs site', () => {
+  it('should serve /docs on this site instead of redirecting it away', () => {
+    // docs.cryptocurrency.cv stopped resolving, so this used to send every
+    // documentation link to a DNS failure. The markdown renders at /docs now.
     const ctx = createContext('/docs');
     const result = redirects(ctx);
 
-    expect(result).toBeInstanceOf(NextResponse);
-    const resp = result as NextResponse;
-    expect(resp.status).toBe(301);
-    expect(resp.headers.get('location')).toBe('https://docs.cryptocurrency.cv/');
+    expect(result).not.toBeInstanceOf(NextResponse);
+    expect(result).toBe(ctx);
   });
 
-  it('should redirect /docs/api to external docs subpath', () => {
+  it('should redirect /docs/api to the on-site /api-reference page, not the external docs', () => {
     const ctx = createContext('/docs/api');
     const result = redirects(ctx);
 
     expect(result).toBeInstanceOf(NextResponse);
     const resp = result as NextResponse;
     expect(resp.status).toBe(301);
-    expect(resp.headers.get('location')).toBe('https://docs.cryptocurrency.cv/api');
+    expect(new URL(resp.headers.get('location')!).pathname).toBe('/api-reference');
   });
 
-  it('should redirect locale-prefixed /docs', () => {
-    const ctx = createContext('/en/docs');
+  it('should redirect locale-prefixed /docs/api to /api-reference', () => {
+    const ctx = createContext('/de/docs/api');
     const result = redirects(ctx);
 
     expect(result).toBeInstanceOf(NextResponse);
-    expect((result as NextResponse).status).toBe(301);
+    const resp = result as NextResponse;
+    expect(new URL(resp.headers.get('location')!).pathname).toBe('/api-reference');
+  });
+
+  it('should serve other /docs subpaths on this site', () => {
+    const ctx = createContext('/docs/quickstart');
+    const result = redirects(ctx);
+
+    expect(result).not.toBeInstanceOf(NextResponse);
+    expect(result).toBe(ctx);
+  });
+
+  it('should serve locale-prefixed /docs on this site', () => {
+    const ctx = createContext('/en/docs');
+    const result = redirects(ctx);
+
+    expect(result).not.toBeInstanceOf(NextResponse);
+    expect(result).toBe(ctx);
   });
 
   it('should fix double-dashboard paths', () => {

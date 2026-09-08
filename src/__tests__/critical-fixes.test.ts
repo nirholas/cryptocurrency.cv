@@ -59,7 +59,7 @@ describe('Critical Agent Fixes', () => {
     });
 
     it('should have sane rate limit values', () => {
-      Object.entries(API_TIERS).forEach(([tierName, config]) => {
+      Object.entries(API_TIERS).forEach(([_tierName, config]) => {
         if (config.requestsPerDay !== -1 && config.requestsPerDay > 0) {
           // Daily limit should be >= minute limit
           expect(config.requestsPerDay).toBeGreaterThanOrEqual(config.requestsPerMinute);

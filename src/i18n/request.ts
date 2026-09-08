@@ -30,7 +30,7 @@ async function loadMessages(locale: string): Promise<Record<string, unknown>> {
     const messages = (await import(`../../messages/${locale}.json`)).default;
     messagesCache[locale] = messages;
     return messages;
-  } catch (error) {
+  } catch {
     console.warn(`Failed to load messages for locale "${locale}", falling back to English`);
     
     // Load English as fallback

@@ -21,7 +21,7 @@
  * - Request fingerprinting
  */
 
-import { describe, it, expect, vi, beforeEach } from 'vitest';
+import { describe, it, expect } from 'vitest';
 import { NextRequest } from 'next/server';
 import {
   sanitizeInput,
@@ -41,7 +41,6 @@ import {
   safeParseJsonBody,
   secureJsonResponse,
   safeErrorResponse,
-  HARDENED_HEADERS,
 } from '@/lib/api-security';
 
 // ---------------------------------------------------------------------------

@@ -98,6 +98,7 @@ const PAGE_HINTS: Record<string, { changeFrequency: ChangeFrequency; priority: n
   '/developers': { changeFrequency: 'weekly', priority: 0.6 },
   '/widgets': { changeFrequency: 'monthly', priority: 0.5 },
   '/x402': { changeFrequency: 'weekly', priority: 0.6 },
+  '/x402/conformance': { changeFrequency: 'weekly', priority: 0.7 },
   '/about': { changeFrequency: 'monthly', priority: 0.5 },
   '/pricing': { changeFrequency: 'monthly', priority: 0.6 },
   '/status': { changeFrequency: 'hourly', priority: 0.5 },
