@@ -31,7 +31,6 @@ import {
   IS_BUILD_TIME,
   PAYMENT_ADDRESS,
   isEvmNetwork,
-  getNetworkDisplayName,
   type NetworkId,
 } from './config';
 

@@ -30,9 +30,8 @@ import {
 } from '@/lib/x402/config';
 import { API_PRICING, PREMIUM_PRICING, usdToUsdc, ENDPOINT_METADATA } from '@/lib/x402/pricing';
 import { EXEMPT_PATTERNS, FREE_TIER_PATTERNS, matchesPattern } from '@/middleware/config';
-import { GENERIC_OUTPUT_SCHEMA } from '@/lib/x402/payment-required';
+import { BASE_URL, GENERIC_OUTPUT_SCHEMA } from '@/lib/x402/payment-required';
 
-const BASE_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://cryptocurrency.cv';
 const NETWORK = CURRENT_NETWORK as string;
 
 /** USDC contract address for the active network */

@@ -28,7 +28,12 @@ import type { HTTPRequestContext, RouteConfig as X402RouteConfig } from '@x402/c
 import { x402Server } from './server';
 import { createRoutes, getRoutePrice } from './routes';
 import { validateApiKey, checkRateLimit as checkKvRateLimit, type ApiKeyData } from '@/lib/api-keys';
-import { API_TIERS, API_PRICING, PREMIUM_PRICING, type PremiumEndpoint } from './pricing';
+import { API_TIERS, API_PRICING, PREMIUM_PRICING, usdToUsdc, type PremiumEndpoint } from './pricing';
+import {
+  buildMppChallenge,
+  buildPaymentRequiredBody,
+  getRoutePrice as getPaymentRequiredPrice,
+} from './payment-required';
 import { PAYMENT_ADDRESS, CURRENT_NETWORK, getAcceptedAssets, IS_PRODUCTION, IS_BUILD_TIME } from './config';
 import { logger } from '@/lib/logger';
 
@@ -500,8 +505,54 @@ export function withX402<
     description: config.description,
   };
 
-  // withX402Next requires: (handler, routeConfig, server)
-  return withX402Next(handler, routeConfig, x402Server) as unknown as T;
+  // The SDK wrapper is built on the first request, not at module load.
+  //
+  // `withX402Next` synchronously kicks off `httpServer.initialize()` and parks
+  // the promise until a request awaits it. Built at module scope, that promise
+  // rejects with nothing attached whenever the facilitator is unreachable, and
+  // Node reports an unhandled rejection while the server is still booting.
+  // Building it inside the request means the SDK's own `await init()` is
+  // reached in the same tick, so the rejection is always handled.
+  let wrapped: T | null = null;
+
+  return (async (request: NextRequest, ...args: unknown[]) => {
+    try {
+      if (!wrapped) {
+        wrapped = withX402Next(handler, routeConfig, x402Server) as unknown as T;
+      }
+      return await wrapped(request, ...args);
+    } catch (err) {
+      // The facilitator is unreachable or the SDK could not load its supported
+      // payment kinds. The endpoint is still paid, so answer with the payment
+      // requirements built from local pricing rather than a 500 — a caller that
+      // gets a 500 has no way to know what to pay, and x402 clients treat a 5xx
+      // as a dead endpoint.
+      logger.warn(
+        { endpoint, error: (err as Error).message },
+        '[x402] Payment wrapper unavailable, serving locally-built 402',
+      );
+      return buildLocal402(request);
+    }
+  }) as unknown as T;
+}
+
+/**
+ * 402 assembled from local pricing, for when the SDK proxy cannot answer.
+ *
+ * Mirrors the middleware-level fallback so a paid endpoint always returns the
+ * same payment requirements whether the gate ran in the proxy or in the route.
+ */
+function buildLocal402(request: NextRequest): NextResponse {
+  const pathname = request.nextUrl.pathname;
+  const amountAtomic = usdToUsdc(getPaymentRequiredPrice(pathname));
+
+  return NextResponse.json(buildPaymentRequiredBody(pathname, request.method), {
+    status: 402,
+    headers: {
+      'WWW-Authenticate': buildMppChallenge(pathname, amountAtomic),
+      'X-Payment-Required': 'true',
+    },
+  });
 }
 
 // =============================================================================

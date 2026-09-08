@@ -51,10 +51,67 @@ export const ARBITRUM_USDC = {
 
 export const BASE_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://cryptocurrency.cv';
 
+/**
+ * Hostnames this deployment will name in a payment document.
+ *
+ * A reflected `Host` header must never reach a challenge body: it is the field
+ * a client reads to decide what it is paying for. Only hosts the operator has
+ * vouched for are honoured, everything else falls back to the configured
+ * origin.
+ */
+const ALLOWED_HOSTS: ReadonlySet<string> = new Set(
+  [
+    safeHost(BASE_URL),
+    ...(process.env.X402_ALLOWED_ORIGINS ?? '')
+      .split(',')
+      .map((entry) => safeHost(entry.trim()))
+      .filter(Boolean),
+    // A dev server is never the origin an attacker is trying to substitute.
+    ...(process.env.NODE_ENV === 'production' ? [] : ['localhost', '127.0.0.1', '[::1]']),
+  ].filter((host): host is string => Boolean(host)),
+);
+
+function safeHost(value: string): string | undefined {
+  if (!value) return undefined;
+  try {
+    return new URL(value.includes('://') ? value : `https://${value}`).hostname;
+  } catch {
+    return undefined;
+  }
+}
+
+/**
+ * The public origin to name in a challenge for this request.
+ *
+ * `NEXT_PUBLIC_APP_URL` is inlined at build time, so an image built once and
+ * deployed to a second hostname keeps naming the first one in every challenge
+ * it issues. Self-hosters hit that immediately, and the symptom is a client
+ * paying for a resource URL that is not the one it called. Read the host off
+ * the request instead, and only trust it when the operator has allowed it.
+ */
+export function resolveOrigin(request?: {
+  headers: { get(name: string): string | null };
+  nextUrl?: { origin: string; protocol?: string };
+}): string {
+  if (!request) return BASE_URL;
+
+  const forwardedHost = request.headers.get('x-forwarded-host')?.split(',')[0]?.trim();
+  const host = forwardedHost || request.headers.get('host')?.trim();
+  if (!host) return BASE_URL;
+
+  const hostname = safeHost(host);
+  if (!hostname || !ALLOWED_HOSTS.has(hostname)) return BASE_URL;
+
+  const forwardedProto = request.headers.get('x-forwarded-proto')?.split(',')[0]?.trim();
+  const protocol = forwardedProto || request.nextUrl?.protocol?.replace(':', '') || 'https';
+  return `${protocol}://${host}`;
+}
+
 /** Build input schema for the accepts[].outputSchema.input field (x402scan format) */
 export function buildInputSchemaForAccepts(
   path: string,
   method: string,
+  origin: string = BASE_URL,
 ): { method: string; type: string; url: string; parameters?: Record<string, unknown> } {
   const fullMeta = (
     ENDPOINT_METADATA_FULL as Record<
@@ -88,7 +145,7 @@ export function buildInputSchemaForAccepts(
   } = {
     method,
     type: 'http',
-    url: `${BASE_URL}${path}`,
+    url: `${origin}${path}`,
   };
 
   if (params) {
@@ -192,7 +249,7 @@ export function getEndpointMeta(
  *
  * @see https://x402scan.com/discovery/spec
  */
-export function buildBazaarExtensions(path: string, method: string) {
+export function buildBazaarExtensions(path: string, method: string, origin: string = BASE_URL) {
   const meta = getEndpointMeta(path, method);
   const params = meta.parameters;
   const carriesBody = method === 'POST' || method === 'PUT' || method === 'PATCH';
@@ -251,7 +308,7 @@ export function buildBazaarExtensions(path: string, method: string) {
  * Build a proper MPP WWW-Authenticate challenge header value.
  * Includes all required parameters: id, method, intent, realm, expires, request.
  */
-export function buildMppChallenge(pathname: string, amountAtomic: string): string {
+export function buildMppChallenge(pathname: string, amountAtomic: string, origin: string = BASE_URL): string {
   const id = `ch_${Date.now().toString(36)}_${Math.random().toString(36).slice(2, 8)}`;
   const expires = new Date(Date.now() + 300_000).toISOString(); // 5 minutes
   const requestObj = {
@@ -261,7 +318,7 @@ export function buildMppChallenge(pathname: string, amountAtomic: string): strin
   };
   // Base64url-encode the request JSON
   const requestB64 = Buffer.from(JSON.stringify(requestObj)).toString('base64url');
-  return `Payment id="${id}" method="tempo" intent="charge" realm="${BASE_URL}" expires="${expires}" request='${requestB64}'`;
+  return `Payment id="${id}" method="tempo" intent="charge" realm="${origin}" expires="${expires}" request='${requestB64}'`;
 }
 
 /**
@@ -276,9 +333,10 @@ export function buildMppChallenge(pathname: string, amountAtomic: string): strin
 export function buildPaymentRequiredBody(
   pathname: string,
   method: string,
+  origin: string = BASE_URL,
 ): Record<string, unknown> {
   const meta = getEndpointMeta(pathname, method);
-  const inputSchema = buildInputSchemaForAccepts(pathname, method);
+  const inputSchema = buildInputSchemaForAccepts(pathname, method, origin);
   const outputSchema = meta.outputSchema ?? GENERIC_OUTPUT_SCHEMA;
 
   return {
@@ -306,10 +364,10 @@ export function buildPaymentRequiredBody(
       },
     ],
     resource: {
-      url: `${BASE_URL}${pathname}`,
+      url: `${origin}${pathname}`,
       description: meta.description,
       mimeType: 'application/json',
     },
-    extensions: buildBazaarExtensions(pathname, method),
+    extensions: buildBazaarExtensions(pathname, method, origin),
   };
 }

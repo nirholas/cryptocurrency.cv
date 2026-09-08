@@ -33,6 +33,12 @@
     "paths": {
       "@/*": [
         "./src/*"
+      ],
+      // The conformance engine is a publishable package with no runtime deps.
+      // Aliasing its source keeps one copy: the site and the npm package can
+      // never disagree about what a conformance grade means.
+      "@x402-conformance": [
+        "./sdk/x402-conformance/src/index.ts"
       ]
     }
   },

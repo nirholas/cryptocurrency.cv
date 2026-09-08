@@ -24,7 +24,6 @@ import { PAYMENT_ADDRESS, CURRENT_NETWORK, NETWORKS, IS_PRODUCTION } from './con
 import {
   API_PRICING,
   PREMIUM_PRICING,
-  ENDPOINT_METADATA,
   getEndpointMetadata,
   toX402Price,
   type PricedEndpoint,

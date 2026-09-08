@@ -30,7 +30,6 @@ import {
   resetRateLimit as resetUpstashRateLimit,
   isRedisConfigured,
   type RateLimitResult,
-  type TierConfig,
 } from '@/lib/ratelimit';
 
 // Re-export types

@@ -185,7 +185,7 @@ if (process.env.NODE_ENV === 'development') {
  */
 export function setupVercelAnalytics() {
   if (process.env.VERCEL_ANALYTICS_ID) {
-    paymentHooks.on('afterSettle', async (event) => {
+    paymentHooks.on('afterSettle', async (_event) => {
       // Track with Vercel Analytics
       // await track('x402_payment', {
       //   amount: event.amount,
@@ -200,7 +200,7 @@ export function setupVercelAnalytics() {
  * Example: PostHog integration
  */
 export function setupPostHogTracking() {
-  paymentHooks.on('afterSettle', async (event) => {
+  paymentHooks.on('afterSettle', async (_event) => {
     // posthog.capture('payment_completed', {
     //   amount: event.amount,
     //   payer: event.payer,

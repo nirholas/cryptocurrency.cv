@@ -1,0 +1,61 @@
+{
+  "name": "@nirholas/x402-conformance",
+  "version": "1.0.0",
+  "description": "Conformance and drift auditor for x402 paid APIs. Cross-validates an origin's OpenAPI discovery document against the payment challenges it actually returns, so agents never read one price and get billed another.",
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "bin": {
+    "x402-conformance": "dist/cli.mjs",
+    "402c": "dist/cli.mjs"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts src/cli.ts --format cjs,esm --dts --clean",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "x402",
+    "x402scan",
+    "agentic-commerce",
+    "openapi",
+    "conformance",
+    "discovery",
+    "402",
+    "payment-required",
+    "usdc",
+    "ai-agents",
+    "api-linter"
+  ],
+  "author": "nirholas",
+  "license": "SEE LICENSE IN LICENSE",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nirholas/cryptocurrency.cv.git",
+    "directory": "sdk/x402-conformance"
+  },
+  "homepage": "https://cryptocurrency.cv/x402/conformance",
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsup": "^8.5.0",
+    "typescript": "^5.9.0",
+    "vitest": "^4.1.0"
+  }
+}
