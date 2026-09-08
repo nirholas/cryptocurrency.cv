@@ -15,9 +15,15 @@
  * Used by translation scripts and validation.
  */
 
+const { readTranslatedLocales } = require('./scripts/lib/translated-locales');
+
 module.exports = {
-  // Supported locales (BCP 47 language tags) - 42 languages
-  locales: [
+  // Supported locales: every messages/<locale>.json on disk (the same source that drives
+  // hreflang alternates and the sitemap), so this list can never drift from the files.
+  locales: readTranslatedLocales(),
+
+  // Priority locales for README/docs translation (BCP 47 language tags) - 42 languages
+  docsLocales: [
     'en',      // English (default)
     'ar',      // Arabic (RTL)
     'bg',      // Bulgarian

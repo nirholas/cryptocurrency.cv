@@ -1,6 +1,6 @@
 site_name: Free Crypto News
-site_description: 100% Free Crypto News API - No API keys, no rate limits
-site_url: https://docs.cryptocurrency.cv
+site_description: Free crypto news API - no API key, no signup, 120 requests per hour per IP
+site_url: https://cryptocurrency.cv/docs
 repo_url: https://github.com/nirholas/cryptocurrency.cv
 repo_name: nirholas/free-crypto-news
 edit_uri: edit/main/docs/
@@ -129,11 +129,19 @@ markdown_extensions:
       custom_checkbox: true
   - pymdownx.tilde
 
-# Exclude archive folder and reference docs from build
+# Excluded from the build:
+#   archive/                   legacy snapshots kept for history only
+#   includes/abbreviations.md  auto-appended snippet, not a page
+#   x402-llms-full-txt.md      machine-readable payload, not prose
+#   README.md                  GitHub-only index; index.md is the site landing page
+#                              (both would render to the same URL)
+#   SCALABILITY.md             pointer stub; SCALING.md is the content
 exclude_docs: |
   archive/
   includes/abbreviations.md
   x402-llms-full-txt.md
+  README.md
+  SCALABILITY.md
 
 plugins:
   - search:
@@ -152,6 +160,7 @@ nav:
   - Home:
     - Welcome: index.md
     - Quick Start: QUICKSTART.md
+    - Getting Started: getting-started.md
     - Features: FEATURES.md
     - Changelog: CHANGELOG.md
   
@@ -161,7 +170,12 @@ nav:
     - Premium API: PREMIUM.md
     - x402 Payments: X402.md
     - x402scan Discovery: x402scan-discovery.md
+    - x402 Conformance: x402-conformance.md
     - Well-Known Endpoints: WELL-KNOWN.md
+    - Endpoint Index: reference/endpoints.md
+    - WebSocket Server: WEBSOCKET.md
+    - Endpoint Inventory: API-INVENTORY.md
+    - Upstream API Routes: EXTERNAL-API-ROUTES.md
     - API Reference (中文): API.zh-CN.md
   
   - AI & Agents:
@@ -179,8 +193,13 @@ nav:
     - Advanced Features: ADVANCED-FEATURES.md
     - API Examples: EXAMPLES.md
     - News Sources: SOURCES.md
+    - International Sources: reference/international-sources.md
+    - Keyless Data Sources: data-sources.md
+    - Data Source Runbook: DATA-SOURCES-RUNBOOK.md
+    - Historical Archive: reference/archive.md
+    - Web App Pages: reference/pages.md
+    - Progressive Web App: reference/pwa.md
     - SEO Guide: SEO.md
-    - Admin Dashboard: ADMIN.md
     - Components: COMPONENTS.md
     - React Hooks: HOOKS.md
     - Library Modules: LIBRARIES.md
@@ -243,15 +262,59 @@ nav:
     - Premium: tutorials/premium-features.md
     - Real-time: tutorials/realtime-sse.md
     - Alerts: tutorials/user-alerts.md
-    - Webhooks: tutorials/webhooks-integrations.md
+    - Webhook Alerts: tutorials/webhook-alerts.md
     - Utility: tutorials/utility-endpoints.md
     - Extraction: tutorials/article-extraction.md
   
   - Deployment:
     - Self-Hosting: DEPLOYMENT.md
+    - Self-Hosting Reference: reference/self-hosting.md
+    - Google Cloud Run: DEPLOY-GCP.md
+    - Upstream Provider Keys: API-KEY-SIGNUP.md
     - Architecture: ARCHITECTURE.md
-    - Scalability: SCALABILITY.md
+    - Architecture Reference: reference/architecture.md
+    - Scaling Runbook: SCALING.md
+    - Database Migrations: DATABASE-MIGRATIONS.md
+    - Disaster Recovery: DISASTER-RECOVERY.md
+    - Resilience Follow-ups: RESILIENCE-FOLLOWUPS.md
+    - x402 Environment Setup: X402-VERCEL-SETUP.md
     - Internationalization: INTERNATIONALIZATION.md
+
+  - Upstream APIs:
+    - Overview: apis/README.md
+    - AI / LLM: apis/ai-llm.md
+    - Analytics / SQL: apis/analytics-sql.md
+    - Caching / Infrastructure: apis/caching-infrastructure.md
+    - DeFi / TVL / Yields: apis/defi-tvl-yields.md
+    - Derivatives: apis/derivatives.md
+    - DEX / Token Data: apis/dex-token-data.md
+    - Gas Estimation: apis/gas-estimation.md
+    - GitHub: apis/github.md
+    - Graph Protocol: apis/graph-protocol.md
+    - Historical OHLCV: apis/historical-ohlcv.md
+    - Intelligence / Wallets: apis/intelligence-wallets.md
+    - IPFS / Storage: apis/ipfs-storage.md
+    - L1 RPC: apis/l1-rpc.md
+    - Layer 2 / Scaling: apis/layer2-scaling.md
+    - Market Price Data: apis/market-price-data.md
+    - News Aggregation: apis/news-aggregation.md
+    - Newsletter / Email: apis/newsletter-email.md
+    - NFT Markets: apis/nft-markets.md
+    - On-Chain Data: apis/on-chain-blockchain.md
+    - Oracle Prices: apis/oracle-prices.md
+    - RSS Feeds: apis/rss-feeds.md
+    - Sentiment / Social: apis/sentiment-social.md
+    - Solana: apis/solana.md
+
+  - Reference:
+    - Overview: reference/README.md
+    - Platform Features: reference/features.md
+    - Advanced Features: reference/advanced-features.md
+    - Integrations: reference/integrations.md
+    - SDKs & Components: reference/sdks-and-components.md
+    - Roadmap: reference/roadmap.md
+    - ERC-8004 Keywords: reference/erc-8004-keywords.md
+    - Submission Targets: SUBMISSION-TARGETS.md
   
   - Community:
     - Contributing: CONTRIBUTING.md

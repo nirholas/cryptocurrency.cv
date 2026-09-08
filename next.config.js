@@ -13,6 +13,11 @@ const createNextIntlPlugin = require('next-intl/plugin');
 const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts');
 
 /** @type {import('next').NextConfig} */
+// Regenerate src/i18n/translated-locales.generated.ts from messages/*.json on every
+// build and dev start so hreflang, the sitemap, and SSG locales never drift from the
+// translation files that actually exist.
+require('./scripts/lib/translated-locales').writeTranslatedLocalesModule();
+
 const nextConfig = {
   // Enable standalone output only for Docker builds; Vercel ignores it but it
   // increases build time and conflicts with edge routes.
@@ -218,21 +223,26 @@ const nextConfig = {
     ];
   },
   // ================================================================
-  // Redirects — /docs → external docs site
+  // Redirects
   // ================================================================
   async redirects() {
     return [
-      // /docs → external docs site
+      // The interactive Swagger reference lives on this site at /api-reference. This
+      // rule must precede the /docs/:path* catch-all below or the external docs site
+      // shadows it.
       {
-        source: '/docs',
-        destination: 'https://docs.cryptocurrency.cv',
+        source: '/docs/api',
+        destination: '/api-reference',
         permanent: true,
       },
       {
-        source: '/docs/:path*',
-        destination: 'https://docs.cryptocurrency.cv/:path*',
+        source: '/:locale/docs/api',
+        destination: '/api-reference',
         permanent: true,
       },
+      // /docs is served by this app from the markdown under docs/. It used to
+      // 301 to docs.cryptocurrency.cv, which stopped resolving, so every
+      // documentation link on the site ended in a DNS failure.
       // Fix double-dashboard paths (e.g. /dashboard/dashboard/keys → /dashboard/keys)
       {
         source: '/dashboard/dashboard',
@@ -345,6 +355,12 @@ const nextConfig = {
       // Allow all HTTPS images — this aggregator pulls from 100+ RSS feed
       // domains whose image CDNs cannot be exhaustively enumerated.
       { protocol: 'https', hostname: '**' },
+      // Some feeds still publish plain-http image URLs (atlanticcouncil.org
+      // among them) and the optimizer answered 400 for every one, leaving
+      // broken thumbnails on the affected articles. The fetch happens
+      // server-side and the result is re-served from our own https origin, so
+      // nothing plaintext ever reaches the browser.
+      { protocol: 'http', hostname: '**' },
     ],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384, 640],

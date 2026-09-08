@@ -155,6 +155,7 @@ A compact map of the API, grouped by area. The interactive explorer is at **[cry
 | **Feeds** | `/api/rss`, `/api/atom`, `/api/opml`, `/api/sse`, WebSocket | Streaming and syndication |
 | **Meta** | `/api/sources`, `/api/health`, `/api/openapi.json`, `/api/stats` | Source list, uptime, spec |
 | **Premium (x402)** | `/api/premium/*`, `/.well-known/x402` | Pay per call with USDC, no account. [x402 docs](docs/X402.md) |
+| **x402 conformance** | `/api/x402/conformance` | Audit any x402 API's discovery contract against the challenges it actually returns. [docs](docs/x402-conformance.md), [page](https://cryptocurrency.cv/x402/conformance) |
 | **Versioned** | `/api/v1/*` | Stable aliases for everything above |
 
 ### AI endpoint examples
@@ -296,7 +297,7 @@ Railway, Render, DigitalOcean, CasaOS, Unraid and Portainer templates are in the
 5. **AI layer** calls Groq for summaries, sentiment, fact-checks and briefs; RAG indexes the archive into pgvector ([docs/RAG.md](docs/RAG.md)).
 6. **Archive** is append-only JSONL by month, enriched with tickers, entities, sentiment and market context, exposed through `/api/archive`.
 7. **Realtime** via SSE and a WebSocket server ([`ws-server.js`](ws-server.js)) fed by the same fetch layer.
-8. **Payments**: premium routes are gated by x402; the facilitator lives in [`x402-facilitator/`](x402-facilitator/).
+8. **Payments**: premium routes are gated by x402; the facilitator lives in [`x402-facilitator/`](x402-facilitator/). The discovery contract those routes publish is audited by [`sdk/x402-conformance/`](sdk/x402-conformance/), which also ships standalone: `npx @nirholas/x402-conformance <origin>`.
 9. **Agents**: MCP (hosted at `/api/mcp`, local in [`mcp/`](mcp/)), OpenAPI, `llms.txt`, and `/.well-known/*` manifests are generated from the same route metadata.
 10. **Web app**: 89 pages of React server and client components, installable as a PWA, localised into 42 languages.
 

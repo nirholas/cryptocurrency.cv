@@ -17,7 +17,8 @@ export type ToolGroup =
   | 'On-chain'
   | 'Reference'
   | 'AI'
-  | 'Feeds & Discovery';
+  | 'Feeds & Discovery'
+  | 'Provenance';
 
 export interface ToolContext {
   config: ApiConfig;
@@ -806,10 +807,99 @@ export const TOOLS: ReadonlyArray<ToolDefinition> = [
       };
     },
   }),
+  define({
+    name: 'get_stories',
+    title: 'Stories, deduplicated with provenance',
+    description:
+      'The news collapsed into events instead of headlines. One entry per story, with the outlet credited with publishing first and every outlet that followed, including how far behind each was. Use this instead of get_latest_news when the question is "what happened" rather than "what was published", when you need to avoid counting one event forty times, or when you want to know who broke something. Each story carries a confidence level and a plain-English reason; attribution rests on publisher timestamps, and a story whose timing cannot be verified reports originator: null rather than guessing.',
+    group: 'Provenance',
+    endpoint: 'GET /api/stories',
+    input: {
+      limit: limit(300, 150, 'articles to analyse'),
+      category: z.enum(NEWS_CATEGORIES).optional().describe('Restrict the corpus to one news category'),
+      min_outlets: z
+        .number()
+        .int()
+        .min(1)
+        .max(20)
+        .default(2)
+        .describe('Smallest cluster to return. 1 includes exclusives that only one outlet covered'),
+      confidence: z
+        .enum(['high', 'medium', 'low', 'unattributed'])
+        .optional()
+        .describe('Only stories whose attribution is at least this strong'),
+    },
+    run: (a, ctx) =>
+      ctx.get('/api/stories', {
+        limit: a.limit,
+        category: a.category,
+        minOutlets: a.min_outlets,
+        confidence: a.confidence,
+      }),
+  }),
+  define({
+    name: 'get_story',
+    title: 'One story, with its full propagation chain',
+    description:
+      'Everything known about a single clustered story: the originating outlet, every outlet that followed in order, the lag for each, and the terms that grouped them as evidence. Story ids come from get_stories and stay stable while a story is in the analysis window; they are not permanent archive identifiers.',
+    group: 'Provenance',
+    endpoint: 'GET /api/stories/{id}',
+    input: {
+      id: z
+        .string()
+        .min(1)
+        .max(16)
+        .regex(/^[a-z0-9]+$/i, 'Story ids are short alphanumeric tokens from get_stories')
+        .describe('Story id from get_stories'),
+    },
+    run: (a, ctx) => ctx.get(`/api/stories/${encodeURIComponent(a.id)}`),
+  }),
+  define({
+    name: 'get_source_leaderboard',
+    title: 'Which outlets break stories, and which follow',
+    description:
+      'Ranks news outlets by how often they published first across the current window, with median lag when they followed. Unlike any "top crypto news sites" list, this is measured from publication times over clustered stories rather than from traffic or popularity. Read meta.caveats before quoting it: the window is hours not history, timing comes from publisher feeds which are frequently wrong, and publishing first says nothing about accuracy. An outlet with too little evidence reports a null rate rather than a flattering percentage.',
+    group: 'Provenance',
+    endpoint: 'GET /api/sources/leaderboard',
+    input: {
+      limit: limit(300, 300, 'articles to analyse'),
+      category: z.enum(NEWS_CATEGORIES).optional().describe('Restrict the corpus to one news category'),
+      ranked_only: z
+        .boolean()
+        .default(false)
+        .describe('Only outlets with enough evidence for a measurable origination rate'),
+    },
+    run: (a, ctx) =>
+      ctx.get('/api/sources/leaderboard', {
+        limit: a.limit,
+        category: a.category,
+        ranked: a.ranked_only ? '1' : undefined,
+      }),
+  }),
+  define({
+    name: 'get_source_health',
+    title: 'Which sources are actually answering',
+    description:
+      'Per-source liveness for the RSS layer: success rate, latency, last error and last successful fetch. A feed that fails is turned into an empty result so one dead source never breaks the aggregate, which also means a source can rot invisibly. Use this to check whether thin coverage of a topic reflects the news or a broken feed.',
+    group: 'Provenance',
+    endpoint: 'GET /api/sources/health',
+    input: {
+      status: z.enum(['failing', 'ok']).optional().describe('Only sources in this state'),
+      category: z.string().max(64).optional().describe('Restrict to one source category'),
+      summary_only: z.boolean().default(false).describe('Counts only, without the per-source rows'),
+    },
+    run: (a, ctx) =>
+      ctx.get('/api/sources/health', {
+        status: a.status,
+        category: a.category,
+        summary: a.summary_only ? '1' : undefined,
+      }),
+  }),
 ];
 
 export const TOOL_GROUPS: ReadonlyArray<ToolGroup> = [
   'News', 'Analysis', 'Market', 'DeFi', 'Derivatives', 'On-chain', 'Reference', 'AI', 'Feeds & Discovery',
+  'Provenance',
 ];
 
 export function getTool(name: string): ToolDefinition | undefined {
