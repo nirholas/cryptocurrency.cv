@@ -73,7 +73,7 @@ export async function GET(request: NextRequest) {
           riskScore: {
             overall: health.riskScore.overallScore,
             grade: health.riskScore.grade,
-            factors: Object.entries(health.riskScore.factors).map(([key, factor]) => ({
+            factors: Object.entries(health.riskScore.factors).map(([_key, factor]) => ({
               name: factor.name,
               score: factor.score,
               severity: factor.severity,

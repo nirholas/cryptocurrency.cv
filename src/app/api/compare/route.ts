@@ -72,7 +72,15 @@ export async function GET(request: NextRequest) {
     );
 
     if (!Array.isArray(data)) {
-      throw new Error('Failed to fetch from CoinGecko');
+      // `fetchCoinGecko` returns null when the upstream is throttling and the
+      // shared cache has no copy to fall back on. That is an upstream
+      // availability problem, not a fault in this handler, so it gets a 503 the
+      // client can retry rather than a 500 that reads as a permanent failure.
+      console.warn('Compare API: CoinGecko unavailable and no cached copy to serve');
+      return NextResponse.json(
+        { error: 'Market data provider is temporarily unavailable', coins: [] },
+        { status: 503, headers: { 'Retry-After': '30' } },
+      );
     }
 
     const comparison = data.map((coin: CoinGeckoMarket) => ({
@@ -123,7 +131,12 @@ export async function GET(request: NextRequest) {
       coins: comparison,
       summary: {
         count: comparison.length,
-        avgChange24h: avgChange24h.toFixed(2),
+        // A number, not a `.toFixed()` string. Every other field in this
+        // summary is numeric, the documented type is `number`, and the client
+        // formats it with `.toFixed(2)` — which threw
+        // "avgChange24h.toFixed is not a function" and took down the whole
+        // comparison summary the moment this endpoint started answering 200.
+        avgChange24h: Number(avgChange24h.toFixed(2)),
         totalMarketCap,
         totalVolume24h: totalVolume,
         // Annotations dropped: `comparison` is now properly typed (the upstream

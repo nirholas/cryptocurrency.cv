@@ -25,12 +25,7 @@ import {
   detectResearchFronts,
   detectCitationBursts,
   exportCitations,
-  toBibTeX,
-  toRIS,
-  toCSLJSON,
   type CitationNode,
-  type Author,
-  type CitationMetadata,
   type ExportFormat,
 } from '@/lib/citation-network';
 

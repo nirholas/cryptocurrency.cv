@@ -157,7 +157,7 @@ async function handleLatestNewsIntent(coin?: string): Promise<AlexaResponse> {
       card,
       true
     );
-  } catch (error) {
+  } catch {
     return buildResponse(
       'Sorry, I had trouble getting the news. Please try again.',
       'Error',
@@ -181,7 +181,7 @@ async function handleMarketSentimentIntent(): Promise<AlexaResponse> {
       `Score: ${market.score}/100 - ${market.label}\nBullish: ${market.bullish}%\nBearish: ${market.bearish}%`,
       true
     );
-  } catch (error) {
+  } catch {
     return buildResponse(
       'Sorry, I could not get the market sentiment right now.',
       'Error',
@@ -214,7 +214,7 @@ async function handleFearGreedIntent(): Promise<AlexaResponse> {
       `Value: ${value}/100\nStatus: ${label}\n\n${description}`,
       true
     );
-  } catch (error) {
+  } catch {
     return buildResponse(
       'Sorry, I could not get the Fear and Greed Index.',
       'Error',
@@ -258,7 +258,7 @@ async function handlePriceIntent(coin: string): Promise<AlexaResponse> {
       `$${usd}\n24h Change: ${change}%`,
       true
     );
-  } catch (error) {
+  } catch {
     return buildResponse(
       `Sorry, I could not get the price for ${coin}.`,
       'Error',

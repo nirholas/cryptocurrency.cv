@@ -61,7 +61,7 @@ export async function GET(request: NextRequest) {
     }, {
       headers: { ...CORS_HEADERS, 'Cache-Control': 'public, s-maxage=60, stale-while-revalidate=120' },
     });
-  } catch (error) {
+  } catch {
     return NextResponse.json(
       { error: 'Failed to fetch digital assets' },
       { status: 500, headers: CORS_HEADERS },

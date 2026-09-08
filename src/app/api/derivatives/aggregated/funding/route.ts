@@ -9,8 +9,7 @@
  */
 
 import { type NextRequest, NextResponse } from 'next/server';
-import { fundingRateChain, createFundingRateChain } from '@/lib/providers/chains/derivatives';
-import type { FundingRate } from '@/lib/providers/chains/derivatives';
+import { fundingRateChain } from '@/lib/providers/chains/derivatives';
 
 export const runtime = 'edge';
 export const revalidate = 300;
@@ -45,7 +44,7 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
         },
       },
     );
-  } catch (error) {
+  } catch {
     return NextResponse.json(
       { error: 'Failed to fetch aggregated funding rates' },
       { status: 500 },

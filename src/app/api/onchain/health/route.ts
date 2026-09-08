@@ -40,7 +40,7 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
         },
       }
     );
-  } catch (error) {
+  } catch {
     return NextResponse.json(
       { error: 'Failed to fetch on-chain health assessment' },
       { status: 500 }

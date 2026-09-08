@@ -18,7 +18,7 @@ export const revalidate = 300;
  * GET /api/onchain/gmx/stats
  * Returns GMX perpetual DEX statistics from The Graph (Arbitrum)
  */
-export async function GET(request: NextRequest): Promise<NextResponse> {
+export async function GET(_request: NextRequest): Promise<NextResponse> {
   try {
     const data = await getGMXStats();
     if (!data) {

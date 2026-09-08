@@ -29,7 +29,7 @@ import { jsonResponse, errorResponse } from '@/lib/api-utils';
 export const runtime = 'nodejs';
 export const revalidate = 300; // 5-minute cache — stale data is fine for a preview
 
-export async function GET(request: NextRequest) {
+export async function GET(_request: NextRequest) {
   try {
     // Fetch a small batch of news — we only expose 2 stripped headlines
     const data = await getLatestNews(5);

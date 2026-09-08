@@ -252,8 +252,18 @@ export async function GET(request: NextRequest) {
     } catch (error) {
       console.error('AI digest error:', error);
 
-      // If all AI providers failed with auth errors, return 503
-      if (error instanceof AIAuthError || (error as Error).name === 'AIAuthError') {
+      // If every AI provider is unavailable — bad key, or a spent quota, which
+      // is what a free Groq tier does after 1000 requests in a day — that is an
+      // upstream availability problem and gets a 503, not a 500.
+      const name = (error as Error).name;
+      if (
+        error instanceof AIAuthError ||
+        name === 'AIAuthError' ||
+        name === 'GroqAuthError' ||
+        name === 'GroqRateLimitError' ||
+        name === 'AIRateLimitError' ||
+        name === 'AIProviderUnavailableError'
+      ) {
         return NextResponse.json(
           {
             error: 'AI service temporarily unavailable',
@@ -288,14 +298,23 @@ export async function GET(request: NextRequest) {
     }
     console.error('Digest error:', error);
 
-    // If all AI providers failed with auth errors, return 503
-    if (error instanceof AIAuthError || (error as Error).name === 'AIAuthError') {
+    // Same as the AI-format branch above: an unusable or exhausted provider is
+    // an upstream availability problem, so it gets a 503, not a 500.
+    const errName = (error as Error).name;
+    if (
+      error instanceof AIAuthError ||
+      errName === 'AIAuthError' ||
+      errName === 'GroqAuthError' ||
+      errName === 'GroqRateLimitError' ||
+      errName === 'AIRateLimitError' ||
+      errName === 'AIProviderUnavailableError'
+    ) {
       return NextResponse.json(
         {
           error: 'AI service temporarily unavailable',
-          details: 'All configured AI providers failed authentication. Please check API keys.',
+          details: 'No configured AI provider could serve this request.',
         },
-        { status: 503 }
+        { status: 503, headers: { 'Retry-After': '120' } }
       );
     }
 

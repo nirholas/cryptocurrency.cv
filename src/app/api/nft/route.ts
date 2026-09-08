@@ -33,7 +33,7 @@ export async function GET(_request: NextRequest): Promise<NextResponse> {
         },
       }
     );
-  } catch (error) {
+  } catch {
     return NextResponse.json(
       { error: 'Failed to fetch NFT data' },
       { status: 500 }

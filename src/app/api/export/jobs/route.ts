@@ -17,7 +17,7 @@
  */
 
 import { type NextRequest, NextResponse } from 'next/server';
-import { listExportJobs, cleanupOldJobs, type ExportJob } from '@/lib/data-export';
+import { listExportJobs, cleanupOldJobs } from '@/lib/data-export';
 
 export const runtime = 'edge';
 

@@ -64,7 +64,7 @@ export const GET = instrumented(
           },
         },
       );
-    } catch (error) {
+    } catch {
       return NextResponse.json({ error: 'Failed to fetch Bitcoin news' }, { status: 500 });
     }
   },

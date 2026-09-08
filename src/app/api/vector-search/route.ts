@@ -8,7 +8,7 @@
  * For licensing inquiries: nirholas@users.noreply.github.com
  */
 
-import { type NextRequest, NextResponse } from 'next/server';
+import { type NextRequest } from 'next/server';
 import {
   vectorSearch,
   findSimilarArticles,

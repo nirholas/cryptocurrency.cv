@@ -11,8 +11,6 @@
 import { NextResponse } from 'next/server';
 import {
   getAggregatedGlobalData,
-  getCoinPaprikaGlobal,
-  getCoinLoreGlobal,
 } from '@/lib/external-apis';
 import { ApiError } from '@/lib/api-error';
 import { logger } from '@/lib/logger';

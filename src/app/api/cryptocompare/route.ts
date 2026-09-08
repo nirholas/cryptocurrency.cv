@@ -150,7 +150,7 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
           ],
         }, { status: 400, headers: CORS_HEADERS });
     }
-  } catch (error) {
+  } catch {
     return NextResponse.json(
       { error: 'Failed to fetch CryptoCompare data' },
       { status: 500, headers: CORS_HEADERS },

@@ -27,6 +27,8 @@ interface Narrative {
     link: string;
     source: string;
   }[];
+  /** Index references the model returns; re-hydrated into `articles` before responding. */
+  articleIndexes?: number[];
   relatedTickers: string[];
   keyPhrases: string[];
   emerging: boolean; // Is this a new/emerging narrative?
@@ -52,7 +54,7 @@ For each narrative you identify:
 - description: 1-2 sentence description
 - sentiment: Market impact (bullish/bearish/neutral)
 - strength: 0-100, based on how many articles mention it
-- articles: Which articles support this narrative
+- articleIndexes: The "i" indexes of the articles supporting this narrative (numbers only)
 - relatedTickers: Cryptocurrencies most affected
 - keyPhrases: Common phrases used in this narrative
 - emerging: true if this seems like a new/growing narrative
@@ -60,6 +62,16 @@ For each narrative you identify:
 Identify 3-7 narratives. Group similar articles under the same narrative.
 
 Respond with JSON: { "narratives": [...] }`;
+
+/** Longest article title kept in the prompt. */
+const MAX_TITLE_CHARS = 140;
+/** Longest article summary kept in the prompt. */
+const MAX_DESCRIPTION_CHARS = 220;
+
+function truncate(text: string, max: number): string {
+  const clean = text.replace(/\s+/g, ' ').trim();
+  return clean.length <= max ? clean : `${clean.slice(0, max - 1).trimEnd()}\u2026`;
+}
 
 export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;
@@ -87,24 +99,38 @@ export async function GET(request: NextRequest) {
       });
     }
 
-    const articlesForAnalysis = data.articles.map((a) => ({
-      title: a.title,
-      link: a.link,
+    // Keep the prompt inside the smallest context window in the provider chain.
+    // Sending 40 articles with full descriptions, absolute links and pretty-
+    // printed JSON pushed the request to ~9.4k tokens, over the 8k/minute cap
+    // on the free Groq tier, so every call 413'd and the page never rendered a
+    // narrative. Articles are referenced by index and re-hydrated from
+    // `data.articles` below, so the model never has to echo a URL back.
+    const articlesForAnalysis = data.articles.map((a, i) => ({
+      i,
+      title: truncate(a.title, MAX_TITLE_CHARS),
       source: a.source,
-      description: a.description || '',
+      summary: truncate(a.description || '', MAX_DESCRIPTION_CHARS),
     }));
 
-    const userPrompt = `Identify dominant narratives in these ${articlesForAnalysis.length} crypto news articles:
+    const userPrompt = `Identify dominant narratives in these ${articlesForAnalysis.length} crypto news articles.
+Reference each supporting article by its "i" index only.
 
-${JSON.stringify(articlesForAnalysis, null, 2)}`;
+${JSON.stringify(articlesForAnalysis)}`;
 
     const result = await promptAIJson<NarrativesResponse>(SYSTEM_PROMPT, userPrompt, {
-      maxTokens: 4000,
+      maxTokens: 2000,
       temperature: 0.4,
     });
 
-    // Filter and sort narratives
-    let narratives = result.narratives || [];
+    // Re-hydrate the index references into the full article shape the UI reads.
+    let narratives = (result.narratives || []).map((n) => ({
+      ...n,
+      articles: (n.articleIndexes ?? [])
+        .map((i) => data.articles[i])
+        .filter(Boolean)
+        .map((a) => ({ title: a.title, link: a.link, source: a.source })),
+      articleIndexes: undefined,
+    }));
 
     if (emerging) {
       narratives = narratives.filter((n) => n.emerging);

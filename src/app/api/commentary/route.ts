@@ -28,7 +28,6 @@ import {
   generateCommentary,
   buildMarketSnapshot,
   type CommentaryTone,
-  type CommentaryEvent,
 } from '@/lib/ai-commentary';
 
 export const runtime = 'edge';

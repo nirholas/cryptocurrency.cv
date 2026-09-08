@@ -18,7 +18,7 @@ export const revalidate = 300;
  * GET /api/onchain/compound/markets
  * Returns Compound V3 lending markets from The Graph
  */
-export async function GET(request: NextRequest): Promise<NextResponse> {
+export async function GET(_request: NextRequest): Promise<NextResponse> {
   try {
     const data = await getCompoundV3Markets();
     return NextResponse.json({

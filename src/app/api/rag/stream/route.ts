@@ -323,7 +323,7 @@ Please provide a comprehensive answer based on these articles:`;
 function calculateConfidence(
   results: SearchResult[],
   response: string,
-  processedQuery: { classification: { intent: string; complexity: string } },
+  _processedQuery: { classification: { intent: string; complexity: string } },
 ): {
   overall: number;
   level: 'high' | 'medium' | 'low' | 'uncertain';

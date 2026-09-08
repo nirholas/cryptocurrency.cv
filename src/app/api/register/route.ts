@@ -20,7 +20,6 @@
 
 import { type NextRequest, NextResponse } from 'next/server';
 import {
-  createApiKey,
   getKeysByEmail,
   revokeApiKey,
   validateApiKey,

@@ -18,7 +18,7 @@ export const revalidate = 300;
  * GET /api/onchain/maker/stats
  * Returns Maker protocol stats (DAI supply, vaults) from The Graph
  */
-export async function GET(request: NextRequest): Promise<NextResponse> {
+export async function GET(_request: NextRequest): Promise<NextResponse> {
   try {
     const data = await getMakerStats();
     if (!data) {

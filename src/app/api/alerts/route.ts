@@ -30,9 +30,16 @@ import {
   createAlertRule,
   evaluateAllAlerts,
   getEnhancedAlertStats,
-  testTriggerAlert,
   getAlertEvents,
 } from '@/lib/alerts';
+import { updateAlertDelivery } from '@/lib/alerts';
+import {
+  alertNotificationSchema,
+  alertNotificationUpdateSchema,
+  alertRuleChannelsSchema,
+  formatIssues,
+  resolveNotificationSettings,
+} from '@/lib/alerts/schema';
 import type { AlertCondition, AlertChannel } from '@/lib/alert-rules';
 import { getLatestNews } from '@/lib/crypto-news';
 import { aiComplete, isAIConfigured } from '@/lib/ai-provider';
@@ -182,9 +189,21 @@ export async function POST(request: NextRequest) {
         );
       }
 
-      const alertChannels: AlertChannel[] = Array.isArray(channels) 
-        ? channels.filter((c: string) => c === 'websocket')
-        : ['websocket'];
+      let alertChannels: AlertChannel[] = ['websocket'];
+      if (channels !== undefined) {
+        const parsedChannels = alertRuleChannelsSchema.safeParse(channels);
+        if (!parsedChannels.success) {
+          return NextResponse.json(
+            {
+              error: 'Invalid channels for an alert rule',
+              issues: formatIssues(parsedChannels.error),
+              supported: ['websocket'],
+            },
+            { status: 400 }
+          );
+        }
+        alertChannels = parsedChannels.data;
+      }
 
       try {
         const alert = createAlertRule(name, condition as AlertCondition, alertChannels, {
@@ -207,6 +226,31 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    // Notification channels are user-supplied endpoints, so they are validated
+    // before anything is stored: a webhook URL we would later POST to is an
+    // SSRF surface, and a half-configured Telegram alert would fail silently
+    // at trigger time instead of at create time.
+    const parsedNotification = alertNotificationSchema.safeParse({
+      notificationChannel: options.notificationChannel,
+      notifyVia: options.notifyVia,
+      email: options.email,
+      delivery: options.delivery,
+    });
+
+    if (!parsedNotification.success) {
+      return NextResponse.json(
+        {
+          error: 'Invalid notification settings',
+          issues: formatIssues(parsedNotification.error),
+        },
+        { status: 400 }
+      );
+    }
+
+    const { notifyVia, delivery, generatedWebhookSecret } = resolveNotificationSettings(
+      parsedNotification.data
+    );
+
     if (type === 'price') {
       if (!options.coinId || !options.condition || options.threshold === undefined) {
         return NextResponse.json(
@@ -215,8 +259,16 @@ export async function POST(request: NextRequest) {
         );
       }
 
-      const alert = await createPriceAlert(userId, options);
-      return NextResponse.json({ success: true, alert }, { status: 201 });
+      const alert = await createPriceAlert(userId, { ...options, notifyVia, delivery });
+      return NextResponse.json(
+        {
+          success: true,
+          alert,
+          // Returned once, at creation. Store it: we never echo it again.
+          ...(generatedWebhookSecret ? { webhookSecret: generatedWebhookSecret } : {}),
+        },
+        { status: 201 }
+      );
     }
 
     if (type === 'keyword') {
@@ -227,15 +279,22 @@ export async function POST(request: NextRequest) {
         );
       }
 
-      const alert = await createKeywordAlert(userId, options);
-      return NextResponse.json({ success: true, alert }, { status: 201 });
+      const alert = await createKeywordAlert(userId, { ...options, notifyVia, delivery });
+      return NextResponse.json(
+        {
+          success: true,
+          alert,
+          ...(generatedWebhookSecret ? { webhookSecret: generatedWebhookSecret } : {}),
+        },
+        { status: 201 }
+      );
     }
 
     return NextResponse.json(
       { error: 'type must be "price", "keyword", or "rule"' },
       { status: 400 }
     );
-  } catch (error) {
+  } catch {
     return NextResponse.json(
       { error: 'Invalid request body' },
       { status: 400 }
@@ -273,9 +332,55 @@ export async function PATCH(request: NextRequest) {
     const body = await request.json();
     const { alertId, active } = body;
 
-    if (!alertId || typeof active !== 'boolean') {
+    if (!alertId) {
+      return NextResponse.json({ error: 'alertId is required' }, { status: 400 });
+    }
+
+    // Notification-only update: move an existing alert onto (or off) a channel
+    // without deleting and recreating it.
+    if (
+      body.notificationChannel !== undefined ||
+      body.notifyVia !== undefined ||
+      body.delivery !== undefined
+    ) {
+      const parsed = alertNotificationUpdateSchema.safeParse({
+        notificationChannel: body.notificationChannel,
+        notifyVia: body.notifyVia,
+        email: body.email,
+        delivery: body.delivery,
+      });
+
+      if (!parsed.success) {
+        return NextResponse.json(
+          { error: 'Invalid notification settings', issues: formatIssues(parsed.error) },
+          { status: 400 }
+        );
+      }
+
+      const { notifyVia, delivery, generatedWebhookSecret } = resolveNotificationSettings(
+        parsed.data
+      );
+      const updated = await updateAlertDelivery(alertId, { notifyVia, delivery });
+
+      if (!updated) {
+        return NextResponse.json({ error: 'Alert not found' }, { status: 404 });
+      }
+
+      if (typeof active === 'boolean') {
+        await toggleAlert(alertId, active);
+      }
+
+      return NextResponse.json({
+        success: true,
+        alert: updated,
+        ...(generatedWebhookSecret ? { webhookSecret: generatedWebhookSecret } : {}),
+        message: 'Notification settings updated',
+      });
+    }
+
+    if (typeof active !== 'boolean') {
       return NextResponse.json(
-        { error: 'alertId and active (boolean) are required' },
+        { error: 'active (boolean), or a notificationChannel/notifyVia/delivery block, is required' },
         { status: 400 }
       );
     }
@@ -293,7 +398,7 @@ export async function PATCH(request: NextRequest) {
       success,
       message: success ? `Alert ${active ? 'enabled' : 'disabled'}` : 'Alert not found',
     });
-  } catch (error) {
+  } catch {
     return NextResponse.json(
       { error: 'Invalid request body' },
       { status: 400 }

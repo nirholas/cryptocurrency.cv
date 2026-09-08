@@ -25,7 +25,6 @@ import { type NextRequest, NextResponse } from 'next/server';
 import {
   scanArbitrageOpportunities,
   getMonitorState,
-  type ArbitrageScanResult,
   type ArbitrageOpportunity,
 } from '@/lib/arbitrage-scanner';
 

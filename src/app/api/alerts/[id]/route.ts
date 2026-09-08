@@ -22,6 +22,7 @@ import {
   testTriggerAlert,
   getAlertEventsByRule,
 } from '@/lib/alerts';
+import { alertRuleChannelsSchema, formatIssues } from '@/lib/alerts/schema';
 import type { AlertCondition, AlertChannel } from '@/lib/alert-rules';
 
 // Use Node.js runtime since alerts.ts uses database.ts which requires fs/path modules
@@ -114,15 +115,47 @@ export async function PUT(
       enabled?: boolean;
     } = {};
 
-    if (name !== undefined) updates.name = name;
-    if (condition !== undefined) updates.condition = condition as AlertCondition;
-    if (channels !== undefined) {
-      updates.channels = Array.isArray(channels)
-        ? channels.filter((c: string) => c === 'websocket')
-        : undefined;
+    if (name !== undefined) {
+      if (typeof name !== 'string' || name.trim().length === 0) {
+        return NextResponse.json(
+          { error: 'name must be a non-empty string' },
+          { status: 400 }
+        );
+      }
+      updates.name = name.trim();
     }
-    if (cooldown !== undefined && typeof cooldown === 'number') updates.cooldown = cooldown;
-    if (enabled !== undefined && typeof enabled === 'boolean') updates.enabled = enabled;
+    if (condition !== undefined) updates.condition = condition as AlertCondition;
+    // Channels used to be silently filtered, so a typo produced an alert that
+    // never notified anyone. Reject it at the boundary instead.
+    if (channels !== undefined) {
+      const parsedChannels = alertRuleChannelsSchema.safeParse(channels);
+      if (!parsedChannels.success) {
+        return NextResponse.json(
+          {
+            error: 'Invalid channels for an alert rule',
+            issues: formatIssues(parsedChannels.error),
+            supported: ['websocket'],
+          },
+          { status: 400 }
+        );
+      }
+      updates.channels = parsedChannels.data;
+    }
+    if (cooldown !== undefined) {
+      if (typeof cooldown !== 'number' || !Number.isFinite(cooldown) || cooldown < 0) {
+        return NextResponse.json(
+          { error: 'cooldown must be a non-negative number of seconds' },
+          { status: 400 }
+        );
+      }
+      updates.cooldown = cooldown;
+    }
+    if (enabled !== undefined) {
+      if (typeof enabled !== 'boolean') {
+        return NextResponse.json({ error: 'enabled must be a boolean' }, { status: 400 });
+      }
+      updates.enabled = enabled;
+    }
 
     if (Object.keys(updates).length === 0) {
       return NextResponse.json(

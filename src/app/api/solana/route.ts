@@ -9,8 +9,6 @@
  */
 
 import { type NextRequest, NextResponse } from 'next/server';
-import { getNetworkSummary as getSuiSummary } from '@/lib/apis/sui';
-import { getNetworkSummary as getAptosSummary } from '@/lib/apis/aptos';
 import * as helius from '@/lib/apis/helius';
 import * as shyft from '@/lib/apis/shyft';
 
@@ -170,7 +168,7 @@ export async function GET(request: NextRequest) {
         });
       }
     }
-  } catch (error) {
+  } catch {
     return NextResponse.json(
       { error: 'Failed to fetch Solana data' },
       { status: 500, headers: CORS_HEADERS },

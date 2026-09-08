@@ -264,7 +264,7 @@ export async function POST(request: NextRequest) {
       transaction,
       totalTransactions: existing.length,
     });
-  } catch (error) {
+  } catch {
     return NextResponse.json(
       { error: 'Invalid request body' },
       { status: 400 }
@@ -391,7 +391,7 @@ function calculateTaxReport(
   };
 }
 
-function buildTaxLots(transactions: Transaction[], method: CostBasisMethod): TaxLot[] {
+function buildTaxLots(transactions: Transaction[], _method: CostBasisMethod): TaxLot[] {
   const lots: TaxLot[] = [];
   
   // Acquisitions create tax lots

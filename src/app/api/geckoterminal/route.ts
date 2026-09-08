@@ -105,7 +105,7 @@ export async function GET(request: NextRequest) {
         'Cache-Control': 'public, s-maxage=30, stale-while-revalidate=60',
       },
     });
-  } catch (error) {
+  } catch {
     return NextResponse.json(
       { error: 'Failed to fetch DEX data' },
       { status: 500, headers: CORS_HEADERS },

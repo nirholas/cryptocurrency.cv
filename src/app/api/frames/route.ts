@@ -307,7 +307,7 @@ export async function POST(request: NextRequest) {
     
     // Default redirect
     return NextResponse.redirect(`${BASE_URL}/api/frames?frame=home`);
-  } catch (error) {
+  } catch {
     return NextResponse.redirect(`${BASE_URL}/api/frames?frame=home`);
   }
 }

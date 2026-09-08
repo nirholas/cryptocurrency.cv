@@ -30,8 +30,6 @@ import { type NextRequest, NextResponse } from 'next/server';
 import {
   fetchListSentiment,
   getInfluencerList,
-  SentimentResult,
-  DEFAULT_CRYPTO_INFLUENCERS,
 } from '@/lib/x-scraper';
 
 export const revalidate = 60; // ISR: sentiment data refreshes every 1 min

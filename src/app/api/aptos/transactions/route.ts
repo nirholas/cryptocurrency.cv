@@ -60,7 +60,7 @@ export async function GET(request: NextRequest) {
     }, {
       headers: { ...CORS_HEADERS, 'Cache-Control': 'public, s-maxage=15, stale-while-revalidate=30' },
     });
-  } catch (error) {
+  } catch {
     return NextResponse.json(
       { error: 'Failed to fetch Aptos transactions' },
       { status: 500, headers: CORS_HEADERS },

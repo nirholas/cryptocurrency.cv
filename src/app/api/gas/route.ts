@@ -66,7 +66,7 @@ export async function GET() {
 
     // Layer 3: Direct Etherscan fallback (legacy)
     const etherscanKey = process.env.ETHERSCAN_API_KEY || '';
-    const etherscanUrl = `https://api.etherscan.io/api?module=gastracker&action=gasoracle${etherscanKey ? `&apikey=${etherscanKey}` : ''}`;
+    const etherscanUrl = `https://api.etherscan.io/v2/api?chainid=1&module=gastracker&action=gasoracle${etherscanKey ? `&apikey=${etherscanKey}` : ''}`;
 
     const response = await fetch(etherscanUrl, {
       next: { revalidate: 30 },

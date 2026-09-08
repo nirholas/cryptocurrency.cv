@@ -310,7 +310,7 @@ async function fetchGlobalMarket(): Promise<MarketData['globalMarket'] | null> {
 async function fetchGasPrice(): Promise<MarketData['gasPrice'] | null> {
   try {
     const response = await resilientFetchResponse(
-      'https://api.etherscan.io/api?module=gastracker&action=gasoracle',
+      'https://api.etherscan.io/v2/api?chainid=1&module=gastracker&action=gasoracle',
       { service: 'etherscan', timeoutMs: 8000, retries: 1, cache: 'no-store' },
     );
 

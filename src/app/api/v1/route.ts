@@ -22,7 +22,6 @@ import {
   getEndpointMetadata,
   FACILITATOR_URL,
   PAYMENT_ADDRESS,
-  NETWORKS,
   CURRENT_NETWORK,
 } from '@/lib/x402';
 

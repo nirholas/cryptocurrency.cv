@@ -30,7 +30,7 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
         'Access-Control-Allow-Origin': '*',
       },
     });
-  } catch (error) {
+  } catch {
     return NextResponse.json(
       { error: 'Failed to fetch recent NFT sales' },
       { status: 500 }

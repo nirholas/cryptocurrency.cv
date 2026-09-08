@@ -10,7 +10,6 @@
 
 import { NextRequest, NextResponse } from 'next/server';
 import { ApiError } from '@/lib/api-error';
-import { createRequestLogger } from '@/lib/logger';
 import { aiComplete, getAIConfigOrNull } from '@/lib/ai-provider';
 
 export const runtime = 'edge';

@@ -65,7 +65,7 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
 
     // Ethereum gas history via Etherscan
     const etherscanKey = process.env.ETHERSCAN_API_KEY || '';
-    const etherscanUrl = `https://api.etherscan.io/api?module=gastracker&action=gasoracle${etherscanKey ? `&apikey=${etherscanKey}` : ''}`;
+    const etherscanUrl = `https://api.etherscan.io/v2/api?chainid=1&module=gastracker&action=gasoracle${etherscanKey ? `&apikey=${etherscanKey}` : ''}`;
 
     const response = await fetch(etherscanUrl, {
       next: { revalidate: 300 },
@@ -129,7 +129,7 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
         },
       },
     );
-  } catch (error) {
+  } catch {
     return NextResponse.json(
       { error: 'Failed to fetch gas history' },
       { status: 500 },

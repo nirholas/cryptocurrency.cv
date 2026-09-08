@@ -20,7 +20,6 @@
 import { type NextRequest, NextResponse } from 'next/server';
 import {
   createPrediction,
-  getPrediction,
   getUserPredictions,
   getAssetPredictions,
   resolvePrediction,
@@ -33,7 +32,7 @@ import {
   type PredictionTimeframe,
   type PredictionStatus,
 } from '@/lib/predictions';
-import { checkRateLimitFromRequest, getRateLimitErrorResponse, type RateLimitResult } from '@/lib/ratelimit';
+import { checkRateLimitFromRequest, getRateLimitErrorResponse } from '@/lib/ratelimit';
 
 // =============================================================================
 // VALIDATION

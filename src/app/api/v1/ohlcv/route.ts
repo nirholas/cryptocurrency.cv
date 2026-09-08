@@ -101,7 +101,7 @@ export async function GET(request: NextRequest) {
           'Cache-Control': 'public, s-maxage=30, stale-while-revalidate=120',
         },
       });
-    } catch (fallbackError) {
+    } catch {
       return ApiError.upstream('OHLCV providers (Binance + CryptoCompare)');
     }
   }

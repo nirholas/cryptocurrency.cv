@@ -13,7 +13,6 @@ import { searchNews } from '@/lib/crypto-news';
 import { translateArticles, isLanguageSupported, SUPPORTED_LANGUAGES } from '@/lib/translate';
 import { validateQuery } from '@/lib/validation-middleware';
 import { searchQuerySchema } from '@/lib/schemas';
-import { ApiError } from '@/lib/api-error';
 import { generateEmbedding, cosineSimilarity } from '@/lib/embeddings';
 import { isDbAvailable, pgFullTextSearch } from '@/lib/db/queries';
 import { instrumented } from '@/lib/telemetry-middleware';

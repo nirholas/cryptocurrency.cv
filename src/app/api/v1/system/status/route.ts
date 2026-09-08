@@ -73,7 +73,7 @@ const SOURCES = [
   },
   {
     name: 'Etherscan',
-    url: 'https://api.etherscan.io/api?module=gastracker&action=gasoracle',
+    url: 'https://api.etherscan.io/v2/api?chainid=1&module=gastracker&action=gasoracle',
     timeout: 5000,
   },
   { name: 'Alternative.me', url: 'https://api.alternative.me/fng/?limit=1', timeout: 5000 },

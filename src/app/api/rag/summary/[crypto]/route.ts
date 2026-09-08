@@ -16,7 +16,7 @@
  */
 
 import { type NextRequest, NextResponse } from 'next/server';
-import { summarizeCryptoNews, VALID_CODES, normalizeToCode } from '@/lib/rag';
+import { summarizeCryptoNews, normalizeToCode } from '@/lib/rag';
 
 export const runtime = 'nodejs';
 export const maxDuration = 30;

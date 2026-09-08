@@ -145,11 +145,11 @@ export async function GET(request: NextRequest) {
       const etherscanKey = process.env.ETHERSCAN_API_KEY || '';
       const [gasRes, supplyRes] = await Promise.allSettled([
         resilientFetchResponse(
-          `https://api.etherscan.io/api?module=gastracker&action=gasoracle&apikey=${etherscanKey}`,
+          `https://api.etherscan.io/v2/api?chainid=1&module=gastracker&action=gasoracle&apikey=${etherscanKey}`,
           { service: 'etherscan', timeoutMs: 8000, retries: 1, next: { revalidate: 60 } },
         ),
         resilientFetchResponse(
-          `https://api.etherscan.io/api?module=stats&action=ethsupply&apikey=${etherscanKey}`,
+          `https://api.etherscan.io/v2/api?chainid=1&module=stats&action=ethsupply&apikey=${etherscanKey}`,
           { service: 'etherscan', timeoutMs: 8000, retries: 1, next: { revalidate: 300 } },
         ),
       ]);

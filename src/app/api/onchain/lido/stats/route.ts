@@ -18,7 +18,7 @@ export const revalidate = 300;
  * GET /api/onchain/lido/stats
  * Returns Lido liquid staking protocol stats from The Graph
  */
-export async function GET(request: NextRequest): Promise<NextResponse> {
+export async function GET(_request: NextRequest): Promise<NextResponse> {
   try {
     const data = await getLidoStats();
     if (!data) {

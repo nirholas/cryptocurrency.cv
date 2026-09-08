@@ -45,7 +45,7 @@ export async function GET(
         'Access-Control-Allow-Origin': '*',
       },
     });
-  } catch (error) {
+  } catch {
     return NextResponse.json(
       { error: 'Failed to fetch Bybit open interest' },
       { status: 500 }

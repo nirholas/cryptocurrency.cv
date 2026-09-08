@@ -76,7 +76,7 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
           { status: 400 },
         );
     }
-  } catch (error) {
+  } catch {
     return NextResponse.json(
       { error: 'Failed to fetch 1inch data' },
       { status: 500 },

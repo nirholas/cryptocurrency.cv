@@ -10,9 +10,8 @@
 
 import { type NextRequest, NextResponse } from 'next/server';
 import { getGlobalDeFiData } from '@/lib/market-data';
-import { ApiError, type ApiErrorResponse } from '@/lib/api-error';
+import { ApiError } from '@/lib/api-error';
 import { createRequestLogger } from '@/lib/logger';
-import type { GlobalDeFi } from '@/lib/market-data';
 
 export const runtime = 'edge';
 export const revalidate = 300;

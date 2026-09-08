@@ -121,7 +121,7 @@ export async function GET() {
         'Access-Control-Allow-Origin': '*',
       },
     });
-  } catch (error) {
+  } catch {
     // Stale-on-error: serve last-known-good data
     const stale = staleCache.get<Record<string, unknown>>('stats:default');
     if (stale) {

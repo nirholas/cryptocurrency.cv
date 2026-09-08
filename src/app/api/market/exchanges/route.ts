@@ -9,8 +9,8 @@
  */
 
 import { type NextRequest, NextResponse } from 'next/server';
-import { getExchanges, Exchange } from '@/lib/market-data';
-import { ApiError, type ApiErrorResponse } from '@/lib/api-error';
+import { getExchanges } from '@/lib/market-data';
+import { ApiError } from '@/lib/api-error';
 import { createRequestLogger } from '@/lib/logger';
 
 export const runtime = 'edge';

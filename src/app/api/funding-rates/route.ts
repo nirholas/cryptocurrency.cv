@@ -36,9 +36,14 @@ export async function GET() {
           },
         });
       }
-    } catch { /* pipeline miss — try provider chain */ }
+    } catch (pipelineErr) {
+      // Logged rather than swallowed: a silent catch here is why a total
+      // upstream outage surfaced only as an opaque 502 from layer 3.
+      console.warn('Funding rates: pipeline cache miss:', (pipelineErr as Error).message);
+    }
 
-    // Layer 2: Provider framework (broadcast across Binance, Bybit, OKX)
+    // Layer 2: Provider framework (broadcast across Binance, Bybit, OKX,
+    // dYdX, Hyperliquid and Coinglass)
     try {
       const result = await registry.fetch<FundingRate[]>('funding-rate');
       return NextResponse.json(result.data, {
@@ -50,17 +55,29 @@ export async function GET() {
           'X-Confidence': String(result.lineage.confidence),
         },
       });
-    } catch { /* provider chain miss — fall through to direct call */ }
+    } catch (chainErr) {
+      console.warn('Funding rates: provider chain exhausted:', (chainErr as Error).message);
+    }
 
-    // Layer 3: Direct Binance fallback (legacy)
+    // Layer 3: Direct Binance fallback, for the case where the provider
+    // registry has not been initialised (no instrumentation hook ran).
     const response = await fetch(`${BINANCE_FUTURES_BASE}/fapi/v1/premiumIndex`, {
       next: { revalidate: 30 },
     });
 
     if (!response.ok) {
+      // Every layer is out. That is an upstream availability problem, not a
+      // malformed upstream reply, so it gets a 503 the client can retry rather
+      // than a 502 that reads like a permanent gateway fault. Binance answers
+      // 451 to requests from restricted regions, which is exactly the case the
+      // other exchanges in the chain exist to cover.
+      console.error(`Funding rates: direct Binance fallback failed (${response.status})`);
       return NextResponse.json(
-        { error: `Binance API error: ${response.status}` },
-        { status: 502 }
+        {
+          error: 'Funding rate providers are temporarily unavailable',
+          rates: [],
+        },
+        { status: 503, headers: { 'Retry-After': '30' } }
       );
     }
 

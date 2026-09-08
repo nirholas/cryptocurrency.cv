@@ -64,7 +64,7 @@ export const GET = instrumented(
           },
         },
       );
-    } catch (error) {
+    } catch {
       return NextResponse.json({ error: 'Failed to fetch DeFi news' }, { status: 500 });
     }
   },

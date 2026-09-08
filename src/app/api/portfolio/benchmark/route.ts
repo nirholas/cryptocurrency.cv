@@ -127,7 +127,7 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
         },
       },
     );
-  } catch (error) {
+  } catch {
     return NextResponse.json(
       { error: 'Failed to compute benchmark comparison' },
       { status: 500 },

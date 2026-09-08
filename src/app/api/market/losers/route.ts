@@ -52,7 +52,7 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
         },
       }
     );
-  } catch (error) {
+  } catch {
     return NextResponse.json(
       { error: 'Failed to fetch losers' },
       { status: 500 }

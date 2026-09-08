@@ -78,7 +78,7 @@ export async function POST(request: NextRequest) {
         'Access-Control-Allow-Origin': '*',
       },
     });
-  } catch (error) {
+  } catch {
     return NextResponse.json(
       { error: 'Invalid request body' },
       { status: 400 }
@@ -103,7 +103,7 @@ export async function PUT(request: NextRequest) {
     return NextResponse.json(result, {
       status: result.success ? 200 : 400,
     });
-  } catch (error) {
+  } catch {
     return NextResponse.json(
       { error: 'Invalid request body' },
       { status: 400 }

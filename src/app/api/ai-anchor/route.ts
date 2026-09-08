@@ -197,7 +197,7 @@ export async function POST(request: NextRequest) {
             const data = await newsRes.json();
             articles = data.articles || [];
           }
-        } catch (e) {
+        } catch {
           articles = [{ title: 'Market update', summary: 'Crypto markets are seeing mixed action today.' }];
         }
       }
@@ -244,7 +244,7 @@ export async function POST(request: NextRequest) {
           const data = await newsRes.json();
           articles = data.articles || [];
         }
-      } catch (e) {
+      } catch {
         articles = [{ title: 'Market update', summary: 'Crypto markets are seeing mixed action today.' }];
       }
       

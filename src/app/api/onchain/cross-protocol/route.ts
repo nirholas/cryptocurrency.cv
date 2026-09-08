@@ -27,7 +27,7 @@ export async function GET(_request: NextRequest): Promise<NextResponse> {
         'Access-Control-Allow-Origin': '*',
       },
     });
-  } catch (error) {
+  } catch {
     return NextResponse.json(
       { error: 'Failed to fetch cross-protocol analysis' },
       { status: 500 }

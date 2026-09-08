@@ -16,7 +16,6 @@ import {
   getTrendingTickers,
   getMarketHistory,
   toNewsArticle,
-  EnrichedArticle
 } from '@/lib/archive-v2';
 import { translateArticles, isLanguageSupported, SUPPORTED_LANGUAGES } from '@/lib/translate';
 import {
@@ -64,11 +63,15 @@ export async function GET(request: NextRequest) {
         : await getArchiveV2Stats();
       
       if (!stats) {
+        // 200, not 404: the endpoint exists and answered, the archive simply
+        // has no content yet. A 404 here made every /archive page load print a
+        // failed request in the console for a state the UI already handles.
         return NextResponse.json({
           success: false,
+          stats: null,
           error: 'Archive not available',
           message: 'Historical archive has not been initialized yet'
-        }, { status: 404 });
+        });
       }
       
       return NextResponse.json({
@@ -83,11 +86,14 @@ export async function GET(request: NextRequest) {
       const index = await getArchiveV2Index(indexType);
       
       if (!index) {
+        // 200 for the same reason as the stats branch above.
         return NextResponse.json({
           success: false,
+          indexType,
+          index: null,
           error: 'Archive index not available',
           message: 'Archive index has not been built yet'
-        }, { status: 404 });
+        });
       }
       
       return NextResponse.json({

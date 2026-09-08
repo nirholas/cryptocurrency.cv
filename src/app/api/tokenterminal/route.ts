@@ -80,7 +80,7 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
           { status: 400 },
         );
     }
-  } catch (error) {
+  } catch {
     return NextResponse.json(
       { error: 'Failed to fetch Token Terminal data' },
       { status: 500 },

@@ -18,12 +18,7 @@
 import { type NextRequest, NextResponse } from 'next/server';
 import {
   createForensicsAnalyzer,
-  createSourceGraph,
   type ArticleForTracing,
-  type ForensicsReport,
-  type CoordinationPattern,
-  type OriginTrace,
-  type NetworkSummary,
   traceStoryOrigin,
   detectCoordinatedPublishing,
   type PublishEvent,

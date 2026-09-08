@@ -38,7 +38,7 @@ export async function GET(
         'Access-Control-Allow-Origin': '*',
       },
     });
-  } catch (error) {
+  } catch {
     return NextResponse.json(
       { error: 'Failed to fetch collection stats' },
       { status: 500 }

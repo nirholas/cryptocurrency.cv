@@ -26,7 +26,7 @@ import { getTopCoins } from '@/lib/market-data';
 export const runtime = 'edge';
 export const revalidate = 120;
 
-export async function GET(request: NextRequest) {
+export async function GET(_request: NextRequest) {
   if (!isGroqConfigured()) {
     return NextResponse.json(
       { error: 'AI features require GROQ_API_KEY configuration' },

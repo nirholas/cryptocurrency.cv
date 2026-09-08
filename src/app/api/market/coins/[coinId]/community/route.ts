@@ -41,7 +41,7 @@ export async function GET(
         'Access-Control-Allow-Origin': '*',
       },
     });
-  } catch (error) {
+  } catch {
     return NextResponse.json(
       { error: 'Failed to fetch community data' },
       { status: 500 }

@@ -34,7 +34,6 @@ import {
   saveInfluencerList,
   type InfluencerList,
   type XUser,
-  DEFAULT_CRYPTO_INFLUENCERS,
 } from '@/lib/x-scraper';
 
 const VALID_CATEGORIES = ['whale', 'influencer', 'analyst', 'developer', 'founder', 'trader'];

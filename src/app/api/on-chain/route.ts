@@ -198,11 +198,11 @@ export async function GET(request: NextRequest) {
       if (ethKey) {
         const [gasResponse, supplyResponse] = await Promise.allSettled([
           resilientFetchResponse(
-            `https://api.etherscan.io/api?module=gastracker&action=gasoracle&apikey=${ethKey}`,
+            `https://api.etherscan.io/v2/api?chainid=1&module=gastracker&action=gasoracle&apikey=${ethKey}`,
             { service: 'etherscan', timeoutMs: 8000, retries: 1 },
           ),
           resilientFetchResponse(
-            `https://api.etherscan.io/api?module=stats&action=ethsupply2&apikey=${ethKey}`,
+            `https://api.etherscan.io/v2/api?chainid=1&module=stats&action=ethsupply2&apikey=${ethKey}`,
             { service: 'etherscan', timeoutMs: 8000, retries: 1 },
           ),
         ]);

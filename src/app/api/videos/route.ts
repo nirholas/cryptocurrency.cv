@@ -165,7 +165,7 @@ export async function GET(request: NextRequest) {
         },
       },
     );
-  } catch (error) {
+  } catch {
     return NextResponse.json(
       { error: 'Failed to fetch videos', timestamp: new Date().toISOString() },
       { status: 500 },

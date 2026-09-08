@@ -9,7 +9,7 @@
  */
 
 import { type NextRequest, NextResponse } from 'next/server';
-import { compareCoins, CompareData } from '@/lib/market-data';
+import { compareCoins } from '@/lib/market-data';
 import { validateQuery } from '@/lib/validation-middleware';
 import { marketCompareQuerySchema2 } from '@/lib/schemas';
 import { ApiError } from '@/lib/api-error';

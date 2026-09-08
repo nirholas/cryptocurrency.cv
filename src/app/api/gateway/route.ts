@@ -87,7 +87,7 @@ export async function POST(request: NextRequest) {
         "Access-Control-Allow-Headers": "Content-Type",
       },
     });
-  } catch (error) {
+  } catch {
     return NextResponse.json({ error: "Gateway error" }, { status: 500 });
   }
 }

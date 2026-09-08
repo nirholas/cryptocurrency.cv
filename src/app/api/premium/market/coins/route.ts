@@ -26,7 +26,6 @@
 import { type NextRequest, NextResponse } from 'next/server';
 import { withX402 } from '@/lib/x402';
 import { getTopCoins, getCoinDetails, type TokenPrice } from '@/lib/market-data';
-import { ApiError, ApiErrorResponse } from '@/lib/api-error';
 import { createRequestLogger } from '@/lib/logger';
 
 export const runtime = 'nodejs'; // Required for x402

@@ -150,7 +150,7 @@ async function fetchEthereumWhaleTransactions(minValueUsd: number): Promise<Whal
     if (apiKey) {
       // Fetch recent blocks and their transactions
       const response = await resilientFetchResponse(
-        `https://api.etherscan.io/api?module=account&action=txlist&address=0x28c6c06298d514db089934071355e5743bf21d60&startblock=0&endblock=99999999&page=1&offset=100&sort=desc&apikey=${apiKey}`,
+        `https://api.etherscan.io/v2/api?chainid=1&module=account&action=txlist&address=0x28c6c06298d514db089934071355e5743bf21d60&startblock=0&endblock=99999999&page=1&offset=100&sort=desc&apikey=${apiKey}`,
         { service: 'etherscan', timeoutMs: 8000, retries: 1, next: { revalidate: 30 } },
       );
 

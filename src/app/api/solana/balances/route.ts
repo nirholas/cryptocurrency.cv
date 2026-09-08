@@ -43,7 +43,7 @@ export async function GET(request: NextRequest) {
     }, {
       headers: { ...CORS_HEADERS, 'Cache-Control': 'public, s-maxage=30, stale-while-revalidate=60' },
     });
-  } catch (error) {
+  } catch {
     return NextResponse.json(
       { error: 'Failed to fetch token balances' },
       { status: 500, headers: CORS_HEADERS },
