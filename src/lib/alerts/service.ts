@@ -10,7 +10,7 @@
 
 /**
  * Price Alerts Service
- * 
+ *
  * Handles price alert management with Vercel KV storage.
  * Features:
  * - Create price alerts (above/below threshold)
@@ -20,6 +20,13 @@
  */
 
 import { kv } from '@vercel/kv';
+import {
+  deliverAlert,
+  isDeliverableChannel,
+  type AlertDeliveryConfig,
+  type AlertDeliveryPayload,
+  type DeliveryResult,
+} from './delivery';
 
 // =============================================================================
 // Types
@@ -27,7 +34,15 @@ import { kv } from '@vercel/kv';
 
 export type AlertType = 'price_above' | 'price_below' | 'percent_change' | 'volume_spike';
 export type AlertStatus = 'active' | 'triggered' | 'expired' | 'cancelled';
-export type NotificationChannel = 'email' | 'push' | 'none';
+
+/**
+ * Where a triggered alert is sent.
+ *
+ * `webhook`, `telegram` and `discord` are push channels delivered by
+ * `./delivery`; `email` and `push` are owned by the mailer and the web-push
+ * subscription pipeline; `none` records the trigger without notifying anyone.
+ */
+export type NotificationChannel = 'email' | 'push' | 'webhook' | 'telegram' | 'discord' | 'none';
 
 export interface PriceAlert {
   id: string;
@@ -45,6 +60,16 @@ export interface PriceAlert {
   expiresAt?: string;
   notificationChannel: NotificationChannel;
   email?: string;
+  /** Endpoint config for the webhook / telegram / discord channels. */
+  delivery?: AlertDeliveryConfig;
+  /** Outcome of the most recent push delivery, so the UI can surface a dead endpoint. */
+  lastDelivery?: {
+    channel: NotificationChannel;
+    delivered: boolean;
+    status: number;
+    error?: string;
+    at: string;
+  };
   notes?: string;
   repeatCount: number;
   maxRepeats: number;
@@ -95,23 +120,20 @@ function generateAlertId(): string {
 /**
  * Get all alerts for a user
  */
-export async function getUserAlerts(
-  userId: string,
-  status?: AlertStatus
-): Promise<PriceAlert[]> {
+export async function getUserAlerts(userId: string, status?: AlertStatus): Promise<PriceAlert[]> {
   try {
     const key = getAlertsKey(userId);
-    const alerts = await kv.get<PriceAlert[]>(key) || [];
-    
+    const alerts = (await kv.get<PriceAlert[]>(key)) || [];
+
     if (status) {
-      return alerts.filter(a => a.status === status);
+      return alerts.filter((a) => a.status === status);
     }
-    
+
     return alerts;
   } catch (error) {
     console.warn('KV not available, using in-memory storage:', error);
     const cached = inMemoryAlerts.get(userId) || [];
-    return status ? cached.filter(a => a.status === status) : cached;
+    return status ? cached.filter((a) => a.status === status) : cached;
   }
 }
 
@@ -132,7 +154,7 @@ export async function getAlertById(alertId: string): Promise<PriceAlert | null> 
  * Create a new price alert
  */
 export async function createAlert(
-  params: Omit<PriceAlert, 'id' | 'status' | 'createdAt' | 'repeatCount'>
+  params: Omit<PriceAlert, 'id' | 'status' | 'createdAt' | 'repeatCount'>,
 ): Promise<PriceAlert> {
   const alert: PriceAlert = {
     ...params,
@@ -141,7 +163,7 @@ export async function createAlert(
     createdAt: new Date().toISOString(),
     repeatCount: 0,
   };
-  
+
   await saveAlert(alert);
   return alert;
 }
@@ -152,23 +174,23 @@ export async function createAlert(
 export async function updateAlertStatus(
   alertId: string,
   status: AlertStatus,
-  triggeredPrice?: number
+  triggeredPrice?: number,
 ): Promise<PriceAlert | null> {
   const alert = await getAlertById(alertId);
   if (!alert) return null;
-  
+
   alert.status = status;
   if (status === 'triggered' && triggeredPrice) {
     alert.triggeredAt = new Date().toISOString();
     alert.triggeredPrice = triggeredPrice;
     alert.repeatCount += 1;
-    
+
     // Reset to active if repeats remaining
     if (alert.maxRepeats > 0 && alert.repeatCount < alert.maxRepeats) {
       alert.status = 'active';
     }
   }
-  
+
   await saveAlert(alert);
   return alert;
 }
@@ -176,13 +198,10 @@ export async function updateAlertStatus(
 /**
  * Cancel an alert
  */
-export async function cancelAlert(
-  userId: string,
-  alertId: string
-): Promise<boolean> {
+export async function cancelAlert(userId: string, alertId: string): Promise<boolean> {
   const alert = await getAlertById(alertId);
   if (alert?.userId !== userId) return false;
-  
+
   alert.status = 'cancelled';
   await saveAlert(alert);
   return true;
@@ -191,33 +210,30 @@ export async function cancelAlert(
 /**
  * Delete an alert permanently
  */
-export async function deleteAlert(
-  userId: string,
-  alertId: string
-): Promise<boolean> {
+export async function deleteAlert(userId: string, alertId: string): Promise<boolean> {
   try {
     // Get user's alerts
     const alerts = await getUserAlerts(userId);
-    const alertIndex = alerts.findIndex(a => a.id === alertId);
-    
+    const alertIndex = alerts.findIndex((a) => a.id === alertId);
+
     if (alertIndex === -1) return false;
-    
+
     // Remove from list
     alerts.splice(alertIndex, 1);
-    
+
     // Save updated list
     const key = getAlertsKey(userId);
     await kv.set(key, alerts);
-    
+
     // Remove individual alert
     const alertKey = getAlertByIdKey(alertId);
     await kv.del(alertKey);
-    
+
     return true;
   } catch (error) {
     console.warn('KV not available:', error);
     const alerts = inMemoryAlerts.get(userId) || [];
-    const filtered = alerts.filter(a => a.id !== alertId);
+    const filtered = alerts.filter((a) => a.id !== alertId);
     inMemoryAlerts.set(userId, filtered);
     inMemoryAlertById.delete(alertId);
     return true;
@@ -229,30 +245,31 @@ export async function deleteAlert(
  */
 export async function checkAlerts(
   coinId: string,
-  currentPrice: number
+  currentPrice: number,
 ): Promise<AlertTriggerResult[]> {
   const results: AlertTriggerResult[] = [];
-  
+
   try {
     // Get all active alerts for this coin from index
     const indexKey = getActiveAlertsIndexKey();
-    const activeAlertIds = await kv.get<string[]>(indexKey) || [];
-    
+    const activeAlertIds = (await kv.get<string[]>(indexKey)) || [];
+
     for (const alertId of activeAlertIds) {
       const alert = await getAlertById(alertId);
       if (alert?.coinId !== coinId || alert.status !== 'active') continue;
-      
+
       const result = evaluateAlert(alert, currentPrice);
       results.push(result);
-      
+
       if (result.triggered) {
-        await updateAlertStatus(alertId, 'triggered', currentPrice);
+        const updated = await updateAlertStatus(alertId, 'triggered', currentPrice);
+        await notifyAlert(updated ?? alert, currentPrice, result.message);
       }
     }
   } catch (error) {
     console.warn('Error checking alerts:', error);
   }
-  
+
   return results;
 }
 
@@ -262,7 +279,7 @@ export async function checkAlerts(
 function evaluateAlert(alert: PriceAlert, currentPrice: number): AlertTriggerResult {
   let triggered = false;
   let message = '';
-  
+
   switch (alert.type) {
     case 'price_above':
       triggered = currentPrice >= alert.threshold;
@@ -270,28 +287,29 @@ function evaluateAlert(alert: PriceAlert, currentPrice: number): AlertTriggerRes
         ? `${alert.symbol} is now above $${alert.threshold} at $${currentPrice.toFixed(2)}`
         : `${alert.symbol} at $${currentPrice.toFixed(2)} (target: above $${alert.threshold})`;
       break;
-      
+
     case 'price_below':
       triggered = currentPrice <= alert.threshold;
       message = triggered
         ? `${alert.symbol} is now below $${alert.threshold} at $${currentPrice.toFixed(2)}`
         : `${alert.symbol} at $${currentPrice.toFixed(2)} (target: below $${alert.threshold})`;
       break;
-      
+
     case 'percent_change':
-      const percentChange = ((currentPrice - alert.currentPriceAtCreation) / alert.currentPriceAtCreation) * 100;
+      const percentChange =
+        ((currentPrice - alert.currentPriceAtCreation) / alert.currentPriceAtCreation) * 100;
       triggered = Math.abs(percentChange) >= Math.abs(alert.threshold);
       message = triggered
         ? `${alert.symbol} changed ${percentChange.toFixed(2)}% (threshold: ${alert.threshold}%)`
         : `${alert.symbol} changed ${percentChange.toFixed(2)}% (waiting for ${alert.threshold}%)`;
       break;
-      
+
     case 'volume_spike': {
       // Volume spike detection using current price's implied volume context
       // The threshold represents the percentage increase in volume considered a "spike"
       // We compare the current trading activity (derived from price volatility) against baseline
       const priceVolatility = Math.abs(
-        ((currentPrice - alert.currentPriceAtCreation) / alert.currentPriceAtCreation) * 100
+        ((currentPrice - alert.currentPriceAtCreation) / alert.currentPriceAtCreation) * 100,
       );
       // High price volatility typically correlates with volume spikes
       // A reasonable proxy: if price moved more than threshold/10 in either direction,
@@ -304,7 +322,7 @@ function evaluateAlert(alert: PriceAlert, currentPrice: number): AlertTriggerRes
       break;
     }
   }
-  
+
   return {
     alert,
     triggered,
@@ -318,11 +336,11 @@ function evaluateAlert(alert: PriceAlert, currentPrice: number): AlertTriggerRes
  */
 export async function getAlertStats(userId: string): Promise<AlertStats> {
   const alerts = await getUserAlerts(userId);
-  
+
   const stats: AlertStats = {
     totalAlerts: alerts.length,
-    activeAlerts: alerts.filter(a => a.status === 'active').length,
-    triggeredAlerts: alerts.filter(a => a.status === 'triggered').length,
+    activeAlerts: alerts.filter((a) => a.status === 'active').length,
+    triggeredAlerts: alerts.filter((a) => a.status === 'triggered').length,
     alertsByType: {
       price_above: 0,
       price_below: 0,
@@ -330,11 +348,11 @@ export async function getAlertStats(userId: string): Promise<AlertStats> {
       volume_spike: 0,
     },
   };
-  
+
   for (const alert of alerts) {
     stats.alertsByType[alert.type]++;
   }
-  
+
   return stats;
 }
 
@@ -343,10 +361,71 @@ export async function getAlertStats(userId: string): Promise<AlertStats> {
  */
 export async function getActiveAlertsForCoin(
   userId: string,
-  coinId: string
+  coinId: string,
 ): Promise<PriceAlert[]> {
   const alerts = await getUserAlerts(userId, 'active');
-  return alerts.filter(a => a.coinId === coinId);
+  return alerts.filter((a) => a.coinId === coinId);
+}
+
+// =============================================================================
+// Notification Delivery
+// =============================================================================
+
+/**
+ * Build the JSON body a webhook receiver gets. This is the exact object the
+ * `X-Signature-256` header signs, so nothing may be added downstream.
+ */
+export function buildDeliveryPayload(
+  alert: PriceAlert,
+  currentPrice: number,
+  message: string,
+): AlertDeliveryPayload {
+  return {
+    event: 'alert.triggered',
+    alertId: alert.id,
+    type: alert.type,
+    title: `${alert.name} (${alert.symbol.toUpperCase()})`,
+    message,
+    triggeredAt: alert.triggeredAt ?? new Date().toISOString(),
+    url: `https://cryptocurrency.cv/coin/${alert.coinId}`,
+    coin: { id: alert.coinId, symbol: alert.symbol, name: alert.name },
+    threshold: alert.threshold,
+    price: currentPrice,
+  };
+}
+
+/**
+ * Push a triggered alert to its configured channel and record the outcome on
+ * the alert. Returns null for channels this pipeline does not own (email,
+ * push, none), which keeps the caller free of channel branching.
+ */
+export async function notifyAlert(
+  alert: PriceAlert,
+  currentPrice: number,
+  message: string,
+): Promise<DeliveryResult | null> {
+  if (!isDeliverableChannel(alert.notificationChannel)) return null;
+
+  const result = await deliverAlert(
+    alert.notificationChannel,
+    alert.delivery,
+    buildDeliveryPayload(alert, currentPrice, message),
+  );
+
+  alert.lastDelivery = {
+    channel: result.channel,
+    delivered: result.delivered,
+    status: result.status,
+    error: result.error,
+    at: new Date().toISOString(),
+  };
+  await saveAlert(alert);
+
+  if (!result.delivered) {
+    console.warn(`[alerts] ${result.channel} delivery failed for ${alert.id}: ${result.error}`);
+  }
+
+  return result;
 }
 
 // =============================================================================
@@ -358,24 +437,24 @@ async function saveAlert(alert: PriceAlert): Promise<void> {
     // Save individual alert
     const alertKey = getAlertByIdKey(alert.id);
     await kv.set(alertKey, alert);
-    
+
     // Update user's alerts list
     const userKey = getAlertsKey(alert.userId);
-    const userAlerts = await kv.get<PriceAlert[]>(userKey) || [];
-    
-    const existingIndex = userAlerts.findIndex(a => a.id === alert.id);
+    const userAlerts = (await kv.get<PriceAlert[]>(userKey)) || [];
+
+    const existingIndex = userAlerts.findIndex((a) => a.id === alert.id);
     if (existingIndex >= 0) {
       userAlerts[existingIndex] = alert;
     } else {
       userAlerts.push(alert);
     }
-    
+
     await kv.set(userKey, userAlerts);
-    
+
     // Update active alerts index
     if (alert.status === 'active') {
       const indexKey = getActiveAlertsIndexKey();
-      const index = await kv.get<string[]>(indexKey) || [];
+      const index = (await kv.get<string[]>(indexKey)) || [];
       if (!index.includes(alert.id)) {
         index.push(alert.id);
         await kv.set(indexKey, index);
@@ -383,12 +462,12 @@ async function saveAlert(alert: PriceAlert): Promise<void> {
     }
   } catch (error) {
     console.warn('KV not available, using in-memory storage:', error);
-    
+
     // In-memory fallback
     inMemoryAlertById.set(alert.id, alert);
-    
+
     const userAlerts = inMemoryAlerts.get(alert.userId) || [];
-    const existingIndex = userAlerts.findIndex(a => a.id === alert.id);
+    const existingIndex = userAlerts.findIndex((a) => a.id === alert.id);
     if (existingIndex >= 0) {
       userAlerts[existingIndex] = alert;
     } else {
