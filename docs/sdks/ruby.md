@@ -15,25 +15,19 @@ The Ruby SDK provides a thread-safe, production-ready client for the Free Crypto
 
 ## Installation
 
-### From RubyGems
-
-```bash
-gem install fcn-sdk
-```
-
-### In Gemfile
-
-```ruby
-gem 'fcn-sdk', '~> 0.2'
-```
-
-### From Source
+The gem is **not on RubyGems yet**. Build and install it from a clone:
 
 ```bash
 git clone https://github.com/nirholas/cryptocurrency.cv.git
 cd cryptocurrency.cv/sdk/ruby
 gem build fcn-sdk.gemspec
-gem install fcn-sdk-*.gem
+gem install ./fcn-sdk-*.gem
+```
+
+### In Gemfile
+
+```ruby
+gem 'fcn-sdk', git: 'https://github.com/nirholas/cryptocurrency.cv', glob: 'sdk/ruby/*.gemspec'
 ```
 
 ## Quick Start

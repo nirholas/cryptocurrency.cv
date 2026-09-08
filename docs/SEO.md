@@ -12,22 +12,36 @@ This document outlines the SEO implementation and best practices for Free Crypto
 
 Dynamic sitemap generation supporting:
 
-- **18 locales** with proper URLs
-- **50+ static pages** with appropriate change frequencies
-- **22 top cryptocurrencies** with hourly updates
-- **Blog posts** with weekly updates
-- **API documentation** pages
-- **Google News sitemap** with `<news:news>` tags for fast news indexing
+- **Canonical, unprefixed URLs.** `next-intl` runs with `localePrefix: 'as-needed'`,
+  so the default locale is served at the bare path and `/en/<path>` only 307s
+  there. The sitemap therefore emits `https://cryptocurrency.cv/markets`, never
+  `https://cryptocurrency.cv/en/markets`, and attaches `hreflang` alternates for
+  the other locales with `x-default` pointing at the unprefixed URL.
+- **Only routes that exist.** Static pages are discovered by walking the route
+  tree on disk (`src/app/[locale]`), so a deleted or renamed page drops out of
+  the sitemap instead of becoming a 404. Private and account-bound segments
+  (`/dashboard`, `/settings`, `/login`, `/keys`, `/bookmarks`, `/notifications`,
+  `/watchlist`, `/portfolio`, `/alerts`, `/export`) are excluded.
+- **Only translated locales** are advertised in `hreflang`. Routing accepts more
+  locales than we have message files for, and an untranslated locale is a
+  duplicate English page.
+- **146 blog posts** at `/blog/<slug>` plus a page per active category at
+  `/blog/category/<category>`, all weekly.
+- **Top cryptocurrencies** with hourly updates.
+- **Google News sitemap** with `<news:news>` tags for fast news indexing.
 
 ```typescript
-// Example sitemap entry
+// Example sitemap entry (note: no /en/ prefix)
 {
-  url: 'https://cryptocurrency.cv/en/markets',
+  url: 'https://cryptocurrency.cv/markets',
   lastModified: new Date(),
   changeFrequency: 'hourly',
   priority: 0.9,
+  alternates: { languages: { es: 'https://cryptocurrency.cv/es/markets', /* … */ } },
 }
 ```
+
+See `src/app/sitemap.ts` and its test at `src/__tests__/sitemap.test.ts`.
 
 ### ✅ Robots.txt
 
@@ -35,7 +49,12 @@ Dynamic sitemap generation supporting:
 
 Configured rules for:
 
-- **AI bots** (GPTBot, ChatGPT-User) - allowed access to public APIs
+- **AI bots** - explicitly allowed, not merely tolerated: GPTBot, ChatGPT-User,
+  Claude-Web, ClaudeBot, anthropic-ai, Grok, xAI-Grok, Google-Extended,
+  FacebookBot, Meta-ExternalAgent, PerplexityBot, cohere-ai, YouBot,
+  mistral-crawler, Amazonbot, Applebot-Extended, Bytespider and more. The API
+  middleware allowlists the same agents, so a crawler that reads `robots.ts` and
+  then calls the API is never turned away at the door.
 - **Search engines** (Googlebot, Bingbot) - with crawl delays
 - **Protected paths** - `/api/`, `/admin/`, `/_next/`
 - **Multiple sitemaps** - main sitemap and news sitemap

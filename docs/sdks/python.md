@@ -4,11 +4,7 @@ The Python SDK provides a simple, Pythonic interface to the Free Crypto News API
 
 ## Installation
 
-```bash
-pip install fcn-sdk
-```
-
-Or install from source:
+The Python SDK is **not on PyPI yet**. Install it from a clone of the repository:
 
 ```bash
 git clone https://github.com/nirholas/cryptocurrency.cv.git
@@ -16,13 +12,16 @@ cd cryptocurrency.cv/sdk/python
 pip install -e .
 ```
 
+The distribution is named `crypto-news-client` and the import package is
+`crypto_news`. It has no runtime dependencies beyond the standard library.
+
 ## Quick Start
 
 ```python
-from fcn_sdk import CryptoNews
+from crypto_news import CryptoNewsClient
 
-# Initialize client (no API key needed!)
-client = CryptoNews()
+# Initialize client (no API key needed)
+client = CryptoNewsClient()
 
 # Get latest news
 news = client.get_news(limit=10)
@@ -33,10 +32,28 @@ for article in news['articles']:
 bitcoin_news = client.search("bitcoin etf", limit=5)
 
 # Get DeFi news
-defi_news = client.get_defi_news(limit=10)
+defi_news = client.get_defi(limit=10)
 
 # Get breaking news (last 2 hours)
-breaking = client.get_breaking_news()
+breaking = client.get_breaking()
+```
+
+!!! note "Free tier returns 3 articles"
+    Without an API key, `get_news()` returns at most 3 articles and the payload
+    carries `limited: true` and `maxResults: 3`. Pass an API key to lift the cap.
+
+### Async client
+
+```python
+import asyncio
+from crypto_news import AsyncCryptoNewsClient
+
+async def main():
+    async with AsyncCryptoNewsClient() as client:
+        news = await client.get_news(limit=10)
+        print(len(news['articles']))
+
+asyncio.run(main())
 ```
 
 ## API Reference
@@ -91,21 +108,19 @@ japanese_news = client.get_news(limit=10, lang="ja")
 
 ```python
 import asyncio
-from fcn_sdk import AsyncCryptoNews
+from crypto_news import AsyncCryptoNewsClient
 
 async def main():
-    client = AsyncCryptoNews()
-    
-    # Fetch multiple endpoints concurrently
-    news, market, fear_greed = await asyncio.gather(
-        client.get_news(limit=10),
-        client.get_market_data(),
-        client.get_fear_greed_index()
-    )
-    
-    print(f"Latest: {news['articles'][0]['title']}")
-    print(f"BTC: ${market['bitcoin']['price']:,.0f}")
-    print(f"Fear & Greed: {fear_greed['value']}")
+    async with AsyncCryptoNewsClient() as client:
+        # Fetch multiple endpoints concurrently
+        news, market, fear_greed = await asyncio.gather(
+            client.get_news(limit=10),
+            client.get_market(),
+            client.get_fear_greed(),
+        )
+
+        print(f"Latest: {news['articles'][0]['title']}")
+        print(f"Fear & Greed: {fear_greed['value']}")
 
 asyncio.run(main())
 ```
@@ -116,10 +131,10 @@ asyncio.run(main())
 
 ```python
 import telebot
-from fcn_sdk import CryptoNews
+from crypto_news import CryptoNewsClient
 
 bot = telebot.TeleBot("YOUR_BOT_TOKEN")
-client = CryptoNews()
+client = CryptoNewsClient()
 
 @bot.message_handler(commands=['news'])
 def send_news(message):
@@ -136,9 +151,9 @@ bot.polling()
 
 ```python
 import pandas as pd
-from fcn_sdk import CryptoNews
+from crypto_news import CryptoNewsClient
 
-client = CryptoNews()
+client = CryptoNewsClient()
 
 # Fetch news and convert to DataFrame
 news = client.get_news(limit=50)
@@ -156,15 +171,21 @@ today = df[df['pubDate'].dt.date == pd.Timestamp.today().date()]
 ## Error Handling
 
 ```python
-from fcn_sdk import CryptoNews, FCNError
+from crypto_news import CryptoNewsClient, APIError, CryptoNewsError, NetworkError, RateLimitError
 
-client = CryptoNews()
+client = CryptoNewsClient()
 
 try:
     news = client.get_news(limit=10)
-except FCNError as e:
-    print(f"API Error: {e.message}")
-    print(f"Status Code: {e.status_code}")
+except RateLimitError as e:
+    # Anonymous callers get 120 requests/hour per IP on free-tier routes
+    print(f"Rate limited: {e.message}")
+except APIError as e:
+    print(f"API error {e.status_code}: {e.message}")
+except NetworkError as e:
+    print(f"Network error: {e.message}")
+except CryptoNewsError as e:
+    print(f"SDK error: {e.message}")
 ```
 
 ## Rate Limits

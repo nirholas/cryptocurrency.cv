@@ -8,9 +8,26 @@ The `@cryptonews` Copilot agent is a GitHub Copilot Chat extension that connects
 
 ## Installation
 
-1. Install the extension from the VS Code Marketplace (search **Crypto News for GitHub Copilot**)
-2. Ensure GitHub Copilot Chat is enabled in your workspace
+The extension is **not on the VS Code Marketplace yet**. Build and install the
+`.vsix` from a clone:
+
+```bash
+git clone https://github.com/nirholas/cryptocurrency.cv.git
+cd cryptocurrency.cv/copilot-extension
+npm install
+npm run compile
+npx vsce package                       # produces crypto-news-copilot-<version>.vsix
+code --install-extension crypto-news-copilot-*.vsix
+```
+
+Then:
+
+1. Ensure GitHub Copilot Chat is enabled in your workspace
+2. Reload the VS Code window
 3. Type `@cryptonews` in any Copilot Chat window to activate
+
+`@cryptonews` is the Copilot Chat participant handle declared by the extension.
+It is not an npm package.
 
 ## Commands
 

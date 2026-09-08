@@ -8,10 +8,10 @@ hide:
 
 # 📰 Free Crypto News
 
-<p class="tagline">100% Free Crypto News API — No API keys, no rate limits, no BS</p>
+<p class="tagline">Free Crypto News API — no API key, no signup, just <code>curl</code></p>
 
 <span class="status free">✓ Always Free</span>
-<span class="status beta">200+ Sources</span>
+<span class="status beta">358 Sources</span>
 
 [Get Started :material-rocket-launch:](QUICKSTART.md){ .md-button .md-button--primary }
 [API Reference :material-api:](API.md){ .md-button }
@@ -76,7 +76,7 @@ Feed crypto news into ChatGPT, Claude, LangChain, or custom agents via MCP, plug
 
 ### :newspaper: Real-Time News
 
-Aggregated news from 200+ professional sources including CoinDesk, The Block, Decrypt, Cointelegraph, Bitcoin Magazine, CryptoSlate, and NewsBTC — updated every 5 minutes.
+Aggregated news from 358 professional sources including CoinDesk, The Block, Decrypt, Cointelegraph, Bitcoin Magazine, CryptoSlate, and NewsBTC — updated every 5 minutes. The full catalog is public at `/api/sources`, and 146 long-form posts live at [/blog](https://cryptocurrency.cv/blog).
 
 </div>
 
@@ -84,7 +84,7 @@ Aggregated news from 200+ professional sources including CoinDesk, The Block, De
 
 ### :robot: AI-Powered
 
-Sentiment analysis, automatic summaries, daily digests, fact-checking, narrative tracking, and credibility scoring — powered by Groq LLM.
+Sentiment analysis, automatic summaries, daily digests, fact-checking, narrative tracking, and credibility scoring. Provider and model are configurable per deployment (Groq, OpenAI, Anthropic, OpenRouter, Gemini) with a fallback chain so a retired model never takes the feature down.
 
 </div>
 
@@ -100,7 +100,7 @@ SDKs for Python, JavaScript, TypeScript, React, Go, PHP, Ruby, and Rust. Plus We
 
 ### :lock: No Auth Required
 
-No API keys, no sign-up, no rate limits. Just make requests and get data. Start building in seconds.
+No API key, no sign-up, no browser `User-Agent` tricks. cURL, wget and AI agents are first-class callers. Anonymous requests get 120/hour per IP on the free-tier routes, and `/api/news` returns 3 articles per call until you [upgrade to a paid tier, or pay per request with x402](PREMIUM.md).
 
 </div>
 
@@ -132,9 +132,14 @@ No API keys, no sign-up, no rate limits. Just make requests and get data. Start 
           "sentiment": "positive"
         }
       ],
-      "count": 50
+      "count": 3,
+      "limited": true,
+      "maxResults": 3
     }
     ```
+
+    Anonymous requests to `/api/news` return **3 articles**, and the payload
+    says so. `/feed.xml` and `/feed.json` are uncapped at 50 items.
 
 === "Python"
 
@@ -162,7 +167,8 @@ No API keys, no sign-up, no rate limits. Just make requests and get data. Start 
 === "React"
 
     ```jsx
-    import { useCryptoNews } from '@free-crypto-news/react';
+    // Hooks ship in sdk/react of the repository (not on npm yet)
+    import { useCryptoNews } from '@nirholas/react-crypto-news';
     
     function NewsFeed() {
       const { articles, loading, error } = useCryptoNews();
@@ -213,7 +219,7 @@ No API keys, no sign-up, no rate limits. Just make requests and get data. Start 
 
 <div class="card" markdown>
 ### :fontawesome-brands-js: JavaScript
-`npm install free-crypto-news`
+`npm install @nirholas/crypto-news`
 
 [:material-arrow-right: JavaScript SDK](sdks/javascript.md)
 </div>
@@ -227,7 +233,7 @@ Full type definitions included
 
 <div class="card" markdown>
 ### :fontawesome-brands-react: React
-Hooks & components
+Hooks & components (from a clone)
 
 [:material-arrow-right: React SDK](sdks/react.md)
 </div>
@@ -241,21 +247,21 @@ Hooks & components
 
 <div class="card" markdown>
 ### :fontawesome-brands-php: PHP
-Composer package
+Composer package, from a clone
 
 [:material-arrow-right: PHP SDK](sdks/php.md)
 </div>
 
 <div class="card" markdown>
 ### :gem: Ruby
-Gem package
+Gem, built from a clone
 
 [:material-arrow-right: Ruby SDK](sdks/ruby.md)
 </div>
 
 <div class="card" markdown>
 ### :crab: Rust
-Cargo crate
+Cargo crate, via git dependency
 
 [:material-arrow-right: Rust SDK](sdks/rust.md)
 </div>
@@ -285,10 +291,11 @@ Learn by doing with step-by-step guides:
 
 Works with your favorite AI tools:
 
-- **Claude** — via MCP Server
-- **ChatGPT** — via Plugin/Actions  
+- **Claude** — hosted MCP endpoint, nothing to install:
+  `claude mcp add --transport http crypto-news https://cryptocurrency.cv/api/mcp`
+- **ChatGPT** — Developer Mode over the same Streamable HTTP URL, or a Plugin/Action
 - **LangChain** — as a custom tool
-- **Any LLM** — via REST API
+- **Any LLM** — via REST API, or the local `@nirholas/free-crypto-news-mcp` package
 
 [:material-arrow-right: MCP Setup Guide](integrations/mcp.md)
 

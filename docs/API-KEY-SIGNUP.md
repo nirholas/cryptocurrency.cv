@@ -1,6 +1,12 @@
-# API Key Signup Guide
+# Upstream Provider Key Signup Guide
 
-> Complete guide to signing up for all external API keys used by free-crypto-news.
+> This page is for **self-hosters**. It covers the third-party API keys the
+> platform consumes upstream (CoinGecko, Etherscan, Neon, Upstash and friends),
+> not access to the cryptocurrency.cv API itself.
+>
+> To use the hosted API you need no key at all: see [Quick Start](QUICKSTART.md)
+> for the free tier, and [Premium](PREMIUM.md) for paid access.
+>
 > Organized by priority — start with HIGH priority (free, most value) first.
 
 ## Quick Reference

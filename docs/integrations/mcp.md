@@ -1,326 +1,231 @@
-# MCP Server Integration
+# MCP Server
 
-The Model Context Protocol (MCP) server allows AI assistants like Claude and ChatGPT to access real-time crypto news.
+The [Model Context Protocol](https://modelcontextprotocol.io) server gives Claude, Cursor, ChatGPT, Windsurf and any other MCP client live crypto news, prices, DeFi, derivatives and on-chain data from cryptocurrency.cv.
 
-## Overview
+No API key. No account. No signup.
 
-Every tool is **read-only** (no confirmation prompts in ChatGPT). The server's `tools/list` response is the authoritative inventory.
+There are two ways to run it, and the hosted one needs nothing installed at all.
 
-MCP enables AI models to:
+!!! info "Source of truth"
+    The tool tables in [`mcp/README.md`](https://github.com/nirholas/cryptocurrency.cv/blob/main/mcp/README.md) are generated from the tool registry itself (`npm run docs:tools`). If a count or a tool name here ever disagrees with that file, that file is right.
 
-- Fetch the latest crypto news from 7 major sources
-- Search for specific topics with keyword filtering
-- Get DeFi and Bitcoin-specific news
-- Access trending topics with sentiment analysis
-- Monitor breaking news (last 2 hours)
-- Query historical news archive
-- Find original news sources
-- Get portfolio news with CoinGecko price data
+---
 
-## Hosted server (no install)
+## Option 1: hosted endpoint (zero install)
 
-A Streamable-HTTP transport is served at `https://cryptocurrency.cv/api/mcp`. No API key.
+The server runs on our infrastructure at `https://cryptocurrency.cv/api/mcp` over **Streamable HTTP**. It is stateless (one server instance per request), so it scales horizontally and stays up to date on its own.
+
+**Claude Code**
 
 ```bash
-# Claude Code
 claude mcp add --transport http crypto-news https://cryptocurrency.cv/api/mcp
 ```
 
-ChatGPT Developer Mode and any other Streamable-HTTP client: add `https://cryptocurrency.cv/api/mcp` as the server URL.
+**Claude Desktop, Cursor, Windsurf** (`claude_desktop_config.json`, `.cursor/mcp.json`, and friends)
 
-## Installation (local stdio server)
-
-### Using npx (Recommended)
-
-```bash
-npx @nirholas/free-crypto-news-mcp
+```json
+{
+  "mcpServers": {
+    "crypto-news": {
+      "url": "https://cryptocurrency.cv/api/mcp"
+    }
+  }
+}
 ```
 
-### From the repository
+**ChatGPT Developer Mode**, or any other Streamable HTTP client: add `https://cryptocurrency.cv/api/mcp` as the server URL with no authentication.
 
-```bash
-git clone https://github.com/nirholas/cryptocurrency.cv.git
-cd cryptocurrency.cv/mcp && npm install
-node index.js
-```
+The hosted route exposes **47 tools**. It is served by the main Next.js app from `src/app/api/mcp/route.ts` and shares the tool registry in `src/lib/mcp/tools.ts`.
 
-## Configuration
+---
 
-### Claude Desktop
+## Option 2: local server (stdio)
 
-Add to your Claude Desktop configuration (`~/Library/Application Support/Claude/claude_desktop_config.json` on macOS):
+Runs on your machine and talks to the same public API. Useful behind a proxy, or when you want to point it at your own deployment. The published package is **`@nirholas/free-crypto-news-mcp`**.
 
 ```json
 {
   "mcpServers": {
     "crypto-news": {
       "command": "npx",
-      "args": ["@nirholas/free-crypto-news-mcp"]
+      "args": ["-y", "@nirholas/free-crypto-news-mcp"]
     }
   }
 }
 ```
 
-### Custom Configuration
+The local server exposes **55 tools, 6 resources and 3 prompts** (the hosted route carries the tools only).
+
+### From source
+
+```bash
+git clone https://github.com/nirholas/cryptocurrency.cv.git
+cd cryptocurrency.cv/mcp
+npm install
+npm run build
+```
+
+The build compiles TypeScript from `src/` into `dist/`, and the entry point is `dist/index.js`:
 
 ```json
 {
   "mcpServers": {
     "crypto-news": {
       "command": "node",
-      "args": ["/path/to/mcp/index.js"],
-      "env": {
-        "FCN_BASE_URL": "https://cryptocurrency.cv"
-      }
+      "args": ["/absolute/path/to/cryptocurrency.cv/mcp/dist/index.js"]
     }
   }
 }
 ```
 
-## Available Tools
+Restart your client after editing its config, then ask it something like *"what is the latest Bitcoin ETF news?"* or *"compare SOL and ETH over the last 30 days"*.
 
-All tools are marked as **read-only** for ChatGPT Developer Mode compatibility (no confirmation prompts).
+---
 
-### 📰 Core News Tools
+## Configuration
 
-| Tool | Description |
-|------|-------------|
-| `get_crypto_news` | Get latest news from all 130+ sources |
-| `search_crypto_news` | Search news by comma-separated keywords |
-| `get_defi_news` | DeFi-specific news (yield farming, DEXs, lending, protocols) |
-| `get_bitcoin_news` | Bitcoin-specific news (BTC, Lightning Network, miners, ordinals) |
-| `get_breaking_news` | Breaking news from the last 2 hours |
-| `get_news_sources` | List all available news sources with details |
-| `get_api_health` | Check API & feed health status |
-| `analyze_news` | News with topic classification and sentiment analysis |
-| `get_ethereum_news` | Ethereum-specific news (ETH, L2s, smart contracts) |
-| `get_altcoin_news` | Altcoin news (SOL, ADA, DOT, AVAX, etc.) |
-| `get_nft_news` | NFT-specific news and market updates |
+Every setting is optional.
 
-### 📊 Analytics & Sentiment
+| Variable | Default | What it does |
+| --- | --- | --- |
+| `API_BASE` | `https://cryptocurrency.cv` | Point the server at another deployment, e.g. `http://localhost:3000` |
+| `API_KEY` | none | Sent as `x-api-key`. Raises rate limits and unlocks paid endpoints |
+| `API_TIMEOUT_MS` | `10000` | Per-request timeout in milliseconds |
+| `PORT` | `3333` | Streamable HTTP mode only (`npm run start:http`) |
 
-| Tool | Description |
-|------|-------------|
-| `get_trending_topics` | Trending topics with sentiment analysis (bullish/bearish/neutral) |
-| `get_crypto_stats` | Analytics: articles per source, hourly distribution, category breakdown |
-| `get_ai_sentiment` | AI-powered market sentiment analysis with confidence scores |
-| `get_ai_summary` | AI-generated news summaries and key insights |
-| `get_market_sentiment` | Real-time market sentiment indicators |
-| `get_fear_greed` | Fear & Greed Index data |
-| `get_social_sentiment` | Social media sentiment from Twitter/Reddit |
-
-### 📈 Trading & Market Data
-
-| Tool | Description |
-|------|-------------|
-| `get_prices` | Real-time cryptocurrency prices from CoinGecko |
-| `get_markets` | Top 100 markets by market cap |
-| `get_ticker` | 24h ticker data (price, volume, change%) |
-| `get_orderbook` | Live orderbook data (bids/asks/depth) |
-| `get_arbitrage` | Cross-exchange arbitrage opportunities |
-| `get_options_data` | Options market data (calls, puts, IV) |
-| `get_funding_rates` | Perpetual futures funding rates |
-| `get_liquidations` | Recent liquidation events |
-| `get_whale_alerts` | Large transaction monitoring |
-
-### 🪙 DeFi & Token Tools
-
-| Tool | Description |
-|------|-------------|
-| `get_stablecoin_data` | Stablecoin metrics (supply, peg, volume) |
-| `get_defi_yields` | DeFi yield farming opportunities |
-| `get_gas_prices` | Ethereum gas price tracker |
-| `get_tvl_rankings` | DeFi TVL rankings by protocol |
-
-### 📚 Archive & Research
-
-| Tool | Description |
-|------|-------------|
-| `get_archive` | Query historical news archive by date range, source, or keywords |
-| `get_archive_stats` | Statistics about the historical news archive |
-| `find_original_sources` | Find where news originated (official, press-release, social, government) |
-| `get_events_calendar` | Upcoming crypto events, launches, and conferences |
-
-### 🔔 Alerts & Monitoring
-
-| Tool | Description |
-|------|-------------|
-| `get_portfolio_news` | News for specific cryptocurrencies with CoinGecko price data |
-| `get_alerts` | Custom price and news alerts |
-| `get_rss_feeds` | RSS feed URLs for various sources |
-| `get_regulatory_news` | Regulatory updates by jurisdiction |
-
-### Tool Parameters
-
-#### get_crypto_news
-
-```
-Parameters:
-- limit (number, optional): Max articles 1-50 (default: 10)
-- source (string, optional): Filter by source (coindesk, theblock, decrypt, cointelegraph, bitcoinmagazine, blockworks, defiant)
+```json
+{
+  "mcpServers": {
+    "crypto-news": {
+      "command": "npx",
+      "args": ["-y", "@nirholas/free-crypto-news-mcp"],
+      "env": { "API_KEY": "your-key" }
+    }
+  }
+}
 ```
 
-#### search_crypto_news
+---
 
-```
-Parameters:
-- keywords (string, required): Comma-separated keywords (e.g., "ethereum,ETF")
-- limit (number, optional): Max results 1-30 (default: 10)
-```
+## Transports
 
-#### get_trending_topics
+| Transport | Command | Use for |
+| --- | --- | --- |
+| stdio | `npm start` | Local MCP clients (Claude Desktop, Cursor, Windsurf) |
+| Streamable HTTP | `npm run start:http` | Self-hosting the HTTP endpoint yourself |
 
-```
-Parameters:
-- limit (number, optional): Max topics 1-20 (default: 10)
-- hours (number, optional): Time window 1-72 hours (default: 24)
-```
+Self-hosted HTTP mode serves the MCP endpoint at `POST /mcp` and a liveness probe at `GET /health` (also `GET /healthz`) on `PORT`. There is no SSE transport: Streamable HTTP replaced it in the MCP spec, and every current client speaks it.
 
-#### analyze_news
+---
 
-```
-Parameters:
-- limit (number, optional): Max articles 1-50 (default: 10)
-- topic (string, optional): Filter by topic (Bitcoin, Ethereum, DeFi, NFTs, Regulation, Exchange)
-- sentiment (string, optional): Filter by sentiment (bullish, bearish, neutral)
-```
+## Tools
 
-#### get_archive
+Every tool is read-only and maps onto one real REST route of the API, so anything a tool returns can also be fetched with `curl`. Read-only tools never trigger a confirmation prompt in ChatGPT Developer Mode.
 
-```
-Parameters:
-- start_date (string, optional): Start date YYYY-MM-DD
-- end_date (string, optional): End date YYYY-MM-DD
-- source (string, optional): Filter by source
-- search (string, optional): Search query
-- limit (number, optional): Max results 1-200 (default: 20)
-```
+| Group | Tools | Covers |
+| --- | --- | --- |
+| News | 10 | latest headlines, search, breaking, per-asset feeds |
+| Analysis | 6 | sentiment, trending topics, article classification |
+| Market | 12 | prices, tickers, global market data, fear and greed |
+| DeFi | 6 | TVL, yields, protocol and chain breakdowns |
+| Derivatives | 6 | funding rates, open interest, liquidations |
+| On-chain | 5 | gas, whale transfers, wallet intelligence |
+| Reference | 5 | source catalog, categories, health, version |
+| AI | 3 | summaries, question answering, digests |
+| Feeds & Discovery | 2 | `get_rss_feeds`, `list_endpoints` |
 
-#### find_original_sources
+`list_endpoints` is the one to reach for when you want the live inventory: it returns the OpenAPI path list plus the REST route behind every MCP tool, so a model can discover the API without a docs round trip.
 
-```
-Parameters:
-- limit (number, optional): Articles to analyze 1-50 (default: 10)
-- search (string, optional): Search query
-- source_type (string, optional): official, press-release, social, blog, government
-```
+The full per-tool table, with the REST route each tool calls, lives in [`mcp/README.md`](https://github.com/nirholas/cryptocurrency.cv/blob/main/mcp/README.md#tools).
 
-#### get_portfolio_news
+---
 
-```
-Parameters:
-- coins (string, required): Comma-separated coins (e.g., "btc,eth,sol")
-- limit (number, optional): Max articles per coin 1-50 (default: 10)
-- prices (boolean, optional): Include CoinGecko price data (default: true)
-```
+## Resources
 
-## Example Prompts
+| URI | Contents |
+| --- | --- |
+| `news://latest` | Latest headlines |
+| `news://breaking` | Last two hours |
+| `news://trending` | Trending topics |
+| `market://overview` | Global market snapshot |
+| `market://fear-greed` | Fear and Greed index |
+| `defi://overview` | DeFi TVL and protocol summary |
 
-### Claude Desktop
+## Prompts
+
+| Prompt | Produces |
+| --- | --- |
+| `daily_brief` | A market brief from today's news, prices and sentiment |
+| `coin_deep_dive` | A full workup on one asset: news, price action, on-chain |
+| `defi_yield_scan` | Current yields with the risk context around them |
+
+---
+
+## Paid tools
+
+Most tools are free and unauthenticated. A few sit behind the [x402](../X402.md) micropayment gate; those return a readable `Payment required` message naming the endpoint and its price rather than a raw HTTP error, so the model can explain the situation instead of retrying blindly. Set `API_KEY` to use them.
+
+---
+
+## Example prompts
 
 - "Get me the latest crypto news"
-- "Search for news about Ethereum ETF"
-- "What's happening in DeFi?"
-- "Any breaking crypto news?"
-- "What are the trending crypto topics?"
+- "Search for news about the Ethereum ETF"
+- "What's happening in DeFi right now?"
+- "Any breaking crypto news in the last two hours?"
 - "Analyze recent news for bullish signals"
-- "Get news from last week about SEC"
-- "Find the original source of this Binance news"
-- "Get news for my portfolio: BTC, ETH, SOL with prices"
+- "Get news for my portfolio: BTC, ETH, SOL, with prices"
 
-### ChatGPT Developer Mode
-
-Be explicit about using the app and tool names:
+In ChatGPT Developer Mode, be explicit about the app and tool name:
 
 - "Use the Free Crypto News app's `get_crypto_news` tool to show me the latest headlines"
-- "Use `search_crypto_news` to find news about 'SEC regulation'"
 - "Call `get_trending_topics` to show what's trending in crypto right now"
-- "Use `get_portfolio_news` with coins='btc,eth,sol' to get news for my portfolio with prices"
 
-## HTTP Server Mode (ChatGPT Developer Mode)
-
-**Live Server:** `https://cryptocurrency.cv/api/mcp`
-
-Run locally:
-
-```bash
-cd mcp
-npm install
-npm run start:http  # Starts on port 3001
-```
-
-### API Endpoints (HTTP mode)
-
-| Endpoint | Description |
-|----------|-------------|
-| `GET /health` | Health check |
-| `GET /sse` | Server-Sent Events endpoint for MCP |
-| `POST /message` | Message endpoint (used with SSE) |
-| `POST /mcp` | Single request/response endpoint |
-
-### Example Request
-
-```bash
-curl -X POST http://localhost:3001/mcp \
-  -H "Content-Type: application/json" \
-  -d '{
-    "tool": "get_crypto_news",
-    "params": { "limit": 5 }
-  }'
-```
-
-## ChatGPT Developer Mode Setup
-
-1. Enable Developer Mode in ChatGPT Settings → Apps → Advanced
-2. Click "Create app"
-3. Configure:
-   - **Name:** Free Crypto News
-   - **Protocol:** SSE
-   - **Endpoint:** `https://cryptocurrency.cv/api/mcp`
-   - **Authentication:** No Authentication
-4. Enable the app in a conversation
-
-## Environment Variables
-
-| Variable | Default | Description |
-|----------|---------|-------------|
-| `PORT` | `3001` | HTTP server port |
-| `API_BASE` | `https://cryptocurrency.cv` | Backend API URL |
+---
 
 ## Troubleshooting
 
-### MCP Server Not Loading in Claude
+**The client does not list any tools.** Confirm the endpoint answers a protocol handshake:
 
-1. Verify the path in your config is correct
-2. Check that Node.js 18+ is installed
-3. Run `node /path/to/mcp/index.js` manually to test
+```bash
+curl -X POST https://cryptocurrency.cv/api/mcp \
+  -H "Content-Type: application/json" \
+  -H "Accept: application/json, text/event-stream" \
+  -d '{"jsonrpc":"2.0","id":1,"method":"tools/list"}'
+```
 
-### Connection Timeout
+The `Accept` header matters: Streamable HTTP requires the client to accept both JSON and SSE, and a request without it is rejected by the transport.
 
-Check if the API is accessible:
+**The local server will not start.** Node 18.17 or newer is required, and `dist/index.js` only exists after `npm run build`. Run `node dist/index.js` directly to see the error.
+
+**Requests time out.** Check the API itself. It needs no key, and no browser user agent: cURL, wget and AI agents are all first-class callers.
 
 ```bash
 curl https://cryptocurrency.cv/api/health
 ```
 
-### ChatGPT Not Seeing Tools
+**Rate limited.** Anonymous callers get 120 requests per hour per IP on the free-tier routes. Set `API_KEY` for a higher tier.
 
-Ensure the SSE endpoint is reachable and returns proper MCP responses.
+---
 
-## Features
+## Source code
 
-- **100% Free** - No API keys required
-- **Dual Transport** - Works with both Claude (stdio) and ChatGPT (HTTP/SSE)
-- **Read-only tools** - Comprehensive crypto news coverage
-- **Read-Only** - All tools marked as safe for ChatGPT (no confirmation prompts)
-- **Real-Time** - Breaking news from last 2 hours
-- **Sentiment Analysis** - Bullish/bearish/neutral classification
-- **Historical Archive** - Query past news by date/source
-- **Portfolio Tracking** - Get news for specific coins with prices
-- **Original Sources** - Trace where news actually originated
+| File | Role |
+| --- | --- |
+| [`mcp/src/tools.ts`](https://github.com/nirholas/cryptocurrency.cv/blob/main/mcp/src/tools.ts) | The local tool registry, one entry per tool |
+| [`mcp/src/resources.ts`](https://github.com/nirholas/cryptocurrency.cv/blob/main/mcp/src/resources.ts) | MCP resources |
+| [`mcp/src/prompts.ts`](https://github.com/nirholas/cryptocurrency.cv/blob/main/mcp/src/prompts.ts) | MCP prompts |
+| [`mcp/src/index.ts`](https://github.com/nirholas/cryptocurrency.cv/blob/main/mcp/src/index.ts) | stdio entry point |
+| [`mcp/src/http.ts`](https://github.com/nirholas/cryptocurrency.cv/blob/main/mcp/src/http.ts) | Streamable HTTP entry point |
+| [`mcp/README.md`](https://github.com/nirholas/cryptocurrency.cv/blob/main/mcp/README.md) | Full tool tables, generated from the registry |
 
-## Source Code
+## Related
 
-- [mcp/index.js](https://github.com/nirholas/cryptocurrency.cv/blob/main/mcp/index.js) - MCP server (stdio)
-- [mcp/http-server.js](https://github.com/nirholas/cryptocurrency.cv/blob/main/mcp/http-server.js) - HTTP/SSE server
-- [mcp/README.md](https://github.com/nirholas/cryptocurrency.cv/blob/main/mcp/README.md) - Quick start guide
+- [Agents & Skills](../AGENTS.md)
+- [ChatGPT Plugin](chatgpt.md)
+- [API Reference](../API.md)
+- [x402 Payments](../X402.md)
+
+## License
+
+Source-available: all rights reserved, see [LICENSE](https://github.com/nirholas/cryptocurrency.cv/blob/main/LICENSE). The hosted API and the hosted MCP endpoint are free to use.

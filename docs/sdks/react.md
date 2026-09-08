@@ -4,16 +4,24 @@ The React SDK provides hooks and components for building crypto news interfaces.
 
 ## Installation
 
+The React package is **not published to npm yet**. Use it from a clone of the
+repository, either by copying `sdk/react/src` into your app or by linking the
+workspace package:
+
 ```bash
-npm install @fcn/react
-# or
-yarn add @fcn/react
+git clone https://github.com/nirholas/cryptocurrency.cv.git
+cd cryptocurrency.cv/sdk/react
+npm install && npm run build
+npm link            # then `npm link @nirholas/react-crypto-news` in your app
 ```
+
+Imports below use `@nirholas/react-crypto-news`, the package's own name. If you
+copied the source in instead, point the import at your local path.
 
 ## Quick Start
 
 ```tsx
-import { CryptoNewsProvider, useNews, NewsFeed } from '@fcn/react';
+import { CryptoNewsProvider, useNews, NewsFeed } from '@nirholas/react-crypto-news';
 
 function App() {
   return (
@@ -31,7 +39,7 @@ function App() {
 Fetch news articles with automatic caching and refetching.
 
 ```tsx
-import { useNews } from '@fcn/react';
+import { useNews } from '@nirholas/react-crypto-news';
 
 function LatestNews() {
   const { articles, isLoading, error, refetch } = useNews({
@@ -63,7 +71,7 @@ function LatestNews() {
 Real-time market data with automatic updates.
 
 ```tsx
-import { useMarket } from '@fcn/react';
+import { useMarket } from '@nirholas/react-crypto-news';
 
 function MarketOverview() {
   const { data, isLoading } = useMarket({
@@ -92,7 +100,7 @@ function MarketOverview() {
 Fear & Greed Index with visualization support.
 
 ```tsx
-import { useFearGreed } from '@fcn/react';
+import { useFearGreed } from '@nirholas/react-crypto-news';
 
 function FearGreedGauge() {
   const { value, classification, isLoading } = useFearGreed();
@@ -121,7 +129,7 @@ function FearGreedGauge() {
 Search news with debouncing.
 
 ```tsx
-import { useSearch } from '@fcn/react';
+import { useSearch } from '@nirholas/react-crypto-news';
 import { useState } from 'react';
 
 function SearchNews() {
@@ -157,7 +165,7 @@ function SearchNews() {
 Pre-built news feed component with customization options.
 
 ```tsx
-import { NewsFeed } from '@fcn/react';
+import { NewsFeed } from '@nirholas/react-crypto-news';
 
 <NewsFeed
   limit={10}
@@ -176,7 +184,7 @@ import { NewsFeed } from '@fcn/react';
 Horizontal scrolling market ticker.
 
 ```tsx
-import { MarketTicker } from '@fcn/react';
+import { MarketTicker } from '@nirholas/react-crypto-news';
 
 <MarketTicker
   coins={['bitcoin', 'ethereum', 'solana']}
@@ -191,7 +199,7 @@ import { MarketTicker } from '@fcn/react';
 Breaking news alert banner.
 
 ```tsx
-import { BreakingBanner } from '@fcn/react';
+import { BreakingBanner } from '@nirholas/react-crypto-news';
 
 <BreakingBanner
   autoHide={10000} // Hide after 10 seconds
@@ -205,7 +213,7 @@ import { BreakingBanner } from '@fcn/react';
 Compact Fear & Greed display.
 
 ```tsx
-import { FearGreedWidget } from '@fcn/react';
+import { FearGreedWidget } from '@nirholas/react-crypto-news';
 
 <FearGreedWidget
   size="sm" // 'sm' | 'md' | 'lg'
@@ -217,7 +225,7 @@ import { FearGreedWidget } from '@fcn/react';
 ## Provider Configuration
 
 ```tsx
-import { CryptoNewsProvider } from '@fcn/react';
+import { CryptoNewsProvider } from '@nirholas/react-crypto-news';
 
 <CryptoNewsProvider
   config={{
@@ -261,7 +269,7 @@ import styles from './News.module.css';
 
 ```tsx
 import styled from 'styled-components';
-import { NewsFeed } from '@fcn/react';
+import { NewsFeed } from '@nirholas/react-crypto-news';
 
 const StyledFeed = styled(NewsFeed)`
   background: linear-gradient(135deg, #1a1a2e, #16213e);
@@ -274,16 +282,21 @@ const StyledFeed = styled(NewsFeed)`
 
 ## Server Components (Next.js 14+)
 
+The React package exports hooks and components, which are client-side. In a
+server component, call the REST API directly (or use the TypeScript SDK, which
+has no React dependency):
+
 ```tsx
 // app/news/page.tsx
-import { getNews } from '@fcn/react/server';
+import { CryptoNews } from '@nirholas/crypto-news';
 
 export default async function NewsPage() {
-  const news = await getNews({ limit: 10 });
-  
+  const client = new CryptoNews();
+  const articles = await client.getLatest(10);
+
   return (
     <ul>
-      {news.articles.map(article => (
+      {articles.map((article) => (
         <li key={article.link}>{article.title}</li>
       ))}
     </ul>

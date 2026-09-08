@@ -54,6 +54,18 @@ curl https://cryptocurrency.cv/api/news?limit=3
 ```
 
 > **That's it!** Every endpoint works the same way — just `GET` the URL and parse the JSON.
+> No browser `User-Agent` needed either: cURL, wget, HTTPie and AI agents
+> (GPTBot, ClaudeBot, PerplexityBot and friends) are all welcome callers.
+
+!!! note "Free tier returns at most 3 articles"
+    Without an API key, `/api/news` returns **3 articles** per request, with
+    full article bodies stripped and summaries truncated. The response says so
+    plainly: it carries `"limited": true`, `"maxResults": 3`, and a `pagination`
+    block describing what you actually received rather than the uncapped result
+    set. [Upgrade to Pro, or pay per request with x402](./PREMIUM.md) to lift the cap.
+
+    The site feeds are not capped: `/feed.xml` and `/feed.json` each publish 50
+    items, no key required.
 
 ### 2. Filter by Topic
 
@@ -76,14 +88,14 @@ curl https://cryptocurrency.cv/api/sentiment
 
 ### 3. Use an SDK
 
-Install an SDK to skip boilerplate. Available for [Python](./sdks/python.md), [JavaScript](./sdks/javascript.md), [TypeScript](./sdks/typescript.md), [React](./sdks/react.md), [Go](./sdks/go.md), [PHP](./sdks/php.md), [Ruby](./sdks/ruby.md), [Rust](./sdks/rust.md), [Java](../sdk/java/), [Kotlin](../sdk/kotlin/), [Swift](../sdk/swift/), [C#](../sdk/csharp/), and [R](../sdk/r/).
+Install an SDK to skip boilerplate. Available for [Python](./sdks/python.md), [JavaScript](./sdks/javascript.md), [TypeScript](./sdks/typescript.md), [React](./sdks/react.md), [Go](./sdks/go.md), [PHP](./sdks/php.md), [Ruby](./sdks/ruby.md), [Rust](./sdks/rust.md), [Java](https://github.com/nirholas/cryptocurrency.cv/tree/main/sdk/java), [Kotlin](https://github.com/nirholas/cryptocurrency.cv/tree/main/sdk/kotlin), [Swift](https://github.com/nirholas/cryptocurrency.cv/tree/main/sdk/swift), [C#](https://github.com/nirholas/cryptocurrency.cv/tree/main/sdk/csharp), and [R](https://github.com/nirholas/cryptocurrency.cv/tree/main/sdk/r).
 
-**Python:**
+**Python:** (from a clone: `pip install ./sdk/python`)
 ```python
-from cryptonews import CryptoNews
+from crypto_news import CryptoNewsClient
 
-news = CryptoNews()
-for article in news.get_latest(5):
+client = CryptoNewsClient()
+for article in client.get_news(limit=5)['articles']:
     print(f"{article['source']}: {article['title']}")
 ```
 
@@ -173,12 +185,20 @@ All API endpoints return standard HTTP status codes:
 Every response includes rate limit information:
 
 ```
-X-RateLimit-Limit: 100
-X-RateLimit-Remaining: 87  
-X-RateLimit-Reset: 1709312400
+X-RateLimit-Limit: 120
+X-RateLimit-Remaining: 87
+X-RateLimit-Reset: 2026-08-28T04:00:00.000Z
+X-RateLimit-Tier: free-tier
 ```
 
-The free tier allows **100 requests per 15 minutes** — no API key needed. For higher limits, [register for a free API key](./API-KEY-SIGNUP.md).
+`X-RateLimit-Reset` is an ISO 8601 timestamp, not a Unix epoch.
+
+Anonymous callers get **120 requests per hour per IP** on the free-tier routes
+(`/api/news*`, `/api/prices*`, `/api/sources*`, `/api/market*`, `/api/archive*`,
+`/api/rss*`, `/api/atom*`, `/api/fear-greed`, `/api/trending`, `/api/unlocks`
+and friends). Other routes are tighter: 20 requests/hour for a programmatic
+client, 10 for a browser. `/api/health` and `/api/version` are exempt entirely.
+For higher limits, [upgrade to a paid tier or pay per request with x402](./PREMIUM.md).
 
 ### Example: Handling Errors in Python
 
@@ -200,15 +220,28 @@ else:
 
 ---
 
-## onst { articles } = JSON.parse(event.data);
+### 4. Stream Real-Time Updates
+
+`/api/sse` is a Server-Sent Events stream. It needs no key and is exempt from
+rate limiting. Every event's `data` is a JSON object carrying an `articles`
+array and a `timestamp`.
+
+```javascript
+const eventSource = new EventSource('https://cryptocurrency.cv/api/sse');
+
+eventSource.addEventListener('news', (event) => {
+  const { articles } = JSON.parse(event.data);
   updateFeed(articles);
 });
 
 eventSource.addEventListener('breaking', (event) => {
-  const article = JSON.parse(event.data);
-  showBreakingAlert(article.title);
+  const { articles } = JSON.parse(event.data);
+  articles.forEach((a) => showBreakingAlert(a.title));
 });
 ```
+
+The stream also emits `connected` on open, `heartbeat` to keep the connection
+alive, `error` on an upstream failure, and `close` before shutting down.
 
 > See [Real-Time docs](./REALTIME.md) for WebSocket and push notification options.
 
@@ -311,14 +344,17 @@ ANTHROPIC_API_KEY=sk-ant-...  # Anthropic - Claude models
 ### Run Tests
 
 ```bash
-# Unit tests
-bun run test
+# Unit tests (vitest, watch mode)
+npm test
 
-# E2E tests
-bun run test:e2e
+# Unit tests, single run
+npm run test:run
 
-# All tests
-bun run test:all
+# Unit tests with coverage
+npm run test:coverage
+
+# E2E tests (Playwright)
+npm run test:e2e
 ```
 
 ### Build for Production

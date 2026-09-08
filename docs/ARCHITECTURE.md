@@ -93,9 +93,13 @@ archive/                         # Static JSON data store
 ├── snapshots/                   # Point-in-time snapshots
 └── YYYY/MM/DD/                  # Daily archives (2021–present)
 
-mcp/                             # Claude MCP server
-├── index.js                     # stdio transport (Claude Desktop)
-└── http-server.js               # HTTP/SSE transport (ChatGPT, etc.)
+mcp/                             # MCP server (TypeScript, builds to dist/)
+├── src/tools.ts                 # 55-tool registry, one entry per REST route
+├── src/resources.ts             # 6 MCP resources
+├── src/prompts.ts               # 3 MCP prompts
+├── src/index.ts                 # stdio transport (Claude Desktop, Cursor)
+└── src/http.ts                  # Streamable HTTP transport (self-hosting)
+                                 # hosted route lives at src/app/api/mcp/route.ts (47 tools)
 
 sdk/                             # Official SDKs (13 languages)
 ├── python/ , typescript/ , go/  # Tier 1 SDKs
@@ -155,7 +159,7 @@ In development it falls back to an in-memory LRU cache. In production it uses `K
 ## Data pipeline
 
 ```
-RSS / Atom feeds (200+ sources)
+RSS / Atom feeds (358 sources)
         │  archive scripts (scripts/)
         ▼
 archive/articles/*.json          (individual articles)
@@ -446,7 +450,7 @@ The standalone output (`next.config.js: output: 'standalone'`) produces a minima
 - [Scaling](SCALING.md) — caching tiers, edge runtime, load handling
 - [Database](DATABASE.md) — storage backends, Drizzle ORM, migrations
 - [Developer Guide](DEVELOPER-GUIDE.md) — component reference, extending the app
-- [API Reference](API.md) — endpoint catalogue (150+ endpoints)
+- [API Reference](API.md) — endpoint catalogue (394 endpoints)
 - [Deployment](DEPLOYMENT.md) — hosting options and configuration
 - [Real-Time](REALTIME.md) — SSE, WebSocket, push notifications
 - [Security](SECURITY.md) — security policy and reporting

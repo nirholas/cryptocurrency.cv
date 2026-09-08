@@ -1,15 +1,16 @@
 # News Sources
 
-Free Crypto News aggregates content from **200+ professional crypto and financial news sources** across 25 categories, in **18 languages**.
+Free Crypto News aggregates content from **358 professional crypto and financial news sources** across 30 categories, in **18 languages**.
+
+The catalog is public: `GET /api/sources` returns every one of them, with no key and no token. The numbers on this page come from `RSS_SOURCES` in `src/lib/crypto-news.ts`, which is the single source of truth.
 
 ## Source Statistics
 
 | Metric | Count |
 |--------|-------|
-| **English Sources** | 140+ |
+| **Total Sources** | 358 |
 | **International Sources** | 75 |
-| **Total Sources** | 215+ |
-| **Categories** | 25 |
+| **Categories** | 30 |
 | **Languages** | 18 |
 
 ---
@@ -389,6 +390,8 @@ News in 17 non-English languages:
 
 ### List All Sources
 
+Public. No API key, no token, no browser `User-Agent`: a plain `curl` is the intended way to call it.
+
 ```bash
 curl https://cryptocurrency.cv/api/sources
 ```
@@ -400,13 +403,34 @@ Response:
     {
       "key": "coindesk",
       "name": "CoinDesk",
-      "url": "https://coindesk.com",
+      "url": "https://www.coindesk.com/arc/outboundfeeds/rss/",
       "category": "general",
-      "language": "en"
+      "tier": "tier2",
+      "status": "unknown"
     }
   ],
-  "total": 225
+  "count": 358,
+  "statusChecked": false
 }
+```
+
+`status` is `"unknown"` and `statusChecked` is `false` because the catalog is
+returned without probing any feed.
+
+### Live Feed Status
+
+Only the live probe needs a token, because it fires a HEAD request at all 358 feeds:
+
+```bash
+curl "https://cryptocurrency.cv/api/sources?status=true&token=$SOURCES_TOKEN"
+```
+
+Without the token that variant answers `403 INVALID_TOKEN` and tells you to drop
+`?status=true`. For per-feed availability with no token at all, use the free
+health endpoint instead:
+
+```bash
+curl https://cryptocurrency.cv/api/sources/health
 ```
 
 ### Filter by Category
@@ -435,25 +459,41 @@ curl https://cryptocurrency.cv/api/news/international
 
 ## Source Categories
 
+Counts below are the number of sources carrying each `category` value in
+`RSS_SOURCES`, and sum to 358.
+
 | Category | Description | Count |
 |----------|-------------|-------|
-| `general` | General crypto news | 20 |
-| `defi` | DeFi protocols, yields | 12 |
-| `bitcoin` | Bitcoin ecosystem | 5 |
-| `ethereum` | Ethereum ecosystem | 4 |
-| `layer2` | L2 scaling solutions | 7 |
-| `altl1` | Alternative L1 chains | 7 |
-| `research` | Analysis, reports | 8 |
-| `institutional` | VCs, institutions | 8 |
-| `etf` | Asset managers, ETFs | 7 |
-| `mainstream` | Traditional finance media | 7 |
-| `trading` | Technical analysis | 6 |
-| `onchain` | On-chain data | 5 |
-| `security` | Audits, hacks | 6 |
-| `developer` | Dev tools, tech | 6 |
-| `mining` | Mining, energy | 3 |
-| `nft` | NFTs, gaming | 4 |
-| `stablecoin` | USDC, USDT | 2 |
+| `defi` | DeFi protocols, yields | 32 |
+| `general` | General crypto news | 31 |
+| `mainstream` | Traditional finance media | 24 |
+| `institutional` | VCs, funds, institutions | 21 |
+| `journalism` | Investigative and long-form reporting | 19 |
+| `altl1` | Alternative L1 chains | 18 |
+| `bitcoin` | Bitcoin ecosystem | 15 |
+| `layer2` | L2 scaling solutions | 15 |
+| `developer` | Dev tools, protocol engineering | 14 |
+| `geopolitical` | Policy, regulation, geopolitics | 14 |
+| `security` | Audits, hacks, incident reports | 13 |
+| `ethereum` | Ethereum ecosystem | 12 |
+| `derivatives` | Futures, options, perps | 12 |
+| `solana` | Solana ecosystem | 10 |
+| `trading` | Technical analysis | 9 |
+| `asia` | Asia-Pacific coverage | 9 |
+| `onchain` | On-chain data and analytics | 9 |
+| `macro` | Macroeconomics | 9 |
+| `nft` | NFTs and collectibles | 8 |
+| `gaming` | Crypto gaming and metaverse | 8 |
+| `etf` | Asset managers, ETFs | 8 |
+| `tradfi` | Traditional finance | 7 |
+| `depin` | DePIN and physical infrastructure | 7 |
+| `research` | Analysis, reports | 6 |
+| `mining` | Mining, energy | 6 |
+| `stablecoin` | USDC, USDT, and peg coverage | 6 |
+| `ai_crypto` | AI and crypto intersection | 6 |
+| `fintech` | Payments and fintech | 5 |
+| `social` | Social and community | 3 |
+| `quant` | Quantitative research | 2 |
 
 ---
 
@@ -479,7 +519,7 @@ const RSS_SOURCES = {
 ## Market Data Providers
 
 Beyond the news feeds above, the platform aggregates ~150 provider adapters under
-[`src/lib/providers/adapters/`](../src/lib/providers/adapters/). Each category is
+[`src/lib/providers/adapters/`](https://github.com/nirholas/cryptocurrency.cv/tree/main/src/lib/providers/adapters). Each category is
 a **fallback chain**: the first healthy provider wins, and the chain degrades
 through the rest so a single throttled/dead source never takes a feature down.
 
@@ -550,7 +590,7 @@ Frankfurter / exchangerate.host 🔓 (fiat FX) ➕
 ### Adding a keyless source
 
 1. Create `src/lib/providers/adapters/<category>/<name>.adapter.ts` implementing
-   `DataProvider<T>` (see [`coinlore.adapter.ts`](../src/lib/providers/adapters/market-price/coinlore.adapter.ts)
+   `DataProvider<T>` (see [`coinlore.adapter.ts`](https://github.com/nirholas/cryptocurrency.cv/blob/main/src/lib/providers/adapters/market-price/coinlore.adapter.ts)
    for a keyless template — `fetch`, `healthCheck`, `validate`).
 2. Register it in that category's `index.ts` chain with a `priority` (lower =
    tried first) and `weight` (consensus trust).

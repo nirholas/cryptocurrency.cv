@@ -1,12 +1,12 @@
 # Reference docs
 
-> Long-form material that used to live in the root README. Nothing was deleted in the README rewrite; it was moved here, one topic per file, with duplicate blocks collapsed and links repaired. Start with the [root README](../../README.md) for the overview, [docs/API.md](../API.md) for the API reference, and https://cryptocurrency.cv/developers for the interactive explorer.
+> Long-form material that used to live in the root README. Nothing was deleted in the README rewrite; it was moved here, one topic per file, with duplicate blocks collapsed and links repaired. Start with the [root README](https://github.com/nirholas/cryptocurrency.cv/blob/main/README.md) for the overview, [docs/API.md](../API.md) for the API reference, and https://cryptocurrency.cv/developers for the interactive explorer.
 
 | File | Covers |
 | ---- | ------ |
 | [Historical Archive](archive.md) | The 662,047-article dataset, archive API parameters, Archive v2 pipeline, JSONL layout, enriched schema |
 | [News Sources](international-sources.md) | English and international outlets, source tiers, homepage feed, translation endpoints |
-| [API Endpoints](endpoints.md) | Complete 450+ route catalog grouped by area, response format, AI endpoint examples |
+| [API Endpoints](endpoints.md) | The 394-route catalog grouped by area, response format, AI endpoint examples |
 | [Web App Pages](pages.md) | Every page of the web app, grouped by area |
 | [Progressive Web App](pwa.md) | Install, offline mode, keyboard shortcuts |
 | [SDKs, Components and Query Parameters](sdks-and-components.md) | Component inventory, SDK table, full query-parameter reference |

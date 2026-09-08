@@ -115,33 +115,44 @@ Free Crypto News provides comprehensive AI-powered features for deeper news anal
 
 The AI system supports multiple providers (priority order):
 
-| Provider | Model | API Key Env |
-|----------|-------|-------------|
-| OpenAI | gpt-4o-mini | `OPENAI_API_KEY` |
-| Anthropic | claude-3-haiku | `ANTHROPIC_API_KEY` |
-| Groq | mixtral-8x7b | `GROQ_API_KEY` |
-| OpenRouter | llama-3-8b | `OPENROUTER_API_KEY` |
+Every model name is configurable per deployment. The `*_MODEL` variables below
+are optional; the fallback shown is what `src/lib/ai-models.ts` uses when the
+variable is unset.
+
+| Provider | API Key Env | Model Env | Fallback model |
+|----------|-------------|-----------|----------------|
+| OpenAI | `OPENAI_API_KEY` | `OPENAI_MODEL` | `gpt-4o` |
+| Anthropic | `ANTHROPIC_API_KEY` | `ANTHROPIC_MODEL` | `claude-3-5-sonnet-20241022` |
+| Groq | `GROQ_API_KEY` | `GROQ_MODEL`, `GROQ_FAST_MODEL` | `qwen/qwen3.8-27b` |
+| OpenRouter | `OPENROUTER_API_KEY` | `OPENROUTER_MODEL` | `meta-llama/llama-3.3-70b-instruct` |
+| Gemini | `GEMINI_API_KEY` | `GEMINI_MODEL` | `gemini-2.0-flash` |
 
 ### Environment Variables
 
 ```env
-# Choose ONE provider (first available is used)
+# Choose ONE provider (first available is used).
+# Every *_MODEL line is optional: omit it to take the fallback above.
 
-# Option 1: OpenAI (recommended)
+# Option 1: OpenAI
 OPENAI_API_KEY=sk-...
-OPENAI_MODEL=gpt-4o-mini  # optional, default shown
+OPENAI_MODEL=gpt-4o
 
 # Option 2: Anthropic
 ANTHROPIC_API_KEY=sk-ant-...
-ANTHROPIC_MODEL=claude-3-haiku-20240307
+ANTHROPIC_MODEL=claude-3-5-sonnet-20241022
 
 # Option 3: Groq (free tier available)
 GROQ_API_KEY=gsk_...
-GROQ_MODEL=mixtral-8x7b-32768
+GROQ_MODEL=qwen/qwen3.8-27b
+GROQ_FAST_MODEL=qwen/qwen3.8-27b   # high-volume work: enrichment, translation
 
 # Option 4: OpenRouter (many models)
 OPENROUTER_API_KEY=sk-or-...
-OPENROUTER_MODEL=meta-llama/llama-3-8b-instruct
+OPENROUTER_MODEL=meta-llama/llama-3.3-70b-instruct
+
+# Option 5: Google Gemini
+GEMINI_API_KEY=...
+GEMINI_MODEL=gemini-2.0-flash
 ```
 
 ### Check Configuration
@@ -156,7 +167,7 @@ Response:
   "configured": true,
   "provider": {
     "provider": "openai",
-    "model": "gpt-4o-mini"
+    "model": "gpt-4o"
   },
   "availableActions": [
     "summarize",
@@ -198,7 +209,7 @@ Response:
   "action": "summarize",
   "provider": {
     "provider": "openai",
-    "model": "gpt-4o-mini"
+    "model": "gpt-4o"
   },
   "result": "..."
 }
@@ -1237,7 +1248,7 @@ curl "https://cryptocurrency.cv/api/ai/cross-lingual"
 |--------|-----------|---------|
 | Asia | Korean, Chinese, Japanese | 25+ sources |
 | Europe | German, French, Italian, Spanish | 15+ sources |
-| Anglosphere | English | 130+ sources |
+| Anglosphere | English | 280+ sources |
 
 ---
 
@@ -2026,9 +2037,31 @@ Translate news content to 18 languages.
 
 ## Provider Comparison
 
-| Provider | Model | Speed | Quality | Cost | Best For |
-|----------|-------|-------|---------|------|----------|
-| **Groq** | llama-3.3-70b | ⚡⚡⚡ | ⭐⭐⭐⭐ | FREE | Development, high-volume |
-| **OpenAI** | gpt-4o-mini | ⚡⚡ | ⭐⭐⭐⭐⭐ | $0.15/1M | Production, best quality |
-| **Anthropic** | claude-3-haiku | ⚡⚡ | ⭐⭐⭐⭐ | $0.25/1M | Privacy-focused |
-| **OpenRouter** | Various | ⚡⚡ | ⭐⭐⭐ | Varies | Model flexibility |
+Model names are **deployment configuration, not constants**. Every provider
+reads an environment variable first and falls back to a model verified against
+the live account. All of them live in one module, `src/lib/ai-models.ts`, so a
+provider retiring a model is one env var away from fixed instead of a dozen
+edits.
+
+| Provider | Env var | Fallback default | Speed | Cost | Best For |
+|----------|---------|------------------|-------|------|----------|
+| **Groq** | `GROQ_MODEL` (and `GROQ_FAST_MODEL`) | `qwen/qwen3.8-27b` | ⚡⚡⚡ | FREE | Development, high-volume |
+| **OpenAI** | `OPENAI_MODEL` | `gpt-4o` | ⚡⚡ | Paid | Production, best quality |
+| **Anthropic** | `ANTHROPIC_MODEL` | `claude-3-5-sonnet-20241022` | ⚡⚡ | Paid | Long-context reasoning |
+| **OpenRouter** | `OPENROUTER_MODEL` | `meta-llama/llama-3.3-70b-instruct` | ⚡⚡ | Varies | Model flexibility |
+| **Gemini** | `GEMINI_MODEL` | `gemini-2.0-flash` | ⚡⚡⚡ | Varies | Multimodal, long context |
+
+### Groq model fallback chain
+
+Groq retires models without notice. When it does, the request falls through to
+the next model in the chain instead of failing, and the retired model is
+remembered for the life of the process so it is not retried:
+
+```
+$GROQ_MODEL  →  qwen/qwen3.8-27b  →  openai/gpt-oss-120b
+             →  openai/gpt-oss-20b  →  groq/compound-mini
+```
+
+Set `GROQ_MODEL` to pin a model; it is tried first. Only a
+`model_not_found` / `model_decommissioned` response falls through. A genuine
+request error still surfaces as an error. See `src/lib/groq.ts`.

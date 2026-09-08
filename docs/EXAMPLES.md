@@ -941,7 +941,7 @@ Copy-paste requests that need no key. Every one of them works against the hosted
 ```bash
 # Latest news, Bitcoin sentiment, search, translated international news
 curl "https://cryptocurrency.cv/api/news?limit=10"
-curl "https://cryptocurrency.cv/api/ai/sentiment?asset=BTC"
+curl "https://cryptocurrency.cv/api/sentiment?asset=BTC"
 curl "https://cryptocurrency.cv/api/search?q=ethereum%20upgrade"
 curl "https://cryptocurrency.cv/api/news/international?language=ko&translate=true"
 
@@ -976,10 +976,10 @@ All examples are available as runnable files:
 
 | Language | Directory | Files |
 |----------|-----------|-------|
-| Python | [`examples/python/`](../examples/python/) | `news.py`, `ai.py`, `market.py`, `trading.py`, `social.py`, `blockchain.py`, `regulatory.py`, `analytics.py`, `portfolio.py`, `premium.py`, `feeds.py` |
-| JavaScript | [`examples/javascript/`](../examples/javascript/) | `news.js`, `ai.js`, `market.js`, `trading.js`, `streaming.js` |
-| Go | [`examples/go/`](../examples/go/) | `client.go` |
-| cURL | [`examples/curl/`](../examples/curl/) | `all-endpoints.sh` |
+| Python | [`examples/python/`](https://github.com/nirholas/cryptocurrency.cv/tree/main/examples/python) | `news.py`, `ai.py`, `market.py`, `trading.py`, `social.py`, `blockchain.py`, `regulatory.py`, `analytics.py`, `portfolio.py`, `premium.py`, `feeds.py` |
+| JavaScript | [`examples/javascript/`](https://github.com/nirholas/cryptocurrency.cv/tree/main/examples/javascript) | `news.js`, `ai.js`, `market.js`, `trading.js`, `streaming.js` |
+| Go | [`examples/go/`](https://github.com/nirholas/cryptocurrency.cv/tree/main/examples/go) | `client.go` |
+| cURL | [`examples/curl/`](https://github.com/nirholas/cryptocurrency.cv/tree/main/examples/curl) | `all-endpoints.sh` |
 
 ### Run Examples
 
@@ -1011,16 +1011,18 @@ chmod +x all-endpoints.sh
 
 Official SDKs for quick integration:
 
+Only the TypeScript/JavaScript SDK is published to a package registry. The rest
+install from a clone of the repository.
+
 | SDK | Install | Docs |
 |-----|---------|------|
-| **Python** | `pip install ./sdk/python` (from a clone; not on PyPI yet) | [Python SDK](./sdks/python.md) |
-| **JavaScript** | `npm install free-crypto-news` | [JS SDK](./sdks/javascript.md) |
-| **TypeScript** | Full type definitions included | [TS SDK](./sdks/typescript.md) |
-| **React** | `npm install @free-crypto-news/react` | [React SDK](./sdks/react.md) |
+| **TypeScript / JavaScript** | `npm install @nirholas/crypto-news` | [TS SDK](./sdks/typescript.md), [JS SDK](./sdks/javascript.md) |
 | **Go** | `go get github.com/nirholas/cryptocurrency.cv/sdk/go` | [Go SDK](./sdks/go.md) |
-| **PHP** | Composer package | [PHP SDK](./sdks/php.md) |
-| **Ruby** | Gem package | [Ruby SDK](./sdks/ruby.md) |
-| **Rust** | Cargo crate | [Rust SDK](./sdks/rust.md) |
+| **Python** | `pip install ./sdk/python` from a clone (not on PyPI yet) | [Python SDK](./sdks/python.md) |
+| **React** | build and `npm link` `sdk/react` from a clone (not on npm yet) | [React SDK](./sdks/react.md) |
+| **PHP** | `composer install` in `sdk/php` from a clone (not on Packagist yet) | [PHP SDK](./sdks/php.md) |
+| **Ruby** | `gem build fcn-sdk.gemspec` in `sdk/ruby` from a clone (not on RubyGems yet) | [Ruby SDK](./sdks/ruby.md) |
+| **Rust** | git dependency on the repo (not on crates.io yet) | [Rust SDK](./sdks/rust.md) |
 
 ---
 

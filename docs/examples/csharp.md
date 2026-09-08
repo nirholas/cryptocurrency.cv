@@ -171,7 +171,7 @@ public class CryptoNewsClient : IDisposable
     public async Task<SentimentResponse?> GetSentimentAsync(string asset)
     {
         return await _client.GetFromJsonAsync<SentimentResponse>(
-            $"{_baseUrl}/api/ai/sentiment?asset={asset}", _jsonOptions);
+            $"{_baseUrl}/api/sentiment?asset={asset}", _jsonOptions);
     }
 
     public async Task<List<TrendingTopic>> GetTrendingAsync(int limit = 10)

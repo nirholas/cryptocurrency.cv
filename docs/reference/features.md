@@ -2,27 +2,40 @@
 
 > Blog, the CryptoNewsOracle smart contract, RSS output, health checks, interactive docs, webhooks, trending analytics, the failsafe mirror, original source finder, web push, and embeddable widgets.
 >
-> Moved here from the project README. Back to the [reference index](../../README.md).
+> Moved here from the project README. Back to the [reference index](https://github.com/nirholas/cryptocurrency.cv/blob/main/README.md).
 
 ## 📝 Blog
 
-11 educational articles at [`/blog`](https://cryptocurrency.cv/blog):
+**146 posts**, each with its own page at `/blog/<slug>`, indexed at
+[`/blog`](https://cryptocurrency.cv/blog) and browsable by category at
+`/blog/category/<category>`.
 
-| Article | Topic |
-|---------|-------|
-| What is Bitcoin? | Bitcoin fundamentals |
-| What is Ethereum? | Ethereum & smart contracts |
-| Introduction to DeFi | Decentralized finance primer |
-| Crypto Trading Strategies | Technical & fundamental analysis |
-| Crypto Wallet Guide | Hot, cold, hardware wallets |
-| Security Best Practices | Protecting your crypto |
-| Layer 2 Scaling Solutions | Rollups, sidechains, channels |
-| Understanding Stablecoins | USDC, USDT, DAI, algorithmic |
-| NFT Guide | Non-fungible tokens explained |
-| Airdrop Guide | Finding and claiming airdrops |
-| How to Buy Crypto | Step-by-step purchasing guide |
+| Category | Route | Posts |
+|----------|-------|-------|
+| Tutorials | [`/blog/category/tutorials`](https://cryptocurrency.cv/blog/category/tutorials) | 40 |
+| Guides | [`/blog/category/guides`](https://cryptocurrency.cv/blog/category/guides) | 28 |
+| DeFi | [`/blog/category/defi`](https://cryptocurrency.cv/blog/category/defi) | 15 |
+| Research | [`/blog/category/research`](https://cryptocurrency.cv/blog/category/research) | 12 |
+| Altcoins | [`/blog/category/altcoins`](https://cryptocurrency.cv/blog/category/altcoins) | 11 |
+| Security | [`/blog/category/security`](https://cryptocurrency.cv/blog/category/security) | 9 |
+| Bitcoin | [`/blog/category/bitcoin`](https://cryptocurrency.cv/blog/category/bitcoin) | 8 |
+| Ethereum | [`/blog/category/ethereum`](https://cryptocurrency.cv/blog/category/ethereum) | 8 |
+| Analysis | [`/blog/category/analysis`](https://cryptocurrency.cv/blog/category/analysis) | 8 |
+| Trading | [`/blog/category/trading`](https://cryptocurrency.cv/blog/category/trading) | 7 |
 
-Blog content lives in [`/content/blog/`](../../content/blog) as Markdown files.
+Only categories with at least one post get a page, so the index never links to
+an empty category. Every post slug and every active category page is emitted
+into the sitemap, and the blog has its own feed at `/blog/feed.xml`.
+
+Posts are Markdown files in
+[`/content/blog/`](https://github.com/nirholas/cryptocurrency.cv/tree/main/content/blog);
+front matter drives the title, date, category and tags. Adding a file adds a
+page, a category entry and a sitemap row with no code change.
+
+Routing: `src/app/[locale]/blog/page.tsx` (index),
+`src/app/[locale]/blog/[slug]/page.tsx` (post),
+`src/app/[locale]/blog/category/[category]/page.tsx` (category), with the
+loader in `src/lib/blog.ts`.
 
 ---
 
@@ -50,7 +63,7 @@ oracle.requestFullData();
 - Breaking news count
 - Last update timestamp
 
-See [`/contracts/CryptoNewsOracle.sol`](../../contracts/CryptoNewsOracle.sol) for the full implementation.
+See [`/contracts/CryptoNewsOracle.sol`](https://github.com/nirholas/cryptocurrency.cv/blob/main/contracts/CryptoNewsOracle.sol) for the full implementation.
 
 ---
 
@@ -64,7 +77,7 @@ PRs welcome! Ideas:
 - [x] ~~WebSocket real-time feed~~ ✅ Done
 - [x] ~~Configurable alert system~~ ✅ Done
 - [x] Rust / Ruby SDKs ✅
-- [x] ~~Mobile app (React Native)~~ ✅ Done - See [mobile/](../../mobile)
+- [x] ~~Mobile app (React Native)~~ ✅ Done - See [mobile/](https://github.com/nirholas/cryptocurrency.cv/tree/main/mobile)
 
 ---
 
@@ -288,5 +301,5 @@ await fetch("https://cryptocurrency.cv/api/push", {
 <script src="https://nirholas.github.io/cryptocurrency.cv/widget/carousel.js"></script>
 ```
 
-See full widget examples in [`/widget`](../../widget)
+See full widget examples in [`/widget`](https://github.com/nirholas/cryptocurrency.cv/tree/main/widget)
 

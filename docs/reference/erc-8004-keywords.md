@@ -2,7 +2,7 @@
 
 > Keyword list for the ERC-8004 Trustless Agents ecosystem, kept out of the README so the front page stays readable.
 >
-> Moved here from the project README. Back to the [reference index](../../README.md).
+> Moved here from the project README. Back to the [reference index](https://github.com/nirholas/cryptocurrency.cv/blob/main/README.md).
 
 > Comprehensive keyword list for ERC-8004 Trustless Agents ecosystem
 

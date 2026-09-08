@@ -1,8 +1,8 @@
 # API Endpoints
 
-> The complete endpoint list (450+ routes) grouped by area, the JSON response format, and worked examples for the AI endpoints. The interactive version lives at https://cryptocurrency.cv/developers and the narrative reference is [docs/API.md](../API.md).
+> The complete endpoint list (394 routes) grouped by area, the JSON response format, and worked examples for the AI endpoints. The interactive version lives at https://cryptocurrency.cv/developers and the narrative reference is [docs/API.md](../API.md).
 >
-> Moved here from the project README. Back to the [reference index](../../README.md).
+> Moved here from the project README. Back to the [reference index](https://github.com/nirholas/cryptocurrency.cv/blob/main/README.md).
 
 ## Endpoints
 
@@ -174,10 +174,15 @@ curl "https://cryptocurrency.cv/api/bitcoin?lang=zh-CN"
 
 **Supported AI Providers (priority order):**
 
-1. **OpenAI** - `OPENAI_API_KEY` (gpt-4o-mini default)
-2. **Anthropic** - `ANTHROPIC_API_KEY` (claude-3-haiku default)
-3. **Groq** - `GROQ_API_KEY` (llama-3.3-70b-versatile default) ⭐ FREE
-4. **OpenRouter** - `OPENROUTER_API_KEY` (llama-3-8b-instruct default)
+1. **OpenAI** - `OPENAI_API_KEY`, model via `OPENAI_MODEL` (falls back to `gpt-4o`)
+2. **Anthropic** - `ANTHROPIC_API_KEY`, model via `ANTHROPIC_MODEL` (falls back to `claude-3-5-sonnet-20241022`)
+3. **Groq** - `GROQ_API_KEY`, model via `GROQ_MODEL` (falls back to `qwen/qwen3.8-27b`) ⭐ FREE
+4. **OpenRouter** - `OPENROUTER_API_KEY`, model via `OPENROUTER_MODEL` (falls back to `meta-llama/llama-3.3-70b-instruct`)
+5. **Gemini** - `GEMINI_API_KEY`, model via `GEMINI_MODEL` (falls back to `gemini-2.0-flash`)
+
+Model names are configuration, not constants: they all live in
+`src/lib/ai-models.ts` and are overridable per deployment. Groq additionally
+walks a fallback chain when a model is decommissioned mid-flight.
 
 ### 🧠 RAG System (Retrieval-Augmented Generation)
 

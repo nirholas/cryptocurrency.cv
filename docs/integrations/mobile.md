@@ -283,7 +283,7 @@ const CryptoDarkTheme = {
 | `/api/breaking` | Home |
 | `/api/trending` | Home |
 | `/api/search` | Search |
-| `/api/ai/sentiment` | Home |
+| `/api/sentiment` | Home |
 | `/api/market/fear-greed` | Home, Markets |
 | `/api/market/coins` | Markets |
 
@@ -296,4 +296,4 @@ const CryptoDarkTheme = {
 
 ## License
 
-Source-available, all rights reserved; the hosted API is free to use. See [LICENSE](../../LICENSE).
+Source-available, all rights reserved; the hosted API is free to use. See [LICENSE](https://github.com/nirholas/cryptocurrency.cv/blob/main/LICENSE).

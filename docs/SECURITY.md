@@ -1,6 +1,6 @@
 # Security Policy
 
-> This is the detailed security architecture and policy document. The short, GitHub-recognized policy (supported versions, how to report) is the root [SECURITY.md](../SECURITY.md); both point at the same advisory process.
+> This is the detailed security architecture and policy document. The short, GitHub-recognized policy (supported versions, how to report) is the root [SECURITY.md](https://github.com/nirholas/cryptocurrency.cv/blob/main/SECURITY.md); both point at the same advisory process.
 
 ## Supported Versions
 

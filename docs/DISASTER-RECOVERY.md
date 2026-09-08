@@ -178,7 +178,7 @@ The full backup system (`scripts/backup-full.sh`) captures three critical compon
 4. Restore all components: `./scripts/restore-full.sh --latest`
 5. Run database migrations: `bun run db:migrate`
 6. Deploy application: `bun run build && bun run start`
-7. Verify all endpoints: `bun run test:api`
+7. Verify all endpoints: `npm run test:e2e -- e2e/api.spec.ts`
 8. Update DNS if needed
 9. Monitor for 1 hour
 

@@ -117,7 +117,7 @@ impl CryptoNewsClient {
 
     /// Get sentiment for an asset
     pub async fn get_sentiment(&self, asset: &str) -> Result<Sentiment> {
-        let url = format!("{}/api/ai/sentiment?asset={}", self.base_url, asset);
+        let url = format!("{}/api/sentiment?asset={}", self.base_url, asset);
         
         let response = self.client
             .get(&url)

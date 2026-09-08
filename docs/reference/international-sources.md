@@ -2,7 +2,7 @@
 
 > The full list of English and international news sources the API aggregates, the source tier system, the curated homepage feed, and the international/translation endpoints.
 >
-> Moved here from the project README. Back to the [reference index](../../README.md).
+> Moved here from the project README. Back to the [reference index](https://github.com/nirholas/cryptocurrency.cv/blob/main/README.md).
 
 ## 🌍 International News Sources
 
@@ -47,7 +47,7 @@ Get crypto news from **75 international sources** across 18 languages — with a
 curl "https://cryptocurrency.cv/api/news?limit=10"
 
 # Get Bitcoin sentiment
-curl "https://cryptocurrency.cv/api/ai/sentiment?asset=BTC"
+curl "https://cryptocurrency.cv/api/sentiment?asset=BTC"
 
 # Search articles
 curl "https://cryptocurrency.cv/api/search?q=ethereum%20upgrade"
@@ -68,7 +68,7 @@ for article in news["articles"]:
     print(f"• {article['title']} ({article['source']})")
 
 # Get Bitcoin sentiment analysis
-sentiment = requests.get(f"{BASE_URL}/api/ai/sentiment?asset=BTC").json()
+sentiment = requests.get(f"{BASE_URL}/api/sentiment?asset=BTC").json()
 print(f"BTC Sentiment: {sentiment['label']} ({sentiment['score']:.2f})")
 
 # Get Fear & Greed Index
@@ -104,7 +104,7 @@ const answer = await fetch(`${BASE_URL}/api/ask?q=What's happening with Bitcoin?
 console.log(answer.response);
 ```
 
-📚 **[Full Tutorials & Examples](../tutorials/index.md)** — 19 comprehensive guides covering 150+ endpoints with complete working code.
+📚 **[Full Tutorials & Examples](../tutorials/index.md)** — 19 comprehensive guides covering the 394-endpoint API with complete working code.
 
 ### Features
 

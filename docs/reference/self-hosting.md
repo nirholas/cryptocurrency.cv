@@ -2,7 +2,7 @@
 
 > Deploying your own instance: one-click Vercel, manual install, every environment variable, Kubernetes, the observability stack, the docs site, Storybook, Inngest background jobs, and chaos/load testing. Google Cloud Run is covered in [docs/DEPLOY-GCP.md](../DEPLOY-GCP.md).
 >
-> Moved here from the project README. Back to the [reference index](../../README.md).
+> Moved here from the project README. Back to the [reference index](https://github.com/nirholas/cryptocurrency.cv/blob/main/README.md).
 
 ## One-Click Deploy
 
@@ -170,7 +170,7 @@ helm upgrade free-crypto-news ./infra/helm/free-crypto-news \
 | **Resource Limits** | CPU/memory requests & limits |
 | **Health Checks** | Liveness & readiness probes |
 
-See [`/infra/helm/`](../../infra) for the full Helm chart.
+See [`/infra/helm/`](https://github.com/nirholas/cryptocurrency.cv/tree/main/infra) for the full Helm chart.
 
 ### Docker Compose
 

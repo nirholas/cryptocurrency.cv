@@ -1,8 +1,8 @@
 # SDKs, Components and Query Parameters
 
-> Component and library inventory of the web app, the SDK tables, and the full query-parameter reference for every endpoint. Runnable client samples in 12 languages live in [examples/](../../examples/).
+> Component and library inventory of the web app, the SDK tables, and the full query-parameter reference for every endpoint. Runnable client samples in 12 languages live in [examples/](https://github.com/nirholas/cryptocurrency.cv/tree/main/examples).
 >
-> Moved here from the project README. Back to the [reference index](../../README.md).
+> Moved here from the project README. Back to the [reference index](https://github.com/nirholas/cryptocurrency.cv/blob/main/README.md).
 
 ## SDKs & Components
 
@@ -38,14 +38,14 @@
 
 | Package                             | Description                             | Version |
 | ----------------------------------- | --------------------------------------- | ------- |
-| [React](../../sdk/react)                 | `<CryptoNews />` drop-in components     | v0.1.0  |
-| [TypeScript](../../sdk/typescript)       | Full TypeScript SDK with type safety    | v0.1.0  |
-| [Python](../../sdk/python)               | Zero-dependency Python client           | v0.1.0  |
-| [JavaScript](../../sdk/javascript)       | Browser & Node.js SDK                   | v0.1.0  |
-| [Go](../../sdk/go)                       | Go client library                       | v0.1.0  |
-| [PHP](../../sdk/php)                     | PHP SDK                                 | v0.1.0  |
-| [Ruby](../../sdk/ruby)                   | Ruby gem with async support             | v0.2.0  |
-| [Rust](../../sdk/rust)                   | Rust crate with async/sync clients      | v0.2.0  |
+| [React](https://github.com/nirholas/cryptocurrency.cv/tree/main/sdk/react)                 | `<CryptoNews />` drop-in components     | v0.1.0  |
+| [TypeScript](https://github.com/nirholas/cryptocurrency.cv/tree/main/sdk/typescript)       | Full TypeScript SDK with type safety    | v0.1.0  |
+| [Python](https://github.com/nirholas/cryptocurrency.cv/tree/main/sdk/python)               | Zero-dependency Python client           | v0.1.0  |
+| [JavaScript](https://github.com/nirholas/cryptocurrency.cv/tree/main/sdk/javascript)       | Browser & Node.js SDK                   | v0.1.0  |
+| [Go](https://github.com/nirholas/cryptocurrency.cv/tree/main/sdk/go)                       | Go client library                       | v0.1.0  |
+| [PHP](https://github.com/nirholas/cryptocurrency.cv/tree/main/sdk/php)                     | PHP SDK                                 | v0.1.0  |
+| [Ruby](https://github.com/nirholas/cryptocurrency.cv/tree/main/sdk/ruby)                   | Ruby gem with async support             | v0.2.0  |
+| [Rust](https://github.com/nirholas/cryptocurrency.cv/tree/main/sdk/rust)                   | Rust crate with async/sync clients      | v0.2.0  |
 | [UI Components](../COMPONENTS.md) | Internal navigation & search components | -       |
 
 ### 🔌 Platform Integrations
@@ -54,14 +54,14 @@
 
 | Integration                    | Description                               | Documentation                           | Status          |
 | ------------------------------ | ----------------------------------------- | --------------------------------------- | --------------- |
-| [ChatGPT](../../chatgpt)            | Custom GPT with OpenAPI schema            | [Guide](../integrations/chatgpt.md)   | ✅ Production   |
-| [MCP Server](../../mcp)             | Model Context Protocol (stdio + HTTP/SSE) | [Guide](../integrations/mcp.md)       | ✅ Production   |
-| [Chrome Extension](../../extension) | Browser extension (Manifest V3)           | [Guide](../integrations/extension.md) | ✅ Chrome Ready |
-| [Alfred Workflow](../../alfred)     | macOS Alfred 4+ integration               | [Guide](../integrations/alfred.md)    | ✅ Production   |
-| [Raycast](../../raycast)            | Raycast extension (6 commands)            | [Guide](../integrations/raycast.md)   | ✅ Production   |
-| [Widgets](../../widget)             | 3 embeddable widget types                 | [Guide](../integrations/widgets.md)   | ✅ Production   |
-| [CLI](../../cli)                    | Command-line interface                    | [README](../../cli/README.md)                 | ✅ Production   |
-| [Postman](../../postman)            | Postman collection (182 endpoints)        | [README](../../postman/README.md)             | ✅ Complete     |
+| [ChatGPT](https://github.com/nirholas/cryptocurrency.cv/tree/main/chatgpt)            | Custom GPT with OpenAPI schema            | [Guide](../integrations/chatgpt.md)   | ✅ Production   |
+| [MCP Server](https://github.com/nirholas/cryptocurrency.cv/tree/main/mcp)             | Model Context Protocol (stdio + HTTP/SSE) | [Guide](../integrations/mcp.md)       | ✅ Production   |
+| [Chrome Extension](https://github.com/nirholas/cryptocurrency.cv/tree/main/extension) | Browser extension (Manifest V3)           | [Guide](../integrations/extension.md) | ✅ Chrome Ready |
+| [Alfred Workflow](https://github.com/nirholas/cryptocurrency.cv/tree/main/alfred)     | macOS Alfred 4+ integration               | [Guide](../integrations/alfred.md)    | ✅ Production   |
+| [Raycast](https://github.com/nirholas/cryptocurrency.cv/tree/main/raycast)            | Raycast extension (6 commands)            | [Guide](../integrations/raycast.md)   | ✅ Production   |
+| [Widgets](https://github.com/nirholas/cryptocurrency.cv/tree/main/widget)             | 3 embeddable widget types                 | [Guide](../integrations/widgets.md)   | ✅ Production   |
+| [CLI](https://github.com/nirholas/cryptocurrency.cv/tree/main/cli)                    | Command-line interface                    | [README](https://github.com/nirholas/cryptocurrency.cv/blob/main/cli/README.md)                 | ✅ Production   |
+| [Postman](https://github.com/nirholas/cryptocurrency.cv/tree/main/postman)            | Postman collection (105 requests)         | [README](https://github.com/nirholas/cryptocurrency.cv/blob/main/postman/README.md)             | ✅ Complete     |
 
 **Widget Types:**
 
@@ -238,7 +238,7 @@ curl -X POST https://cryptocurrency.cv/api/academic \
 | `scale-to-1m` | Scale the system to 1M+ requests/day |
 | `add-data-sources` | Add new RSS/API data sources |
 
-Skills are located in [`/skills/`](../../skills) and can be loaded by AI coding agents for autonomous development tasks.
+Skills are located in [`/skills/`](https://github.com/nirholas/cryptocurrency.cv/tree/main/skills) and can be loaded by AI coding agents for autonomous development tasks.
 
 ### 🖥️ GitHub Copilot Extension
 
@@ -255,7 +255,7 @@ Crypto news directly in your VS Code editor via Copilot Chat:
 
 Also supports natural language queries: *"@crypto-news What's happening with Ethereum?"*
 
-Install from the VS Code Marketplace or build from source: [`/copilot-extension/`](../../copilot-extension)
+Install from the VS Code Marketplace or build from source: [`/copilot-extension/`](https://github.com/nirholas/cryptocurrency.cv/tree/main/copilot-extension)
 
 ### 🖥️ Terminal Dashboard
 
@@ -276,7 +276,7 @@ API_URL=http://localhost:3000 node terminal/dashboard.js
 - Multiple view modes (all news, breaking only, by source)
 - Works over SSH — perfect for headless servers
 
-See [`/terminal/`](../../terminal) for details.
+See [`/terminal/`](https://github.com/nirholas/cryptocurrency.cv/tree/main/terminal) for details.
 
 ---
 
@@ -319,7 +319,7 @@ curl -N -X POST /api/rag/stream -d '{"query": "Why did crypto crash?"}'
 curl -X POST /api/rag/search -d '{"query": "DeFi hacks", "limit": 10}'
 ```
 
-📚 **[Full RAG Documentation](../../src/lib/rag/README.md)** — Architecture, API reference, configuration, and advanced features.
+📚 **[Full RAG Documentation](https://github.com/nirholas/cryptocurrency.cv/blob/main/src/lib/rag/README.md)** — Architecture, API reference, configuration, and advanced features.
 
 ### 🚀 Code Examples & SDKs (200+ Examples)
 
@@ -327,11 +327,11 @@ Complete examples for all 184 API endpoints across 5 languages:
 
 | Language | Files | Functions | Description |
 |----------|-------|-----------|-------------|
-| [Python](../../examples/python) | 12 files | 150+ | Full SDK with all endpoints |
-| [JavaScript](../../examples/javascript) | 11 files | 120+ | Node.js & browser examples |
-| [TypeScript](../../examples/typescript) | 3 files | 80+ | Type-safe SDK |
-| [Go](../../examples/go) | 1 file | 60+ | Go client library |
-| [cURL](../../examples/curl) | 1 file | 100+ | Shell script examples |
+| [Python](https://github.com/nirholas/cryptocurrency.cv/tree/main/examples/python) | 12 files | 150+ | Full SDK with all endpoints |
+| [JavaScript](https://github.com/nirholas/cryptocurrency.cv/tree/main/examples/javascript) | 11 files | 120+ | Node.js & browser examples |
+| [TypeScript](https://github.com/nirholas/cryptocurrency.cv/tree/main/examples/typescript) | 3 files | 80+ | Type-safe SDK |
+| [Go](https://github.com/nirholas/cryptocurrency.cv/tree/main/examples/go) | 1 file | 60+ | Go client library |
+| [cURL](https://github.com/nirholas/cryptocurrency.cv/tree/main/examples/curl) | 1 file | 100+ | Shell script examples |
 
 **Python Example Files:**
 - `news.py` - News feeds, search, categories (13 functions)
@@ -355,7 +355,7 @@ BASE_URL = "https://cryptocurrency.cv"
 news = requests.get(f"{BASE_URL}/api/news?limit=10").json()
 
 # Get Bitcoin sentiment
-sentiment = requests.get(f"{BASE_URL}/api/ai/sentiment?asset=BTC").json()
+sentiment = requests.get(f"{BASE_URL}/api/sentiment?asset=BTC").json()
 print(f"BTC: {sentiment['label']} ({sentiment['score']:.2f})")
 
 # Get Fear & Greed
@@ -375,7 +375,7 @@ const events = new EventSource(`${BASE_URL}/api/stream`);
 events.onmessage = (e) => console.log('New:', JSON.parse(e.data).title);
 ```
 
-📚 **[Full Examples Documentation](../../examples/README.md)** | **[API Tutorial](../EXAMPLES.md)**
+📚 **[Full Examples Documentation](https://github.com/nirholas/cryptocurrency.cv/blob/main/examples/README.md)** | **[API Tutorial](../EXAMPLES.md)**
 
 **Bot Integration Examples:**
 
@@ -400,10 +400,10 @@ Step-by-step tutorials with full working code for every API endpoint:
 | Tutorial | Endpoints Covered | Description |
 |----------|-------------------|-------------|
 | [News Basics](../tutorials/news-basics.md) | `/api/news`, `/api/latest`, `/api/breaking`, `/api/trending` | Fetching, filtering, and paginating news articles |
-| [Search & Filtering](../tutorials/search-filtering.md) | `/api/search`, `/api/news?source=`, `/api/categories` | Full-text search, source filtering, category browsing |
+| [Search & Filtering](../tutorials/search-filtering.md) | `/api/search`, `/api/news?source=`, `/api/news/categories` | Full-text search, source filtering, category browsing |
 | [Archive & Export](../tutorials/archive-export.md) | `/api/archive`, `/api/export`, `/api/rss`, `/api/atom` | Historical data access, bulk exports, RSS/Atom feeds |
-| [International News](../tutorials/international-news.md) | `/api/news/international`, `/api/sources/international`, `/api/languages`, `/api/regions` | Multi-language news with auto-translation |
-| [AI Sentiment](../tutorials/ai-sentiment.md) | `/api/ai/sentiment`, `/api/ai/sentiment/history`, `/api/ai/sentiment/market` | Real-time sentiment analysis for any asset |
+| [International News](../tutorials/international-news.md) | `/api/news/international`, `/api/news?lang=`, `/api/i18n/translate` | Multi-language news with auto-translation |
+| [AI Sentiment](../tutorials/ai-sentiment.md) | `/api/sentiment`, `/api/sentiment?asset=BTC`, `/api/social/sentiment` | Real-time sentiment analysis for any asset |
 | [AI Features](../tutorials/ai-features.md) | `/api/ask`, `/api/summarize`, `/api/digest`, `/api/entities`, `/api/narratives`, `/api/signals` | Q&A, summarization, NER, narratives, trading signals |
 | [Trading Signals](../tutorials/trading-signals.md) | `/api/trading/arbitrage`, `/api/trading/signals`, `/api/trading/funding` | Arbitrage opportunities, AI signals, funding rates |
 | [Market Data](../tutorials/market-data.md) | `/api/market/coins`, `/api/market/ohlc`, `/api/market/fear-greed`, `/api/market/dominance` | Price data, OHLCV, market indicators |
@@ -415,16 +415,16 @@ Step-by-step tutorials with full working code for every API endpoint:
 | [Real-time SSE](../tutorials/realtime-sse.md) | `/api/stream`, `/api/prices/stream` | Server-Sent Events for live updates |
 | [User Alerts](../tutorials/user-alerts.md) | `/api/alerts`, `/api/notifications` | Push notifications, price alerts, webhooks |
 | [Webhooks & Integrations](../tutorials/user-alerts.md) | `/api/webhooks`, `/api/webhooks/events` | Webhook management, event subscriptions |
-| [Utility Endpoints](../tutorials/utility-endpoints.md) | `/api/health`, `/api/status`, `/api/sources`, `/api/categories`, `/api/config` | Health checks, system status, metadata |
+| [Utility Endpoints](../tutorials/utility-endpoints.md) | `/api/health`, `/api/version`, `/api/stats`, `/api/sources`, `/api/news/categories`, `/api/openapi.json` | Health checks, deploy verification, metadata |
 | [Article Extraction](../tutorials/article-extraction.md) | `/api/extract`, `/api/extract/batch`, `/api/ai/detect` | Full article content, batch extraction, AI detection |
 
-📚 **[View All Tutorials](../tutorials/index.md)** — Complete documentation covering 150+ endpoints with Python, JavaScript, TypeScript, and cURL examples.
+📚 **[View All Tutorials](../tutorials/index.md)** — Complete documentation covering the 394-endpoint API with Python, JavaScript, TypeScript, and cURL examples.
 
 **MCP Server Modes:**
 
 - **stdio:** For Claude Desktop (local)
 - **HTTP/SSE:** For ChatGPT Developer Mode (remote)
-- **Tools:** 40 tools available for AI assistants
+- **Tools:** 47 over the hosted endpoint, 55 in the local package (plus 6 resources and 3 prompts)
 
 ### 📚 Documentation
 
@@ -484,25 +484,25 @@ Step-by-step tutorials with full working code for every API endpoint:
 
 ## 🌐 SDKs (13 Languages)
 
-Only `@nirholas/crypto-news` is published to a package registry. Every other client is source in this repository: copy the file or directory into your project. Runnable samples in 12 languages live in [`examples/`](../../examples/).
+Only `@nirholas/crypto-news` is published to a package registry. Every other client is source in this repository: copy the file or directory into your project. Runnable samples in 12 languages live in [`examples/`](https://github.com/nirholas/cryptocurrency.cv/tree/main/examples).
 
 | Language | Source | Install |
 |----------|--------|---------|
-| TypeScript | [`@nirholas/crypto-news`](../../sdk/typescript/) | `npm install @nirholas/crypto-news` |
-| Python | [`crypto_news.py`](../../sdk/python/) | copy `sdk/python/crypto_news.py` |
-| JavaScript | [`crypto-news.js`](../../sdk/javascript/) | copy `sdk/javascript/crypto-news.js` |
-| Go | [`cryptonews.go`](../../sdk/go/) | `go get github.com/nirholas/cryptocurrency.cv/sdk/go` |
-| PHP | [`CryptoNews.php`](../../sdk/php/) | copy `sdk/php/CryptoNews.php` |
-| Rust | [`sdk/rust/`](../../sdk/rust/) | add as a path dependency |
-| Ruby | [`sdk/ruby/`](../../sdk/ruby/) | build the gem from `sdk/ruby/` |
-| React | [`sdk/react/`](../../sdk/react/) | copy the hook/component source |
-| Swift | [`sdk/swift/`](../../sdk/swift/) | Swift Package Manager (local path) |
-| Kotlin | [`sdk/kotlin/`](../../sdk/kotlin/) | Gradle (local module) |
-| Java | [`sdk/java/`](../../sdk/java/) | Maven (local module) |
-| C# | [`sdk/csharp/`](../../sdk/csharp/) | add the project reference |
-| R | [`sdk/r/`](../../sdk/r/) | `devtools::install_local("sdk/r")` |
+| TypeScript | [`@nirholas/crypto-news`](https://github.com/nirholas/cryptocurrency.cv/tree/main/sdk/typescript) | `npm install @nirholas/crypto-news` |
+| Python | [`crypto_news.py`](https://github.com/nirholas/cryptocurrency.cv/tree/main/sdk/python) | copy `sdk/python/crypto_news.py` |
+| JavaScript | [`crypto-news.js`](https://github.com/nirholas/cryptocurrency.cv/tree/main/sdk/javascript) | copy `sdk/javascript/crypto-news.js` |
+| Go | [`cryptonews.go`](https://github.com/nirholas/cryptocurrency.cv/tree/main/sdk/go) | `go get github.com/nirholas/cryptocurrency.cv/sdk/go` |
+| PHP | [`CryptoNews.php`](https://github.com/nirholas/cryptocurrency.cv/tree/main/sdk/php) | copy `sdk/php/CryptoNews.php` |
+| Rust | [`sdk/rust/`](https://github.com/nirholas/cryptocurrency.cv/tree/main/sdk/rust) | add as a path dependency |
+| Ruby | [`sdk/ruby/`](https://github.com/nirholas/cryptocurrency.cv/tree/main/sdk/ruby) | build the gem from `sdk/ruby/` |
+| React | [`sdk/react/`](https://github.com/nirholas/cryptocurrency.cv/tree/main/sdk/react) | copy the hook/component source |
+| Swift | [`sdk/swift/`](https://github.com/nirholas/cryptocurrency.cv/tree/main/sdk/swift) | Swift Package Manager (local path) |
+| Kotlin | [`sdk/kotlin/`](https://github.com/nirholas/cryptocurrency.cv/tree/main/sdk/kotlin) | Gradle (local module) |
+| Java | [`sdk/java/`](https://github.com/nirholas/cryptocurrency.cv/tree/main/sdk/java) | Maven (local module) |
+| C# | [`sdk/csharp/`](https://github.com/nirholas/cryptocurrency.cv/tree/main/sdk/csharp) | add the project reference |
+| R | [`sdk/r/`](https://github.com/nirholas/cryptocurrency.cv/tree/main/sdk/r) | `devtools::install_local("sdk/r")` |
 
-See [`/sdk/`](../../sdk/) for documentation and per-language guides in [docs/sdks/](../sdks/index.md).
+See [`/sdk/`](https://github.com/nirholas/cryptocurrency.cv/tree/main/sdk) for documentation and per-language guides in [docs/sdks/](../sdks/index.md).
 
 
 ---

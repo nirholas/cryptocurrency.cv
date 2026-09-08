@@ -945,14 +945,17 @@ All components follow WCAG AA guidelines:
 ## Testing Components
 
 ```bash
-# Run component tests
+# Run component tests (vitest)
 npm test
 
-# Visual regression tests
-npm run test:visual
+# UI audit sweep (Playwright, chromium)
+npm run audit:ui
 
 # Accessibility audit
 npm run test:a11y
+
+# Contrast audit
+npm run audit:contrast
 ```
 
 ---

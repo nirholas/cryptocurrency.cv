@@ -6,7 +6,7 @@ Connect Free Crypto News to your favorite tools and platforms. **100% FREE** - n
 
 | Category | Integrations | Description |
 |----------|--------------|-------------|
-| **AI Assistants** | MCP Server, ChatGPT Plugin | 40 tools for Claude/ChatGPT |
+| **AI Assistants** | MCP Server, ChatGPT Plugin | 47 hosted / 55 local tools for Claude, Cursor and ChatGPT |
 | **SDKs** | 8 languages | Python, JS, TS, Go, Rust, Ruby, PHP, React |
 | **Desktop** | Raycast, Alfred | macOS productivity tools |
 | **Browser** | Chrome Extension | News in your browser toolbar |
@@ -27,7 +27,7 @@ Access DeFi TVL, on-chain metrics, social sentiment, NFT data, and more from Def
 
 | Integration | Description | Tools | Setup Time |
 |-------------|-------------|-------|------------|
-| [MCP Server](mcp.md) | Claude Desktop & ChatGPT Developer Mode | 40 tools | 5 min |
+| [MCP Server](mcp.md) | Hosted Streamable HTTP, or local stdio | 47 hosted / 55 local | 1 min |
 | [ChatGPT Plugin](chatgpt.md) | ChatGPT Actions/Plugin | 6 endpoints | 10 min |
 
 ## SDKs (8 Languages)

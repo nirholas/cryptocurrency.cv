@@ -1,6 +1,12 @@
 # SDKs Overview
 
-Official SDKs for Free Crypto News API, available in **8 languages**. All SDKs are **100% FREE** - no API keys required!
+Official SDKs for the Free Crypto News API, in **8 languages**. All of them are free and need no API key.
+
+!!! warning "Only the TypeScript/JavaScript SDK is published to a registry"
+    `@nirholas/crypto-news` is on npm. Every other SDK ships from the
+    repository: install it from a clone, vendor the single file, or point your
+    package manager at the git repo. The commands below reflect that; a
+    `pip install`, `gem install` or `cargo add` of these names will not resolve.
 
 ## Installation
 
@@ -27,7 +33,9 @@ Official SDKs for Free Crypto News API, available in **8 languages**. All SDKs a
 === "React"
 
     ```bash
-    npm install @nirholas/react-crypto-news
+    # Not on npm yet: build and link from a clone
+    git clone https://github.com/nirholas/cryptocurrency.cv.git
+    cd cryptocurrency.cv/sdk/react && npm install && npm run build && npm link
     ```
 
 === "Go"
@@ -38,14 +46,18 @@ Official SDKs for Free Crypto News API, available in **8 languages**. All SDKs a
 
 === "Rust"
 
-    ```bash
-    cargo add fcn-sdk
+    ```toml
+    # Not on crates.io yet: depend on the repository
+    [dependencies]
+    fcn-sdk = { git = "https://github.com/nirholas/cryptocurrency.cv", branch = "main" }
     ```
 
 === "Ruby"
 
     ```bash
-    gem install fcn-sdk
+    # Not on RubyGems yet: build the gem from a clone
+    git clone https://github.com/nirholas/cryptocurrency.cv.git
+    cd cryptocurrency.cv/sdk/ruby && gem build fcn-sdk.gemspec && gem install ./fcn-sdk-*.gem
     ```
 
 === "PHP"

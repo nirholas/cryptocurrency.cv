@@ -11,9 +11,17 @@ Free Crypto News provides several well-known endpoints following web standards f
 | Endpoint | Purpose | Standard |
 |----------|---------|----------|
 | `/.well-known/x402` | x402 payment discovery | [x402 Protocol](https://x402.org) |
-| `/api/openapi.json` | OpenAPI specification | [OpenAPI 3.1](https://spec.openapis.org/oas/v3.1.0) |
+| `/.well-known/agent.json` | Agent card | A2A / agent discovery |
+| `/.well-known/ai-plugin.json` | AI plugin manifest | [ChatGPT Plugins](https://platform.openai.com/docs/plugins) |
+| `/api/openapi.json` | OpenAPI 3.1 specification (also what ChatGPT Actions imports) | [OpenAPI 3.1](https://spec.openapis.org/oas/v3.1.0) |
 | `/api/docs` | Interactive API docs | Swagger UI |
-| `/chatgpt/openapi.yaml` | ChatGPT plugin spec | [ChatGPT Plugins](https://platform.openai.com/docs/plugins) |
+| `/api/llms.txt`, `/api/llms-full.txt` | LLM-oriented API reference | [llms.txt](https://llmstxt.org) |
+| `/api/version` | Running commit, build time, Cloud Run revision | — |
+| `/api/health` | Health status with per-subsystem checks | — |
+
+Every one of these is exempt from rate limiting and from x402 payment: an agent
+must be able to read the manual without paying for it, and without pretending to
+be a browser. cURL, wget, GPTBot, ClaudeBot and PerplexityBot are all allowed.
 
 ---
 
@@ -201,7 +209,7 @@ OpenAPI specification for ChatGPT plugin integration.
 ### Endpoint
 
 ```
-GET /chatgpt/openapi.yaml
+GET /api/openapi.json
 ```
 
 ### Manifest Location
@@ -213,7 +221,7 @@ The ChatGPT plugin expects the manifest at:
 ```
 
 !!! note "ChatGPT Plugin"
-    The ChatGPT plugin uses the OpenAPI spec at `/chatgpt/openapi.yaml` for action definitions. See the [ChatGPT Integration](integrations/chatgpt.md) guide for setup.
+    ChatGPT Actions consume the live OpenAPI spec at `/api/openapi.json`. (`chatgpt/openapi.yaml` exists in the repository as a hand-written plugin manifest, but it is not served over HTTP.) See the [ChatGPT Integration](integrations/chatgpt.md) guide for setup.
 
 ### Manifest Structure
 
@@ -223,11 +231,11 @@ The ChatGPT plugin expects the manifest at:
   "name_for_human": "Free Crypto News",
   "name_for_model": "crypto_news",
   "description_for_human": "Get real-time crypto news, market data, and sentiment analysis.",
-  "description_for_model": "Provides access to cryptocurrency news from 130+ sources, market prices, Fear & Greed Index, and search functionality.",
+  "description_for_model": "Provides access to cryptocurrency news from 358 sources, market prices, Fear & Greed Index, and search functionality.",
   "auth": { "type": "none" },
   "api": {
     "type": "openapi",
-    "url": "https://cryptocurrency.cv/chatgpt/openapi.yaml"
+    "url": "https://cryptocurrency.cv/api/openapi.json"
   }
 }
 ```
@@ -259,10 +267,11 @@ news = httpx.get("https://cryptocurrency.cv/api/news").json()
 
 The MCP (Model Context Protocol) server can be discovered via:
 
-| Method | URL |
-|--------|-----|
-| **HTTP/SSE** | `https://cryptocurrency.cv/api/mcp` |
-| **Local stdio** | `node mcp/index.js` |
+| Method | URL or command | Tools |
+|--------|----------------|-------|
+| **Streamable HTTP (hosted)** | `https://cryptocurrency.cv/api/mcp` | 47 |
+| **Local stdio** | `npx -y @nirholas/free-crypto-news-mcp` | 55 (+6 resources, 3 prompts) |
+| **Local stdio, from source** | `node mcp/dist/index.js` (after `npm run build`) | 55 |
 
 See [MCP Server Integration](integrations/mcp.md) for details.
 
@@ -304,7 +313,7 @@ curl -s https://cryptocurrency.cv/.well-known/x402 | jq '.name'
 curl -s https://cryptocurrency.cv/api/openapi.json | jq '.info.title'
 
 # ChatGPT plugin
-curl -s https://cryptocurrency.cv/chatgpt/openapi.yaml | head -10
+curl -s https://cryptocurrency.cv/api/openapi.json | head -10
 ```
 
 ### Health Check

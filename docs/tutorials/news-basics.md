@@ -241,6 +241,11 @@ No API key required! All endpoints are free and open.
 }
 ```
 
+That is an **authenticated** response. An anonymous free-tier request returns at
+most 3 articles and adds four fields that say so: `free_tier`, `total`,
+`limited` and `maxResults`, with `pagination.perPage` set to what you actually
+received. See [Pagination](#pagination) below.
+
 ---
 
 ## Category-Specific News
@@ -449,7 +454,32 @@ No API key required! All endpoints are free and open.
 
 ## Pagination
 
-Handle large result sets with pagination:
+Handle large result sets with pagination.
+
+!!! warning "The free tier caps `/api/news` at 3 articles"
+    Without an API key you get **3 articles per request**, full article bodies
+    stripped and summaries truncated. The response is honest about it:
+
+    ```json
+    {
+      "articles": [ "…3 of them…" ],
+      "pagination": { "page": 1, "perPage": 3, "totalPages": 1, "hasMore": true },
+      "free_tier": true,
+      "total": 3,
+      "limited": true,
+      "maxResults": 3,
+      "upgrade": "https://cryptocurrency.cv/pricing"
+    }
+    ```
+
+    `pagination` describes what you actually received, not the uncapped result
+    set, so the loops below terminate correctly instead of walking pages that do
+    not exist. `hasMore: true` alongside `limited: true` means "more exists, but
+    not for this tier" rather than "call page 2". Check `limited` before
+    paginating, and [upgrade to a paid tier, or pay per request with x402](../PREMIUM.md) to lift the
+    cap.
+
+Pagination as it behaves with a key:
 
 === "Python"
 
@@ -481,11 +511,15 @@ Handle large result sets with pagination:
             for article in articles:
                 yield article
             
+            # Free tier is capped: hasMore is true but page 2 does not exist
+            if data.get("limited"):
+                break
+
             # Check if more pages exist
             pagination = data.get("pagination", {})
             if not pagination.get("hasMore", False):
                 break
-            
+
             page += 1
     
     
@@ -515,6 +549,8 @@ Handle large result sets with pagination:
                 yield article;
             }
             
+            // Free tier is capped: hasMore is true but page 2 does not exist
+            if (data.limited) break;
             if (!data.pagination?.hasMore) break;
             page++;
         }

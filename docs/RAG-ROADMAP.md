@@ -817,16 +817,13 @@ See [CONTRIBUTING.md](./CONTRIBUTING.md) for how to contribute to the RAG system
 ### Development Setup
 ```bash
 # Install dependencies
-npm install
+pnpm install
 
-# Run RAG tests
-npm run test:rag
+# Run the RAG unit tests (evaluator, chunking, dedup, graph, personalization)
+npm run test:run -- src/lib/rag
 
-# Run evaluation suite
-npm run eval:rag
-
-# Generate test cases
-npm run test:generate
+# Ingest news into the vector store (add --days 30 for a recent window)
+npm run rag:ingest
 
 # Start development server
 npm run dev

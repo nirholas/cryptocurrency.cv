@@ -171,7 +171,7 @@ class CryptoNewsClient(
     }
 
     suspend fun getSentiment(asset: String): SentimentData {
-        return client.get("$baseUrl/api/ai/sentiment") {
+        return client.get("$baseUrl/api/sentiment") {
             parameter("asset", asset)
         }.body()
     }

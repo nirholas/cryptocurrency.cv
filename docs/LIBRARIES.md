@@ -47,7 +47,7 @@ Documentation for the core library modules in Free Crypto News.
 
 ### crypto-news.ts
 
-Core RSS news aggregation from 120+ sources across 21 categories.
+Core RSS news aggregation from 358 sources across 30 categories.
 
 ```typescript
 import { getLatestNews, getAllSources, CATEGORIES } from '@/lib/crypto-news';

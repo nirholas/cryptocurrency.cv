@@ -6,24 +6,38 @@ Premium tier features and API access for Free Crypto News.
 
 ## Overview
 
-While the core Free Crypto News API is completely free, premium tiers unlock advanced features for power users, traders, and institutions.
+The core news and market endpoints stay free and keyless. Paid tiers unlock the
+rest of the surface for power users, traders and institutions.
 
 ---
 
 ## Tiers
 
-| Feature | Free | Pro | Enterprise |
-|---------|------|-----|------------|
-| **News API** | ✅ | ✅ | ✅ |
-| **Rate Limit** | 100/min | 1,000/min | 10,000/min |
-| **AI Endpoints** | Basic | Full | Full + Custom |
-| **Trading Signals** | ❌ | ✅ | ✅ |
-| **Whale Alerts** | Limited | Full | Real-time |
-| **Historical Data** | 30 days | 1 year | Full history |
-| **Export Formats** | JSON | JSON, CSV | JSON, CSV, Parquet |
-| **Support** | Community | Email | Dedicated |
-| **SLA** | - | 99.5% | 99.9% |
-| **Price** | Free | $49/mo | Custom |
+Tier definitions live in `src/lib/x402/pricing.ts` (`API_TIERS`), which is the
+single source of truth for what follows.
+
+| | Anonymous (free tier) | x402 pay-per-request | Pro | Enterprise |
+|---|---|---|---|---|
+| **Price** | Free | $0.001 / request | **$29/mo** | **$99/mo** |
+| **Rate limit** | 120 req/hour per IP | Per payment | 50,000/day (500/min) | 500,000/day (2,000/min) |
+| **API key** | None needed | None needed | Yes | Yes |
+| **News API** | ✅ (3 articles/request) | ✅ full | ✅ full | ✅ full |
+| **Market, DeFi, sources, archive** | ✅ | ✅ | ✅ | ✅ |
+| **AI endpoints** | ❌ | ✅ | ✅ | ✅ |
+| **Trading signals** | ❌ | ✅ | ✅ | ✅ |
+| **Whale alerts** | ❌ | ✅ | ✅ | ✅ |
+| **Historical data** | Archive endpoints | Per request | 1 year | Full history |
+| **Export formats** | JSON | JSON | JSON, CSV | JSON, CSV |
+| **Priority routing / dedicated cache** | ❌ | ❌ | ❌ | ✅ |
+| **Support** | Community | Community | Priority | Dedicated |
+| **SLA** | — | — | — | 99.9% |
+
+!!! warning "The free API-key tier is discontinued"
+    Free API keys are no longer issued. `API_TIERS.free` still exists so that
+    previously-issued keys resolve, but its quota is zero. The free path is now
+    the **anonymous free tier** described above (no key at all), plus
+    `/api/sample` for a preview and x402 micropayments for pay-per-request
+    access to paid endpoints.
 
 ---
 

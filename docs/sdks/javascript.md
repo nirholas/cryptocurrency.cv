@@ -4,35 +4,50 @@ The JavaScript SDK provides a lightweight client for Node.js and browser environ
 
 ## Installation
 
+The published package is **`@nirholas/crypto-news`**. It ships TypeScript types,
+but works exactly the same from plain JavaScript.
+
 ```bash
-npm install @fcn/sdk
+npm install @nirholas/crypto-news
 # or
-yarn add @fcn/sdk
+yarn add @nirholas/crypto-news
 # or
-pnpm add @fcn/sdk
+pnpm add @nirholas/crypto-news
 ```
+
+A dependency-free single-file build also lives at
+[`sdk/javascript/crypto-news.js`](https://github.com/nirholas/cryptocurrency.cv/blob/main/sdk/javascript/crypto-news.js)
+in the repository if you would rather vendor one file than add a dependency.
 
 ## Quick Start
 
 ```javascript
-import { CryptoNews } from '@fcn/sdk';
+import { CryptoNews } from '@nirholas/crypto-news';
 
-// Initialize client (no API key needed!)
+// Initialize client (no API key needed)
 const client = new CryptoNews();
 
 // Get latest news
-const news = await client.getNews({ limit: 10 });
-news.articles.forEach(article => {
+const articles = await client.getLatest(10);
+articles.forEach(article => {
   console.log(`${article.title} - ${article.source}`);
 });
 
+// Same call, with the response envelope (pagination, free-tier flags)
+const news = await client.getLatestWithMeta(10);
+console.log(news.pagination, news.limited, news.maxResults);
+
 // Search for specific topics
-const results = await client.search('ethereum merge', { limit: 5 });
+const results = await client.search('ethereum merge', 5);
 
 // Get market data
 const market = await client.getMarket();
-console.log(`BTC: $${market.bitcoin.price.toLocaleString()}`);
 ```
+
+!!! note "Free tier returns 3 articles"
+    Without an API key the API caps `/api/news` at 3 articles.
+    `getLatestWithMeta()` exposes the `limited` and `maxResults` fields so you
+    can tell a capped response from an exhausted one.
 
 ## API Reference
 
@@ -106,7 +121,7 @@ const health = await client.health();
 
 ```html
 <script type="module">
-  import { CryptoNews } from 'https://esm.sh/@fcn/sdk';
+  import { CryptoNews } from 'https://esm.sh/@nirholas/crypto-news';
   
   const client = new CryptoNews();
   const news = await client.getNews({ limit: 5 });
@@ -150,7 +165,7 @@ const arabic = await client.getNews({ lang: 'ar', limit: 10 });
 ## Error Handling
 
 ```javascript
-import { CryptoNews, FCNError } from '@fcn/sdk';
+import { CryptoNews, FCNError } from '@nirholas/crypto-news';
 
 const client = new CryptoNews();
 
@@ -172,7 +187,7 @@ try {
 
 ```javascript
 import express from 'express';
-import { CryptoNews } from '@fcn/sdk';
+import { CryptoNews } from '@nirholas/crypto-news';
 
 const app = express();
 const client = new CryptoNews();
@@ -190,7 +205,7 @@ app.listen(3000);
 
 ```javascript
 import { Client, GatewayIntentBits } from 'discord.js';
-import { CryptoNews } from '@fcn/sdk';
+import { CryptoNews } from '@nirholas/crypto-news';
 
 const discord = new Client({ intents: [GatewayIntentBits.Guilds] });
 const crypto = new CryptoNews();

@@ -1,871 +1,450 @@
 # Utility & Meta Endpoints Tutorial
 
-This tutorial covers utility endpoints for API health, metadata, configuration, and miscellaneous functionality.
+These are the endpoints you call to find out what the API is, what it knows, and whether it is healthy. Every one of them is free: no API key, no payment, and no browser `User-Agent`. A plain `curl` is the intended way to use them.
 
 ## Endpoints Covered
 
-| Endpoint | Description |
-|----------|-------------|
-| `/api/health` | API health status |
-| `/api/status` | Detailed system status |
-| `/api/version` | API version info |
-| `/api/sources` | News sources list |
-| `/api/categories` | Article categories |
-| `/api/currencies` | Supported currencies |
-| `/api/languages` | Supported languages |
-| `/api/config` | API configuration |
-| `/api/openapi` | OpenAPI specification |
+| Endpoint | Description | Tier |
+|----------|-------------|------|
+| `/api/health` | Health status, per-subsystem checks, build identity | Exempt |
+| `/api/version` | Running commit, build time, Cloud Run revision | Exempt |
+| `/api/stats` | Article and source statistics over the last 24 hours | Free tier |
+| `/api/sources` | The full 358-source catalog | Free tier |
+| `/api/sources/health` | Which feeds are actually answering | Free tier |
+| `/api/news/categories` | Article categories, with source counts | Free tier |
+| `/api/feeds` | Every RSS, Atom and JSON feed URL | Free tier |
+| `/api/openapi.json` | OpenAPI 3.1 specification | Exempt |
+| `/api/docs` | Swagger UI, rendered in the browser | Exempt |
+| `/api/llms.txt`, `/api/llms-full.txt` | LLM-oriented API reference | Exempt |
+| `/api/sample` | A tiny, uncached-free taste of the API | Exempt |
+
+!!! warning "Endpoints that no longer exist"
+    Earlier revisions of this tutorial documented `/api/status`, `/api/categories`,
+    `/api/currencies`, `/api/languages`, `/api/config` and `/api/openapi`. None of
+    those routes exist. Their replacements are in the table above:
+    `/api/health` + `/api/version` cover status, `/api/news/categories` covers
+    categories, and the spec is served at `/api/openapi.json`.
 
 ---
 
-## 1. Health & Status Checks
+## 1. Health, version and deploy verification
 
-Monitor API health and system status.
+Two endpoints answer "is it up?" and "what is running?". Both are exempt from rate limiting and from x402, so a monitor can poll them without a budget.
+
+=== "cURL"
+    ```bash
+    # Full health report
+    curl https://cryptocurrency.cv/api/health | jq
+
+    # Just the top-level verdict
+    curl -s https://cryptocurrency.cv/api/health | jq -r .status
+
+    # Which commit is live
+    curl https://cryptocurrency.cv/api/version | jq
+
+    # Liveness probe: prints the HTTP status only
+    curl -s -o /dev/null -w "%{http_code}\n" https://cryptocurrency.cv/api/health
+    ```
 
 === "Python"
     ```python
     import requests
-    from datetime import datetime
-    
-    def check_health():
-        """Check API health."""
-        response = requests.get(
-            "https://cryptocurrency.cv/api/health"
-        )
-        return response.json()
-    
-    def get_status():
-        """Get detailed system status."""
-        response = requests.get(
-            "https://cryptocurrency.cv/api/status"
-        )
-        return response.json()
-    
-    def get_version():
-        """Get API version."""
-        response = requests.get(
-            "https://cryptocurrency.cv/api/version"
-        )
-        return response.json()
-    
-    # Health check
-    print("🏥 API Health Check")
-    print("=" * 70)
-    
+
+    BASE_URL = "https://cryptocurrency.cv"
+
+    def check_health() -> dict:
+        return requests.get(f"{BASE_URL}/api/health", timeout=10).json()
+
+    def get_version() -> dict:
+        return requests.get(f"{BASE_URL}/api/version", timeout=10).json()
+
     health = check_health()
-    
-    status = health.get('status', 'unknown')
-    status_icon = "✅" if status == "healthy" else "⚠️" if status == "degraded" else "❌"
-    
-    print(f"   Status: {status_icon} {status.upper()}")
-    print(f"   Timestamp: {health.get('timestamp', 'N/A')}")
-    
-    # Component health
-    components = health.get('components', {})
-    if components:
-        print("\n   📊 Component Status:")
-        for component, comp_status in components.items():
-            comp_icon = "✅" if comp_status.get('healthy') else "❌"
-            latency = comp_status.get('latency', 'N/A')
-            print(f"      {comp_icon} {component}: {latency}ms")
-    
-    # Detailed status
-    print("\n" + "=" * 70)
-    print("📊 Detailed System Status")
-    print("-" * 70)
-    
-    status_data = get_status()
-    
-    # Uptime
-    uptime = status_data.get('uptime', {})
-    print(f"\n   ⏱️ Uptime:")
-    print(f"      Current: {uptime.get('current', 'N/A')}")
-    print(f"      30-Day SLA: {uptime.get('sla30d', 'N/A')}%")
-    
-    # Response times
-    response_times = status_data.get('responseTimes', {})
-    print(f"\n   ⚡ Response Times:")
-    print(f"      P50: {response_times.get('p50', 'N/A')}ms")
-    print(f"      P95: {response_times.get('p95', 'N/A')}ms")
-    print(f"      P99: {response_times.get('p99', 'N/A')}ms")
-    
-    # Data freshness
-    freshness = status_data.get('dataFreshness', {})
-    print(f"\n   📰 Data Freshness:")
-    print(f"      News: {freshness.get('news', 'N/A')}")
-    print(f"      Market: {freshness.get('market', 'N/A')}")
-    print(f"      Sentiment: {freshness.get('sentiment', 'N/A')}")
-    
-    # Version info
-    print("\n" + "=" * 70)
-    print("📦 API Version")
-    print("-" * 70)
-    
+    icons = {"healthy": "✅", "degraded": "⚠️", "unhealthy": "❌"}
+    print(f"Status: {icons.get(health['status'], '❓')} {health['status'].upper()}")
+    print(f"Uptime: {health['uptime']}s")
+
+    for name, check in health["checks"].items():
+        icon = icons.get(check["status"], "❓")
+        print(f"  {icon} {name}: {check['status']} ({check.get('responseTime', 0)}ms)")
+        if check.get("message"):
+            print(f"      {check['message']}")
+
+    feeds = health["checks"]["feeds"]
+    print(f"\nCached articles: {feeds['articleCount']}")
+    print(f"Newest article age: {feeds['newestAgeMinutes']} min")
+
     version = get_version()
-    
-    print(f"   Version: {version.get('version', 'N/A')}")
-    print(f"   Build: {version.get('build', 'N/A')}")
-    print(f"   Released: {version.get('releaseDate', 'N/A')}")
-    
-    print("\n   📝 Recent Changes:")
-    for change in version.get('changelog', [])[:5]:
-        print(f"      • {change}")
+    print(f"\nCommit:   {version['commit']}")
+    print(f"Built at: {version['builtAt']}")
+    print(f"Revision: {version['revision']}")
     ```
 
 === "JavaScript"
     ```javascript
-    async function checkHealth() {
-        const response = await fetch(
-            'https://cryptocurrency.cv/api/health'
-        );
-        return response.json();
-    }
-    
-    async function getStatus() {
-        const response = await fetch(
-            'https://cryptocurrency.cv/api/status'
-        );
-        return response.json();
-    }
-    
-    async function getVersion() {
-        const response = await fetch(
-            'https://cryptocurrency.cv/api/version'
-        );
-        return response.json();
-    }
-    
-    // Health check
-    console.log("🏥 API Health Check");
-    console.log("=".repeat(70));
-    
+    const BASE_URL = 'https://cryptocurrency.cv';
+
+    const checkHealth = () => fetch(`${BASE_URL}/api/health`).then((r) => r.json());
+    const getVersion = () => fetch(`${BASE_URL}/api/version`).then((r) => r.json());
+
     const health = await checkHealth();
-    const statusIcon = health.status === 'healthy' ? '✅' : '❌';
-    
-    console.log(`   Status: ${statusIcon} ${health.status?.toUpperCase()}`);
-    console.log(`   Timestamp: ${health.timestamp}`);
-    
-    // Components
-    if (health.components) {
-        console.log("\n   📊 Components:");
-        for (const [comp, status] of Object.entries(health.components)) {
-            const icon = status.healthy ? '✅' : '❌';
-            console.log(`      ${icon} ${comp}: ${status.latency}ms`);
-        }
+    const icons = { healthy: '✅', degraded: '⚠️', unhealthy: '❌' };
+
+    console.log(`Status: ${icons[health.status]} ${health.status.toUpperCase()}`);
+    console.log(`Uptime: ${health.uptime}s`);
+
+    for (const [name, check] of Object.entries(health.checks)) {
+      console.log(`  ${icons[check.status]} ${name}: ${check.responseTime ?? 0}ms`);
     }
-    
-    // Detailed status
-    console.log("\n📊 System Status");
-    const status = await getStatus();
-    
-    console.log(`   Uptime: ${status.uptime?.current}`);
-    console.log(`   P50: ${status.responseTimes?.p50}ms`);
-    console.log(`   P99: ${status.responseTimes?.p99}ms`);
-    
-    // Version
-    const version = await getVersion();
-    console.log(`\n📦 Version: ${version.version}`);
-    console.log(`   Build: ${version.build}`);
+
+    const { commit, builtAt, revision } = await getVersion();
+    console.log(`Commit ${commit} built ${builtAt} on revision ${revision}`);
     ```
 
-=== "cURL"
-    ```bash
-    # Health check
-    curl "https://cryptocurrency.cv/api/health" | jq
-    
-    # Detailed status
-    curl "https://cryptocurrency.cv/api/status" | jq
-    
-    # Version info
-    curl "https://cryptocurrency.cv/api/version" | jq
-    
-    # Quick health check (returns 200 if healthy)
-    curl -s -o /dev/null -w "%{http_code}" "https://cryptocurrency.cv/api/health"
-    ```
+### Reading the health response
+
+```json
+{
+  "status": "healthy",
+  "timestamp": "2026-08-28T03:14:52.656Z",
+  "version": "1.0.10",
+  "build": { "commit": "da46f180", "builtAt": "2026-08-28T02:40:11Z", "revision": "…" },
+  "uptime": 2588,
+  "checks": {
+    "api": { "status": "healthy", "responseTime": 74 },
+    "cache": { "status": "healthy", "message": "In-memory cache (no Redis or Vercel KV configured)" },
+    "externalAPIs": { "status": "healthy", "responseTime": 74 },
+    "feeds": {
+      "status": "healthy",
+      "articleCount": 1842,
+      "newestPublishedAt": "2026-08-28T03:02:00.000Z",
+      "newestAgeMinutes": 12,
+      "responseTime": 0
+    }
+  }
+}
+```
+
+Three things are worth knowing when you build alerting on this:
+
+- **`feeds`** is the check that tells you whether news is actually flowing. It reports how many articles this instance has cached and how old the newest one is. `degraded` means either the instance has not aggregated yet (a cold start, before the first `/api/news` call fills the cache) or the newest cached article is more than 3 hours old. Alert on the second case, not the first.
+- **`cache`** reports the in-memory cache as **healthy**. Running without Redis or Vercel KV is the designed single-instance mode, not a fault. A `degraded` or `unhealthy` cache means a Redis or Vercel KV that *is* configured is misbehaving. Do not page on "no Redis configured".
+- **`x402Facilitator`** appears only when `X402_FACILITATOR_URL` or `X402_PAYMENT_ADDRESS` is set.
+
+`/api/version` is the deploy-verification endpoint: `commit`, `builtAt`, `revision`, `service` and `region` are baked into the image at build time, so comparing `commit` against your git SHA proves a deploy actually landed. A locally-run dev server reports `"unknown"` and `null` for those fields, which is expected.
 
 ---
 
-## 2. News Sources
+## 2. News sources
 
-Get information about available news sources.
+`/api/sources` is public and returns the whole catalog: all 358 feeds the aggregator reads, with no key and no token.
+
+=== "cURL"
+    ```bash
+    # The full catalog
+    curl https://cryptocurrency.cv/api/sources | jq
+
+    # How many sources?
+    curl -s https://cryptocurrency.cv/api/sources | jq '.count'
+
+    # Just the names
+    curl -s https://cryptocurrency.cv/api/sources | jq -r '.sources[].name'
+
+    # Everything in one category
+    curl -s https://cryptocurrency.cv/api/sources | jq '[.sources[] | select(.category=="defi")]'
+
+    # Which feeds are actually answering right now
+    curl https://cryptocurrency.cv/api/sources/health | jq
+    ```
 
 === "Python"
     ```python
     import requests
-    
-    def get_sources(category: str = None, language: str = None):
-        """Get news sources."""
-        params = {}
-        if category:
-            params["category"] = category
-        if language:
-            params["language"] = language
-        
-        response = requests.get(
-            "https://cryptocurrency.cv/api/sources",
-            params=params
-        )
-        return response.json()
-    
-    # Get all sources
-    sources = get_sources()
-    
-    print("📰 News Sources")
-    print("=" * 70)
-    print(f"   Total Sources: {sources.get('count', 0)}")
-    
-    # Group by category
-    by_category = {}
-    for source in sources.get('sources', []):
-        cat = source.get('category', 'other')
-        if cat not in by_category:
-            by_category[cat] = []
-        by_category[cat].append(source)
-    
-    print("\n📊 Sources by Category:")
-    for cat, cat_sources in sorted(by_category.items(), key=lambda x: -len(x[1])):
-        print(f"\n   {cat.title()} ({len(cat_sources)} sources):")
-        for source in cat_sources[:5]:
-            name = source.get('name', 'Unknown')
-            reliability = source.get('reliabilityScore', 0)
-            stars = "⭐" * int(reliability / 20)
-            print(f"      • {name} {stars}")
-    
-    # Group by language
-    by_lang = {}
-    for source in sources.get('sources', []):
-        lang = source.get('language', 'unknown')
-        by_lang[lang] = by_lang.get(lang, 0) + 1
-    
-    print("\n🗣️ Sources by Language:")
-    for lang, count in sorted(by_lang.items(), key=lambda x: -x[1])[:10]:
-        bar = "█" * (count // 2) + "░" * (20 - count // 2)
-        print(f"   {lang:5} [{bar}] {count}")
-    
-    # Top reliable sources
-    print("\n🏆 Most Reliable Sources:")
-    sorted_sources = sorted(
-        sources.get('sources', []),
-        key=lambda x: x.get('reliabilityScore', 0),
-        reverse=True
-    )
-    
-    for source in sorted_sources[:10]:
-        name = source.get('name', 'Unknown')[:30]
-        score = source.get('reliabilityScore', 0)
-        articles = source.get('articleCount', 0)
-        print(f"   {score:3.0f}% {name:30} ({articles:,} articles)")
+    from collections import Counter
+
+    BASE_URL = "https://cryptocurrency.cv"
+
+    data = requests.get(f"{BASE_URL}/api/sources", timeout=15).json()
+    sources = data["sources"]
+
+    print(f"{data['count']} sources")
+
+    by_category = Counter(s["category"] for s in sources)
+    for category, count in by_category.most_common():
+        print(f"  {category:16s} {count}")
+
+    # Filter client-side: the catalog is small and cached for an hour
+    defi = [s for s in sources if s["category"] == "defi"]
+    for s in defi[:5]:
+        print(f"{s['key']:20s} {s['name']:30s} tier={s.get('tier')}")
     ```
 
 === "JavaScript"
     ```javascript
-    async function getSources(options = {}) {
-        const params = new URLSearchParams();
-        if (options.category) params.set('category', options.category);
-        if (options.language) params.set('language', options.language);
-        
-        const response = await fetch(
-            `https://cryptocurrency.cv/api/sources?${params}`
-        );
-        return response.json();
-    }
-    
-    const sources = await getSources();
-    
-    console.log("📰 News Sources");
-    console.log("=".repeat(70));
-    console.log(`   Total: ${sources.count}`);
-    
-    // By category
-    const byCategory = {};
-    sources.sources?.forEach(source => {
-        const cat = source.category || 'other';
-        if (!byCategory[cat]) byCategory[cat] = [];
-        byCategory[cat].push(source);
-    });
-    
-    console.log("\n📊 By Category:");
-    for (const [cat, catSources] of Object.entries(byCategory)) {
-        console.log(`   ${cat}: ${catSources.length} sources`);
-    }
-    
-    // Top reliable
-    console.log("\n🏆 Most Reliable:");
-    const sorted = [...(sources.sources || [])].sort((a, b) => 
-        (b.reliabilityScore || 0) - (a.reliabilityScore || 0)
-    );
-    
-    sorted.slice(0, 10).forEach(source => {
-        console.log(`   ${source.reliabilityScore}% ${source.name}`);
-    });
+    const res = await fetch('https://cryptocurrency.cv/api/sources');
+    const { sources, count } = await res.json();
+
+    console.log(`${count} sources`);
+
+    const byCategory = sources.reduce((acc, s) => {
+      acc[s.category] = (acc[s.category] ?? 0) + 1;
+      return acc;
+    }, {});
+    console.table(byCategory);
     ```
 
-=== "cURL"
+Each entry carries `key`, `name`, `url`, `category`, `tier` and `status`:
+
+```json
+{
+  "sources": [
+    {
+      "key": "coindesk",
+      "name": "CoinDesk",
+      "url": "https://www.coindesk.com/arc/outboundfeeds/rss/",
+      "category": "general",
+      "tier": "tier2",
+      "status": "unknown"
+    }
+  ],
+  "count": 358,
+  "statusChecked": false
+}
+```
+
+`status` is `"unknown"` and `statusChecked` is `false` because the catalog is returned without probing anything. Use `key` as the value for `?source=` on `/api/news`.
+
+!!! note "Only the live probe needs a token"
+    `GET /api/sources?status=true` fires a HEAD request at all 358 feeds, so it stays behind an HMAC token:
+
     ```bash
-    # Get all sources
-    curl "https://cryptocurrency.cv/api/sources" | jq
-    
-    # Get crypto sources only
-    curl "https://cryptocurrency.cv/api/sources?category=crypto" | jq
-    
-    # Get English sources
-    curl "https://cryptocurrency.cv/api/sources?language=en" | jq
-    
-    # Count sources
-    curl "https://cryptocurrency.cv/api/sources" | jq '.count'
+    curl "https://cryptocurrency.cv/api/sources?status=true&token=$SOURCES_TOKEN"
     ```
+
+    Without the token it answers `403 INVALID_TOKEN` and tells you to drop the parameter. For per-feed availability with no token at all, use `GET /api/sources/health`.
 
 ---
 
-## 3. Categories & Classifications
+## 3. Categories
 
-Get article categories and classification systems.
+Categories live at `/api/news/categories`, not `/api/categories`.
+
+=== "cURL"
+    ```bash
+    curl https://cryptocurrency.cv/api/news/categories | jq
+
+    # Just the ids you can pass to ?category=
+    curl -s https://cryptocurrency.cv/api/news/categories | jq -r '.categories[].id'
+
+    # Categories with the most sources behind them
+    curl -s https://cryptocurrency.cv/api/news/categories \
+      | jq '.categories | sort_by(-.sourceCount) | .[0:5]'
+    ```
 
 === "Python"
     ```python
     import requests
-    
-    def get_categories():
-        """Get article categories."""
-        response = requests.get(
-            "https://cryptocurrency.cv/api/categories"
-        )
-        return response.json()
-    
-    # Get categories
-    categories = get_categories()
-    
-    print("📁 Article Categories")
-    print("=" * 70)
-    
-    print(f"\n   {'Category':<25} {'Articles':<15} {'Trending':<10}")
-    print("   " + "-" * 50)
-    
-    for cat in categories.get('categories', []):
-        name = cat.get('name', 'Unknown')
-        slug = cat.get('slug', 'N/A')
-        count = cat.get('articleCount', 0)
-        trending = "🔥" if cat.get('trending') else ""
-        
-        print(f"   {name:<25} {count:<15,} {trending}")
-    
-    # Subcategories
-    print("\n📂 Category Hierarchy:")
-    
-    for cat in categories.get('categories', [])[:5]:
-        name = cat.get('name', 'Unknown')
-        print(f"\n   📁 {name}:")
-        
-        for subcat in cat.get('subcategories', [])[:5]:
-            sub_name = subcat.get('name', 'Unknown')
-            sub_count = subcat.get('articleCount', 0)
-            print(f"      📄 {sub_name} ({sub_count:,})")
-    
-    # Popular categories
-    print("\n📊 Most Active Categories (24h):")
-    
-    sorted_cats = sorted(
-        categories.get('categories', []),
-        key=lambda x: x.get('articleCount24h', 0),
-        reverse=True
-    )
-    
-    for cat in sorted_cats[:10]:
-        name = cat.get('name', 'Unknown')
-        count_24h = cat.get('articleCount24h', 0)
-        bar_len = min(count_24h // 10, 30)
-        bar = "█" * bar_len + "░" * (30 - bar_len)
-        print(f"   {name[:15]:<15} [{bar}] {count_24h}")
+
+    data = requests.get("https://cryptocurrency.cv/api/news/categories", timeout=10).json()
+
+    for c in sorted(data["categories"], key=lambda c: -c["sourceCount"]):
+        print(f"{c['id']:16s} {c['sourceCount']:4d}  {c['description']}")
+
+    # Then use an id to filter the feed
+    news = requests.get(
+        "https://cryptocurrency.cv/api/news",
+        params={"category": "institutional", "limit": 5},
+        timeout=10,
+    ).json()
+    for a in news["articles"]:
+        print(a["title"])
     ```
 
-=== "JavaScript"
-    ```javascript
-    async function getCategories() {
-        const response = await fetch(
-            'https://cryptocurrency.cv/api/categories'
-        );
-        return response.json();
-    }
-    
-    const categories = await getCategories();
-    
-    console.log("📁 Article Categories");
-    console.log("=".repeat(70));
-    
-    categories.categories?.forEach(cat => {
-        const trending = cat.trending ? '🔥' : '';
-        console.log(`   ${cat.name}: ${cat.articleCount?.toLocaleString()} ${trending}`);
-    });
-    
-    // Subcategories
-    console.log("\n📂 Hierarchy:");
-    categories.categories?.slice(0, 5).forEach(cat => {
-        console.log(`\n   📁 ${cat.name}:`);
-        cat.subcategories?.slice(0, 3).forEach(sub => {
-            console.log(`      📄 ${sub.name} (${sub.articleCount})`);
-        });
-    });
-    
-    // Most active
-    console.log("\n📊 Most Active (24h):");
-    const sorted = [...(categories.categories || [])].sort((a, b) =>
-        (b.articleCount24h || 0) - (a.articleCount24h || 0)
-    );
-    
-    sorted.slice(0, 10).forEach(cat => {
-        console.log(`   ${cat.name}: ${cat.articleCount24h}`);
-    });
-    ```
+Response:
 
-=== "cURL"
-    ```bash
-    # Get categories
-    curl "https://cryptocurrency.cv/api/categories" | jq
-    
-    # Get category names only
-    curl "https://cryptocurrency.cv/api/categories" | jq '.categories[].name'
-    
-    # Get trending categories
-    curl "https://cryptocurrency.cv/api/categories" | jq '.categories | map(select(.trending))'
-    ```
+```json
+{
+  "categories": [
+    { "id": "general", "name": "General", "description": "Broad crypto industry news", "sourceCount": 31 },
+    { "id": "institutional", "name": "Institutional", "description": "VC and institutional investor insights", "sourceCount": 21 }
+  ],
+  "usage": {
+    "example": "/api/news?category=institutional",
+    "description": "Use the category parameter to filter news by category"
+  }
+}
+```
 
 ---
 
-## 4. Currencies & Languages
+## 4. Statistics
 
-Get supported currencies and languages.
+`/api/stats` summarises the last 24 hours: how many articles arrived, from which sources, in which categories, and at what hours.
+
+=== "cURL"
+    ```bash
+    curl https://cryptocurrency.cv/api/stats | jq '.summary'
+
+    # Top 10 sources by article count
+    curl -s https://cryptocurrency.cv/api/stats | jq '.bySource[0:10]'
+
+    # Busiest hour
+    curl -s https://cryptocurrency.cv/api/stats \
+      | jq '.hourlyDistribution | max_by(.count)'
+    ```
 
 === "Python"
     ```python
     import requests
-    
-    def get_currencies():
-        """Get supported currencies."""
-        response = requests.get(
-            "https://cryptocurrency.cv/api/currencies"
-        )
-        return response.json()
-    
-    def get_languages():
-        """Get supported languages."""
-        response = requests.get(
-            "https://cryptocurrency.cv/api/languages"
-        )
-        return response.json()
-    
-    # Currencies
-    currencies = get_currencies()
-    
-    print("💰 Supported Currencies")
-    print("=" * 70)
-    print(f"   Total: {currencies.get('count', 0)} currencies")
-    
-    # Fiat currencies
-    print("\n   💵 Fiat Currencies:")
-    fiat = [c for c in currencies.get('currencies', []) if c.get('type') == 'fiat']
-    for currency in fiat[:15]:
-        code = currency.get('code', 'N/A')
-        name = currency.get('name', 'Unknown')
-        symbol = currency.get('symbol', '')
-        print(f"      {code:5} {symbol:3} {name}")
-    
-    # Crypto currencies
-    print("\n   🪙 Crypto Currencies:")
-    crypto = [c for c in currencies.get('currencies', []) if c.get('type') == 'crypto']
-    for currency in crypto[:15]:
-        code = currency.get('code', 'N/A')
-        name = currency.get('name', 'Unknown')
-        print(f"      {code:10} {name}")
-    
-    # Languages
-    languages = get_languages()
-    
-    print("\n" + "=" * 70)
-    print("🗣️ Supported Languages")
-    print("-" * 70)
-    print(f"   Total: {languages.get('count', 0)} languages")
-    
-    print(f"\n   {'Code':<8} {'Language':<20} {'Sources':<10} {'Articles':<15}")
-    print("   " + "-" * 55)
-    
-    for lang in languages.get('languages', [])[:20]:
-        code = lang.get('code', 'N/A')
-        name = lang.get('name', 'Unknown')
-        sources = lang.get('sourcesCount', 0)
-        articles = lang.get('articleCount', 0)
-        
-        print(f"   {code:<8} {name:<20} {sources:<10} {articles:<15,}")
-    
-    # Most common languages
-    print("\n📊 Languages by Article Count:")
-    sorted_langs = sorted(
-        languages.get('languages', []),
-        key=lambda x: x.get('articleCount', 0),
-        reverse=True
-    )
-    
-    total_articles = sum(l.get('articleCount', 0) for l in sorted_langs)
-    
-    for lang in sorted_langs[:10]:
-        name = lang.get('name', 'Unknown')
-        count = lang.get('articleCount', 0)
-        pct = (count / total_articles * 100) if total_articles > 0 else 0
-        bar = "█" * int(pct / 2) + "░" * (50 - int(pct / 2))
-        print(f"   {name[:12]:<12} [{bar}] {pct:.1f}%")
+
+    stats = requests.get("https://cryptocurrency.cv/api/stats", timeout=15).json()
+    s = stats["summary"]
+
+    print(f"{s['totalArticles']} articles in the last {s['timeRange']}")
+    print(f"{s['activeSources']} of {s['totalSources']} sources active")
+    print(f"~{s['avgArticlesPerHour']} articles/hour")
+
+    print("\nTop sources:")
+    for entry in stats["bySource"][:10]:
+        print(f"  {entry['source']:24s} {entry['articleCount']:4d}  ({entry['percentage']}%)")
     ```
 
-=== "JavaScript"
-    ```javascript
-    async function getCurrencies() {
-        const response = await fetch(
-            'https://cryptocurrency.cv/api/currencies'
-        );
-        return response.json();
-    }
-    
-    async function getLanguages() {
-        const response = await fetch(
-            'https://cryptocurrency.cv/api/languages'
-        );
-        return response.json();
-    }
-    
-    // Currencies
-    const currencies = await getCurrencies();
-    
-    console.log("💰 Currencies");
-    console.log("=".repeat(70));
-    console.log(`   Total: ${currencies.count}`);
-    
-    // Fiat
-    console.log("\n   💵 Fiat:");
-    currencies.currencies
-        ?.filter(c => c.type === 'fiat')
-        .slice(0, 10)
-        .forEach(c => console.log(`      ${c.code} ${c.symbol} ${c.name}`));
-    
-    // Crypto
-    console.log("\n   🪙 Crypto:");
-    currencies.currencies
-        ?.filter(c => c.type === 'crypto')
-        .slice(0, 10)
-        .forEach(c => console.log(`      ${c.code} ${c.name}`));
-    
-    // Languages
-    const languages = await getLanguages();
-    
-    console.log("\n🗣️ Languages");
-    console.log("=".repeat(70));
-    console.log(`   Total: ${languages.count}`);
-    
-    languages.languages?.slice(0, 15).forEach(lang => {
-        console.log(`   ${lang.code}: ${lang.name} (${lang.articleCount} articles)`);
-    });
-    ```
-
-=== "cURL"
-    ```bash
-    # Get currencies
-    curl "https://cryptocurrency.cv/api/currencies" | jq
-    
-    # Get just fiat currencies
-    curl "https://cryptocurrency.cv/api/currencies" | jq '.currencies | map(select(.type=="fiat"))'
-    
-    # Get languages
-    curl "https://cryptocurrency.cv/api/languages" | jq
-    
-    # Get language codes
-    curl "https://cryptocurrency.cv/api/languages" | jq '.languages[].code'
-    ```
+The response shape is `{ summary, bySource, byCategory, hourlyDistribution, fetchedAt }`. `summary` carries `totalArticles`, `activeSources`, `totalSources`, `avgArticlesPerHour` and `timeRange`.
 
 ---
 
-## 5. API Configuration & OpenAPI Spec
+## 5. Feeds
 
-Get API configuration and documentation.
+`/api/feeds` lists every syndication URL the site publishes, one set per indexed category.
+
+=== "cURL"
+    ```bash
+    curl https://cryptocurrency.cv/api/feeds | jq
+
+    # Every RSS URL
+    curl -s https://cryptocurrency.cv/api/feeds | jq -r '.feeds[].rss'
+
+    # Fetch one of them, capped at 20 items
+    curl "https://cryptocurrency.cv/api/rss?category=defi&limit=20"
+    ```
+
+Each feed entry carries an `rss`, `atom` and `json` URL. Append `&limit=N` (max 50) to any of them.
+
+The site-wide feeds live at the root and publish **50 items** each, with no key required:
+
+```bash
+curl https://cryptocurrency.cv/feed.xml     # RSS 2.0
+curl https://cryptocurrency.cv/feed.json    # JSON Feed 1.1
+```
+
+These are not subject to the free-tier article cap that applies to `/api/news`.
+
+---
+
+## 6. Discovery: OpenAPI, docs and llms.txt
+
+Everything an agent needs to work out what this API can do, without paying to read the manual.
+
+=== "cURL"
+    ```bash
+    # The OpenAPI 3.1 spec
+    curl https://cryptocurrency.cv/api/openapi.json | jq
+
+    # Every path in the spec
+    curl -s https://cryptocurrency.cv/api/openapi.json | jq -r '.paths | keys[]'
+
+    # How many endpoints?
+    curl -s https://cryptocurrency.cv/api/openapi.json | jq '.paths | length'
+
+    # LLM-oriented reference (plain text, no parsing needed)
+    curl https://cryptocurrency.cv/api/llms.txt
+    curl https://cryptocurrency.cv/api/llms-full.txt
+    ```
 
 === "Python"
     ```python
     import requests
-    import json
-    
-    def get_config():
-        """Get API configuration."""
-        response = requests.get(
-            "https://cryptocurrency.cv/api/config"
-        )
-        return response.json()
-    
-    def get_openapi_spec():
-        """Get OpenAPI specification."""
-        response = requests.get(
-            "https://cryptocurrency.cv/api/openapi"
-        )
-        return response.json()
-    
-    # Configuration
-    config = get_config()
-    
-    print("⚙️ API Configuration")
-    print("=" * 70)
-    
-    # Rate limits
-    limits = config.get('rateLimits', {})
-    print("\n   ⚡ Rate Limits:")
-    print(f"      Requests/min: {limits.get('requestsPerMinute', 'N/A')}")
-    print(f"      Requests/day: {limits.get('requestsPerDay', 'N/A')}")
-    print(f"      Burst limit: {limits.get('burstLimit', 'N/A')}")
-    
-    # Pagination
-    pagination = config.get('pagination', {})
-    print("\n   📄 Pagination:")
-    print(f"      Default limit: {pagination.get('defaultLimit', 'N/A')}")
-    print(f"      Max limit: {pagination.get('maxLimit', 'N/A')}")
-    
-    # Features
-    features = config.get('features', {})
-    print("\n   🎯 Enabled Features:")
-    for feature, enabled in features.items():
-        icon = "✅" if enabled else "❌"
-        print(f"      {icon} {feature}")
-    
-    # Endpoints count
-    endpoints = config.get('endpoints', {})
-    print("\n   📊 Endpoint Counts:")
-    for category, count in endpoints.items():
-        print(f"      {category}: {count} endpoints")
-    
-    # OpenAPI spec
-    print("\n" + "=" * 70)
-    print("📖 OpenAPI Specification")
-    print("-" * 70)
-    
-    spec = get_openapi_spec()
-    
-    print(f"   Version: {spec.get('openapi', 'N/A')}")
-    print(f"   Title: {spec.get('info', {}).get('title', 'N/A')}")
-    print(f"   API Version: {spec.get('info', {}).get('version', 'N/A')}")
-    
-    # Count paths
-    paths = spec.get('paths', {})
-    print(f"\n   📍 Endpoints: {len(paths)}")
-    
-    # Group by tag
-    by_tag = {}
-    for path, methods in paths.items():
-        for method, details in methods.items():
-            if isinstance(details, dict):
-                tags = details.get('tags', ['other'])
-                for tag in tags:
-                    by_tag[tag] = by_tag.get(tag, 0) + 1
-    
-    print("\n   📁 Endpoints by Category:")
-    for tag, count in sorted(by_tag.items(), key=lambda x: -x[1]):
-        print(f"      {tag}: {count}")
-    
-    # List some endpoints
-    print("\n   📋 Sample Endpoints:")
-    for path in list(paths.keys())[:20]:
-        methods = list(paths[path].keys())
-        print(f"      {', '.join(m.upper() for m in methods):6} {path}")
+
+    spec = requests.get("https://cryptocurrency.cv/api/openapi.json", timeout=20).json()
+
+    print(f"{spec['info']['title']} {spec['info']['version']}")
+    print(f"{len(spec['paths'])} paths")
+
+    # Which endpoints take a `category` parameter?
+    for path, ops in spec["paths"].items():
+        for method, op in ops.items():
+            names = {p.get("name") for p in op.get("parameters", [])}
+            if "category" in names:
+                print(f"{method.upper():5s} {path}")
+                break
     ```
 
-=== "JavaScript"
-    ```javascript
-    async function getConfig() {
-        const response = await fetch(
-            'https://cryptocurrency.cv/api/config'
-        );
-        return response.json();
-    }
-    
-    async function getOpenApiSpec() {
-        const response = await fetch(
-            'https://cryptocurrency.cv/api/openapi'
-        );
-        return response.json();
-    }
-    
-    // Configuration
-    const config = await getConfig();
-    
-    console.log("⚙️ API Configuration");
-    console.log("=".repeat(70));
-    
-    // Rate limits
-    console.log("\n   ⚡ Rate Limits:");
-    console.log(`      Per minute: ${config.rateLimits?.requestsPerMinute}`);
-    console.log(`      Per day: ${config.rateLimits?.requestsPerDay}`);
-    
-    // Features
-    console.log("\n   🎯 Features:");
-    for (const [feature, enabled] of Object.entries(config.features || {})) {
-        console.log(`      ${enabled ? '✅' : '❌'} ${feature}`);
-    }
-    
-    // OpenAPI
-    const spec = await getOpenApiSpec();
-    
-    console.log("\n📖 OpenAPI Spec");
-    console.log(`   Version: ${spec.openapi}`);
-    console.log(`   Endpoints: ${Object.keys(spec.paths || {}).length}`);
-    
-    // Sample endpoints
-    console.log("\n   Sample Endpoints:");
-    Object.keys(spec.paths || {}).slice(0, 15).forEach(path => {
-        const methods = Object.keys(spec.paths[path]).map(m => m.toUpperCase()).join(',');
-        console.log(`      ${methods.padEnd(6)} ${path}`);
-    });
-    ```
+`/api/docs` serves Swagger UI in the browser, driven by the same spec. Open <https://cryptocurrency.cv/api/docs> to click through it.
 
-=== "cURL"
-    ```bash
-    # Get configuration
-    curl "https://cryptocurrency.cv/api/config" | jq
-    
-    # Get OpenAPI spec
-    curl "https://cryptocurrency.cv/api/openapi" | jq
-    
-    # Get just rate limits
-    curl "https://cryptocurrency.cv/api/config" | jq '.rateLimits'
-    
-    # List all endpoints
-    curl "https://cryptocurrency.cv/api/openapi" | jq '.paths | keys'
-    ```
+`/api/sample` returns a deliberately tiny payload (2 headlines and 2 prices) plus pricing information. It is the "what does this thing even return" endpoint, useful for a first call from an agent that has no context.
 
 ---
 
-## Complete Utility Dashboard
+## 7. A monitoring script you can actually run
 
 ```python
 #!/usr/bin/env python3
-"""API utility dashboard."""
+"""Poll the free utility endpoints and print a one-screen status board."""
 
+import sys
 import requests
-from datetime import datetime
-from typing import Dict, Any
 
-class UtilityDashboard:
-    """API utility dashboard."""
-    
-    BASE_URL = "https://cryptocurrency.cv"
-    
-    def __init__(self):
-        self.session = requests.Session()
-    
-    def _get(self, endpoint: str, params: Dict = None) -> Dict[str, Any]:
-        response = self.session.get(
-            f"{self.BASE_URL}{endpoint}",
-            params=params or {}
-        )
-        return response.json()
-    
-    def run_dashboard(self):
-        """Run utility dashboard."""
-        print("=" * 80)
-        print("🔧 API UTILITY DASHBOARD")
-        print(f"   Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-        print("=" * 80)
-        
-        # Health
-        print("\n🏥 HEALTH STATUS")
-        print("-" * 80)
-        try:
-            health = self._get("/api/health")
-            icon = "✅" if health.get('status') == 'healthy' else "❌"
-            print(f"   Status: {icon} {health.get('status', 'unknown').upper()}")
-            
-            for comp, status in health.get('components', {}).items():
-                c_icon = "✅" if status.get('healthy') else "❌"
-                print(f"      {c_icon} {comp}: {status.get('latency', 'N/A')}ms")
-        except Exception as e:
-            print(f"   Error: {e}")
-        
-        # Version
-        print("\n📦 VERSION INFO")
-        print("-" * 80)
-        try:
-            version = self._get("/api/version")
-            print(f"   Version: {version.get('version', 'N/A')}")
-            print(f"   Build: {version.get('build', 'N/A')}")
-        except Exception as e:
-            print(f"   Error: {e}")
-        
-        # Sources
-        print("\n📰 NEWS SOURCES")
-        print("-" * 80)
-        try:
-            sources = self._get("/api/sources")
-            print(f"   Total: {sources.get('count', 0)} sources")
-            
-            # Top 5 by reliability
-            sorted_sources = sorted(
-                sources.get('sources', []),
-                key=lambda x: x.get('reliabilityScore', 0),
-                reverse=True
-            )
-            print("   Top by reliability:")
-            for s in sorted_sources[:5]:
-                print(f"      • {s.get('name')}: {s.get('reliabilityScore', 0)}%")
-        except Exception as e:
-            print(f"   Error: {e}")
-        
-        # Categories
-        print("\n📁 CATEGORIES")
-        print("-" * 80)
-        try:
-            categories = self._get("/api/categories")
-            total = len(categories.get('categories', []))
-            print(f"   Total: {total} categories")
-            
-            trending = [c for c in categories.get('categories', []) if c.get('trending')]
-            if trending:
-                print(f"   Trending: {', '.join(c.get('name', '') for c in trending[:5])}")
-        except Exception as e:
-            print(f"   Error: {e}")
-        
-        # Languages
-        print("\n🗣️ LANGUAGES")
-        print("-" * 80)
-        try:
-            languages = self._get("/api/languages")
-            print(f"   Supported: {languages.get('count', 0)} languages")
-            
-            top_langs = sorted(
-                languages.get('languages', []),
-                key=lambda x: x.get('articleCount', 0),
-                reverse=True
-            )[:5]
-            print(f"   Top: {', '.join(l.get('name', '') for l in top_langs)}")
-        except Exception as e:
-            print(f"   Error: {e}")
-        
-        # Config
-        print("\n⚙️ CONFIGURATION")
-        print("-" * 80)
-        try:
-            config = self._get("/api/config")
-            limits = config.get('rateLimits', {})
-            print(f"   Rate limit: {limits.get('requestsPerMinute', 'N/A')}/min")
-            print(f"   Daily limit: {limits.get('requestsPerDay', 'N/A')}/day")
-        except Exception as e:
-            print(f"   Error: {e}")
-        
-        print("\n" + "=" * 80)
-        print("✅ Dashboard complete!")
+BASE_URL = "https://cryptocurrency.cv"
+TIMEOUT = 15
+ICONS = {"healthy": "✅", "degraded": "⚠️", "unhealthy": "❌"}
 
-def main():
-    dashboard = UtilityDashboard()
-    dashboard.run_dashboard()
+
+def get(path: str) -> dict:
+    response = requests.get(f"{BASE_URL}{path}", timeout=TIMEOUT)
+    response.raise_for_status()
+    return response.json()
+
+
+def main() -> int:
+    health = get("/api/health")
+    version = get("/api/version")
+    stats = get("/api/stats")
+    sources = get("/api/sources")
+
+    print("=" * 60)
+    print(f"{ICONS.get(health['status'], '❓')}  {health['status'].upper()}")
+    print("=" * 60)
+
+    print(f"\ncommit {version['commit']}  built {version['builtAt']}")
+    print(f"revision {version['revision']}  uptime {health['uptime']}s")
+
+    print("\nchecks:")
+    for name, check in health["checks"].items():
+        print(f"  {ICONS.get(check['status'], '❓')} {name:14s} {check['status']}")
+
+    feeds = health["checks"]["feeds"]
+    print(f"\ncached articles: {feeds['articleCount']}")
+    print(f"newest article:  {feeds['newestAgeMinutes']} min old")
+
+    summary = stats["summary"]
+    print(f"\n{summary['totalArticles']} articles / {summary['timeRange']}")
+    print(f"{summary['activeSources']}/{summary['totalSources']} sources active")
+    print(f"{sources['count']} sources in the catalog")
+
+    # Non-zero exit so a cron or a CI job can gate on it
+    return 0 if health["status"] == "healthy" else 1
+
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())
 ```
+
+Run it as often as you like: `/api/health` and `/api/version` are exempt from rate limiting, and `/api/stats` and `/api/sources` are free-tier routes with a 120 requests/hour per-IP budget.
 
 ---
 
 ## Next Steps
 
 - [News Basics](news-basics.md) - Get started with news endpoints
-- [API Reference](../API.md) - Complete API documentation
-- [SDKs](../../examples/README.md) - Official SDK libraries
+- [API Reference](../API.md) - Complete API documentation, including the access model and rate limits
+- [News Sources](../SOURCES.md) - The catalog behind `/api/sources`
+- [Examples](https://github.com/nirholas/cryptocurrency.cv/blob/main/examples/README.md) - Runnable code in several languages

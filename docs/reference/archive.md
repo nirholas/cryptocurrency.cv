@@ -2,7 +2,7 @@
 
 > Everything about the historical news archive: the 662,047-article dataset, the archive API and its query parameters, the Archive v2 collection pipeline, the JSONL directory layout, and the enriched article schema.
 >
-> Moved here from the project README. Back to the [reference index](../../README.md).
+> Moved here from the project README. Back to the [reference index](https://github.com/nirholas/cryptocurrency.cv/blob/main/README.md).
 
 ## 📚 Historical Archive
 

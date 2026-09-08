@@ -138,7 +138,7 @@ actor CryptoNewsClient {
     }
     
     func fetchSentiment(asset: String) async throws -> SentimentData {
-        var components = URLComponents(url: baseURL.appendingPathComponent("/api/ai/sentiment"), resolvingAgainstBaseURL: false)!
+        var components = URLComponents(url: baseURL.appendingPathComponent("/api/sentiment"), resolvingAgainstBaseURL: false)!
         components.queryItems = [URLQueryItem(name: "asset", value: asset)]
         
         let (data, _) = try await session.data(from: components.url!)

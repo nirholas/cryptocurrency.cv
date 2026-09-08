@@ -4,7 +4,7 @@ Import our Postman collection to explore and test the Free Crypto News API inter
 
 ## Features
 
-- 📋 **182 pre-configured requests** for all API endpoints
+- 📋 **105 pre-configured requests** covering the main API surface
 - 🔄 **Environment variables** for easy configuration
 - 📝 **Request examples** with sample responses
 - 🧪 **Test scripts** for validation
@@ -113,7 +113,7 @@ https://raw.githubusercontent.com/nirholas/cryptocurrency.cv/main/postman/Free_C
 |---------|--------|----------|-------------|
 | Health Check | GET | `/api/health` | API status |
 | List Sources | GET | `/api/sources` | Available sources |
-| Get Categories | GET | `/api/categories` | News categories |
+| Get Categories | GET | `/api/news/categories` | News categories |
 | OpenAPI Spec | GET | `/api/openapi.json` | OpenAPI specification |
 
 ## Environment Variables
@@ -144,7 +144,7 @@ baseUrl = https://your-instance.vercel.app
 
 ## No Authentication Required! 🆓
 
-All endpoints work without API keys. Premium endpoints require x402 payment headers.
+Free-tier and exempt endpoints work without API keys. Premium endpoints require an `X-API-Key` or an x402 payment header. See the access model in [API Reference](../API.md#access-model).
 
 ## Example Requests
 

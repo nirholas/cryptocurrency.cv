@@ -15,25 +15,32 @@ The Rust SDK provides an async, type-safe client for the Free Crypto News API wi
 
 ## Installation
 
-Add to your `Cargo.toml`:
+The crate is **not on crates.io yet**. Depend on the repository directly:
 
 ```toml
 [dependencies]
-fcn-sdk = "0.2"
+fcn-sdk = { git = "https://github.com/nirholas/cryptocurrency.cv", branch = "main" }
 tokio = { version = "1", features = ["full"] }
+```
+
+Or clone it and use a path dependency:
+
+```toml
+[dependencies]
+fcn-sdk = { path = "../cryptocurrency.cv/sdk/rust" }
 ```
 
 ### Feature Flags
 
 ```toml
 # Enable WebSocket streaming
-fcn-sdk = { version = "0.2", features = ["websocket"] }
+fcn-sdk = { git = "https://github.com/nirholas/cryptocurrency.cv", features = ["websocket"] }
 
 # Enable tracing for debugging
-fcn-sdk = { version = "0.2", features = ["tracing"] }
+fcn-sdk = { git = "https://github.com/nirholas/cryptocurrency.cv", features = ["tracing"] }
 
 # Enable all features
-fcn-sdk = { version = "0.2", features = ["full"] }
+fcn-sdk = { git = "https://github.com/nirholas/cryptocurrency.cv", features = ["full"] }
 ```
 
 | Feature | Description | Default |

@@ -18,7 +18,7 @@ The `CryptoNewsOracle` contract fetches crypto news sentiment data from the Free
 
 ## Contract Source
 
-📁 Location: [contracts/CryptoNewsOracle.sol](../../contracts/CryptoNewsOracle.sol)
+📁 Location: [contracts/CryptoNewsOracle.sol](https://github.com/nirholas/cryptocurrency.cv/blob/main/contracts/CryptoNewsOracle.sol)
 
 ```solidity
 // SPDX-License-Identifier: MIT

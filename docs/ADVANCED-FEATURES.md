@@ -70,7 +70,7 @@ Interactive frames for the Farcaster social network.
 
 Get crypto news directly in VS Code through Copilot Chat.
 
-**Installation:** Search "Crypto News for Copilot" in VS Code Marketplace
+**Installation:** Not on the Marketplace yet. Build the `.vsix` from a clone: `cd copilot-extension && npm install && npm run compile && npx vsce package`, then `code --install-extension crypto-news-copilot-*.vsix`. See [Copilot Extension](integrations/copilot-extension.md).
 
 **Usage:**
 ```

@@ -118,7 +118,7 @@ API configuration and metadata.
 
 | Tutorial | Description | Endpoints |
 |----------|-------------|-----------|
-| [Utility Endpoints](utility-endpoints.md) | Health, sources, config | `/api/health`, `/api/sources`, `/api/categories`, `/api/config`, `/api/openapi` |
+| [Utility Endpoints](utility-endpoints.md) | Health, version, sources, discovery | `/api/health`, `/api/version`, `/api/stats`, `/api/sources`, `/api/news/categories`, `/api/openapi.json` |
 
 ---
 
@@ -128,9 +128,9 @@ Full SDK implementations with all endpoints:
 
 | SDK | Location | Description |
 |-----|----------|-------------|
-| Python SDK | [examples/python/crypto_news_sdk.py](../../examples/python/crypto_news_sdk.py) | Complete Python SDK with all endpoints |
-| TypeScript SDK | [examples/typescript/crypto-news-sdk.ts](../../examples/typescript/crypto-news-sdk.ts) | Type-safe TypeScript SDK |
-| JavaScript SDK | [examples/javascript/complete-api.js](../../examples/javascript/complete-api.js) | Comprehensive JavaScript SDK |
+| Python SDK | [examples/python/crypto_news_sdk.py](https://github.com/nirholas/cryptocurrency.cv/blob/main/examples/python/crypto_news_sdk.py) | Complete Python SDK with all endpoints |
+| TypeScript SDK | [examples/typescript/crypto-news-sdk.ts](https://github.com/nirholas/cryptocurrency.cv/blob/main/examples/typescript/crypto-news-sdk.ts) | Type-safe TypeScript SDK |
+| JavaScript SDK | [examples/javascript/complete-api.js](https://github.com/nirholas/cryptocurrency.cv/blob/main/examples/javascript/complete-api.js) | Comprehensive JavaScript SDK |
 
 ---
 
@@ -140,12 +140,12 @@ Complete integration examples for popular platforms:
 
 | Example | Language | Description |
 |---------|----------|-------------|
-| [Discord Bot](../../examples/discord-bot.js) | JavaScript | News bot for Discord |
-| [Slack Bot](../../examples/slack-bot.js) | JavaScript | News bot for Slack |
-| [Telegram Bot](../../examples/telegram-bot.py) | Python | News bot for Telegram |
-| [LangChain Tool](../../examples/langchain-tool.py) | Python | AI agent integration |
-| [Real-time Stream](../../examples/realtime-stream.js) | JavaScript | SSE streaming example |
-| [Sentiment Analysis](../../examples/sentiment-analysis.py) | Python | AI sentiment example |
+| [Discord Bot](https://github.com/nirholas/cryptocurrency.cv/blob/main/examples/discord-bot.js) | JavaScript | News bot for Discord |
+| [Slack Bot](https://github.com/nirholas/cryptocurrency.cv/blob/main/examples/slack-bot.js) | JavaScript | News bot for Slack |
+| [Telegram Bot](https://github.com/nirholas/cryptocurrency.cv/blob/main/examples/telegram-bot.py) | Python | News bot for Telegram |
+| [LangChain Tool](https://github.com/nirholas/cryptocurrency.cv/blob/main/examples/langchain-tool.py) | Python | AI agent integration |
+| [Real-time Stream](https://github.com/nirholas/cryptocurrency.cv/blob/main/examples/realtime-stream.js) | JavaScript | SSE streaming example |
+| [Sentiment Analysis](https://github.com/nirholas/cryptocurrency.cv/blob/main/examples/sentiment-analysis.py) | Python | AI sentiment example |
 
 ---
 
@@ -155,9 +155,9 @@ For premium API access with micropayments:
 
 | Example | Language | Description |
 |---------|----------|-------------|
-| [x402 TypeScript](../../examples/x402-client.ts) | TypeScript | Using @x402/fetch |
-| [x402 Python](../../examples/x402-client.py) | Python | Manual payment flow |
-| [x402 Go](../../examples/x402-client.go) | Go | Server-side integration |
+| [x402 TypeScript](https://github.com/nirholas/cryptocurrency.cv/blob/main/examples/x402-client.ts) | TypeScript | Using @x402/fetch |
+| [x402 Python](https://github.com/nirholas/cryptocurrency.cv/blob/main/examples/x402-client.py) | Python | Manual payment flow |
+| [x402 Go](https://github.com/nirholas/cryptocurrency.cv/blob/main/examples/x402-client.go) | Go | Server-side integration |
 
 ---
 

@@ -5,27 +5,30 @@ The TypeScript SDK provides full type safety with comprehensive type definitions
 ## Installation
 
 ```bash
-npm install @fcn/sdk
+npm install @nirholas/crypto-news
 # or
-yarn add @fcn/sdk
+yarn add @nirholas/crypto-news
 ```
 
 ## Quick Start
 
 ```typescript
-import { CryptoNews, NewsArticle, MarketData } from '@fcn/sdk';
+import { CryptoNews, type NewsArticle, type MarketOverview } from '@nirholas/crypto-news';
 
 const client = new CryptoNews();
 
 // Fully typed responses
-const news = await client.getNews({ limit: 10 });
-news.articles.forEach((article: NewsArticle) => {
+const articles: NewsArticle[] = await client.getLatest(10);
+articles.forEach((article) => {
   console.log(article.title, article.pubDate);
 });
 
+// The full envelope, when you need pagination and free-tier flags
+const news = await client.getLatestWithMeta(10);
+console.log(news.pagination);
+
 // Market data with types
-const market: MarketData = await client.getMarket();
-console.log(market.bitcoin.price);
+const market: MarketOverview = await client.getMarket();
 ```
 
 ## Type Definitions
@@ -111,7 +114,7 @@ type SupportedLanguage =
 
 ```typescript
 import { useQuery } from '@tanstack/react-query';
-import { CryptoNews, NewsResponse } from '@fcn/sdk';
+import { CryptoNews, NewsResponse } from '@nirholas/crypto-news';
 
 const client = new CryptoNews();
 
@@ -145,7 +148,7 @@ function NewsList() {
 
 ```typescript
 import { z } from 'zod';
-import { CryptoNews } from '@fcn/sdk';
+import { CryptoNews } from '@nirholas/crypto-news';
 
 const ArticleSchema = z.object({
   title: z.string(),
@@ -172,7 +175,7 @@ async function getValidatedNews() {
 ### Generic Fetch Wrapper
 
 ```typescript
-import { CryptoNews } from '@fcn/sdk';
+import { CryptoNews } from '@nirholas/crypto-news';
 
 class TypedNewsClient extends CryptoNews {
   async fetchTyped<T>(endpoint: string): Promise<T> {
@@ -204,7 +207,7 @@ Enable strict null checks for maximum type safety:
 ```
 
 ```typescript
-import { CryptoNews, NewsResponse } from '@fcn/sdk';
+import { CryptoNews, NewsResponse } from '@nirholas/crypto-news';
 
 const client = new CryptoNews();
 
@@ -223,7 +226,7 @@ async function getFirstArticle(): Promise<string | undefined> {
 ## Error Types
 
 ```typescript
-import { CryptoNews, FCNError, NetworkError, ValidationError } from '@fcn/sdk';
+import { CryptoNews, FCNError, NetworkError, ValidationError } from '@nirholas/crypto-news';
 
 const client = new CryptoNews();
 

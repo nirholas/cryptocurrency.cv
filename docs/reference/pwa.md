@@ -2,7 +2,7 @@
 
 > The installable PWA: offline support, install prompts, keyboard shortcuts, and the service worker behaviour of the web app.
 >
-> Moved here from the project README. Back to the [reference index](../../README.md).
+> Moved here from the project README. Back to the [reference index](https://github.com/nirholas/cryptocurrency.cv/blob/main/README.md).
 
 ## 📱 Progressive Web App (PWA)
 

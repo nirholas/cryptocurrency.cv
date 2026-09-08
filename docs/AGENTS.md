@@ -10,7 +10,7 @@ Free Crypto News provides multiple integration points for AI agents:
 
 | Integration | Protocol | Tools/Actions | Use Case |
 |-------------|----------|---------------|----------|
-| **MCP Server** | Model Context Protocol | Local stdio server (`mcp/`) or hosted Streamable HTTP at `https://cryptocurrency.cv/api/mcp` | Claude Code, Claude Desktop, ChatGPT Dev Mode, any MCP client |
+| **MCP Server** | Model Context Protocol (Streamable HTTP or stdio) | 47 hosted tools at `https://cryptocurrency.cv/api/mcp`; 55 tools, 6 resources and 3 prompts locally | Claude Code, Claude Desktop, Cursor, ChatGPT Dev Mode, any MCP client |
 | **ChatGPT Plugin** | OpenAI Actions | 6 endpoints | ChatGPT Plus/Enterprise |
 | **LangChain Tools** | LangChain | 5 tools | Custom AI agents |
 | **x402 Discovery** | x402 Protocol | 10 paid endpoints | Autonomous payments |
@@ -56,7 +56,7 @@ cd /workspaces/cryptocurrency.cv && pwd && ls scripts/archive/*.js && rm scripts
 The Model Context Protocol server exposes the news, sentiment, market, DeFi, archive and alert endpoints as read-only tools for AI assistants. It ships two ways:
 
 - **Hosted (no install):** Streamable HTTP at `https://cryptocurrency.cv/api/mcp`. Claude Code: `claude mcp add --transport http crypto-news https://cryptocurrency.cv/api/mcp`.
-- **Local stdio server:** the `mcp/` directory of this repository. Clone, then `cd mcp && npm install && node index.js`.
+- **Local stdio server:** the published package `@nirholas/free-crypto-news-mcp` (`npx -y @nirholas/free-crypto-news-mcp`), or the `mcp/` directory of this repository: `cd mcp && npm install && npm run build && node dist/index.js`.
 
 The tool list below is grouped by category; the server's `tools/list` response is the authoritative inventory.
 
@@ -64,7 +64,7 @@ The tool list below is grouped by category; the server's `tools/list` response i
 
 | Tool | Description | Parameters |
 |------|-------------|------------|
-| `get_crypto_news` | Latest news from 130+ sources | `limit`, `source` |
+| `get_crypto_news` | Latest news from 358 sources | `limit`, `source` |
 | `search_crypto_news` | Search by keywords | `keywords`, `limit` |
 | `get_defi_news` | DeFi-specific news | `limit` |
 | `get_bitcoin_news` | Bitcoin-specific news | `limit` |
@@ -137,7 +137,7 @@ All tools are marked as `readOnlyHint: true` for ChatGPT compatibility (no confi
 ```javascript
 {
   name: 'get_crypto_news',
-  description: 'Get latest crypto news from 130+ sources',
+  description: 'Get latest crypto news from 358 sources',
   inputSchema: {
     type: 'object',
     properties: {
@@ -160,9 +160,25 @@ All tools are marked as `readOnlyHint: true` for ChatGPT compatibility (no confi
 
 === "Claude Desktop (local)"
 
+    The published package is `@nirholas/free-crypto-news-mcp`:
+
+    ```json title="claude_desktop_config.json"
+    {
+      "mcpServers": {
+        "crypto-news": {
+          "command": "npx",
+          "args": ["-y", "@nirholas/free-crypto-news-mcp"]
+        }
+      }
+    }
+    ```
+
+    To run from source, build it first: the entry point is `dist/index.js` and
+    only exists after `npm run build`.
+
     ```bash
     git clone https://github.com/nirholas/cryptocurrency.cv.git
-    cd cryptocurrency.cv/mcp && npm install
+    cd cryptocurrency.cv/mcp && npm install && npm run build
     ```
 
     ```json title="claude_desktop_config.json"
@@ -170,7 +186,7 @@ All tools are marked as `readOnlyHint: true` for ChatGPT compatibility (no confi
       "mcpServers": {
         "crypto-news": {
           "command": "node",
-          "args": ["/path/to/cryptocurrency.cv/mcp/index.js"]
+          "args": ["/absolute/path/to/cryptocurrency.cv/mcp/dist/index.js"]
         }
       }
     }
@@ -184,7 +200,7 @@ All tools are marked as `readOnlyHint: true` for ChatGPT compatibility (no confi
 
 === "Any Streamable-HTTP client"
 
-    Point the client at `https://cryptocurrency.cv/api/mcp`. No API key is needed. To self-host the HTTP transport instead, run `cd mcp && npm install && node http-server.js`.
+    Point the client at `https://cryptocurrency.cv/api/mcp`. No API key is needed. To self-host the Streamable HTTP transport instead, run `cd mcp && npm install && npm run build && npm run start:http` (serves `POST /mcp` on `PORT`, default 3333).
 
 ### Example Usage
 
@@ -238,7 +254,7 @@ paths:
             default: 10
 ```
 
-Full spec: [/chatgpt/openapi.yaml](https://cryptocurrency.cv/chatgpt/openapi.yaml)
+Full spec: [/api/openapi.json](https://cryptocurrency.cv/api/openapi.json)
 
 ### Installation
 
@@ -347,7 +363,7 @@ Agents can use these prompts to understand available capabilities:
 
 ```
 System: You have access to the Free Crypto News API with these capabilities:
-- get_crypto_news: Latest headlines from 130+ sources
+- get_crypto_news: Latest headlines from 358 sources
 - search_crypto_news: Search by topic/keyword
 - get_defi_news: DeFi protocol news
 - get_bitcoin_news: Bitcoin-specific news
@@ -372,7 +388,7 @@ The API is compatible with Google's Agent-to-Agent protocol:
 {
   "agent": {
     "name": "Free Crypto News",
-    "description": "Real-time crypto news from 130+ sources",
+    "description": "Real-time crypto news from 358 sources",
     "capabilities": ["news", "search", "market_data", "sentiment"],
     "endpoints": {
       "discovery": "/.well-known/x402",

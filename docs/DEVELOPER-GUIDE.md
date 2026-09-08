@@ -433,7 +433,7 @@ Copy `.env.example` to `.env.local` and configure:
 
 ## 🛣️ API Routes
 
-All API routes are in `src/app/api/`. The project has **150+ endpoints** organised by category:
+All API routes are in `src/app/api/`. The project has **394 discoverable endpoints** organised by category (the count is generated into `src/lib/openapi/routes.generated.ts`):
 
 ### Core
 
@@ -857,7 +857,7 @@ export const myJob = inngest.createFunction(
 ### Project documentation
 
 - [Architecture](ARCHITECTURE.md) — System design, data flow, storage
-- [API Reference](API.md) — Complete endpoint catalogue (150+ endpoints)
+- [API Reference](API.md) — Complete endpoint catalogue (394 endpoints)
 - [Testing Guide](TESTING.md) — Unit, component, and E2E testing
 - [Database](DATABASE.md) — Storage backends, Drizzle ORM, migrations
 - [Deployment](DEPLOYMENT.md) — Vercel, Docker, Railway
@@ -880,7 +880,7 @@ export const myJob = inngest.createFunction(
 
 ## 🤝 Contributing
 
-See the root [CONTRIBUTING.md](../CONTRIBUTING.md) for the code of conduct, PR workflow, coverage ratchet, and migration rules.
+See the root [CONTRIBUTING.md](https://github.com/nirholas/cryptocurrency.cv/blob/main/CONTRIBUTING.md) for the code of conduct, PR workflow, coverage ratchet, and migration rules.
 
 ### Local setup checklist
 

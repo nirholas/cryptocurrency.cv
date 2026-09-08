@@ -31,7 +31,7 @@ AI-powered trading signal generator combining news sentiment with market data.
 
 ### Features
 
-- Multi-source news aggregation (130+ sources)
+- Multi-source news aggregation (358 sources)
 - Sentiment scoring with confidence levels
 - Buy/Sell/Hold signals with explanations
 - Configurable risk parameters

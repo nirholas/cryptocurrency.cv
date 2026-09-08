@@ -1,7 +1,9 @@
 # Crypto Vision API Reference
 
-> Auto-generated from endpoint metadata. Do not edit manually.
-> Run: `node scripts/generate-api-docs.js`
+> The per-endpoint sections below are generated from endpoint metadata by
+> `node scripts/generate-api-docs.js`. The Overview section, and the notes
+> attached to `/api/sources` and `/api/version`, are maintained by hand:
+> re-run the generator only after porting them across.
 >
 > Generated: 2026-08-27T13:49:47.421Z
 > Total endpoints: 394
@@ -12,7 +14,117 @@ This API provides 394 endpoints across 30 categories covering cryptocurrency new
 
 **Base URL:** `https://cryptocurrency.cv`
 
-**Authentication:** All endpoints require either an API key (`X-API-Key` header) or x402 micropayment (`X-PAYMENT` header).
+### Access model
+
+The `Price` line printed under each endpoint below is generated from endpoint metadata and describes the **x402 tariff for paid routes**. It does not mean every route is paid. Three tiers exist, and which one applies is decided in `src/middleware/config.ts`:
+
+| Tier | Who it covers | Cost |
+|------|---------------|------|
+| **Exempt** | `/api/health`, `/api/version`, `/api/openapi.json`, `/api/mcp`, `/api/docs`, `/api/llms.txt`, `/api/llms-full.txt`, `/api/.well-known/*`, `/api/well-known/*`, `/api/sample`, `/api/sse`, `/api/ws`, `/api/register`, `/api/keys/*` | Free, no rate limit, no payment |
+| **Free tier** | `/api/news*`, `/api/prices*`, `/api/sources*`, `/api/market*`, `/api/coins*`, `/api/archive*`, `/api/article*`, `/api/articles*`, `/api/signals*`, `/api/exchanges*`, `/api/rss*`, `/api/atom*`, `/api/fear-greed`, `/api/trending`, `/api/unlocks` | Free, no key, 120 requests/hour per IP |
+| **Paid** | Everything else | API key (`X-API-Key`) or x402 micropayment (`X-PAYMENT`) |
+
+**No user-agent games required.** cURL, wget, HTTPie, SDK clients, search-engine crawlers and AI agents (GPTBot, ClaudeBot, PerplexityBot, and the rest of the allowlist in `src/middleware/bot-detection.ts`) are all first-class callers. Only vulnerability scanners and named content scrapers are blocked. A plain `curl https://cryptocurrency.cv/api/news` is the intended way to use this API; there is no need to send a browser `User-Agent`.
+
+### Free-tier article cap
+
+Anonymous free-tier requests to `/api/news` are capped at **3 articles**, and the response says so rather than pretending otherwise:
+
+```json
+{
+  "articles": [ "…at most 3…" ],
+  "pagination": { "page": 1, "perPage": 3, "totalPages": 1, "hasMore": true },
+  "free_tier": true,
+  "total": 3,
+  "limited": true,
+  "maxResults": 3,
+  "upgrade": "https://cryptocurrency.cv/pricing"
+}
+```
+
+`limited` is `true` only when articles were actually withheld, and `pagination` describes what you received rather than the uncapped result set, so a paginating client is not misled into requesting pages that do not exist. Full article bodies are stripped and summaries truncated to 120 characters at this tier. Send an `X-API-Key` to lift the cap.
+
+The site feeds at `/feed.xml` and `/feed.json` are **not** subject to this cap: each publishes 50 items.
+
+### Rate limits
+
+| Caller | Limit |
+|--------|-------|
+| Anonymous, free-tier routes | 120 requests/hour per IP |
+| Anonymous programmatic client, other routes | 20 requests/hour per IP |
+| Anonymous browser, other routes | 10 requests/hour per IP |
+| API key registration (`/api/register`) | 5 requests/hour per IP |
+| With an API key | Per-tier limits, see [Premium Tiers](PREMIUM.md) |
+
+### Operations endpoints
+
+Two routes exist for checking what is running. Both are exempt: no key, no payment, no rate limit.
+
+#### `GET /api/version`
+
+Returns the git commit, build time and Cloud Run revision serving the response. This is the deploy-verification endpoint: it proves which commit is live instead of leaving you to guess from behaviour.
+
+```bash
+curl https://cryptocurrency.cv/api/version
+```
+
+```json
+{
+  "name": "free-crypto-news",
+  "version": "1.0.10",
+  "commit": "da46f180",
+  "builtAt": "2026-08-28T02:40:11Z",
+  "revision": "cryptocurrency-cv-00219-abc",
+  "service": "cryptocurrency-cv",
+  "region": "us-central1",
+  "nodeVersion": "v20.19.0",
+  "uptimeSeconds": 2588,
+  "timestamp": "2026-08-28T03:14:52.656Z"
+}
+```
+
+`commit`, `builtAt`, `revision`, `service` and `region` come from `src/lib/build-info.ts` and are baked in at image build time. A locally-run dev server reports `"unknown"` and `null` for them, which is expected.
+
+#### `GET /api/health`
+
+Reports overall status plus a per-subsystem breakdown, and the build identity alongside it.
+
+```bash
+curl https://cryptocurrency.cv/api/health
+```
+
+```json
+{
+  "status": "healthy",
+  "timestamp": "2026-08-28T03:14:52.656Z",
+  "version": "1.0.10",
+  "build": {
+    "commit": "da46f180",
+    "builtAt": "2026-08-28T02:40:11Z",
+    "revision": "cryptocurrency-cv-00219-abc"
+  },
+  "uptime": 2588,
+  "checks": {
+    "api": { "status": "healthy", "responseTime": 74 },
+    "cache": { "status": "healthy", "message": "In-memory cache (no Redis or Vercel KV configured)" },
+    "externalAPIs": { "status": "healthy", "responseTime": 74 },
+    "feeds": {
+      "status": "healthy",
+      "articleCount": 1842,
+      "newestPublishedAt": "2026-08-28T03:02:00.000Z",
+      "newestAgeMinutes": 12,
+      "responseTime": 0
+    }
+  }
+}
+```
+
+Two things worth knowing about these checks:
+
+- **`feeds`** reports how many articles this instance has cached and how old the newest one is. It is `degraded` when the instance has not aggregated anything yet (a cold start, before the first `/api/news` call fills the cache) or when the newest cached article is more than 3 hours old. Otherwise `healthy`.
+- **`cache`** reports the in-memory cache as **healthy**, not degraded. Running without Redis or Vercel KV is the designed single-instance mode, not a fault. A `degraded` or `unhealthy` cache means a Redis or Vercel KV that *is* configured is misbehaving.
+
+An `x402Facilitator` check is added only when `X402_FACILITATOR_URL` or `X402_PAYMENT_ADDRESS` is configured.
 
 ---
 
@@ -2808,14 +2920,44 @@ RSS feed proxy with CORS support
 
 ### `GET /api/sources`
 
-News source listings and metadata
+The full source catalog: every RSS feed the aggregator reads.
 
-**Price:** `$0.001/request`
+**Price:** free. This endpoint is public and needs no token. Every `/api/news`
+response already carries these source names, so gating the catalog made an
+endpoint advertised as free answer `403`.
+
+Returns all 358 sources, each with `key`, `name`, `url`, `category` and `tier`:
+
+```bash
+curl https://cryptocurrency.cv/api/sources
+```
+
+```json
+{
+  "sources": [
+    {
+      "key": "coindesk",
+      "name": "CoinDesk",
+      "url": "https://www.coindesk.com/arc/outboundfeeds/rss/",
+      "category": "general",
+      "tier": "tier2",
+      "status": "unknown"
+    }
+  ],
+  "count": 358,
+  "statusChecked": false
+}
+```
+
+`status` is `"unknown"` and `statusChecked` is `false` because the catalog is
+returned without probing anything.
 
 | Parameter | Type | Required | Default | Description |
 |-----------|------|----------|---------|-------------|
-| `token` | string | No | — | Filter by token |
-| `status` | string | No | — | Filter by status |
+| `status` | string | No | — | `status=true` runs a live HEAD probe of every feed. **This variant alone requires the HMAC `token`**, because it is 358 outbound requests. Without it you get a `403 INVALID_TOKEN` telling you to drop the parameter. |
+| `token` | string | No | — | HMAC token, required only alongside `status=true` |
+
+For per-feed availability without a token, use `GET /api/sources/health` instead.
 
 ---
 
@@ -3564,9 +3706,13 @@ Vector similarity search across crypto content
 
 ### `GET /api/version`
 
-Version - Other
+The running git commit, build time and Cloud Run revision. Use it to verify a
+deploy landed.
 
-**Price:** `$0.001/request`
+**Price:** free. Exempt from rate limiting and from x402 payment.
+
+See [Operations endpoints](#operations-endpoints) above for the full response
+shape.
 
 ---
 
@@ -4959,4 +5105,4 @@ Trading signals with confidence scores
 
 ---
 
-*Generated by [scripts/generate-api-docs.js](../scripts/generate-api-docs.js) from [endpoint-metadata.generated.ts](../src/lib/openapi/endpoint-metadata.generated.ts)*
+*Generated by [scripts/generate-api-docs.js](https://github.com/nirholas/cryptocurrency.cv/blob/main/scripts/generate-api-docs.js) from [endpoint-metadata.generated.ts](https://github.com/nirholas/cryptocurrency.cv/blob/main/src/lib/openapi/endpoint-metadata.generated.ts)*

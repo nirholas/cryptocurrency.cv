@@ -189,7 +189,7 @@ Full bi-directional communication with subscriptions, live prices, whale alerts,
 
 | Feature | Update Interval | Description |
 |---------|-----------------|-------------|
-| 📰 **News Streaming** | 30s | Real-time news from 130+ sources |
+| 📰 **News Streaming** | 30s | Real-time news from 358 sources |
 | 🚨 **Breaking News** | 30s | Urgent breaking news alerts |
 | 💰 **Price Streaming** | 10s | Live prices (BTC, ETH, SOL, etc.) |
 | 🐳 **Whale Alerts** | 60s | Large transactions ($1M+) |

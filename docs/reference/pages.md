@@ -2,7 +2,7 @@
 
 > Every page of the cryptocurrency.cv web app, grouped by area (news, market data, portfolio, AI tools, developer pages).
 >
-> Moved here from the project README. Back to the [reference index](../../README.md).
+> Moved here from the project README. Back to the [reference index](https://github.com/nirholas/cryptocurrency.cv/blob/main/README.md).
 
 ## 🌐 Interactive Pages
 
@@ -91,7 +91,9 @@ The web interface provides rich, interactive pages for exploring crypto data:
 | `/about`      | About the project           |
 | `/pricing`    | Pricing tiers               |
 | `/install`    | Installation guide          |
-| `/blog`       | Project blog                |
+| `/blog`       | Blog index (146 posts)      |
+| `/blog/[slug]` | Individual blog post       |
+| `/blog/category/[category]` | Posts in one category |
 | `/calculator` | Crypto calculator           |
 | `/compare`    | Coin comparison             |
 | `/charts`     | Advanced charting           |
@@ -227,7 +229,9 @@ The web app includes **95+ pages** for market data, portfolio management, AI too
 | `/read/[id]`           | 🆕 Distraction-free reader mode |
 | `/share/[id]`          | 🆕 Share & embed articles       |
 | `/defi`                | DeFi news section               |
-| `/blog`                | Blog posts                      |
+| `/blog`                | Blog index (146 posts)          |
+| `/blog/[slug]`         | Individual blog post            |
+| `/blog/category/[category]` | Posts in one category      |
 
 ### Administration
 

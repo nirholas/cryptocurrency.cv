@@ -722,7 +722,9 @@ Requires `OPENAI_API_KEY` environment variable.
 ### Unit Tests
 
 ```bash
-npm run test:i18n
+npm run i18n:check      # locale files, key consistency, placeholders, JSON validity
+npm run i18n:validate   # schema validation
+npm run i18n:freshness  # flag translations that have drifted from the source
 ```
 
 Tests:
@@ -734,7 +736,7 @@ Tests:
 ### E2E Tests
 
 ```bash
-npm run e2e:i18n
+npm run test:e2e -- e2e/i18n.spec.ts
 ```
 
 Tests:

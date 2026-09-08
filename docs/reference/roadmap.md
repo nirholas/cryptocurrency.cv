@@ -2,7 +2,7 @@
 
 > What is complete, in progress, and planned for the platform.
 >
-> Moved here from the project README. Back to the [reference index](../../README.md).
+> Moved here from the project README. Back to the [reference index](https://github.com/nirholas/cryptocurrency.cv/blob/main/README.md).
 
 ## 🚀 Roadmap
 

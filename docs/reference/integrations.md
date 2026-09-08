@@ -2,7 +2,7 @@
 
 > Copy-paste integrations for Python, JavaScript/TypeScript, ChatGPT, MCP, LangChain, Discord, Telegram, HTML widgets, cURL, and the hosted MCP HTTP gateway.
 >
-> Moved here from the project README. Back to the [reference index](../../README.md).
+> Moved here from the project README. Back to the [reference index](https://github.com/nirholas/cryptocurrency.cv/blob/main/README.md).
 
 Pick your platform. Copy the code. Ship it.
 
@@ -158,13 +158,13 @@ paths:
 4. No authentication needed
 5. Save and test: _"What's the latest crypto news?"_
 
-Full schema: [`chatgpt/openapi.yaml`](../../chatgpt/openapi.yaml)
+Full schema: [`chatgpt/openapi.yaml`](https://github.com/nirholas/cryptocurrency.cv/blob/main/chatgpt/openapi.yaml)
 
 ---
 
 ## 🔮 MCP Server (Claude Desktop & ChatGPT Developer Mode)
 
-The MCP server provides **40+ tools** for AI assistants to access crypto news (full list in [`mcp/README.md`](../../mcp/README.md)).
+The MCP server gives AI assistants live crypto news. The hosted endpoint exposes **47 tools**; the local package exposes **55 tools, 6 resources and 3 prompts** (full list in [`mcp/README.md`](https://github.com/nirholas/cryptocurrency.cv/blob/main/mcp/README.md)).
 
 ### Option 0: Hosted endpoint, zero install
 
@@ -188,7 +188,7 @@ claude mcp add --transport http crypto-news https://cryptocurrency.cv/api/mcp
 
 | Tool                    | Description                    |
 | ----------------------- | ------------------------------ |
-| `get_crypto_news`       | Latest news from 130+ sources  |
+| `get_crypto_news`       | Latest news from 358 sources   |
 | `search_crypto_news`    | Search by keywords             |
 | `get_defi_news`         | DeFi-specific news             |
 | `get_bitcoin_news`      | Bitcoin-specific news          |
@@ -203,55 +203,78 @@ claude mcp add --transport http crypto-news https://cryptocurrency.cv/api/mcp
 | `find_original_sources` | Original source tracking       |
 | `get_portfolio_news`    | Portfolio news with prices     |
 
-### Option 1: Claude Desktop (stdio)
+### Option 1: hosted endpoint (nothing to install)
 
-The quickest local setup is the npm package: `"command": "npx", "args": ["-y", "@nirholas/free-crypto-news-mcp"]` in the config below. To run from source instead:
-
-**1. Clone & install:**
+`https://cryptocurrency.cv/api/mcp` speaks Streamable HTTP, is stateless, and
+needs no key. 47 tools.
 
 ```bash
-git clone https://github.com/nirholas/cryptocurrency.cv.git
-cd cryptocurrency.cv/mcp && npm install
+claude mcp add --transport http crypto-news https://cryptocurrency.cv/api/mcp
 ```
 
-**2. Add to config**
+Claude Desktop, Cursor and Windsurf take the same URL:
 
-**Mac:** `~/Library/Application Support/Claude/claude_desktop_config.json`  
+```json
+{
+  "mcpServers": {
+    "crypto-news": {
+      "url": "https://cryptocurrency.cv/api/mcp"
+    }
+  }
+}
+```
+
+### Option 2: local stdio server
+
+The published package is `@nirholas/free-crypto-news-mcp` (55 tools, 6
+resources, 3 prompts).
+
+**Mac:** `~/Library/Application Support/Claude/claude_desktop_config.json`
 **Windows:** `%APPDATA%\Claude\claude_desktop_config.json`
 
 ```json
 {
   "mcpServers": {
     "crypto-news": {
-      "command": "node",
-      "args": ["/path/to/cryptocurrency.cv/mcp/index.js"]
+      "command": "npx",
+      "args": ["-y", "@nirholas/free-crypto-news-mcp"]
     }
   }
 }
 ```
 
-**3. Restart Claude.** Ask: _"Get me the latest crypto news"_
-
-### Option 2: ChatGPT Developer Mode (HTTP/SSE)
-
-**Live Server:** `https://plugins.support/sse`
-
-**Or run locally:**
+To run from source instead, build it first: the entry point is `dist/index.js`,
+which only exists after `npm run build`.
 
 ```bash
-cd cryptocurrency.cv/mcp
-npm install
-npm run start:http  # Starts on port 3001
+git clone https://github.com/nirholas/cryptocurrency.cv.git
+cd cryptocurrency.cv/mcp && npm install && npm run build
 ```
 
-**In ChatGPT:**
+```json
+{
+  "mcpServers": {
+    "crypto-news": {
+      "command": "node",
+      "args": ["/absolute/path/to/cryptocurrency.cv/mcp/dist/index.js"]
+    }
+  }
+}
+```
+
+**Restart Claude.** Ask: _"Get me the latest crypto news"_
+
+### Option 3: ChatGPT Developer Mode
 
 1. Enable Developer Mode in Settings → Apps → Advanced
-2. Create new app with protocol: **SSE**
-3. Endpoint: `https://plugins.support/sse` (or `http://localhost:3001/sse`)
-4. No authentication needed
+2. Create a new app pointing at `https://cryptocurrency.cv/api/mcp`
+3. No authentication needed
 
-Full documentation: [`mcp/README.md`](../../mcp/README.md)
+To self-host that HTTP endpoint, `npm run start:http` in `mcp/` serves it at
+`POST /mcp` on `PORT` (default 3333). There is no SSE transport: Streamable
+HTTP replaced it in the MCP spec.
+
+Full documentation: [`mcp/README.md`](https://github.com/nirholas/cryptocurrency.cv/blob/main/mcp/README.md)
 
 ---
 
@@ -263,7 +286,7 @@ import requests
 
 @tool
 def get_crypto_news(limit: int = 5) -> str:
-    """Get latest cryptocurrency news from 130+ sources."""
+    """Get latest cryptocurrency news from 358 sources."""
     r = requests.get(f"https://cryptocurrency.cv/api/news?limit={limit}")
     return "\n".join([f"• {a['title']} ({a['source']})" for a in r.json()["articles"]])
 
@@ -277,7 +300,7 @@ def search_crypto_news(query: str) -> str:
 tools = [get_crypto_news, search_crypto_news]
 ```
 
-Full example: [`examples/langchain-tool.py`](../../examples/langchain-tool.py)
+Full example: [`examples/langchain-tool.py`](https://github.com/nirholas/cryptocurrency.cv/blob/main/examples/langchain-tool.py)
 
 ---
 
@@ -308,7 +331,7 @@ client.on("messageCreate", async (msg) => {
 });
 ```
 
-Full bot: [`examples/discord-bot.js`](../../examples/discord-bot.js)
+Full bot: [`examples/discord-bot.js`](https://github.com/nirholas/cryptocurrency.cv/blob/main/examples/discord-bot.js)
 
 ---
 
@@ -335,7 +358,7 @@ app.add_handler(CommandHandler("news", news))
 app.run_polling()
 ```
 
-Full bot: [`examples/telegram-bot.py`](../../examples/telegram-bot.py)
+Full bot: [`examples/telegram-bot.py`](https://github.com/nirholas/cryptocurrency.cv/blob/main/examples/telegram-bot.py)
 
 ---
 
@@ -361,7 +384,7 @@ Embed on any website:
 <div id="news">Loading...</div>
 ```
 
-Full styled widget: [`widget/crypto-news-widget.html`](../../widget/crypto-news-widget.html)
+Full styled widget: [`widget/crypto-news-widget.html`](https://github.com/nirholas/cryptocurrency.cv/blob/main/widget/crypto-news-widget.html)
 
 ---
 
@@ -386,11 +409,11 @@ curl -s https://cryptocurrency.cv/api/news | jq -r '.articles[] | "📰 \(.title
 
 ## 🤖 Integrations
 
-- **Claude Desktop MCP**: [`/mcp`](../../mcp)
-- **ChatGPT Plugin**: [`/chatgpt`](../../chatgpt)
-- **Postman Collection**: [`/postman`](../../postman)
-- **Bot Examples**: Discord, Telegram, Slack in [`/examples`](../../examples)
-- **Embeddable Widget**: [`/widget`](../../widget)
+- **Claude Desktop MCP**: [`/mcp`](https://github.com/nirholas/cryptocurrency.cv/tree/main/mcp)
+- **ChatGPT Plugin**: [`/chatgpt`](https://github.com/nirholas/cryptocurrency.cv/tree/main/chatgpt)
+- **Postman Collection**: [`/postman`](https://github.com/nirholas/cryptocurrency.cv/tree/main/postman)
+- **Bot Examples**: Discord, Telegram, Slack in [`/examples`](https://github.com/nirholas/cryptocurrency.cv/tree/main/examples)
+- **Embeddable Widget**: [`/widget`](https://github.com/nirholas/cryptocurrency.cv/tree/main/widget)
 
 
 ---

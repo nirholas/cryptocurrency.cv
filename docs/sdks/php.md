@@ -4,10 +4,25 @@ The PHP SDK provides a simple interface for integrating crypto news into PHP app
 
 ## Installation
 
-### Via Composer (Recommended)
+The PHP SDK is **not on Packagist yet**. Add it from the repository instead.
+
+### Via Composer (from source)
 
 ```bash
-composer require fcn/sdk
+git clone https://github.com/nirholas/cryptocurrency.cv.git
+cd cryptocurrency.cv/sdk/php
+composer install
+```
+
+Or point Composer at the repository from your own `composer.json`:
+
+```json
+{
+  "repositories": [
+    { "type": "vcs", "url": "https://github.com/nirholas/cryptocurrency.cv" }
+  ],
+  "require": { "nirholas/crypto-news": "dev-main" }
+}
 ```
 
 ### Manual Installation
@@ -15,7 +30,7 @@ composer require fcn/sdk
 Download the SDK and include it in your project:
 
 ```php
-require_once 'path/to/fcn-sdk/src/CryptoNews.php';
+require_once 'path/to/cryptocurrency.cv/sdk/php/src/CryptoNews.php';
 ```
 
 ## Quick Start

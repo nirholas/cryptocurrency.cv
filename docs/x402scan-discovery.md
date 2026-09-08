@@ -23,10 +23,10 @@ Full specification: <https://x402scan.com/discovery/spec>.
 
 ### 1. `GET /openapi.json`
 
-Served by [`src/app/api/openapi.json/route.ts`](../src/app/api/openapi.json/route.ts)
-and rewritten to the root path in [`next.config.js`](../next.config.js). The
+Served by [`src/app/api/openapi.json/route.ts`](https://github.com/nirholas/cryptocurrency.cv/blob/main/src/app/api/openapi.json/route.ts)
+and rewritten to the root path in [`next.config.js`](https://github.com/nirholas/cryptocurrency.cv/blob/main/next.config.js). The
 document is generated, never hand-edited, by
-[`src/lib/openapi/generator.ts`](../src/lib/openapi/generator.ts).
+[`src/lib/openapi/generator.ts`](https://github.com/nirholas/cryptocurrency.cv/blob/main/src/lib/openapi/generator.ts).
 
 Every operation carries:
 
@@ -71,9 +71,9 @@ wrong:
 ### 2. The runtime `402`
 
 Built by
-[`src/lib/x402/payment-required.ts`](../src/lib/x402/payment-required.ts) and
+[`src/lib/x402/payment-required.ts`](https://github.com/nirholas/cryptocurrency.cv/blob/main/src/lib/x402/payment-required.ts) and
 returned by the middleware gate in
-[`src/middleware/x402.ts`](../src/middleware/x402.ts) before the route handler
+[`src/middleware/x402.ts`](https://github.com/nirholas/cryptocurrency.cv/blob/main/src/middleware/x402.ts) before the route handler
 ever runs. That ordering matters: a registration probe sends a bare request with
 no arguments, so if body or query validation ran first it would answer `400` and
 the probe would never see a challenge.
@@ -172,7 +172,7 @@ npx -y @agentcash/discovery@latest check    https://cryptocurrency.cv/api/v1/new
 ```
 
 The contract is also pinned in
-[`src/lib/openapi/__tests__/x402scan-discovery.test.ts`](../src/lib/openapi/__tests__/x402scan-discovery.test.ts),
+[`src/lib/openapi/__tests__/x402scan-discovery.test.ts`](https://github.com/nirholas/cryptocurrency.cv/blob/main/src/lib/openapi/__tests__/x402scan-discovery.test.ts),
 so a regression fails `bun run test` instead of surfacing as a silent delisting
 weeks later.
 
@@ -215,6 +215,7 @@ Manual alternative: <https://x402scan.com/resources/register>.
 
 ## Related
 
+- [x402-conformance.md](x402-conformance.md) - the auditor that checks all of the above against a live origin, and the layer no other tool covers
 - [X402.md](X402.md) - pricing tiers, payment flow, client integration
 - [WELL-KNOWN.md](WELL-KNOWN.md) - `/.well-known/x402` and the other discovery files
 - [API.md](API.md) - the full endpoint reference

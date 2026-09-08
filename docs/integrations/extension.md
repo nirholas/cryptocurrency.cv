@@ -174,7 +174,7 @@ extension/
 
 ### v1.0.0
 - Initial release
-- News popup with 120+ sources
+- News popup with 358 sources
 - Breaking news notifications
 - Price ticker
 - Dark mode support

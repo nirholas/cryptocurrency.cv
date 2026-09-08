@@ -27,7 +27,7 @@ Submit PRs to these high-star curated lists. Each accepted PR generates permanen
 | **awesome-mcp-servers** | 40k+ | [github.com/punkpeye/awesome-mcp-servers](https://github.com/punkpeye/awesome-mcp-servers) | 🔴 P0 | ☐ | MCP server for Claude — real-time crypto data |
 | **awesome-chatgpt-plugins** | 2k+ | [github.com/ai-boost/awesome-chatgpt-plugins](https://github.com/ai-boost/awesome-gpts) | 🟠 P1 | ☐ | ChatGPT plugin with OpenAPI spec |
 | **awesome-selfhosted** | 210k+ | [github.com/awesome-selfhosted/awesome-selfhosted](https://github.com/awesome-selfhosted/awesome-selfhosted) | 🔴 P0 | ☐ | Docker one-click deploy, full self-hosted news aggregator |
-| **awesome-crypto** | 4k+ | [github.com/coinpride/CryptoList](https://github.com/coinpride/CryptoList) | 🟠 P1 | ☐ | Free crypto news API with 200+ sources |
+| **awesome-crypto** | 4k+ | [github.com/coinpride/CryptoList](https://github.com/coinpride/CryptoList) | 🟠 P1 | ☐ | Free crypto news API with 358 sources |
 | **awesome-nextjs** | 13k+ | [github.com/unicodeveloper/awesome-nextjs](https://github.com/unicodeveloper/awesome-nextjs) | 🟡 P2 | ☐ | Next.js app with PWA, SSR, 150+ API routes |
 | **awesome-react** | 66k+ | [github.com/enaqx/awesome-react](https://github.com/enaqx/awesome-react) | 🟡 P2 | ☐ | React SDK + embeddable widgets |
 | **awesome-typescript** | 4k+ | [github.com/dzharii/awesome-typescript](https://github.com/dzharii/awesome-typescript) | 🟢 P3 | ☐ | Full-stack TypeScript project |
@@ -93,7 +93,7 @@ For coordinated launch events — do these on the same day/week for maximum star
 | Target | Link | Priority | Status | Notes |
 |--------|------|----------|--------|-------|
 | **Product Hunt** | [producthunt.com](https://www.producthunt.com) | 🔴 P0 | ☐ | Schedule launch. Category: Developer Tools / Crypto / APIs. Get a hunter |
-| **Hacker News (Show HN)** | [news.ycombinator.com](https://news.ycombinator.com) | 🔴 P0 | ☐ | Title: "Show HN: Free Crypto News API – 200+ sources, no API key, self-hostable" |
+| **Hacker News (Show HN)** | [news.ycombinator.com](https://news.ycombinator.com) | 🔴 P0 | ☐ | Title: "Show HN: Free Crypto News API – 358 sources, no API key, self-hostable" |
 | **Indie Hackers** | [indiehackers.com](https://www.indiehackers.com) | 🟠 P1 | ☐ | Post in Products section + community |
 | **BetaList** | [betalist.com](https://betalist.com) | 🟡 P2 | ☐ | Startup directory for early-stage products |
 | **Launching Next** | [launchingnext.com](https://www.launchingnext.com) | 🟡 P2 | ☐ | Startup launch platform |
@@ -342,13 +342,13 @@ For maximum impact, submit to multiple high-priority targets in the same 24–48
 
 | Audience | Lead With |
 |----------|-----------|
-| **Developers** | Free, no API key, 150+ endpoints, SDKs in 13 languages |
+| **Developers** | Free, no API key, 394 endpoints, SDKs in 13 languages |
 | **Self-hosters** | One-click Docker deploy, full control, no vendor lock-in |
 | **AI/ML Engineers** | MCP server, llms.txt, RAG system, 662k article dataset |
 | **Crypto Traders** | Real-time news, sentiment analysis, whale alerts, arbitrage scanner |
 | **Researchers** | 662k+ article archive (2017–2025), academic access program, CITATION.cff |
 | **Content Creators** | Free embeddable widgets, RSS/Atom feeds, newsletter integration |
-| **Compared to Paid APIs** | $0 vs $29–299/mo, no rate limits, 200+ sources vs 1 |
+| **Compared to Paid APIs** | $0 vs $29–299/mo, 120 req/hour free, 358 sources vs 1 |
 
 ---
 

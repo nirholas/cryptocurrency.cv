@@ -2,7 +2,7 @@
 
 > Content-addressable storage, citation graphs, provenance, premium tiers, and the other advanced capabilities beyond the core news feed.
 >
-> Moved here from the project README. Back to the [reference index](../../README.md).
+> Moved here from the project README. Back to the [reference index](https://github.com/nirholas/cryptocurrency.cv/blob/main/README.md).
 
 ## ✨ Advanced Features
 

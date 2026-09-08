@@ -124,7 +124,7 @@ export function SentimentBadge({ asset = 'BTC' }: { asset?: string }) {
   const [sentiment, setSentiment] = useState<any>(null);
 
   useEffect(() => {
-    fetch(`${BASE_URL}/api/ai/sentiment?asset=${asset}`)
+    fetch(`${BASE_URL}/api/sentiment?asset=${asset}`)
       .then(r => r.json())
       .then(setSentiment);
   }, [asset]);

@@ -2,13 +2,13 @@
 
 > Runtime and caching design, authentication and x402 payment security, and the test suites that guard the platform.
 >
-> Moved here from the project README. Back to the [reference index](../../README.md).
+> Moved here from the project README. Back to the [reference index](https://github.com/nirholas/cryptocurrency.cv/blob/main/README.md).
 
 ## 🏗️ Technical Architecture
 
 ### Runtime & Performance
 
-**Edge Runtime:** 140+ endpoints optimized for Edge runtime  
+**Edge Runtime:** 253 route files declare `runtime = 'edge'`  
 **Target Metrics:**
 
 - TTFB: <200ms (actual ~150ms on Edge)
@@ -75,11 +75,17 @@
 
 **Tiers & Limits:**
 
-| Tier       | Daily Limit     | Rate Limit | Price   |
-| ---------- | --------------- | ---------- | ------- |
-| Free       | 100 requests    | 10/min     | $0/mo   |
-| Pro        | 10,000 requests | 100/min    | $29/mo  |
-| Enterprise | Unlimited       | 1,000/min  | $299/mo |
+Source of truth: `API_TIERS` in `src/lib/x402/pricing.ts`.
+
+| Tier | Daily Limit | Rate Limit | Price |
+| --- | --- | --- | --- |
+| Anonymous (no key) | — | 120/hour per IP on free-tier routes | $0 |
+| x402 pay-per-request | — | per payment | $0.001/request |
+| Pro | 50,000 requests | 500/min | $29/mo |
+| Enterprise | 500,000 requests | 2,000/min | $99/mo |
+
+The `free` API-key tier is discontinued: it still resolves for previously-issued
+keys but its quota is zero. Keyless callers use the anonymous free tier instead.
 
 **Features:**
 
@@ -142,7 +148,7 @@ curl -H "X-API-Key: cda_free_abc123" \
 
 - **E2E Tests:** 9 Playwright test files covering critical user paths
 - **Component Tests:** 8 Storybook stories for key UI components
-- **API Tests:** Postman collection with 182 endpoint tests
+- **API Tests:** Postman collection with 105 requests, plus the Playwright suite in `e2e/api.spec.ts`
 - **Unit Tests:** Vitest for core utility functions
 
 **E2E Test Coverage:**

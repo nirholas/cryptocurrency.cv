@@ -668,7 +668,7 @@ Developer portal with everything you need to integrate with the API.
 **URL:** `/developers`
 
 **Features:**
-- Full API documentation (180+ endpoints)
+- Full API documentation (394 endpoints)
 - SDK downloads for 8 languages
 - Code examples in Python, JavaScript, Go, cURL
 - Optional API key management

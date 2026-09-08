@@ -35,14 +35,14 @@ API Base: https://cryptocurrency.cv
 Available endpoints:
 - GET /api/news - Latest news
 - GET /api/search?q={query} - Search news  
-- GET /api/ai/sentiment?asset={symbol} - Get sentiment
+- GET /api/sentiment?asset={symbol} - Get sentiment
 - GET /api/fear-greed - Fear & Greed Index
 - GET /api/trending - Trending topics
 ```
 
 4. Under **Actions**, import the OpenAPI schema:
    ```
-   https://cryptocurrency.cv/chatgpt/openapi.yaml
+   https://cryptocurrency.cv/api/openapi.json
    ```
 
 ### Method 2: ChatGPT Actions
@@ -89,16 +89,13 @@ paths:
 
 ## Claude
 
-### Claude Desktop (MCP)
+### Claude Code (hosted, nothing to install)
 
-1. Install the MCP server:
 ```bash
-git clone https://github.com/nirholas/cryptocurrency.cv.git
-cd cryptocurrency.cv/mcp
-npm install
+claude mcp add --transport http crypto-news https://cryptocurrency.cv/api/mcp
 ```
 
-2. Add to Claude config:
+### Claude Desktop (hosted)
 
 **macOS:** `~/Library/Application Support/Claude/claude_desktop_config.json`
 **Windows:** `%APPDATA%\Claude\claude_desktop_config.json`
@@ -107,25 +104,30 @@ npm install
 {
   "mcpServers": {
     "crypto-news": {
-      "command": "node",
-      "args": ["/path/to/free-crypto-news/mcp/index.js"]
+      "url": "https://cryptocurrency.cv/api/mcp"
     }
   }
 }
 ```
 
-3. Restart Claude Desktop
+### Claude Desktop (local stdio server)
 
-4. Try: *"Get me the latest Bitcoin news with sentiment analysis"*
+```json
+{
+  "mcpServers": {
+    "crypto-news": {
+      "command": "npx",
+      "args": ["-y", "@nirholas/free-crypto-news-mcp"]
+    }
+  }
+}
+```
 
-### Available Tools (40+)
+Restart Claude Desktop, then try: *"Get me the latest Bitcoin news with sentiment analysis"*
 
-| Category | Tools |
-|----------|-------|
-| News | `get_news`, `search_news`, `get_breaking`, `get_by_source` |
-| Market | `get_fear_greed`, `get_trending`, `get_prices` |
-| AI | `get_sentiment`, `analyze_article`, `get_digest` |
-| Trading | `get_signals`, `get_whales`, `get_arbitrage` |
+### Available tools
+
+The local server exposes 55 tools, 6 resources and 3 prompts; the hosted endpoint exposes 47 tools. The full per-tool table is in [`mcp/README.md`](https://github.com/nirholas/cryptocurrency.cv/blob/main/mcp/README.md#tools), and [MCP Server](../integrations/mcp.md) has the group breakdown.
 
 ---
 
@@ -198,7 +200,7 @@ class Tools:
     
     def get_sentiment(self, asset: str = "BTC") -> str:
         """Get sentiment for a cryptocurrency."""
-        response = requests.get(f"{self.base_url}/api/ai/sentiment?asset={asset}")
+        response = requests.get(f"{self.base_url}/api/sentiment?asset={asset}")
         data = response.json()
         return f"{asset}: {data['label']} (score: {data['score']:.2f})"
 ```
@@ -215,8 +217,20 @@ Add to `.cursor/mcp.json`:
 {
   "mcpServers": {
     "crypto-news": {
+      "url": "https://cryptocurrency.cv/api/mcp"
+    }
+  }
+}
+```
+
+For a local stdio server instead, use the published package:
+
+```json
+{
+  "mcpServers": {
+    "crypto-news": {
       "command": "npx",
-      "args": ["-y", "@anthropic/mcp-server-crypto-news"]
+      "args": ["-y", "@nirholas/free-crypto-news-mcp"]
     }
   }
 }
@@ -234,7 +248,7 @@ Base URL: https://cryptocurrency.cv
 ### Endpoints
 - GET /api/news - Latest news
 - GET /api/search?q={query} - Search
-- GET /api/ai/sentiment?asset={symbol} - Sentiment
+- GET /api/sentiment?asset={symbol} - Sentiment
 - GET /api/fear-greed - Market index
 ```
 
@@ -251,8 +265,8 @@ Add to Windsurf settings:
   "mcp": {
     "servers": {
       "crypto-news": {
-        "command": "node",
-        "args": ["path/to/mcp/index.js"]
+        "command": "npx",
+        "args": ["-y", "@nirholas/free-crypto-news-mcp"]
       }
     }
   }
@@ -270,7 +284,7 @@ This project uses the Free Crypto News API for market data.
 
 API Base: https://cryptocurrency.cv
 - /api/news - Get latest news
-- /api/ai/sentiment - Get market sentiment
+- /api/sentiment - Get market sentiment
 - /api/fear-greed - Fear & Greed Index
 ```
 
@@ -355,7 +369,7 @@ def get_crypto_news(query: str = "") -> str:
 @tool
 def get_crypto_sentiment(asset: str) -> str:
     """Get sentiment analysis for a cryptocurrency symbol (e.g., BTC, ETH)."""
-    url = f"https://cryptocurrency.cv/api/ai/sentiment?asset={asset}"
+    url = f"https://cryptocurrency.cv/api/sentiment?asset={asset}"
     response = requests.get(url)
     data = response.json()
     return f"{asset}: {data['label']} (score: {data['score']:.2f}, confidence: {data['confidence']:.0%})"

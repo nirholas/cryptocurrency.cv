@@ -4,7 +4,7 @@ The Free Crypto News ChatGPT Plugin allows ChatGPT to access real-time crypto ne
 
 ## Features
 
-- Real-time crypto news from 7 major sources
+- Real-time crypto news from 358 sources
 - Search functionality across all sources
 - DeFi and Bitcoin-specific news
 - Breaking news alerts
@@ -64,7 +64,7 @@ ChatGPT will return news from the last 2 hours.
 
 The plugin uses the OpenAPI specification at:
 ```
-https://cryptocurrency.cv/chatgpt/openapi.yaml
+https://cryptocurrency.cv/api/openapi.json
 ```
 
 ### Endpoints
@@ -132,11 +132,11 @@ https://cryptocurrency.cv/.well-known/ai-plugin.json
   "name_for_human": "Free Crypto News",
   "name_for_model": "crypto_news",
   "description_for_human": "Get real-time crypto news, market data, and sentiment analysis.",
-  "description_for_model": "Provides access to cryptocurrency news from 120+ sources, market prices, Fear & Greed Index, and search functionality.",
+  "description_for_model": "Provides access to cryptocurrency news from 358 sources, market prices, Fear & Greed Index, and search functionality.",
   "auth": { "type": "none" },
   "api": {
     "type": "openapi",
-    "url": "https://cryptocurrency.cv/chatgpt/openapi.yaml"
+    "url": "https://cryptocurrency.cv/api/openapi.json"
   }
 }
 ```
