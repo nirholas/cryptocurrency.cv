@@ -42,7 +42,6 @@ import {
   getHomepageNews,
   getSourceCount,
   type NewsResponse,
-  type NewsArticle,
 } from '@/lib/crypto-news';
 import { categories } from '@/lib/categories';
 import { Link } from '@/i18n/navigation';

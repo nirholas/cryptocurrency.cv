@@ -517,6 +517,10 @@ export interface BridgeVolumeData {
   weeklyVolume: number;
   monthlyVolume: number;
   chains: string[];
+  /** Total value locked, in USD. Always present. */
+  tvlUsd: number;
+  /** 24h change in TVL, percent. */
+  tvlChange1d: number;
 }
 
 export function BridgeVolumeTable({
@@ -524,15 +528,37 @@ export function BridgeVolumeTable({
 }: {
   bridges: BridgeVolumeData[];
 }) {
-  const top = useMemo(
-    () =>
-      [...bridges]
-        .sort((a, b) => b.lastDailyVolume - a.lastDailyVolume)
-        .slice(0, 10),
+  // DefiLlama moved per-bridge volume behind a paid plan. When no bridge
+  // reports volume the roster still carries real TVL, so the table ranks and
+  // labels by TVL instead of printing a column of zeroes.
+  const hasVolume = useMemo(
+    () => bridges.some((b) => b.lastDailyVolume > 0),
     [bridges]
   );
 
-  const maxVol = top[0]?.lastDailyVolume ?? 1;
+  const top = useMemo(
+    () =>
+      [...bridges]
+        .sort((a, b) =>
+          hasVolume ? b.lastDailyVolume - a.lastDailyVolume : b.tvlUsd - a.tvlUsd
+        )
+        .slice(0, 10),
+    [bridges, hasVolume]
+  );
+
+  const primaryValue = (b: BridgeVolumeData) => (hasVolume ? b.lastDailyVolume : b.tvlUsd);
+  const maxVol = primaryValue(top[0] ?? ({ lastDailyVolume: 1, tvlUsd: 1 } as BridgeVolumeData)) || 1;
+
+  if (bridges.length === 0) {
+    return (
+      <div className="rounded-xl border border-border bg-(--color-surface) px-4 py-10 text-center">
+        <p className="text-sm font-medium text-text-primary">No bridge data available</p>
+        <p className="mt-1 text-xs text-text-secondary">
+          The upstream bridge feed is not responding right now. It refreshes every few minutes.
+        </p>
+      </div>
+    );
+  }
 
   return (
     <div className="overflow-x-auto rounded-xl border border-border bg-(--color-surface)">
@@ -546,13 +572,13 @@ export function BridgeVolumeTable({
               Chains
             </th>
             <th className="px-4 py-3 text-right text-xs font-semibold uppercase tracking-wider text-text-tertiary">
-              24h Volume
+              {hasVolume ? '24h Volume' : 'TVL'}
             </th>
             <th className="px-4 py-3 text-right text-xs font-semibold uppercase tracking-wider text-text-tertiary hidden md:table-cell">
-              7d Volume
+              {hasVolume ? '7d Volume' : '24h Change'}
             </th>
             <th className="px-4 py-3 text-right text-xs font-semibold uppercase tracking-wider text-text-tertiary hidden lg:table-cell">
-              30d Volume
+              {hasVolume ? '30d Volume' : 'Chains'}
             </th>
           </tr>
         </thead>
@@ -587,29 +613,45 @@ export function BridgeVolumeTable({
               <td className="px-4 py-3 text-right">
                 <div className="flex items-center gap-2 justify-end">
                   <span className="font-semibold tabular-nums text-text-primary">
-                    {formatLargeNumber(bridge.lastDailyVolume)}
+                    {formatLargeNumber(primaryValue(bridge))}
                   </span>
                   <div className="w-12 h-1.5 rounded-full bg-border/50 overflow-hidden hidden md:block">
                     <div
                       className="h-full rounded-full bg-purple-500 transition-all"
                       style={{
-                        width: `${(bridge.lastDailyVolume / maxVol) * 100}%`,
+                        width: `${(primaryValue(bridge) / maxVol) * 100}%`,
                         minWidth: "3px",
                       }}
                     />
                   </div>
                 </div>
               </td>
-              <td className="px-4 py-3 text-right hidden md:table-cell font-medium tabular-nums text-text-secondary">
-                {formatLargeNumber(bridge.weeklyVolume)}
+              <td
+                className={`px-4 py-3 text-right hidden md:table-cell font-medium tabular-nums ${
+                  hasVolume
+                    ? 'text-text-secondary'
+                    : bridge.tvlChange1d >= 0
+                      ? 'text-green-500'
+                      : 'text-red-500'
+                }`}
+              >
+                {hasVolume
+                  ? formatLargeNumber(bridge.weeklyVolume)
+                  : `${bridge.tvlChange1d >= 0 ? '+' : ''}${bridge.tvlChange1d.toFixed(2)}%`}
               </td>
               <td className="px-4 py-3 text-right hidden lg:table-cell font-medium tabular-nums text-text-secondary">
-                {formatLargeNumber(bridge.monthlyVolume)}
+                {hasVolume ? formatLargeNumber(bridge.monthlyVolume) : bridge.chains.length}
               </td>
             </tr>
           ))}
         </tbody>
       </table>
+      {!hasVolume && (
+        <p className="border-t border-border px-4 py-2 text-xs text-text-tertiary">
+          Ranked by total value locked. Per-bridge volume is not available from the free
+          DefiLlama feed.
+        </p>
+      )}
     </div>
   );
 }

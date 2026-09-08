@@ -10,7 +10,6 @@
  * sentiment, categories, links). Pure render, no data fetching.
  */
 
-import { Link } from '@/i18n/navigation';
 
 /* ── shared field shapes (subset of the CoinGecko /coins/{id} response) ── */
 

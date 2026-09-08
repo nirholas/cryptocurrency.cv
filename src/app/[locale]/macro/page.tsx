@@ -14,7 +14,6 @@ import { cn } from "@/lib/utils";
 import {
   Landmark,
   TrendingUp,
-  TrendingDown,
   DollarSign,
   BarChart3,
   Activity,
@@ -23,7 +22,6 @@ import {
   ArrowDownRight,
   BookOpen,
   Bitcoin,
-  Globe,
   LineChart,
 } from "lucide-react";
 import type { Metadata } from "next";

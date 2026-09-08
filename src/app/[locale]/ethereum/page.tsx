@@ -25,7 +25,6 @@ import {
   Activity,
   TrendingUp,
   TrendingDown,
-  ExternalLink,
   Layers,
 } from 'lucide-react';
 import type { Metadata } from 'next';

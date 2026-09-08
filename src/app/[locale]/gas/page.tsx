@@ -350,7 +350,7 @@ export default async function GasPage({ params }: Props) {
 
             {/* Speed Cards */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
-              {SPEED_CARDS.map(({ key, emoji, label, desc, barColor, borderColor }) => {
+              {SPEED_CARDS.map(({ key, emoji, label, desc, borderColor }) => {
                 const level = gas[key];
                 return (
                   <Card key={key} className={`p-6 border ${borderColor}`}>

@@ -11,7 +11,6 @@ import PageShareSection from '@/components/PageShareSection';
 import { getAllTags, getTagsByCategory, type Tag } from '@/lib/tags';
 import { generateSEOMetadata } from '@/lib/seo';
 import { Link } from '@/i18n/navigation';
-import { TagChip } from '@/components/TagChip';
 import type { Metadata } from 'next';
 
 export const revalidate = 300;

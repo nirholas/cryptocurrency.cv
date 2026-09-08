@@ -130,7 +130,7 @@ const faqs = [
   {
     question: 'Do you offer an SLA or premium support?',
     answer:
-      "Our Pro tier (coming soon) will include priority support and SLA guarantees. For enterprise needs with custom SLAs, please reach out via the contact form and we'll work with you directly.",
+      "Yes. The Pro plan on our pricing page includes priority support, and the Enterprise plan adds custom SLAs and a dedicated contact. For enterprise needs, reach out via the contact form and we'll work with you directly.",
   },
   {
     question: 'Is my data private when using the contact form?',

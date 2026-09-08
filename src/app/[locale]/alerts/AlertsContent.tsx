@@ -9,7 +9,7 @@
 import { useState, useMemo, useCallback, useRef } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { useAlerts, type Alert, type AlertType, type AlertPriority } from '@/components/alerts';
+import { useAlerts, type AlertType, type AlertPriority } from '@/components/alerts';
 import { Button } from '@/components/ui/Button';
 import { Badge } from '@/components/ui/Badge';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
@@ -31,8 +31,6 @@ import {
   Upload,
   Activity,
   Search,
-  Filter,
-  Volume2,
   RefreshCw,
   CheckSquare,
   Square,

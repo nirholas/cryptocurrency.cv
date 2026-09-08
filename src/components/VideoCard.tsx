@@ -6,7 +6,6 @@
 
 'use client';
 
-import { cn } from '@/lib/utils';
 import type { Video } from '@/lib/video-sources';
 import { Play } from 'lucide-react';
 

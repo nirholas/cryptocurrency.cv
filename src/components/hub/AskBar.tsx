@@ -7,7 +7,7 @@
 "use client";
 
 import { useState, useRef, useCallback } from "react";
-import { Search, Sparkles, Loader2, ArrowRight, X } from "lucide-react";
+import { Sparkles, Loader2, ArrowRight, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 /* ------------------------------------------------------------------ */

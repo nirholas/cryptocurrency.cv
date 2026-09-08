@@ -10,7 +10,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { generateSEOMetadata } from "@/lib/seo";
 import { Skeleton } from "@/components/ui";
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui";
+import { Card, CardContent } from "@/components/ui";
 import WhaleAlertFeed from "@/components/WhaleAlertFeed";
 import type { Metadata } from "next";
 import {
@@ -24,7 +24,6 @@ import {
   TrendingUp,
   TrendingDown,
   Minus,
-  ExternalLink,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { SITE_URL } from "@/lib/constants";

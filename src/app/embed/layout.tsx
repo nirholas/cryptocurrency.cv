@@ -30,7 +30,12 @@ export default function EmbedLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    // `data-theme` lives on <html>, not <body>. The theme script below runs in
+    // <head>, where `document.body` does not exist yet, so writing to it threw
+    // "Cannot read properties of null (reading 'setAttribute')" and left the
+    // widget on its default theme whenever the browser had not streamed the
+    // body element yet. `document.documentElement` is always available there.
+    <html lang="en" data-theme="dark" suppressHydrationWarning>
       <head>
         <style>{`
           *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -40,8 +45,8 @@ export default function EmbedLayout({
             -moz-osx-font-smoothing: grayscale;
             overflow-x: hidden;
           }
-          body[data-theme="dark"] { background: #0f172a; color: #e2e8f0; }
-          body[data-theme="light"] { background: #ffffff; color: #1e293b; }
+          html[data-theme="dark"] body { background: #0f172a; color: #e2e8f0; }
+          html[data-theme="light"] body { background: #ffffff; color: #1e293b; }
         `}</style>
         <script dangerouslySetInnerHTML={{ __html: `
           (function() {
@@ -52,11 +57,11 @@ export default function EmbedLayout({
             if (theme === 'auto') {
               theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
             }
-            document.body.setAttribute('data-theme', theme);
+            document.documentElement.setAttribute('data-theme', theme);
           })();
         `}} />
       </head>
-      <body data-theme="dark">
+      <body>
         {children}
       </body>
     </html>

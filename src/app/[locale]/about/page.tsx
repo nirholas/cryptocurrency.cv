@@ -184,14 +184,14 @@ const techStack = [
   { name: 'Redis', description: 'Caching' },
 ];
 
-const roadmap = [
+const roadmap: Array<{ label: string; title: string; done: boolean; href?: string }> = [
   { label: 'Launched', title: 'Core API & RSS Feeds', done: true },
   { label: 'Launched', title: 'SDKs (Python, TS, Go, PHP, React)', done: true },
   { label: 'Launched', title: 'ChatGPT Plugin & Claude MCP', done: true },
   { label: 'Launched', title: '100+ Language Support', done: true },
   { label: 'In Progress', title: 'AI Sentiment & Summary Engine', done: false },
-  { label: 'Coming Soon', title: 'Real-Time Alerts', done: false },
-  { label: 'Coming Soon', title: 'Pro Tier with Advanced Analytics', done: false },
+  { label: 'Launched', title: 'Real-Time Price & News Alerts', done: true, href: '/alerts' },
+  { label: 'Launched', title: 'Pro & Enterprise Plans', done: true, href: '/pricing' },
   { label: 'Planned', title: 'On-Chain Data Integration', done: false },
 ];
 
@@ -538,9 +538,18 @@ export default async function AboutPage({ params }: Props) {
                   </div>
                   <div className="pt-2">
                     <div className="mb-0.5 flex items-center gap-2">
-                      <span className="text-sm font-bold text-text-primary">
-                        {item.title}
-                      </span>
+                      {item.href ? (
+                        <Link
+                          href={item.href}
+                          className="text-sm font-bold text-text-primary underline-offset-4 hover:underline"
+                        >
+                          {item.title}
+                        </Link>
+                      ) : (
+                        <span className="text-sm font-bold text-text-primary">
+                          {item.title}
+                        </span>
+                      )}
                       <Badge
                         className={cn(
                           'px-1.5 py-0 text-[10px]',

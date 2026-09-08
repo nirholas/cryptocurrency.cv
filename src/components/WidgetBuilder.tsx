@@ -6,7 +6,7 @@
 
 "use client";
 
-import { useState, useCallback, useMemo } from "react";
+import { useState, useCallback, useEffect, useMemo } from "react";
 
 type WidgetType =
   | "ticker"
@@ -215,9 +215,28 @@ const QUICK_START_TEMPLATES: QuickStartTemplate[] = [
   },
 ];
 
+/** Canonical host that goes into the embed code a user copies. */
 const BASE_URL = "https://cryptocurrency.cv";
 
+/**
+ * Host the live preview iframe loads from.
+ *
+ * The copyable snippet always names the canonical host, but the preview has to
+ * come from whatever deployment the builder itself is running on. Pointing it
+ * at production meant the preview showed the deployed widget rather than the
+ * one being configured, and on any non-production origin it dragged that
+ * deployment's console errors into this page.
+ */
+function usePreviewOrigin(): string {
+  const [origin, setOrigin] = useState(BASE_URL);
+  useEffect(() => {
+    if (typeof window !== "undefined") setOrigin(window.location.origin);
+  }, []);
+  return origin;
+}
+
 export default function WidgetBuilder() {
+  const previewOrigin = usePreviewOrigin();
   const [config, setConfig] = useState<WidgetConfig>({
     type: "ticker",
     theme: "dark",
@@ -278,6 +297,12 @@ export default function WidgetBuilder() {
     if (config.locale !== "en") params.set("locale", config.locale);
     return `${BASE_URL}/embed/${config.type}?${params.toString()}`;
   }, [config]);
+
+  /** Same URL as `embedUrl`, but served from the origin the builder runs on. */
+  const previewUrl = useMemo(
+    () => embedUrl.replace(BASE_URL, previewOrigin),
+    [embedUrl, previewOrigin],
+  );
 
   const iframeHeight = useMemo(() => {
     switch (config.type) {
@@ -864,7 +889,7 @@ import { CryptoWidget } from '@nicholasgriffintn/crypto-widget-vue';
                   }}
                 >
                   <iframe
-                    src={embedUrl}
+                    src={previewUrl}
                     width={
                       previewWidth
                         ? Math.min(

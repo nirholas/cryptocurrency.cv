@@ -9,7 +9,6 @@
 import { useState, useMemo, useCallback } from "react";
 import { ArrowUpDown, ArrowUp, ArrowDown, AlertTriangle, CheckCircle, AlertCircle } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { Badge } from "@/components/ui/Badge";
 
 export interface StablecoinRow {
   rank: number;

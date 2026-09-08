@@ -8,7 +8,6 @@
 
 import { useState, useCallback, useMemo } from "react";
 import {
-  Settings,
   Sun,
   Moon,
   Monitor,
@@ -25,22 +24,16 @@ import {
   ChevronRight,
   Volume2,
   VolumeX,
-  Type,
   Columns3,
   Newspaper,
   DollarSign,
-  Eye,
-  EyeOff,
-  Sparkles,
-  TrendingUp,
-  Database,
   Cookie,
   HardDrive,
   Palette,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/Button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
+import { Card, CardContent } from "@/components/ui/Card";
 import { useTheme } from "@/components/ThemeProvider";
 import { useRouter, usePathname } from "@/i18n/navigation";
 import {

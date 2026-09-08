@@ -9,7 +9,6 @@
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
-import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import {
   Shield,
@@ -18,7 +17,6 @@ import {
   ShieldCheck,
   ShieldQuestion,
   X,
-  ExternalLink,
 } from "lucide-react";
 
 /* ------------------------------------------------------------------ */

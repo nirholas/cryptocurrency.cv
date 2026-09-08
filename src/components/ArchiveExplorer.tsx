@@ -26,7 +26,6 @@ import {
   Clock,
   Newspaper,
   Database,
-  DollarSign,
   Activity,
   AlertCircle,
 } from "lucide-react";

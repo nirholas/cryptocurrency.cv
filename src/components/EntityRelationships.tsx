@@ -386,7 +386,6 @@ export default function EntityRelationships({
     const m = new Map<string, ForceNode>();
     for (const n of nodesRef.current) m.set(n.id, n);
     return m;
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [tick]);
 
   const connectedIds = useMemo(() => {
@@ -398,7 +397,6 @@ export default function EntityRelationships({
       if (l.target === active) ids.add(l.source);
     }
     return ids;
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [hoveredNode, selectedNode, tick]);
 
   const highlightIds = useMemo(() => {
@@ -421,7 +419,6 @@ export default function EntityRelationships({
       }))
       .filter(l => l.otherNode)
       .sort((a, b) => b.weight - a.weight);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedNode, tick, nodeMap]);
 
   /* ---- Interaction handlers -------------------------------------- */

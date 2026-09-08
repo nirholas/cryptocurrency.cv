@@ -8,7 +8,7 @@
 
 import { useState, useEffect, useCallback } from "react";
 import { cn } from "@/lib/utils";
-import { Badge, Card, CardContent, CardHeader, CardTitle } from "@/components/ui";
+import { Badge, Card, CardContent } from "@/components/ui";
 import { Skeleton } from "@/components/ui/Skeleton";
 import AdvancedChart from "@/components/AdvancedChart";
 import ChartAnalysis from "@/components/ChartAnalysis";

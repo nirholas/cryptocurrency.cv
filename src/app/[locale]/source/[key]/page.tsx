@@ -14,7 +14,6 @@ import Footer from '@/components/Footer';
 import NewsCard from '@/components/NewsCard';
 import { NewsCardCompact } from '@/components/NewsCard';
 import { Badge } from '@/components/ui/Badge';
-import { Skeleton } from '@/components/ui/Skeleton';
 import { Link } from '@/i18n/navigation';
 import { generateSEOMetadata } from '@/lib/seo';
 import { getSourceInfo, getLatestNews, type NewsArticle } from '@/lib/crypto-news';
@@ -25,7 +24,7 @@ import {
   getSourceReputation,
   type SourceTier,
 } from '@/lib/source-tiers';
-import { getSourceProfile, type SourceProfile } from '@/lib/source-profiles';
+import { getSourceProfile } from '@/lib/source-profiles';
 import type { Metadata } from 'next';
 
 export const revalidate = 300;

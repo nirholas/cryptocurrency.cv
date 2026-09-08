@@ -7,8 +7,6 @@
 "use client";
 
 import { useState, useEffect, useCallback, useRef } from "react";
-import { useRouter, useSearchParams } from "next/navigation";
-import { Link } from "@/i18n/navigation";
 import { Badge, categoryToBadgeVariant } from "@/components/ui/Badge";
 import { cn } from "@/lib/utils";
 

@@ -11,7 +11,7 @@ import { generateSEOMetadata } from '@/lib/seo';
 import { SITE_URL } from '@/lib/constants';
 import { formatLargeNumber } from '@/lib/format';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/Card';
-import { TrendingDown, TrendingUp, BarChart3, Activity, Target } from 'lucide-react';
+import { TrendingUp, BarChart3, Activity, Target } from 'lucide-react';
 import LiquidationFeed from '@/components/LiquidationFeed';
 import FundingRates from '@/components/FundingRates';
 import type { Metadata } from 'next';

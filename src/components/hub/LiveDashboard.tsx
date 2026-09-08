@@ -132,7 +132,9 @@ export default function LiveDashboard() {
       const ids = COINS.map((c) => c.id).join(",");
       const [priceRes, globalRes] = await Promise.allSettled([
         fetch(`/api/prices?coins=${ids}`).then((r) => (r.ok ? r.json() : null)),
-        fetch("/api/market/global").then((r) => (r.ok ? r.json() : null)),
+        // /api/global, not /api/market/global — the latter has never existed,
+        // so the hub's market cap, volume and dominance tiles all sat at zero.
+        fetch("/api/global").then((r) => (r.ok ? r.json() : null)),
       ]);
 
       if (priceRes.status === "fulfilled" && priceRes.value) {

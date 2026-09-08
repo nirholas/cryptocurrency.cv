@@ -36,14 +36,12 @@ import {
   Cloud,
   Cpu,
   Database,
-  ExternalLink,
   Globe,
   HardDrive,
   Headphones,
   MessageSquare,
   Newspaper,
   Radio,
-  Rss,
   Server,
   Shield,
   Star,
@@ -51,7 +49,6 @@ import {
   Wifi,
   Zap,
   AlertTriangle,
-  XCircle,
 } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 

@@ -110,7 +110,6 @@ const tiers: Tier[] = [
     period: "mo",
     description: "Advanced features for power users and teams.",
     highlight: false,
-    badge: "Coming Soon",
     color: "text-violet-500",
     features: [
       { text: "Everything in Free", icon: Check, included: true },
@@ -121,12 +120,7 @@ const tiers: Tier[] = [
       { text: "Higher rate limits", icon: Zap, included: true },
       { text: "Advanced analytics dashboard", icon: BarChart3, included: true },
     ],
-    cta: {
-      text: "Join Waitlist",
-      href: "#",
-      variant: "outline",
-      disabled: true,
-    },
+    cta: { text: "Upgrade to Pro", href: "/keys", variant: "outline" },
   },
   {
     name: "Enterprise",
@@ -275,7 +269,7 @@ const faqs = [
   {
     question: "Can I switch between plans at any time?",
     answer:
-      "Yes, you'll be able to upgrade or downgrade at any time once paid tiers are available. Changes take effect at the start of your next billing cycle, and we'll prorate any differences.",
+      "Yes. Upgrade from the API keys page at any time; downgrades take effect at the start of your next billing cycle, and we prorate any differences.",
   },
   {
     question: "Are there rate limits on the Free tier?",

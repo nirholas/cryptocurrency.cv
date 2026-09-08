@@ -204,6 +204,8 @@ export default async function DefiPage({ params }: Props) {
 
   const totalDexVol24h = dexVolumes.reduce((s, d) => s + d.total24h, 0);
   const totalBridgeVol24h = bridges.reduce((s, b) => s + b.lastDailyVolume, 0);
+  const totalBridgeTvl = bridges.reduce((s, b) => s + b.tvlUsd, 0);
+  const hasBridgeVolume = (summary?.bridgeVolume24h ?? 0) > 0 || totalBridgeVol24h > 0;
 
   const stats = [
     {
@@ -237,11 +239,13 @@ export default async function DefiPage({ params }: Props) {
       icon: '🔗',
     },
     {
-      label: 'Bridge Volume (24h)',
-      value: summary?.bridgeVolume24h
-        ? formatLargeNumber(summary.bridgeVolume24h)
-        : totalBridgeVol24h > 0
-          ? formatLargeNumber(totalBridgeVol24h)
+      // Falls back to bridge TVL when DefiLlama's paywalled volume feed leaves
+      // every bridge at zero, so the card carries a real number either way.
+      label: hasBridgeVolume ? 'Bridge Volume (24h)' : 'Bridge TVL',
+      value: hasBridgeVolume
+        ? formatLargeNumber(summary?.bridgeVolume24h || totalBridgeVol24h)
+        : totalBridgeTvl > 0
+          ? formatLargeNumber(totalBridgeTvl)
           : '—',
       icon: '🌉',
     },
@@ -312,6 +316,8 @@ export default async function DefiPage({ params }: Props) {
     weeklyVolume: b.weeklyVolume,
     monthlyVolume: b.monthlyVolume,
     chains: b.chains,
+    tvlUsd: b.tvlUsd,
+    tvlChange1d: b.tvlChange1d,
   }));
 
   /* ── Stablecoin data ── */

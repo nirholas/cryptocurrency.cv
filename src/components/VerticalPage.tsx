@@ -11,7 +11,6 @@ import { Link } from '@/i18n/navigation';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { FeaturedCard, NewsCardDefault, NewsCardCompact } from '@/components/NewsCard';
-import { Badge } from '@/components/ui/Badge';
 import { cn } from '@/lib/utils';
 import type { NewsArticle } from '@/lib/crypto-news';
 import type { NewsVertical } from '@/lib/verticals';
@@ -50,7 +49,7 @@ interface VerticalPageProps {
   locale: string;
 }
 
-export default function VerticalPage({ vertical, articles, total, locale }: VerticalPageProps) {
+export default function VerticalPage({ vertical, articles }: VerticalPageProps) {
   const [activeSubcategory, setActiveSubcategory] = useState<string | null>(null);
   const Icon = ICON_MAP[vertical.icon] ?? Newspaper;
 

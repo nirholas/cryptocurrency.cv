@@ -8,13 +8,11 @@
 
 import { useState, useCallback, useRef, useMemo } from "react";
 import CodeBlock from "@/components/CodeBlock";
-import { Button, Badge } from "@/components/ui";
+import { Button } from "@/components/ui";
 import { cn } from "@/lib/utils";
 import {
   Play,
   RotateCcw,
-  ChevronDown,
-  ChevronRight,
   Copy,
   Check,
   Clock,
@@ -297,7 +295,6 @@ export default function APIPlayground() {
       if (p.defaultValue) init[p.name] = p.defaultValue;
     }
     setParamValues(init);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const buildUrl = useCallback(() => {

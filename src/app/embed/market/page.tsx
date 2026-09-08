@@ -48,6 +48,7 @@ export default function MarketWidget() {
   const [theme, setTheme] = useState<"dark" | "light">("dark");
   const [showTitle, setShowTitle] = useState(true);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
@@ -59,57 +60,17 @@ export default function MarketWidget() {
   useEffect(() => {
     async function fetchMarket() {
       try {
-        const res = await fetch(`${BASE_URL}/api/prices?limit=5`);
-        if (!res.ok) throw new Error("Failed to fetch");
+        // /api/prices takes an explicit `coins` list and 400s without one, so
+        // the old `?limit=5` call failed on every load and this widget showed
+        // five hardcoded prices to every site embedding it. The top-N list
+        // lives on /api/market/coins.
+        const res = await fetch(`${BASE_URL}/api/market/coins?type=top&limit=5`);
+        if (!res.ok) throw new Error(`Failed to fetch market data: ${res.status}`);
         const data = await res.json();
-        setCoins(
-          Array.isArray(data)
-            ? data.slice(0, 5)
-            : (data.data || data.prices || []).slice(0, 5),
-        );
+        setCoins((Array.isArray(data) ? data : data.coins || []).slice(0, 5));
+        setError(false);
       } catch {
-        setCoins([
-          {
-            id: "bitcoin",
-            symbol: "BTC",
-            name: "Bitcoin",
-            current_price: 97500,
-            price_change_percentage_24h: 2.4,
-            market_cap: 1.92e12,
-          },
-          {
-            id: "ethereum",
-            symbol: "ETH",
-            name: "Ethereum",
-            current_price: 3400,
-            price_change_percentage_24h: -1.2,
-            market_cap: 4.08e11,
-          },
-          {
-            id: "solana",
-            symbol: "SOL",
-            name: "Solana",
-            current_price: 195,
-            price_change_percentage_24h: 5.1,
-            market_cap: 9.4e10,
-          },
-          {
-            id: "binancecoin",
-            symbol: "BNB",
-            name: "BNB",
-            current_price: 680,
-            price_change_percentage_24h: 0.8,
-            market_cap: 9.9e10,
-          },
-          {
-            id: "cardano",
-            symbol: "ADA",
-            name: "Cardano",
-            current_price: 1.05,
-            price_change_percentage_24h: -2.3,
-            market_cap: 3.7e10,
-          },
-        ]);
+        setError(true);
       } finally {
         setLoading(false);
       }
@@ -171,6 +132,10 @@ export default function MarketWidget() {
             />
           ))}
           <style>{`@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }`}</style>
+        </div>
+      ) : error || coins.length === 0 ? (
+        <div style={{ color: mutedText, fontSize: 13, padding: "8px 0" }}>
+          Market data is unavailable right now. This widget refreshes every minute.
         </div>
       ) : (
         <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>

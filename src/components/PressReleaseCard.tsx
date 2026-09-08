@@ -4,7 +4,6 @@
  * @see https://github.com/nirholas/free-crypto-news
  */
 
-import { Link } from '@/i18n/navigation';
 import type { PressReleaseSubmission } from '@/lib/press-release';
 
 interface Props {

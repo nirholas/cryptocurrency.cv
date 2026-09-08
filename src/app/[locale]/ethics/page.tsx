@@ -8,7 +8,6 @@ import { setRequestLocale } from 'next-intl/server';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { generateSEOMetadata } from '@/lib/seo';
-import { cn } from '@/lib/utils';
 import type { Metadata } from 'next';
 
 type Props = {

@@ -16,7 +16,6 @@ import StablecoinTable, { type StablecoinRow } from '@/components/StablecoinTabl
 import { cn } from '@/lib/utils';
 import {
   TrendingUp,
-  TrendingDown,
   DollarSign,
   BarChart3,
   AlertTriangle,

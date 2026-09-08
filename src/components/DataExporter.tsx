@@ -17,7 +17,6 @@ import {
   FileJson,
   FileSpreadsheet,
   FileCode2,
-  Calendar,
   Rss,
   Globe,
   Link2,

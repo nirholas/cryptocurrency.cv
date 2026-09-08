@@ -13,7 +13,6 @@ import VideoPlayer from '@/components/VideoPlayer';
 import { Skeleton } from '@/components/ui/Skeleton';
 import { VIDEO_CATEGORIES, type Video, type VideoCategory } from '@/lib/video-sources';
 import { cn } from '@/lib/utils';
-import { Link } from '@/i18n/navigation';
 
 interface VideosResponse {
   videos: Video[];
@@ -75,7 +74,6 @@ export default function VideosClient({ initialSource }: { initialSource?: string
   // Fetch on mount and when category changes
   useEffect(() => {
     fetchVideos(true);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activeCategory, initialSource]);
 
   const featured = videos[0] ?? null;

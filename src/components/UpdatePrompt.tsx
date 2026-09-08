@@ -43,7 +43,6 @@ export function UpdatePrompt() {
     }
     const t = setInterval(() => setCountdown((c) => c - 1), 1000);
     return () => clearInterval(t);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isUpdateAvailable, isPaused, countdown]);
 
   const handleUpdate = useCallback(() => {

@@ -31,19 +31,15 @@ import {
   X,
   LayoutGrid,
   LayoutList,
-  ArrowUpDown,
   StickyNote,
   Tag,
-  BarChart3,
   DollarSign,
   Activity,
-  Flame,
   Clock,
 } from "lucide-react";
 import { Button } from "@/components/ui";
 import { Skeleton } from "@/components/ui";
 import { Card } from "@/components/ui";
-import { Badge } from "@/components/ui";
 
 // ---------------------------------------------------------------------------
 // Types

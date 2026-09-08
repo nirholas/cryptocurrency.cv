@@ -5,7 +5,7 @@
  */
 
 import { Link } from '@/i18n/navigation';
-import { getTranslations } from 'next-intl/server';
+import { useTranslations } from 'next-intl';
 import FooterNewsletter from '@/components/FooterNewsletter';
 import FooterSection from '@/components/FooterSection';
 import LanguageSelector from '@/components/LanguageSelector';
@@ -196,8 +196,18 @@ function ApiStatusBadge({ label }: { label: string }) {
   );
 }
 
-export default async function Footer() {
-  const t = await getTranslations('footer');
+/**
+ * Site footer.
+ *
+ * Uses `useTranslations` rather than the server-only `getTranslations` so the
+ * component renders in either environment. Three pages (`/search`,
+ * `/watchlist`, `/bookmarks`) are client components that render the footer
+ * themselves; with the server-only API that threw
+ * "`getTranslations` is not supported in Client Components" at runtime and the
+ * footer never appeared on any of them.
+ */
+export default function Footer() {
+  const t = useTranslations('footer');
   return (
     <>
       <footer className="border-border bg-surface-secondary border-t" role="contentinfo">

@@ -10,11 +10,10 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { generateSEOMetadata } from '@/lib/seo';
 import { SITE_URL } from '@/lib/constants';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
-import { Badge } from '@/components/ui/Badge';
+import { Card, CardContent } from '@/components/ui/Card';
 import L2Table, { type L2Row } from '@/components/L2Table';
 import { cn } from '@/lib/utils';
-import { Layers, TrendingUp, Zap, ArrowRightLeft, BarChart3, DollarSign } from 'lucide-react';
+import { Layers, TrendingUp, ArrowRightLeft, BarChart3 } from 'lucide-react';
 
 export const revalidate = 300;
 

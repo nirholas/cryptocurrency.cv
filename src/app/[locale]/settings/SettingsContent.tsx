@@ -12,7 +12,6 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
 import { useSettings, type FontSize, type DefaultCurrency, type ArticlesPerPage } from "@/hooks/useSettings";
 import {
   Settings,
-  Eye,
   Bell,
   Shield,
   Download,
@@ -22,8 +21,6 @@ import {
   HardDrive,
   Palette,
   Newspaper,
-  Volume2,
-  VolumeX,
 } from "lucide-react";
 
 /* ------------------------------------------------------------------ */

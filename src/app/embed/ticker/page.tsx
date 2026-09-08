@@ -28,6 +28,7 @@ export default function TickerWidget() {
   const [prices, setPrices] = useState<PriceItem[]>([]);
   const [theme, setTheme] = useState<"dark" | "light">("dark");
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -39,17 +40,17 @@ export default function TickerWidget() {
   useEffect(() => {
     async function fetchPrices() {
       try {
-        const res = await fetch(`${BASE_URL}/api/prices?limit=20`);
-        if (!res.ok) throw new Error("Failed to fetch");
+        // /api/prices takes an explicit `coins` list and 400s without one, so
+        // the old `?limit=20` call failed on every load and this widget showed
+        // three hardcoded prices to every site embedding it. The top-N list
+        // lives on /api/market/coins.
+        const res = await fetch(`${BASE_URL}/api/market/coins?type=top&limit=20`);
+        if (!res.ok) throw new Error(`Failed to fetch prices: ${res.status}`);
         const data = await res.json();
-        setPrices(Array.isArray(data) ? data : data.data || data.prices || []);
+        setPrices(Array.isArray(data) ? data : data.coins || []);
+        setError(false);
       } catch {
-        // Fallback sample data
-        setPrices([
-          { id: "bitcoin", symbol: "BTC", name: "Bitcoin", current_price: 97500, price_change_percentage_24h: 2.4 },
-          { id: "ethereum", symbol: "ETH", name: "Ethereum", current_price: 3400, price_change_percentage_24h: -1.2 },
-          { id: "solana", symbol: "SOL", name: "Solana", current_price: 195, price_change_percentage_24h: 5.1 },
-        ]);
+        setError(true);
       } finally {
         setLoading(false);
       }
@@ -72,6 +73,23 @@ export default function TickerWidget() {
           <div key={i} style={{ width: 120, height: 20, background: isDark ? "#1e293b" : "#f1f5f9", borderRadius: 4, animation: "pulse 1.5s infinite" }} />
         ))}
         <style>{`@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }`}</style>
+      </div>
+    );
+  }
+
+  if (error || prices.length === 0) {
+    return (
+      <div
+        style={{
+          background: bg,
+          color: mutedText,
+          padding: "12px 16px",
+          fontSize: 13,
+          fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+          borderBottom: `1px solid ${border}`,
+        }}
+      >
+        Prices are unavailable right now. This ticker refreshes every minute.
       </div>
     );
   }

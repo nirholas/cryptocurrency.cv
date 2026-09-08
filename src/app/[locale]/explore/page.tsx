@@ -13,10 +13,14 @@ import { setRequestLocale } from 'next-intl/server';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { generateSEOMetadata } from '@/lib/seo';
-import { SITE_URL } from '@/lib/constants';
+import { getAllTags } from '@/lib/tags';
+import { loadTagScoresFromFile } from '@/lib/tagScoring';
+import { getFullKnowledgeGraph } from '@/lib/ai-knowledge-graph';
 import { Skeleton } from '@/components/ui/Skeleton';
 import type { Metadata } from 'next';
 import ExploreClient from './ExploreClient';
+
+export const revalidate = 300;
 
 /* ------------------------------------------------------------------ */
 /*  Types                                                              */
@@ -27,10 +31,12 @@ type Props = {
 };
 
 /* ------------------------------------------------------------------ */
-/*  Data fetchers                                                      */
+/*  Data loaders                                                       */
 /* ------------------------------------------------------------------ */
 
-const BASE = SITE_URL;
+// Both sources are in-process (the tag catalogue and the knowledge graph
+// singleton), so read them directly instead of round-tripping through the
+// public /api/tags and /api/knowledge-graph routes.
 
 interface TagData {
   name: string;
@@ -47,56 +53,37 @@ interface TrendingPair {
   strength: number;
 }
 
-async function fetchTags(): Promise<TagData[]> {
+function loadTags(): TagData[] {
   try {
-    const res = await fetch(`${BASE}/api/tags`, { next: { revalidate: 300 } });
-    if (!res.ok) return [];
-    const data = await res.json();
-    // Flatten grouped tags into a single array
-    const tags: TagData[] = [];
-    if (data.tags && Array.isArray(data.tags)) {
-      return data.tags.slice(0, 60);
-    }
-    if (data.categories) {
-      for (const cat of Object.values(data.categories) as TagData[][]) {
-        if (Array.isArray(cat)) {
-          for (const t of cat) {
-            tags.push(t);
-          }
-        }
-      }
-      return tags.slice(0, 60);
-    }
-    return [];
+    // The tag cloud sizes entries by `count`; the catalogue carries no per-tag
+    // article count, so use the pre-computed relevance score (0-1) like /api/tags.
+    const scores = loadTagScoresFromFile();
+    return getAllTags()
+      .slice(0, 60)
+      .map((tag) => ({
+        name: tag.name,
+        slug: tag.slug,
+        category: tag.category,
+        count: scores[tag.slug] ?? 0.7,
+      }));
   } catch {
     return [];
   }
 }
 
-async function fetchTrendingConnections(): Promise<TrendingPair[]> {
+function loadTrendingConnections(): TrendingPair[] {
   try {
-    const res = await fetch(`${BASE}/api/knowledge-graph`, { next: { revalidate: 300 } });
-    if (!res.ok) return [];
-    const data = await res.json();
+    const data = getFullKnowledgeGraph();
     // Build trending connections from relationships sorted by weight
-    const entities = new Map<string, string>(
-      (data.entities || []).map(
-        (e: { id: string; name: string }) => [e.id, e.name] as [string, string],
-      ),
-    );
-    const relationships = (data.relationships || []) as {
-      source: string;
-      target: string;
-      weight: number;
-    }[];
-    return relationships
+    const entities = new Map<string, string>(data.entities.map((e) => [e.id, e.name]));
+    return [...data.relationships]
       .sort((a, b) => b.weight - a.weight)
       .slice(0, 10)
       .map((r) => ({
         source: r.source,
-        sourceLabel: String(entities.get(r.source) ?? r.source),
+        sourceLabel: entities.get(r.source) ?? r.source,
         target: r.target,
-        targetLabel: String(entities.get(r.target) ?? r.target),
+        targetLabel: entities.get(r.target) ?? r.target,
         strength: Math.round(Math.min(100, r.weight)),
       }));
   } catch {
@@ -135,13 +122,8 @@ export default async function ExplorePage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
 
-  const [tagsResult, connectionsResult] = await Promise.allSettled([
-    fetchTags(),
-    fetchTrendingConnections(),
-  ]);
-  const tags = tagsResult.status === 'fulfilled' ? tagsResult.value : [];
-  const trendingConnections =
-    connectionsResult.status === 'fulfilled' ? connectionsResult.value : [];
+  const tags = loadTags();
+  const trendingConnections = loadTrendingConnections();
 
   return (
     <>
