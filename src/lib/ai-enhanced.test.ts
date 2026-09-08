@@ -306,18 +306,20 @@ describe('AI Enhanced Utilities', () => {
         .rejects.toThrow('No AI provider configured');
     });
 
-    it('throws error on API failure', async () => {
+    it('throws after exhausting the provider chain on API failure', async () => {
       process.env.OPENAI_API_KEY = 'test-key';
-      
+
       mockFetch.mockResolvedValueOnce({
         ok: false,
         status: 500,
         text: async () => 'Internal error',
       });
 
+      // A 5xx means "this provider cannot serve the request", so the chain
+      // moves on and only throws once every configured provider is exhausted.
       // Use unique title to avoid cache hits
       await expect(summarizeArticle('API Failure Test ' + Date.now(), 'Content'))
-        .rejects.toThrow('AI API error');
+        .rejects.toThrow('All configured AI providers unavailable');
     });
   });
 });

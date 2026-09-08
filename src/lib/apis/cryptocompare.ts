@@ -20,6 +20,8 @@
  * @module lib/apis/cryptocompare
  */
 
+import { resilientFetchResponse } from '@/lib/resilient-fetch';
+
 const BASE_URL = 'https://min-api.cryptocompare.com/data';
 const API_KEY = process.env.CRYPTOCOMPARE_API_KEY || '';
 
@@ -201,7 +203,8 @@ async function ccFetch<T>(
       Object.entries(params).forEach(([k, v]) => url.searchParams.set(k, v));
     }
 
-    const res = await fetch(url.toString(), {
+    const res = await resilientFetchResponse(url.toString(), {
+      service: 'cryptocompare', timeoutMs: 8000, retries: 1,
       headers: { accept: 'application/json' },
       next: { revalidate: 60 },
     });

@@ -26,6 +26,7 @@
 
 import { cache } from './cache';
 import { EXTERNAL_APIS, CACHE_TTL } from './external-apis';
+import { resilientFetchResponse } from '@/lib/resilient-fetch';
 
 // =============================================================================
 // Types
@@ -153,8 +154,8 @@ async function fetchBinanceFundingRates(): Promise<FundingRateData[]> {
 
   try {
     const [premiumResponse, oiResponse] = await Promise.all([
-      fetch(`${EXTERNAL_APIS.BINANCE_FUTURES}/fapi/v1/premiumIndex`),
-      fetch(`${EXTERNAL_APIS.BINANCE_FUTURES}/fapi/v1/openInterest?symbol=BTCUSDT`).catch(() => null),
+      resilientFetchResponse(`${EXTERNAL_APIS.BINANCE_FUTURES}/fapi/v1/premiumIndex`, { service: 'binance-futures', timeoutMs: 8000, retries: 1 }),
+      resilientFetchResponse(`${EXTERNAL_APIS.BINANCE_FUTURES}/fapi/v1/openInterest?symbol=BTCUSDT`, { service: 'binance-futures', timeoutMs: 8000, retries: 1 }).catch(() => null),
     ]);
 
     if (!premiumResponse.ok) {
@@ -170,7 +171,7 @@ async function fetchBinanceFundingRates(): Promise<FundingRateData[]> {
 
     // Fetch 24h ticker data for volume (single API call for all symbols)
     try {
-      const tickerRes = await fetch(`${EXTERNAL_APIS.BINANCE_FUTURES}/fapi/v1/ticker/24hr`);
+      const tickerRes = await resilientFetchResponse(`${EXTERNAL_APIS.BINANCE_FUTURES}/fapi/v1/ticker/24hr`, { service: 'binance-futures', timeoutMs: 8000, retries: 1 });
       if (tickerRes.ok) {
         const tickers = await tickerRes.json();
         for (const t of tickers) {
@@ -183,7 +184,7 @@ async function fetchBinanceFundingRates(): Promise<FundingRateData[]> {
 
     const oiPromises = STANDARD_SYMBOLS.slice(0, 20).map(async (symbol) => {
       try {
-        const res = await fetch(`${EXTERNAL_APIS.BINANCE_FUTURES}/fapi/v1/openInterest?symbol=${symbol}`);
+        const res = await resilientFetchResponse(`${EXTERNAL_APIS.BINANCE_FUTURES}/fapi/v1/openInterest?symbol=${symbol}`, { service: 'binance-futures', timeoutMs: 8000, retries: 1 });
         if (res.ok) {
           const data = await res.json();
           oiMap.set(symbol, parseFloat(data.openInterest) * parseFloat(
@@ -252,7 +253,7 @@ async function fetchBybitFundingRates(): Promise<FundingRateData[]> {
   if (cached) return cached;
 
   try {
-    const response = await fetch(`${EXTERNAL_APIS.BYBIT}/market/tickers?category=linear`);
+    const response = await resilientFetchResponse(`${EXTERNAL_APIS.BYBIT}/market/tickers?category=linear`, { service: 'bybit', timeoutMs: 8000, retries: 1 });
     
     if (!response.ok) {
       console.warn(`Bybit funding API returned ${response.status} (likely geo-restricted from this region)`);
@@ -326,8 +327,8 @@ async function fetchOKXFundingRates(): Promise<FundingRateData[]> {
 
   try {
     const [fundingResponse, tickerResponse] = await Promise.all([
-      fetch(`${EXTERNAL_APIS.OKX}/public/funding-rate?instType=SWAP`),
-      fetch(`${EXTERNAL_APIS.OKX}/market/tickers?instType=SWAP`),
+      resilientFetchResponse(`${EXTERNAL_APIS.OKX}/public/funding-rate?instType=SWAP`, { service: 'okx', timeoutMs: 8000, retries: 1 }),
+      resilientFetchResponse(`${EXTERNAL_APIS.OKX}/market/tickers?instType=SWAP`, { service: 'okx', timeoutMs: 8000, retries: 1 }),
     ]);
 
     if (!fundingResponse.ok) {
@@ -410,12 +411,14 @@ async function fetchHyperliquidFundingRates(): Promise<FundingRateData[]> {
 
   try {
     const [metaResponse, assetCtxResponse] = await Promise.all([
-      fetch('https://api.hyperliquid.xyz/info', {
+      resilientFetchResponse('https://api.hyperliquid.xyz/info', {
+        service: 'hyperliquid', timeoutMs: 8000, retries: 1,
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ type: 'meta' }),
       }),
-      fetch('https://api.hyperliquid.xyz/info', {
+      resilientFetchResponse('https://api.hyperliquid.xyz/info', {
+        service: 'hyperliquid', timeoutMs: 8000, retries: 1,
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ type: 'metaAndAssetCtxs' }),
@@ -594,9 +597,10 @@ export async function getFundingHistory(
   try {
     switch (exchange) {
       case 'binance': {
-        const response = await fetch(
-          `${EXTERNAL_APIS.BINANCE_FUTURES}/fapi/v1/fundingRate?symbol=${symbol}&limit=${limit}`
-        );
+        const response = await resilientFetchResponse(
+          `${EXTERNAL_APIS.BINANCE_FUTURES}/fapi/v1/fundingRate?symbol=${symbol}&limit=${limit}`,
+      { service: 'binance-futures', timeoutMs: 8000, retries: 1 },
+    );
         if (response.ok) {
           const data = await response.json();
           for (const item of data) {
@@ -610,9 +614,10 @@ export async function getFundingHistory(
         break;
       }
       case 'bybit': {
-        const response = await fetch(
-          `${EXTERNAL_APIS.BYBIT}/market/funding/history?category=linear&symbol=${symbol}&limit=${limit}`
-        );
+        const response = await resilientFetchResponse(
+          `${EXTERNAL_APIS.BYBIT}/market/funding/history?category=linear&symbol=${symbol}&limit=${limit}`,
+      { service: 'bybit', timeoutMs: 8000, retries: 1 },
+    );
         if (response.ok) {
           const result = await response.json();
           for (const item of result.result?.list || []) {

@@ -18,6 +18,8 @@
  * @module lib/apis/messari
  */
 
+import { resilientFetchResponse } from '@/lib/resilient-fetch';
+
 const BASE_URL = 'https://data.messari.io/api/v1';
 const API_KEY = process.env.MESSARI_API_KEY || '';
 
@@ -271,7 +273,8 @@ async function messariFetch<T>(endpoint: string, params?: Record<string, string>
       headers['x-messari-api-key'] = API_KEY;
     }
 
-    const response = await fetch(url.toString(), {
+    const response = await resilientFetchResponse(url.toString(), {
+      service: 'messari', timeoutMs: 8000, retries: 1,
       headers,
       next: { revalidate: 120 }, // Cache for 2 minutes
     });
@@ -520,7 +523,7 @@ export async function getMarketIntelligence(): Promise<MarketIntelligence> {
       fearGreedScore: await (async () => {
         // Fetch from Alternative.me Fear & Greed Index API
         try {
-          const fgRes = await fetch('https://api.alternative.me/fng/?limit=1');
+          const fgRes = await resilientFetchResponse('https://api.alternative.me/fng/?limit=1', { service: 'alternative-me', timeoutMs: 5000, retries: 1 });
           if (fgRes.ok) {
             const fgData = await fgRes.json();
             return parseInt(fgData?.data?.[0]?.value || '50', 10);

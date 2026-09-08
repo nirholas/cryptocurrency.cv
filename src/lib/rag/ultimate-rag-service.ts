@@ -37,9 +37,6 @@ import { extractDateRange } from "./date-range-extractor";
 import { processQuery, generateHypotheticalDocument } from "./query-processor";
 import {
   rerankResults,
-  llmRerank,
-  applyTimeDecay,
-  applySourceCredibility,
 } from "./reranker";
 import {
   contextualizeQuery,
@@ -47,11 +44,9 @@ import {
   generateContextualResponse,
 } from "./conversation-memory";
 import { agenticRAG } from "./agentic-rag";
-import { selfRAG, gradeRetrievals, detectHallucinations } from "./self-rag";
+import { gradeRetrievals } from "./self-rag";
 import {
-  compressDocuments,
   assembleContext,
-  extractKeyFacts,
   type AssembledContext,
 } from "./contextual-compression";
 import {
@@ -75,15 +70,13 @@ import { routeQuery, type QueryRoute } from "./query-router";
 import {
   findRelatedArticles,
   type RelatedArticle,
-  RelatedArticlesFinder,
 } from "./related-articles";
-import { graphRAG, type GraphSearchResult } from "./graph-rag";
+import { graphRAG } from "./graph-rag";
 import { quickDedup } from "./deduplication";
 import type {
   ScoredDocument,
   SearchFilter,
   SearchResult,
-  NewsDocument,
 } from "./types";
 
 // ═══════════════════════════════════════════════════════════════

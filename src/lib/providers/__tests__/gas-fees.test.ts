@@ -12,6 +12,14 @@
  * Gas Fees Chain — Integration Tests
  */
 import { describe, it, expect, vi, beforeEach } from 'vitest';
+
+// The Blocknative adapter reads its key once, at module scope, so this has to
+// run before the adapter module is imported. Without a key the adapter refuses
+// to fetch at all and the fallback test below asserted nothing.
+vi.hoisted(() => {
+  process.env.BLOCKNATIVE_API_KEY = 'test-key';
+});
+
 import { createGasChain } from '../adapters/gas';
 import { registry } from '../registry';
 import '../setup';
@@ -65,10 +73,17 @@ describe('GasChain', () => {
       }),
     });
 
-    const chain = createGasChain({ cacheTtlSeconds: 0, includeBlocknative: true });
+    // Owlracle is excluded so a Blocknative failure cannot be masked by the
+    // tertiary provider picking up the request.
+    const chain = createGasChain({
+      cacheTtlSeconds: 0,
+      includeBlocknative: true,
+      includeOwlracle: false,
+    });
     const result = await chain.fetch({});
 
     expect(result.data).toBeDefined();
+    expect(result.lineage.provider).toContain('blocknative');
   });
 
   it('registry resolves gas-fees category', () => {

@@ -18,6 +18,8 @@
  * @module lib/apis/glassnode
  */
 
+import { resilientFetchResponse } from '@/lib/resilient-fetch';
+
 const GLASSNODE_API_KEY = process.env.GLASSNODE_API_KEY || '';
 const BASE_URL = 'https://api.glassnode.com/v1';
 
@@ -135,7 +137,8 @@ async function glassnodeFetch<T>(endpoint: string, params: Record<string, string
   Object.entries(params).forEach(([key, value]) => url.searchParams.append(key, value));
 
   try {
-    const response = await fetch(url.toString(), {
+    const response = await resilientFetchResponse(url.toString(), {
+      service: 'glassnode', timeoutMs: 10000, retries: 1,
       next: { revalidate: 300 }, // Cache for 5 minutes
     });
 

@@ -19,7 +19,6 @@
 import {
   defillama,
   defillamaYields,
-  defillamaCoins,
   defillamaStablecoins,
   defillamaBridges,
   defillamaVolumes,

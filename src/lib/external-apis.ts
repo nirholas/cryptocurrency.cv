@@ -19,6 +19,8 @@
  * @module external-apis
  */
 
+import { resilientFetchResponse } from '@/lib/resilient-fetch';
+
 // =============================================================================
 // API ENDPOINTS
 // =============================================================================
@@ -279,7 +281,7 @@ export async function getCoinCapAsset(id: string): Promise<CoinCapAsset> {
   const cached = getCached<CoinCapAsset>(cacheKey);
   if (cached) return cached;
 
-  const response = await fetch(`${COINCAP_BASE}/assets/${id}`);
+  const response = await resilientFetchResponse(`${COINCAP_BASE}/assets/${id}`, { service: 'coincap', timeoutMs: 8000, retries: 1 });
   if (!response.ok) {
     throw new Error(`CoinCap API error: ${response.status}`);
   }
@@ -297,7 +299,7 @@ export async function getCoinCapAssets(limit = 100): Promise<CoinCapAsset[]> {
   const cached = getCached<CoinCapAsset[]>(cacheKey);
   if (cached) return cached;
 
-  const response = await fetch(`${COINCAP_BASE}/assets?limit=${limit}`);
+  const response = await resilientFetchResponse(`${COINCAP_BASE}/assets?limit=${limit}`, { service: 'coincap', timeoutMs: 8000, retries: 1 });
   if (!response.ok) {
     throw new Error(`CoinCap API error: ${response.status}`);
   }
@@ -318,7 +320,7 @@ export async function getCoinCapHistory(
   const cached = getCached<CoinCapHistoryPoint[]>(cacheKey);
   if (cached) return cached;
 
-  const response = await fetch(`${COINCAP_BASE}/assets/${id}/history?interval=${interval}`);
+  const response = await resilientFetchResponse(`${COINCAP_BASE}/assets/${id}/history?interval=${interval}`, { service: 'coincap', timeoutMs: 8000, retries: 1 });
   if (!response.ok) {
     throw new Error(`CoinCap API error: ${response.status}`);
   }
@@ -354,7 +356,7 @@ export async function getCoinPaprikaGlobal(): Promise<CoinPaprikaGlobal> {
   const cached = getCached<CoinPaprikaGlobal>(cacheKey);
   if (cached) return cached;
 
-  const response = await fetch(`${COINPAPRIKA_BASE}/global`);
+  const response = await resilientFetchResponse(`${COINPAPRIKA_BASE}/global`, { service: 'coinpaprika', timeoutMs: 8000, retries: 1 });
   if (!response.ok) {
     throw new Error(`CoinPaprika API error: ${response.status}`);
   }
@@ -390,7 +392,7 @@ export async function getCoinLoreGlobal(): Promise<CoinLoreGlobal> {
   const cached = getCached<CoinLoreGlobal>(cacheKey);
   if (cached) return cached;
 
-  const response = await fetch(`${COINLORE_BASE}/global/`);
+  const response = await resilientFetchResponse(`${COINLORE_BASE}/global/`, { service: 'coinlore', timeoutMs: 8000, retries: 1 });
   if (!response.ok) {
     throw new Error(`CoinLore API error: ${response.status}`);
   }

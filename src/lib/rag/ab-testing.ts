@@ -21,7 +21,7 @@
  * @module lib/rag/ab-testing
  */
 
-import type { EvalResult, EvalRunResult, EvalConfig } from './evaluator';
+import type { EvalResult, EvalConfig } from './evaluator';
 import { RAGEvaluator } from './evaluator';
 import type { ScoredDocument } from './types';
 

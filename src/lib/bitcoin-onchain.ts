@@ -22,6 +22,7 @@
 
 import { EXTERNAL_APIS, CACHE_TTL, type MempoolFees, type MempoolBlock } from './external-apis';
 import { cache } from './cache';
+import { resilientFetchResponse } from '@/lib/resilient-fetch';
 
 // =============================================================================
 // Types
@@ -110,7 +111,7 @@ export async function getRecommendedFees(): Promise<MempoolFees> {
   const cached = cache.get<MempoolFees>(cacheKey);
   if (cached) return cached;
 
-  const response = await fetch(`${EXTERNAL_APIS.MEMPOOL}/v1/fees/recommended`);
+  const response = await resilientFetchResponse(`${EXTERNAL_APIS.MEMPOOL}/v1/fees/recommended`, { service: 'mempool', timeoutMs: 8000, retries: 1 });
 
   if (!response.ok) {
     throw new Error(`Mempool API error: ${response.status}`);
@@ -139,7 +140,7 @@ export async function getMempoolBlocks(): Promise<
   const cached = cache.get<Awaited<ReturnType<typeof getMempoolBlocks>>>(cacheKey);
   if (cached) return cached;
 
-  const response = await fetch(`${EXTERNAL_APIS.MEMPOOL}/v1/fees/mempool-blocks`);
+  const response = await resilientFetchResponse(`${EXTERNAL_APIS.MEMPOOL}/v1/fees/mempool-blocks`, { service: 'mempool', timeoutMs: 8000, retries: 1 });
 
   if (!response.ok) {
     throw new Error(`Mempool API error: ${response.status}`);
@@ -159,7 +160,7 @@ export async function getMempoolInfo(): Promise<MempoolInfo> {
   const cached = cache.get<MempoolInfo>(cacheKey);
   if (cached) return cached;
 
-  const response = await fetch(`${EXTERNAL_APIS.MEMPOOL}/mempool`);
+  const response = await resilientFetchResponse(`${EXTERNAL_APIS.MEMPOOL}/mempool`, { service: 'mempool', timeoutMs: 8000, retries: 1 });
 
   if (!response.ok) {
     throw new Error(`Mempool API error: ${response.status}`);
@@ -183,7 +184,7 @@ export async function getRecentBlocks(startHeight?: number): Promise<MempoolBloc
     ? `${EXTERNAL_APIS.MEMPOOL}/v1/blocks/${startHeight}`
     : `${EXTERNAL_APIS.MEMPOOL}/v1/blocks`;
 
-  const response = await fetch(url);
+  const response = await resilientFetchResponse(url, { service: 'mempool', timeoutMs: 8000, retries: 1 });
 
   if (!response.ok) {
     throw new Error(`Mempool API error: ${response.status}`);
@@ -203,7 +204,7 @@ export async function getBlock(hash: string): Promise<MempoolBlock> {
   const cached = cache.get<MempoolBlock>(cacheKey);
   if (cached) return cached;
 
-  const response = await fetch(`${EXTERNAL_APIS.MEMPOOL}/block/${hash}`);
+  const response = await resilientFetchResponse(`${EXTERNAL_APIS.MEMPOOL}/block/${hash}`, { service: 'mempool', timeoutMs: 8000, retries: 1 });
 
   if (!response.ok) {
     throw new Error(`Mempool API error: ${response.status}`);
@@ -223,7 +224,7 @@ export async function getBlockHeight(): Promise<number> {
   const cached = cache.get<number>(cacheKey);
   if (cached) return cached;
 
-  const response = await fetch(`${EXTERNAL_APIS.MEMPOOL}/blocks/tip/height`);
+  const response = await resilientFetchResponse(`${EXTERNAL_APIS.MEMPOOL}/blocks/tip/height`, { service: 'mempool', timeoutMs: 8000, retries: 1 });
 
   if (!response.ok) {
     throw new Error(`Mempool API error: ${response.status}`);
@@ -243,7 +244,7 @@ export async function getDifficultyAdjustment(): Promise<DifficultyAdjustment> {
   const cached = cache.get<DifficultyAdjustment>(cacheKey);
   if (cached) return cached;
 
-  const response = await fetch(`${EXTERNAL_APIS.MEMPOOL}/v1/difficulty-adjustment`);
+  const response = await resilientFetchResponse(`${EXTERNAL_APIS.MEMPOOL}/v1/difficulty-adjustment`, { service: 'mempool', timeoutMs: 8000, retries: 1 });
 
   if (!response.ok) {
     throw new Error(`Mempool API error: ${response.status}`);
@@ -263,7 +264,7 @@ export async function getAddress(address: string): Promise<MempoolAddress> {
   const cached = cache.get<MempoolAddress>(cacheKey);
   if (cached) return cached;
 
-  const response = await fetch(`${EXTERNAL_APIS.MEMPOOL}/address/${address}`);
+  const response = await resilientFetchResponse(`${EXTERNAL_APIS.MEMPOOL}/address/${address}`, { service: 'mempool', timeoutMs: 8000, retries: 1 });
 
   if (!response.ok) {
     throw new Error(`Mempool API error: ${response.status}`);
@@ -283,7 +284,7 @@ export async function getAddressTransactions(address: string): Promise<MempoolTr
   const cached = cache.get<MempoolTransaction[]>(cacheKey);
   if (cached) return cached;
 
-  const response = await fetch(`${EXTERNAL_APIS.MEMPOOL}/address/${address}/txs`);
+  const response = await resilientFetchResponse(`${EXTERNAL_APIS.MEMPOOL}/address/${address}/txs`, { service: 'mempool', timeoutMs: 8000, retries: 1 });
 
   if (!response.ok) {
     throw new Error(`Mempool API error: ${response.status}`);
@@ -303,7 +304,7 @@ export async function getTransaction(txid: string): Promise<MempoolTransaction> 
   const cached = cache.get<MempoolTransaction>(cacheKey);
   if (cached) return cached;
 
-  const response = await fetch(`${EXTERNAL_APIS.MEMPOOL}/tx/${txid}`);
+  const response = await resilientFetchResponse(`${EXTERNAL_APIS.MEMPOOL}/tx/${txid}`, { service: 'mempool', timeoutMs: 8000, retries: 1 });
 
   if (!response.ok) {
     throw new Error(`Mempool API error: ${response.status}`);
@@ -330,10 +331,10 @@ export async function getNetworkStats(): Promise<BlockchainStats> {
   if (cached) return cached;
 
   const [hashrate, difficulty, blockHeight, unconfirmed] = await Promise.all([
-    fetch(`${EXTERNAL_APIS.BLOCKCHAIN_INFO}/q/hashrate`).then((r) => r.text()),
-    fetch(`${EXTERNAL_APIS.BLOCKCHAIN_INFO}/q/getdifficulty`).then((r) => r.text()),
-    fetch(`${EXTERNAL_APIS.BLOCKCHAIN_INFO}/q/getblockcount`).then((r) => r.text()),
-    fetch(`${EXTERNAL_APIS.BLOCKCHAIN_INFO}/q/unconfirmedcount`).then((r) => r.text()),
+    resilientFetchResponse(`${EXTERNAL_APIS.BLOCKCHAIN_INFO}/q/hashrate`, { service: 'blockchain-info', timeoutMs: 8000, retries: 1 }).then((r) => r.text()),
+    resilientFetchResponse(`${EXTERNAL_APIS.BLOCKCHAIN_INFO}/q/getdifficulty`, { service: 'blockchain-info', timeoutMs: 8000, retries: 1 }).then((r) => r.text()),
+    resilientFetchResponse(`${EXTERNAL_APIS.BLOCKCHAIN_INFO}/q/getblockcount`, { service: 'blockchain-info', timeoutMs: 8000, retries: 1 }).then((r) => r.text()),
+    resilientFetchResponse(`${EXTERNAL_APIS.BLOCKCHAIN_INFO}/q/unconfirmedcount`, { service: 'blockchain-info', timeoutMs: 8000, retries: 1 }).then((r) => r.text()),
   ]);
 
   const stats: BlockchainStats = {
@@ -359,7 +360,7 @@ export async function getBtcPrice(): Promise<
   const cached = cache.get<Awaited<ReturnType<typeof getBtcPrice>>>(cacheKey);
   if (cached) return cached;
 
-  const response = await fetch(`${EXTERNAL_APIS.BLOCKCHAIN_INFO}/ticker`);
+  const response = await resilientFetchResponse(`${EXTERNAL_APIS.BLOCKCHAIN_INFO}/ticker`, { service: 'blockchain-info', timeoutMs: 8000, retries: 1 });
 
   if (!response.ok) {
     throw new Error(`Blockchain.info API error: ${response.status}`);

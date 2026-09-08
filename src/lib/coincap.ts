@@ -21,6 +21,7 @@
 
 import { EXTERNAL_APIS, CACHE_TTL, type CoinCapAsset } from './external-apis';
 import { cache } from './cache';
+import { resilientFetchResponse } from '@/lib/resilient-fetch';
 
 const BASE_URL = EXTERNAL_APIS.COINCAP;
 
@@ -94,7 +95,7 @@ export async function getAssets(options?: {
   if (options?.offset) params.set('offset', options.offset.toString());
 
   const url = `${BASE_URL}/assets${params.toString() ? `?${params}` : ''}`;
-  const response = await fetch(url);
+  const response = await resilientFetchResponse(url, { service: 'coincap', timeoutMs: 8000, retries: 1 });
 
   if (!response.ok) {
     throw new Error(`CoinCap API error: ${response.status}`);
@@ -114,7 +115,7 @@ export async function getAsset(id: string): Promise<CoinCapAsset> {
   const cached = cache.get<CoinCapAsset>(cacheKey);
   if (cached) return cached;
 
-  const response = await fetch(`${BASE_URL}/assets/${id}`);
+  const response = await resilientFetchResponse(`${BASE_URL}/assets/${id}`, { service: 'coincap', timeoutMs: 8000, retries: 1 });
 
   if (!response.ok) {
     throw new Error(`CoinCap API error: ${response.status}`);
@@ -143,7 +144,7 @@ export async function getAssetHistory(
   const cached = cache.get<CoinCapHistory[]>(cacheKey);
   if (cached) return cached;
 
-  const response = await fetch(`${BASE_URL}/assets/${id}/history?${params}`);
+  const response = await resilientFetchResponse(`${BASE_URL}/assets/${id}/history?${params}`, { service: 'coincap', timeoutMs: 8000, retries: 1 });
 
   if (!response.ok) {
     throw new Error(`CoinCap API error: ${response.status}`);
@@ -174,7 +175,7 @@ export async function getAssetMarkets(
     offset: offset.toString(),
   });
 
-  const response = await fetch(`${BASE_URL}/assets/${id}/markets?${params}`);
+  const response = await resilientFetchResponse(`${BASE_URL}/assets/${id}/markets?${params}`, { service: 'coincap', timeoutMs: 8000, retries: 1 });
 
   if (!response.ok) {
     throw new Error(`CoinCap API error: ${response.status}`);
@@ -194,7 +195,7 @@ export async function getExchanges(): Promise<CoinCapExchange[]> {
   const cached = cache.get<CoinCapExchange[]>(cacheKey);
   if (cached) return cached;
 
-  const response = await fetch(`${BASE_URL}/exchanges`);
+  const response = await resilientFetchResponse(`${BASE_URL}/exchanges`, { service: 'coincap', timeoutMs: 8000, retries: 1 });
 
   if (!response.ok) {
     throw new Error(`CoinCap API error: ${response.status}`);
@@ -214,7 +215,7 @@ export async function getRates(): Promise<CoinCapRate[]> {
   const cached = cache.get<CoinCapRate[]>(cacheKey);
   if (cached) return cached;
 
-  const response = await fetch(`${BASE_URL}/rates`);
+  const response = await resilientFetchResponse(`${BASE_URL}/rates`, { service: 'coincap', timeoutMs: 8000, retries: 1 });
 
   if (!response.ok) {
     throw new Error(`CoinCap API error: ${response.status}`);

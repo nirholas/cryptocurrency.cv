@@ -35,6 +35,7 @@ import {
   BINANCE_BASE,
   COINPAPRIKA_BASE,
 } from "./constants";
+import { resilientFetchResponse } from '@/lib/resilient-fetch';
 
 /**
  * Whether we are in a CI/build environment.
@@ -817,9 +818,6 @@ async function fetchWithTimeout(
     );
   }
 
-  const controller = new AbortController();
-  const timeoutId = setTimeout(() => controller.abort(), timeout);
-
   try {
     if (!skipRateLimit && url.includes("coingecko.com")) {
       recordRequest();
@@ -834,11 +832,14 @@ async function fetchWithTimeout(
       headers["x-cg-demo-api-key"] = process.env.COINGECKO_API_KEY;
     }
 
-    const response = await fetch(url, {
-      signal: controller.signal,
+    // One retry on transient failures; 429 is handled by the rate-limit state below
+    const response = await resilientFetchResponse(url, {
+      service: serviceNameForUrl(url),
+      timeoutMs: timeout,
+      retries: url.includes("coingecko.com") ? 0 : 1,
       headers,
       next: { revalidate: 120 }, // Next.js cache for 2 minutes
-    } as RequestInit & { next?: { revalidate?: number } });
+    });
 
     // Handle rate limiting from API
     if (response.status === 429) {
@@ -849,8 +850,26 @@ async function fetchWithTimeout(
     }
 
     return response;
-  } finally {
-    clearTimeout(timeoutId);
+  } catch (error) {
+    if ((error as Error).name === "AbortError") {
+      throw new MarketDataError(`Request timed out after ${timeout}ms`, 504);
+    }
+    throw error;
+  }
+}
+
+/** Map an upstream URL to its circuit-breaker service name */
+function serviceNameForUrl(url: string): string {
+  try {
+    const host = new URL(url).hostname;
+    if (host.includes("coingecko")) return "coingecko";
+    if (host.includes("coincap")) return "coincap";
+    if (host.includes("coinpaprika")) return "coinpaprika";
+    if (host.includes("binance")) return "binance";
+    if (host.includes("cryptocompare")) return "cryptocompare";
+    return host.replace(/^(api|www)\./, "").replace(/\./g, "-");
+  } catch {
+    return "market-data";
   }
 }
 

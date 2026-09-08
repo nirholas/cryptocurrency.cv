@@ -36,7 +36,7 @@
  * @see {@link https://en.wikipedia.org/wiki/Algorithms_for_calculating_variance#Welford's_online_algorithm Welford's Algorithm}
  */
 
-import type { AnomalyDetectorConfig, AnomalyFlag, AnomalyType } from './types';
+import type { AnomalyDetectorConfig, AnomalyFlag } from './types';
 import { DEFAULT_ANOMALY_CONFIG } from './types';
 
 // =============================================================================

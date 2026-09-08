@@ -27,9 +27,9 @@
 
 import { promises as fs } from 'fs';
 import path from 'path';
-import type { NewsDocument, NewsMetadata, SearchFilter, SearchResult, VectorStoreStats } from './types';
+import type { NewsDocument, SearchFilter, SearchResult, VectorStoreStats } from './types';
 import { logger } from '@/lib/logger';
-import { cosineSimilarity, dotProduct, normalizeVector } from './embedding-service';
+import { dotProduct, normalizeVector } from './embedding-service';
 
 // Store path
 // On Vercel serverless, only /tmp is writable. Use /tmp when VERCEL env is set.

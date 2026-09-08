@@ -44,7 +44,7 @@ export const lidoAdapter: DataProvider<YieldPool[]> = {
   rateLimit: RATE_LIMIT,
   capabilities: ['defi-yields'],
 
-  async fetch(params: FetchParams): Promise<YieldPool[]> {
+  async fetch(_params: FetchParams): Promise<YieldPool[]> {
     const [aprRes, statsRes] = await Promise.all([
       fetch(`${LIDO_API_BASE}/v1/protocol/steth/apr/sma`, {
         headers: { Accept: 'application/json' },

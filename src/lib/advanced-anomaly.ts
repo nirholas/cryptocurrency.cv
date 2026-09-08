@@ -43,7 +43,6 @@
  */
 
 import { aiComplete } from './ai-provider';
-import { cache } from './cache';
 
 // ═══════════════════════════════════════════════════════════════
 // TYPES

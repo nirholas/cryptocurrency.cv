@@ -20,9 +20,8 @@
  * - Metadata indexes (sorted sets)
  */
 
-import { redisGet, redisSet, redisDel, redisClient, isRedisAvailable } from '../redis';
-import { aiCache } from '../cache';
-import type { NewsDocument, NewsMetadata, SearchFilter, SearchResult, VectorStoreStats } from './types';
+import { redisClient, isRedisAvailable } from '../redis';
+import type { NewsDocument, SearchFilter, SearchResult, VectorStoreStats } from './types';
 import { normalizeVector, dotProduct } from './embedding-service';
 
 // Keys

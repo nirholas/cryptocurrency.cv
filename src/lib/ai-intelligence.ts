@@ -18,7 +18,7 @@
  * - News-price correlation detection
  */
 
-import { promptGroqJson, promptGroqJsonCached, isGroqConfigured } from './groq';
+import { promptGroqJsonCached, isGroqConfigured } from './groq';
 
 // Types
 export interface NewsArticle {

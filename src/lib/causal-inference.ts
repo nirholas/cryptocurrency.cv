@@ -26,10 +26,8 @@
  * @module causal-inference
  */
 
-import { getTopCoins, getHistoricalPrices, type TokenPrice } from './market-data';
-import { getLatestNews, type NewsArticle } from './crypto-news';
+import { getHistoricalPrices } from './market-data';
 import { db } from './database';
-import { aiCache } from './cache';
 
 // =============================================================================
 // TYPES

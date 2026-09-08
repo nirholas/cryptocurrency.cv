@@ -172,7 +172,7 @@ describe('Alerts System', () => {
     const checkPriceAlerts = (prices: Record<string, number>) => {
       const triggeredAlerts: any[] = [];
       
-      alertsStore.forEach((alerts, userId) => {
+      alertsStore.forEach((alerts, _userId) => {
         alerts.forEach(alert => {
           if (alert.type !== 'price' || !alert.enabled) return;
           
@@ -286,7 +286,7 @@ describe('Alerts System', () => {
       const triggeredAlerts: any[] = [];
       const textToSearch = `${article.title} ${article.description || ''}`.toLowerCase();
       
-      alertsStore.forEach((alerts, userId) => {
+      alertsStore.forEach((alerts, _userId) => {
         alerts.forEach(alert => {
           if (alert.type !== 'keyword' || !alert.enabled) return;
           

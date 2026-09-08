@@ -18,6 +18,9 @@
  * @module lib/apis/dexes
  */
 
+import { resilientFetch } from '@/lib/resilient-fetch';
+import { staleCache } from '@/lib/cache';
+
 const BASE_URL = 'https://api.llama.fi/overview/dexs';
 
 // =============================================================================
@@ -82,16 +85,16 @@ export interface TopDex {
  */
 async function dexFetch<T>(url: string): Promise<T | null> {
   try {
-    const response = await fetch(url, {
-      next: { revalidate: 300 }, // 5 min cache
+    const { data, stale } = await resilientFetch<T>(url, {
+      service: 'defillama-dex',
+      timeoutMs: 10000,
+      retries: 1,
+      staleCache,
+      staleCacheKey: `dex:${url}`,
+      next: { revalidate: 300 },
     });
-
-    if (!response.ok) {
-      console.error(`DEX API error: ${response.status} for ${url}`);
-      return null;
-    }
-
-    return await response.json();
+    if (stale) console.warn('DEX API: upstream failed, serving last known good payload');
+    return data;
   } catch (error) {
     console.error('DEX API request failed:', error);
     return null;

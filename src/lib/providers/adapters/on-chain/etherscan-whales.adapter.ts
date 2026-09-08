@@ -21,7 +21,8 @@
 import type { DataProvider, FetchParams, RateLimitConfig } from '../../types';
 import type { WhaleAlert } from './types';
 
-const BASE = 'https://api.etherscan.io/api';
+/** Etherscan V2 multichain endpoint (chainid 1 = Ethereum mainnet). */
+const BASE = 'https://api.etherscan.io/v2/api?chainid=1';
 const ETHERSCAN_KEY = process.env.ETHERSCAN_API_KEY ?? '';
 
 const RATE_LIMIT: RateLimitConfig = { maxRequests: 5, windowMs: 1_000 };
@@ -44,7 +45,7 @@ export const etherscanWhalesAdapter: DataProvider<WhaleAlert[]> = {
 
     // Fetch recent internal transactions (large ETH movements)
     const res = await fetch(
-      `${BASE}?module=account&action=txlistinternal&startblock=0&endblock=99999999&page=1&offset=${limit}&sort=desc&apikey=${ETHERSCAN_KEY}`,
+      `${BASE}&module=account&action=txlistinternal&startblock=0&endblock=99999999&page=1&offset=${limit}&sort=desc&apikey=${ETHERSCAN_KEY}`,
       { signal: AbortSignal.timeout(10_000) },
     );
 
@@ -87,7 +88,7 @@ export const etherscanWhalesAdapter: DataProvider<WhaleAlert[]> = {
     if (!ETHERSCAN_KEY) return false;
     try {
       const res = await fetch(
-        `${BASE}?module=proxy&action=eth_blockNumber&apikey=${ETHERSCAN_KEY}`,
+        `${BASE}&module=proxy&action=eth_blockNumber&apikey=${ETHERSCAN_KEY}`,
         { signal: AbortSignal.timeout(5000) },
       );
       return res.ok;

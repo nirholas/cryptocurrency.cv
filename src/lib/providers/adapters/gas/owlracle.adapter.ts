@@ -96,26 +96,45 @@ export const owlracleAdapter: DataProvider<GasFeeEstimate[]> = {
     }
 
     const speeds = data.speeds || [];
+    if (speeds.length === 0) {
+      throw new Error('Owlracle returned no speed tiers');
+    }
+
+    // Owlracle does not publish a confirmation-time estimate. Each tier's
+    // `acceptance` is the share of recent blocks it would have made, so the
+    // expected wait is roughly one block time divided by that share.
+    const blockSeconds = data.avgTime && data.avgTime > 0 ? data.avgTime : 12;
+
     const getSpeed = (acceptance: number) => {
-      const s = speeds.find(sp => sp.acceptance >= acceptance) || speeds[0];
+      const tier = speeds.find((sp) => sp.acceptance >= acceptance) ?? speeds[speeds.length - 1];
+      const share = tier.acceptance > 0 ? tier.acceptance : 1;
       return {
-        gasPrice: s?.gasPrice ?? 0,
-        estimatedSeconds: s?.estimatedFee ?? 0,
+        gasPrice: tier.maxFeePerGas,
+        estimatedSeconds: Math.round((blockSeconds / share) * 10) / 10,
       };
     };
 
     const result: GasFeeEstimate = {
       chain,
-      baseFee: data.baseFee ?? 0,
+      // v4 reports base fee per tier; the cheapest tier tracks the network base
+      // fee most closely.
+      baseFee: speeds[0].baseFee,
       speeds: {
         slow: getSpeed(0.35),
         standard: getSpeed(0.6),
         fast: getSpeed(0.9),
         instant: getSpeed(0.99),
       },
-      lastBlock: data.lastBlock ?? 0,
+      // Not published by v4. Callers read it as "unknown", never as block 0.
+      lastBlock: 0,
       timestamp: now,
     };
+
+    if (result.speeds.standard.gasPrice <= 0) {
+      // A zeroed estimate is worse than no estimate: the chain would cache it
+      // and stop failing over to Etherscan / Blocknative.
+      throw new Error('Owlracle returned a zero gas price');
+    }
 
     return [result];
   },
@@ -137,15 +156,29 @@ export const owlracleAdapter: DataProvider<GasFeeEstimate[]> = {
   },
 };
 
+/**
+ * Owlracle v4 `/{chain}/gas` response.
+ *
+ * v4 reports each speed tier as an EIP-1559 pair and carries no top-level
+ * `baseFee`, `gasPrice` or `lastBlock`. The adapter used to read those three
+ * fields, so every value it produced was `0` and the /gas page rendered a
+ * column of zeroes whenever the chain fell through to this provider.
+ */
 interface OwlracleGasResponse {
-  baseFee?: number;
-  lastBlock?: number;
+  timestamp?: string;
+  /** Average seconds per block, used to estimate confirmation time. */
   avgTime?: number;
   avgTx?: number;
   avgGas?: number;
   speeds?: Array<{
+    /** Share of recent transactions this tier would have been included in. */
     acceptance: number;
-    gasPrice: number;
+    /** Total gwei per gas unit to bid for this tier. */
+    maxFeePerGas: number;
+    maxPriorityFeePerGas: number;
+    /** Network base fee observed for this tier, in gwei. */
+    baseFee: number;
+    /** Estimated total fee in the chain's native currency. */
     estimatedFee: number;
   }>;
   error?: string;

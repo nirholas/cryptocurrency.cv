@@ -18,7 +18,6 @@ import {
   categories,
   getCategoryBySlug,
   matchArticleToCategories,
-  type Category,
 } from '@/lib/categories';
 
 // ---------------------------------------------------------------------------

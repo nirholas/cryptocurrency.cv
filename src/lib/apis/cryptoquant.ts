@@ -17,6 +17,8 @@
  * @module lib/apis/cryptoquant
  */
 
+import { resilientFetchResponse } from '@/lib/resilient-fetch';
+
 const CRYPTOQUANT_API_KEY = process.env.CRYPTOQUANT_API_KEY || '';
 const BASE_URL = 'https://api.cryptoquant.com/v1';
 
@@ -106,7 +108,8 @@ async function cryptoQuantFetch<T>(endpoint: string, params: Record<string, stri
   Object.entries(params).forEach(([key, value]) => url.searchParams.append(key, value));
 
   try {
-    const response = await fetch(url.toString(), {
+    const response = await resilientFetchResponse(url.toString(), {
+      service: 'cryptoquant', timeoutMs: 10000, retries: 1,
       headers: {
         'Authorization': `Bearer ${CRYPTOQUANT_API_KEY}`,
       },

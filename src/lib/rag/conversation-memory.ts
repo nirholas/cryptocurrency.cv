@@ -19,7 +19,6 @@
  */
 
 import { callGroq, parseGroqJson } from '../groq';
-import { aiCache } from '../cache';
 import type { ScoredDocument } from './types';
 
 // ═══════════════════════════════════════════════════════════════

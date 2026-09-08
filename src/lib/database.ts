@@ -22,7 +22,6 @@
  * connection pooling, retry logic, and comprehensive error handling.
  */
 
-import { aiCache } from './cache';
 import { dbLogger } from '@/lib/logger';
 
 // =============================================================================
@@ -835,7 +834,7 @@ class DatabaseClient {
         latencyMs: Date.now() - start,
         backend: this.backend.getStats().backend,
       };
-    } catch (error) {
+    } catch {
       return {
         healthy: false,
         latencyMs: Date.now() - start,

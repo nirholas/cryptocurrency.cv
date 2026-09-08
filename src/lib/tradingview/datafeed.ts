@@ -462,7 +462,7 @@ export async function getTimescaleMarks(
   symbol: string,
   from: number,
   to: number,
-  resolution: string
+  _resolution: string
 ): Promise<UDFTimescaleMark[]> {
   const marks: UDFTimescaleMark[] = [];
   

@@ -357,7 +357,7 @@ export async function getEthGasPrice(): Promise<{
   if (!apiKey) return null;
 
   const data = await scaleFetch<{ result: Record<string, string> }>(
-    `https://api.etherscan.io/api?module=gastracker&action=gasoracle&apikey=${apiKey}`,
+    `https://api.etherscan.io/v2/api?chainid=1&module=gastracker&action=gasoracle&apikey=${apiKey}`,
     {
       cacheKey: 'eth-gas',
       cacheTtl: 15,
@@ -380,7 +380,7 @@ export async function getEthSupply(): Promise<{ ethSupply: string; eth2Staking: 
   if (!apiKey) return null;
 
   const data = await scaleFetch<{ result: Record<string, string> }>(
-    `https://api.etherscan.io/api?module=stats&action=ethsupply2&apikey=${apiKey}`,
+    `https://api.etherscan.io/v2/api?chainid=1&module=stats&action=ethsupply2&apikey=${apiKey}`,
     {
       cacheKey: 'eth-supply',
       cacheTtl: 300,

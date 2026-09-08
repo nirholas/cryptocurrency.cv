@@ -57,6 +57,34 @@ export class AIRateLimitError extends Error {
   }
 }
 
+/**
+ * Thrown when a provider cannot serve THIS request but its credentials are
+ * fine: the payload exceeds the model's per-request or per-minute token
+ * budget (413), the upstream timed out (408/504), or the provider is having
+ * an outage (5xx).
+ *
+ * Treated like a rate-limit error by aiComplete: skip this provider and try
+ * the next one. Without this, a single small-context provider at the head of
+ * the chain (Groq caps free-tier requests at 8k tokens/minute) took down
+ * every large-prompt endpoint even though a 1M-context provider was
+ * configured right behind it.
+ */
+export class AIProviderUnavailableError extends Error {
+  public readonly statusCode: number;
+  public readonly provider: AIProvider;
+  constructor(provider: AIProvider, statusCode: number, message: string) {
+    super(message);
+    this.name = 'AIProviderUnavailableError';
+    this.provider = provider;
+    this.statusCode = statusCode;
+  }
+}
+
+/** HTTP statuses that mean "this provider can't serve this request, try another". */
+export function isProviderUnavailableStatus(status: number): boolean {
+  return status === 408 || status === 413 || status === 422 || status >= 500;
+}
+
 export interface AIConfig {
   provider: AIProvider;
   model: string;
@@ -281,8 +309,12 @@ export async function aiComplete(
     try {
       return await aiCompleteWithConfig(config, systemPrompt, userPrompt, options);
     } catch (err) {
-      // Auth errors and rate-limit / quota errors → skip this provider, try next
-      if (err instanceof AIAuthError || err instanceof AIRateLimitError) {
+      // Auth, quota and can't-serve-this-request errors → skip provider, try next
+      if (
+        err instanceof AIAuthError ||
+        err instanceof AIRateLimitError ||
+        err instanceof AIProviderUnavailableError
+      ) {
         console.warn(`AI provider ${config.provider} unavailable (${err.name}), trying next provider...`, err.message);
         skipErrors.push(err);
         continue;
@@ -339,6 +371,13 @@ async function aiCompleteWithConfig(
       if (response.status === 429 || response.status === 402) {
         throw new AIRateLimitError('anthropic', response.status, `Anthropic rate-limited / out of quota: ${response.status}`);
       }
+      if (isProviderUnavailableStatus(response.status)) {
+        throw new AIProviderUnavailableError(
+          'anthropic',
+          response.status,
+          `Anthropic cannot serve this request (${response.status})`,
+        );
+      }
       throw new Error(`Anthropic API error: ${response.status}`);
     }
 
@@ -373,6 +412,9 @@ async function aiCompleteWithConfig(
       }
       if (/\[429 |quota|rate limit|resource_exhausted/i.test(message)) {
         throw new AIRateLimitError('gemini', 429, `Gemini rate-limited: ${message}`);
+      }
+      if (/\[(408|413|422|5\d\d) |too large|payload size|deadline|unavailable|internal error/i.test(message)) {
+        throw new AIProviderUnavailableError('gemini', 503, `Gemini cannot serve this request: ${message}`);
       }
       throw err;
     }
@@ -410,6 +452,13 @@ async function aiCompleteWithConfig(
     }
     if (response.status === 429 || response.status === 402) {
       throw new AIRateLimitError(config.provider, response.status, `${config.provider} rate-limited / out of quota (${response.status}): ${error}`);
+    }
+    if (isProviderUnavailableStatus(response.status)) {
+      throw new AIProviderUnavailableError(
+        config.provider,
+        response.status,
+        `${config.provider} cannot serve this request (${response.status}): ${error}`,
+      );
     }
     throw new Error(`AI API error: ${response.status} - ${error}`);
   }

@@ -424,7 +424,7 @@ async function fetchFearGreed(): Promise<Record<string, unknown>> {
  */
 async function fetchGas(): Promise<Record<string, unknown>> {
   const etherscanKey = process.env.ETHERSCAN_API_KEY || '';
-  const url = `https://api.etherscan.io/api?module=gastracker&action=gasoracle${etherscanKey ? `&apikey=${etherscanKey}` : ''}`;
+  const url = `https://api.etherscan.io/v2/api?chainid=1&module=gastracker&action=gasoracle${etherscanKey ? `&apikey=${etherscanKey}` : ''}`;
 
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), 6000);

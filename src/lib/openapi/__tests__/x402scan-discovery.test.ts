@@ -15,7 +15,7 @@
 
 import { describe, it, expect } from 'vitest';
 import { generateOpenAPISpec } from '../generator';
-import { buildPaymentRequiredBody } from '@/lib/x402/payment-required';
+import { buildPaymentRequiredBody, resolveOrigin, BASE_URL } from '@/lib/x402/payment-required';
 import { EXEMPT_PATTERNS, FREE_TIER_PATTERNS, matchesPattern } from '@/middleware/config';
 
 type Operation = {
@@ -118,6 +118,42 @@ describe('OpenAPI discovery document', () => {
       // An empty security array is the explicit "public" declaration.
       expect(operation.security, `${method} ${path} security`).toEqual([]);
     }
+  });
+});
+
+describe('origin resolution', () => {
+  // NEXT_PUBLIC_APP_URL is inlined at build time, so an image built once and
+  // deployed to a second hostname would name the first one in every challenge
+  // it issues. Reading the host off the request fixes that, and the allowlist
+  // is what keeps a spoofed Host header out of a payment document.
+  const request = (headers: Record<string, string>) => ({
+    headers: { get: (name: string) => headers[name.toLowerCase()] ?? null },
+  });
+
+  it('falls back to the configured origin when there is no request', () => {
+    expect(resolveOrigin()).toBe(BASE_URL);
+  });
+
+  it('honours a forwarded host the deployment answers for', () => {
+    const host = new URL(BASE_URL).host;
+    expect(resolveOrigin(request({ 'x-forwarded-host': host, 'x-forwarded-proto': 'https' }))).toBe(
+      `https://${host}`,
+    );
+  });
+
+  it('refuses a host this deployment does not answer for', () => {
+    // A reflected Host must never reach the field a client reads to decide
+    // what it is paying for.
+    expect(resolveOrigin(request({ host: 'attacker.example' }))).toBe(BASE_URL);
+    expect(resolveOrigin(request({ 'x-forwarded-host': 'attacker.example' }))).toBe(BASE_URL);
+  });
+
+  it('names the resource it was actually called on', () => {
+    const host = new URL(BASE_URL).host;
+    const body = buildPaymentRequiredBody('/api/v1/news', 'GET', `https://${host}`) as {
+      resource: { url: string };
+    };
+    expect(body.resource.url).toBe(`https://${host}/api/v1/news`);
   });
 });
 

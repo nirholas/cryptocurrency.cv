@@ -42,7 +42,6 @@ import type {
   ChainHealth,
   ProviderChainInstance,
   ProviderEventListener,
-  ProviderEvent,
 } from './types';
 
 // =============================================================================
@@ -138,7 +137,16 @@ export class ProviderRegistry {
     category: DataCategory,
     params: FetchParams = {},
   ): Promise<ProviderResponse<T>> {
-    const entry = this._entries.get(category);
+    let entry = this._entries.get(category);
+    if (!entry) {
+      // The chains may not have been registered in this execution context yet.
+      // Register them on demand rather than reporting an empty registry: a
+      // route that reaches an unregistered chain silently drops to whatever
+      // single-provider legacy path it happens to have, which is how the whole
+      // multi-source framework ended up inert behind every endpoint.
+      await ensureChainsRegistered();
+      entry = this._entries.get(category);
+    }
     if (!entry) {
       throw new Error(
         `[ProviderRegistry] No provider chain registered for category "${category}". ` +
@@ -256,5 +264,38 @@ export class ProviderRegistry {
 /**
  * Global provider registry instance.
  * Import this from the barrel export.
+ *
+ * Parked on `globalThis` rather than held in module scope. Next.js bundles
+ * `instrumentation.ts` and each route into separate module graphs, so a plain
+ * module-scoped singleton gives the startup hook one registry and every route
+ * handler another, empty one. That is why `registry.fetch` reported
+ * `Available: none` at request time even though setup registers 23 chains.
  */
-export const registry = new ProviderRegistry();
+const REGISTRY_KEY = Symbol.for('cryptocurrency.cv.providerRegistry');
+
+type RegistryGlobal = typeof globalThis & {
+  [REGISTRY_KEY]?: ProviderRegistry;
+};
+
+const registryGlobal = globalThis as RegistryGlobal;
+
+export const registry: ProviderRegistry =
+  registryGlobal[REGISTRY_KEY] ?? (registryGlobal[REGISTRY_KEY] = new ProviderRegistry());
+
+/**
+ * Import the provider setup module once, registering every chain.
+ *
+ * Dynamic so `setup.ts` (which imports this module) does not create an
+ * evaluation cycle, and memoised so concurrent requests share one import.
+ */
+let setupPromise: Promise<unknown> | null = null;
+
+export function ensureChainsRegistered(): Promise<unknown> {
+  if (!setupPromise) {
+    setupPromise = import('./setup').catch((err) => {
+      setupPromise = null;
+      throw err;
+    });
+  }
+  return setupPromise;
+}

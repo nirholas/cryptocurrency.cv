@@ -483,7 +483,7 @@ export async function registerResearcher(
   return researcher;
 }
 
-function generateAcademicApiKey(researcherId: string): string {
+function generateAcademicApiKey(_researcherId: string): string {
   const prefix = 'acad_';
   const random = Array.from({ length: 32 }, () =>
     Math.random().toString(36).charAt(2)

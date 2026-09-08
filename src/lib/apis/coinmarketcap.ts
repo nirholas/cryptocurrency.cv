@@ -18,6 +18,8 @@
  * @module lib/apis/coinmarketcap
  */
 
+import { resilientFetchResponse } from '@/lib/resilient-fetch';
+
 const BASE_URL = 'https://pro-api.coinmarketcap.com/v1';
 const API_KEY = process.env.COINMARKETCAP_API_KEY || '';
 
@@ -180,7 +182,8 @@ async function cmcFetch<T>(endpoint: string, params?: Record<string, string>): P
       });
     }
 
-    const response = await fetch(url.toString(), {
+    const response = await resilientFetchResponse(url.toString(), {
+      service: 'coinmarketcap', timeoutMs: 8000, retries: 1,
       headers: {
         'X-CMC_PRO_API_KEY': API_KEY,
         'Accept': 'application/json',
@@ -376,7 +379,8 @@ function calculateTrendingScore(crypto: CmcCryptocurrency): number {
  */
 export async function getFearGreedIndex(): Promise<FearGreedIndex | null> {
   try {
-    const response = await fetch('https://api.alternative.me/fng/?limit=1', {
+    const response = await resilientFetchResponse('https://api.alternative.me/fng/?limit=1', {
+      service: 'alternative-me', timeoutMs: 5000, retries: 1,
       next: { revalidate: 3600 }, // Cache for 1 hour
     });
 

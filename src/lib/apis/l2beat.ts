@@ -18,6 +18,9 @@
  * @module lib/apis/l2beat
  */
 
+import { resilientFetch } from '@/lib/resilient-fetch';
+import { staleCache } from '@/lib/cache';
+
 const BASE_URL = 'https://l2beat.com/api';
 
 // =============================================================================
@@ -115,16 +118,16 @@ export interface L2Summary {
  */
 async function l2beatFetch<T>(endpoint: string): Promise<T | null> {
   try {
-    const response = await fetch(`${BASE_URL}${endpoint}`, {
+    const { data, stale } = await resilientFetch<T>(`${BASE_URL}${endpoint}`, {
+      service: 'l2beat',
+      timeoutMs: 10_000,
+      retries: 1,
+      staleCache,
+      staleCacheKey: `l2beat:${endpoint}`,
       next: { revalidate: 600 }, // Cache for 10 minutes
     });
-
-    if (!response.ok) {
-      console.error(`L2Beat API error: ${response.status}`);
-      return null;
-    }
-
-    return await response.json();
+    if (stale) console.warn(`L2Beat API: upstream failed, serving last known good payload for ${endpoint}`);
+    return data;
   } catch (error) {
     console.error('L2Beat API request failed:', error);
     return null;
@@ -181,13 +184,17 @@ export async function getL2Projects(): Promise<L2Project[]> {
  */
 async function getL2ProjectsFallback(): Promise<L2Project[]> {
   try {
-    const response = await fetch('https://api.llama.fi/v2/chains', {
-      next: { revalidate: 600 },
-    });
-
-    if (!response.ok) return [];
-
-    const chains = await response.json();
+    const { data: chains } = await resilientFetch<Array<{ name: string; tvl: number; chainId?: string }>>(
+      'https://api.llama.fi/v2/chains',
+      {
+        service: 'defillama',
+        timeoutMs: 10_000,
+        retries: 1,
+        staleCache,
+        staleCacheKey: 'defillama:/v2/chains',
+        next: { revalidate: 600 },
+      },
+    );
     
     // Filter for L2s
     const l2Chains = chains.filter((c: { name: string }) => 
@@ -327,12 +334,16 @@ export async function getL2Activity(): Promise<L2Activity[]> {
 
   // Try to fetch real activity data from L2Beat or alternative sources
   try {
-    const response = await fetch('https://l2beat.com/api/activity', {
+    const { data } = await resilientFetch<{ projects?: Record<string, unknown> }>('https://l2beat.com/api/activity', {
+      service: 'l2beat',
+      timeoutMs: 10_000,
+      retries: 1,
+      staleCache,
+      staleCacheKey: 'l2beat:/api/activity',
       next: { revalidate: 600 },
     });
 
-    if (response.ok) {
-      const data = await response.json();
+    if (data) {
       if (data.projects) {
         interface L2BeatProject {
           name: string;

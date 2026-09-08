@@ -16,7 +16,7 @@
  * @module data-sources/social
  */
 
-import { lunarcrush, alternative, snapshot, tally } from './index';
+import { lunarcrush, alternative } from './index';
 
 // ═══════════════════════════════════════════════════════════════
 // TYPES

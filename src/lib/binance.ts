@@ -28,6 +28,7 @@ import {
   type BinanceOpenInterest,
 } from './external-apis';
 import { cache } from './cache';
+import { resilientFetchResponse } from '@/lib/resilient-fetch';
 
 const BASE_URL = EXTERNAL_APIS.BINANCE;
 const FUTURES_URL = EXTERNAL_APIS.BINANCE_FUTURES;
@@ -115,7 +116,7 @@ export async function getAllPrices(): Promise<BinancePrice[]> {
   const cached = cache.get<BinancePrice[]>(cacheKey);
   if (cached) return cached;
 
-  const response = await fetch(`${BASE_URL}/ticker/price`);
+  const response = await resilientFetchResponse(`${BASE_URL}/ticker/price`, { service: 'binance', timeoutMs: 8000, retries: 1 });
 
   if (!response.ok) {
     throw new Error(`Binance API error: ${response.status}`);
@@ -135,7 +136,7 @@ export async function getPrice(symbol: string): Promise<BinancePrice> {
   const cached = cache.get<BinancePrice>(cacheKey);
   if (cached) return cached;
 
-  const response = await fetch(`${BASE_URL}/ticker/price?symbol=${symbol}`);
+  const response = await resilientFetchResponse(`${BASE_URL}/ticker/price?symbol=${symbol}`, { service: 'binance', timeoutMs: 8000, retries: 1 });
 
   if (!response.ok) {
     throw new Error(`Binance API error: ${response.status}`);
@@ -155,7 +156,7 @@ export async function get24hrTickers(): Promise<BinanceTicker[]> {
   const cached = cache.get<BinanceTicker[]>(cacheKey);
   if (cached) return cached;
 
-  const response = await fetch(`${BASE_URL}/ticker/24hr`);
+  const response = await resilientFetchResponse(`${BASE_URL}/ticker/24hr`, { service: 'binance', timeoutMs: 8000, retries: 1 });
 
   if (!response.ok) {
     throw new Error(`Binance API error: ${response.status}`);
@@ -175,7 +176,7 @@ export async function get24hrTicker(symbol: string): Promise<BinanceTicker> {
   const cached = cache.get<BinanceTicker>(cacheKey);
   if (cached) return cached;
 
-  const response = await fetch(`${BASE_URL}/ticker/24hr?symbol=${symbol}`);
+  const response = await resilientFetchResponse(`${BASE_URL}/ticker/24hr?symbol=${symbol}`, { service: 'binance', timeoutMs: 8000, retries: 1 });
 
   if (!response.ok) {
     throw new Error(`Binance API error: ${response.status}`);
@@ -195,7 +196,7 @@ export async function getOrderBook(symbol: string, limit = 100): Promise<Binance
   const cached = cache.get<BinanceOrderBook>(cacheKey);
   if (cached) return cached;
 
-  const response = await fetch(`${BASE_URL}/depth?symbol=${symbol}&limit=${limit}`);
+  const response = await resilientFetchResponse(`${BASE_URL}/depth?symbol=${symbol}&limit=${limit}`, { service: 'binance', timeoutMs: 8000, retries: 1 });
 
   if (!response.ok) {
     throw new Error(`Binance API error: ${response.status}`);
@@ -215,7 +216,7 @@ export async function getRecentTrades(symbol: string, limit = 500): Promise<Bina
   const cached = cache.get<BinanceTrade[]>(cacheKey);
   if (cached) return cached;
 
-  const response = await fetch(`${BASE_URL}/trades?symbol=${symbol}&limit=${limit}`);
+  const response = await resilientFetchResponse(`${BASE_URL}/trades?symbol=${symbol}&limit=${limit}`, { service: 'binance', timeoutMs: 8000, retries: 1 });
 
   if (!response.ok) {
     throw new Error(`Binance API error: ${response.status}`);
@@ -264,7 +265,7 @@ export async function getKlines(
   const cached = cache.get<BinanceKline[]>(cacheKey);
   if (cached) return cached;
 
-  const response = await fetch(`${BASE_URL}/klines?${params}`);
+  const response = await resilientFetchResponse(`${BASE_URL}/klines?${params}`, { service: 'binance', timeoutMs: 8000, retries: 1 });
 
   if (!response.ok) {
     throw new Error(`Binance API error: ${response.status}`);
@@ -303,7 +304,7 @@ export async function getExchangeInfo(): Promise<BinanceExchangeInfo> {
   const cached = cache.get<BinanceExchangeInfo>(cacheKey);
   if (cached) return cached;
 
-  const response = await fetch(`${BASE_URL}/exchangeInfo`);
+  const response = await resilientFetchResponse(`${BASE_URL}/exchangeInfo`, { service: 'binance', timeoutMs: 8000, retries: 1 });
 
   if (!response.ok) {
     throw new Error(`Binance API error: ${response.status}`);
@@ -331,7 +332,7 @@ export async function getFundingRates(symbol?: string): Promise<BinanceFundingRa
     ? `${FUTURES_URL}/fapi/v1/premiumIndex?symbol=${symbol}`
     : `${FUTURES_URL}/fapi/v1/premiumIndex`;
 
-  const response = await fetch(url);
+  const response = await resilientFetchResponse(url, { service: 'binance', timeoutMs: 8000, retries: 1 });
 
   if (!response.ok) {
     throw new Error(`Binance Futures API error: ${response.status}`);
@@ -352,7 +353,7 @@ export async function getOpenInterest(symbol: string): Promise<BinanceOpenIntere
   const cached = cache.get<BinanceOpenInterest>(cacheKey);
   if (cached) return cached;
 
-  const response = await fetch(`${FUTURES_URL}/fapi/v1/openInterest?symbol=${symbol}`);
+  const response = await resilientFetchResponse(`${FUTURES_URL}/fapi/v1/openInterest?symbol=${symbol}`, { service: 'binance-futures', timeoutMs: 8000, retries: 1 });
 
   if (!response.ok) {
     throw new Error(`Binance Futures API error: ${response.status}`);
@@ -372,7 +373,7 @@ export async function getMarkPrices(): Promise<BinanceFuturesMarkPrice[]> {
   const cached = cache.get<BinanceFuturesMarkPrice[]>(cacheKey);
   if (cached) return cached;
 
-  const response = await fetch(`${FUTURES_URL}/fapi/v1/premiumIndex`);
+  const response = await resilientFetchResponse(`${FUTURES_URL}/fapi/v1/premiumIndex`, { service: 'binance-futures', timeoutMs: 8000, retries: 1 });
 
   if (!response.ok) {
     throw new Error(`Binance Futures API error: ${response.status}`);
@@ -396,9 +397,10 @@ export async function getLongShortRatio(
   const cached = cache.get<BinanceLongShortRatio[]>(cacheKey);
   if (cached) return cached;
 
-  const response = await fetch(
-    `${FUTURES_URL}/futures/data/globalLongShortAccountRatio?symbol=${symbol}&period=${period}&limit=${limit}`
-  );
+  const response = await resilientFetchResponse(
+    `${FUTURES_URL}/futures/data/globalLongShortAccountRatio?symbol=${symbol}&period=${period}&limit=${limit}`,
+      { service: 'binance-futures', timeoutMs: 8000, retries: 1 },
+    );
 
   if (!response.ok) {
     throw new Error(`Binance Futures API error: ${response.status}`);

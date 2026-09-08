@@ -23,6 +23,7 @@
 
 import { EXTERNAL_APIS, CACHE_TTL, type DydxMarket } from './external-apis';
 import { cache } from './cache';
+import { resilientFetchResponse } from '@/lib/resilient-fetch';
 
 // =============================================================================
 // Types
@@ -115,7 +116,7 @@ export async function getBybitTickers(
   const cached = cache.get<BybitTicker[]>(cacheKey);
   if (cached) return cached;
 
-  const response = await fetch(`${EXTERNAL_APIS.BYBIT}/market/tickers?category=${category}`);
+  const response = await resilientFetchResponse(`${EXTERNAL_APIS.BYBIT}/market/tickers?category=${category}`, { service: 'bybit', timeoutMs: 8000, retries: 1 });
 
   if (!response.ok) {
     throw new Error(`Bybit API error: ${response.status}`);
@@ -139,9 +140,10 @@ export async function getBybitFundingHistory(
   const cached = cache.get<Awaited<ReturnType<typeof getBybitFundingHistory>>>(cacheKey);
   if (cached) return cached;
 
-  const response = await fetch(
-    `${EXTERNAL_APIS.BYBIT}/market/funding/history?category=linear&symbol=${symbol}&limit=${limit}`
-  );
+  const response = await resilientFetchResponse(
+    `${EXTERNAL_APIS.BYBIT}/market/funding/history?category=linear&symbol=${symbol}&limit=${limit}`,
+      { service: 'bybit', timeoutMs: 8000, retries: 1 },
+    );
 
   if (!response.ok) {
     throw new Error(`Bybit API error: ${response.status}`);
@@ -166,9 +168,10 @@ export async function getBybitOpenInterest(
   const cached = cache.get<Awaited<ReturnType<typeof getBybitOpenInterest>>>(cacheKey);
   if (cached) return cached;
 
-  const response = await fetch(
-    `${EXTERNAL_APIS.BYBIT}/market/open-interest?category=linear&symbol=${symbol}&intervalTime=${intervalTime}&limit=${limit}`
-  );
+  const response = await resilientFetchResponse(
+    `${EXTERNAL_APIS.BYBIT}/market/open-interest?category=linear&symbol=${symbol}&intervalTime=${intervalTime}&limit=${limit}`,
+      { service: 'bybit', timeoutMs: 8000, retries: 1 },
+    );
 
   if (!response.ok) {
     throw new Error(`Bybit API error: ${response.status}`);
@@ -193,7 +196,7 @@ export async function getOKXTickers(instType: 'SWAP' | 'FUTURES' = 'SWAP'): Prom
   const cached = cache.get<OKXTicker[]>(cacheKey);
   if (cached) return cached;
 
-  const response = await fetch(`${EXTERNAL_APIS.OKX}/market/tickers?instType=${instType}`);
+  const response = await resilientFetchResponse(`${EXTERNAL_APIS.OKX}/market/tickers?instType=${instType}`, { service: 'okx', timeoutMs: 8000, retries: 1 });
 
   if (!response.ok) {
     throw new Error(`OKX API error: ${response.status}`);
@@ -214,7 +217,7 @@ export async function getOKXFundingRates(): Promise<OKXFundingRate[]> {
   const cached = cache.get<OKXFundingRate[]>(cacheKey);
   if (cached) return cached;
 
-  const response = await fetch(`${EXTERNAL_APIS.OKX}/public/funding-rate`);
+  const response = await resilientFetchResponse(`${EXTERNAL_APIS.OKX}/public/funding-rate`, { service: 'okx', timeoutMs: 8000, retries: 1 });
 
   if (!response.ok) {
     throw new Error(`OKX API error: ${response.status}`);
@@ -237,7 +240,7 @@ export async function getOKXOpenInterest(
   const cached = cache.get<Awaited<ReturnType<typeof getOKXOpenInterest>>>(cacheKey);
   if (cached) return cached;
 
-  const response = await fetch(`${EXTERNAL_APIS.OKX}/public/open-interest?instType=${instType}`);
+  const response = await resilientFetchResponse(`${EXTERNAL_APIS.OKX}/public/open-interest?instType=${instType}`, { service: 'okx', timeoutMs: 8000, retries: 1 });
 
   if (!response.ok) {
     throw new Error(`OKX API error: ${response.status}`);
@@ -262,7 +265,7 @@ export async function getDydxMarkets(): Promise<Record<string, DydxMarket>> {
   const cached = cache.get<Record<string, DydxMarket>>(cacheKey);
   if (cached) return cached;
 
-  const response = await fetch(`${EXTERNAL_APIS.DYDX}/markets`);
+  const response = await resilientFetchResponse(`${EXTERNAL_APIS.DYDX}/markets`, { service: 'dydx', timeoutMs: 8000, retries: 1 });
 
   if (!response.ok) {
     throw new Error(`dYdX API error: ${response.status}`);
@@ -286,7 +289,7 @@ export async function getDydxOrderbook(market: string): Promise<{
   const cached = cache.get<Awaited<ReturnType<typeof getDydxOrderbook>>>(cacheKey);
   if (cached) return cached;
 
-  const response = await fetch(`${EXTERNAL_APIS.DYDX}/orderbook/${market}`);
+  const response = await resilientFetchResponse(`${EXTERNAL_APIS.DYDX}/orderbook/${market}`, { service: 'dydx', timeoutMs: 8000, retries: 1 });
 
   if (!response.ok) {
     throw new Error(`dYdX API error: ${response.status}`);
@@ -317,7 +320,7 @@ export async function getDydxTrades(
   const cached = cache.get<Awaited<ReturnType<typeof getDydxTrades>>>(cacheKey);
   if (cached) return cached;
 
-  const response = await fetch(`${EXTERNAL_APIS.DYDX}/trades/${market}?limit=${limit}`);
+  const response = await resilientFetchResponse(`${EXTERNAL_APIS.DYDX}/trades/${market}?limit=${limit}`, { service: 'dydx', timeoutMs: 8000, retries: 1 });
 
   if (!response.ok) {
     throw new Error(`dYdX API error: ${response.status}`);

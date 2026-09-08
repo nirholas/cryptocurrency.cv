@@ -13,7 +13,7 @@
  * Covers ETag generation, cache control headers, JSON/error responses, withTiming
  */
 
-import { describe, it, expect, vi } from 'vitest';
+import { describe, it, expect } from 'vitest';
 import { NextRequest } from 'next/server';
 import {
   generateETag,

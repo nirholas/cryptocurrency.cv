@@ -16,7 +16,7 @@
  * @module data-sources/derivatives
  */
 
-import { coinglass, deribit, bybit, okx, hyperliquid } from './index';
+import { coinglass, deribit, bybit, okx } from './index';
 
 // ═══════════════════════════════════════════════════════════════
 // TYPES

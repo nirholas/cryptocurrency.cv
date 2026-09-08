@@ -17,6 +17,7 @@
 
 import { type NextRequest, NextResponse } from 'next/server';
 import { PREMIUM_PRICING } from '@/lib/x402';
+import { resilientFetchResponse } from '@/lib/resilient-fetch';
 
 export const runtime = 'edge';
 
@@ -97,9 +98,9 @@ async function fetchRealWhaleTransactions(
 
   try {
     // Get current prices
-    const priceResponse = await fetch(
+    const priceResponse = await resilientFetchResponse(
       'https://api.coingecko.com/api/v3/simple/price?ids=ethereum,bitcoin&vs_currencies=usd',
-      { next: { revalidate: 60 } }
+      { service: 'coingecko', timeoutMs: 8000, retries: 1, next: { revalidate: 60 } }
     );
     const priceData = await priceResponse.json();
     const ethPrice = priceData.ethereum?.usd || 3000;
@@ -108,9 +109,9 @@ async function fetchRealWhaleTransactions(
     // Fetch Ethereum whale transactions from Blockchair
     if (!chainFilter || chainFilter === 'ethereum') {
       try {
-        const ethResponse = await fetch(
+        const ethResponse = await resilientFetchResponse(
           'https://api.blockchair.com/ethereum/transactions?limit=25&s=value(desc)',
-          { next: { revalidate: 30 } }
+          { service: 'blockchair', timeoutMs: 8000, retries: 1, next: { revalidate: 30 } }
         );
 
         if (ethResponse.ok) {
@@ -162,9 +163,9 @@ async function fetchRealWhaleTransactions(
     // Fetch Bitcoin whale transactions from Blockchair
     if (!chainFilter || chainFilter === 'bitcoin') {
       try {
-        const btcResponse = await fetch(
+        const btcResponse = await resilientFetchResponse(
           'https://api.blockchair.com/bitcoin/transactions?limit=25&s=output_total(desc)',
-          { next: { revalidate: 30 } }
+          { service: 'blockchair', timeoutMs: 8000, retries: 1, next: { revalidate: 30 } }
         );
 
         if (btcResponse.ok) {
@@ -208,9 +209,9 @@ async function fetchRealWhaleTransactions(
     if (ETHERSCAN_API_KEY && (!chainFilter || chainFilter === 'ethereum')) {
       try {
         // Binance hot wallet
-        const binanceResponse = await fetch(
-          `https://api.etherscan.io/api?module=account&action=txlist&address=0x28c6c06298d514db089934071355e5743bf21d60&startblock=0&endblock=99999999&page=1&offset=50&sort=desc&apikey=${ETHERSCAN_API_KEY}`,
-          { next: { revalidate: 30 } }
+        const binanceResponse = await resilientFetchResponse(
+          `https://api.etherscan.io/v2/api?chainid=1&module=account&action=txlist&address=0x28c6c06298d514db089934071355e5743bf21d60&startblock=0&endblock=99999999&page=1&offset=50&sort=desc&apikey=${ETHERSCAN_API_KEY}`,
+          { service: 'etherscan', timeoutMs: 8000, retries: 1, next: { revalidate: 30 } }
         );
 
         if (binanceResponse.ok) {
@@ -395,13 +396,13 @@ export async function analyzeWallet(request: NextRequest): Promise<NextResponse>
     if (isValidEthAddress && ETHERSCAN_API_KEY) {
       // Fetch from Etherscan
       const [balanceResponse, txResponse] = await Promise.all([
-        fetch(
-          `https://api.etherscan.io/api?module=account&action=balance&address=${address}&tag=latest&apikey=${ETHERSCAN_API_KEY}`,
-          { next: { revalidate: 60 } }
+        resilientFetchResponse(
+          `https://api.etherscan.io/v2/api?chainid=1&module=account&action=balance&address=${address}&tag=latest&apikey=${ETHERSCAN_API_KEY}`,
+          { service: 'etherscan', timeoutMs: 8000, retries: 1, next: { revalidate: 60 } }
         ),
-        fetch(
-          `https://api.etherscan.io/api?module=account&action=txlist&address=${address}&startblock=0&endblock=99999999&page=1&offset=100&sort=desc&apikey=${ETHERSCAN_API_KEY}`,
-          { next: { revalidate: 60 } }
+        resilientFetchResponse(
+          `https://api.etherscan.io/v2/api?chainid=1&module=account&action=txlist&address=${address}&startblock=0&endblock=99999999&page=1&offset=100&sort=desc&apikey=${ETHERSCAN_API_KEY}`,
+          { service: 'etherscan', timeoutMs: 8000, retries: 1, next: { revalidate: 60 } }
         ),
       ]);
 
@@ -409,9 +410,9 @@ export async function analyzeWallet(request: NextRequest): Promise<NextResponse>
       const txData = await txResponse.json();
 
       // Get ETH price
-      const priceResponse = await fetch(
+      const priceResponse = await resilientFetchResponse(
         'https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd',
-        { next: { revalidate: 60 } }
+        { service: 'coingecko', timeoutMs: 8000, retries: 1, next: { revalidate: 60 } }
       );
       const priceData = await priceResponse.json();
       const ethPrice = priceData.ethereum?.usd || 3000;
@@ -443,9 +444,10 @@ export async function analyzeWallet(request: NextRequest): Promise<NextResponse>
         isContract: await (async () => {
           // Check if address is a contract by fetching code size via Etherscan
           try {
-            const codeRes = await fetch(
-              `https://api.etherscan.io/api?module=proxy&action=eth_getCode&address=${address}&tag=latest${ETHERSCAN_API_KEY ? `&apikey=${ETHERSCAN_API_KEY}` : ''}`
-            );
+            const codeRes = await resilientFetchResponse(
+              `https://api.etherscan.io/v2/api?chainid=1&module=proxy&action=eth_getCode&address=${address}&tag=latest${ETHERSCAN_API_KEY ? `&apikey=${ETHERSCAN_API_KEY}` : ''}`,
+      { service: 'etherscan', timeoutMs: 8000, retries: 1 },
+    );
             if (codeRes.ok) {
               const codeData = await codeRes.json();
               // '0x' means EOA (no code), anything longer is a contract

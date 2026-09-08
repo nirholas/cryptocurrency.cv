@@ -20,16 +20,11 @@
  * @module lib/apis/helius
  */
 
-import { CircuitBreaker } from '@/lib/circuit-breaker';
+import { resilientFetchResponse } from '@/lib/resilient-fetch';
 
 const API_KEY = process.env.HELIUS_API_KEY || '';
 const BASE_URL = `https://api.helius.xyz/v0`;
 const RPC_URL = `https://mainnet.helius-rpc.com/?api-key=${API_KEY}`;
-
-const breaker = CircuitBreaker.for('helius', {
-  failureThreshold: 5,
-  cooldownMs: 30_000,
-});
 
 // =============================================================================
 // Types
@@ -196,19 +191,18 @@ async function heliusFetch<T>(path: string): Promise<T | null> {
     return null;
   }
 
-  return breaker.call(async () => {
-    const url = `${BASE_URL}${path}${path.includes('?') ? '&' : '?'}api-key=${API_KEY}`;
-    const res = await fetch(url, {
-      headers: { accept: 'application/json' },
-      next: { revalidate: 30 },
-    });
-
-    if (!res.ok) {
-      throw new Error(`Helius API error ${res.status}: ${path}`);
-    }
-
-    return (await res.json()) as T;
+  const url = `${BASE_URL}${path}${path.includes('?') ? '&' : '?'}api-key=${API_KEY}`;
+  const res = await resilientFetchResponse(url, {
+    service: 'helius', timeoutMs: 8000, retries: 1,
+    headers: { accept: 'application/json' },
+    next: { revalidate: 30 },
   });
+
+  if (!res.ok) {
+    throw new Error(`Helius API error ${res.status}: ${path}`);
+  }
+
+  return (await res.json()) as T;
 }
 
 /**
@@ -220,30 +214,29 @@ async function heliusRpc<T>(method: string, params: unknown): Promise<T | null> 
     return null;
   }
 
-  return breaker.call(async () => {
-    const res = await fetch(RPC_URL, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        jsonrpc: '2.0',
-        id: `helius-${Date.now()}`,
-        method,
-        params,
-      }),
-      next: { revalidate: 30 },
-    });
-
-    if (!res.ok) {
-      throw new Error(`Helius RPC error ${res.status}: ${method}`);
-    }
-
-    const json = await res.json();
-    if (json.error) {
-      throw new Error(`Helius RPC error: ${json.error.message || JSON.stringify(json.error)}`);
-    }
-
-    return json.result as T;
+  const res = await resilientFetchResponse(RPC_URL, {
+    service: 'helius', timeoutMs: 8000, retries: 1,
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      jsonrpc: '2.0',
+      id: `helius-${Date.now()}`,
+      method,
+      params,
+    }),
+    next: { revalidate: 30 },
   });
+
+  if (!res.ok) {
+    throw new Error(`Helius RPC error ${res.status}: ${method}`);
+  }
+
+  const json = await res.json();
+  if (json.error) {
+    throw new Error(`Helius RPC error: ${json.error.message || JSON.stringify(json.error)}`);
+  }
+
+  return json.result as T;
 }
 
 // ---------------------------------------------------------------------------

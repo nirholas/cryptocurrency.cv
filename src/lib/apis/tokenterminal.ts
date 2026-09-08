@@ -20,16 +20,11 @@
  * @module lib/apis/tokenterminal
  */
 
-import { CircuitBreaker } from '@/lib/circuit-breaker';
-import { marketCache, CACHE_TTL, apiCacheKey } from '@/lib/distributed-cache';
+import { marketCache, apiCacheKey } from '@/lib/distributed-cache';
+import { resilientFetchResponse } from '@/lib/resilient-fetch';
 
 const BASE_URL = 'https://api.tokenterminal.com/v2';
 const API_KEY = process.env.TOKEN_TERMINAL_API_KEY || process.env.TOKENTERMINAL_API_KEY || '';
-
-const breaker = CircuitBreaker.for('tokenterminal', {
-  failureThreshold: 5,
-  cooldownMs: 30_000,
-});
 
 // =============================================================================
 // Types
@@ -122,21 +117,20 @@ async function ttFetch<T>(path: string): Promise<T | null> {
     return null;
   }
 
-  return breaker.call(async () => {
-    const res = await fetch(`${BASE_URL}${path}`, {
-      headers: {
-        accept: 'application/json',
-        Authorization: `Bearer ${API_KEY}`,
-      },
-      next: { revalidate: 300 }, // 5 min cache
-    });
-
-    if (!res.ok) {
-      throw new Error(`TokenTerminal API error ${res.status}: ${path}`);
-    }
-
-    return await res.json();
+  const res = await resilientFetchResponse(`${BASE_URL}${path}`, {
+    service: 'tokenterminal', timeoutMs: 10000, retries: 1,
+    headers: {
+      accept: 'application/json',
+      Authorization: `Bearer ${API_KEY}`,
+    },
+    next: { revalidate: 300 }, // 5 min cache
   });
+
+  if (!res.ok) {
+    throw new Error(`TokenTerminal API error ${res.status}: ${path}`);
+  }
+
+  return await res.json();
 }
 
 // ---------------------------------------------------------------------------

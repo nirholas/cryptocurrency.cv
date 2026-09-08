@@ -18,6 +18,8 @@
  * @module lib/apis/lunarcrush
  */
 
+import { resilientFetchResponse } from '@/lib/resilient-fetch';
+
 const LUNARCRUSH_API_KEY = process.env.LUNARCRUSH_API_KEY || '';
 const BASE_URL = 'https://lunarcrush.com/api4/public';
 
@@ -116,7 +118,8 @@ async function lunarCrushFetch<T>(endpoint: string, params: Record<string, strin
   Object.entries(params).forEach(([key, value]) => url.searchParams.append(key, value));
 
   try {
-    const response = await fetch(url.toString(), {
+    const response = await resilientFetchResponse(url.toString(), {
+      service: 'lunarcrush', timeoutMs: 8000, retries: 1,
       headers: {
         'Authorization': `Bearer ${LUNARCRUSH_API_KEY}`,
       },

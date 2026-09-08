@@ -145,6 +145,9 @@ const DEFAULT_POST_BODY = {
   },
 };
 
+/** Origin named when the request does not identify a trusted one. */
+const DEFAULT_ORIGIN = 'https://cryptocurrency.cv';
+
 /** HTTP methods that carry a JSON request body. DELETE takes query params. */
 const BODY_METHODS = new Set(['post', 'put', 'patch']);
 
@@ -224,7 +227,14 @@ const SSE_STREAM_SCHEMA = {
 // Spec generator
 // ---------------------------------------------------------------------------
 
-export function generateOpenAPISpec() {
+/**
+ * Build the discovery document.
+ *
+ * @param origin - Public origin serving this document. `servers` and every
+ *   absolute URL are built from it, so a container deployed to a second
+ *   hostname describes itself rather than the host it was built for.
+ */
+export function generateOpenAPISpec(origin: string = DEFAULT_ORIGIN) {
   const paths: Record<string, Record<string, unknown>> = {};
 
   for (const { path, category } of ROUTE_MANIFEST) {
@@ -472,9 +482,7 @@ export function generateOpenAPISpec() {
         'GET /.well-known/agents.json — agent capabilities and skills',
       ].join('\n'),
     },
-    servers: [
-      { url: 'https://cryptocurrency.cv', description: 'Production' },
-    ],
+    servers: [{ url: origin, description: origin === DEFAULT_ORIGIN ? 'Production' : 'This deployment' }],
     ...(getOwnershipProofs() && {
       'x-discovery': { ownershipProofs: getOwnershipProofs() },
     }),

@@ -309,7 +309,18 @@ export const alerts = pgTable(
     isActive: boolean('is_active').default(true),
     isTriggered: boolean('is_triggered').default(false),
     triggeredAt: timestamp('triggered_at', { withTimezone: true }),
+    /** 'email' | 'push' | 'webhook' | 'telegram' | 'discord' | 'none' */
     notificationChannel: varchar('notification_channel', { length: 32 }).default('push'),
+    // Delivery endpoints for the three push channels (migration 0003).
+    webhookUrl: text('webhook_url'),
+    webhookSecret: varchar('webhook_secret', { length: 256 }),
+    discordWebhookUrl: text('discord_webhook_url'),
+    telegramBotToken: varchar('telegram_bot_token', { length: 128 }),
+    telegramChatId: varchar('telegram_chat_id', { length: 64 }),
+    // Outcome of the most recent delivery attempt, so a dead endpoint is visible.
+    lastDeliveryAt: timestamp('last_delivery_at', { withTimezone: true }),
+    lastDeliveryStatus: integer('last_delivery_status'),
+    lastDeliveryError: text('last_delivery_error'),
     meta: jsonb('meta').$type<Record<string, unknown>>(),
     createdAt: timestamp('created_at', { withTimezone: true }).defaultNow(),
     updatedAt: timestamp('updated_at', { withTimezone: true }).defaultNow(),
@@ -319,6 +330,7 @@ export const alerts = pgTable(
     index('idx_alerts_ticker').on(table.ticker),
     index('idx_alerts_active').on(table.isActive),
     index('idx_alerts_type').on(table.alertType),
+    index('idx_alerts_channel').on(table.notificationChannel),
   ],
 );
 

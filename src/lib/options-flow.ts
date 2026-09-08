@@ -24,6 +24,7 @@
  */
 
 import { cache } from './cache';
+import { resilientFetchResponse } from '@/lib/resilient-fetch';
 
 // =============================================================================
 // Types
@@ -194,8 +195,9 @@ async function fetchDeribitInstruments(currency: string = 'BTC'): Promise<Option
   if (cached) return cached;
 
   try {
-    const response = await fetch(
-      `${DERIBIT_API}/get_instruments?currency=${currency}&kind=option&expired=false`
+    const response = await resilientFetchResponse(
+      `${DERIBIT_API}/get_instruments?currency=${currency}&kind=option&expired=false`,
+      { service: 'deribit', timeoutMs: 8000, retries: 1 },
     );
     
     if (!response.ok) throw new Error(`Deribit API error: ${response.status}`);
@@ -230,8 +232,9 @@ async function fetchDeribitTickers(currency: string = 'BTC'): Promise<OptionTick
 
   try {
     // Get book summary for all options
-    const response = await fetch(
-      `${DERIBIT_API}/get_book_summary_by_currency?currency=${currency}&kind=option`
+    const response = await resilientFetchResponse(
+      `${DERIBIT_API}/get_book_summary_by_currency?currency=${currency}&kind=option`,
+      { service: 'deribit', timeoutMs: 8000, retries: 1 },
     );
     
     if (!response.ok) throw new Error(`Deribit API error: ${response.status}`);
@@ -302,8 +305,9 @@ async function fetchDeribitTrades(currency: string = 'BTC', count: number = 100)
   if (cached) return cached;
 
   try {
-    const response = await fetch(
-      `${DERIBIT_API}/get_last_trades_by_currency?currency=${currency}&kind=option&count=${count}`
+    const response = await resilientFetchResponse(
+      `${DERIBIT_API}/get_last_trades_by_currency?currency=${currency}&kind=option&count=${count}`,
+      { service: 'deribit', timeoutMs: 8000, retries: 1 },
     );
     
     if (!response.ok) throw new Error(`Deribit API error: ${response.status}`);
@@ -383,7 +387,7 @@ async function fetchOKXOptionsTickers(underlying: string = 'BTC-USD'): Promise<O
   if (cached) return cached;
 
   try {
-    const response = await fetch(`${OKX_API}/market/tickers?instType=OPTION&uly=${underlying}`);
+    const response = await resilientFetchResponse(`${OKX_API}/market/tickers?instType=OPTION&uly=${underlying}`, { service: 'okx', timeoutMs: 8000, retries: 1 });
     
     if (!response.ok) throw new Error(`OKX API error: ${response.status}`);
     

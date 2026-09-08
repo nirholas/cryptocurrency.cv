@@ -332,7 +332,7 @@ class KnowledgeGraph {
     // Convert to clusters (only clusters with 2+ entities)
     return Array.from(groups.entries())
       .filter(([, members]) => members.length >= 2)
-      .map(([root, members], i) => {
+      .map(([_root, members], i) => {
         const clusterEntities = members
           .map(id => entities.find(e => e.id === id))
           .filter(Boolean) as GraphEntity[];

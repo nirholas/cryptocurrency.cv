@@ -269,7 +269,7 @@ Return JSON:
       attributionScore,
       sourceHighlights,
     };
-  } catch (error) {
+  } catch {
     // Fallback to simple answer
     return {
       answer: "Unable to generate attributed answer.",

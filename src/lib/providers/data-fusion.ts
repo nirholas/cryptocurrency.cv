@@ -390,7 +390,7 @@ export class DataFusionEngine {
    * 2. Coverage: How many providers reported? (more = better)
    * 3. Weight: Are the agreeing providers trustworthy?
    */
-  private _computeConfidence(inputs: FusionInput[], fusedValue: number): number {
+  private _computeConfidence(inputs: FusionInput[], _fusedValue: number): number {
     // 1. Agreement score (based on coefficient of variation)
     const values = inputs.map(i => i.value);
     const mean = values.reduce((a, b) => a + b, 0) / values.length;

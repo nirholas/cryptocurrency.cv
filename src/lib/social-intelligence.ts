@@ -26,7 +26,8 @@
  * @module lib/social-intelligence
  */
 
-import { cache, withCache } from './cache';
+import { cache } from './cache';
+import { resilientFetchResponse } from '@/lib/resilient-fetch';
 
 // =============================================================================
 // Configuration
@@ -594,7 +595,8 @@ export async function fetchDiscordMessages(
     url.searchParams.set('limit', String(Math.min(limit, 100)));
     if (before) url.searchParams.set('before', before);
     
-    const response = await fetch(url.toString(), {
+    const response = await resilientFetchResponse(url.toString(), {
+      service: 'discord', timeoutMs: 8000, retries: 1,
       headers: {
         'Authorization': `Bot ${token}`,
         'Content-Type': 'application/json',
@@ -672,7 +674,8 @@ export async function getDiscordChannel(channelId: string): Promise<ChannelConfi
   await checkRateLimit('discord');
   
   try {
-    const response = await fetch(`${CONFIG.DISCORD_API}/channels/${channelId}`, {
+    const response = await resilientFetchResponse(`${CONFIG.DISCORD_API}/channels/${channelId}`, {
+      service: 'discord', timeoutMs: 8000, retries: 1,
       headers: { 'Authorization': `Bot ${token}` },
     });
     
@@ -692,7 +695,7 @@ export async function getDiscordChannel(channelId: string): Promise<ChannelConfi
       language: 'en',
       isActive: true,
     };
-  } catch (error) {
+  } catch {
     recordFailure('discord');
     return null;
   }
@@ -729,8 +732,9 @@ export async function fetchTelegramMessages(
   
   try {
     // Get updates (messages the bot can see)
-    const response = await fetch(
-      `${CONFIG.TELEGRAM_API}/bot${token}/getUpdates?limit=${limit}&allowed_updates=["message","channel_post"]`
+    const response = await resilientFetchResponse(
+      `${CONFIG.TELEGRAM_API}/bot${token}/getUpdates?limit=${limit}&allowed_updates=["message","channel_post"]`,
+      { service: 'telegram', timeoutMs: 8000, retries: 1 },
     );
     
     if (!response.ok) {
@@ -818,8 +822,9 @@ export async function getTelegramChat(chatId: string): Promise<ChannelConfig | n
   await checkRateLimit('telegram');
   
   try {
-    const response = await fetch(
-      `${CONFIG.TELEGRAM_API}/bot${token}/getChat?chat_id=${chatId}`
+    const response = await resilientFetchResponse(
+      `${CONFIG.TELEGRAM_API}/bot${token}/getChat?chat_id=${chatId}`,
+      { service: 'telegram', timeoutMs: 8000, retries: 1 },
     );
     
     if (!response.ok) return null;
@@ -841,7 +846,7 @@ export async function getTelegramChat(chatId: string): Promise<ChannelConfig | n
       isActive: true,
       memberCount: chat.member_count,
     };
-  } catch (error) {
+  } catch {
     recordFailure('telegram');
     return null;
   }
@@ -884,7 +889,7 @@ export async function getLunarCrushMetrics(
       headers['Authorization'] = `Bearer ${apiKey}`;
     }
     
-    const response = await fetch(url.toString(), { headers });
+    const response = await resilientFetchResponse(url.toString(), { service: 'lunarcrush', timeoutMs: 8000, retries: 1, headers });
     
     if (!response.ok) {
       throw new Error(`LunarCrush API error: ${response.status}`);
@@ -958,7 +963,8 @@ export async function getLunarCrushTrending(limit: number = 20): Promise<LunarCr
   await checkRateLimit('lunarcrush');
   
   try {
-    const response = await fetch(`${CONFIG.LUNARCRUSH_API}/coins/list?sort=social_volume&limit=${limit}`, {
+    const response = await resilientFetchResponse(`${CONFIG.LUNARCRUSH_API}/coins/list?sort=social_volume&limit=${limit}`, {
+      service: 'lunarcrush', timeoutMs: 8000, retries: 1,
       headers: process.env.LUNARCRUSH_API_KEY 
         ? { 'Authorization': `Bearer ${process.env.LUNARCRUSH_API_KEY}` }
         : {},
@@ -1053,7 +1059,8 @@ export async function getSantimentMetrics(
       }
     `;
     
-    const response = await fetch(CONFIG.SANTIMENT_API, {
+    const response = await resilientFetchResponse(CONFIG.SANTIMENT_API, {
+      service: 'santiment', timeoutMs: 8000, retries: 1,
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

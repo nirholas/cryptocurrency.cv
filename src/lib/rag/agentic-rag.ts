@@ -21,7 +21,6 @@
 import { callGroq, parseGroqJson } from '../groq';
 import type { ScoredDocument, SearchFilter } from './types';
 import { processQuery } from './query-processor';
-import { aiCache } from '../cache';
 
 // ═══════════════════════════════════════════════════════════════
 // TYPES

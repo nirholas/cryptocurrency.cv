@@ -34,6 +34,8 @@
  * @module orderbook-aggregator
  */
 
+import { resilientFetchResponse } from '@/lib/resilient-fetch';
+
 // =============================================================================
 // TYPES
 // =============================================================================
@@ -244,8 +246,9 @@ async function fetchBinanceOrderBook(
       ? EXCHANGE_ENDPOINTS.binance.spot 
       : EXCHANGE_ENDPOINTS.binance.futures;
     
-    const response = await fetch(
-      `${endpoint}?symbol=${exchangeSymbol}&limit=${DEFAULT_DEPTH}`
+    const response = await resilientFetchResponse(
+      `${endpoint}?symbol=${exchangeSymbol}&limit=${DEFAULT_DEPTH}`,
+      { service: 'binance', timeoutMs: 5000, retries: 1 },
     );
     
     if (!response.ok) return null;
@@ -273,8 +276,9 @@ async function fetchBybitOrderBook(
   const startTime = Date.now();
   try {
     const category = market === 'spot' ? 'spot' : 'linear';
-    const response = await fetch(
-      `${EXCHANGE_ENDPOINTS.bybit.spot}?category=${category}&symbol=${exchangeSymbol}&limit=${DEFAULT_DEPTH}`
+    const response = await resilientFetchResponse(
+      `${EXCHANGE_ENDPOINTS.bybit.spot}?category=${category}&symbol=${exchangeSymbol}&limit=${DEFAULT_DEPTH}`,
+      { service: 'bybit', timeoutMs: 5000, retries: 1 },
     );
     
     if (!response.ok) return null;
@@ -314,8 +318,9 @@ async function fetchOKXOrderBook(
       ? exchangeSymbol 
       : exchangeSymbol.replace('-USDT', '-USDT-SWAP');
     
-    const response = await fetch(
-      `${EXCHANGE_ENDPOINTS.okx.spot}?instId=${instId}&sz=${DEFAULT_DEPTH}`
+    const response = await resilientFetchResponse(
+      `${EXCHANGE_ENDPOINTS.okx.spot}?instId=${instId}&sz=${DEFAULT_DEPTH}`,
+      { service: 'okx', timeoutMs: 5000, retries: 1 },
     );
     
     if (!response.ok) return null;
@@ -349,8 +354,9 @@ async function fetchKrakenOrderBook(symbol: string): Promise<ExchangeOrderBook |
 
   const startTime = Date.now();
   try {
-    const response = await fetch(
-      `${EXCHANGE_ENDPOINTS.kraken.spot}?pair=${exchangeSymbol}&count=${DEFAULT_DEPTH}`
+    const response = await resilientFetchResponse(
+      `${EXCHANGE_ENDPOINTS.kraken.spot}?pair=${exchangeSymbol}&count=${DEFAULT_DEPTH}`,
+      { service: 'kraken', timeoutMs: 5000, retries: 1 },
     );
     
     if (!response.ok) return null;
@@ -385,8 +391,9 @@ async function fetchKuCoinOrderBook(symbol: string): Promise<ExchangeOrderBook |
 
   const startTime = Date.now();
   try {
-    const response = await fetch(
-      `${EXCHANGE_ENDPOINTS.kucoin.spot}?symbol=${exchangeSymbol}`
+    const response = await resilientFetchResponse(
+      `${EXCHANGE_ENDPOINTS.kucoin.spot}?symbol=${exchangeSymbol}`,
+      { service: 'kucoin', timeoutMs: 5000, retries: 1 },
     );
     
     if (!response.ok) return null;
@@ -419,8 +426,9 @@ async function fetchCoinbaseOrderBook(symbol: string): Promise<ExchangeOrderBook
 
   const startTime = Date.now();
   try {
-    const response = await fetch(
-      `${EXCHANGE_ENDPOINTS.coinbase.spot}/${exchangeSymbol}/book?level=2`
+    const response = await resilientFetchResponse(
+      `${EXCHANGE_ENDPOINTS.coinbase.spot}/${exchangeSymbol}/book?level=2`,
+      { service: 'coinbase', timeoutMs: 5000, retries: 1 },
     );
     
     if (!response.ok) return null;
@@ -461,7 +469,7 @@ function buildOrderBook(
   symbol: string,
   bids: Array<{ price: number; quantity: number }>,
   asks: Array<{ price: number; quantity: number }>,
-  latency: number
+  _latency: number
 ): ExchangeOrderBook {
   const bestBid = bids[0]?.price || 0;
   const bestAsk = asks[0]?.price || 0;

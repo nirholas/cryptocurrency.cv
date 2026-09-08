@@ -24,7 +24,7 @@
  * @module data-sources
  */
 
-import { cache, withCache } from '@/lib/cache';
+import { cache } from '@/lib/cache';
 
 // ═══════════════════════════════════════════════════════════════
 // CORE TYPES
@@ -344,7 +344,7 @@ export const alternative = createAdapter({
 
 export const etherscan = createAdapter({
   name: 'etherscan',
-  baseUrl: 'https://api.etherscan.io/api',
+  baseUrl: 'https://api.etherscan.io/v2/api?chainid=1',
   category: 'blockchain-explorer',
   rateLimit: { requests: 5, windowMs: 1_000 },
   cacheTtlSeconds: 30,
@@ -356,7 +356,7 @@ export const etherscan = createAdapter({
 
 export const basescan = createAdapter({
   name: 'basescan',
-  baseUrl: 'https://api.basescan.org/api',
+  baseUrl: 'https://api.etherscan.io/v2/api?chainid=8453',
   category: 'blockchain-explorer',
   rateLimit: { requests: 5, windowMs: 1_000 },
   cacheTtlSeconds: 30,
@@ -368,7 +368,7 @@ export const basescan = createAdapter({
 
 export const arbiscan = createAdapter({
   name: 'arbiscan',
-  baseUrl: 'https://api.arbiscan.io/api',
+  baseUrl: 'https://api.etherscan.io/v2/api?chainid=42161',
   category: 'blockchain-explorer',
   rateLimit: { requests: 5, windowMs: 1_000 },
   cacheTtlSeconds: 30,
@@ -380,7 +380,7 @@ export const arbiscan = createAdapter({
 
 export const polygonscan = createAdapter({
   name: 'polygonscan',
-  baseUrl: 'https://api.polygonscan.com/api',
+  baseUrl: 'https://api.etherscan.io/v2/api?chainid=137',
   category: 'blockchain-explorer',
   rateLimit: { requests: 5, windowMs: 1_000 },
   cacheTtlSeconds: 30,

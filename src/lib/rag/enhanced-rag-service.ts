@@ -23,8 +23,8 @@
 
 import { callGroq } from '../groq';
 import { vectorStore, computeVoteScore } from './vector-store';
-import { RedisVectorStore, redisVectorStore } from './redis-vector-store';
-import { hybridSearch, HybridSearchOptions } from './hybrid-search';
+import { redisVectorStore } from './redis-vector-store';
+import { hybridSearch } from './hybrid-search';
 import { generateEmbedding } from './embedding-service';
 import { extractCurrencies } from './currency-extractor';
 import { extractDateRange } from './date-range-extractor';

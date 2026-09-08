@@ -247,7 +247,7 @@ export class DistributedRateLimiter {
   private async checkWithMemory(
     key: string,
     now: number,
-    windowMs: number
+    _windowMs: number
   ): Promise<RateLimitResult> {
     const result = await this.memory.increment(key, this.config.window);
     

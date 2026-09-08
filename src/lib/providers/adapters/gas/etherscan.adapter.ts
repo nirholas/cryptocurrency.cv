@@ -41,7 +41,8 @@ export interface GasPrice {
 // CONSTANTS
 // =============================================================================
 
-const ETHERSCAN_BASE = 'https://api.etherscan.io/api';
+/** Etherscan V2 multichain endpoint (chainid 1 = Ethereum mainnet). */
+const ETHERSCAN_BASE = 'https://api.etherscan.io/v2/api?chainid=1';
 const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY ?? '';
 
 const RATE_LIMIT: RateLimitConfig = {
@@ -62,7 +63,7 @@ export const etherscanGasAdapter: DataProvider<GasPrice> = {
   capabilities: ['gas-fees'],
 
   async fetch(_params: FetchParams): Promise<GasPrice> {
-    const url = `${ETHERSCAN_BASE}?module=gastracker&action=gasoracle${
+    const url = `${ETHERSCAN_BASE}&module=gastracker&action=gasoracle${
       ETHERSCAN_API_KEY ? `&apikey=${ETHERSCAN_API_KEY}` : ''
     }`;
 
@@ -84,7 +85,7 @@ export const etherscanGasAdapter: DataProvider<GasPrice> = {
 
   async healthCheck(): Promise<boolean> {
     try {
-      const url = `${ETHERSCAN_BASE}?module=gastracker&action=gasoracle${
+      const url = `${ETHERSCAN_BASE}&module=gastracker&action=gasoracle${
         ETHERSCAN_API_KEY ? `&apikey=${ETHERSCAN_API_KEY}` : ''
       }`;
       const response = await fetch(url, { signal: AbortSignal.timeout(5000) });

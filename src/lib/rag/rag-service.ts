@@ -27,9 +27,9 @@ import { callGroq } from '../groq';
 import { vectorStore } from './vector-store';
 import { generateEmbedding, getEmbeddingConfig } from './embedding-service';
 import { extractCurrencies } from './currency-extractor';
-import { extractDateRange, parseSimpleDateExpression } from './date-range-extractor';
+import { extractDateRange } from './date-range-extractor';
 import { rankForRAG, diversifyBySource } from './document-ranker';
-import type { RAGQueryOptions, RAGResponse, SearchResult, SearchFilter, NewsDocument } from './types';
+import type { RAGQueryOptions, RAGResponse, SearchResult, SearchFilter } from './types';
 
 // Default RAG configuration
 const DEFAULT_OPTIONS: Required<RAGQueryOptions> = {

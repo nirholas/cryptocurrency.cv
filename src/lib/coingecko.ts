@@ -26,6 +26,7 @@
  */
 
 import { COINCAP_BASE } from './constants';
+import { resilientFetchResponse } from '@/lib/resilient-fetch';
 
 // ---------------------------------------------------------------------------
 // Build-time detection
@@ -184,11 +185,13 @@ async function tryCoinCapFallback<T>(url: string): Promise<T | null> {
     const parsed = new URL(url);
     const perPage = parsed.searchParams.get('per_page') || '100';
 
-    const res = await fetch(
+    const res = await resilientFetchResponse(
       `${COINCAP_BASE}/assets?limit=${perPage}`,
       {
+        service: 'coincap',
+        timeoutMs: 10_000,
+        retries: 1,
         headers: { Accept: 'application/json' },
-        signal: AbortSignal.timeout(10_000),
       },
     );
     if (!res.ok) return null;
@@ -323,9 +326,6 @@ async function _fetchFromCoinGecko<T>(
   }
 
   // ---- make request ----
-  const controller = new AbortController();
-  const timer = setTimeout(() => controller.abort(), timeout);
-
   try {
     state.timestamps.push(Date.now());
     lastRequestTime = Date.now();
@@ -339,8 +339,11 @@ async function _fetchFromCoinGecko<T>(
       headers['x-cg-demo-api-key'] = process.env.COINGECKO_API_KEY;
     }
 
-    const res = await fetch(url, {
-      signal: controller.signal,
+    // retries: 0 because this module runs its own 429 back-off state below
+    const res = await resilientFetchResponse(url, {
+      service: 'coingecko',
+      timeoutMs: timeout,
+      retries: 0,
       headers,
       next: { revalidate },
     });
@@ -365,7 +368,5 @@ async function _fetchFromCoinGecko<T>(
       console.warn(`[CoinGecko] Fetch error:`, (err as Error).message);
     }
     return null;
-  } finally {
-    clearTimeout(timer);
   }
 }

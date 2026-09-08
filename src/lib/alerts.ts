@@ -26,6 +26,12 @@ import { getLatestNews, getBreakingNews } from '@/lib/crypto-news';
 import { db } from '@/lib/database';
 import { generateShortId } from '@/lib/utils/id';
 import {
+  deliverAlertToChannels,
+  type AlertDeliveryConfig,
+  type AlertDeliveryPayload,
+} from '@/lib/alerts/delivery';
+import type { NotificationChannel } from '@/lib/alerts/service';
+import {
   type AlertRule,
   type AlertCondition,
   type AlertEvent,
@@ -34,7 +40,6 @@ import {
   generateAlertId,
   generateEventId,
   determineSeverity,
-  getConditionDescription,
 } from '@/lib/alert-rules';
 
 // Database collections
@@ -52,7 +57,10 @@ export interface PriceAlert {
   coinId: string;
   condition: 'above' | 'below' | 'percent_up' | 'percent_down';
   threshold: number;
-  notifyVia: ('push' | 'email')[];
+  /** Channels this alert fires on. Push channels are delivered by lib/alerts/delivery. */
+  notifyVia: NotificationChannel[];
+  /** Endpoint config for the webhook / telegram / discord channels. */
+  delivery?: AlertDeliveryConfig;
   active: boolean;
   triggered: boolean;
   triggeredAt?: string;
@@ -64,11 +72,25 @@ export interface KeywordAlert {
   userId: string;
   keywords: string[];
   sources?: string[];
-  notifyVia: ('push' | 'email')[];
+  /** Channels this alert fires on. Push channels are delivered by lib/alerts/delivery. */
+  notifyVia: NotificationChannel[];
+  /** Endpoint config for the webhook / telegram / discord channels. */
+  delivery?: AlertDeliveryConfig;
   active: boolean;
   lastTriggeredAt?: string;
   createdAt: string;
 }
+
+/** Price alert conditions map onto the delivery payload's trigger vocabulary. */
+const PRICE_CONDITION_TO_TYPE: Record<
+  PriceAlert['condition'],
+  AlertDeliveryPayload['type']
+> = {
+  above: 'price_above',
+  below: 'price_below',
+  percent_up: 'percent_change',
+  percent_down: 'percent_change',
+};
 
 export interface AlertNotification {
   type: 'price' | 'keyword';
@@ -164,7 +186,8 @@ export async function createPriceAlert(
     coinId: string;
     condition: 'above' | 'below' | 'percent_up' | 'percent_down';
     threshold: number;
-    notifyVia?: ('push' | 'email')[];
+    notifyVia?: NotificationChannel[];
+    delivery?: AlertDeliveryConfig;
   }
 ): Promise<PriceAlert> {
   const alert: PriceAlert = {
@@ -175,6 +198,7 @@ export async function createPriceAlert(
     condition: options.condition,
     threshold: options.threshold,
     notifyVia: options.notifyVia || ['push'],
+    delivery: options.delivery,
     active: true,
     triggered: false,
     createdAt: new Date().toISOString(),
@@ -192,7 +216,8 @@ export async function createKeywordAlert(
   options: {
     keywords: string[];
     sources?: string[];
-    notifyVia?: ('push' | 'email')[];
+    notifyVia?: NotificationChannel[];
+    delivery?: AlertDeliveryConfig;
   }
 ): Promise<KeywordAlert> {
   const alert: KeywordAlert = {
@@ -201,6 +226,7 @@ export async function createKeywordAlert(
     keywords: options.keywords.map(k => k.toLowerCase()),
     sources: options.sources,
     notifyVia: options.notifyVia || ['push'],
+    delivery: options.delivery,
     active: true,
     createdAt: new Date().toISOString(),
   };
@@ -243,6 +269,41 @@ export async function toggleAlert(alertId: string, active: boolean): Promise<boo
   }
   
   return false;
+}
+
+/**
+ * Update an alert's notification channels and endpoint configuration.
+ *
+ * Works for both price and keyword alerts, so a user can move an existing
+ * alert onto a webhook (or off one) without deleting and recreating it.
+ * The delivery block is merged, not replaced, so sending only
+ * `{ telegramChatId }` keeps the existing bot token.
+ *
+ * @returns the updated alert, or null when no alert has that id.
+ */
+export async function updateAlertDelivery(
+  alertId: string,
+  updates: { notifyVia?: NotificationChannel[]; delivery?: AlertDeliveryConfig }
+): Promise<PriceAlert | KeywordAlert | null> {
+  const priceAlert = await getPriceAlertById(alertId);
+  if (priceAlert) {
+    if (updates.notifyVia) priceAlert.notifyVia = updates.notifyVia;
+    if (updates.delivery) priceAlert.delivery = { ...priceAlert.delivery, ...updates.delivery };
+    await savePriceAlert(priceAlert);
+    return priceAlert;
+  }
+
+  const keywordAlert = await getKeywordAlertById(alertId);
+  if (keywordAlert) {
+    if (updates.notifyVia) keywordAlert.notifyVia = updates.notifyVia;
+    if (updates.delivery) {
+      keywordAlert.delivery = { ...keywordAlert.delivery, ...updates.delivery };
+    }
+    await saveKeywordAlert(keywordAlert);
+    return keywordAlert;
+  }
+
+  return null;
 }
 
 /**
@@ -332,7 +393,22 @@ export async function checkPriceAlerts(): Promise<AlertNotification[]> {
         };
 
         notifications.push(notification);
-        
+
+        // Push it to the alert's own endpoints (webhook / telegram / discord).
+        // Never throws: a dead endpoint is recorded, not allowed to abort the sweep.
+        await deliverAlertToChannels(alert.notifyVia, alert.delivery, {
+          event: 'alert.triggered',
+          alertId: alert.id,
+          type: PRICE_CONDITION_TO_TYPE[alert.condition],
+          title: `${coin.name} (${coin.symbol.toUpperCase()})`,
+          message,
+          triggeredAt: notification.timestamp,
+          url: `https://cryptocurrency.cv/coin/${alert.coinId}`,
+          coin: { id: alert.coinId, symbol: coin.symbol, name: coin.name },
+          threshold: alert.threshold,
+          price: coin.current_price,
+        });
+
         // Store in history
         const history = await getAlertHistoryForUser(alert.userId);
         history.unshift(notification);
@@ -399,7 +475,19 @@ export async function checkKeywordAlerts(): Promise<AlertNotification[]> {
             };
 
             notifications.push(notification);
-            
+
+            // Push it to the alert's own endpoints (webhook / telegram / discord).
+            await deliverAlertToChannels(alert.notifyVia, alert.delivery, {
+              event: 'alert.triggered',
+              alertId: alert.id,
+              type: 'keyword',
+              title: article.title,
+              message: `Matched ${matchedKeywords.join(', ')} in "${article.title}" (${article.source})`,
+              triggeredAt: notification.timestamp,
+              url: article.link,
+              keywords: matchedKeywords,
+            });
+
             // Store in history
             history.unshift(notification);
             await saveAlertHistoryForUser(alert.userId, history.slice(0, 100));

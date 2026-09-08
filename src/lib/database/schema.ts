@@ -32,7 +32,6 @@ import {
   text,
   varchar,
   integer,
-  bigint,
   real,
   doublePrecision,
   boolean,

@@ -19,6 +19,8 @@
  * @module lib/apis/news-feeds
  */
 
+import { resilientFetchResponse } from '@/lib/resilient-fetch';
+
 const CRYPTOPANIC_URL = 'https://cryptopanic.com/api/v1';
 const NEWSAPI_URL = 'https://newsapi.org/v2';
 const CRYPTOPANIC_API_KEY = process.env.CRYPTOPANIC_API_KEY || '';
@@ -141,7 +143,8 @@ async function cryptoPanicFetch<T>(endpoint: string, params?: Record<string, str
       });
     }
 
-    const response = await fetch(url.toString(), {
+    const response = await resilientFetchResponse(url.toString(), {
+      service: 'cryptopanic', timeoutMs: 8000, retries: 1,
       next: { revalidate: 60 }, // Cache for 1 minute
     });
 
@@ -176,7 +179,8 @@ async function newsApiFetch<T>(endpoint: string, params?: Record<string, string>
       });
     }
 
-    const response = await fetch(url.toString(), {
+    const response = await resilientFetchResponse(url.toString(), {
+      service: 'newsapi', timeoutMs: 8000, retries: 1,
       next: { revalidate: 300 }, // Cache for 5 minutes
     });
 

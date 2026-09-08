@@ -18,6 +18,9 @@
  * @module lib/apis/geckoterminal
  */
 
+import { resilientFetch } from '@/lib/resilient-fetch';
+import { staleCache } from '@/lib/cache';
+
 const BASE_URL = 'https://api.geckoterminal.com/api/v2';
 
 // =============================================================================
@@ -121,17 +124,17 @@ export type SupportedNetwork =
  */
 async function gtFetch<T>(path: string): Promise<T | null> {
   try {
-    const res = await fetch(`${BASE_URL}${path}`, {
+    const { data, stale } = await resilientFetch<T>(`${BASE_URL}${path}`, {
+      service: 'geckoterminal',
+      timeoutMs: 8_000,
+      retries: 1,
+      staleCache,
+      staleCacheKey: `geckoterminal:${path}`,
       headers: { Accept: 'application/json' },
       next: { revalidate: 60 }, // 1 min cache
     });
-
-    if (!res.ok) {
-      console.error(`GeckoTerminal API error ${res.status}: ${path}`);
-      return null;
-    }
-
-    return await res.json();
+    if (stale) console.warn(`GeckoTerminal API: upstream failed, serving last known good payload for ${path}`);
+    return data;
   } catch (err) {
     console.error('GeckoTerminal API request failed:', err);
     return null;

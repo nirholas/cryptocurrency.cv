@@ -25,8 +25,7 @@
  * @module backtesting
  */
 
-import { getTopCoins, type TokenPrice } from './market-data';
-import { aiCache } from './cache';
+import { type TokenPrice } from './market-data';
 import { db } from './database';
 
 // Alias for compatibility

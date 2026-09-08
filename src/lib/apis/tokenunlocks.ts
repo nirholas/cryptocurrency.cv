@@ -20,6 +20,9 @@
  * @module lib/apis/tokenunlocks
  */
 
+import { resilientFetch } from '@/lib/resilient-fetch';
+import { staleCache } from '@/lib/cache';
+
 const BASE_URL = 'https://token.unlocks.app/api';
 const API_KEY = process.env.TOKEN_UNLOCKS_API_KEY || '';
 
@@ -96,20 +99,20 @@ async function unlocksFetch<T>(path: string): Promise<T | null> {
   }
 
   try {
-    const response = await fetch(`${BASE_URL}${path}`, {
+    const { data, stale } = await resilientFetch<T>(`${BASE_URL}${path}`, {
+      service: 'tokenunlocks',
+      timeoutMs: 10_000,
+      retries: 1,
+      staleCache,
+      staleCacheKey: `tokenunlocks:${path}`,
       headers: {
         Authorization: `Bearer ${API_KEY}`,
         Accept: 'application/json',
       },
       next: { revalidate: 3600 }, // 1 hour cache
     });
-
-    if (!response.ok) {
-      console.error(`Token Unlocks API error: ${response.status} for ${path}`);
-      return null;
-    }
-
-    return await response.json();
+    if (stale) console.warn(`Token Unlocks API: upstream failed, serving last known good payload for ${path}`);
+    return data;
   } catch (error) {
     console.error('Token Unlocks API request failed:', error);
     return null;

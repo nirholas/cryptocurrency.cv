@@ -19,6 +19,8 @@
  * @module lib/apis/nft-markets
  */
 
+import { resilientFetchResponse } from '@/lib/resilient-fetch';
+
 const OPENSEA_URL = 'https://api.opensea.io/api/v2';
 const RESERVOIR_URL = 'https://api.reservoir.tools';
 const OPENSEA_API_KEY = process.env.OPENSEA_API_KEY || '';
@@ -146,7 +148,8 @@ async function openseaFetch<T>(endpoint: string, params?: Record<string, string>
       });
     }
 
-    const response = await fetch(url.toString(), {
+    const response = await resilientFetchResponse(url.toString(), {
+      service: 'opensea', timeoutMs: 8000, retries: 1,
       headers: {
         'X-API-KEY': OPENSEA_API_KEY,
         'Accept': 'application/json',
@@ -186,7 +189,8 @@ async function reservoirFetch<T>(endpoint: string, params?: Record<string, strin
       headers['x-api-key'] = RESERVOIR_API_KEY;
     }
 
-    const response = await fetch(url.toString(), {
+    const response = await resilientFetchResponse(url.toString(), {
+      service: 'reservoir', timeoutMs: 8000, retries: 1,
       headers,
       next: { revalidate: 60 },
     });

@@ -20,14 +20,9 @@
  * @module lib/apis/sui
  */
 
-import { CircuitBreaker } from '@/lib/circuit-breaker';
+import { resilientFetchResponse } from '@/lib/resilient-fetch';
 
 const RPC_URL = 'https://fullnode.mainnet.sui.io:443';
-
-const breaker = CircuitBreaker.for('sui-rpc', {
-  failureThreshold: 5,
-  cooldownMs: 30_000,
-});
 
 // =============================================================================
 // Types
@@ -142,30 +137,29 @@ export interface SuiNetworkSummary {
  * Make a JSON-RPC 2.0 call to the Sui fullnode.
  */
 async function suiRpc<T>(method: string, params: unknown[] = []): Promise<T | null> {
-  return breaker.call(async () => {
-    const res = await fetch(RPC_URL, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        jsonrpc: '2.0',
-        id: `sui-${Date.now()}`,
-        method,
-        params,
-      }),
-      next: { revalidate: 15 }, // Sui has fast block times
-    });
-
-    if (!res.ok) {
-      throw new Error(`Sui RPC error ${res.status}: ${method}`);
-    }
-
-    const json = await res.json();
-    if (json.error) {
-      throw new Error(`Sui RPC error: ${json.error.message || JSON.stringify(json.error)}`);
-    }
-
-    return json.result as T;
+  const res = await resilientFetchResponse(RPC_URL, {
+    service: 'sui-rpc', timeoutMs: 8000, retries: 1,
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      jsonrpc: '2.0',
+      id: `sui-${Date.now()}`,
+      method,
+      params,
+    }),
+    next: { revalidate: 15 }, // Sui has fast block times
   });
+
+  if (!res.ok) {
+    throw new Error(`Sui RPC error ${res.status}: ${method}`);
+  }
+
+  const json = await res.json();
+  if (json.error) {
+    throw new Error(`Sui RPC error: ${json.error.message || JSON.stringify(json.error)}`);
+  }
+
+  return json.result as T;
 }
 
 // ---------------------------------------------------------------------------

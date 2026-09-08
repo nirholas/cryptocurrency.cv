@@ -27,6 +27,7 @@
 
 import { cache } from './cache';
 import { EXTERNAL_APIS } from './external-apis';
+import { resilientFetchResponse } from '@/lib/resilient-fetch';
 
 // =============================================================================
 // Types
@@ -164,7 +165,7 @@ async function fetchBinancePrices(): Promise<ExchangePrice[]> {
   if (cached) return cached;
 
   try {
-    const response = await fetch(`${EXTERNAL_APIS.BINANCE}/ticker/bookTicker`);
+    const response = await resilientFetchResponse(`${EXTERNAL_APIS.BINANCE}/ticker/bookTicker`, { service: 'binance', timeoutMs: 8000, retries: 1 });
     if (!response.ok) {
       console.warn(`Binance price API returned ${response.status} (likely geo-restricted from this region)`);
       return cache.get<ExchangePrice[]>('arb:binance:stale') ?? [];
@@ -210,7 +211,7 @@ async function fetchBybitPrices(): Promise<ExchangePrice[]> {
   if (cached) return cached;
 
   try {
-    const response = await fetch(`${EXTERNAL_APIS.BYBIT}/market/tickers?category=spot`);
+    const response = await resilientFetchResponse(`${EXTERNAL_APIS.BYBIT}/market/tickers?category=spot`, { service: 'bybit', timeoutMs: 8000, retries: 1 });
     if (!response.ok) {
       console.warn(`Bybit price API returned ${response.status} (likely geo-restricted from this region)`);
       return cache.get<ExchangePrice[]>('arb:bybit:stale') ?? [];
@@ -259,7 +260,7 @@ async function fetchOKXPrices(): Promise<ExchangePrice[]> {
   if (cached) return cached;
 
   try {
-    const response = await fetch(`${EXTERNAL_APIS.OKX}/market/tickers?instType=SPOT`);
+    const response = await resilientFetchResponse(`${EXTERNAL_APIS.OKX}/market/tickers?instType=SPOT`, { service: 'okx', timeoutMs: 8000, retries: 1 });
     if (!response.ok) {
       console.warn(`OKX price API returned ${response.status} (likely geo-restricted from this region)`);
       return cache.get<ExchangePrice[]>('arb:okx:stale') ?? [];
@@ -310,7 +311,7 @@ async function fetchKrakenPrices(): Promise<ExchangePrice[]> {
   try {
     // Kraken uses different symbol format
     const krakenPairs = ['XXBTZUSD', 'XETHZUSD', 'SOLUSD', 'XXRPZUSD', 'XDGUSD'];
-    const response = await fetch(`https://api.kraken.com/0/public/Ticker?pair=${krakenPairs.join(',')}`);
+    const response = await resilientFetchResponse(`https://api.kraken.com/0/public/Ticker?pair=${krakenPairs.join(',')}`, { service: 'kraken', timeoutMs: 8000, retries: 1 });
     if (!response.ok) {
       console.warn(`Kraken price API returned ${response.status}`);
       return cache.get<ExchangePrice[]>('arb:kraken:stale') ?? [];
@@ -367,7 +368,7 @@ async function fetchKucoinPrices(): Promise<ExchangePrice[]> {
   if (cached) return cached;
 
   try {
-    const response = await fetch('https://api.kucoin.com/api/v1/market/allTickers');
+    const response = await resilientFetchResponse('https://api.kucoin.com/api/v1/market/allTickers', { service: 'kucoin', timeoutMs: 8000, retries: 1 });
     if (!response.ok) {
       console.warn(`KuCoin price API returned ${response.status}`);
       return cache.get<ExchangePrice[]>('arb:kucoin:stale') ?? [];

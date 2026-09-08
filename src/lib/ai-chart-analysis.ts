@@ -417,7 +417,7 @@ export async function analyzeChart(
       riskReward: parsed.riskReward || undefined,
       rawAnalysis,
     };
-  } catch (parseError) {
+  } catch {
     // If JSON parsing fails, still return what we can
     return {
       id: `chart-${Date.now()}`,

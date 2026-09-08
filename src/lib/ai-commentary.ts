@@ -23,7 +23,7 @@
  * @module lib/ai-commentary
  */
 
-import { aiComplete, aiCompleteStream, getAIConfigOrNull, type AICompleteOptions } from './ai-provider';
+import { aiComplete, getAIConfigOrNull } from './ai-provider';
 import { getLatestNews } from './crypto-news';
 import { getTopCoins, getGlobalMarketData, getFearGreedIndex } from './market-data';
 

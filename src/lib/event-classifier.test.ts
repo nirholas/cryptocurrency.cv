@@ -13,7 +13,6 @@ import {
   classifyEvent,
   isClassifierConfigured,
   quickClassify,
-  EventType,
 } from './event-classifier';
 import {
   extractClaims,

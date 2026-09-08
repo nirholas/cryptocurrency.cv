@@ -12,7 +12,7 @@
  * AI Intelligence Engine Tests
  */
 
-import { describe, it, expect, vi, beforeEach } from 'vitest';
+import { describe, it, expect, vi } from 'vitest';
 import { 
   clusterSimilarArticles, 
   type NewsArticle 

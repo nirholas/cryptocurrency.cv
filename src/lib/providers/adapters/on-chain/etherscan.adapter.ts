@@ -24,7 +24,8 @@
 import type { DataProvider, FetchParams, RateLimitConfig } from '../../types';
 import type { OnChainMetric } from './types';
 
-const BASE = 'https://api.etherscan.io/api';
+/** Etherscan V2 multichain endpoint (chainid 1 = Ethereum mainnet). */
+const BASE = 'https://api.etherscan.io/v2/api?chainid=1';
 const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY ?? '';
 
 const RATE_LIMIT: RateLimitConfig = {
@@ -50,8 +51,8 @@ export const etherscanAdapter: DataProvider<OnChainMetric[]> = {
 
     // Fetch gas oracle + ETH supply in parallel
     const [gasResponse, supplyResponse] = await Promise.allSettled([
-      fetch(`${BASE}?module=gastracker&action=gasoracle&apikey=${ETHERSCAN_API_KEY}`),
-      fetch(`${BASE}?module=stats&action=ethsupply2&apikey=${ETHERSCAN_API_KEY}`),
+      fetch(`${BASE}&module=gastracker&action=gasoracle&apikey=${ETHERSCAN_API_KEY}`),
+      fetch(`${BASE}&module=stats&action=ethsupply2&apikey=${ETHERSCAN_API_KEY}`),
     ]);
 
     if (gasResponse.status === 'fulfilled' && gasResponse.value.ok) {
@@ -157,7 +158,7 @@ export const etherscanAdapter: DataProvider<OnChainMetric[]> = {
   async healthCheck(): Promise<boolean> {
     if (!ETHERSCAN_API_KEY) return false;
     try {
-      const res = await fetch(`${BASE}?module=gastracker&action=gasoracle&apikey=${ETHERSCAN_API_KEY}`, {
+      const res = await fetch(`${BASE}&module=gastracker&action=gasoracle&apikey=${ETHERSCAN_API_KEY}`, {
         signal: AbortSignal.timeout(5000),
       });
       return res.ok;

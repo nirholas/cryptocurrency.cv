@@ -30,6 +30,7 @@
 
 import { db } from './database';
 import { aiCache } from './cache';
+import { resilientFetchResponse } from '@/lib/resilient-fetch';
 
 // =============================================================================
 // TYPES
@@ -641,7 +642,10 @@ export async function fetchOrderBook(
     const endpoint = config.orderBookEndpoint(symbol, depth);
     const url = `${config.baseUrl}${endpoint}`;
     
-    const response = await fetch(url, {
+    const response = await resilientFetchResponse(url, {
+      service: `orderbook-${exchange}`,
+      timeoutMs: 5_000,
+      retries: 1,
       headers: {
         'Accept': 'application/json',
         'User-Agent': 'FreeCryptoNews/1.0',
@@ -956,7 +960,7 @@ function estimateSlippage(
 function detectWhaleOrders(
   bids: OrderBookEntry[],
   asks: OrderBookEntry[],
-  midPrice: number
+  _midPrice: number
 ): WhaleOrder[] {
   const whales: WhaleOrder[] = [];
   

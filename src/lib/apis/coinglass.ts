@@ -20,6 +20,8 @@
  * @module lib/apis/coinglass
  */
 
+import { resilientFetchResponse } from '@/lib/resilient-fetch';
+
 const BASE_URL = 'https://open-api-v3.coinglass.com/api';
 const API_KEY = process.env.COINGLASS_API_KEY || '';
 
@@ -113,7 +115,8 @@ async function cgFetch<T>(path: string): Promise<T | null> {
   }
 
   try {
-    const res = await fetch(`${BASE_URL}${path}`, {
+    const res = await resilientFetchResponse(`${BASE_URL}${path}`, {
+      service: 'coinglass', timeoutMs: 8000, retries: 1,
       headers: {
         accept: 'application/json',
         CG_API_KEY: API_KEY,

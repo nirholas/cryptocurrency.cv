@@ -14,7 +14,7 @@
  * Falls back to existing memory cache if Redis unavailable
  */
 
-import { newsCache, aiCache, translationCache, withCache as memoryWithCache } from './cache';
+import { newsCache } from './cache';
 import { cacheLogger } from '@/lib/logger';
 
 import type { RedisClientType } from 'redis';

@@ -19,7 +19,7 @@
  */
 
 import type { ScoredDocument } from './types';
-import { callGroq, parseGroqJson } from '../groq';
+import { callGroq } from '../groq';
 
 // Alias for document type
 type RAGDocument = ScoredDocument;

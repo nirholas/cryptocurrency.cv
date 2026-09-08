@@ -21,6 +21,8 @@
  * @module lib/apis/dune
  */
 
+import { resilientFetchResponse } from '@/lib/resilient-fetch';
+
 const BASE_URL = 'https://api.dune.com/api/v1';
 const API_KEY = process.env.DUNE_API_KEY || '';
 
@@ -100,7 +102,10 @@ async function duneFetch<T>(
   }
 
   try {
-    const res = await fetch(`${BASE_URL}${path}`, {
+    const res = await resilientFetchResponse(`${BASE_URL}${path}`, {
+      service: 'dune',
+      timeoutMs: opts?.timeout ?? 15_000,
+      retries: opts?.method && opts.method !== 'GET' ? 0 : 1,
       method: opts?.method ?? 'GET',
       headers: {
         'Content-Type': 'application/json',

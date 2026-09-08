@@ -119,6 +119,24 @@ export class GroqAuthError extends Error {
 }
 
 /**
+ * Typed error for Groq quota and rate-limit responses (402 / 429).
+ *
+ * The free tier caps requests per day, and once it is spent Groq answers 429 to
+ * everything. Untyped, that reached callers as a generic `Error` and every route
+ * built on this client answered 500 — a server fault, for an upstream that is
+ * simply out of quota. `aiComplete` already keys its provider failover off this
+ * error name, so typing it also lets the chain move on to the next provider.
+ */
+export class GroqRateLimitError extends Error {
+  public readonly statusCode: number;
+  constructor(message: string, statusCode = 429) {
+    super(message);
+    this.name = 'GroqRateLimitError';
+    this.statusCode = statusCode;
+  }
+}
+
+/**
  * Check if Groq API is configured
  */
 export function isGroqConfigured(): boolean {
@@ -186,6 +204,13 @@ export async function callGroq(
 
         if (attempt.status === 401) {
           throw new GroqAuthError(`Groq API authentication failed: ${error}`);
+        }
+
+        if (attempt.status === 429 || attempt.status === 402) {
+          throw new GroqRateLimitError(
+            `Groq rate-limited / out of quota (${attempt.status}): ${error}`,
+            attempt.status,
+          );
         }
 
         if (isModelGoneError(attempt.status, error) && candidate !== candidates.at(-1)) {
@@ -443,6 +468,12 @@ export async function* streamGroq(
     const error = await response.text();
     if (response.status === 401) {
       throw new GroqAuthError(`Groq API authentication failed: ${error}`);
+    }
+    if (response.status === 429 || response.status === 402) {
+      throw new GroqRateLimitError(
+        `Groq rate-limited / out of quota (${response.status}): ${error}`,
+        response.status,
+      );
     }
     throw new Error(`Groq API error: ${response.status} - ${error}`);
   }

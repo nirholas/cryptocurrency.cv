@@ -26,7 +26,6 @@
 
 import { db } from './database';
 import { getTopCoins, type TokenPrice } from './market-data';
-import { aiCache } from './cache';
 
 // Alias for compatibility
 type CoinData = TokenPrice;

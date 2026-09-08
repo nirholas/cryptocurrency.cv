@@ -20,7 +20,7 @@
  */
 
 import type { QueryClassification } from './query-processor';
-import { callGroq, parseGroqJson } from '../groq';
+import { callGroq } from '../groq';
 
 // ═══════════════════════════════════════════════════════════════
 // TYPES

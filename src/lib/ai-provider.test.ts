@@ -9,7 +9,7 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { aiCompleteWithRetry } from './ai-provider';
+import { aiComplete, aiCompleteWithRetry, isProviderUnavailableStatus } from './ai-provider';
 
 // ---------------------------------------------------------------------------
 // Helpers
@@ -134,5 +134,51 @@ describe('aiCompleteWithRetry', () => {
     const result = await settled;
     expect(result.ok).toBe(false);
     expect(mockFetch.mock.calls.length).toBeGreaterThanOrEqual(3);
+  });
+});
+
+// ---------------------------------------------------------------------------
+// Tests: provider chain failover
+// ---------------------------------------------------------------------------
+
+/**
+ * Regression: Groq caps free-tier requests at 8k tokens/minute and answers 413
+ * for anything larger. That status used to escape `aiComplete`'s provider loop,
+ * so one small-context provider at the head of the chain took down every
+ * large-prompt endpoint (/api/narratives among them) while a 1M-context
+ * provider sat configured right behind it.
+ */
+describe('aiComplete provider chain', () => {
+  beforeEach(() => {
+    vi.clearAllMocks();
+    vi.useRealTimers();
+  });
+
+  afterEach(() => {
+    delete process.env.GROQ_API_KEY;
+    delete process.env.OPENAI_API_KEY;
+  });
+
+  it('fails over to the next provider when one answers 413', async () => {
+    process.env.GROQ_API_KEY = 'groq-key';
+    process.env.OPENAI_API_KEY = 'openai-key';
+
+    mockFetch
+      .mockResolvedValueOnce(
+        new Response(JSON.stringify({ error: { message: 'Request too large' } }), { status: 413 })
+      )
+      .mockResolvedValueOnce(openaiChatResponse('Narratives identified.'));
+
+    const result = await aiComplete('sys', 'usr', {}, true);
+
+    expect(result).toBe('Narratives identified.');
+    expect(mockFetch).toHaveBeenCalledTimes(2);
+  });
+
+  it('classifies 413 as a provider-unavailable status', () => {
+    expect(isProviderUnavailableStatus(413)).toBe(true);
+    expect(isProviderUnavailableStatus(503)).toBe(true);
+    expect(isProviderUnavailableStatus(400)).toBe(false);
+    expect(isProviderUnavailableStatus(429)).toBe(false);
   });
 });

@@ -46,6 +46,21 @@ export const DEFILLAMA_BASE = 'https://api.llama.fi';
 /** Alternative.me (Fear & Greed Index) */
 export const ALTERNATIVE_ME_BASE = 'https://api.alternative.me';
 
+/**
+ * Etherscan REST API, V2.
+ *
+ * V1 (`https://api.etherscan.io/api`) is retired and answers every request with
+ * `{"status":"0","message":"NOTOK","result":"You are using a deprecated V1
+ * endpoint..."}`, which took gas prices, ETH supply and whale transactions down
+ * across the site. V2 is a single multichain endpoint that takes the network as
+ * a `chainid` query param and accepts the same API key.
+ *
+ * The base already carries `?chainid=`, so append further params with `&`.
+ *
+ * @see https://docs.etherscan.io/v2-migration
+ */
+export const ETHERSCAN_BASE = 'https://api.etherscan.io/v2/api?chainid=1';
+
 /** Binance spot REST API v3 */
 export const BINANCE_BASE = 'https://api.binance.com/api/v3';
 

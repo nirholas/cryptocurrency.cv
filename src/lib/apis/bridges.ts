@@ -18,6 +18,9 @@
  * @module lib/apis/bridges
  */
 
+import { resilientFetch } from '@/lib/resilient-fetch';
+import { staleCache } from '@/lib/cache';
+
 const BASE_URL = 'https://bridges.llama.fi';
 
 // =============================================================================
@@ -39,6 +42,10 @@ export interface Bridge {
   monthlyVolume: number;
   chains: string[];
   destinationChain?: string;
+  /** Total value locked, in USD. Always present; volume may not be. */
+  tvlUsd: number;
+  /** 24h change in TVL, percent. */
+  tvlChange1d: number;
 }
 
 export interface BridgeVolume {
@@ -71,6 +78,14 @@ export interface BridgeVolumesSummary {
   totalVolume7d: number;
   bridges: Bridge[];
   topByVolume: Bridge[];
+  /**
+   * False when the roster came from the free TVL endpoint because the volume
+   * API is paywalled. Consumers must not render the zeroed volume fields as
+   * real numbers when this is false.
+   */
+  volumeAvailable: boolean;
+  /** Which upstream produced this payload. */
+  source: 'defillama-bridges' | 'defillama-protocols';
   timestamp: string;
 }
 
@@ -83,16 +98,16 @@ export interface BridgeVolumesSummary {
  */
 async function bridgeFetch<T>(path: string): Promise<T | null> {
   try {
-    const response = await fetch(`${BASE_URL}${path}`, {
-      next: { revalidate: 300 }, // 5 min cache
+    const { data, stale } = await resilientFetch<T>(`${BASE_URL}${path}`, {
+      service: 'defillama-bridges',
+      timeoutMs: 10000,
+      retries: 1,
+      staleCache,
+      staleCacheKey: `bridges:${path}`,
+      next: { revalidate: 300 },
     });
-
-    if (!response.ok) {
-      console.error(`Bridges API error: ${response.status} for ${path}`);
-      return null;
-    }
-
-    return await response.json();
+    if (stale) console.warn('Bridges API: upstream failed, serving last known good payload');
+    return data;
   } catch (error) {
     console.error('Bridges API request failed:', error);
     return null;
@@ -103,13 +118,73 @@ async function bridgeFetch<T>(path: string): Promise<T | null> {
 // Bridge Data
 // ---------------------------------------------------------------------------
 
+/** One entry of the free DefiLlama protocols list, narrowed to what we read. */
+interface LlamaProtocol {
+  id?: string;
+  name: string;
+  category?: string;
+  tvl?: number;
+  change_1d?: number;
+  chains?: string[];
+  logo?: string;
+}
+
 /**
- * Get all bridges with volume data.
+ * Bridge roster built from the FREE protocols endpoint.
+ *
+ * `bridges.llama.fi` moved behind DefiLlama's paid plan and now answers 402 for
+ * every request, which left both bridge endpoints returning an empty list with
+ * a 200 — a silent failure nothing could detect. `api.llama.fi/protocols` is
+ * still free and carries every bridge with its TVL and 24h change, so the
+ * product keeps a real, complete bridge roster; only per-bridge volume is lost,
+ * and `volumeAvailable: false` tells callers not to render the zeroed fields.
+ */
+async function fetchBridgeRosterFromProtocols(): Promise<Bridge[]> {
+  try {
+    const { data } = await resilientFetch<LlamaProtocol[]>('https://api.llama.fi/protocols', {
+      service: 'defillama-protocols',
+      timeoutMs: 15000,
+      retries: 1,
+      staleCache,
+      staleCacheKey: 'bridges:protocols-fallback',
+      next: { revalidate: 900 },
+    });
+    if (!Array.isArray(data)) return [];
+
+    return data
+      .filter((p) => p.category === 'Bridge' && typeof p.tvl === 'number' && p.tvl > 0)
+      .map((p, index) => ({
+        id: index,
+        name: p.name,
+        displayName: p.name,
+        icon: p.logo,
+        volumePrevDay: 0,
+        volumePrev2Day: 0,
+        lastHourlyVolume: 0,
+        currentDayVolume: 0,
+        lastDailyVolume: 0,
+        dayBeforeLastVolume: 0,
+        weeklyVolume: 0,
+        monthlyVolume: 0,
+        chains: p.chains ?? [],
+        tvlUsd: p.tvl ?? 0,
+        tvlChange1d: p.change_1d ?? 0,
+      }))
+      .sort((a, b) => b.tvlUsd - a.tvlUsd);
+  } catch (error) {
+    console.error('Bridge roster fallback failed:', error);
+    return [];
+  }
+}
+
+/**
+ * Get all bridges with volume data, falling back to the free TVL roster when
+ * the volume API is unavailable.
  */
 export async function getBridges(): Promise<Bridge[]> {
   const data = await bridgeFetch<{ bridges: Bridge[] }>('/bridges');
 
-  if (!data?.bridges) return [];
+  if (!data?.bridges?.length) return fetchBridgeRosterFromProtocols();
 
   return data.bridges
     .map((b) => ({
@@ -127,6 +202,8 @@ export async function getBridges(): Promise<Bridge[]> {
       monthlyVolume: b.monthlyVolume || 0,
       chains: b.chains || [],
       destinationChain: b.destinationChain,
+      tvlUsd: b.tvlUsd || 0,
+      tvlChange1d: b.tvlChange1d || 0,
     }))
     .sort((a, b) => b.lastDailyVolume - a.lastDailyVolume);
 }
@@ -139,10 +216,13 @@ export async function getBridgeVolumes(): Promise<BridgeVolumesSummary> {
 
   const totalVolume24h = bridges.reduce((sum, b) => sum + b.lastDailyVolume, 0);
   const totalVolume7d = bridges.reduce((sum, b) => sum + b.weeklyVolume, 0);
+  const volumeAvailable = totalVolume24h > 0;
 
   return {
     totalVolume24h,
     totalVolume7d,
+    volumeAvailable,
+    source: volumeAvailable ? 'defillama-bridges' : 'defillama-protocols',
     bridges,
     topByVolume: bridges.slice(0, 20),
     timestamp: new Date().toISOString(),

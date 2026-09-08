@@ -18,16 +18,11 @@
  * @module lib/apis/oneinch
  */
 
-import { CircuitBreaker } from '@/lib/circuit-breaker';
 import { marketCache, CACHE_TTL, apiCacheKey } from '@/lib/distributed-cache';
+import { resilientFetchResponse } from '@/lib/resilient-fetch';
 
 const BASE_URL = 'https://api.1inch.dev';
 const API_KEY = process.env.ONEINCH_API_KEY || '';
-
-const breaker = CircuitBreaker.for('oneinch', {
-  failureThreshold: 5,
-  cooldownMs: 30_000,
-});
 
 // =============================================================================
 // Types
@@ -132,28 +127,27 @@ async function oneinchFetch<T>(
     return null;
   }
 
-  return breaker.call(async () => {
-    const url = new URL(`${BASE_URL}${path}`);
-    if (params) {
-      Object.entries(params).forEach(([key, value]) => {
-        url.searchParams.append(key, value);
-      });
-    }
-
-    const res = await fetch(url.toString(), {
-      headers: {
-        accept: 'application/json',
-        Authorization: `Bearer ${API_KEY}`,
-      },
-      next: { revalidate: 15 },
+  const url = new URL(`${BASE_URL}${path}`);
+  if (params) {
+    Object.entries(params).forEach(([key, value]) => {
+      url.searchParams.append(key, value);
     });
+  }
 
-    if (!res.ok) {
-      throw new Error(`1inch API error ${res.status}: ${path}`);
-    }
-
-    return (await res.json()) as T;
+  const res = await resilientFetchResponse(url.toString(), {
+    service: 'oneinch', timeoutMs: 8000, retries: 1,
+    headers: {
+      accept: 'application/json',
+      Authorization: `Bearer ${API_KEY}`,
+    },
+    next: { revalidate: 15 },
   });
+
+  if (!res.ok) {
+    throw new Error(`1inch API error ${res.status}: ${path}`);
+  }
+
+  return (await res.json()) as T;
 }
 
 // ---------------------------------------------------------------------------

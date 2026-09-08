@@ -25,16 +25,12 @@ import {
   ilike,
   sql,
   or,
-  inArray,
   type SQL,
 } from "drizzle-orm";
 import {
   getDb,
   articles,
   pricesHistory,
-  marketSnapshots,
-  predictions,
-  tagScores,
 } from "./index";
 import type {
   EnrichedArticle,

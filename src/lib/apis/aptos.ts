@@ -20,14 +20,9 @@
  * @module lib/apis/aptos
  */
 
-import { CircuitBreaker } from '@/lib/circuit-breaker';
+import { resilientFetchResponse } from '@/lib/resilient-fetch';
 
 const BASE_URL = 'https://fullnode.mainnet.aptoslabs.com/v1';
-
-const breaker = CircuitBreaker.for('aptos-rest', {
-  failureThreshold: 5,
-  cooldownMs: 30_000,
-});
 
 // =============================================================================
 // Types
@@ -144,18 +139,17 @@ export interface AptosNetworkSummary {
  * Fetch from Aptos REST API.
  */
 async function aptosFetch<T>(path: string): Promise<T | null> {
-  return breaker.call(async () => {
-    const res = await fetch(`${BASE_URL}${path}`, {
-      headers: { accept: 'application/json' },
-      next: { revalidate: 15 }, // Aptos has 1s block times
-    });
-
-    if (!res.ok) {
-      throw new Error(`Aptos API error ${res.status}: ${path}`);
-    }
-
-    return (await res.json()) as T;
+  const res = await resilientFetchResponse(`${BASE_URL}${path}`, {
+    service: 'aptos-rest', timeoutMs: 8000, retries: 1,
+    headers: { accept: 'application/json' },
+    next: { revalidate: 15 }, // Aptos has 1s block times
   });
+
+  if (!res.ok) {
+    throw new Error(`Aptos API error ${res.status}: ${path}`);
+  }
+
+  return (await res.json()) as T;
 }
 
 // ---------------------------------------------------------------------------
@@ -354,26 +348,25 @@ export async function executeViewFunction(
   typeArguments: string[] = [],
   args: unknown[] = [],
 ): Promise<unknown[] | null> {
-  return breaker.call(async () => {
-    const res = await fetch(`${BASE_URL}/view`, {
-      method: 'POST',
-      headers: {
-        accept: 'application/json',
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        function: functionId,
-        type_arguments: typeArguments,
-        arguments: args,
-      }),
-    });
-
-    if (!res.ok) {
-      throw new Error(`Aptos view function error ${res.status}: ${functionId}`);
-    }
-
-    return (await res.json()) as unknown[];
+  const res = await resilientFetchResponse(`${BASE_URL}/view`, {
+    service: 'aptos-rest', timeoutMs: 8000, retries: 1,
+    method: 'POST',
+    headers: {
+      accept: 'application/json',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      function: functionId,
+      type_arguments: typeArguments,
+      arguments: args,
+    }),
   });
+
+  if (!res.ok) {
+    throw new Error(`Aptos view function error ${res.status}: ${functionId}`);
+  }
+
+  return (await res.json()) as unknown[];
 }
 
 // ---------------------------------------------------------------------------

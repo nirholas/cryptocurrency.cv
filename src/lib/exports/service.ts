@@ -292,7 +292,7 @@ export function getExportJob(id: string): ExportJob | null {
 /**
  * List export jobs
  */
-export function listExportJobs(userId?: string): ExportJob[] {
+export function listExportJobs(_userId?: string): ExportJob[] {
   return Array.from(exportJobs.values())
     .sort((a, b) => b.createdAt.getTime() - a.createdAt.getTime());
 }
@@ -459,7 +459,7 @@ async function fetchDataForExport(
     case 'gas':
       // Fetch Ethereum gas prices
       try {
-        const response = await fetch('https://api.etherscan.io/api?module=gastracker&action=gasoracle', { next: { revalidate: 60 } });
+        const response = await fetch('https://api.etherscan.io/v2/api?chainid=1&module=gastracker&action=gasoracle', { next: { revalidate: 60 } });
         if (response.ok) {
           const data = await response.json();
           if (data.result) {

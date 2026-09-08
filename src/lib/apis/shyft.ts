@@ -20,15 +20,10 @@
  * @module lib/apis/shyft
  */
 
-import { CircuitBreaker } from '@/lib/circuit-breaker';
+import { resilientFetchResponse } from '@/lib/resilient-fetch';
 
 const BASE_URL = 'https://api.shyft.to/sol/v1';
 const API_KEY = process.env.SHYFT_API_KEY || '';
-
-const breaker = CircuitBreaker.for('shyft', {
-  failureThreshold: 5,
-  cooldownMs: 30_000,
-});
 
 // =============================================================================
 // Types
@@ -148,26 +143,25 @@ async function shyftFetch<T>(path: string): Promise<T | null> {
     return null;
   }
 
-  return breaker.call(async () => {
-    const res = await fetch(`${BASE_URL}${path}`, {
-      headers: {
-        accept: 'application/json',
-        'x-api-key': API_KEY,
-      },
-      next: { revalidate: 30 },
-    });
-
-    if (!res.ok) {
-      throw new Error(`Shyft API error ${res.status}: ${path}`);
-    }
-
-    const json = await res.json();
-    if (!json.success) {
-      throw new Error(`Shyft API error: ${json.message || 'unknown'}`);
-    }
-
-    return json.result as T;
+  const res = await resilientFetchResponse(`${BASE_URL}${path}`, {
+    service: 'shyft', timeoutMs: 8000, retries: 1,
+    headers: {
+      accept: 'application/json',
+      'x-api-key': API_KEY,
+    },
+    next: { revalidate: 30 },
   });
+
+  if (!res.ok) {
+    throw new Error(`Shyft API error ${res.status}: ${path}`);
+  }
+
+  const json = await res.json();
+  if (!json.success) {
+    throw new Error(`Shyft API error: ${json.message || 'unknown'}`);
+  }
+
+  return json.result as T;
 }
 
 // ---------------------------------------------------------------------------

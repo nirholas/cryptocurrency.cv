@@ -18,6 +18,9 @@
  * @module lib/apis/rated
  */
 
+import { resilientFetch } from '@/lib/resilient-fetch';
+import { staleCache } from '@/lib/cache';
+
 const BASE_URL = 'https://api.rated.network/v0';
 
 // =============================================================================
@@ -83,19 +86,19 @@ export interface OperatorSummary {
  */
 async function ratedFetch<T>(path: string): Promise<T | null> {
   try {
-    const response = await fetch(`${BASE_URL}${path}`, {
+    const { data, stale } = await resilientFetch<T>(`${BASE_URL}${path}`, {
+      service: 'rated',
+      timeoutMs: 10_000,
+      retries: 1,
+      staleCache,
+      staleCacheKey: `rated:${path}`,
       headers: {
         Accept: 'application/json',
       },
       next: { revalidate: 600 }, // 10 min cache
     });
-
-    if (!response.ok) {
-      console.error(`Rated API error: ${response.status} for ${path}`);
-      return null;
-    }
-
-    return await response.json();
+    if (stale) console.warn(`Rated API: upstream failed, serving last known good payload for ${path}`);
+    return data;
   } catch (error) {
     console.error('Rated API request failed:', error);
     return null;

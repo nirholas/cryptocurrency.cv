@@ -27,8 +27,9 @@
  * @module tradingview
  */
 
-import { getTopCoins, getHistoricalPrices, type TokenPrice } from './market-data';
+import { getHistoricalPrices } from './market-data';
 import { db } from './database';
+import { resilientFetchResponse } from '@/lib/resilient-fetch';
 
 // =============================================================================
 // TYPES
@@ -907,7 +908,8 @@ export async function triggerAlert(id: string): Promise<void> {
   // Call webhook if configured
   if (alert.webhook) {
     try {
-      await fetch(alert.webhook.url, {
+      await resilientFetchResponse(alert.webhook.url, {
+        service: 'user-webhook', timeoutMs: 10000, retries: 0,
         method: alert.webhook.method,
         headers: {
           'Content-Type': 'application/json',
@@ -1309,7 +1311,7 @@ export async function getHistory(
     const baseSymbol = symbol.replace('USD', 'USDT');
     const url = `https://api.binance.com/api/v3/klines?symbol=${baseSymbol}&interval=${interval}&startTime=${from * 1000}&endTime=${to * 1000}&limit=1000`;
     
-    const response = await fetch(url);
+    const response = await resilientFetchResponse(url, { service: 'binance', timeoutMs: 10000, retries: 1 });
     if (!response.ok) {
       return { s: 'no_data' };
     }
@@ -1357,7 +1359,7 @@ export async function getQuotes(symbols: string[]): Promise<{
     const results = await Promise.all(
       symbols.map(async (symbol) => {
         const baseSymbol = symbol.replace('USD', 'USDT');
-        const response = await fetch(`https://api.binance.com/api/v3/ticker/24hr?symbol=${baseSymbol}`);
+        const response = await resilientFetchResponse(`https://api.binance.com/api/v3/ticker/24hr?symbol=${baseSymbol}`, { service: 'binance', timeoutMs: 10000, retries: 1 });
         if (!response.ok) return null;
         const data = await response.json() as { priceChange: string; priceChangePercent: string; lastPrice: string; volume: string };
         

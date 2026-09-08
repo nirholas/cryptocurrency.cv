@@ -104,7 +104,7 @@ export interface RateLimitResult {
 // Configuration - Derived from Single Source of Truth
 // ============================================================================
 
-import { API_TIERS, type TierConfig } from '@/lib/x402/pricing';
+import { API_TIERS } from '@/lib/x402/pricing';
 
 /**
  * API_KEY_TIERS is derived from API_TIERS (the single source of truth).

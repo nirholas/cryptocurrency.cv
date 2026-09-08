@@ -18,16 +18,11 @@
  * @module lib/apis/nansen
  */
 
-import { CircuitBreaker } from '@/lib/circuit-breaker';
-import { marketCache, CACHE_TTL, apiCacheKey } from '@/lib/distributed-cache';
+import { marketCache, apiCacheKey } from '@/lib/distributed-cache';
+import { resilientFetchResponse } from '@/lib/resilient-fetch';
 
 const BASE_URL = 'https://api.nansen.ai';
 const API_KEY = process.env.NANSEN_API_KEY || '';
-
-const breaker = CircuitBreaker.for('nansen', {
-  failureThreshold: 5,
-  cooldownMs: 30_000,
-});
 
 // =============================================================================
 // Types
@@ -154,28 +149,27 @@ async function nansenFetch<T>(
     return null;
   }
 
-  return breaker.call(async () => {
-    const url = new URL(`${BASE_URL}${path}`);
-    if (params) {
-      Object.entries(params).forEach(([key, value]) => {
-        url.searchParams.append(key, value);
-      });
-    }
-
-    const res = await fetch(url.toString(), {
-      headers: {
-        accept: 'application/json',
-        Authorization: `Bearer ${API_KEY}`,
-      },
-      next: { revalidate: 60 },
+  const url = new URL(`${BASE_URL}${path}`);
+  if (params) {
+    Object.entries(params).forEach(([key, value]) => {
+      url.searchParams.append(key, value);
     });
+  }
 
-    if (!res.ok) {
-      throw new Error(`Nansen API error ${res.status}: ${path}`);
-    }
-
-    return (await res.json()) as T;
+  const res = await resilientFetchResponse(url.toString(), {
+    service: 'nansen', timeoutMs: 8000, retries: 1,
+    headers: {
+      accept: 'application/json',
+      Authorization: `Bearer ${API_KEY}`,
+    },
+    next: { revalidate: 60 },
   });
+
+  if (!res.ok) {
+    throw new Error(`Nansen API error ${res.status}: ${path}`);
+  }
+
+  return (await res.json()) as T;
 }
 
 // ---------------------------------------------------------------------------

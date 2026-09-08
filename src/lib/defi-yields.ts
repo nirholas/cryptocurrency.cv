@@ -20,6 +20,7 @@
 
 import { EXTERNAL_APIS, CACHE_TTL, type LlamaYieldPool } from './external-apis';
 import { cache } from './cache';
+import { resilientFetchResponse } from '@/lib/resilient-fetch';
 
 const BASE_URL = EXTERNAL_APIS.LLAMA_YIELDS;
 
@@ -58,7 +59,7 @@ export async function getAllPools(): Promise<YieldPool[]> {
   const cached = cache.get<YieldPool[]>(cacheKey);
   if (cached) return cached;
 
-  const response = await fetch(`${BASE_URL}/pools`);
+  const response = await resilientFetchResponse(`${BASE_URL}/pools`, { service: 'defillama-yields', timeoutMs: 10000, retries: 1 });
 
   if (!response.ok) {
     throw new Error(`Llama Yields API error: ${response.status}`);
@@ -79,7 +80,7 @@ export async function getPoolChart(poolId: string): Promise<PoolChart[]> {
   const cached = cache.get<PoolChart[]>(cacheKey);
   if (cached) return cached;
 
-  const response = await fetch(`${BASE_URL}/chart/${poolId}`);
+  const response = await resilientFetchResponse(`${BASE_URL}/chart/${poolId}`, { service: 'defillama-yields', timeoutMs: 10000, retries: 1 });
 
   if (!response.ok) {
     throw new Error(`Llama Yields API error: ${response.status}`);
@@ -100,7 +101,7 @@ export async function getMedianYields(): Promise<MedianYield[]> {
   const cached = cache.get<MedianYield[]>(cacheKey);
   if (cached) return cached;
 
-  const response = await fetch(`${BASE_URL}/median`);
+  const response = await resilientFetchResponse(`${BASE_URL}/median`, { service: 'defillama-yields', timeoutMs: 10000, retries: 1 });
 
   if (!response.ok) {
     throw new Error(`Llama Yields API error: ${response.status}`);

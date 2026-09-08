@@ -46,7 +46,7 @@ export function validateQuery<T extends z.ZodType>(
     }
 
     return { success: true, data: result.data };
-  } catch (error) {
+  } catch {
     return {
       success: false,
       error: ApiError.badRequest('Failed to parse query parameters'),

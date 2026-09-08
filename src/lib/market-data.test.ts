@@ -13,7 +13,7 @@
  * Tests the Market Data API layer functions
  */
 
-import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
+import { describe, it, expect } from 'vitest';
 
 // Store original fetch
 const originalFetch = global.fetch;
@@ -22,14 +22,9 @@ const originalFetch = global.fetch;
 import type { 
   HistoricalData,
   OHLCData,
-  TickerData,
   Exchange,
-  ExchangeDetails,
   Category,
-  TokenPrice,
   SearchResult,
-  CompareData,
-  CoinListItem,
   DeveloperData,
   CommunityData,
   GlobalDeFi,

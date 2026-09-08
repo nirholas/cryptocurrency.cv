@@ -18,6 +18,10 @@
  * @module lib/apis/defillama
  */
 
+import { resilientFetch } from '@/lib/resilient-fetch';
+import { staleCache } from '@/lib/cache';
+import { getBridges as getBridgeRoster } from '@/lib/apis/bridges';
+
 const BASE_URL = 'https://api.llama.fi';
 const COINS_URL = 'https://coins.llama.fi';
 const YIELDS_URL = 'https://yields.llama.fi';
@@ -133,6 +137,10 @@ export interface BridgeData {
   weeklyVolume: number;
   monthlyVolume: number;
   chains: string[];
+  /** Total value locked, in USD. Populated even when volume is unavailable. */
+  tvlUsd: number;
+  /** 24h change in TVL, percent. */
+  tvlChange1d: number;
 }
 
 export interface DefiSummary {
@@ -158,16 +166,16 @@ export interface DefiSummary {
  */
 async function llamaFetch<T>(url: string): Promise<T | null> {
   try {
-    const response = await fetch(url, {
-      next: { revalidate: 300 }, // Cache for 5 minutes
+    const { data, stale } = await resilientFetch<T>(url, {
+      service: 'defillama',
+      timeoutMs: 10000,
+      retries: 1,
+      staleCache,
+      staleCacheKey: `defillama:${url}`,
+      next: { revalidate: 300 },
     });
-
-    if (!response.ok) {
-      console.error(`DefiLlama API error: ${response.status}`);
-      return null;
-    }
-
-    return await response.json();
+    if (stale) console.warn('DefiLlama API: upstream failed, serving last known good payload');
+    return data;
   } catch (error) {
     console.error('DefiLlama API request failed:', error);
     return null;
@@ -351,23 +359,28 @@ export async function getDexVolumes(): Promise<DexVolume[]> {
 }
 
 /**
- * Get bridge volumes
+ * Get bridges with volume where available, TVL always.
+ *
+ * Delegates to `lib/apis/bridges`, which owns the upstream call and the
+ * free-tier fallback. This used to hit `api.llama.fi/bridges` directly, which
+ * has never been a real path (bridges live on `bridges.llama.fi`) and returned
+ * 404 on every build and request, so the DeFi page rendered an empty table.
  */
 export async function getBridges(): Promise<BridgeData[]> {
-  const data = await llamaFetch<{bridges: BridgeData[]}>(`${BASE_URL}/bridges`);
-  
-  if (!data?.bridges) return [];
+  const bridges = await getBridgeRoster();
 
-  return data.bridges.map(bridge => ({
+  return bridges.map((bridge) => ({
     id: bridge.id,
     name: bridge.name,
     displayName: bridge.displayName || bridge.name,
-    lastDailyVolume: bridge.lastDailyVolume || 0,
-    dayBeforeLastVolume: bridge.dayBeforeLastVolume || 0,
-    weeklyVolume: bridge.weeklyVolume || 0,
-    monthlyVolume: bridge.monthlyVolume || 0,
-    chains: bridge.chains || [],
-  })).sort((a, b) => b.lastDailyVolume - a.lastDailyVolume);
+    lastDailyVolume: bridge.lastDailyVolume,
+    dayBeforeLastVolume: bridge.dayBeforeLastVolume,
+    weeklyVolume: bridge.weeklyVolume,
+    monthlyVolume: bridge.monthlyVolume,
+    chains: bridge.chains,
+    tvlUsd: bridge.tvlUsd,
+    tvlChange1d: bridge.tvlChange1d,
+  }));
 }
 
 /**

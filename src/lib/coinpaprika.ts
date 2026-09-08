@@ -20,6 +20,7 @@
 
 import { EXTERNAL_APIS, CACHE_TTL, type CoinPaprikaTicker } from './external-apis';
 import { cache } from './cache';
+import { resilientFetchResponse } from '@/lib/resilient-fetch';
 
 const BASE_URL = EXTERNAL_APIS.COINPAPRIKA;
 
@@ -127,7 +128,7 @@ export async function getCoins(): Promise<CoinPaprikaCoin[]> {
   const cached = cache.get<CoinPaprikaCoin[]>(cacheKey);
   if (cached) return cached;
 
-  const response = await fetch(`${BASE_URL}/coins`);
+  const response = await resilientFetchResponse(`${BASE_URL}/coins`, { service: 'coinpaprika', timeoutMs: 8000, retries: 1 });
 
   if (!response.ok) {
     throw new Error(`CoinPaprika API error: ${response.status}`);
@@ -147,7 +148,7 @@ export async function getTickers(quotes = 'USD'): Promise<CoinPaprikaTicker[]> {
   const cached = cache.get<CoinPaprikaTicker[]>(cacheKey);
   if (cached) return cached;
 
-  const response = await fetch(`${BASE_URL}/tickers?quotes=${quotes}`);
+  const response = await resilientFetchResponse(`${BASE_URL}/tickers?quotes=${quotes}`, { service: 'coinpaprika', timeoutMs: 8000, retries: 1 });
 
   if (!response.ok) {
     throw new Error(`CoinPaprika API error: ${response.status}`);
@@ -167,7 +168,7 @@ export async function getTicker(coinId: string, quotes = 'USD'): Promise<CoinPap
   const cached = cache.get<CoinPaprikaTicker>(cacheKey);
   if (cached) return cached;
 
-  const response = await fetch(`${BASE_URL}/tickers/${coinId}?quotes=${quotes}`);
+  const response = await resilientFetchResponse(`${BASE_URL}/tickers/${coinId}?quotes=${quotes}`, { service: 'coinpaprika', timeoutMs: 8000, retries: 1 });
 
   if (!response.ok) {
     throw new Error(`CoinPaprika API error: ${response.status}`);
@@ -187,7 +188,7 @@ export async function getGlobal(): Promise<CoinPaprikaGlobal> {
   const cached = cache.get<CoinPaprikaGlobal>(cacheKey);
   if (cached) return cached;
 
-  const response = await fetch(`${BASE_URL}/global`);
+  const response = await resilientFetchResponse(`${BASE_URL}/global`, { service: 'coinpaprika', timeoutMs: 8000, retries: 1 });
 
   if (!response.ok) {
     throw new Error(`CoinPaprika API error: ${response.status}`);
@@ -207,7 +208,7 @@ export async function getOHLCVLatest(coinId: string, quote = 'usd'): Promise<Coi
   const cached = cache.get<CoinPaprikaOHLC[]>(cacheKey);
   if (cached) return cached;
 
-  const response = await fetch(`${BASE_URL}/coins/${coinId}/ohlcv/latest?quote=${quote}`);
+  const response = await resilientFetchResponse(`${BASE_URL}/coins/${coinId}/ohlcv/latest?quote=${quote}`, { service: 'coinpaprika', timeoutMs: 8000, retries: 1 });
 
   if (!response.ok) {
     throw new Error(`CoinPaprika API error: ${response.status}`);
@@ -240,7 +241,7 @@ export async function getOHLCVHistorical(
   });
   if (end) params.set('end', end);
 
-  const response = await fetch(`${BASE_URL}/coins/${coinId}/ohlcv/historical?${params}`);
+  const response = await resilientFetchResponse(`${BASE_URL}/coins/${coinId}/ohlcv/historical?${params}`, { service: 'coinpaprika', timeoutMs: 8000, retries: 1 });
 
   if (!response.ok) {
     throw new Error(`CoinPaprika API error: ${response.status}`);
@@ -260,7 +261,7 @@ export async function getExchanges(): Promise<CoinPaprikaExchange[]> {
   const cached = cache.get<CoinPaprikaExchange[]>(cacheKey);
   if (cached) return cached;
 
-  const response = await fetch(`${BASE_URL}/exchanges`);
+  const response = await resilientFetchResponse(`${BASE_URL}/exchanges`, { service: 'coinpaprika', timeoutMs: 8000, retries: 1 });
 
   if (!response.ok) {
     throw new Error(`CoinPaprika API error: ${response.status}`);
@@ -280,7 +281,7 @@ export async function getCoinMarkets(coinId: string, quotes = 'USD'): Promise<Co
   const cached = cache.get<CoinPaprikaMarket[]>(cacheKey);
   if (cached) return cached;
 
-  const response = await fetch(`${BASE_URL}/coins/${coinId}/markets?quotes=${quotes}`);
+  const response = await resilientFetchResponse(`${BASE_URL}/coins/${coinId}/markets?quotes=${quotes}`, { service: 'coinpaprika', timeoutMs: 8000, retries: 1 });
 
   if (!response.ok) {
     throw new Error(`CoinPaprika API error: ${response.status}`);
@@ -306,7 +307,7 @@ export async function search(query: string): Promise<{
   const cached = cache.get<Awaited<ReturnType<typeof search>>>(cacheKey);
   if (cached) return cached;
 
-  const response = await fetch(`${BASE_URL}/search?q=${encodeURIComponent(query)}`);
+  const response = await resilientFetchResponse(`${BASE_URL}/search?q=${encodeURIComponent(query)}`, { service: 'coinpaprika', timeoutMs: 8000, retries: 1 });
 
   if (!response.ok) {
     throw new Error(`CoinPaprika API error: ${response.status}`);

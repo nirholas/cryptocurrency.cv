@@ -382,7 +382,7 @@ function transformLunarCrushData(data: Record<string, unknown>, symbol: string):
   };
 }
 
-function transformSantimentData(data: Record<string, unknown>, symbol: string): Partial<SocialMetrics> {
+function transformSantimentData(data: Record<string, unknown>, _symbol: string): Partial<SocialMetrics> {
   const dataObj = data as any;
   const volumeData = (dataObj.data?.getMetric?.timeseriesData as Array<{ value: number }>) || [];
   const sentimentData = (dataObj.data?.sentiment?.timeseriesData as Array<{ value: number }>) || [];

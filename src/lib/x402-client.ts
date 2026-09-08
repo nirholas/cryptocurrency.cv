@@ -502,7 +502,7 @@ export function usePremiumFetch() {
 
       setState((s) => ({ ...s, chainId: targetChainId }));
       return true;
-    } catch (error) {
+    } catch {
       // Chain not added, try to add it
       const chain = Object.values(supportedChains).find((c) => c.id === targetChainId);
       if (chain) {
@@ -534,7 +534,7 @@ export function usePremiumFetch() {
   const premiumFetch = useMemo(() => {
     if (!walletClient || !state.address) {
       // Return a fetch that prompts connection
-      return async <T = unknown>(url: string, options?: PremiumFetchOptions): Promise<T> => {
+      return async <T = unknown>(_url: string, _options?: PremiumFetchOptions): Promise<T> => {
         const connected = await connect();
         if (!connected) {
           throw new Error('Wallet connection required for premium features');

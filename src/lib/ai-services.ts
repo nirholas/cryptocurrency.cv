@@ -25,7 +25,7 @@
  * @module ai-services
  */
 
-import { callGroq, type GroqMessage, type GroqResponse } from './groq';
+import { callGroq, type GroqMessage } from './groq';
 import { aiCache } from './cache';
 
 // Helper to create a simple prompt call
@@ -361,7 +361,7 @@ Respond with a JSON object:
   // Process and validate entities
   const entities: Entity[] = parsed.entities
     .filter(e => e.name && e.type)
-    .map((e, idx) => ({
+    .map((e, _idx) => ({
       id: `ent_${generateId()}`,
       name: e.name!,
       type: (e.type as EntityType) || 'other',

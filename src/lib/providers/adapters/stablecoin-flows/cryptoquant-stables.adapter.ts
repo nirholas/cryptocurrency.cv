@@ -33,7 +33,7 @@ export const cryptoquantStablesAdapter: DataProvider<StablecoinFlow[]> = {
   rateLimit: RATE_LIMIT,
   capabilities: ['stablecoin-flows'],
 
-  async fetch(params: FetchParams): Promise<StablecoinFlow[]> {
+  async fetch(_params: FetchParams): Promise<StablecoinFlow[]> {
     if (!API_KEY) throw new Error('CRYPTOQUANT_API_KEY not configured');
 
     const stablecoins = ['usdt', 'usdc'];

@@ -24,7 +24,6 @@
  * @module lib/influencer-tracker
  */
 
-import { cache } from './cache';
 
 // =============================================================================
 // Types

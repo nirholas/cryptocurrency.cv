@@ -20,6 +20,8 @@
  * @module lib/apis/birdeye
  */
 
+import { resilientFetchResponse } from '@/lib/resilient-fetch';
+
 const BASE_URL = 'https://public-api.birdeye.so';
 const API_KEY = process.env.BIRDEYE_API_KEY || '';
 
@@ -146,7 +148,8 @@ async function beFetch<T>(
   }
 
   try {
-    const res = await fetch(`${BASE_URL}${path}`, {
+    const res = await resilientFetchResponse(`${BASE_URL}${path}`, {
+      service: 'birdeye', timeoutMs: 8000, retries: 1,
       headers: {
         accept: 'application/json',
         'X-API-KEY': API_KEY,

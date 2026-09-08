@@ -14,7 +14,7 @@
 
 import { cookies } from 'next/headers';
 import { type NextRequest, NextResponse } from 'next/server';
-import { verifyJwt, type JwtPayload } from './jwt';
+import { verifyJwt } from './jwt';
 import { createAccessToken, createRefreshToken } from './jwt';
 import { getUserById } from './users';
 

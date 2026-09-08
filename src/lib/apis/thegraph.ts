@@ -18,6 +18,8 @@
  * @module lib/apis/thegraph
  */
 
+import { resilientFetchResponse } from '@/lib/resilient-fetch';
+
 const GATEWAY_URL = 'https://gateway.thegraph.com/api';
 const API_KEY = process.env.THEGRAPH_API_KEY || '';
 
@@ -197,7 +199,8 @@ async function querySubgraph<T>(
       ? `${GATEWAY_URL}/${API_KEY}/subgraphs/id/${subgraphId}`
       : `https://api.thegraph.com/subgraphs/id/${subgraphId}`;
 
-    const response = await fetch(url, {
+    const response = await resilientFetchResponse(url, {
+      service: 'thegraph', timeoutMs: 10000, retries: 1,
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

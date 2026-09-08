@@ -19,7 +19,6 @@ import { ProviderChain } from '../../provider-chain';
 import type { SolanaToken } from './types';
 import { jupiterAdapter } from './jupiter.adapter';
 import { birdeyeAdapter } from './birdeye.adapter';
-import { heliusAdapter } from './helius.adapter';
 
 export type { SolanaToken, SolanaDeFiProtocol, SolanaNetworkStats } from './types';
 

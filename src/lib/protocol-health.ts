@@ -27,6 +27,8 @@
  * @module lib/protocol-health
  */
 
+import { resilientFetchResponse } from '@/lib/resilient-fetch';
+
 // =============================================================================
 // Types & Interfaces
 // =============================================================================
@@ -1132,7 +1134,8 @@ async function fetchProtocolInfo(protocolId: string): Promise<Protocol | null> {
 async function fetchAudits(protocolId: string): Promise<AuditReport[]> {
   // Fetch from DeFi Safety API for audit information
   try {
-    const response = await fetch(`https://api.defisafety.com/pqr/protocols`, {
+    const response = await resilientFetchResponse(`https://api.defisafety.com/pqr/protocols`, {
+      service: 'defisafety', timeoutMs: 10000, retries: 1,
       next: { revalidate: 3600 },
     });
     
@@ -1164,7 +1167,8 @@ async function fetchAudits(protocolId: string): Promise<AuditReport[]> {
 
   // Fallback: Check rekt.news for audit info via their API
   try {
-    const rektResponse = await fetch(`https://api.rekt.news/v1/protocols/${protocolId}`, {
+    const rektResponse = await resilientFetchResponse(`https://api.rekt.news/v1/protocols/${protocolId}`, {
+      service: 'rekt', timeoutMs: 10000, retries: 1,
       next: { revalidate: 3600 },
     });
     
@@ -1198,7 +1202,8 @@ function getAuditorReputation(auditor: string): 'tier1' | 'tier2' | 'tier3' | 'u
 async function fetchIncidents(protocolId: string): Promise<SecurityIncident[]> {
   // Fetch from rekt.news API for security incidents
   try {
-    const response = await fetch('https://rekt.news/api/leaderboard', {
+    const response = await resilientFetchResponse('https://rekt.news/api/leaderboard', {
+      service: 'rekt', timeoutMs: 10000, retries: 1,
       next: { revalidate: 1800 },
     });
     
@@ -1228,7 +1233,8 @@ async function fetchIncidents(protocolId: string): Promise<SecurityIncident[]> {
 
   // Fallback: Check DeFiYield REKT database
   try {
-    const response = await fetch(`https://api.defiyield.app/rekt/list?q=${protocolId}`, {
+    const response = await resilientFetchResponse(`https://api.defiyield.app/rekt/list?q=${protocolId}`, {
+      service: 'defiyield', timeoutMs: 10000, retries: 1,
       next: { revalidate: 1800 },
     });
     
@@ -1260,7 +1266,8 @@ async function fetchIncidents(protocolId: string): Promise<SecurityIncident[]> {
 async function fetchTVL(protocolId: string): Promise<TVLData | null> {
   try {
     // Use DefiLlama API - this is the primary source for TVL data
-    const response = await fetch(`https://api.llama.fi/protocol/${protocolId}`, {
+    const response = await resilientFetchResponse(`https://api.llama.fi/protocol/${protocolId}`, {
+      service: 'defillama', timeoutMs: 10000, retries: 1,
       next: { revalidate: 300 },
     });
 
@@ -1292,7 +1299,8 @@ async function fetchGovernance(protocolId: string): Promise<GovernanceMetrics | 
   // Fetch governance data from Tally API or Snapshot
   try {
     // Try Tally first for on-chain governance
-    const tallyResponse = await fetch(`https://api.tally.xyz/query`, {
+    const tallyResponse = await resilientFetchResponse(`https://api.tally.xyz/query`, {
+      service: 'tally', timeoutMs: 10000, retries: 1,
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -1342,7 +1350,8 @@ async function fetchGovernance(protocolId: string): Promise<GovernanceMetrics | 
 
   // Try Snapshot for off-chain governance
   try {
-    const snapshotResponse = await fetch('https://hub.snapshot.org/graphql', {
+    const snapshotResponse = await resilientFetchResponse('https://hub.snapshot.org/graphql', {
+      service: 'snapshot', timeoutMs: 10000, retries: 1,
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -1392,7 +1401,8 @@ async function fetchGovernance(protocolId: string): Promise<GovernanceMetrics | 
 async function fetchInsurance(protocolId: string): Promise<InsuranceCoverage | null> {
   // Fetch from Nexus Mutual API for insurance coverage
   try {
-    const response = await fetch('https://api.nexusmutual.io/v2/capacities', {
+    const response = await resilientFetchResponse('https://api.nexusmutual.io/v2/capacities', {
+      service: 'nexusmutual', timeoutMs: 10000, retries: 1,
       next: { revalidate: 3600 },
     });
 
@@ -1427,7 +1437,8 @@ async function fetchInsurance(protocolId: string): Promise<InsuranceCoverage | n
 
   // Try InsurAce as fallback
   try {
-    const insurAceResponse = await fetch(`https://api.insurace.io/v1/products?protocol=${protocolId}`, {
+    const insurAceResponse = await resilientFetchResponse(`https://api.insurace.io/v1/products?protocol=${protocolId}`, {
+      service: 'insurace', timeoutMs: 10000, retries: 1,
       next: { revalidate: 3600 },
     });
 
@@ -1473,7 +1484,8 @@ async function fetchTeamInfo(protocolId: string): Promise<TeamInfo | null> {
 
     const org = orgMappings[protocolId] || protocolId.replace(/-v\d+$/, '');
     
-    const response = await fetch(`https://api.github.com/orgs/${org}`, {
+    const response = await resilientFetchResponse(`https://api.github.com/orgs/${org}`, {
+      service: 'github', timeoutMs: 10000, retries: 1,
       headers: {
         'Accept': 'application/vnd.github.v3+json',
         'Authorization': process.env.GITHUB_TOKEN ? `token ${process.env.GITHUB_TOKEN}` : '',
@@ -1485,7 +1497,8 @@ async function fetchTeamInfo(protocolId: string): Promise<TeamInfo | null> {
       const orgData = await response.json();
       
       // Get repos to estimate activity
-      const reposResponse = await fetch(`https://api.github.com/orgs/${org}/repos?sort=updated&per_page=10`, {
+      const reposResponse = await resilientFetchResponse(`https://api.github.com/orgs/${org}/repos?sort=updated&per_page=10`, {
+        service: 'github', timeoutMs: 10000, retries: 1,
         headers: {
           'Accept': 'application/vnd.github.v3+json',
           'Authorization': process.env.GITHUB_TOKEN ? `token ${process.env.GITHUB_TOKEN}` : '',
@@ -1599,7 +1612,8 @@ function generateHealthAlerts(
 
 export async function getTopProtocols(limit: number = 100): Promise<Protocol[]> {
   try {
-    const response = await fetch('https://api.llama.fi/protocols', {
+    const response = await resilientFetchResponse('https://api.llama.fi/protocols', {
+      service: 'defillama', timeoutMs: 10000, retries: 1,
       next: { revalidate: 3600 },
     });
 
@@ -1686,7 +1700,8 @@ export async function getProtocolRanking(
 export async function getRecentIncidents(limit: number = 20): Promise<SecurityIncident[]> {
   // Fetch from rekt.news API for recent security incidents
   try {
-    const response = await fetch('https://rekt.news/api/leaderboard', {
+    const response = await resilientFetchResponse('https://rekt.news/api/leaderboard', {
+      service: 'rekt', timeoutMs: 10000, retries: 1,
       next: { revalidate: 1800 },
     });
     
@@ -1712,7 +1727,8 @@ export async function getRecentIncidents(limit: number = 20): Promise<SecurityIn
 
   // Fallback: Try DeFiYield REKT database
   try {
-    const response = await fetch('https://api.defiyield.app/rekt/list?limit=' + limit, {
+    const response = await resilientFetchResponse('https://api.defiyield.app/rekt/list?limit=' + limit, {
+      service: 'defiyield', timeoutMs: 10000, retries: 1,
       next: { revalidate: 1800 },
     });
     
