@@ -877,7 +877,7 @@ export const TOOLS: ReadonlyArray<ToolDefinition> = [
       }),
   }),
   define({
-    name: 'get_source_health',
+    name: 'get_source_feed_health',
     title: 'Which sources are actually answering',
     description:
       'Per-source liveness for the RSS layer: success rate, latency, last error and last successful fetch. A feed that fails is turned into an empty result so one dead source never breaks the aggregate, which also means a source can rot invisibly. Use this to check whether thin coverage of a topic reflects the news or a broken feed.',

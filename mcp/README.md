@@ -114,7 +114,7 @@ Most tools are free and unauthenticated. A few sit behind the [x402](https://cry
 
 <!-- TOOLS:START -->
 
-**55 tools.** Every tool maps onto one real REST route of the API.
+**59 tools.** Every tool maps onto one real REST route of the API.
 
 ### News (10)
 
@@ -215,6 +215,15 @@ Most tools are free and unauthenticated. A few sit behind the [x402](https://cry
 | --- | --- | --- |
 | `get_rss_feeds` | RSS, Atom and OPML feed URLs for the news categories. Pass fetch=true to return the XML of one feed instead of just its URL. | `GET /api/rss \| GET /api/atom \| GET /api/opml` |
 | `list_endpoints` | Discover the REST API behind these tools: the live OpenAPI path list (optionally filtered) plus the endpoint each MCP tool maps to. | `GET /api/openapi.json` |
+
+### Provenance (4)
+
+| Tool | Does | Calls |
+| --- | --- | --- |
+| `get_stories` | The news collapsed into events instead of headlines. One entry per story, with the outlet credited with publishing first and every outlet that followed, including how far behind each was. Use this instead of get_latest_news when the question is "what happened" rather than "what was published", when you need to avoid counting one event forty times, or when you want to know who broke something. Each story carries a confidence level and a plain-English reason; attribution rests on publisher timestamps, and a story whose timing cannot be verified reports originator: null rather than guessing. | `GET /api/stories` |
+| `get_story` | Everything known about a single clustered story: the originating outlet, every outlet that followed in order, the lag for each, and the terms that grouped them as evidence. Story ids come from get_stories and stay stable while a story is in the analysis window; they are not permanent archive identifiers. | `GET /api/stories/{id}` |
+| `get_source_leaderboard` | Ranks news outlets by how often they published first across the current window, with median lag when they followed. Unlike any "top crypto news sites" list, this is measured from publication times over clustered stories rather than from traffic or popularity. Read meta.caveats before quoting it: the window is hours not history, timing comes from publisher feeds which are frequently wrong, and publishing first says nothing about accuracy. An outlet with too little evidence reports a null rate rather than a flattering percentage. | `GET /api/sources/leaderboard` |
+| `get_source_health` | Per-source liveness for the RSS layer: success rate, latency, last error and last successful fetch. A feed that fails is turned into an empty result so one dead source never breaks the aggregate, which also means a source can rot invisibly. Use this to check whether thin coverage of a topic reflects the news or a broken feed. | `GET /api/sources/health` |
 
 <!-- TOOLS:END -->
 

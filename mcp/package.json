@@ -1,5 +1,5 @@
 {
-  "name": "free-crypto-news-mcp",
+  "name": "@nirholas/free-crypto-news-mcp",
   "version": "4.0.0",
   "description": "MCP server for cryptocurrency.cv: real-time crypto news, prices, DeFi, derivatives and on-chain data for Claude, Cursor, ChatGPT and any Model Context Protocol client",
   "type": "module",
@@ -9,7 +9,8 @@
   },
   "files": [
     "dist",
-    "README.md"
+    "README.md",
+    "LICENSE"
   ],
   "scripts": {
     "build": "tsc -p tsconfig.json && node scripts/mark-executable.mjs",
@@ -47,6 +48,12 @@
     "directory": "mcp"
   },
   "homepage": "https://cryptocurrency.cv",
+  "bugs": {
+    "url": "https://github.com/nirholas/cryptocurrency.cv/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.30.0",
     "zod": "^4.4.3"
