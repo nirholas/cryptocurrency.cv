@@ -22,6 +22,7 @@ import { type NextRequest, NextResponse } from 'next/server';
 import { createHash } from 'crypto';
 
 import { resilientFetchResponse } from '@/lib/resilient-fetch';
+import { ARCHIVE_BASE_URL } from '@/lib/archive-source';
 interface ArchivedItem {
   id: string;
   cid: string; // IPFS CID or Arweave TX
@@ -114,7 +115,7 @@ async function getEthBlockHeight(): Promise<number | null> {
  */
 async function getArchiveStats(): Promise<{ totalArticles: number; lastUpdated: string | null }> {
   try {
-    const res = await resilientFetchResponse('https://raw.githubusercontent.com/nirholas/free-crypto-news/main/archive/meta/stats.json', { service: 'github-raw', timeoutMs: 8000, retries: 1, next: { revalidate: 3600 } });
+    const res = await resilientFetchResponse(`${ARCHIVE_BASE_URL}/meta/stats.json`, { service: 'news-archive', timeoutMs: 8000, retries: 1, next: { revalidate: 3600 } });
     if (res.ok) {
       const data = await res.json();
       return {
@@ -307,7 +308,7 @@ export async function POST(request: NextRequest) {
       let articleCount = 0;
       try {
         const [year, month] = date.split('-');
-        const archiveRes = await resilientFetchResponse(`https://raw.githubusercontent.com/nirholas/free-crypto-news/main/archive/articles/${year}-${month}.jsonl`, { service: 'github-raw', timeoutMs: 8000, retries: 1 });
+        const archiveRes = await resilientFetchResponse(`${ARCHIVE_BASE_URL}/articles/${year}-${month}.jsonl`, { service: 'news-archive', timeoutMs: 8000, retries: 1 });
         if (archiveRes.ok) {
           const text = await archiveRes.text();
           articleCount = text.split('\n').filter(l => l.trim()).length;

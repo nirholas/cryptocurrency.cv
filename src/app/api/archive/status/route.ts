@@ -17,12 +17,13 @@
  */
 
 import { NextResponse } from 'next/server';
+import { ARCHIVE_BASE_URL } from '@/lib/archive-source';
 
 export const runtime = 'edge';
 
 interface ArchiveStats {
   healthy: boolean;
-  storage: 'vercel-kv' | 'github' | 'none';
+  storage: 'vercel-kv' | 'bucket' | 'none';
   lastArchived?: string;
   totalDays?: number;
   totalArticles?: number;
@@ -77,12 +78,12 @@ async function checkKvArchive(): Promise<Partial<ArchiveStats> | null> {
 }
 
 /**
- * Check GitHub raw content for archive data
+ * Check the public archive bucket (see lib/archive-source)
  */
-async function checkGitHubArchive(): Promise<Partial<ArchiveStats> | null> {
+async function checkArchiveBucket(): Promise<Partial<ArchiveStats> | null> {
   try {
     const response = await fetch(
-      'https://raw.githubusercontent.com/nirholas/free-crypto-news/main/archive/index.json',
+      `${ARCHIVE_BASE_URL}/index.json`,
       { next: { revalidate: 300 } } // Cache for 5 minutes
     );
 
@@ -93,7 +94,7 @@ async function checkGitHubArchive(): Promise<Partial<ArchiveStats> | null> {
     const index = await response.json();
 
     return {
-      storage: 'github',
+      storage: 'bucket',
       lastArchived: index.dateRange?.latest,
       totalDays: index.availableDates?.length || 0,
       totalArticles: index.totalArticles,
@@ -120,10 +121,10 @@ export async function GET() {
     Object.assign(stats, kvStats);
     stats.healthy = true;
   } else {
-    // Fall back to GitHub archive
-    const githubStats = await checkGitHubArchive();
-    if (githubStats) {
-      Object.assign(stats, githubStats);
+    // Fall back to the archive bucket
+    const bucketStats = await checkArchiveBucket();
+    if (bucketStats) {
+      Object.assign(stats, bucketStats);
       stats.healthy = true;
     }
   }

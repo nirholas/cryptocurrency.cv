@@ -14,6 +14,7 @@
  */
 
 import { type NewsArticle } from './crypto-news';
+import { ARCHIVE_BASE_URL } from '@/lib/archive-source';
 
 export interface ArchiveEntry {
   date: string; // YYYY-MM-DD format
@@ -42,14 +43,13 @@ export interface ArchiveQueryOptions {
 }
 
 // GitHub raw content URL for archive files
-const GITHUB_ARCHIVE_BASE = 'https://raw.githubusercontent.com/nirholas/free-crypto-news/main/archive';
 
 /**
  * Fetch archive index from GitHub
  */
 export async function getArchiveIndex(): Promise<ArchiveIndex | null> {
   try {
-    const response = await fetch(`${GITHUB_ARCHIVE_BASE}/index.json`, {
+    const response = await fetch(`${ARCHIVE_BASE_URL}/index.json`, {
       next: { revalidate: 3600 } // Cache for 1 hour
     });
     
@@ -70,7 +70,7 @@ export async function getArchiveByDate(date: string): Promise<ArchiveEntry | nul
   try {
     // Date format: YYYY-MM-DD -> archive/2024/01/2024-01-15.json
     const [year, month] = date.split('-');
-    const response = await fetch(`${GITHUB_ARCHIVE_BASE}/${year}/${month}/${date}.json`, {
+    const response = await fetch(`${ARCHIVE_BASE_URL}/${year}/${month}/${date}.json`, {
       next: { revalidate: 86400 } // Cache for 24 hours (historical data doesn't change)
     });
     
