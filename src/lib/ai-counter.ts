@@ -14,7 +14,7 @@
  */
 
 import { aiCache, withCache } from './cache';
-import { aiComplete } from './ai-provider';
+import { aiComplete, isAnyAIProviderConfigured } from './ai-provider';
 
 // Types
 export interface CounterResult {
@@ -221,10 +221,5 @@ Requirements:
  * Check if AI is configured
  */
 export function isAIConfigured(): boolean {
-  return !!(
-    process.env.OPENAI_API_KEY ||
-    process.env.ANTHROPIC_API_KEY ||
-    process.env.GROQ_API_KEY ||
-    process.env.OPENROUTER_API_KEY
-  );
+  return isAnyAIProviderConfigured();
 }

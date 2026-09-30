@@ -9,6 +9,7 @@
  */
 
 import { GROQ_MODEL, OPENAI_MODEL } from './ai-models';
+import { getGeminiKey, getOpenRouterKey } from './ai-provider';
 
 /**
  * Multi-Model AI Router
@@ -405,11 +406,11 @@ export function getAIRouterMetrics(): {
 
 function isProviderConfigured(provider: ModelProvider): boolean {
   switch (provider) {
-    case 'gemini': return !!process.env.GOOGLE_AI_API_KEY;
+    case 'gemini': return !!getGeminiKey();
     case 'anthropic': return !!process.env.ANTHROPIC_API_KEY;
     case 'openai': return !!process.env.OPENAI_API_KEY;
     case 'groq': return !!process.env.GROQ_API_KEY;
-    case 'openrouter': return !!process.env.OPENROUTER_API_KEY;
+    case 'openrouter': return !!getOpenRouterKey();
     default: return false;
   }
 }
@@ -541,8 +542,8 @@ async function callGemini(
   messages: ChatMessage[],
   options: { maxTokens?: number; temperature?: number; jsonMode?: boolean; signal?: AbortSignal },
 ): Promise<{ content: string; usage: TokenUsage }> {
-  const apiKey = process.env.GOOGLE_AI_API_KEY;
-  if (!apiKey) throw new Error('GOOGLE_AI_API_KEY not set');
+  const apiKey = getGeminiKey();
+  if (!apiKey) throw new Error('GEMINI_API_KEY (or GOOGLE_AI_API_KEY) not set');
 
   const url = `https://generativelanguage.googleapis.com/v1beta/models/${spec.model}:generateContent?key=${apiKey}`;
 
@@ -681,7 +682,7 @@ async function callOpenAI(
   const baseUrl = spec.provider === 'openrouter'
     ? 'https://openrouter.ai/api/v1'
     : (spec.provider === 'groq' ? 'https://api.groq.com/openai/v1' : 'https://api.openai.com/v1');
-  const key = spec.provider === 'openrouter' ? process.env.OPENROUTER_API_KEY :
+  const key = spec.provider === 'openrouter' ? getOpenRouterKey() :
                spec.provider === 'groq' ? process.env.GROQ_API_KEY : apiKey;
 
   if (!key) throw new Error(`${spec.provider} API key not set`);
@@ -775,7 +776,7 @@ export async function routeAI(req: RouteRequest): Promise<RouteResult> {
   const ranked = scoreModels(req);
 
   if (ranked.length === 0) {
-    throw new Error('No AI providers configured. Set at least one of: GOOGLE_AI_API_KEY, ANTHROPIC_API_KEY, OPENAI_API_KEY, GROQ_API_KEY');
+    throw new Error('No AI providers configured. Set at least one of: GEMINI_API_KEY, ANTHROPIC_API_KEY, OPENAI_API_KEY, GROQ_API_KEY, OPENROUTER_API_KEY');
   }
 
   const attemptChain: string[] = [];

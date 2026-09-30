@@ -303,7 +303,7 @@ export async function POST(request: NextRequest) {
     console.error('Blog generation error:', error);
     if (error instanceof AIAuthError || (error as Error).name === 'AIAuthError') {
       return NextResponse.json(
-        { error: 'AI service temporarily unavailable. All providers failed authentication.' },
+        { error: 'AI service temporarily unavailable: every AI provider is out of quota or unreachable. Please try again later.' },
         { status: 503 }
       );
     }

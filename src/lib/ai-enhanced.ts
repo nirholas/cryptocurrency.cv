@@ -14,7 +14,7 @@
  */
 
 import { aiCache, withCache } from './cache';
-import { aiComplete, getAIConfigOrNull } from './ai-provider';
+import { aiComplete, getAIConfigOrNull, isAnyAIProviderConfigured } from './ai-provider';
 
 /**
  * Summarize an article
@@ -367,12 +367,7 @@ ${content.slice(0, 8000)}`;
  * Check if AI is configured
  */
 export function isAIConfigured(): boolean {
-  return !!(
-    process.env.OPENAI_API_KEY ||
-    process.env.ANTHROPIC_API_KEY ||
-    process.env.GROQ_API_KEY ||
-    process.env.OPENROUTER_API_KEY
-  );
+  return isAnyAIProviderConfigured();
 }
 
 /**

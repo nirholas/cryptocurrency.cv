@@ -51,6 +51,7 @@
 
 import { metrics } from './telemetry';
 import { GROQ_MODEL, OPENAI_MODEL, OPENROUTER_MODEL } from './ai-models';
+import { getOpenRouterKey } from './ai-provider';
 
 // ---------------------------------------------------------------------------
 // Types
@@ -218,7 +219,7 @@ const PROVIDERS: Record<StreamProvider, ProviderConfig> = {
       } catch { return null; }
     },
     getDefaultModel: () => OPENROUTER_MODEL,
-    getApiKey: () => process.env.OPENROUTER_API_KEY,
+    getApiKey: () => getOpenRouterKey(),
     outputCostPer1M: 1.0,
   },
 };

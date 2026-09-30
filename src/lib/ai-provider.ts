@@ -117,15 +117,47 @@ const providerFactories: Record<AIProvider, () => AIConfig | null> = {
     process.env.GROQ_API_KEY
       ? { provider: 'groq', model: process.env.GROQ_MODEL || GROQ_MODEL, apiKey: process.env.GROQ_API_KEY, baseUrl: 'https://api.groq.com/openai/v1' }
       : null,
-  openrouter: () =>
-    process.env.OPENROUTER_API_KEY
-      ? { provider: 'openrouter', model: process.env.OPENROUTER_MODEL || OPENROUTER_MODEL, apiKey: process.env.OPENROUTER_API_KEY, baseUrl: 'https://openrouter.ai/api/v1' }
-      : null,
+  openrouter: () => {
+    const [apiKey] = openRouterKeys();
+    return apiKey
+      ? { provider: 'openrouter', model: process.env.OPENROUTER_MODEL || OPENROUTER_MODEL, apiKey, baseUrl: 'https://openrouter.ai/api/v1' }
+      : null;
+  },
   gemini: () =>
-    process.env.GEMINI_API_KEY || process.env.GOOGLE_AI_API_KEY
-      ? { provider: 'gemini', model: GEMINI_MODEL, apiKey: (process.env.GEMINI_API_KEY || process.env.GOOGLE_AI_API_KEY)! }
+    getGeminiKey()
+      ? { provider: 'gemini', model: GEMINI_MODEL, apiKey: getGeminiKey()! }
       : null,
 };
+
+/**
+ * OpenRouter keys in the order to try them: OPENROUTER_API_KEY, then each key
+ * in the comma-separated OPENROUTER_FALLBACK_KEYS. Deployments that only set
+ * the fallback list used to get no OpenRouter provider at all.
+ */
+function openRouterKeys(): string[] {
+  const keys = [
+    process.env.OPENROUTER_API_KEY,
+    ...(process.env.OPENROUTER_FALLBACK_KEYS ?? '').split(','),
+  ]
+    .map((k) => k?.trim())
+    .filter((k): k is string => Boolean(k));
+  return [...new Set(keys)];
+}
+
+/** First OpenRouter key to try, for callers that talk to OpenRouter directly. */
+export function getOpenRouterKey(): string | undefined {
+  return openRouterKeys()[0];
+}
+
+/** Gemini API key under either of its supported names. */
+export function getGeminiKey(): string | undefined {
+  return process.env.GEMINI_API_KEY || process.env.GOOGLE_AI_API_KEY || undefined;
+}
+
+/** True when at least one AI provider has credentials. */
+export function isAnyAIProviderConfigured(): boolean {
+  return getAllAIConfigs().length > 0;
+}
 
 /** Returns the provider priority order based on preference. */
 function getProviderOrder(preferGroq: boolean): AIProvider[] {
@@ -156,7 +188,13 @@ export function getAllAIConfigs(preferGroq = false): AIConfig[] {
   const configs: AIConfig[] = [];
   for (const provider of getProviderOrder(preferGroq)) {
     const cfg = providerFactories[provider]();
-    if (cfg) configs.push(cfg);
+    if (!cfg) continue;
+    if (provider === 'openrouter') {
+      // One entry per key, so a key that is out of credit falls through to the next.
+      for (const apiKey of openRouterKeys()) configs.push({ ...cfg, apiKey });
+    } else {
+      configs.push(cfg);
+    }
   }
   return configs;
 }
@@ -286,6 +324,63 @@ export function aiCompleteStream(
   });
 }
 
+// =============================================================================
+// PROVIDER COOLDOWN
+// =============================================================================
+
+/**
+ * A provider that answered with a billing refusal or bad credentials (the
+ * Google project's "dunning decision is deny", a revoked or unfunded key) will
+ * answer the same way for a while. Without a cooldown every request re-walked
+ * the chain and paid that provider's round trip before failing over. Rate
+ * limits are left alone: aiCompleteWithRetry backs off and retries those
+ * within seconds, which is the right response to a per-minute quota.
+ */
+const AUTH_COOLDOWN_MS = 10 * 60_000;
+
+const cooldownUntil = new Map<string, number>();
+
+function providerKey(config: AIConfig): string {
+  return `${config.provider}:${config.apiKey.slice(-6)}`;
+}
+
+function isCoolingDown(config: AIConfig): boolean {
+  const until = cooldownUntil.get(providerKey(config));
+  if (!until) return false;
+  if (Date.now() < until) return true;
+  cooldownUntil.delete(providerKey(config));
+  return false;
+}
+
+function coolDownAfterAuthFailure(config: AIConfig): void {
+  cooldownUntil.set(providerKey(config), Date.now() + AUTH_COOLDOWN_MS);
+}
+
+/** Test hook: forget every cooldown. */
+export function resetAIProviderCooldowns(): void {
+  cooldownUntil.clear();
+}
+
+/**
+ * Thrown when every configured provider was skipped. Extends AIAuthError so
+ * existing `instanceof AIAuthError` handlers still map it to a 503, but its
+ * message says what actually happened (usually quota or billing, rarely keys).
+ */
+export class AIAllProvidersUnavailableError extends AIAuthError {
+  constructor(reasons: string[]) {
+    super(
+      'groq',
+      503,
+      `AI service temporarily unavailable: every configured provider is out of quota, refused by billing or unreachable (${reasons.join('; ')})`,
+    );
+    this.name = 'AIAuthError';
+  }
+}
+
+/** Public copy for a 503 caused by AIAllProvidersUnavailableError. */
+export const AI_UNAVAILABLE_MESSAGE =
+  'AI service temporarily unavailable: every AI provider is out of quota or unreachable. Please try again later.';
+
 /**
  * Generic AI completion request compatible with all supported providers.
  * Automatically falls back to the next configured provider on auth errors (401).
@@ -306,6 +401,10 @@ export async function aiComplete(
   const skipErrors: Error[] = [];
 
   for (const config of configs) {
+    if (isCoolingDown(config)) {
+      skipErrors.push(new Error(`${config.provider} skipped: refused by billing or auth within the last 10 minutes`));
+      continue;
+    }
     try {
       return await aiCompleteWithConfig(config, systemPrompt, userPrompt, options);
     } catch (err) {
@@ -316,12 +415,14 @@ export async function aiComplete(
         err instanceof AIProviderUnavailableError
       ) {
         console.warn(`AI provider ${config.provider} unavailable (${err.name}), trying next provider...`, err.message);
+        if (err instanceof AIAuthError) coolDownAfterAuthFailure(config);
         skipErrors.push(err);
         continue;
       }
       // Groq's own error classes (dynamic name check to avoid circular deps)
       if ((err as Error).name === 'GroqAuthError' || (err as Error).name === 'GroqRateLimitError') {
         console.warn(`AI provider ${config.provider} unavailable (${(err as Error).name}), trying next provider...`, (err as Error).message);
+        if ((err as Error).name === 'GroqAuthError') coolDownAfterAuthFailure(config);
         skipErrors.push(err as Error);
         continue;
       }
@@ -329,12 +430,8 @@ export async function aiComplete(
     }
   }
 
-  // Every provider was skipped (auth failure or rate-limit / quota)
-  throw new AIAuthError(
-    'groq',
-    503,
-    `All configured AI providers unavailable: ${skipErrors.map((e) => e.message).join('; ')}`
-  );
+  // Every provider was skipped (quota, billing, auth, or can't serve this request)
+  throw new AIAllProvidersUnavailableError(skipErrors.map((e) => e.message));
 }
 
 /**
