@@ -36,8 +36,8 @@ export const predictions = inngest.createFunction(
     name: 'AI Price Predictions',
     retries: 2,
     concurrency: [{ limit: 1 }],
+    triggers: { cron: '0 0 * * *' },
   },
-  { cron: '0 0 * * *' },
   async ({ step, logger }) => {
     const today = new Date().toISOString().slice(0, 10);
 

@@ -18,7 +18,7 @@
  * Migrated from /api/cron/archive-kv
  */
 
-import { inngest } from '../client';
+import { inngest, articlePublished } from '../client';
 
 // ---------------------------------------------------------------------------
 // Cron-triggered batch archive (hourly)
@@ -30,8 +30,8 @@ export const archiveArticlesCron = inngest.createFunction(
     name: 'Archive News to KV (Cron)',
     retries: 3,
     concurrency: [{ limit: 1 }],
+    triggers: { cron: '0 * * * *' },
   },
-  { cron: '0 * * * *' },
   async ({ step, logger }) => {
     const result = await step.run('archive-news', async () => {
       const { archiveNews } = await import('@/lib/archive-service');
@@ -69,8 +69,8 @@ export const archiveArticleOnPublish = inngest.createFunction(
     name: 'Archive Single Article (Event)',
     retries: 3,
     concurrency: [{ limit: 5 }],
+    triggers: articlePublished,
   },
-  { event: 'article/published' },
   async ({ event, step, logger }) => {
     const { articleId, title, source } = event.data;
 

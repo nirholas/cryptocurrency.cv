@@ -27,8 +27,8 @@ export const coverageGapDetection = inngest.createFunction(
     name: 'Coverage Gap Detection',
     retries: 2,
     concurrency: [{ limit: 1 }],
+    triggers: { cron: '0 */6 * * *' },
   },
-  { cron: '0 */6 * * *' },
   async ({ step, logger }) => {
     // Step 1 — Load indexes
     const indexes = await step.run('load-indexes', async () => {

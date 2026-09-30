@@ -27,8 +27,8 @@ export const tagScoreRecalculation = inngest.createFunction(
     name: 'Tag Score Computation',
     retries: 3,
     concurrency: [{ limit: 1 }],
+    triggers: { cron: '0 */6 * * *' },
   },
-  { cron: '0 */6 * * *' },
   async ({ step, logger }) => {
     const result = await step.run('compute-scores', async () => {
       const { computeAllTagScores } = await import('@/lib/tagScoring');

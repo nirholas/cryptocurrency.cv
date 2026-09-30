@@ -35,8 +35,8 @@ export const stablecoinSnapshot = inngest.createFunction(
     id: 'stablecoin-snapshot',
     name: 'Stablecoin Supply Snapshot',
     retries: 2,
+    triggers: { cron: '*/30 * * * *' },
   },
-  { cron: '*/30 * * * *' },
   async () => {
     const db = getDb();
     if (!db) {
@@ -88,8 +88,8 @@ export const gasFeeSnapshot = inngest.createFunction(
     id: 'gas-fee-snapshot',
     name: 'Gas Fee Snapshot',
     retries: 2,
+    triggers: { cron: '*/5 * * * *' },
   },
-  { cron: '*/5 * * * *' },
   async () => {
     const db = getDb();
     if (!db) {

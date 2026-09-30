@@ -36,8 +36,8 @@ export const solanaSnapshot = inngest.createFunction(
     id: 'solana-ecosystem-snapshot',
     name: 'Solana Ecosystem Token Snapshot',
     retries: 2,
+    triggers: { cron: '*/5 * * * *' },
   },
-  { cron: '*/5 * * * *' },
   async () => {
     const { solanaChain } = await import('@/lib/providers/adapters/solana-ecosystem');
     const now = new Date();
@@ -66,8 +66,8 @@ export const predictionMarketsSnapshot = inngest.createFunction(
     id: 'prediction-markets-snapshot',
     name: 'Prediction Markets Snapshot',
     retries: 2,
+    triggers: { cron: '*/15 * * * *' },
   },
-  { cron: '*/15 * * * *' },
   async () => {
     const { predictionMarketsChain } = await import(
       '@/lib/providers/adapters/prediction-markets'
@@ -97,8 +97,8 @@ export const governanceSnapshot = inngest.createFunction(
     id: 'governance-snapshot',
     name: 'Governance Proposals Snapshot',
     retries: 2,
+    triggers: { cron: '0 * * * *' },
   },
-  { cron: '0 * * * *' },
   async () => {
     const { governanceChain } = await import('@/lib/providers/adapters/governance');
     const now = new Date();
@@ -126,8 +126,8 @@ export const l2DataSnapshot = inngest.createFunction(
     id: 'l2-data-snapshot',
     name: 'L2 Rollup Data Snapshot',
     retries: 2,
+    triggers: { cron: '*/30 * * * *' },
   },
-  { cron: '*/30 * * * *' },
   async () => {
     const { l2DataChain } = await import('@/lib/providers/adapters/l2-data');
     const now = new Date();
@@ -155,8 +155,8 @@ export const mevSnapshot = inngest.createFunction(
     id: 'mev-snapshot',
     name: 'MEV Stats Snapshot',
     retries: 2,
+    triggers: { cron: '*/10 * * * *' },
   },
-  { cron: '*/10 * * * *' },
   async () => {
     const { mevChain } = await import('@/lib/providers/adapters/mev');
     const now = new Date();
@@ -185,8 +185,8 @@ export const bridgeSnapshot = inngest.createFunction(
     id: 'bridge-volume-snapshot',
     name: 'Cross-Chain Bridge Volume Snapshot',
     retries: 2,
+    triggers: { cron: '15 * * * *' },
   },
-  { cron: '15 * * * *' },
   async () => {
     const { bridgesChain } = await import('@/lib/providers/adapters/bridges');
     const now = new Date();
@@ -214,8 +214,8 @@ export const btcETFSnapshot = inngest.createFunction(
     id: 'btc-etf-snapshot',
     name: 'BTC ETF Flow Snapshot',
     retries: 2,
+    triggers: { cron: '30 * * * *' },
   },
-  { cron: '30 * * * *' },
   async () => {
     const { btcETFChain } = await import('@/lib/providers/adapters/btc-etf');
     const now = new Date();
@@ -244,8 +244,8 @@ export const miningSnapshot = inngest.createFunction(
     id: 'mining-stats-snapshot',
     name: 'Bitcoin Mining Stats Snapshot',
     retries: 2,
+    triggers: { cron: '*/30 * * * *' },
   },
-  { cron: '*/30 * * * *' },
   async () => {
     const { miningChain } = await import('@/lib/providers/adapters/mining');
     const now = new Date();
@@ -274,8 +274,8 @@ export const protocolRevenueSnapshot = inngest.createFunction(
     id: 'protocol-revenue-snapshot',
     name: 'Protocol Revenue Snapshot',
     retries: 2,
+    triggers: { cron: '0 */6 * * *' },
   },
-  { cron: '0 */6 * * *' },
   async () => {
     const { protocolRevenueChain } = await import(
       '@/lib/providers/adapters/protocol-revenue'

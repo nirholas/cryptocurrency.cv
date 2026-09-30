@@ -17,19 +17,21 @@
  * Environment variables:
  *   INNGEST_EVENT_KEY  — Inngest event key (production)
  *   INNGEST_SIGNING_KEY — Inngest signing key for webhook verification
+ *   INNGEST_DEV=1       — run against the local Inngest Dev Server (v4
+ *                          defaults to cloud mode, which needs the signing key)
  *
  * @see https://www.inngest.com/docs
  */
 
-import { Inngest } from 'inngest';
+import { Inngest, eventType, staticSchema } from 'inngest';
 
 // =============================================================================
 // TYPED EVENT SCHEMAS
 // =============================================================================
 
 /**
- * All Inngest events emitted or consumed by the app.
- * Using a string-literal map ensures type safety across send() and createFunction().
+ * All Inngest events emitted or consumed by the app. Each one is exposed below
+ * as an `eventType()` trigger so functions get a typed `event.data`.
  */
 export type Events = {
   /** Fired when a new article is fetched from an RSS source */
@@ -82,15 +84,34 @@ export type Events = {
 };
 
 // =============================================================================
+// EVENT TRIGGERS
+// =============================================================================
+
+function defineEvent<TName extends keyof Events>(name: TName) {
+  return eventType(name, { schema: staticSchema<Events[TName]['data']>() });
+}
+
+export const articlePublished = defineEvent('article/published');
+export const articleNeedsEnrichment = defineEvent('article/needs-enrichment');
+export const articleNeedsCoverage = defineEvent('article/needs-coverage');
+export const marketPriceAlert = defineEvent('market/price-alert');
+export const sentimentRefresh = defineEvent('sentiment/refresh');
+
+// =============================================================================
 // CLIENT INSTANCE
 // =============================================================================
 
+/**
+ * Event key is optional in dev (Inngest Dev Server doesn't require it).
+ * In production Inngest reads INNGEST_EVENT_KEY and INNGEST_SIGNING_KEY
+ * automatically.
+ *
+ * Checkpointing (on by default in v4) runs consecutive steps inside one
+ * request; capping it below the 300 s Cloud Run request timeout (and the
+ * route's maxDuration) hands the run back to Inngest before the platform
+ * kills the request mid-step.
+ */
 export const inngest = new Inngest({
   id: 'free-crypto-news',
-  schemas: new Map() as never, // Type inference from Events
-  /**
-   * Event key is optional in dev (Inngest Dev Server doesn't require it).
-   * In production Inngest reads INNGEST_EVENT_KEY automatically.
-   */
+  checkpointing: { maxRuntime: '240s' },
 });
-

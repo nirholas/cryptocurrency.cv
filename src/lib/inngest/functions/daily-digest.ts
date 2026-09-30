@@ -27,8 +27,8 @@ export const dailyDigest = inngest.createFunction(
     name: 'AI Daily Digest',
     retries: 2,
     concurrency: [{ limit: 1 }],
+    triggers: { cron: '0 8 * * *' },
   },
-  { cron: '0 8 * * *' },
   async ({ step, logger }) => {
     // Step 1 — Determine base URL
     const baseUrl = await step.run('resolve-base-url', async () => {

@@ -28,6 +28,7 @@ import { EXEMPT_PATTERNS, FREE_TIER_PATTERNS, matchesPattern } from './config';
 import { paymentProxyFromConfig } from '@x402/next';
 import type { RouteConfig } from '@x402/next';
 import { HTTPFacilitatorClient } from '@x402/core/server';
+import { convertToTokenAmount, numberToDecimalString } from '@x402/core/utils';
 import { ExactEvmScheme } from '@x402/evm/exact/server';
 import {
   API_PRICING,
@@ -98,12 +99,19 @@ class Caip2FacilitatorBridge {
 // ExactEvmScheme with Arbitrum USDC support
 // ---------------------------------------------------------------------------
 
-/** Create an ExactEvmScheme with a custom money parser for Arbitrum USDC */
+/**
+ * Create an ExactEvmScheme with a custom money parser for Arbitrum USDC.
+ *
+ * The SDK hands parsers the price as a plain decimal string ("0.001"); older
+ * releases passed a number. Both are converted with the SDK's own exact
+ * decimal-to-atomic helper rather than float multiplication.
+ */
 function createArbitrumScheme(): ExactEvmScheme {
   const scheme = new ExactEvmScheme();
-  scheme.registerMoneyParser(async (amount: number, network: string) => {
+  scheme.registerMoneyParser(async (amount: string | number, network: string) => {
     if (network === 'eip155:42161') {
-      const tokenAmount = Math.round(amount * 10 ** ARBITRUM_USDC.decimals).toString();
+      const decimal = typeof amount === 'number' ? numberToDecimalString(amount) : amount;
+      const tokenAmount = convertToTokenAmount(decimal, ARBITRUM_USDC.decimals);
       return {
         amount: tokenAmount,
         asset: ARBITRUM_USDC.address,

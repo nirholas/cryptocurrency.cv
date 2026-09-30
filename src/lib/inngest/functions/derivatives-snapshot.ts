@@ -29,8 +29,8 @@ export const derivativesSnapshot = inngest.createFunction(
     id: 'derivatives-snapshot',
     name: 'Derivatives Snapshot',
     retries: 2,
+    triggers: { cron: '*/15 * * * *' }, // Every 15 minutes
   },
-  { cron: '*/15 * * * *' }, // Every 15 minutes
   async () => {
     const db = getDb();
     if (!db) {

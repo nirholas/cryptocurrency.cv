@@ -22,7 +22,7 @@
  * Migrated from /api/cron/enrich-articles
  */
 
-import { inngest } from '../client';
+import { inngest, articleNeedsEnrichment } from '../client';
 
 /** Lightweight article shape passed between enrichment steps. */
 interface ArticleStub {
@@ -42,8 +42,8 @@ export const enrichArticlesCron = inngest.createFunction(
     name: 'AI Article Enrichment (Batch)',
     retries: 2,
     concurrency: [{ limit: 5 }], // increased from 1 → 5
+    triggers: { cron: '*/5 * * * *' },
   },
-  { cron: '*/5 * * * *' },
   async ({ step, logger }) => {
     // Step 1 — Fetch latest articles
     const articles: ArticleStub[] = await step.run(
@@ -171,8 +171,8 @@ export const enrichArticleOnEvent = inngest.createFunction(
     name: 'AI Article Enrichment (Single)',
     retries: 3,
     concurrency: [{ limit: 5 }],
+    triggers: articleNeedsEnrichment,
   },
-  { event: 'article/needs-enrichment' },
   async ({ event, step, logger }) => {
     const { articleId, link, title, description, source, priority } =
       event.data;

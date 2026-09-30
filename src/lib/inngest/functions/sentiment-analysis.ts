@@ -20,7 +20,7 @@
  * Migrated from /api/cron/x-sentiment
  */
 
-import { inngest } from '../client';
+import { inngest, sentimentRefresh } from '../client';
 
 export const sentimentAnalysis = inngest.createFunction(
   {
@@ -28,11 +28,11 @@ export const sentimentAnalysis = inngest.createFunction(
     name: 'X Sentiment Analysis',
     retries: 2,
     concurrency: [{ limit: 2 }],
+    triggers: [
+      { cron: '0 0 * * *' },     // daily at midnight UTC
+      sentimentRefresh, // on-demand refresh
+    ],
   },
-  [
-    { cron: '0 0 * * *' },     // daily at midnight UTC
-    { event: 'sentiment/refresh' }, // on-demand refresh
-  ],
   async ({ event, step, logger }) => {
     const ALERT_THRESHOLD = 0.2;
     const isEventDriven = event?.name === 'sentiment/refresh';

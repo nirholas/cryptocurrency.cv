@@ -20,8 +20,8 @@ export const sendDailyEmailDigest = inngest.createFunction(
     name: 'Send Daily Email Digest',
     retries: 2,
     concurrency: [{ limit: 1 }],
+    triggers: { cron: '0 9 * * *' },
   },
-  { cron: '0 9 * * *' },
   async ({ step, logger }) => {
     // Step 1 — Fetch users who want a daily email digest
     const eligibleUsers = await step.run('fetch-eligible-users', async () => {
