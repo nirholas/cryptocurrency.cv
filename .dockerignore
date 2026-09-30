@@ -9,7 +9,6 @@ storybook-static
 .env
 .env.*
 !.env.example
-docs
 examples
 extension
 copilot-extension

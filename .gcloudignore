@@ -1,38 +1,42 @@
+# Uploaded as the Cloud Build context. gitignore syntax: a pattern without a
+# leading slash matches at ANY depth, so every top-level directory below is
+# anchored with "/". Unanchored `docs/`, `mcp/` and `archive/` used to drop
+# src/app/api/mcp, src/app/api/archive and src/app/[locale]/docs from every
+# production build, and those routes answered 404.
 node_modules/
 .next/
 .git/
-coverage/
-storybook-static/
+/coverage/
+/storybook-static/
 *.log
 .env
 .env.local
 .env.*.local
-.github/
-e2e/
-docs/
-examples/
+/.github/
+/e2e/
+/examples/
 # sdk/ is excluded except the conformance engine, which the site imports via
 # the @x402-conformance tsconfig alias (src/lib/x402/conformance.ts).
-sdk/*
-!sdk/x402-conformance/
-mcp/
-mobile/
-telegram/
-raycast/
-postman/
-infra/
-contracts/
-skills/
-terminal/
-prompts/
-site/
-archive/
-memescope-monday/
-x402-facilitator/
-extension/
-copilot-extension/
-widget/
-cli/
-alfred/
-chatgpt/
-README.*.md
+/sdk/*
+!/sdk/x402-conformance/
+/mcp/
+/mobile/
+/telegram/
+/raycast/
+/postman/
+/infra/
+/contracts/
+/skills/
+/terminal/
+/prompts/
+/site/
+/archive/
+/memescope-monday/
+/x402-facilitator/
+/extension/
+/copilot-extension/
+/widget/
+/cli/
+/alfred/
+/chatgpt/
+/README.*.md
