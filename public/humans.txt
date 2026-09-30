@@ -95,11 +95,11 @@ Language: TypeScript
 Runtime: Bun / Node.js
 Package Manager: pnpm
 Database: Neon (PostgreSQL), Drizzle ORM
-Cache: Vercel KV / Upstash Redis
+Cache: Redis (Upstash or self-hosted), in-memory fallback
 AI: Claude (Anthropic), GPT-4 (OpenAI)
 Search: Vector embeddings, full-text search
 Hosting: Google Cloud Run
-Monitoring: Vercel Analytics
+Monitoring: Google Cloud Logging
 
 /* AI INTEGRATIONS */
 
