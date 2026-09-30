@@ -312,7 +312,7 @@ export const rateLimitHandler: MiddlewareHandler = async (ctx) => {
 
   // Tier-aware rate limiting
   if (ctx.isSperaxOS || ctx.isTrustedOrigin) {
-    const speraxosKeyId = ctx.speraxosKeyId ?? 'trusted-origin';
+    const speraxosKeyId = ctx.speraxosKeyId ?? ctx.trustedBucket ?? 'trusted-origin';
     const speraxosLimit = getSperaxosKeyRateLimit(speraxosKeyId);
     const srl = await checkTierRateLimit(`speraxos:${speraxosKeyId}`, speraxosLimit.daily);
     ctx.headers['X-RateLimit-Limit'] = speraxosLimit.daily.toString();

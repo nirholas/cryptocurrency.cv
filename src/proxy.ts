@@ -35,6 +35,7 @@ import { rateLimitHandler } from './middleware/rate-limit';
 import { x402Gate } from './middleware/x402';
 import { apiResponse } from './middleware/api-response';
 import { generateRequestId } from './middleware/config';
+import { issueFirstPartyCookie } from './middleware/first-party';
 
 const pipeline = compose(
   redirects, // /docs redirect, /dashboard/dashboard fix
@@ -84,8 +85,15 @@ export default async function middleware(request: NextRequest) {
   };
 
   const result = await pipeline(ctx);
-  if (result instanceof NextResponse) return result;
-  return result.response ?? NextResponse.next();
+  const response =
+    result instanceof NextResponse ? result : (result.response ?? NextResponse.next());
+
+  // Page views carry the signed cookie that lets this page's own API calls be
+  // recognised as first party (see middleware/first-party).
+  if (!ctx.isApiRoute && !ctx.isEmbedRoute && response.status < 400) {
+    await issueFirstPartyCookie(request, response);
+  }
+  return response;
 }
 
 export const config = {

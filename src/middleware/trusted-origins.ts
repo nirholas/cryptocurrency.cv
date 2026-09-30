@@ -11,17 +11,19 @@
 /**
  * Trusted Origin Detection
  *
- * Determines whether a browser request originates from a trusted SperaxOS domain.
+ * Determines whether an API request comes from this site's own pages or
+ * server, or from an allow-listed partner origin.
  *
  * SperaxOS API authentication is handled exclusively by speraxos-hmac.ts
- * (HMAC-SHA256 signatures). This module only checks the browser `Origin`
- * header for CORS and trusted-origin flags — the `Origin` header is NOT
- * used for API authorization (trivially spoofable by non-browser clients).
+ * (HMAC-SHA256 signatures). Headers such as `Origin` and `Sec-Fetch-Site`
+ * are trivially spoofable by non-browser clients, so first-party trust also
+ * requires the signed cookie from ./first-party.
  *
  * @module middleware/trusted-origins
  */
 
 import type { MiddlewareHandler } from './types';
+import { firstPartyCookieRemaining, isInternalRequest } from './first-party';
 
 // The app's own public URL — browser client components fetch same-origin APIs
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL ?? 'https://cryptocurrency.cv';
@@ -55,47 +57,63 @@ export function isTrustedOrigin(origin: string): boolean {
 // =============================================================================
 
 /**
- * Middleware handler: checks browser origin trust and sets priority headers.
+ * Middleware handler: decides whether an API request comes from this site or
+ * from an allow-listed partner.
  *
  * `ctx.isSperaxOS` is set upstream by the speraxos-hmac handler (HMAC-only).
- * This handler only evaluates browser-origin trust for non-HMAC requests.
+ * For everything else, in order:
+ *  1. Internal: server code calling its own API with the signed
+ *     `x-fcn-internal` header (lib/internal-fetch).
+ *  2. First party: a same-origin signal (`Sec-Fetch-Site`, our own `Origin`,
+ *     or a same-site `Referer` for Safari) AND a valid signed first-party
+ *     cookie. The headers alone prove nothing, since any non-browser client
+ *     can send them; the cookie is only issued on this site's pages.
+ *  3. Partner: an allow-listed partner `Origin` (or `Referer`), unchanged.
  *
- * Three signals are checked in order:
- *  1. `Origin` header — present on cross-origin requests and most POST requests.
- *  2. `Sec-Fetch-Site: same-origin` — set by Chrome and Firefox on all JS-initiated
- *     same-origin requests. Browsers prevent JS from forging `Sec-*` headers, making
- *     this a reliable browser indicator. Non-browser clients (curl, SDKs) omit it.
- *     NOTE: Safari does not implement `Sec-Fetch-*` headers at all.
- *  3. `Referer` header — fallback for Safari (no Sec-Fetch-Site) and CDN/proxy
- *     layers that strip Sec-* headers. All major browsers send Referer for same-origin
- *     requests unless the page sets `Referrer-Policy: no-referrer`.
+ * Each kind of trust is metered in its own bucket (see ctx.trustedBucket).
  */
-export const trustedOriginHandler: MiddlewareHandler = (ctx) => {
+export const trustedOriginHandler: MiddlewareHandler = async (ctx) => {
   if (!ctx.isApiRoute) return ctx;
 
-  // isSperaxOS is already set by speraxosHmac earlier in the pipeline
   const reqOrigin = ctx.request.headers.get('origin') ?? '';
   const secFetchSite = ctx.request.headers.get('sec-fetch-site');
   const reqReferer = ctx.request.headers.get('referer') ?? '';
+  const ownOrigin = ctx.request.nextUrl.origin;
 
-  // Same-origin browser fetch (GET/HEAD) — no Origin header, but Sec-Fetch-Site is present
-  const isSameOriginBrowser = secFetchSite === 'same-origin' || secFetchSite === 'same-site';
-
-  // Cross-origin or POST from a trusted domain — Origin header is present
-  const isOriginTrusted = !!reqOrigin && isTrustedOrigin(reqOrigin);
-
-  // Fallback: derive origin from Referer when Origin and Sec-Fetch-Site are absent.
-  // Handles environments (some CDNs/proxies) that strip Sec-* headers.
-  let isRefererTrusted = false;
-  if (!isSameOriginBrowser && !isOriginTrusted && reqReferer) {
-    try {
-      isRefererTrusted = isTrustedOrigin(new URL(reqReferer).origin);
-    } catch {
-      // malformed Referer — ignore
-    }
+  let refererOrigin = '';
+  try {
+    refererOrigin = reqReferer ? new URL(reqReferer).origin : '';
+  } catch {
+    // malformed Referer: ignore
   }
 
-  ctx.isTrustedOrigin = !ctx.isSperaxOS && (isSameOriginBrowser || isOriginTrusted || isRefererTrusted);
+  const isOwn = (origin: string) => origin === ownOrigin || origin === APP_URL;
+
+  if (ctx.isSperaxOS) {
+    // HMAC-authenticated upstream; nothing to decide here.
+  } else if (await isInternalRequest(ctx.request)) {
+    ctx.isTrustedOrigin = true;
+    ctx.trustedBucket = 'internal';
+  } else {
+    const claimsSameOrigin =
+      secFetchSite === 'same-origin' ||
+      secFetchSite === 'same-site' ||
+      isOwn(reqOrigin) ||
+      (!reqOrigin && isOwn(refererOrigin));
+
+    if (claimsSameOrigin && (await firstPartyCookieRemaining(ctx.request)) > 0) {
+      ctx.isTrustedOrigin = true;
+      ctx.trustedBucket = `first-party:${ctx.clientIp}`;
+    } else {
+      const partner = [reqOrigin, refererOrigin].find(
+        (o) => o && !isOwn(o) && isTrustedOrigin(o),
+      );
+      if (partner) {
+        ctx.isTrustedOrigin = true;
+        ctx.trustedBucket = `partner:${new URL(partner).host}`;
+      }
+    }
+  }
 
   if (ctx.isSperaxOS || ctx.isTrustedOrigin) {
     ctx.headers['X-Priority'] = 'speraxos';

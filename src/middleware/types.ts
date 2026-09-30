@@ -25,6 +25,11 @@ export interface MiddlewareContext {
   isSperaxOS: boolean;
   speraxosKeyId: string | null;
   isTrustedOrigin: boolean;
+  /**
+   * Rate-limit bucket for a trusted request: `internal`, `first-party:<ip>` or
+   * `partner:<host>`. Keeps one caller from spending another's allowance.
+   */
+  trustedBucket?: string;
   isApiClient: boolean;
   clientIp: string;
   apiKeyTier: 'free' | 'pro' | 'enterprise' | null;
