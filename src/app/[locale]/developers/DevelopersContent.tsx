@@ -595,7 +595,7 @@ const sdks: SDK[] = [
     language: "Python",
     install: "pip install free-crypto-news",
     installLang: "bash",
-    repo: "https://github.com/nirholas/free-crypto-news/tree/main/sdk/python",
+    repo: "https://github.com/nirholas/cryptocurrency.cv/tree/main/sdk/python",
     description: "Full-featured Python client with async support, type hints, and automatic pagination.",
     icon: "🐍",
     features: ["Async/await support", "Type hints (mypy)", "Auto-pagination", "Retry with backoff"],
@@ -628,7 +628,7 @@ asyncio.run(main())`,
     language: "TypeScript",
     install: "npm install @cryptocurrency.cv/sdk",
     installLang: "bash",
-    repo: "https://github.com/nirholas/free-crypto-news/tree/main/sdk/typescript",
+    repo: "https://github.com/nirholas/cryptocurrency.cv/tree/main/sdk/typescript",
     description: "Type-safe TypeScript/JavaScript client for Node.js and browsers.",
     icon: "📘",
     features: ["Full TypeScript types", "Tree-shakeable", "Browser & Node.js", "ESM & CJS"],
@@ -660,9 +660,9 @@ client.ws.subscribe("prices", (data) => {
   {
     name: "Go SDK",
     language: "Go",
-    install: "go get github.com/nirholas/free-crypto-news/sdk/go",
+    install: "go get github.com/nirholas/cryptocurrency.cv/sdk/go",
     installLang: "bash",
-    repo: "https://github.com/nirholas/free-crypto-news/tree/main/sdk/go",
+    repo: "https://github.com/nirholas/cryptocurrency.cv/tree/main/sdk/go",
     description: "Idiomatic Go client with context support and error handling.",
     icon: "🔵",
     features: ["Context support", "Struct responses", "Connection pooling", "Custom HTTP client"],
@@ -674,7 +674,7 @@ import (
     "fmt"
     "log"
 
-    cryptonews "github.com/nirholas/free-crypto-news/sdk/go"
+    cryptonews "github.com/nirholas/cryptocurrency.cv/sdk/go"
 )
 
 func main() {
@@ -706,7 +706,7 @@ func main() {
     language: "React",
     install: "npm install @cryptocurrency.cv/react",
     installLang: "bash",
-    repo: "https://github.com/nirholas/free-crypto-news/tree/main/sdk/react",
+    repo: "https://github.com/nirholas/cryptocurrency.cv/tree/main/sdk/react",
     description: "React hooks and components for embedding crypto news in your app.",
     icon: "⚛️",
     features: ["React hooks", "SSR ready", "Auto-refresh", "Suspense support"],
@@ -750,7 +750,7 @@ function PriceTicker() {
     language: "PHP",
     install: "composer require nirholas/free-crypto-news",
     installLang: "bash",
-    repo: "https://github.com/nirholas/free-crypto-news/tree/main/sdk/php",
+    repo: "https://github.com/nirholas/cryptocurrency.cv/tree/main/sdk/php",
     description: "PHP client compatible with Laravel, Symfony, and vanilla PHP.",
     icon: "🐘",
     features: ["Laravel facade", "PSR-18 compatible", "Guzzle built-in", "Caching support"],
@@ -795,14 +795,14 @@ const integrations: Integration[] = [
   {
     name: "ChatGPT Plugin",
     description: "Use Crypto Vision News directly within ChatGPT. Ask about latest crypto news, prices, and trends.",
-    link: "https://github.com/nirholas/free-crypto-news/tree/main/chatgpt",
+    link: "https://github.com/nirholas/cryptocurrency.cv/tree/main/chatgpt",
     icon: "🤖",
     badge: "OpenAI",
   },
   {
     name: "Claude MCP Server",
     description: "Connect Claude to live crypto data via the Model Context Protocol (MCP) server.",
-    link: "https://github.com/nirholas/free-crypto-news/tree/main/mcp",
+    link: "https://github.com/nirholas/cryptocurrency.cv/tree/main/mcp",
     icon: "🧠",
     badge: "Anthropic",
     setupCode: `// Add to your Claude Desktop config (claude_desktop_config.json):
@@ -819,28 +819,28 @@ const integrations: Integration[] = [
   {
     name: "Discord Bot",
     description: "Add real-time crypto news alerts and price commands to your Discord server.",
-    link: "https://github.com/nirholas/free-crypto-news",
+    link: "https://github.com/nirholas/cryptocurrency.cv",
     icon: "💜",
     badge: "Bot",
   },
   {
     name: "Telegram Bot",
     description: "Get instant crypto news notifications and market updates in Telegram.",
-    link: "https://github.com/nirholas/free-crypto-news",
+    link: "https://github.com/nirholas/cryptocurrency.cv",
     icon: "✈️",
     badge: "Bot",
   },
   {
     name: "Raycast Extension",
     description: "Search crypto news instantly from Raycast. Quick look at prices and trending topics.",
-    link: "https://github.com/nirholas/free-crypto-news/tree/main/raycast",
+    link: "https://github.com/nirholas/cryptocurrency.cv/tree/main/raycast",
     icon: "🔍",
     badge: "macOS",
   },
   {
     name: "Alfred Workflow",
     description: "Access crypto news directly from Alfred on macOS with keyword shortcuts.",
-    link: "https://github.com/nirholas/free-crypto-news/tree/main/alfred",
+    link: "https://github.com/nirholas/cryptocurrency.cv/tree/main/alfred",
     icon: "🎩",
     badge: "macOS",
   },
@@ -1449,7 +1449,7 @@ export default function DevelopersContent() {
                 </Button>
                 <Button variant="outline" asChild>
                   <a
-                    href="https://github.com/nirholas/free-crypto-news"
+                    href="https://github.com/nirholas/cryptocurrency.cv"
                     target="_blank"
                     rel="noopener noreferrer"
                   >

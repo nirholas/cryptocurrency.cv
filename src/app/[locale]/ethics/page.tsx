@@ -135,7 +135,7 @@ export default async function EthicsPage({ params }: Props) {
                     <p>
                       Our code is publicly auditable on{' '}
                       <a
-                        href="https://github.com/nirholas/free-crypto-news"
+                        href="https://github.com/nirholas/cryptocurrency.cv"
                         target="_blank"
                         rel="noopener noreferrer"
                       >

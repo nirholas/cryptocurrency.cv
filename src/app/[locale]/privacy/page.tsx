@@ -412,7 +412,7 @@ export default async function PrivacyPage({ params }: Props) {
                   <li>
                     <strong>GitHub:</strong> Open an issue on our{" "}
                     <a
-                      href="https://github.com/nirholas/free-crypto-news"
+                      href="https://github.com/nirholas/cryptocurrency.cv"
                       target="_blank"
                       rel="noopener noreferrer"
                     >

@@ -286,8 +286,8 @@ export async function GET() {
 
     // Contact
     contact: {
-      github: 'https://github.com/nirholas/free-crypto-news',
-      issues: 'https://github.com/nirholas/free-crypto-news/issues',
+      github: 'https://github.com/nirholas/cryptocurrency.cv',
+      issues: 'https://github.com/nirholas/cryptocurrency.cv/issues',
     },
   };
 

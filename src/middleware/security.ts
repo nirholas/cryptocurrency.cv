@@ -33,7 +33,7 @@ export const SECURITY_HEADERS: Record<string, string> = {
   Pragma: 'no-cache',
   // ── Anti-poaching / origin fingerprinting ──────────────────────────────
   'X-Source': 'cryptocurrency.cv',
-  'X-Source-Repo': 'https://github.com/nirholas/free-crypto-news',
+  'X-Source-Repo': 'https://github.com/nirholas/cryptocurrency.cv',
   'X-License': 'SEE LICENSE IN LICENSE',
   'X-Copyright': '2024-2026 nirholas',
 };

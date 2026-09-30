@@ -382,11 +382,11 @@ export function generateOpenAPISpec(origin: string = DEFAULT_ORIGIN) {
         // x402scan uses info.contact.email to verify origin ownership and to
         // reach operators about outages, pricing changes and schema breaks.
         email: process.env.X402_CONTACT_EMAIL || 'support@cryptocurrency.cv',
-        url: 'https://github.com/nirholas/free-crypto-news',
+        url: 'https://github.com/nirholas/cryptocurrency.cv',
       },
       license: {
         name: 'SEE LICENSE IN LICENSE',
-        url: 'https://github.com/nirholas/free-crypto-news/blob/main/LICENSE',
+        url: 'https://github.com/nirholas/cryptocurrency.cv/blob/main/LICENSE',
       },
       'x-guidance': [
         '# Crypto Vision News API — Agent Guide',

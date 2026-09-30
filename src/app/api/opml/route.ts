@@ -326,7 +326,7 @@ export async function GET() {
     <title>Crypto Vision News - All Sources</title>
     <dateCreated>${new Date().toUTCString()}</dateCreated>
     <ownerName>Crypto Vision News</ownerName>
-    <docs>https://github.com/nirholas/free-crypto-news</docs>
+    <docs>https://github.com/nirholas/cryptocurrency.cv</docs>
   </head>
   <body>
     <outline text="Crypto News Sources" title="Crypto News Sources">

@@ -839,7 +839,7 @@ export default async function StatusPage() {
             <div className="flex flex-wrap items-center justify-center gap-3">
               <Button variant="outline" size="sm" asChild>
                 <a
-                  href="https://github.com/nirholas/free-crypto-news/issues"
+                  href="https://github.com/nirholas/cryptocurrency.cv/issues"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -848,7 +848,7 @@ export default async function StatusPage() {
               </Button>
               <Button variant="outline" size="sm" asChild>
                 <a
-                  href="https://github.com/nirholas/free-crypto-news/discussions"
+                  href="https://github.com/nirholas/cryptocurrency.cv/discussions"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -857,7 +857,7 @@ export default async function StatusPage() {
               </Button>
               <Button variant="primary" size="sm" asChild>
                 <a
-                  href="https://github.com/nirholas/free-crypto-news"
+                  href="https://github.com/nirholas/cryptocurrency.cv"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

@@ -189,7 +189,7 @@ export default async function EditorialPolicyPage({ params }: Props) {
                     be reported via our <a href="/contact">contact page</a> or by opening an issue
                     on{' '}
                     <a
-                      href="https://github.com/nirholas/free-crypto-news/issues"
+                      href="https://github.com/nirholas/cryptocurrency.cv/issues"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -328,7 +328,7 @@ export default async function EditorialPolicyPage({ params }: Props) {
                   <li>
                     <strong>GitHub Issues:</strong>{' '}
                     <a
-                      href="https://github.com/nirholas/free-crypto-news/issues"
+                      href="https://github.com/nirholas/cryptocurrency.cv/issues"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
