@@ -51,6 +51,10 @@ COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
 COPY --from=builder --chown=nextjs:nodejs /app/public ./public
 COPY --from=builder --chown=nextjs:nodejs /app/content ./content
 COPY --from=builder --chown=nextjs:nodejs /app/messages ./messages
+# The /docs pages render these at request time (src/lib/docs.ts); output
+# tracing excludes them, so they are copied explicitly.
+COPY --from=builder --chown=nextjs:nodejs /app/docs ./docs
+COPY --from=builder --chown=nextjs:nodejs /app/mkdocs.yml ./mkdocs.yml
 
 USER nextjs
 
