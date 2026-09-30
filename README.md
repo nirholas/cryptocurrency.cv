@@ -251,7 +251,7 @@ Embed a live news feed in any page with one script tag. Source and examples in [
 
 ## 🐳 Self-Hosting
 
-Everything runs from one Next.js app. All environment variables are optional; without any, you get the full news API. Set `GROQ_API_KEY` (free at [console.groq.com](https://console.groq.com/keys)) to switch on the AI endpoints. The complete variable list, Kubernetes manifests and observability stack are in [docs/reference/self-hosting.md](docs/reference/deployment.md).
+Everything runs from one Next.js app. All environment variables are optional; without any, you get the full news API. Set `GROQ_API_KEY` (free at [console.groq.com](https://console.groq.com/keys)) to switch on the AI endpoints. The complete variable list, Kubernetes manifests and observability stack are in [docs/reference/self-hosting.md](docs/reference/self-hosting.md).
 
 **Docker**
 
