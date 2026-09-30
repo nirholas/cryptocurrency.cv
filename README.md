@@ -330,6 +330,41 @@ Bug fixes, new sources, translations and docs are all welcome. Read [CONTRIBUTIN
 
 ---
 
+## 🙏 Contributors
+
+<!-- contributors:start (generated from src/data/contributors.json by `npm run contributors:generate`) -->
+<table>
+  <tr>
+    <td align="center" valign="top" width="14%"><a href="https://github.com/speraxos"><img src="https://github.com/speraxos.png?size=100" width="64" height="64" alt="speraxos"/><br/><sub><b>Sperax</b></sub></a><br/><sub>Code, Triage</sub></td>
+    <td align="center" valign="top" width="14%"><a href="https://github.com/cemitos"><img src="https://github.com/cemitos.png?size=100" width="64" height="64" alt="cemitos"/><br/><sub><b>cemitos</b></sub></a><br/><sub>Code</sub></td>
+    <td align="center" valign="top" width="14%"><a href="https://github.com/notmynamepls"><img src="https://github.com/notmynamepls.png?size=100" width="64" height="64" alt="notmynamepls"/><br/><sub><b>notmynamepls</b></sub></a><br/><sub>Code</sub></td>
+    <td align="center" valign="top" width="14%"><a href="https://github.com/yassais"><img src="https://github.com/yassais.png?size=100" width="64" height="64" alt="yassais"/><br/><sub><b>yassais</b></sub></a><br/><sub>Code, Docs</sub></td>
+    <td align="center" valign="top" width="14%"><a href="https://github.com/superchain"><img src="https://github.com/superchain.png?size=100" width="64" height="64" alt="superchain"/><br/><sub><b>superchain</b></sub></a><br/><sub>Docs</sub></td>
+    <td align="center" valign="top" width="14%"><a href="https://github.com/nirholas/cryptocurrency.cv/commit/96bc0fdd"><img src="https://github.com/ghost.png?size=100" width="64" height="64" alt="clankered"/><br/><sub><b>clankered</b></sub></a><br/><sub>Docs</sub></td>
+    <td align="center" valign="top" width="14%"><a href="https://github.com/chenshj73"><img src="https://github.com/chenshj73.png?size=100" width="64" height="64" alt="chenshj73"/><br/><sub><b>chenshj73</b></sub></a><br/><sub>Security report</sub></td>
+  </tr>
+  <tr>
+    <td align="center" valign="top" width="14%"><a href="https://github.com/volumevigilante"><img src="https://github.com/volumevigilante.png?size=100" width="64" height="64" alt="volumevigilante"/><br/><sub><b>volumevigilante</b></sub></a><br/><sub>Bug report</sub></td>
+    <td align="center" valign="top" width="14%"><a href="https://github.com/cmdenney"><img src="https://github.com/cmdenney.png?size=100" width="64" height="64" alt="cmdenney"/><br/><sub><b>cmdenney</b></sub></a><br/><sub>Bug report</sub></td>
+    <td align="center" valign="top" width="14%"><a href="https://github.com/bomzj"><img src="https://github.com/bomzj.png?size=100" width="64" height="64" alt="bomzj"/><br/><sub><b>bomzj</b></sub></a><br/><sub>Bug report</sub></td>
+    <td align="center" valign="top" width="14%"><a href="https://github.com/RaoHammas"><img src="https://github.com/RaoHammas.png?size=100" width="64" height="64" alt="RaoHammas"/><br/><sub><b>RaoHammas</b></sub></a><br/><sub>Bug report</sub></td>
+    <td align="center" valign="top" width="14%"><a href="https://github.com/zhiqihuang"><img src="https://github.com/zhiqihuang.png?size=100" width="64" height="64" alt="zhiqihuang"/><br/><sub><b>zhiqihuang</b></sub></a><br/><sub>Bug report</sub></td>
+    <td align="center" valign="top" width="14%"><a href="https://github.com/3lang3"><img src="https://github.com/3lang3.png?size=100" width="64" height="64" alt="3lang3"/><br/><sub><b>3lang3</b></sub></a><br/><sub>Bug report</sub></td>
+    <td align="center" valign="top" width="14%"><a href="https://github.com/webparadoxer"><img src="https://github.com/webparadoxer.png?size=100" width="64" height="64" alt="webparadoxer"/><br/><sub><b>webparadoxer</b></sub></a><br/><sub>Bug report</sub></td>
+  </tr>
+  <tr>
+    <td align="center" valign="top" width="14%"><a href="https://github.com/AlestackOverglow"><img src="https://github.com/AlestackOverglow.png?size=100" width="64" height="64" alt="AlestackOverglow"/><br/><sub><b>AlestackOverglow</b></sub></a><br/><sub>Triage</sub></td>
+    <td align="center" valign="top" width="14%"><a href="https://github.com/lui62233"><img src="https://github.com/lui62233.png?size=100" width="64" height="64" alt="lui62233"/><br/><sub><b>lui62233</b></sub></a><br/><sub>Triage</sub></td>
+    <td align="center" valign="top" width="14%"><a href="https://github.com/niqv"><img src="https://github.com/niqv.png?size=100" width="64" height="64" alt="niqv"/><br/><sub><b>niqv</b></sub></a><br/><sub>Maintenance</sub></td>
+    <td align="center" valign="top" width="14%"><a href="https://github.com/Yash2341"><img src="https://github.com/Yash2341.png?size=100" width="64" height="64" alt="Yash2341"/><br/><sub><b>Yash2341</b></sub></a><br/><sub>Feedback</sub></td>
+  </tr>
+</table>
+
+Thank you to everyone who has written code, reported bugs and security issues, or helped other users. What each person did is in [CONTRIBUTORS.md](CONTRIBUTORS.md); the same list appears on [cryptocurrency.cv/team](https://cryptocurrency.cv/team).
+<!-- contributors:end -->
+
+---
+
 ## 📄 License
 
 Source-available, all rights reserved. See [LICENSE](LICENSE) for the code terms.
