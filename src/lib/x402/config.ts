@@ -181,6 +181,17 @@ export const RECEIVE_ADDRESS: `0x${string}` = (() => {
 /**
  * Solana payment receiving address
  */
+/**
+ * True when the deployment has a real wallet to receive x402 payments. Without
+ * one, every 402 challenge would direct USDC to the zero address (an
+ * unrecoverable burn) for something nobody can ever unlock, so data endpoints
+ * are served under the anonymous rate limits instead and anything that SELLS
+ * (tier upgrades) refuses with 503.
+ */
+export function isX402Configured(): boolean {
+  return RECEIVE_ADDRESS.toLowerCase() !== '0x0000000000000000000000000000000000000000';
+}
+
 export const SOLANA_PAYMENT_ADDRESS: string = process.env.X402_SOLANA_PAYMENT_ADDRESS || '';
 
 // Validate payment address in production at runtime only (not during build)
@@ -303,7 +314,7 @@ export function getOwnershipProofs(): string[] | undefined {
  * Check if x402 payments are properly configured
  */
 export function isX402Enabled(): boolean {
-  return PAYMENT_ADDRESS !== '0x0000000000000000000000000000000000000000';
+  return isX402Configured();
 }
 
 /**

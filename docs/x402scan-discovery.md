@@ -192,16 +192,20 @@ is gated on three things, all of which must be true:
 1. **The implementation is live at its final origin.** `/openapi.json` served
    from that origin, audits clean against the deployed URL, not localhost and
    not a preview.
-2. **`X402_PAYMENT_ADDRESS` is set** on the production service. Without it the
-   `payTo` in every challenge is the zero address, and any agent that pays burns
-   its USDC unrecoverably. Verify before registering:
+2. **`X402_PAYMENT_ADDRESS` is set** on the production service. Without it no
+   endpoint issues a payment challenge at all (a challenge would name the zero
+   address, and any agent that paid it would burn its USDC): data endpoints are
+   served under the anonymous rate limits, premium endpoints and key upgrades
+   answer `503 PAYMENTS_NOT_CONFIGURED`, and there is nothing to register.
+   Verify before registering:
 
    ```bash
    curl -s https://cryptocurrency.cv/api/v1/news | jq -r '.accepts[0].payTo'
    ```
 
-   A `0x0000000000000000000000000000000000000000` here means the variable is
-   missing. Do not register.
+   A real wallet address here means payments are live. A `null` (the request
+   was served instead of challenged) means the variable is missing. Do not
+   register.
 3. **The owner has approved registering that specific origin.**
 
 Only then:

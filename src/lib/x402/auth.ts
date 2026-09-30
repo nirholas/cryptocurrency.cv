@@ -34,7 +34,14 @@ import {
   buildPaymentRequiredBody,
   getRoutePrice as getPaymentRequiredPrice,
 } from './payment-required';
-import { PAYMENT_ADDRESS, CURRENT_NETWORK, getAcceptedAssets, IS_PRODUCTION, IS_BUILD_TIME } from './config';
+import {
+  PAYMENT_ADDRESS,
+  CURRENT_NETWORK,
+  getAcceptedAssets,
+  IS_PRODUCTION,
+  IS_BUILD_TIME,
+  isX402Configured,
+} from './config';
 import { logger } from '@/lib/logger';
 
 // =============================================================================
@@ -283,6 +290,14 @@ export async function hybridAuthMiddleware(
     return null;
   }
 
+  // No receiving wallet: a 402 would ask the caller to pay the zero address,
+  // which nobody can collect and which burns the funds of any client that
+  // honours it. Serve the request under the anonymous rate limits instead,
+  // exactly as the global x402 gate does (issue #36).
+  if (!isX402Configured()) {
+    return null;
+  }
+
   // For priced endpoints, return 402 Payment Required
   return create402Response(endpoint, price);
 }
@@ -492,6 +507,21 @@ export function withX402<
   if (!config) {
     // Not a premium endpoint, return handler as-is
     return handler;
+  }
+
+  // Premium endpoints are sold, not free. With no receiving wallet the SDK
+  // would challenge for a payment to the zero address, so refuse plainly
+  // instead: nothing is charged and the caller learns why.
+  if (!isX402Configured()) {
+    return (async () =>
+      NextResponse.json(
+        {
+          error: 'Premium endpoint unavailable',
+          code: 'PAYMENTS_NOT_CONFIGURED',
+          message: `${endpoint} is a paid endpoint and payments are not enabled on this deployment. No payment was requested or taken.`,
+        },
+        { status: 503, headers: { 'Retry-After': '3600' } },
+      )) as unknown as T;
   }
 
   // Create route config for @x402/next (v2 SDK format)

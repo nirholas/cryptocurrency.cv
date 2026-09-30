@@ -42,8 +42,8 @@ import {
   isKvConfigured,
 } from '@/lib/api-keys';
 import { API_TIERS } from '@/lib/x402/pricing';
-import { RECEIVE_ADDRESS } from '@/lib/x402/config';
-import { verifyPayment } from '@/lib/x402/verify-payment';
+import { RECEIVE_ADDRESS, CURRENT_NETWORK, isX402Configured } from '@/lib/x402/config';
+import { collectPayment } from '@/lib/x402/verify-payment';
 
 export const runtime = 'nodejs';
 
@@ -163,8 +163,24 @@ export async function POST(request: NextRequest) {
   const tierConfig = API_TIERS[targetTier];
   const price = tierConfig.price * months;
 
-  // Check for x402 payment header
-  const paymentHeader = request.headers.get('x-402-payment') || request.headers.get('402-receipt');
+  // Selling an upgrade needs a wallet to receive the money. Without one, a 402
+  // would ask buyers to pay the zero address, which burns the funds.
+  if (!isX402Configured()) {
+    return NextResponse.json(
+      {
+        error: 'Upgrades unavailable',
+        code: 'PAYMENTS_NOT_CONFIGURED',
+        message: 'Paid upgrades are not enabled on this deployment. No payment was requested or taken.',
+      },
+      { status: 503 },
+    );
+  }
+
+  // x402 clients send X-PAYMENT; the two legacy names are still accepted.
+  const paymentHeader =
+    request.headers.get('x-payment') ||
+    request.headers.get('x-402-payment') ||
+    request.headers.get('402-receipt');
 
   if (!paymentHeader) {
     // No payment — return 402 with payment requirements
@@ -178,7 +194,7 @@ export async function POST(request: NextRequest) {
           price: `$${price}`,
           priceUsdc: (price * 1_000_000).toString(),
           currency: 'USDC',
-          network: 'eip155:8453',
+          network: CURRENT_NETWORK,
           payTo: RECEIVE_ADDRESS,
           description: `${tierConfig.name} tier upgrade for ${months} month(s)`,
           months,
@@ -197,19 +213,19 @@ export async function POST(request: NextRequest) {
   // enough to be granted an enterprise key for free (reported as issue #43).
   //
   // The signed payload is verified with the facilitator against the exact
-  // amount and recipient this upgrade requires. Verification fails closed: an
-  // unreachable facilitator is not evidence of payment, so nothing is granted.
-  const verification = await verifyPayment(
-    request.headers.get('x-payment') ?? paymentHeader,
-    {
-      priceUsd: price,
-      description: `${tierConfig.name} tier upgrade for ${months} month(s)`,
-      payTo: RECEIVE_ADDRESS,
-    },
-  );
+  // amount and recipient this upgrade requires, then settled, so the tier is
+  // only granted once money has actually moved (verification alone charges
+  // nothing). Every step fails closed: an unreachable facilitator is not
+  // evidence of payment, so nothing is granted.
+  const verification = await collectPayment(paymentHeader, {
+    priceUsd: price,
+    description: `${tierConfig.name} tier upgrade for ${months} month(s)`,
+    payTo: RECEIVE_ADDRESS,
+    resource: '/api/keys/upgrade',
+  });
 
   if (!verification.valid) {
-    const unavailable = verification.code === 'UNAVAILABLE';
+    const unavailable = verification.code === 'UNAVAILABLE' || verification.code === 'NOT_CONFIGURED';
     return NextResponse.json(
       {
         error: unavailable ? 'Payment verification unavailable' : 'Payment verification failed',
@@ -220,7 +236,7 @@ export async function POST(request: NextRequest) {
           price: `$${price}`,
           priceUsdc: (price * 1_000_000).toString(),
           currency: 'USDC',
-          network: 'eip155:8453',
+          network: CURRENT_NETWORK,
           payTo: RECEIVE_ADDRESS,
           description: `${tierConfig.name} tier upgrade for ${months} month(s)`,
           months,

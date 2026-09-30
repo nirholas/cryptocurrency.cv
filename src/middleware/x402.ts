@@ -36,7 +36,12 @@ import {
   toX402Price,
   usdToUsdc,
 } from '@/lib/x402/pricing';
-import { FACILITATOR_URL, RECEIVE_ADDRESS, CURRENT_NETWORK } from '@/lib/x402/config';
+import {
+  FACILITATOR_URL,
+  RECEIVE_ADDRESS,
+  CURRENT_NETWORK,
+  isX402Configured,
+} from '@/lib/x402/config';
 import {
   ARBITRUM_USDC,
   resolveOrigin,
@@ -284,6 +289,14 @@ async function augment402Response(res: NextResponse, req: NextRequest): Promise<
 // COMPOSABLE HANDLER
 // =============================================================================
 
+let warnedNoReceiveAddress = false;
+
+/**
+ * Re-exported for callers of the middleware module; the predicate lives with
+ * the address it checks so route handlers apply the same rule.
+ */
+export { isX402Configured };
+
 /**
  * Middleware handler: applies x402 USDC micropayment gate to non-exempt,
  * non-free-tier API routes without a paid key or API key.
@@ -294,19 +307,6 @@ async function augment402Response(res: NextResponse, req: NextRequest): Promise<
  * Ensures all 402 responses include a proper WWW-Authenticate header with
  * a Payment challenge for x402scan compatibility.
  */
-const ZERO_ADDRESS = '0x0000000000000000000000000000000000000000';
-let warnedNoReceiveAddress = false;
-
-/**
- * True when the deployment has a real wallet to receive x402 payments.
- * Without one, a 402 challenge would direct USDC to the zero address (an
- * unrecoverable burn) for an endpoint nobody can ever unlock, so the gate
- * fails open and the ordinary anonymous rate limits apply instead.
- */
-export function isX402Configured(): boolean {
-  return RECEIVE_ADDRESS.toLowerCase() !== ZERO_ADDRESS;
-}
-
 export const x402Gate: MiddlewareHandler = async (ctx) => {
   if (!ctx.isApiRoute) return ctx;
 

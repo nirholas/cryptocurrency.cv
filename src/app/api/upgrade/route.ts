@@ -30,10 +30,9 @@ import {
   PAYMENT_ADDRESS,
   CURRENT_NETWORK as NETWORK,
   isX402Enabled,
-  facilitatorClient,
-  getAcceptedAssets,
   paymentHooks,
 } from '@/lib/x402';
+import { collectPayment } from '@/lib/x402/verify-payment';
 
 export const runtime = 'nodejs';
 
@@ -186,130 +185,50 @@ export async function POST(request: NextRequest) {
     return create402Response('/api/upgrade', upgradeConfig.price);
   }
 
-  // Verify payment using x402 facilitator
-  const priceInUSDC = Math.round(parseFloat(upgradeConfig.price) * 1e6); // USDC has 6 decimals
-  const acceptedAssets = getAcceptedAssets();
-  
+  // Verify AND settle the payment with the facilitator before granting the
+  // tier: verification alone moves no money, and the settled transaction is
+  // the receipt. Fails closed; there is no structural or "testnet" fallback,
+  // because a fallback that accepts a well-formed header is a free upgrade.
   const paymentEvent = {
     requestId: crypto.randomUUID(),
     resource: '/api/upgrade',
     amount: upgradeConfig.price,
     network: NETWORK,
-    payer: '', // Will be extracted from payment
-    payTo: PAYMENT_ADDRESS || '',
+    payer: '',
+    payTo: PAYMENT_ADDRESS,
     timestamp: new Date(),
     signature: paymentHeader,
   };
+  await paymentHooks.emit('beforeSettle', paymentEvent);
+  const payment = await collectPayment(paymentHeader, {
+    priceUsd: parseFloat(upgradeConfig.price),
+    description: upgradeConfig.description,
+    payTo: PAYMENT_ADDRESS,
+    resource: '/api/upgrade',
+  });
+  await paymentHooks.emit('afterSettle', {
+    ...paymentEvent,
+    payer: payment.valid ? (payment.payer ?? '') : '',
+    success: payment.valid,
+    transactionHash: payment.valid ? payment.transaction : undefined,
+    error: payment.valid ? undefined : payment.reason,
+  });
 
-  let paymentValid = false;
-  let verificationError = '';
-  let payerAddress = '';
-  let transactionHash = '';
-
-  try {
-    // Use paymentHooks.withVerify for proper lifecycle tracking
-    await paymentHooks.withVerify(paymentEvent, async () => {
-      // Parse the payment header (base64 encoded JSON or direct signature)
-      let paymentData: {
-        signature?: string;
-        payer?: string;
-        amount?: string;
-        network?: string;
-        transactionHash?: string;
-        nonce?: string;
-        timestamp?: number;
-      };
-
-      try {
-        // Try to parse as JSON (may be base64 encoded)
-        const decoded = Buffer.from(paymentHeader, 'base64').toString('utf-8');
-        paymentData = JSON.parse(decoded);
-      } catch {
-        // If not base64 JSON, treat as raw signature
-        paymentData = { signature: paymentHeader };
-      }
-
-      // Verify the payment via facilitator
-      const paymentRequirements = {
-        resource: '/api/upgrade',
-        payTo: PAYMENT_ADDRESS || '',
-        maxAmountRequired: priceInUSDC.toString(),
-        network: NETWORK,
-        scheme: 'exact',
-        accepts: acceptedAssets.map((asset) => ({
-          scheme: 'exact',
-          network: NETWORK,
-          asset: asset.address,
-          amount: priceInUSDC.toString(),
-          payTo: PAYMENT_ADDRESS || '',
-        })),
-      };
-
-      // Decode payment header into PaymentPayload format
-      let paymentPayload: { x402Version: string; payload: unknown };
-      try {
-        const decoded = Buffer.from(paymentHeader, 'base64').toString('utf-8');
-        const parsed = JSON.parse(decoded);
-        paymentPayload = {
-          x402Version: parsed.x402Version || '1',
-          payload: parsed.payload || parsed,
-        };
-      } catch {
-        // If decoding fails, wrap raw signature as payload
-        paymentPayload = {
-          x402Version: '1',
-          payload: { signature: paymentHeader },
-        };
-      }
-
-      // Call facilitator to verify payment signature
-      const verifyResult = await facilitatorClient.verify(paymentPayload as any, paymentRequirements as any) as any;
-
-      if (verifyResult && 'valid' in verifyResult && verifyResult.valid) {
-        paymentValid = true;
-         
-        const vr = verifyResult as any;
-        payerAddress = paymentData.payer || vr.payer || 'unknown';
-        transactionHash = paymentData.transactionHash || vr.transactionHash || '';
-      } else if (verifyResult && 'error' in verifyResult) {
-        verificationError = verifyResult.error || 'Payment verification failed';
-      } else {
-        // Fallback: Check payment structure validity for testnet/development
-        // This allows testing with mock payments when facilitator isn't available
-        if (paymentData.signature && paymentData.signature.length >= 64) {
-          // Verify minimum payment amount
-          const paymentAmount = parseFloat(paymentData.amount || '0');
-          const requiredAmount = parseFloat(upgradeConfig.price);
-          
-          if (paymentAmount >= requiredAmount) {
-            paymentValid = true;
-            payerAddress = paymentData.payer || 'testnet-payer';
-            transactionHash = paymentData.transactionHash || `mock-${Date.now()}`;
-            console.log('[x402] Payment verified via structure check (testnet mode)');
-          } else {
-            verificationError = `Insufficient payment: ${paymentAmount} < ${requiredAmount}`;
-          }
-        } else {
-          verificationError = 'Invalid payment signature format';
-        }
-      }
-    });
-  } catch (error) {
-    verificationError = error instanceof Error ? error.message : 'Payment verification error';
-    console.error('[x402] Payment verification failed:', error);
-  }
-
-  if (!paymentValid) {
+  if (!payment.valid) {
+    const unavailable = payment.code === 'UNAVAILABLE' || payment.code === 'NOT_CONFIGURED';
     return NextResponse.json(
       {
-        error: 'Payment verification failed',
-        details: verificationError || 'Invalid payment signature',
-        code: 'PAYMENT_INVALID',
-        help: 'Ensure your payment includes a valid signature from a supported wallet',
+        error: unavailable ? 'Payment verification unavailable' : 'Payment verification failed',
+        details: payment.reason,
+        code: unavailable ? 'VERIFICATION_UNAVAILABLE' : 'PAYMENT_INVALID',
+        help: 'Send a signed x402 payment in the X-PAYMENT header for the exact price, network and recipient in the 402 challenge.',
       },
-      { status: 402 }
+      { status: unavailable ? 503 : 402 }
     );
   }
+
+  const payerAddress = payment.payer ?? 'unknown';
+  const transactionHash = payment.transaction ?? '';
 
   // Calculate new expiry date
   let expiresAt: Date;
