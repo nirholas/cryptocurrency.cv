@@ -115,7 +115,7 @@ ${JSON.stringify(articlesToSummarize, null, 2)}`;
     if (error instanceof AIAuthError || (error as Error).name === 'AIAuthError') {
       return errorResponse(
         'AI service temporarily unavailable',
-        'All configured AI providers failed authentication. Please check API keys.',
+        'AI service temporarily unavailable: every AI provider is out of quota or unreachable. Please try again later.',
         503
       );
     }

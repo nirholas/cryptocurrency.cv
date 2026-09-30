@@ -52,7 +52,7 @@ export function aiAuthErrorResponse(details?: string): NextResponse {
   return NextResponse.json(
     {
       error: 'AI service temporarily unavailable',
-      message: 'All configured AI providers failed authentication. Please check API keys.',
+      message: 'AI service temporarily unavailable: every AI provider is out of quota or unreachable. Please try again later.',
       ...(details && { details }),
     },
     { status: 503 }

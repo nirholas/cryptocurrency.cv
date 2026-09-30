@@ -14,7 +14,7 @@
  */
 
 import { aiCache, withCache } from './cache';
-import { aiComplete } from './ai-provider';
+import { aiComplete, isAnyAIProviderConfigured } from './ai-provider';
 import { getLatestNews, type NewsArticle } from './crypto-news';
 import { getFearGreedIndex, getGlobalMarketData, getSimplePrices } from './market-data';
 
@@ -227,10 +227,5 @@ ${format === 'summary' ? 'Keep responses brief and focus on executive summary.' 
  * Check if AI is configured
  */
 export function isAIConfigured(): boolean {
-  return !!(
-    process.env.OPENAI_API_KEY ||
-    process.env.ANTHROPIC_API_KEY ||
-    process.env.GROQ_API_KEY ||
-    process.env.OPENROUTER_API_KEY
-  );
+  return isAnyAIProviderConfigured();
 }

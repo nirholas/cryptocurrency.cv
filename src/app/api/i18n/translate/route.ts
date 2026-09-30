@@ -186,7 +186,7 @@ CRITICAL RULES:
       return NextResponse.json(
         {
           success: false,
-          error: 'AI service temporarily unavailable. All providers failed authentication.',
+          error: 'AI service temporarily unavailable: every AI provider is out of quota or unreachable. Please try again later.',
           locale: '',
           model: '',
         },

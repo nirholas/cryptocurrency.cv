@@ -9,7 +9,14 @@
  */
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { aiComplete, aiCompleteWithRetry, isProviderUnavailableStatus } from './ai-provider';
+import {
+  AIAuthError,
+  aiComplete,
+  aiCompleteWithRetry,
+  getAllAIConfigs,
+  isProviderUnavailableStatus,
+  resetAIProviderCooldowns,
+} from './ai-provider';
 
 // ---------------------------------------------------------------------------
 // Helpers
@@ -180,5 +187,79 @@ describe('aiComplete provider chain', () => {
     expect(isProviderUnavailableStatus(503)).toBe(true);
     expect(isProviderUnavailableStatus(400)).toBe(false);
     expect(isProviderUnavailableStatus(429)).toBe(false);
+  });
+});
+
+// ---------------------------------------------------------------------------
+// Tests: OpenRouter fallback keys, auth cooldown, all-unavailable error
+// ---------------------------------------------------------------------------
+
+describe('provider credentials and cooldowns', () => {
+  const AI_ENV = [
+    'OPENAI_API_KEY',
+    'ANTHROPIC_API_KEY',
+    'GROQ_API_KEY',
+    'GEMINI_API_KEY',
+    'GOOGLE_AI_API_KEY',
+    'OPENROUTER_API_KEY',
+    'OPENROUTER_FALLBACK_KEYS',
+  ];
+  let saved: Record<string, string | undefined>;
+
+  beforeEach(() => {
+    vi.clearAllMocks();
+    resetAIProviderCooldowns();
+    saved = Object.fromEntries(AI_ENV.map((k) => [k, process.env[k]]));
+    for (const k of AI_ENV) delete process.env[k];
+  });
+
+  afterEach(() => {
+    for (const k of AI_ENV) {
+      if (saved[k] === undefined) delete process.env[k];
+      else process.env[k] = saved[k];
+    }
+    resetAIProviderCooldowns();
+  });
+
+  it('uses OPENROUTER_FALLBACK_KEYS when no primary key is set, one provider entry per key', () => {
+    process.env.OPENROUTER_FALLBACK_KEYS = 'sk-or-one, sk-or-two,,sk-or-one';
+    const keys = getAllAIConfigs().map((c) => `${c.provider}:${c.apiKey}`);
+    expect(keys).toEqual(['openrouter:sk-or-one', 'openrouter:sk-or-two']);
+  });
+
+  it('fails over to the next OpenRouter key when one is out of credit', async () => {
+    process.env.OPENROUTER_FALLBACK_KEYS = 'sk-or-empty,sk-or-funded';
+    mockFetch
+      .mockResolvedValueOnce(new Response('{"error":{"message":"Insufficient credits"}}', { status: 402 }))
+      .mockResolvedValueOnce(openaiChatResponse('from the second key'));
+
+    await expect(aiComplete('sys', 'user')).resolves.toBe('from the second key');
+    const authHeaders = mockFetch.mock.calls.map(([, init]) => (init as RequestInit).headers as Record<string, string>);
+    expect(authHeaders.map((h) => h.Authorization)).toEqual(['Bearer sk-or-empty', 'Bearer sk-or-funded']);
+  });
+
+  it('skips a provider that refused on auth or billing for the next requests', async () => {
+    process.env.OPENAI_API_KEY = 'sk-revoked';
+    process.env.OPENROUTER_API_KEY = 'sk-or-ok';
+    mockFetch
+      .mockResolvedValueOnce(new Response('{"error":"invalid key"}', { status: 401 }))
+      .mockResolvedValueOnce(openaiChatResponse('first'))
+      .mockResolvedValueOnce(openaiChatResponse('second'));
+
+    await expect(aiComplete('sys', 'a')).resolves.toBe('first');
+    await expect(aiComplete('sys', 'b')).resolves.toBe('second');
+
+    const urls = mockFetch.mock.calls.map(([url]) => String(url));
+    expect(urls.filter((u) => u.includes('api.openai.com'))).toHaveLength(1);
+  });
+
+  it('says quota or billing, not bad keys, when every provider is unavailable', async () => {
+    process.env.GROQ_API_KEY = 'gsk-exhausted';
+    mockFetch.mockResolvedValue(rateLimitResponse());
+
+    const error = await aiComplete('sys', 'user', {}, true).catch((e: Error) => e);
+    expect(error).toBeInstanceOf(AIAuthError);
+    expect((error as Error).message).toMatch(/out of quota/);
+    expect((error as Error).message).not.toMatch(/check api keys/i);
   });
 });

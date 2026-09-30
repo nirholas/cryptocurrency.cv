@@ -267,7 +267,7 @@ export async function GET(request: NextRequest) {
         return NextResponse.json(
           {
             error: 'AI service temporarily unavailable',
-            details: 'All configured AI providers failed authentication. Please check API keys.',
+            details: 'AI service temporarily unavailable: every AI provider is out of quota or unreachable. Please try again later.',
           },
           { status: 503 }
         );
