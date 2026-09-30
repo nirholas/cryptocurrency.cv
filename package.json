@@ -40,6 +40,8 @@
     "quality-gate:full": "./scripts/quality-gate.sh --continue",
     "hooks:install": "./scripts/install-pre-push-hook.sh",
     "hooks:remove": "./scripts/install-pre-push-hook.sh --remove",
+    "contributors:generate": "node scripts/generate-contributors.mjs",
+    "contributors:check": "node scripts/generate-contributors.mjs --check",
     "pwa:icons": "node scripts/generate-pwa-icons.js",
     "mcp:install": "cd mcp && npm install",
     "mcp:start": "cd mcp && npm start",

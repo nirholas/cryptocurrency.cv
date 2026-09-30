@@ -4,15 +4,89 @@ Creator: nirholas
 GitHub: https://github.com/nirholas
 Location: Global
 
+/* THANKS */
+
+Name: Sperax
+GitHub: https://github.com/speraxos
+Contribution: Code, Triage
+
+Name: cemitos
+GitHub: https://github.com/cemitos
+Contribution: Code
+
+Name: notmynamepls
+GitHub: https://github.com/notmynamepls
+Contribution: Code
+
+Name: yassais
+GitHub: https://github.com/yassais
+Contribution: Code, Docs
+
+Name: superchain
+GitHub: https://github.com/superchain
+Contribution: Docs
+
+Name: clankered
+Contribution link: https://github.com/nirholas/cryptocurrency.cv/commit/96bc0fdd
+Contribution: Docs
+
+Name: chenshj73
+GitHub: https://github.com/chenshj73
+Contribution: Security report
+
+Name: volumevigilante
+GitHub: https://github.com/volumevigilante
+Contribution: Bug report
+
+Name: cmdenney
+GitHub: https://github.com/cmdenney
+Contribution: Bug report
+
+Name: bomzj
+GitHub: https://github.com/bomzj
+Contribution: Bug report
+
+Name: RaoHammas
+GitHub: https://github.com/RaoHammas
+Contribution: Bug report
+
+Name: zhiqihuang
+GitHub: https://github.com/zhiqihuang
+Contribution: Bug report
+
+Name: 3lang3
+GitHub: https://github.com/3lang3
+Contribution: Bug report
+
+Name: webparadoxer
+GitHub: https://github.com/webparadoxer
+Contribution: Bug report
+
+Name: AlestackOverglow
+GitHub: https://github.com/AlestackOverglow
+Contribution: Triage
+
+Name: lui62233
+GitHub: https://github.com/lui62233
+Contribution: Triage
+
+Name: niqv
+GitHub: https://github.com/niqv
+Contribution: Maintenance
+
+Name: Yash2341
+GitHub: https://github.com/Yash2341
+Contribution: Feedback
+
 /* SITE */
 
 Name: Free Crypto News API
 URL: https://cryptocurrency.cv
 Description: Free, real-time cryptocurrency news API aggregating 200+ sources
-Last update: 2026-03-27
-Language: English (42 locales supported)
+Last update: 2026-09-30
+Language: English (68 locales supported)
 Standards: HTML5, CSS3, TypeScript, REST, GraphQL, RSS, Atom, MCP, OpenAPI 3.1
-License: MIT
+License: Source-available, all rights reserved (see LICENSE)
 
 /* TECHNOLOGY */
 
@@ -24,8 +98,7 @@ Database: Neon (PostgreSQL), Drizzle ORM
 Cache: Vercel KV / Upstash Redis
 AI: Claude (Anthropic), GPT-4 (OpenAI)
 Search: Vector embeddings, full-text search
-Hosting: Vercel
-CDN: Vercel Edge Network
+Hosting: Google Cloud Run
 Monitoring: Vercel Analytics
 
 /* AI INTEGRATIONS */
@@ -41,8 +114,8 @@ AI Permissions: https://cryptocurrency.cv/ai.txt
 
 News Sources: 200+
 API Endpoints: 150+
-Archived Articles: 24,000+
-Date Range: 2010-present
+Archived Articles: 662,000+
+Date Range: 2017-present
 Update Frequency: Real-time
-Languages: 42 locales
+Languages: 68 locales
 SDKs: TypeScript, Python, Go, React, PHP

@@ -1,0 +1,216 @@
+{
+  "$comment": "Community credits. Single source for the README 'Contributors' section, CONTRIBUTORS.md, public/humans.txt (all rendered by `npm run contributors:generate`) and the /team page. Add yourself or someone else in the same shape; the test in src/data/__tests__/contributors.test.ts fails if the rendered files drift from this list. The repository owner and automated accounts (dependabot) are not listed here. Set githubProfile: false for someone whose GitHub account no longer exists, so their credit links to their contribution instead of a dead profile.",
+  "repo": "https://github.com/nirholas/cryptocurrency.cv",
+  "contributors": [
+    {
+      "login": "speraxos",
+      "name": "Sperax",
+      "kinds": ["code", "triage"],
+      "contributions": [
+        {
+          "summary": "Ended the February site-wide 500s reported in #15 by moving data-driven pages to dynamic rendering",
+          "url": "https://github.com/nirholas/cryptocurrency.cv/commit/f25bc6e6"
+        },
+        {
+          "summary": "Lazy x402 proxy initialisation so production builds stopped failing",
+          "url": "https://github.com/nirholas/cryptocurrency.cv/commit/fa57e818"
+        },
+        {
+          "summary": "Predictive cache warming for frequently requested data",
+          "url": "https://github.com/nirholas/cryptocurrency.cv/commit/1c3db33f"
+        },
+        {
+          "summary": "Server-side proxy for funding rates and liquidations, removing browser CORS failures",
+          "url": "https://github.com/nirholas/cryptocurrency.cv/commit/1823e8a3"
+        },
+        {
+          "summary": "Markets page redesign, market overview cards, and the mobile header and price rows",
+          "url": "https://github.com/nirholas/cryptocurrency.cv/commit/2c555d62"
+        },
+        {
+          "summary": "Coin detail page timeout fixes that stopped fallback-chain 500s",
+          "url": "https://github.com/nirholas/cryptocurrency.cv/commit/9e21c9da"
+        },
+        {
+          "summary": "Followed up with reporters on the #15 outage",
+          "url": "https://github.com/nirholas/cryptocurrency.cv/issues/15"
+        }
+      ]
+    },
+    {
+      "login": "cemitos",
+      "kinds": ["code"],
+      "contributions": [
+        {
+          "summary": "The v2 historical archive of 346,000 articles and the retrieval (RAG) system built on it",
+          "url": "https://github.com/nirholas/cryptocurrency.cv/commit/843c7d33"
+        }
+      ]
+    },
+    {
+      "login": "notmynamepls",
+      "kinds": ["code"],
+      "contributions": [
+        {
+          "summary": "Price chart on coin pages and a fix for the header navigation clipping",
+          "url": "https://github.com/nirholas/cryptocurrency.cv/commit/fad2d75e"
+        }
+      ]
+    },
+    {
+      "login": "yassais",
+      "kinds": ["code", "docs"],
+      "contributions": [
+        {
+          "summary": "OpenRouter integration documentation",
+          "url": "https://github.com/nirholas/cryptocurrency.cv/commit/1b13a040"
+        },
+        {
+          "summary": "Complete MCP registry schema in server.json",
+          "url": "https://github.com/nirholas/cryptocurrency.cv/commit/3fc08f2f"
+        }
+      ]
+    },
+    {
+      "login": "superchain",
+      "kinds": ["docs"],
+      "contributions": [
+        {
+          "summary": "OpenAPI description edits for the prices and yields endpoints",
+          "url": "https://github.com/nirholas/cryptocurrency.cv/commit/12c5d7e8"
+        }
+      ]
+    },
+    {
+      "login": "clankered",
+      "githubProfile": false,
+      "kinds": ["docs"],
+      "contributions": [
+        {
+          "summary": "Removed a stale branch note from the README",
+          "url": "https://github.com/nirholas/cryptocurrency.cv/commit/96bc0fdd"
+        }
+      ]
+    },
+    {
+      "login": "niqv",
+      "kinds": ["maintenance"],
+      "contributions": [
+        {
+          "summary": "Reviewed and merged dependency updates #26 and #30",
+          "url": "https://github.com/nirholas/cryptocurrency.cv/pull/26"
+        }
+      ]
+    },
+    {
+      "login": "chenshj73",
+      "kinds": ["security"],
+      "contributions": [
+        {
+          "summary": "Found the payment bypass on API key upgrades, which led to verified and settled payments on both upgrade routes",
+          "url": "https://github.com/nirholas/cryptocurrency.cv/issues/43"
+        }
+      ]
+    },
+    {
+      "login": "AlestackOverglow",
+      "kinds": ["triage"],
+      "contributions": [
+        {
+          "summary": "Traced the #15 outage to Next.js DYNAMIC_SERVER_USAGE errors from the production logs",
+          "url": "https://github.com/nirholas/cryptocurrency.cv/issues/15"
+        }
+      ]
+    },
+    {
+      "login": "lui62233",
+      "kinds": ["triage"],
+      "contributions": [
+        {
+          "summary": "Broke down the payment-challenge mismatch in #36 for the reporter and maintainers",
+          "url": "https://github.com/nirholas/cryptocurrency.cv/issues/36"
+        }
+      ]
+    },
+    {
+      "login": "volumevigilante",
+      "kinds": ["bug"],
+      "contributions": [
+        {
+          "summary": "Reported the paywalled search, blocked curl and the zero-address payment challenge, with follow-up checks across endpoints",
+          "url": "https://github.com/nirholas/cryptocurrency.cv/issues/36"
+        }
+      ]
+    },
+    {
+      "login": "cmdenney",
+      "kinds": ["bug"],
+      "contributions": [
+        {
+          "summary": "Flagged the Blocknative gas API shutdown, which led to the keyless eth_feeHistory gas engine",
+          "url": "https://github.com/nirholas/cryptocurrency.cv/issues/44"
+        }
+      ]
+    },
+    {
+      "login": "bomzj",
+      "kinds": ["bug"],
+      "contributions": [
+        {
+          "summary": "Reported the empty news feed with a full response sample",
+          "url": "https://github.com/nirholas/cryptocurrency.cv/issues/40"
+        }
+      ]
+    },
+    {
+      "login": "RaoHammas",
+      "kinds": ["bug"],
+      "contributions": [
+        {
+          "summary": "Reported the DEPLOYMENT_DISABLED outage on every endpoint",
+          "url": "https://github.com/nirholas/cryptocurrency.cv/issues/45"
+        }
+      ]
+    },
+    {
+      "login": "zhiqihuang",
+      "kinds": ["bug"],
+      "contributions": [
+        {
+          "summary": "Reported the missing historical archive, which started the archive work",
+          "url": "https://github.com/nirholas/cryptocurrency.cv/issues/14"
+        }
+      ]
+    },
+    {
+      "login": "3lang3",
+      "kinds": ["bug"],
+      "contributions": [
+        {
+          "summary": "Reported the February site outage",
+          "url": "https://github.com/nirholas/cryptocurrency.cv/issues/15"
+        }
+      ]
+    },
+    {
+      "login": "webparadoxer",
+      "kinds": ["bug"],
+      "contributions": [
+        {
+          "summary": "Confirmed the February site outage",
+          "url": "https://github.com/nirholas/cryptocurrency.cv/issues/15"
+        }
+      ]
+    },
+    {
+      "login": "Yash2341",
+      "kinds": ["feedback"],
+      "contributions": [
+        {
+          "summary": "Asked how to fetch full article content, which pointed readers to the extraction endpoint and its guide",
+          "url": "https://github.com/nirholas/cryptocurrency.cv/issues/39"
+        }
+      ]
+    }
+  ]
+}

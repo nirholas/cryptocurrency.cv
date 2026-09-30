@@ -257,10 +257,12 @@ Feel free to:
 
 ## 🙏 Recognition
 
-Contributors will be:
-- Listed in our README
-- Credited in release notes
+Code, docs, bug reports, security reports and helping other users in issues all count. Contributors are:
+- Listed in the [README](README.md#-contributors), in [CONTRIBUTORS.md](CONTRIBUTORS.md), on [cryptocurrency.cv/team](https://cryptocurrency.cv/team) and in [humans.txt](https://cryptocurrency.cv/humans.txt)
+- Credited by name in the [CHANGELOG](CHANGELOG.md) entry for the fix their report led to, and in the commit (`Reported-by:`)
 - Forever appreciated by the community! 💜
+
+All four lists are rendered from one file, `src/data/contributors.json`. To add someone (including yourself), add an entry there in the same shape as the others and run `npm run contributors:generate`; a test fails if the rendered files are out of date.
 
 ---
 
