@@ -19,7 +19,9 @@ alfred
 chatgpt
 memescope-monday
 x402-facilitator
-sdk
+# Keep the conformance engine: the site imports it via @x402-conformance.
+sdk/*
+!sdk/x402-conformance
 mcp
 mobile
 telegram

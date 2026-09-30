@@ -11,7 +11,10 @@ storybook-static/
 e2e/
 docs/
 examples/
-sdk/
+# sdk/ is excluded except the conformance engine, which the site imports via
+# the @x402-conformance tsconfig alias (src/lib/x402/conformance.ts).
+sdk/*
+!sdk/x402-conformance/
 mcp/
 mobile/
 telegram/
