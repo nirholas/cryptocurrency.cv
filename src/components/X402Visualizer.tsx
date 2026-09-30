@@ -358,7 +358,6 @@ export default function X402Visualizer() {
     // Simulation state
     // -----------------------------------------------------------------------
     let txCount = 0;
-    let lastTxTime = Date.now();
 
     // Transaction generation interval
     const txInterval = setInterval(() => {
@@ -384,7 +383,6 @@ export default function X402Visualizer() {
         }
       }
 
-      lastTxTime = now;
     }, 200 + Math.random() * 400);
 
     // -----------------------------------------------------------------------
