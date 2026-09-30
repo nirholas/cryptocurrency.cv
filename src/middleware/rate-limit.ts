@@ -210,6 +210,51 @@ export async function checkRateLimit(
 }
 
 // =============================================================================
+// PER-ROUTE RATE LIMITER (expensive endpoints, see ROUTE_RATE_LIMITS)
+// =============================================================================
+
+const _routeLimiters = new Map<string, Ratelimit>();
+
+/**
+ * Enforce a route's own budget (e.g. 10 per minute for /api/ai). This used to
+ * go through the anonymous 'public' tier, so every route budget silently
+ * became 10 per hour shared across all of /api/ai/*, and callers were told
+ * "per minute" while being asked to retry in an hour.
+ */
+export async function checkRouteRateLimit(
+  key: string,
+  label: string,
+  requests: number,
+  windowMs: number,
+): Promise<{ allowed: boolean; remaining: number; resetAt: number; limit: number }> {
+  const creds = getRedisCredentials();
+  if (!creds) {
+    const result = inMemoryRateCheck(`route:${key}`, requests, windowMs);
+    return { ...result, limit: requests };
+  }
+
+  let limiter = _routeLimiters.get(label);
+  if (!limiter) {
+    limiter = new Ratelimit({
+      redis: new Redis(creds),
+      limiter: Ratelimit.slidingWindow(requests, `${windowMs}ms`),
+      prefix: `mw:rl:route:${label}`,
+      analytics: true,
+      enableProtection: true,
+    });
+    _routeLimiters.set(label, limiter);
+  }
+
+  try {
+    const { success, remaining, reset } = await limiter.limit(key);
+    return { allowed: success, remaining, resetAt: reset, limit: requests };
+  } catch {
+    const result = inMemoryRateCheck(`fallback:route:${key}`, requests, windowMs);
+    return { ...result, limit: requests };
+  }
+}
+
+// =============================================================================
 // TIER-SPECIFIC RATE LIMITER (for authenticated API keys)
 // =============================================================================
 
@@ -470,14 +515,19 @@ export const rateLimitHandler: MiddlewareHandler = async (ctx) => {
       : ctx.apiKeyId
         ? `route:${routeLimit.label}:${ctx.apiKeyId}`
         : `route:${routeLimit.label}:${ctx.clientIp}`;
-    const routeRl = await checkRateLimit(routeKey, 'public');
+    const routeRl = await checkRouteRateLimit(
+      routeKey,
+      routeLimit.label,
+      routeLimit.requests,
+      routeLimit.windowMs,
+    );
     if (!routeRl.allowed) {
       const retry = Math.ceil((routeRl.resetAt - Date.now()) / 1000);
       return NextResponse.json(
         {
           error: 'Rate Limit Exceeded',
           code: 'ROUTE_RATE_LIMIT',
-          message: `This endpoint is limited to ${routeLimit.requests} requests per minute`,
+          message: `This endpoint is limited to ${routeLimit.requests} requests per ${Math.round(routeLimit.windowMs / 1000)} seconds`,
           endpoint: routeLimit.label,
           retryAfter: retry,
           requestId: ctx.requestId,

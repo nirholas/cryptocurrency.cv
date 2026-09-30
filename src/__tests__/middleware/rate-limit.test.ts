@@ -9,7 +9,8 @@
  */
 
 import { describe, it, expect, beforeEach } from 'vitest';
-import { record429, isRepeat429Blocked } from '@/middleware/rate-limit';
+import { record429, isRepeat429Blocked, checkRouteRateLimit } from '@/middleware/rate-limit';
+import { findRouteRateLimit } from '@/middleware/config';
 
 describe('record429 / isRepeat429Blocked', () => {
   // Use unique IPs per test to avoid state leakage
@@ -102,5 +103,24 @@ describe('FREE_TIER_PATTERNS covers the routes the 2026-08 429 noise came from',
     expect(matchesPattern('/api/fear-greed', FREE_TIER_PATTERNS)).toBe(true);
     // Search fans out to live backends on every miss — it stays tightly capped.
     expect(matchesPattern('/api/search', FREE_TIER_PATTERNS)).toBe(false);
+  });
+});
+
+describe('checkRouteRateLimit', () => {
+  it('applies the route budget (10 per minute for /api/ai), not the anonymous hourly tier', async () => {
+    const route = findRouteRateLimit('/api/ai/brief');
+    expect(route).not.toBeNull();
+    const { label, requests, windowMs } = route!;
+    const key = `route:${label}:198.51.100.${Math.floor(Math.random() * 250)}`;
+
+    for (let i = 0; i < requests; i++) {
+      expect((await checkRouteRateLimit(key, label, requests, windowMs)).allowed).toBe(true);
+    }
+    const blocked = await checkRouteRateLimit(key, label, requests, windowMs);
+    expect(blocked.allowed).toBe(false);
+    expect(blocked.limit).toBe(10);
+    // The window is the route's minute, not the anonymous tier's hour.
+    expect(blocked.resetAt - Date.now()).toBeLessThanOrEqual(windowMs);
+    expect(windowMs).toBe(60_000);
   });
 });
