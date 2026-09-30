@@ -10,6 +10,7 @@
 
 import { type NextRequest, NextResponse } from 'next/server';
 import { aiComplete, getAIConfigOrNull } from '@/lib/ai-provider';
+import { internalFetch } from '@/lib/internal-fetch';
 
 export const runtime = 'edge';
 
@@ -153,8 +154,7 @@ export async function GET(request: NextRequest) {
   } else {
     // Fetch from the signals API directly
     try {
-      const baseUrl = request.nextUrl.origin;
-      const res = await fetch(`${baseUrl}/api/signals?limit=10`, {
+      const res = await internalFetch(`/api/signals?limit=10`, {
         headers: { 'x-internal': '1' },
       });
       if (!res.ok) {

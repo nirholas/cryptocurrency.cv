@@ -19,8 +19,8 @@
  */
 
 import { type NextRequest, NextResponse } from 'next/server';
+import { internalFetch } from '@/lib/internal-fetch';
 
-const API_BASE = process.env.NEXT_PUBLIC_BASE_URL || 'https://cryptocurrency.cv';
 
 interface VideoJob {
   id: string;
@@ -192,7 +192,7 @@ export async function POST(request: NextRequest) {
       let articles: any[] = [];
       if (!customScript) {
         try {
-          const newsRes = await fetch(`${API_BASE}/api/news?limit=5`);
+          const newsRes = await internalFetch(`/api/news?limit=5`);
           if (newsRes.ok) {
             const data = await newsRes.json();
             articles = data.articles || [];
@@ -239,7 +239,7 @@ export async function POST(request: NextRequest) {
       
       let articles: any[] = [];
       try {
-        const newsRes = await fetch(`${API_BASE}/api/news?limit=5`);
+        const newsRes = await internalFetch(`/api/news?limit=5`);
         if (newsRes.ok) {
           const data = await newsRes.json();
           articles = data.articles || [];

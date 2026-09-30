@@ -9,6 +9,7 @@
  */
 
 import { type NextRequest, NextResponse } from 'next/server';
+import { internalFetch } from '@/lib/internal-fetch';
 
 export const runtime = 'edge';
 export const revalidate = 60;
@@ -24,11 +25,9 @@ export async function GET(request: NextRequest) {
   const min_usd = searchParams.get('min_usd') || '1000000';
   
   // Forward to whale-alerts endpoint
-  const baseUrl = process.env.NEXT_PUBLIC_API_URL || 'https://cryptocurrency.cv';
   
   try {
-    const response = await fetch(
-      `${baseUrl}/api/whale-alerts?limit=${limit}&min_usd=${min_usd}`,
+    const response = await internalFetch(`/api/whale-alerts?limit=${limit}&min_usd=${min_usd}`,
       { next: { revalidate: 60 } }
     );
     

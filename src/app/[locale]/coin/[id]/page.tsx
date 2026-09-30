@@ -37,6 +37,7 @@ import {
 } from './sections';
 import { AiCoinAnalysis } from './ai-analysis';
 import { CoinLiveData } from './live';
+import { internalFetch } from '@/lib/internal-fetch';
 
 export const revalidate = 60;
 
@@ -75,10 +76,7 @@ async function fetchCoinData(coinId: string): Promise<CoinData | null> {
 
 async function fetchRelatedNews(coinName: string): Promise<NewsArticle[]> {
   try {
-    const baseUrl =
-      process.env.NEXT_PUBLIC_BASE_URL ||
-      (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000');
-    const res = await fetch(`${baseUrl}/api/news?search=${encodeURIComponent(coinName)}&limit=8`, {
+    const res = await internalFetch(`/api/news?search=${encodeURIComponent(coinName)}&limit=8`, {
       next: { revalidate: 120 },
     });
     if (!res.ok) return [];

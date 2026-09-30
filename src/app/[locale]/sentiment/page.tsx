@@ -10,7 +10,6 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import PageShareSection from '@/components/PageShareSection';
 import { generateSEOMetadata } from '@/lib/seo';
-import { SITE_URL } from '@/lib/constants';
 import { Card } from '@/components/ui/Card';
 import SentimentTable from '@/components/SentimentTable';
 import InfluencerFeed from '@/components/InfluencerFeed';
@@ -29,6 +28,7 @@ import {
   Zap,
 } from 'lucide-react';
 import type { Metadata } from 'next';
+import { internalFetch } from '@/lib/internal-fetch';
 
 /* ------------------------------------------------------------------ */
 /*  Types                                                              */
@@ -65,11 +65,10 @@ interface SocialTrend {
 /*  Data fetchers                                                      */
 /* ------------------------------------------------------------------ */
 
-const BASE = SITE_URL;
 
 async function fetchJSON<T>(path: string): Promise<T | null> {
   try {
-    const res = await fetch(`${BASE}${path}`, { next: { revalidate: 300 } });
+    const res = await internalFetch(path, { next: { revalidate: 300 } });
     if (!res.ok) return null;
     return (await res.json()) as T;
   } catch {

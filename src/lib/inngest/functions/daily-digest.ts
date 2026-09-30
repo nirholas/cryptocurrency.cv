@@ -20,6 +20,7 @@
  */
 
 import { inngest } from '../client';
+import { internalFetch } from '@/lib/internal-fetch';
 
 export const dailyDigest = inngest.createFunction(
   {
@@ -41,7 +42,7 @@ export const dailyDigest = inngest.createFunction(
 
     // Step 2 — Fetch digest from internal API
     const digestPayload = await step.run('fetch-digest', async () => {
-      const res = await fetch(`${baseUrl}/api/digest?format=ai-digest`, {
+      const res = await internalFetch(`/api/digest?format=ai-digest`, {
         headers: { 'x-internal-cron': '1' },
         cache: 'no-store',
       });

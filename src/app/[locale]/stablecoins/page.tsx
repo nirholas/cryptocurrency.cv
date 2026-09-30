@@ -9,7 +9,6 @@ import type { Metadata } from 'next';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { generateSEOMetadata } from '@/lib/seo';
-import { SITE_URL } from '@/lib/constants';
 import { Card, CardContent } from '@/components/ui/Card';
 import { Badge } from '@/components/ui/Badge';
 import StablecoinTable, { type StablecoinRow } from '@/components/StablecoinTable';
@@ -21,6 +20,7 @@ import {
   AlertTriangle,
   Coins,
 } from 'lucide-react';
+import { internalFetch } from '@/lib/internal-fetch';
 
 export const revalidate = 300;
 
@@ -28,7 +28,6 @@ type Props = {
   params: Promise<{ locale: string }>;
 };
 
-const BASE = SITE_URL;
 
 interface StablecoinAPIItem {
   rank?: number;
@@ -50,7 +49,7 @@ interface StablecoinAPIResponse {
 
 async function fetchJSON<T>(path: string): Promise<T | null> {
   try {
-    const res = await fetch(`${BASE}${path}`, { next: { revalidate: 300 } });
+    const res = await internalFetch(path, { next: { revalidate: 300 } });
     if (!res.ok) return null;
     return (await res.json()) as T;
   } catch {

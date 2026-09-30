@@ -28,6 +28,7 @@ import {
   Zap,
 } from 'lucide-react';
 import type { Metadata } from 'next';
+import { internalFetch } from '@/lib/internal-fetch';
 
 export const revalidate = 300;
 
@@ -74,10 +75,7 @@ async function fetchSolanaData(): Promise<SolanaData | null> {
 
 async function fetchSolanaNetworkStats(): Promise<SolanaNetworkStats> {
   try {
-    const baseUrl =
-      process.env.NEXT_PUBLIC_BASE_URL ||
-      (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000');
-    const res = await fetch(`${baseUrl}/api/solana`, {
+    const res = await internalFetch(`/api/solana`, {
       next: { revalidate: 300 },
     });
     if (!res.ok) return {};

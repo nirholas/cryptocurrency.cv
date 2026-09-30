@@ -28,6 +28,7 @@ import {
   Layers,
 } from 'lucide-react';
 import type { Metadata } from 'next';
+import { internalFetch } from '@/lib/internal-fetch';
 
 export const revalidate = 300;
 
@@ -76,10 +77,7 @@ async function fetchEthereumData(): Promise<EthereumData | null> {
 
 async function fetchEthNetworkStats(): Promise<EthNetworkStats> {
   try {
-    const baseUrl =
-      process.env.NEXT_PUBLIC_BASE_URL ||
-      (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000');
-    const res = await fetch(`${baseUrl}/api/ethereum`, {
+    const res = await internalFetch(`/api/ethereum`, {
       next: { revalidate: 300 },
     });
     if (!res.ok) return {};

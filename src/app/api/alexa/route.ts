@@ -18,8 +18,8 @@
  */
 
 import { type NextRequest, NextResponse } from 'next/server';
+import { internalFetch } from '@/lib/internal-fetch';
 
-const API_BASE = process.env.NEXT_PUBLIC_BASE_URL || 'https://cryptocurrency.cv';
 
 interface AlexaRequest {
   version: string;
@@ -131,7 +131,7 @@ async function handleLatestNewsIntent(coin?: string): Promise<AlexaResponse> {
       ? `/api/search?q=${encodeURIComponent(coin)}&limit=3`
       : '/api/breaking?limit=3';
     
-    const res = await fetch(`${API_BASE}${endpoint}`);
+    const res = await internalFetch(endpoint);
     const data = await res.json();
     const articles = data.articles || [];
     
@@ -169,7 +169,7 @@ async function handleLatestNewsIntent(coin?: string): Promise<AlexaResponse> {
 
 async function handleMarketSentimentIntent(): Promise<AlexaResponse> {
   try {
-    const res = await fetch(`${API_BASE}/api/sentiment`);
+    const res = await internalFetch(`/api/sentiment`);
     const data = await res.json();
     const market = data.market || { score: 50, label: 'Neutral' };
     
@@ -193,7 +193,7 @@ async function handleMarketSentimentIntent(): Promise<AlexaResponse> {
 
 async function handleFearGreedIntent(): Promise<AlexaResponse> {
   try {
-    const res = await fetch(`${API_BASE}/api/fear-greed`);
+    const res = await internalFetch(`/api/fear-greed`);
     const data = await res.json();
     
     const value = data.value || 50;
@@ -226,7 +226,7 @@ async function handleFearGreedIntent(): Promise<AlexaResponse> {
 
 async function handlePriceIntent(coin: string): Promise<AlexaResponse> {
   try {
-    const res = await fetch(`${API_BASE}/api/prices`);
+    const res = await internalFetch(`/api/prices`);
     const data = await res.json();
     const prices = data.prices || {};
     

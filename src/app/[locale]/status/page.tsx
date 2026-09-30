@@ -17,7 +17,6 @@
  */
 
 import { generateSEOMetadata } from '@/lib/seo';
-import { SITE_URL } from '@/lib/constants';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import StatusAutoRefresh from '@/components/StatusAutoRefresh';
@@ -51,6 +50,7 @@ import {
   AlertTriangle,
 } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
+import { internalFetch } from '@/lib/internal-fetch';
 
 export const metadata = generateSEOMetadata({
   title: 'System Status',
@@ -108,7 +108,7 @@ interface StatsResponse {
 
 async function getHealth(): Promise<HealthResponse | null> {
   try {
-    const res = await fetch(`${SITE_URL}/api/health`, {
+    const res = await internalFetch(`/api/health`, {
       cache: 'no-store',
       signal: AbortSignal.timeout(5000),
     });
@@ -121,7 +121,7 @@ async function getHealth(): Promise<HealthResponse | null> {
 
 async function getStats(): Promise<StatsResponse | null> {
   try {
-    const res = await fetch(`${SITE_URL}/api/stats`, {
+    const res = await internalFetch(`/api/stats`, {
       cache: 'no-store',
       signal: AbortSignal.timeout(5000),
     });

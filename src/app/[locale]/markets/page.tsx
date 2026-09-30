@@ -8,12 +8,12 @@ import { setRequestLocale } from 'next-intl/server';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { generateSEOMetadata } from '@/lib/seo';
-import { SITE_URL } from '@/lib/constants';
 import { Card } from '@/components/ui/Card';
 import { formatLargeNumber, formatPercent } from '@/lib/format';
 import MarketTable, { type CoinRow } from '@/components/MarketTable';
 import { TrendingUp, BarChart3, Bitcoin, Activity, Gauge, Coins } from 'lucide-react';
 import type { Metadata } from 'next';
+import { internalFetch } from '@/lib/internal-fetch';
 
 export const revalidate = 120;
 
@@ -40,11 +40,10 @@ interface FearGreedData {
 
 // ---------- Data fetchers ----------------------------------------------------
 
-const BASE = SITE_URL;
 
 async function fetchJSON<T>(path: string): Promise<T | null> {
   try {
-    const res = await fetch(`${BASE}${path}`, {
+    const res = await internalFetch(path, {
       next: { revalidate: 120 },
     });
     if (!res.ok) return null;

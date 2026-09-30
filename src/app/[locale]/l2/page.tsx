@@ -9,11 +9,11 @@ import type { Metadata } from 'next';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { generateSEOMetadata } from '@/lib/seo';
-import { SITE_URL } from '@/lib/constants';
 import { Card, CardContent } from '@/components/ui/Card';
 import L2Table, { type L2Row } from '@/components/L2Table';
 import { cn } from '@/lib/utils';
 import { Layers, TrendingUp, ArrowRightLeft, BarChart3 } from 'lucide-react';
+import { internalFetch } from '@/lib/internal-fetch';
 
 export const revalidate = 300;
 
@@ -21,7 +21,6 @@ type Props = {
   params: Promise<{ locale: string }>;
 };
 
-const BASE = SITE_URL;
 
 interface L2Project {
   id?: string;
@@ -70,7 +69,7 @@ interface BridgesSummary {
 
 async function fetchJSON<T>(path: string): Promise<T | null> {
   try {
-    const res = await fetch(`${BASE}${path}`, { next: { revalidate: 300 } });
+    const res = await internalFetch(path, { next: { revalidate: 300 } });
     if (!res.ok) return null;
     return (await res.json()) as T;
   } catch {

@@ -26,7 +26,7 @@ import {
   Minus,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { SITE_URL } from "@/lib/constants";
+import { internalFetch } from '@/lib/internal-fetch';
 
 /* ------------------------------------------------------------------ */
 /*  ISR                                                               */
@@ -113,11 +113,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 /*  Data fetching helpers (server)                                    */
 /* ------------------------------------------------------------------ */
 
-const BASE = SITE_URL;
 
 async function fetchOnChainMetrics(): Promise<OnChainMetric[]> {
   try {
-    const res = await fetch(`${BASE}/api/on-chain`, {
+    const res = await internalFetch(`/api/on-chain`, {
       next: { revalidate: 300 },
     });
     if (!res.ok) return [];
@@ -133,7 +132,7 @@ async function fetchFlows(): Promise<FlowData[]> {
     const coins = ["bitcoin", "ethereum", "solana", "xrp", "cardano"];
     const results = await Promise.allSettled(
       coins.map((coin) =>
-        fetch(`${BASE}/api/flows?coin=${coin}`, {
+        internalFetch(`/api/flows?coin=${coin}`, {
           next: { revalidate: 300 },
         }).then((r) => (r.ok ? r.json() : null)),
       ),
@@ -151,7 +150,7 @@ async function fetchFlows(): Promise<FlowData[]> {
 
 async function fetchWhaleWallets(): Promise<WhaleWallet[]> {
   try {
-    const res = await fetch(`${BASE}/api/whales?limit=10`, {
+    const res = await internalFetch(`/api/whales?limit=10`, {
       next: { revalidate: 300 },
     });
     if (!res.ok) return [];

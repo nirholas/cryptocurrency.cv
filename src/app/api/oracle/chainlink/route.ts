@@ -19,10 +19,10 @@
  */
 
 import { type NextRequest, NextResponse } from 'next/server';
+import { internalFetch } from '@/lib/internal-fetch';
 
 export const runtime = 'edge';
 
-const API_BASE = process.env.NEXT_PUBLIC_BASE_URL || 'https://cryptocurrency.cv';
 
 // Edge-compatible SHA-256 hash function
 async function sha256(message: string): Promise<string> {
@@ -51,9 +51,9 @@ async function getOracleData(): Promise<OracleData> {
   
   try {
     const [sentimentRes, fgRes, newsRes] = await Promise.all([
-      fetch(`${API_BASE}/api/sentiment?limit=20`),
-      fetch(`${API_BASE}/api/fear-greed`),
-      fetch(`${API_BASE}/api/breaking?limit=10`),
+      internalFetch(`/api/sentiment?limit=20`),
+      internalFetch(`/api/fear-greed`),
+      internalFetch(`/api/breaking?limit=10`),
     ]);
     
     if (sentimentRes.ok) {

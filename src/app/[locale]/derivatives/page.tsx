@@ -8,23 +8,22 @@ import { setRequestLocale } from 'next-intl/server';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { generateSEOMetadata } from '@/lib/seo';
-import { SITE_URL } from '@/lib/constants';
 import { formatLargeNumber } from '@/lib/format';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/Card';
 import { TrendingUp, BarChart3, Activity, Target } from 'lucide-react';
 import LiquidationFeed from '@/components/LiquidationFeed';
 import FundingRates from '@/components/FundingRates';
 import type { Metadata } from 'next';
+import { internalFetch } from '@/lib/internal-fetch';
 
 type Props = {
   params: Promise<{ locale: string }>;
 };
 
-const BASE = SITE_URL;
 
 async function fetchJSON<T>(path: string): Promise<T | null> {
   try {
-    const res = await fetch(`${BASE}${path}`, { next: { revalidate: 120 } });
+    const res = await internalFetch(path, { next: { revalidate: 120 } });
     if (!res.ok) return null;
     return (await res.json()) as T;
   } catch {

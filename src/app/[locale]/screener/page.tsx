@@ -13,6 +13,7 @@ import { Skeleton } from '@/components/ui';
 import { Card, CardContent } from '@/components/ui';
 import ScreenerTable from '@/components/ScreenerTable';
 import type { Metadata } from 'next';
+import { internalFetch } from '@/lib/internal-fetch';
 
 export const revalidate = 60;
 
@@ -34,10 +35,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 async function fetchCoins() {
   try {
-    const baseUrl =
-      process.env.NEXT_PUBLIC_BASE_URL ||
-      (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000');
-    const res = await fetch(`${baseUrl}/api/market/coins?type=top&limit=250`, {
+    const res = await internalFetch(`/api/market/coins?type=top&limit=250`, {
       next: { revalidate: 60 },
     });
     if (!res.ok) return [];

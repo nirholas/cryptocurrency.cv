@@ -31,6 +31,7 @@ import {
   ExternalLink,
 } from 'lucide-react';
 import type { Metadata } from 'next';
+import { internalFetch } from '@/lib/internal-fetch';
 
 export const revalidate = 300;
 
@@ -72,10 +73,7 @@ async function fetchBitcoinData(): Promise<BitcoinData | null> {
 
 async function fetchBitcoinNetworkStats(): Promise<BitcoinNetworkStats> {
   try {
-    const baseUrl =
-      process.env.NEXT_PUBLIC_BASE_URL ||
-      (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000');
-    const res = await fetch(`${baseUrl}/api/bitcoin`, {
+    const res = await internalFetch(`/api/bitcoin`, {
       next: { revalidate: 300 },
     });
     if (!res.ok) return {};

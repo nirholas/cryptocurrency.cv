@@ -14,6 +14,7 @@ import { Skeleton } from '@/components/ui';
 import type { Metadata } from 'next';
 import FearGreedGauge from '@/components/FearGreedGauge';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui';
+import { internalFetch } from '@/lib/internal-fetch';
 
 export const revalidate = 300;
 
@@ -60,10 +61,7 @@ interface FearGreedResponse {
 
 async function fetchFearGreed(): Promise<FearGreedResponse | null> {
   try {
-    const baseUrl =
-      process.env.NEXT_PUBLIC_BASE_URL ||
-      (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000');
-    const res = await fetch(`${baseUrl}/api/fear-greed?days=30`, {
+    const res = await internalFetch(`/api/fear-greed?days=30`, {
       next: { revalidate: 300 },
     });
     if (!res.ok) return null;
@@ -75,10 +73,7 @@ async function fetchFearGreed(): Promise<FearGreedResponse | null> {
 
 async function fetchBtcPrice(): Promise<{ usd: number; usd_24h_change: number } | null> {
   try {
-    const baseUrl =
-      process.env.NEXT_PUBLIC_BASE_URL ||
-      (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000');
-    const res = await fetch(`${baseUrl}/api/prices?coins=bitcoin`, {
+    const res = await internalFetch(`/api/prices?coins=bitcoin`, {
       next: { revalidate: 120 },
     });
     if (!res.ok) return null;

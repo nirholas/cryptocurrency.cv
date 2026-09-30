@@ -23,6 +23,7 @@ import {
   detectCoordinatedPublishing,
   type PublishEvent,
 } from '@/lib/source-forensics';
+import { internalFetch } from '@/lib/internal-fetch';
 
 export const runtime = 'edge';
 
@@ -30,8 +31,7 @@ export const runtime = 'edge';
 async function getRealArticles(): Promise<ArticleForTracing[]> {
   try {
     // Fetch from our actual news API
-    const baseUrl = process.env.NEXT_PUBLIC_API_URL || '';
-    const response = await fetch(`${baseUrl}/api/news?limit=100`, {
+    const response = await internalFetch(`/api/news?limit=100`, {
       next: { revalidate: 300 },
     });
     
