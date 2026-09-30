@@ -234,7 +234,7 @@
     "eslint": "^10.11.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "ioredis-mock": "^8.13.1",
-    "jsdom": "^29.1.1",
+    "jsdom": "^30.1.0",
     "lighthouse": "^13.5.0",
     "pa11y": "^9.1.1",
     "postcss": "^8.5.28",
