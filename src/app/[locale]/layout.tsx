@@ -56,7 +56,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 // Dynamic rendering is auto-detected via headers() call for CSP nonce.
-// See https://github.com/nirholas/free-crypto-news/issues/15
+// See https://github.com/nirholas/cryptocurrency.cv/issues/15
 
 export const viewport: Viewport = {
   themeColor: [

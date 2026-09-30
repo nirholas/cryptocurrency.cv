@@ -34,7 +34,7 @@ export function OrganizationStructuredData() {
     name: 'Crypto Vision',
     url: 'https://cryptocurrency.cv',
     logo: 'https://cryptocurrency.cv/icons/icon-512x512.png',
-    sameAs: ['https://github.com/nirholas/free-crypto-news', 'https://x.com/nichxbt'],
+    sameAs: ['https://github.com/nirholas/cryptocurrency.cv', 'https://x.com/nichxbt'],
     contactPoint: {
       '@type': 'ContactPoint',
       email: 'support@cryptocurrency.cv',

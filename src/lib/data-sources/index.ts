@@ -83,7 +83,7 @@ async function safeFetch<T>(
   const { timeout = 10000, retries = 2, apiKey, authHeader } = options;
   const headers: Record<string, string> = {
     Accept: 'application/json',
-    'User-Agent': 'free-crypto-news/2.0 (+https://github.com/nirholas/free-crypto-news)',
+    'User-Agent': 'free-crypto-news/2.0 (+https://github.com/nirholas/cryptocurrency.cv)',
     ...options.headers,
   };
 

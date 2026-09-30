@@ -341,7 +341,7 @@ async function fetchNews(): Promise<Record<string, unknown>> {
       const res = await fetch(url, {
         signal: controller.signal,
         headers: {
-          'User-Agent': 'free-crypto-news/1.0 (+https://github.com/nirholas/free-crypto-news)',
+          'User-Agent': 'free-crypto-news/1.0 (+https://github.com/nirholas/cryptocurrency.cv)',
         },
       });
       if (!res.ok) throw new Error(`HTTP ${res.status} from ${url}`);

@@ -1121,7 +1121,7 @@ async function fetchInternationalFeed(source: InternationalSource): Promise<Inte
       const response = await fetch(source.rss, {
         headers: {
           Accept: 'application/rss+xml, application/xml, text/xml, application/atom+xml',
-          'User-Agent': 'FreeCryptoNews/1.0 (github.com/nirholas/free-crypto-news)',
+          'User-Agent': 'FreeCryptoNews/1.0 (github.com/nirholas/cryptocurrency.cv)',
           'Accept-Charset': 'UTF-8',
         },
         signal: controller.signal,

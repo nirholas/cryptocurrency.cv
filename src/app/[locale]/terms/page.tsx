@@ -276,7 +276,7 @@ export default async function TermsPage({ params }: Props) {
                   The FCN platform source code is open source and licensed under
                   the terms specified in our{" "}
                   <a
-                    href="https://github.com/nirholas/free-crypto-news/blob/main/LICENSE"
+                    href="https://github.com/nirholas/cryptocurrency.cv/blob/main/LICENSE"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -432,7 +432,7 @@ export default async function TermsPage({ params }: Props) {
                   <li>
                     <strong>GitHub:</strong> Open an issue on our{" "}
                     <a
-                      href="https://github.com/nirholas/free-crypto-news"
+                      href="https://github.com/nirholas/cryptocurrency.cv"
                       target="_blank"
                       rel="noopener noreferrer"
                     >

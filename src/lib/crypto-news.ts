@@ -3785,7 +3785,7 @@ async function fetchFeed(sourceKey: SourceKey): Promise<NewsArticle[]> {
       const fetchOptions: RequestInit & { next?: { revalidate: number } } = {
         headers: {
           Accept: 'application/rss+xml, application/xml, text/xml',
-          'User-Agent': 'FreeCryptoNews/1.0 (github.com/nirholas/free-crypto-news)',
+          'User-Agent': 'FreeCryptoNews/1.0 (github.com/nirholas/cryptocurrency.cv)',
         },
         signal: controller.signal,
         redirect: 'manual', // Prevent redirect loops hitting own domain

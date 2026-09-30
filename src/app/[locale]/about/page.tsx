@@ -225,7 +225,7 @@ export default async function AboutPage({ params }: Props) {
             </Button>
             <Button variant="outline" size="lg" asChild>
               <a
-                href="https://github.com/nirholas/free-crypto-news"
+                href="https://github.com/nirholas/cryptocurrency.cv"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -415,7 +415,7 @@ export default async function AboutPage({ params }: Props) {
                 <div className="flex flex-wrap gap-3">
                   <Button variant="primary" asChild>
                     <a
-                      href="https://github.com/nirholas/free-crypto-news"
+                      href="https://github.com/nirholas/cryptocurrency.cv"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -424,7 +424,7 @@ export default async function AboutPage({ params }: Props) {
                   </Button>
                   <Button variant="outline" asChild>
                     <a
-                      href="https://github.com/nirholas/free-crypto-news/issues"
+                      href="https://github.com/nirholas/cryptocurrency.cv/issues"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -483,8 +483,8 @@ export default async function AboutPage({ params }: Props) {
           </h2>
           <p className="mb-6 leading-relaxed text-text-secondary">
             Crypto Vision News is maintained by a global community of open source contributors.
-            Whether you&apos;re fixing a bug, adding a new source, translating the interface, or
-            improving documentation — every contribution matters.
+            Whether you&apos;re fixing a bug, reporting one, adding a new source, translating the
+            interface, or improving documentation, every contribution matters and is credited.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             <Button variant="primary" asChild>
@@ -494,11 +494,11 @@ export default async function AboutPage({ params }: Props) {
             </Button>
             <Button variant="outline" asChild>
               <a
-                href="https://github.com/nirholas/free-crypto-news/graphs/contributors"
+                href="https://github.com/nirholas/cryptocurrency.cv/blob/main/CONTRIBUTORS.md"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Users className="mr-1 h-4 w-4" /> View Contributors on GitHub
+                <Users className="mr-1 h-4 w-4" /> Read the Contributor Credits
               </a>
             </Button>
           </div>

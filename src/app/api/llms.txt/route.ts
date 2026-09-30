@@ -59,7 +59,7 @@ curl https://cryptocurrency.cv/api/news
 
 ## Links
 - Docs: https://cryptocurrency.cv/docs
-- GitHub: https://github.com/nirholas/free-crypto-news
+- GitHub: https://github.com/nirholas/cryptocurrency.cv
 `;
 
     return new NextResponse(fallbackContent, {

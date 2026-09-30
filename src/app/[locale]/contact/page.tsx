@@ -62,7 +62,7 @@ const contactMethods: ContactMethod[] = [
     icon: Code,
     title: 'GitHub Issues',
     description: 'Report bugs, request features, or browse existing discussions',
-    link: 'https://github.com/nirholas/free-crypto-news/issues',
+    link: 'https://github.com/nirholas/cryptocurrency.cv/issues',
     linkText: 'Open an Issue',
     color: 'text-gray-700 dark:text-gray-300',
     responseTime: '24-48 hrs',
@@ -149,7 +149,7 @@ const quickLinks = [
   {
     icon: Shield,
     label: 'Security Policy',
-    href: 'https://github.com/nirholas/free-crypto-news/blob/main/SECURITY.md',
+    href: 'https://github.com/nirholas/cryptocurrency.cv/blob/main/SECURITY.md',
     description: 'Report vulnerabilities',
     external: true,
   },
@@ -157,7 +157,7 @@ const quickLinks = [
   {
     icon: Zap,
     label: 'Changelog',
-    href: 'https://github.com/nirholas/free-crypto-news/blob/main/CHANGELOG.md',
+    href: 'https://github.com/nirholas/cryptocurrency.cv/blob/main/CHANGELOG.md',
     description: "What's new",
     external: true,
   },
@@ -325,7 +325,7 @@ export default async function ContactPage({ params }: Props) {
               </p>
               <Button variant="primary" size="sm" asChild className="w-full">
                 <a
-                  href="https://github.com/nirholas/free-crypto-news"
+                  href="https://github.com/nirholas/cryptocurrency.cv"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
