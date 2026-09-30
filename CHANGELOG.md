@@ -7,7 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Security
+- **API key upgrades now require a verified payment** - `/api/keys/upgrade` sits outside the global x402 gate and treated the mere presence of a payment header as proof of payment, so any free-tier key could be upgraded to enterprise with `x-402-payment: x`. The route now verifies the signed payment with the facilitator against the exact price, recipient and network before touching the key, and refuses (503) rather than upgrading when the facilitator cannot be reached. Thanks to [@chenshj73](https://github.com/chenshj73) for the careful report ([#43](https://github.com/nirholas/cryptocurrency.cv/issues/43)).
+
 ### Fixed
+- **Gas prices no longer depend on Blocknative**, whose gas API shut down on 2026-06-19. Gas is now read from recent blocks with the standard `eth_feeHistory` JSON-RPC method over public RPCs, so it needs no key and works on Ethereum, Base, Arbitrum, Optimism and Polygon. Set `ETHEREUM_RPC_URL` (or the matching variable for another network) to use your own node first. Thanks to [@cmdenney](https://github.com/cmdenney) for flagging the shutdown ([#44](https://github.com/nirholas/cryptocurrency.cv/issues/44)).
+- **`/api/v1/gas` serves real prices for every network** - Base, Arbitrum and Optimism were hardcoded constants, and Ethereum and Polygon fell back to made-up numbers whenever their source failed. Every network is now live, networks are fetched in parallel, a network whose sources are all down is listed in `meta.unavailable` instead of being guessed, and an unknown `?network=` returns `400` with the supported list. Polygon's gas token is reported as `POL`.
+- **`/api/gas` and the [gas tracker](https://cryptocurrency.cv/gas)** - the endpoint answered in two different shapes depending on which source served it, and the page could only read one of them. Every source now returns the same shape, the last-resort fallback is a live `eth_feeHistory` read instead of fixed 20/30/50 gwei figures, and a total outage returns `503` instead of invented prices.
+- **Sub-gwei gas prices read as 0** - mainnet gas is routinely below 1 gwei, and several paths parsed or rounded it to whole numbers. Prices keep their precision, and the gas tracker shows three significant digits.
+- **x402 visualizer** - a reference to an undefined variable threw on every simulated transaction.
 - **x402scan discovery** - paid endpoints were listed without usable schemas and failed registration probes. Four shapes disagreed with what the discovery parser reads, and every one of them was silent from the outside:
   - `x-payment-info` used the flat `{ pricingMode, price }` form, which only parses through a legacy fallback. It is now the structured `{ price: { mode, currency, amount }, protocols: [{ x402: {} }] }`.
   - 416 of 418 operations advertised no response schema at all, which x402scan rejects outright.
@@ -17,6 +25,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **`/.well-known/x402`** - returned `outputSchema.output: null` for nearly every resource; it now carries the real response schema.
 - **Payment challenges named the wrong host** - `resource.url` and the OpenAPI `servers` entry were built from `NEXT_PUBLIC_APP_URL`, which Next.js inlines at build time. An image built once and deployed to a second hostname kept naming the first one in every challenge it issued, so a self-hoster's clients paid for a resource URL that was not the one they called. Both are now derived from the request, and only from hosts the deployment is configured to answer for, so a spoofed `Host` header can never reach a payment document. Found by the conformance auditor above, running against this codebase.
 - **`/api/mcp`** - advertised a generic `{ data }` body no MCP client would send. It now declares the JSON-RPC envelope it actually accepts and the `Mcp-Session-Id` header its `GET` and `DELETE` use.
+
+### Changed
+- **Dependencies** - landed the ten open Dependabot updates, including inngest 4 (background jobs migrated to the v4 trigger API with typed events), TypeScript 6, redis 6, isomorphic-dompurify 4, jsdom 30, `@vitejs/plugin-react` 6, `@testing-library/jest-dom` 7, `@types/node` 26 and the grouped minor and patch bumps.
 
 ### Added
 - **[x402 conformance auditor](docs/x402-conformance.md)** - a new tool, endpoint and page that catch the class of x402 bug nothing else looks for. A paid API states its price twice, in two different units, written by two different pieces of code: decimal USD in the discovery document an agent reads before calling, and token atomic units in the `402` challenge it gets at the door. Every existing validator checks each side alone and reports both green while they describe different prices, different protection, or different call shapes.
@@ -35,9 +46,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 Maintenance release: reliability fixes for API consumers and a documentation cleanup.
 
 ### Fixed
-- **curl and AI-agent requests no longer get 403** - the bot filter blocked non-browser user agents from the free API; scripted clients, curl, and MCP/agent traffic are served again.
-- **Empty news feed** - the aggregator returned an empty list when the first provider in the chain failed; the fallback chain now degrades through the remaining sources.
-- **x402 zero-address fail-open** - a missing or zero payment address no longer lets a paid request through unpaid; the middleware now fails closed and returns the 402 challenge.
+- **curl and AI-agent requests no longer get 403** - the bot filter blocked non-browser user agents from the free API; scripted clients, curl, and MCP/agent traffic are served again (also reported in [#36](https://github.com/nirholas/cryptocurrency.cv/issues/36)).
+- **Empty news feed** - the aggregator returned an empty list when the first provider in the chain failed; the fallback chain now degrades through the remaining sources. Thanks to [@bomzj](https://github.com/bomzj) for the report and the response sample ([#40](https://github.com/nirholas/cryptocurrency.cv/issues/40)).
+- **No payment demanded to the zero address** - `/api/search` and other endpoints answered `402` with a challenge whose `payTo` was the zero address, so nobody could pay and anyone who tried would burn the funds. With no `X402_PAYMENT_ADDRESS` configured the payment gate now steps aside and the ordinary anonymous rate limits apply; with one configured, the challenge names the real wallet. Thanks to [@volumevigilante](https://github.com/volumevigilante) for the report and the follow-up checks ([#36](https://github.com/nirholas/cryptocurrency.cv/issues/36)).
 - **Sitemap** - regenerated with the correct canonical host and the blog routes, so search engines stop indexing dead URLs.
 
 ### Added
