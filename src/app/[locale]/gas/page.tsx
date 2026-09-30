@@ -12,7 +12,7 @@ import { setRequestLocale } from "next-intl/server";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { generateSEOMetadata } from "@/lib/seo";
-import { SITE_URL } from "@/lib/constants";
+import { getEthereumGasSnapshot } from "@/lib/gas-snapshot";
 import { Card } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
 import { formatCurrency } from "@/lib/format";
@@ -184,13 +184,14 @@ function getGasStatus(medianGwei: number) {
 
 // ---------- Data fetcher -----------------------------------------------------
 
-const BASE = SITE_URL;
-
+/**
+ * Reads gas in-process rather than over HTTP: a server render that fetched its
+ * own public /api/gas would share the anonymous rate limit of the server's
+ * egress IP with every other render.
+ */
 async function fetchGas(): Promise<GasData | null> {
   try {
-    const res = await fetch(`${BASE}/api/gas`, { next: { revalidate: 30 } });
-    if (!res.ok) return null;
-    return (await res.json()) as GasData;
+    return await getEthereumGasSnapshot();
   } catch {
     return null;
   }
