@@ -53,7 +53,7 @@ export async function GET() {
         'dex': ['dexscreener', 'geckoterminal'],
         'fear-greed': ['alternative-me', 'coinstats'],
         'funding-rate': ['binance-futures', 'bybit', 'okx'],
-        'gas-fees': ['etherscan', 'blocknative'],
+        'gas-fees': ['etherscan', 'eth-feehistory', 'owlracle'],
         'tvl': ['defillama'],
         'defi-yields': ['defillama-yields'],
         'derivatives': ['hyperliquid', 'coinglass'],

@@ -367,7 +367,7 @@ Types: { chain, low/medium/high: {gwei, usd, time}, baseFee, timestamp }
 
 1. etherscan.adapter.ts — api.etherscan.io/api?module=gastracker, ETHERSCAN_API_KEY, 5/sec
 2. alchemy-gas.adapter.ts — eth_gasPrice + eth_feeHistory, ALCHEMY_API_KEY
-3. blocknative.adapter.ts — api.blocknative.com/gasprices, BLOCKNATIVE_API_KEY
+3. fee-history.adapter.ts: eth_feeHistory over public RPCs, no key (Blocknative's gas API shut down 2026-06-19)
 gasChain: consensus (fuse estimates)
 
 MEMPOOL — src/lib/providers/adapters/mempool/:
@@ -1187,7 +1187,6 @@ TENSOR_API_KEY=                    # Tensor Solana NFT data
 SIMPLEHASH_API_KEY=                # SimpleHash multi-chain NFT
 ALCHEMY_API_KEY=                   # Alchemy multi-chain RPC
 INFURA_API_KEY=                    # Infura Ethereum RPC
-BLOCKNATIVE_API_KEY=               # Blocknative gas prediction
 DUNE_API_KEY=                      # Dune Analytics SQL on-chain
 FLIPSIDE_API_KEY=                  # Flipside SQL on-chain
 ARTEMIS_API_KEY=                   # Artemis DeFi analytics

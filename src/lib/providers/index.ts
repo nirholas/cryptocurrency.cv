@@ -160,7 +160,7 @@ export {
   createFundingRateChain,
 } from './adapters/funding-rate';
 
-// Gas Fees (Etherscan → Blocknative)
+// Gas Fees (Etherscan → eth_feeHistory → Owlracle)
 export {
   gasChain,
   gasConsensusChain,

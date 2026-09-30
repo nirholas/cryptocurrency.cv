@@ -20,7 +20,7 @@
 | Doc | APIs Covered |
 |-----|-------------|
 | [On-Chain / Blockchain Data](on-chain-blockchain.md) | Etherscan, Blockchain.info, Mempool.space, Glassnode, CryptoQuant, IntoTheBlock, Blockchair, Whale Alert |
-| [Gas Estimation](gas-estimation.md) | Blocknative, Polygon Gas Station |
+| [Gas Estimation](gas-estimation.md) | eth_feeHistory (public RPCs), Polygon Gas Station |
 | [Layer 2 / Scaling](layer2-scaling.md) | L2BEAT |
 | [Other L1 RPC Endpoints](l1-rpc.md) | Sui, Aptos, Cloudflare Ethereum |
 

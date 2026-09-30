@@ -132,7 +132,7 @@ export const owlracleAdapter: DataProvider<GasFeeEstimate[]> = {
 
     if (result.speeds.standard.gasPrice <= 0) {
       // A zeroed estimate is worse than no estimate: the chain would cache it
-      // and stop failing over to Etherscan / Blocknative.
+      // and stop failing over to Etherscan / eth_feeHistory.
       throw new Error('Owlracle returned a zero gas price');
     }
 

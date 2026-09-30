@@ -124,7 +124,8 @@ function normalize(raw: EtherscanGasResult): GasPrice {
     slow: parseFloat(raw.SafeGasPrice) || 0,
     standard: parseFloat(raw.ProposeGasPrice) || 0,
     fast: parseFloat(raw.FastGasPrice) || 0,
-    instant: Math.round((parseFloat(raw.FastGasPrice) || 0) * 1.2),
+    // Not rounded: mainnet gas is routinely below 1 gwei, where rounding gives 0.
+    instant: (parseFloat(raw.FastGasPrice) || 0) * 1.2,
     baseFee: parseFloat(raw.suggestBaseFee) || null,
     unit: 'gwei',
     lastUpdated: new Date().toISOString(),

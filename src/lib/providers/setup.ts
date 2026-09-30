@@ -31,7 +31,7 @@
  * | dex             | dexChain               | DexScreener → GeckoTerminal       |
  * | fear-greed      | fearGreedChain         | Alternative.me → CoinStats        |
  * | funding-rate    | fundingRateChain       | Binance → Bybit → OKX            |
- * | gas-fees        | gasChain               | Etherscan → Blocknative           |
+ * | gas-fees        | gasChain               | Etherscan → eth_feeHistory        |
  * | tvl             | tvlChain               | DefiLlama                        |
  * | defi-yields     | defiYieldsChain        | DefiLlama Yields                  |
  * | derivatives     | derivativesChain       | Hyperliquid → CoinGlass           |
@@ -94,7 +94,7 @@ registry.register('funding-rate', fundingRateChain, {
 
 // Gas Fees
 registry.register('gas-fees', gasChain, {
-  description: 'Ethereum gas prices from Etherscan and Blocknative',
+  description: 'Ethereum gas prices from Etherscan, eth_feeHistory and Owlracle',
 });
 
 // TVL

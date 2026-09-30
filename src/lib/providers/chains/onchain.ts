@@ -14,7 +14,7 @@
  * Chains:
  * - `onChainChain` — On-chain metrics from Blockchain.info, Etherscan, Mempool.space
  * - `whaleAlertChain` — Whale transaction alerts
- * - `gasChain` — Gas prices from Etherscan, Blocknative, Owlracle
+ * - `gasChain`: Gas prices from Etherscan, eth_feeHistory, Owlracle
  *
  * @module providers/chains/onchain
  */

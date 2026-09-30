@@ -194,7 +194,7 @@ export function registerAllChains(): void {
     description: 'Whale transaction alerts from Whale Alert API',
   });
   registry.register('gas-fees', onchain.gasChain, {
-    description: 'Gas prices from Etherscan, Blocknative, Owlracle',
+    description: 'Gas prices from Etherscan, eth_feeHistory, Owlracle',
   });
 
   // ── Social ───────────────────────────────────────────────────────────────

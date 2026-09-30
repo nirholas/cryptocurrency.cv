@@ -87,7 +87,7 @@ Ethereum gas fees follow predictable patterns. The cheapest times to transact ar
 Gas tracker tools show real-time and predicted fees:
 - **Etherscan Gas Tracker**: etherscan.io/gastracker
 - **Gas Now / Ultrasound.money**: Show historical and current fee data
-- **Blocknative Gas Estimator**: Excellent for predicting near-future fees
+- **cryptocurrency.cv Gas Tracker** ([/gas](https://cryptocurrency.cv/gas)): Live fees for Ethereum and its major L2s, read straight from recent blocks
 
 ### 2. Use Layer 2 Networks
 

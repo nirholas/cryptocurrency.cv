@@ -11,12 +11,15 @@
 /**
  * Gas Fees Chain — Pre-wired provider chain for gas price data
  *
- * | Provider     | Priority | Weight | Rate Limit     | Coverage         |
- * |--------------|----------|--------|----------------|------------------|
- * | Etherscan    | 1        | 0.50   | 300/min (keyed)| Ethereum mainnet |
- * | Blocknative  | 2        | 0.50   | 30/min         | ETH + L2s        |
+ * | Provider       | Priority | Weight | Rate Limit     | Coverage              |
+ * |----------------|----------|--------|----------------|-----------------------|
+ * | Etherscan      | 1        | 0.50   | 300/min (keyed)| Ethereum mainnet      |
+ * | eth_feeHistory | 2        | 0.50   | 60/min         | Any EIP-1559 chain    |
+ * | Owlracle       | 3        |        |                | Multi-chain           |
  *
- * Default strategy: `fallback` (Etherscan → Blocknative)
+ * Default strategy: `fallback` (Etherscan → eth_feeHistory → Owlracle).
+ * eth_feeHistory needs no key, so the chain has a live source even when no
+ * third-party credential is configured.
  *
  * @module providers/adapters/gas
  */
@@ -25,16 +28,23 @@ import type { ProviderChainConfig, ResolutionStrategy } from '../../types';
 import { ProviderChain } from '../../provider-chain';
 import type { GasPrice } from './etherscan.adapter';
 import { etherscanGasAdapter } from './etherscan.adapter';
-import { blocknativeGasAdapter } from './blocknative.adapter';
+import { feeHistoryGasAdapter } from './fee-history.adapter';
 import { owlracleAdapter } from './owlracle.adapter';
 
 export type { GasPrice } from './etherscan.adapter';
+export {
+  fetchFeeHistoryGas,
+  isFeeHistoryNetwork,
+  FEE_HISTORY_NETWORKS,
+  type FeeHistoryNetwork,
+  type FeeHistoryEstimate,
+} from './fee-history.adapter';
 
 export interface GasChainOptions {
   strategy?: ResolutionStrategy;
   cacheTtlSeconds?: number;
   staleWhileError?: boolean;
-  includeBlocknative?: boolean;
+  includeFeeHistory?: boolean;
   includeOwlracle?: boolean;
 }
 
@@ -43,7 +53,7 @@ export function createGasChain(options: GasChainOptions = {}): ProviderChain<Gas
     strategy = 'fallback',
     cacheTtlSeconds = 15,
     staleWhileError = true,
-    includeBlocknative = true,
+    includeFeeHistory = true,
     includeOwlracle = true,
   } = options;
 
@@ -56,8 +66,8 @@ export function createGasChain(options: GasChainOptions = {}): ProviderChain<Gas
   const chain = new ProviderChain<GasPrice>('gas-fees', config);
   chain.addProvider(etherscanGasAdapter);
 
-  if (includeBlocknative) {
-    chain.addProvider(blocknativeGasAdapter);
+  if (includeFeeHistory) {
+    chain.addProvider(feeHistoryGasAdapter);
   }
 
   if (includeOwlracle) {

@@ -228,7 +228,7 @@ Key endpoints to test:
 | DeFi TVL | 1 (DefiLlama) | 3+ | DeFi Pulse, L2Beat API |
 | Funding Rates | 3 (Binance, Bybit, OKX) | 5+ | Deribit, Hyperliquid |
 | On-Chain | 2 (Blockchain.info, Etherscan) + new Mempool.space | 5+ | Glassnode API, Santiment |
-| Gas Fees | 0 → 2 (Etherscan, Blocknative) | 3+ | Owlracle |
+| Gas Fees | 3 (Etherscan, eth_feeHistory, Owlracle) | 3+ | ✅ Done |
 | DEX Data | 0 → 2 (DexScreener, GeckoTerminal) | 3+ | 1inch API |
 | Fear & Greed | 0 → 2 (Alternative.me, CoinStats) | 2 | ✅ Done |
 | Whale Alerts | 0 → 1 (Whale Alert) | 2+ | Arkham Intelligence |
@@ -242,7 +242,6 @@ Key endpoints to test:
 | Etherscan | 5 req/s | https://etherscan.io/apis | HIGH |
 | CoinMarketCap | 10K req/mo | https://coinmarketcap.com/api/ | HIGH |
 | Whale Alert | 10 req/min | https://whale-alert.io/signup | HIGH |
-| Blocknative | 1K req/mo | https://www.blocknative.com/ | MEDIUM |
 | CoinStats | 500 req/mo | https://coinstats.app/api | MEDIUM |
 | Neon (PostgreSQL) | 500MB free | https://neon.tech | HIGH |
 | Upstash Redis | 10K cmd/day | https://upstash.com | HIGH |

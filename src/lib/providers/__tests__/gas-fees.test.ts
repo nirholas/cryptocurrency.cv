@@ -13,13 +13,6 @@
  */
 import { describe, it, expect, vi, beforeEach } from 'vitest';
 
-// The Blocknative adapter reads its key once, at module scope, so this has to
-// run before the adapter module is imported. Without a key the adapter refuses
-// to fetch at all and the fallback test below asserted nothing.
-vi.hoisted(() => {
-  process.env.BLOCKNATIVE_API_KEY = 'test-key';
-});
-
 import { createGasChain } from '../adapters/gas';
 import { registry } from '../registry';
 import '../setup';
@@ -48,42 +41,53 @@ describe('GasChain', () => {
       }),
     });
 
-    const chain = createGasChain({ cacheTtlSeconds: 0, includeBlocknative: false });
+    const chain = createGasChain({ cacheTtlSeconds: 0, includeFeeHistory: false });
     const result = await chain.fetch({});
 
     expect(result.data).toBeDefined();
     expect(result.lineage.provider).toContain('etherscan');
   });
 
-  it('falls back to Blocknative when Etherscan fails', async () => {
+  it('falls back to eth_feeHistory when Etherscan fails', async () => {
     // Etherscan fails
     mockFetch.mockRejectedValueOnce(new Error('Etherscan down'));
-    // Blocknative succeeds
+    // The first public RPC answers eth_feeHistory (3 blocks + next base fee)
     mockFetch.mockResolvedValueOnce({
       ok: true,
+      status: 200,
       json: async () => ({
-        blockPrices: [{
-          baseFeePerGas: 25,
-          estimatedPrices: [
-            { confidence: 99, price: 50, maxPriorityFeePerGas: 2, maxFeePerGas: 52 },
-            { confidence: 90, price: 35, maxPriorityFeePerGas: 1.5, maxFeePerGas: 36.5 },
-            { confidence: 70, price: 25, maxPriorityFeePerGas: 1, maxFeePerGas: 26 },
+        jsonrpc: '2.0',
+        id: 1,
+        result: {
+          oldestBlock: '0x100',
+          baseFeePerGas: ['0x3b9aca00', '0x3b9aca00', '0x3b9aca00', '0x77359400'], // 1,1,1 then 2 gwei
+          gasUsedRatio: [0.5, 0.5, 0.5],
+          reward: [
+            ['0x5f5e100', '0x3b9aca00', '0x77359400', '0xb2d05e00'], // 0.1, 1, 2, 3 gwei
+            ['0x5f5e100', '0x3b9aca00', '0x77359400', '0xb2d05e00'],
+            ['0x5f5e100', '0x3b9aca00', '0x77359400', '0xb2d05e00'],
           ],
-        }],
+        },
       }),
     });
 
-    // Owlracle is excluded so a Blocknative failure cannot be masked by the
+    // Owlracle is excluded so a fee-history failure cannot be masked by the
     // tertiary provider picking up the request.
     const chain = createGasChain({
       cacheTtlSeconds: 0,
-      includeBlocknative: true,
+      includeFeeHistory: true,
       includeOwlracle: false,
     });
     const result = await chain.fetch({});
 
-    expect(result.data).toBeDefined();
-    expect(result.lineage.provider).toContain('blocknative');
+    expect(result.lineage.provider).toContain('feehistory');
+    expect(result.data.baseFee).toBe(2);
+    expect(result.data.slow).toBeCloseTo(2.1);
+    expect(result.data.standard).toBe(3);
+    expect(result.data.fast).toBe(4);
+    const [url, init] = mockFetch.mock.calls[1];
+    expect(url).toBe('https://ethereum-rpc.publicnode.com');
+    expect(JSON.parse(init.body).method).toBe('eth_feeHistory');
   });
 
   it('registry resolves gas-fees category', () => {

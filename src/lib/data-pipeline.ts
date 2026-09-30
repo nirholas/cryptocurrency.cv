@@ -440,9 +440,10 @@ async function fetchGas(): Promise<Record<string, unknown>> {
     return {
       network: 'ethereum',
       baseFee: parseFloat(data.result.suggestBaseFee) || null,
-      low: { gwei: parseInt(data.result.SafeGasPrice), usd: null },
-      medium: { gwei: parseInt(data.result.ProposeGasPrice), usd: null },
-      high: { gwei: parseInt(data.result.FastGasPrice), usd: null },
+      // parseFloat, not parseInt: mainnet gas is routinely below 1 gwei.
+      low: { gwei: parseFloat(data.result.SafeGasPrice), usd: null },
+      medium: { gwei: parseFloat(data.result.ProposeGasPrice), usd: null },
+      high: { gwei: parseFloat(data.result.FastGasPrice), usd: null },
       lastBlock: data.result.LastBlock,
       timestamp: new Date().toISOString(),
       source: 'etherscan',

@@ -11,16 +11,25 @@
 import { NextResponse } from 'next/server';
 import { getPipelineGas } from '@/lib/data-pipeline';
 import { registry } from '@/lib/providers/registry';
-import type { GasPrice } from '@/lib/providers/adapters/gas';
+import { fetchFeeHistoryGas, type GasPrice } from '@/lib/providers/adapters/gas';
 
 import { resilientFetchResponse } from '@/lib/resilient-fetch';
 export const revalidate = 30;
 
+const CACHE_HEADERS = { 'Cache-Control': 'public, s-maxage=15, stale-while-revalidate=30' };
+
+/** Gas for a standard ETH transfer, used for the USD figures. */
+const TRANSFER_GAS_UNITS = 21_000;
+
 /**
  * GET /api/gas
  *
- * Get current Ethereum gas prices
- * Uses pipeline cache → provider framework (Etherscan + Blocknative) → direct Etherscan fallback
+ * Get current Ethereum gas prices.
+ * Uses pipeline cache → provider framework (Etherscan → eth_feeHistory →
+ * Owlracle) → eth_feeHistory directly. Every layer answers in the same shape:
+ * `low` / `medium` / `high` ({ gwei, usd }) for the gas page and older
+ * clients, plus the provider fields (`slow`, `standard`, `fast`, `instant`,
+ * `baseFee`). When every source is down it returns 503 rather than guessing.
  */
 export async function GET() {
   try {
@@ -28,113 +37,83 @@ export async function GET() {
     try {
       const pipelineData = await getPipelineGas();
       if (pipelineData) {
-        return NextResponse.json(
-          {
-            ...pipelineData,
-            _cache: 'pipeline',
-          },
-          {
-            headers: {
-              'Cache-Control': 'public, s-maxage=15, stale-while-revalidate=30',
-            },
-          },
-        );
+        return NextResponse.json({ ...pipelineData, _cache: 'pipeline' }, { headers: CACHE_HEADERS });
       }
     } catch {
-      /* pipeline miss — try provider chain */
+      /* pipeline miss: try provider chain */
     }
 
-    // Layer 2: Provider framework (fallback between Etherscan + Blocknative with circuit breakers)
+    // Layer 2: Provider framework (Etherscan → eth_feeHistory → Owlracle, with circuit breakers)
     try {
       const result = await registry.fetch<GasPrice>('gas-fees');
       return NextResponse.json(
         {
-          ...result.data,
+          ...(await toGasResponse(result.data, result.lineage.provider, null)),
           _cache: 'provider',
           _provider: result.lineage.provider,
           _confidence: result.lineage.confidence,
         },
-        {
-          headers: {
-            'Cache-Control': 'public, s-maxage=15, stale-while-revalidate=30',
-          },
-        },
+        { headers: CACHE_HEADERS },
       );
     } catch {
-      /* provider chain miss — fall through to direct call */
+      /* provider chain miss: read the chain directly */
     }
 
-    // Layer 3: Direct Etherscan fallback (legacy)
-    const etherscanKey = process.env.ETHERSCAN_API_KEY || '';
-    const etherscanUrl = `https://api.etherscan.io/v2/api?chainid=1&module=gastracker&action=gasoracle${etherscanKey ? `&apikey=${etherscanKey}` : ''}`;
-
-    const response = await fetch(etherscanUrl, {
-      next: { revalidate: 30 },
-    });
-
-    if (response.ok) {
-      const data = await response.json();
-
-      if (data.status === '1' && data.result) {
-        // Fetch ETH price for USD conversion
-        let ethPriceUsd: number | null = null;
-        try {
-          const ethRes = await resilientFetchResponse(
-            'https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd',
-            { service: 'coingecko', timeoutMs: 8000, retries: 1, next: { revalidate: 60 } },
-          );
-          if (ethRes.ok) {
-            const ethData = await ethRes.json();
-            ethPriceUsd = ethData?.ethereum?.usd ?? null;
-          }
-        } catch {
-          /* ETH price fetch failed — USD will be null */
-        }
-
-        // Standard transfer gas: 21000 units. USD = gwei * 21000 * 1e-9 * ethPrice
-        const gweiToUsd = (gwei: number) =>
-          ethPriceUsd !== null ? parseFloat((gwei * 21000 * 1e-9 * ethPriceUsd).toFixed(4)) : null;
-
-        const lowGwei = parseInt(data.result.SafeGasPrice);
-        const medGwei = parseInt(data.result.ProposeGasPrice);
-        const highGwei = parseInt(data.result.FastGasPrice);
-
-        return NextResponse.json({
-          network: 'ethereum',
-          baseFee: parseFloat(data.result.suggestBaseFee) || null,
-          low: {
-            gwei: lowGwei,
-            usd: gweiToUsd(lowGwei),
-          },
-          medium: {
-            gwei: medGwei,
-            usd: gweiToUsd(medGwei),
-          },
-          high: {
-            gwei: highGwei,
-            usd: gweiToUsd(highGwei),
-          },
-          lastBlock: data.result.LastBlock,
-          timestamp: new Date().toISOString(),
-          source: 'etherscan',
-        });
-      }
+    // Layer 3: eth_feeHistory straight from public RPCs (no key, bypasses the chain's breakers)
+    try {
+      const gas = await fetchFeeHistoryGas('ethereum');
+      return NextResponse.json(
+        { ...(await toGasResponse(gas, 'eth-feehistory', gas.blockNumber)), _cache: 'direct' },
+        { headers: CACHE_HEADERS },
+      );
+    } catch (error) {
+      console.error('Gas API: every source failed:', (error as Error).message);
     }
 
-    // Fallback: estimate based on recent blocks
-    return NextResponse.json({
-      network: 'ethereum',
-      baseFee: null,
-      low: { gwei: 20, usd: null },
-      medium: { gwei: 30, usd: null },
-      high: { gwei: 50, usd: null },
-      lastBlock: null,
-      timestamp: new Date().toISOString(),
-      source: 'estimate',
-      note: 'Estimates based on typical gas prices. Add ETHERSCAN_API_KEY for live data.',
-    });
+    return NextResponse.json(
+      {
+        error: 'Gas prices are temporarily unavailable',
+        message: 'Every gas source (Etherscan, eth_feeHistory, Owlracle) failed. Retry in a few seconds.',
+      },
+      { status: 503, headers: { 'Retry-After': '15' } },
+    );
   } catch (error) {
     console.error('Gas API error:', error);
     return NextResponse.json({ error: 'Failed to fetch gas prices' }, { status: 500 });
+  }
+}
+
+async function toGasResponse(gas: GasPrice, source: string, lastBlock: number | null) {
+  const ethPriceUsd = await fetchEthPriceUsd();
+  const level = (gwei: number) => ({
+    gwei,
+    usd:
+      ethPriceUsd !== null
+        ? parseFloat((gwei * TRANSFER_GAS_UNITS * 1e-9 * ethPriceUsd).toFixed(4))
+        : null,
+  });
+  return {
+    ...gas,
+    network: gas.chain,
+    low: level(gas.slow),
+    medium: level(gas.standard),
+    high: level(gas.fast),
+    lastBlock: lastBlock !== null ? String(lastBlock) : null,
+    timestamp: gas.lastUpdated,
+    source,
+  };
+}
+
+async function fetchEthPriceUsd(): Promise<number | null> {
+  try {
+    const res = await resilientFetchResponse(
+      'https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd',
+      { service: 'coingecko', timeoutMs: 8000, retries: 1, next: { revalidate: 60 } },
+    );
+    if (!res.ok) return null;
+    const data = await res.json();
+    return typeof data?.ethereum?.usd === 'number' ? data.ethereum.usd : null;
+  } catch {
+    return null; // USD figures are optional; gwei is still served
   }
 }

@@ -23,7 +23,6 @@
 | Upstash Redis | Cache + Rate Limit | 10K cmd/day | HIGH | 3 min |
 | NewsData.io | News API | 200 credits/day | MEDIUM | 2 min |
 | CoinStats | Fear & Greed | 30 req/min | MEDIUM | 3 min |
-| Blocknative | Gas Mempool | 30 req/min | MEDIUM | 5 min |
 | Santiment | Social Analytics | 10 req/min | MEDIUM | 3 min |
 | CoinGlass | Derivatives | 30 req/min | MEDIUM | 3 min |
 | The Graph | DeFi Subgraphs | 100K queries/mo | MEDIUM | 5 min |
@@ -174,18 +173,16 @@ NEWSDATA_API_KEY=pub_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 COINSTATS_API_KEY=xxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ```
 
-### 11. Blocknative API Key
-**What it powers:** Mempool-based gas estimation  
-**Free tier:** 30 requests/minute  
-**Signup:**
-1. Go to https://www.blocknative.com/
-2. Sign up → "Gas Platform" → free plan
-3. Get API key from dashboard
-
-**Environment variable:**
+### 11. Gas estimation: no key needed
+**What it powers:** `/api/gas` and `/api/v1/gas`  
+Gas prices come from the standard `eth_feeHistory` JSON-RPC method over public
+RPCs, so there is nothing to sign up for. Blocknative, which this section used
+to cover, shut its gas API down on 2026-06-19. To use your own node instead of
+the public ones, optionally set:
 ```bash
-BLOCKNATIVE_API_KEY=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+ETHEREUM_RPC_URL=https://your-node.example
 ```
+(`BASE_RPC_URL`, `ARBITRUM_RPC_URL`, `OPTIMISM_RPC_URL` and `POLYGON_RPC_URL` work the same way.)
 
 ### 12. Santiment API Key
 **What it powers:** On-chain + social analytics with dev activity  
@@ -322,7 +319,6 @@ UPSTASH_REDIS_REST_TOKEN=
 # MEDIUM priority
 NEWSDATA_API_KEY=
 COINSTATS_API_KEY=
-BLOCKNATIVE_API_KEY=
 SANTIMENT_API_KEY=
 COINGLASS_API_KEY=
 THEGRAPH_API_KEY=

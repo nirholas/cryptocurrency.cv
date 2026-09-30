@@ -151,6 +151,16 @@ function estimateUsd(
   return formatCurrency(usd);
 }
 
+/**
+ * Mainnet gas is routinely a fraction of a gwei, so fixed decimals either print
+ * noise (0.089573121) or round a real price to 0. Keep three significant
+ * digits below 100 gwei and whole numbers above.
+ */
+const gweiFormat = new Intl.NumberFormat("en-US", { maximumSignificantDigits: 3 });
+function formatGwei(gwei: number): string {
+  return gwei >= 100 ? Math.round(gwei).toLocaleString("en-US") : gweiFormat.format(gwei);
+}
+
 function estimateUsdRaw(
   _gwei: number,
   gasUnits: number,
@@ -259,7 +269,7 @@ function L2Comparison({ gas }: { gas: GasData }) {
           <div className="flex-1 h-7 rounded bg-surface-secondary overflow-hidden">
             <div className="h-full rounded bg-accent flex items-center justify-end pr-2 transition-all" style={{ width: "100%" }}>
               <span className="text-xs font-medium text-white">
-                {ethTransferUsd !== null ? formatCurrency(ethTransferUsd) : `${gas.medium.gwei} gwei`}
+                {ethTransferUsd !== null ? formatCurrency(ethTransferUsd) : `${formatGwei(gas.medium.gwei)} gwei`}
               </span>
             </div>
           </div>
@@ -330,7 +340,7 @@ export default async function GasPage({ params }: Props) {
               )}
               {gas.baseFee !== null && (
                 <span className="text-xs text-text-tertiary">
-                  Base fee: {gas.baseFee.toFixed(1)} gwei
+                  Base fee: {formatGwei(gas.baseFee)} gwei
                 </span>
               )}
             </div>
@@ -363,7 +373,7 @@ export default async function GasPage({ params }: Props) {
                         </div>
                       </div>
                       <div className="text-right">
-                        <p className="text-3xl font-bold text-accent">{level.gwei}</p>
+                        <p className="text-3xl font-bold text-accent">{formatGwei(level.gwei)}</p>
                         <p className="text-[10px] text-text-tertiary">gwei</p>
                       </div>
                     </div>
@@ -446,14 +456,14 @@ export default async function GasPage({ params }: Props) {
               <div className="space-y-3">
                 {SPEED_CARDS.map(({ key, label, emoji, barColor }) => {
                   const level = gas[key];
-                  const maxGwei = Math.max(gas.low.gwei, gas.medium.gwei, gas.high.gwei, 1);
+                  const maxGwei = Math.max(gas.low.gwei, gas.medium.gwei, gas.high.gwei) || 1;
                   const pct = (level.gwei / maxGwei) * 100;
                   return (
                     <div key={key}>
                       <div className="flex items-center justify-between text-sm mb-1">
                         <span className="text-text-secondary">{emoji} {label}</span>
                         <span className="font-medium text-text-primary">
-                          {level.gwei} gwei
+                          {formatGwei(level.gwei)} gwei
                           {level.usd !== null && (
                             <span className="text-text-tertiary ml-1">({formatCurrency(level.usd)})</span>
                           )}
@@ -473,7 +483,7 @@ export default async function GasPage({ params }: Props) {
                   <span className="font-medium text-text-primary">
                     {(gas.high.gwei / gas.low.gwei).toFixed(1)}×
                     <span className="text-text-tertiary ml-1">
-                      ({gas.high.gwei - gas.low.gwei} gwei difference)
+                      ({formatGwei(gas.high.gwei - gas.low.gwei)} gwei difference)
                     </span>
                   </span>
                 </div>

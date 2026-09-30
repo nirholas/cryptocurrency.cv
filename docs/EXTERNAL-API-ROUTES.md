@@ -919,18 +919,27 @@
 
 ## 8. Gas Estimation
 
-### Blocknative
+### eth_feeHistory (public JSON-RPC)
 
 | | |
 |---|---|
-| **Base URL** | `https://api.blocknative.com` |
-| **Env Var** | `NEXT_PUBLIC_BLOCKNATIVE_API_KEY` |
+| **Method** | [`eth_feeHistory`](https://ethereum.org/en/developers/docs/apis/json-rpc/#eth_feehistory) (EIP-1559) |
+| **Key Required** | No |
+| **Networks** | Ethereum, Base, Arbitrum, Optimism, Polygon |
+| **Env Vars (optional)** | `ETHEREUM_RPC_URL`, `BASE_RPC_URL`, `ARBITRUM_RPC_URL`, `OPTIMISM_RPC_URL`, `POLYGON_RPC_URL` |
 
-**Used Endpoints:**
+Gas tiers are derived from what the last 20 blocks actually paid: the median
+priority fee at the 10th / 50th / 90th / 99th percentile is added to the base
+fee of the next block (`slow` / `standard` / `fast` / `instant`; `instant` also
+budgets a 12.5% base-fee rise). Each network fails over across several public
+RPCs (publicnode, dRPC and the chain's official endpoint); set the matching
+env var to put your own node first. Source:
+`src/lib/providers/adapters/gas/fee-history.adapter.ts`.
 
-| Endpoint | Purpose |
-|---|---|
-| `GET /gasprices/blockprices` | Gas price predictions |
+This replaced Blocknative, whose gas API shut down on 2026-06-19 (thanks to
+@cmdenney for the report in issue #44).
+
+**Used by:** `/api/gas` (Ethereum fallback after Etherscan), `/api/v1/gas` (all networks).
 
 ---
 
@@ -1466,7 +1475,7 @@ All API keys used across the project:
 | `MESSARI_API_KEY` | Messari | Yes |
 | `SANTIMENT_API_KEY` | Santiment | Yes |
 | `CRYPTOCOMPARE_API_KEY` | CryptoCompare | Optional |
-| `NEXT_PUBLIC_BLOCKNATIVE_API_KEY` | Blocknative | Yes |
+| `ETHEREUM_RPC_URL` (and `BASE_`/`ARBITRUM_`/`OPTIMISM_`/`POLYGON_RPC_URL`) | eth_feeHistory gas (preferred RPC; public RPCs used when unset) | No |
 | `BIRDEYE_API_KEY` | Birdeye | Yes |
 | `HELIUS_API_KEY` | Helius | Yes |
 | `SHYFT_API_KEY` | Shyft | Yes |
