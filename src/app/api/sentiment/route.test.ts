@@ -69,6 +69,7 @@ vi.mock('@/app/api/_utils', () => ({
 }));
 
 import { GET } from './route';
+import { aiCache, staleCache } from '@/lib/cache';
 
 // ---------------------------------------------------------------------------
 // Helpers
@@ -114,6 +115,62 @@ const sampleGroqResult = {
   },
 };
 
+/** Synthetic tickers, so no fixture names a real asset. */
+const syntheticArticles = [
+  {
+    title: 'ZQXV network posts record growth after upgrade',
+    link: 'https://example.com/zqxv-growth',
+    description: 'Adoption of the synthetic ZQXV chain keeps climbing.',
+    pubDate: '2026-10-08T09:00:00.000Z',
+    source: 'Example Wire',
+    sourceKey: 'example',
+    category: 'general',
+    timeAgo: '1h ago',
+  },
+  {
+    title: 'Exchange hack triggers panic and a fraud investigation',
+    link: 'https://example.com/hack',
+    description: 'Regulators open a lawsuit after the collapse.',
+    pubDate: '2026-10-08T08:00:00.000Z',
+    source: 'Example Wire',
+    sourceKey: 'example',
+    category: 'general',
+    timeAgo: '2h ago',
+  },
+];
+
+function syntheticAIResult(assetsPerArticle: unknown[]) {
+  return {
+    articles: assetsPerArticle.map((affectedAssets, i) => ({
+      title: `Synthetic article ${i}`,
+      link: `https://example.com/${i}`,
+      source: 'Example Wire',
+      sentiment: 'bullish',
+      confidence: 70,
+      reasoning: 'synthetic',
+      impactLevel: 'medium',
+      timeHorizon: 'short_term',
+      affectedAssets,
+    })),
+    market: {
+      overall: 'bullish',
+      score: 40,
+      confidence: 70,
+      summary: 'Synthetic summary.',
+      keyDrivers: [],
+    },
+  };
+}
+
+function newsOf(articles: typeof syntheticArticles) {
+  return {
+    articles,
+    totalCount: articles.length,
+    sources: ['synthetic'],
+    fetchedAt: new Date().toISOString(),
+  };
+}
+
 // ---------------------------------------------------------------------------
 // Tests
 // ---------------------------------------------------------------------------
@@ -121,16 +178,27 @@ const sampleGroqResult = {
 describe('GET /api/sentiment', () => {
   beforeEach(() => {
     vi.clearAllMocks();
+    aiCache.clear();
+    staleCache.clear();
   });
 
-  it('returns 503 when Groq is not configured', async () => {
+  it('answers from the keyword reading when no AI provider is configured', async () => {
     mockIsGroqConfigured.mockReturnValue(false);
+    mockGetLatestNews.mockResolvedValueOnce({
+      articles: syntheticArticles,
+      totalCount: syntheticArticles.length,
+      sources: ['synthetic'],
+      fetchedAt: new Date().toISOString(),
+    });
 
     const response = await GET(makeRequest());
 
-    expect(response.status).toBe(503);
+    expect(response.status).toBe(200);
     const body = await response.json();
-    expect(body.error).toBeDefined();
+    expect(body.meta.method).toBe('keyword');
+    expect(body.meta.degraded).toBe(true);
+    expect(body.meta.degradedReason).toBe('ai_not_configured');
+    expect(mockPromptGroqJson).not.toHaveBeenCalled();
   });
 
   it('returns 200 with articles and market sentiment when Groq is configured', async () => {
@@ -173,21 +241,28 @@ describe('GET /api/sentiment', () => {
     expect(body.market.score).toBe(0);
   });
 
-  it('returns 500 when Groq AI call fails', async () => {
+  it('answers from the keyword reading when every AI provider fails', async () => {
     mockIsGroqConfigured.mockReturnValue(true);
     mockGetLatestNews.mockResolvedValueOnce({
-      articles: sampleArticles,
-      totalCount: 1,
-      sources: ['coindesk'],
+      articles: syntheticArticles,
+      totalCount: syntheticArticles.length,
+      sources: ['synthetic'],
       fetchedAt: new Date().toISOString(),
     });
-    mockPromptGroqJson.mockRejectedValueOnce(new Error('Groq rate limit'));
+    mockPromptGroqJson.mockRejectedValueOnce(new Error('every configured provider is out of quota'));
+    const warn = vi.spyOn(console, 'warn').mockImplementation(() => {});
 
     const response = await GET(makeRequest());
 
-    expect(response.status).toBe(500);
+    expect(response.status).toBe(200);
     const body = await response.json();
-    expect(body.error).toBeDefined();
+    expect(body.meta.method).toBe('keyword');
+    expect(body.meta.degradedReason).toBe('ai_unavailable');
+    expect(body.market.confidence).toBeLessThanOrEqual(40);
+    expect(body.market.overall).toBe('neutral');
+    expect(body.articles).toHaveLength(syntheticArticles.length);
+    expect(response.headers.get('Cache-Control')).toContain('s-maxage=60');
+    warn.mockRestore();
   });
 
   it('filters articles by asset when ?asset= is provided', async () => {
@@ -230,5 +305,87 @@ describe('GET /api/sentiment', () => {
           a.affectedAssets.some((t: string) => t.toUpperCase().includes('BTC'))
       )
     ).toBe(true);
+  });
+  it('rejects an asset that cannot be a ticker symbol with 400', async () => {
+    const response = await GET(makeRequest('http://localhost/api/sentiment?asset=%3Cscript%3E'));
+
+    expect(response.status).toBe(400);
+    expect(mockGetLatestNews).not.toHaveBeenCalled();
+  });
+
+  it('falls back to the default limit when limit is not a number', async () => {
+    mockIsGroqConfigured.mockReturnValue(true);
+    mockGetLatestNews.mockResolvedValueOnce(newsOf(syntheticArticles));
+    mockPromptGroqJson.mockResolvedValueOnce(syntheticAIResult([['ZQX']]));
+
+    const response = await GET(makeRequest('http://localhost/api/sentiment?limit=abc'));
+
+    expect(response.status).toBe(200);
+    expect(mockGetLatestNews).toHaveBeenCalledWith(20);
+  });
+
+  it('reuses one AI analysis across polls and assets instead of re-prompting', async () => {
+    mockIsGroqConfigured.mockReturnValue(true);
+    mockGetLatestNews.mockResolvedValue(newsOf(syntheticArticles));
+    mockPromptGroqJson.mockResolvedValue(syntheticAIResult([['ZQX'], ['ZQXV']]));
+
+    const first = await GET(makeRequest('http://localhost/api/sentiment?asset=ZQX'));
+    const second = await GET(makeRequest('http://localhost/api/sentiment?asset=zqxv'));
+    const third = await GET(makeRequest('http://localhost/api/sentiment'));
+
+    expect(first.status).toBe(200);
+    expect(second.status).toBe(200);
+    expect(third.status).toBe(200);
+    expect(mockPromptGroqJson).toHaveBeenCalledTimes(1);
+    expect((await first.json()).articles).toHaveLength(1);
+    expect((await second.json()).meta.asset).toBe('ZQXV');
+    expect((await third.json()).meta.method).toBe('ai');
+  });
+
+  it('matches the asset symbol exactly rather than as a substring', async () => {
+    mockIsGroqConfigured.mockReturnValue(true);
+    mockGetLatestNews.mockResolvedValueOnce(newsOf(syntheticArticles));
+    mockPromptGroqJson.mockResolvedValueOnce(syntheticAIResult([['ZQXV'], ['$zqx'], ['WZQ']]));
+
+    const response = await GET(makeRequest('http://localhost/api/sentiment?asset=ZQX'));
+    const body = await response.json();
+
+    expect(body.articles.map((a: { link: string }) => a.link)).toEqual(['https://example.com/1']);
+  });
+
+  it('does not throw when the model omits affectedAssets on an article', async () => {
+    mockIsGroqConfigured.mockReturnValue(true);
+    mockGetLatestNews.mockResolvedValueOnce(newsOf(syntheticArticles));
+    mockPromptGroqJson.mockResolvedValueOnce(syntheticAIResult([undefined, ['ZQX']]));
+
+    const response = await GET(makeRequest('http://localhost/api/sentiment?asset=ZQX'));
+
+    expect(response.status).toBe(200);
+    expect((await response.json()).articles).toHaveLength(1);
+  });
+
+  it('tags the requested asset on keyword-read articles that name it', async () => {
+    mockIsGroqConfigured.mockReturnValue(false);
+    mockGetLatestNews.mockResolvedValueOnce(newsOf(syntheticArticles));
+
+    const response = await GET(makeRequest('http://localhost/api/sentiment?asset=zqxv'));
+    const body = await response.json();
+
+    expect(body.articles).toHaveLength(1);
+    expect(body.articles[0].link).toBe('https://example.com/zqxv-growth');
+    expect(body.articles[0].sentiment).toMatch(/bullish/);
+    expect(body.articles[0].reasoning).toContain('growth');
+  });
+
+  it('answers 503 with Retry-After when the news feed itself is down', async () => {
+    mockIsGroqConfigured.mockReturnValue(true);
+    mockGetLatestNews.mockRejectedValueOnce(new Error('feed unreachable'));
+    const error = vi.spyOn(console, 'error').mockImplementation(() => {});
+
+    const response = await GET(makeRequest());
+
+    expect(response.status).toBe(503);
+    expect(response.headers.get('Retry-After')).toBe('60');
+    error.mockRestore();
   });
 });

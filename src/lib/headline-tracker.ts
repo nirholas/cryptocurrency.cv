@@ -202,6 +202,18 @@ export function calculateSentiment(text: string): number {
 }
 
 /**
+ * The positive and negative headline terms found in `text`: the evidence
+ * behind calculateSentiment, for callers that explain a score.
+ */
+export function sentimentTerms(text: string): { positive: string[]; negative: string[] } {
+  const words = text.toLowerCase().split(/\s+/);
+  return {
+    positive: POSITIVE_WORDS.filter((pw) => words.some((word) => word.includes(pw))),
+    negative: NEGATIVE_WORDS.filter((nw) => words.some((word) => word.includes(nw))),
+  };
+}
+
+/**
  * Detect sentiment shift between headlines
  */
 export function detectSentimentShift(
