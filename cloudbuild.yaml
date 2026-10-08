@@ -52,8 +52,10 @@ steps:
               '--region',
               'us-central1',
               '--allow-unauthenticated',
+              # 4Gi matches the live service since revision 00011; 2Gi here
+              # would silently halve it on the next pipeline deploy.
               '--memory',
-              '2Gi',
+              '4Gi',
               '--cpu',
               '2',
               '--timeout',
