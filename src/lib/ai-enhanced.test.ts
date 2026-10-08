@@ -319,7 +319,7 @@ describe('AI Enhanced Utilities', () => {
       // moves on and only throws once every configured provider is exhausted.
       // Use unique title to avoid cache hits
       await expect(summarizeArticle('API Failure Test ' + Date.now(), 'Content'))
-        .rejects.toThrow('All configured AI providers unavailable');
+        .rejects.toThrow('every configured provider is out of quota, refused by billing or unreachable');
     });
   });
 });
