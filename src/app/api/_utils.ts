@@ -45,16 +45,27 @@ export function aiNotConfiguredResponse(): NextResponse {
   );
 }
 
+/** Seconds a client should wait before retrying after every AI provider refused. */
+const AI_UNAVAILABLE_RETRY_AFTER_SECONDS = 120;
+
 /**
- * Returns the standard 503 response when all AI providers fail authentication.
+ * Returns the standard 503 response when every AI provider is unavailable.
+ *
+ * `details` is the upstream provider error. It is logged here and never sent
+ * to the caller: provider errors carry account internals (the Groq
+ * organization id and its token budget, the Google project number in a billing
+ * refusal) that a public API must not hand to anonymous clients.
  */
 export function aiAuthErrorResponse(details?: string): NextResponse {
+  if (details) console.warn('[ai] every provider unavailable:', details);
   return NextResponse.json(
     {
       error: 'AI service temporarily unavailable',
       message: 'AI service temporarily unavailable: every AI provider is out of quota or unreachable. Please try again later.',
-      ...(details && { details }),
     },
-    { status: 503 }
+    {
+      status: 503,
+      headers: { 'Retry-After': String(AI_UNAVAILABLE_RETRY_AFTER_SECONDS) },
+    }
   );
 }
