@@ -22,6 +22,7 @@
 
 import { type NextRequest } from 'next/server';
 import { getLatestNews, getBreakingNews } from '@/lib/crypto-news';
+import { SSE_MAX_DURATION_MS, sseCloseFrame, sseRetryFrame } from '@/lib/sse-lifetime';
 
 export const runtime = 'edge';
 
@@ -31,9 +32,9 @@ const POLL_INTERVAL = 60000; // 60 seconds
 
 // --- Connection limits ---
 const MAX_CONCURRENT_SSE = parseInt(process.env.SSE_MAX_CONNECTIONS ?? '500', 10);
-// 5-minute cap: keeps Vercel function cost low.  Clients should reconnect
-// via EventSource's built-in retry mechanism.
-const MAX_CONNECTION_DURATION = 5 * 60 * 1000; // 5 minutes hard cap
+// Closes itself before Cloud Run's request timeout would cut the response
+// (lib/sse-lifetime). Clients reconnect via EventSource's built-in retry.
+const MAX_CONNECTION_DURATION = SSE_MAX_DURATION_MS;
 let activeConnections = 0;
 
 export async function GET(request: NextRequest) {
@@ -82,16 +83,14 @@ export async function GET(request: NextRequest) {
       // Auto-disconnect after MAX_CONNECTION_DURATION to prevent zombie connections
       maxDurationTimer = setTimeout(() => {
         if (isConnected) {
-          const closeEvent = `event: close\ndata: ${JSON.stringify({
-            reason: 'max_duration_reached',
-            message: 'Connection closed after 5 minutes. Please reconnect.',
-          })}\n\n`;
-          safeEnqueue(controller, encoder.encode(closeEvent));
+          safeEnqueue(controller, encoder.encode(sseCloseFrame()));
           isConnected = false;
           activeConnections = Math.max(0, activeConnections - 1);
           try { controller.close(); } catch { /* already closed */ }
         }
       }, MAX_CONNECTION_DURATION);
+
+      if (!safeEnqueue(controller, encoder.encode(sseRetryFrame()))) { clearTimeout(maxDurationTimer); return; }
 
       // Send initial connection event
       const connectEvent = `event: connected\ndata: ${JSON.stringify({

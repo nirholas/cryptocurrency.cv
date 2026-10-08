@@ -12,7 +12,10 @@
  * GET /api/news/stream
  * SSE endpoint for live news updates.
  *
- * Polls for new articles every ~60 seconds and pushes them via SSE.
+ * Polls for new articles every ~60 seconds and pushes them via SSE. The
+ * stream closes itself before Cloud Run's request timeout (see
+ * lib/sse-lifetime); EventSource reconnects and sends back the last news
+ * event id, so the reconnected stream does not repeat the batch it already sent.
  *
  * Query params:
  *   categories — comma-separated list of categories to filter (optional)
@@ -21,6 +24,7 @@
 
 import { type NextRequest } from 'next/server';
 import { getLatestNews, getBreakingNews } from '@/lib/crypto-news';
+import { SSE_MAX_DURATION_MS, sseCloseFrame, sseEventId, sseRetryFrame } from '@/lib/sse-lifetime';
 
 // force-dynamic required: SSE streaming response
 export const dynamic = 'force-dynamic';
@@ -30,11 +34,21 @@ const POLL_INTERVAL = 60000; // 60 seconds
 export async function GET(request: NextRequest): Promise<Response> {
   const searchParams = request.nextUrl.searchParams;
   const categories = searchParams.get('categories')?.split(',').filter(Boolean) || [];
-  const limit = Math.min(Math.max(1, parseInt(searchParams.get('limit') || '5', 10)), 20);
+  const parsedLimit = Number.parseInt(searchParams.get('limit') ?? '', 10);
+  const limit = Number.isFinite(parsedLimit) ? Math.min(Math.max(1, parsedLimit), 20) : 5;
 
   const encoder = new TextEncoder();
   let isConnected = true;
-  let lastArticleId = '';
+  let lastArticleId = request.headers.get('last-event-id') ?? '';
+  let pollTimer: ReturnType<typeof setTimeout> | null = null;
+  let lifetimeTimer: ReturnType<typeof setTimeout> | null = null;
+
+  const stopTimers = () => {
+    if (pollTimer) clearTimeout(pollTimer);
+    if (lifetimeTimer) clearTimeout(lifetimeTimer);
+    pollTimer = null;
+    lifetimeTimer = null;
+  };
 
   const safeEnqueue = (controller: ReadableStreamDefaultController, data: Uint8Array): boolean => {
     if (!isConnected || controller.desiredSize === null) {
@@ -52,12 +66,35 @@ export async function GET(request: NextRequest): Promise<Response> {
 
   const stream = new ReadableStream({
     async start(controller) {
+      const endStream = () => {
+        if (!isConnected) return;
+        safeEnqueue(controller, encoder.encode(sseCloseFrame()));
+        isConnected = false;
+        stopTimers();
+        try {
+          controller.close();
+        } catch {
+          // The client already went away; nothing left to close.
+        }
+      };
+
+      lifetimeTimer = setTimeout(endStream, SSE_MAX_DURATION_MS);
+      request.signal.addEventListener('abort', () => {
+        isConnected = false;
+        stopTimers();
+      });
+
+      if (!safeEnqueue(controller, encoder.encode(sseRetryFrame()))) return;
+
       const connectEvent = `event: connected\ndata: ${JSON.stringify({
         message: 'Connected to news stream',
         config: { categories, limit },
         timestamp: new Date().toISOString(),
       })}\n\n`;
-      if (!safeEnqueue(controller, encoder.encode(connectEvent))) return;
+      if (!safeEnqueue(controller, encoder.encode(connectEvent))) {
+        stopTimers();
+        return;
+      }
 
       const pollNews = async () => {
         if (!isConnected) return;
@@ -77,7 +114,7 @@ export async function GET(request: NextRequest): Promise<Response> {
               }
 
               if (articles.length > 0) {
-                const newsEvent = `event: news\ndata: ${JSON.stringify({
+                const newsEvent = `id: ${sseEventId(latestId)}\nevent: news\ndata: ${JSON.stringify({
                   type: 'news',
                   articles: articles.slice(0, limit),
                   timestamp: new Date().toISOString(),
@@ -125,14 +162,15 @@ export async function GET(request: NextRequest): Promise<Response> {
         }
 
         if (isConnected) {
-          setTimeout(pollNews, POLL_INTERVAL);
+          pollTimer = setTimeout(pollNews, POLL_INTERVAL);
         }
       };
 
-      setTimeout(() => pollNews(), 0);
+      pollTimer = setTimeout(() => pollNews(), 0);
     },
     cancel() {
       isConnected = false;
+      stopTimers();
     },
   });
 
