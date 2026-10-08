@@ -9,9 +9,10 @@
  */
 
 import { type NextRequest, NextResponse } from 'next/server';
-import { getLatestNews } from '@/lib/crypto-news';
+import { getLatestNews, type NewsArticle } from '@/lib/crypto-news';
 import { promptAIJson, isAIConfigured, AIAuthError } from '@/lib/ai-provider';
 import { aiNotConfiguredResponse, aiAuthErrorResponse } from '@/app/api/_utils';
+import { aiCache, generateCacheKey, withCache } from '@/lib/cache';
 
 export const runtime = 'edge';
 export const revalidate = 300;
@@ -68,14 +69,77 @@ const MAX_TITLE_CHARS = 140;
 /** Longest article summary kept in the prompt. */
 const MAX_DESCRIPTION_CHARS = 220;
 
+/**
+ * How long one narrative analysis is reused. The prompt costs ~4k tokens, so
+ * re-running it on every request spent the provider's daily budget; the cache
+ * also serves the last good analysis for up to an hour while providers are down.
+ */
+const ANALYSIS_TTL_SECONDS = 300;
+
+const DEFAULT_LIMIT = 40;
+const MAX_LIMIT = 80;
+
+function parseLimit(raw: string | null): number {
+  const parsed = Number.parseInt(raw ?? '', 10);
+  if (!Number.isFinite(parsed)) return DEFAULT_LIMIT;
+  return Math.min(Math.max(parsed, 1), MAX_LIMIT);
+}
+
 function truncate(text: string, max: number): string {
   const clean = text.replace(/\s+/g, ' ').trim();
   return clean.length <= max ? clean : `${clean.slice(0, max - 1).trimEnd()}\u2026`;
 }
 
+interface NarrativeAnalysis {
+  narratives: Narrative[];
+  articlesAnalyzed: number;
+  analyzedAt: string;
+}
+
+/**
+ * Ask the model for the narratives in `articles` and re-hydrate its index
+ * references into article objects. The result is what gets cached, so a cache
+ * hit never resolves old indexes against a newer article list.
+ */
+async function analyzeNarratives(articles: NewsArticle[]): Promise<NarrativeAnalysis> {
+  // Keep the prompt inside the smallest context window in the provider chain.
+  // Sending 40 articles with full descriptions, absolute links and pretty-
+  // printed JSON pushed the request to ~9.4k tokens, over the 8k/minute cap
+  // on the free Groq tier, so every call 413'd and the page never rendered a
+  // narrative. Articles are referenced by index and re-hydrated below, so the
+  // model never has to echo a URL back.
+  const articlesForAnalysis = articles.map((a, i) => ({
+    i,
+    title: truncate(a.title, MAX_TITLE_CHARS),
+    source: a.source,
+    summary: truncate(a.description || '', MAX_DESCRIPTION_CHARS),
+  }));
+
+  const userPrompt = `Identify dominant narratives in these ${articlesForAnalysis.length} crypto news articles.
+Reference each supporting article by its "i" index only.
+
+${JSON.stringify(articlesForAnalysis)}`;
+
+  const result = await promptAIJson<NarrativesResponse>(SYSTEM_PROMPT, userPrompt, {
+    maxTokens: 2000,
+    temperature: 0.4,
+  });
+
+  const narratives = (result?.narratives || []).map((n) => ({
+    ...n,
+    articles: (Array.isArray(n.articleIndexes) ? n.articleIndexes : [])
+      .map((i) => articles[i])
+      .filter(Boolean)
+      .map((a) => ({ title: a.title, link: a.link, source: a.source })),
+    articleIndexes: undefined,
+  }));
+
+  return { narratives, articlesAnalyzed: articles.length, analyzedAt: new Date().toISOString() };
+}
+
 export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;
-  const limit = Math.min(parseInt(searchParams.get('limit') || '40'), 80);
+  const limit = parseLimit(searchParams.get('limit'));
   const emerging = searchParams.get('emerging') === 'true';
 
   if (!isAIConfigured()) return aiNotConfiguredResponse();
@@ -99,45 +163,16 @@ export async function GET(request: NextRequest) {
       });
     }
 
-    // Keep the prompt inside the smallest context window in the provider chain.
-    // Sending 40 articles with full descriptions, absolute links and pretty-
-    // printed JSON pushed the request to ~9.4k tokens, over the 8k/minute cap
-    // on the free Groq tier, so every call 413'd and the page never rendered a
-    // narrative. Articles are referenced by index and re-hydrated from
-    // `data.articles` below, so the model never has to echo a URL back.
-    const articlesForAnalysis = data.articles.map((a, i) => ({
-      i,
-      title: truncate(a.title, MAX_TITLE_CHARS),
-      source: a.source,
-      summary: truncate(a.description || '', MAX_DESCRIPTION_CHARS),
-    }));
+    const analysis = await withCache(
+      aiCache,
+      generateCacheKey('narratives-analysis', { limit }),
+      ANALYSIS_TTL_SECONDS,
+      () => analyzeNarratives(data.articles),
+    );
 
-    const userPrompt = `Identify dominant narratives in these ${articlesForAnalysis.length} crypto news articles.
-Reference each supporting article by its "i" index only.
-
-${JSON.stringify(articlesForAnalysis)}`;
-
-    const result = await promptAIJson<NarrativesResponse>(SYSTEM_PROMPT, userPrompt, {
-      maxTokens: 2000,
-      temperature: 0.4,
-    });
-
-    // Re-hydrate the index references into the full article shape the UI reads.
-    let narratives = (result.narratives || []).map((n) => ({
-      ...n,
-      articles: (n.articleIndexes ?? [])
-        .map((i) => data.articles[i])
-        .filter(Boolean)
-        .map((a) => ({ title: a.title, link: a.link, source: a.source })),
-      articleIndexes: undefined,
-    }));
-
-    if (emerging) {
-      narratives = narratives.filter((n) => n.emerging);
-    }
-
-    // Sort by strength
-    narratives.sort((a, b) => b.strength - a.strength);
+    const narratives = (emerging ? analysis.narratives.filter((n) => n.emerging) : [...analysis.narratives]).sort(
+      (a, b) => b.strength - a.strength,
+    );
 
     // Calculate narrative diversity
     const bullishCount = narratives.filter((n) => n.sentiment === 'bullish').length;
@@ -157,8 +192,8 @@ ${JSON.stringify(articlesForAnalysis)}`;
           },
           dominantNarrative: narratives[0]?.name || 'None identified',
         },
-        articlesAnalyzed: data.articles.length,
-        analyzedAt: new Date().toISOString(),
+        articlesAnalyzed: analysis.articlesAnalyzed,
+        analyzedAt: analysis.analyzedAt,
       },
       {
         headers: {
