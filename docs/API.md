@@ -2,8 +2,9 @@
 
 > The per-endpoint sections below are generated from endpoint metadata by
 > `node scripts/generate-api-docs.js`. The Overview section, and the notes
-> attached to `/api/sources` and `/api/version`, are maintained by hand:
-> re-run the generator only after porting them across.
+> attached to `/api/sources`, `/api/version`, `/api/sentiment`,
+> `/api/news/stream` and `/api/whales`, are maintained by hand: re-run the
+> generator only after porting them across.
 >
 > Generated: 2026-08-27T13:49:47.421Z
 > Total endpoints: 394
@@ -657,6 +658,25 @@ Market sentiment analysis and indicators
 |-----------|------|----------|---------|-------------|
 | `limit` | number | No | `20` | Maximum number of results to return |
 | `asset` | string | No | — | Asset identifier (e.g., BTC, ETH) |
+
+One AI analysis of the latest news is shared by every caller for five
+minutes; `asset` filters that analysis to articles tagged with exactly that
+ticker symbol. An `asset` that is not 1-15 letters or digits answers `400`.
+
+When no AI provider can answer (quota spent, billing refusal), the endpoint
+serves the last good analysis for up to an hour, then falls back to a keyword
+reading of the same headlines instead of failing. Check `meta` to tell them
+apart:
+
+| Field | Meaning |
+|-------|---------|
+| `meta.method` | `ai` for the model's analysis, `keyword` for the headline-lexicon fallback |
+| `meta.analyzedAt` | When the analysis being served was produced |
+| `meta.degraded` | Present and `true` only on a keyword answer |
+| `meta.degradedReason` | `ai_unavailable` or `ai_not_configured` |
+
+A keyword answer caps every confidence at 40 and is cached for 60 seconds, so
+AI output returns as soon as a provider recovers.
 
 ---
 
@@ -2835,6 +2855,15 @@ Real-time news stream via Server-Sent Events
 | `categories` | string | No | — | Filter by categories |
 | `limit` | number | No | `5` | Maximum number of results to return |
 
+Each connection lasts 270 seconds, then the server sends `event: close` (with
+`reason: "max_duration_reached"`) and ends the response cleanly, ahead of the
+hosting platform's 300-second request limit. The first frame is
+`retry: 3000`, so a browser `EventSource` reconnects on its own three seconds
+later. Every `news` event carries an `id:`; on reconnect, `EventSource` sends
+it back as `Last-Event-ID` and the stream skips the batch you already have.
+Non-browser clients should do the same: reconnect on `close` and pass the last
+`id` in a `Last-Event-ID` header.
+
 ---
 
 ### `GET /api/opml`
@@ -3343,6 +3372,12 @@ Whale wallet tracking and analysis
 |-----------|------|----------|---------|-------------|
 | `limit` | string | No | `10` | Maximum number of results to return |
 | `min_usd` | string | No | `1000000` | Filter by min usd |
+
+`min_usd` is the smallest transfer, in USD, to include; the response echoes
+the value applied as `min_usd`. `limit` is clamped to 1-100. Results are cached
+for 60 seconds, and the last good alerts keep serving while the upstream
+chain sources are down. If they fail with nothing cached, the endpoint answers
+`502` with `Retry-After: 60`.
 
 ---
 
