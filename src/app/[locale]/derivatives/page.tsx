@@ -39,14 +39,18 @@ interface DerivativesTicker {
   h24_volume?: number;
 }
 
+/** The subset of /api/options?view=dashboard (lib/options-flow OptionsDashboard) this page reads. */
 interface OptionsData {
   success: boolean;
-  data: {
-    putCallRatio?: number;
-    maxPain?: number;
-    totalCalls?: number;
-    totalPuts?: number;
+  data?: {
+    flow?: { summary?: { putCallRatio?: number } };
+    maxPain?: { maxPainPrice?: number };
   };
+}
+
+/** A finite, positive number from the API, or null so the card shows a dash. */
+function positiveOrNull(value: unknown): number | null {
+  return typeof value === 'number' && Number.isFinite(value) && value > 0 ? value : null;
 }
 
 interface HyperliquidResponse {
@@ -133,10 +137,10 @@ export default async function DerivativesPage({ params }: Props) {
   ];
 
   // Options data
-  const btcPCR = btcOptions?.data?.putCallRatio ?? null;
-  const btcMaxPain = btcOptions?.data?.maxPain ?? null;
-  const ethPCR = ethOptions?.data?.putCallRatio ?? null;
-  const ethMaxPain = ethOptions?.data?.maxPain ?? null;
+  const btcPCR = positiveOrNull(btcOptions?.data?.flow?.summary?.putCallRatio);
+  const btcMaxPain = positiveOrNull(btcOptions?.data?.maxPain?.maxPainPrice);
+  const ethPCR = positiveOrNull(ethOptions?.data?.flow?.summary?.putCallRatio);
+  const ethMaxPain = positiveOrNull(ethOptions?.data?.maxPain?.maxPainPrice);
 
   return (
     <>

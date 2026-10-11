@@ -455,18 +455,22 @@ async function fetchOKXOptionsTickers(underlying: string = 'BTC-USD'): Promise<O
 // Helper Functions
 // =============================================================================
 
-function parseExpiryDate(expiryStr: string): string {
-  // Parse Deribit format: 26JAN26 -> 2026-01-26
-  const day = expiryStr.slice(0, 2);
-  const monthStr = expiryStr.slice(2, 5);
-  const year = `20${expiryStr.slice(5, 7)}`;
-  
-  const months: Record<string, string> = {
-    JAN: '01', FEB: '02', MAR: '03', APR: '04', MAY: '05', JUN: '06',
-    JUL: '07', AUG: '08', SEP: '09', OCT: '10', NOV: '11', DEC: '12',
-  };
-  
-  return `${year}-${months[monthStr]}-${day}`;
+const EXPIRY_MONTHS: Record<string, string> = {
+  JAN: '01', FEB: '02', MAR: '03', APR: '04', MAY: '05', JUN: '06',
+  JUL: '07', AUG: '08', SEP: '09', OCT: '10', NOV: '11', DEC: '12',
+};
+
+/**
+ * Parse a Deribit expiry code to YYYY-MM-DD: `26JAN26` -> `2026-01-26`.
+ * Deribit writes single-digit days without padding (`3OCT26`); slicing fixed
+ * offsets turned those into "206-undefined-3O". Returns null for anything
+ * that is not a valid expiry code.
+ */
+export function parseExpiryDate(expiryStr: string): string | null {
+  const match = /^(\d{1,2})([A-Z]{3})(\d{2})$/.exec(expiryStr);
+  const month = match && EXPIRY_MONTHS[match[2]];
+  if (!match || !month) return null;
+  return `20${match[3]}-${month}-${match[1].padStart(2, '0')}`;
 }
 
 // =============================================================================
