@@ -14,7 +14,8 @@
  *
  * Integrates multiple free APIs for live market data:
  * - CoinGecko     (primary — free without key, key optional for higher limits)
- * - CoinCap       (fallback for prices, trending, history, search — no key, any coin)
+ * - DefiLlama coins + CoinLore (keyless fallback for prices, trending, coin
+ *   details, history and search; see keyless-market.ts)
  * - CoinPaprika   (fallback for coin details + global market data — no key)
  * - Binance       (fallback for OHLC/klines + real-time prices — no key)
  * - CryptoCompare (fallback for real-time prices — no key on free tier)
@@ -28,7 +29,6 @@
 
 import {
   COINGECKO_BASE,
-  COINCAP_BASE,
   DEFILLAMA_BASE,
   ALTERNATIVE_ME_BASE,
   CRYPTOCOMPARE_BASE,
@@ -36,6 +36,14 @@ import {
   COINPAPRIKA_BASE,
 } from "./constants";
 import { resilientFetchResponse } from '@/lib/resilient-fetch';
+import {
+  getKeylessCoinDetails,
+  getKeylessMarketCoins,
+  getKeylessPriceHistory,
+  getKeylessSpotPrices,
+  historyWindowForDays,
+  searchKeylessCoins,
+} from '@/lib/keyless-market';
 
 /**
  * Whether we are in a CI/build environment.
@@ -863,7 +871,6 @@ function serviceNameForUrl(url: string): string {
   try {
     const host = new URL(url).hostname;
     if (host.includes("coingecko")) return "coingecko";
-    if (host.includes("coincap")) return "coincap";
     if (host.includes("coinpaprika")) return "coinpaprika";
     if (host.includes("binance")) return "binance";
     if (host.includes("cryptocompare")) return "cryptocompare";
@@ -1351,15 +1358,15 @@ export async function getCoinDetails(coinId: string) {
       // exchange tickers, developer/GitHub stats, community stats, sentiment
       // votes, categories, and links. Surfaced on the coin detail page.
       `${COINGECKO_BASE}/coins/${coinId}?localization=false&tickers=true&market_data=true&community_data=true&developer_data=true&sparkline=false&price_change_percentage=1h%2C24h%2C7d%2C14d%2C30d%2C1y`,
-      5000, // 5 s — leaves budget for CoinPaprika + CoinCap fallbacks within maxDuration
+      5000, // 5 s: leaves budget for the CoinPaprika and keyless fallbacks within maxDuration
     );
 
     if (!response.ok) {
       console.warn(`CoinGecko failed for ${coinId}, trying CoinPaprika...`);
       const paprikaResult = await getCoinDetailsFallback(coinId);
       if (paprikaResult) return paprikaResult;
-      console.warn(`CoinPaprika failed for ${coinId}, trying CoinCap...`);
-      return (await getCoinDetailsCoinCap(coinId)) ?? (await getCoinDetailsCoinLore(coinId));
+      console.warn(`CoinPaprika failed for ${coinId}, trying keyless sources...`);
+      return await getCoinDetailsKeyless(coinId);
     }
 
     const data = await response.json();
@@ -1367,10 +1374,10 @@ export async function getCoinDetails(coinId: string) {
     return data;
   } catch (error) {
     console.error("Error fetching coin details:", error);
-    // Try fallback chain: CoinPaprika → CoinCap
+    // Fallback chain: CoinPaprika, then the keyless DefiLlama/CoinLore sources
     const paprikaResult = await getCoinDetailsFallback(coinId);
     if (paprikaResult) return paprikaResult;
-    return (await getCoinDetailsCoinCap(coinId)) ?? (await getCoinDetailsCoinLore(coinId));
+    return await getCoinDetailsKeyless(coinId);
   }
 }
 
@@ -1378,7 +1385,7 @@ export async function getCoinDetails(coinId: string) {
  * CoinPaprika id mappings and helpers.
  */
 // CoinPaprika uses different IDs than CoinGecko.
-// Note: the CoinCap fallback covers ANY coin without a map.
+// Note: the keyless fallback (DefiLlama prices) covers ANY coin without a map.
 // This map just gives richer data (ATH, supply, links) from CoinPaprika for top coins.
 const GECKO_TO_PAPRIKA: Record<string, string> = {
       // --- Tier 1: Top 10 ---
@@ -1636,197 +1643,58 @@ async function getCoinDetailsFallback(
 }
 
 /**
- * Fallback: Get coin details from CoinCap API (api.coincap.io)
- * Completely free, no API key required. Works for ANY coin.
- *
- * Strategy:
- *   1. Direct /assets/{coinId} lookup  (works for most CoinGecko IDs)
- *   2. If that 404s → search /assets?search={stripped-id} and pick best match
- *      e.g. "avalanche-2" → searches "avalanche", "wrapped-bitcoin" → "wrapped bitcoin"
+ * Last-resort fallback: build a CoinGecko-compatible coin object from the
+ * keyless sources (see keyless-market.ts). Coins CoinLore ranks (top ~500)
+ * get market cap, volume, supply and 1h/24h/7d change; any other CoinGecko id
+ * DefiLlama prices gets price and 24h change. Fields neither source has
+ * (ATH, 24h high/low, description, links) are left out rather than guessed.
  */
-/**
- * Last-resort fallback: build a CoinGecko-compatible coin object from CoinLore
- * (fully keyless). Covers the top ~100 coins by market cap, which is where
- * almost all coin-detail traffic lands. Returns null when the coin isn't in
- * CoinLore's top list (a rarer coin the higher-priority sources already serve).
- */
-async function getCoinDetailsCoinLore(
+async function getCoinDetailsKeyless(
   coinId: string,
 ): Promise<Record<string, unknown> | null> {
-  const NAMEID_ALIASES: Record<string, string> = {
-    binancecoin: 'binance-coin',
-    'avalanche-2': 'avalanche',
-    'matic-network': 'polygon',
-    near: 'near-protocol',
-  };
   try {
-    const res = await fetchWithTimeout(
-      'https://api.coinlore.net/api/tickers/?start=0&limit=100',
-      5000,
-      true,
-    );
-    if (!res.ok) return null;
-    const body = (await res.json()) as { data?: Array<Record<string, string>> };
-    const list = body.data ?? [];
-    const wantNameid = NAMEID_ALIASES[coinId] ?? coinId;
-    const c = list.find(
-      (t) => t.nameid === wantNameid || t.symbol?.toLowerCase() === coinId.toLowerCase(),
-    );
-    if (!c) return null;
-
-    const price = parseFloat(c.price_usd) || 0;
-    const change24h = parseFloat(c.percent_change_24h) || 0;
-    const marketCap = parseFloat(c.market_cap_usd) || 0;
-    const volume = parseFloat(String(c.volume24)) || 0;
-    const supply = parseFloat(c.csupply) || 0;
-    const maxSupply = c.msupply ? parseFloat(c.msupply) : null;
-    return {
+    const d = await getKeylessCoinDetails(coinId);
+    if (!d) return null;
+    const result: Record<string, unknown> = {
       id: coinId,
-      symbol: c.symbol.toLowerCase(),
-      name: c.name,
-      market_cap_rank: c.rank ? Number(c.rank) : null,
-      categories: [],
-      description: { en: '' },
-      links: { homepage: [], blockchain_site: [] },
-      market_data: {
-        current_price: { usd: price },
-        price_change_percentage_24h: change24h,
-        price_change_percentage_1h_in_currency: {
-          usd: parseFloat(c.percent_change_1h) || 0,
-        },
-        price_change_percentage_7d: parseFloat(c.percent_change_7d) || 0,
-        market_cap: { usd: marketCap },
-        total_volume: { usd: volume },
-        high_24h: { usd: price * (1 + Math.abs(change24h) / 100) },
-        low_24h: { usd: price * (1 - Math.abs(change24h) / 100) },
-        circulating_supply: supply,
-        total_supply: c.tsupply ? parseFloat(c.tsupply) : null,
-        max_supply: maxSupply,
-        fully_diluted_valuation: maxSupply ? { usd: price * maxSupply } : null,
-      },
-      last_updated: new Date().toISOString(),
-    };
-  } catch {
-    return null;
-  }
-}
-
-async function getCoinDetailsCoinCap(
-  coinId: string,
-): Promise<Record<string, unknown> | null> {
-  // Shared helper: build CoinGecko-compatible object from a CoinCap asset blob
-  const buildResult = (d: Record<string, unknown>): Record<string, unknown> => {
-    const price = parseFloat(d.priceUsd as string) || 0;
-    const changePercent24h = parseFloat(d.changePercent24Hr as string) || 0;
-    const marketCap = parseFloat(d.marketCapUsd as string) || 0;
-    const volume24h = parseFloat(d.volumeUsd24Hr as string) || 0;
-    const supply = parseFloat(d.supply as string) || 0;
-    const maxSupply = d.maxSupply ? parseFloat(d.maxSupply as string) : null;
-    const logoUrl = `https://assets.coincap.io/assets/icons/${(d.symbol as string).toLowerCase()}@2x.png`;
-    return {
-      id: coinId,
-      symbol: (d.symbol as string).toLowerCase(),
+      symbol: d.symbol.toLowerCase(),
       name: d.name,
-      image: { large: logoUrl, small: logoUrl, thumb: logoUrl },
-      market_cap_rank: d.rank ? parseInt(d.rank as string, 10) : null,
+      ...(d.image ? { image: { large: d.image, small: d.image, thumb: d.image } } : {}),
+      market_cap_rank: d.rank,
       categories: [],
       description: { en: "" },
-      links: {
-        homepage: [],
-        blockchain_site: d.explorer ? [d.explorer] : [],
-        twitter_screen_name: "",
-        subreddit_url: "",
-      },
-      genesis_date: null,
+      links: { homepage: [], blockchain_site: [] },
       market_data: {
-        current_price: { usd: price },
-        price_change_percentage_24h: changePercent24h,
-        price_change_percentage_1h_in_currency: { usd: 0 },
-        price_change_percentage_7d: 0,
-        price_change_percentage_30d: 0,
-        price_change_percentage_1y: 0,
-        market_cap: { usd: marketCap },
-        total_volume: { usd: volume24h },
-        high_24h: { usd: price * (1 + Math.abs(changePercent24h) / 100) },
-        low_24h: { usd: price * (1 - Math.abs(changePercent24h) / 100) },
-        ath: { usd: price },
-        ath_date: { usd: new Date().toISOString() },
-        ath_change_percentage: { usd: 0 },
-        atl: { usd: 0 },
-        atl_date: { usd: new Date().toISOString() },
-        atl_change_percentage: { usd: 0 },
-        circulating_supply: supply,
-        total_supply: supply || null,
-        max_supply: maxSupply,
-        fully_diluted_valuation: maxSupply ? { usd: price * maxSupply } : null,
+        current_price: { usd: d.priceUsd },
+        price_change_percentage_24h: d.change24h,
+        price_change_percentage_1h_in_currency:
+          d.change1h !== undefined ? { usd: d.change1h } : undefined,
+        price_change_percentage_7d: d.change7d,
+        market_cap: d.marketCapUsd !== undefined ? { usd: d.marketCapUsd } : undefined,
+        total_volume: d.volume24hUsd !== undefined ? { usd: d.volume24hUsd } : undefined,
+        circulating_supply: d.circulatingSupply,
+        total_supply: d.totalSupply,
+        max_supply: d.maxSupply,
+        fully_diluted_valuation: d.maxSupply
+          ? { usd: d.priceUsd * d.maxSupply }
+          : undefined,
       },
-      last_updated: new Date().toISOString(),
+      last_updated: d.lastUpdated,
     };
-  };
-
-  try {
-    // --- Step 1: Direct lookup by CoinGecko ID (works for ~90% of coins) ---
-    const directRes = await fetchWithTimeout(
-      `${COINCAP_BASE}/assets/${coinId}`,
-      5000, // 5 s — keep total fallback chain under page maxDuration
-      true,
-    );
-
-    if (directRes.ok) {
-      const json = await directRes.json();
-      if (json.data) {
-        const result = buildResult(json.data as Record<string, unknown>);
-        setCache(`coin-${coinId}`, result, CACHE_TTL.global);
-        return result;
-      }
-    }
-
-    // --- Step 2: Search fallback for any ID that didn't match directly ---
-    // "avalanche-2" → "avalanche"  |  "wrapped-bitcoin" → "wrapped bitcoin"
-    const searchQuery = coinId
-      .replace(/-\d+$/, "") // strip trailing version suffix (-2, -3 …)
-      .replace(/-/g, " ") // hyphens → spaces for CoinCap search
-      .trim();
-
-    const searchRes = await fetchWithTimeout(
-      `${COINCAP_BASE}/assets?search=${encodeURIComponent(searchQuery)}&limit=5`,
-      5000, // 5 s — keep total fallback chain under page maxDuration
-      true,
-    );
-
-    if (!searchRes.ok) return null;
-
-    const searchJson = await searchRes.json();
-    const assets: Record<string, unknown>[] = searchJson.data ?? [];
-    if (!assets.length) return null;
-
-    // Pick the closest match: exact ID/name win; otherwise take highest-ranked result
-    const normalised = coinId
-      .replace(/-\d+$/, "")
-      .replace(/-/g, "")
-      .toLowerCase();
-    const best =
-      assets.find(
-        (a) =>
-          (a.id as string).replace(/-/g, "").toLowerCase() === normalised ||
-          (a.name as string).replace(/\s+/g, "").toLowerCase() === normalised,
-      ) ?? assets[0];
-
-    const result = buildResult(best);
     setCache(`coin-${coinId}`, result, CACHE_TTL.global);
     return result;
   } catch (error) {
-    console.error("CoinCap fallback error:", error);
+    console.error("Keyless coin details fallback error:", error);
     return null;
   }
 }
 
 // =============================================================================
-// FREE API FALLBACKS — CoinCap, CoinPaprika global, Binance klines
+// FREE API FALLBACKS: DefiLlama/CoinLore (keyless-market), CoinPaprika global, Binance klines
 // All keyless, no registration required
 // =============================================================================
 
-/** CoinCap fallback for getSimplePrices — returns real prices instead of zeros */
+/** DefiLlama fallback for getSimplePrices: real prices for BTC, ETH and SOL */
 async function getSimplePricesFallback(): Promise<SimplePrices> {
   const empty: SimplePrices = {
     bitcoin: { usd: 0, usd_24h_change: 0 },
@@ -1834,57 +1702,40 @@ async function getSimplePricesFallback(): Promise<SimplePrices> {
     solana: { usd: 0, usd_24h_change: 0 },
   };
   try {
-    const response = await fetchWithTimeout(
-      `${COINCAP_BASE}/assets?ids=bitcoin,ethereum,solana`,
-      10000,
-      true,
-    );
-    if (!response.ok) return empty;
-    const { data } = await response.json();
+    const spots = await getKeylessSpotPrices(["bitcoin", "ethereum", "solana"], {
+      include24hChange: true,
+    });
+    if (Object.keys(spots).length === 0) return empty;
     const result: SimplePrices = { ...empty };
-    for (const asset of data as Array<{
-      id: string;
-      priceUsd: string;
-      changePercent24Hr: string;
-    }>) {
-      if (asset.id in result) {
-        result[asset.id] = {
-          usd: parseFloat(asset.priceUsd) || 0,
-          usd_24h_change: parseFloat(asset.changePercent24Hr) || 0,
-        };
-      }
+    for (const [id, spot] of Object.entries(spots)) {
+      result[id] = { usd: spot.usd, usd_24h_change: spot.usd_24h_change ?? 0 };
     }
     setCache("simple-prices", result, CACHE_TTL.prices);
     return result;
-  } catch {
+  } catch (error) {
+    console.error("Keyless simple prices fallback error:", error);
     return empty;
   }
 }
 
-/** CoinCap fallback for getTrending — top-10 by market cap as trending proxy */
+/** CoinLore fallback for getTrending: top 10 by market cap as a trending proxy */
 async function getTrendingFallback(): Promise<TrendingCoin[]> {
   try {
-    const response = await fetchWithTimeout(
-      `${COINCAP_BASE}/assets?limit=10`,
-      10000,
-      true,
-    );
-    if (!response.ok) return [];
-    const { data } = await response.json();
-    return (
-      data as Array<{ id: string; name: string; symbol: string; rank: string }>
-    ).map((asset, i) => ({
-      id: asset.id,
-      name: asset.name,
-      symbol: asset.symbol,
-      market_cap_rank: parseInt(asset.rank, 10) || i + 1,
-      thumb: `https://assets.coincap.io/assets/icons/${asset.symbol.toLowerCase()}@2x.png`,
-      small: `https://assets.coincap.io/assets/icons/${asset.symbol.toLowerCase()}@2x.png`,
-      large: `https://assets.coincap.io/assets/icons/${asset.symbol.toLowerCase()}@2x.png`,
-      price_btc: 0,
+    const coins = await getKeylessMarketCoins({ perPage: 10 });
+    const btcPrice = coins.find((c) => c.id === "bitcoin")?.current_price;
+    return coins.map((coin, i) => ({
+      id: coin.id,
+      name: coin.name,
+      symbol: coin.symbol.toUpperCase(),
+      market_cap_rank: coin.market_cap_rank ?? i + 1,
+      thumb: coin.image,
+      small: coin.image,
+      large: coin.image,
+      price_btc: btcPrice ? coin.current_price / btcPrice : 0,
       score: i,
     }));
-  } catch {
+  } catch (error) {
+    console.error("Keyless trending fallback error:", error);
     return [];
   }
 }
@@ -1920,7 +1771,7 @@ async function getGlobalMarketDataFallback(): Promise<GlobalMarketData | null> {
   }
 }
 
-/** CoinCap /history fallback for getHistoricalPrices */
+/** DefiLlama /chart fallback for getHistoricalPrices (prices only, no caps or volumes) */
 async function getHistoricalPricesFallback(
   coinId: string,
   days: number | "max",
@@ -1931,22 +1782,10 @@ async function getHistoricalPricesFallback(
     total_volumes: [],
   };
   try {
-    const numDays = days === "max" ? 365 : (days as number);
-    const interval = numDays <= 1 ? "h1" : numDays <= 7 ? "h6" : "d1";
-    const end = Date.now();
-    const start = end - numDays * 24 * 60 * 60 * 1000;
-    const response = await fetchWithTimeout(
-      `${COINCAP_BASE}/assets/${coinId}/history?interval=${interval}&start=${start}&end=${end}`,
-      10000,
-      true,
-    );
-    if (!response.ok) return empty;
-    const { data } = await response.json();
-    const prices: [number, number][] = (
-      data as Array<{ priceUsd: string; time: number }>
-    ).map(({ priceUsd, time }) => [time, parseFloat(priceUsd) || 0]);
+    const points = await getKeylessPriceHistory(coinId, historyWindowForDays(days));
+    if (points.length === 0) return empty;
     const result: HistoricalData = {
-      prices,
+      prices: points.map((p): [number, number] => [p.time, p.priceUsd]),
       market_caps: [],
       total_volumes: [],
     };
@@ -1956,7 +1795,8 @@ async function getHistoricalPricesFallback(
       CACHE_TTL.historical_30d,
     );
     return result;
-  } catch {
+  } catch (error) {
+    console.error("Keyless historical prices fallback error:", error);
     return empty;
   }
 }
@@ -2023,8 +1863,8 @@ async function getOHLCBinanceFallback(
   }
 }
 
-/** CoinCap /assets search fallback for searchCoins */
-async function searchCoinsCoinCapFallback(
+/** CoinLore search fallback for searchCoins (top ~500 coins by market cap) */
+async function searchCoinsKeylessFallback(
   query: string,
 ): Promise<SearchResult> {
   const empty: SearchResult = {
@@ -2034,26 +1874,19 @@ async function searchCoinsCoinCapFallback(
     nfts: [],
   };
   try {
-    const response = await fetchWithTimeout(
-      `${COINCAP_BASE}/assets?search=${encodeURIComponent(query)}&limit=10`,
-      10000,
-      true,
-    );
-    if (!response.ok) return empty;
-    const { data } = await response.json();
-    const coins = (
-      data as Array<{ id: string; name: string; symbol: string; rank: string }>
-    ).map((asset) => ({
-      id: asset.id,
-      name: asset.name,
-      symbol: asset.symbol,
-      api_symbol: asset.symbol,
-      market_cap_rank: parseInt(asset.rank, 10) || 9999,
-      thumb: `https://assets.coincap.io/assets/icons/${asset.symbol.toLowerCase()}@2x.png`,
-      large: `https://assets.coincap.io/assets/icons/${asset.symbol.toLowerCase()}@2x.png`,
+    const hits = await searchKeylessCoins(query, 10);
+    const coins = hits.map((hit) => ({
+      id: hit.id,
+      name: hit.name,
+      symbol: hit.symbol,
+      api_symbol: hit.id,
+      market_cap_rank: hit.rank,
+      thumb: hit.image,
+      large: hit.image,
     }));
     return { ...empty, coins };
-  } catch {
+  } catch (error) {
+    console.error("Keyless search fallback error:", error);
     return empty;
   }
 }
@@ -2626,7 +2459,7 @@ export async function searchCoins(query: string): Promise<SearchResult> {
     return data;
   } catch (error) {
     console.error("Error searching coins:", error);
-    return await searchCoinsCoinCapFallback(query);
+    return await searchCoinsKeylessFallback(query);
   }
 }
 

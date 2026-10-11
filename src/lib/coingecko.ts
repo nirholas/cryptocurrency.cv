@@ -10,23 +10,23 @@
 
 /**
  * Centralized CoinGecko API fetch wrapper with rate limiting,
- * in-process caching, and CoinCap/CoinPaprika fallbacks.
+ * in-process caching, and a keyless DefiLlama/CoinLore fallback.
  * 
  * Prevents 429 errors during SSR builds by serializing requests
  * and respecting CoinGecko's free-tier rate limits (~10-30 calls/min).
  * 
  * Features:
  * - In-process stale-while-revalidate cache (shared by SSR + API routes)
- * - CoinCap fallback for /coins/markets when CoinGecko is rate-limited
- * - CoinPaprika fallback for global market data
+ * - Keyless fallback (DefiLlama prices, CoinLore market lists) for
+ *   /simple/price and /coins/markets when CoinGecko is rate-limited
  * - Build-time short-circuit (returns null immediately during CI/build)
  * 
  * All CoinGecko fetch calls from page-level server components should
  * use `fetchCoinGecko()` instead of raw `fetch()`.
  */
 
-import { COINCAP_BASE } from './constants';
 import { resilientFetchResponse } from '@/lib/resilient-fetch';
+import { getKeylessMarketCoins, getKeylessSimplePrice } from '@/lib/keyless-market';
 
 // ---------------------------------------------------------------------------
 // Build-time detection
@@ -133,75 +133,65 @@ function enqueue<T>(fn: () => Promise<T>): Promise<T> {
 }
 
 // ---------------------------------------------------------------------------
-// CoinCap fallback for /coins/markets
+// Keyless fallback for /simple/price and /coins/markets
 // ---------------------------------------------------------------------------
 
-/**
- * Map a CoinCap asset to the same shape CoinGecko /coins/markets returns.
- * Fields not available from CoinCap are set to zero / undefined.
- */
-interface CoinCapAssetRaw {
-  id: string;
-  rank: string;
-  symbol: string;
-  name: string;
-  supply: string;
-  maxSupply: string | null;
-  marketCapUsd: string;
-  volumeUsd24Hr: string;
-  priceUsd: string;
-  changePercent24Hr: string;
-  vwap24Hr: string;
+function flag(params: URLSearchParams, name: string): boolean {
+  return params.get(name) === 'true';
 }
 
-function coinCapToMarketCoin(a: CoinCapAssetRaw): Record<string, unknown> {
-  return {
-    id: a.id,
-    symbol: a.symbol.toLowerCase(),
-    name: a.name,
-    image: '', // CoinCap doesn't provide images
-    current_price: parseFloat(a.priceUsd) || 0,
-    market_cap: parseFloat(a.marketCapUsd) || 0,
-    market_cap_rank: parseInt(a.rank, 10) || 0,
-    total_volume: parseFloat(a.volumeUsd24Hr) || 0,
-    price_change_percentage_24h: parseFloat(a.changePercent24Hr) || 0,
-    circulating_supply: parseFloat(a.supply) || 0,
-    total_supply: a.maxSupply ? parseFloat(a.maxSupply) : null,
-    max_supply: a.maxSupply ? parseFloat(a.maxSupply) : null,
-    ath: 0,
-    ath_change_percentage: 0,
-  };
+function idList(params: URLSearchParams): string[] {
+  return (params.get('ids') ?? '')
+    .split(',')
+    .map((id) => id.trim().toLowerCase())
+    .filter(Boolean);
 }
 
 /**
- * Try CoinCap as a fallback when a CoinGecko /coins/markets request fails.
- * Returns null if the URL is not a markets request or if CoinCap also fails.
+ * Answer a failed CoinGecko request from the keyless sources (DefiLlama and
+ * CoinLore, see `keyless-market.ts`) in CoinGecko's own response shape.
+ *
+ * Covers `/simple/price` and `/coins/markets` in USD. Any other endpoint or
+ * quote currency returns null, as does a total upstream failure, so the
+ * caller's own degradation path runs instead of serving wrong data.
  */
-async function tryCoinCapFallback<T>(url: string): Promise<T | null> {
+async function tryKeylessFallback<T>(url: string): Promise<T | null> {
   try {
-    // Only fall back for /coins/markets requests
-    if (!url.includes('/coins/markets')) return null;
-
     const parsed = new URL(url);
-    const perPage = parsed.searchParams.get('per_page') || '100';
+    const params = parsed.searchParams;
 
-    const res = await resilientFetchResponse(
-      `${COINCAP_BASE}/assets?limit=${perPage}`,
-      {
-        service: 'coincap',
-        timeoutMs: 10_000,
-        retries: 1,
-        headers: { Accept: 'application/json' },
-      },
-    );
-    if (!res.ok) return null;
+    if (parsed.pathname.endsWith('/simple/price')) {
+      const currencies = (params.get('vs_currencies') ?? '').toLowerCase().split(',');
+      if (!currencies.includes('usd')) return null;
+      const ids = idList(params);
+      if (ids.length === 0) return null;
+      const data = await getKeylessSimplePrice(ids, {
+        include24hChange: flag(params, 'include_24hr_change'),
+        includeMarketCap: flag(params, 'include_market_cap'),
+        include24hVol: flag(params, 'include_24hr_vol'),
+        includeLastUpdatedAt: flag(params, 'include_last_updated_at'),
+      });
+      if (!data) return null;
+      console.info(`[CoinGecko] Served ${Object.keys(data).length} prices from keyless fallback`);
+      return data as unknown as T;
+    }
 
-    const json = (await res.json()) as { data: CoinCapAssetRaw[] };
-    if (!Array.isArray(json?.data)) return null;
+    if (parsed.pathname.endsWith('/coins/markets')) {
+      if ((params.get('vs_currency') ?? 'usd').toLowerCase() !== 'usd') return null;
+      const ids = idList(params);
+      const coins = await getKeylessMarketCoins({
+        ids: ids.length > 0 ? ids : undefined,
+        perPage: parseInt(params.get('per_page') ?? '100', 10) || 100,
+        page: parseInt(params.get('page') ?? '1', 10) || 1,
+      });
+      if (coins.length === 0) return null;
+      console.info(`[CoinGecko] Served ${coins.length} coins from keyless fallback`);
+      return coins as unknown as T;
+    }
 
-    console.info(`[CoinGecko] Served ${json.data.length} assets from CoinCap fallback`);
-    return json.data.map(coinCapToMarketCoin) as unknown as T;
-  } catch {
+    return null;
+  } catch (err) {
+    console.warn('[CoinGecko] Keyless fallback failed:', (err as Error).message);
     return null;
   }
 }
@@ -228,7 +218,7 @@ export interface CoinGeckoFetchOptions {
  * - Serializes requests so only one is in flight at a time
  * - Enforces a sliding-window rate limit
  * - Respects `retry-after` headers on 429 responses
- * - Falls back to CoinCap for /coins/markets on failure
+ * - Falls back to DefiLlama/CoinLore for /simple/price and /coins/markets
  * - Returns `null` on failure so pages can render gracefully with empty data
  */
 export async function fetchCoinGecko<T = unknown>(
@@ -276,8 +266,8 @@ export async function fetchCoinGecko<T = unknown>(
     }
   }
 
-  // --- fallback to CoinCap ---
-  const fallback = await tryCoinCapFallback<T>(url);
+  // --- keyless fallback (DefiLlama / CoinLore) ---
+  const fallback = await tryKeylessFallback<T>(url);
   if (fallback !== null && !skipCache) {
     // Cache the fallback data with a shorter TTL
     setCache(cacheKey, fallback, Math.min(cacheTtl, 60));
