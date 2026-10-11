@@ -1,5 +1,8 @@
 blank_issues_enabled: false
 contact_links:
+  - name: Report a security vulnerability
+    url: https://github.com/nirholas/cryptocurrency.cv/security/advisories/new
+    about: Report security vulnerabilities privately. Do not open a public issue.
   - name: 📖 Documentation
     url: https://cryptocurrency.cv/api/docs
     about: Check the API documentation before opening an issue
