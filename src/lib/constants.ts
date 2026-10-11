@@ -43,6 +43,9 @@ export const CRYPTOCOMPARE_BASE = 'https://min-api.cryptocompare.com/data';
 /** DeFiLlama REST API */
 export const DEFILLAMA_BASE = 'https://api.llama.fi';
 
+/** DefiLlama coins API: keyless spot prices, % change and charts by CoinGecko id */
+export const DEFILLAMA_COINS_BASE = 'https://coins.llama.fi';
+
 /** Alternative.me (Fear & Greed Index) */
 export const ALTERNATIVE_ME_BASE = 'https://api.alternative.me';
 
@@ -66,9 +69,6 @@ export const BINANCE_BASE = 'https://api.binance.com/api/v3';
 
 /** CoinPaprika REST API v1 */
 export const COINPAPRIKA_BASE = 'https://api.coinpaprika.com/v1';
-
-/** CoinCap REST API v2 */
-export const COINCAP_BASE = 'https://api.coincap.io/v2';
 
 /** CoinLore REST API */
 export const COINLORE_BASE = 'https://api.coinlore.net/api';

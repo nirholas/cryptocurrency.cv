@@ -12,21 +12,27 @@
  * External APIs Integration
  *
  * Aggregates data from multiple free cryptocurrency APIs:
- * - CoinCap (https://coincap.io)
  * - CoinPaprika (https://coinpaprika.com)
  * - CoinLore (https://coinlore.com)
+ * - DefiLlama coins (https://coins.llama.fi), via keyless-market.ts
  *
  * @module external-apis
  */
 
 import { resilientFetchResponse } from '@/lib/resilient-fetch';
+import {
+  getKeylessCoinDetails,
+  getKeylessMarketCoins,
+  getKeylessPriceHistory,
+  type HistoryWindow,
+  type KeylessCoinDetail,
+} from '@/lib/keyless-market';
 
 // =============================================================================
 // API ENDPOINTS
 // =============================================================================
 
 export const EXTERNAL_APIS = {
-  COINCAP: 'https://api.coincap.io/v2',
   COINPAPRIKA: 'https://api.coinpaprika.com/v1',
   COINLORE: 'https://api.coinlore.net/api',
   BINANCE: 'https://api.binance.com/api/v3',
@@ -39,7 +45,6 @@ export const EXTERNAL_APIS = {
   LLAMA_YIELDS: 'https://yields.llama.fi',
 } as const;
 
-const COINCAP_BASE = EXTERNAL_APIS.COINCAP;
 const COINPAPRIKA_BASE = EXTERNAL_APIS.COINPAPRIKA;
 const COINLORE_BASE = EXTERNAL_APIS.COINLORE;
 
@@ -249,85 +254,102 @@ export interface LlamaYieldPool {
 }
 
 // =============================================================================
-// COINCAP API
+// SINGLE ASSETS AND PRICE HISTORY (keyless: CoinLore + DefiLlama)
 // =============================================================================
 
-export interface CoinCapAsset {
+/** One asset as `/api/v1/assets?id=` serves it. */
+export interface AssetDetail {
   id: string;
-  rank: string;
   symbol: string;
   name: string;
-  supply: string;
-  maxSupply: string | null;
-  marketCapUsd: string;
-  volumeUsd24Hr: string;
-  priceUsd: string;
-  changePercent24Hr: string;
-  vwap24Hr: string;
-  explorer: string;
+  rank: number | null;
+  price: number;
+  marketCap: number | null;
+  volume24h: number | null;
+  change24h: number | null;
+  supply: number | null;
+  maxSupply: number | null;
+  /** Data source that supplied the market fields */
+  source: KeylessCoinDetail['source'];
 }
 
-export interface CoinCapHistoryPoint {
-  priceUsd: string;
+/** One price point as `/api/v1/assets/{id}/history` serves it. */
+export interface AssetHistoryPoint {
+  /** Unix milliseconds */
   time: number;
+  /** ISO 8601 timestamp */
   date: string;
+  priceUsd: number;
 }
 
 /**
- * Get a single asset from CoinCap
+ * Candle intervals the history endpoint accepts. The names are the ones the
+ * route has always taken (CoinCap's), so existing clients keep working.
  */
-export async function getCoinCapAsset(id: string): Promise<CoinCapAsset> {
-  const cacheKey = `coincap-asset-${id}`;
-  const cached = getCached<CoinCapAsset>(cacheKey);
+export type AssetHistoryInterval = 'm1' | 'm5' | 'm15' | 'm30' | 'h1' | 'h2' | 'h6' | 'h12' | 'd1';
+
+/**
+ * DefiLlama candle size and span per interval. DefiLlama's finest candle is
+ * five minutes, so `m1` is served at five-minute resolution.
+ */
+export const ASSET_HISTORY_WINDOWS: Record<AssetHistoryInterval, HistoryWindow> = {
+  m1: { period: '5m', points: 288 },
+  m5: { period: '5m', points: 288 },
+  m15: { period: '15m', points: 480 },
+  m30: { period: '30m', points: 480 },
+  h1: { period: '1h', points: 480 },
+  h2: { period: '2h', points: 480 },
+  h6: { period: '6h', points: 480 },
+  h12: { period: '12h', points: 480 },
+  d1: { period: '1d', points: 500 },
+};
+
+/**
+ * Get a single asset by CoinGecko id. Returns null when no source knows it.
+ */
+export async function getAssetDetail(id: string): Promise<AssetDetail | null> {
+  const cacheKey = `asset-detail-${id}`;
+  const cached = getCached<AssetDetail>(cacheKey);
   if (cached) return cached;
 
-  const response = await resilientFetchResponse(`${COINCAP_BASE}/assets/${id}`, { service: 'coincap', timeoutMs: 8000, retries: 1 });
-  if (!response.ok) {
-    throw new Error(`CoinCap API error: ${response.status}`);
-  }
-
-  const json = await response.json();
-  setCache(cacheKey, json.data);
-  return json.data;
+  const d = await getKeylessCoinDetails(id);
+  if (!d) return null;
+  const result: AssetDetail = {
+    id: d.id,
+    symbol: d.symbol,
+    name: d.name,
+    rank: d.rank,
+    price: d.priceUsd,
+    marketCap: d.marketCapUsd ?? null,
+    volume24h: d.volume24hUsd ?? null,
+    change24h: d.change24h ?? null,
+    supply: d.circulatingSupply ?? null,
+    maxSupply: d.maxSupply ?? null,
+    source: d.source,
+  };
+  setCache(cacheKey, result);
+  return result;
 }
 
 /**
- * Get multiple assets from CoinCap
+ * Get USD price history for an asset by CoinGecko id.
  */
-export async function getCoinCapAssets(limit = 100): Promise<CoinCapAsset[]> {
-  const cacheKey = `coincap-assets-${limit}`;
-  const cached = getCached<CoinCapAsset[]>(cacheKey);
-  if (cached) return cached;
-
-  const response = await resilientFetchResponse(`${COINCAP_BASE}/assets?limit=${limit}`, { service: 'coincap', timeoutMs: 8000, retries: 1 });
-  if (!response.ok) {
-    throw new Error(`CoinCap API error: ${response.status}`);
-  }
-
-  const json = await response.json();
-  setCache(cacheKey, json.data);
-  return json.data;
-}
-
-/**
- * Get price history for an asset from CoinCap
- */
-export async function getCoinCapHistory(
+export async function getAssetHistory(
   id: string,
-  interval: 'm1' | 'm5' | 'm15' | 'm30' | 'h1' | 'h2' | 'h6' | 'h12' | 'd1' = 'h1'
-): Promise<CoinCapHistoryPoint[]> {
-  const cacheKey = `coincap-history-${id}-${interval}`;
-  const cached = getCached<CoinCapHistoryPoint[]>(cacheKey);
+  interval: AssetHistoryInterval = 'h1',
+): Promise<AssetHistoryPoint[]> {
+  const cacheKey = `asset-history-${id}-${interval}`;
+  const cached = getCached<AssetHistoryPoint[]>(cacheKey);
   if (cached) return cached;
 
-  const response = await resilientFetchResponse(`${COINCAP_BASE}/assets/${id}/history?interval=${interval}`, { service: 'coincap', timeoutMs: 8000, retries: 1 });
-  if (!response.ok) {
-    throw new Error(`CoinCap API error: ${response.status}`);
-  }
-
-  const json = await response.json();
-  setCache(cacheKey, json.data);
-  return json.data;
+  const points = await getKeylessPriceHistory(id, ASSET_HISTORY_WINDOWS[interval]);
+  const result = points.map((p) => ({
+    time: p.time,
+    date: new Date(p.time).toISOString(),
+    priceUsd: p.priceUsd,
+  }));
+  setCache(cacheKey, result);
+  return result;
 }
 
 // =============================================================================
@@ -509,20 +531,20 @@ export async function getAggregatedAssets(limit = 100): Promise<AggregatedAsset[
   if (cached) return cached;
 
   try {
-    const assets = await getCoinCapAssets(limit);
+    const coins = await getKeylessMarketCoins({ perPage: limit });
 
-    const result = assets.map((asset) => ({
-      id: asset.id,
-      symbol: asset.symbol,
-      name: asset.name,
-      rank: parseInt(asset.rank, 10),
-      price: parseFloat(asset.priceUsd),
-      marketCap: parseFloat(asset.marketCapUsd),
-      volume24h: parseFloat(asset.volumeUsd24Hr),
-      change24h: parseFloat(asset.changePercent24Hr),
-      supply: parseFloat(asset.supply),
-      maxSupply: asset.maxSupply ? parseFloat(asset.maxSupply) : null,
-      sources: ['coincap'],
+    const result: AggregatedAsset[] = coins.map((coin, i) => ({
+      id: coin.id,
+      symbol: coin.symbol.toUpperCase(),
+      name: coin.name,
+      rank: coin.market_cap_rank ?? i + 1,
+      price: coin.current_price,
+      marketCap: coin.market_cap ?? 0,
+      volume24h: coin.total_volume ?? 0,
+      change24h: coin.price_change_percentage_24h ?? 0,
+      supply: coin.circulating_supply ?? 0,
+      maxSupply: coin.max_supply ?? null,
+      sources: ['coinlore'],
     }));
 
     setCache(cacheKey, result);

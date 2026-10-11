@@ -9,7 +9,7 @@
  */
 
 import { type NextRequest, NextResponse } from 'next/server';
-import { getAggregatedAssets, getCoinCapAsset } from '@/lib/external-apis';
+import { getAggregatedAssets, getAssetDetail } from '@/lib/external-apis';
 import { ApiError } from '@/lib/api-error';
 import { logger } from '@/lib/logger';
 
@@ -20,11 +20,12 @@ export const revalidate = 30;
  * GET /api/v1/assets
  *
  * Get aggregated cryptocurrency assets from multiple free sources.
- * Data is normalized and combined from CoinCap, CoinPaprika, and CoinLore.
+ * Rankings, market cap and supply come from CoinLore; single-asset prices are
+ * cross-checked against DefiLlama (CoinCap, the original source, is shut down).
  *
  * Query parameters:
  * - limit: Number of assets to return (default: 100, max: 250)
- * - id: Specific asset ID to fetch (returns single asset)
+ * - id: CoinGecko id of one asset to fetch (returns single asset)
  *
  * @example
  * GET /api/v1/assets               # Top 100 assets
@@ -42,27 +43,18 @@ export async function GET(request: NextRequest) {
       logger.info({ id }, 'Fetching single asset');
 
       // Fetch single asset
-      const asset = await getCoinCapAsset(id);
+      const asset = await getAssetDetail(id);
+      if (!asset) {
+        return ApiError.notFound(`Asset '${id}' not found`);
+      }
 
       logger.info({ id, duration: Date.now() - startTime }, 'Asset fetched successfully');
 
+      const { source, ...data } = asset;
       return NextResponse.json(
         {
-          data: {
-            id: asset.id,
-            symbol: asset.symbol,
-            name: asset.name,
-            rank: parseInt(asset.rank, 10),
-            price: parseFloat(asset.priceUsd),
-            marketCap: parseFloat(asset.marketCapUsd),
-            volume24h: parseFloat(asset.volumeUsd24Hr),
-            change24h: parseFloat(asset.changePercent24Hr),
-            supply: parseFloat(asset.supply),
-            maxSupply: asset.maxSupply ? parseFloat(asset.maxSupply) : null,
-            vwap24h: parseFloat(asset.vwap24Hr),
-            explorer: asset.explorer,
-          },
-          source: 'coincap',
+          data,
+          source,
           timestamp: new Date().toISOString(),
         },
         {
