@@ -9,7 +9,7 @@
  */
 
 import { type NextRequest, NextResponse } from 'next/server';
-import { getCoinCapHistory } from '@/lib/external-apis';
+import { getAssetHistory, type AssetHistoryInterval } from '@/lib/external-apis';
 import { ApiError } from '@/lib/api-error';
 import { logger } from '@/lib/logger';
 
@@ -19,7 +19,7 @@ export const revalidate = 60;
 /**
  * GET /api/v1/assets/[assetId]/history
  *
- * Get price history for a specific asset from CoinCap.
+ * Get price history for a specific asset from keyless sources (DefiLlama).
  *
  * Query parameters:
  * - interval: Time interval (m1, m5, m15, m30, h1, h2, h6, h12, d1)
@@ -35,27 +35,18 @@ export async function GET(
   const startTime = Date.now();
   const { assetId } = await params;
   const searchParams = request.nextUrl.searchParams;
-  const interval = (searchParams.get('interval') || 'h1') as
-    | 'm1'
-    | 'm5'
-    | 'm15'
-    | 'm30'
-    | 'h1'
-    | 'h2'
-    | 'h6'
-    | 'h12'
-    | 'd1';
+  const interval = (searchParams.get('interval') || 'h1') as AssetHistoryInterval;
 
   try {
     logger.info({ assetId, interval }, 'Fetching asset history');
 
-    const history = await getCoinCapHistory(assetId, interval);
+    const history = await getAssetHistory(assetId, interval);
 
     // Transform to standard format
     const data = history.map((point) => ({
       timestamp: point.time,
       date: point.date,
-      price: parseFloat(point.priceUsd),
+      price: point.priceUsd,
     }));
 
     logger.info({ assetId, dataPoints: data.length, duration: Date.now() - startTime }, 'Asset history fetched successfully');

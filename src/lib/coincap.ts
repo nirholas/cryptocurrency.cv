@@ -19,15 +19,30 @@
  * @module coincap
  */
 
-import { EXTERNAL_APIS, CACHE_TTL, type CoinCapAsset } from './external-apis';
+import { CACHE_TTL } from './external-apis';
 import { cache } from './cache';
 import { resilientFetchResponse } from '@/lib/resilient-fetch';
 
-const BASE_URL = EXTERNAL_APIS.COINCAP;
+const BASE_URL = 'https://api.coincap.io/v2';
 
 // =============================================================================
 // Types
 // =============================================================================
+
+export interface CoinCapAsset {
+  id: string;
+  rank: string;
+  symbol: string;
+  name: string;
+  supply: string;
+  maxSupply: string | null;
+  marketCapUsd: string;
+  volumeUsd24Hr: string;
+  priceUsd: string;
+  changePercent24Hr: string;
+  vwap24Hr: string;
+  explorer: string;
+}
 
 export interface CoinCapResponse<T> {
   data: T;
