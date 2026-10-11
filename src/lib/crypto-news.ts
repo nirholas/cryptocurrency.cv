@@ -226,6 +226,12 @@ const RSS_SOURCES = {
   },
 
   // ═══════════════════════════════════════════════════════════════
+  lightning_news: {
+    name: 'Lightning News',
+    url: 'https://lightning.news/feed/',
+    category: 'bitcoin',
+  },
+
   // NEW: Security & Hacks
   // ═══════════════════════════════════════════════════════════════
   slowmist: {
