@@ -2,7 +2,7 @@
 # Build:  docker build -t cryptocurrency-cv .
 # Run:    docker run -p 3000:3000 cryptocurrency-cv
 
-FROM node:24-alpine AS builder
+FROM node:26-alpine AS builder
 
 WORKDIR /app
 
@@ -27,7 +27,7 @@ ENV GIT_SHA=$GIT_SHA \
     NODE_OPTIONS=--max-old-space-size=8192
 RUN pnpm exec next build
 
-FROM node:24-alpine AS runner
+FROM node:26-alpine AS runner
 
 WORKDIR /app
 
