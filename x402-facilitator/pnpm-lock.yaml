@@ -10,10 +10,10 @@ importers:
     dependencies:
       '@hono/node-server':
         specifier: ^1.13.7
-        version: 1.19.17(hono@4.13.7)
+        version: 1.19.17(hono@4.13.11)
       hono:
-        specifier: ^4.13.7
-        version: 4.13.7
+        specifier: ^4.13.11
+        version: 4.13.11
       pino:
         specifier: ^9.6.0
         version: 9.14.0
@@ -621,8 +621,8 @@ packages:
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
     os: [darwin]
 
-  hono@4.13.7:
-    resolution: {integrity: sha512-c8/gF9ac8Y78/agExVocyLevgR+JlpNB444Py0FSX8pJoPdYUfUzRcXtYEYGwt6l19qIlVZPN5Mfsw9jFShmQQ==}
+  hono@4.13.11:
+    resolution: {integrity: sha512-/SMX/RQNJn7oNmFwH6DtwDqcrzZU2otm1FD6OJe2cWF6cfy/F8hq0XVBv7xW3FTJshRQwuBnXHDq2kNsdZnshg==}
     engines: {node: '>=16.9.0'}
 
   isows@1.0.7:
@@ -993,9 +993,9 @@ snapshots:
   '@esbuild/win32-x64@0.28.2':
     optional: true
 
-  '@hono/node-server@1.19.17(hono@4.13.7)':
+  '@hono/node-server@1.19.17(hono@4.13.11)':
     dependencies:
-      hono: 4.13.7
+      hono: 4.13.11
 
   '@jridgewell/sourcemap-codec@1.5.5': {}
 
@@ -1241,7 +1241,7 @@ snapshots:
   fsevents@2.3.3:
     optional: true
 
-  hono@4.13.7: {}
+  hono@4.13.11: {}
 
   isows@1.0.7(ws@8.21.0):
     dependencies:
