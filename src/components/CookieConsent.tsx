@@ -45,12 +45,21 @@ function loadConsent(): ConsentPreferences | null {
   }
 }
 
+/** Fired on window after the visitor answers the banner. */
+export const COOKIE_CONSENT_EVENT = "fcn-cookie-consent";
+
+/** Whether the visitor has answered the current consent version. */
+export function hasCookieConsent(): boolean {
+  return loadConsent() !== null;
+}
+
 function saveConsent(prefs: ConsentPreferences) {
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(prefs));
   } catch {
     /* storage unavailable */
   }
+  window.dispatchEvent(new Event(COOKIE_CONSENT_EVENT));
 }
 
 /* ─── Component ─── */

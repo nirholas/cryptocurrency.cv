@@ -20,6 +20,7 @@ import { CookieConsent } from "@/components/CookieConsent";
 import { BottomNav } from "@/components/BottomNav";
 import { OfflineIndicator } from "@/components/OfflineIndicator";
 import { UpdatePrompt } from "@/components/UpdatePrompt";
+import { InstallPrompt } from "@/components/InstallPrompt";
 
 /* ─── Network quality detection ─── */
 
@@ -127,6 +128,7 @@ export function PWAProvider({ children }: { children: ReactNode }) {
   >("unsupported");
   const [cacheStatus, setCacheStatus] = useState<CacheStatus | null>(null);
   const [isCheckingUpdate, setIsCheckingUpdate] = useState(false);
+  const [canInstall, setCanInstall] = useState(false);
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const deferredPromptRef = useRef<any>(null);
@@ -187,14 +189,19 @@ export function PWAProvider({ children }: { children: ReactNode }) {
 
     // A2HS prompt capture
     const handleBeforeInstallPrompt = (e: Event) => {
+      // Holding the event suppresses the browser's own mini-infobar, so the
+      // site must offer the install itself: InstallPrompt renders while
+      // canInstall is true and calls promptInstall().
       e.preventDefault();
       deferredPromptRef.current = e;
+      setCanInstall(true);
     };
     window.addEventListener("beforeinstallprompt", handleBeforeInstallPrompt);
 
     const handleAppInstalled = () => {
       setIsInstalled(true);
       deferredPromptRef.current = null;
+      setCanInstall(false);
     };
     window.addEventListener("appinstalled", handleAppInstalled);
 
@@ -260,7 +267,9 @@ export function PWAProvider({ children }: { children: ReactNode }) {
     if (!prompt) return false;
     prompt.prompt();
     const { outcome } = await prompt.userChoice;
+    // A BeforeInstallPromptEvent can be prompted only once.
     deferredPromptRef.current = null;
+    setCanInstall(false);
     if (outcome === "accepted") {
       setIsInstalled(true);
       return true;
@@ -311,7 +320,7 @@ export function PWAProvider({ children }: { children: ReactNode }) {
   const value = useMemo<PWAContextValue>(
     () => ({
       isInstalled,
-      canInstall: !!deferredPromptRef.current,
+      canInstall: canInstall && !isInstalled,
       isUpdateAvailable: isUpdateAvailable && !isUpdateDismissed,
       isOnline,
       networkQuality,
@@ -327,6 +336,7 @@ export function PWAProvider({ children }: { children: ReactNode }) {
     }),
     [
       isInstalled,
+      canInstall,
       isUpdateAvailable,
       isUpdateDismissed,
       isOnline,
@@ -348,6 +358,7 @@ export function PWAProvider({ children }: { children: ReactNode }) {
       {children}
       <OfflineIndicator />
       <UpdatePrompt />
+      <InstallPrompt />
       <CookieConsent />
       <BottomNav />
     </PWAContext.Provider>
