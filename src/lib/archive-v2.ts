@@ -234,12 +234,16 @@ export async function getArchiveV2Index(
  */
 function parseJsonl(content: string): EnrichedArticle[] {
   const articles: EnrichedArticle[] = [];
-  const lines = content
-    .trim()
-    .split('\n')
-    .filter((line) => line.trim());
 
-  for (const line of lines) {
+  // Walk the buffer instead of split('\n'): a month is ~60 MB, and split would
+  // hold a second copy of it as ~50k line strings while parsing.
+  let start = 0;
+  while (start < content.length) {
+    let end = content.indexOf('\n', start);
+    if (end === -1) end = content.length;
+    const line = content.slice(start, end).trim();
+    start = end + 1;
+    if (!line) continue;
     try {
       articles.push(JSON.parse(line));
     } catch {
@@ -250,22 +254,74 @@ function parseJsonl(content: string): EnrichedArticle[] {
   return articles;
 }
 
-/**
- * Fetch articles for a specific month
- */
-export async function getArchiveV2Month(yearMonth: string): Promise<EnrichedArticle[]> {
+/** Parsed months kept in memory. One month is ~200 MB of heap while parsing. */
+const MAX_CACHED_MONTHS = 3;
+/** The current month is appended to by the archiver; older months are final. */
+const CURRENT_MONTH_TTL_MS = 15 * 60_000;
+const PAST_MONTH_TTL_MS = 6 * 60 * 60_000;
+
+const monthCache = new Map<string, { articles: EnrichedArticle[]; expiresAt: number }>();
+const monthInflight = new Map<string, Promise<EnrichedArticle[]>>();
+
+/** Drop every cached and in-flight month (tests) */
+export function clearArchiveV2MonthCache(): void {
+  monthCache.clear();
+  monthInflight.clear();
+}
+
+async function loadArchiveV2Month(
+  yearMonth: string,
+  stale: EnrichedArticle[] | undefined,
+): Promise<EnrichedArticle[]> {
   try {
+    // The file is far above the 2 MB Next.js data cache limit, so revalidate only
+    // marks the fetch as cacheable for ISR pages; monthCache does the caching.
     const response = await fetch(`${ARCHIVE_BASE_URL}/articles/${yearMonth}.jsonl`, {
-      next: { revalidate: 3600 }, // Cache for 1 hour
+      next: { revalidate: 3600 },
     } as NextFetchRequestConfig);
 
-    if (!response.ok) return [];
+    // A month the archive has not reached yet is a real, cacheable empty result
+    if (response.status === 404) return [];
+    if (!response.ok) throw new Error(`archive month ${yearMonth}: HTTP ${response.status}`);
 
-    const content = await response.text();
-    return parseJsonl(content);
-  } catch {
-    return [];
+    return parseJsonl(await response.text());
+  } catch (error) {
+    if (stale) return stale;
+    throw error;
   }
+}
+
+/**
+ * Fetch articles for a specific month.
+ *
+ * Concurrent callers share one download, and the parsed result is reused until
+ * it expires, so an article page view or archive query no longer downloads and
+ * parses the whole month each time. The returned array is shared: do not mutate it.
+ */
+export async function getArchiveV2Month(yearMonth: string): Promise<EnrichedArticle[]> {
+  const now = Date.now();
+  const cached = monthCache.get(yearMonth);
+  if (cached && cached.expiresAt > now) return cached.articles;
+
+  const pending = monthInflight.get(yearMonth);
+  if (pending) return pending;
+
+  const request = loadArchiveV2Month(yearMonth, cached?.articles)
+    .then((articles) => {
+      const currentMonth = new Date(now).toISOString().slice(0, 7);
+      const ttl = yearMonth >= currentMonth ? CURRENT_MONTH_TTL_MS : PAST_MONTH_TTL_MS;
+      monthCache.delete(yearMonth);
+      monthCache.set(yearMonth, { articles, expiresAt: Date.now() + ttl });
+      while (monthCache.size > MAX_CACHED_MONTHS) {
+        monthCache.delete(monthCache.keys().next().value as string);
+      }
+      return articles;
+    })
+    .catch(() => [] as EnrichedArticle[])
+    .finally(() => monthInflight.delete(yearMonth));
+
+  monthInflight.set(yearMonth, request);
+  return request;
 }
 
 /**
