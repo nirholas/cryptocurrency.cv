@@ -28,7 +28,8 @@ interface Exchange {
   volume24h: number;
   /** CoinGecko trust-score rank, 1 = highest. */
   trustScoreRank: number | null;
-  trustScore: number;
+  /** CoinGecko trust score (0-10); null when the data source has none. */
+  trustScore: number | null;
   yearEstablished: number | null;
   country?: string;
   type: "CEX" | "DEX";
@@ -56,7 +57,10 @@ function trustBadge(score: number) {
   return { label: "Low", cls: "text-red-500 dark:text-red-400" };
 }
 
-function trustBar(score: number) {
+function trustBar(score: number | null) {
+  if (score === null) {
+    return <span className="text-xs text-text-tertiary">n/a</span>;
+  }
   const pct = Math.min(100, (score / 10) * 100);
   const color =
     score >= 9
@@ -110,7 +114,7 @@ export default function ExchangeTable({
           url: item.url || item.website,
           volume24h: item.volume24h || item.trade_volume_24h_btc || item.volume || 0,
           trustScoreRank: item.trustScoreRank ?? item.trust_score_rank ?? null,
-          trustScore: item.trustScore || item.trust_score || item.trust || 0,
+          trustScore: item.trustScore ?? item.trust_score ?? item.trust ?? null,
           yearEstablished: item.yearEstablished || item.year_established || item.year || null,
           country: item.country,
           type: item.type === "DEX" || item.centralized === false ? "DEX" : "CEX",
@@ -163,7 +167,7 @@ export default function ExchangeTable({
         case "trustScoreRank":
           return mul * ((a.trustScoreRank ?? Infinity) - (b.trustScoreRank ?? Infinity));
         case "trustScore":
-          return mul * (a.trustScore - b.trustScore);
+          return mul * ((a.trustScore ?? -1) - (b.trustScore ?? -1));
         case "yearEstablished":
           return mul * ((a.yearEstablished ?? 0) - (b.yearEstablished ?? 0));
         default:

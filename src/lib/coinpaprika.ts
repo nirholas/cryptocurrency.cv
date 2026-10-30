@@ -66,6 +66,8 @@ export interface CoinPaprikaOHLC {
 export interface CoinPaprikaExchange {
   id: string;
   name: string;
+  /** e.g. ['cex'] or ['dex'] */
+  type?: string[];
   description: string;
   active: boolean;
   website_status: boolean;

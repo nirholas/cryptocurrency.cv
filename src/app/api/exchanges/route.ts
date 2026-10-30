@@ -26,14 +26,19 @@
 
 import { type NextRequest, NextResponse } from 'next/server';
 import { getExchanges } from '@/lib/market-data';
+import { getExchanges as getPaprikaExchanges } from '@/lib/coinpaprika';
+import {
+  type ExchangeSortKey,
+  rankingsFromCoinGecko,
+  rankingsFromCoinPaprika,
+  sortRankings,
+} from '@/lib/exchange-rankings';
 import { fetchCoinGecko } from '@/lib/coingecko';
 import { COINGECKO_BASE } from '@/lib/constants';
 import { createRequestLogger } from '@/lib/logger';
 import { ApiError } from '@/lib/api-error';
 
 export const revalidate = 3600;
-
-type SortKey = 'trust' | 'volume' | 'name';
 
 /**
  * CoinGecko reports exchange volume in BTC. Rendering that as dollars would
@@ -54,45 +59,31 @@ export async function GET(request: NextRequest) {
   const logger = createRequestLogger(request);
   const { searchParams } = new URL(request.url);
 
-  const sort = (searchParams.get('sort') ?? 'trust') as SortKey;
+  const sort = (searchParams.get('sort') ?? 'trust') as ExchangeSortKey;
   const limitRaw = parseInt(searchParams.get('limit') ?? '50', 10);
   const limit = Math.min(Number.isNaN(limitRaw) ? 50 : Math.max(1, limitRaw), 250);
 
   try {
     const [rows, btcUsd] = await Promise.all([getExchanges(limit, 1), getBtcPriceUsd()]);
 
-    if (rows.length === 0) {
+    let source = 'CoinGecko';
+    let exchanges = rankingsFromCoinGecko(rows, btcUsd);
+
+    // CoinGecko rate limits shared IPs; a cold instance has nothing cached to serve
+    if (exchanges.length === 0) {
+      try {
+        exchanges = rankingsFromCoinPaprika(await getPaprikaExchanges(), limit, btcUsd);
+        source = 'CoinPaprika';
+      } catch (error) {
+        logger.warn('CoinPaprika exchange fallback failed', { error: String(error) });
+      }
+    }
+
+    if (exchanges.length === 0) {
       return ApiError.serviceUnavailable('Exchange rankings are temporarily unavailable');
     }
 
-    const exchanges = rows.map((row) => {
-      const volumeBtc =
-        typeof row.trade_volume_24h_btc === 'number' && Number.isFinite(row.trade_volume_24h_btc)
-          ? row.trade_volume_24h_btc
-          : null;
-
-      return {
-        id: row.id,
-        name: row.name,
-        url: row.url,
-        image: row.image,
-        country: row.country ?? undefined,
-        yearEstablished: row.year_established ?? null,
-        trustScore: row.trust_score ?? 0,
-        trustScoreRank: row.trust_score_rank ?? null,
-        volume24hBtc: volumeBtc,
-        volume24h: volumeBtc !== null && btcUsd !== null ? volumeBtc * btcUsd : null,
-        hasTradingIncentive: row.has_trading_incentive ?? false,
-      };
-    });
-
-    if (sort === 'volume') {
-      exchanges.sort((a, b) => (b.volume24hBtc ?? 0) - (a.volume24hBtc ?? 0));
-    } else if (sort === 'name') {
-      exchanges.sort((a, b) => a.name.localeCompare(b.name));
-    } else {
-      exchanges.sort((a, b) => b.trustScore - a.trustScore);
-    }
+    sortRankings(exchanges, sort);
 
     return NextResponse.json(
       {
@@ -100,7 +91,7 @@ export async function GET(request: NextRequest) {
         total: exchanges.length,
         currency: 'usd',
         btcPriceUsd: btcUsd,
-        source: 'CoinGecko',
+        source,
         fetchedAt: new Date().toISOString(),
       },
       {
