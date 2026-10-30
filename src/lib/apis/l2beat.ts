@@ -32,11 +32,15 @@ export interface L2Project {
   name: string;
   slug: string;
   type: 'rollup' | 'validium' | 'optimium' | 'plasma' | 'state-channel';
-  category: 'Optimistic Rollup' | 'ZK Rollup' | 'Validium' | 'Optimium' | 'Plasma';
+  category: 'Optimistic Rollup' | 'ZK Rollup' | 'Validium' | 'Optimium' | 'Plasma' | 'Other';
+  /** Total value secured (L2Beat's TVS: canonical + external + native), USD */
   tvl: number;
-  tvlChange24h: number;
+  /** Percent; L2Beat's summary only reports a 7-day change, so this is absent for L2Beat data */
+  tvlChange24h?: number;
+  /** Percent */
   tvlChange7d: number;
-  tvlChange30d: number;
+  /** Percent; not reported by L2Beat's summary */
+  tvlChange30d?: number;
   canonicalTvl: number;
   externalTvl: number;
   nativeTvl: number;
@@ -134,49 +138,130 @@ async function l2beatFetch<T>(endpoint: string): Promise<T | null> {
   }
 }
 
+interface L2BeatRisk {
+  name: string;
+  value: string;
+  sentiment: 'good' | 'warning' | 'bad' | string;
+}
+
+interface L2BeatSummaryProject {
+  id: string;
+  name: string;
+  slug: string;
+  category: string;
+  stage?: string;
+  purposes?: string[];
+  isArchived?: boolean;
+  risks?: L2BeatRisk[];
+  tvs?: {
+    breakdown?: {
+      total?: number;
+      native?: number;
+      canonical?: number;
+      external?: number;
+    };
+    /** Fraction, e.g. -0.045 for -4.5% */
+    change7d?: number;
+  };
+}
+
+export interface L2BeatSummaryResponse {
+  /** Columns: timestamp, native, canonical, external, ethPrice */
+  chart?: { types: string[]; data: number[][] };
+  projects: Record<string, L2BeatSummaryProject>;
+}
+
+const L2_STAGES: ReadonlyArray<L2Project['stage']> = ['Stage 0', 'Stage 1', 'Stage 2', 'Not applicable'];
+const L2_CATEGORIES: ReadonlyArray<L2Project['category']> = [
+  'Optimistic Rollup',
+  'ZK Rollup',
+  'Validium',
+  'Optimium',
+  'Plasma',
+  'Other',
+];
+
+/** Weighted count of L2Beat's risk rosette: bad = 2, warning = 1. */
+export function riskLevelFromRisks(risks: L2BeatRisk[] | undefined): L2Project['riskLevel'] {
+  if (!risks?.length) return 'medium';
+  const score = risks.reduce(
+    (sum, r) => sum + (r.sentiment === 'bad' ? 2 : r.sentiment === 'warning' ? 1 : 0),
+    0,
+  );
+  if (score <= 1) return 'low';
+  if (score <= 5) return 'medium';
+  return 'high';
+}
+
+export function mapL2BeatSummary(data: L2BeatSummaryResponse, now = new Date()): L2Project[] {
+  const timestamp = now.toISOString();
+  return Object.values(data.projects)
+    .filter(project => !project.isArchived)
+    .map(project => {
+      const breakdown = project.tvs?.breakdown;
+      const stage = L2_STAGES.find(s => s === project.stage) ?? 'Not applicable';
+      const category = L2_CATEGORIES.find(c => c === project.category) ?? 'Other';
+      return {
+        id: project.id,
+        name: project.name,
+        slug: project.slug,
+        type: categorizeL2Type(project.category),
+        category,
+        tvl: breakdown?.total ?? 0,
+        tvlChange7d: (project.tvs?.change7d ?? 0) * 100,
+        canonicalTvl: breakdown?.canonical ?? 0,
+        externalTvl: breakdown?.external ?? 0,
+        nativeTvl: breakdown?.native ?? 0,
+        stage,
+        riskLevel: riskLevelFromRisks(project.risks),
+        purposes: project.purposes ?? [],
+        website: '',
+        explorer: '',
+        timestamp,
+      };
+    })
+    .sort((a, b) => b.tvl - a.tvl);
+}
+
 /**
- * Get all L2 projects with TVL data
+ * Percent change of the aggregate TVS over the last 24h, from the summary chart.
+ * Chart points are irregular (6h buckets plus a latest point), so compare the
+ * latest point with the newest one at least 24h older.
+ */
+export function totalTvsChange24h(chart: L2BeatSummaryResponse['chart']): number | null {
+  if (!chart?.data?.length) return null;
+  const valueCols = ['native', 'canonical', 'external']
+    .map(name => chart.types.indexOf(name))
+    .filter(i => i > 0);
+  if (!valueCols.length) return null;
+  const total = (row: number[]) => valueCols.reduce((sum, i) => sum + (row[i] ?? 0), 0);
+
+  const latest = chart.data[chart.data.length - 1];
+  const cutoff = latest[0] - 86_400;
+  let previous: number[] | undefined;
+  for (let i = chart.data.length - 2; i >= 0; i--) {
+    if (chart.data[i][0] <= cutoff) {
+      previous = chart.data[i];
+      break;
+    }
+  }
+  if (!previous) return null;
+  const prev = total(previous);
+  return prev > 0 ? ((total(latest) - prev) / prev) * 100 : null;
+}
+
+async function getL2BeatSummary(): Promise<L2BeatSummaryResponse | null> {
+  const data = await l2beatFetch<L2BeatSummaryResponse>('/scaling/summary');
+  return data?.projects ? data : null;
+}
+
+/**
+ * Get all L2 projects with TVS data, largest first
  */
 export async function getL2Projects(): Promise<L2Project[]> {
-  // L2Beat doesn't have a public API, so we'll construct from their public data
-  // Using their scaling summary endpoint
-  const data = await l2beatFetch<{
-    projects: Record<string, {
-      id: string;
-      name: string;
-      slug: string;
-      category: string;
-      tvl: { value: number; change24h: number; change7d: number };
-      stage?: string;
-      purposes: string[];
-    }>;
-  }>('/scaling/summary');
-
-  if (!data?.projects) {
-    // Return curated list of major L2s with estimated data
-    return getL2ProjectsFallback();
-  }
-
-  return Object.values(data.projects).map(project => ({
-    id: project.id,
-    name: project.name,
-    slug: project.slug,
-    type: categorizeL2Type(project.category),
-    category: project.category as L2Project['category'],
-    tvl: project.tvl?.value || 0,
-    tvlChange24h: project.tvl?.change24h || 0,
-    tvlChange7d: project.tvl?.change7d || 0,
-    tvlChange30d: 0,
-    canonicalTvl: 0,
-    externalTvl: 0,
-    nativeTvl: 0,
-    stage: (project.stage as L2Project['stage']) || 'Not applicable',
-    riskLevel: 'medium',
-    purposes: project.purposes || [],
-    website: '',
-    explorer: '',
-    timestamp: new Date().toISOString(),
-  }));
+  const data = await getL2BeatSummary();
+  if (!data) return getL2ProjectsFallback();
+  return mapL2BeatSummary(data);
 }
 
 /**
@@ -208,9 +293,7 @@ async function getL2ProjectsFallback(): Promise<L2Project[]> {
       type: inferL2Type(chain.name),
       category: inferCategory(chain.name),
       tvl: chain.tvl || 0,
-      tvlChange24h: 0,
       tvlChange7d: 0,
-      tvlChange30d: 0,
       canonicalTvl: 0,
       externalTvl: 0,
       nativeTvl: 0,
@@ -220,7 +303,7 @@ async function getL2ProjectsFallback(): Promise<L2Project[]> {
       website: '',
       explorer: '',
       timestamp: new Date().toISOString(),
-    }));
+    })).sort((a, b) => b.tvl - a.tvl);
   } catch {
     return [];
   }
@@ -313,111 +396,116 @@ export async function getL2RiskAssessment(projectId: string): Promise<L2RiskAsse
   };
 }
 
+interface L2BeatActivityResponse {
+  success: boolean;
+  data?: {
+    /** Columns: timestamp, count, uopsCount — one row per UTC day */
+    chart?: { types: string[]; data: number[][] };
+  };
+}
+
+/** How many of the largest projects get a per-project activity lookup */
+const ACTIVITY_PROJECT_LIMIT = 15;
+
 /**
- * Get L2 activity metrics
+ * Activity metrics from an L2Beat daily activity chart. The last row is the
+ * most recent complete day. Returns null when the chart is missing or empty.
+ */
+export function activityFromChart(
+  project: { id: string; name: string },
+  response: L2BeatActivityResponse | null,
+): L2Activity | null {
+  const chart = response?.success ? response.data?.chart : undefined;
+  if (!chart?.data?.length) return null;
+  const countCol = chart.types.indexOf('count');
+  const uopsCol = chart.types.indexOf('uopsCount');
+  if (countCol < 0) return null;
+
+  const rows = chart.data;
+  const last = rows[rows.length - 1];
+  const prior = rows.length > 1 ? rows[rows.length - 2] : undefined;
+  const daily = last[countCol] ?? 0;
+  const priorDaily = prior?.[countCol] ?? 0;
+  const lastWeek = rows.slice(-7);
+
+  return {
+    projectId: project.id,
+    projectName: project.name,
+    dailyTransactions: daily,
+    dailyTransactionsChange: priorDaily > 0 ? ((daily - priorDaily) / priorDaily) * 100 : 0,
+    weeklyTransactions: lastWeek.reduce((sum, r) => sum + (r[countCol] ?? 0), 0),
+    averageTps: daily / 86_400,
+    // Busiest day in the returned window, as an average over that day
+    peakTps: Math.max(...rows.map(r => r[countCol] ?? 0)) / 86_400,
+    userOperations: uopsCol >= 0 ? last[uopsCol] ?? 0 : 0,
+    timestamp: new Date(last[0] * 1000).toISOString(),
+  };
+}
+
+/**
+ * Get L2 activity metrics for the largest projects, busiest first.
+ * Projects L2Beat does not track activity for are omitted.
  */
 export async function getL2Activity(): Promise<L2Activity[]> {
-  // Activity data from public sources
-  const activities: L2Activity[] = [
-    {
-      projectId: 'arbitrum',
-      projectName: 'Arbitrum One',
-      dailyTransactions: 0,
-      dailyTransactionsChange: 0,
-      weeklyTransactions: 0,
-      averageTps: 0,
-      peakTps: 0,
-      userOperations: 0,
-      timestamp: new Date().toISOString(),
-    },
-  ];
+  const summary = await getL2BeatSummary();
+  if (!summary) return [];
+  const projects = mapL2BeatSummary(summary).slice(0, ACTIVITY_PROJECT_LIMIT);
 
-  // Try to fetch real activity data from L2Beat or alternative sources
-  try {
-    const { data } = await resilientFetch<{ projects?: Record<string, unknown> }>('https://l2beat.com/api/activity', {
-      service: 'l2beat',
-      timeoutMs: 10_000,
-      retries: 1,
-      staleCache,
-      staleCacheKey: 'l2beat:/api/activity',
-      next: { revalidate: 600 },
-    });
+  const results = await Promise.all(
+    projects.map(async project =>
+      activityFromChart(
+        project,
+        await l2beatFetch<L2BeatActivityResponse>(`/scaling/activity/${encodeURIComponent(project.slug)}`),
+      ),
+    ),
+  );
 
-    if (data) {
-      if (data.projects) {
-        interface L2BeatProject {
-          name: string;
-          daily: number;
-          weekly: number;
-          tps: number;
-        }
-        return Object.entries(data.projects as Record<string, L2BeatProject>).map(([id, project]) => ({
-          projectId: id,
-          projectName: project.name,
-          dailyTransactions: project.daily || 0,
-          dailyTransactionsChange: 0,
-          weeklyTransactions: project.weekly || 0,
-          averageTps: project.tps || 0,
-          peakTps: 0,
-          userOperations: 0,
-          timestamp: new Date().toISOString(),
-        }));
-      }
-    }
-  } catch {
-    // Return empty activities
-  }
+  return results
+    .filter((a): a is L2Activity => a !== null)
+    .sort((a, b) => b.dailyTransactions - a.dailyTransactions);
+}
 
-  return activities;
+/**
+ * Ecosystem-wide daily transactions and TPS across every project L2Beat tracks
+ */
+async function getL2ActivityTotals(): Promise<L2Summary['activityMetrics']> {
+  const totals = activityFromChart(
+    { id: 'all', name: 'All projects' },
+    await l2beatFetch<L2BeatActivityResponse>('/scaling/activity'),
+  );
+  return {
+    totalDailyTx: totals?.dailyTransactions ?? 0,
+    totalTps: totals?.averageTps ?? 0,
+  };
 }
 
 /**
  * Get comprehensive L2 ecosystem summary
  */
 export async function getL2Summary(): Promise<L2Summary> {
-  const projects = await getL2Projects();
-  const activities = await getL2Activity();
+  const [summary, activityMetrics] = await Promise.all([getL2BeatSummary(), getL2ActivityTotals()]);
+  const projects = summary ? mapL2BeatSummary(summary) : await getL2ProjectsFallback();
 
   const totalTvl = projects.reduce((sum, p) => sum + p.tvl, 0);
-  const prevTvl = projects.reduce((sum, p) => sum + p.tvl / (1 + p.tvlChange24h / 100), 0);
-  const totalTvlChange24h = prevTvl > 0 ? ((totalTvl - prevTvl) / prevTvl) * 100 : 0;
+  const totalTvlChange24h = (summary && totalTvsChange24h(summary.chart)) ?? 0;
 
-  // Calculate dominance
+  const topProjects = projects.slice(0, 10);
   const dominance: Record<string, number> = {};
-  projects.slice(0, 10).forEach(p => {
+  for (const p of topProjects) {
     dominance[p.name] = totalTvl > 0 ? (p.tvl / totalTvl) * 100 : 0;
-  });
-
-  // Calculate risk distribution
-  let lowRisk = 0, mediumRisk = 0, highRisk = 0;
-  for (const project of projects) {
-    const risk = await getL2RiskAssessment(project.id);
-    if (risk) {
-      if (risk.overallRiskScore < 30) lowRisk++;
-      else if (risk.overallRiskScore < 60) mediumRisk++;
-      else highRisk++;
-    }
   }
 
-  // Activity metrics
-  const totalDailyTx = activities.reduce((sum, a) => sum + a.dailyTransactions, 0);
-  const totalTps = activities.reduce((sum, a) => sum + a.averageTps, 0);
+  const riskDistribution = { low: 0, medium: 0, high: 0 };
+  for (const project of projects) riskDistribution[project.riskLevel]++;
 
   return {
     totalTvl,
     totalTvlChange24h,
     totalProjects: projects.length,
     dominance,
-    topProjects: projects.sort((a, b) => b.tvl - a.tvl).slice(0, 10),
-    activityMetrics: {
-      totalDailyTx,
-      totalTps,
-    },
-    riskDistribution: {
-      low: lowRisk,
-      medium: mediumRisk,
-      high: highRisk,
-    },
+    topProjects,
+    activityMetrics,
+    riskDistribution,
     timestamp: new Date().toISOString(),
   };
 }

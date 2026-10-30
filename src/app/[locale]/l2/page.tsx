@@ -36,9 +36,9 @@ interface L2Project {
 }
 
 interface L2Activity {
-  projectId?: string;
-  projectName?: string;
-  averageTps?: number;
+  projectId: string;
+  projectName: string;
+  averageTps: number;
 }
 
 interface L2Summary {
@@ -47,7 +47,7 @@ interface L2Summary {
   totalProjects?: number;
   dominance?: Record<string, number>;
   topProjects?: L2Project[];
-  activityMetrics?: L2Activity[];
+  activityMetrics?: { totalDailyTx: number; totalTps: number };
   timestamp?: string;
 }
 
@@ -156,31 +156,34 @@ export default async function L2Page({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
 
-  const [l2Result, bridgeResult] = await Promise.allSettled([
+  const [l2Result, activityResult, bridgeResult] = await Promise.allSettled([
     fetchJSON<L2Summary>('/api/l2'),
+    fetchJSON<L2Activity[]>('/api/l2/activity'),
     fetchJSON<BridgesSummary>('/api/bridges'),
   ]);
 
   const l2Data = l2Result.status === 'fulfilled' ? l2Result.value : null;
+  const activities =
+    activityResult.status === 'fulfilled' && Array.isArray(activityResult.value)
+      ? activityResult.value
+      : [];
   const bridgeData = bridgeResult.status === 'fulfilled' ? bridgeResult.value : null;
 
   const topProjects = l2Data?.topProjects ?? [];
-  const activityMetrics = l2Data?.activityMetrics ?? [];
+  const totalTps = l2Data?.activityMetrics?.totalTps ?? 0;
   const totalTvl = l2Data?.totalTvl ?? 0;
   const totalTvlChange24h = l2Data?.totalTvlChange24h ?? 0;
   const totalProjects = l2Data?.totalProjects ?? 0;
 
   // Build activity lookup
   const activityMap = new Map<string, L2Activity>();
-  for (const a of activityMetrics) {
-    if (a.projectName) {
-      activityMap.set(a.projectName.toLowerCase(), a);
-    }
+  for (const a of activities) {
+    activityMap.set(a.projectId, a);
   }
 
   // Transform to L2Row
   const l2Rows: L2Row[] = topProjects.map((p, idx) => {
-    const activity = activityMap.get(p.name.toLowerCase());
+    const activity = p.id ? activityMap.get(p.id) : undefined;
     const typeLabel = p.category ?? p.type ?? 'Rollup';
     const normalizedType = typeLabel.toLowerCase().includes('zk')
       ? 'ZK Rollup'
@@ -242,6 +245,7 @@ export default async function L2Page({ params }: Props) {
             <StatCard
               label="L2 Projects"
               value={totalProjects > 0 ? totalProjects.toString() : l2Rows.length.toString()}
+              sub={totalTps > 0 ? `${totalTps.toFixed(0)} TPS combined` : undefined}
               icon={<BarChart3 className="h-5 w-5" />}
             />
             <StatCard
