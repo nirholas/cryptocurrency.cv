@@ -19,6 +19,7 @@
 
 import { type NextRequest, NextResponse } from 'next/server';
 import { internalFetch } from '@/lib/internal-fetch';
+import type { MarketSentiment, SentimentLabel } from '@/lib/news-sentiment';
 
 
 interface AlexaRequest {
@@ -36,6 +37,17 @@ interface AlexaRequest {
     application: { applicationId: string };
     user: { userId: string };
   };
+}
+
+/** The parts of /api/sentiment this skill speaks. */
+interface SentimentPayload {
+  market?: MarketSentiment;
+  distribution?: Record<SentimentLabel, number>;
+}
+
+/** The parts of /api/fear-greed this skill speaks. */
+interface FearGreedPayload {
+  current?: { value: number; valueClassification: string };
 }
 
 interface AlexaResponse {
@@ -170,15 +182,23 @@ async function handleLatestNewsIntent(coin?: string): Promise<AlexaResponse> {
 async function handleMarketSentimentIntent(): Promise<AlexaResponse> {
   try {
     const res = await internalFetch(`/api/sentiment`);
-    const data = await res.json();
-    const market = data.market || { score: 50, label: 'Neutral' };
-    
-    const speech = `The current market sentiment is ${market.label} with a score of ${market.score} out of 100. ${market.bullish}% of articles are bullish, and ${market.bearish}% are bearish.`;
-    
+    if (!res.ok) throw new Error(`sentiment ${res.status}`);
+    const data: SentimentPayload = await res.json();
+    const { market, distribution } = data;
+    if (typeof market?.score !== 'number') throw new Error('sentiment has no market score');
+
+    const label = market.overall.replace(/_/g, ' ');
+    const total = distribution ? Object.values(distribution).reduce((sum, n) => sum + n, 0) : 0;
+    const share = (n: number) => (total ? Math.round((n / total) * 100) : 0);
+    const bullish = share((distribution?.very_bullish ?? 0) + (distribution?.bullish ?? 0));
+    const bearish = share((distribution?.very_bearish ?? 0) + (distribution?.bearish ?? 0));
+
+    const speech = `The current market sentiment is ${label} with a score of ${market.score} on a scale from -100 to 100. ${bullish}% of articles are bullish, and ${bearish}% are bearish.`;
+
     return buildResponse(
       speech,
       'Market Sentiment',
-      `Score: ${market.score}/100 - ${market.label}\nBullish: ${market.bullish}%\nBearish: ${market.bearish}%`,
+      `Score: ${market.score} (-100 to 100) - ${label}\nBullish: ${bullish}%\nBearish: ${bearish}%`,
       true
     );
   } catch {
@@ -194,10 +214,11 @@ async function handleMarketSentimentIntent(): Promise<AlexaResponse> {
 async function handleFearGreedIntent(): Promise<AlexaResponse> {
   try {
     const res = await internalFetch(`/api/fear-greed`);
-    const data = await res.json();
-    
-    const value = data.value || 50;
-    const label = data.classification || 'Neutral';
+    if (!res.ok) throw new Error(`fear-greed ${res.status}`);
+    const data: FearGreedPayload = await res.json();
+    const value = data.current?.value;
+    if (typeof value !== 'number') throw new Error('fear-greed has no current value');
+    const label = data.current?.valueClassification ?? 'Neutral';
     
     let description = '';
     if (value < 25) description = 'Extreme fear in the market. This could be a buying opportunity.';

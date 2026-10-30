@@ -41,6 +41,14 @@ interface OracleData {
   dataHash: string;
 }
 
+/** Each packed field is one byte wide. */
+const UINT8_MAX = 255;
+
+/** Maps the sentiment score (-100 bearish .. 100 bullish) onto the oracle's 0-100 scale. */
+function toPercentScale(score: number): number {
+  return Math.min(100, Math.max(0, Math.round((score + 100) / 2)));
+}
+
 // Get oracle data for on-chain use
 async function getOracleData(): Promise<OracleData> {
   // Fetch sentiment
@@ -57,18 +65,18 @@ async function getOracleData(): Promise<OracleData> {
     ]);
     
     if (sentimentRes.ok) {
-      const data = await sentimentRes.json();
-      sentiment = data.market?.score || 50;
+      const data: { market?: { score?: number } } = await sentimentRes.json();
+      if (typeof data.market?.score === 'number') sentiment = toPercentScale(data.market.score);
     }
     
     if (fgRes.ok) {
-      const data = await fgRes.json();
-      fearGreed = data.value || 50;
+      const data: { current?: { value?: number } } = await fgRes.json();
+      if (typeof data.current?.value === 'number') fearGreed = data.current.value;
     }
     
     if (newsRes.ok) {
-      const data = await newsRes.json();
-      breakingCount = data.articles?.filter((a: any) => a.isBreaking)?.length || 0;
+      const data: { totalCount?: number; articles?: unknown[] } = await newsRes.json();
+      breakingCount = Math.min(UINT8_MAX, data.totalCount ?? data.articles?.length ?? 0);
     }
     
     // Determine top narrative
