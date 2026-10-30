@@ -217,7 +217,7 @@ export default function DashboardOverview() {
           </div>
           <pre className="text-xs font-mono overflow-x-auto">
             {`curl -H "X-API-Key: YOUR_KEY" \\
-  https://cryptocurrency.cv/api/prices?limit=10`}
+  https://cryptocurrency.cv/api/prices?coins=bitcoin,ethereum,solana`}
           </pre>
         </div>
       </div>

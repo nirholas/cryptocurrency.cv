@@ -64,8 +64,7 @@ const ENDPOINTS: EndpointDef[] = [
     description: "Get current cryptocurrency prices",
     category: "Market",
     params: [
-      { name: "coin", type: "string", description: "Coin symbol (e.g. bitcoin)" },
-      { name: "vs_currency", type: "select", description: "Target currency", options: ["usd", "eur", "gbp", "jpy", "btc"], defaultValue: "usd" },
+      { name: "coins", type: "string", description: "Comma-separated CoinGecko IDs (default: top 20)", defaultValue: "bitcoin,ethereum" },
     ],
   },
   {

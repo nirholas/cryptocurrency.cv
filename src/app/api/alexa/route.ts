@@ -224,19 +224,47 @@ async function handleFearGreedIntent(): Promise<AlexaResponse> {
   }
 }
 
+/** Spoken names and tickers whose CoinGecko id differs from the slugged name. */
+const SPOKEN_COIN_IDS: Record<string, string> = {
+  btc: 'bitcoin',
+  eth: 'ethereum',
+  ether: 'ethereum',
+  sol: 'solana',
+  xrp: 'ripple',
+  bnb: 'binancecoin',
+  'binance-coin': 'binancecoin',
+  doge: 'dogecoin',
+  ada: 'cardano',
+  avalanche: 'avalanche-2',
+  avax: 'avalanche-2',
+  ton: 'the-open-network',
+  toncoin: 'the-open-network',
+  dot: 'polkadot',
+  link: 'chainlink',
+  ltc: 'litecoin',
+  shib: 'shiba-inu',
+  usdt: 'tether',
+  usdc: 'usd-coin',
+  trx: 'tron',
+  xlm: 'stellar',
+};
+
+/** Alexa hands over the spoken name ("Bitcoin", "Shiba Inu"), which is usually the CoinGecko id once slugged. */
+function toCoinGeckoId(coin: string): string {
+  const slug = coin.trim().toLowerCase().replace(/\s+/g, '-');
+  return SPOKEN_COIN_IDS[slug] ?? slug;
+}
+
 async function handlePriceIntent(coin: string): Promise<AlexaResponse> {
   try {
-    const res = await internalFetch(`/api/prices`);
-    const data = await res.json();
-    const prices = data.prices || {};
-    
-    // Find the coin (case-insensitive)
-    const coinKey = Object.keys(prices).find(k => 
-      k.toLowerCase() === coin.toLowerCase() ||
-      k.toLowerCase().includes(coin.toLowerCase())
-    );
-    
-    if (!coinKey || !prices[coinKey]) {
+    const coinId = toCoinGeckoId(coin);
+    const res = await internalFetch(`/api/prices?coins=${encodeURIComponent(coinId)}`);
+    const data: Record<string, { usd?: number; usd_24h_change?: number }> = res.ok
+      ? await res.json()
+      : {};
+    const price = data[coinId];
+
+    if (typeof price?.usd !== 'number') {
       return buildResponse(
         `I don't have price data for ${coin}. Try asking for Bitcoin, Ethereum, or another major cryptocurrency.`,
         'Price Not Found',
@@ -244,10 +272,10 @@ async function handlePriceIntent(coin: string): Promise<AlexaResponse> {
         true
       );
     }
-    
-    const price = prices[coinKey];
-    const usd = price.usd?.toLocaleString() || 'unknown';
-    const change = price.change24h?.toFixed(2) || '0';
+
+    const coinKey = coin.trim();
+    const usd = price.usd.toLocaleString('en-US');
+    const change = (price.usd_24h_change ?? 0).toFixed(2);
     const direction = parseFloat(change) >= 0 ? 'up' : 'down';
     
     const speech = `${coinKey} is currently at ${usd} dollars, ${direction} ${Math.abs(parseFloat(change))} percent in the last 24 hours.`;

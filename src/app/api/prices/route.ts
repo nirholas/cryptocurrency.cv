@@ -11,6 +11,7 @@
 /**
  * Simple price lookup API route
  * GET /api/prices?coins=bitcoin,ethereum,solana
+ * GET /api/prices — the large caps in DEFAULT_COINS
  * Returns { bitcoin: { usd: 50000, usd_24h_change: 1.5, usd_market_cap: 1.0e12,
  *            usd_24h_vol: 3.1e10 }, ... }
  *
@@ -31,19 +32,21 @@ import { COINGECKO_BASE, PREMIUM_URL } from '@/lib/constants';
 import { staleCache, cache, generateCacheKey } from '@/lib/cache';
 import { getPricesFallback } from '@/lib/fallback';
 import { getPipelinePrices } from '@/lib/data-pipeline';
-import { ApiError } from '@/lib/api-error';
 import { instrumented } from '@/lib/telemetry-middleware';
 
 export const revalidate = 120;
 
+/** Served when `coins` is omitted, as the developer docs promise. */
+const DEFAULT_COINS = [
+  'bitcoin', 'ethereum', 'tether', 'ripple', 'binancecoin', 'solana', 'usd-coin',
+  'dogecoin', 'tron', 'cardano', 'hyperliquid', 'chainlink', 'stellar', 'sui',
+  'bitcoin-cash', 'avalanche-2', 'litecoin', 'shiba-inu', 'the-open-network', 'polkadot',
+].join(',');
+
 export const GET = instrumented(
   async function GET(request: NextRequest) {
     const isFreeTier = request.headers.get('x-free-tier') === '1';
-    const coins = request.nextUrl.searchParams.get('coins');
-
-    if (!coins) {
-      return ApiError.badRequest('Missing "coins" query parameter');
-    }
+    const coins = request.nextUrl.searchParams.get('coins') || DEFAULT_COINS;
 
     const coinIds = coins
       .split(',')

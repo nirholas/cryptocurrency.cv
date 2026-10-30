@@ -242,21 +242,15 @@ const endpointCategories: EndpointCategory[] = [
         path: "/api/prices",
         description: "Get current cryptocurrency prices and 24h changes.",
         params: [
-          { name: "coins", type: "string", required: false, description: "Comma-separated coin IDs (default: top 20)" },
-          { name: "currency", type: "string", required: false, description: "Quote currency (default: usd)" },
+          { name: "coins", type: "string", required: false, description: "Comma-separated CoinGecko IDs, up to 20 (default: top 20 by market cap). Prices are quoted in USD." },
         ],
         response: `{
-  "prices": [
-    {
-      "id": "bitcoin",
-      "symbol": "BTC",
-      "price": 98542.30,
-      "change24h": 2.45,
-      "marketCap": 1940000000000,
-      "volume24h": 35200000000
-    }
-  ],
-  "fetchedAt": "2026-03-01T12:05:00Z"
+  "bitcoin": {
+    "usd": 98542.30,
+    "usd_24h_change": 2.45,
+    "usd_market_cap": 1940000000000,
+    "usd_24h_vol": 35200000000
+  }
 }`,
       },
       {
