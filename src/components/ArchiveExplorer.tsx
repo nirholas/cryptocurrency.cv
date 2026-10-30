@@ -16,6 +16,8 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/Card";
 import { Skeleton } from "@/components/ui/Skeleton";
 import { cn } from "@/lib/utils";
 import type { NewsArticle } from "@/lib/crypto-news";
+import type { ArchiveV2Stats } from "@/lib/archive-v2";
+import { summarizeArchiveStats, type ArchiveStatsSummary } from "@/lib/archive-stats-summary";
 import {
   Calendar,
   ChevronLeft,
@@ -31,14 +33,6 @@ import {
 } from "lucide-react";
 
 // ─── Types ───────────────────────────────────────────────────────────────────
-
-interface ArchiveStats {
-  totalArticles: number;
-  dateRange: { earliest: string; latest: string };
-  byYear?: Record<string, number>;
-  bySource?: Record<string, number>;
-  byCategory?: Record<string, number>;
-}
 
 interface MarketSnapshot {
   timestamp: string;
@@ -359,7 +353,7 @@ function StatsDashboard({
   stats,
   loading,
 }: {
-  stats: ArchiveStats | null;
+  stats: ArchiveStatsSummary | null;
   loading: boolean;
 }) {
   const t = useTranslations("archive");
@@ -384,18 +378,14 @@ function StatsDashboard({
 
   if (!stats) return null;
 
-  const yearData = stats.byYear || {};
+  const yearData = stats.byYear;
   const maxArticles = Math.max(...Object.values(yearData), 1);
-  const topSources = stats.bySource
-    ? Object.entries(stats.bySource)
-        .sort(([, a], [, b]) => b - a)
-        .slice(0, 8)
-    : [];
-  const topCategories = stats.byCategory
-    ? Object.entries(stats.byCategory)
-        .sort(([, a], [, b]) => b - a)
-        .slice(0, 6)
-    : [];
+  const topSources = Object.entries(stats.bySource)
+    .sort(([, a], [, b]) => b - a)
+    .slice(0, 8);
+  const topCategories = Object.entries(stats.byCategory)
+    .sort(([, a], [, b]) => b - a)
+    .slice(0, 6);
 
   return (
     <Card>
@@ -577,7 +567,7 @@ export default function ArchiveExplorer() {
   const [articles, setArticles] = useState<NewsArticle[]>([]);
   const [total, setTotal] = useState(0);
   const [loading, setLoading] = useState(false);
-  const [stats, setStats] = useState<ArchiveStats | null>(null);
+  const [stats, setStats] = useState<ArchiveStatsSummary | null>(null);
   const [statsLoading, setStatsLoading] = useState(true);
   const [market, setMarket] = useState<MarketSnapshot | null>(null);
   const [marketLoading, setMarketLoading] = useState(false);
@@ -717,9 +707,9 @@ export default function ArchiveExplorer() {
       setStatsLoading(true);
       try {
         const res = await fetch("/api/archive?stats=true");
-        const data = await res.json();
+        const data: { success?: boolean; stats?: ArchiveV2Stats | null } = await res.json();
         if (data.success && data.stats) {
-          setStats(data.stats);
+          setStats(summarizeArchiveStats(data.stats));
         }
       } catch {
         /* ignore */

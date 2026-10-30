@@ -131,15 +131,24 @@ export interface ArchiveSnapshot {
   } | null;
 }
 
+/**
+ * Archive statistics. The archive's `meta/stats.json` carries article dates,
+ * categories and monthly counts; the Postgres summary carries fetch dates and
+ * daily counts. Fields only one of them provides are optional.
+ */
 export interface ArchiveV2Stats {
   version: string;
   total_articles: number;
-  total_fetches: number;
-  first_fetch: string | null;
-  last_fetch: string | null;
+  total_fetches?: number;
+  first_fetch?: string | null;
+  last_fetch?: string | null;
+  first_article_date?: string | null;
+  last_article_date?: string | null;
   sources: Record<string, number>;
   tickers: Record<string, number>;
-  daily_counts: Record<string, number>;
+  categories?: Record<string, number>;
+  daily_counts?: Record<string, number>;
+  monthly_counts?: Record<string, number>;
 }
 
 /**
