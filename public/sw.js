@@ -19,6 +19,9 @@ const DYNAMIC_CACHE = `dynamic-${CACHE_VERSION}`;
 const API_CACHE = `api-${CACHE_VERSION}`;
 const IMAGE_CACHE = `images-${CACHE_VERSION}`;
 
+// How long network-first requests wait before serving a cached copy
+const NETWORK_TIMEOUT_MS = 10000;
+
 // Files to cache immediately on install
 const STATIC_ASSETS = [
   '/',
@@ -189,8 +192,11 @@ self.addEventListener('fetch', (event) => {
  * Try network, fall back to cache, update cache on success
  */
 async function networkFirstStrategy(request, cacheName, maxAge) {
+  const cachedResponse = await caches.match(request);
+  const hasFallback = !!cachedResponse && !isCacheExpired(cachedResponse, maxAge);
+
   try {
-    const networkResponse = await fetchWithTimeout(request, 10000);
+    const networkResponse = await fetchNetworkFirst(request, hasFallback);
     
     if (networkResponse.ok) {
       const cache = await caches.open(cacheName);
@@ -213,10 +219,8 @@ async function networkFirstStrategy(request, cacheName, maxAge) {
     return networkResponse;
   } catch (error) {
     console.log('[SW] Network failed, trying cache:', request.url);
-    
-    const cachedResponse = await caches.match(request);
-    
-    if (cachedResponse && !isCacheExpired(cachedResponse, maxAge)) {
+
+    if (hasFallback) {
       return cachedResponse;
     }
     
@@ -357,8 +361,10 @@ async function staleWhileRevalidate(request, cacheName) {
  * For navigation requests
  */
 async function networkFirstWithOfflineFallback(request) {
+  const cachedResponse = await caches.match(request);
+
   try {
-    const networkResponse = await fetchWithTimeout(request, 10000);
+    const networkResponse = await fetchNetworkFirst(request, !!cachedResponse);
     
     // Cache successful navigation responses
     if (networkResponse.ok) {
@@ -371,7 +377,6 @@ async function networkFirstWithOfflineFallback(request) {
     console.log('[SW] Navigation failed, checking cache:', request.url);
     
     // Try to return cached page
-    const cachedResponse = await caches.match(request);
     if (cachedResponse) {
       return cachedResponse;
     }
@@ -446,6 +451,15 @@ function isCacheExpired(response, maxAge) {
   
   const age = (Date.now() - parseInt(timestamp, 10)) / 1000;
   return age > maxAge;
+}
+
+/**
+ * Give up on a slow network only when a cached copy can be served instead.
+ * Without one, wait it out: a cold server start can take longer than the
+ * timeout, and aborting would show an offline page to an online user.
+ */
+function fetchNetworkFirst(request, hasFallback) {
+  return hasFallback ? fetchWithTimeout(request, NETWORK_TIMEOUT_MS) : fetch(request);
 }
 
 async function fetchWithTimeout(request, timeout) {
