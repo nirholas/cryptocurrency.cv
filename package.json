@@ -128,7 +128,7 @@
   "dependencies": {
     "@google/generative-ai": "^0.24.1",
     "@heroicons/react": "^2.2.0",
-    "@modelcontextprotocol/sdk": "^1.31.0",
+    "@modelcontextprotocol/sdk": "^1.32.0",
     "@neondatabase/serverless": "^1.2.0",
     "@next/third-parties": "^16.3.8",
     "@noble/curves": "^2.4.0",
