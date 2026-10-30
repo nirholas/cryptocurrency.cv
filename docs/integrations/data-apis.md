@@ -29,6 +29,7 @@ import {
 |-----|------|------------|----------|
 | [DefiLlama](#defillama) | **Free** | Generous | DeFi TVL, yields, protocols |
 | [L2Beat](#l2beat) | **Free** | Moderate | Layer 2 analytics, risk |
+| [growthepie](#growthepie) | **Free** | Moderate | Median transaction fee per chain |
 | [Messari](#messari) | Free tier | 20/min | Research-grade data |
 | [NFT Markets](#nft-markets) | Free tier | 120/min | NFT collections, sales |
 | [News Feeds](#news-feeds) | Free tier | 100/day | Crypto news, regulatory |
@@ -174,9 +175,9 @@ interface L2Project {
   name: string;
   type: 'rollup' | 'validium' | 'optimium' | 'plasma';
   category: 'Optimistic Rollup' | 'ZK Rollup' | 'Validium';
-  tvl: number;
-  tvlChange24h: number;
-  stage: 'Stage 0' | 'Stage 1' | 'Stage 2';
+  tvl: number; // total value secured (canonical + external + native), USD
+  tvlChange7d: number; // percent
+  stage: 'Stage 0' | 'Stage 1' | 'Stage 2' | 'Not applicable';
   riskLevel: 'low' | 'medium' | 'high';
 }
 
@@ -196,6 +197,30 @@ interface L2Summary {
   riskDistribution: { low: number; medium: number; high: number };
 }
 ```
+
+---
+
+## growthepie
+
+**Free** | No API key required | [growthepie.com](https://www.growthepie.com/fees)
+
+Hourly median transaction cost for Ethereum L1 and its L2s, from
+`https://api.growthepie.com/v1/fees/table.json`. Powers the fee chart and the
+"Avg Fee" column on `/l2`.
+
+```typescript
+import { growthepie } from '@/lib/apis';
+
+// Latest hourly median per chain, most expensive first ([] if unreachable)
+const fees = await growthepie.getChainFees();
+// [{ chain: 'ethereum', name: 'Ethereum L1', usd: 0.038, eth: 0.000017, timestamp: 1793390400000 }, ...]
+
+// Join onto L2Beat rows by slug ('op-mainnet', 'zksync-era', ...)
+const feeUsd = growthepie.feesBySlug(fees).get('arbitrum');
+```
+
+growthepie rounds `value_usd` to four decimals, so sub-cent fees are priced from
+`value_eth` at the ETH price implied by the other chains.
 
 ---
 

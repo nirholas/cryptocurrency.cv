@@ -51,6 +51,10 @@ export { cryptoquant };
 import * as l2beat from './l2beat';
 export { l2beat };
 
+// Chain Fees - growthepie (Free)
+import * as growthepie from './growthepie';
+export { growthepie };
+
 // Social Intelligence - LunarCrush ($99/mo)
 import * as lunarcrush from './lunarcrush';
 export { lunarcrush };
@@ -143,6 +147,7 @@ export const API_STATUS = {
   // Free APIs
   defillama: { status: 'free', rateLimit: 'generous', cost: '$0' },
   l2beat: { status: 'free', rateLimit: 'moderate', cost: '$0' },
+  growthepie: { status: 'free', rateLimit: 'moderate', cost: '$0' },
   geckoterminal: { status: 'free', rateLimit: '30 calls/min', cost: '$0' },
   
   // Free tier available

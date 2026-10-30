@@ -14,6 +14,8 @@ import L2Table, { type L2Row } from '@/components/L2Table';
 import { cn } from '@/lib/utils';
 import { Layers, TrendingUp, ArrowRightLeft, BarChart3 } from 'lucide-react';
 import { internalFetch } from '@/lib/internal-fetch';
+import { feesBySlug, getChainFees } from '@/lib/apis/growthepie';
+import { formatCurrency } from '@/lib/format';
 
 export const revalidate = 300;
 
@@ -143,23 +145,16 @@ function StatCard({
   );
 }
 
-// Average fee data (approximate, for comparison display)
-const FEE_COMPARISON = [
-  { name: 'Ethereum L1', fee: 3.5, color: '#627eea' },
-  { name: 'Arbitrum', fee: 0.1, color: '#28a0f0' },
-  { name: 'Optimism', fee: 0.07, color: '#ff0420' },
-  { name: 'Base', fee: 0.03, color: '#0052ff' },
-  { name: 'zkSync', fee: 0.05, color: '#8b8dfc' },
-];
 
 export default async function L2Page({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
 
-  const [l2Result, activityResult, bridgeResult] = await Promise.allSettled([
+  const [l2Result, activityResult, bridgeResult, feesResult] = await Promise.allSettled([
     fetchJSON<L2Summary>('/api/l2'),
     fetchJSON<L2Activity[]>('/api/l2/activity'),
     fetchJSON<BridgesSummary>('/api/bridges'),
+    getChainFees(),
   ]);
 
   const l2Data = l2Result.status === 'fulfilled' ? l2Result.value : null;
@@ -168,6 +163,8 @@ export default async function L2Page({ params }: Props) {
       ? activityResult.value
       : [];
   const bridgeData = bridgeResult.status === 'fulfilled' ? bridgeResult.value : null;
+  const fees = feesResult.status === 'fulfilled' ? feesResult.value : [];
+  const feeBySlug = feesBySlug(fees);
 
   const topProjects = l2Data?.topProjects ?? [];
   const totalTps = l2Data?.activityMetrics?.totalTps ?? 0;
@@ -198,7 +195,7 @@ export default async function L2Page({ params }: Props) {
       type: normalizedType,
       tvl: p.tvl,
       tps: activity?.averageTps ?? 0,
-      averageFee: 0,
+      averageFee: feeBySlug.get(p.slug) ?? 0,
       change7d: p.tvlChange7d ?? 0,
       stage: p.stage,
     };
@@ -215,7 +212,8 @@ export default async function L2Page({ params }: Props) {
   const topL2Name = Object.entries(dominance).sort((a, b) => b[1] - a[1])[0]?.[0];
 
   // Max fee for comparison bar chart
-  const maxFee = Math.max(...FEE_COMPARISON.map((f) => f.fee));
+  const maxFee = Math.max(0, ...fees.map((f) => f.usd));
+  const feeHour = fees.length > 0 ? Math.max(...fees.map((f) => f.timestamp)) : null;
 
   return (
     <>
@@ -322,38 +320,54 @@ export default async function L2Page({ params }: Props) {
           </h2>
           <Card>
             <CardContent className="p-6">
-              <p className="text-text-tertiary mb-4 text-xs">
-                Average transaction costs across Ethereum L1 and major L2 networks (approximate)
-              </p>
-              <div className="space-y-4">
-                {FEE_COMPARISON.map((item) => {
-                  const barWidth = maxFee > 0 ? (item.fee / maxFee) * 100 : 0;
-                  return (
-                    <div key={item.name} className="flex items-center gap-4">
-                      <span className="text-text-primary w-28 shrink-0 text-sm font-medium">
-                        {item.name}
-                      </span>
-                      <div className="bg-surface-tertiary relative h-6 flex-1 overflow-hidden rounded">
-                        <div
-                          className="h-full rounded transition-all duration-500"
-                          style={{
-                            width: `${barWidth}%`,
-                            backgroundColor: item.color,
-                            minWidth: '2px',
-                          }}
-                        />
-                      </div>
-                      <span className="text-text-primary w-16 text-right font-mono text-sm">
-                        ${item.fee.toFixed(2)}
-                      </span>
-                    </div>
-                  );
-                })}
-              </div>
-              <p className="text-text-tertiary mt-4 text-[10px]">
-                * Fees are approximate averages and vary based on network congestion and transaction
-                complexity.
-              </p>
+              {fees.length === 0 || feeHour === null ? (
+                <p className="text-text-secondary text-sm">
+                  Live fee data is unavailable right now. Check back shortly.
+                </p>
+              ) : (
+                <>
+                  <p className="text-text-tertiary mb-4 text-xs">
+                    Median transaction cost on Ethereum L1 and its L2 networks for the hour starting{' '}
+                    {new Date(feeHour).toISOString().slice(0, 16).replace('T', ' ')} UTC
+                  </p>
+                  <div className="space-y-4">
+                    {fees.map((item) => {
+                      const barWidth = maxFee > 0 ? (item.usd / maxFee) * 100 : 0;
+                      return (
+                        <div key={item.chain} className="flex items-center gap-4">
+                          <span className="text-text-primary w-32 shrink-0 truncate text-sm font-medium">
+                            {item.name}
+                          </span>
+                          <div className="bg-surface-tertiary relative h-6 flex-1 overflow-hidden rounded">
+                            <div
+                              className={cn(
+                                'h-full rounded transition-all duration-500',
+                                item.chain === 'ethereum' ? 'bg-accent' : 'bg-accent/60',
+                              )}
+                              style={{ width: `${barWidth}%`, minWidth: '2px' }}
+                            />
+                          </div>
+                          <span className="text-text-primary w-24 text-right font-mono text-sm">
+                            {formatCurrency(item.usd)}
+                          </span>
+                        </div>
+                      );
+                    })}
+                  </div>
+                  <p className="text-text-tertiary mt-4 text-[10px]">
+                    * Median fee per transaction, priced in USD from the ETH cost. Source:{' '}
+                    <a
+                      href="https://www.growthepie.com/fees"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-text-primary underline"
+                    >
+                      growthepie
+                    </a>
+                    .
+                  </p>
+                </>
+              )}
             </CardContent>
           </Card>
         </section>

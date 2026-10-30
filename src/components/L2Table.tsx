@@ -9,6 +9,7 @@
 import { useState, useMemo, useCallback } from "react";
 import { ArrowUpDown, ArrowUp, ArrowDown } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { formatCurrency } from "@/lib/format";
 
 export interface L2Row {
   rank: number;
@@ -211,7 +212,7 @@ export default function L2Table({ l2s }: { l2s: L2Row[] }) {
                   {l2.tps > 0 ? l2.tps.toFixed(1) : "—"}
                 </td>
                 <td className="hidden lg:table-cell px-3 py-3 text-right font-mono text-text-secondary">
-                  {l2.averageFee > 0 ? `$${l2.averageFee.toFixed(4)}` : "—"}
+                  {l2.averageFee > 0 ? formatCurrency(l2.averageFee) : "—"}
                 </td>
                 <td className="px-3 py-3 text-right">
                   <span
