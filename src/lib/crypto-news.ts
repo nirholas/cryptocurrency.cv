@@ -1082,13 +1082,6 @@ const RSS_SOURCES = {
   },
 
   // Derivatives Extended
-  // Podcasts (show notes via RSS)
-  unchained_podcast: {
-    name: 'Unchained Podcast',
-    url: 'https://feeds.simplecast.com/JGE3yC0V',
-    category: 'journalism',
-    noDataCache: true, // 11.9MB feed exceeds Next.js 2MB data cache limit
-  },
   // =========================================================================
   // CRYPTO MEDIA — High-Volume News Sources
   // =========================================================================
