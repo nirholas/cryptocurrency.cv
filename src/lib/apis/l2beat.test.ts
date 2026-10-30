@@ -8,6 +8,7 @@ import {
   getL2Activity,
   getL2RiskAssessment,
   getL2Summary,
+  mapDefiLlamaChains,
   mapL2BeatSummary,
   riskAssessmentFromSummary,
   riskLevelFromRisks,
@@ -124,6 +125,27 @@ describe('mapL2BeatSummary', () => {
     expect(arb.tvlChange24h).toBeUndefined();
     expect(projects[2].category).toBe('Other');
     expect(projects.map(p => p.type)).toEqual(['rollup', 'rollup', 'other', 'optimium']);
+  });
+});
+
+describe('mapDefiLlamaChains', () => {
+  it("keeps L2Beat's id, category and stage for chains under DefiLlama's current names", () => {
+    const projects = mapDefiLlamaChains(
+      [
+        { name: 'Ethereum', tvl: 50_000 },
+        { name: 'Optimism', tvl: 0 },
+        { name: 'OP Mainnet', tvl: 400 },
+        { name: 'ZKsync Era', tvl: 10 },
+        { name: 'Blast', tvl: 3 },
+        { name: 'Base', tvl: 5_000 },
+      ],
+      new Date(T0 * 1000),
+    );
+
+    expect(projects.map((p) => p.id)).toEqual(['base', 'op-mainnet', 'zksync-era', 'blast']);
+    expect(projects[0]).toMatchObject({ slug: 'base', stage: 'Stage 1', type: 'rollup', tvl: 5_000 });
+    expect(projects[2]).toMatchObject({ category: 'ZK Rollup', type: 'rollup' });
+    expect(projects[3]).toMatchObject({ category: 'Other', type: 'other', riskLevel: 'high' });
   });
 });
 

@@ -261,11 +261,61 @@ export async function getL2Projects(): Promise<L2Project[]> {
 }
 
 /**
- * Fallback: Get L2 projects from DefiLlama if L2Beat API fails
+ * L2Beat's classification of the chains DefiLlama also tracks, keyed by
+ * DefiLlama chain name. Snapshot of https://l2beat.com/api/scaling/summary
+ * taken 2026-10-30; only used while L2Beat itself is unreachable.
  */
+const FALLBACK_CLASSIFICATION: Record<
+  string,
+  Pick<L2Project, 'id' | 'name' | 'category' | 'stage' | 'riskLevel'>
+> = {
+  Base: { id: 'base', name: 'Base Chain', category: 'Optimistic Rollup', stage: 'Stage 1', riskLevel: 'medium' },
+  Arbitrum: { id: 'arbitrum', name: 'Arbitrum One', category: 'Optimistic Rollup', stage: 'Stage 1', riskLevel: 'medium' },
+  'OP Mainnet': { id: 'op-mainnet', name: 'OP Mainnet', category: 'Optimistic Rollup', stage: 'Stage 1', riskLevel: 'medium' },
+  Starknet: { id: 'starknet', name: 'Starknet', category: 'ZK Rollup', stage: 'Stage 1', riskLevel: 'medium' },
+  Mantle: { id: 'mantle', name: 'Mantle', category: 'ZK Rollup', stage: 'Stage 0', riskLevel: 'medium' },
+  'ZKsync Era': { id: 'zksync-era', name: 'ZKsync Era', category: 'ZK Rollup', stage: 'Stage 0', riskLevel: 'medium' },
+  Scroll: { id: 'scroll', name: 'Scroll', category: 'ZK Rollup', stage: 'Stage 0', riskLevel: 'medium' },
+  Linea: { id: 'linea', name: 'Linea', category: 'ZK Rollup', stage: 'Stage 0', riskLevel: 'high' },
+  Blast: { id: 'blast', name: 'Blast', category: 'Other', stage: 'Stage 0', riskLevel: 'high' },
+  Manta: { id: 'mantapacific', name: 'Manta Pacific', category: 'Other', stage: 'Stage 0', riskLevel: 'high' },
+  'Polygon zkEVM': { id: 'polygonzkevm', name: 'Polygon zkEVM', category: 'Other', stage: 'Not applicable', riskLevel: 'high' },
+};
+
+/**
+ * Fallback when L2Beat is unreachable: DefiLlama TVL for the chains in
+ * FALLBACK_CLASSIFICATION. Value-secured breakdowns and 7d change are not
+ * available from DefiLlama and are reported as 0.
+ */
+export function mapDefiLlamaChains(
+  chains: Array<{ name: string; tvl: number }>,
+  now = new Date(),
+): L2Project[] {
+  return chains
+    .flatMap((chain) => {
+      const known = FALLBACK_CLASSIFICATION[chain.name];
+      if (!known) return [];
+      return [{
+        ...known,
+        slug: known.id,
+        type: categorizeL2Type(known.category),
+        tvl: chain.tvl || 0,
+        tvlChange7d: 0,
+        canonicalTvl: 0,
+        externalTvl: 0,
+        nativeTvl: 0,
+        purposes: ['Universal'],
+        website: '',
+        explorer: '',
+        timestamp: now.toISOString(),
+      }];
+    })
+    .sort((a, b) => b.tvl - a.tvl);
+}
+
 async function getL2ProjectsFallback(): Promise<L2Project[]> {
   try {
-    const { data: chains } = await resilientFetch<Array<{ name: string; tvl: number; chainId?: string }>>(
+    const { data: chains } = await resilientFetch<Array<{ name: string; tvl: number }>>(
       'https://api.llama.fi/v2/chains',
       {
         service: 'defillama',
@@ -276,30 +326,7 @@ async function getL2ProjectsFallback(): Promise<L2Project[]> {
         next: { revalidate: 600 },
       },
     );
-    
-    // Filter for L2s
-    const l2Chains = chains.filter((c: { name: string }) => 
-      ['Arbitrum', 'Optimism', 'Base', 'zkSync Era', 'Linea', 'Scroll', 'Starknet', 'Polygon zkEVM', 'Mantle', 'Manta', 'Blast'].includes(c.name)
-    );
-
-    return l2Chains.map((chain: { name: string; tvl: number; chainId?: string }) => ({
-      id: chain.name.toLowerCase().replace(/\s+/g, '-'),
-      name: chain.name,
-      slug: chain.name.toLowerCase().replace(/\s+/g, '-'),
-      type: inferL2Type(chain.name),
-      category: inferCategory(chain.name),
-      tvl: chain.tvl || 0,
-      tvlChange7d: 0,
-      canonicalTvl: 0,
-      externalTvl: 0,
-      nativeTvl: 0,
-      stage: inferStage(chain.name),
-      riskLevel: 'medium' as const,
-      purposes: ['Universal'],
-      website: '',
-      explorer: '',
-      timestamp: new Date().toISOString(),
-    })).sort((a, b) => b.tvl - a.tvl);
+    return mapDefiLlamaChains(chains);
   } catch {
     return [];
   }
@@ -311,22 +338,6 @@ export function categorizeL2Type(category: string): L2Project['type'] {
   if (category.includes('Optimium')) return 'optimium';
   if (category.includes('Plasma')) return 'plasma';
   return 'other';
-}
-
-function inferL2Type(name: string): L2Project['type'] {
-  if (['zkSync Era', 'Starknet', 'Polygon zkEVM', 'Scroll', 'Linea'].includes(name)) return 'rollup';
-  if (['Arbitrum', 'Optimism', 'Base', 'Blast', 'Mantle'].includes(name)) return 'rollup';
-  return 'rollup';
-}
-
-function inferCategory(name: string): L2Project['category'] {
-  if (['zkSync Era', 'Starknet', 'Polygon zkEVM', 'Scroll', 'Linea'].includes(name)) return 'ZK Rollup';
-  return 'Optimistic Rollup';
-}
-
-function inferStage(name: string): L2Project['stage'] {
-  if (['Arbitrum', 'Optimism'].includes(name)) return 'Stage 1';
-  return 'Stage 0';
 }
 
 const RISK_FACTORS = {
