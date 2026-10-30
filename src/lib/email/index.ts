@@ -42,6 +42,14 @@ export function getEmailProvider(): EmailProvider {
 }
 
 /**
+ * Whether email can reach a real inbox. Outside production the console
+ * provider counts, since developers read magic links from the server log.
+ */
+export function isEmailDeliveryConfigured(): boolean {
+  return !!process.env.RESEND_API_KEY || process.env.NODE_ENV !== 'production';
+}
+
+/**
  * Send an email using the configured provider.
  */
 export async function sendEmail(params: SendEmailParams): Promise<{ id: string }> {

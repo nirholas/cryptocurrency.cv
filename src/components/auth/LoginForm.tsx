@@ -37,11 +37,10 @@ export default function LoginForm() {
         body: JSON.stringify({ email, name: name || undefined }),
       });
 
-      const data = await res.json();
-
       if (!res.ok) {
+        const data: { error?: string } = await res.json().catch(() => ({}));
         setStatus("error");
-        setErrorMessage(data.error || "Failed to send magic link");
+        setErrorMessage(data.error || "Failed to send magic link. Please try again.");
         return;
       }
 

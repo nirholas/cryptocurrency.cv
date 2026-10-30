@@ -14,9 +14,13 @@
 import { type NextRequest, NextResponse } from 'next/server';
 import { createUser, getUserByEmail } from '@/lib/auth/users';
 import { createMagicLink } from '@/lib/auth/tokens';
-import { sendEmail, magicLinkEmail } from '@/lib/email';
+import { sendEmail, magicLinkEmail, isEmailDeliveryConfigured } from '@/lib/email';
+import { isDbAvailable } from '@/lib/db';
 
 export const runtime = 'nodejs';
+
+const ACCOUNTS_UNAVAILABLE =
+  'Account sign-in is not available right now. All news, market data and the public API work without an account.';
 
 // Rate limit: 5 login requests per IP per 15 minutes
 const loginAttempts = new Map<string, { count: number; resetAt: number }>();
@@ -69,7 +73,22 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const body = await request.json();
+    // Without a database there is nowhere to store users or tokens, and
+    // without email delivery the link never arrives: say so instead of
+    // failing with a 500 or claiming a link was sent.
+    if (!isDbAvailable() || !isEmailDeliveryConfigured()) {
+      return NextResponse.json(
+        { error: ACCOUNTS_UNAVAILABLE },
+        { status: 503, headers: { 'Retry-After': '3600' } },
+      );
+    }
+
+    let body: { email?: unknown; name?: unknown };
+    try {
+      body = await request.json();
+    } catch {
+      return NextResponse.json({ error: 'Invalid request body' }, { status: 400 });
+    }
     const { email, name } = body;
 
     if (!email || typeof email !== 'string') {
@@ -86,7 +105,10 @@ export async function POST(request: NextRequest) {
     // Create user if they don't exist, or get existing
     let user = await getUserByEmail(normalizedEmail);
     if (!user) {
-      user = await createUser({ email: normalizedEmail, name });
+      user = await createUser({
+        email: normalizedEmail,
+        name: typeof name === 'string' && name.trim() ? name.trim().slice(0, 100) : undefined,
+      });
     }
 
     // Generate magic link
@@ -95,7 +117,7 @@ export async function POST(request: NextRequest) {
     // Never log the actual magic link token — it's equivalent to a password.
     // In development, log only that a link was generated (not the token itself).
     if (process.env.NODE_ENV === 'development') {
-      console.log(`[AUTH] Magic link generated for ${normalizedEmail} (token redacted)`);
+      console.info(`[AUTH] Magic link generated for ${normalizedEmail} (token redacted)`);
     }
 
     // Send magic link email (Resend in prod, console fallback in dev)
@@ -110,6 +132,10 @@ export async function POST(request: NextRequest) {
       });
     } catch (emailError) {
       console.error('[AUTH] Failed to send magic link email:', emailError);
+      return NextResponse.json(
+        { error: 'We could not send the sign-in email. Please try again in a few minutes.' },
+        { status: 502 },
+      );
     }
 
     return NextResponse.json({
