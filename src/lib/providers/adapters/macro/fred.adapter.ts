@@ -59,7 +59,7 @@ const SERIES_MAP: Record<string, { id: string; name: string; unit: string }> = {
   DTWEXBGS: { id: 'DXY',     name: 'US Dollar Index (Broad)', unit: 'index' },
 };
 
-interface FredObservation {
+export interface FredObservation {
   date: string;
   value: string;
 }
@@ -85,9 +85,9 @@ export function parseFredCsv(text: string, limit = Infinity): FredObservation[] 
   return rows.reverse().slice(0, limit);
 }
 
-/** Observations from the last 90 days, newest first */
-async function fetchSeries(seriesId: string): Promise<FredObservation[]> {
-  const start = new Date(Date.now() - 90 * 86400000).toISOString().slice(0, 10);
+/** Observations from the last `days` days, newest first, without missing values */
+export async function fetchFredSeries(seriesId: string, days = 90): Promise<FredObservation[]> {
+  const start = new Date(Date.now() - days * 86400000).toISOString().slice(0, 10);
 
   if (!FRED_API_KEY) {
     const res = await fetch(`${FRED_CSV_BASE}?id=${seriesId}&cosd=${start}`, {
@@ -99,7 +99,7 @@ async function fetchSeries(seriesId: string): Promise<FredObservation[]> {
 
   const url =
     `${FRED_BASE}?series_id=${seriesId}&api_key=${FRED_API_KEY}` +
-    `&file_type=json&sort_order=desc&limit=100&observation_start=${start}`;
+    `&file_type=json&sort_order=desc&observation_start=${start}`;
 
   const res = await fetch(url, { signal: AbortSignal.timeout(8000) });
   if (!res.ok) throw new Error(`FRED ${seriesId} HTTP ${res.status}`);
@@ -117,7 +117,7 @@ export const fredAdapter: DataProvider<MacroData> = {
 
   async fetch(_params: FetchParams): Promise<MacroData> {
     const seriesIds = Object.keys(SERIES_MAP);
-    const results = await Promise.allSettled(seriesIds.map(fetchSeries));
+    const results = await Promise.allSettled(seriesIds.map((id) => fetchFredSeries(id)));
 
     const indicators: MacroIndicator[] = [];
     const observations: Record<string, FredObservation[]> = {};

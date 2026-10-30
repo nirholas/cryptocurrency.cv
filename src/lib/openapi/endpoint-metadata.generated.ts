@@ -8,7 +8,7 @@
  * AUTO-GENERATED — Do not edit manually.
  * Run: node scripts/generate-endpoint-metadata.js
  *
- * Generated: 2026-08-28T02:08:43.532Z
+ * Generated: 2026-10-30T22:59:23.728Z
  * Total endpoints: 394
  *
  * Comprehensive endpoint metadata for OpenAPI spec generation,
@@ -262,7 +262,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       alertId: { type: "string", description: "Filter by alertId" },
       id: { type: "string", description: "Unique identifier" },
     },
-    outputSchemas: {"GET":{"type":"object","properties":{"checked":{"type":"boolean"},"notifications":{"type":"object"},"results":{},"evaluated":{"type":"boolean"},"eventsTriggered":{"type":"number"},"events":{},"legacy":{},"enhanced":{},"alerts":{},"total":{"type":"number"},"history":{}}},"POST":{"type":"object","properties":{"alert":{},"success":{"type":"boolean"}}},"DELETE":{"type":"object","properties":{"success":{},"message":{}}},"PATCH":{"type":"object","properties":{"success":{},"message":{}}}},
+    outputSchemas: {"GET":{"type":"object","properties":{"checked":{"type":"boolean"},"notifications":{"type":"object"},"results":{},"evaluated":{"type":"boolean"},"eventsTriggered":{"type":"number"},"events":{},"legacy":{},"enhanced":{},"alerts":{},"total":{"type":"number"},"history":{}}},"POST":{"type":"object","properties":{"alert":{},"success":{"type":"boolean"}},"additionalProperties":true},"DELETE":{"type":"object","properties":{"success":{},"message":{}}},"PATCH":{"type":"object","properties":{"success":{},"alert":{},"message":{}},"additionalProperties":true}},
   },
 
   "/api/alerts/stream": {
@@ -482,7 +482,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       format: { type: "string", description: "Response format", default: "full" },
       lang: { type: "string", description: "Language code (e.g., en, es, zh)", default: "en" },
     },
-    outputSchemas: {"GET":{"type":"object","properties":{"success":{"type":"boolean"},"stats":{},"indexType":{},"index":{},"hours":{},"tickers":{},"month":{},"data_points":{"type":"number"},"history":{},"count":{"type":"number"},"total":{},"pagination":{},"lang":{},"availableLanguages":{"type":"array"},"filters":{"type":"object"},"format":{},"articles":{}}}},
+    outputSchemas: {"GET":{"type":"object","properties":{"success":{"type":"boolean"},"stats":{},"error":{"type":"string"},"message":{"type":"string"},"indexType":{},"index":{},"hours":{},"tickers":{},"month":{},"data_points":{"type":"number"},"history":{},"count":{"type":"number"},"total":{},"pagination":{},"lang":{},"availableLanguages":{"type":"array"},"filters":{"type":"object"},"format":{},"articles":{}}}},
   },
 
   "/api/archive/ipfs": {
@@ -1138,7 +1138,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       sort: { type: "string", description: "Sort field", default: "trust" },
       limit: { type: "number", description: "Maximum number of results to return", default: "50" },
     },
-    outputSchemas: {"GET":{"type":"object","properties":{"exchanges":{},"total":{"type":"number"}}}},
+    outputSchemas: {"GET":{"type":"object","properties":{"exchanges":{},"total":{"type":"number"},"currency":{"type":"string"},"btcPriceUsd":{},"source":{},"fetchedAt":{"type":"string"}}}},
   },
 
   "/api/export": {
@@ -1292,7 +1292,6 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
 
   "/api/gas": {
     description: "Ethereum gas prices and network congestion",
-    outputSchemas: {"GET":{"type":"object","properties":{"_cache":{"type":"string"},"_provider":{},"_confidence":{},"network":{"type":"string"},"baseFee":{},"low":{"type":"object"},"medium":{"type":"object"},"high":{"type":"object"},"lastBlock":{},"timestamp":{"type":"string"},"source":{"type":"string"},"note":{"type":"string"}},"additionalProperties":true}},
   },
 
   "/api/gas/estimate": {
@@ -1420,7 +1419,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
   },
 
   "/api/l2/projects/{projectId}": {
-    description: "Returns detailed risk assessment for a specific L2 project.",
+    description: "Returns L2Beat's risk assessment for a specific L2 project (L2Beat id or slug).",
   },
 
   "/api/l2/risk": {
@@ -1452,12 +1451,12 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
     parameters: {
       days: { type: "number", description: "Number of days of historical data", default: "30" },
     },
-    outputSchemas: {"GET":{"type":"object","properties":{"data":{"type":"object"},"count":{"type":"number"},"_lineage":{},"_cached":{}}}},
+    outputSchemas: {"GET":{"type":"object","properties":{"data":{"type":"object"},"count":{"type":"number"},"source":{"type":"string"},"series":{}}}},
   },
 
   "/api/macro/fed": {
     description: "Federal Reserve data, rates, and yield curves",
-    outputSchemas: {"GET":{"type":"object","properties":{"data":{},"yieldCurve":{},"count":{"type":"number"},"_lineage":{},"_cached":{}}}},
+    outputSchemas: {"GET":{"type":"object","properties":{"data":{},"yieldCurve":{},"count":{"type":"number"},"source":{"type":"string"}}}},
   },
 
   "/api/macro/indicators": {
@@ -1652,10 +1651,10 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
   "/api/narratives": {
     description: "Current market narratives and trending themes",
     parameters: {
-      limit: { type: "number", description: "Maximum number of results to return", default: "40" },
+      limit: { type: "string", description: "Maximum number of results to return" },
       emerging: { type: "string", description: "Filter by emerging" },
     },
-    outputSchemas: {"GET":{"type":"object","properties":{"narratives":{},"message":{"type":"string"},"summary":{"type":"object"},"articlesAnalyzed":{"type":"number"},"analyzedAt":{"type":"string"}}}},
+    outputSchemas: {"GET":{"type":"object","properties":{"narratives":{},"message":{"type":"string"},"summary":{"type":"object"},"articlesAnalyzed":{},"analyzedAt":{}}}},
   },
 
   "/api/news": {
@@ -1695,7 +1694,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
     streaming: true,
     parameters: {
       categories: { type: "string", description: "Filter by categories" },
-      limit: { type: "number", description: "Maximum number of results to return", default: "5" },
+      limit: { type: "number", description: "Maximum number of results to return" },
     },
   },
 
@@ -2317,10 +2316,10 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
   "/api/sentiment": {
     description: "Market sentiment analysis and indicators",
     parameters: {
-      limit: { type: "number", description: "Maximum number of results to return", default: "20" },
+      limit: { type: "string", description: "Maximum number of results to return" },
       asset: { type: "string", description: "Asset identifier (e.g., BTC, ETH)" },
     },
-    outputSchemas: {"GET":{"type":"object","properties":{"articles":{},"market":{},"distribution":{},"highImpactNews":{},"meta":{"type":"object"}}}},
+    outputSchemas: {"GET":{"type":"object","properties":{"articles":{},"market":{},"distribution":{},"highImpactNews":{"type":"array"},"meta":{"type":"object"}}}},
   },
 
   "/api/signals": {
@@ -2839,7 +2838,7 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
       id: { type: "string", description: "Unique identifier" },
       limit: { type: "number", description: "Maximum number of results to return", default: "100" },
     },
-    outputSchemas: {"GET":{"type":"object","properties":{"data":{},"source":{"type":"string"},"timestamp":{"type":"string"},"total":{"type":"number"}}}},
+    outputSchemas: {"GET":{"type":"object","properties":{"data":{},"source":{},"timestamp":{"type":"string"},"total":{"type":"number"}}}},
   },
 
   "/api/v1/assets/{assetId}/history": {
@@ -3219,10 +3218,10 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
   "/api/whales": {
     description: "Whale wallet tracking and analysis",
     parameters: {
-      limit: { type: "string", description: "Maximum number of results to return", default: "10" },
-      min_usd: { type: "string", description: "Filter by min usd", default: "1000000" },
+      limit: { type: "string", description: "Maximum number of results to return" },
+      min_usd: { type: "string", description: "Filter by min usd" },
     },
-    outputSchemas: {"GET":{"type":"object","properties":{"alerts":{"type":"array"},"summary":{},"timestamp":{"type":"string"}}}},
+    outputSchemas: {"GET":{"type":"object","properties":{"alerts":{"type":"array"},"summary":{},"min_usd":{},"timestamp":{"type":"string"}}}},
   },
 
   "/api/ws": {

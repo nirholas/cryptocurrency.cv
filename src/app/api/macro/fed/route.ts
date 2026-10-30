@@ -12,72 +12,76 @@
  * GET /api/macro/fed
  *
  * Returns Federal Reserve related data:
- *   - Federal Funds Rate (current + target range)
+ *   - Effective Federal Funds Rate (daily and monthly average)
  *   - Fed Balance Sheet size
  *   - Treasury yields (2Y, 5Y, 10Y, 30Y)
  *   - Yield curve inversion status
  *
- * Data sourced from FRED API (St. Louis Fed).
+ * Data sourced from FRED (St. Louis Fed).
  */
 
 import { NextResponse } from 'next/server';
-import { macroChain } from '@/lib/providers/adapters/macro';
+import { fetchFredSeries } from '@/lib/providers/adapters/macro/fred.adapter';
 
 export const revalidate = 3600; // ISR: Fed data changes infrequently (1 hour)
 
-const FED_SERIES = ['FEDFUNDS', 'DFF', 'DGS2', 'DGS5', 'DGS10', 'DGS30', 'WALCL'];
+const FED_SERIES: Record<string, { name: string; unit: string }> = {
+  DFF: { name: 'Effective Federal Funds Rate (daily)', unit: '%' },
+  FEDFUNDS: { name: 'Effective Federal Funds Rate (monthly average)', unit: '%' },
+  DGS2: { name: '2-Year Treasury Yield', unit: '%' },
+  DGS5: { name: '5-Year Treasury Yield', unit: '%' },
+  DGS10: { name: '10-Year Treasury Yield', unit: '%' },
+  DGS30: { name: '30-Year Treasury Yield', unit: '%' },
+  WALCL: { name: 'Fed Total Assets (balance sheet)', unit: 'millions USD' },
+};
+
+interface FedSeries {
+  series: string;
+  name: string;
+  value: number;
+  previousValue: number | null;
+  change: number | null;
+  unit: string;
+  date: string;
+}
 
 export async function GET() {
   try {
-    const result = await macroChain.fetch({
-      extra: { series: FED_SERIES, source: 'fred' },
+    const ids = Object.keys(FED_SERIES);
+    // 90 days covers at least two observations of the monthly FEDFUNDS series
+    const results = await Promise.allSettled(ids.map((id) => fetchFredSeries(id, 90)));
+
+    const fedData: FedSeries[] = [];
+    results.forEach((r, i) => {
+      if (r.status !== 'fulfilled' || r.value.length === 0) return;
+      const [latest, previous] = r.value;
+      const value = Number(latest.value);
+      const previousValue = previous ? Number(previous.value) : null;
+      fedData.push({
+        series: ids[i],
+        ...FED_SERIES[ids[i]],
+        value,
+        previousValue,
+        change: previousValue !== null ? value - previousValue : null,
+        date: latest.date,
+      });
     });
 
-    const allData = Array.isArray(result.data) ? result.data : [];
+    if (fedData.length === 0) throw new Error('No FRED data returned');
 
-    // Extract Fed-specific indicators
-    const fedData: Record<string, unknown>[] = allData.filter((d: Record<string, unknown>) => {
-      const name = ((d.symbol as string) || (d.name as string) || '').toUpperCase();
-      return (
-        FED_SERIES.some((s) => name.includes(s)) ||
-        name.includes('FED') ||
-        name.includes('TREASURY') ||
-        name.includes('YIELD')
-      );
-    });
-
-    // Compute yield curve slope (10Y - 2Y)
-    const t2y = fedData.find(
-      (d: Record<string, unknown>) =>
-        ((d.symbol as string) || '').includes('DGS2') ||
-        ((d.name as string) || '').includes('2-Year'),
-    );
-    const t10y = fedData.find(
-      (d: Record<string, unknown>) =>
-        ((d.symbol as string) || '').includes('DGS10') ||
-        ((d.name as string) || '').includes('10-Year'),
-    );
-
-    const yieldCurve = {
-      spread2s10s:
-        t2y && t10y
-          ? (((t10y as Record<string, unknown>).value as number) ?? 0) -
-            (((t2y as Record<string, unknown>).value as number) ?? 0)
-          : null,
-      inverted:
-        t2y && t10y
-          ? (((t10y as Record<string, unknown>).value as number) ?? 0) <
-            (((t2y as Record<string, unknown>).value as number) ?? 0)
-          : null,
-    };
+    const t2y = fedData.find((d) => d.series === 'DGS2')?.value;
+    const t10y = fedData.find((d) => d.series === 'DGS10')?.value;
+    const yieldCurve =
+      t2y !== undefined && t10y !== undefined
+        ? { spread2s10s: Math.round((t10y - t2y) * 100) / 100, inverted: t10y < t2y }
+        : { spread2s10s: null, inverted: null };
 
     return NextResponse.json(
       {
         data: fedData,
         yieldCurve,
         count: fedData.length,
-        _lineage: result.lineage,
-        _cached: result.cached,
+        source: 'fred',
       },
       {
         headers: { 'Cache-Control': 'public, s-maxage=900, stale-while-revalidate=1800' },

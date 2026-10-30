@@ -11,64 +11,64 @@
 /**
  * GET /api/macro/dxy
  *
- * Returns US Dollar Index (DXY) data with crypto correlation context.
- * DXY inversely correlates with BTC — when dollar weakens, crypto tends to rally.
+ * Returns the Nominal Broad U.S. Dollar Index (FRED DTWEXBGS) with crypto
+ * correlation context. A weaker dollar has historically coincided with
+ * crypto rallies.
  *
  * Includes:
- *   - Current DXY value and changes
- *   - Historical DXY data points
- *   - DXY-BTC inverse correlation coefficient
+ *   - Latest index value and change from the previous observation
+ *   - Daily observations for the requested window, newest first
+ *   - Dollar strength relative to the window's own average
  */
 
 import { NextResponse } from 'next/server';
-import { macroChain } from '@/lib/providers/adapters/macro';
+import { dollarScore, fetchFredSeries } from '@/lib/providers/adapters/macro/fred.adapter';
 
 export const revalidate = 300; // ISR: DXY data refreshes every 5 min
+
+const SERIES = 'DTWEXBGS';
 
 export async function GET(request: Request) {
   try {
     const { searchParams } = new URL(request.url);
-    const days = Math.min(parseInt(searchParams.get('days') || '30', 10), 365);
+    const requested = parseInt(searchParams.get('days') || '30', 10);
+    const days = Number.isFinite(requested) ? Math.min(Math.max(requested, 7), 365) : 30;
 
-    const result = await macroChain.fetch({
-      extra: { series: ['DXY', 'DTWEXBGS'], source: 'fred', days },
-    });
+    const observations = await fetchFredSeries(SERIES, days);
+    if (observations.length === 0) throw new Error(`No ${SERIES} observations in the last ${days} days`);
 
-    const allData = Array.isArray(result.data) ? result.data : [];
-
-    // Extract DXY data
-    const dxyData = allData.filter((d: Record<string, unknown>) => {
-      const name = ((d.symbol as string) || (d.name as string) || '').toUpperCase();
-      return name.includes('DXY') || name.includes('DOLLAR') || name.includes('DTWEX');
-    });
-
-    // Current values
-    const current = dxyData[0] as Record<string, unknown> | undefined;
-    const currentValue = (current?.value as number) ?? (current?.price as number) ?? 0;
+    const historical = observations.map((o) => ({ date: o.date, value: Number(o.value) }));
+    const [latest, previous] = historical;
+    const oldest = historical[historical.length - 1];
+    const change = previous ? latest.value - previous.value : null;
+    const score = dollarScore(observations);
 
     return NextResponse.json(
       {
         data: {
           current: {
-            value: currentValue,
-            change24h: (current?.change as number) ?? 0,
-            changePercent24h: (current?.changePercent as number) ?? 0,
+            value: latest.value,
+            date: latest.date,
+            change24h: change,
+            changePercent24h: previous && change !== null ? (change / previous.value) * 100 : null,
           },
-          historical: dxyData,
+          historical,
           context: {
-            description: 'US Dollar Index — measures USD against basket of 6 major currencies',
-            cryptoCorrelation: 'BTC typically inversely correlated with DXY',
+            description:
+              'Nominal Broad U.S. Dollar Index — USD against the currencies of major U.S. trading partners, trade-weighted (Jan 2006 = 100)',
+            cryptoCorrelation: 'BTC typically inversely correlated with the dollar',
+            periodChangePercent: ((latest.value - oldest.value) / oldest.value) * 100,
             strongDollar:
-              currentValue > 105
-                ? 'Headwind for crypto'
-                : currentValue < 100
-                  ? 'Tailwind for crypto'
+              score < 40
+                ? `Headwind for crypto (dollar above its ${days}-day average)`
+                : score > 60
+                  ? `Tailwind for crypto (dollar below its ${days}-day average)`
                   : 'Neutral',
           },
         },
-        count: dxyData.length,
-        _lineage: result.lineage,
-        _cached: result.cached,
+        count: historical.length,
+        source: 'fred',
+        series: SERIES,
       },
       {
         headers: { 'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=600' },
