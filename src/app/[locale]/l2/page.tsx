@@ -60,11 +60,15 @@ interface BridgeData {
   weeklyVolume?: number;
   monthlyVolume?: number;
   chains?: string[];
+  tvlUsd?: number;
+  tvlChange1d?: number;
 }
 
 interface BridgesSummary {
   totalVolume24h?: number;
   totalVolume7d?: number;
+  /** False when per-bridge volume is unavailable and only TVL is real */
+  volumeAvailable?: boolean;
   bridges?: BridgeData[];
   topByVolume?: BridgeData[];
 }
@@ -206,6 +210,9 @@ export default async function L2Page({ params }: Props) {
   const topBridges = bridges.slice(0, 8);
   const totalBridgeVolume =
     bridgeData?.totalVolume24h ?? bridges.reduce((s, b) => s + (b.lastDailyVolume ?? 0), 0);
+  // DefiLlama's bridge volume API is paid; the free roster carries TVL only
+  const bridgeVolumeAvailable = bridgeData?.volumeAvailable !== false;
+  const totalBridgeTvl = bridges.reduce((s, b) => s + (b.tvlUsd ?? 0), 0);
 
   // Dominant L2
   const dominance = l2Data?.dominance ?? {};
@@ -256,11 +263,20 @@ export default async function L2Page({ params }: Props) {
               }
               icon={<TrendingUp className="h-5 w-5" />}
             />
-            <StatCard
-              label="Bridge Volume (24h)"
-              value={totalBridgeVolume > 0 ? formatLargeNumber(totalBridgeVolume) : '—'}
-              icon={<ArrowRightLeft className="h-5 w-5" />}
-            />
+            {bridgeVolumeAvailable ? (
+              <StatCard
+                label="Bridge Volume (24h)"
+                value={totalBridgeVolume > 0 ? formatLargeNumber(totalBridgeVolume) : '—'}
+                icon={<ArrowRightLeft className="h-5 w-5" />}
+              />
+            ) : (
+              <StatCard
+                label="Bridge TVL"
+                value={totalBridgeTvl > 0 ? formatLargeNumber(totalBridgeTvl) : '—'}
+                sub={bridges.length > 0 ? `${bridges.length} bridges` : undefined}
+                icon={<ArrowRightLeft className="h-5 w-5" />}
+              />
+            )}
           </div>
         </section>
 
@@ -274,7 +290,7 @@ export default async function L2Page({ params }: Props) {
         {topBridges.length > 0 && (
           <section>
             <h2 className="text-text-primary mb-4 font-serif text-2xl font-bold">
-              🌉 Cross-Chain Bridge Volume
+              {bridgeVolumeAvailable ? '🌉 Cross-Chain Bridge Volume' : '🌉 Cross-Chain Bridges'}
             </h2>
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {topBridges.map((bridge) => (
@@ -284,10 +300,16 @@ export default async function L2Page({ params }: Props) {
                       {bridge.displayName || bridge.name}
                     </p>
                     <p className="text-text-primary font-mono text-xl font-bold">
-                      {formatLargeNumber(bridge.lastDailyVolume)}
+                      {formatLargeNumber(
+                        bridgeVolumeAvailable ? bridge.lastDailyVolume : (bridge.tvlUsd ?? 0),
+                      )}
                     </p>
                     <p className="text-text-tertiary mt-1 text-[10px] tracking-wider uppercase">
-                      24h volume
+                      {bridgeVolumeAvailable
+                        ? '24h volume'
+                        : bridge.tvlChange1d
+                          ? `TVL · ${formatPct(bridge.tvlChange1d)} (24h)`
+                          : 'TVL'}
                     </p>
                     {bridge.chains && bridge.chains.length > 0 && (
                       <div className="mt-2 flex flex-wrap gap-1">
