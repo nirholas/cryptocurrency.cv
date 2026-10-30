@@ -584,7 +584,7 @@ Polymarket / Metaculus 🔓 ✅
 ### NFT / staking / macro
 
 OpenSea / Reservoir / SimpleHash 🔑 ✅ · Lido / StakingRewards / EigenLayer /
-L2Beat ✅ · Yahoo Finance 🔓 ✅ · FRED / Alpha Vantage / Twelve Data 🔑 ✅ ·
+L2Beat ✅ · Yahoo Finance 🔓 ✅ · FRED 🔓 / 🔑 (keyless CSV; `FRED_API_KEY` optional) ✅ · Alpha Vantage / Twelve Data 🔑 ✅ ·
 Frankfurter / exchangerate.host 🔓 (fiat FX) ➕
 
 ### Adding a keyless source

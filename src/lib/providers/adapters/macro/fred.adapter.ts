@@ -20,6 +20,9 @@
  * - M2 Money Supply (M2SL)
  * - US Dollar Index (DTWEXBGS — broad trade-weighted)
  *
+ * Without FRED_API_KEY the same series are read from the public, keyless
+ * fredgraph.csv download that backs the charts on fred.stlouisfed.org.
+ *
  * @see https://fred.stlouisfed.org/docs/api/fred/
  * @module providers/adapters/macro/fred
  */
@@ -28,9 +31,24 @@ import type { DataProvider, FetchParams, RateLimitConfig } from '../../types';
 import type { MacroData, MacroIndicator } from './types';
 
 const FRED_BASE = 'https://api.stlouisfed.org/fred/series/observations';
+const FRED_CSV_BASE = 'https://fred.stlouisfed.org/graph/fredgraph.csv';
 const FRED_API_KEY = process.env.FRED_API_KEY ?? '';
 
 const RATE_LIMIT: RateLimitConfig = { maxRequests: 120, windowMs: 60_000 };
+
+const clampScore = (value: number) => Math.max(0, Math.min(100, value));
+
+/**
+ * Dollar component: 50 at the index's own 90-day mean, 10 points lower per
+ * percent above it. DTWEXBGS is the broad trade-weighted index (Jan 2006 = 100),
+ * not ICE DXY, so it has no fixed neutral level.
+ */
+export function dollarScore(observations: FredObservation[]): number {
+  if (observations.length < 2) return 50;
+  const values = observations.map((o) => parseFloat(o.value));
+  const mean = values.reduce((sum, v) => sum + v, 0) / values.length;
+  return clampScore(50 - ((values[0] - mean) / mean) * 100 * 10);
+}
 
 /** FRED series IDs mapped to our indicator IDs */
 const SERIES_MAP: Record<string, { id: string; name: string; unit: string }> = {
@@ -41,20 +59,52 @@ const SERIES_MAP: Record<string, { id: string; name: string; unit: string }> = {
   DTWEXBGS: { id: 'DXY',     name: 'US Dollar Index (Broad)', unit: 'index' },
 };
 
-async function fetchSeries(seriesId: string): Promise<{ date: string; value: string }[]> {
-  if (!FRED_API_KEY) throw new Error('FRED_API_KEY not configured');
+interface FredObservation {
+  date: string;
+  value: string;
+}
+
+/** Missing observations are "." in the JSON API and "." or empty in the CSV */
+function isMissing(value: string): boolean {
+  return value === '' || value === '.';
+}
+
+/**
+ * Parse a fredgraph.csv download ("observation_date,<SERIES>" header, one
+ * "YYYY-MM-DD,value" row per observation, oldest first) into observations,
+ * newest first, without missing values.
+ */
+export function parseFredCsv(text: string, limit = Infinity): FredObservation[] {
+  const rows: FredObservation[] = [];
+  for (const line of text.trim().split(/\r?\n/).slice(1)) {
+    const [date, value = ''] = line.split(',');
+    const trimmed = value.trim();
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(date) || isMissing(trimmed) || !Number.isFinite(Number(trimmed))) continue;
+    rows.push({ date, value: trimmed });
+  }
+  return rows.reverse().slice(0, limit);
+}
+
+/** Observations from the last 90 days, newest first */
+async function fetchSeries(seriesId: string): Promise<FredObservation[]> {
+  const start = new Date(Date.now() - 90 * 86400000).toISOString().slice(0, 10);
+
+  if (!FRED_API_KEY) {
+    const res = await fetch(`${FRED_CSV_BASE}?id=${seriesId}&cosd=${start}`, {
+      signal: AbortSignal.timeout(8000),
+    });
+    if (!res.ok) throw new Error(`FRED CSV ${seriesId} HTTP ${res.status}`);
+    return parseFredCsv(await res.text());
+  }
 
   const url =
     `${FRED_BASE}?series_id=${seriesId}&api_key=${FRED_API_KEY}` +
-    `&file_type=json&sort_order=desc&limit=5&observation_start=` +
-    new Date(Date.now() - 90 * 86400000).toISOString().slice(0, 10);
+    `&file_type=json&sort_order=desc&limit=100&observation_start=${start}`;
 
   const res = await fetch(url, { signal: AbortSignal.timeout(8000) });
   if (!res.ok) throw new Error(`FRED ${seriesId} HTTP ${res.status}`);
   const json = await res.json();
-  return (json.observations ?? []).filter(
-    (o: { value: string }) => o.value !== '.',
-  );
+  return (json.observations ?? []).filter((o: FredObservation) => !isMissing(o.value));
 }
 
 export const fredAdapter: DataProvider<MacroData> = {
@@ -70,12 +120,14 @@ export const fredAdapter: DataProvider<MacroData> = {
     const results = await Promise.allSettled(seriesIds.map(fetchSeries));
 
     const indicators: MacroIndicator[] = [];
+    const observations: Record<string, FredObservation[]> = {};
 
     for (let i = 0; i < seriesIds.length; i++) {
       const r = results[i];
       if (r.status !== 'fulfilled' || r.value.length === 0) continue;
 
       const obs = r.value;
+      observations[seriesIds[i]] = obs;
       const current = parseFloat(obs[0].value);
       const previous = obs.length > 1 ? parseFloat(obs[1].value) : null;
       const meta = SERIES_MAP[seriesIds[i]];
@@ -97,15 +149,13 @@ export const fredAdapter: DataProvider<MacroData> = {
 
     if (indicators.length === 0) throw new Error('No FRED data returned');
 
-    // Compute simple risk appetite from available data
-    const dxy = indicators.find(i => i.id === 'DXY')?.value ?? 100;
-    const us10y = indicators.find(i => i.id === 'US10Y')?.value ?? 4;
-    const us2y = indicators.find(i => i.id === 'US2Y')?.value ?? 4;
-    const yieldSpread = us10y - us2y;
-
-    // DXY rising = risk-off, yield curve inversion = risk-off
-    const dxyScore = Math.max(0, Math.min(100, 50 + (105 - dxy) * 5));
-    const spreadScore = Math.max(0, Math.min(100, 50 + yieldSpread * 20));
+    // Strong dollar = risk-off, yield curve inversion = risk-off; a missing input scores neutral
+    const us10y = indicators.find(i => i.id === 'US10Y')?.value;
+    const us2y = indicators.find(i => i.id === 'US2Y')?.value;
+    const dxyScore = dollarScore(observations.DTWEXBGS ?? []);
+    const spreadScore = us10y !== undefined && us2y !== undefined
+      ? clampScore(50 + (us10y - us2y) * 20)
+      : 50;
 
     const riskScore = Math.round((dxyScore + spreadScore) / 2);
 
@@ -122,12 +172,11 @@ export const fredAdapter: DataProvider<MacroData> = {
   },
 
   async healthCheck(): Promise<boolean> {
-    if (!FRED_API_KEY) return false;
     try {
-      const res = await fetch(
-        `${FRED_BASE}?series_id=DFF&api_key=${FRED_API_KEY}&file_type=json&limit=1`,
-        { signal: AbortSignal.timeout(5000) },
-      );
+      const url = FRED_API_KEY
+        ? `${FRED_BASE}?series_id=DFF&api_key=${FRED_API_KEY}&file_type=json&limit=1`
+        : `${FRED_CSV_BASE}?id=DFF&cosd=${new Date(Date.now() - 14 * 86400000).toISOString().slice(0, 10)}`;
+      const res = await fetch(url, { signal: AbortSignal.timeout(5000) });
       return res.ok;
     } catch { return false; }
   },
