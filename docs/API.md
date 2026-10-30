@@ -3,7 +3,7 @@
 > The per-endpoint sections below are generated from endpoint metadata by
 > `node scripts/generate-api-docs.js`. The Overview section, and the notes
 > attached to `/api/sources`, `/api/version`, `/api/sentiment`,
-> `/api/news/stream` and `/api/whales`, are maintained by hand: re-run the
+> `/api/news/stream`, `/api/whales` and `/api/l2/projects/{projectId}`, are maintained by hand: re-run the
 > generator only after porting them across.
 >
 > Generated: 2026-08-27T13:49:47.421Z
@@ -1723,9 +1723,22 @@ Layer 2 project listings and comparisons
 
 ### `GET /api/l2/projects/{projectId}`
 
-Returns detailed risk assessment for a specific L2 project.
+Returns L2Beat's risk assessment for a specific L2 project. `projectId` is an L2Beat project id or slug, case-insensitive (`arbitrum`, `optimism` or `op-mainnet`).
 
 **Price:** `$0.001/request`
+
+Each factor (`stateValidation`, `dataAvailability`, `exitWindow`, `sequencerFailure`, `proposerFailure`) is `{ value, sentiment, description }` as L2Beat reports it, or `null` when L2Beat does not report it. `sentiment` is `good`, `warning`, `bad` or `neutral`. `overallRiskScore` runs 0–100, higher is riskier: bad counts 2, warning 1, scaled by the factors reported. Unknown projects return 404; 503 means L2Beat is unreachable and no earlier copy is cached.
+
+```json
+{
+  "projectId": "arbitrum",
+  "projectName": "Arbitrum One",
+  "stage": "Stage 1",
+  "stateValidation": { "value": "Fraud proofs (INT)", "sentiment": "good", "description": "Fraud proofs allow actors watching the chain to prove that the state is incorrect. ..." },
+  "exitWindow": { "value": "None", "sentiment": "bad", "description": "..." },
+  "overallRiskScore": 20
+}
+```
 
 ---
 

@@ -1,10 +1,15 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
+import { staleCache } from '@/lib/cache';
+
 import {
   activityFromChart,
+  categorizeL2Type,
   getL2Activity,
+  getL2RiskAssessment,
   getL2Summary,
   mapL2BeatSummary,
+  riskAssessmentFromSummary,
   riskLevelFromRisks,
   totalTvsChange24h,
   type L2BeatSummaryResponse,
@@ -49,6 +54,25 @@ const summary: L2BeatSummaryResponse = {
       risks: [good('Sequencer Failure'), good('State Validation')],
       tvs: { breakdown: { total: 14_000, native: 2_000, canonical: 10_000, external: 2_000 }, change7d: 0.02 },
     },
+    'op-mainnet-id': {
+      id: 'optimism',
+      name: 'OP Mainnet',
+      slug: 'op-mainnet',
+      category: 'Optimium',
+      stage: 'Stage 1',
+      risks: [
+        {
+          name: 'State Validation',
+          value: 'Fraud proofs (INT)',
+          sentiment: 'good',
+          description: 'Fraud proofs allow actors watching the chain to prove that the state is incorrect.',
+        },
+        { name: 'Data Availability', value: 'Onchain', sentiment: 'warning' },
+        { name: 'Exit Window', value: 'None', sentiment: 'bad', description: 'Upgrades have no delay.' },
+        { name: 'Proposer Failure', value: 'Self propose', sentiment: 'UnderReview' },
+      ],
+      tvs: { breakdown: { total: 1_000 }, change7d: 0 },
+    },
     hyperliquid: {
       id: 'hyperliquid',
       name: 'Hyperliquid',
@@ -89,7 +113,7 @@ describe('mapL2BeatSummary', () => {
   it('reads TVS, converts change7d from a fraction to percent, drops archived projects and sorts by TVS', () => {
     const projects = mapL2BeatSummary(summary);
 
-    expect(projects.map(p => p.id)).toEqual(['base', 'arbitrum', 'hyperliquid']);
+    expect(projects.map(p => p.id)).toEqual(['base', 'arbitrum', 'hyperliquid', 'optimism']);
     const arb = projects[1];
     expect(arb.tvl).toBe(9_000);
     expect(arb.canonicalTvl).toBe(7_000);
@@ -99,6 +123,47 @@ describe('mapL2BeatSummary', () => {
     expect(arb.stage).toBe('Stage 1');
     expect(arb.tvlChange24h).toBeUndefined();
     expect(projects[2].category).toBe('Other');
+    expect(projects.map(p => p.type)).toEqual(['rollup', 'rollup', 'other', 'optimium']);
+  });
+});
+
+describe('categorizeL2Type', () => {
+  it('maps each L2Beat category to its own type instead of defaulting to rollup', () => {
+    expect(categorizeL2Type('ZK Rollup')).toBe('rollup');
+    expect(categorizeL2Type('Optimistic Rollup')).toBe('rollup');
+    expect(categorizeL2Type('Validium')).toBe('validium');
+    expect(categorizeL2Type('Optimium')).toBe('optimium');
+    expect(categorizeL2Type('Plasma')).toBe('plasma');
+    expect(categorizeL2Type('Other')).toBe('other');
+  });
+});
+
+describe('riskAssessmentFromSummary', () => {
+  it('reads the risk rosette L2Beat reports, matched by id or slug', () => {
+    const bySlug = riskAssessmentFromSummary(summary, 'OP-Mainnet');
+
+    expect(riskAssessmentFromSummary(summary, 'optimism')).toEqual(bySlug);
+    expect(bySlug).toEqual({
+      projectId: 'optimism',
+      projectName: 'OP Mainnet',
+      stage: 'Stage 1',
+      stateValidation: {
+        value: 'Fraud proofs (INT)',
+        sentiment: 'good',
+        description: 'Fraud proofs allow actors watching the chain to prove that the state is incorrect.',
+      },
+      dataAvailability: { value: 'Onchain', sentiment: 'warning', description: '' },
+      exitWindow: { value: 'None', sentiment: 'bad', description: 'Upgrades have no delay.' },
+      sequencerFailure: null,
+      proposerFailure: { value: 'Self propose', sentiment: 'neutral', description: '' },
+      // (warning 1 + bad 2) of a possible 4 factors x 2
+      overallRiskScore: 38,
+    });
+  });
+
+  it('covers projects outside any hardcoded list and returns null for unknown ones', () => {
+    expect(riskAssessmentFromSummary(summary, 'hyperliquid')?.overallRiskScore).toBe(100);
+    expect(riskAssessmentFromSummary(summary, 'not-a-chain')).toBeNull();
   });
 });
 
@@ -168,13 +233,21 @@ describe('L2Beat fetchers', () => {
   it('getL2Summary reports real TVS totals, ecosystem activity and risk distribution', async () => {
     const result = await getL2Summary();
 
-    expect(result.totalTvl).toBe(29_000);
-    expect(result.totalProjects).toBe(3);
-    expect(result.topProjects.map(p => p.id)).toEqual(['base', 'arbitrum', 'hyperliquid']);
-    expect(result.dominance['Base Chain']).toBeCloseTo((14_000 / 29_000) * 100);
+    expect(result.totalTvl).toBe(30_000);
+    expect(result.totalProjects).toBe(4);
+    expect(result.topProjects.map(p => p.id)).toEqual(['base', 'arbitrum', 'hyperliquid', 'optimism']);
+    expect(result.dominance['Base Chain']).toBeCloseTo((14_000 / 30_000) * 100);
     expect(result.totalTvlChange24h).toBeCloseTo(20);
     expect(result.activityMetrics).toEqual({ totalDailyTx: 17_280_000, totalTps: 200 });
-    expect(result.riskDistribution).toEqual({ low: 1, medium: 1, high: 1 });
+    expect(result.riskDistribution).toEqual({ low: 1, medium: 2, high: 1 });
+  });
+
+  it('getL2RiskAssessment reads live L2Beat risks and fails loudly when L2Beat is down', async () => {
+    expect((await getL2RiskAssessment('arbitrum'))?.exitWindow?.sentiment).toBe('bad');
+
+    vi.mocked(globalThis.fetch).mockResolvedValue(new Response('down', { status: 503 }));
+    staleCache.clear();
+    await expect(getL2RiskAssessment('arbitrum')).rejects.toThrow('L2Beat summary unavailable');
   });
 
   it('getL2Activity returns tracked projects only, busiest first', async () => {

@@ -16,7 +16,7 @@ export const revalidate = 3600;
 
 /**
  * GET /api/l2/projects/[projectId]
- * Returns detailed risk assessment for a specific L2 project.
+ * Returns L2Beat's risk assessment for a specific L2 project (L2Beat id or slug).
  */
 export async function GET(
   _request: NextRequest,
@@ -49,8 +49,8 @@ export async function GET(
     });
   } catch {
     return NextResponse.json(
-      { error: 'Failed to fetch L2 risk assessment' },
-      { status: 500 }
+      { error: 'L2Beat is unavailable, try again shortly' },
+      { status: 503 }
     );
   }
 }

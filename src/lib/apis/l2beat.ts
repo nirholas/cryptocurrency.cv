@@ -31,7 +31,8 @@ export interface L2Project {
   id: string;
   name: string;
   slug: string;
-  type: 'rollup' | 'validium' | 'optimium' | 'plasma' | 'state-channel';
+  /** 'other' covers L2Beat's "Others": projects that do not meet its rollup or validium requirements */
+  type: 'rollup' | 'validium' | 'optimium' | 'plasma' | 'other';
   category: 'Optimistic Rollup' | 'ZK Rollup' | 'Validium' | 'Optimium' | 'Plasma' | 'Other';
   /** Total value secured (L2Beat's TVS: canonical + external + native), USD */
   tvl: number;
@@ -52,35 +53,25 @@ export interface L2Project {
   timestamp: string;
 }
 
+export interface L2RiskFactor {
+  /** L2Beat's short verdict, e.g. "Fraud proofs (INT)" or "Self sequence" */
+  value: string;
+  sentiment: 'good' | 'warning' | 'bad' | 'neutral';
+  description: string;
+}
+
+/** L2Beat's risk rosette for one project; a factor is null when L2Beat does not report it */
 export interface L2RiskAssessment {
   projectId: string;
   projectName: string;
-  stateValidation: {
-    value: 'ZK proofs' | 'Fraud proofs' | 'None';
-    sentiment: 'good' | 'warning' | 'bad';
-    description: string;
-  };
-  dataAvailability: {
-    value: 'On-chain' | 'DAC' | 'External';
-    sentiment: 'good' | 'warning' | 'bad';
-    description: string;
-  };
-  upgradeability: {
-    value: string;
-    sentiment: 'good' | 'warning' | 'bad';
-    description: string;
-  };
-  sequencerFailure: {
-    value: string;
-    sentiment: 'good' | 'warning' | 'bad';
-    description: string;
-  };
-  proposerFailure: {
-    value: string;
-    sentiment: 'good' | 'warning' | 'bad';
-    description: string;
-  };
-  overallRiskScore: number; // 0-100, higher = riskier
+  stage: L2Project['stage'];
+  stateValidation: L2RiskFactor | null;
+  dataAvailability: L2RiskFactor | null;
+  exitWindow: L2RiskFactor | null;
+  sequencerFailure: L2RiskFactor | null;
+  proposerFailure: L2RiskFactor | null;
+  /** 0-100, higher = riskier (bad = 2, warning = 1, scaled by the factors reported); null without factors */
+  overallRiskScore: number | null;
 }
 
 export interface L2Activity {
@@ -141,7 +132,8 @@ async function l2beatFetch<T>(endpoint: string): Promise<T | null> {
 interface L2BeatRisk {
   name: string;
   value: string;
-  sentiment: 'good' | 'warning' | 'bad' | string;
+  sentiment: 'good' | 'warning' | 'bad' | 'neutral' | string;
+  description?: string;
 }
 
 interface L2BeatSummaryProject {
@@ -182,12 +174,16 @@ const L2_CATEGORIES: ReadonlyArray<L2Project['category']> = [
 ];
 
 /** Weighted count of L2Beat's risk rosette: bad = 2, warning = 1. */
-export function riskLevelFromRisks(risks: L2BeatRisk[] | undefined): L2Project['riskLevel'] {
-  if (!risks?.length) return 'medium';
-  const score = risks.reduce(
+function riskPoints(risks: L2BeatRisk[]): number {
+  return risks.reduce(
     (sum, r) => sum + (r.sentiment === 'bad' ? 2 : r.sentiment === 'warning' ? 1 : 0),
     0,
   );
+}
+
+export function riskLevelFromRisks(risks: L2BeatRisk[] | undefined): L2Project['riskLevel'] {
+  if (!risks?.length) return 'medium';
+  const score = riskPoints(risks);
   if (score <= 1) return 'low';
   if (score <= 5) return 'medium';
   return 'high';
@@ -309,12 +305,12 @@ async function getL2ProjectsFallback(): Promise<L2Project[]> {
   }
 }
 
-function categorizeL2Type(category: string): L2Project['type'] {
-  if (category.includes('ZK')) return 'rollup';
-  if (category.includes('Optimistic')) return 'rollup';
+export function categorizeL2Type(category: string): L2Project['type'] {
+  if (category.includes('Rollup')) return 'rollup';
   if (category.includes('Validium')) return 'validium';
+  if (category.includes('Optimium')) return 'optimium';
   if (category.includes('Plasma')) return 'plasma';
-  return 'rollup';
+  return 'other';
 }
 
 function inferL2Type(name: string): L2Project['type'] {
@@ -333,67 +329,62 @@ function inferStage(name: string): L2Project['stage'] {
   return 'Stage 0';
 }
 
-/**
- * Get risk assessment for a specific L2
- */
-export async function getL2RiskAssessment(projectId: string): Promise<L2RiskAssessment | null> {
-  // Risk assessments based on L2Beat's criteria
-  const riskProfiles: Record<string, Partial<L2RiskAssessment>> = {
-    arbitrum: {
-      stateValidation: { value: 'Fraud proofs', sentiment: 'good', description: 'Uses interactive fraud proofs' },
-      dataAvailability: { value: 'On-chain', sentiment: 'good', description: 'All data posted to Ethereum' },
-      upgradeability: { value: '12h delay', sentiment: 'warning', description: 'Security council can upgrade' },
-      sequencerFailure: { value: 'Self-sequence', sentiment: 'good', description: 'Users can submit L1 transactions' },
-      proposerFailure: { value: 'Self-propose', sentiment: 'good', description: 'Anyone can propose state roots' },
-      overallRiskScore: 25,
-    },
-    optimism: {
-      stateValidation: { value: 'Fraud proofs', sentiment: 'good', description: 'Uses fault proofs' },
-      dataAvailability: { value: 'On-chain', sentiment: 'good', description: 'All data posted to Ethereum' },
-      upgradeability: { value: 'Multisig', sentiment: 'warning', description: 'Can be upgraded by multisig' },
-      sequencerFailure: { value: 'Self-sequence', sentiment: 'good', description: 'Users can submit L1 transactions' },
-      proposerFailure: { value: 'Permissioned', sentiment: 'warning', description: 'Only specific addresses can propose' },
-      overallRiskScore: 35,
-    },
-    'zksync-era': {
-      stateValidation: { value: 'ZK proofs', sentiment: 'good', description: 'Uses ZK-SNARKs' },
-      dataAvailability: { value: 'On-chain', sentiment: 'good', description: 'State diffs posted to Ethereum' },
-      upgradeability: { value: 'Instant', sentiment: 'bad', description: 'Can be upgraded instantly' },
-      sequencerFailure: { value: 'No escape', sentiment: 'bad', description: 'No forced transaction mechanism yet' },
-      proposerFailure: { value: 'Centralized', sentiment: 'bad', description: 'Single proposer' },
-      overallRiskScore: 55,
-    },
-    starknet: {
-      stateValidation: { value: 'ZK proofs', sentiment: 'good', description: 'Uses STARKs' },
-      dataAvailability: { value: 'On-chain', sentiment: 'good', description: 'All data on Ethereum' },
-      upgradeability: { value: 'Upgradeable', sentiment: 'warning', description: 'Contracts are upgradeable' },
-      sequencerFailure: { value: 'No escape', sentiment: 'bad', description: 'No forced exit mechanism' },
-      proposerFailure: { value: 'Centralized', sentiment: 'bad', description: 'Single prover' },
-      overallRiskScore: 50,
-    },
-    base: {
-      stateValidation: { value: 'Fraud proofs', sentiment: 'good', description: 'OP Stack with fault proofs' },
-      dataAvailability: { value: 'On-chain', sentiment: 'good', description: 'All data posted to Ethereum' },
-      upgradeability: { value: 'Multisig', sentiment: 'warning', description: 'Coinbase multisig' },
-      sequencerFailure: { value: 'Self-sequence', sentiment: 'good', description: 'L1 forced inclusion' },
-      proposerFailure: { value: 'Permissioned', sentiment: 'warning', description: 'Coinbase as proposer' },
-      overallRiskScore: 40,
-    },
-  };
+const RISK_FACTORS = {
+  stateValidation: 'State Validation',
+  dataAvailability: 'Data Availability',
+  exitWindow: 'Exit Window',
+  sequencerFailure: 'Sequencer Failure',
+  proposerFailure: 'Proposer Failure',
+} as const;
 
-  const profile = riskProfiles[projectId.toLowerCase()];
-  if (!profile) return null;
+const RISK_SENTIMENTS: ReadonlyArray<L2RiskFactor['sentiment']> = ['good', 'warning', 'bad', 'neutral'];
+
+/**
+ * Risk assessment for one project from the L2Beat summary, matched by
+ * L2Beat id or slug (case-insensitive). Returns null for unknown projects.
+ */
+export function riskAssessmentFromSummary(
+  data: L2BeatSummaryResponse,
+  projectId: string,
+): L2RiskAssessment | null {
+  const key = projectId.toLowerCase();
+  const project = Object.values(data.projects).find(
+    p => p.id.toLowerCase() === key || p.slug.toLowerCase() === key,
+  );
+  if (!project) return null;
+
+  const risks = project.risks ?? [];
+  const factor = (name: string): L2RiskFactor | null => {
+    const risk = risks.find(r => r.name === name);
+    if (!risk) return null;
+    return {
+      value: risk.value,
+      sentiment: RISK_SENTIMENTS.find(s => s === risk.sentiment) ?? 'neutral',
+      description: risk.description ?? '',
+    };
+  };
 
   return {
-    projectId,
-    projectName: projectId.charAt(0).toUpperCase() + projectId.slice(1),
-    stateValidation: profile.stateValidation!,
-    dataAvailability: profile.dataAvailability!,
-    upgradeability: profile.upgradeability!,
-    sequencerFailure: profile.sequencerFailure!,
-    proposerFailure: profile.proposerFailure!,
-    overallRiskScore: profile.overallRiskScore!,
+    projectId: project.id,
+    projectName: project.name,
+    stage: L2_STAGES.find(s => s === project.stage) ?? 'Not applicable',
+    stateValidation: factor(RISK_FACTORS.stateValidation),
+    dataAvailability: factor(RISK_FACTORS.dataAvailability),
+    exitWindow: factor(RISK_FACTORS.exitWindow),
+    sequencerFailure: factor(RISK_FACTORS.sequencerFailure),
+    proposerFailure: factor(RISK_FACTORS.proposerFailure),
+    overallRiskScore: risks.length ? Math.round((riskPoints(risks) / (risks.length * 2)) * 100) : null,
   };
+}
+
+/**
+ * Get the L2Beat risk assessment for a specific L2.
+ * Returns null for unknown projects; throws when L2Beat is unreachable.
+ */
+export async function getL2RiskAssessment(projectId: string): Promise<L2RiskAssessment | null> {
+  const data = await getL2BeatSummary();
+  if (!data) throw new Error('L2Beat summary unavailable');
+  return riskAssessmentFromSummary(data, projectId);
 }
 
 interface L2BeatActivityResponse {
