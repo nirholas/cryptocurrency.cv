@@ -36,6 +36,7 @@ import {
   COINPAPRIKA_BASE,
 } from "./constants";
 import { resilientFetchResponse } from '@/lib/resilient-fetch';
+import { backOffCoinGecko, coinGeckoBackoffRemaining } from '@/lib/coingecko-backoff';
 import {
   getKeylessCoinDetails,
   getKeylessMarketCoins,
@@ -736,13 +737,11 @@ function getHistoricalCacheTTL(days: number): number {
 interface RateLimitState {
   requestCount: number;
   windowStart: number;
-  retryAfter: number;
 }
 
 const rateLimitState: RateLimitState = {
   requestCount: 0,
   windowStart: Date.now(),
-  retryAfter: 0,
 };
 
 const RATE_LIMIT_WINDOW = 60000; // 1 minute window
@@ -754,8 +753,8 @@ const MAX_REQUESTS_PER_WINDOW = 50; // Allow more requests since we have fallbac
 function canMakeRequest(): boolean {
   const now = Date.now();
 
-  // Check if we're in a retry backoff period
-  if (rateLimitState.retryAfter > now) {
+  // Check if we're in a retry backoff period (shared with lib/coingecko)
+  if (coinGeckoBackoffRemaining(now) > 0) {
     return false;
   }
 
@@ -776,14 +775,10 @@ function recordRequest(): void {
 }
 
 /**
- * Handle rate limit error with exponential backoff
+ * Handle rate limit error by backing off every CoinGecko caller
  */
 function handleRateLimitError(retryAfterHeader?: string): void {
-  const retryAfterSeconds = retryAfterHeader
-    ? parseInt(retryAfterHeader, 10)
-    : 60;
-  const backoffMs = Math.min(retryAfterSeconds * 1000, 120000); // Max 2 minutes
-  rateLimitState.retryAfter = Date.now() + backoffMs;
+  const backoffMs = backOffCoinGecko(retryAfterHeader);
   console.warn(`Rate limited. Backing off for ${backoffMs / 1000} seconds`);
 }
 

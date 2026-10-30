@@ -26,6 +26,7 @@
  */
 
 import { resilientFetchResponse } from '@/lib/resilient-fetch';
+import { backOffCoinGecko, coinGeckoBackoffRemaining } from '@/lib/coingecko-backoff';
 import { getKeylessMarketCoins, getKeylessSimplePrice } from '@/lib/keyless-market';
 
 // ---------------------------------------------------------------------------
@@ -84,13 +85,10 @@ function setCache<T>(key: string, data: T, freshSec: number): void {
 interface RateLimitState {
   /** Timestamps (ms) of recent requests inside the current window */
   timestamps: number[];
-  /** Absolute ms timestamp – do not send requests before this */
-  retryAfter: number;
 }
 
 const state: RateLimitState = {
   timestamps: [],
-  retryAfter: 0,
 };
 
 /** Sliding window size in ms */
@@ -284,15 +282,15 @@ async function _fetchFromCoinGecko<T>(
   timeout: number,
 ): Promise<T | null> {
   // ---- wait for retry-after window if set ----
-  if (state.retryAfter > Date.now()) {
-    const wait = state.retryAfter - Date.now();
+  const backoff = coinGeckoBackoffRemaining();
+  if (backoff > 0) {
     // If the wait is very long (>30s), don't block — return null so fallbacks kick in
-    if (wait > 30_000) {
-      console.warn(`[CoinGecko] Retry-after ${(wait / 1000).toFixed(0)}s too long, skipping`);
+    if (backoff > 30_000) {
+      console.warn(`[CoinGecko] Retry-after ${(backoff / 1000).toFixed(0)}s too long, skipping`);
       return null;
     }
-    console.warn(`[CoinGecko] Waiting ${(wait / 1000).toFixed(1)}s for retry-after`);
-    await sleep(wait);
+    console.warn(`[CoinGecko] Waiting ${(backoff / 1000).toFixed(1)}s for retry-after`);
+    await sleep(backoff);
   }
 
   // ---- sliding-window gate ----
@@ -339,9 +337,8 @@ async function _fetchFromCoinGecko<T>(
     });
 
     if (res.status === 429) {
-      const retryAfterSec = parseInt(res.headers.get('retry-after') || '60', 10);
-      state.retryAfter = Date.now() + retryAfterSec * 1000;
-      console.warn(`[CoinGecko] 429 received – backing off ${retryAfterSec}s`);
+      const backoffMs = backOffCoinGecko(res.headers.get('retry-after'));
+      console.warn(`[CoinGecko] 429 received – backing off ${backoffMs / 1000}s`);
       return null;
     }
 
