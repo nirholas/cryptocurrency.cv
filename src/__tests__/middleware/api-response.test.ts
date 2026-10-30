@@ -55,17 +55,14 @@ describe('apiResponse handler', () => {
     expect(result.headers.get('X-Response-Time')).toMatch(/^\d+ms$/);
   });
 
-  it('should set public cache control for non-enterprise requests', () => {
-    const ctx = createContext();
-    const result = apiResponse(ctx) as NextResponse;
-    expect(result.headers.get('Cache-Control')).toContain('public');
-  });
-
-  it('should set private cache control for enterprise tier', () => {
-    const ctx = createContext({ apiKeyTier: 'enterprise', apiKeyId: 'key_123' });
-    const result = apiResponse(ctx) as NextResponse;
-    expect(result.headers.get('Cache-Control')).toContain('private');
-    expect(result.headers.get('X-Cache-Tier')).toBe('enterprise');
+  // Next.js joins a middleware Cache-Control with the route's own value
+  // ("public, s-maxage=60, …,no-store"), so caching policy belongs to routes.
+  it('should leave Cache-Control to the route handler', () => {
+    for (const apiKeyTier of [null, 'free', 'enterprise'] as const) {
+      const ctx = createContext({ apiKeyTier, apiKeyId: apiKeyTier ? 'key_123' : null });
+      const result = apiResponse(ctx) as NextResponse;
+      expect(result.headers.has('Cache-Control')).toBe(false);
+    }
   });
 
   it('should set Vary: Accept header', () => {

@@ -7,8 +7,9 @@
 /**
  * API Response Handler
  *
- * Assembles the final API response with forwarded metadata headers,
- * cache control, and response timing.
+ * Assembles the final API response with forwarded metadata headers and
+ * response timing. Cache-Control is left to each route: Next.js joins a
+ * middleware value with the route's own instead of replacing it.
  *
  * @module middleware/api-response
  */
@@ -54,15 +55,6 @@ export const apiResponse: MiddlewareHandler = (ctx) => {
   const res = NextResponse.next({ request: { headers: requestHeaders } });
   Object.entries(ctx.headers).forEach(([k, v]) => res.headers.set(k, v));
   res.headers.set('X-Response-Time', `${Date.now() - ctx.startTime}ms`);
-
-  if (!res.headers.has('Cache-Control')) {
-    if (ctx.apiKeyTier === 'enterprise') {
-      res.headers.set('Cache-Control', 'private, s-maxage=30, stale-while-revalidate=120');
-      res.headers.set('X-Cache-Tier', 'enterprise');
-    } else {
-      res.headers.set('Cache-Control', 'public, s-maxage=60, stale-while-revalidate=300');
-    }
-  }
 
   res.headers.append('Vary', 'Accept');
   return res;
