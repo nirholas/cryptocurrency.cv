@@ -229,8 +229,8 @@ importers:
         specifier: ^2.57.2
         version: 2.57.2(typescript@6.0.3)(zod@4.6.5)
       web-vitals:
-        specifier: ^5.3.0
-        version: 5.3.0
+        specifier: ^6.2.3
+        version: 6.2.3
       ws:
         specifier: ^8.22.0
         version: 8.22.0
@@ -5194,8 +5194,8 @@ packages:
     resolution: {integrity: sha512-rNjApaLzuwaOTjCiT8lSDdGN1APCiqkChLMJxJPWLunPAt5fy8xgU9/jNOchV84wfIxrA0lRQB7oCT8jrn/wrQ==}
     engines: {node: '>=6.0'}
 
-  chromedriver@156.0.1:
-    resolution: {integrity: sha512-4W/2SBw2ELUnlNXC/qOQq3H1f80K78x25+qPJwIYFT2CDiU4wt1J3tZQWAlhPMl4fB4nvv5F7ODLk4Ef5wJreA==}
+  chromedriver@156.0.0:
+    resolution: {integrity: sha512-C1YDo5DHMNdQ5w5i4lz9htZ7ZQPnLTkQcnaQio8NKN1nPudJXhervWf9rr1othlT58QGTNVLhDDjp9Jel0kQLQ==}
     engines: {node: '>=22'}
     hasBin: true
 
@@ -10076,8 +10076,8 @@ packages:
   web-tree-sitter@0.24.5:
     resolution: {integrity: sha512-+J/2VSHN8J47gQUAvF8KDadrfz6uFYVjxoxbKWDoXVsH2u7yLdarCnIURnrMA6uSRkgX3SdmqM5BOoQjPdSh5w==}
 
-  web-vitals@5.3.0:
-    resolution: {integrity: sha512-q6LWsLatGYZp5VGBIOvbTj6JBV2nOmC8KvWztXBmwJcfFAzhwKwbOxhUH306XY3CcaZDUlSmSuNPBsCn0bFu+g==}
+  web-vitals@6.2.3:
+    resolution: {integrity: sha512-Dmy+vdO1UPMqXiAtZSNayhl4f794Bxfd94W4HIj2HlYtczEQfEOon969memlcpcHrTuOKLa5baFjX7WbgmOq+A==}
 
   webdriver-bidi-protocol@0.4.1:
     resolution: {integrity: sha512-ARrjNjtWRRs2w4Tk7nqrf2gBI0QXWuOmMCx2hU+1jUt6d00MjMxURrhxhGbrsoiZKJrhTSTzbIrc554iKI10qw==}
@@ -10353,7 +10353,7 @@ snapshots:
     dependencies:
       '@axe-core/webdriverjs': 4.13.0(selenium-webdriver@4.44.0)
       axe-core: 4.13.0
-      chromedriver: 156.0.1
+      chromedriver: 156.0.0
       colors: 1.4.0
       commander: 9.5.0
       dotenv: 17.4.2
@@ -15649,7 +15649,7 @@ snapshots:
 
   chrome-trace-event@1.0.4: {}
 
-  chromedriver@156.0.1:
+  chromedriver@156.0.0:
     dependencies:
       '@testim/chrome-version': 1.1.4
       adm-zip: 0.6.1
@@ -21368,7 +21368,7 @@ snapshots:
   web-tree-sitter@0.24.5:
     optional: true
 
-  web-vitals@5.3.0: {}
+  web-vitals@6.2.3: {}
 
   webdriver-bidi-protocol@0.4.1: {}
 
