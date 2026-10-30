@@ -32,7 +32,7 @@ export default function TradingViewMiniChart({
   underLineColor = 'rgba(41, 98, 255, 0.07)',
 }: TradingViewMiniChartProps) {
   const containerRef = useRef<HTMLDivElement>(null);
-  const { resolvedTheme } = useTheme();
+  const { resolvedTheme, ready } = useTheme();
   const theme =
     colorTheme || (resolvedTheme === 'dark' || resolvedTheme === 'midnight' ? 'dark' : 'light');
 
@@ -73,9 +73,11 @@ export default function TradingViewMiniChart({
     container.appendChild(widgetDiv);
   }, [symbol, width, height, dateRange, theme, trendLineColor, underLineColor]);
 
+  // Embed once the real theme is known: rebuilding mid-load orphans the
+  // first script's iframe ("contentWindow is not available").
   useEffect(() => {
-    renderWidget();
-  }, [renderWidget]);
+    if (ready) renderWidget();
+  }, [ready, renderWidget]);
 
   return (
     <div

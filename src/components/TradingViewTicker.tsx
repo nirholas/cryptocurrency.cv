@@ -35,7 +35,7 @@ export default function TradingViewTicker({
   colorTheme,
 }: TradingViewTickerProps) {
   const containerRef = useRef<HTMLDivElement>(null);
-  const { resolvedTheme } = useTheme();
+  const { resolvedTheme, ready } = useTheme();
   const theme =
     colorTheme || (resolvedTheme === 'dark' || resolvedTheme === 'midnight' ? 'dark' : 'light');
 
@@ -68,9 +68,11 @@ export default function TradingViewTicker({
     container.appendChild(widgetDiv);
   }, [symbols, theme, displayMode]);
 
+  // Embed once the real theme is known: rebuilding mid-load orphans the
+  // first script's iframe ("contentWindow is not available").
   useEffect(() => {
-    renderWidget();
-  }, [renderWidget]);
+    if (ready) renderWidget();
+  }, [ready, renderWidget]);
 
   return <div ref={containerRef} className={cn('w-full overflow-hidden', className)} />;
 }

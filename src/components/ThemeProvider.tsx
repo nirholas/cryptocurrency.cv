@@ -17,12 +17,19 @@ const THEME_CLASSES = ["dark", "midnight"] as const;
 interface ThemeContextType {
   theme: Theme;
   resolvedTheme: ResolvedTheme;
+  /**
+   * False until the stored/system theme has been read after mount; before
+   * that, resolvedTheme is the SSR default. Third-party embeds that bake the
+   * theme in (TradingView) wait for this so they don't build twice.
+   */
+  ready: boolean;
   setTheme: (theme: Theme) => void;
 }
 
 const ThemeContext = createContext<ThemeContextType>({
   theme: "system",
   resolvedTheme: "dark",
+  ready: true,
   setTheme: () => {},
 });
 
@@ -64,6 +71,7 @@ export function ThemeScript({ nonce }: { nonce?: string }) {
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [theme, setThemeState] = useState<Theme>("system");
   const [resolvedTheme, setResolvedTheme] = useState<ResolvedTheme>("dark");
+  const [ready, setReady] = useState(false);
 
   useEffect(() => {
     const stored = (localStorage.getItem("theme") as Theme) || "system";
@@ -78,6 +86,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
 
     const resolved = resolve(stored);
     setResolvedTheme(resolved);
+    setReady(true);
     applyThemeClass(resolved);
 
     const handler = () => {
@@ -111,7 +120,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   };
 
   return (
-    <ThemeContext value={{ theme, resolvedTheme, setTheme }}>
+    <ThemeContext value={{ theme, resolvedTheme, ready, setTheme }}>
       {children}
     </ThemeContext>
   );

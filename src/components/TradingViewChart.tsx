@@ -71,7 +71,7 @@ export default function TradingViewChart({
   showToolbar = true,
 }: TradingViewChartProps) {
   const containerRef = useRef<HTMLDivElement>(null);
-  const { resolvedTheme } = useTheme();
+  const { resolvedTheme, ready } = useTheme();
   const [symbol, setSymbol] = useState(initialSymbol);
   const [interval, setInterval] = useState(initialInterval);
   const [chartStyle, setChartStyle] = useState('1');
@@ -131,9 +131,11 @@ export default function TradingViewChart({
     widgetDiv.appendChild(script);
   }, [symbol, interval, theme, chartStyle, allowSymbolChange, showToolbar]);
 
+  // Embed once the real theme is known: rebuilding mid-load orphans the
+  // first script's iframe ("contentWindow is not available").
   useEffect(() => {
-    renderWidget();
-  }, [renderWidget]);
+    if (ready) renderWidget();
+  }, [ready, renderWidget]);
 
   // ---- Fullscreen -----------------------------------------------------------
 

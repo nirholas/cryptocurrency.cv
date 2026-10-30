@@ -32,7 +32,7 @@ export default function TradingViewHeatmap({
   colorTheme,
 }: TradingViewHeatmapProps) {
   const containerRef = useRef<HTMLDivElement>(null);
-  const { resolvedTheme } = useTheme();
+  const { resolvedTheme, ready } = useTheme();
   const theme =
     colorTheme || (resolvedTheme === 'dark' || resolvedTheme === 'midnight' ? 'dark' : 'light');
 
@@ -73,9 +73,11 @@ export default function TradingViewHeatmap({
     container.appendChild(widgetDiv);
   }, [dataSource, blockSize, blockColor, grouping, theme, width, height]);
 
+  // Embed once the real theme is known: rebuilding mid-load orphans the
+  // first script's iframe ("contentWindow is not available").
   useEffect(() => {
-    renderWidget();
-  }, [renderWidget]);
+    if (ready) renderWidget();
+  }, [ready, renderWidget]);
 
   return (
     <div
