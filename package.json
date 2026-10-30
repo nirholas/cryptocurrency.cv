@@ -258,7 +258,13 @@
       "postcss": "^8.5.31",
       "sharp": "^0.35.0",
       "js-yaml@^3": "^3.15.2",
-      "fflate@<0.7.5": "^0.7.5"
+      "fflate@<0.7.5": "^0.7.5",
+      "body-parser@>=2.0.0 <2.4.0": "^2.4.0",
+      "fast-uri@>=3.0.0 <3.1.9": "^3.1.9",
+      "fast-copy@>=4.0.0 <4.1.0": "^4.1.0",
+      "systeminformation@<5.33.16": "^5.33.16",
+      "qs@>=6.7.0 <=6.16.0": "^6.16.1",
+      "postcss-selector-parser@<6.1.5": "^6.1.5"
     },
     "onlyBuiltDependencies": [
       "@parcel/watcher",
