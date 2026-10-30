@@ -1,5 +1,9 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
+import { staleCache } from '@/lib/cache';
+import { CircuitBreaker } from '@/lib/circuit-breaker';
+import { fredCache } from '@/lib/providers/adapters/macro/fred.adapter';
+
 import { GET } from './route';
 
 // fredgraph.csv rows per series, oldest first
@@ -22,6 +26,9 @@ function respond(input: string | URL | Request) {
 describe('GET /api/macro/fed', () => {
   beforeEach(() => {
     vi.clearAllMocks();
+    fredCache.clear();
+    staleCache.clear();
+    CircuitBreaker.resetAll();
     vi.spyOn(console, 'error').mockImplementation(() => {});
   });
 

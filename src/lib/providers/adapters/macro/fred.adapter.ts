@@ -27,6 +27,8 @@
  * @module providers/adapters/macro/fred
  */
 
+import MemoryCache, { withCache } from '@/lib/cache';
+import { resilientFetchResponse } from '@/lib/resilient-fetch';
 import type { DataProvider, FetchParams, RateLimitConfig } from '../../types';
 import type { MacroData, MacroIndicator } from './types';
 
@@ -35,6 +37,10 @@ const FRED_CSV_BASE = 'https://fred.stlouisfed.org/graph/fredgraph.csv';
 const FRED_API_KEY = process.env.FRED_API_KEY ?? '';
 
 const RATE_LIMIT: RateLimitConfig = { maxRequests: 120, windowMs: 60_000 };
+
+/** FRED publishes daily at most; 15 minutes keeps every macro route on one fetch per series */
+const SERIES_TTL_SECONDS = 900;
+export const fredCache = new MemoryCache(50);
 
 const clampScore = (value: number) => Math.max(0, Math.min(100, value));
 
@@ -86,13 +92,23 @@ export function parseFredCsv(text: string, limit = Infinity): FredObservation[] 
 }
 
 /** Observations from the last `days` days, newest first, without missing values */
-export async function fetchFredSeries(seriesId: string, days = 90): Promise<FredObservation[]> {
+export function fetchFredSeries(seriesId: string, days = 90): Promise<FredObservation[]> {
+  return withCache(
+    fredCache,
+    `fred:${seriesId}:${days}`,
+    SERIES_TTL_SECONDS,
+    () => fetchFredSeriesUncached(seriesId, days),
+    { shouldCache: (rows) => rows.length > 0 },
+  );
+}
+
+async function fetchFredSeriesUncached(seriesId: string, days: number): Promise<FredObservation[]> {
   const start = new Date(Date.now() - days * 86400000).toISOString().slice(0, 10);
+  // Requests from Cloud Run occasionally stall at FRED; a short timeout plus retries recovers them
+  const fetchOpts = { service: 'fred', timeoutMs: 5_000, retries: 2 };
 
   if (!FRED_API_KEY) {
-    const res = await fetch(`${FRED_CSV_BASE}?id=${seriesId}&cosd=${start}`, {
-      signal: AbortSignal.timeout(8000),
-    });
+    const res = await resilientFetchResponse(`${FRED_CSV_BASE}?id=${seriesId}&cosd=${start}`, fetchOpts);
     if (!res.ok) throw new Error(`FRED CSV ${seriesId} HTTP ${res.status}`);
     return parseFredCsv(await res.text());
   }
@@ -101,7 +117,7 @@ export async function fetchFredSeries(seriesId: string, days = 90): Promise<Fred
     `${FRED_BASE}?series_id=${seriesId}&api_key=${FRED_API_KEY}` +
     `&file_type=json&sort_order=desc&observation_start=${start}`;
 
-  const res = await fetch(url, { signal: AbortSignal.timeout(8000) });
+  const res = await resilientFetchResponse(url, fetchOpts);
   if (!res.ok) throw new Error(`FRED ${seriesId} HTTP ${res.status}`);
   const json = await res.json();
   return (json.observations ?? []).filter((o: FredObservation) => !isMissing(o.value));

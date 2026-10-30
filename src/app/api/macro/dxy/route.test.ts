@@ -1,5 +1,9 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
+import { staleCache } from '@/lib/cache';
+import { CircuitBreaker } from '@/lib/circuit-breaker';
+import { fredCache } from '@/lib/providers/adapters/macro/fred.adapter';
+
 import { GET } from './route';
 
 // Shape of GET https://fred.stlouisfed.org/graph/fredgraph.csv?id=DTWEXBGS&cosd=... (oldest first)
@@ -19,6 +23,9 @@ function csvResponse(body: string, status = 200) {
 describe('GET /api/macro/dxy', () => {
   beforeEach(() => {
     vi.clearAllMocks();
+    fredCache.clear();
+    staleCache.clear();
+    CircuitBreaker.resetAll();
     vi.spyOn(console, 'error').mockImplementation(() => {});
   });
 

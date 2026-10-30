@@ -1,6 +1,9 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
-import { dollarScore, fredAdapter, parseFredCsv } from './fred.adapter';
+import { staleCache } from '@/lib/cache';
+import { CircuitBreaker } from '@/lib/circuit-breaker';
+
+import { dollarScore, fetchFredSeries, fredAdapter, fredCache, parseFredCsv } from './fred.adapter';
 
 // Shape of GET https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10&cosd=...
 const csv = (series: string, rows: string[]) => [`observation_date,${series}`, ...rows].join('\n') + '\n';
@@ -68,6 +71,9 @@ describe('fredAdapter without FRED_API_KEY', () => {
 
   beforeEach(() => {
     vi.clearAllMocks();
+    fredCache.clear();
+    staleCache.clear();
+    CircuitBreaker.resetAll();
   });
 
   afterEach(() => {
@@ -114,5 +120,53 @@ describe('fredAdapter without FRED_API_KEY', () => {
     vi.spyOn(globalThis, 'fetch').mockResolvedValue(new Response('', { status: 503 }));
 
     await expect(fredAdapter.fetch({})).rejects.toThrow('No FRED data returned');
+  });
+});
+
+describe('fetchFredSeries', () => {
+  const body = csv('DGS10', ['2026-10-28,5.05', '2026-10-29,4.98']);
+
+  beforeEach(() => {
+    vi.clearAllMocks();
+    fredCache.clear();
+    staleCache.clear();
+    CircuitBreaker.resetAll();
+  });
+
+  afterEach(() => {
+    vi.restoreAllMocks();
+  });
+
+  it('retries a request that fails in transit', async () => {
+    const fetchSpy = vi
+      .spyOn(globalThis, 'fetch')
+      .mockRejectedValueOnce(new TypeError('fetch failed'))
+      .mockResolvedValueOnce(new Response(body, { status: 200 }));
+
+    const rows = await fetchFredSeries('DGS10', 30);
+
+    expect(fetchSpy).toHaveBeenCalledTimes(2);
+    expect(rows[0]).toEqual({ date: '2026-10-29', value: '4.98' });
+  });
+
+  it('shares one upstream request per series and window', async () => {
+    const fetchSpy = vi.spyOn(globalThis, 'fetch').mockImplementation(async () => new Response(body, { status: 200 }));
+
+    const [a, b] = await Promise.all([fetchFredSeries('DGS10', 30), fetchFredSeries('DGS10', 30)]);
+    const c = await fetchFredSeries('DGS10', 30);
+
+    expect(fetchSpy).toHaveBeenCalledTimes(1);
+    expect(b).toEqual(a);
+    expect(c).toEqual(a);
+  });
+
+  it('serves the last good observations when FRED stops answering', async () => {
+    vi.spyOn(globalThis, 'fetch').mockResolvedValueOnce(new Response(body, { status: 200 }));
+    const fresh = await fetchFredSeries('DGS10', 30);
+
+    fredCache.clear();
+    vi.spyOn(globalThis, 'fetch').mockRejectedValue(new Error('The operation was aborted due to timeout'));
+
+    await expect(fetchFredSeries('DGS10', 30)).resolves.toEqual(fresh);
   });
 });
