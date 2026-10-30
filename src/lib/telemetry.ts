@@ -216,10 +216,12 @@ export async function initTelemetry(): Promise<void> {
     const sdk = new NodeSDK({
       resource,
       traceExporter,
-      metricReader: new PeriodicExportingMetricReader({
-        exporter: metricExporter,
-        exportIntervalMillis: 30_000,
-      }),
+      metricReaders: [
+        new PeriodicExportingMetricReader({
+          exporter: metricExporter,
+          exportIntervalMillis: 30_000,
+        }),
+      ],
     });
 
     sdk.start();
