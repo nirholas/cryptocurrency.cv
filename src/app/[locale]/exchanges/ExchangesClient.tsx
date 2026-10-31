@@ -17,7 +17,7 @@ interface Exchange {
   url?: string;
   volume24h: number;
   trustScoreRank: number | null;
-  trustScore: number;
+  trustScore: number | null;
   yearEstablished: number | null;
   country?: string;
   type: "CEX" | "DEX";
@@ -115,7 +115,7 @@ export default function ExchangesClient() {
                   {
                     label: "Trust Score",
                     values: compareList.map((e) =>
-                      `${e.trustScore.toFixed(1)} / 10`
+                      e.trustScore !== null ? `${e.trustScore.toFixed(1)} / 10` : "n/a"
                     ),
                   },
                   {

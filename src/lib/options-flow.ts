@@ -259,6 +259,7 @@ async function fetchDeribitTickers(currency: string = 'BTC'): Promise<OptionTick
       const strike = parseFloat(parts[2]);
       const type = parts[3] === 'C' ? 'call' : 'put';
       const expiry = parseExpiryDate(parts[1]);
+      if (!expiry) return null;
       
       return {
         contract: {
@@ -289,7 +290,7 @@ async function fetchDeribitTickers(currency: string = 'BTC'): Promise<OptionTick
         underlyingPrice: s.underlying_price,
         timestamp: now,
       };
-    });
+    }).filter((ticker: OptionTicker | null): ticker is OptionTicker => ticker !== null);
 
     cache.set(cacheKey, tickers, CACHE_TTL.tickers);
     return tickers;
@@ -334,6 +335,7 @@ async function fetchDeribitTrades(currency: string = 'BTC', count: number = 100)
       const strike = parseFloat(parts[2]);
       const type = parts[3] === 'C' ? 'call' : 'put';
       const expiry = parseExpiryDate(parts[1]);
+      if (!expiry) return null;
       
       const notionalValue = t.amount * t.index_price;
       const premium = t.price * t.amount * t.index_price;
@@ -367,7 +369,7 @@ async function fetchDeribitTrades(currency: string = 'BTC', count: number = 100)
         isUnusual: isUnusual || isBlock,
         unusualReason: unusualReason.length > 0 ? unusualReason : undefined,
       };
-    });
+    }).filter((trade: OptionTrade | null): trade is OptionTrade => trade !== null);
 
     cache.set(cacheKey, trades, CACHE_TTL.trades);
     return trades;
