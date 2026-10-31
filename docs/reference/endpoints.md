@@ -170,7 +170,7 @@ curl "https://cryptocurrency.cv/api/bitcoin?lang=zh-CN"
 | `/api/ai/source-quality` | AI-powered source scoring & clickbait detection                                                                                                | Groq     |
 | `/api/ai/research`       | Deep-dive research reports on any crypto topic                                                                                                 | Groq     |
 | `/api/detect/ai-content` | AI-generated content detection (offline, no API needed)                                                                                        | None     |
-| `/api/i18n/translate`    | Article translation (18 languages)                                                                                                             | Groq     |
+| `/api/i18n/translate`    | Text translation into any site locale                                                                                                          | Groq     |
 
 **Supported AI Providers (priority order):**
 
