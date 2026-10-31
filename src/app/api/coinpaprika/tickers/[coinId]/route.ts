@@ -9,7 +9,7 @@
  */
 
 import { type NextRequest, NextResponse } from 'next/server';
-import { getTicker } from '@/lib/coinpaprika';
+import { getTicker, MAX_QUOTES, parseQuotes } from '@/lib/coinpaprika';
 
 export const runtime = 'edge';
 export const revalidate = 60;
@@ -29,10 +29,15 @@ export async function GET(
     return NextResponse.json({ error: 'A valid coin ID is required (e.g. btc-bitcoin)' }, { status: 400 });
   }
 
-  try {
-    const searchParams = request.nextUrl.searchParams;
-    const quotes = searchParams.get('quotes') || 'USD';
+  const quotes = parseQuotes(request.nextUrl.searchParams.get('quotes'));
+  if (!quotes) {
+    return NextResponse.json(
+      { error: `quotes must be up to ${MAX_QUOTES} comma-separated currency codes (e.g. USD,BTC)` },
+      { status: 400 }
+    );
+  }
 
+  try {
     const data = await getTicker(coinId, quotes);
     return NextResponse.json(data, {
       headers: {

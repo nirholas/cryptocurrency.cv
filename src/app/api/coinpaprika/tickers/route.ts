@@ -9,7 +9,7 @@
  */
 
 import { type NextRequest, NextResponse } from 'next/server';
-import { getTickers } from '@/lib/coinpaprika';
+import { getTickers, MAX_QUOTES, parseQuotes } from '@/lib/coinpaprika';
 
 export const runtime = 'edge';
 export const revalidate = 300;
@@ -21,10 +21,15 @@ export const revalidate = 300;
  *   - quotes: comma-separated quote currencies (default: 'USD', e.g. 'USD,BTC,ETH')
  */
 export async function GET(request: NextRequest): Promise<NextResponse> {
-  try {
-    const searchParams = request.nextUrl.searchParams;
-    const quotes = searchParams.get('quotes') || 'USD';
+  const quotes = parseQuotes(request.nextUrl.searchParams.get('quotes'));
+  if (!quotes) {
+    return NextResponse.json(
+      { error: `quotes must be up to ${MAX_QUOTES} comma-separated currency codes (e.g. USD,BTC)` },
+      { status: 400 }
+    );
+  }
 
+  try {
     const data = await getTickers(quotes);
     return NextResponse.json(data, {
       headers: {
@@ -32,10 +37,11 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
         'Access-Control-Allow-Origin': '*',
       },
     });
-  } catch {
+  } catch (error) {
+    console.error('coinpaprika tickers route error:', error);
     return NextResponse.json(
       { error: 'Failed to fetch CoinPaprika tickers' },
-      { status: 500 }
+      { status: 502 }
     );
   }
 }
