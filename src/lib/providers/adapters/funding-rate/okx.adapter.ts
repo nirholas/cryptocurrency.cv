@@ -48,7 +48,7 @@ export const okxFundingAdapter: DataProvider<FundingRate[]> = {
       const results = await Promise.allSettled(
         params.symbols.map(async (sym) => {
           const instId = `${sym.toUpperCase().replace('USDT', '')}-USDT-SWAP`;
-          const res = await fetch(`${url}?instId=${instId}`);
+          const res = await fetch(`${url}?instId=${encodeURIComponent(instId)}`);
           if (!res.ok) throw new Error(`OKX ${instId}: ${res.status}`);
           const json: OkxResponse = await res.json();
           return json.data?.[0];

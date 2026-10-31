@@ -10,6 +10,7 @@
 
 import { type NextRequest, NextResponse } from 'next/server';
 import { derivativesChain } from '@/lib/providers/chains/derivatives';
+import { isTradingSymbol } from '@/lib/providers/symbols';
 
 export const runtime = 'edge';
 export const revalidate = 300;
@@ -22,6 +23,12 @@ export const revalidate = 300;
 export async function GET(request: NextRequest): Promise<NextResponse> {
   const searchParams = request.nextUrl.searchParams;
   const symbol = searchParams.get('symbol') || undefined;
+  if (symbol && !isTradingSymbol(symbol)) {
+    return NextResponse.json(
+      { error: 'Invalid symbol', message: 'Use a ticker such as BTC or BTCUSDT' },
+      { status: 400 },
+    );
+  }
 
   try {
     const params = symbol ? { symbols: [symbol] } : {};

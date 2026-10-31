@@ -45,7 +45,7 @@ export const coinglassFundingAdapter: DataProvider<FundingRate[]> = {
     if (!API_KEY) throw new Error('COINGLASS_API_KEY not configured');
 
     const symbol = params.symbols?.[0]?.toUpperCase() || 'BTC';
-    const res = await fetch(`${BASE}/funding-rates-history?symbol=${symbol}&limit=100`, {
+    const res = await fetch(`${BASE}/funding-rates-history?symbol=${encodeURIComponent(symbol)}&limit=100`, {
       headers: { 'CG-API-KEY': API_KEY, Accept: 'application/json' },
     });
 

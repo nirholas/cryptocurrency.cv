@@ -52,7 +52,7 @@ export const coinglassAdapter: DataProvider<OpenInterest[]> = {
 
     // Fetch aggregated OI
     const response = await fetch(
-      `${BASE}/futures/openInterest/chart?symbol=${symbol}&interval=0`,
+      `${BASE}/futures/openInterest/chart?symbol=${encodeURIComponent(symbol)}&interval=0`,
       { headers },
     );
 
