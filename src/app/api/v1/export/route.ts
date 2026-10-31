@@ -22,11 +22,14 @@ import { type NextRequest, NextResponse } from 'next/server';
 import { hybridAuthMiddleware } from '@/lib/x402';
 import { ApiError } from '@/lib/api-error';
 import { createRequestLogger } from '@/lib/logger';
-import { COINGECKO_BASE } from '@/lib/constants';
-
-import { resilientFetchResponse } from '@/lib/resilient-fetch';
+import { getTopCoins } from '@/lib/market-data';
 import { getLlamaProtocols } from '@/lib/apis/llama-bulk';
+
 const ENDPOINT = '/api/v1/export';
+/** CoinGecko's /coins/markets returns at most 250 rows per page. */
+const MAX_COINS = 250;
+const MAX_ROWS = 500;
+const DEFAULT_ROWS = 100;
 
 export async function GET(request: NextRequest) {
   const logger = createRequestLogger(request);
@@ -39,7 +42,8 @@ export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;
   const format = searchParams.get('format') || 'json';
   const type = searchParams.get('type') || 'coins';
-  const limit = Math.min(500, Math.max(1, parseInt(searchParams.get('limit') || '100')));
+  const requested = Number.parseInt(searchParams.get('limit') ?? '', 10);
+  const limit = Math.min(MAX_ROWS, Math.max(1, Number.isNaN(requested) ? DEFAULT_ROWS : requested));
 
   // Validate format
   if (!['json', 'csv'].includes(format)) {
@@ -57,22 +61,10 @@ export async function GET(request: NextRequest) {
     let data: Record<string, unknown>[];
 
     if (type === 'coins') {
-      const response = await fetch(
-        `${COINGECKO_BASE}/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=${limit}&page=1&sparkline=false&price_change_percentage=24h,7d,30d`,
-        {
-          headers: {
-            Accept: 'application/json',
-            'User-Agent': 'CryptoDataAggregator/1.0',
-          },
-          next: { revalidate: 300 },
-        },
-      );
-
-      if (!response.ok) {
-        throw new Error(`Upstream API error: ${response.status}`);
-      }
-
-      data = await response.json();
+      // Shared fetcher: demo-key header, in-process cache and CoinPaprika fallback.
+      const coins = await getTopCoins(Math.min(limit, MAX_COINS));
+      if (coins.length === 0) throw new Error('No market data from CoinGecko or CoinPaprika');
+      data = coins.map(({ sparkline_in_7d: _sparkline, ...coin }) => ({ ...coin }));
     } else if (type === 'defi') {
       const protocols = await getLlamaProtocols();
       data = protocols.slice(0, limit).map((p) => ({
