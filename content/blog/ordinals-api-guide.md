@@ -1,6 +1,6 @@
 ---
 title: "How to Query Bitcoin Ordinals Data via API"
-description: "Learn how to query Bitcoin Ordinals inscription data using the ord API and Hiro's Ordinals API. Fetch inscriptions, collections, and BRC-20 token data programmatically."
+description: "Learn how to query Bitcoin Ordinals inscription data using the ord API. Fetch inscriptions, address holdings, collections and sat rarity, and parse BRC-20 operations."
 date: "2026-03-30"
 author: team
 category: tutorial
@@ -75,79 +75,42 @@ async function getInscriptionsByBlock(blockHeight) {
 }
 ```
 
-## Hiro Ordinals API
+## Listing and Filtering with ord
 
-Hiro (formerly Blockstack) provides a managed Ordinals API with rich indexing:
+Hiro retired its managed Ordinals, Runes and BRC-20 APIs on March 9, 2026 (`api.hiro.so/ordinals/v1` now returns `410 Gone`, see the [deprecation announcement](https://www.hiro.so/blog/upcoming-deprecation-of-ordinals-runes-and-brc-20-apis)). Everything below uses the `ord` JSON API instead, so you can point `ORD_BASE` at your own indexer and avoid depending on a hosted service.
 
 ```javascript
-const HIRO_BASE = 'https://api.hiro.so/ordinals/v1';
-const HIRO_KEY = process.env.HIRO_API_KEY;
-
-async function hiroRequest(path) {
-  const response = await fetch(`${HIRO_BASE}${path}`, {
-    headers: {
-      'Accept': 'application/json',
-      ...(HIRO_KEY && { 'x-hiro-api-key': HIRO_KEY }),
-    },
+// List the latest inscriptions (ord returns ids plus paging flags)
+async function listInscriptions(page = 0) {
+  const response = await fetch(`${ORD_BASE}/inscriptions/${page}`, {
+    headers: { 'Accept': 'application/json' },
   });
-
-  if (!response.ok) throw new Error(`Hiro API error: ${response.status}`);
-  return response.json();
+  if (!response.ok) throw new Error(`ord error: ${response.status}`);
+  return response.json(); // { ids, more, page_index }
 }
 
-// Get inscription stats
-async function getInscriptionStats() {
-  return hiroRequest('/stats/inscriptions');
-}
-
-// List inscriptions with filtering
-async function listInscriptions({
-  genesis_block_height,
-  mime_type,
-  order = 'desc',
-  limit = 20,
-  offset = 0,
-} = {}) {
-  const params = new URLSearchParams({
-    order,
-    limit: limit.toString(),
-    offset: offset.toString(),
-    ...(genesis_block_height && { genesis_block_height: genesis_block_height.toString() }),
-    ...(mime_type && { mime_type }),
-  });
-
-  return hiroRequest(`/inscriptions?${params}`);
-}
-
-// Get specific inscription
-async function getHiroInscription(inscriptionId) {
-  return hiroRequest(`/inscriptions/${inscriptionId}`);
-}
-
-// Get inscriptions for an address
+// Get inscriptions held by an address
 async function getAddressInscriptions(address) {
-  return hiroRequest(`/inscriptions?address=${address}`);
-}
-
-// Get BRC-20 tokens
-async function getBRC20Tokens({ ticker, limit = 20 } = {}) {
-  const params = new URLSearchParams({
-    limit: limit.toString(),
-    ...(ticker && { ticker }),
+  const response = await fetch(`${ORD_BASE}/address/${address}`, {
+    headers: { 'Accept': 'application/json' },
   });
-
-  return hiroRequest(`/brc-20/tokens?${params}`);
+  if (!response.ok) throw new Error(`ord error: ${response.status}`);
+  return response.json(); // { outputs, inscriptions, sat_balance, runes_balances }
 }
 
-// Get BRC-20 balances for an address
-async function getBRC20Balances(address) {
-  return hiroRequest(`/brc-20/balances/${address}`);
+// Get the children of a parent inscription (how collections are modelled)
+async function getChildren(parentId, page = 0) {
+  const response = await fetch(`${ORD_BASE}/r/children/${parentId}/${page}`, {
+    headers: { 'Accept': 'application/json' },
+  });
+  if (!response.ok) throw new Error(`ord error: ${response.status}`);
+  return response.json(); // { ids, more, page }
 }
 ```
 
 ## Working with BRC-20 Tokens
 
-BRC-20 is an experimental token standard built on Ordinals using JSON inscriptions:
+BRC-20 is an experimental token standard built on Ordinals using JSON inscriptions. `ord` does not index BRC-20 balances, so balance queries need a BRC-20 indexer that you run yourself; the snippet below shows how to recognise the operations in inscription content:
 
 ```javascript
 // BRC-20 operations are JSON-encoded inscriptions
@@ -199,10 +162,10 @@ function parseBRC20Inscription(content) {
 ## Building an Ordinals Collection Viewer
 
 ```javascript
-async function getCollectionInscriptions(collectionName) {
-  // Hiro has collection data
-  const response = await hiroRequest(`/inscriptions?collection=${encodeURIComponent(collectionName)}&limit=100`);
-  return response.results || [];
+async function getCollectionInscriptions(parentInscriptionId) {
+  // Collections are parent inscriptions; their members are the parent's children
+  const { ids } = await getChildren(parentInscriptionId);
+  return Promise.all(ids.map(getInscription));
 }
 
 // Display inscription with its content
@@ -210,8 +173,8 @@ async function displayInscription(inscription) {
   console.log(`ID: ${inscription.id}`);
   console.log(`Number: #${inscription.number}`);
   console.log(`Content type: ${inscription.content_type}`);
-  console.log(`Genesis block: ${inscription.genesis_block_height}`);
-  console.log(`Sat ordinal: ${inscription.sat_ordinal}`);
+  console.log(`Genesis block: ${inscription.genesis_height}`);
+  console.log(`Sat ordinal: ${inscription.sat}`);
   console.log(`Sat rarity: ${inscription.sat_rarity}`);
   console.log(`Value: ${inscription.value} sats`);
   console.log(`Preview URL: https://ordinals.com/preview/${inscription.id}`);
@@ -219,10 +182,9 @@ async function displayInscription(inscription) {
 }
 
 // Fetch and display latest inscriptions
-const latest = await listInscriptions({ limit: 10 });
-console.log(`Total inscriptions: ${latest.total}`);
-for (const inscription of latest.results) {
-  await displayInscription(inscription);
+const latest = await listInscriptions();
+for (const id of latest.ids.slice(0, 10)) {
+  await displayInscription(await getInscription(id));
   console.log('---');
 }
 ```
@@ -245,19 +207,14 @@ function getSatRarityInfo(rarity) {
   return rarities[rarity] || 'Unknown rarity';
 }
 
-// Fetch rare sat inscriptions
-async function getRareSatInscriptions(minRarity = 'rare') {
-  const rarities = ['mythic', 'legendary', 'epic', 'rare'];
-  const minIndex = rarities.indexOf(minRarity);
-  const targetRarities = rarities.slice(0, minIndex + 1);
-
-  const results = await Promise.all(
-    targetRarities.map(r =>
-      hiroRequest(`/inscriptions?sat_rarity=${r}&limit=10`)
-    )
-  );
-
-  return results.flatMap(r => r.results || []);
+// Look up a sat and its inscriptions (ord reports the rarity itself)
+async function getSat(satNumber) {
+  const response = await fetch(`${ORD_BASE}/sat/${satNumber}`, {
+    headers: { 'Accept': 'application/json' },
+  });
+  if (!response.ok) throw new Error(`ord error: ${response.status}`);
+  const sat = await response.json(); // { number, rarity, inscriptions, ... }
+  return { ...sat, description: getSatRarityInfo(sat.rarity) };
 }
 ```
 
@@ -276,4 +233,4 @@ async function getOrdinalsNews() {
 
 ## Conclusion
 
-Bitcoin Ordinals created an entirely new category of on-chain digital artifacts. The `ord` daemon API and Hiro's managed Ordinals API provide comprehensive access to inscription data, BRC-20 token states, and satoshi rarity information. As the ecosystem matures with new standards and tooling, developers who understand these APIs will be well-positioned to build the next generation of Bitcoin-native applications.
+Bitcoin Ordinals created an entirely new category of on-chain digital artifacts. The `ord` daemon API provides comprehensive access to inscription data, BRC-20 token states, and satoshi rarity information. As the ecosystem matures with new standards and tooling, developers who understand these APIs will be well-positioned to build the next generation of Bitcoin-native applications.
