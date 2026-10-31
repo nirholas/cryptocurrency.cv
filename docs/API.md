@@ -1663,7 +1663,7 @@ DeFi yield farming opportunities
 
 ### `GET /api/gaming`
 
-Blockchain gaming ecosystem overview
+Blockchain gaming ecosystem overview. Games are ranked by daily active users when `FOOTPRINT_API_KEY` is set and by value locked (DefiLlama) otherwise; `rankedBy` says which. Metrics a provider does not report are `null`, not `0`.
 
 **Price:** `$0.001/request`
 
@@ -1686,8 +1686,8 @@ Top blockchain games by activity and volume
 | Parameter | Type | Required | Default | Description |
 |-----------|------|----------|---------|-------------|
 | `limit` | number | No | `25` | Maximum number of results to return |
-| `sort` | string | No | `dau` | Sort field |
-| `chain` | string | No | — | Blockchain network (e.g., ethereum, solana) |
+| `sort` | string | No | — | Sort field: `dau`, `players`, `volume` or `tvl`. Defaults to the provider ranking (`sortBy` in the response). Games missing the metric are listed last. |
+| `chain` | string | No | — | Blockchain network (e.g., Ronin, Polygon; `all` for every chain) |
 
 ---
 

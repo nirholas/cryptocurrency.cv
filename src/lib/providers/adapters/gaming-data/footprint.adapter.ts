@@ -16,6 +16,7 @@
  */
 
 import type { DataProvider, FetchParams, RateLimitConfig } from '../../types';
+import { summarizeGames } from './summarize';
 import type { GamingOverview, GameData } from './types';
 
 const FP_BASE = 'https://api.footprint.network/api/v1';
@@ -23,11 +24,26 @@ const FP_API_KEY = process.env.FOOTPRINT_API_KEY ?? '';
 
 const RATE_LIMIT: RateLimitConfig = { maxRequests: 20, windowMs: 60_000 };
 
+interface FootprintGame {
+  protocol_name?: string;
+  protocol_slug?: string;
+  chain?: string;
+  active_addresses_24h?: number | null;
+  transactions_24h?: number | null;
+  volume_24h?: number | null;
+  tvl?: number | null;
+  logo?: string | null;
+}
+
+function numberOrNull(value: number | null | undefined): number | null {
+  return typeof value === 'number' && Number.isFinite(value) ? value : null;
+}
+
 export const footprintAdapter: DataProvider<GamingOverview> = {
   name: 'footprint',
   description: 'Footprint Analytics — on-chain gaming data',
-  priority: 2,
-  weight: 0.40,
+  priority: 1,
+  weight: 0.5,
   rateLimit: RATE_LIMIT,
   capabilities: ['gaming-data'],
 
@@ -43,36 +59,25 @@ export const footprintAdapter: DataProvider<GamingOverview> = {
     });
 
     if (!res.ok) throw new Error(`Footprint HTTP ${res.status}`);
-    const json = await res.json();
+    const json = (await res.json()) as { data?: FootprintGame[] };
+    const timestamp = new Date().toISOString();
 
-     
-    const games: GameData[] = (json.data ?? []).map((d: any) => ({
-      id: d.protocol_slug ?? d.protocol_name ?? '',
+    const games: GameData[] = (json.data ?? []).map((d) => ({
       name: d.protocol_name ?? '',
+      slug: d.protocol_slug ?? d.protocol_name ?? '',
       chain: d.chain ?? 'multi',
-      dau: d.active_addresses_24h ?? 0,
-      transactions24h: d.transactions_24h ?? 0,
-      volume24h: d.volume_24h ?? 0,
-      volumeChange24h: d.volume_change_24h ?? 0,
+      dau: numberOrNull(d.active_addresses_24h),
+      transactions24h: numberOrNull(d.transactions_24h),
+      volume24h: numberOrNull(d.volume_24h),
       category: 'game',
-      balance: d.tvl ?? 0,
-      imageUrl: d.logo ?? null,
-      source: 'footprint',
-      timestamp: new Date().toISOString(),
+      balance: numberOrNull(d.tvl),
+      change24h: null,
+      logo: d.logo ?? null,
+      url: null,
+      timestamp,
     }));
 
-    const byChain: Record<string, number> = {};
-    for (const g of games) {
-      byChain[g.chain] = (byChain[g.chain] ?? 0) + g.dau;
-    }
-
-    return {
-      totalDau: games.reduce((s, g) => s + g.dau, 0),
-      totalVolume24h: games.reduce((s, g) => s + g.volume24h, 0),
-      topGames: games.slice(0, 25),
-      byChain,
-      timestamp: new Date().toISOString(),
-    };
+    return summarizeGames(games.slice(0, 25), 'dau', 'footprint');
   },
 
   async healthCheck(): Promise<boolean> {

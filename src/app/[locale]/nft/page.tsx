@@ -233,6 +233,43 @@ export default async function NFTPage({ params }: Props) {
 
   /* ── gaming data ── */
   const topGames: GameData[] = gaming?.topGames?.slice(0, 10) ?? [];
+  const gamingColumns = {
+    dau: topGames.some((g) => g.dau !== null),
+    volume: topGames.some((g) => g.volume24h !== null),
+    tvl: topGames.some((g) => g.balance !== null),
+    change: topGames.some((g) => g.change24h !== null),
+  };
+  const gamingStats: { label: string; value: string; icon: string }[] = gaming
+    ? [
+        gaming.totalDau !== null && {
+          label: "Total DAU",
+          value: gaming.totalDau.toLocaleString(),
+          icon: "👥",
+        },
+        gaming.totalVolume24h !== null && {
+          label: "Gaming Volume (24h)",
+          value: formatLargeNumber(gaming.totalVolume24h),
+          icon: "💎",
+        },
+        gaming.totalTvl !== null && {
+          label: "Value Locked",
+          value: formatLargeNumber(gaming.totalTvl),
+          icon: "🏦",
+        },
+        {
+          label: "Games Tracked",
+          value: gaming.topGames.length.toLocaleString(),
+          icon: "🕹️",
+        },
+        {
+          label: "Chains",
+          value: Object.keys(gaming.byChain).length.toLocaleString(),
+          icon: "⛓️",
+        },
+      ]
+        .filter((stat): stat is { label: string; value: string; icon: string } => Boolean(stat))
+        .slice(0, 4)
+    : [];
 
   /* ── data freshness ── */
   const lastUpdated = market?.timestamp
@@ -386,38 +423,24 @@ export default async function NFTPage({ params }: Props) {
             title="Blockchain Gaming"
             subtitle={
               topGames.length > 0
-                ? `Top ${topGames.length} games by daily active users`
+                ? `Top ${topGames.length} games by ${
+                    gaming?.rankedBy === "dau" ? "daily active users" : "value locked"
+                  }`
                 : "Crypto gaming & metaverse data"
             }
             icon="🎮"
           />
 
-          {gaming && (
+          {gamingStats.length > 0 && (
             <div className="grid gap-4 grid-cols-2 md:grid-cols-4 mb-6">
-              <StatCard
-                label="Total DAU"
-                value={gaming.totalDau.toLocaleString()}
-                icon="👥"
-              />
-              <StatCard
-                label="Gaming Volume (24h)"
-                value={formatLargeNumber(gaming.totalVolume24h)}
-                icon="💎"
-              />
-              <StatCard
-                label="Games Tracked"
-                value={topGames.length.toLocaleString()}
-                icon="🕹️"
-              />
-              <StatCard
-                label="Chains"
-                value={
-                  gaming.byChain
-                    ? Object.keys(gaming.byChain).length.toLocaleString()
-                    : "—"
-                }
-                icon="⛓️"
-              />
+              {gamingStats.map((stat) => (
+                <StatCard
+                  key={stat.label}
+                  label={stat.label}
+                  value={stat.value}
+                  icon={stat.icon}
+                />
+              ))}
             </div>
           )}
 
@@ -435,15 +458,26 @@ export default async function NFTPage({ params }: Props) {
                     <th className="px-3 py-2.5 text-left text-[10px] font-semibold uppercase tracking-wider text-text-tertiary">
                       Chain
                     </th>
-                    <th className="px-3 py-2.5 text-left text-[10px] font-semibold uppercase tracking-wider text-text-tertiary">
-                      Players (24h)
-                    </th>
-                    <th className="px-3 py-2.5 text-left text-[10px] font-semibold uppercase tracking-wider text-text-tertiary">
-                      Volume (24h)
-                    </th>
-                    <th className="px-3 py-2.5 text-left text-[10px] font-semibold uppercase tracking-wider text-text-tertiary">
-                      Category
-                    </th>
+                    {gamingColumns.dau && (
+                      <th className="px-3 py-2.5 text-left text-[10px] font-semibold uppercase tracking-wider text-text-tertiary">
+                        Players (24h)
+                      </th>
+                    )}
+                    {gamingColumns.volume && (
+                      <th className="px-3 py-2.5 text-left text-[10px] font-semibold uppercase tracking-wider text-text-tertiary">
+                        Volume (24h)
+                      </th>
+                    )}
+                    {gamingColumns.tvl && (
+                      <th className="px-3 py-2.5 text-left text-[10px] font-semibold uppercase tracking-wider text-text-tertiary">
+                        Value Locked
+                      </th>
+                    )}
+                    {gamingColumns.change && (
+                      <th className="px-3 py-2.5 text-left text-[10px] font-semibold uppercase tracking-wider text-text-tertiary">
+                        24h
+                      </th>
+                    )}
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-border">
@@ -456,28 +490,63 @@ export default async function NFTPage({ params }: Props) {
                         {i + 1}
                       </td>
                       <td className="px-3 py-3">
-                        <p className="font-semibold text-text-primary">
-                          {game.name}
-                        </p>
+                        {game.url ? (
+                          <a
+                            href={game.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="font-semibold text-text-primary hover:underline"
+                          >
+                            {game.name}
+                          </a>
+                        ) : (
+                          <p className="font-semibold text-text-primary">
+                            {game.name}
+                          </p>
+                        )}
                       </td>
                       <td className="px-3 py-3">
                         <Badge variant="default" className="text-[9px]">
                           {game.chain}
                         </Badge>
                       </td>
-                      <td className="px-3 py-3 tabular-nums text-text-primary">
-                        {game.dau > 0 ? game.dau.toLocaleString() : "—"}
-                      </td>
-                      <td className="px-3 py-3 tabular-nums text-text-primary">
-                        {game.volume24h > 0
-                          ? formatLargeNumber(game.volume24h)
-                          : "—"}
-                      </td>
-                      <td className="px-3 py-3">
-                        <span className="text-xs text-text-secondary capitalize">
-                          {game.category}
-                        </span>
-                      </td>
+                      {gamingColumns.dau && (
+                        <td className="px-3 py-3 tabular-nums text-text-primary">
+                          {game.dau !== null && game.dau > 0
+                            ? game.dau.toLocaleString()
+                            : "—"}
+                        </td>
+                      )}
+                      {gamingColumns.volume && (
+                        <td className="px-3 py-3 tabular-nums text-text-primary">
+                          {game.volume24h !== null && game.volume24h > 0
+                            ? formatLargeNumber(game.volume24h)
+                            : "—"}
+                        </td>
+                      )}
+                      {gamingColumns.tvl && (
+                        <td className="px-3 py-3 tabular-nums text-text-primary">
+                          {game.balance !== null && game.balance > 0
+                            ? formatLargeNumber(game.balance)
+                            : "—"}
+                        </td>
+                      )}
+                      {gamingColumns.change && (
+                        <td
+                          className={cn(
+                            "px-3 py-3 tabular-nums",
+                            game.change24h === null
+                              ? "text-text-tertiary"
+                              : game.change24h >= 0
+                                ? "text-green-500"
+                                : "text-red-500",
+                          )}
+                        >
+                          {game.change24h === null
+                            ? "—"
+                            : `${game.change24h >= 0 ? "+" : ""}${game.change24h.toFixed(2)}%`}
+                        </td>
+                      )}
                     </tr>
                   ))}
                 </tbody>

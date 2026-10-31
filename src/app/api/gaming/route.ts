@@ -11,8 +11,9 @@
 /**
  * GET /api/gaming
  *
- * Returns blockchain gaming market data — top games by DAU,
- * transaction volume, chain breakdown.
+ * Returns blockchain gaming market data: top games, totals and games per
+ * chain. Games are ranked by daily active users when Footprint is keyed and
+ * by value locked otherwise (see `rankedBy`). Unreported metrics are null.
  */
 
 import { NextResponse } from 'next/server';
@@ -37,10 +38,7 @@ export async function GET() {
   } catch (error) {
     console.error('[Gaming] Error:', error);
     return NextResponse.json(
-      {
-        error: 'Failed to fetch gaming data',
-        message: error instanceof Error ? error.message : 'Unknown',
-      },
+      { error: 'Failed to fetch gaming data' },
       { status: 502 },
     );
   }

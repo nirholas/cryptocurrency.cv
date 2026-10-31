@@ -244,7 +244,7 @@ export {
   createNFTMarketChain,
 } from './adapters/nft-market';
 
-// Gaming Data (DappRadar → PlayToEarn → Footprint)
+// Gaming Data (Footprint → DefiLlama)
 export {
   gamingDataChain,
   gamingDataConsensusChain,

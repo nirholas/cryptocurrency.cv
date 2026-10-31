@@ -13,7 +13,7 @@
  *
  * Chains:
  * - `nftMarketChain` — NFT data from OpenSea, Reservoir, SimpleHash
- * - `gamingDataChain` — Gaming data from DappRadar, PlayToEarn, Footprint
+ * - `gamingDataChain` — Gaming data from Footprint (keyed) and DefiLlama
  *
  * @module providers/chains/nft-gaming
  */
@@ -31,4 +31,4 @@ export {
 } from '../adapters/gaming-data';
 
 export type { NFTMarketOverview, NFTCollectionSummary } from '../adapters/nft-market';
-export type { GamingOverview, GameData } from '../adapters/gaming-data';
+export type { GamingOverview, GameData, GamingRanking } from '../adapters/gaming-data';

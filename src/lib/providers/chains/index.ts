@@ -210,7 +210,7 @@ export function registerAllChains(): void {
     description: 'NFT market data from OpenSea, Reservoir, SimpleHash',
   });
   registry.register('gaming-data', nftGaming.gamingDataChain, {
-    description: 'Blockchain gaming data from DappRadar, PlayToEarn, Footprint',
+    description: 'Blockchain gaming data from Footprint (keyed) and DefiLlama',
   });
 
   // ── Macro ────────────────────────────────────────────────────────────────

@@ -159,7 +159,7 @@ registry.register('nft-market', nftMarketChain, {
 
 // Gaming Data
 registry.register('gaming-data', gamingDataChain, {
-  description: 'Blockchain gaming data from DappRadar, PlayToEarn, and Footprint',
+  description: 'Blockchain gaming data from Footprint (keyed) and DefiLlama',
 });
 
 // Macro/TradFi Data

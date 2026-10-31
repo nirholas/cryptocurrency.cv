@@ -1284,8 +1284,8 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
     description: "Top blockchain games by activity and volume",
     parameters: {
       limit: { type: "number", description: "Maximum number of results to return", default: "25" },
-      sort: { type: "string", description: "Sort field", default: "dau" },
-      chain: { type: "string", description: "Blockchain network (e.g., ethereum, solana)" },
+      sort: { type: "string", description: "Sort field: dau, players, volume or tvl (default: provider ranking)" },
+      chain: { type: "string", description: "Blockchain network (e.g., Ronin, Polygon; all for every chain)" },
     },
     outputSchemas: {"GET":{"type":"object","properties":{"data":{},"count":{"type":"number"},"sortBy":{},"chain":{},"_lineage":{},"_cached":{}}}},
   },

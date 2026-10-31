@@ -11,12 +11,14 @@
 /**
  * Gaming Data Chain — Pre-wired provider chain for blockchain gaming data
  *
- * | Provider    | Priority | Weight | Rate Limit  | Coverage             |
- * |-------------|----------|--------|-------------|----------------------|
- * | DappRadar   | 1        | 0.60   | 30/min      | 15,000+ dApps        |
- * | PlayToEarn  | 2        | 0.40   | 60/min      | Community-curated    |
+ * | Provider   | Priority | Weight | Rate Limit | Coverage                          |
+ * |------------|----------|--------|------------|-----------------------------------|
+ * | Footprint  | 1        | 0.50   | 20/min     | Players, volume (FOOTPRINT_API_KEY) |
+ * | DefiLlama  | 2        | 0.50   | 300/min    | Value locked, keyless             |
  *
- * Default strategy: `fallback` (DappRadar → PlayToEarn)
+ * Default strategy: `fallback` (Footprint → DefiLlama). Footprint joins the
+ * chain only when FOOTPRINT_API_KEY is set. DappRadar's API and the
+ * PlayToEarn host were shut down, so they are no longer providers.
  *
  * @example
  * ```ts
@@ -24,7 +26,7 @@
  *
  * const result = await gamingDataChain.fetch({ chain: 'all', limit: 25 });
  * console.log(result.data.topGames);
- * console.log(result.lineage.provider); // 'dappradar'
+ * console.log(result.data.rankedBy); // 'tvl' without a Footprint key
  * ```
  *
  * @module providers/adapters/gaming-data
@@ -33,11 +35,10 @@
 import type { ProviderChainConfig, ResolutionStrategy } from '../../types';
 import { ProviderChain } from '../../provider-chain';
 import type { GamingOverview } from './types';
-import { dappradarAdapter } from './dappradar.adapter';
-import { playtoearnAdapter } from './playtoearn.adapter';
+import { defillamaGamingAdapter } from './defillama.adapter';
 import { footprintAdapter } from './footprint.adapter';
 
-export type { GamingOverview, GameData } from './types';
+export type { GamingOverview, GameData, GamingRanking } from './types';
 
 // =============================================================================
 // TYPES
@@ -50,11 +51,9 @@ export interface GamingDataChainOptions {
   cacheTtlSeconds?: number;
   /** Whether to serve stale cache on total failure. Default: true */
   staleWhileError?: boolean;
-  /** Whether to include DappRadar adapter. Default: true */
-  includeDappRadar?: boolean;
-  /** Whether to include PlayToEarn adapter. Default: true */
-  includePlayToEarn?: boolean;
-  /** Whether to include Footprint Analytics adapter. Default: true */
+  /** Whether to include the DefiLlama adapter. Default: true */
+  includeDefiLlama?: boolean;
+  /** Whether to include Footprint Analytics. Default: true when FOOTPRINT_API_KEY is set */
   includeFootprint?: boolean;
 }
 
@@ -72,9 +71,8 @@ export function createGamingDataChain(
     strategy = 'fallback',
     cacheTtlSeconds = 300,
     staleWhileError = true,
-    includeDappRadar = true,
-    includePlayToEarn = true,
-    includeFootprint = true,
+    includeDefiLlama = true,
+    includeFootprint = Boolean(process.env.FOOTPRINT_API_KEY),
   } = options;
 
   const config: Partial<ProviderChainConfig> = {
@@ -85,16 +83,12 @@ export function createGamingDataChain(
 
   const chain = new ProviderChain<GamingOverview>('gaming-data', config);
 
-  if (includeDappRadar) {
-    chain.addProvider(dappradarAdapter);
-  }
-
-  if (includePlayToEarn) {
-    chain.addProvider(playtoearnAdapter);
-  }
-
   if (includeFootprint) {
     chain.addProvider(footprintAdapter);
+  }
+
+  if (includeDefiLlama) {
+    chain.addProvider(defillamaGamingAdapter);
   }
 
   return chain;

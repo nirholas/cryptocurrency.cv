@@ -11,53 +11,53 @@
 /**
  * GET /api/gaming/top
  *
- * Returns top blockchain games ranked by daily active users (DAU),
- * transaction volume, and player count.
+ * Returns top blockchain games.
+ *
+ * Query: `limit` (1-100, default 25), `chain` (e.g. `Ronin`; `all` for every
+ * chain) and `sort` (`dau`, `players`, `volume` or `tvl`; default is the
+ * provider's own ranking, reported as `sortBy`). Games missing the sort
+ * metric are listed last.
  */
 
 import { NextResponse } from 'next/server';
 import { gamingDataChain } from '@/lib/providers/adapters/gaming-data';
+import { parseGameSort, sortGames } from '@/lib/providers/adapters/gaming-data/rank';
 
 export const dynamic = 'force-dynamic';
-export const revalidate = 300; // ISR: top games refreshes every 5 min
+
+const DEFAULT_LIMIT = 25;
+const MAX_LIMIT = 100;
+
+function parseLimit(value: string | null): number {
+  const parsed = Number.parseInt(value ?? '', 10);
+  if (!Number.isFinite(parsed)) return DEFAULT_LIMIT;
+  return Math.min(Math.max(parsed, 1), MAX_LIMIT);
+}
 
 export async function GET(request: Request) {
   try {
     const { searchParams } = new URL(request.url);
-    const limit = Math.min(parseInt(searchParams.get('limit') || '25', 10), 100);
-    const sortBy = searchParams.get('sort') || 'dau'; // dau | volume | players
-    const chain = searchParams.get('chain') || undefined;
+    const limit = parseLimit(searchParams.get('limit'));
+    const sortParam = searchParams.get('sort');
+    const sortKey = parseGameSort(sortParam);
+    if (sortParam && !sortKey) {
+      return NextResponse.json(
+        { error: 'Invalid sort. Use dau, players, volume or tvl.' },
+        { status: 400 },
+      );
+    }
+    const chainParam = searchParams.get('chain')?.trim();
+    const chain = chainParam && chainParam.toLowerCase() !== 'all' ? chainParam : undefined;
 
-    const result = await gamingDataChain.fetch({
-      limit,
-      chain,
-      extra: { sortBy },
-    });
-
-    const games = Array.isArray(result.data) ? result.data : [];
-
-    // Sort by chosen metric
-    const sorted = [...games]
-      .sort((a, b) => {
-        const aVal = a as Record<string, unknown>;
-        const bVal = b as Record<string, unknown>;
-        switch (sortBy) {
-          case 'volume':
-            return ((bVal.volume as number) ?? 0) - ((aVal.volume as number) ?? 0);
-          case 'players':
-            return ((bVal.users as number) ?? 0) - ((aVal.users as number) ?? 0);
-          case 'dau':
-          default:
-            return ((bVal.dau as number) ?? 0) - ((aVal.dau as number) ?? 0);
-        }
-      })
-      .slice(0, limit);
+    const result = await gamingDataChain.fetch({ limit, chain });
+    const games = result.data.topGames;
+    const sorted = (sortKey ? sortGames(games, sortKey) : games).slice(0, limit);
 
     return NextResponse.json(
       {
         data: sorted,
         count: sorted.length,
-        sortBy,
+        sortBy: sortKey ?? result.data.rankedBy,
         chain: chain || 'all',
         _lineage: result.lineage,
         _cached: result.cached,
@@ -69,10 +69,7 @@ export async function GET(request: Request) {
   } catch (error) {
     console.error('[Gaming/Top] Error:', error);
     return NextResponse.json(
-      {
-        error: 'Failed to fetch top games',
-        message: error instanceof Error ? error.message : 'Unknown',
-      },
+      { error: 'Failed to fetch top games' },
       { status: 502 },
     );
   }
