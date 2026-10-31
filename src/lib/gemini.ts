@@ -459,7 +459,7 @@ export async function synthesizeReport(
     ],
     {
       // Use Pro for reports (better reasoning)
-      model: newsArticles.length > 200 ? 'gemini-2.5-pro-preview-06-05' : 'gemini-2.0-flash',
+      model: newsArticles.length > 200 ? 'gemini-2.5-pro' : 'gemini-2.0-flash',
       systemInstruction: `You are a senior crypto market analyst at a tier-1 research firm. Generate institutional-quality ${reportType} market reports. Be data-driven, cite specific articles by number, and provide actionable insights.
 
 Return valid JSON with this structure:

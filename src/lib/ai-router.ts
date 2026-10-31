@@ -8,7 +8,7 @@
  * For licensing inquiries: nirholas@users.noreply.github.com
  */
 
-import { GROQ_MODEL, OPENAI_MODEL } from './ai-models';
+import { ANTHROPIC_MODEL, GROQ_MODEL, OPENAI_MODEL } from './ai-models';
 import { getGeminiKey, getOpenRouterKey } from './ai-provider';
 
 /**
@@ -187,7 +187,7 @@ export const MODEL_REGISTRY: ModelSpec[] = [
   },
   {
     provider: 'gemini',
-    model: 'gemini-2.5-pro-preview-06-05',
+    model: 'gemini-2.5-pro',
     displayName: 'Gemini 2.5 Pro',
     contextWindow: 1_048_576,
     maxOutput: 65_536,
@@ -205,10 +205,10 @@ export const MODEL_REGISTRY: ModelSpec[] = [
   // ── Anthropic Claude ───────────────────────────────────────────────
   {
     provider: 'anthropic',
-    model: 'claude-sonnet-4-20250514',
-    displayName: 'Claude Sonnet 4',
-    contextWindow: 200_000,
-    maxOutput: 16_384,
+    model: ANTHROPIC_MODEL,
+    displayName: 'Claude Sonnet 4.6',
+    contextWindow: 1_000_000,
+    maxOutput: 64_000,
     inputCostPer1M: 3.00,
     outputCostPer1M: 15.00,
     tokensPerSecond: 120,
@@ -221,12 +221,12 @@ export const MODEL_REGISTRY: ModelSpec[] = [
   },
   {
     provider: 'anthropic',
-    model: 'claude-opus-4-20250514',
-    displayName: 'Claude Opus 4',
-    contextWindow: 200_000,
-    maxOutput: 32_000,
-    inputCostPer1M: 15.00,
-    outputCostPer1M: 75.00,
+    model: 'claude-opus-4-6',
+    displayName: 'Claude Opus 4.6',
+    contextWindow: 1_000_000,
+    maxOutput: 64_000,
+    inputCostPer1M: 5.00,
+    outputCostPer1M: 25.00,
     tokensPerSecond: 60,
     strengths: ['reason', 'generate', 'code'],
     envKey: 'ANTHROPIC_API_KEY',

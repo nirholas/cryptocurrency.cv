@@ -50,7 +50,7 @@
  */
 
 import { metrics } from './telemetry';
-import { GROQ_MODEL, OPENAI_MODEL, OPENROUTER_MODEL } from './ai-models';
+import { ANTHROPIC_MODEL, GROQ_MODEL, OPENAI_MODEL, OPENROUTER_MODEL } from './ai-models';
 import { getOpenRouterKey } from './ai-provider';
 
 // ---------------------------------------------------------------------------
@@ -149,7 +149,7 @@ const PROVIDERS: Record<StreamProvider, ProviderConfig> = {
         return json.delta?.text || json.content_block?.text || null;
       } catch { return null; }
     },
-    getDefaultModel: () => process.env.ANTHROPIC_MODEL || 'claude-sonnet-4-20250514',
+    getDefaultModel: () => ANTHROPIC_MODEL,
     getApiKey: () => process.env.ANTHROPIC_API_KEY,
     outputCostPer1M: 15,
   },
