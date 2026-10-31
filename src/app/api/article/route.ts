@@ -9,9 +9,9 @@
  */
 
 import { NextResponse } from 'next/server';
-import { lookup } from 'dns/promises';
 import DOMPurify from 'isomorphic-dompurify';
 import { aiComplete, getAIConfigOrNull } from '@/lib/ai-provider';
+import { safeFetch, UnsafeUrlError } from '@/lib/safe-fetch';
 
 const MAX_RESPONSE_BYTES = 5 * 1024 * 1024; // 5 MB
 const FETCH_TIMEOUT_MS = 10_000; // 10 seconds
@@ -31,89 +31,20 @@ interface ArticleContent {
 }
 
 /**
- * Check if a URL targets a private/reserved IP range (SSRF protection).
- * Blocks requests to internal networks, cloud metadata endpoints, and loopback.
- */
-function isPrivateOrReservedUrl(urlString: string): boolean {
-  const parsed = new URL(urlString);
-  const hostname = parsed.hostname.toLowerCase();
-
-  // Block well-known metadata endpoints
-  const blockedHostnames = [
-    'localhost',
-    'metadata.google.internal',
-    'metadata.google',
-    'instance-data',
-  ];
-  if (blockedHostnames.includes(hostname)) return true;
-
-  // Parse IPv4 octets
-  const ipv4Match = hostname.match(/^(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})$/);
-  if (ipv4Match) {
-    const [, a, b] = ipv4Match.map(Number);
-    if (
-      a === 0 ||          // 0.0.0.0/8
-      a === 10 ||         // 10.0.0.0/8
-      a === 127 ||        // 127.0.0.0/8 (loopback)
-      (a === 169 && b === 254) || // 169.254.0.0/16 (link-local / cloud metadata)
-      (a === 172 && b >= 16 && b <= 31) || // 172.16.0.0/12
-      (a === 192 && b === 168) // 192.168.0.0/16
-    ) {
-      return true;
-    }
-  }
-
-  // Block IPv6 private ranges (fc00::/7, fe80::/10, ::1)
-  const bare = hostname.replace(/^\[|\]$/g, '');
-  if (
-    bare === '::1' ||
-    /^(fc|fd)/i.test(bare) ||
-    /^fe[89ab]/i.test(bare)
-  ) {
-    return true;
-  }
-
-  return false;
-}
-
-/**
- * Resolve hostname and verify the resolved IP is not private (prevents DNS rebinding).
- */
-async function assertPublicDns(hostname: string): Promise<void> {
-  // Skip DNS check for raw IP addresses (already checked by isPrivateOrReservedUrl)
-  if (/^\d{1,3}(\.\d{1,3}){3}$/.test(hostname) || hostname.includes(':')) return;
-
-  const { address } = await lookup(hostname);
-
-  // Build a synthetic URL so we can reuse the existing check
-  if (isPrivateOrReservedUrl(`http://${address}/`)) {
-    throw new Error('URL resolved to a private or reserved address');
-  }
-}
-
-/**
  * Extract article content from URL by fetching the page
  */
 async function fetchArticleContent(url: string): Promise<string> {
-  if (isPrivateOrReservedUrl(url)) {
-    throw new Error('URL targets a private or reserved address');
-  }
-
-  // DNS rebinding protection: resolve hostname and verify it's public
-  const hostname = new URL(url).hostname;
-  await assertPublicDns(hostname);
-
   try {
     const controller = new AbortController();
     const timeout = setTimeout(() => controller.abort(), FETCH_TIMEOUT_MS);
 
-    const response = await fetch(url, {
+    // safeFetch refuses private and internal targets, including via redirects.
+    const response = await safeFetch(url, {
       headers: {
         'User-Agent': 'Mozilla/5.0 (compatible; FreeCryptoNews/1.0)',
         'Accept': 'text/html,application/xhtml+xml',
       },
       signal: controller.signal,
-      redirect: 'follow',
     });
 
     clearTimeout(timeout);
@@ -283,6 +214,9 @@ export async function GET(request: Request) {
       },
     });
   } catch (error) {
+    if (error instanceof UnsafeUrlError) {
+      return NextResponse.json({ error: 'url must point to a public web page' }, { status: 400 });
+    }
     console.error('Article fetch error:', error);
     const message = error instanceof Error ? error.message : 'Failed to fetch article content';
     const is429 = message.includes('429');

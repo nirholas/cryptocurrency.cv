@@ -36,6 +36,7 @@
 
 import { type NextRequest, NextResponse } from 'next/server';
 
+import { assertPublicUrl, safeFetchImpl, UnsafeUrlError } from '@/lib/safe-fetch';
 import { audit, renderSarif } from '@/lib/x402/conformance';
 import { resolveOrigin } from '@/lib/x402/payment-required';
 
@@ -47,33 +48,21 @@ const MAX_PROBES = 40;
 const DEFAULT_PROBES = 12;
 
 /**
- * Refuse to point the prober at anything that is not a public origin.
+ * Refuse to point the prober at anything that is not a public HTTPS origin.
  *
  * The endpoint takes a URL from the caller and fetches it server-side, which is
- * the shape of an SSRF. Hostnames that resolve inside a private network, and
- * every scheme but HTTPS, are rejected before a single request is made.
+ * the shape of an SSRF. The origin is checked before any request (scheme,
+ * internal hostnames, every address the name resolves to), and the prober's
+ * fetches go through `safeFetchImpl`, so each redirect hop is checked as well.
  */
-function rejectionReason(origin: string): string | null {
-  let url: URL;
+async function rejectionReason(origin: string): Promise<string | null> {
   try {
-    url = new URL(origin.includes('://') ? origin : `https://${origin}`);
-  } catch {
-    return 'origin is not a valid URL';
+    await assertPublicUrl(origin.includes('://') ? origin : `https://${origin}`, { protocols: ['https:'] });
+    return null;
+  } catch (error) {
+    if (error instanceof UnsafeUrlError) return error.message;
+    return 'origin hostname could not be resolved';
   }
-  if (url.protocol !== 'https:') return 'origin must use https';
-  const host = url.hostname.toLowerCase();
-  if (
-    host === 'localhost' ||
-    host.endsWith('.localhost') ||
-    host.endsWith('.internal') ||
-    host.endsWith('.local') ||
-    /^\d+\.\d+\.\d+\.\d+$/.test(host) ||
-    host.startsWith('[') ||
-    host === 'metadata.google.internal'
-  ) {
-    return 'origin must be a public hostname';
-  }
-  return null;
 }
 
 export async function GET(request: NextRequest) {
@@ -82,7 +71,7 @@ export async function GET(request: NextRequest) {
   const target = requested || resolveOrigin(request);
 
   if (requested) {
-    const reason = rejectionReason(requested);
+    const reason = await rejectionReason(requested);
     if (reason) {
       return NextResponse.json(
         { error: 'Invalid origin', code: 'INVALID_ORIGIN', message: reason },
@@ -102,6 +91,7 @@ export async function GET(request: NextRequest) {
       documentOnly: searchParams.get('documentOnly') === '1',
       timeoutMs: 8000,
       userAgent: 'x402-conformance/1.0 (+https://cryptocurrency.cv/x402/conformance)',
+      ...(requested ? { fetchImpl: safeFetchImpl } : {}),
     });
 
     if (searchParams.get('format') === 'sarif') {

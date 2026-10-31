@@ -15,6 +15,8 @@
 
 import { type NextRequest, NextResponse } from 'next/server';
 
+import { assertPublicUrl, safeFetch, UnsafeUrlError } from '@/lib/safe-fetch';
+
 interface ExtractionResult {
   url: string;
   title: string;
@@ -33,43 +35,8 @@ interface ExtractionResult {
   extractedAt: string;
 }
 
-/**
- * Validate a URL is safe to fetch (prevents SSRF attacks)
- * Blocks private/internal IPs, localhost, cloud metadata endpoints, and non-HTTP schemes.
- */
-function isSafeUrl(urlStr: string): boolean {
-  try {
-    const parsed = new URL(urlStr);
-    if (!['http:', 'https:'].includes(parsed.protocol)) return false;
-    const hostname = parsed.hostname.toLowerCase();
-    // Block localhost
-    if (hostname === 'localhost' || hostname === '127.0.0.1' || hostname === '::1' || hostname === '[::1]') return false;
-    // Block cloud metadata endpoints
-    if (hostname === '169.254.169.254' || hostname === 'metadata.google.internal') return false;
-    // Block private/reserved IP ranges
-    if (
-      hostname.startsWith('10.') ||
-      hostname.startsWith('192.168.') ||
-      hostname.startsWith('0.') ||
-      hostname === '0.0.0.0'
-    ) return false;
-    // Block 172.16.0.0 - 172.31.255.255
-    if (hostname.startsWith('172.')) {
-      const second = parseInt(hostname.split('.')[1], 10);
-      if (second >= 16 && second <= 31) return false;
-    }
-    // Block internal/local domains
-    if (
-      hostname.endsWith('.internal') ||
-      hostname.endsWith('.local') ||
-      hostname.endsWith('.localhost') ||
-      hostname.endsWith('.svc.cluster.local')
-    ) return false;
-    return true;
-  } catch {
-    return false;
-  }
-}
+/** Per-request deadline for each extraction strategy's fetch. */
+const FETCH_TIMEOUT_MS = 10_000;
 
 /**
  * Extract full article content from a URL
@@ -92,8 +59,14 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({ error: 'Invalid URL' }, { status: 400 });
   }
 
-  // SSRF protection: block private/internal/metadata URLs
-  if (!isSafeUrl(url)) {
+  // SSRF protection: every strategy fetches through safeFetch, which re-checks
+  // redirects; this up-front check gives a clear 400 instead of a failed extraction.
+  try {
+    await assertPublicUrl(url);
+  } catch (error) {
+    if (!(error instanceof UnsafeUrlError)) {
+      return NextResponse.json({ error: 'URL hostname could not be resolved' }, { status: 400 });
+    }
     return NextResponse.json(
       { error: 'URL not allowed — private, internal, and metadata URLs are blocked' },
       { status: 400 }
@@ -154,7 +127,8 @@ async function extractWithMercury(
 ): Promise<Omit<ExtractionResult, 'method' | 'extractedAt'>> {
   // Use the same HTML extraction approach as Readability but with
   // Mercury-style content scoring heuristics
-  const response = await fetch(url, {
+  const response = await safeFetch(url, {
+    signal: AbortSignal.timeout(FETCH_TIMEOUT_MS),
     headers: {
       'User-Agent': 'Mozilla/5.0 (compatible; FCN-Bot/1.0; +https://cryptocurrency.cv)',
       Accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
@@ -208,7 +182,8 @@ async function extractWithMercury(
 async function extractWithReadability(
   url: string
 ): Promise<Omit<ExtractionResult, 'method' | 'extractedAt'>> {
-  const response = await fetch(url, {
+  const response = await safeFetch(url, {
+    signal: AbortSignal.timeout(FETCH_TIMEOUT_MS),
     headers: {
       'User-Agent':
         'Mozilla/5.0 (compatible; FCN-Bot/1.0; +https://cryptocurrency.cv)',
@@ -264,7 +239,8 @@ async function extractWithReadability(
 async function extractWithOpenGraph(
   url: string
 ): Promise<Omit<ExtractionResult, 'method' | 'extractedAt'>> {
-  const response = await fetch(url, {
+  const response = await safeFetch(url, {
+    signal: AbortSignal.timeout(FETCH_TIMEOUT_MS),
     headers: {
       'User-Agent': 'FCN-Bot/1.0',
     },
@@ -299,7 +275,7 @@ async function extractWithOpenGraph(
 async function extractBasic(
   url: string
 ): Promise<Omit<ExtractionResult, 'method' | 'extractedAt'>> {
-  const response = await fetch(url);
+  const response = await safeFetch(url, { signal: AbortSignal.timeout(FETCH_TIMEOUT_MS) });
   const html = await response.text();
 
   const title = extractTag(html, 'title') || '';

@@ -10,6 +10,8 @@
 
 import { type NextRequest, NextResponse } from 'next/server';
 
+import { safeFetch, UnsafeUrlError } from '@/lib/safe-fetch';
+
 interface ExtractedArticle {
   url: string;
   title: string;
@@ -131,58 +133,6 @@ function extractContentFromHTML(html: string): string {
   return '';
 }
 
-/**
- * Validate that a URL is safe to fetch (prevent SSRF attacks).
- * Blocks internal/private IPs, localhost, and non-HTTP(S) schemes.
- */
-function isSafeUrl(input: string): boolean {
-  try {
-    const parsed = new URL(input);
-
-    // Only allow HTTP(S)
-    if (parsed.protocol !== 'http:' && parsed.protocol !== 'https:') return false;
-
-    const hostname = parsed.hostname.toLowerCase();
-
-    // Block localhost & loopback
-    if (
-      hostname === 'localhost' ||
-      hostname === '127.0.0.1' ||
-      hostname === '[::1]' ||
-      hostname === '0.0.0.0'
-    ) return false;
-
-    // Block private/internal IP ranges (RFC 1918, link-local, metadata)
-    const privatePatterns = [
-      /^10\./,                           // 10.0.0.0/8
-      /^172\.(1[6-9]|2\d|3[01])\./,     // 172.16.0.0/12
-      /^192\.168\./,                     // 192.168.0.0/16
-      /^169\.254\./,                     // link-local
-      /^0\./,                            // 0.0.0.0/8
-      /^100\.(6[4-9]|[7-9]\d|1[01]\d|12[0-7])\./, // CGN 100.64.0.0/10
-      /^198\.18\./,                      // benchmarking
-    ];
-    if (privatePatterns.some((p) => p.test(hostname))) return false;
-
-    // Block cloud metadata endpoints
-    if (
-      hostname === 'metadata.google.internal' ||
-      hostname === '169.254.169.254'
-    ) return false;
-
-    // Block common internal hostnames
-    if (
-      hostname.endsWith('.internal') ||
-      hostname.endsWith('.local') ||
-      hostname.endsWith('.localhost')
-    ) return false;
-
-    return true;
-  } catch {
-    return false;
-  }
-}
-
 export async function POST(request: NextRequest) {
   try {
     const { url } = await request.json();
@@ -191,19 +141,13 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'URL is required' }, { status: 400 });
     }
 
-    if (!isSafeUrl(url)) {
-      return NextResponse.json(
-        { error: 'Invalid or disallowed URL. Only public HTTP(S) URLs are accepted.' },
-        { status: 400 },
-      );
-    }
-
-    // Fetch the page
-    const response = await fetch(url, {
+    // Fetch the page. safeFetch refuses private and internal targets, including via redirects.
+    const response = await safeFetch(url, {
       headers: {
         'User-Agent': 'Mozilla/5.0 (compatible; CryptoNewsBot/1.0)',
         'Accept': 'text/html,application/xhtml+xml'
-      }
+      },
+      signal: AbortSignal.timeout(10_000),
     });
 
     if (!response.ok) {
@@ -298,6 +242,12 @@ export async function POST(request: NextRequest) {
 
     return NextResponse.json(result);
   } catch (error) {
+    if (error instanceof UnsafeUrlError) {
+      return NextResponse.json(
+        { error: 'Invalid or disallowed URL. Only public HTTP(S) URLs are accepted.' },
+        { status: 400 },
+      );
+    }
     console.error('Article extraction error:', error);
     return NextResponse.json({ error: 'Extraction failed' }, { status: 500 });
   }

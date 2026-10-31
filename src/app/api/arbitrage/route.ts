@@ -23,8 +23,10 @@ import {
   getMonitorState,
   type ArbitrageScanResult,
 } from '@/lib/arbitrage-scanner';
+import { safeFetch, UnsafeUrlError } from '@/lib/safe-fetch';
 
-export const runtime = 'edge';
+// Node, not edge: the webhook test resolves DNS to keep the caller's URL off private addresses.
+export const runtime = 'nodejs';
 export const revalidate = 5;
 
 /**
@@ -201,23 +203,34 @@ export async function POST(request: NextRequest) {
       };
 
       if (webhook_url) {
+        if (typeof webhook_url !== 'string') {
+          return NextResponse.json({ error: 'webhook_url must be a string' }, { status: 400 });
+        }
         try {
-          await fetch(webhook_url, {
+          const res = await safeFetch(webhook_url, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(testPayload),
+            signal: AbortSignal.timeout(5000),
           });
-          
+          await res.body?.cancel();
+
           return NextResponse.json({
-            success: true,
-            message: 'Test webhook sent',
+            success: res.ok,
+            message: res.ok ? 'Test webhook sent' : `Webhook responded with HTTP ${res.status}`,
             payload: testPayload,
           });
         } catch (err) {
+          if (err instanceof UnsafeUrlError) {
+            return NextResponse.json({
+              success: false,
+              error: 'webhook_url must be a public http(s) URL',
+            }, { status: 400 });
+          }
           return NextResponse.json({
             success: false,
             error: 'Failed to send test webhook',
-            message: err instanceof Error ? err.message : 'Unknown error',
+            message: 'The webhook could not be reached',
           }, { status: 400 });
         }
       }
