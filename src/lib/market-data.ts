@@ -1146,6 +1146,8 @@ export async function getRealTimePrice(
   symbol: string,
 ): Promise<{ price: number; source: string } | null> {
   const symbolUpper = symbol.toUpperCase();
+  // Ticker symbols are alphanumeric; anything else would alter the query string
+  if (!/^[A-Z0-9]{1,20}$/.test(symbolUpper)) return null;
   const binanceSymbol = `${symbolUpper}USDT`;
 
   // Try Binance first (fastest, most real-time)
@@ -1186,7 +1188,7 @@ export async function getRealTimePrice(
       ADA: "cardano",
       DOGE: "dogecoin",
       DOT: "polkadot",
-      AVAX: "avalanche",
+      AVAX: "avalanche-2",
       LINK: "chainlink",
     };
     const coinId = idMap[symbolUpper];
@@ -1985,6 +1987,8 @@ export async function getTopProtocols(limit = 20): Promise<ProtocolTVL[]> {
 export async function getProtocolBySlug(
   slug: string,
 ): Promise<ProtocolTVL | null> {
+  // DeFiLlama slugs share the CoinGecko id charset; reject anything that could rewrite the path
+  if (!isCoinGeckoId(slug)) return null;
   const cacheKey = `protocol-${slug}`;
   const cached = getCached<ProtocolTVL>(cacheKey);
   if (cached) return cached.data;
@@ -2343,6 +2347,7 @@ export async function getExchanges(
 export async function getExchangeDetails(
   exchangeId: string,
 ): Promise<ExchangeDetails | null> {
+  if (!isCoinGeckoId(exchangeId)) return null;
   const cacheKey = `exchange-${exchangeId}`;
 
   const cached = getCached<ExchangeDetails>(cacheKey);

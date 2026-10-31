@@ -424,6 +424,16 @@ describe('market-data', () => {
       expect(urls.every((url) => !url.includes('evil') && !url.includes('bad'))).toBe(true);
     });
 
+    it('rejects malformed symbols, exchange ids and protocol slugs without fetching', async () => {
+      const fetchSpy = vi.spyOn(globalThis, 'fetch');
+      const { getRealTimePrice, getExchangeDetails, getProtocolBySlug } = await import('./market-data');
+
+      expect(await getRealTimePrice('BTC&symbol=ETH')).toBeNull();
+      expect(await getExchangeDetails('../coins/bitcoin')).toBeNull();
+      expect(await getProtocolBySlug('aave?x=1')).toBeNull();
+      expect(fetchSpy).not.toHaveBeenCalled();
+    });
+
     it('returns no prices for an invalid currency without fetching', async () => {
       const fetchSpy = vi.spyOn(globalThis, 'fetch');
       const { getPricesForCoins } = await import('./market-data');
