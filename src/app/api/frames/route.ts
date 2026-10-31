@@ -19,6 +19,7 @@
  */
 
 import { type NextRequest, NextResponse } from 'next/server';
+import { intParam } from '@/lib/query-params';
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://cryptocurrency.cv';
 const API_BASE = `${BASE_URL}/api`;
@@ -127,7 +128,7 @@ async function getSentiment() {
 export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;
   const frame = searchParams.get('frame') || 'home';
-  const index = parseInt(searchParams.get('index') || '0');
+  const index = intParam(searchParams, 'index', { fallback: 0, min: 0, max: 1000 });
   
   // Home frame
   if (frame === 'home') {

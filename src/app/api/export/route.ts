@@ -36,6 +36,7 @@ import {
 import { getLatestNews, type NewsArticle } from '@/lib/crypto-news';
 import { getTopCoins, type TokenPrice } from '@/lib/market-data';
 import { getSocialTrends, type SocialTrend } from '@/lib/social-intelligence';
+import { intParam } from '@/lib/query-params';
 import { 
   getRecentPredictions, 
   type Prediction,
@@ -193,7 +194,7 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
     
     const dataType = searchParams.get('type') || 'news';
     const format = (searchParams.get('format') || 'json') as ExportFormat;
-    const limit = Math.min(parseInt(searchParams.get('limit') || '100'), 10000);
+    const limit = intParam(searchParams, 'limit', { fallback: 100, min: 1, max: 10000 });
     const dateFrom = searchParams.get('from') || undefined;
     const dateTo = searchParams.get('to') || undefined;
     const download = searchParams.get('download') === 'true';

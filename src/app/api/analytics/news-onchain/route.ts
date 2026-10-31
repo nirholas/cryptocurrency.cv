@@ -11,6 +11,7 @@
 import { type NextRequest, NextResponse } from 'next/server';
 import { getLatestNews, type NewsArticle } from '@/lib/crypto-news';
 import { getTopCoins, type TokenPrice } from '@/lib/market-data';
+import { intParam } from '@/lib/query-params';
 
 interface NewsOnChainCorrelation {
   article: {
@@ -31,7 +32,7 @@ interface NewsOnChainCorrelation {
 export async function GET(request: NextRequest) {
   try {
     const { searchParams } = new URL(request.url);
-    const hours = parseInt(searchParams.get('hours') || '24');
+    const hours = intParam(searchParams, 'hours', { fallback: 24, min: 1, max: 168 });
     
     // Get recent news
     const newsResponse = await getLatestNews(50);

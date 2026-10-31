@@ -30,6 +30,7 @@ import {
   isTranslationAvailable,
 } from '@/lib/source-translator';
 import { jsonResponse, errorResponse, withTiming } from '@/lib/api-utils';
+import { intParam } from '@/lib/query-params';
 
 export const runtime = 'edge';
 export const revalidate = 300; // 5 minutes
@@ -66,7 +67,7 @@ export async function GET(request: NextRequest) {
   // Parse query parameters
   const languageParam = searchParams.get('language') || 'all';
   const translateParam = searchParams.get('translate') === 'true';
-  const limitParam = parseInt(searchParams.get('limit') || '20', 10);
+  const limit = intParam(searchParams, 'limit', { fallback: 20, min: 1, max: 100 });
   const regionParam = searchParams.get('region') || 'all';
   const sourcesParam = searchParams.get('sources') === 'true';
 
@@ -110,9 +111,6 @@ export async function GET(request: NextRequest) {
       400
     );
   }
-
-  // Validate limit parameter
-  const limit = Math.min(Math.max(1, limitParam), 100);
 
   try {
     // Fetch international news

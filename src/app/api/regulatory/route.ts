@@ -52,6 +52,7 @@ import {
 } from '@/lib/regulatory-intelligence';
 import { db } from '@/lib/database';
 import { getLatestNews } from '@/lib/crypto-news';
+import { intParam } from '@/lib/query-params';
 
 // Cache keys
 const CACHE_KEY_EVENTS = 'regulatory:events';
@@ -122,9 +123,9 @@ async function handleEventsRequest(
   const actionType = searchParams.get('actionType') as RegulatoryActionType | null;
   const impact = searchParams.get('impact') as ImpactLevel | null;
   const sector = searchParams.get('sector') as AffectedSector | null;
-  const limit = Math.min(parseInt(searchParams.get('limit') || '50'), 100);
-  const offset = parseInt(searchParams.get('offset') || '0');
-  const days = Math.min(parseInt(searchParams.get('days') || '7'), 30);
+  const limit = intParam(searchParams, 'limit', { fallback: 50, min: 1, max: 100 });
+  const offset = intParam(searchParams, 'offset', { fallback: 0, min: 0, max: 10000 });
+  const days = intParam(searchParams, 'days', { fallback: 7, min: 1, max: 30 });
   
   // Try to get cached events
   const cacheKey = `${CACHE_KEY_EVENTS}:${jurisdiction || 'all'}:${agency || 'all'}:${days}`;
@@ -397,7 +398,7 @@ async function handleDeadlinesRequest(
   searchParams: URLSearchParams
 ): Promise<NextResponse> {
   const jurisdiction = searchParams.get('jurisdiction') as Jurisdiction | null;
-  const days = Math.min(parseInt(searchParams.get('days') || '90'), 365);
+  const days = intParam(searchParams, 'days', { fallback: 90, min: 1, max: 365 });
   
   // Known regulatory deadlines from official sources
   const now = new Date();
