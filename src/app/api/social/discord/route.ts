@@ -74,11 +74,18 @@ interface DiscordIntelligence {
 // Discord API configuration
 const DISCORD_API = 'https://discord.com/api/v10';
 
+/** Discord IDs are 64-bit snowflakes written as 17-20 decimal digits. */
+const DISCORD_SNOWFLAKE_RE = /^\d{17,20}$/;
+
+/** Most messages Discord returns from one channel history request. */
+const DISCORD_MAX_PAGE = 100;
+
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url);
   const channelId = searchParams.get('channel_id');
   const guildId = searchParams.get('guild_id');
-  const limit = Math.min(parseInt(searchParams.get('limit') || '100'), 500);
+  const requestedLimit = Number.parseInt(searchParams.get('limit') || '100', 10);
+  const limit = Number.isNaN(requestedLimit) ? 100 : Math.min(Math.max(requestedLimit, 1), 500);
   const keyword = searchParams.get('keyword');
   const ticker = searchParams.get('ticker');
 
@@ -106,6 +113,13 @@ export async function GET(request: NextRequest) {
   if (!channelId && !guildId) {
     return NextResponse.json(
       { error: 'Either channel_id or guild_id is required' },
+      { status: 400 },
+    );
+  }
+
+  if ((channelId && !DISCORD_SNOWFLAKE_RE.test(channelId)) || (guildId && !DISCORD_SNOWFLAKE_RE.test(guildId))) {
+    return NextResponse.json(
+      { error: 'channel_id and guild_id must be numeric Discord IDs' },
       { status: 400 },
     );
   }
@@ -185,7 +199,8 @@ async function fetchChannelMessages(
   limit: number,
   token: string,
 ): Promise<DiscordMessage[]> {
-  const response = await fetch(`${DISCORD_API}/channels/${channelId}/messages?limit=${limit}`, {
+  const pageSize = Math.min(Math.max(limit, 1), DISCORD_MAX_PAGE);
+  const response = await fetch(`${DISCORD_API}/channels/${channelId}/messages?limit=${pageSize}`, {
     headers: {
       Authorization: `Bot ${token}`,
     },

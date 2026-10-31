@@ -158,7 +158,7 @@ async function searchCoinGecko(query: string): Promise<TokenInfo | null> {
     
     // Get price data
     const priceResponse = await fetch(
-      `${COINGECKO_API}/simple/price?ids=${coin.id}&vs_currencies=usd&include_24hr_change=true&include_24hr_vol=true&include_market_cap=true`,
+      `${COINGECKO_API}/simple/price?ids=${encodeURIComponent(coin.id)}&vs_currencies=usd&include_24hr_change=true&include_24hr_vol=true&include_market_cap=true`,
       { headers: { 'Accept': 'application/json' } }
     );
     
