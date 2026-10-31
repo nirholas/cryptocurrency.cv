@@ -85,6 +85,46 @@ export function isProviderUnavailableStatus(status: number): boolean {
   return status === 408 || status === 413 || status === 422 || status >= 500;
 }
 
+/**
+ * Map a Google SDK error onto the provider error classes the fallback chain
+ * skips over. The SDK throws its own error type; left unclassified it escapes
+ * the provider loop and takes the whole chain down with it, which is how a
+ * billing hold on the Google project ("Lightning dunning decision is deny")
+ * turned every brief into a 500 while Groq sat idle. Unrecognised errors are
+ * returned unchanged.
+ */
+export function classifyGeminiError(err: unknown): unknown {
+  const message = err instanceof Error ? err.message : String(err);
+  if (/\[40[13] |permission|denied|dunning|API key|unauthenticated/i.test(message)) {
+    return new AIAuthError('gemini', 403, `Gemini unavailable: ${message}`);
+  }
+  if (/\[429 |quota|rate limit|resource_exhausted/i.test(message)) {
+    return new AIRateLimitError('gemini', 429, `Gemini rate-limited: ${message}`);
+  }
+  if (/\[(408|413|422|5\d\d) |too large|payload size|deadline|unavailable|internal error/i.test(message)) {
+    return new AIProviderUnavailableError('gemini', 503, `Gemini cannot serve this request: ${message}`);
+  }
+  return err;
+}
+
+/**
+ * Error for a non-OK HTTP response from a provider called over fetch: auth
+ * (401/403), quota (429/402) and can't-serve statuses get the typed classes
+ * the fallback chain skips over; anything else is a plain Error.
+ */
+export function providerHttpError(provider: AIProvider, status: number, label: string): Error {
+  if (status === 401 || status === 403) {
+    return new AIAuthError(provider, status, `${label} authentication failed: ${status}`);
+  }
+  if (status === 429 || status === 402) {
+    return new AIRateLimitError(provider, status, `${label} rate-limited / out of quota: ${status}`);
+  }
+  if (isProviderUnavailableStatus(status)) {
+    return new AIProviderUnavailableError(provider, status, `${label} cannot serve this request: ${status}`);
+  }
+  return new Error(`${label} error: ${status}`);
+}
+
 export interface AIConfig {
   provider: AIProvider;
   model: string;
@@ -518,21 +558,7 @@ async function aiCompleteWithConfig(
       const result = await model.generateContent(userPrompt);
       return result.response.text();
     } catch (err) {
-      // The Google SDK throws its own error type. Left unclassified it escapes
-      // the provider loop in aiComplete and takes the whole chain down with it,
-      // which is how a billing hold on the Google project ("Lightning dunning
-      // decision is deny") turned every brief into a 500 while Groq sat idle.
-      const message = err instanceof Error ? err.message : String(err);
-      if (/\[40[13] |permission|denied|dunning|API key|unauthenticated/i.test(message)) {
-        throw new AIAuthError('gemini', 403, `Gemini unavailable: ${message}`);
-      }
-      if (/\[429 |quota|rate limit|resource_exhausted/i.test(message)) {
-        throw new AIRateLimitError('gemini', 429, `Gemini rate-limited: ${message}`);
-      }
-      if (/\[(408|413|422|5\d\d) |too large|payload size|deadline|unavailable|internal error/i.test(message)) {
-        throw new AIProviderUnavailableError('gemini', 503, `Gemini cannot serve this request: ${message}`);
-      }
-      throw err;
+      throw classifyGeminiError(err);
     }
   }
 

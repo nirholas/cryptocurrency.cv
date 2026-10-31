@@ -3548,6 +3548,16 @@ Technical chart pattern analysis
 
 **Price:** `$0.001/request`
 
+`POST` takes a JSON body `{ image, mimeType, symbol?, timeframe? }`. `image` is base64 or a `data:` URL, at most 10 MB, and must be PNG, JPEG, WebP or GIF. `GET` analyzes CoinGecko OHLC candles:
+
+| Parameter | Type | Required | Default | Description |
+|-----------|------|----------|---------|-------------|
+| `symbol` | string | No | `bitcoin` | CoinGecko coin id (letters, digits, hyphens) |
+| `timeframe` | string | No | `1d` | Candle timeframe label |
+| `days` | number | No | `30` | Days of history, clamped to 1-365 |
+
+Errors: `400` invalid input, `404` no candle data, `413` image too large, `502` market data unavailable or malformed model output, `503` no AI provider available.
+
 ---
 
 ### `GET /api/contributors`

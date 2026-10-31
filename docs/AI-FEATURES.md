@@ -122,7 +122,7 @@ variable is unset.
 | Provider | API Key Env | Model Env | Fallback model |
 |----------|-------------|-----------|----------------|
 | OpenAI | `OPENAI_API_KEY` | `OPENAI_MODEL` | `gpt-4o` |
-| Anthropic | `ANTHROPIC_API_KEY` | `ANTHROPIC_MODEL` | `claude-3-5-sonnet-20241022` |
+| Anthropic | `ANTHROPIC_API_KEY` | `ANTHROPIC_MODEL` | `claude-sonnet-4-6` |
 | Groq | `GROQ_API_KEY` | `GROQ_MODEL`, `GROQ_FAST_MODEL` | `qwen/qwen3.8-27b` |
 | OpenRouter | `OPENROUTER_API_KEY` | `OPENROUTER_MODEL` | `meta-llama/llama-3.3-70b-instruct` |
 | Gemini | `GEMINI_API_KEY` | `GEMINI_MODEL` | `gemini-2.0-flash` |
@@ -139,7 +139,7 @@ OPENAI_MODEL=gpt-4o
 
 # Option 2: Anthropic
 ANTHROPIC_API_KEY=sk-ant-...
-ANTHROPIC_MODEL=claude-3-5-sonnet-20241022
+ANTHROPIC_MODEL=claude-sonnet-4-6
 
 # Option 3: Groq (free tier available)
 GROQ_API_KEY=gsk_...
@@ -2047,7 +2047,7 @@ edits.
 |----------|---------|------------------|-------|------|----------|
 | **Groq** | `GROQ_MODEL` (and `GROQ_FAST_MODEL`) | `qwen/qwen3.8-27b` | ⚡⚡⚡ | FREE | Development, high-volume |
 | **OpenAI** | `OPENAI_MODEL` | `gpt-4o` | ⚡⚡ | Paid | Production, best quality |
-| **Anthropic** | `ANTHROPIC_MODEL` | `claude-3-5-sonnet-20241022` | ⚡⚡ | Paid | Long-context reasoning |
+| **Anthropic** | `ANTHROPIC_MODEL` | `claude-sonnet-4-6` | ⚡⚡ | Paid | Long-context reasoning |
 | **OpenRouter** | `OPENROUTER_MODEL` | `meta-llama/llama-3.3-70b-instruct` | ⚡⚡ | Varies | Model flexibility |
 | **Gemini** | `GEMINI_MODEL` | `gemini-2.0-flash` | ⚡⚡⚡ | Varies | Multimodal, long context |
 

@@ -27,7 +27,25 @@
  * @module lib/ai-chart-analysis
  */
 
-import { getAIConfigOrNull, type AIConfig } from './ai-provider';
+import { ANTHROPIC_MODEL } from './ai-models';
+import {
+  AIAllProvidersUnavailableError,
+  AIProviderUnavailableError,
+  aiComplete,
+  classifyGeminiError,
+  getAIConfigOrNull,
+  isAIUnavailableError,
+  providerHttpError,
+  type AIConfig,
+} from './ai-provider';
+
+/** Thrown when no AI provider able to run the requested analysis has a key. */
+export class ChartAnalysisNotConfiguredError extends Error {
+  constructor(message: string) {
+    super(message);
+    this.name = 'ChartAnalysisNotConfiguredError';
+  }
+}
 
 // ---------------------------------------------------------------------------
 // Types
@@ -149,17 +167,20 @@ async function analyzeWithGemini(
     },
   });
 
-  const result = await model.generateContent([
-    { text: prompt },
-    {
-      inlineData: {
-        data: imageBase64,
-        mimeType,
+  try {
+    const result = await model.generateContent([
+      { text: prompt },
+      {
+        inlineData: {
+          data: imageBase64,
+          mimeType,
+        },
       },
-    },
-  ]);
-
-  return result.response.text();
+    ]);
+    return result.response.text();
+  } catch (err) {
+    throw classifyGeminiError(err);
+  }
 }
 
 async function analyzeWithClaude(
@@ -176,7 +197,7 @@ async function analyzeWithClaude(
       'anthropic-version': '2023-06-01',
     },
     body: JSON.stringify({
-      model: config.model || 'claude-sonnet-4-20250514',
+      model: config.model,
       max_tokens: 4000,
       messages: [
         {
@@ -198,11 +219,15 @@ async function analyzeWithClaude(
   });
 
   if (!response.ok) {
-    throw new Error(`Claude vision error: ${response.status}`);
+    throw providerHttpError('anthropic', response.status, 'Claude vision');
   }
 
-  const data = await response.json();
-  return data.content[0].text;
+  const data = (await response.json()) as { content?: { type?: string; text?: unknown }[] };
+  const text = data.content?.find((block) => block.type === 'text')?.text;
+  if (typeof text !== 'string' || !text) {
+    throw new AIProviderUnavailableError('anthropic', 502, 'Claude vision returned no text');
+  }
+  return text;
 }
 
 async function analyzeWithOpenAI(
@@ -218,7 +243,7 @@ async function analyzeWithOpenAI(
       Authorization: `Bearer ${config.apiKey}`,
     },
     body: JSON.stringify({
-      model: config.model || 'gpt-4o',
+      model: config.model,
       messages: [
         {
           role: 'user',
@@ -241,11 +266,15 @@ async function analyzeWithOpenAI(
   });
 
   if (!response.ok) {
-    throw new Error(`OpenAI vision error: ${response.status}`);
+    throw providerHttpError('openai', response.status, 'OpenAI vision');
   }
 
-  const data = await response.json();
-  return data.choices[0].message.content;
+  const data = (await response.json()) as { choices?: { message?: { content?: unknown } }[] };
+  const text = data.choices?.[0]?.message?.content;
+  if (typeof text !== 'string' || !text) {
+    throw new AIProviderUnavailableError('openai', 502, 'OpenAI vision returned no text');
+  }
+  return text;
 }
 
 // ---------------------------------------------------------------------------
@@ -348,14 +377,14 @@ export async function analyzeChart(
   const configs = [geminiConfig, anthropicConfig, openaiConfig].filter(Boolean) as AIConfig[];
 
   if (configs.length === 0) {
-    throw new Error(
+    throw new ChartAnalysisNotConfiguredError(
       'No vision-capable AI provider configured. Set GEMINI_API_KEY, ANTHROPIC_API_KEY, or OPENAI_API_KEY.'
     );
   }
 
   const prompt = buildChartPrompt(symbol, timeframe);
   let rawAnalysis = '';
-  let lastError: Error | null = null;
+  const failures: unknown[] = [];
 
   // Try each provider until one succeeds
   for (const config of configs) {
@@ -369,14 +398,17 @@ export async function analyzeChart(
       }
       break; // success
     } catch (err) {
-      lastError = err as Error;
+      failures.push(err);
       console.warn(`[Chart Analysis] ${config.provider} failed:`, err);
-      continue;
     }
   }
 
   if (!rawAnalysis) {
-    throw lastError || new Error('All vision providers failed');
+    // Quota, billing, auth and outages on every provider are a 503, not a bug.
+    // Anything else is rethrown so it surfaces as a server error.
+    const unexpected = failures.find((err) => !isAIUnavailableError(err));
+    if (unexpected) throw unexpected;
+    throw new AIAllProvidersUnavailableError(failures.map((err) => (err as Error).message));
   }
 
   // Parse the JSON response
@@ -446,9 +478,8 @@ export async function analyzeOHLCData(
   symbol: string,
   timeframe: string
 ): Promise<ChartAnalysis> {
-  const config = getAIConfigOrNull();
-  if (!config) {
-    throw new Error('No AI provider configured');
+  if (!getAIConfigOrNull()) {
+    throw new ChartAnalysisNotConfiguredError('No AI provider configured');
   }
 
   // Build a text representation of the OHLC data
@@ -471,21 +502,24 @@ export async function analyzeOHLCData(
 
 PRICE RANGE: $${priceRange.low.toFixed(2)} — $${priceRange.high.toFixed(2)}
 CURRENT: $${priceRange.currentClose.toFixed(2)}
-CHANGE: ${((priceRange.currentClose - priceRange.previousClose) / priceRange.previousClose * 100).toFixed(2)}%
+CHANGE: ${priceRange.previousClose ? `${(((priceRange.currentClose - priceRange.previousClose) / priceRange.previousClose) * 100).toFixed(2)}%` : 'n/a'}
 
 OHLC DATA (last ${recent.length} candles):
 ${ohlcText}
 
 ${buildChartPrompt(symbol, timeframe)}`;
 
-  const { aiComplete: complete } = await import('./ai-provider');
-  const rawAnalysis = await complete(
+  const rawAnalysis = await aiComplete(
     'You are an expert crypto technical analyst.',
     prompt,
     { maxTokens: 4000, temperature: 0.2, jsonMode: true }
   );
 
+  // A SyntaxError here means the model ignored JSON mode; callers map it to a 502.
   const parsed = JSON.parse(rawAnalysis);
+  if (typeof parsed !== 'object' || parsed === null || Array.isArray(parsed)) {
+    throw new SyntaxError('AI analysis is not a JSON object');
+  }
 
   return {
     id: `ohlc-${Date.now()}`,
@@ -518,7 +552,7 @@ function getVisionConfig(provider: string): AIConfig | null {
     }
     case 'anthropic': {
       const key = process.env.ANTHROPIC_API_KEY;
-      return key ? { provider: 'anthropic', model: 'claude-sonnet-4-20250514', apiKey: key } : null;
+      return key ? { provider: 'anthropic', model: ANTHROPIC_MODEL, apiKey: key } : null;
     }
     case 'openai': {
       const key = process.env.OPENAI_API_KEY;

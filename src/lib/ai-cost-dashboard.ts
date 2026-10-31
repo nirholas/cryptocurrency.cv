@@ -119,6 +119,7 @@ const PRICING: Record<string, { input: number; output: number }> = {
   'o1-mini': { input: 3, output: 12 },
 
   // Anthropic
+  'claude-sonnet-4-6': { input: 3, output: 15 },
   'claude-sonnet-4-20250514': { input: 3, output: 15 },
   'claude-3-5-sonnet-20241022': { input: 3, output: 15 },
   'claude-3-haiku-20240307': { input: 0.25, output: 1.25 },

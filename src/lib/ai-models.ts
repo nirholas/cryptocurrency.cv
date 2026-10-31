@@ -43,7 +43,7 @@ export const GROQ_FAST_MODEL = process.env.GROQ_FAST_MODEL || GROQ_MODEL;
 export const OPENAI_MODEL = process.env.OPENAI_MODEL || 'gpt-4o';
 
 /** Anthropic chat model. */
-export const ANTHROPIC_MODEL = process.env.ANTHROPIC_MODEL || 'claude-3-5-sonnet-20241022';
+export const ANTHROPIC_MODEL = process.env.ANTHROPIC_MODEL || 'claude-sonnet-4-6';
 
 /** OpenRouter chat model. */
 export const OPENROUTER_MODEL =

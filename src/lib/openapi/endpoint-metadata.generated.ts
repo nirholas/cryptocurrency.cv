@@ -681,6 +681,11 @@ export const ENDPOINT_METADATA_FULL: Record<string, EndpointMetaExtended> = {
   "/api/chart-analysis": {
     description: "Technical chart pattern analysis",
     methods: ["POST", "GET"],
+    parameters: {
+      symbol: { type: "string", description: "CoinGecko coin id (GET)", default: "bitcoin" },
+      timeframe: { type: "string", description: "Candle timeframe label (GET)", default: "1d" },
+      days: { type: "number", description: "Days of OHLC history, 1-365 (GET)", default: "30" },
+    },
     outputSchemas: {"POST":{"type":"object","properties":{"analysis":{}}},"GET":{"type":"object","properties":{"analysis":{}}}},
   },
 
