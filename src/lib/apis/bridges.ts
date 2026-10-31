@@ -20,6 +20,7 @@
 
 import { resilientFetch } from '@/lib/resilient-fetch';
 import { staleCache } from '@/lib/cache';
+import { getLlamaProtocols } from '@/lib/apis/llama-bulk';
 
 const BASE_URL = 'https://bridges.llama.fi';
 
@@ -141,15 +142,7 @@ interface LlamaProtocol {
  */
 async function fetchBridgeRosterFromProtocols(): Promise<Bridge[]> {
   try {
-    const { data } = await resilientFetch<LlamaProtocol[]>('https://api.llama.fi/protocols', {
-      service: 'defillama-protocols',
-      timeoutMs: 15000,
-      retries: 1,
-      staleCache,
-      staleCacheKey: 'bridges:protocols-fallback',
-      next: { revalidate: 900 },
-    });
-    if (!Array.isArray(data)) return [];
+    const data = await getLlamaProtocols<LlamaProtocol>();
 
     return data
       .filter((p) => p.category === 'Bridge' && typeof p.tvl === 'number' && p.tvl > 0)

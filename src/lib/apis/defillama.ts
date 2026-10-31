@@ -21,12 +21,16 @@
 import { resilientFetch } from '@/lib/resilient-fetch';
 import { staleCache } from '@/lib/cache';
 import { getBridges as getBridgeRoster } from '@/lib/apis/bridges';
+import {
+  getLlamaDexOverview,
+  getLlamaFeesOverview,
+  getLlamaProtocols,
+  getLlamaYieldPools,
+} from '@/lib/apis/llama-bulk';
 
 const BASE_URL = 'https://api.llama.fi';
 const COINS_URL = 'https://coins.llama.fi';
-const YIELDS_URL = 'https://yields.llama.fi';
 const STABLECOINS_URL = 'https://stablecoins.llama.fi';
-const FEES_URL = 'https://fees.llama.fi';
 
 // =============================================================================
 // Types
@@ -183,10 +187,23 @@ async function llamaFetch<T>(url: string): Promise<T | null> {
 }
 
 /**
+ * Load one of the shared multi-megabyte DefiLlama datasets (see
+ * `lib/apis/llama-bulk`), returning null on failure like `llamaFetch`.
+ */
+async function llamaBulk<T>(load: () => Promise<T>): Promise<T | null> {
+  try {
+    return await load();
+  } catch (error) {
+    console.error('DefiLlama API request failed:', error);
+    return null;
+  }
+}
+
+/**
  * Get all DeFi protocols with TVL
  */
 export async function getProtocols(): Promise<Protocol[]> {
-  const data = await llamaFetch<Protocol[]>(`${BASE_URL}/protocols`);
+  const data = await llamaBulk(() => getLlamaProtocols<Protocol>());
   
   if (!data) return [];
 
@@ -263,11 +280,12 @@ export async function getYieldPools(options?: {
   minTvl?: number;
   minApy?: number;
 }): Promise<YieldPool[]> {
-  const data = await llamaFetch<{data: YieldPool[]}>(`${YIELDS_URL}/pools`);
-  
-  if (!data?.data) return [];
+  const data = await llamaBulk(() => getLlamaYieldPools<YieldPool>());
 
-  let pools = data.data;
+  if (!data) return [];
+
+  // Copy: the shared cached array must not be sorted in place.
+  let pools = [...data];
 
   // Apply filters
   if (options?.chain) {
@@ -338,8 +356,8 @@ export async function getStablecoins(): Promise<StablecoinData[]> {
  * Get DEX volumes
  */
 export async function getDexVolumes(): Promise<DexVolume[]> {
-  const data = await llamaFetch<{protocols: DexVolume[]}>(`${BASE_URL}/overview/dexs`);
-  
+  const data = await llamaBulk(() => getLlamaDexOverview<DexVolume>());
+
   if (!data?.protocols) return [];
 
   return data.protocols.map(dex => ({
@@ -488,7 +506,7 @@ export async function searchProtocols(query: string): Promise<Protocol[]> {
 }
 
 // =============================================================================
-// Fees & Revenue (https://fees.llama.fi)
+// Fees & Revenue (api.llama.fi/overview/fees)
 // =============================================================================
 
 export interface ProtocolFees {
@@ -529,55 +547,76 @@ export interface FeesSummary {
   timestamp: string;
 }
 
-/**
- * Get protocol fees overview (all protocols).
- */
-export async function getProtocolFees(): Promise<ProtocolFees[]> {
-  const data = await llamaFetch<{
-    protocols: Array<{
-      name: string;
-      slug: string;
-      category: string;
-      chains: string[];
-      total24h: number;
-      total7d: number;
-      total30d: number;
-      totalAllTime: number;
-      change_1d: number;
-      change_7d: number;
-      change_1m: number;
-      revenue24h?: number;
-      revenue7d?: number;
-      revenue30d?: number;
-      holdersRevenue24h?: number;
-    }>;
-  }>(`${FEES_URL}/overview/fees`);
-
-  if (!data?.protocols) return [];
-
-  return data.protocols.map((p) => ({
-    name: p.name,
-    slug: p.slug || p.name.toLowerCase().replace(/\s+/g, '-'),
-    category: p.category || 'Unknown',
-    chains: p.chains || [],
-    total24h: p.total24h || 0,
-    total7d: p.total7d || 0,
-    total30d: p.total30d || 0,
-    totalAllTime: p.totalAllTime || 0,
-    change_1d: p.change_1d || 0,
-    change_7d: p.change_7d || 0,
-    change_1m: p.change_1m || 0,
-    revenue24h: p.revenue24h || 0,
-    revenue7d: p.revenue7d || 0,
-    revenue30d: p.revenue30d || 0,
-    holdersRevenue24h: p.holdersRevenue24h,
-    protocolRevenueShare:
-      p.total24h > 0 && p.revenue24h
-        ? (p.revenue24h / p.total24h) * 100
-        : undefined,
-  })).sort((a, b) => b.total24h - a.total24h);
+/** One protocol row of DefiLlama's fees/revenue overview. */
+interface LlamaFeesRow {
+  name: string;
+  slug?: string;
+  category?: string;
+  chains?: string[];
+  total24h?: number | null;
+  total7d?: number | null;
+  total30d?: number | null;
+  totalAllTime?: number | null;
+  change_1d?: number | null;
+  change_7d?: number | null;
+  change_1m?: number | null;
 }
 
+function feesRowSlug(row: LlamaFeesRow): string {
+  return row.slug || row.name.toLowerCase().replace(/\s+/g, '-');
+}
+
+/**
+ * Get protocol fees overview (all protocols), with revenue merged in.
+ */
+export async function getProtocolFees(): Promise<ProtocolFees[]> {
+  // The fees overview carries no revenue fields; revenue is a separate
+  // `dataType=dailyRevenue` overview, merged in by protocol slug.
+  const [feesResult, revenueResult] = await Promise.allSettled([
+    getLlamaFeesOverview<LlamaFeesRow>(),
+    getLlamaFeesOverview<LlamaFeesRow>({ dataType: 'dailyRevenue' }),
+  ]);
+
+  if (feesResult.status === 'rejected') {
+    console.error('DefiLlama API request failed:', feesResult.reason);
+    return [];
+  }
+  const data = feesResult.value;
+  if (!data.protocols) return [];
+
+  const revenueBySlug = new Map<string, LlamaFeesRow>();
+  if (revenueResult.status === 'fulfilled') {
+    for (const row of revenueResult.value.protocols ?? []) {
+      revenueBySlug.set(feesRowSlug(row), row);
+    }
+  } else {
+    console.warn('DefiLlama revenue overview failed; fees returned without revenue:', revenueResult.reason);
+  }
+
+  return data.protocols.map((p) => {
+    const revenue = revenueBySlug.get(feesRowSlug(p));
+    return {
+      name: p.name,
+      slug: feesRowSlug(p),
+      category: p.category || 'Unknown',
+      chains: p.chains || [],
+      total24h: p.total24h || 0,
+      total7d: p.total7d || 0,
+      total30d: p.total30d || 0,
+      totalAllTime: p.totalAllTime || 0,
+      change_1d: p.change_1d || 0,
+      change_7d: p.change_7d || 0,
+      change_1m: p.change_1m || 0,
+      revenue24h: revenue?.total24h || 0,
+      revenue7d: revenue?.total7d || 0,
+      revenue30d: revenue?.total30d || 0,
+      protocolRevenueShare:
+        p.total24h && revenue?.total24h
+          ? (revenue.total24h / p.total24h) * 100
+          : undefined,
+    };
+  }).sort((a, b) => b.total24h - a.total24h);
+}
 /**
  * Get fees for a specific protocol.
  */
@@ -595,27 +634,13 @@ export async function getProtocolFeesDetail(protocol: string): Promise<ProtocolF
  * Get revenue-only overview (what actually accrues to token holders/treasury).
  */
 export async function getProtocolRevenue(): Promise<ProtocolFees[]> {
-  const data = await llamaFetch<{
-    protocols: Array<{
-      name: string;
-      slug: string;
-      category: string;
-      chains: string[];
-      total24h: number;
-      total7d: number;
-      total30d: number;
-      totalAllTime: number;
-      change_1d: number;
-      change_7d: number;
-      change_1m: number;
-    }>;
-  }>(`${FEES_URL}/overview/fees?dataType=dailyRevenue`);
+  const data = await llamaBulk(() => getLlamaFeesOverview<LlamaFeesRow>({ dataType: 'dailyRevenue' }));
 
   if (!data?.protocols) return [];
 
   return data.protocols.map((p) => ({
     name: p.name,
-    slug: p.slug || p.name.toLowerCase().replace(/\s+/g, '-'),
+    slug: feesRowSlug(p),
     category: p.category || 'Unknown',
     chains: p.chains || [],
     total24h: 0,
@@ -635,16 +660,7 @@ export async function getProtocolRevenue(): Promise<ProtocolFees[]> {
  * Get chain-level fees breakdown.
  */
 export async function getChainFees(): Promise<ChainFees[]> {
-  const data = await llamaFetch<{
-    allChains: string[];
-    totalDataChart?: Array<[number, number]>;
-    totalDataChartBreakdown?: Array<Record<string, Record<string, number>>>;
-    chain?: string;
-    // There is also a per-chain endpoint
-  }>(`${FEES_URL}/overview/fees`);
-
-  // The main endpoint returns a flat protocol list. For chain breakdown,
-  // we aggregate from protocol-level data.
+  // The overview is a flat protocol list; aggregate per chain from it.
   const protocols = await getProtocolFees();
 
   const chainMap = new Map<string, { total24h: number; total7d: number; total30d: number }>();

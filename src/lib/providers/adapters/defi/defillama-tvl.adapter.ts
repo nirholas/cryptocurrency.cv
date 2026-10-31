@@ -20,6 +20,7 @@
  * @module providers/adapters/defi/defillama-tvl
  */
 
+import { getLlamaProtocols } from '@/lib/apis/llama-bulk';
 import type { DataProvider, FetchParams, RateLimitConfig } from '../../types';
 import type { ProtocolTvl } from './types';
 
@@ -39,14 +40,8 @@ export const defillamaTvlAdapter: DataProvider<ProtocolTvl[]> = {
   capabilities: ['tvl'],
 
   async fetch(params: FetchParams): Promise<ProtocolTvl[]> {
-    const url = `${BASE}/protocols`;
-    const response = await fetch(url);
-
-    if (!response.ok) {
-      throw new Error(`DefiLlama API error: ${response.status}`);
-    }
-
-    let protocols: LlamaProtocol[] = await response.json();
+    // Copy: the shared cached array must not be sorted in place.
+    let protocols: LlamaProtocol[] = [...(await getLlamaProtocols<LlamaProtocol>())];
 
     // Filter by chain if specified
     if (params.chain) {
@@ -72,7 +67,7 @@ export const defillamaTvlAdapter: DataProvider<ProtocolTvl[]> = {
 
   async healthCheck(): Promise<boolean> {
     try {
-      const res = await fetch(`${BASE}/protocols`, {
+      const res = await fetch(`${BASE}/v2/chains`, {
         signal: AbortSignal.timeout(5000),
       });
       return res.ok;

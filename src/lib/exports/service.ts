@@ -245,6 +245,7 @@ const exportJobs = new Map<string, ExportJob>();
 
 // Import Edge-compatible ID utility
 import { generateId } from '@/lib/utils/id';
+import { getLlamaProtocols } from '@/lib/apis/llama-bulk';
 
 function generateJobId(): string {
   return generateId('export');
@@ -437,20 +438,17 @@ async function fetchDataForExport(
     case 'defi':
       // Fetch from DefiLlama
       try {
-        const response = await fetch('https://api.llama.fi/protocols', { next: { revalidate: 3600 } });
-        if (response.ok) {
-          const data = await response.json();
-          return data.slice(0, limit).map((protocol: Record<string, unknown>) => ({
-            id: protocol.slug,
-            name: protocol.name,
-            category: protocol.category,
-            tvl: protocol.tvl,
-            change1d: protocol.change_1d,
-            change7d: protocol.change_7d,
-            chains: protocol.chains,
-            timestamp: new Date().toISOString(),
-          }));
-        }
+        const protocols = await getLlamaProtocols();
+        return protocols.slice(0, limit).map((protocol) => ({
+          id: protocol.slug,
+          name: protocol.name,
+          category: protocol.category,
+          tvl: protocol.tvl,
+          change1d: protocol.change_1d,
+          change7d: protocol.change_7d,
+          chains: protocol.chains,
+          timestamp: new Date().toISOString(),
+        }));
       } catch (error) {
         console.error('Failed to fetch DeFi data for export:', error);
       }

@@ -19,6 +19,7 @@
  * @module providers/adapters/defi-yields/defillama-yields
  */
 
+import { getLlamaYieldPools, LLAMA_YIELDS_API } from '@/lib/apis/llama-bulk';
 import type { DataProvider, FetchParams, RateLimitConfig } from '../../types';
 
 // =============================================================================
@@ -66,7 +67,7 @@ export interface DefiYield {
 // CONSTANTS
 // =============================================================================
 
-const YIELDS_BASE = 'https://yields.llama.fi';
+const YIELDS_BASE = LLAMA_YIELDS_API;
 
 const RATE_LIMIT: RateLimitConfig = {
   maxRequests: 200,
@@ -90,15 +91,8 @@ export const defillamaYieldsAdapter: DataProvider<DefiYield[]> = {
     const limit = params.limit ?? 100;
     const category = params.category;
 
-    const res = await fetch(`${YIELDS_BASE}/pools`, {
-      headers: { Accept: 'application/json' },
-      signal: AbortSignal.timeout(15_000),
-    });
-
-    if (!res.ok) throw new Error(`DefiLlama Yields API error: ${res.status}`);
-
-    const json = await res.json();
-    let pools: DefiLlamaPool[] = json.data ?? [];
+    // Copy: the cached array is shared and sorted in place below.
+    let pools: DefiLlamaPool[] = [...(await getLlamaYieldPools<DefiLlamaPool>())];
 
     // Filter by chain
     if (chain) {
@@ -124,7 +118,8 @@ export const defillamaYieldsAdapter: DataProvider<DefiYield[]> = {
 
   async healthCheck(): Promise<boolean> {
     try {
-      const res = await fetch(`${YIELDS_BASE}/pools`, {
+      // /median is ~140 KB; /pools is ~11 MB.
+      const res = await fetch(`${YIELDS_BASE}/median`, {
         signal: AbortSignal.timeout(5000),
       });
       return res.ok;

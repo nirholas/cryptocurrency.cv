@@ -36,6 +36,7 @@ import {
   COINPAPRIKA_BASE,
 } from "./constants";
 import { resilientFetchResponse } from '@/lib/resilient-fetch';
+import { getLlamaProtocols } from '@/lib/apis/llama-bulk';
 import { backOffCoinGecko, coinGeckoBackoffRemaining } from '@/lib/coingecko-backoff';
 import {
   getKeylessCoinDetails,
@@ -1935,18 +1936,12 @@ export async function getTopProtocols(limit = 20): Promise<ProtocolTVL[]> {
   if (cached) return cached.data;
 
   try {
-    const response = await fetchWithTimeout(`${DEFILLAMA_BASE}/protocols`);
-
-    if (!response.ok) {
-      throw new Error("Failed to fetch protocols");
-    }
-
-    const data = await response.json();
+    const data = await getLlamaProtocols<ProtocolTVL>();
     const top = data
-      .filter((p: ProtocolTVL) => p.tvl > 0)
-      .sort((a: ProtocolTVL, b: ProtocolTVL) => b.tvl - a.tvl)
+      .filter((p) => p.tvl > 0)
+      .sort((a, b) => b.tvl - a.tvl)
       .slice(0, limit)
-      .map((p: ProtocolTVL) => ({
+      .map((p) => ({
         ...p,
         slug: p.slug || p.name.toLowerCase().replace(/\s+/g, "-"),
       }));

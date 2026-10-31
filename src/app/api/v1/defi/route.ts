@@ -22,8 +22,24 @@ import { hybridAuthMiddleware } from '@/lib/x402';
 import { ApiError } from '@/lib/api-error';
 import { createRequestLogger } from '@/lib/logger';
 
-import { resilientFetchResponse } from '@/lib/resilient-fetch';
+import { getLlamaProtocols } from '@/lib/apis/llama-bulk';
 const ENDPOINT = '/api/v1/defi';
+
+interface DefiProtocolRow {
+  name: string;
+  symbol: string;
+  category: string;
+  chain: string;
+  chains?: string[];
+  tvl: number;
+  change_1h: number;
+  change_1d: number;
+  change_7d: number;
+  mcap?: number;
+  url: string;
+  logo: string;
+  slug: string;
+}
 
 export async function GET(request: NextRequest) {
   const logger = createRequestLogger(request);
@@ -41,22 +57,9 @@ export async function GET(request: NextRequest) {
   try {
     logger.info('Fetching DeFi protocols', { limit, chain, category });
 
-    const response = await resilientFetchResponse('https://api.llama.fi/protocols', {
-      service: 'defillama',
-      timeoutMs: 8000,
-      retries: 1,
-      headers: {
-        Accept: 'application/json',
-        'User-Agent': 'CryptoDataAggregator/1.0',
-      },
-      next: { revalidate: 300 },
-    });
-
-    if (!response.ok) {
-      throw new Error(`Upstream API error: ${response.status}`);
-    }
-
-    let protocols = await response.json();
+    // Shared in-process copy: the ~9 MB list is too large for Next's data cache.
+    // Copied because the sort below works in place.
+    let protocols: DefiProtocolRow[] = [...(await getLlamaProtocols<DefiProtocolRow>())];
 
     // Filter by chain if specified
     if (chain) {

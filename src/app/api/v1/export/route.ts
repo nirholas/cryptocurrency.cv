@@ -25,6 +25,7 @@ import { createRequestLogger } from '@/lib/logger';
 import { COINGECKO_BASE } from '@/lib/constants';
 
 import { resilientFetchResponse } from '@/lib/resilient-fetch';
+import { getLlamaProtocols } from '@/lib/apis/llama-bulk';
 const ENDPOINT = '/api/v1/export';
 
 export async function GET(request: NextRequest) {
@@ -73,23 +74,8 @@ export async function GET(request: NextRequest) {
 
       data = await response.json();
     } else if (type === 'defi') {
-      const response = await resilientFetchResponse('https://api.llama.fi/protocols', {
-        service: 'defillama',
-        timeoutMs: 8000,
-        retries: 1,
-        headers: {
-          Accept: 'application/json',
-          'User-Agent': 'CryptoDataAggregator/1.0',
-        },
-        next: { revalidate: 300 },
-      });
-
-      if (!response.ok) {
-        throw new Error(`Upstream API error: ${response.status}`);
-      }
-
-      const protocols = await response.json();
-      data = protocols.slice(0, limit).map((p: Record<string, unknown>) => ({
+      const protocols = await getLlamaProtocols();
+      data = protocols.slice(0, limit).map((p) => ({
         name: p.name,
         symbol: p.symbol,
         category: p.category,

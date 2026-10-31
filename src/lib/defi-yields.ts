@@ -21,6 +21,7 @@
 import { EXTERNAL_APIS, CACHE_TTL, type LlamaYieldPool } from './external-apis';
 import { cache } from './cache';
 import { resilientFetchResponse } from '@/lib/resilient-fetch';
+import { getLlamaYieldPools } from '@/lib/apis/llama-bulk';
 
 const BASE_URL = EXTERNAL_APIS.LLAMA_YIELDS;
 
@@ -55,21 +56,8 @@ export interface PoolChart {
  * Get all yield pools
  */
 export async function getAllPools(): Promise<YieldPool[]> {
-  const cacheKey = 'llamayields:pools';
-  const cached = cache.get<YieldPool[]>(cacheKey);
-  if (cached) return cached;
-
-  const response = await resilientFetchResponse(`${BASE_URL}/pools`, { service: 'defillama-yields', timeoutMs: 10000, retries: 1 });
-
-  if (!response.ok) {
-    throw new Error(`Llama Yields API error: ${response.status}`);
-  }
-
-  const result = await response.json();
-  const data: YieldPool[] = result.data;
-  cache.set(cacheKey, data, CACHE_TTL.yields);
-
-  return data;
+  // Shared with every other yields caller; copy so callers may sort in place.
+  return [...(await getLlamaYieldPools<YieldPool>())];
 }
 
 /**

@@ -24,6 +24,7 @@
  * @module providers/adapters/tvl/defillama
  */
 
+import { getLlamaProtocols } from '@/lib/apis/llama-bulk';
 import type { DataProvider, FetchParams, RateLimitConfig } from '../../types';
 
 // =============================================================================
@@ -101,12 +102,8 @@ export const defillamaTvlAdapter: DataProvider<TVLData[]> = {
     }
 
     // Default: protocol TVL
-    const res = await fetch(`${DEFILLAMA_BASE}/protocols`, {
-      headers: { Accept: 'application/json' },
-      signal: AbortSignal.timeout(15_000),
-    });
-    if (!res.ok) throw new Error(`DefiLlama protocols API error: ${res.status}`);
-    let protocols: DefiLlamaProtocol[] = await res.json();
+    // Copy: the shared cached array must not be sorted in place.
+    let protocols: DefiLlamaProtocol[] = [...(await getLlamaProtocols<DefiLlamaProtocol>())];
 
     // Filter by chain if specified
     if (chain) {

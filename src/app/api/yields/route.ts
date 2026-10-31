@@ -10,7 +10,7 @@
 
 import { type NextRequest, NextResponse } from 'next/server';
 
-import { resilientFetchResponse } from '@/lib/resilient-fetch';
+import { getLlamaYieldPools } from '@/lib/apis/llama-bulk';
 export const runtime = 'edge';
 export const revalidate = 300; // 5 minutes
 
@@ -26,59 +26,33 @@ export async function GET(request: NextRequest) {
   const limit = Math.min(parseInt(searchParams.get('limit') || '10'), 50);
 
   try {
-    // Fetch from DeFiLlama yields API
-    const response = await resilientFetchResponse('https://yields.llama.fi/pools', {
-      service: 'defillama',
-      timeoutMs: 8000,
-      retries: 1,
-      next: { revalidate: 300 },
-    });
+    const pools = await getLlamaYieldPools();
+    const chainLower = chain?.toLowerCase();
 
-    if (!response.ok) {
-      throw new Error('Failed to fetch yields');
-    }
-
-    const data = await response.json();
-    let pools = data.data || [];
-
-    // Filter by chain if specified
-    if (chain) {
-      const chainLower = chain.toLowerCase();
-      pools = pools.filter((p: { chain: string }) => p.chain.toLowerCase() === chainLower);
-    }
-
-    // Sort by APY and take top pools
+    // filter() copies, so sorting never touches the shared cached array.
     const topPools = pools
-      .filter((p: { apy: number; tvlUsd: number }) => p.apy > 0 && p.tvlUsd > 100000)
-      .sort((a: { apy: number }, b: { apy: number }) => b.apy - a.apy)
+      .filter(
+        (p) =>
+          (!chainLower || p.chain.toLowerCase() === chainLower) &&
+          (p.apy ?? 0) > 0 &&
+          p.tvlUsd > 100000,
+      )
+      .sort((a, b) => (b.apy ?? 0) - (a.apy ?? 0))
       .slice(0, limit)
-      .map(
-        (p: {
-          pool: string;
-          chain: string;
-          project: string;
-          symbol: string;
-          tvlUsd: number;
-          apy: number;
-          apyBase: number;
-          apyReward: number;
-          stablecoin: boolean;
-          ilRisk: string;
-        }) => ({
-          pool: p.pool,
-          chain: p.chain,
-          project: p.project,
-          symbol: p.symbol,
-          tvlUsd: Math.round(p.tvlUsd),
-          apy: {
-            total: p.apy?.toFixed(2),
-            base: p.apyBase?.toFixed(2),
-            reward: p.apyReward?.toFixed(2),
-          },
-          stablecoin: p.stablecoin || false,
-          ilRisk: p.ilRisk || 'unknown',
-        }),
-      );
+      .map((p) => ({
+        pool: p.pool,
+        chain: p.chain,
+        project: p.project,
+        symbol: p.symbol,
+        tvlUsd: Math.round(p.tvlUsd),
+        apy: {
+          total: p.apy?.toFixed(2),
+          base: p.apyBase?.toFixed(2),
+          reward: p.apyReward?.toFixed(2),
+        },
+        stablecoin: p.stablecoin || false,
+        ilRisk: p.ilRisk || 'unknown',
+      }));
 
     return NextResponse.json({
       chain: chain || 'all',

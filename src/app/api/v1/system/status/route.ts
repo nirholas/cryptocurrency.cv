@@ -59,7 +59,7 @@ interface SystemStatus {
 const SOURCES = [
   { name: 'CoinGecko', url: 'https://api.coingecko.com/api/v3/ping', timeout: 5000 },
   { name: 'Binance', url: 'https://api.binance.com/api/v3/ping', timeout: 3000 },
-  { name: 'DefiLlama', url: 'https://api.llama.fi/protocols', timeout: 5000 },
+  { name: 'DefiLlama', url: 'https://api.llama.fi/v2/chains', timeout: 5000 },
   {
     name: 'DexScreener',
     url: 'https://api.dexscreener.com/latest/dex/search?q=btc',

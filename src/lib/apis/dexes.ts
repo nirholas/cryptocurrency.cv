@@ -18,10 +18,7 @@
  * @module lib/apis/dexes
  */
 
-import { resilientFetch } from '@/lib/resilient-fetch';
-import { staleCache } from '@/lib/cache';
-
-const BASE_URL = 'https://api.llama.fi/overview/dexs';
+import { getLlamaDexOverview, type LlamaOverview } from '@/lib/apis/llama-bulk';
 
 // =============================================================================
 // Types
@@ -81,20 +78,13 @@ export interface TopDex {
 // =============================================================================
 
 /**
- * Fetch from DefiLlama DEX API with caching.
+ * DefiLlama DEX overview (all chains, or one chain) through the shared bulk
+ * cache. The all-chains payload is over Next's 2 MB data-cache limit, so it
+ * cannot rely on `next.revalidate`. Returns null on failure.
  */
-async function dexFetch<T>(url: string): Promise<T | null> {
+async function dexOverview<P extends object>(chain?: string): Promise<LlamaOverview<P> | null> {
   try {
-    const { data, stale } = await resilientFetch<T>(url, {
-      service: 'defillama-dex',
-      timeoutMs: 10000,
-      retries: 1,
-      staleCache,
-      staleCacheKey: `dex:${url}`,
-      next: { revalidate: 300 },
-    });
-    if (stale) console.warn('DEX API: upstream failed, serving last known good payload');
-    return data;
+    return await getLlamaDexOverview<P>(chain);
   } catch (error) {
     console.error('DEX API request failed:', error);
     return null;
@@ -109,14 +99,7 @@ async function dexFetch<T>(url: string): Promise<T | null> {
  * Get all DEX protocols with volume data.
  */
 export async function getDexVolumes(): Promise<DexVolumesSummary> {
-  const data = await dexFetch<{
-    totalDataChart: Array<[number, number]>;
-    totalDataChartBreakdown: unknown[];
-    protocols: DexProtocol[];
-    total24h: number;
-    total7d: number;
-    change_1d: number;
-  }>(BASE_URL);
+  const data = await dexOverview<DexProtocol>();
 
   if (!data?.protocols) {
     return {
@@ -164,22 +147,7 @@ export async function getDexVolumes(): Promise<DexVolumesSummary> {
  * @param chain - Chain name (e.g. "ethereum", "bsc", "arbitrum")
  */
 export async function getDexVolumeByChain(chain: string): Promise<DexChainVolume | null> {
-  const data = await dexFetch<{
-    totalDataChart: Array<[number, number]>;
-    protocols: Array<{
-      name: string;
-      total24h: number;
-      total7d: number;
-      total30d: number;
-      change_1d: number;
-      change_7d: number;
-    }>;
-    total24h: number;
-    total7d: number;
-    total30d: number;
-    change_1d: number;
-    change_7d: number;
-  }>(`${BASE_URL}/${encodeURIComponent(chain)}`);
+  const data = await dexOverview<{ name: string }>(chain);
 
   if (!data) return null;
 

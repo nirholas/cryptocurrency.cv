@@ -21,6 +21,7 @@
  * @module providers/adapters/defi/aave
  */
 
+import { getLlamaYieldPools } from '@/lib/apis/llama-bulk';
 import type { DataProvider, FetchParams, RateLimitConfig } from '../../types';
 import type { YieldPool } from './types';
 
@@ -105,17 +106,8 @@ export const aaveAdapter: DataProvider<YieldPool[]> = {
 
 /** Fallback: fetch Aave yields from DeFi Llama */
 async function _fetchFromDefiLlama(limit: number): Promise<YieldPool[]> {
-  const response = await fetch('https://yields.llama.fi/pools', {
-    signal: AbortSignal.timeout(15_000),
-  });
-
-  if (!response.ok) {
-    throw new Error(`DeFi Llama yields API error: ${response.status}`);
-  }
-
-  const json = await response.json();
-  const pools: DefiLlamaPool[] = (json?.data ?? []).filter(
-    (p: DefiLlamaPool) => p.project === 'aave-v3' || p.project === 'aave-v2',
+  const pools = (await getLlamaYieldPools<DefiLlamaPool>()).filter(
+    (p) => p.project === 'aave-v3' || p.project === 'aave-v2',
   );
 
   return pools

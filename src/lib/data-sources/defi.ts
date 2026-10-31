@@ -17,12 +17,15 @@
  */
 
 import {
+  getLlamaDexOverview,
+  getLlamaFeesOverview,
+  getLlamaProtocols,
+  getLlamaYieldPools,
+} from '@/lib/apis/llama-bulk';
+import {
   defillama,
-  defillamaYields,
   defillamaStablecoins,
   defillamaBridges,
-  defillamaVolumes,
-  defillamaFees,
   dexscreener,
   geckoterminal,
   l2beat,
@@ -195,12 +198,9 @@ interface RawFeeProtocol {
   name: string;
   slug?: string;
   module?: string;
-  total24h?: number;
-  totalRevenue24h?: number;
-  total7d?: number;
-  totalRevenue7d?: number;
-  total30d?: number;
-  totalRevenue30d?: number;
+  total24h?: number | null;
+  total7d?: number | null;
+  total30d?: number | null;
   category?: string;
   chains?: string[];
 }
@@ -255,7 +255,7 @@ interface RawL2Project {
  * Get TVL for all protocols, ranked by size
  */
 export async function getProtocolsTVL(limit = 100): Promise<ProtocolTVL[]> {
-  const data = await defillama.fetch('/protocols') as RawProtocol[];
+  const data = await getLlamaProtocols<RawProtocol>();
   return data
     .slice(0, limit)
     .map((p) => ({
@@ -323,8 +323,7 @@ export async function getYieldPools(options?: {
   maxApy?: number;
   limit?: number;
 }): Promise<YieldPool[]> {
-  const response = await defillamaYields.fetch('/pools') as { status: string; data: RawYieldPool[] };
-  let pools = response.data || [];
+  let pools: ReadonlyArray<RawYieldPool> = await getLlamaYieldPools<RawYieldPool>();
 
   if (options?.chain) {
     pools = pools.filter((p) => p.chain?.toLowerCase() === options.chain!.toLowerCase());
@@ -427,19 +426,32 @@ export async function getBridges(): Promise<BridgeVolume[]> {
  * Get protocol fees and revenue rankings
  */
 export async function getProtocolFees(limit = 50): Promise<ProtocolRevenue[]> {
-  const data = await defillamaFees.fetch('/overview/fees?excludeTotalDataChart=true&excludeTotalDataChartBreakdown=true') as { protocols: RawFeeProtocol[] };
-  return (data.protocols || []).slice(0, limit).map((p) => ({
-    name: p.name,
-    slug: p.slug || p.module || '',
-    totalFees24h: p.total24h || 0,
-    totalRevenue24h: p.totalRevenue24h || 0,
-    totalFees7d: p.total7d || 0,
-    totalRevenue7d: p.totalRevenue7d || 0,
-    totalFees30d: p.total30d || 0,
-    totalRevenue30d: p.totalRevenue30d || 0,
-    category: p.category || '',
-    chains: p.chains || [],
-  }));
+  // Revenue is a separate `dataType=dailyRevenue` overview; the fees rows
+  // carry no revenue fields. A failed revenue fetch leaves revenue at 0.
+  const [fees, revenue] = await Promise.all([
+    getLlamaFeesOverview<RawFeeProtocol>(),
+    getLlamaFeesOverview<RawFeeProtocol>({ dataType: 'dailyRevenue' }).catch(() => null),
+  ]);
+  const revenueByName = new Map((revenue?.protocols ?? []).map((p) => [p.name, p]));
+
+  return [...fees.protocols]
+    .sort((a, b) => (b.total24h || 0) - (a.total24h || 0))
+    .slice(0, limit)
+    .map((p) => {
+      const rev = revenueByName.get(p.name);
+      return {
+        name: p.name,
+        slug: p.slug || p.module || '',
+        totalFees24h: p.total24h || 0,
+        totalRevenue24h: rev?.total24h || 0,
+        totalFees7d: p.total7d || 0,
+        totalRevenue7d: rev?.total7d || 0,
+        totalFees30d: p.total30d || 0,
+        totalRevenue30d: rev?.total30d || 0,
+        category: p.category || '',
+        chains: p.chains || [],
+      };
+    });
 }
 
 export interface DEXVolume {
@@ -457,17 +469,20 @@ export interface DEXVolume {
  * Get DEX volume rankings
  */
 export async function getDEXVolumes(limit = 50): Promise<DEXVolume[]> {
-  const data = await defillamaVolumes.fetch('/overview/dexs?excludeTotalDataChart=true&excludeTotalDataChartBreakdown=true') as { protocols: RawDEXVolumeProtocol[] };
-  return (data.protocols || []).slice(0, limit).map((p) => ({
-    name: p.name,
-    slug: p.slug || p.module || '',
-    volume24h: p.total24h || 0,
-    volume7d: p.total7d || 0,
-    volume30d: p.total30d || 0,
-    change1d: p.change_1d || 0,
-    change7d: p.change_7d || 0,
-    chains: p.chains || [],
-  }));
+  const data = await getLlamaDexOverview<RawDEXVolumeProtocol>();
+  return [...data.protocols]
+    .sort((a, b) => (b.total24h || 0) - (a.total24h || 0))
+    .slice(0, limit)
+    .map((p) => ({
+      name: p.name,
+      slug: p.slug || p.module || '',
+      volume24h: p.total24h || 0,
+      volume7d: p.total7d || 0,
+      volume30d: p.total30d || 0,
+      change1d: p.change_1d || 0,
+      change7d: p.change_7d || 0,
+      chains: p.chains || [],
+    }));
 }
 
 // ═══════════════════════════════════════════════════════════════

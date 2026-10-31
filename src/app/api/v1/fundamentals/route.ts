@@ -29,11 +29,17 @@ import { hybridAuthMiddleware } from '@/lib/x402';
 import { ApiError } from '@/lib/api-error';
 import { createRequestLogger } from '@/lib/logger';
 
-import { resilientFetchResponse } from '@/lib/resilient-fetch';
+import { getLlamaFeesOverview, getLlamaProtocols } from '@/lib/apis/llama-bulk';
 export const runtime = 'nodejs';
 export const revalidate = 300;
 
 const ENDPOINT = '/api/v1/fundamentals';
+
+/** Row of DefiLlama `/overview/fees`; `total30d` is fees or revenue depending on `dataType`. */
+interface FeesRow {
+  name?: string;
+  total30d?: number | null;
+}
 
 interface ProtocolFundamental {
   name: string;
@@ -70,41 +76,31 @@ export async function GET(request: NextRequest) {
   try {
     logger.info('Fetching protocol fundamentals', { protocolFilter, sort, limit });
 
-    // Fetch protocols and fees from DefiLlama (free, no API key needed)
-    const [protocolsRes, feesRes] = await Promise.allSettled([
-      resilientFetchResponse('https://api.llama.fi/protocols', {
-        service: 'defillama',
-        timeoutMs: 8000,
-        retries: 1,
-        headers: { 'User-Agent': 'free-crypto-news/2.0' },
-        next: { revalidate: 300 },
-      }),
-      resilientFetchResponse(
-        'https://api.llama.fi/overview/fees?excludeTotalDataChart=true&excludeTotalDataChartBreakdown=true',
-        {
-          service: 'defillama',
-          timeoutMs: 8000,
-          retries: 1,
-          headers: { 'User-Agent': 'free-crypto-news/2.0' },
-          next: { revalidate: 300 },
-        },
-      ),
+    // Fetch protocols, fees and revenue from DefiLlama (free, no API key needed)
+    const [protocolsRes, feesRes, revenueRes] = await Promise.allSettled([
+      getLlamaProtocols<Record<string, unknown>>(),
+      getLlamaFeesOverview<FeesRow>(),
+      getLlamaFeesOverview<FeesRow>({ dataType: 'dailyRevenue' }),
     ]);
 
-    let protocols: Record<string, unknown>[] = [];
+    const protocols: ReadonlyArray<Record<string, unknown>> =
+      protocolsRes.status === 'fulfilled' ? protocolsRes.value : [];
     const feesMap = new Map<string, { fees30d: number; revenue30d: number }>();
 
-    if (protocolsRes.status === 'fulfilled' && protocolsRes.value.ok) {
-      protocols = await protocolsRes.value.json();
+    if (feesRes.status === 'fulfilled') {
+      for (const p of feesRes.value.protocols) {
+        if (!p.name) continue;
+        feesMap.set(p.name.toLowerCase(), { fees30d: p.total30d || 0, revenue30d: 0 });
+      }
     }
 
-    if (feesRes.status === 'fulfilled' && feesRes.value.ok) {
-      const feesData = await feesRes.value.json();
-      for (const p of feesData.protocols || []) {
-        feesMap.set((p.name as string)?.toLowerCase() || '', {
-          fees30d: p.total30d || 0,
-          revenue30d: p.totalRevenue30d || p.total30d * 0.3 || 0, // Estimate if not available
-        });
+    if (revenueRes.status === 'fulfilled') {
+      for (const p of revenueRes.value.protocols) {
+        if (!p.name) continue;
+        const key = p.name.toLowerCase();
+        const entry = feesMap.get(key) ?? { fees30d: 0, revenue30d: 0 };
+        entry.revenue30d = p.total30d || 0;
+        feesMap.set(key, entry);
       }
     }
 

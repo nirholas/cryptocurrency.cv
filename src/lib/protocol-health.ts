@@ -28,6 +28,7 @@
  */
 
 import { resilientFetchResponse } from '@/lib/resilient-fetch';
+import { getLlamaProtocols } from '@/lib/apis/llama-bulk';
 
 // =============================================================================
 // Types & Interfaces
@@ -1612,26 +1613,16 @@ function generateHealthAlerts(
 
 export async function getTopProtocols(limit: number = 100): Promise<Protocol[]> {
   try {
-    const response = await resilientFetchResponse('https://api.llama.fi/protocols', {
-      service: 'defillama', timeoutMs: 10000, retries: 1,
-      next: { revalidate: 3600 },
-    });
+    const data = await getLlamaProtocols();
 
-    if (!response.ok) {
-      console.error(`DefiLlama protocols API error: ${response.status}`);
-      return [];
-    }
-
-    const data = await response.json();
-    
-    return data.slice(0, limit).map((p: { slug: string; name: string; category: string; chains: string[]; url: string; twitter?: string; logo?: string; description?: string }) => ({
+    return data.slice(0, limit).map((p) => ({
       id: p.slug,
       name: p.name,
       slug: p.slug,
-      category: mapCategory(p.category),
+      category: mapCategory(p.category ?? ''),
       chains: p.chains || [],
       website: p.url || '',
-      twitter: p.twitter,
+      twitter: p.twitter ?? undefined,
       logo: p.logo,
       description: p.description || '',
       launchDate: '2020-01-01', // DefiLlama doesn't provide this
