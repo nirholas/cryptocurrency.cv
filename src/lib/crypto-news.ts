@@ -1308,6 +1308,11 @@ const RSS_SOURCES = {
     url: 'https://blog.gala.games/feed',
     category: 'gaming',
   },
+  cryptogames: {
+    name: 'CryptoGames.gg',
+    url: 'https://cryptogames.gg/category/crypto-games/feed/',
+    category: 'gaming',
+  },
 
   // =========================================================================
   // PRIVACY & ZERO KNOWLEDGE — Extended
