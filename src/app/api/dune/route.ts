@@ -9,7 +9,9 @@
  */
 
 import { type NextRequest, NextResponse } from 'next/server';
+import { isAdminAuthorized } from '@/lib/admin-auth';
 import {
+  isDuneConfigured,
   executeQuery,
   getLatestResults,
   getQueryResults,
@@ -39,8 +41,22 @@ export const revalidate = 300;
  *   ?query=dexVolume           — pre-built query (dexVolume | ethGas | stablecoins | l2Txs | bridges)
  *   ?queryId=12345             — run arbitrary query by ID (cached results)
  *   ?executionId=abc123        — get results for a specific execution
- *   ?execute=12345             — trigger a fresh execution and return results
+ *   ?execute=12345             — trigger a fresh execution (admin key required; spends credits)
  */
+/** Dune query ids are positive integers; anything else would reach the upstream path as NaN. */
+function parseQueryId(raw: string): number | null {
+  if (!/^\d{1,10}$/.test(raw)) return null;
+  const id = Number(raw);
+  return id > 0 ? id : null;
+}
+
+/** Execution ids are ULID-like tokens; they are interpolated into the upstream path. */
+const EXECUTION_ID_PATTERN = /^[A-Za-z0-9_-]{1,64}$/;
+
+function badRequest(error: string, param: string, value: string): NextResponse {
+  return NextResponse.json({ error, [param]: value }, { status: 400 });
+}
+
 export async function GET(request: NextRequest): Promise<NextResponse> {
   try {
     const { searchParams } = new URL(request.url);
@@ -53,6 +69,14 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
       'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=600',
       'Access-Control-Allow-Origin': '*',
     };
+
+    const wantsData = Boolean(query || queryId || executionId || execute);
+    if (wantsData && !isDuneConfigured()) {
+      return NextResponse.json(
+        { error: 'Dune Analytics is not configured on this server (DUNE_API_KEY).' },
+        { status: 503 },
+      );
+    }
 
     // Pre-built analytics queries
     if (query) {
@@ -104,8 +128,8 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
 
       if (!data) {
         return NextResponse.json(
-          { error: 'DUNE_API_KEY not configured or query failed', query },
-          { status: 503 },
+          { error: 'Dune query failed upstream', query },
+          { status: 502 },
         );
       }
 
@@ -117,6 +141,9 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
 
     // Get results for a specific execution
     if (executionId) {
+      if (!EXECUTION_ID_PATTERN.test(executionId)) {
+        return badRequest('Invalid executionId', 'executionId', executionId);
+      }
       const data = await getQueryResults(executionId);
       if (!data) {
         return NextResponse.json(
@@ -128,12 +155,25 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
     }
 
     // Run a fresh execution
+    // A fresh execution spends the server's Dune credits and holds the request
+    // open for up to a minute of polling, so it is not open to anonymous callers.
     if (execute) {
-      const data = await executeQuery(parseInt(execute, 10));
+      if (!isAdminAuthorized(request)) {
+        return NextResponse.json(
+          {
+            error: 'Fresh query execution requires an admin key',
+            hint: 'Use ?queryId= for the latest cached results.',
+          },
+          { status: 401 },
+        );
+      }
+      const id = parseQueryId(execute);
+      if (id === null) return badRequest('Invalid query id', 'execute', execute);
+      const data = await executeQuery(id);
       if (!data) {
         return NextResponse.json(
-          { error: 'Query execution failed or timed out', queryId: execute },
-          { status: 500 },
+          { error: 'Query execution failed or timed out', queryId: id },
+          { status: 502 },
         );
       }
       return NextResponse.json(data, { headers });
@@ -141,7 +181,9 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
 
     // Get cached results for a query ID
     if (queryId) {
-      const data = await getLatestResults(parseInt(queryId, 10));
+      const id = parseQueryId(queryId);
+      if (id === null) return badRequest('Invalid queryId', 'queryId', queryId);
+      const data = await getLatestResults(id);
       if (!data) {
         return NextResponse.json(
           { error: 'No cached results found', queryId },
@@ -162,7 +204,7 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
         usage: {
           preBuilt: '/api/dune?query=dexVolume',
           byId: '/api/dune?queryId=12345',
-          execute: '/api/dune?execute=12345',
+          execute: '/api/dune?execute=12345 (admin key required)',
           executionResult: '/api/dune?executionId=abc123',
         },
         timestamp: new Date().toISOString(),

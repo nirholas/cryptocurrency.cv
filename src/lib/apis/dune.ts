@@ -92,6 +92,11 @@ export interface DuneQueryMeta {
 /**
  * Fetch from Dune API with bearer auth.
  */
+/** True when DUNE_API_KEY is set; every request is skipped without it. */
+export function isDuneConfigured(): boolean {
+  return API_KEY !== '';
+}
+
 async function duneFetch<T>(
   path: string,
   opts?: { method?: string; body?: unknown; timeout?: number },
