@@ -18,8 +18,6 @@ import {
   TrendingUp,
   TrendingDown,
   Minus,
-  ArrowUpRight,
-  ArrowDownRight,
   Flame,
   Users,
   Hash,
@@ -103,24 +101,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 /*  Sub-components (server-rendered)                                    */
 /* ------------------------------------------------------------------ */
 
-function SentimentArrow({ change }: { change: number }) {
-  if (change > 0)
-    return (
-      <span className="inline-flex items-center gap-0.5 text-sm font-medium text-green-500 dark:text-green-400">
-        <ArrowUpRight className="h-4 w-4" /> +{change}
-      </span>
-    );
-  if (change < 0)
-    return (
-      <span className="inline-flex items-center gap-0.5 text-sm font-medium text-red-500 dark:text-red-400">
-        <ArrowDownRight className="h-4 w-4" /> {change}
-      </span>
-    );
-  return (
-    <span className="text-text-tertiary inline-flex items-center gap-0.5 text-sm font-medium">
-      <Minus className="h-4 w-4" /> 0
-    </span>
-  );
+function labelFor(overall: string): string {
+  switch (overall) {
+    case 'very_bullish':
+      return 'Very Bullish';
+    case 'bullish':
+      return 'Bullish';
+    case 'bearish':
+      return 'Bearish';
+    case 'very_bearish':
+      return 'Very Bearish';
+    default:
+      return 'Neutral';
+  }
 }
 
 function NarrativeCard({ narrative }: { narrative: Narrative }) {
@@ -201,12 +194,13 @@ function SocialBuzzCloud({ trends }: { trends: SocialTrend[] }) {
   const min = Math.min(...trends.map((t) => t.mentions));
   const range = max - min || 1;
 
-  // Shuffle for visual variety
-  const shuffled = [...trends].sort(() => Math.random() - 0.5);
+  // Stable alphabetical order: size carries the volume, position stays put
+  // between renders so the cloud does not reshuffle on every revalidation.
+  const ordered = [...trends].sort((a, b) => a.topic.localeCompare(b.topic));
 
   return (
     <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-2 py-4">
-      {shuffled.map((trend) => {
+      {ordered.map((trend) => {
         const ratio = (trend.mentions - min) / range;
         const fontSize = 0.7 + ratio * 1.6; // 0.7rem to 2.3rem
         const opacity = 0.45 + ratio * 0.55;
@@ -239,105 +233,6 @@ function SkeletonSection({ rows = 3 }: { rows?: number }) {
 }
 
 /* ------------------------------------------------------------------ */
-/*  Default mock data                                                  */
-/* ------------------------------------------------------------------ */
-
-const MOCK_SENTIMENT: MarketSentiment = {
-  overall: 'bullish',
-  score: 65,
-  confidence: 72,
-  summary:
-    'Markets are showing cautious optimism driven by institutional inflows and improving on-chain metrics. Layer 2 adoption and AI narrative continue to fuel positive sentiment.',
-  keyDrivers: ['Record ETF inflows', 'Layer 2 ecosystem growth', 'AI x Crypto convergence'],
-};
-
-const MOCK_NARRATIVES: Narrative[] = [
-  {
-    id: 'ai_tokens',
-    name: 'AI Tokens',
-    description:
-      'Convergence of artificial intelligence and blockchain. Projects like Fetch.ai, Render, and Bittensor driving innovation.',
-    sentiment: 'bullish',
-    strength: 82,
-    relatedTickers: ['FET', 'RNDR', 'TAO', 'AGIX', 'OCEAN'],
-    emerging: false,
-  },
-  {
-    id: 'layer_2',
-    name: 'Layer 2 Season',
-    description:
-      'Ethereum L2s hitting new usage milestones. Base, Arbitrum, and Optimism seeing record TVL and transaction counts.',
-    sentiment: 'bullish',
-    strength: 75,
-    relatedTickers: ['ARB', 'OP', 'MATIC', 'IMX', 'STRK'],
-    emerging: false,
-  },
-  {
-    id: 'rwa',
-    name: 'RWA Narrative',
-    description:
-      'Tokenization of real-world assets gaining traction with institutional players. BlackRock and Franklin Templeton leading.',
-    sentiment: 'bullish',
-    strength: 68,
-    relatedTickers: ['ONDO', 'MKR', 'LINK', 'AVAX'],
-    emerging: true,
-  },
-  {
-    id: 'meme_coins',
-    name: 'Meme Coins',
-    description:
-      'Meme coin mania continues with high social volume. Extreme speculation but significant trading volume.',
-    sentiment: 'neutral',
-    strength: 60,
-    relatedTickers: ['DOGE', 'SHIB', 'PEPE', 'WIF', 'BONK'],
-    emerging: false,
-  },
-  {
-    id: 'btc_etf',
-    name: 'Bitcoin ETF Flows',
-    description:
-      'Spot Bitcoin ETFs continue to attract billions in inflows. Institutional demand remains strong.',
-    sentiment: 'bullish',
-    strength: 88,
-    relatedTickers: ['BTC', 'GBTC'],
-    emerging: false,
-  },
-  {
-    id: 'depin',
-    name: 'DePIN Growth',
-    description:
-      'Decentralized physical infrastructure networks gaining ground in compute, storage, and wireless.',
-    sentiment: 'bullish',
-    strength: 55,
-    relatedTickers: ['HNT', 'RNDR', 'FIL', 'AR', 'MOBILE'],
-    emerging: true,
-  },
-];
-
-const MOCK_BUZZ: SocialTrend[] = [
-  { topic: '#Bitcoin', mentions: 125_000 },
-  { topic: '#Ethereum', mentions: 89_000 },
-  { topic: '#Solana', mentions: 67_000 },
-  { topic: '#DeFi', mentions: 45_000 },
-  { topic: '#NFT', mentions: 28_000 },
-  { topic: '#Layer2', mentions: 52_000 },
-  { topic: '#AIcrypto', mentions: 61_000 },
-  { topic: '#Altseason', mentions: 38_000 },
-  { topic: '#BullRun', mentions: 42_000 },
-  { topic: '#ETF', mentions: 55_000 },
-  { topic: '#Staking', mentions: 22_000 },
-  { topic: '#Web3', mentions: 31_000 },
-  { topic: '#HODL', mentions: 48_000 },
-  { topic: '#Memecoin', mentions: 57_000 },
-  { topic: '#RWA', mentions: 34_000 },
-  { topic: '#DePIN', mentions: 29_000 },
-  { topic: '#ZKProof', mentions: 18_000 },
-  { topic: '#Airdrop', mentions: 41_000 },
-  { topic: '#GameFi', mentions: 15_000 },
-  { topic: '#BTC100K', mentions: 73_000 },
-];
-
-/* ------------------------------------------------------------------ */
 /*  Page Component                                                     */
 /* ------------------------------------------------------------------ */
 
@@ -349,10 +244,12 @@ export default async function SentimentPage({ params }: Props) {
   const [sentimentResult, narrativesResult, socialResult] = await Promise.allSettled([
     fetchJSON<{
       market?: MarketSentiment;
+      method?: 'ai' | 'keyword';
       meta?: { articlesAnalyzed?: number };
     }>('/api/sentiment?limit=30'),
     fetchJSON<{
       narratives?: Narrative[];
+      method?: 'ai' | 'keyword';
       summary?: { dominantNarrative?: string };
     }>('/api/narratives'),
     fetchJSON<{
@@ -366,39 +263,22 @@ export default async function SentimentPage({ params }: Props) {
   const narrativesData = narrativesResult.status === 'fulfilled' ? narrativesResult.value : null;
   const socialData = socialResult.status === 'fulfilled' ? socialResult.value : null;
 
-  // Derive values with fallbacks
-  const market = sentimentData?.market ?? MOCK_SENTIMENT;
-  const narratives =
-    narrativesData?.narratives && narrativesData.narratives.length > 0
-      ? narrativesData.narratives
-      : MOCK_NARRATIVES;
-  const socialTrends =
-    socialData?.data?.trends && socialData.data.trends.length > 0
-      ? socialData.data.trends.map((t) => {
-          const raw = t as unknown as Record<string, unknown>;
-          return {
-            topic: String(raw.topic ?? raw.coin ?? t),
-            mentions: Number(raw.mentions ?? raw.volume ?? 0),
-          };
-        })
-      : MOCK_BUZZ;
+  // Missing data renders as an unavailable state, never as invented numbers.
+  const market = sentimentData?.market ?? null;
+  const narratives = narrativesData?.narratives ?? [];
+  const narrativesAreKeyword = narrativesData?.method === 'keyword';
+  const socialTrends: SocialTrend[] = (socialData?.data?.trends ?? [])
+    .map((t) => {
+      const raw = t as unknown as Record<string, unknown>;
+      return {
+        topic: String(raw.topic ?? raw.coin ?? ''),
+        mentions: Number(raw.mentions ?? raw.volume ?? 0),
+      };
+    })
+    .filter((t) => t.topic !== '' && Number.isFinite(t.mentions) && t.mentions > 0);
 
-  // Gauge values
-  const gaugeValue = Math.round(((market.score + 100) / 200) * 100); // Convert -100..100 to 0..100
-  const gaugeLabel =
-    market.overall === 'very_bullish'
-      ? 'Very Bullish'
-      : market.overall === 'bullish'
-        ? 'Bullish'
-        : market.overall === 'bearish'
-          ? 'Bearish'
-          : market.overall === 'very_bearish'
-            ? 'Very Bearish'
-            : 'Neutral';
-
-  // Trend vs yesterday (mocked since API doesn't provide historical)
-  const yesterdayScore = gaugeValue - Math.floor(Math.random() * 10 - 5);
-  const trendChange = gaugeValue - yesterdayScore;
+  const gaugeValue = market ? Math.round(((market.score + 100) / 200) * 100) : 0; // -100..100 → 0..100
+  const gaugeLabel = market ? labelFor(market.overall) : '';
 
   return (
     <>
@@ -422,53 +302,51 @@ export default async function SentimentPage({ params }: Props) {
             Overall Market Sentiment
           </h2>
 
-          <div className="grid gap-6 lg:grid-cols-[1fr_1.4fr]">
-            {/* Gauge */}
-            <Card className="flex flex-col items-center justify-center p-6">
-              <Suspense fallback={<SkeletonSection rows={2} />}>
-                <FearGreedGauge
-                  value={gaugeValue}
-                  label={gaugeLabel}
-                  previousValue={yesterdayScore}
-                />
-              </Suspense>
-              <div className="mt-2 flex items-center gap-2 text-sm">
-                <span className="text-text-tertiary">vs yesterday:</span>
-                <SentimentArrow change={trendChange} />
+          {market ? (
+            <div className="grid gap-6 lg:grid-cols-[1fr_1.4fr]">
+              {/* Gauge */}
+              <Card className="flex flex-col items-center justify-center p-6">
+                <Suspense fallback={<SkeletonSection rows={2} />}>
+                  <FearGreedGauge value={gaugeValue} label={gaugeLabel} />
+                </Suspense>
+              </Card>
+
+              {/* Summary + Drivers */}
+              <div className="flex flex-col gap-4">
+                <Card className="flex-1 p-5">
+                  <div className="mb-3 flex items-center gap-2">
+                    <BarChart3 className="text-accent h-4 w-4" />
+                    <h3 className="text-text-primary text-sm font-semibold">Market Summary</h3>
+                    <span className="text-text-tertiary bg-border/50 ml-auto rounded-full px-2 py-0.5 text-[10px]">
+                      Confidence: {market.confidence}%
+                    </span>
+                  </div>
+                  <p className="text-text-secondary text-sm leading-relaxed">{market.summary}</p>
+                </Card>
+
+                <Card className="p-5">
+                  <h3 className="text-text-primary mb-3 flex items-center gap-2 text-sm font-semibold">
+                    <Flame className="h-4 w-4 text-orange-500" />
+                    Key Sentiment Drivers
+                  </h3>
+                  <ul className="space-y-2">
+                    {market.keyDrivers.map((driver, i) => (
+                      <li key={i} className="text-text-secondary flex items-center gap-2 text-sm">
+                        <span className="bg-accent/10 text-accent flex h-5 w-5 items-center justify-center rounded-full text-[10px] font-bold">
+                          {i + 1}
+                        </span>
+                        {driver}
+                      </li>
+                    ))}
+                  </ul>
+                </Card>
               </div>
-            </Card>
-
-            {/* Summary + Drivers */}
-            <div className="flex flex-col gap-4">
-              <Card className="flex-1 p-5">
-                <div className="mb-3 flex items-center gap-2">
-                  <BarChart3 className="text-accent h-4 w-4" />
-                  <h3 className="text-text-primary text-sm font-semibold">Market Summary</h3>
-                  <span className="text-text-tertiary bg-border/50 ml-auto rounded-full px-2 py-0.5 text-[10px]">
-                    Confidence: {market.confidence}%
-                  </span>
-                </div>
-                <p className="text-text-secondary text-sm leading-relaxed">{market.summary}</p>
-              </Card>
-
-              <Card className="p-5">
-                <h3 className="text-text-primary mb-3 flex items-center gap-2 text-sm font-semibold">
-                  <Flame className="h-4 w-4 text-orange-500" />
-                  Key Sentiment Drivers
-                </h3>
-                <ul className="space-y-2">
-                  {market.keyDrivers.map((driver, i) => (
-                    <li key={i} className="text-text-secondary flex items-center gap-2 text-sm">
-                      <span className="bg-accent/10 text-accent flex h-5 w-5 items-center justify-center rounded-full text-[10px] font-bold">
-                        {i + 1}
-                      </span>
-                      {driver}
-                    </li>
-                  ))}
-                </ul>
-              </Card>
             </div>
-          </div>
+          ) : (
+            <Card className="text-text-secondary p-12 text-center">
+              Market sentiment is temporarily unavailable.
+            </Card>
+          )}
         </section>
 
         {/* ================================================================ */}
@@ -492,6 +370,12 @@ export default async function SentimentPage({ params }: Props) {
             <Flame className="h-5 w-5 text-orange-500" />
             Trending Narratives
           </h2>
+          {narrativesAreKeyword && narratives.length > 0 && (
+            <p className="text-text-tertiary -mt-2 mb-4 text-xs">
+              AI analysis is temporarily unavailable. These narratives are grouped by headline
+              keywords.
+            </p>
+          )}
 
           {narratives.length > 0 ? (
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -528,10 +412,18 @@ export default async function SentimentPage({ params }: Props) {
             Social Buzz
           </h2>
           <Card className="p-6">
-            <SocialBuzzCloud trends={socialTrends} />
-            <p className="text-text-tertiary mt-2 text-center text-[10px]">
-              Sized by mention volume across social platforms
-            </p>
+            {socialTrends.length > 0 ? (
+              <>
+                <SocialBuzzCloud trends={socialTrends} />
+                <p className="text-text-tertiary mt-2 text-center text-[10px]">
+                  Sized by mention volume across social platforms
+                </p>
+              </>
+            ) : (
+              <p className="text-text-secondary py-6 text-center">
+                Social buzz data is temporarily unavailable.
+              </p>
+            )}
           </Card>
         </section>
       </main>

@@ -10,33 +10,20 @@
 
 import { type NextRequest, NextResponse } from 'next/server';
 import { getLatestNews, type NewsArticle } from '@/lib/crypto-news';
-import { promptAIJson, isAIConfigured, AIAuthError } from '@/lib/ai-provider';
-import { aiNotConfiguredResponse, aiAuthErrorResponse } from '@/app/api/_utils';
+import { promptAIJson, isAIConfigured } from '@/lib/ai-provider';
 import { aiCache, generateCacheKey, withCache } from '@/lib/cache';
+import { keywordNarratives, type Narrative } from '@/lib/keyword-narratives';
 
 export const runtime = 'edge';
 export const revalidate = 300;
 
-interface Narrative {
-  id: string;
-  name: string;
-  description: string;
-  sentiment: 'bullish' | 'bearish' | 'neutral';
-  strength: number; // 0-100, how dominant this narrative is
-  articles: {
-    title: string;
-    link: string;
-    source: string;
-  }[];
-  /** Index references the model returns; re-hydrated into `articles` before responding. */
+/** A narrative as the model returns it, before article indexes are re-hydrated. */
+interface ModelNarrative extends Omit<Narrative, 'articles'> {
   articleIndexes?: number[];
-  relatedTickers: string[];
-  keyPhrases: string[];
-  emerging: boolean; // Is this a new/emerging narrative?
 }
 
 interface NarrativesResponse {
-  narratives: Narrative[];
+  narratives: ModelNarrative[];
 }
 
 const SYSTEM_PROMPT = `You are a crypto market narrative analyst. Identify the dominant narratives and themes in crypto news.
@@ -76,6 +63,12 @@ const MAX_DESCRIPTION_CHARS = 220;
  */
 const ANALYSIS_TTL_SECONDS = 300;
 
+/**
+ * Edge cache time for a keyword answer, so callers pick up the AI analysis
+ * soon after a provider recovers.
+ */
+const DEGRADED_CACHE_SECONDS = 60;
+
 const DEFAULT_LIMIT = 40;
 const MAX_LIMIT = 80;
 
@@ -94,6 +87,7 @@ interface NarrativeAnalysis {
   narratives: Narrative[];
   articlesAnalyzed: number;
   analyzedAt: string;
+  method: 'ai' | 'keyword';
 }
 
 /**
@@ -125,24 +119,56 @@ ${JSON.stringify(articlesForAnalysis)}`;
     temperature: 0.4,
   });
 
-  const narratives = (result?.narratives || []).map((n) => ({
+  const narratives = (result?.narratives || []).map(({ articleIndexes, ...n }) => ({
     ...n,
-    articles: (Array.isArray(n.articleIndexes) ? n.articleIndexes : [])
+    articles: (Array.isArray(articleIndexes) ? articleIndexes : [])
       .map((i) => articles[i])
       .filter(Boolean)
       .map((a) => ({ title: a.title, link: a.link, source: a.source })),
-    articleIndexes: undefined,
   }));
 
-  return { narratives, articlesAnalyzed: articles.length, analyzedAt: new Date().toISOString() };
+  return { narratives, articlesAnalyzed: articles.length, analyzedAt: new Date().toISOString(), method: 'ai' };
+}
+
+function keywordAnalysis(articles: NewsArticle[]): NarrativeAnalysis {
+  return {
+    narratives: keywordNarratives(articles),
+    articlesAnalyzed: articles.length,
+    analyzedAt: new Date().toISOString(),
+    method: 'keyword',
+  };
+}
+
+/**
+ * The AI analysis when a provider can give one (fresh, or the last good one
+ * for up to an hour via the cache's stale-on-error), otherwise the keyword
+ * grouping of the same articles.
+ */
+async function analyze(
+  articles: NewsArticle[],
+  limit: number,
+): Promise<{ analysis: NarrativeAnalysis; degradedReason?: string }> {
+  if (!isAIConfigured()) {
+    return { analysis: keywordAnalysis(articles), degradedReason: 'ai_not_configured' };
+  }
+  try {
+    const analysis = await withCache(
+      aiCache,
+      generateCacheKey('narratives-analysis', { limit }),
+      ANALYSIS_TTL_SECONDS,
+      () => analyzeNarratives(articles),
+    );
+    return { analysis };
+  } catch (error) {
+    console.warn('[narratives] AI analysis unavailable, answering from headline keywords:', String(error));
+    return { analysis: keywordAnalysis(articles), degradedReason: 'ai_unavailable' };
+  }
 }
 
 export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;
   const limit = parseLimit(searchParams.get('limit'));
   const emerging = searchParams.get('emerging') === 'true';
-
-  if (!isAIConfigured()) return aiNotConfiguredResponse();
 
   try {
     let data;
@@ -163,12 +189,8 @@ export async function GET(request: NextRequest) {
       });
     }
 
-    const analysis = await withCache(
-      aiCache,
-      generateCacheKey('narratives-analysis', { limit }),
-      ANALYSIS_TTL_SECONDS,
-      () => analyzeNarratives(data.articles),
-    );
+    const { analysis, degradedReason } = await analyze(data.articles, limit);
+    const maxAge = degradedReason ? DEGRADED_CACHE_SECONDS : ANALYSIS_TTL_SECONDS;
 
     const narratives = (emerging ? analysis.narratives.filter((n) => n.emerging) : [...analysis.narratives]).sort(
       (a, b) => b.strength - a.strength,
@@ -194,19 +216,18 @@ export async function GET(request: NextRequest) {
         },
         articlesAnalyzed: analysis.articlesAnalyzed,
         analyzedAt: analysis.analyzedAt,
+        method: analysis.method,
+        ...(degradedReason && { degraded: true, degradedReason }),
       },
       {
         headers: {
-          'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=600',
+          'Cache-Control': `public, s-maxage=${maxAge}, stale-while-revalidate=${maxAge * 2}`,
           'Access-Control-Allow-Origin': '*',
         },
       },
     );
   } catch (error) {
     console.error('Narrative analysis error:', error);
-    if (error instanceof AIAuthError || (error as Error).name === 'AIAuthError') {
-      return aiAuthErrorResponse((error as Error).message);
-    }
     return NextResponse.json(
       {
         error: 'Failed to analyze narratives',

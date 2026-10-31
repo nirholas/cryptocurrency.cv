@@ -113,9 +113,37 @@ describe('GET /api/narratives', () => {
     expect((await response.json()).narratives).toHaveLength(1);
   });
 
-  it('answers 503 with Retry-After when no provider answers and nothing is cached', async () => {
-    mockGetLatestNews.mockResolvedValue(newsOf([article(0)]));
+  it('answers from headline keywords when no provider answers and nothing is cached', async () => {
+    mockGetLatestNews.mockResolvedValue(
+      newsOf([article(0), article(1)].map((a, i) => ({ ...a, title: `Spot ETF inflows rally ${i}` }))),
+    );
     mockPromptAIJson.mockRejectedValueOnce(new Error('every configured provider is out of quota'));
+    const warn = vi.spyOn(console, 'warn').mockImplementation(() => {});
+
+    const response = await GET(makeRequest());
+    const body = await response.json();
+
+    expect(response.status).toBe(200);
+    expect(body).toMatchObject({ method: 'keyword', degraded: true, degradedReason: 'ai_unavailable' });
+    expect(body.narratives[0]).toMatchObject({ id: 'etf', strength: 100 });
+    expect(response.headers.get('Cache-Control')).toContain('s-maxage=60');
+    warn.mockRestore();
+  });
+
+  it('answers from headline keywords without prompting when no provider is configured', async () => {
+    mockIsAIConfigured.mockReturnValue(false);
+    mockGetLatestNews.mockResolvedValue(newsOf([article(0)]));
+
+    const response = await GET(makeRequest());
+    const body = await response.json();
+
+    expect(response.status).toBe(200);
+    expect(body).toMatchObject({ method: 'keyword', degradedReason: 'ai_not_configured' });
+    expect(mockPromptAIJson).not.toHaveBeenCalled();
+  });
+
+  it('answers 503 with Retry-After when the news feed itself fails', async () => {
+    mockGetLatestNews.mockRejectedValue(new Error('feed down'));
     const error = vi.spyOn(console, 'error').mockImplementation(() => {});
 
     const response = await GET(makeRequest());
