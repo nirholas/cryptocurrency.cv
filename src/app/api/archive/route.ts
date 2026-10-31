@@ -10,11 +10,14 @@
 
 import { type NextRequest, NextResponse } from 'next/server';
 import {
+  ARCHIVE_INDEX_TYPES,
   queryArchiveV2,
   getArchiveV2Stats,
   getArchiveV2Index,
   getTrendingTickers,
   getMarketHistory,
+  isArchiveIndexType,
+  isArchiveYearMonth,
   toNewsArticle,
 } from '@/lib/archive-v2';
 import { translateArticles, isLanguageSupported, SUPPORTED_LANGUAGES } from '@/lib/translate';
@@ -27,6 +30,13 @@ import {
 } from '@/lib/db/queries';
 
 export const runtime = 'edge';
+
+/** Parse an integer query value, falling back on garbage and clamping to [min, max]. */
+function clampInt(raw: string | null, fallback: number, min: number, max: number): number {
+  const value = Number.parseInt(raw ?? '', 10);
+  if (Number.isNaN(value)) return fallback;
+  return Math.min(Math.max(value, min), max);
+}
 
 /**
  * GET /api/archive - Query historical news archive
@@ -82,7 +92,14 @@ export async function GET(request: NextRequest) {
     
     // Check for index request
     if (searchParams.get('index') === 'true') {
-      const indexType = searchParams.get('type') as 'by-source' | 'by-ticker' | 'by-date' || 'by-date';
+      const indexType = searchParams.get('type') || 'by-date';
+      if (!isArchiveIndexType(indexType)) {
+        return NextResponse.json({
+          success: false,
+          error: 'Invalid index type',
+          message: `Use one of: ${ARCHIVE_INDEX_TYPES.join(', ')}`
+        }, { status: 400 });
+      }
       const index = await getArchiveV2Index(indexType);
       
       if (!index) {
@@ -105,10 +122,10 @@ export async function GET(request: NextRequest) {
     
     // Check for trending tickers request
     if (searchParams.get('trending') === 'true') {
-      const hours = parseInt(searchParams.get('hours') || '24');
+      const hours = clampInt(searchParams.get('hours'), 24, 1, 72);
       const trending = isDbAvailable()
-        ? await pgGetTrendingTickers(Math.min(hours, 72))
-        : await getTrendingTickers(Math.min(hours, 72));
+        ? await pgGetTrendingTickers(hours)
+        : await getTrendingTickers(hours);
       
       return NextResponse.json({
         success: true,
@@ -120,6 +137,13 @@ export async function GET(request: NextRequest) {
     // Check for market history request
     const marketMonth = searchParams.get('market');
     if (marketMonth) {
+      if (!isArchiveYearMonth(marketMonth)) {
+        return NextResponse.json({
+          success: false,
+          error: 'Invalid market month',
+          message: 'Use YYYY-MM format'
+        }, { status: 400 });
+      }
       const history = isDbAvailable()
         ? await pgGetMarketHistory(marketMonth)
         : await getMarketHistory(marketMonth);
@@ -141,8 +165,8 @@ export async function GET(request: NextRequest) {
     const sentiment = searchParams.get('sentiment') as 'positive' | 'negative' | 'neutral' | undefined;
     const tagsParam = searchParams.get('tags');
     const tags = tagsParam ? tagsParam.split(',').map(t => t.trim()) : undefined;
-    const limit = Math.min(parseInt(searchParams.get('limit') || '50'), 200);
-    const offset = parseInt(searchParams.get('offset') || '0');
+    const limit = clampInt(searchParams.get('limit'), 50, 1, 200);
+    const offset = clampInt(searchParams.get('offset'), 0, 0, Number.MAX_SAFE_INTEGER);
     const format = searchParams.get('format') || 'full';
     const lang = searchParams.get('lang') || 'en';
     

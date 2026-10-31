@@ -1,7 +1,14 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
 import { ARCHIVE_BASE_URL } from '@/lib/archive-source';
-import { clearArchiveV2MonthCache, getArchiveV2Month } from '@/lib/archive-v2';
+import {
+  clearArchiveV2MonthCache,
+  getArchiveV2Index,
+  getArchiveV2Month,
+  getMarketHistory,
+  isArchiveYearMonth,
+  type ArchiveIndexType,
+} from '@/lib/archive-v2';
 
 const MONTH = '2026-09';
 
@@ -111,5 +118,49 @@ describe('getArchiveV2Month', () => {
       '2026-09',
       '2026-06',
     ]);
+  });
+});
+
+describe('archive path validation', () => {
+  beforeEach(() => {
+    vi.clearAllMocks();
+    clearArchiveV2MonthCache();
+  });
+
+  afterEach(() => {
+    vi.restoreAllMocks();
+  });
+
+  it.each(['2026-09', '2017-01', '2026-12'])('accepts %s as a month', (value) => {
+    expect(isArchiveYearMonth(value)).toBe(true);
+  });
+
+  it.each(['2026-13', '2026-00', '2026-9', '../meta/stats', '2026-09/../../x', ''])(
+    'rejects %s as a month',
+    (value) => {
+      expect(isArchiveYearMonth(value)).toBe(false);
+    },
+  );
+
+  it('never fetches a malformed month', async () => {
+    const fetchSpy = vi.spyOn(globalThis, 'fetch');
+
+    expect(await getArchiveV2Month('../meta/stats')).toEqual([]);
+    expect(await getMarketHistory('../articles/2026-09')).toEqual([]);
+    expect(fetchSpy).not.toHaveBeenCalled();
+  });
+
+  it('never fetches an unknown index type', async () => {
+    const fetchSpy = vi.spyOn(globalThis, 'fetch');
+
+    expect(await getArchiveV2Index('../meta/stats' as ArchiveIndexType)).toBeNull();
+    expect(fetchSpy).not.toHaveBeenCalled();
+  });
+
+  it('fetches a published index type', async () => {
+    const fetchSpy = vi.spyOn(globalThis, 'fetch').mockResolvedValue(Response.json({ BTC: ['a'] }));
+
+    expect(await getArchiveV2Index('by-ticker')).toEqual({ BTC: ['a'] });
+    expect(String(fetchSpy.mock.calls[0][0])).toBe(`${ARCHIVE_BASE_URL}/indexes/by-ticker.json`);
   });
 });

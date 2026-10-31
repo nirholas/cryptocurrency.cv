@@ -211,12 +211,26 @@ export async function getArchiveV2Stats(): Promise<ArchiveV2Stats | null> {
   }
 }
 
+export const ARCHIVE_INDEX_TYPES = ['by-source', 'by-ticker', 'by-date'] as const;
+export type ArchiveIndexType = (typeof ARCHIVE_INDEX_TYPES)[number];
+
+const YEAR_MONTH_RE = /^\d{4}-(0[1-9]|1[0-2])$/;
+
+/** True for a `YYYY-MM` string naming a real calendar month. */
+export function isArchiveYearMonth(value: string): boolean {
+  return YEAR_MONTH_RE.test(value);
+}
+
+/** True for one of the index files the archive publishes. */
+export function isArchiveIndexType(value: string): value is ArchiveIndexType {
+  return (ARCHIVE_INDEX_TYPES as readonly string[]).includes(value);
+}
+
 /**
  * Fetch V2 archive index (for fast lookups)
  */
-export async function getArchiveV2Index(
-  type: 'by-source' | 'by-ticker' | 'by-date',
-): Promise<Record<string, string[]> | null> {
+export async function getArchiveV2Index(type: ArchiveIndexType): Promise<Record<string, string[]> | null> {
+  if (!isArchiveIndexType(type)) return null;
   try {
     const response = await fetch(`${ARCHIVE_BASE_URL}/indexes/${type}.json`, {
       next: { revalidate: 300 },
@@ -299,6 +313,7 @@ async function loadArchiveV2Month(
  * parses the whole month each time. The returned array is shared: do not mutate it.
  */
 export async function getArchiveV2Month(yearMonth: string): Promise<EnrichedArticle[]> {
+  if (!isArchiveYearMonth(yearMonth)) return [];
   const now = Date.now();
   const cached = monthCache.get(yearMonth);
   if (cached && cached.expiresAt > now) return cached.articles;
@@ -532,6 +547,7 @@ export async function getMarketHistory(yearMonth: string): Promise<
     fear_greed_index: number | null;
   }>
 > {
+  if (!isArchiveYearMonth(yearMonth)) return [];
   try {
     const response = await fetch(`${ARCHIVE_BASE_URL}/market/${yearMonth}.jsonl`, {
       next: { revalidate: 3600 },
