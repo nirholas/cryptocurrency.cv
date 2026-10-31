@@ -152,7 +152,6 @@ export async function POST(request: NextRequest) {
     return NextResponse.json(
       {
         error: 'AI processing failed',
-        message: error instanceof Error ? error.message : 'Unknown error',
       },
       { status: 500 }
     );

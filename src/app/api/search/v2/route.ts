@@ -82,7 +82,7 @@ export async function GET(request: NextRequest) {
   } catch (error) {
     console.error('[search/v2] Error:', error);
     return NextResponse.json(
-      { error: 'Search failed', message: error instanceof Error ? error.message : 'Unknown error' },
+      { error: 'Search failed', message: 'Internal server error' },
       { status: 500 },
     );
   }
@@ -105,8 +105,9 @@ export async function POST(request: NextRequest) {
 
     return NextResponse.json({ suggestions, engine: engine.name });
   } catch (error) {
+    console.error('search/v2 route error:', error);
     return NextResponse.json(
-      { error: 'Suggest failed', message: error instanceof Error ? error.message : 'Unknown error' },
+      { error: 'Suggest failed', message: 'Internal server error' },
       { status: 500 },
     );
   }

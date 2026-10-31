@@ -32,8 +32,9 @@ export async function GET() {
       headers: { 'Cache-Control': 'public, s-maxage=30' },
     });
   } catch (error) {
+    console.error('pipelines route error:', error);
     return NextResponse.json(
-      { error: 'Failed to generate pipeline report', message: error instanceof Error ? error.message : 'Unknown' },
+      { error: 'Failed to generate pipeline report', message: 'Internal server error' },
       { status: 500 },
     );
   }
@@ -67,8 +68,9 @@ export async function POST(request: NextRequest) {
       ...result,
     });
   } catch (error) {
+    console.error('pipelines route error:', error);
     return NextResponse.json(
-      { error: 'Pipeline execution failed', message: error instanceof Error ? error.message : 'Unknown' },
+      { error: 'Pipeline execution failed', message: 'Internal server error' },
       { status: 500 },
     );
   }

@@ -182,7 +182,6 @@ export async function GET(request: NextRequest) {
       {
         success: false,
         error: 'Failed to fetch options data',
-        message: error instanceof Error ? error.message : 'Unknown error',
         timestamp: new Date().toISOString(),
       },
       { status: 500 },

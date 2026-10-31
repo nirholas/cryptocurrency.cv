@@ -159,7 +159,7 @@ export async function GET(request: NextRequest) {
     return NextResponse.json(
       { 
         s: 'error',
-        errmsg: error instanceof Error ? error.message : 'Unknown error',
+        errmsg: 'Internal server error',
       },
       { status: 500 }
     );

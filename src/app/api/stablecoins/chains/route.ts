@@ -59,8 +59,9 @@ export async function GET(req: NextRequest) {
       },
     );
   } catch (error) {
+    console.error('stablecoins/chains route error:', error);
     return NextResponse.json(
-      { status: 'error', message: error instanceof Error ? error.message : 'Unknown error' },
+      { status: 'error', message: 'Internal server error' },
       { status: 502 },
     );
   }

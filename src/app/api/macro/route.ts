@@ -44,7 +44,6 @@ export async function GET() {
     return NextResponse.json(
       {
         error: 'Failed to fetch macro data',
-        message: error instanceof Error ? error.message : 'Unknown',
       },
       { status: 502 },
     );

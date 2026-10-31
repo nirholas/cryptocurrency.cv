@@ -39,8 +39,9 @@ export async function GET() {
       },
     );
   } catch (error) {
+    console.error('stablecoins/depeg route error:', error);
     return NextResponse.json(
-      { status: 'error', message: error instanceof Error ? error.message : 'Unknown error' },
+      { status: 'error', message: 'Internal server error' },
       { status: 500 },
     );
   }

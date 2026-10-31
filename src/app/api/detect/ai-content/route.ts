@@ -105,6 +105,7 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
     );
 
   } catch (error) {
+    console.error('detect/ai-content route error:', error);
     if (error instanceof SyntaxError) {
       return NextResponse.json(
         { error: "Invalid JSON", code: "INVALID_JSON" },
@@ -116,7 +117,6 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
       {
         error: "Failed to analyze content",
         code: "ANALYSIS_ERROR",
-        message: error instanceof Error ? error.message : "Unknown error"
       },
       { status: 500 }
     );

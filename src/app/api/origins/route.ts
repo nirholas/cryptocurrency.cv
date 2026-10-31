@@ -251,7 +251,6 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({
       success: false,
       error: 'Failed to analyze origins',
-      message: error instanceof Error ? error.message : 'Unknown error'
     }, { status: 500 });
   }
 }
@@ -304,10 +303,10 @@ export async function POST(request: NextRequest) {
     });
     
   } catch (error) {
+    console.error('origins route error:', error);
     return NextResponse.json({
       success: false,
       error: 'Analysis failed',
-      message: error instanceof Error ? error.message : 'Unknown error'
     }, { status: 500 });
   }
 }

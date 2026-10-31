@@ -130,7 +130,6 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({
       success: false,
       error: 'Failed to scan arbitrage opportunities',
-      message: error instanceof Error ? error.message : 'Unknown error',
     }, { 
       status: 500,
       headers: {
@@ -234,10 +233,10 @@ export async function POST(request: NextRequest) {
       error: 'Invalid action. Use: subscribe, test',
     }, { status: 400 });
   } catch (error) {
+    console.error('arbitrage route error:', error);
     return NextResponse.json({
       success: false,
       error: 'Failed to process request',
-      message: error instanceof Error ? error.message : 'Unknown error',
     }, { status: 500 });
   }
 }

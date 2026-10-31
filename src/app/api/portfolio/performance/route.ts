@@ -83,10 +83,10 @@ export async function POST(request: NextRequest) {
 
     return NextResponse.json(performance);
   } catch (error) {
+    console.error('portfolio/performance route error:', error);
     return NextResponse.json(
       {
         error: 'Failed to calculate performance',
-        message: error instanceof Error ? error.message : 'Unknown error',
       },
       { status: 500 },
     );

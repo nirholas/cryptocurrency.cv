@@ -79,7 +79,6 @@ export async function GET(request: Request) {
     return NextResponse.json(
       {
         error: 'Failed to fetch DXY data',
-        message: error instanceof Error ? error.message : 'Unknown',
       },
       { status: 502 },
     );

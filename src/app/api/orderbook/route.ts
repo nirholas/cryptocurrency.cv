@@ -250,7 +250,6 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
       {
         success: false,
         error: 'Failed to fetch order book data',
-        message: error instanceof Error ? error.message : 'Unknown error',
       },
       { status: 500 }
     );

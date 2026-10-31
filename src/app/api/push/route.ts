@@ -207,7 +207,6 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({
       success: false,
       error: 'Registration failed',
-      message: error instanceof Error ? error.message : 'Unknown error'
     }, { status: 500 });
   }
 }
@@ -249,10 +248,10 @@ export async function DELETE(request: NextRequest) {
     }, { status: 404 });
     
   } catch (error) {
+    console.error('push route error:', error);
     return NextResponse.json({
       success: false,
       error: 'Unsubscribe failed',
-      message: error instanceof Error ? error.message : 'Unknown error'
     }, { status: 500 });
   }
 }
@@ -301,10 +300,10 @@ export async function PATCH(request: NextRequest) {
     });
     
   } catch (error) {
+    console.error('push route error:', error);
     return NextResponse.json({
       success: false,
       error: 'Update failed',
-      message: error instanceof Error ? error.message : 'Unknown error'
     }, { status: 500 });
   }
 }

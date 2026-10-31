@@ -93,7 +93,6 @@ export async function GET() {
     return NextResponse.json(
       {
         error: 'Failed to compute correlations',
-        message: error instanceof Error ? error.message : 'Unknown',
       },
       { status: 502 },
     );

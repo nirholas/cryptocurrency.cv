@@ -251,7 +251,7 @@ export async function GET(request: NextRequest) {
     return NextResponse.json(
       { 
         success: false, 
-        error: error instanceof Error ? error.message : 'Failed to fetch predictions' 
+        error: 'Failed to fetch predictions' 
       },
       { status: 500 }
     );
@@ -355,7 +355,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json(
       { 
         success: false, 
-        error: error instanceof Error ? error.message : 'Failed to process request' 
+        error: 'Failed to process request' 
       },
       { status: 500 }
     );

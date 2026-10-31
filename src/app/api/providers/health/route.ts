@@ -56,10 +56,10 @@ export async function GET(request: NextRequest) {
 
     return NextResponse.json(summary, { headers: CORS_HEADERS });
   } catch (err) {
+    console.error('providers/health route error:', err);
     return NextResponse.json(
       {
         error: 'Failed to collect health data',
-        details: String(err),
       },
       { status: 500, headers: CORS_HEADERS },
     );

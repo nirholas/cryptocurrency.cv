@@ -148,7 +148,6 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({
       success: false,
       error: 'Failed to fetch funding rate data',
-      message: error instanceof Error ? error.message : 'Unknown error',
     }, { 
       status: 500,
       headers: {
@@ -232,10 +231,10 @@ export async function POST(request: NextRequest) {
       error: 'Invalid action. Use: subscribe, unsubscribe',
     }, { status: 400 });
   } catch (error) {
+    console.error('funding route error:', error);
     return NextResponse.json({
       success: false,
       error: 'Failed to process subscription',
-      message: error instanceof Error ? error.message : 'Unknown error',
     }, { status: 500 });
   }
 }

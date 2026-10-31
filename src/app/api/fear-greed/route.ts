@@ -180,7 +180,6 @@ export const GET = instrumented(
       return NextResponse.json(
         {
           error: 'Failed to fetch Fear & Greed index',
-          message: error instanceof Error ? error.message : 'Unknown error',
         },
         { status: 500 },
       );

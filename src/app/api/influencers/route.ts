@@ -118,7 +118,6 @@ export async function GET(request: NextRequest) {
       {
         success: false,
         error: 'Failed to fetch influencer data',
-        message: error instanceof Error ? error.message : 'Unknown error',
       },
       { status: 500 },
     );
@@ -203,7 +202,6 @@ export async function POST(request: NextRequest) {
       {
         success: false,
         error: 'Failed to register influencer',
-        message: error instanceof Error ? error.message : 'Unknown error',
       },
       { status: 500 },
     );
