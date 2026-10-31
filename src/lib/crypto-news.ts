@@ -2905,7 +2905,11 @@ function getTimeAgo(date: Date): string {
 }
 
 import { newsCache, staleCache, withCache } from './cache';
+import { describeFeedFetchError } from './feed-fetch-error';
 import { recordFeedOutcome } from './source-health';
+
+/** Deadline for one RSS feed, headers and body together. */
+const RSS_TIMEOUT_MS = 3000; // reduced from 5s for faster cold starts
 
 // ═══════════════════════════════════════════════════════════════
 // API SOURCES (more reliable than RSS)
@@ -3652,10 +3656,12 @@ async function fetchApiSource(sourceKey: string): Promise<NewsArticle[]> {
 
     await domainSemaphore.acquire(domain);
 
-    try {
-      const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), 4000); // 4s timeout (reduced from 8s for faster cold starts)
+    // The deadline covers the body as well as the headers, so a stalled
+    // response cannot hold the domain slot.
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 4000); // 4s timeout (reduced from 8s for faster cold starts)
 
+    try {
       // Sources with noDataCache skip the Next.js data cache (responses > 2MB)
       // and rely solely on the in-memory withCache layer (5-min TTL).
       // Use short ISR (60s) instead of no-store to avoid tainting routes as
@@ -3669,8 +3675,6 @@ async function fetchApiSource(sourceKey: string): Promise<NewsArticle[]> {
         signal: controller.signal,
         ...(source.noDataCache ? { next: { revalidate: 60 } } : { next: { revalidate: 300 } }),
       });
-
-      clearTimeout(timeoutId);
 
       if (!response.ok) {
         // Handle 429 with domain-level back-off
@@ -3699,6 +3703,7 @@ async function fetchApiSource(sourceKey: string): Promise<NewsArticle[]> {
       }
       return [];
     } finally {
+      clearTimeout(timeoutId);
       domainSemaphore.release(domain);
     }
   });
@@ -3775,10 +3780,12 @@ async function fetchFeed(sourceKey: SourceKey): Promise<NewsArticle[]> {
         httpStatus,
       });
 
-    try {
-      const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), 3000); // 3s timeout (reduced from 5s for faster cold starts)
+    // The deadline covers the body as well as the headers, so a feed that
+    // stalls mid-download cannot hold the domain slot.
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), RSS_TIMEOUT_MS);
 
+    try {
       // force-cache ensures origin server Cache-Control headers (e.g. no-store)
       // don't break static generation; revalidate: 300 adds ISR on top.
       // Sources with noDataCache skip the Next.js data cache (responses > 2MB)
@@ -3801,8 +3808,6 @@ async function fetchFeed(sourceKey: SourceKey): Promise<NewsArticle[]> {
             }),
       };
       const response = await fetch(source.url, fetchOptions);
-
-      clearTimeout(timeoutId);
 
       // Detect redirects (3xx) — log warning and bail to prevent self-referential requests
       if (response.status >= 300 && response.status < 400) {
@@ -3840,14 +3845,16 @@ async function fetchFeed(sourceKey: SourceKey): Promise<NewsArticle[]> {
       record('ok', undefined, response.status);
       return parsed;
     } catch (error) {
-      // Only log non-abort errors in production, or all errors with DEBUG_RSS
-      const isAbortError = error instanceof Error && error.name === 'AbortError';
-      if (process.env.DEBUG_RSS || (!isAbortError && process.env.NODE_ENV === 'production')) {
-        console.warn(`Error fetching ${source.name}:`, isAbortError ? 'timeout' : error);
+      // Timeouts and dropped connections are routine across hundreds of feeds
+      // and stay in feed health; production logs only unexpected errors.
+      const failure = describeFeedFetchError(error, RSS_TIMEOUT_MS);
+      if (process.env.DEBUG_RSS || (!failure.network && process.env.NODE_ENV === 'production')) {
+        console.warn(`Error fetching ${source.name}: ${failure.message}`);
       }
-      record('fail', isAbortError ? 'timeout after 3000ms' : error instanceof Error ? error.message : String(error));
+      record('fail', failure.message);
       return [];
     } finally {
+      clearTimeout(timeoutId);
       domainSemaphore.release(domain);
     }
   });
