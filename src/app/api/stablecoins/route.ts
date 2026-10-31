@@ -36,7 +36,8 @@ export async function GET(request: NextRequest) {
   try {
     const { searchParams } = new URL(request.url);
     const showChains = searchParams.get('chains') === 'true';
-    const limit = parseInt(searchParams.get('limit') ?? '50', 10);
+    const limitRaw = Number.parseInt(searchParams.get('limit') ?? '', 10);
+    const limit = Number.isFinite(limitRaw) ? Math.min(Math.max(limitRaw, 1), 500) : 50;
 
     // Chain breakdown mode — direct fetch (not covered by provider chain)
     if (showChains) {

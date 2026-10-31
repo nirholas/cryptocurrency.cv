@@ -95,7 +95,8 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
   if (authResponse) return authResponse;
 
   const { searchParams } = new URL(request.url);
-  const days = Math.min(parseInt(searchParams.get('days') || '30'), 365);
+  const daysRaw = Number.parseInt(searchParams.get('days') ?? '', 10);
+  const days = Number.isFinite(daysRaw) ? Math.min(Math.max(daysRaw, 1), 365) : 30;
 
   try {
     logger.info('Fetching Fear & Greed index', { days });
