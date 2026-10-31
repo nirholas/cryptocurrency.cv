@@ -21,6 +21,7 @@
 import { type NextRequest, NextResponse } from 'next/server';
 import { createHash } from 'crypto';
 
+import { requireAdminAuth } from '@/lib/admin-auth';
 import { resilientFetchResponse } from '@/lib/resilient-fetch';
 import { ARCHIVE_BASE_URL } from '@/lib/archive-source';
 interface ArchivedItem {
@@ -225,15 +226,45 @@ export async function GET(request: NextRequest) {
   });
 }
 
+/** CIDv0 (base58btc, `Qm…`) or CIDv1 in its default base32 form (`b…`). */
+const CID_PATTERN = /^(?:Qm[1-9A-HJ-NP-Za-km-z]{44}|b[a-z2-7]{50,100})$/;
+
+/** Snapshot dates become part of the archive URL, so only `YYYY-MM-DD` is accepted. */
+const SNAPSHOT_DATE_PATTERN = /^\d{4}-(?:0[1-9]|1[0-2])-(?:0[1-9]|[12]\d|3[01])$/;
+
+function optionalString(value: unknown): string | undefined {
+  return typeof value === 'string' && value.length > 0 ? value : undefined;
+}
+
+/**
+ * Writes spend the owner's Pinata / nft.storage quota, so they are admin-only.
+ * Reads (GET) stay public.
+ */
 export async function POST(request: NextRequest) {
+  const denied = requireAdminAuth(request);
+  if (denied) return denied;
+
+  let body: Record<string, unknown>;
   try {
-    const body = await request.json();
+    const parsed: unknown = await request.json();
+    if (typeof parsed !== 'object' || parsed === null || Array.isArray(parsed)) {
+      return NextResponse.json({ error: 'Request body must be a JSON object' }, { status: 400 });
+    }
+    body = parsed as Record<string, unknown>;
+  } catch {
+    return NextResponse.json({ error: 'Invalid JSON body' }, { status: 400 });
+  }
+
+  try {
     const { action } = body;
     
     // Archive single article
     if (action === 'archive') {
-      const { url, title, content, source, storage = 'ipfs' } = body;
-      
+      const url = optionalString(body.url);
+      const title = optionalString(body.title);
+      const content = optionalString(body.content);
+      const source = optionalString(body.source);
+
       if (!content && !url) {
         return NextResponse.json({ error: 'Content or URL required' }, { status: 400 });
       }
@@ -293,7 +324,10 @@ export async function POST(request: NextRequest) {
     
     // Create daily snapshot
     if (action === 'snapshot') {
-      const { date = new Date().toISOString().split('T')[0] } = body;
+      const date = body.date ?? new Date().toISOString().split('T')[0];
+      if (typeof date !== 'string' || !SNAPSHOT_DATE_PATTERN.test(date)) {
+        return NextResponse.json({ error: 'date must be YYYY-MM-DD' }, { status: 400 });
+      }
 
       if (!isConfigured()) {
         return NextResponse.json({
@@ -355,7 +389,9 @@ export async function POST(request: NextRequest) {
     // Pin existing content
     if (action === 'pin') {
       const { cid } = body;
-      if (!cid) return NextResponse.json({ error: 'cid required' }, { status: 400 });
+      if (typeof cid !== 'string' || !CID_PATTERN.test(cid)) {
+        return NextResponse.json({ error: 'cid must be a CIDv0 (Qm…) or base32 CIDv1 (b…)' }, { status: 400 });
+      }
 
       // Try Pinata pin-by-hash
       const pinataJwt = process.env.PINATA_JWT;
@@ -367,10 +403,11 @@ export async function POST(request: NextRequest) {
           if (res.ok) {
             return NextResponse.json({ success: true, pinned: true, cid, service: 'pinata', message: `CID ${cid} pinned to Pinata` });
           }
-          const err = await res.text();
-          return NextResponse.json({ success: false, error: `Pinata pin failed: ${err}` }, { status: 502 });
+          console.error(`IPFS pin: Pinata returned ${res.status}:`, await res.text());
+          return NextResponse.json({ success: false, error: 'Pinning service rejected the request' }, { status: 502 });
         } catch (e) {
-          return NextResponse.json({ success: false, error: String(e) }, { status: 502 });
+          console.error('IPFS pin: Pinata request failed:', e);
+          return NextResponse.json({ success: false, error: 'Pinning service unavailable' }, { status: 502 });
         }
       }
 
@@ -384,7 +421,7 @@ export async function POST(request: NextRequest) {
     
     return NextResponse.json({ error: 'Unknown action' }, { status: 400 });
   } catch (error: unknown) {
-    const message = error instanceof Error ? error.message : 'Unknown error';
-    return NextResponse.json({ error: message }, { status: 500 });
+    console.error('IPFS archive POST error:', error);
+    return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
   }
 }

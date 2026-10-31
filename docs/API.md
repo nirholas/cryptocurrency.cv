@@ -2686,6 +2686,17 @@ News article archive and historical data
 
 IPFS-pinned news archive for permanent storage
 
+`GET` is public. `POST` writes to the owner's Pinata / nft.storage account, so it requires the admin key (`Authorization: Bearer $ADMIN_API_KEY` or `X-Admin-Key`). It returns 401 without a valid key and 503 when no admin key is configured.
+
+| `POST` body field | Type | Description |
+|-------------------|------|-------------|
+| `action` | string | `archive`, `snapshot` or `pin` |
+| `url`, `title`, `content`, `source` | string | `archive`: `content` or `url` is required |
+| `date` | string | `snapshot`: `YYYY-MM-DD`, defaults to today (UTC) |
+| `cid` | string | `pin`: a CIDv0 (`Qm…`) or base32 CIDv1 (`b…`) |
+
+`POST` errors: 400 for invalid JSON or fields, 502 when the storage provider fails, 503 when storage is not configured.
+
 **Price:** `$0.001/request`
 
 | Parameter | Type | Required | Default | Description |

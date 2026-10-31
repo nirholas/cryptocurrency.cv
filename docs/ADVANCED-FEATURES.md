@@ -86,7 +86,7 @@ Get crypto news directly in VS Code through Copilot Chat.
 
 Permanently archive news to decentralized storage.
 
-**Endpoint:** `GET /api/archive/ipfs`
+**Endpoint:** `GET /api/archive/ipfs` (public), `POST /api/archive/ipfs` (admin key required)
 
 **Features:**
 - Archive articles to IPFS
@@ -98,12 +98,15 @@ Permanently archive news to decentralized storage.
 ```bash
 # Archive an article
 curl -X POST /api/archive/ipfs \
+  -H "Authorization: Bearer $ADMIN_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{"action": "archive", "url": "...", "title": "..."}'
 
 # Create daily snapshot
 curl -X POST /api/archive/ipfs \
-  -d '{"action": "snapshot"}'
+  -H "Authorization: Bearer $ADMIN_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{"action": "snapshot", "date": "2026-10-30"}'
 ```
 
 ## ⛓️ Chainlink Oracle
