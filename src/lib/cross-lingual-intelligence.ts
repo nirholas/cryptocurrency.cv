@@ -17,7 +17,7 @@
  * - International alpha signals
  */
 
-import { promptGroqJsonCached, isGroqConfigured } from './groq';
+import { isAIConfigured, promptAIJsonCached } from './ai-provider';
 
 // Region definitions
 export const REGIONS = {
@@ -141,8 +141,8 @@ export function detectEarlyAsianNews(
 export async function analyzeRegionalSentiment(
   articlesByRegion: Record<Region, RegionalArticle[]>
 ): Promise<CrossLingualAnalysis> {
-  if (!isGroqConfigured()) {
-    throw new Error('AI features require GROQ_API_KEY');
+  if (!isAIConfigured()) {
+    throw new Error('AI features require an AI provider key');
   }
 
   const regionSummaries = Object.entries(articlesByRegion)
@@ -194,7 +194,7 @@ Return JSON:
   "summary": "one paragraph summary of global sentiment and notable divergences"
 }`;
 
-  const result = await promptGroqJsonCached<Omit<CrossLingualAnalysis, 'generatedAt'>>(
+  const result = await promptAIJsonCached<Omit<CrossLingualAnalysis, 'generatedAt'>>(
     'cross-lingual',
     systemPrompt,
     `Analyze these regional news headlines for sentiment and alpha signals:\n\n${regionSummaries}`,

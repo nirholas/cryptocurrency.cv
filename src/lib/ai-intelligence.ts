@@ -18,7 +18,7 @@
  * - News-price correlation detection
  */
 
-import { promptGroqJsonCached, isGroqConfigured } from './groq';
+import { isAIConfigured, promptAIJsonCached } from './ai-provider';
 
 // Types
 export interface NewsArticle {
@@ -151,8 +151,8 @@ function calculateSimilarity(text1: string, text2: string): number {
  * Synthesize multiple articles about the same story into one comprehensive summary
  */
 export async function synthesizeStory(articles: NewsArticle[]): Promise<SynthesizedStory> {
-  if (!isGroqConfigured()) {
-    throw new Error('AI features require GROQ_API_KEY');
+  if (!isAIConfigured()) {
+    throw new Error('AI features require an AI provider key');
   }
 
   if (articles.length === 0) {
@@ -200,7 +200,7 @@ Return JSON matching this exact structure:
   "disagreements": ["where sources conflict", ...]
 }`;
 
-  const result = await promptGroqJsonCached<Omit<SynthesizedStory, 'sourceCount' | 'sources'>>(
+  const result = await promptAIJsonCached<Omit<SynthesizedStory, 'sourceCount' | 'sources'>>(
     'synthesis',
     systemPrompt,
     `Synthesize these ${articles.length} articles about the same story:\n\n${articlesContext}`,
@@ -226,8 +226,8 @@ export async function explainTrending(
   mentionCount: number,
   priceChange24h?: number
 ): Promise<TrendExplanation> {
-  if (!isGroqConfigured()) {
-    throw new Error('AI features require GROQ_API_KEY');
+  if (!isAIConfigured()) {
+    throw new Error('AI features require an AI provider key');
   }
 
   const priceContext = priceChange24h !== undefined
@@ -266,7 +266,7 @@ ${recentHeadlines.slice(0, 10).map((h, i) => `${i + 1}. ${h}`).join('\n')}
 
 Explain why "${topic}" is trending and provide context.`;
 
-  return promptGroqJsonCached<TrendExplanation>(
+  return promptAIJsonCached<TrendExplanation>(
     'trending',
     systemPrompt,
     userPrompt,
@@ -281,8 +281,8 @@ export async function scorePortfolioRelevance(
   articles: NewsArticle[],
   holdings: Array<{ symbol: string; name: string; allocation: number }>
 ): Promise<PortfolioRelevanceScore[]> {
-  if (!isGroqConfigured()) {
-    throw new Error('AI features require GROQ_API_KEY');
+  if (!isAIConfigured()) {
+    throw new Error('AI features require an AI provider key');
   }
 
   if (articles.length === 0 || holdings.length === 0) {
@@ -330,7 +330,7 @@ ${articlesContext}
 
 Score each article's relevance to this portfolio.`;
 
-  return promptGroqJsonCached<PortfolioRelevanceScore[]>(
+  return promptAIJsonCached<PortfolioRelevanceScore[]>(
     'portfolio-relevance',
     systemPrompt,
     userPrompt,
@@ -355,8 +355,8 @@ export async function detectNewsPriceCorrelation(
   }>;
   summary: string;
 }> {
-  if (!isGroqConfigured()) {
-    throw new Error('AI features require GROQ_API_KEY');
+  if (!isAIConfigured()) {
+    throw new Error('AI features require an AI provider key');
   }
 
   const priceContext = priceData
@@ -396,7 +396,7 @@ ${articlesContext}
 
 Detect potential news-price correlations.`;
 
-  return promptGroqJsonCached(
+  return promptAIJsonCached(
     'correlation',
     systemPrompt,
     userPrompt,
@@ -420,8 +420,8 @@ export async function generateFlashBriefing(
   marketMood: string;
   generatedAt: string;
 }> {
-  if (!isGroqConfigured()) {
-    throw new Error('AI features require GROQ_API_KEY');
+  if (!isAIConfigured()) {
+    throw new Error('AI features require an AI provider key');
   }
 
   const articlesContext = articles.slice(0, 30).map(a =>
@@ -445,7 +445,7 @@ Return JSON:
   "marketMood": "one word: bullish/bearish/cautious/excited/uncertain"
 }`;
 
-  const result = await promptGroqJsonCached<Omit<ReturnType<typeof generateFlashBriefing> extends Promise<infer T> ? T : never, 'generatedAt'>>(
+  const result = await promptAIJsonCached<Omit<ReturnType<typeof generateFlashBriefing> extends Promise<infer T> ? T : never, 'generatedAt'>>(
     'flash-briefing',
     systemPrompt,
     `Create a flash briefing from these headlines:\n${articlesContext}`,

@@ -18,11 +18,10 @@ import {
   type NewsArticle 
 } from './ai-intelligence';
 
-// Mock Groq
-vi.mock('./groq', () => ({
-  isGroqConfigured: () => true,
-  promptGroqJson: vi.fn(),
-  promptGroqJsonCached: vi.fn(),
+// Mock the AI provider chain
+vi.mock('./ai-provider', () => ({
+  isAIConfigured: () => true,
+  promptAIJsonCached: vi.fn(),
 }));
 
 describe('AI Intelligence Engine', () => {

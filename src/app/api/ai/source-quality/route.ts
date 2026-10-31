@@ -27,7 +27,8 @@ import {
   detectClickbait,
   detectRehash,
 } from '@/lib/source-quality-scorer';
-import { isGroqConfigured } from '@/lib/groq';
+import { isAIConfigured, isAIUnavailableError } from '@/lib/ai-provider';
+import { aiAuthErrorResponse, aiNotConfiguredResponse } from '@/app/api/_utils';
 
 export const runtime = 'edge';
 export const revalidate = 600; // 10 minutes
@@ -71,11 +72,8 @@ export async function GET(request: NextRequest) {
 
     // If analyzing specific source
     if (sourceName) {
-      if (!isGroqConfigured()) {
-        return NextResponse.json(
-          { error: 'AI features require GROQ_API_KEY configuration' },
-          { status: 503 }
-        );
+      if (!isAIConfigured()) {
+        return aiNotConfiguredResponse();
       }
 
       const sourceArticles = data.articles.filter(a => 
@@ -108,11 +106,8 @@ export async function GET(request: NextRequest) {
 
     // If ranking by category
     if (category) {
-      if (!isGroqConfigured()) {
-        return NextResponse.json(
-          { error: 'AI features require GROQ_API_KEY configuration' },
-          { status: 503 }
-        );
+      if (!isAIConfigured()) {
+        return aiNotConfiguredResponse();
       }
 
       // Group articles by source
@@ -166,6 +161,8 @@ export async function GET(request: NextRequest) {
     });
   } catch (error) {
     console.error('Source quality API error:', error);
+    // Every provider out of quota or rejecting the key: retryable upstream outage, not a handler fault.
+    if (isAIUnavailableError(error)) return aiAuthErrorResponse((error as Error).message);
     return NextResponse.json(
       { error: 'Failed to analyze source quality', details: process.env.NODE_ENV === 'development' ? String(error) : 'Internal server error' },
       { status: 500 }
@@ -174,11 +171,8 @@ export async function GET(request: NextRequest) {
 }
 
 export async function POST(request: NextRequest) {
-  if (!isGroqConfigured()) {
-    return NextResponse.json(
-      { error: 'AI features require GROQ_API_KEY configuration' },
-      { status: 503 }
-    );
+  if (!isAIConfigured()) {
+    return aiNotConfiguredResponse();
   }
 
   try {
@@ -228,6 +222,8 @@ export async function POST(request: NextRequest) {
     });
   } catch (error) {
     console.error('Article quality API error:', error);
+    // Every provider out of quota or rejecting the key: retryable upstream outage, not a handler fault.
+    if (isAIUnavailableError(error)) return aiAuthErrorResponse((error as Error).message);
     return NextResponse.json(
       { error: 'Failed to score article quality', details: process.env.NODE_ENV === 'development' ? String(error) : 'Internal server error' },
       { status: 500 }

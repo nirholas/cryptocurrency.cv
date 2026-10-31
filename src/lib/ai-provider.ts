@@ -377,6 +377,25 @@ export class AIAllProvidersUnavailableError extends AIAuthError {
   }
 }
 
+/** Error names that mean an upstream AI provider refused or could not serve the request. */
+const AI_UNAVAILABLE_ERROR_NAMES: ReadonlySet<string> = new Set([
+  'AIAuthError',
+  'AIRateLimitError',
+  'AIProviderUnavailableError',
+  'GroqAuthError',
+  'GroqRateLimitError',
+]);
+
+/**
+ * True when `error` is a provider-side refusal (quota, billing, auth, request
+ * too large, outage) rather than a fault in the calling code. Routes answer
+ * these with a retryable 503 instead of a 500. Matched by name so Groq's error
+ * classes need no import here (groq.ts is imported by this module).
+ */
+export function isAIUnavailableError(error: unknown): boolean {
+  return error instanceof Error && AI_UNAVAILABLE_ERROR_NAMES.has(error.name);
+}
+
 /** Public copy for a 503 caused by AIAllProvidersUnavailableError. */
 export const AI_UNAVAILABLE_MESSAGE =
   'AI service temporarily unavailable: every AI provider is out of quota or unreachable. Please try again later.';

@@ -21,17 +21,15 @@
 import { type NextRequest, NextResponse } from 'next/server';
 import { getLatestNews } from '@/lib/crypto-news';
 import { generateFlashBriefing, type NewsArticle } from '@/lib/ai-intelligence';
-import { isGroqConfigured, GroqAuthError, GroqRateLimitError } from '@/lib/groq';
+import { isAIConfigured, isAIUnavailableError } from '@/lib/ai-provider';
+import { aiAuthErrorResponse, aiNotConfiguredResponse } from '@/app/api/_utils';
 
 export const runtime = 'edge';
 export const revalidate = 120;
 
 export async function GET(request: NextRequest) {
-  if (!isGroqConfigured()) {
-    return NextResponse.json(
-      { error: 'AI features require GROQ_API_KEY configuration' },
-      { status: 503 }
-    );
+  if (!isAIConfigured()) {
+    return aiNotConfiguredResponse();
   }
 
   const searchParams = request.nextUrl.searchParams;
@@ -61,22 +59,8 @@ export async function GET(request: NextRequest) {
   } catch (error) {
     console.error('Flash briefing API error:', error);
 
-    // An exhausted quota or a rejected key is an upstream availability problem,
-    // not a fault in this handler. It gets a 503 the client can retry rather
-    // than a 500, which is what a spent Groq daily allowance used to produce.
-    if (
-      error instanceof GroqRateLimitError ||
-      error instanceof GroqAuthError ||
-      (error as Error).name === 'GroqRateLimitError' ||
-      (error as Error).name === 'GroqAuthError' ||
-      (error as Error).name === 'AIAuthError'
-    ) {
-      return NextResponse.json(
-        { error: 'AI service temporarily unavailable', success: false },
-        { status: 503, headers: { 'Retry-After': '120' } }
-      );
-    }
-
+    // Every provider out of quota or rejecting the key: retryable upstream outage, not a handler fault.
+    if (isAIUnavailableError(error)) return aiAuthErrorResponse((error as Error).message);
     return NextResponse.json(
       { error: 'Failed to generate flash briefing', details: process.env.NODE_ENV === 'development' ? String(error) : 'Internal server error' },
       { status: 500 }

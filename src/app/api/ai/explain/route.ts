@@ -21,7 +21,8 @@
 import { type NextRequest, NextResponse } from 'next/server';
 import { getLatestNews } from '@/lib/crypto-news';
 import { explainTrending } from '@/lib/ai-intelligence';
-import { isGroqConfigured } from '@/lib/groq';
+import { isAIConfigured, isAIUnavailableError } from '@/lib/ai-provider';
+import { aiAuthErrorResponse, aiNotConfiguredResponse } from '@/app/api/_utils';
 import { getTopCoins } from '@/lib/market-data';
 
 export const runtime = 'edge';
@@ -54,11 +55,8 @@ const TOPIC_PATTERNS: Record<string, RegExp> = {
 };
 
 export async function GET(request: NextRequest) {
-  if (!isGroqConfigured()) {
-    return NextResponse.json(
-      { error: 'AI features require GROQ_API_KEY configuration' },
-      { status: 503 }
-    );
+  if (!isAIConfigured()) {
+    return aiNotConfiguredResponse();
   }
 
   const searchParams = request.nextUrl.searchParams;
@@ -136,6 +134,8 @@ export async function GET(request: NextRequest) {
     });
   } catch (error) {
     console.error('Explain API error:', error);
+    // Every provider out of quota or rejecting the key: retryable upstream outage, not a handler fault.
+    if (isAIUnavailableError(error)) return aiAuthErrorResponse((error as Error).message);
     return NextResponse.json(
       { error: 'Failed to generate explanation', details: process.env.NODE_ENV === 'development' ? String(error) : 'Internal server error' },
       { status: 500 }

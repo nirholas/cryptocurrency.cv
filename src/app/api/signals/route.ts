@@ -10,8 +10,8 @@
 
 import { type NextRequest, NextResponse } from 'next/server';
 import { getLatestNews } from '@/lib/crypto-news';
-import { promptGroqJson, isGroqConfigured } from '@/lib/groq';
-import { groqNotConfiguredResponse } from '@/app/api/_utils';
+import { isAIConfigured, promptAIJson } from '@/lib/ai-provider';
+import { aiNotConfiguredResponse } from '@/app/api/_utils';
 import { createRequestLogger } from '@/lib/logger';
 
 export const runtime = 'edge';
@@ -61,7 +61,7 @@ export async function GET(request: NextRequest) {
   const minConfidence = Number.isNaN(minConfidenceRaw) ? 50 : Math.max(0, Math.min(minConfidenceRaw, 100));
   const ticker = searchParams.get('ticker')?.toUpperCase();
 
-  if (!isGroqConfigured()) return groqNotConfiguredResponse();
+  if (!isAIConfigured()) return aiNotConfiguredResponse();
 
   try {
     let data;
@@ -99,10 +99,11 @@ export async function GET(request: NextRequest) {
 
 ${JSON.stringify(articlesForAnalysis, null, 2)}`;
 
-    const result = await promptGroqJson<SignalsResponse>(
+    const result = await promptAIJson<SignalsResponse>(
       SYSTEM_PROMPT,
       userPrompt,
-      { maxTokens: 3000, temperature: 0.3 }
+      { maxTokens: 3000, temperature: 0.3 },
+      true,
     );
 
     // Filter signals

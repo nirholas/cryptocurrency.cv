@@ -9,8 +9,7 @@
  */
 
 import { getLatestNews } from '@/lib/crypto-news';
-import { promptGroqJson, isGroqConfigured, GroqAuthError, parseGroqJson } from '@/lib/groq';
-import { aiComplete, getAIConfigOrNull } from '@/lib/ai-provider';
+import { isAIConfigured, promptAIJson } from '@/lib/ai-provider';
 
 export type DigestPeriod = '6h' | '12h' | '24h';
 export type DigestFormat = 'full' | 'brief' | 'newsletter';
@@ -81,7 +80,7 @@ const FORMAT_INSTRUCTIONS: Record<string, string> = {
 
 /** True when Groq or any fallback provider can produce a digest. */
 export function isDigestAIConfigured(): boolean {
-  return isGroqConfigured() || getAIConfigOrNull(true) !== null;
+  return isAIConfigured();
 }
 
 export async function generateDigest(
@@ -113,36 +112,14 @@ Total articles: ${articlesForDigest.length}
 Articles:
 ${articlesText}`;
 
-  let digest: DigestResponse;
-  try {
-    // Try Groq first if configured
-    if (isGroqConfigured()) {
-      digest = await promptGroqJson<DigestResponse>(SYSTEM_PROMPT, userPrompt, {
-        maxTokens: 3000,
-        temperature: 0.5,
-      });
-    } else {
-      throw new GroqAuthError('Groq not configured, falling back to other providers');
-    }
-  } catch (groqError) {
-    // On Groq auth failure, fall back to aiComplete (tries all providers)
-    if (groqError instanceof GroqAuthError || (groqError as Error).name === 'GroqAuthError') {
-      console.warn(
-        'Groq auth failed for digest, falling back to aiComplete:',
-        (groqError as Error).message,
-      );
-      const systemWithJson = SYSTEM_PROMPT + '\n\nAlways respond with valid JSON only, no markdown.';
-      const raw = await aiComplete(
-        systemWithJson,
-        userPrompt,
-        { maxTokens: 3000, temperature: 0.5, jsonMode: true },
-        false,
-      );
-      digest = parseGroqJson<DigestResponse>(raw);
-    } else {
-      throw groqError;
-    }
-  }
+  // Groq first, then every other configured provider: an exhausted Groq quota
+  // used to surface as a 503 even with a working fallback key.
+  const digest = await promptAIJson<DigestResponse>(
+    SYSTEM_PROMPT,
+    userPrompt,
+    { maxTokens: 3000, temperature: 0.5 },
+    true,
+  );
 
   return {
     digest,

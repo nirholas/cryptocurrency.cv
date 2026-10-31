@@ -18,7 +18,7 @@
  * - Identifies risks and opportunities
  */
 
-import { promptGroqJsonCached, isGroqConfigured } from './groq';
+import { isAIConfigured, promptAIJsonCached } from './ai-provider';
 
 export interface ResearchReport {
   topic: string;
@@ -107,8 +107,8 @@ export async function generateResearchReport(
     volume?: number;
   }
 ): Promise<ResearchReport> {
-  if (!isGroqConfigured()) {
-    throw new Error('AI features require GROQ_API_KEY');
+  if (!isAIConfigured()) {
+    throw new Error('AI features require an AI provider key');
   }
 
   const priceContext = additionalContext?.priceData
@@ -162,7 +162,7 @@ Return JSON:
   "confidence": 0.0-1.0
 }`;
 
-  const result = await promptGroqJsonCached<Partial<ResearchReport>>(
+  const result = await promptAIJsonCached<Partial<ResearchReport>>(
     'research',
     systemPrompt,
     `Research Topic: ${topic}
@@ -206,8 +206,8 @@ export async function generateQuickTake(
   topic: string,
   headlines: string[]
 ): Promise<QuickTake> {
-  if (!isGroqConfigured()) {
-    throw new Error('AI features require GROQ_API_KEY');
+  if (!isAIConfigured()) {
+    throw new Error('AI features require an AI provider key');
   }
 
   const systemPrompt = `You are a crypto analyst giving quick, actionable takes.
@@ -223,7 +223,7 @@ Return JSON:
   "watchFor": "what to monitor next"
 }`;
 
-  const result = await promptGroqJsonCached<Omit<QuickTake, 'topic' | 'generatedAt'>>(
+  const result = await promptAIJsonCached<Omit<QuickTake, 'topic' | 'generatedAt'>>(
     'quick-take',
     systemPrompt,
     `Topic: ${topic}
@@ -267,8 +267,8 @@ export async function compareAssets(
   tradingIdea?: string;
   generatedAt: string;
 }> {
-  if (!isGroqConfigured()) {
-    throw new Error('AI features require GROQ_API_KEY');
+  if (!isAIConfigured()) {
+    throw new Error('AI features require an AI provider key');
   }
 
   const systemPrompt = `You are a crypto analyst comparing two assets based on news sentiment and narratives.
@@ -293,7 +293,7 @@ Return JSON:
   "tradingIdea": "optional pair trade idea"
 }`;
 
-  const result = await promptGroqJsonCached(
+  const result = await promptAIJsonCached(
     'compare-assets',
     systemPrompt,
     `Compare these two assets based on recent news:
@@ -331,8 +331,8 @@ export async function findContrarianOpportunities(
   marketContext: string;
   generatedAt: string;
 }> {
-  if (!isGroqConfigured()) {
-    throw new Error('AI features require GROQ_API_KEY');
+  if (!isAIConfigured()) {
+    throw new Error('AI features require an AI provider key');
   }
 
   const systemPrompt = `You are a contrarian crypto investor looking for opportunities where the crowd is wrong.
@@ -356,7 +356,7 @@ Return JSON:
   "marketContext": "overall market read"
 }`;
 
-  const result = await promptGroqJsonCached(
+  const result = await promptAIJsonCached(
     'contrarian',
     systemPrompt,
     `Market Sentiment: ${marketSentiment}

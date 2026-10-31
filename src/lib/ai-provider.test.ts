@@ -14,6 +14,7 @@ import {
   aiComplete,
   aiCompleteWithRetry,
   getAllAIConfigs,
+  isAIUnavailableError,
   isProviderUnavailableStatus,
   resetAIProviderCooldowns,
 } from './ai-provider';
@@ -261,5 +262,25 @@ describe('provider credentials and cooldowns', () => {
     expect(error).toBeInstanceOf(AIAuthError);
     expect((error as Error).message).toMatch(/out of quota/);
     expect((error as Error).message).not.toMatch(/check api keys/i);
+  });
+});
+
+describe('isAIUnavailableError', () => {
+  function named(name: string): Error {
+    return Object.assign(new Error('upstream refused'), { name });
+  }
+
+  it('matches every provider-side refusal by error name', () => {
+    expect(isAIUnavailableError(new AIAuthError('openai', 401, 'bad key'))).toBe(true);
+    for (const name of ['AIRateLimitError', 'AIProviderUnavailableError', 'GroqAuthError', 'GroqRateLimitError']) {
+      expect(isAIUnavailableError(named(name))).toBe(true);
+    }
+  });
+
+  it('leaves handler faults and non-errors alone', () => {
+    expect(isAIUnavailableError(new TypeError('Cannot read properties of undefined'))).toBe(false);
+    expect(isAIUnavailableError(new SyntaxError('Unexpected token'))).toBe(false);
+    expect(isAIUnavailableError({ name: 'AIAuthError', message: 'plain object' })).toBe(false);
+    expect(isAIUnavailableError('AIAuthError')).toBe(false);
   });
 });

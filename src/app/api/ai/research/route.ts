@@ -28,7 +28,8 @@ import {
   compareAssets,
   findContrarianOpportunities,
 } from '@/lib/ai-research-agent';
-import { isGroqConfigured } from '@/lib/groq';
+import { isAIConfigured, isAIUnavailableError } from '@/lib/ai-provider';
+import { aiAuthErrorResponse, aiNotConfiguredResponse } from '@/app/api/_utils';
 
 export const runtime = 'edge';
 export const revalidate = 60; // 1 minute — fresh analysis
@@ -51,11 +52,8 @@ const TOPIC_PATTERNS: Record<string, RegExp> = {
 };
 
 export async function GET(request: NextRequest) {
-  if (!isGroqConfigured()) {
-    return NextResponse.json(
-      { error: 'AI features require GROQ_API_KEY configuration' },
-      { status: 503 }
-    );
+  if (!isAIConfigured()) {
+    return aiNotConfiguredResponse();
   }
 
   const searchParams = request.nextUrl.searchParams;
@@ -196,6 +194,8 @@ export async function GET(request: NextRequest) {
     });
   } catch (error) {
     console.error('Research API error:', error);
+    // Every provider out of quota or rejecting the key: retryable upstream outage, not a handler fault.
+    if (isAIUnavailableError(error)) return aiAuthErrorResponse((error as Error).message);
     return NextResponse.json(
       { error: 'Failed to generate research', details: process.env.NODE_ENV === 'development' ? String(error) : 'Internal server error' },
       { status: 500 }

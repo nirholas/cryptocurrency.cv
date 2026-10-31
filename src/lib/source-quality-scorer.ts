@@ -19,7 +19,7 @@
  * - Market Impact: Correlation with price movements
  */
 
-import { promptGroqJsonCached, isGroqConfigured } from './groq';
+import { isAIConfigured, promptAIJsonCached } from './ai-provider';
 
 export interface SourceMetrics {
   sourceId: string;
@@ -101,8 +101,8 @@ export async function scoreArticleQuality(
   source: string,
   content?: string
 ): Promise<ArticleQualityScore> {
-  if (!isGroqConfigured()) {
-    throw new Error('AI features require GROQ_API_KEY');
+  if (!isAIConfigured()) {
+    throw new Error('AI features require an AI provider key');
   }
 
   const systemPrompt = `You are a media quality analyst scoring crypto news articles.
@@ -127,7 +127,7 @@ Return JSON:
   "positiveSignals": ["list of quality indicators"]
 }`;
 
-  const result = await promptGroqJsonCached<Omit<ArticleQualityScore, 'title' | 'source'>>(
+  const result = await promptAIJsonCached<Omit<ArticleQualityScore, 'title' | 'source'>>(
     'article-quality',
     systemPrompt,
     `Source: ${source}
@@ -153,8 +153,8 @@ export async function analyzeSourceQuality(
   sourceName: string,
   recentArticles: Array<{ title: string; description?: string; pubDate: string }>
 ): Promise<SourceMetrics> {
-  if (!isGroqConfigured()) {
-    throw new Error('AI features require GROQ_API_KEY');
+  if (!isAIConfigured()) {
+    throw new Error('AI features require an AI provider key');
   }
 
   const isTrusted = TRUSTED_SOURCES.some(s => 
@@ -187,7 +187,7 @@ Return JSON:
   "verificationStatus": "verified|unverified|controversial"
 }`;
 
-  const result = await promptGroqJsonCached<Partial<SourceMetrics>>(
+  const result = await promptAIJsonCached<Partial<SourceMetrics>>(
     'source-quality',
     systemPrompt,
     `Source: ${sourceName}
@@ -228,8 +228,8 @@ export async function rankSourcesByCategory(
   category: string,
   sourceArticles: Record<string, Array<{ title: string; description?: string }>>
 ): Promise<SourceRanking> {
-  if (!isGroqConfigured()) {
-    throw new Error('AI features require GROQ_API_KEY');
+  if (!isAIConfigured()) {
+    throw new Error('AI features require an AI provider key');
   }
 
   const sourceSummaries = Object.entries(sourceArticles)
@@ -256,7 +256,7 @@ Return JSON:
 
 Order by rank (1 = best).`;
 
-  const result = await promptGroqJsonCached<{ sources: SourceRanking['sources'] }>(
+  const result = await promptAIJsonCached<{ sources: SourceRanking['sources'] }>(
     'source-ranking',
     systemPrompt,
     `Category: ${category}

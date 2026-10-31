@@ -20,7 +20,7 @@
  * Uses historical patterns to predict narrative trajectory.
  */
 
-import { promptGroqJsonCached, isGroqConfigured } from './groq';
+import { isAIConfigured, promptAIJsonCached } from './ai-provider';
 
 export interface NarrativeSnapshot {
   name: string;
@@ -139,8 +139,8 @@ export async function detectNarratives(
   recentHeadlines: string[],
   historicalNarratives?: Narrative[]
 ): Promise<NarrativeAnalysis> {
-  if (!isGroqConfigured()) {
-    throw new Error('AI features require GROQ_API_KEY');
+  if (!isAIConfigured()) {
+    throw new Error('AI features require an AI provider key');
   }
 
   const knownNarratives = historicalNarratives?.map(n => n.name).join(', ') || 'None tracked';
@@ -186,7 +186,7 @@ Return JSON:
   "marketContext": "overall narrative landscape summary"
 }`;
 
-  const result = await promptGroqJsonCached<Omit<NarrativeAnalysis, 'generatedAt'>>(
+  const result = await promptAIJsonCached<Omit<NarrativeAnalysis, 'generatedAt'>>(
     'narratives',
     systemPrompt,
     `Known narratives being tracked: ${knownNarratives}
@@ -229,8 +229,8 @@ export async function predictNarrativeTrajectory(
   priceImplication: string;
   historicalComparison: string;
 }> {
-  if (!isGroqConfigured()) {
-    throw new Error('AI features require GROQ_API_KEY');
+  if (!isAIConfigured()) {
+    throw new Error('AI features require an AI provider key');
   }
 
   const matchingPatterns = NARRATIVE_PATTERNS.filter(p => 
@@ -250,7 +250,7 @@ Return JSON:
   "historicalComparison": "similar historical narrative and outcome"
 }`;
 
-  return promptGroqJsonCached(
+  return promptAIJsonCached(
     'narrative-prediction',
     systemPrompt,
     `Narrative: ${narrative.name}
