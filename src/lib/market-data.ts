@@ -802,6 +802,27 @@ export class MarketDataError extends Error {
 }
 
 /**
+ * CoinGecko ids are lowercase slugs ("bitcoin", "avalanche-2", "usd-coin").
+ * Callers pass route params and query strings straight through, so an id is
+ * checked before it reaches a URL path: `..` would climb out of `/coins/`, and
+ * `?`, `&` or `/` would rewrite the upstream request.
+ */
+const COINGECKO_ID_RE = /^[a-z0-9][a-z0-9._-]{0,99}$/i;
+
+/** True when `coinId` is shaped like a CoinGecko coin id. */
+export function isCoinGeckoId(coinId: string): boolean {
+  return COINGECKO_ID_RE.test(coinId);
+}
+
+/** `coinId` encoded for a CoinGecko URL path; throws a 400 for anything else. */
+function coinGeckoIdPath(coinId: string): string {
+  if (!isCoinGeckoId(coinId)) {
+    throw new MarketDataError("Invalid coin id", 400);
+  }
+  return encodeURIComponent(coinId);
+}
+
+/**
  * Fetch with timeout, rate limiting, and error handling
  * @param url - URL to fetch
  * @param timeout - Timeout in milliseconds
@@ -1000,7 +1021,9 @@ export async function getPricesForCoins(
 ): Promise<
   Record<string, { price: number; change_24h: number; last_updated: string }>
 > {
-  const ids = coinIds.join(",");
+  const validIds = [...new Set(coinIds.filter(isCoinGeckoId))];
+  if (validIds.length === 0 || !/^[a-z0-9]{2,10}$/i.test(vsCurrency)) return {};
+  const ids = validIds.join(",");
   const cacheKey = `prices-${ids}-${vsCurrency}`;
   const cached =
     getCached<
@@ -1013,7 +1036,7 @@ export async function getPricesForCoins(
 
   try {
     const response = await fetchWithTimeout(
-      `${COINGECKO_BASE}/simple/price?ids=${ids}&vs_currencies=${vsCurrency}&include_24hr_change=true&include_last_updated_at=true`,
+      `${COINGECKO_BASE}/simple/price?ids=${encodeURIComponent(ids)}&vs_currencies=${encodeURIComponent(vsCurrency)}&include_24hr_change=true&include_last_updated_at=true`,
     );
 
     if (!response.ok) {
@@ -1027,7 +1050,7 @@ export async function getPricesForCoins(
       string,
       { price: number; change_24h: number; last_updated: string }
     > = {};
-    for (const coinId of coinIds) {
+    for (const coinId of validIds) {
       if (data[coinId]) {
         result[coinId] = {
           price: data[coinId][vsCurrency] || 0,
@@ -1044,7 +1067,7 @@ export async function getPricesForCoins(
   } catch (error) {
     console.error("Error fetching prices for coins:", error);
     // Try Binance fallback for major coins
-    return await getPricesFromBinanceFallback(coinIds);
+    return await getPricesFromBinanceFallback(validIds);
   }
 }
 
@@ -1353,7 +1376,7 @@ export async function getCoinDetails(coinId: string) {
       // Full payload in ONE call: market data (with multi-window % changes),
       // exchange tickers, developer/GitHub stats, community stats, sentiment
       // votes, categories, and links. Surfaced on the coin detail page.
-      `${COINGECKO_BASE}/coins/${coinId}?localization=false&tickers=true&market_data=true&community_data=true&developer_data=true&sparkline=false&price_change_percentage=1h%2C24h%2C7d%2C14d%2C30d%2C1y`,
+      `${COINGECKO_BASE}/coins/${coinGeckoIdPath(coinId)}?localization=false&tickers=true&market_data=true&community_data=true&developer_data=true&sparkline=false&price_change_percentage=1h%2C24h%2C7d%2C14d%2C30d%2C1y`,
       5000, // 5 s: leaves budget for the CoinPaprika and keyless fallbacks within maxDuration
     );
 
@@ -2131,7 +2154,7 @@ export async function getHistoricalPrices(
 
   try {
     const response = await fetchWithTimeout(
-      `${COINGECKO_BASE}/coins/${coinId}/market_chart?vs_currency=usd&days=${daysParam}${intervalParam}`,
+      `${COINGECKO_BASE}/coins/${coinGeckoIdPath(coinId)}/market_chart?vs_currency=usd&days=${daysParam}${intervalParam}`,
     );
 
     if (!response.ok) {
@@ -2174,7 +2197,7 @@ export async function getOHLC(
 
   try {
     const response = await fetchWithTimeout(
-      `${COINGECKO_BASE}/coins/${coinId}/ohlc?vs_currency=usd&days=${normalizedDays}`,
+      `${COINGECKO_BASE}/coins/${coinGeckoIdPath(coinId)}/ohlc?vs_currency=usd&days=${normalizedDays}`,
     );
 
     if (!response.ok) {
@@ -2219,7 +2242,7 @@ export async function getHistoricalPrice(
 
   try {
     const response = await fetchWithTimeout(
-      `${COINGECKO_BASE}/coins/${coinId}/history?date=${date}&localization=false`,
+      `${COINGECKO_BASE}/coins/${coinGeckoIdPath(coinId)}/history?date=${encodeURIComponent(date)}&localization=false`,
     );
 
     if (!response.ok) {
@@ -2260,7 +2283,7 @@ export async function getCoinTickers(
 
   try {
     const response = await fetchWithTimeout(
-      `${COINGECKO_BASE}/coins/${coinId}/tickers?page=${page}&include_exchange_logo=true&order=volume_desc`,
+      `${COINGECKO_BASE}/coins/${coinGeckoIdPath(coinId)}/tickers?page=${page}&include_exchange_logo=true&order=volume_desc`,
     );
 
     if (!response.ok) {
@@ -2565,7 +2588,7 @@ export async function getCoinDeveloperData(
 
   try {
     const response = await fetchWithTimeout(
-      `${COINGECKO_BASE}/coins/${coinId}?localization=false&tickers=false&market_data=false&community_data=false&developer_data=true&sparkline=false`,
+      `${COINGECKO_BASE}/coins/${coinGeckoIdPath(coinId)}?localization=false&tickers=false&market_data=false&community_data=false&developer_data=true&sparkline=false`,
     );
 
     if (!response.ok) {
@@ -2612,7 +2635,7 @@ export async function getCoinCommunityData(
 
   try {
     const response = await fetchWithTimeout(
-      `${COINGECKO_BASE}/coins/${coinId}?localization=false&tickers=false&market_data=false&community_data=true&developer_data=false&sparkline=false`,
+      `${COINGECKO_BASE}/coins/${coinGeckoIdPath(coinId)}?localization=false&tickers=false&market_data=false&community_data=true&developer_data=false&sparkline=false`,
     );
 
     if (!response.ok) {

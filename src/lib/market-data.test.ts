@@ -13,7 +13,7 @@
  * Tests the Market Data API layer functions
  */
 
-import { describe, it, expect } from 'vitest';
+import { afterEach, describe, it, expect, vi } from 'vitest';
 
 // Store original fetch
 const originalFetch = global.fetch;
@@ -382,5 +382,55 @@ describe('market-data', () => {
       expect(result.comparison_date).toBeDefined();
     });
   });
-});
 
+  describe('CoinGecko id validation', () => {
+    afterEach(() => {
+      vi.restoreAllMocks();
+    });
+
+    it.each(['bitcoin', 'avalanche-2', 'usd-coin', 'wrapped-steth', 'a.b_c'])('accepts %s', async (id) => {
+      const { isCoinGeckoId } = await import('./market-data');
+      expect(isCoinGeckoId(id)).toBe(true);
+    });
+
+    it.each(['', '..', '.hidden', 'bitcoin?x=1', 'a/b', 'a&b', 'a#b', 'a%2Fb', 'x'.repeat(101)])(
+      'rejects %j',
+      async (id) => {
+        const { isCoinGeckoId } = await import('./market-data');
+        expect(isCoinGeckoId(id)).toBe(false);
+      },
+    );
+
+    it('never sends a path-traversing id upstream', async () => {
+      const fetchSpy = vi.spyOn(globalThis, 'fetch').mockResolvedValue(Response.json([]));
+      const { getOHLC } = await import('./market-data');
+
+      await getOHLC('../../simple/price', 7).catch(() => undefined);
+
+      const urls = fetchSpy.mock.calls.map(([url]) => String(url));
+      expect(urls.some((url) => url.includes('/coins/..') || url.includes('simple/price'))).toBe(false);
+    });
+
+    it('drops invalid ids from a batch price request', async () => {
+      const fetchSpy = vi
+        .spyOn(globalThis, 'fetch')
+        .mockResolvedValue(Response.json({ bitcoin: { usd: 1, usd_24h_change: 0, last_updated_at: 0 } }));
+      const { getPricesForCoins } = await import('./market-data');
+
+      await getPricesForCoins(['bitcoin', 'bad/id', 'x&ids=evil'], 'usd');
+
+      const urls = fetchSpy.mock.calls.map(([url]) => String(url));
+      expect(urls.length).toBeGreaterThan(0);
+      expect(urls.every((url) => !url.includes('evil') && !url.includes('bad'))).toBe(true);
+    });
+
+    it('returns no prices for an invalid currency without fetching', async () => {
+      const fetchSpy = vi.spyOn(globalThis, 'fetch');
+      const { getPricesForCoins } = await import('./market-data');
+
+      expect(await getPricesForCoins(['bitcoin'], 'usd&x=1')).toEqual({});
+      expect(await getPricesForCoins(['../x'], 'usd')).toEqual({});
+      expect(fetchSpy).not.toHaveBeenCalled();
+    });
+  });
+});
