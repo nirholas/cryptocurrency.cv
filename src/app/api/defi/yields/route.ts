@@ -10,6 +10,7 @@
 
 import { type NextRequest, NextResponse } from 'next/server';
 import { getAllPools, getTopYields } from '@/lib/defi-yields';
+import { intParam } from '@/lib/query-params';
 
 export const runtime = 'edge';
 export const revalidate = 300;
@@ -22,7 +23,7 @@ export const revalidate = 300;
 export async function GET(request: NextRequest): Promise<NextResponse> {
   const searchParams = request.nextUrl.searchParams;
   const type = searchParams.get('type');
-  const limit = Math.min(parseInt(searchParams.get('limit') || '20', 10), 100);
+  const limit = intParam(searchParams, 'limit', { fallback: 20, min: 1, max: 100 });
   const chain = searchParams.get('chain') || undefined;
   const project = searchParams.get('project') || undefined;
   const stableParam = searchParams.get('stable');

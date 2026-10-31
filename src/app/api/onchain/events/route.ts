@@ -12,6 +12,7 @@ import { type NextRequest, NextResponse } from 'next/server';
 import { getLatestNews } from '@/lib/crypto-news';
 import { promptAIJsonCached, isAIConfigured, AIAuthError } from '@/lib/ai-provider';
 import { aiNotConfiguredResponse, aiAuthErrorResponse } from '@/app/api/_utils';
+import { intParam } from '@/lib/query-params';
 
 export const runtime = 'edge';
 export const revalidate = 300; // 5 minute cache
@@ -101,11 +102,11 @@ Respond with JSON: { "links": [...] }`;
 
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url);
-  const limit = Math.min(parseInt(searchParams.get('limit') || '30'), 50);
+  const limit = intParam(searchParams, 'limit', { fallback: 30, min: 1, max: 50 });
   const chain = searchParams.get('chain');
   const eventType = searchParams.get('type');
   const minValue = parseFloat(searchParams.get('min_value') || '0');
-  const minConfidence = parseInt(searchParams.get('min_confidence') || '50');
+  const minConfidence = intParam(searchParams, 'min_confidence', { fallback: 50, min: 0, max: 100 });
 
   if (!isAIConfigured()) return aiNotConfiguredResponse();
 

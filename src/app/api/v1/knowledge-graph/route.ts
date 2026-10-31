@@ -25,6 +25,7 @@ export const runtime = 'nodejs';
 
 import { NextResponse } from 'next/server';
 import { getKnowledgeGraph } from '@/lib/knowledge-graph';
+import { intParam } from '@/lib/query-params';
 
 export async function GET(request: Request) {
   const url = new URL(request.url);
@@ -78,7 +79,7 @@ export async function GET(request: Request) {
       });
     }
 
-    const hops = parseInt(url.searchParams.get('hops') ?? '2', 10);
+    const hops = intParam(url.searchParams, 'hops', { fallback: 2, min: 1, max: 3 });
     const subgraph = kg.getNeighbors(entityId, hops);
     return NextResponse.json({
       entity,

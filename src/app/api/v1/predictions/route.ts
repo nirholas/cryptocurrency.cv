@@ -38,6 +38,7 @@ import {
   type PredictionTimeframe,
   type PredictionStatus,
 } from '@/lib/predictions';
+import { intParam } from '@/lib/query-params';
 
 export const runtime = 'nodejs';
 export const revalidate = 60;
@@ -157,8 +158,8 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
     const asset = searchParams.get('asset');
     const status = searchParams.get('status') as PredictionStatus | null;
     const view = searchParams.get('view') || 'list';
-    const limit = Math.min(parseInt(searchParams.get('limit') || '50'), 100);
-    const minPredictions = parseInt(searchParams.get('minPredictions') || '5');
+    const limit = intParam(searchParams, 'limit', { fallback: 50, min: 1, max: 100 });
+    const minPredictions = intParam(searchParams, 'minPredictions', { fallback: 5, min: 0, max: 1000 });
 
     logger.info('Fetching predictions', { view, userId, asset, limit });
 

@@ -10,6 +10,7 @@
 
 import { type NextRequest, NextResponse } from 'next/server';
 import { getRecommendedFees } from '@/lib/bitcoin-onchain';
+import { intParam } from '@/lib/query-params';
 
 export const runtime = 'edge';
 export const revalidate = 300;
@@ -25,7 +26,7 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
   try {
     const searchParams = request.nextUrl.searchParams;
     const network = (searchParams.get('network') || 'ethereum').toLowerCase();
-    const days = Math.min(parseInt(searchParams.get('days') || '7', 10), 30);
+    const days = intParam(searchParams, 'days', { fallback: 7, min: 1, max: 30 });
 
     if (network !== 'ethereum' && network !== 'bitcoin') {
       return NextResponse.json(

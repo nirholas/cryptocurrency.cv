@@ -28,6 +28,7 @@ import { type NextRequest, NextResponse } from 'next/server';
 import { getLatestNews } from '@/lib/crypto-news';
 import { aiComplete, isAIConfigured, AIAuthError } from '@/lib/ai-provider';
 import { parseGroqJson } from '@/lib/groq';
+import { intParam } from '@/lib/query-params';
 
 export const runtime = 'nodejs';
 export const maxDuration = 120;
@@ -233,8 +234,8 @@ export async function POST(request: NextRequest) {
   }
 
   const { searchParams } = new URL(request.url);
-  const numTopics = Math.min(parseInt(searchParams.get('topics') || '3', 10), 5);
-  const days = Math.min(parseInt(searchParams.get('days') || '7', 10), 30);
+  const numTopics = intParam(searchParams, 'topics', { fallback: 3, min: 1, max: 5 });
+  const days = intParam(searchParams, 'days', { fallback: 7, min: 1, max: 30 });
   const shouldCommit = searchParams.get('commit') === 'true';
 
   const postDate = today();

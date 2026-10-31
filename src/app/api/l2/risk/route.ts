@@ -11,6 +11,7 @@
 import { type NextRequest, NextResponse } from 'next/server';
 import { getL2Projects } from '@/lib/apis/l2beat';
 import type { L2Project } from '@/lib/apis/l2beat';
+import { intParam } from '@/lib/query-params';
 
 export const runtime = 'edge';
 export const revalidate = 3600;
@@ -26,7 +27,7 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
   try {
     const searchParams = request.nextUrl.searchParams;
     const sort = searchParams.get('sort') === 'desc' ? 'desc' : 'asc';
-    const limit = Math.min(parseInt(searchParams.get('limit') || '20', 10), 100);
+    const limit = intParam(searchParams, 'limit', { fallback: 20, min: 1, max: 100 });
 
     const riskOrder: Record<L2Project['riskLevel'], number> = {
       low: 0,

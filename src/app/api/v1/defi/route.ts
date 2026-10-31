@@ -23,6 +23,7 @@ import { ApiError } from '@/lib/api-error';
 import { createRequestLogger } from '@/lib/logger';
 
 import { getLlamaProtocols } from '@/lib/apis/llama-bulk';
+import { intParam } from '@/lib/query-params';
 const ENDPOINT = '/api/v1/defi';
 
 interface DefiProtocolRow {
@@ -50,7 +51,7 @@ export async function GET(request: NextRequest) {
   if (authResponse) return authResponse;
 
   const searchParams = request.nextUrl.searchParams;
-  const limit = Math.min(100, Math.max(1, parseInt(searchParams.get('limit') || '50')));
+  const limit = intParam(searchParams, 'limit', { fallback: 50, min: 1, max: 100 });
   const chain = searchParams.get('chain');
   const category = searchParams.get('category');
 

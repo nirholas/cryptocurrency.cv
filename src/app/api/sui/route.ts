@@ -10,6 +10,7 @@
 
 import { type NextRequest, NextResponse } from 'next/server';
 import * as sui from '@/lib/apis/sui';
+import { intParam } from '@/lib/query-params';
 
 export const runtime = 'edge';
 
@@ -81,7 +82,7 @@ export async function GET(request: NextRequest) {
     if (address) {
       switch (view) {
         case 'objects': {
-          const limit = Math.min(parseInt(searchParams.get('limit') || '50', 10), 50);
+          const limit = intParam(searchParams, 'limit', { fallback: 50, min: 1, max: 50 });
           const cursor = searchParams.get('cursor') || undefined;
           const data = await sui.getOwnedObjects(address, { limit, cursor });
           return NextResponse.json({
@@ -95,7 +96,7 @@ export async function GET(request: NextRequest) {
         }
 
         case 'transactions': {
-          const limit = Math.min(parseInt(searchParams.get('limit') || '20', 10), 50);
+          const limit = intParam(searchParams, 'limit', { fallback: 20, min: 1, max: 50 });
           const cursor = searchParams.get('cursor') || undefined;
           const data = await sui.getTransactionsByAddress(address, { limit, cursor });
           return NextResponse.json({

@@ -27,6 +27,7 @@ import {
   getOrderBookDashboard,
   fetchAllOrderBooks,
 } from '@/lib/orderbook-aggregator';
+import { intParam } from '@/lib/query-params';
 
 export const runtime = 'edge';
 export const revalidate = 0; // No caching - real-time data
@@ -210,10 +211,7 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
         const aggregated = await getAggregatedOrderBook(symbol, market, exchanges);
         
         // Limit depth in response
-        const depthLimit = Math.min(
-          parseInt(searchParams.get('depth') || '20'),
-          100
-        );
+        const depthLimit = intParam(searchParams, 'depth', { fallback: 20, min: 1, max: 100 });
 
         return NextResponse.json({
           symbol,

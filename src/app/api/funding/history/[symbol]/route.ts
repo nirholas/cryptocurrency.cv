@@ -10,6 +10,7 @@
 
 import { type NextRequest, NextResponse } from 'next/server';
 import { getFundingHistory } from '@/lib/funding-rates';
+import { intParam } from '@/lib/query-params';
 
 export const runtime = 'edge';
 export const revalidate = 300;
@@ -29,7 +30,7 @@ export async function GET(
 
   const searchParams = request.nextUrl.searchParams;
   const exchange = searchParams.get('exchange') || 'binance';
-  const limit = Math.min(parseInt(searchParams.get('limit') || '100', 10), 1000);
+  const limit = intParam(searchParams, 'limit', { fallback: 100, min: 1, max: 1000 });
 
   try {
     const data = await getFundingHistory(symbol.toUpperCase(), exchange, limit);

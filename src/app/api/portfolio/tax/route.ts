@@ -10,6 +10,7 @@
 
 import { type NextRequest, NextResponse } from 'next/server';
 import { db } from '@/lib/database';
+import { intParam } from '@/lib/query-params';
 
 export const runtime = 'nodejs'; // Changed from 'edge' to support database operations
 
@@ -174,7 +175,7 @@ async function savePortfolioTransactions(portfolioId: string, transactions: Tran
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url);
   const portfolioId = searchParams.get('portfolio_id') || 'demo';
-  const taxYear = parseInt(searchParams.get('year') || new Date().getFullYear().toString());
+  const taxYear = intParam(searchParams, 'year', { fallback: new Date().getFullYear(), min: 2009, max: new Date().getFullYear() });
   const jurisdiction = searchParams.get('jurisdiction') || 'US';
   const costBasisMethod = (searchParams.get('method')?.toUpperCase() as CostBasisMethod) || 'FIFO';
   const format = searchParams.get('format') || 'json'; // json, csv, form8949

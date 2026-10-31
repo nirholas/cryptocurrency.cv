@@ -42,6 +42,7 @@ import {
   analyzeSentiment,
   type SocialMessage,
 } from '@/lib/social-intelligence';
+import { intParam } from '@/lib/query-params';
 
 export const revalidate = 60; // ISR: social data refreshes every 1 min
 
@@ -59,7 +60,7 @@ export async function GET(request: NextRequest) {
 
     const view = searchParams.get('view') || 'full';
     const symbols = searchParams.get('symbols')?.split(',').filter(Boolean);
-    const limit = Math.min(parseInt(searchParams.get('limit') || '20'), 100);
+    const limit = intParam(searchParams, 'limit', { fallback: 20, min: 1, max: 100 });
     const platform = searchParams.get('platform') || 'all';
     const format = searchParams.get('format') || 'json';
 

@@ -24,6 +24,7 @@ import { ApiError } from '@/lib/api-error';
 import { createRequestLogger } from '@/lib/logger';
 import { getBitcoinNews } from '@/lib/crypto-news';
 import { translateArticles, isLanguageSupported, SUPPORTED_LANGUAGES } from '@/lib/translate';
+import { intParam } from '@/lib/query-params';
 
 export const runtime = 'nodejs';
 export const revalidate = 300;
@@ -39,7 +40,7 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
   if (authResponse) return authResponse;
 
   const searchParams = request.nextUrl.searchParams;
-  const limit = Math.min(parseInt(searchParams.get('limit') || '10', 10), 100);
+  const limit = intParam(searchParams, 'limit', { fallback: 10, min: 1, max: 100 });
   const lang = searchParams.get('lang') || 'en';
 
   // Validate language

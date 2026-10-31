@@ -12,6 +12,7 @@ import { type NextRequest, NextResponse } from 'next/server';
 import { getExchanges } from '@/lib/market-data';
 import { ApiError } from '@/lib/api-error';
 import { createRequestLogger } from '@/lib/logger';
+import { intParam } from '@/lib/query-params';
 
 export const runtime = 'edge';
 export const revalidate = 3600;
@@ -37,11 +38,8 @@ export async function GET(
   const searchParams = request.nextUrl.searchParams;
   
   // Parse pagination parameters
-  const perPage = Math.min(
-    parseInt(searchParams.get('per_page') || '100', 10),
-    250
-  );
-  const page = parseInt(searchParams.get('page') || '1', 10);
+  const perPage = intParam(searchParams, 'per_page', { fallback: 100, min: 1, max: 250 });
+  const page = intParam(searchParams, 'page', { fallback: 1, min: 1, max: 1000 });
   
   if (isNaN(perPage) || perPage < 1) {
     logger.error('Invalid per_page parameter', { perPage: searchParams.get('per_page') });

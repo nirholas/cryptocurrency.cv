@@ -46,6 +46,7 @@ import {
   type AgreementTerms,
   type DataRequirements,
 } from '@/lib/academic-access';
+import { intParam } from '@/lib/query-params';
 
 export const runtime = 'edge';
 
@@ -216,7 +217,7 @@ export async function GET(request: NextRequest) {
       case 'publications': {
         // List publications
         const status = searchParams.get('status') as 'draft' | 'submitted' | 'accepted' | 'published' | null;
-        const limit = parseInt(searchParams.get('limit') || '50');
+        const limit = intParam(searchParams, 'limit', { fallback: 50, min: 1, max: 200 });
 
         const pubs = listPublications({
           status: status || undefined,

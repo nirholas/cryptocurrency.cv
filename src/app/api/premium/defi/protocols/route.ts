@@ -27,6 +27,7 @@
 import { type NextRequest, NextResponse } from 'next/server';
 import { withX402 } from '@/lib/x402';
 import { getTopProtocols, getTopChains } from '@/lib/market-data';
+import { intParam } from '@/lib/query-params';
 
 export const runtime = 'nodejs';
 
@@ -124,7 +125,7 @@ async function handler(
   request: NextRequest
 ): Promise<NextResponse<PremiumDeFiResponse | { error: string; message: string }>> {
   const searchParams = request.nextUrl.searchParams;
-  const limit = Math.min(parseInt(searchParams.get('limit') || '500', 10), 1000);
+  const limit = intParam(searchParams, 'limit', { fallback: 500, min: 1, max: 1000 });
   const category = searchParams.get('category');
   const chain = searchParams.get('chain');
   const includeChains = searchParams.get('chains') === 'true';

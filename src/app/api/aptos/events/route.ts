@@ -10,6 +10,7 @@
 
 import { type NextRequest, NextResponse } from 'next/server';
 import { getEventsByEventHandle, getEventsByCreationNumber } from '@/lib/apis/aptos';
+import { intParam } from '@/lib/query-params';
 
 export const runtime = 'edge';
 
@@ -34,7 +35,7 @@ export async function GET(request: NextRequest) {
       );
     }
 
-    const limit = Math.min(parseInt(searchParams.get('limit') || '25', 10), 100);
+    const limit = intParam(searchParams, 'limit', { fallback: 25, min: 1, max: 100 });
     const start = searchParams.get('start') || undefined;
     const handle = searchParams.get('handle');
     const field = searchParams.get('field');

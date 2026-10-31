@@ -36,6 +36,7 @@ import {
   getTimescaleMarks,
   generateWidgetConfig,
 } from '@/lib/tradingview';
+import { intParam } from '@/lib/query-params';
 
 // Use Node.js runtime since tradingview.ts imports database.ts which requires fs/path modules
 export const runtime = 'nodejs';
@@ -76,7 +77,7 @@ export async function GET(request: NextRequest) {
         const query = searchParams.get('query') || '';
         const type = searchParams.get('type') || undefined;
         const exchange = searchParams.get('exchange') || undefined;
-        const limit = parseInt(searchParams.get('limit') || '30', 10);
+        const limit = intParam(searchParams, 'limit', { fallback: 30, min: 1, max: 100 });
         
         const results = searchSymbols(query, type, exchange, limit);
         return NextResponse.json(results);
@@ -84,12 +85,11 @@ export async function GET(request: NextRequest) {
         
       case 'history': {
         const symbol = searchParams.get('symbol');
-        const from = parseInt(searchParams.get('from') || '0', 10);
-        const to = parseInt(searchParams.get('to') || String(Math.floor(Date.now() / 1000)), 10);
+        const from = intParam(searchParams, 'from', { fallback: 0, min: 0, max: Number.MAX_SAFE_INTEGER });
+        const to = intParam(searchParams, 'to', { fallback: Math.floor(Date.now() / 1000), min: 0, max: Number.MAX_SAFE_INTEGER });
         const resolution = searchParams.get('resolution') || 'D';
-        const countback = searchParams.get('countback') 
-          ? parseInt(searchParams.get('countback')!, 10) 
-          : undefined;
+        const countbackRaw = Number.parseInt(searchParams.get('countback') ?? '', 10);
+        const countback = countbackRaw > 0 ? Math.min(countbackRaw, 5000) : undefined;
         
         if (!symbol) {
           return NextResponse.json({ s: 'error', errmsg: 'Symbol required' }, { status: 400 });
@@ -111,8 +111,8 @@ export async function GET(request: NextRequest) {
         
       case 'marks': {
         const symbol = searchParams.get('symbol');
-        const from = parseInt(searchParams.get('from') || '0', 10);
-        const to = parseInt(searchParams.get('to') || String(Math.floor(Date.now() / 1000)), 10);
+        const from = intParam(searchParams, 'from', { fallback: 0, min: 0, max: Number.MAX_SAFE_INTEGER });
+        const to = intParam(searchParams, 'to', { fallback: Math.floor(Date.now() / 1000), min: 0, max: Number.MAX_SAFE_INTEGER });
         const resolution = searchParams.get('resolution') || 'D';
         
         if (!symbol) {
@@ -125,8 +125,8 @@ export async function GET(request: NextRequest) {
         
       case 'timescale_marks': {
         const symbol = searchParams.get('symbol');
-        const from = parseInt(searchParams.get('from') || '0', 10);
-        const to = parseInt(searchParams.get('to') || String(Math.floor(Date.now() / 1000)), 10);
+        const from = intParam(searchParams, 'from', { fallback: 0, min: 0, max: Number.MAX_SAFE_INTEGER });
+        const to = intParam(searchParams, 'to', { fallback: Math.floor(Date.now() / 1000), min: 0, max: Number.MAX_SAFE_INTEGER });
         const resolution = searchParams.get('resolution') || 'D';
         
         if (!symbol) {

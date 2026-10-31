@@ -10,6 +10,7 @@
 
 import { type NextRequest, NextResponse } from 'next/server';
 import { getLatestNews } from '@/lib/crypto-news';
+import { intParam } from '@/lib/query-params';
 
 export const runtime = 'edge';
 export const revalidate = 300;
@@ -73,7 +74,7 @@ function analyzeSentiment(text: string): { sentiment: 'bullish' | 'bearish' | 'n
 
 export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;
-  const limit = Math.min(parseInt(searchParams.get('limit') || '20'), 50);
+  const limit = intParam(searchParams, 'limit', { fallback: 20, min: 1, max: 50 });
   const topic = searchParams.get('topic') || undefined;
   const sentiment = searchParams.get('sentiment') as 'bullish' | 'bearish' | 'neutral' | undefined;
   

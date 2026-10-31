@@ -18,6 +18,7 @@
 
 import { type NextRequest, NextResponse } from 'next/server';
 import { listExportJobs, cleanupOldJobs } from '@/lib/data-export';
+import { intParam } from '@/lib/query-params';
 
 export const runtime = 'edge';
 
@@ -35,7 +36,7 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
     
     // Optionally cleanup old jobs
     if (cleanup) {
-      const maxAgeMs = parseInt(searchParams.get('maxAge') || '3600000'); // 1 hour default
+      const maxAgeMs = intParam(searchParams, 'maxAge', { fallback: 3600000, min: 0, max: 604800000 }); // 1 hour default
       cleanupOldJobs(maxAgeMs);
     }
 

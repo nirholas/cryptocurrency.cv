@@ -26,6 +26,7 @@ import {
   type CausalEvent,
   type CausalMethod,
 } from '@/lib/causal-inference';
+import { intParam } from '@/lib/query-params';
 
 // Use Node.js runtime since causal-inference.ts imports database.ts which requires fs/path modules
 export const runtime = 'nodejs';
@@ -47,7 +48,7 @@ export async function GET(request: NextRequest) {
     const eventId = searchParams.get('eventId');
     const eventType = searchParams.get('type');
     const asset = searchParams.get('asset');
-    const limit = parseInt(searchParams.get('limit') || '50');
+    const limit = intParam(searchParams, 'limit', { fallback: 50, min: 1, max: 200 });
 
     if (eventId) {
       const event = await getEvent(eventId);

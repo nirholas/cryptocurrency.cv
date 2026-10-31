@@ -23,6 +23,7 @@
 import { type NextRequest } from 'next/server';
 import { getLatestNews } from '@/lib/crypto-news';
 import { aiCompleteStream, getAIConfigOrNull } from '@/lib/ai-provider';
+import { intParam } from '@/lib/query-params';
 
 export const runtime = 'edge';
 
@@ -50,7 +51,7 @@ export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url);
   const topic = searchParams.get('topic')?.trim() || '';
   const coinsParam = searchParams.get('coins') || '';
-  const limit = Math.min(parseInt(searchParams.get('limit') || '60', 10), 100);
+  const limit = intParam(searchParams, 'limit', { fallback: 60, min: 1, max: 100 });
 
   if (!topic && !coinsParam) {
     return Response.json(

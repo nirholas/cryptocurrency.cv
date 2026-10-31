@@ -27,6 +27,7 @@ import {
   getTrackingStats 
 } from '@/lib/headline-tracker';
 import { getLatestNews } from '@/lib/crypto-news';
+import { intParam } from '@/lib/query-params';
 
 export const runtime = 'edge';
 export const revalidate = 60; // 1 minute
@@ -36,7 +37,7 @@ export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;
   
   // Parse query parameters
-  const hours = Math.min(Math.max(parseInt(searchParams.get('hours') || '24'), 1), 168); // Max 1 week
+  const hours = intParam(searchParams, 'hours', { fallback: 24, min: 1, max: 168 }); // Max 1 week
   const changesOnly = searchParams.get('changesOnly') === 'true';
   
   try {

@@ -10,6 +10,7 @@
 
 import { type NextRequest, NextResponse } from 'next/server';
 import { getAaveMarkets } from '@/lib/apis/thegraph';
+import { intParam } from '@/lib/query-params';
 
 export const runtime = 'edge';
 export const revalidate = 300;
@@ -20,7 +21,7 @@ export const revalidate = 300;
  */
 export async function GET(request: NextRequest): Promise<NextResponse> {
   const searchParams = request.nextUrl.searchParams;
-  const limit = Math.min(parseInt(searchParams.get('limit') || '20', 10), 100);
+  const limit = intParam(searchParams, 'limit', { fallback: 20, min: 1, max: 100 });
 
   try {
     const data = await getAaveMarkets();

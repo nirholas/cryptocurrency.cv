@@ -10,6 +10,7 @@
 
 import { type NextRequest, NextResponse } from 'next/server';
 import { getLatestNews, type NewsArticle } from '@/lib/crypto-news';
+import { intParam } from '@/lib/query-params';
 
 export const runtime = 'edge';
 
@@ -226,7 +227,7 @@ export async function GET(request: NextRequest) {
   
   // Get parameters
   const coinsParam = searchParams.get('coins');
-  const limit = Math.min(Math.max(parseInt(searchParams.get('limit') || '10'), 1), 50);
+  const limit = intParam(searchParams, 'limit', { fallback: 10, min: 1, max: 50 });
   const includePrices = searchParams.get('prices') !== 'false';
   
   if (!coinsParam) {

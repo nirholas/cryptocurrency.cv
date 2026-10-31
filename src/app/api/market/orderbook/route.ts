@@ -22,6 +22,7 @@ import {
 } from '@/lib/order-book';
 import { ApiError } from '@/lib/api-error';
 import { createRequestLogger } from '@/lib/logger';
+import { intParam } from '@/lib/query-params';
 
 // Use Node.js runtime since order-book.ts imports database.ts which requires fs/path modules
 export const runtime = 'nodejs';
@@ -94,7 +95,7 @@ export async function GET(request: NextRequest) {
 
     if (action === 'single') {
       const exchange = validExchanges[0];
-      const depth = parseInt(searchParams.get('depth') || '25');
+      const depth = intParam(searchParams, 'depth', { fallback: 25, min: 1, max: 500 });
       
       logger.info('Fetching single order book', { symbol, exchange, depth });
       const book = await orderBook.fetchOrderBook(symbol, exchange, depth);
@@ -156,7 +157,7 @@ export async function GET(request: NextRequest) {
     }
 
     if (action === 'snapshots') {
-      const limit = parseInt(searchParams.get('limit') || '20');
+      const limit = intParam(searchParams, 'limit', { fallback: 20, min: 1, max: 100 });
       logger.info('Listing order book snapshots', { symbol, limit });
       const snapshots = await orderBook.listSnapshots({ symbol, limit });
       

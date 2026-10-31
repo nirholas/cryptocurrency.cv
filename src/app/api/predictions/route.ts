@@ -33,6 +33,7 @@ import {
   type PredictionStatus,
 } from '@/lib/predictions';
 import { checkRateLimitFromRequest, getRateLimitErrorResponse } from '@/lib/ratelimit';
+import { intParam } from '@/lib/query-params';
 
 // =============================================================================
 // VALIDATION
@@ -173,8 +174,8 @@ export async function GET(request: NextRequest) {
     const asset = searchParams.get('asset');
     const status = searchParams.get('status') as PredictionStatus | null;
     const view = searchParams.get('view') || 'list';
-    const limit = Math.min(parseInt(searchParams.get('limit') || '50'), 100);
-    const minPredictions = parseInt(searchParams.get('minPredictions') || '5');
+    const limit = intParam(searchParams, 'limit', { fallback: 50, min: 1, max: 100 });
+    const minPredictions = intParam(searchParams, 'minPredictions', { fallback: 5, min: 0, max: 1000 });
 
     // Rate limiting
     const rateLimit = await checkRateLimitFromRequest(request);

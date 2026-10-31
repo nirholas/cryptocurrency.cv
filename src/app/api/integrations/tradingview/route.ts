@@ -23,6 +23,7 @@ import {
   type PineScriptInput,
   type PineScriptPlot,
 } from '@/lib/tradingview';
+import { intParam } from '@/lib/query-params';
 
 // Use Node.js runtime since tradingview.ts imports database.ts which requires fs/path modules
 export const runtime = 'nodejs';
@@ -50,7 +51,7 @@ export async function GET(request: NextRequest) {
       const widgetType = searchParams.get('type') || 'chart';
       const theme = (searchParams.get('theme') || 'dark') as 'light' | 'dark';
       const width = searchParams.get('width') || '100%';
-      const height = parseInt(searchParams.get('height') || '500');
+      const height = intParam(searchParams, 'height', { fallback: 500, min: 100, max: 2000 });
 
       const config: Partial<WidgetConfig> = {
         symbol: symbol ? `BINANCE:${symbol.toUpperCase()}USDT` : 'BINANCE:BTCUSDT',
@@ -160,8 +161,8 @@ export async function GET(request: NextRequest) {
       let indicator;
       switch (type) {
         case 'ma-crossover':
-          const fast = parseInt(searchParams.get('fast') || '9');
-          const slow = parseInt(searchParams.get('slow') || '21');
+          const fast = intParam(searchParams, 'fast', { fallback: 9, min: 1, max: 200 });
+          const slow = intParam(searchParams, 'slow', { fallback: 21, min: 1, max: 400 });
           indicator = tradingView.generateMACrossoverIndicator(fast, slow);
           break;
         case 'rsi-divergence':

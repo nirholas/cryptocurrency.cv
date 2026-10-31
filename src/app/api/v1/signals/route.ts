@@ -25,6 +25,7 @@ import { createRequestLogger } from "@/lib/logger";
 import { getLatestNews } from "@/lib/crypto-news";
 import { promptAIJson, isAIConfigured, AIAuthError } from "@/lib/ai-provider";
 import { aiNotConfiguredResponse, aiAuthErrorResponse } from "@/app/api/_utils";
+import { intParam } from '@/lib/query-params';
 
 export const runtime = 'nodejs';
 export const revalidate = 300;
@@ -58,11 +59,8 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
   if (authResponse) return authResponse;
 
   const searchParams = request.nextUrl.searchParams;
-  const limit = Math.min(parseInt(searchParams.get("limit") || "30", 10), 50);
-  const minConfidence = Math.max(
-    0,
-    Math.min(100, parseInt(searchParams.get("min_confidence") || "50", 10)),
-  );
+  const limit = intParam(searchParams, 'limit', { fallback: 30, min: 1, max: 50 });
+  const minConfidence = intParam(searchParams, 'min_confidence', { fallback: 50, min: 0, max: 100 });
 
   if (!isAIConfigured()) return aiNotConfiguredResponse();
 

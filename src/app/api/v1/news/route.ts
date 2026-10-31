@@ -25,6 +25,7 @@ import { createRequestLogger } from '@/lib/logger';
 import { getLatestNews } from '@/lib/crypto-news';
 import { translateArticles, isLanguageSupported, SUPPORTED_LANGUAGES } from '@/lib/translate';
 import { getBulkEnrichment } from '@/lib/article-enrichment';
+import { intParam } from '@/lib/query-params';
 
 export const runtime = 'nodejs';
 export const revalidate = 60;
@@ -48,13 +49,13 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
   if (authResponse) return authResponse;
 
   const searchParams = request.nextUrl.searchParams;
-  const limit = Math.min(parseInt(searchParams.get('limit') || '20', 10), 100);
+  const limit = intParam(searchParams, 'limit', { fallback: 20, min: 1, max: 100 });
   const source = searchParams.get('source') || undefined;
   const category = searchParams.get('category') || undefined;
   const from = searchParams.get('from') || undefined;
   const to = searchParams.get('to') || undefined;
-  const page = parseInt(searchParams.get('page') || '1', 10);
-  const per_page = Math.min(parseInt(searchParams.get('per_page') || '20', 10), 100);
+  const page = intParam(searchParams, 'page', { fallback: 1, min: 1, max: 1000 });
+  const per_page = intParam(searchParams, 'per_page', { fallback: 20, min: 1, max: 100 });
   const lang = searchParams.get('lang') || 'en';
   const sort = searchParams.get('sort');
 

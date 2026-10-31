@@ -10,6 +10,7 @@
 
 import { type NextRequest, NextResponse } from 'next/server';
 import { getAsset, getAssetMarkets, normalizeAsset } from '@/lib/coincap';
+import { intParam } from '@/lib/query-params';
 
 export const runtime = 'edge';
 export const revalidate = 60;
@@ -37,7 +38,7 @@ export async function GET(
 
     const searchParams = request.nextUrl.searchParams;
     const includeMarkets = searchParams.get('include_markets') === 'true';
-    const marketsLimit = Math.min(parseInt(searchParams.get('markets_limit') || '10', 10), 50);
+    const marketsLimit = intParam(searchParams, 'markets_limit', { fallback: 10, min: 1, max: 50 });
 
     const asset = await getAsset(id);
     const normalized = normalizeAsset(asset);

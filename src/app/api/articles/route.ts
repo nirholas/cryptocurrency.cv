@@ -34,6 +34,7 @@ import {
   getArchiveStats,
   type ArchivedArticle,
 } from '@/lib/archive-service';
+import { intParam } from '@/lib/query-params';
 
 export const runtime = 'edge';
 export const revalidate = 60; // Cache for 1 minute
@@ -127,7 +128,7 @@ export async function GET(request: NextRequest) {
       });
     }
     
-    const limit = Math.min(parseInt(searchParams.get('limit') || '50'), 200);
+    const limit = intParam(searchParams, 'limit', { fallback: 50, min: 1, max: 200 });
     
     // Articles by date
     const date = searchParams.get('date');

@@ -23,6 +23,7 @@ import {
   getRegulatoryUpdates,
   getNewsSummary,
 } from '@/lib/apis/news-feeds';
+import { intParam } from '@/lib/query-params';
 
 export const runtime = 'edge';
 export const revalidate = 60;
@@ -65,7 +66,7 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
       }
 
       case 'news': {
-        const page = parseInt(searchParams.get('page') || '1', 10);
+        const page = intParam(searchParams, 'page', { fallback: 1, min: 1, max: 100 });
         const data = await getCryptoNews({ currencies, page });
         return NextResponse.json(data, { headers: CORS_HEADERS });
       }
@@ -110,20 +111,20 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
         const kind = searchParams.get('kind') as 'news' | 'media' | 'analysis' | undefined;
         const regions = searchParams.get('regions')?.split(',') || undefined;
         const source = searchParams.get('source') || undefined;
-        const page = parseInt(searchParams.get('page') || '1', 10);
+        const page = intParam(searchParams, 'page', { fallback: 1, min: 1, max: 100 });
         const data = await getCryptoPanicFiltered({ filter, kind, currencies, regions, source, page });
         return NextResponse.json(data, { headers: CORS_HEADERS });
       }
 
       case 'topics': {
-        const limit = Math.min(parseInt(searchParams.get('limit') || '10', 10), 50);
+        const limit = intParam(searchParams, 'limit', { fallback: 10, min: 1, max: 50 });
         const data = await getTrendingTopics(limit);
         return NextResponse.json({ data, count: data.length, timestamp: new Date().toISOString() }, { headers: CORS_HEADERS });
       }
 
       case 'regulatory': {
         const country = searchParams.get('country') || undefined;
-        const limit = Math.min(parseInt(searchParams.get('limit') || '20', 10), 50);
+        const limit = intParam(searchParams, 'limit', { fallback: 20, min: 1, max: 50 });
         const data = await getRegulatoryUpdates({ country, limit });
         return NextResponse.json({ data, count: data.length, timestamp: new Date().toISOString() }, { headers: CORS_HEADERS });
       }

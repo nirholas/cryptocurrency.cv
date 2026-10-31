@@ -17,6 +17,7 @@ import {
   getVectorSearchIndex,
 } from '@/lib/vector-search';
 import { jsonResponse, errorResponse, withTiming, CACHE_CONTROL } from '@/lib/api-utils';
+import { intParam } from '@/lib/query-params';
 
 export const runtime = 'edge';
 
@@ -61,7 +62,7 @@ export async function GET(request: NextRequest) {
   }
 
   if (action === 'topics') {
-    const numTopics = parseInt(searchParams.get('numTopics') || '8', 10);
+    const numTopics = intParam(searchParams, 'numTopics', { fallback: 8, min: 1, max: 50 });
     const clusters = await discoverTopics(undefined, numTopics);
     return jsonResponse(withTiming({
       success: true,

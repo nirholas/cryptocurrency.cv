@@ -28,6 +28,7 @@ import { withX402 } from '@/lib/x402';
 import { getCoinDetails } from '@/lib/market-data';
 
 import { resilientFetchResponse } from '@/lib/resilient-fetch';
+import { intParam } from '@/lib/query-params';
 export const runtime = 'nodejs';
 
 interface WhaleTransaction {
@@ -346,10 +347,7 @@ async function handler(
   const searchParams = request.nextUrl.searchParams;
   const coinsParam = searchParams.get('coins') || 'bitcoin,ethereum';
   const coins = coinsParam.split(',').slice(0, 10);
-  const minThreshold = Math.max(
-    100000,
-    parseInt(searchParams.get('minThreshold') || '1000000', 10),
-  );
+  const minThreshold = intParam(searchParams, 'minThreshold', { fallback: 1000000, min: 100000, max: Number.MAX_SAFE_INTEGER });
   const includeConcentration = searchParams.get('concentration') === 'true';
 
   try {

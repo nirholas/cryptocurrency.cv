@@ -24,6 +24,7 @@ import { createHash } from 'crypto';
 import { requireAdminAuth } from '@/lib/admin-auth';
 import { resilientFetchResponse } from '@/lib/resilient-fetch';
 import { ARCHIVE_BASE_URL } from '@/lib/archive-source';
+import { intParam } from '@/lib/query-params';
 interface ArchivedItem {
   id: string;
   cid: string; // IPFS CID or Arweave TX
@@ -205,7 +206,7 @@ export async function GET(request: NextRequest) {
   // List session archives
   const storage = searchParams.get('storage');
   const type = searchParams.get('type');
-  const limit = parseInt(searchParams.get('limit') || '20');
+  const limit = intParam(searchParams, 'limit', { fallback: 20, min: 1, max: 100 });
 
   let items = [...sessionItems];
   if (storage) items = items.filter(i => i.storage === storage || i.storage === 'both');

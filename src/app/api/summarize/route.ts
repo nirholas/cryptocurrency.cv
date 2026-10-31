@@ -14,6 +14,7 @@ import { promptAIJsonCached, isAIConfigured, AIAuthError } from '@/lib/ai-provid
 import { jsonResponse, errorResponse, withTiming } from '@/lib/api-utils';
 import { ApiError } from '@/lib/api-error';
 import { createRequestLogger } from '@/lib/logger';
+import { intParam } from '@/lib/query-params';
 
 export const runtime = 'edge';
 export const revalidate = 60; // 1 minute cache
@@ -45,7 +46,7 @@ Respond with a JSON object: { "summaries": [...] }`;
 export async function GET(request: NextRequest) {
   const startTime = Date.now();
   const searchParams = request.nextUrl.searchParams;
-  const limit = Math.min(parseInt(searchParams.get('limit') || '5'), 20);
+  const limit = intParam(searchParams, 'limit', { fallback: 5, min: 1, max: 20 });
   const source = searchParams.get('source') || undefined;
   const style = searchParams.get('style') || 'brief'; // brief, detailed, bullet
 

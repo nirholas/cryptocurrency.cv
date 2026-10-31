@@ -22,6 +22,7 @@ import { type NextRequest, NextResponse } from 'next/server';
 import { createHash } from 'crypto';
 import { schnorr } from '@noble/curves/secp256k1.js';
 import { bytesToHex, hexToBytes } from '@noble/curves/utils.js';
+import { intParam } from '@/lib/query-params';
 
 export const runtime = 'nodejs';
 
@@ -277,7 +278,7 @@ export async function GET(request: NextRequest) {
   }
   
   // Get recent published events
-  const limit = parseInt(searchParams.get('limit') || '20');
+  const limit = intParam(searchParams, 'limit', { fallback: 20, min: 1, max: 100 });
   
   return NextResponse.json({
     success: true,

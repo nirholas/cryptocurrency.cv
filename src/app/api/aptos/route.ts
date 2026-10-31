@@ -10,6 +10,7 @@
 
 import { type NextRequest, NextResponse } from 'next/server';
 import * as aptos from '@/lib/apis/aptos';
+import { intParam } from '@/lib/query-params';
 
 export const runtime = 'edge';
 
@@ -68,7 +69,7 @@ export async function GET(request: NextRequest) {
     if (address) {
       switch (view) {
         case 'transactions': {
-          const limit = Math.min(parseInt(searchParams.get('limit') || '25', 10), 100);
+          const limit = intParam(searchParams, 'limit', { fallback: 25, min: 1, max: 100 });
           const start = searchParams.get('start') || undefined;
           const data = await aptos.getAccountTransactions(address, { limit, start });
           return NextResponse.json({

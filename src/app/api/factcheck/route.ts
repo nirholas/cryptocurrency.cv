@@ -12,6 +12,7 @@ import { type NextRequest, NextResponse } from 'next/server';
 import { getLatestNews } from '@/lib/crypto-news';
 import { promptAIJson, isAIConfigured, AIAuthError } from '@/lib/ai-provider';
 import { aiNotConfiguredResponse, aiAuthErrorResponse } from '@/app/api/_utils';
+import { intParam } from '@/lib/query-params';
 
 export const runtime = 'edge';
 export const revalidate = 300;
@@ -55,7 +56,7 @@ Respond with JSON: { "claims": [...] }`;
 
 export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;
-  const limit = Math.min(parseInt(searchParams.get('limit') || '15'), 30);
+  const limit = intParam(searchParams, 'limit', { fallback: 15, min: 1, max: 30 });
   const type = searchParams.get('type') as 'factual' | 'prediction' | 'opinion' | 'quote' | undefined;
   const confidence = searchParams.get('confidence') as 'verified' | 'likely' | 'unverified' | 'disputed' | undefined;
 

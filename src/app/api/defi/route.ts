@@ -12,6 +12,7 @@ import { type NextRequest, NextResponse } from 'next/server';
 import { getDefiNews } from '@/lib/crypto-news';
 import { translateArticles, isLanguageSupported, SUPPORTED_LANGUAGES } from '@/lib/translate';
 import { instrumented } from '@/lib/telemetry-middleware';
+import { intParam } from '@/lib/query-params';
 
 export const runtime = 'edge';
 export const revalidate = 300;
@@ -19,7 +20,7 @@ export const revalidate = 300;
 export const GET = instrumented(
   async function GET(request: NextRequest) {
     const searchParams = request.nextUrl.searchParams;
-    const limit = parseInt(searchParams.get('limit') || '10');
+    const limit = intParam(searchParams, 'limit', { fallback: 10, min: 1, max: 500 });
     const lang = searchParams.get('lang') || 'en';
 
     // Validate language parameter

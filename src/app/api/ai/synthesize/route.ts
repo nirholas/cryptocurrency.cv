@@ -29,6 +29,7 @@ import {
 } from '@/lib/ai-intelligence';
 import { isAIConfigured, isAIUnavailableError } from '@/lib/ai-provider';
 import { aiAuthErrorResponse, aiNotConfiguredResponse } from '@/app/api/_utils';
+import { intParam } from '@/lib/query-params';
 
 export const runtime = 'edge';
 export const revalidate = 60;
@@ -39,7 +40,7 @@ export async function GET(request: NextRequest) {
   }
 
   const searchParams = request.nextUrl.searchParams;
-  const limit = Math.min(parseInt(searchParams.get('limit') || '5'), 10);
+  const limit = intParam(searchParams, 'limit', { fallback: 5, min: 1, max: 10 });
   const threshold = parseFloat(searchParams.get('threshold') || '0.4');
 
   try {

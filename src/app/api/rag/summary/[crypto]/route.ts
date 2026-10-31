@@ -17,6 +17,7 @@
 
 import { type NextRequest, NextResponse } from 'next/server';
 import { summarizeCryptoNews, normalizeToCode } from '@/lib/rag';
+import { intParam } from '@/lib/query-params';
 
 export const runtime = 'nodejs';
 export const maxDuration = 30;
@@ -28,7 +29,7 @@ export async function GET(
   try {
     const { crypto } = await params;
     const { searchParams } = new URL(request.url);
-    const days = parseInt(searchParams.get('days') || '7', 10);
+    const days = intParam(searchParams, 'days', { fallback: 7, min: 1, max: 365 });
 
     if (!crypto) {
       return NextResponse.json(

@@ -12,6 +12,7 @@ import { type NextRequest, NextResponse } from 'next/server';
 import { getLatestNews } from '@/lib/crypto-news';
 import { promptAIJson, isAIConfigured, AIAuthError } from '@/lib/ai-provider';
 import { aiNotConfiguredResponse, aiAuthErrorResponse } from '@/app/api/_utils';
+import { intParam } from '@/lib/query-params';
 
 export const runtime = 'edge';
 export const revalidate = 300;
@@ -50,9 +51,9 @@ Respond with JSON: { "entities": [...] }`;
 
 export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;
-  const limit = Math.min(parseInt(searchParams.get('limit') || '30'), 50);
+  const limit = intParam(searchParams, 'limit', { fallback: 30, min: 1, max: 50 });
   const type = searchParams.get('type') || undefined; // Filter by entity type
-  const minMentions = parseInt(searchParams.get('min_mentions') || '1');
+  const minMentions = intParam(searchParams, 'min_mentions', { fallback: 1, min: 0, max: 10000 });
 
   if (!isAIConfigured()) return aiNotConfiguredResponse();
 

@@ -10,6 +10,7 @@
 
 import { type NextRequest, NextResponse } from 'next/server';
 import { getBybitFundingHistory } from '@/lib/derivatives';
+import { intParam } from '@/lib/query-params';
 
 export const runtime = 'edge';
 export const revalidate = 300;
@@ -28,7 +29,7 @@ export async function GET(
   }
 
   const searchParams = request.nextUrl.searchParams;
-  const limit = Math.min(parseInt(searchParams.get('limit') || '200', 10), 200);
+  const limit = intParam(searchParams, 'limit', { fallback: 200, min: 1, max: 200 });
 
   try {
     const data = await getBybitFundingHistory(symbol.toUpperCase(), limit);

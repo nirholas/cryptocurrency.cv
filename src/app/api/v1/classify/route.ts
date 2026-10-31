@@ -24,6 +24,7 @@ import { ApiError } from "@/lib/api-error";
 import { createRequestLogger } from "@/lib/logger";
 import { getLatestNews } from "@/lib/crypto-news";
 import { classifyEvent } from "@/lib/event-classifier";
+import { intParam } from '@/lib/query-params';
 
 export const runtime = 'nodejs';
 export const revalidate = 300;
@@ -38,7 +39,7 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
   if (authResponse) return authResponse;
 
   const searchParams = request.nextUrl.searchParams;
-  const limit = Math.min(parseInt(searchParams.get("limit") || "10", 10), 50);
+  const limit = Math.min(intParam(searchParams, 'limit', { fallback: 10, min: 1, max: 50 }), 50);
   const source = searchParams.get("source") || undefined;
 
   try {

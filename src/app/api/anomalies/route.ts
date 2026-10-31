@@ -21,6 +21,7 @@ import {
 } from '@/lib/advanced-anomaly';
 import type { AnomalySignal, AnomalySeverity } from '@/lib/advanced-anomaly';
 import { jsonResponse, errorResponse, withTiming, CACHE_CONTROL } from '@/lib/api-utils';
+import { intParam } from '@/lib/query-params';
 
 export const runtime = 'edge';
 
@@ -58,7 +59,7 @@ export async function GET(request: NextRequest) {
 
   // Historical anomaly log
   if (action === 'history') {
-    const limit = parseInt(searchParams.get('limit') || '50', 10);
+    const limit = intParam(searchParams, 'limit', { fallback: 50, min: 1, max: 500 });
     const signalParam = searchParams.get('signal') || undefined;
     const severityParam = searchParams.get('severity') || undefined;
     const sinceParam = searchParams.get('since') || undefined;

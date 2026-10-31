@@ -10,6 +10,7 @@
 
 import { type NextRequest, NextResponse } from 'next/server';
 import { getTransactionBlock, getTransactionsByAddress } from '@/lib/apis/sui';
+import { intParam } from '@/lib/query-params';
 
 export const runtime = 'edge';
 
@@ -47,7 +48,7 @@ export async function GET(request: NextRequest) {
       );
     }
 
-    const limit = Math.min(parseInt(searchParams.get('limit') || '20', 10), 50);
+    const limit = intParam(searchParams, 'limit', { fallback: 20, min: 1, max: 50 });
     const cursor = searchParams.get('cursor') || undefined;
     const data = await getTransactionsByAddress(address, { limit, cursor });
 

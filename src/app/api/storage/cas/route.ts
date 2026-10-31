@@ -20,6 +20,7 @@ import {
   cas,
   type ContentIdentifier,
 } from '@/lib/content-addressable';
+import { intParam } from '@/lib/query-params';
 
 // Use Node.js runtime since content-addressable.ts uses database.ts which requires fs/path modules
 export const runtime = 'nodejs';
@@ -47,7 +48,7 @@ export async function GET(request: NextRequest) {
     }
 
     if (action === 'pins') {
-      const limit = parseInt(searchParams.get('limit') || '100');
+      const limit = intParam(searchParams, 'limit', { fallback: 100, min: 1, max: 1000 });
       const pins = await cas.listPins({ limit });
       return NextResponse.json({ 
         pins,

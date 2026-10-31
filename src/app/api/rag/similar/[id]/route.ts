@@ -17,6 +17,7 @@
 
 import { type NextRequest, NextResponse } from 'next/server';
 import { getSimilarArticles } from '@/lib/rag';
+import { intParam } from '@/lib/query-params';
 
 export const runtime = 'nodejs';
 
@@ -27,7 +28,7 @@ export async function GET(
   try {
     const { id } = await params;
     const { searchParams } = new URL(request.url);
-    const topK = parseInt(searchParams.get('topK') || '5', 10);
+    const topK = intParam(searchParams, 'topK', { fallback: 5, min: 1, max: 50 });
 
     if (!id) {
       return NextResponse.json(

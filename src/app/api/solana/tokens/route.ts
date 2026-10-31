@@ -10,6 +10,7 @@
 
 import { type NextRequest, NextResponse } from 'next/server';
 import { getTokenAccounts } from '@/lib/apis/helius';
+import { intParam } from '@/lib/query-params';
 
 export const runtime = 'edge';
 
@@ -33,8 +34,8 @@ export async function GET(request: NextRequest) {
     const { searchParams } = new URL(request.url);
     const owner = searchParams.get('owner');
     const mint = searchParams.get('mint');
-    const page = parseInt(searchParams.get('page') || '1', 10);
-    const limit = Math.min(parseInt(searchParams.get('limit') || '100', 10), 1000);
+    const page = intParam(searchParams, 'page', { fallback: 1, min: 1, max: 1000 });
+    const limit = intParam(searchParams, 'limit', { fallback: 100, min: 1, max: 1000 });
 
     if (!owner && !mint) {
       return NextResponse.json({

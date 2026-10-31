@@ -27,6 +27,7 @@ import {
   getTopExchanges,
   searchCryptocurrencies,
 } from '@/lib/apis/coinmarketcap';
+import { intParam } from '@/lib/query-params';
 
 export const runtime = 'edge';
 export const revalidate = 60;
@@ -71,7 +72,7 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
       }
 
       case 'listings': {
-        const limit = Math.min(parseInt(searchParams.get('limit') || '50', 10), 200);
+        const limit = intParam(searchParams, 'limit', { fallback: 50, min: 1, max: 200 });
         const sort = (searchParams.get('sort') as 'market_cap' | 'volume_24h' | 'percent_change_24h') || 'market_cap';
         const tag = searchParams.get('tag') || undefined;
         const data = await getLatestListings({ limit, sort, tag });
@@ -109,14 +110,14 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
       case 'pairs': {
         const symbol = searchParams.get('symbol') || searchParams.get('id');
         if (!symbol) return NextResponse.json({ error: 'Missing symbol or id' }, { status: 400 });
-        const limit = Math.min(parseInt(searchParams.get('limit') || '50', 10), 100);
+        const limit = intParam(searchParams, 'limit', { fallback: 50, min: 1, max: 100 });
         const category = (searchParams.get('category') as 'spot' | 'derivatives' | 'all') || 'spot';
         const data = await getMarketPairs(symbol, { limit, category });
         return NextResponse.json({ data, timestamp: new Date().toISOString() }, { headers: CORS_HEADERS });
       }
 
       case 'categories': {
-        const limit = Math.min(parseInt(searchParams.get('limit') || '50', 10), 200);
+        const limit = intParam(searchParams, 'limit', { fallback: 50, min: 1, max: 200 });
         const data = await getCategories({ limit });
         return NextResponse.json({ data, count: data.length, timestamp: new Date().toISOString() }, { headers: CORS_HEADERS });
       }
@@ -145,7 +146,7 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
       }
 
       case 'exchanges': {
-        const limit = Math.min(parseInt(searchParams.get('limit') || '25', 10), 100);
+        const limit = intParam(searchParams, 'limit', { fallback: 25, min: 1, max: 100 });
         const data = await getTopExchanges(limit);
         return NextResponse.json({ data, count: data.length, timestamp: new Date().toISOString() }, { headers: CORS_HEADERS });
       }
@@ -159,7 +160,7 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
 
       case 'map': {
         const symbol = searchParams.get('symbol') || undefined;
-        const limit = Math.min(parseInt(searchParams.get('limit') || '200', 10), 5000);
+        const limit = intParam(searchParams, 'limit', { fallback: 200, min: 1, max: 5000 });
         const data = await getIdMap({ symbol, limit });
         return NextResponse.json({ data, count: data.length, timestamp: new Date().toISOString() }, { headers: CORS_HEADERS });
       }

@@ -11,6 +11,7 @@
 import { type NextRequest, NextResponse } from 'next/server';
 import * as helius from '@/lib/apis/helius';
 import * as shyft from '@/lib/apis/shyft';
+import { intParam } from '@/lib/query-params';
 
 export const runtime = 'edge';
 
@@ -116,7 +117,7 @@ export async function GET(request: NextRequest) {
       }
 
       case 'transactions': {
-        const limit = parseInt(searchParams.get('limit') || '20', 10);
+        const limit = intParam(searchParams, 'limit', { fallback: 20, min: 1, max: 100 });
         const data = await helius.getTransactionHistory(address, { limit: Math.min(limit, 100) });
         return NextResponse.json({
           count: data.length,

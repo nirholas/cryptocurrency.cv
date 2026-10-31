@@ -29,6 +29,7 @@ import {
   getMajorProtocolGovernance,
   getTopSpaces,
 } from '@/lib/data-sources/social';
+import { intParam } from '@/lib/query-params';
 
 export const runtime = 'edge';
 export const revalidate = 300;
@@ -40,7 +41,7 @@ export async function GET(request: NextRequest) {
   try {
     switch (view) {
       case 'fear-greed': {
-        const days = parseInt(searchParams.get('days') || '30');
+        const days = intParam(searchParams, 'days', { fallback: 30, min: 1, max: 365 });
         const [current, history] = await Promise.allSettled([
           getFearGreedIndex(),
           getFearGreedHistory(days),
@@ -59,7 +60,7 @@ export async function GET(request: NextRequest) {
       }
 
       case 'trending': {
-        const limit = parseInt(searchParams.get('limit') || '20');
+        const limit = intParam(searchParams, 'limit', { fallback: 20, min: 1, max: 100 });
         const trending = await getTrendingSocial(limit);
         return NextResponse.json({ status: 'ok', data: trending, timestamp: new Date().toISOString() }, {
           headers: { 'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=600' },
@@ -87,7 +88,7 @@ export async function GET(request: NextRequest) {
 
       case 'proposals': {
         const space = searchParams.get('space') || undefined;
-        const limit = parseInt(searchParams.get('limit') || '20');
+        const limit = intParam(searchParams, 'limit', { fallback: 20, min: 1, max: 100 });
         const proposals = await getActiveProposals(space, limit);
         return NextResponse.json({ status: 'ok', data: proposals, timestamp: new Date().toISOString() }, {
           headers: { 'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=600' },
@@ -95,7 +96,7 @@ export async function GET(request: NextRequest) {
       }
 
       case 'spaces': {
-        const limit = parseInt(searchParams.get('limit') || '20');
+        const limit = intParam(searchParams, 'limit', { fallback: 20, min: 1, max: 100 });
         const spaces = await getTopSpaces(limit);
         return NextResponse.json({ status: 'ok', data: spaces, timestamp: new Date().toISOString() }, {
           headers: { 'Cache-Control': 'public, s-maxage=600, stale-while-revalidate=1200' },

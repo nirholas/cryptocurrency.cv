@@ -11,6 +11,7 @@
 import { type NextRequest, NextResponse } from 'next/server';
 import { getTransactionHistory } from '@/lib/apis/helius';
 import { getParsedTransactions } from '@/lib/apis/shyft';
+import { intParam } from '@/lib/query-params';
 
 export const runtime = 'edge';
 
@@ -37,7 +38,7 @@ export async function GET(request: NextRequest) {
       );
     }
 
-    const limit = Math.min(parseInt(searchParams.get('limit') || '20', 10), 100);
+    const limit = intParam(searchParams, 'limit', { fallback: 20, min: 1, max: 100 });
     const source = searchParams.get('source');
 
     if (source === 'shyft') {

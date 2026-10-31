@@ -11,6 +11,7 @@
 import { type NextRequest, NextResponse } from 'next/server';
 import { kv } from '@vercel/kv';
 import { isKvConfigured, type ApiKeyData, API_KEY_TIERS } from '@/lib/api-keys';
+import { intParam } from '@/lib/query-params';
 
 export const runtime = 'edge';
 export const revalidate = 60; // 1 minute cache
@@ -68,7 +69,7 @@ export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url);
   const keyPrefix = searchParams.get('key_prefix');
   const keyId = searchParams.get('key_id');
-  const days = Math.min(parseInt(searchParams.get('days') || '30'), 90);
+  const days = intParam(searchParams, 'days', { fallback: 30, min: 1, max: 90 });
   
   // Require authentication for usage data
   const authHeader = request.headers.get('authorization');

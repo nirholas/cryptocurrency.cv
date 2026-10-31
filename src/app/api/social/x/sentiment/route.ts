@@ -31,6 +31,7 @@ import {
   fetchListSentiment,
   getInfluencerList,
 } from '@/lib/x-scraper';
+import { intParam } from '@/lib/query-params';
 
 export const revalidate = 60; // ISR: sentiment data refreshes every 1 min
 export const maxDuration = 60; // Allow longer execution for scraping
@@ -39,7 +40,7 @@ export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;
   const listId = searchParams.get('list') || 'default';
   const forceRefresh = searchParams.get('refresh') === 'true';
-  const tweetsPerUser = Math.min(parseInt(searchParams.get('tweets') || '10', 10), 20);
+  const tweetsPerUser = intParam(searchParams, 'tweets', { fallback: 10, min: 1, max: 20 });
 
   try {
     // Check if list exists

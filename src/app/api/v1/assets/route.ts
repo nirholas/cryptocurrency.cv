@@ -12,6 +12,7 @@ import { type NextRequest, NextResponse } from 'next/server';
 import { getAggregatedAssets, getAssetDetail } from '@/lib/external-apis';
 import { ApiError } from '@/lib/api-error';
 import { logger } from '@/lib/logger';
+import { intParam } from '@/lib/query-params';
 
 export const runtime = 'edge';
 export const revalidate = 30;
@@ -36,7 +37,7 @@ export async function GET(request: NextRequest) {
   const startTime = Date.now();
   const searchParams = request.nextUrl.searchParams;
   const id = searchParams.get('id');
-  const limit = Math.min(parseInt(searchParams.get('limit') || '100', 10), 250);
+  const limit = intParam(searchParams, 'limit', { fallback: 100, min: 1, max: 250 });
 
   try {
     if (id) {

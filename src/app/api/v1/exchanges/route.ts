@@ -22,6 +22,7 @@ import { hybridAuthMiddleware } from '@/lib/x402';
 import { ApiError } from '@/lib/api-error';
 import { createRequestLogger } from '@/lib/logger';
 import { COINGECKO_BASE } from '@/lib/constants';
+import { intParam } from '@/lib/query-params';
 
 const ENDPOINT = '/api/v1/exchanges';
 
@@ -34,8 +35,8 @@ export async function GET(request: NextRequest) {
   if (authResponse) return authResponse;
 
   const searchParams = request.nextUrl.searchParams;
-  const page = Math.max(1, parseInt(searchParams.get('page') || '1'));
-  const perPage = Math.min(100, Math.max(1, parseInt(searchParams.get('per_page') || '50')));
+  const page = intParam(searchParams, 'page', { fallback: 1, min: 1, max: 1000 });
+  const perPage = intParam(searchParams, 'per_page', { fallback: 50, min: 1, max: 100 });
 
   try {
     logger.info('Fetching exchanges', { page, perPage });

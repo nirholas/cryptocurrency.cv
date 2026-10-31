@@ -20,6 +20,7 @@
  */
 
 import { type NextRequest, NextResponse } from 'next/server';
+import { intParam } from '@/lib/query-params';
 
 // Trading strategies
 const STRATEGIES = {
@@ -297,7 +298,7 @@ export async function GET(request: NextRequest) {
   const asset = searchParams.get('asset') || 'BTC';
   const startDate = searchParams.get('start') || '2025-01-01';
   const endDate = searchParams.get('end') || '2026-02-01';
-  const initialCapital = parseInt(searchParams.get('capital') || '10000');
+  const initialCapital = intParam(searchParams, 'capital', { fallback: 10000, min: 1, max: 1000000000 });
   
   try {
     const result = await runBacktest({

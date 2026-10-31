@@ -10,6 +10,7 @@
 
 import { type NextRequest, NextResponse } from 'next/server';
 import { kv } from '@vercel/kv';
+import { intParam } from '@/lib/query-params';
 
 interface InfluencerScore {
   handle: string;
@@ -31,7 +32,7 @@ export async function GET(request: NextRequest) {
     const { searchParams } = new URL(request.url);
     const handle = searchParams.get('handle');
     const platform = searchParams.get('platform') || 'twitter';
-    const minScore = parseInt(searchParams.get('min_score') || '0');
+    const minScore = intParam(searchParams, 'min_score', { fallback: 0, min: 0, max: 100 });
     
     if (handle) {
       const key = `${INFLUENCER_PREFIX}${platform}:${handle.toLowerCase()}`;

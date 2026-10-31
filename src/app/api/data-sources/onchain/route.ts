@@ -27,6 +27,7 @@ import {
   getTokenTransfers,
   detectWhaleTransactions,
 } from '@/lib/data-sources/onchain';
+import { intParam } from '@/lib/query-params';
 
 export const runtime = 'edge';
 export const revalidate = 30;
@@ -84,7 +85,7 @@ export async function GET(request: NextRequest) {
       }
 
       case 'whales': {
-        const minEth = parseInt(searchParams.get('minEth') || '100');
+        const minEth = intParam(searchParams, 'minEth', { fallback: 100, min: 0, max: 1000000000 });
         const whales = await detectWhaleTransactions(minEth);
         return NextResponse.json({ status: 'ok', data: whales, timestamp: new Date().toISOString() }, {
           headers: { 'Cache-Control': 'public, s-maxage=15, stale-while-revalidate=30' },

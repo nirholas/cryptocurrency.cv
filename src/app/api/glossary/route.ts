@@ -14,6 +14,7 @@
  */
 
 import { type NextRequest, NextResponse } from 'next/server';
+import { intParam } from '@/lib/query-params';
 
 const TERMS = [
   { term: 'HODL', definition: 'A misspelling of "hold" that became crypto slang for holding assets long-term rather than selling during volatility.', category: 'Culture' },
@@ -47,7 +48,7 @@ export async function GET(req: NextRequest) {
   const { searchParams } = new URL(req.url);
   const category = searchParams.get('category');
   const search = searchParams.get('q')?.toLowerCase();
-  const limit = parseInt(searchParams.get('limit') || '100', 10);
+  const limit = intParam(searchParams, 'limit', { fallback: 100, min: 1, max: 1000 });
 
   let filtered = [...TERMS];
 

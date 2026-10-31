@@ -27,6 +27,7 @@ import {
   getMonitorState,
   type ArbitrageOpportunity,
 } from '@/lib/arbitrage-scanner';
+import { intParam } from '@/lib/query-params';
 
 export const revalidate = 60; // ISR: arbitrage data refreshes every 1 min
 
@@ -42,7 +43,7 @@ export async function GET(request: NextRequest) {
     const minSpread = parseFloat(searchParams.get('minSpread') || '0');
     const minProfit = parseFloat(searchParams.get('minProfit') || '0');
     const exchange = searchParams.get('exchange'); // Filter by exchange
-    const limit = Math.min(parseInt(searchParams.get('limit') || '50'), 100);
+    const limit = intParam(searchParams, 'limit', { fallback: 50, min: 1, max: 100 });
     const sortBy = searchParams.get('sortBy') || 'score'; // score, spread, profit
     const view = searchParams.get('view') || 'opportunities'; // opportunities, monitor, summary
 

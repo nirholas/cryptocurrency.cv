@@ -15,6 +15,7 @@ import {
   getTokenUnlockSchedule,
   getUnlockCalendar,
 } from '@/lib/apis/tokenunlocks';
+import { intParam } from '@/lib/query-params';
 
 export const runtime = 'edge';
 export const revalidate = 3600; // 1 hour
@@ -33,7 +34,7 @@ export const revalidate = 3600; // 1 hour
  */
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url);
-  const limit = Math.min(parseInt(searchParams.get('limit') || '10'), 50);
+  const limit = intParam(searchParams, 'limit', { fallback: 10, min: 1, max: 50 });
   const project = searchParams.get('project');
   const calendar = searchParams.get('calendar') === 'true';
 

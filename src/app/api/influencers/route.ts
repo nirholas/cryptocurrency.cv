@@ -28,6 +28,7 @@ import {
   rankInfluencers,
   type Influencer,
 } from '@/lib/influencer-tracker';
+import { intParam } from '@/lib/query-params';
 
 export const revalidate = 300; // ISR: influencer data refreshes every 5 min
 
@@ -50,8 +51,8 @@ export async function GET(request: NextRequest) {
       | 'accuracy'
       | 'returns'
       | 'sharpe';
-    const limit = Math.min(parseInt(searchParams.get('limit') || '50'), 100);
-    const minCalls = parseInt(searchParams.get('minCalls') || '0');
+    const limit = intParam(searchParams, 'limit', { fallback: 50, min: 1, max: 100 });
+    const minCalls = intParam(searchParams, 'minCalls', { fallback: 0, min: 0, max: 100000 });
     const platform = searchParams.get('platform');
     const ticker = searchParams.get('ticker');
     const view = searchParams.get('view');

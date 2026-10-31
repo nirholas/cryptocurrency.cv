@@ -10,6 +10,7 @@
 
 import { type NextRequest, NextResponse } from 'next/server';
 import { getTopInfluencers } from '@/lib/apis/lunarcrush';
+import { intParam } from '@/lib/query-params';
 
 export const runtime = 'edge';
 export const revalidate = 3600;
@@ -22,7 +23,7 @@ export const revalidate = 3600;
  */
 export async function GET(request: NextRequest): Promise<NextResponse> {
   const searchParams = request.nextUrl.searchParams;
-  const limit = Math.min(parseInt(searchParams.get('limit') || '50', 10), 100);
+  const limit = intParam(searchParams, 'limit', { fallback: 50, min: 1, max: 100 });
 
   try {
     const data = await getTopInfluencers(limit);

@@ -14,6 +14,7 @@ import {
   getNetworkOverview,
   getOperators,
 } from '@/lib/apis/rated';
+import { intParam } from '@/lib/query-params';
 
 export const runtime = 'edge';
 export const revalidate = 600;
@@ -33,7 +34,7 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
   try {
     const { searchParams } = new URL(request.url);
     const view = searchParams.get('view');
-    const limit = parseInt(searchParams.get('limit') || '50', 10);
+    const limit = intParam(searchParams, 'limit', { fallback: 50, min: 1, max: 500 });
 
     const headers = {
       'Cache-Control': 'public, s-maxage=600, stale-while-revalidate=1200',

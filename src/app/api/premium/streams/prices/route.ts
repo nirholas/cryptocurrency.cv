@@ -28,6 +28,7 @@ import { withX402 } from '@/lib/x402';
 import { getPricesForCoins } from '@/lib/market-data';
 import { ApiError } from '@/lib/api-error';
 import { createRequestLogger } from '@/lib/logger';
+import { intParam } from '@/lib/query-params';
 
 export const runtime = 'nodejs';
 // force-dynamic required: SSE streaming response
@@ -44,7 +45,7 @@ async function handler(request: NextRequest): Promise<NextResponse> {
     logger.info('Starting SSE price stream');
     const searchParams = request.nextUrl.searchParams;
     const coins = searchParams.get('coins')?.split(',').slice(0, 20) || ['bitcoin', 'ethereum'];
-    const interval = Math.max(1000, parseInt(searchParams.get('interval') || '2000', 10));
+    const interval = intParam(searchParams, 'interval', { fallback: 2000, min: 1000, max: 60000 });
 
     // Create SSE stream
     const encoder = new TextEncoder();

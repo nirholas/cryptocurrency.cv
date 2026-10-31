@@ -28,6 +28,7 @@ import {
   type CitationNode,
   type ExportFormat,
 } from '@/lib/citation-network';
+import { intParam } from '@/lib/query-params';
 
 export const runtime = 'edge';
 
@@ -224,7 +225,7 @@ export async function GET(request: NextRequest) {
         const year = searchParams.get('year');
         const keyword = searchParams.get('keyword');
         const author = searchParams.get('author');
-        const limit = parseInt(searchParams.get('limit') || '50');
+        const limit = intParam(searchParams, 'limit', { fallback: 50, min: 1, max: 500 });
 
         let papers = graph.getAllNodes();
 
@@ -316,7 +317,7 @@ export async function GET(request: NextRequest) {
 
       case 'co-citations': {
         // Co-citation clusters
-        const minStrength = parseInt(searchParams.get('min') || '2');
+        const minStrength = intParam(searchParams, 'min', { fallback: 2, min: 1, max: 100 });
         const clusters = findCoCitationClusters(minStrength);
         return NextResponse.json({
           success: true,
@@ -326,7 +327,7 @@ export async function GET(request: NextRequest) {
 
       case 'research-fronts': {
         // Research fronts
-        const windowYears = parseInt(searchParams.get('window') || '3');
+        const windowYears = intParam(searchParams, 'window', { fallback: 3, min: 1, max: 50 });
         const fronts = detectResearchFronts(windowYears);
         return NextResponse.json({
           success: true,

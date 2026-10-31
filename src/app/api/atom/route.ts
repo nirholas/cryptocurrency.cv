@@ -10,6 +10,7 @@
 
 import { type NextRequest, NextResponse } from 'next/server';
 import { escapeXml, resolveFeed, feedSlugs } from '@/app/api/_feed-utils';
+import { intParam } from '@/lib/query-params';
 
 export const runtime = 'edge';
 export const revalidate = 300; // 5 minutes
@@ -53,7 +54,7 @@ function generateAtom(articles: any[], title: string, subtitle: string, feedUrl:
 export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;
   const feed = searchParams.get('feed') || 'all';
-  const limit = Math.min(parseInt(searchParams.get('limit') || '20'), 50);
+  const limit = intParam(searchParams, 'limit', { fallback: 20, min: 1, max: 50 });
 
   try {
     const resolved = await resolveFeed(feed, 'atom', limit);

@@ -22,6 +22,7 @@ import { hybridAuthMiddleware } from '@/lib/x402';
 import { ApiError } from '@/lib/api-error';
 import { createRequestLogger } from '@/lib/logger';
 import { COINGECKO_BASE } from '@/lib/constants';
+import { intParam } from '@/lib/query-params';
 
 const ENDPOINT = '/api/v1/historical';
 
@@ -38,7 +39,7 @@ export async function GET(
 
   const { coinId } = await params;
   const searchParams = request.nextUrl.searchParams;
-  const days = Math.min(365, Math.max(1, parseInt(searchParams.get('days') || '30')));
+  const days = intParam(searchParams, 'days', { fallback: 30, min: 1, max: 365 });
   const interval = searchParams.get('interval') || (days > 90 ? 'daily' : 'hourly');
 
   if (!coinId) {

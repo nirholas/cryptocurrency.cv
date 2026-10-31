@@ -30,6 +30,7 @@ import {
   formatValidationError,
 } from '../schemas';
 import { applyRateLimit, withRateLimitHeaders, handleAPIError, logRequest } from '../middleware';
+import { intParam } from '@/lib/query-params';
 
 export const runtime = 'nodejs';
 
@@ -151,7 +152,7 @@ export async function GET(request: NextRequest) {
     // ?export=true — training data export
     if (searchParams.get('export') === 'true') {
       const includeNegatives = searchParams.get('includeNegatives') !== 'false';
-      const limit = parseInt(searchParams.get('limit') || '5000', 10);
+      const limit = intParam(searchParams, 'limit', { fallback: 5000, min: 1, max: 50000 });
       const data = store.exportTrainingData({ includeNegatives, limit });
       const response = NextResponse.json(data);
       return withRateLimitHeaders(response, request, 'metrics');

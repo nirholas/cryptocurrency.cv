@@ -10,6 +10,7 @@
 
 import { type NextRequest, NextResponse } from 'next/server';
 import { getTopSocialCoins, getBulkSocialMetrics } from '@/lib/apis/lunarcrush';
+import { intParam } from '@/lib/query-params';
 
 export const runtime = 'edge';
 export const revalidate = 300;
@@ -35,7 +36,7 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
         .filter(Boolean);
       data = await getBulkSocialMetrics(symbols);
     } else {
-      const limit = Math.min(parseInt(searchParams.get('limit') || '50', 10), 100);
+      const limit = intParam(searchParams, 'limit', { fallback: 50, min: 1, max: 100 });
       data = await getTopSocialCoins(limit);
     }
 

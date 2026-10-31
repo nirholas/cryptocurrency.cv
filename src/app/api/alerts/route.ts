@@ -44,6 +44,7 @@ import type { AlertCondition, AlertChannel } from '@/lib/alert-rules';
 import { getLatestNews } from '@/lib/crypto-news';
 import { aiComplete, isAIConfigured } from '@/lib/ai-provider';
 import { parseGroqJson } from '@/lib/groq';
+import { intParam } from '@/lib/query-params';
 
 // Use Node.js runtime since alerts.ts uses database.ts which requires fs/path modules
 export const runtime = 'nodejs';
@@ -139,7 +140,7 @@ export async function GET(request: NextRequest) {
 
   // Get recent alert events
   if (action === 'events') {
-    const limit = parseInt(searchParams.get('limit') || '100', 10);
+    const limit = intParam(searchParams, 'limit', { fallback: 100, min: 1, max: 1000 });
     const events = await getAlertEvents(limit);
     return NextResponse.json({
       events,

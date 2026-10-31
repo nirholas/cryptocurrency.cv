@@ -10,6 +10,7 @@
 
 import { type NextRequest, NextResponse } from 'next/server';
 import { getAssets, normalizeAsset } from '@/lib/coincap';
+import { intParam } from '@/lib/query-params';
 
 export const runtime = 'edge';
 export const revalidate = 300;
@@ -25,9 +26,9 @@ export const revalidate = 300;
 export async function GET(request: NextRequest): Promise<NextResponse> {
   try {
     const searchParams = request.nextUrl.searchParams;
-    const limit = Math.min(parseInt(searchParams.get('limit') || '100', 10), 2000);
+    const limit = intParam(searchParams, 'limit', { fallback: 100, min: 1, max: 2000 });
     const search = searchParams.get('search') || undefined;
-    const offset = parseInt(searchParams.get('offset') || '0', 10);
+    const offset = intParam(searchParams, 'offset', { fallback: 0, min: 0, max: 10000 });
 
     const assets = await getAssets({ limit, search, offset });
 

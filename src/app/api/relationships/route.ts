@@ -12,6 +12,7 @@ import { type NextRequest } from 'next/server';
 import { getLatestNews } from '@/lib/crypto-news';
 import { promptAIJsonCached, isAIConfigured, AIAuthError } from '@/lib/ai-provider';
 import { jsonResponse, errorResponse, withTiming } from '@/lib/api-utils';
+import { intParam } from '@/lib/query-params';
 
 export const runtime = 'edge';
 export const revalidate = 300; // 5 minute cache
@@ -76,7 +77,7 @@ Example:
 export async function GET(request: NextRequest) {
   const startTime = Date.now();
   const searchParams = request.nextUrl.searchParams;
-  const limit = Math.min(parseInt(searchParams.get('limit') || '20'), 50);
+  const limit = intParam(searchParams, 'limit', { fallback: 20, min: 1, max: 50 });
   const actorType = searchParams.get('actor_type') || undefined;
   const actionFilter = searchParams.get('action') || undefined;
   const sentiment = searchParams.get('sentiment') || undefined;

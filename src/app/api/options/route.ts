@@ -29,6 +29,7 @@ import {
   getGammaExposure,
   getOptionsDashboard,
 } from '@/lib/options-flow';
+import { intParam } from '@/lib/query-params';
 
 export const runtime = 'edge';
 export const revalidate = 10;
@@ -50,7 +51,7 @@ export async function GET(request: NextRequest) {
     const underlying = searchParams.get('underlying')?.toUpperCase() || 'BTC';
     const view = searchParams.get('view') || 'dashboard';
     const expiry = searchParams.get('expiry') || undefined;
-    const limit = parseInt(searchParams.get('limit') || '100');
+    const limit = intParam(searchParams, 'limit', { fallback: 100, min: 1, max: 1000 });
 
     let data: unknown;
     const meta: Record<string, unknown> = {

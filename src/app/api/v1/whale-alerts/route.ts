@@ -25,6 +25,7 @@ import { createRequestLogger } from '@/lib/logger';
 import { COINGECKO_BASE } from '@/lib/constants';
 
 import { resilientFetchResponse } from '@/lib/resilient-fetch';
+import { intParam } from '@/lib/query-params';
 export const runtime = 'nodejs';
 export const revalidate = 60;
 
@@ -212,8 +213,8 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
 
   const { searchParams } = new URL(request.url);
   const blockchain = searchParams.get('blockchain') || 'all';
-  const minValue = parseInt(searchParams.get('minValue') || '100000');
-  const limit = Math.min(parseInt(searchParams.get('limit') || '50'), 200);
+  const minValue = intParam(searchParams, 'minValue', { fallback: 100000, min: 0, max: Number.MAX_SAFE_INTEGER });
+  const limit = intParam(searchParams, 'limit', { fallback: 50, min: 1, max: 200 });
 
   try {
     logger.info('Fetching whale alerts', { blockchain, minValue, limit });

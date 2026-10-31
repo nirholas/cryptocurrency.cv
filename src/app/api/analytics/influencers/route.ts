@@ -12,6 +12,7 @@ import { type NextRequest, NextResponse } from 'next/server';
 import { getLatestNews } from '@/lib/crypto-news';
 import { promptAIJsonCached, isAIConfigured, AIAuthError } from '@/lib/ai-provider';
 import { aiNotConfiguredResponse, aiAuthErrorResponse } from '@/app/api/_utils';
+import { intParam } from '@/lib/query-params';
 
 export const runtime = 'edge';
 export const revalidate = 600; // 10 minute cache
@@ -89,8 +90,8 @@ Respond with JSON: { "influencers": [...] }`;
 
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url);
-  const limit = Math.min(parseInt(searchParams.get('limit') || '30'), 50);
-  const minCredibility = parseInt(searchParams.get('min_credibility') || '0');
+  const limit = intParam(searchParams, 'limit', { fallback: 30, min: 1, max: 50 });
+  const minCredibility = intParam(searchParams, 'min_credibility', { fallback: 0, min: 0, max: 100 });
   const category = searchParams.get('category');
   const platform = searchParams.get('platform');
   const sortBy = searchParams.get('sort') || 'credibility'; // credibility, accuracy, mentions

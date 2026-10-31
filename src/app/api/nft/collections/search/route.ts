@@ -10,6 +10,7 @@
 
 import { type NextRequest, NextResponse } from 'next/server';
 import { searchCollections } from '@/lib/apis/nft-markets';
+import { intParam } from '@/lib/query-params';
 
 export const runtime = 'edge';
 export const revalidate = 0;
@@ -21,7 +22,7 @@ export const revalidate = 0;
 export async function GET(request: NextRequest): Promise<NextResponse> {
   const searchParams = request.nextUrl.searchParams;
   const q = searchParams.get('q') || '';
-  const limit = Math.min(parseInt(searchParams.get('limit') || '20', 10), 50);
+  const limit = intParam(searchParams, 'limit', { fallback: 20, min: 1, max: 50 });
 
   if (!q) {
     return NextResponse.json(

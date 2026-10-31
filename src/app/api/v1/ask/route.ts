@@ -25,6 +25,7 @@ import { createRequestLogger } from "@/lib/logger";
 import { promptAIJson, isAIConfigured, AIAuthError } from "@/lib/ai-provider";
 import { aiNotConfiguredResponse, aiAuthErrorResponse } from "@/app/api/_utils";
 import { getLatestNews } from "@/lib/crypto-news";
+import { intParam } from '@/lib/query-params';
 
 export const runtime = 'nodejs';
 export const revalidate = 0; // Dynamic - depends on question
@@ -58,10 +59,7 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
 
   const searchParams = request.nextUrl.searchParams;
   const question = searchParams.get("q") || searchParams.get("question");
-  const limit = Math.min(
-    parseInt(searchParams.get("context_size") || "20", 10),
-    50,
-  );
+  const limit = intParam(searchParams, 'context_size', { fallback: 20, min: 1, max: 50 });
 
   if (!question) {
     return NextResponse.json(

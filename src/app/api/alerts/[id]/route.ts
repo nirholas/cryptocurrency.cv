@@ -24,6 +24,7 @@ import {
 } from '@/lib/alerts';
 import { alertRuleChannelsSchema, formatIssues } from '@/lib/alerts/schema';
 import type { AlertCondition, AlertChannel } from '@/lib/alert-rules';
+import { intParam } from '@/lib/query-params';
 
 // Use Node.js runtime since alerts.ts uses database.ts which requires fs/path modules
 export const runtime = 'nodejs';
@@ -71,7 +72,7 @@ export async function GET(
 
   // Get events for this rule
   if (action === 'events') {
-    const limit = parseInt(searchParams.get('limit') || '50', 10);
+    const limit = intParam(searchParams, 'limit', { fallback: 50, min: 1, max: 1000 });
     const events = await getAlertEventsByRule(id, limit);
     return NextResponse.json({
       events,

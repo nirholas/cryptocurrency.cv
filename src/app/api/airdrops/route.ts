@@ -14,6 +14,7 @@
  */
 
 import { type NextRequest, NextResponse } from 'next/server';
+import { intParam } from '@/lib/query-params';
 
 const AIRDROPS = [
   { id: '1', name: 'LayerZero Season 2', token: 'ZRO', chain: 'Multi-chain', status: 'upcoming', estimatedValue: '$200-2,000', difficulty: 'medium', verified: false },
@@ -27,7 +28,7 @@ const AIRDROPS = [
 export async function GET(req: NextRequest) {
   const { searchParams } = new URL(req.url);
   const status = searchParams.get('status');
-  const limit = parseInt(searchParams.get('limit') || '50', 10);
+  const limit = intParam(searchParams, 'limit', { fallback: 50, min: 1, max: 200 });
 
   let filtered = AIRDROPS;
   if (status) filtered = filtered.filter(a => a.status === status);

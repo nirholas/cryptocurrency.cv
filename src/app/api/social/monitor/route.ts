@@ -15,6 +15,7 @@
 
 import { type NextRequest, NextResponse } from 'next/server';
 import { db } from '@/lib/database';
+import { intParam } from '@/lib/query-params';
 
 // Use Node.js runtime since database.ts requires fs/path modules
 export const runtime = 'nodejs';
@@ -101,7 +102,7 @@ export async function GET(request: NextRequest) {
   const channel = searchParams.get('channel');
   const coin = searchParams.get('coin');
   const since = searchParams.get('since');
-  const limit = parseInt(searchParams.get('limit') || '50');
+  const limit = intParam(searchParams, 'limit', { fallback: 50, min: 1, max: 500 });
 
   try {
     let messages = [...messageCache];

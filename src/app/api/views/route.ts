@@ -18,6 +18,7 @@
  */
 
 import { type NextRequest, NextResponse } from 'next/server';
+import { intParam } from '@/lib/query-params';
 
 export const runtime = 'edge';
 
@@ -48,7 +49,7 @@ export async function GET(request: NextRequest) {
   try {
     const { searchParams } = new URL(request.url);
     const idsParam = searchParams.get('ids');
-    const limit = Math.min(parseInt(searchParams.get('limit') || '50'), 100);
+    const limit = intParam(searchParams, 'limit', { fallback: 50, min: 1, max: 100 });
     const sort = searchParams.get('sort') || 'views';
     
     let results: Array<{ id: string; views: number; views24h: number; views7d: number }> = [];

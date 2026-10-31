@@ -10,6 +10,7 @@
 
 import { type NextRequest, NextResponse } from 'next/server';
 import { getOwnedObjects, getObject, getMultiObjects } from '@/lib/apis/sui';
+import { intParam } from '@/lib/query-params';
 
 export const runtime = 'edge';
 
@@ -62,7 +63,7 @@ export async function GET(request: NextRequest) {
       );
     }
 
-    const limit = Math.min(parseInt(searchParams.get('limit') || '50', 10), 50);
+    const limit = intParam(searchParams, 'limit', { fallback: 50, min: 1, max: 50 });
     const cursor = searchParams.get('cursor') || undefined;
     const data = await getOwnedObjects(address, { limit, cursor });
 

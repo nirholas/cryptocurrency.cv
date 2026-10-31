@@ -23,6 +23,7 @@ import { getLatestNews } from '@/lib/crypto-news';
 import { generateFlashBriefing, type NewsArticle } from '@/lib/ai-intelligence';
 import { isAIConfigured, isAIUnavailableError } from '@/lib/ai-provider';
 import { aiAuthErrorResponse, aiNotConfiguredResponse } from '@/app/api/_utils';
+import { intParam } from '@/lib/query-params';
 
 export const runtime = 'edge';
 export const revalidate = 120;
@@ -33,7 +34,7 @@ export async function GET(request: NextRequest) {
   }
 
   const searchParams = request.nextUrl.searchParams;
-  const stories = Math.min(parseInt(searchParams.get('stories') || '5'), 10);
+  const stories = intParam(searchParams, 'stories', { fallback: 5, min: 1, max: 10 });
 
   try {
     // Fetch recent news

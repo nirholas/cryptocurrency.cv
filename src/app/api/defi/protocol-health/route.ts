@@ -31,6 +31,7 @@ import {
   searchProtocols,
   type ProtocolCategory,
 } from '@/lib/protocol-health';
+import { intParam } from '@/lib/query-params';
 
 export const runtime = 'edge';
 export const revalidate = 300; // 5 minutes cache
@@ -45,7 +46,7 @@ export async function GET(request: NextRequest) {
     const category = searchParams.get('category') as ProtocolCategory | null;
     const chain = searchParams.get('chain');
     const query = searchParams.get('q');
-    const limit = Math.min(parseInt(searchParams.get('limit') || '50'), 100);
+    const limit = intParam(searchParams, 'limit', { fallback: 50, min: 1, max: 100 });
 
     let responseData: unknown;
 

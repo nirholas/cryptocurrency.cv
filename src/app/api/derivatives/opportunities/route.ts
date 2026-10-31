@@ -11,6 +11,7 @@
 import { type NextRequest, NextResponse } from 'next/server';
 import { fundingRateChain } from '@/lib/providers/chains/derivatives';
 import type { FundingRate } from '@/lib/providers/chains/derivatives';
+import { intParam } from '@/lib/query-params';
 
 export const runtime = 'edge';
 export const revalidate = 300;
@@ -22,7 +23,7 @@ export const revalidate = 300;
  */
 export async function GET(request: NextRequest): Promise<NextResponse> {
   const searchParams = request.nextUrl.searchParams;
-  const limit = Math.min(parseInt(searchParams.get('limit') || '10', 10), 50);
+  const limit = intParam(searchParams, 'limit', { fallback: 10, min: 1, max: 50 });
 
   try {
     const result = await fundingRateChain.fetch({});

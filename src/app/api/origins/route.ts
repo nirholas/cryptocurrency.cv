@@ -10,6 +10,7 @@
 
 import { type NextRequest, NextResponse } from 'next/server';
 import { getLatestNews, type NewsArticle } from '@/lib/crypto-news';
+import { intParam } from '@/lib/query-params';
 
 export const runtime = 'edge';
 
@@ -170,7 +171,7 @@ function determineConfidence(matchedText: string, fullText: string): 'high' | 'm
 export async function GET(request: NextRequest) {
   try {
     const { searchParams } = new URL(request.url);
-    const limit = Math.min(parseInt(searchParams.get('limit') || '20'), 50);
+    const limit = intParam(searchParams, 'limit', { fallback: 20, min: 1, max: 50 });
     const query = searchParams.get('q') || '';
     const sourceType = searchParams.get('source_type') || '';
     

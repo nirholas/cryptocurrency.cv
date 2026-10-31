@@ -11,6 +11,7 @@
 import { type NextRequest, NextResponse } from 'next/server';
 
 import { getLlamaYieldPools } from '@/lib/apis/llama-bulk';
+import { intParam } from '@/lib/query-params';
 export const runtime = 'edge';
 export const revalidate = 300; // 5 minutes
 
@@ -23,7 +24,7 @@ export const revalidate = 300; // 5 minutes
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url);
   const chain = searchParams.get('chain');
-  const limit = Math.min(parseInt(searchParams.get('limit') || '10'), 50);
+  const limit = intParam(searchParams, 'limit', { fallback: 10, min: 1, max: 50 });
 
   try {
     const pools = await getLlamaYieldPools();

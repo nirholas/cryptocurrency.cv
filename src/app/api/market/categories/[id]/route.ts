@@ -10,6 +10,7 @@
 
 import { type NextRequest, NextResponse } from 'next/server';
 import { getCategoryCoins, type TokenPrice } from '@/lib/market-data';
+import { intParam } from '@/lib/query-params';
 
 export const runtime = 'edge';
 export const revalidate = 300;
@@ -46,11 +47,8 @@ export async function GET(
   }
   
   // Parse pagination parameters
-  const perPage = Math.min(
-    parseInt(searchParams.get('per_page') || '100', 10),
-    250
-  );
-  const page = parseInt(searchParams.get('page') || '1', 10);
+  const perPage = intParam(searchParams, 'per_page', { fallback: 100, min: 1, max: 250 });
+  const page = intParam(searchParams, 'page', { fallback: 1, min: 1, max: 1000 });
   
   if (isNaN(perPage) || perPage < 1) {
     return NextResponse.json(

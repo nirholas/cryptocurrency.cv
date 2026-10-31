@@ -23,6 +23,7 @@ import {
   getOrderBook,
   getMarketOverview,
 } from '@/lib/apis/cryptocompare';
+import { intParam } from '@/lib/query-params';
 
 export const runtime = 'edge';
 export const revalidate = 60;
@@ -80,7 +81,7 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
         const fsym = searchParams.get('fsym') || 'BTC';
         const tsym = searchParams.get('tsym') || 'USD';
         const interval = (searchParams.get('interval') as '1m' | '5m' | '15m' | '30m' | '1h' | '4h' | '1d' | '1w') || '1d';
-        const limit = Math.min(parseInt(searchParams.get('limit') || '100', 10), 2000);
+        const limit = intParam(searchParams, 'limit', { fallback: 100, min: 1, max: 2000 });
         const exchange = searchParams.get('exchange') || undefined;
         const data = await getOHLCV(fsym, tsym, { interval, limit, exchange });
         return NextResponse.json({ fsym, tsym, interval, data, count: data.length, timestamp: new Date().toISOString() }, { headers: CORS_HEADERS });
@@ -95,7 +96,7 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
       }
 
       case 'social': {
-        const coinId = parseInt(searchParams.get('coinId') || '1182', 10); // 1182 = BTC
+        const coinId = intParam(searchParams, 'coinId', { fallback: 1182, min: 1, max: Number.MAX_SAFE_INTEGER }); // 1182 = BTC
         const data = await getSocialStats(coinId);
         return NextResponse.json({ data, timestamp: new Date().toISOString() }, { headers: CORS_HEADERS });
       }
@@ -109,26 +110,26 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
       case 'exchanges': {
         const fsym = searchParams.get('fsym') || 'BTC';
         const tsym = searchParams.get('tsym') || 'USD';
-        const limit = Math.min(parseInt(searchParams.get('limit') || '20', 10), 50);
+        const limit = intParam(searchParams, 'limit', { fallback: 20, min: 1, max: 50 });
         const data = await getTopExchangesByPair(fsym, tsym, limit);
         return NextResponse.json({ data, count: data.length, timestamp: new Date().toISOString() }, { headers: CORS_HEADERS });
       }
 
       case 'topMarketCap': {
-        const limit = Math.min(parseInt(searchParams.get('limit') || '50', 10), 100);
+        const limit = intParam(searchParams, 'limit', { fallback: 50, min: 1, max: 100 });
         const data = await getTopByMarketCap('USD', limit);
         return NextResponse.json({ data, count: data.length, timestamp: new Date().toISOString() }, { headers: CORS_HEADERS });
       }
 
       case 'topVolume': {
-        const limit = Math.min(parseInt(searchParams.get('limit') || '50', 10), 100);
+        const limit = intParam(searchParams, 'limit', { fallback: 50, min: 1, max: 100 });
         const data = await getTopByVolume('USD', limit);
         return NextResponse.json({ data, count: data.length, timestamp: new Date().toISOString() }, { headers: CORS_HEADERS });
       }
 
       case 'blockchain': {
         const fsym = searchParams.get('fsym') || 'BTC';
-        const limit = Math.min(parseInt(searchParams.get('limit') || '30', 10), 365);
+        const limit = intParam(searchParams, 'limit', { fallback: 30, min: 1, max: 365 });
         const data = await getBlockchainHistory(fsym, limit);
         return NextResponse.json({ fsym, data, count: data.length, timestamp: new Date().toISOString() }, { headers: CORS_HEADERS });
       }
