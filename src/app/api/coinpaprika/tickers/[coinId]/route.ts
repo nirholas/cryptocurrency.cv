@@ -25,8 +25,8 @@ export async function GET(
   { params }: { params: Promise<{ coinId: string }> }
 ): Promise<NextResponse> {
   const { coinId } = await params;
-  if (!coinId) {
-    return NextResponse.json({ error: 'Coin ID is required' }, { status: 400 });
+  if (!coinId || !/^[a-z0-9][a-z0-9._-]{0,99}$/i.test(coinId)) {
+    return NextResponse.json({ error: 'A valid coin ID is required (e.g. btc-bitcoin)' }, { status: 400 });
   }
 
   try {
@@ -44,13 +44,14 @@ export async function GET(
     const message = String(error);
     if (message.includes('404') || message.includes('not found')) {
       return NextResponse.json(
-        { error: 'Coin not found', message },
+        { error: 'Coin not found' },
         { status: 404 }
       );
     }
+    console.error('coinpaprika route error:', error);
     return NextResponse.json(
-      { error: 'Failed to fetch CoinPaprika ticker', message },
-      { status: 500 }
+      { error: 'Failed to fetch CoinPaprika ticker' },
+      { status: 502 }
     );
   }
 }

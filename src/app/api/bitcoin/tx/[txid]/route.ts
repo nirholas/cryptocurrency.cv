@@ -24,9 +24,9 @@ export async function GET(
 ): Promise<NextResponse> {
   const { txid } = await params;
 
-  if (!txid) {
+  if (!txid || !/^[0-9a-f]{64}$/i.test(txid)) {
     return NextResponse.json(
-      { error: 'Transaction ID is required' },
+      { error: 'Transaction ID must be 64 hex characters' },
       { status: 400 }
     );
   }
@@ -55,9 +55,10 @@ export async function GET(
         { status: 404 }
       );
     }
+    console.error('bitcoin/tx route error:', error);
     return NextResponse.json(
-      { error: 'Failed to fetch transaction', message: errorMsg },
-      { status: 500 }
+      { error: 'Failed to fetch transaction' },
+      { status: 502 }
     );
   }
 }

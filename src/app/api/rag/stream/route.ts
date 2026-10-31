@@ -25,6 +25,7 @@ import {
   generateConversationId,
 } from '@/lib/rag/conversation-memory';
 import { rerankResults } from '@/lib/rag/reranker';
+import { AI_UNAVAILABLE_MESSAGE, isAIUnavailableError } from '@/lib/ai-provider';
 import { callGroq, streamGroq } from '@/lib/groq';
 import type { ScoredDocument, SearchResult, NewsDocument } from '@/lib/rag/types';
 
@@ -264,9 +265,12 @@ export async function POST(request: NextRequest) {
         });
       }
     } catch (error) {
-      send('error', {
-        message: error instanceof Error ? error.message : 'An error occurred',
-      });
+      if (isAIUnavailableError(error)) {
+        send('error', { message: AI_UNAVAILABLE_MESSAGE });
+      } else {
+        console.error('rag/stream error:', error);
+        send('error', { message: 'An error occurred while answering. Please try again.' });
+      }
     } finally {
       close();
     }

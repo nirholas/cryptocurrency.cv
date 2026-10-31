@@ -290,7 +290,7 @@ export async function POST(request: NextRequest) {
       400
     );
   } catch (error) {
-    const message = error instanceof Error ? error.message : 'Request failed';
-    return errorResponse(message, undefined, 500);
+    console.error('anomalies POST error:', error);
+    return errorResponse('Request failed', undefined, 500);
   }
 }

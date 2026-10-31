@@ -191,7 +191,7 @@ For each relationship found, include the article title and number it came from.`
         503
       );
     }
-    return errorResponse('Failed to extract relationships', String(error));
+    return errorResponse('Failed to extract relationships');
   }
 }
 

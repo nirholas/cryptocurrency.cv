@@ -87,9 +87,6 @@ export async function GET(request: NextRequest) {
     });
   } catch (error) {
     console.error('Credibility scoring error:', error);
-    return errorResponse(
-      'Failed to get credibility scores',
-      error instanceof Error ? error.message : String(error)
-    );
+    return errorResponse('Failed to get credibility scores');
   }
 }

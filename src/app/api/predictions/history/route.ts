@@ -134,8 +134,7 @@ export async function GET() {
       },
     });
   } catch (err) {
-    const message = err instanceof Error ? err.message : String(err);
-    console.error('[predictions/history]', message);
-    return NextResponse.json({ error: message }, { status: 500 });
+    console.error('[predictions/history]', err);
+    return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
   }
 }

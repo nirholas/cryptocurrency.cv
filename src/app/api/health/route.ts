@@ -97,9 +97,10 @@ async function checkCache(): Promise<HealthCheck> {
         responseTime: Date.now() - start,
       };
     } catch (error) {
+      console.error('health: Redis check failed:', error);
       return {
         status: 'unhealthy',
-        message: error instanceof Error ? error.message : 'Redis unavailable',
+        message: 'Redis unavailable',
         responseTime: Date.now() - start,
       };
     }
@@ -117,9 +118,10 @@ async function checkCache(): Promise<HealthCheck> {
         responseTime: Date.now() - start,
       };
     } catch (error) {
+      console.error('health: Vercel KV check failed:', error);
       return {
         status: 'unhealthy',
-        message: error instanceof Error ? error.message : 'Vercel KV unavailable',
+        message: 'Vercel KV unavailable',
         responseTime: Date.now() - start,
       };
     }
@@ -201,9 +203,10 @@ export const GET = instrumented(
           responseTime: Date.now() - start,
         };
       } catch (error) {
+        console.error('health: x402 facilitator check failed:', error);
         checks.x402Facilitator = {
           status: 'unhealthy',
-          message: error instanceof Error ? error.message : 'Facilitator unreachable',
+          message: 'Facilitator unreachable',
           responseTime: Date.now() - start,
         };
       }

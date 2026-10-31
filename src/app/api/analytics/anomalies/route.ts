@@ -86,9 +86,6 @@ export async function GET(request: NextRequest) {
     });
   } catch (error) {
     console.error('Anomaly detection error:', error);
-    return errorResponse(
-      'Failed to get anomaly report',
-      error instanceof Error ? error.message : String(error)
-    );
+    return errorResponse('Failed to get anomaly report');
   }
 }

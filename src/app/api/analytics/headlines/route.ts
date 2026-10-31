@@ -72,9 +72,6 @@ export async function GET(request: NextRequest) {
     });
   } catch (error) {
     console.error('Headline tracking error:', error);
-    return errorResponse(
-      'Failed to get headline tracking',
-      error instanceof Error ? error.message : String(error)
-    );
+    return errorResponse('Failed to get headline tracking');
   }
 }

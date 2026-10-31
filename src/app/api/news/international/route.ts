@@ -88,7 +88,8 @@ export async function GET(request: NextRequest) {
         request,
       });
     } catch (error) {
-      return errorResponse('Failed to fetch sources', String(error));
+      console.error('International sources error:', error);
+      return errorResponse('Failed to fetch sources');
     }
   }
 
@@ -155,7 +156,7 @@ export async function GET(request: NextRequest) {
     });
   } catch (error) {
     console.error('International news fetch error:', error);
-    return errorResponse('Failed to fetch international news', String(error));
+    return errorResponse('Failed to fetch international news');
   }
 }
 

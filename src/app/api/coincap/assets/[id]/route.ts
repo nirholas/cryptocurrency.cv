@@ -28,9 +28,9 @@ export async function GET(
   try {
     const { id } = await params;
 
-    if (!id) {
+    if (!id || !/^[a-z0-9][a-z0-9._-]{0,99}$/i.test(id)) {
       return NextResponse.json(
-        { error: 'Asset ID is required' },
+        { error: 'A valid asset ID is required (e.g. bitcoin)' },
         { status: 400 },
       );
     }
@@ -64,13 +64,14 @@ export async function GET(
     const message = String(error);
     if (message.includes('404') || message.includes('not found')) {
       return NextResponse.json(
-        { error: 'Asset not found', message },
+        { error: 'Asset not found' },
         { status: 404 },
       );
     }
+    console.error('coincap/assets route error:', error);
     return NextResponse.json(
-      { error: 'Failed to fetch CoinCap asset', message },
-      { status: 500 },
+      { error: 'Failed to fetch CoinCap asset' },
+      { status: 502 },
     );
   }
 }

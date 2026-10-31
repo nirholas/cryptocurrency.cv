@@ -24,9 +24,9 @@ export async function GET(
 ): Promise<NextResponse> {
   const { hash } = await params;
 
-  if (!hash) {
+  if (!hash || !/^[0-9a-f]{64}$/i.test(hash)) {
     return NextResponse.json(
-      { error: 'Block hash is required' },
+      { error: 'Block hash must be 64 hex characters' },
       { status: 400 }
     );
   }
@@ -55,9 +55,10 @@ export async function GET(
         { status: 404 }
       );
     }
+    console.error('bitcoin/blocks route error:', error);
     return NextResponse.json(
-      { error: 'Failed to fetch block', message: errorMsg },
-      { status: 500 }
+      { error: 'Failed to fetch block' },
+      { status: 502 }
     );
   }
 }
