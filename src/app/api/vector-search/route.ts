@@ -144,8 +144,8 @@ export async function GET(request: NextRequest) {
       cacheControl: CACHE_CONTROL.ai,
     });
   } catch (error) {
-    const message = error instanceof Error ? error.message : 'Search failed';
-    return errorResponse(message, undefined, 500);
+    console.error('[vector-search] search failed:', error);
+    return errorResponse('Search failed', undefined, 500);
   }
 }
 
@@ -225,7 +225,7 @@ export async function POST(request: NextRequest) {
 
     return errorResponse('Unknown action. Use: index or batch-search', undefined, 400);
   } catch (error) {
-    const message = error instanceof Error ? error.message : 'Request failed';
-    return errorResponse(message, undefined, 500);
+    console.error('[vector-search] request failed:', error);
+    return errorResponse('Request failed', undefined, 500);
   }
 }

@@ -415,9 +415,9 @@ export async function POST(request: NextRequest) {
     
     return NextResponse.json(response);
   } catch (error: unknown) {
-    const message = error instanceof Error ? error.message : 'Unknown error';
+    console.error('[alexa] request failed:', error);
     return NextResponse.json(
-      buildResponse('Sorry, something went wrong. Please try again.', 'Error', message, true)
+      buildResponse('Sorry, something went wrong. Please try again.', 'Error', 'Something went wrong. Please try again.', true)
     );
   }
 }

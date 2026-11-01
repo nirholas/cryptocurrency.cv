@@ -282,7 +282,7 @@ export async function POST(request: NextRequest) {
     
     return NextResponse.json({ error: 'Unknown action' }, { status: 400 });
   } catch (error: unknown) {
-    const message = error instanceof Error ? error.message : 'Unknown error';
-    return NextResponse.json({ error: message }, { status: 500 });
+    console.error('[predictions/markets] request failed:', error);
+    return NextResponse.json({ error: 'Prediction markets request failed' }, { status: 500 });
   }
 }

@@ -153,10 +153,10 @@ async function handle(request: Request): Promise<Response> {
     const response = await transport.handleRequest(request);
     return withCors(response);
   } catch (error) {
-    const message = error instanceof Error ? error.message : 'Internal error';
+    console.error('[mcp] request failed:', error);
     return withCors(
       Response.json(
-        { jsonrpc: '2.0', error: { code: -32603, message }, id: null },
+        { jsonrpc: '2.0', error: { code: -32603, message: 'Internal error' }, id: null },
         { status: 500 },
       ),
     );

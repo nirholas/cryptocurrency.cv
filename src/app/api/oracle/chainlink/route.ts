@@ -209,11 +209,11 @@ export async function POST(request: NextRequest) {
       statusCode: 200,
     });
   } catch (error: unknown) {
-    const message = error instanceof Error ? error.message : 'Unknown error';
+    console.error('[oracle/chainlink] job failed:', error);
     return NextResponse.json({
       jobRunID: Date.now().toString(),
       status: 'errored',
-      error: message,
+      error: 'Oracle job failed',
       statusCode: 500,
     }, { status: 500 });
   }

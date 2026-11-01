@@ -447,7 +447,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json(
       {
         success: false,
-        error: error instanceof Error ? error.message : 'Unknown error',
+        error: 'Archive webhook failed',
         timestamp: now.toISOString(),
       },
       { status: 500 }

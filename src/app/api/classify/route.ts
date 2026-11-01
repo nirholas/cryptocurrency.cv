@@ -134,13 +134,11 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
   } catch (error) {
     console.error('Classification error:', error);
 
-    const errorMessage = error instanceof Error ? error.message : 'Unknown error';
-
     return addRateLimitHeaders(
       NextResponse.json(
         {
           error: 'Classification failed',
-          message: errorMessage,
+          message: 'An unexpected error occurred',
         } as ErrorResponse,
         { status: 500 }
       ),

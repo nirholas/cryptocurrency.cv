@@ -113,8 +113,8 @@ export async function GET(request: NextRequest) {
       cacheControl: CACHE_CONTROL.ai,
     });
   } catch (error) {
-    const message = error instanceof Error ? error.message : 'Forecast generation failed';
-    return errorResponse(message, undefined, 500);
+    console.error('[forecast] generation failed:', error);
+    return errorResponse('Forecast generation failed', undefined, 500);
   }
 }
 
@@ -177,7 +177,7 @@ export async function POST(request: NextRequest) {
 
     return errorResponse('Unknown action. Use: multi-forecast or resolve', undefined, 400);
   } catch (error) {
-    const message = error instanceof Error ? error.message : 'Request failed';
-    return errorResponse(message, undefined, 500);
+    console.error('[forecast] request failed:', error);
+    return errorResponse('Request failed', undefined, 500);
   }
 }

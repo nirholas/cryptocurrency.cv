@@ -342,7 +342,7 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
       {
         success: false,
         error: isClientError ? 'Bad request' : 'Internal server error',
-        message: errorMessage,
+        message: isClientError ? errorMessage : 'An unexpected error occurred',
         code: isClientError ? 'BAD_REQUEST' : 'INTERNAL_ERROR',
         processingTimeMs: Date.now() - startTime,
       },

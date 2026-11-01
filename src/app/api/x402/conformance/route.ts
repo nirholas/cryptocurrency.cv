@@ -112,11 +112,12 @@ export async function GET(request: NextRequest) {
       },
     });
   } catch (error) {
+    console.error('[x402/conformance] audit failed:', error);
     return NextResponse.json(
       {
         error: 'Audit failed',
         code: 'AUDIT_FAILED',
-        message: error instanceof Error ? error.message : 'unknown error',
+        message: 'The conformance audit could not be completed',
       },
       { status: 502, headers: { 'Access-Control-Allow-Origin': '*' } },
     );

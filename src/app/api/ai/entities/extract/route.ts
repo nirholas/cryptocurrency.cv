@@ -175,7 +175,7 @@ export async function POST(request: NextRequest) {
 
     return errorResponse('Unknown action. Use: extract or batch-extract', undefined, 400);
   } catch (error) {
-    const message = error instanceof Error ? error.message : 'Extraction failed';
-    return errorResponse(message, undefined, 500);
+    console.error('[ai/entities/extract] extraction failed:', error);
+    return errorResponse('Extraction failed', undefined, 500);
   }
 }
