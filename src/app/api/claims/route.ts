@@ -21,6 +21,7 @@ import {
   rateLimitResponse,
   addRateLimitHeaders,
 } from '@/lib/ratelimit';
+import { readJsonBody } from '@/lib/json-body';
 
 export const runtime = 'edge';
 
@@ -61,7 +62,9 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
   if (!isExtractorConfigured()) {
     // Provide quick hint without AI
     try {
-      const body = await request.json() as ClaimsRequest;
+      const jsonBody = await readJsonBody<ClaimsRequest>(request);
+      if (!jsonBody.ok) return jsonBody.response;
+      const body = jsonBody.body;
       const significant = hasSignificantClaims(body.title, body.content);
 
       return addRateLimitHeaders(
@@ -90,7 +93,9 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
   }
 
   try {
-    const body = await request.json() as ClaimsRequest;
+    const jsonBody2 = await readJsonBody<ClaimsRequest>(request);
+    if (!jsonBody2.ok) return jsonBody2.response;
+    const body = jsonBody2.body;
 
     // Validate request
     if (!body.title || typeof body.title !== 'string') {

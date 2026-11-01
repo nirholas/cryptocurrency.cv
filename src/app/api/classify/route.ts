@@ -20,6 +20,7 @@ import {
   rateLimitResponse,
   addRateLimitHeaders,
 } from '@/lib/ratelimit';
+import { readJsonBody } from '@/lib/json-body';
 
 export const runtime = 'edge';
 
@@ -54,7 +55,9 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
   if (!isClassifierConfigured()) {
     // Try to provide quick classification without AI
     try {
-      const body = await request.json() as ClassifyRequest;
+      const jsonBody = await readJsonBody<ClassifyRequest>(request);
+      if (!jsonBody.ok) return jsonBody.response;
+      const body = jsonBody.body;
       const quickType = quickClassify(body.title, body.content);
 
       return addRateLimitHeaders(
@@ -83,7 +86,9 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
   }
 
   try {
-    const body = await request.json() as ClassifyRequest;
+    const jsonBody2 = await readJsonBody<ClassifyRequest>(request);
+    if (!jsonBody2.ok) return jsonBody2.response;
+    const body = jsonBody2.body;
 
     // Validate request
     if (!body.title || typeof body.title !== 'string') {

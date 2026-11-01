@@ -29,6 +29,7 @@ import {
   type ExportFormat,
 } from '@/lib/citation-network';
 import { intParam } from '@/lib/query-params';
+import { readJsonBody } from '@/lib/json-body';
 
 export const runtime = 'edge';
 
@@ -408,7 +409,9 @@ export async function POST(request: NextRequest) {
   try {
     initializeSampleCitations();
 
-    const body = await request.json();
+    const jsonBody = await readJsonBody(request);
+    if (!jsonBody.ok) return jsonBody.response;
+    const body = jsonBody.body;
     const { action } = body;
     const graph = getCitationGraph();
 

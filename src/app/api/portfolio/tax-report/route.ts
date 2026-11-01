@@ -9,6 +9,7 @@
  */
 
 import { type NextRequest, NextResponse } from 'next/server';
+import { readJsonBody } from '@/lib/json-body';
 
 interface Transaction {
   date: string;
@@ -31,7 +32,9 @@ interface TaxEvent {
 
 export async function POST(request: NextRequest) {
   try {
-    const { transactions, year, method = 'fifo' } = await request.json();
+    const jsonBody = await readJsonBody(request);
+    if (!jsonBody.ok) return jsonBody.response;
+    const { transactions, year, method = 'fifo' } = jsonBody.body;
     
     if (!transactions || !Array.isArray(transactions)) {
       return NextResponse.json({ error: 'Transactions array required' }, { status: 400 });

@@ -23,6 +23,7 @@ import { getLatestNews } from '@/lib/crypto-news';
 import { scorePortfolioRelevance, type NewsArticle } from '@/lib/ai-intelligence';
 import { isAIConfigured, isAIUnavailableError } from '@/lib/ai-provider';
 import { aiAuthErrorResponse, aiNotConfiguredResponse } from '@/app/api/_utils';
+import { readJsonBody } from '@/lib/json-body';
 
 export const runtime = 'edge';
 export const revalidate = 60;
@@ -39,7 +40,9 @@ export async function POST(request: NextRequest) {
   }
 
   try {
-    const body = await request.json();
+    const jsonBody = await readJsonBody(request);
+    if (!jsonBody.ok) return jsonBody.response;
+    const body = jsonBody.body;
     const { holdings } = body as { holdings: HoldingInput[] };
 
     if (!holdings || !Array.isArray(holdings) || holdings.length === 0) {

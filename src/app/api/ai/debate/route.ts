@@ -10,6 +10,7 @@
 
 import { type NextRequest, NextResponse } from 'next/server';
 import { generateDebate, isAIConfigured, type DebateInput } from '@/lib/ai-debate';
+import { readJsonBody } from '@/lib/json-body';
 
 export const runtime = 'edge';
 
@@ -44,7 +45,9 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const body: DebateRequestBody = await request.json();
+    const jsonBody = await readJsonBody<DebateRequestBody>(request);
+    if (!jsonBody.ok) return jsonBody.response;
+    const body = jsonBody.body;
     const { article, topic } = body;
 
     // Validate input

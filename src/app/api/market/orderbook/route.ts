@@ -23,6 +23,7 @@ import {
 import { ApiError } from '@/lib/api-error';
 import { createRequestLogger } from '@/lib/logger';
 import { intParam } from '@/lib/query-params';
+import { readJsonBody } from '@/lib/json-body';
 
 // Use Node.js runtime since order-book.ts imports database.ts which requires fs/path modules
 export const runtime = 'nodejs';
@@ -207,7 +208,9 @@ export async function POST(request: NextRequest) {
   }
 
   try {
-    const body = await request.json();
+    const jsonBody = await readJsonBody(request);
+    if (!jsonBody.ok) return jsonBody.response;
+    const body = jsonBody.body;
     const { action } = body;
 
     if (action === 'smart-route') {

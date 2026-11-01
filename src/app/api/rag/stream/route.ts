@@ -28,6 +28,7 @@ import { rerankResults } from '@/lib/rag/reranker';
 import { AI_UNAVAILABLE_MESSAGE, isAIUnavailableError } from '@/lib/ai-provider';
 import { callGroq, streamGroq } from '@/lib/groq';
 import type { ScoredDocument, SearchResult, NewsDocument } from '@/lib/rag/types';
+import { readJsonBody } from '@/lib/json-body';
 
 // Convert ScoredDocument to SearchResult format
 function toSearchResults(docs: ScoredDocument[]): SearchResult[] {
@@ -77,7 +78,9 @@ function createSSEStream() {
 }
 
 export async function POST(request: NextRequest) {
-  const { query, conversationId, options = {} } = await request.json();
+  const jsonBody = await readJsonBody(request);
+  if (!jsonBody.ok) return jsonBody.response;
+  const { query, conversationId, options = {} } = jsonBody.body;
 
   if (!query || typeof query !== 'string') {
     return new Response(JSON.stringify({ error: 'Query is required' }), {

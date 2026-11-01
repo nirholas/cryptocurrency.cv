@@ -19,9 +19,13 @@ import { type NextRequest, NextResponse } from 'next/server';
 import { type Locale, locales, localeNames } from '@/i18n/config';
 
 import { resilientFetchResponse } from '@/lib/resilient-fetch';
+import { readJsonBody } from '@/lib/json-body';
+
 export async function POST(request: NextRequest) {
   try {
-    const body = await request.json();
+    const jsonBody = await readJsonBody(request);
+    if (!jsonBody.ok) return jsonBody.response;
+    const body = jsonBody.body;
     const { text, texts, targetLocale, context = 'cryptocurrency news' } = body;
 
     // Validate target locale

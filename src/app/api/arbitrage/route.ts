@@ -25,6 +25,7 @@ import {
 } from '@/lib/arbitrage-scanner';
 import { safeFetch, UnsafeUrlError } from '@/lib/safe-fetch';
 import { intParam, numParam } from '@/lib/query-params';
+import { readJsonBody } from '@/lib/json-body';
 
 // Node, not edge: the webhook test resolves DNS to keep the caller's URL off private addresses.
 export const runtime = 'nodejs';
@@ -149,7 +150,9 @@ export async function GET(request: NextRequest) {
  */
 export async function POST(request: NextRequest) {
   try {
-    const body = await request.json();
+    const jsonBody = await readJsonBody(request);
+    if (!jsonBody.ok) return jsonBody.response;
+    const body = jsonBody.body;
     const { 
       action,
       webhook_url,

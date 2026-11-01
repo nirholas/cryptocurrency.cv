@@ -29,6 +29,7 @@ import {
   type Influencer,
 } from '@/lib/influencer-tracker';
 import { intParam } from '@/lib/query-params';
+import { readJsonBody } from '@/lib/json-body';
 
 export const revalidate = 300; // ISR: influencer data refreshes every 5 min
 
@@ -137,7 +138,9 @@ export async function GET(request: NextRequest) {
  */
 export async function POST(request: NextRequest) {
   try {
-    const body = await request.json();
+    const jsonBody = await readJsonBody(request);
+    if (!jsonBody.ok) return jsonBody.response;
+    const body = jsonBody.body;
 
     const { platform, username, displayName } = body;
 

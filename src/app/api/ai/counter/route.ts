@@ -10,6 +10,7 @@
 
 import { type NextRequest, NextResponse } from 'next/server';
 import { generateCounterArguments, isAIConfigured, type CounterInput } from '@/lib/ai-counter';
+import { readJsonBody } from '@/lib/json-body';
 
 export const runtime = 'edge';
 
@@ -39,7 +40,9 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const body: CounterRequestBody = await request.json();
+    const jsonBody = await readJsonBody<CounterRequestBody>(request);
+    if (!jsonBody.ok) return jsonBody.response;
+    const body = jsonBody.body;
     const { claim, context } = body;
 
     // Validate input

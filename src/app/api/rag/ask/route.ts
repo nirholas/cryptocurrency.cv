@@ -25,6 +25,7 @@ import { type NextRequest, NextResponse } from 'next/server';
 import { askUltimate } from '@/lib/rag/ultimate-rag-service';
 import { AskRequestSchema, formatValidationError, buildRagOptions } from '../schemas';
 import { applyRateLimit, withRateLimitHeaders, handleAPIError, logRequest } from '../middleware';
+import { readJsonBody } from '@/lib/json-body';
 
 export const runtime = 'nodejs';
 export const maxDuration = 60;
@@ -35,7 +36,9 @@ export async function POST(request: NextRequest) {
   if (rateLimitResponse) return rateLimitResponse;
 
   try {
-    const body = await request.json();
+    const jsonBody = await readJsonBody(request);
+    if (!jsonBody.ok) return jsonBody.response;
+    const body = jsonBody.body;
     logRequest(request, 'ask', body);
 
     // Validate

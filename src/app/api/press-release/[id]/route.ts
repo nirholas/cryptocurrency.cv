@@ -8,6 +8,7 @@ import { type NextRequest, NextResponse } from 'next/server';
 import { pressReleaseStore } from '@/lib/press-release';
 import { requireAdminAuth } from '@/lib/admin-auth';
 import { logger } from '@/lib/logger';
+import { readJsonBody } from '@/lib/json-body';
 
 export async function PATCH(req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   const authError = requireAdminAuth(req);
@@ -15,7 +16,9 @@ export async function PATCH(req: NextRequest, { params }: { params: Promise<{ id
 
   try {
     const { id } = await params;
-    const { status, reviewNote } = await req.json();
+    const jsonBody = await readJsonBody(req);
+    if (!jsonBody.ok) return jsonBody.response;
+    const { status, reviewNote } = jsonBody.body;
 
     if (!['approved', 'rejected'].includes(status)) {
       return NextResponse.json({ error: 'Invalid status' }, { status: 400 });

@@ -20,6 +20,7 @@ import {
   isAIConfigured,
   getAIProviderInfo,
 } from '@/lib/ai-enhanced';
+import { readJsonBody } from '@/lib/json-body';
 
 export const runtime = 'edge';
 
@@ -78,7 +79,9 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const body: AIRequestBody = await request.json();
+    const jsonBody = await readJsonBody<AIRequestBody>(request);
+    if (!jsonBody.ok) return jsonBody.response;
+    const body = jsonBody.body;
     const { action, title = '', content, options = {} } = body;
 
     if (!content) {

@@ -23,6 +23,7 @@ import { createHash } from 'crypto';
 import { schnorr } from '@noble/curves/secp256k1.js';
 import { bytesToHex, hexToBytes } from '@noble/curves/utils.js';
 import { intParam } from '@/lib/query-params';
+import { readJsonBody } from '@/lib/json-body';
 
 export const runtime = 'nodejs';
 
@@ -298,7 +299,9 @@ export async function POST(request: NextRequest) {
   }
 
   try {
-    const body = await request.json();
+    const jsonBody = await readJsonBody(request);
+    if (!jsonBody.ok) return jsonBody.response;
+    const body = jsonBody.body;
     const { action, articles } = body;
     
     // Publish latest news

@@ -20,6 +20,7 @@ import { type NextRequest, NextResponse } from 'next/server';
 import { getPersonalizationEngine } from '@/lib/rag/personalization';
 import { UpdatePreferencesSchema, formatValidationError } from '../schemas';
 import { applyRateLimit, withRateLimitHeaders, handleAPIError, logRequest } from '../middleware';
+import { readJsonBody } from '@/lib/json-body';
 
 export const runtime = 'nodejs';
 
@@ -32,7 +33,9 @@ export async function POST(request: NextRequest) {
   if (rateLimitResponse) return rateLimitResponse;
 
   try {
-    const body = await request.json();
+    const jsonBody = await readJsonBody(request);
+    if (!jsonBody.ok) return jsonBody.response;
+    const body = jsonBody.body;
     logRequest(request, 'personalization', body);
 
     const parsed = UpdatePreferencesSchema.safeParse(body);

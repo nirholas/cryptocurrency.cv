@@ -10,6 +10,7 @@
 
 import { type NextRequest, NextResponse } from 'next/server';
 import { db } from '@/lib/database';
+import { readJsonBody } from '@/lib/json-body';
 
 export const runtime = 'nodejs';
 
@@ -150,7 +151,9 @@ async function subscribeToPush() {
  */
 export async function POST(request: NextRequest) {
   try {
-    const body = await request.json();
+    const jsonBody = await readJsonBody(request);
+    if (!jsonBody.ok) return jsonBody.response;
+    const body = jsonBody.body;
     const { subscription, topics = ['breaking'] } = body;
     
     if (!subscription?.endpoint) {
@@ -221,7 +224,9 @@ export async function POST(request: NextRequest) {
  */
 export async function DELETE(request: NextRequest) {
   try {
-    const body = await request.json();
+    const jsonBody2 = await readJsonBody(request);
+    if (!jsonBody2.ok) return jsonBody2.response;
+    const body = jsonBody2.body;
     const { endpoint } = body;
     
     if (!endpoint) {
@@ -267,7 +272,9 @@ export async function DELETE(request: NextRequest) {
  */
 export async function PATCH(request: NextRequest) {
   try {
-    const body = await request.json();
+    const jsonBody3 = await readJsonBody(request);
+    if (!jsonBody3.ok) return jsonBody3.response;
+    const body = jsonBody3.body;
     const { endpoint, topics } = body;
     
     if (!endpoint) {

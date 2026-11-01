@@ -39,6 +39,7 @@ import {
   type PredictionStatus,
 } from '@/lib/predictions';
 import { intParam } from '@/lib/query-params';
+import { readJsonBody } from '@/lib/json-body';
 
 export const runtime = 'nodejs';
 export const revalidate = 60;
@@ -278,7 +279,9 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
   if (authResponse) return authResponse;
 
   try {
-    const body = await request.json();
+    const jsonBody = await readJsonBody(request);
+    if (!jsonBody.ok) return jsonBody.response;
+    const body = jsonBody.body;
 
     // Resolution request
     if (body.action === 'resolve') {

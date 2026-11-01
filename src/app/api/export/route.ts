@@ -41,6 +41,7 @@ import {
   getRecentPredictions, 
   type Prediction,
 } from '@/lib/predictions/registry';
+import { readJsonBody } from '@/lib/json-body';
 
 export const runtime = 'nodejs';
 
@@ -324,7 +325,9 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
  */
 export async function POST(request: NextRequest): Promise<NextResponse> {
   try {
-    const body = await request.json();
+    const jsonBody = await readJsonBody(request);
+    if (!jsonBody.ok) return jsonBody.response;
+    const body = jsonBody.body;
     
     const {
       type = 'news',

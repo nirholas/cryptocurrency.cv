@@ -14,6 +14,7 @@ import { promptGroq, callGroqStream, isGroqConfigured } from '@/lib/groq';
 import { groqNotConfiguredResponse } from '@/app/api/_utils';
 import { ApiError } from '@/lib/api-error';
 import { instrumented } from '@/lib/telemetry-middleware';
+import { readJsonBody } from '@/lib/json-body';
 
 export const runtime = 'edge';
 
@@ -132,7 +133,9 @@ export const POST = instrumented(
   async function POST(request: NextRequest) {
     // Support POST for longer questions, conversation history, or streaming
     try {
-      const body = await request.json();
+      const jsonBody = await readJsonBody(request);
+      if (!jsonBody.ok) return jsonBody.response;
+      const body = jsonBody.body;
       const { question, context, stream: wantStream = false } = body;
 
       if (!question || (typeof question === 'string' && question.length > 2000)) {

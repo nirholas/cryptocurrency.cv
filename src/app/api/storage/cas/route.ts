@@ -21,6 +21,7 @@ import {
   type ContentIdentifier,
 } from '@/lib/content-addressable';
 import { intParam } from '@/lib/query-params';
+import { readJsonBody } from '@/lib/json-body';
 
 // Use Node.js runtime since content-addressable.ts uses database.ts which requires fs/path modules
 export const runtime = 'nodejs';
@@ -107,7 +108,9 @@ export async function POST(request: NextRequest) {
   }
 
   try {
-    const body = await request.json();
+    const jsonBody = await readJsonBody(request);
+    if (!jsonBody.ok) return jsonBody.response;
+    const body = jsonBody.body;
     const { action } = body;
 
     if (action === 'put' || !action) {

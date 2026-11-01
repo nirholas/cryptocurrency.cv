@@ -35,6 +35,7 @@ import {
   type InfluencerList,
   type XUser,
 } from '@/lib/x-scraper';
+import { readJsonBody } from '@/lib/json-body';
 
 const VALID_CATEGORIES = ['whale', 'influencer', 'analyst', 'developer', 'founder', 'trader'];
 
@@ -66,7 +67,9 @@ export async function GET() {
 
 export async function POST(request: NextRequest) {
   try {
-    const body = await request.json();
+    const jsonBody = await readJsonBody(request);
+    if (!jsonBody.ok) return jsonBody.response;
+    const body = jsonBody.body;
     const { name, description, users } = body;
 
     // Validation

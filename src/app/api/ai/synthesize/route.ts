@@ -30,6 +30,7 @@ import {
 import { isAIConfigured, isAIUnavailableError } from '@/lib/ai-provider';
 import { aiAuthErrorResponse, aiNotConfiguredResponse } from '@/app/api/_utils';
 import { intParam, numParam } from '@/lib/query-params';
+import { readJsonBody } from '@/lib/json-body';
 
 export const runtime = 'edge';
 export const revalidate = 60;
@@ -96,7 +97,9 @@ export async function POST(request: NextRequest) {
   }
 
   try {
-    const body = await request.json();
+    const jsonBody = await readJsonBody(request);
+    if (!jsonBody.ok) return jsonBody.response;
+    const body = jsonBody.body;
     const { articles } = body as { articles: NewsArticle[] };
 
     if (!articles || !Array.isArray(articles) || articles.length === 0) {

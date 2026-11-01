@@ -16,6 +16,7 @@ import { getSession } from '@/lib/auth/session';
 import { getDb } from '@/lib/db';
 import { notificationPreferences } from '@/lib/db/schema';
 import { eq } from 'drizzle-orm';
+import { readJsonBody } from '@/lib/json-body';
 
 export const runtime = 'nodejs';
 
@@ -68,7 +69,9 @@ export async function PUT(request: NextRequest) {
     return NextResponse.json({ error: 'Database unavailable' }, { status: 503 });
   }
 
-  const body = await request.json();
+  const jsonBody = await readJsonBody(request);
+  if (!jsonBody.ok) return jsonBody.response;
+  const body = jsonBody.body;
 
   // Validate fields
   const update: Record<string, unknown> = { updatedAt: new Date() };

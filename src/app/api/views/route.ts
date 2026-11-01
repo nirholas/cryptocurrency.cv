@@ -19,6 +19,7 @@
 
 import { type NextRequest, NextResponse } from 'next/server';
 import { intParam } from '@/lib/query-params';
+import { readJsonBody } from '@/lib/json-body';
 
 export const runtime = 'edge';
 
@@ -112,7 +113,9 @@ export async function GET(request: NextRequest) {
  */
 export async function POST(request: NextRequest) {
   try {
-    const body = await request.json();
+    const jsonBody = await readJsonBody(request);
+    if (!jsonBody.ok) return jsonBody.response;
+    const body = jsonBody.body;
     const { articleId } = body;
     
     if (!articleId || typeof articleId !== 'string') {

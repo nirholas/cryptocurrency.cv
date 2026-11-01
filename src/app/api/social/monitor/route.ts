@@ -16,6 +16,7 @@
 import { type NextRequest, NextResponse } from 'next/server';
 import { db } from '@/lib/database';
 import { intParam } from '@/lib/query-params';
+import { readJsonBody } from '@/lib/json-body';
 
 // Use Node.js runtime since database.ts requires fs/path modules
 export const runtime = 'nodejs';
@@ -215,7 +216,9 @@ export async function GET(request: NextRequest) {
 // Add or update monitored channel
 export async function POST(request: NextRequest) {
   try {
-    const body = await request.json();
+    const jsonBody = await readJsonBody(request);
+    if (!jsonBody.ok) return jsonBody.response;
+    const body = jsonBody.body;
     const { action, channel, message } = body;
 
     if (action === 'add_channel') {
@@ -363,7 +366,9 @@ function detectSentiment(text: string): 'bullish' | 'bearish' | 'neutral' {
 // Webhook endpoint for receiving real-time updates
 export async function PUT(request: NextRequest) {
   try {
-    const body = await request.json();
+    const jsonBody2 = await readJsonBody(request);
+    if (!jsonBody2.ok) return jsonBody2.response;
+    const body = jsonBody2.body;
     const { platform, channelId, messages } = body;
 
     if (!Array.isArray(messages)) {

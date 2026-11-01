@@ -11,6 +11,7 @@
 import { type NextRequest, NextResponse } from 'next/server';
 import { aiComplete, isAIConfigured, AIAuthError } from '@/lib/ai-provider';
 import { aiNotConfiguredResponse, aiAuthErrorResponse } from '@/app/api/_utils';
+import { readJsonBody } from '@/lib/json-body';
 
 interface Relationship {
   subject: string;
@@ -23,7 +24,9 @@ export async function POST(request: NextRequest) {
   if (!isAIConfigured()) return aiNotConfiguredResponse();
 
   try {
-    const { text } = await request.json();
+    const jsonBody = await readJsonBody(request);
+    if (!jsonBody.ok) return jsonBody.response;
+    const { text } = jsonBody.body;
     
     if (!text) {
       return NextResponse.json({ error: 'Text is required' }, { status: 400 });

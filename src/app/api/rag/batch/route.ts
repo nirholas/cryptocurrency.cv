@@ -21,6 +21,7 @@ import { askFast } from '@/lib/rag/ultimate-rag-service';
 import type { UltimateRAGResponse } from '@/lib/rag/ultimate-rag-service';
 import { BatchRequestSchema, formatValidationError } from '../schemas';
 import { applyRateLimit, withRateLimitHeaders, handleAPIError, logRequest } from '../middleware';
+import { readJsonBody } from '@/lib/json-body';
 
 export const runtime = 'nodejs';
 export const maxDuration = 120;
@@ -34,40 +35,19 @@ interface BatchResult {
 }
 
 /**
- * Execute promises with bounded concurrency
+ * Run tasks with at most `limit` in flight. Results keep the input order, so
+ * duplicate queries each get their own answer.
  */
-async function parallelLimit<T>(
-  tasks: (() => Promise<T>)[],
-  limit: number
-): Promise<T[]> {
-  const results: T[] = [];
-  const executing: Promise<void>[] = [];
-
-  for (const task of tasks) {
-    const promise = task().then((result) => {
-      results.push(result);
-    });
-    executing.push(promise);
-
-    if (executing.length >= limit) {
-      await Promise.race(executing);
-      // Remove settled promises
-      const settled = executing.filter(
-        (p) => {
-          let done = false;
-          p.then(() => { done = true; }).catch(() => { done = true; });
-          return done;
-        }
-      );
-      // Simpler: just await all when at limit
-      if (executing.length >= limit) {
-        await Promise.allSettled(executing);
-        executing.length = 0;
-      }
+async function parallelLimit<T>(tasks: (() => Promise<T>)[], limit: number): Promise<T[]> {
+  const results = new Array<T>(tasks.length);
+  let next = 0;
+  const worker = async () => {
+    while (next < tasks.length) {
+      const index = next++;
+      results[index] = await tasks[index]();
     }
-  }
-
-  await Promise.allSettled(executing);
+  };
+  await Promise.all(Array.from({ length: Math.max(1, Math.min(limit, tasks.length)) }, worker));
   return results;
 }
 
@@ -77,7 +57,9 @@ export async function POST(request: NextRequest) {
   if (rateLimitResponse) return rateLimitResponse;
 
   try {
-    const body = await request.json();
+    const jsonBody = await readJsonBody(request);
+    if (!jsonBody.ok) return jsonBody.response;
+    const body = jsonBody.body;
     logRequest(request, 'batch', body);
 
     // Validate
@@ -103,27 +85,18 @@ export async function POST(request: NextRequest) {
           processingTime: Date.now() - start,
         };
       } catch (error) {
+        console.error('[rag/batch] query failed:', error);
         return {
           query,
           status: 'error',
-          error: error instanceof Error ? error.message : 'Unknown error',
+          error: 'Query failed',
           processingTime: Date.now() - start,
         };
       }
     });
 
     // Execute with concurrency limit
-    const results = await parallelLimit(tasks, parallelism);
-
-    // Sort results to match input order
-    const orderedResults = queries.map((q) =>
-      results.find((r) => r.query === q) ?? {
-        query: q,
-        status: 'error' as const,
-        error: 'Result not found',
-        processingTime: 0,
-      }
-    );
+    const orderedResults = await parallelLimit(tasks, parallelism);
 
     const succeeded = orderedResults.filter((r) => r.status === 'success').length;
     const failed = orderedResults.length - succeeded;

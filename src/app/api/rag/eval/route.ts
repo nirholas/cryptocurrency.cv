@@ -24,6 +24,7 @@ import { askFast } from '@/lib/rag/ultimate-rag-service';
 import { EvalRequestSchema, formatValidationError } from '../schemas';
 import { applyRateLimit, handleAPIError } from '../middleware';
 import testCaseData from '@/lib/rag/eval-test-cases.json';
+import { readJsonBody } from '@/lib/json-body';
 
 // ═══════════════════════════════════════════════════════════════
 // GET — Return available test cases
@@ -52,7 +53,9 @@ export async function POST(request: NextRequest) {
     const rateLimitResponse = await applyRateLimit(request, 'batch');
     if (rateLimitResponse) return rateLimitResponse;
 
-    const body = await request.json();
+    const jsonBody = await readJsonBody(request);
+    if (!jsonBody.ok) return jsonBody.response;
+    const body = jsonBody.body;
     const parsed = EvalRequestSchema.safeParse(body);
 
     if (!parsed.success) {

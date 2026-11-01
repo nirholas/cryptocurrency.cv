@@ -10,6 +10,7 @@
 
 import { NextRequest, NextResponse } from 'next/server';
 import { aiComplete, getAIConfigOrNull } from '@/lib/ai-provider';
+import { readJsonBody } from '@/lib/json-body';
 
 export const runtime = 'edge';
 
@@ -47,7 +48,9 @@ const CRYPTO_PATTERNS = {
 
 export async function POST(request: NextRequest) {
   try {
-    const body: ExtractRequest = await request.json();
+    const jsonBody = await readJsonBody<ExtractRequest>(request);
+    if (!jsonBody.ok) return jsonBody.response;
+    const body = jsonBody.body;
     const { text, types } = body;
 
     if (!text?.trim()) {

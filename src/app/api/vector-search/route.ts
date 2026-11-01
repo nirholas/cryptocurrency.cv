@@ -18,6 +18,7 @@ import {
 } from '@/lib/vector-search';
 import { jsonResponse, errorResponse, withTiming, CACHE_CONTROL } from '@/lib/api-utils';
 import { intParam } from '@/lib/query-params';
+import { readJsonBody } from '@/lib/json-body';
 
 export const runtime = 'edge';
 
@@ -156,7 +157,9 @@ export async function POST(request: NextRequest) {
   const startTime = Date.now();
 
   try {
-    const body = await request.json();
+    const jsonBody = await readJsonBody(request);
+    if (!jsonBody.ok) return jsonBody.response;
+    const body = jsonBody.body;
     const { action } = body as { action?: string };
 
     if (action === 'index') {

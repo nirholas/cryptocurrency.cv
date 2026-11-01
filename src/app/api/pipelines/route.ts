@@ -17,6 +17,7 @@
 
 import { type NextRequest, NextResponse } from 'next/server';
 import { getPipelineExecutor, generateFreshnessReport } from '@/lib/pipeline';
+import { readJsonBody } from '@/lib/json-body';
 
 export const runtime = 'nodejs';
 export const maxDuration = 300; // 5 min for pipeline execution
@@ -55,7 +56,9 @@ export async function POST(request: NextRequest) {
   }
 
   try {
-    const { pipelineId } = await request.json() as { pipelineId: string };
+    const jsonBody = await readJsonBody<{ pipelineId: string }>(request);
+    if (!jsonBody.ok) return jsonBody.response;
+    const { pipelineId } = jsonBody.body;
     if (!pipelineId) {
       return NextResponse.json({ error: 'Missing pipelineId' }, { status: 400 });
     }

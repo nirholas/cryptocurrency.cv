@@ -16,6 +16,7 @@ import {
 } from '@/lib/entity-extractor';
 import type { BatchExtractionResult } from '@/lib/entity-extractor';
 import { jsonResponse, errorResponse, withTiming, CACHE_CONTROL } from '@/lib/api-utils';
+import { readJsonBody } from '@/lib/json-body';
 
 export const runtime = 'edge';
 
@@ -89,7 +90,9 @@ export async function POST(request: NextRequest) {
   const startTime = Date.now();
 
   try {
-    const body = await request.json();
+    const jsonBody = await readJsonBody(request);
+    if (!jsonBody.ok) return jsonBody.response;
+    const body = jsonBody.body;
     const { action } = body as { action?: string };
 
     // Single article extraction

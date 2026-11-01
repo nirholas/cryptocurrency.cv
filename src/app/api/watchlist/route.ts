@@ -35,6 +35,7 @@ import {
   getWatchlistWithPrices,
   getDefaultUserId,
 } from '@/lib/watchlist/service';
+import { readJsonBody } from '@/lib/json-body';
 
 // =============================================================================
 // Helper to get user ID
@@ -143,7 +144,9 @@ export async function GET(request: NextRequest) {
 export async function POST(request: NextRequest) {
   try {
     const userId = await getUserId(request);
-    const body = await request.json();
+    const jsonBody = await readJsonBody(request);
+    if (!jsonBody.ok) return jsonBody.response;
+    const body = jsonBody.body;
     
     const { coinId, symbol, name, priceAtAdd, notes, toggle, bulk } = body;
     
@@ -259,7 +262,9 @@ export async function DELETE(request: NextRequest) {
 export async function PUT(request: NextRequest) {
   try {
     const userId = await getUserId(request);
-    const body = await request.json();
+    const jsonBody2 = await readJsonBody(request);
+    if (!jsonBody2.ok) return jsonBody2.response;
+    const body = jsonBody2.body;
     
     const { coinId, notes } = body;
     

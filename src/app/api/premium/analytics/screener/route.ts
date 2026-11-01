@@ -24,6 +24,7 @@
 import { type NextRequest, NextResponse } from 'next/server';
 import { withX402 } from '@/lib/x402';
 import { getTopCoins, type TokenPrice } from '@/lib/market-data';
+import { readJsonBody } from '@/lib/json-body';
 
 export const runtime = 'nodejs';
 
@@ -91,7 +92,9 @@ async function handler(request: NextRequest): Promise<NextResponse<ScreenerRespo
   const startTime = Date.now();
 
   try {
-    const body: ScreenerRequest = await request.json();
+    const jsonBody = await readJsonBody<ScreenerRequest>(request);
+    if (!jsonBody.ok) return jsonBody.response;
+    const body = jsonBody.body;
     const { filters = [], sort, limit = 100, offset = 0 } = body;
 
     // Fetch all coins (premium gets up to 500)

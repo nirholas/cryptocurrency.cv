@@ -16,6 +16,8 @@
 import { type NextRequest, NextResponse } from 'next/server';
 
 import { resilientFetchResponse } from '@/lib/resilient-fetch';
+import { readJsonBody } from '@/lib/json-body';
+
 interface Holding {
   coinId: string;
   symbol: string;
@@ -72,7 +74,9 @@ const COLORS = [
 
 export async function POST(request: NextRequest) {
   try {
-    const body = await request.json();
+    const jsonBody = await readJsonBody(request);
+    if (!jsonBody.ok) return jsonBody.response;
+    const body = jsonBody.body;
     const { holdings, timeframe = '30d' } = body;
 
     if (!holdings || !Array.isArray(holdings) || holdings.length === 0) {

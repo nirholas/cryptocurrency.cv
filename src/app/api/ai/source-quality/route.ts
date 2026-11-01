@@ -29,6 +29,7 @@ import {
 } from '@/lib/source-quality-scorer';
 import { isAIConfigured, isAIUnavailableError } from '@/lib/ai-provider';
 import { aiAuthErrorResponse, aiNotConfiguredResponse } from '@/app/api/_utils';
+import { readJsonBody } from '@/lib/json-body';
 
 export const runtime = 'edge';
 export const revalidate = 600; // 10 minutes
@@ -176,7 +177,9 @@ export async function POST(request: NextRequest) {
   }
 
   try {
-    const body = await request.json();
+    const jsonBody = await readJsonBody(request);
+    if (!jsonBody.ok) return jsonBody.response;
+    const body = jsonBody.body;
     const { title, description, source, content } = body;
 
     if (!title || !source) {

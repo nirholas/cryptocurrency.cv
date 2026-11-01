@@ -20,6 +20,7 @@
 import { type NextRequest, NextResponse } from 'next/server';
 import { internalFetch } from '@/lib/internal-fetch';
 import type { MarketSentiment, SentimentLabel } from '@/lib/news-sentiment';
+import { readJsonBody } from '@/lib/json-body';
 
 
 interface AlexaRequest {
@@ -338,7 +339,9 @@ async function handleStopIntent(): Promise<AlexaResponse> {
 // Main handler
 export async function POST(request: NextRequest) {
   try {
-    const alexaRequest: AlexaRequest = await request.json();
+    const jsonBody = await readJsonBody<AlexaRequest>(request);
+    if (!jsonBody.ok) return jsonBody.response;
+    const alexaRequest = jsonBody.body;
     const requestType = alexaRequest.request.type;
     
     let response: AlexaResponse;

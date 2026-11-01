@@ -18,6 +18,7 @@
  */
 
 import { type NextRequest, NextResponse } from 'next/server';
+import { readJsonBody } from '@/lib/json-body';
 
 interface PredictionMarket {
   id: string;
@@ -198,7 +199,9 @@ export async function GET(request: NextRequest) {
 
 export async function POST(request: NextRequest) {
   try {
-    const body = await request.json();
+    const jsonBody = await readJsonBody(request);
+    if (!jsonBody.ok) return jsonBody.response;
+    const body = jsonBody.body;
     const { action } = body;
     
     // Place a bet

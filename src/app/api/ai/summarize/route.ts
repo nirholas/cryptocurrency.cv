@@ -11,6 +11,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { ApiError } from '@/lib/api-error';
 import { aiComplete, getAIConfigOrNull } from '@/lib/ai-provider';
+import { readJsonBody } from '@/lib/json-body';
 
 export const runtime = 'edge';
 
@@ -22,7 +23,9 @@ interface SummarizeRequest {
 
 export async function POST(request: NextRequest) {
   try {
-    const body: SummarizeRequest = await request.json();
+    const jsonBody = await readJsonBody<SummarizeRequest>(request);
+    if (!jsonBody.ok) return jsonBody.response;
+    const body = jsonBody.body;
     const { text, url, type = 'paragraph' } = body;
 
     if (!text?.trim() && !url?.trim()) {

@@ -20,6 +20,7 @@
 
 import { type NextRequest, NextResponse } from 'next/server';
 import { internalFetch } from '@/lib/internal-fetch';
+import { readJsonBody } from '@/lib/json-body';
 
 
 interface VideoJob {
@@ -173,7 +174,9 @@ export async function GET(request: NextRequest) {
 
 export async function POST(request: NextRequest) {
   try {
-    const body = await request.json();
+    const jsonBody = await readJsonBody(request);
+    if (!jsonBody.ok) return jsonBody.response;
+    const body = jsonBody.body;
     const { action } = body;
     
     // Generate new video

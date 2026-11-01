@@ -17,6 +17,7 @@ import {
   getBreakingNews,
   getSources,
 } from "@/lib/crypto-news";
+import { readJsonBody } from '@/lib/json-body';
 
 export const runtime = "edge";
 
@@ -34,7 +35,9 @@ function sanitizeString(val: unknown, maxLen: number): string {
 
 export async function POST(request: NextRequest) {
   try {
-    const body = await request.json();
+    const jsonBody = await readJsonBody(request);
+    if (!jsonBody.ok) return jsonBody.response;
+    const body = jsonBody.body;
     const apiName = typeof body?.apiName === "string" ? body.apiName : "";
     let args: Record<string, unknown> = {};
     if (typeof body?.arguments === "string") {

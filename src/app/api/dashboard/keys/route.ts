@@ -15,6 +15,7 @@ import { getDb } from '@/lib/db';
 import { apiKeys } from '@/lib/db/schema';
 import { eq, desc } from 'drizzle-orm';
 import { createApiKey, hashApiKey } from '@/lib/api-keys';
+import { readJsonBody } from '@/lib/json-body';
 
 export const runtime = 'nodejs';
 
@@ -62,7 +63,9 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: 'Database not available' }, { status: 503 });
   }
 
-  const body = await request.json();
+  const jsonBody = await readJsonBody(request);
+  if (!jsonBody.ok) return jsonBody.response;
+  const body = jsonBody.body;
   const name = body.name || 'Default';
   const tier = body.tier || 'pro';
 

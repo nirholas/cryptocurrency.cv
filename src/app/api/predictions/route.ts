@@ -34,6 +34,7 @@ import {
 } from '@/lib/predictions';
 import { checkRateLimitFromRequest, getRateLimitErrorResponse } from '@/lib/ratelimit';
 import { intParam } from '@/lib/query-params';
+import { readJsonBody } from '@/lib/json-body';
 
 // =============================================================================
 // VALIDATION
@@ -285,7 +286,9 @@ export async function POST(request: NextRequest) {
       return getRateLimitErrorResponse(rateLimit);
     }
 
-    const body = await request.json();
+    const jsonBody = await readJsonBody(request);
+    if (!jsonBody.ok) return jsonBody.response;
+    const body = jsonBody.body;
 
     // Check if this is a resolution request
     if (body.action === 'resolve') {

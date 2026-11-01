@@ -13,6 +13,8 @@ import { COINGECKO_BASE, SITE_URL } from '@/lib/constants';
 import { getAIConfigOrNull } from '@/lib/ai-provider';
 
 import { resilientFetchResponse } from '@/lib/resilient-fetch';
+import { readJsonBody } from '@/lib/json-body';
+
 export const runtime = 'edge';
 
 interface OracleRequest {
@@ -674,7 +676,9 @@ function generateFallbackResponse(query: string, context: OracleContext): string
 
 export async function POST(request: NextRequest) {
   try {
-    const body: OracleRequest = await request.json();
+    const jsonBody = await readJsonBody<OracleRequest>(request);
+    if (!jsonBody.ok) return jsonBody.response;
+    const body = jsonBody.body;
     const { query, history } = body;
 
     if (!query?.trim()) {

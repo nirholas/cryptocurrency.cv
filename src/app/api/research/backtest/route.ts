@@ -10,6 +10,7 @@
 
 import { type NextRequest, NextResponse } from 'next/server';
 import { runBacktest } from '@/lib/backtesting';
+import { readJsonBody } from '@/lib/json-body';
 
 interface BacktestRequest {
   strategy: string;
@@ -22,7 +23,9 @@ interface BacktestRequest {
 
 export async function POST(request: NextRequest) {
   try {
-    const body: BacktestRequest = await request.json();
+    const jsonBody = await readJsonBody<BacktestRequest>(request);
+    if (!jsonBody.ok) return jsonBody.response;
+    const body = jsonBody.body;
     
     const { strategy, asset, start_date, end_date, initial_capital = 10000, parameters } = body;
     

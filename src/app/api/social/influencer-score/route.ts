@@ -11,6 +11,7 @@
 import { type NextRequest, NextResponse } from 'next/server';
 import { kv } from '@vercel/kv';
 import { intParam } from '@/lib/query-params';
+import { readJsonBody } from '@/lib/json-body';
 
 interface InfluencerScore {
   handle: string;
@@ -81,7 +82,9 @@ export async function GET(request: NextRequest) {
 
 export async function POST(request: NextRequest) {
   try {
-    const body = await request.json();
+    const jsonBody = await readJsonBody(request);
+    if (!jsonBody.ok) return jsonBody.response;
+    const body = jsonBody.body;
     const { handle, platform = 'twitter', prediction_result } = body;
     
     if (!handle) {
