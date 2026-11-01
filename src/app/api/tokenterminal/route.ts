@@ -16,6 +16,7 @@ import {
   getTopByRevenue,
   getProtocolMetrics,
 } from '@/lib/apis/tokenterminal';
+import { intParam } from '@/lib/query-params';
 
 export const runtime = 'nodejs';
 export const revalidate = 300;
@@ -54,17 +55,13 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
       }
 
       case 'pe': {
-        const limit = searchParams.get('limit')
-          ? Number(searchParams.get('limit'))
-          : 20;
+        const limit = intParam(searchParams, 'limit', { fallback: 20, min: 1, max: 100 });
         const data = await getProtocolPE(limit);
         return jsonResponse(data);
       }
 
       case 'top-revenue': {
-        const limit = searchParams.get('limit')
-          ? Number(searchParams.get('limit'))
-          : 20;
+        const limit = intParam(searchParams, 'limit', { fallback: 20, min: 1, max: 100 });
         const data = await getTopByRevenue(limit);
         return jsonResponse(data);
       }

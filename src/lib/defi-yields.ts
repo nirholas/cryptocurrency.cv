@@ -113,6 +113,8 @@ export async function getTopYields(options?: {
   project?: string;
   stablecoin?: boolean;
   minTvl?: number;
+  minApy?: number;
+  maxApy?: number;
   limit?: number;
 }): Promise<YieldPool[]> {
   const pools = await getAllPools();
@@ -138,6 +140,14 @@ export async function getTopYields(options?: {
 
   if (options?.minTvl) {
     filtered = filtered.filter((p) => p.tvlUsd >= options.minTvl!);
+  }
+
+  if (options?.minApy !== undefined) {
+    filtered = filtered.filter((p) => p.apy >= options.minApy!);
+  }
+
+  if (options?.maxApy !== undefined) {
+    filtered = filtered.filter((p) => p.apy <= options.maxApy!);
   }
 
   return filtered.sort((a, b) => b.apy - a.apy).slice(0, options?.limit || 50);

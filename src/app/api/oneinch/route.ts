@@ -15,6 +15,7 @@ import {
   getLiquiditySources,
 } from '@/lib/apis/oneinch';
 import type { ChainId } from '@/lib/apis/oneinch';
+import { optionalNumParam } from '@/lib/query-params';
 
 export const runtime = 'nodejs';
 export const revalidate = 30;
@@ -53,9 +54,7 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
           dst,
           amount,
           from: searchParams.get('from') || undefined,
-          slippage: searchParams.get('slippage')
-            ? Number(searchParams.get('slippage'))
-            : undefined,
+          slippage: optionalNumParam(searchParams, 'slippage', { min: 0, max: 50 }),
         });
         return jsonResponse(data, 15);
       }

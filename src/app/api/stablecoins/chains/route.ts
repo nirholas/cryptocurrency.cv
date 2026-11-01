@@ -19,12 +19,13 @@
 
 import { type NextRequest, NextResponse } from 'next/server';
 import { stablecoinFlowsChain } from '@/lib/providers/adapters/stablecoin-flows';
+import { intParam } from '@/lib/query-params';
 
 export const revalidate = 300;
 
 export async function GET(req: NextRequest) {
   try {
-    const limit = Number(req.nextUrl.searchParams.get('limit') ?? '25');
+    const limit = intParam(req.nextUrl.searchParams, 'limit', { fallback: 25, min: 1, max: 100 });
 
     const result = await stablecoinFlowsChain.fetch({ limit: 100 });
     const data = result.data;

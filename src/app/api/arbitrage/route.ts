@@ -24,7 +24,7 @@ import {
   type ArbitrageScanResult,
 } from '@/lib/arbitrage-scanner';
 import { safeFetch, UnsafeUrlError } from '@/lib/safe-fetch';
-import { intParam } from '@/lib/query-params';
+import { intParam, numParam } from '@/lib/query-params';
 
 // Node, not edge: the webhook test resolves DNS to keep the caller's URL off private addresses.
 export const runtime = 'nodejs';
@@ -46,7 +46,7 @@ export async function GET(request: NextRequest) {
   try {
     const { searchParams } = new URL(request.url);
     const symbol = searchParams.get('symbol')?.toUpperCase();
-    const minProfit = parseFloat(searchParams.get('minProfit') || '0.1');
+    const minProfit = numParam(searchParams, 'minProfit', { fallback: 0.1, min: 0, max: 100 });
     const exchange = searchParams.get('exchange')?.toLowerCase();
     const limit = intParam(searchParams, 'limit', { fallback: 50, min: 1, max: 500 });
     const includeTriangular = searchParams.get('includeTriangular') !== 'false';

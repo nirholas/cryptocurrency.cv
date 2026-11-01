@@ -14,6 +14,7 @@ import {
   getEntityPortfolio,
   getSmartMoneyFlows,
 } from '@/lib/apis/arkham';
+import { optionalIntParam, optionalNumParam } from '@/lib/query-params';
 
 export const runtime = 'nodejs';
 export const revalidate = 60;
@@ -63,12 +64,8 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
         const data = await getSmartMoneyFlows({
           chain: searchParams.get('chain') || undefined,
           token: searchParams.get('token') || undefined,
-          minValueUsd: searchParams.get('minValueUsd')
-            ? Number(searchParams.get('minValueUsd'))
-            : undefined,
-          limit: searchParams.get('limit')
-            ? Number(searchParams.get('limit'))
-            : undefined,
+          minValueUsd: optionalNumParam(searchParams, 'minValueUsd', { min: 0, max: 1e12 }),
+          limit: optionalIntParam(searchParams, 'limit', { min: 1, max: 100 }),
         });
         return jsonResponse(data);
       }

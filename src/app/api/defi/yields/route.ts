@@ -10,7 +10,7 @@
 
 import { type NextRequest, NextResponse } from 'next/server';
 import { getAllPools, getTopYields } from '@/lib/defi-yields';
-import { intParam } from '@/lib/query-params';
+import { intParam, optionalNumParam } from '@/lib/query-params';
 
 export const runtime = 'edge';
 export const revalidate = 300;
@@ -28,16 +28,16 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
   const project = searchParams.get('project') || undefined;
   const stableParam = searchParams.get('stable');
   const stable = stableParam !== null ? stableParam === 'true' : undefined;
-  const minTvl = searchParams.get('min_tvl') ? parseFloat(searchParams.get('min_tvl')!) : undefined;
-  const minApy = searchParams.get('min_apy') ? parseFloat(searchParams.get('min_apy')!) : undefined;
-  const maxApy = searchParams.get('max_apy') ? parseFloat(searchParams.get('max_apy')!) : undefined;
+  const minTvl = optionalNumParam(searchParams, 'min_tvl', { min: 0, max: 1e13 });
+  const minApy = optionalNumParam(searchParams, 'min_apy', { min: 0, max: 10000 });
+  const maxApy = optionalNumParam(searchParams, 'max_apy', { min: 0, max: 10000 });
 
   try {
     let data;
     if (type === 'all') {
       data = await getAllPools();
     } else {
-      data = await getTopYields({ limit, chain, project, stablecoin: stable, minTvl });
+      data = await getTopYields({ limit, chain, project, stablecoin: stable, minTvl, minApy, maxApy });
     }
 
     return NextResponse.json(data, {

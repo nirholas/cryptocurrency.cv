@@ -30,7 +30,7 @@ import {
   getOrderBookDashboard,
   fetchAllOrderBooks,
 } from '@/lib/orderbook-aggregator';
-import { intParam } from '@/lib/query-params';
+import { intParam, numParam } from '@/lib/query-params';
 
 export const revalidate = 30; // ISR: order book data refreshes every 30 sec
 
@@ -59,7 +59,7 @@ export async function GET(request: NextRequest) {
     const depth = intParam(searchParams, 'depth', { fallback: 25, min: 1, max: 100 });
     const exchangeList = searchParams.get('exchanges')?.split(',') || undefined;
     const market = (searchParams.get('market') || 'spot') as 'spot' | 'futures';
-    const orderSize = parseFloat(searchParams.get('size') || '10000'); // USD
+    const orderSize = numParam(searchParams, 'size', { fallback: 10000, min: 1, max: 1e9 }); // USD
     const side = (searchParams.get('side') || 'both') as 'buy' | 'sell' | 'both';
 
     const normalizedSymbol = symbol.toUpperCase().replace('-', '');

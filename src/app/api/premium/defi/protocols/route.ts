@@ -27,7 +27,7 @@
 import { type NextRequest, NextResponse } from 'next/server';
 import { withX402 } from '@/lib/x402';
 import { getTopProtocols, getTopChains } from '@/lib/market-data';
-import { intParam } from '@/lib/query-params';
+import { intParam, numParam } from '@/lib/query-params';
 
 export const runtime = 'nodejs';
 
@@ -129,7 +129,7 @@ async function handler(
   const category = searchParams.get('category');
   const chain = searchParams.get('chain');
   const includeChains = searchParams.get('chains') === 'true';
-  const minTvl = parseFloat(searchParams.get('minTvl') || '0');
+  const minTvl = numParam(searchParams, 'minTvl', { fallback: 0, min: 0, max: 1e13 });
 
   try {
     // Fetch all protocols

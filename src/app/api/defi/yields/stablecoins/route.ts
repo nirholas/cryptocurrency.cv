@@ -10,6 +10,7 @@
 
 import { type NextRequest, NextResponse } from 'next/server';
 import { getStablecoinYields } from '@/lib/defi-yields';
+import { numParam } from '@/lib/query-params';
 
 export const runtime = 'edge';
 export const revalidate = 300;
@@ -20,7 +21,7 @@ export const revalidate = 300;
  */
 export async function GET(request: NextRequest): Promise<NextResponse> {
   const searchParams = request.nextUrl.searchParams;
-  const minTvl = parseFloat(searchParams.get('min_tvl') || '1000000');
+  const minTvl = numParam(searchParams, 'min_tvl', { fallback: 1000000, min: 0, max: 1e13 });
 
   try {
     const data = await getStablecoinYields(minTvl);

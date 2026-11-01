@@ -28,3 +28,35 @@ export function intParam(params: URLSearchParams, name: string, { fallback, min,
   if (!Number.isFinite(parsed)) return fallback;
   return Math.min(Math.max(parsed, min), max);
 }
+
+/** Read `name` from `params` as a finite number clamped to `[min, max]`. */
+export function numParam(params: URLSearchParams, name: string, { fallback, min, max }: IntParamOptions): number {
+  return optionalNumParam(params, name, { min, max }) ?? fallback;
+}
+
+export type OptionalParamOptions = Omit<IntParamOptions, 'fallback'>;
+
+/**
+ * Read `name` from `params` as a finite number clamped to `[min, max]`, or
+ * `undefined` when the parameter is absent, empty or not a number.
+ */
+export function optionalNumParam(
+  params: URLSearchParams,
+  name: string,
+  { min, max }: OptionalParamOptions,
+): number | undefined {
+  const parsed = Number.parseFloat(params.get(name) ?? '');
+  if (!Number.isFinite(parsed)) return undefined;
+  return Math.min(Math.max(parsed, min), max);
+}
+
+/** {@link optionalNumParam} for integers. */
+export function optionalIntParam(
+  params: URLSearchParams,
+  name: string,
+  { min, max }: OptionalParamOptions,
+): number | undefined {
+  const parsed = Number.parseInt(params.get(name) ?? '', 10);
+  if (!Number.isFinite(parsed)) return undefined;
+  return Math.min(Math.max(parsed, min), max);
+}

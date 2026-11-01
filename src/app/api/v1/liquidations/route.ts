@@ -24,7 +24,7 @@ import { ApiError } from '@/lib/api-error';
 import { createRequestLogger } from '@/lib/logger';
 
 import { resilientFetchResponse } from '@/lib/resilient-fetch';
-import { intParam } from '@/lib/query-params';
+import { intParam, numParam } from '@/lib/query-params';
 export const runtime = 'nodejs';
 export const revalidate = 60;
 
@@ -78,7 +78,7 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
   const searchParams = request.nextUrl.searchParams;
   const symbol = searchParams.get('symbol')?.toUpperCase();
   const limit = intParam(searchParams, 'limit', { fallback: 20, min: 1, max: 100 });
-  const minValue = parseFloat(searchParams.get('min_value') || '0');
+  const minValue = numParam(searchParams, 'min_value', { fallback: 0, min: 0, max: 1e12 });
 
   try {
     logger.info('Fetching liquidations', { symbol, limit });

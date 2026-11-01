@@ -14,6 +14,7 @@ import {
   getTokenGodMode,
   getWalletProfiler,
 } from '@/lib/apis/nansen';
+import { optionalIntParam } from '@/lib/query-params';
 
 export const runtime = 'nodejs';
 export const revalidate = 60;
@@ -40,9 +41,7 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
           chain: searchParams.get('chain') || undefined,
           token: searchParams.get('token') || undefined,
           action: (searchParams.get('txAction') as 'buy' | 'sell') || undefined,
-          limit: searchParams.get('limit')
-            ? Number(searchParams.get('limit'))
-            : undefined,
+          limit: optionalIntParam(searchParams, 'limit', { min: 1, max: 100 }),
         });
         return jsonResponse(data);
       }

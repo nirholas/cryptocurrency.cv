@@ -32,6 +32,7 @@ import {
   type GraphQuery,
   type EntityType,
 } from '@/lib/ai-knowledge-graph';
+import { optionalIntParam, optionalNumParam } from '@/lib/query-params';
 
 export const runtime = 'nodejs';
 export const maxDuration = 60;
@@ -44,9 +45,9 @@ export async function GET(request: NextRequest) {
 
     const entity = searchParams.get('entity') || undefined;
     const entityType = searchParams.get('type') as EntityType | undefined;
-    const depth = searchParams.has('depth') ? Number(searchParams.get('depth')) : undefined;
-    const minMentions = searchParams.has('minMentions') ? Number(searchParams.get('minMentions')) : undefined;
-    const minWeight = searchParams.has('minWeight') ? Number(searchParams.get('minWeight')) : undefined;
+    const depth = optionalIntParam(searchParams, 'depth', { min: 1, max: 3 });
+    const minMentions = optionalIntParam(searchParams, 'minMentions', { min: 1, max: 100000 });
+    const minWeight = optionalNumParam(searchParams, 'minWeight', { min: 0, max: 1 });
 
     const params: GraphQuery = {};
     if (entity) params.entity = entity;

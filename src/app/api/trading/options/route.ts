@@ -31,7 +31,7 @@ import {
   getMaxPain,
   getGammaExposure,
 } from '@/lib/options-flow';
-import { intParam } from '@/lib/query-params';
+import { intParam, numParam } from '@/lib/query-params';
 
 export const revalidate = 60; // ISR: options data refreshes every 1 min
 
@@ -48,7 +48,7 @@ export async function GET(request: NextRequest) {
     const limit = intParam(searchParams, 'limit', { fallback: 50, min: 1, max: 200 });
     const onlyUnusual = searchParams.get('unusual') === 'true';
     const onlyBlocks = searchParams.get('blocks') === 'true';
-    const minPremium = parseFloat(searchParams.get('minPremium') || '0');
+    const minPremium = numParam(searchParams, 'minPremium', { fallback: 0, min: 0, max: 1e12 });
 
     let responseData: Record<string, unknown> = {};
 

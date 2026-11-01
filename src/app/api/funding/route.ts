@@ -25,7 +25,7 @@ import {
   generateFundingAlerts,
   type FundingDashboard,
 } from '@/lib/funding-rates';
-import { intParam } from '@/lib/query-params';
+import { intParam, numParam } from '@/lib/query-params';
 
 export const runtime = 'edge';
 export const revalidate = 30;
@@ -55,7 +55,7 @@ export async function GET(request: NextRequest) {
     const { searchParams } = new URL(request.url);
     const exchange = searchParams.get('exchange');
     const symbol = searchParams.get('symbol');
-    const minSpread = parseFloat(searchParams.get('minSpread') || '0');
+    const minSpread = numParam(searchParams, 'minSpread', { fallback: 0, min: 0, max: 1000 });
     const includeAlerts = searchParams.get('alerts') === 'true';
     const historySymbol = searchParams.get('history');
     const historyExchange = searchParams.get('historyExchange') || 'binance';
