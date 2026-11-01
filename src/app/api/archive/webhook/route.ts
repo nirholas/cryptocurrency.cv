@@ -41,6 +41,7 @@ import { getLatestNews, type NewsArticle } from '@/lib/crypto-news';
 import { notifyIndexNow } from '@/lib/indexnow';
 import { callGroq, isGroqConfigured } from '@/lib/groq';
 import { logger } from '@/lib/logger';
+import { parseDate } from '@/lib/query-params';
 
 import { resilientFetchResponse } from '@/lib/resilient-fetch';
 export const runtime = 'nodejs';
@@ -156,9 +157,9 @@ function generateSlug(title: string, date?: string): string {
     .slice(0, 60)
     .replace(/-$/, '');
   
-  if (date) {
-    const dateStr = new Date(date).toISOString().split('T')[0];
-    slug = `${slug}-${dateStr}`;
+  const parsed = date ? parseDate(date) : undefined;
+  if (parsed) {
+    slug = `${slug}-${parsed.toISOString().split('T')[0]}`;
   }
   
   return slug || 'untitled';

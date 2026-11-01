@@ -35,6 +35,7 @@ import {
   type CompressionType,
 } from '@/lib/exports';
 import { readJsonBody } from '@/lib/json-body';
+import { parseDate } from '@/lib/query-params';
 
 // =============================================================================
 // GET - List exports or schemas
@@ -143,6 +144,27 @@ export async function POST(request: NextRequest) {
       );
     }
     
+    const start = startDate ? parseDate(startDate) : undefined;
+    const end = endDate ? parseDate(endDate) : undefined;
+    if ((startDate && !start) || (endDate && !end)) {
+      return NextResponse.json(
+        {
+          success: false,
+          error: 'startDate and endDate must be valid ISO 8601 dates',
+        },
+        { status: 400 }
+      );
+    }
+    if (start && end && start > end) {
+      return NextResponse.json(
+        {
+          success: false,
+          error: 'startDate must not be after endDate',
+        },
+        { status: 400 }
+      );
+    }
+    
     // Handle monthly archive creation
     if (createArchive) {
       if (!archiveYear || !archiveMonth) {
@@ -172,8 +194,8 @@ export async function POST(request: NextRequest) {
     const job = await createExportJob(dataType, {
       format,
       compression: compression as CompressionType,
-      startDate: startDate ? new Date(startDate) : undefined,
-      endDate: endDate ? new Date(endDate) : undefined,
+      startDate: start,
+      endDate: end,
       limit: limit ? parseInt(limit, 10) : undefined,
       fields: Array.isArray(fields) ? fields : undefined,
       includeMetadata,

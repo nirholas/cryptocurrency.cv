@@ -20,7 +20,7 @@
  */
 
 import { type NextRequest, NextResponse } from 'next/server';
-import { intParam } from '@/lib/query-params';
+import { intParam, parseDate } from '@/lib/query-params';
 
 // Trading strategies
 const STRATEGIES = {
@@ -159,8 +159,11 @@ async function runBacktest(params: {
   // Generate simulated trades
   const trades = [];
   let capital = initialCapital;
-  const startTime = new Date(startDate).getTime();
-  const endTime = new Date(endDate).getTime();
+  const startTime = parseDate(startDate)?.getTime();
+  const endTime = parseDate(endDate)?.getTime();
+  if (startTime === undefined || endTime === undefined || endTime <= startTime) {
+    throw new Error('start and end must be valid dates with start before end');
+  }
   const tradeDuration = (endTime - startTime) / perf.totalTrades;
   
   for (let i = 0; i < Math.min(perf.totalTrades, 20); i++) {

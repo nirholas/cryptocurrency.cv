@@ -60,3 +60,19 @@ export function optionalIntParam(
   if (!Number.isFinite(parsed)) return undefined;
   return Math.min(Math.max(parsed, min), max);
 }
+
+/**
+ * Parse a client-supplied date (ISO string or epoch milliseconds). Returns
+ * `undefined` for anything that does not yield a real date, so callers can
+ * reject it instead of passing an Invalid Date (NaN) into filters or
+ * `toISOString()`, which throws.
+ */
+export function parseDate(raw: unknown): Date | undefined {
+  if (typeof raw === 'number') {
+    const date = new Date(raw);
+    return Number.isNaN(date.getTime()) ? undefined : date;
+  }
+  if (typeof raw !== 'string' || raw.trim() === '') return undefined;
+  const date = new Date(raw);
+  return Number.isNaN(date.getTime()) ? undefined : date;
+}

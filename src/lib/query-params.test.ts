@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 
-import { intParam, numParam, optionalIntParam, optionalNumParam } from './query-params';
+import { intParam, numParam, optionalIntParam, optionalNumParam, parseDate } from './query-params';
 
 const params = (query: string) => new URLSearchParams(query);
 const bounds = { min: 1, max: 100 };
@@ -56,4 +56,21 @@ describe('optionalIntParam', () => {
   ])('%s -> %s', (query, expected) => {
     expect(optionalIntParam(params(query), 'n', bounds)).toBe(expected);
   });
+});
+
+describe('parseDate', () => {
+  it.each([
+    ['2026-01-15', '2026-01-15T00:00:00.000Z'],
+    ['2026-01-15T12:30:00Z', '2026-01-15T12:30:00.000Z'],
+    [0, '1970-01-01T00:00:00.000Z'],
+  ])('%s -> %s', (raw, expected) => {
+    expect(parseDate(raw)?.toISOString()).toBe(expected);
+  });
+
+  it.each([undefined, null, '', '   ', 'garbage', '2026-13-45', Number.NaN, Number.POSITIVE_INFINITY, {}, true])(
+    'rejects %s',
+    (raw) => {
+      expect(parseDate(raw)).toBeUndefined();
+    },
+  );
 });

@@ -15,7 +15,7 @@
 
 import { type NextRequest, NextResponse } from 'next/server';
 import { db } from '@/lib/database';
-import { intParam } from '@/lib/query-params';
+import { intParam, parseDate } from '@/lib/query-params';
 import { readJsonBody } from '@/lib/json-body';
 
 // Use Node.js runtime since database.ts requires fs/path modules
@@ -104,6 +104,13 @@ export async function GET(request: NextRequest) {
   const coin = searchParams.get('coin');
   const since = searchParams.get('since');
   const limit = intParam(searchParams, 'limit', { fallback: 50, min: 1, max: 500 });
+  const sinceDate = since ? parseDate(since) : undefined;
+  if (since && !sinceDate) {
+    return NextResponse.json(
+      { error: 'Invalid since date', message: 'Use an ISO 8601 date such as 2026-01-31' },
+      { status: 400 }
+    );
+  }
 
   try {
     let messages = [...messageCache];
@@ -131,8 +138,7 @@ export async function GET(request: NextRequest) {
     }
 
     // Filter by time
-    if (since) {
-      const sinceDate = new Date(since);
+    if (sinceDate) {
       messages = messages.filter((m) => new Date(m.timestamp) >= sinceDate);
     }
 

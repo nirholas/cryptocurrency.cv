@@ -39,6 +39,7 @@
 import { type NextRequest, NextResponse } from 'next/server';
 import { getLatestNews, type NewsArticle } from '@/lib/crypto-news';
 import { logger } from '@/lib/logger';
+import { parseDate } from '@/lib/query-params';
 
 export const runtime = 'nodejs';
 export const maxDuration = 60;
@@ -107,9 +108,9 @@ function generateArticleSlug(title: string, date?: string): string {
     .slice(0, 60)
     .replace(/-$/, '');
   
-  if (date) {
-    const dateStr = new Date(date).toISOString().split('T')[0];
-    slug = `${slug}-${dateStr}`;
+  const parsed = date ? parseDate(date) : undefined;
+  if (parsed) {
+    slug = `${slug}-${parsed.toISOString().split('T')[0]}`;
   }
   
   return slug || 'untitled';

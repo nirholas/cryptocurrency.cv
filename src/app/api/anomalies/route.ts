@@ -21,7 +21,7 @@ import {
 } from '@/lib/advanced-anomaly';
 import type { AnomalySignal, AnomalySeverity } from '@/lib/advanced-anomaly';
 import { jsonResponse, errorResponse, withTiming, CACHE_CONTROL } from '@/lib/api-utils';
-import { intParam } from '@/lib/query-params';
+import { intParam, parseDate } from '@/lib/query-params';
 import { readJsonBody } from '@/lib/json-body';
 
 export const runtime = 'edge';
@@ -64,10 +64,14 @@ export async function GET(request: NextRequest) {
     const signalParam = searchParams.get('signal') || undefined;
     const severityParam = searchParams.get('severity') || undefined;
     const sinceParam = searchParams.get('since') || undefined;
+    const since = sinceParam ? parseDate(sinceParam) : undefined;
+    if (sinceParam && !since) {
+      return errorResponse('Invalid since date', 'Use an ISO 8601 date such as 2026-01-31', 400);
+    }
     const history = getAnomalyHistory({
       signal: signalParam && isValidSignal(signalParam) ? signalParam : undefined,
       minSeverity: severityParam as AnomalySeverity | undefined,
-      since: sinceParam ? new Date(sinceParam).getTime() : undefined,
+      since: since?.getTime(),
       limit: Math.min(limit, 500),
     });
     return jsonResponse(withTiming({

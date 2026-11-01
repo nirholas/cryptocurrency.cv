@@ -10,7 +10,7 @@
 
 import { type NextRequest, NextResponse } from 'next/server';
 import { db } from '@/lib/database';
-import { intParam } from '@/lib/query-params';
+import { intParam, parseDate } from '@/lib/query-params';
 
 export const runtime = 'nodejs'; // Changed from 'edge' to support database operations
 
@@ -237,6 +237,12 @@ export async function POST(request: NextRequest) {
     if (!body.type || !body.asset || !body.amount || !body.price || !body.timestamp) {
       return NextResponse.json(
         { error: 'Missing required fields: type, asset, amount, price, timestamp' },
+        { status: 400 }
+      );
+    }
+    if (!parseDate(body.timestamp)) {
+      return NextResponse.json(
+        { error: 'timestamp must be a valid ISO 8601 date' },
         { status: 400 }
       );
     }
