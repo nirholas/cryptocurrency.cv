@@ -37,6 +37,10 @@ import { optionalIntParam, optionalNumParam } from '@/lib/query-params';
 export const runtime = 'nodejs';
 export const maxDuration = 60;
 
+const DEFAULT_INGEST_COUNT = 20;
+/** getLatestNews caps its limit at 50. */
+const MAX_INGEST_COUNT = 50;
+
 // ---- GET ----------------------------------------------------------------
 
 export async function GET(request: NextRequest) {
@@ -88,11 +92,15 @@ export async function GET(request: NextRequest) {
 
 export async function POST(request: NextRequest) {
   try {
-    const body = await request.json().catch(() => ({}));
-    const action = body.action || 'ingest';
+    const raw: unknown = await request.json().catch(() => null);
+    const body = (raw && typeof raw === 'object' ? raw : {}) as { action?: unknown; count?: unknown };
+    const action = body.action ?? 'ingest';
 
     if (action === 'ingest') {
-      const count = body.count || 20;
+      const count =
+        typeof body.count === 'number' && Number.isFinite(body.count)
+          ? Math.min(Math.max(Math.trunc(body.count), 1), MAX_INGEST_COUNT)
+          : DEFAULT_INGEST_COUNT;
       const result = await ingestLatestNews(count);
       return NextResponse.json({
         success: true,

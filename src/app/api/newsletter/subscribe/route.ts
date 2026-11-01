@@ -18,6 +18,7 @@
  */
 
 import { type NextRequest, NextResponse } from 'next/server';
+import { readJsonBody } from '@/lib/json-body';
 import { logger } from '@/lib/logger';
 import { getValidNewsletterIds } from '@/lib/newsletters';
 
@@ -106,8 +107,9 @@ export async function POST(request: NextRequest) {
     }
 
     // Parse request body
-    const body = (await request.json()) as SubscriptionRequest;
-    const { email, newsletters } = body;
+    const parsed = await readJsonBody<Partial<SubscriptionRequest> | null>(request);
+    if (!parsed.ok) return parsed.response;
+    const { email, newsletters } = parsed.body ?? {};
 
     // Validate newsletter IDs if provided
     const validIds = getValidNewsletterIds();

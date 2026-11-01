@@ -10,6 +10,7 @@
 
 import { type NextRequest, NextResponse } from 'next/server';
 
+import { readJsonBody } from '@/lib/json-body';
 import { safeFetch, UnsafeUrlError } from '@/lib/safe-fetch';
 
 interface ExtractedArticle {
@@ -135,7 +136,9 @@ function extractContentFromHTML(html: string): string {
 
 export async function POST(request: NextRequest) {
   try {
-    const { url } = await request.json();
+    const parsed = await readJsonBody<{ url?: unknown } | null>(request);
+    if (!parsed.ok) return parsed.response;
+    const url = parsed.body?.url;
     
     if (!url || typeof url !== 'string') {
       return NextResponse.json({ error: 'URL is required' }, { status: 400 });

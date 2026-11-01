@@ -33,6 +33,21 @@ describe('POST /api/news/extract', () => {
     },
   );
 
+  it.each(['{"url":', 'null'])('returns 400 for body %s without fetching', async (body) => {
+    const fetchSpy = vi.spyOn(globalThis, 'fetch');
+
+    const res = await POST(
+      new NextRequest('http://localhost/api/news/extract', {
+        method: 'POST',
+        body,
+        headers: { 'content-type': 'application/json' },
+      }),
+    );
+
+    expect(res.status).toBe(400);
+    expect(fetchSpy).not.toHaveBeenCalled();
+  });
+
   it('refuses a public page that redirects to the metadata server', async () => {
     const fetchSpy = vi
       .spyOn(globalThis, 'fetch')
