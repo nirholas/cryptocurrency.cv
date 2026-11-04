@@ -9,7 +9,7 @@ import { auth } from "@/lib/auth"
 import { notifyDiscordLaunch as sendRealDiscordLaunchNotification } from "@/lib/discord-notification"
 
 const LaunchTypeZodEnum = z.enum(Object.values(LaunchTypeEnum) as [string, ...string[]], {
-  errorMap: () => ({ message: "Invalid launch type specified." }),
+  error: "Invalid launch type specified.",
 })
 
 const DiscordNotificationSchema = z.object({
