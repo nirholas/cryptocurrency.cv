@@ -1,0 +1,17 @@
+{
+  "name": "free-crypto-news",
+  "version": "4.0.0",
+  "description": "Real-time crypto news, sentiment, market and DeFi data from the cryptocurrency.cv API, with an MCP server of 50+ tools.",
+  "author": {
+    "name": "nirholas"
+  },
+  "repository": "https://github.com/nirholas/cryptocurrency.cv",
+  "homepage": "https://cryptocurrency.cv",
+  "keywords": [
+    "crypto",
+    "news",
+    "api",
+    "mcp",
+    "sentiment"
+  ]
+}

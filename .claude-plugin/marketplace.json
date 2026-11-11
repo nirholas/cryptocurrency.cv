@@ -1,0 +1,22 @@
+{
+  "name": "cryptocurrency-cv",
+  "owner": {
+    "name": "nirholas"
+  },
+  "description": "Plugin for the cryptocurrency.cv crypto news API and MCP server.",
+  "plugins": [
+    {
+      "name": "free-crypto-news",
+      "source": "./plugins/free-crypto-news",
+      "description": "Real-time crypto news, sentiment, market and DeFi data from the cryptocurrency.cv API, with an MCP server of 50+ tools.",
+      "category": "data",
+      "tags": [
+        "crypto",
+        "news",
+        "api",
+        "mcp",
+        "sentiment"
+      ]
+    }
+  ]
+}

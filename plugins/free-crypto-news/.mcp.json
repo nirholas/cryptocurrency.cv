@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "free-crypto-news": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@nirholas/free-crypto-news-mcp"
+      ],
+      "env": {
+        "CRYPTO_NEWS_API_KEY": "${CRYPTO_NEWS_API_KEY:-}"
+      }
+    }
+  }
+}
