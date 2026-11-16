@@ -228,7 +228,7 @@
     "@typescript-eslint/parser": "^8.72.0",
     "@typescript-eslint/scope-manager": "^8.72.0",
     "@vitejs/plugin-react": "^6.1.2",
-    "@vitest/coverage-v8": "^4.1.10",
+    "@vitest/coverage-v8": "^5.1.0",
     "@vitest/ui": "^4.1.10",
     "drizzle-kit": "^0.31.11",
     "eslint": "^10.13.0",
