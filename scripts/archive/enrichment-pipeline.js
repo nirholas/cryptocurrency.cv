@@ -40,7 +40,6 @@ const fs = require('fs');
 const path = require('path');
 const https = require('https');
 const http = require('http');
-const crypto = require('crypto');
 
 // ============================================================================
 // Configuration
@@ -125,13 +124,50 @@ function log(msg, level = 'info') {
 const httpAgent = new http.Agent({ keepAlive: true, maxSockets: PARALLEL });
 const httpsAgent = new https.Agent({ keepAlive: true, maxSockets: PARALLEL });
 
+/**
+ * Parse a URL and require a public http(s) target (no loopback/private hosts).
+ */
+function toPublicHttpUrl(url) {
+  const parsed = new URL(url);
+  if (parsed.protocol !== 'https:' && parsed.protocol !== 'http:') {
+    throw new Error(`Refusing non-http(s) URL: ${parsed.protocol}`);
+  }
+  const host = parsed.hostname.toLowerCase().replace(/^\[|\]$/g, '');
+  if (
+    host === 'localhost' ||
+    host.endsWith('.localhost') ||
+    host.endsWith('.local') ||
+    host.endsWith('.internal') ||
+    host === '0.0.0.0' ||
+    host === '::' ||
+    host === '::1' ||
+    /^127\./.test(host) ||
+    /^10\./.test(host) ||
+    /^192\.168\./.test(host) ||
+    /^169\.254\./.test(host) ||
+    /^172\.(1[6-9]|2\d|3[01])\./.test(host) ||
+    (host.includes(':') && /^(fc|fd|fe80|::ffff:)/.test(host))
+  ) {
+    throw new Error(`Refusing private or loopback host: ${host}`);
+  }
+  return parsed;
+}
+
 function httpGet(url, options = {}) {
   return new Promise((resolve, reject) => {
     const timeout = options.timeout || 15000;
-    const proto = url.startsWith('https') ? https : http;
-    const agent = url.startsWith('https') ? httpsAgent : httpAgent;
+    let target;
+    try {
+      target = toPublicHttpUrl(url);
+    } catch (error) {
+      reject(error);
+      return;
+    }
+    const isHttps = target.protocol === 'https:';
+    const proto = isHttps ? https : http;
+    const agent = isHttps ? httpsAgent : httpAgent;
     
-    const req = proto.get(url, {
+    const req = proto.get(target.href, {
       timeout,
       agent,
       headers: options.headers || {
@@ -533,21 +569,6 @@ function loadArticles(filePath) {
 function saveArticles(filePath, articles) {
   const jsonl = articles.map(a => JSON.stringify(a)).join('\n');
   fs.writeFileSync(filePath, jsonl + '\n');
-}
-
-/**
- * Get month key from date
- */
-function getMonthKey(dateStr) {
-  try {
-    const d = new Date(dateStr);
-    if (isNaN(d.getTime())) return null;
-    const year = d.getFullYear();
-    const month = String(d.getMonth() + 1).padStart(2, '0');
-    return `${year}-${month}`;
-  } catch {
-    return null;
-  }
 }
 
 // ============================================================================

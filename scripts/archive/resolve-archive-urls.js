@@ -48,10 +48,23 @@ const DRY_RUN = args.includes('--dry-run');
 const YEAR_FILTER = getArg('--year', null);
 
 /**
+ * True if the URL's hostname is cryptopanic.com or a subdomain of it.
+ * Relative URLs are resolved against `base` when given.
+ */
+function isCryptoPanicUrl(url, base) {
+  try {
+    const host = new URL(url, base).hostname;
+    return host === 'cryptopanic.com' || host.endsWith('.cryptopanic.com');
+  } catch {
+    return false;
+  }
+}
+
+/**
  * Extract post ID from CryptoPanic URL
  */
 function extractPostId(url) {
-  if (!url || !url.includes('cryptopanic.com')) return null;
+  if (!url || !isCryptoPanicUrl(url)) return null;
   const match = url.match(/\/news\/(?:click\/)?(\d+)/);
   return match ? match[1] : null;
 }
@@ -62,12 +75,12 @@ function extractPostId(url) {
 function resolveUrl(url) {
   return new Promise((resolve) => {
     const postId = extractPostId(url);
-    if (!postId) {
+    if (!postId || !/^\d{1,20}$/.test(postId)) {
       resolve({ success: false, error: 'No post ID' });
       return;
     }
     
-    const clickUrl = `https://cryptopanic.com/news/click/${postId}/`;
+    const clickUrl = `https://cryptopanic.com/news/click/${encodeURIComponent(postId)}/`;
     
     const timeout = setTimeout(() => {
       resolve({ success: false, error: 'Timeout' });
@@ -85,7 +98,7 @@ function resolveUrl(url) {
       
       if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
         const realUrl = res.headers.location;
-        if (realUrl && !realUrl.includes('cryptopanic.com')) {
+        if (realUrl && !isCryptoPanicUrl(realUrl, 'https://cryptopanic.com')) {
           resolve({ success: true, url: realUrl });
         } else {
           resolve({ success: false, error: 'Still CryptoPanic' });
@@ -244,7 +257,7 @@ async function main() {
     
     // Find articles with CryptoPanic URLs
     const cryptopanicArticles = articles.filter(a => 
-      a.url && a.url.includes('cryptopanic.com')
+      a.url && isCryptoPanicUrl(a.url)
     );
     
     if (cryptopanicArticles.length === 0) continue;

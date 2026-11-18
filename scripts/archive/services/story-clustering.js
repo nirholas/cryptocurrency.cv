@@ -237,7 +237,6 @@ class StoryCluster {
   getStorySize() {
     // Story size based on source diversity and article count
     const sourceDiversity = this.sources.size;
-    const articleVolume = this.articles.length;
     
     if (sourceDiversity >= 10) return 'mega';
     if (sourceDiversity >= 5) return 'large';
@@ -403,7 +402,7 @@ const ClusteringService = {
     }
     
     // Calculate averages
-    for (const [source, stats] of Object.entries(sourceStats)) {
+    for (const stats of Object.values(sourceStats)) {
       if (stats.delays.length > 0) {
         stats.avg_delay_minutes = Math.round(
           stats.delays.reduce((a, b) => a + b, 0) / stats.delays.length

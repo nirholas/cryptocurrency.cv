@@ -238,8 +238,14 @@ async function translateMessages(langCode, langName, englishSource, messagesDir)
   const outputPath = path.join(messagesDir, `${langCode}.json`);
   
   // Skip if already well-translated
-  if (fs.existsSync(outputPath)) {
-    const existing = JSON.parse(fs.readFileSync(outputPath, 'utf8'));
+  let existingRaw = null;
+  try {
+    existingRaw = fs.readFileSync(outputPath, 'utf8');
+  } catch (err) {
+    if (err.code !== 'ENOENT') throw err;
+  }
+  if (existingRaw !== null) {
+    const existing = JSON.parse(existingRaw);
     const existingCount = Object.keys(flattenObject(existing)).length;
     const sourceCount = Object.keys(flattenObject(englishSource)).length;
     if (existingCount >= sourceCount * 0.9) {
@@ -283,75 +289,6 @@ async function translateMessages(langCode, langName, englishSource, messagesDir)
   const translated = unflattenObject(translatedFlat);
   fs.writeFileSync(outputPath, JSON.stringify(translated, null, 2));
   console.log(`  ✅ Saved ${langCode}.json (${Object.keys(translatedFlat).length} strings)`);
-  return true;
-}
-
-async function translateReadme(langCode, langName, readmePath, outputDir) {
-  const outputPath = path.join(outputDir, `README.${langCode}.md`);
-  
-  // Skip if exists and is reasonably sized
-  if (fs.existsSync(outputPath)) {
-    const stats = fs.statSync(outputPath);
-    if (stats.size > 5000) {
-      console.log(`  ⏭️ README.${langCode}.md already exists`);
-      return true;
-    }
-  }
-  
-  const readmeContent = fs.readFileSync(readmePath, 'utf8');
-  
-  // Split into sections for translation
-  const sections = readmeContent.split(/^## /m);
-  const translatedSections = [];
-  
-  for (let i = 0; i < Math.min(sections.length, 5); i++) {
-    const section = i === 0 ? sections[i] : `## ${sections[i]}`;
-    
-    if (section.length < 100) {
-      translatedSections.push(section);
-      continue;
-    }
-    
-    try {
-      console.log(`  📄 README section ${i + 1}/${Math.min(sections.length, 5)}...`);
-      
-      const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${GROQ_API_KEY}`,
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          model: 'llama-3.3-70b-versatile',
-          messages: [
-            {
-              role: 'system',
-              content: `Translate this Markdown documentation to ${langName}. 
-Keep code blocks, URLs, badges, and technical terms in English.
-Preserve Markdown formatting exactly.`
-            },
-            { role: 'user', content: section.slice(0, 4000) }
-          ],
-          temperature: 0.3,
-          max_tokens: 4000
-        })
-      });
-      
-      if (response.ok) {
-        const data = await response.json();
-        translatedSections.push(data.choices[0].message.content);
-      } else {
-        translatedSections.push(section);
-      }
-      
-      await sleep(15000);
-    } catch {
-      translatedSections.push(section);
-    }
-  }
-  
-  fs.writeFileSync(outputPath, translatedSections.join('\n\n'));
-  console.log(`  ✅ Saved README.${langCode}.md`);
   return true;
 }
 

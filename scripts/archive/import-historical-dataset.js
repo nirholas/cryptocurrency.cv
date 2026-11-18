@@ -31,10 +31,8 @@
 
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
+const { execFileSync } = require('child_process');
 const readline = require('readline');
-const https = require('https');
-const http = require('http');
 
 // Configuration
 const ARCHIVE_DIR = process.env.ARCHIVE_DIR || path.join(__dirname, '../../archive');
@@ -180,7 +178,7 @@ async function downloadRarFile(filename) {
   
   console.log(`Downloading ${filename}...`);
   try {
-    execSync(`curl -L -o "${outputPath}" "${url}"`, { 
+    execFileSync('curl', ['-L', '-o', outputPath, url], { 
       stdio: 'inherit',
       cwd: TEMP_DIR 
     });
@@ -203,21 +201,21 @@ function extractRarFile(rarPath) {
   console.log(`Extracting ${path.basename(rarPath)}...`);
   try {
     // Try unrar first (most common)
-    execSync(`unrar x -o+ "${rarPath}" "${extractDir}/"`, { 
+    execFileSync('unrar', ['x', '-o+', rarPath, `${extractDir}/`], { 
       stdio: 'pipe',
       cwd: TEMP_DIR 
     });
   } catch {
     try {
       // Try 7z as fallback
-      execSync(`7z x -y -o"${extractDir}" "${rarPath}"`, { 
+      execFileSync('7z', ['x', '-y', `-o${extractDir}`, rarPath], { 
         stdio: 'pipe',
         cwd: TEMP_DIR 
       });
     } catch {
       try {
         // Try unar as another fallback (macOS)
-        execSync(`unar -o "${extractDir}" "${rarPath}"`, { 
+        execFileSync('unar', ['-o', extractDir, rarPath], { 
           stdio: 'pipe',
           cwd: TEMP_DIR 
         });
@@ -626,26 +624,24 @@ function writeArchiveFile(date, articles, dryRun = false) {
     fs.mkdirSync(dirPath, { recursive: true });
   }
   
-  // If file exists, merge articles
-  if (fs.existsSync(filePath)) {
-    try {
-      const existing = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
-      const existingLinks = new Set(existing.articles.map(a => a.link));
-      
-      // Add only new articles
-      const newArticles = articles.filter(a => !existingLinks.has(a.link));
-      if (newArticles.length > 0) {
-        archiveEntry.articles = [...existing.articles, ...newArticles];
-        archiveEntry.articleCount = archiveEntry.articles.length;
-        archiveEntry.mergedAt = new Date().toISOString();
-        archiveEntry.articles.sort((a, b) => new Date(b.pubDate).getTime() - new Date(a.pubDate).getTime());
-      } else {
-        // No new articles, skip
-        return 'skipped';
-      }
-    } catch {
-      // If existing file is corrupted, overwrite
+  // If file exists, merge articles (missing or corrupted file: overwrite)
+  try {
+    const existing = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+    const existingLinks = new Set(existing.articles.map(a => a.link));
+    
+    // Add only new articles
+    const newArticles = articles.filter(a => !existingLinks.has(a.link));
+    if (newArticles.length > 0) {
+      archiveEntry.articles = [...existing.articles, ...newArticles];
+      archiveEntry.articleCount = archiveEntry.articles.length;
+      archiveEntry.mergedAt = new Date().toISOString();
+      archiveEntry.articles.sort((a, b) => new Date(b.pubDate).getTime() - new Date(a.pubDate).getTime());
+    } else {
+      // No new articles, skip
+      return 'skipped';
     }
+  } catch {
+    // Missing or corrupted file: write fresh
   }
   
   fs.writeFileSync(filePath, JSON.stringify(archiveEntry, null, 2));
@@ -665,13 +661,11 @@ function updateArchiveIndex(dates, articleCounts, dryRun = false) {
     availableDates: []
   };
   
-  // Load existing index
-  if (fs.existsSync(indexPath)) {
-    try {
-      existingIndex = JSON.parse(fs.readFileSync(indexPath, 'utf-8'));
-    } catch {
-      // Use default
-    }
+  // Load existing index (missing or corrupt file: use default)
+  try {
+    existingIndex = JSON.parse(fs.readFileSync(indexPath, 'utf-8'));
+  } catch {
+    // Use default
   }
   
   // Merge dates
@@ -749,7 +743,6 @@ async function main() {
   
   // Step 1: Download or locate RAR file
   let csvPath = null;
-  let extractDir = null;
   
   // Check if CSV already exists
   const existingExtractDir = path.join(TEMP_DIR, 'extracted');
@@ -757,7 +750,6 @@ async function main() {
     const csvFiles = findCsvFiles(existingExtractDir);
     if (csvFiles.length > 0) {
       console.log(`Found existing extracted CSV files`);
-      extractDir = existingExtractDir;
       csvPath = csvFiles[0];
     }
   }
@@ -767,7 +759,7 @@ async function main() {
     for (const rarFile of RAR_FILES) {
       const rarPath = await downloadRarFile(rarFile);
       if (rarPath) {
-        extractDir = extractRarFile(rarPath);
+        const extractDir = extractRarFile(rarPath);
         const csvFiles = findCsvFiles(extractDir);
         if (csvFiles.length > 0) {
           csvPath = csvFiles[0];

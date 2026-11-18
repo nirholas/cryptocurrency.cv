@@ -247,7 +247,7 @@ async function tearDown() {
   console.log(`\n🔌 Closing ${connections.size} connections...`);
   const closePromises = [];
 
-  for (const [id, conn] of connections) {
+  for (const [, conn] of connections) {
     closePromises.push(
       new Promise((resolve) => {
         try {

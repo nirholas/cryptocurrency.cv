@@ -114,7 +114,7 @@ const URL_PATTERNS = {
 function slugify(title) {
   return title
     .toLowerCase()
-    .replace(/['']/g, '')
+    .replace(/['\u2019]/g, '')
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/^-+|-+$/g, '')
     .substring(0, 80);
@@ -137,29 +137,17 @@ function checkUrl(url, timeout = 5000) {
   });
 }
 
-// Process batch of URLs concurrently
-async function checkUrlBatch(urls, concurrency = 20) {
-  const results = [];
-  for (let i = 0; i < urls.length; i += concurrency) {
-    const batch = urls.slice(i, i + concurrency);
-    const batchResults = await Promise.all(batch.map(u => checkUrl(u)));
-    results.push(...batchResults);
-    if (i % 100 === 0) process.stdout.write('.');
-  }
-  return results;
-}
-
 async function main() {
   console.log('URL Reconstruction Tool');
   console.log('=======================\n');
   
   // Load existing progress
   let progress = { processed: 0, found: 0, results: {} };
-  if (fs.existsSync(PROGRESS_PATH)) {
-    try {
-      progress = JSON.parse(fs.readFileSync(PROGRESS_PATH, 'utf-8'));
-      console.log(`Resuming from ${progress.processed} processed, ${progress.found} found`);
-    } catch (e) {}
+  try {
+    progress = JSON.parse(fs.readFileSync(PROGRESS_PATH, 'utf-8'));
+    console.log(`Resuming from ${progress.processed} processed, ${progress.found} found`);
+  } catch {
+    // No saved progress (or unreadable): start fresh.
   }
   
   // Read CSV and find articles needing URL reconstruction

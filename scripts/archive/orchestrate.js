@@ -38,7 +38,7 @@
 
 const fs = require('fs');
 const path = require('path');
-const { execSync, spawn } = require('child_process');
+const { spawn } = require('child_process');
 
 const WORKSPACE = '/workspaces/free-crypto-news';
 const SCRIPTS_DIR = path.join(WORKSPACE, 'scripts/archive');

@@ -54,6 +54,12 @@ const LANGUAGES = {
   'zh-TW': 'Chinese (Traditional)'
 };
 
+// Bounds on what is sent to and accepted from the translation API
+const MAX_REQUEST_CHARS = 200000;
+const MAX_RESPONSE_CHARS = 1000000;
+// Locale codes end up in output file names, so keep them to a strict BCP-47-like shape
+const LOCALE_RE = /^[A-Za-z]{2,3}(?:-[A-Za-z0-9]{2,8})?$/;
+
 async function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
@@ -78,6 +84,10 @@ function parseWaitTime(errorMessage) {
 }
 
 async function translateWithGroq(content, targetLanguage, retries = 5) {
+  if (typeof content !== 'string' || content.length > MAX_REQUEST_CHARS) {
+    throw new Error(`Content chunk too large to translate (limit ${MAX_REQUEST_CHARS} chars)`);
+  }
+
   // Pre-request delay for rate limiting
   await sleep(RATE_LIMIT.currentDelay);
   
@@ -171,8 +181,13 @@ IMPORTANT RULES:
         RATE_LIMIT.minDelayBetweenRequests
       );
       
+      const translated = data?.choices?.[0]?.message?.content;
+      if (typeof translated !== 'string' || translated.length > MAX_RESPONSE_CHARS) {
+        throw new Error('Unexpected or oversized translation response');
+      }
+
       console.log(`      ✅ Translation received`);
-      return data.choices[0].message.content;
+      return translated;
     } catch (error) {
       const waitTime = getBackoffDelay(attempt, 3000);
       if (attempt === retries) {
@@ -186,6 +201,11 @@ IMPORTANT RULES:
 }
 
 async function translateFile(filePath, targetLocale) {
+  if (!LOCALE_RE.test(targetLocale)) {
+    console.error(`❌ Invalid locale code: ${JSON.stringify(targetLocale)}`);
+    return false;
+  }
+
   const fullPath = path.resolve(filePath);
   
   if (!fs.existsSync(fullPath)) {

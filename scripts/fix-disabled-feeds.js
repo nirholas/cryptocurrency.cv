@@ -21,9 +21,42 @@ const APPLY = process.argv.includes("--apply");
 const FILE_PATH = path.resolve(__dirname, "../src/lib/crypto-news.ts");
 
 /**
+ * Allow only http(s) URLs whose host is not loopback, private or link-local.
+ */
+function isPublicHttpUrl(value) {
+  let u;
+  try {
+    u = new URL(value);
+  } catch {
+    return false;
+  }
+  if (u.protocol !== "http:" && u.protocol !== "https:") return false;
+  const host = u.hostname.toLowerCase().replace(/^\[|\]$/g, "");
+  if (host === "localhost" || host.endsWith(".localhost") || host.endsWith(".local") || host.endsWith(".internal")) {
+    return false;
+  }
+  if (/^\d{1,3}(\.\d{1,3}){3}$/.test(host)) {
+    const [a, b] = host.split(".").map(Number);
+    if (a === 0 || a === 10 || a === 127 || (a === 169 && b === 254) || (a === 172 && b >= 16 && b <= 31) ||
+        (a === 192 && b === 168) || (a === 100 && b >= 64 && b <= 127)) {
+      return false;
+    }
+  }
+  if (host.includes(":")) {
+    if (host === "::1" || host === "::" || /^f[cd]/.test(host) || /^fe[89ab]/.test(host) || host.startsWith("::ffff:")) {
+      return false;
+    }
+  }
+  return true;
+}
+
+/**
  * Check a single URL, returning status code or error string.
  */
 async function checkUrl(url) {
+  if (!isPublicHttpUrl(url)) {
+    return { status: null, ok: false, error: "BLOCKED_URL" };
+  }
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), TIMEOUT_MS);
   try {

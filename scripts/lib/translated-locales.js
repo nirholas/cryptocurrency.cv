@@ -63,7 +63,12 @@ export type TranslatedLocale = (typeof TRANSLATED_LOCALES)[number];
 function writeTranslatedLocalesModule() {
   const locales = readTranslatedLocales();
   const next = renderModule(locales);
-  const current = fs.existsSync(OUTPUT) ? fs.readFileSync(OUTPUT, 'utf8') : null;
+  let current = null;
+  try {
+    current = fs.readFileSync(OUTPUT, 'utf8');
+  } catch (err) {
+    if (err.code !== 'ENOENT') throw err;
+  }
   if (current !== next) {
     fs.writeFileSync(OUTPUT, next);
   }

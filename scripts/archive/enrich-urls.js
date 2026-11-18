@@ -138,13 +138,49 @@ function saveCache(cache) {
 }
 
 /**
+ * Parse a URL and require a public http(s) target (no loopback/private hosts).
+ */
+function toPublicHttpUrl(url) {
+  const parsed = new URL(url);
+  if (parsed.protocol !== 'https:' && parsed.protocol !== 'http:') {
+    throw new Error(`Refusing non-http(s) URL: ${parsed.protocol}`);
+  }
+  const host = parsed.hostname.toLowerCase().replace(/^\[|\]$/g, '');
+  if (
+    host === 'localhost' ||
+    host.endsWith('.localhost') ||
+    host.endsWith('.local') ||
+    host.endsWith('.internal') ||
+    host === '0.0.0.0' ||
+    host === '::' ||
+    host === '::1' ||
+    /^127\./.test(host) ||
+    /^10\./.test(host) ||
+    /^192\.168\./.test(host) ||
+    /^169\.254\./.test(host) ||
+    /^172\.(1[6-9]|2\d|3[01])\./.test(host) ||
+    (host.includes(':') && /^(fc|fd|fe80|::ffff:)/.test(host))
+  ) {
+    throw new Error(`Refusing private or loopback host: ${host}`);
+  }
+  return parsed;
+}
+
+/**
  * HTTP GET request with timeout
  */
 function httpGet(url, timeout = 10000) {
   return new Promise((resolve, reject) => {
-    const protocol = url.startsWith('https') ? https : http;
+    let target;
+    try {
+      target = toPublicHttpUrl(url);
+    } catch (error) {
+      reject(error);
+      return;
+    }
+    const protocol = target.protocol === 'https:' ? https : http;
     
-    const req = protocol.get(url, { 
+    const req = protocol.get(target.href, { 
       timeout,
       headers: { 'User-Agent': 'Mozilla/5.0 (compatible; ArchiveBot/1.0)' }
     }, (res) => {
@@ -189,7 +225,7 @@ async function searchWaybackMachine(domain, title, date) {
     const slug = slugify(title);
     
     for (let i = 1; i < records.length; i++) {
-      const [, timestamp, originalUrl, mimeType, statusCode] = records[i];
+      const [, , originalUrl, mimeType, statusCode] = records[i];
       
       if (statusCode !== '200') continue;
       if (!mimeType.includes('text/html')) continue;

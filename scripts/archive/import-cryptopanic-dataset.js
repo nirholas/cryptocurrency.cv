@@ -632,13 +632,7 @@ async function main() {
     const article = convertToV2Article(row, resolvedUrls);
     
     // Skip if date filter was applied
-    if (article && article.filtered) {
-      stats.skipped++;
-      continue;
-    }
-    
-    if (!article) {
-      console.warn(`  Warning: null article for ID ${originalId}`);
+    if (article.filtered) {
       stats.skipped++;
       continue;
     }

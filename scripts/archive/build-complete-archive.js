@@ -37,9 +37,8 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { createReadStream, createWriteStream } from 'fs';
+import { createReadStream } from 'fs';
 import { createInterface } from 'readline';
-import { pipeline } from 'stream/promises';
 import { exec } from 'child_process';
 import { promisify } from 'util';
 
@@ -236,7 +235,6 @@ async function downloadDataset(args) {
     console.log('\nTrying alternative download method...');
     try {
       await execAsync(`gh release download -R ${CONFIG.datasetRepo} -p "*.rar" -D "${CONFIG.tempDir}"`);
-      const rarPath = path.join(CONFIG.tempDir, CONFIG.rarFileName);
       await execAsync(`cd "${CONFIG.tempDir}" && unrar x -o+ *.rar`);
       
       const { stdout: findResult } = await execAsync(`find "${CONFIG.tempDir}" -name "*.csv" | head -1`);
@@ -347,6 +345,20 @@ async function extractUniqueArticles(csvPath) {
 // STEP 3: RESOLVE CRYPTOPANIC URLs
 // ============================================================
 
+/**
+ * True when a URL points at cryptopanic.com (or a subdomain). Relative
+ * redirect locations resolve against cryptopanic.com and count as internal.
+ */
+function isCryptoPanicUrl(value) {
+  let hostname;
+  try {
+    hostname = new URL(value, 'https://cryptopanic.com/').hostname.toLowerCase();
+  } catch {
+    return false;
+  }
+  return hostname === 'cryptopanic.com' || hostname.endsWith('.cryptopanic.com');
+}
+
 async function resolveUrl(articleId, retryCount = 0) {
   const clickUrl = `https://cryptopanic.com/news/click/${articleId}/`;
   
@@ -367,7 +379,7 @@ async function resolveUrl(articleId, retryCount = 0) {
     
     if (response.status === 302 || response.status === 301) {
       const location = response.headers.get('location');
-      if (location && !location.includes('cryptopanic.com')) {
+      if (location && !isCryptoPanicUrl(location)) {
         return { id: articleId, url: location, status: 'resolved' };
       }
     }
@@ -396,7 +408,7 @@ async function resolveUrl(articleId, retryCount = 0) {
     
     if (getResponse.status === 302 || getResponse.status === 301) {
       const location = getResponse.headers.get('location');
-      if (location && !location.includes('cryptopanic.com')) {
+      if (location && !isCryptoPanicUrl(location)) {
         return { id: articleId, url: location, status: 'resolved' };
       }
     }
@@ -419,11 +431,11 @@ async function resolveAllUrls(articles, args) {
   
   // Load cache
   let cache = {};
-  if (fs.existsSync(CONFIG.urlCachePath)) {
-    try {
-      cache = JSON.parse(fs.readFileSync(CONFIG.urlCachePath, 'utf-8'));
-      console.log(`Loaded ${Object.keys(cache).length.toLocaleString()} cached URLs`);
-    } catch {
+  try {
+    cache = JSON.parse(fs.readFileSync(CONFIG.urlCachePath, 'utf-8'));
+    console.log(`Loaded ${Object.keys(cache).length.toLocaleString()} cached URLs`);
+  } catch (error) {
+    if (error.code !== 'ENOENT') {
       console.log('Starting with fresh cache');
     }
   }
@@ -435,7 +447,7 @@ async function resolveAllUrls(articles, args) {
   
   for (const [id, article] of articles) {
     // If already has sourceUrl from CSV, use that
-    if (article.sourceUrl && !article.sourceUrl.includes('cryptopanic.com')) {
+    if (article.sourceUrl && !isCryptoPanicUrl(article.sourceUrl)) {
       alreadyHasUrl++;
       continue;
     }
@@ -646,7 +658,7 @@ async function buildUnifiedArchive(articles, urlCache, args) {
   for (const [id, article] of articles) {
     // Determine final URL
     let finalUrl = article.sourceUrl;
-    if (!finalUrl || finalUrl.includes('cryptopanic.com')) {
+    if (!finalUrl || isCryptoPanicUrl(finalUrl)) {
       finalUrl = article.resolvedUrl || urlCache[id];
     }
     

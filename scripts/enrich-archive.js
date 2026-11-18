@@ -86,6 +86,9 @@ function needsEnrichment(article) {
 
 const sleep = (ms) => new Promise(res => setTimeout(res, ms));
 
+// Upper bound on archive-derived text sent to the Groq API per prompt
+const MAX_PROMPT_CHARS = 8000;
+
 /**
  * Call the Groq API and expect a JSON response.
  * Mirrors promptGroqJson() from src/lib/groq.ts.
@@ -106,7 +109,7 @@ async function callGroqJson(systemPrompt, userPrompt, maxTokens = 512) {
       model: GROQ_MODEL,
       messages: [
         { role: 'system', content: systemPrompt },
-        { role: 'user',   content: userPrompt   },
+        { role: 'user',   content: String(userPrompt).slice(0, MAX_PROMPT_CHARS) },
       ],
       temperature: 0.3,
       max_tokens: maxTokens,

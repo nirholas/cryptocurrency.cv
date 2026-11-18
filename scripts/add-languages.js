@@ -259,17 +259,19 @@ function setNestedValue(obj, keyPath, value) {
   const keys = keyPath.split('.');
   let current = obj;
   for (let i = 0; i < keys.length - 1; i++) {
-    if (!current[keys[i]]) current[keys[i]] = {};
-    current = current[keys[i]];
+    const key = keys[i];
+    // Refuse keys that would walk onto Object.prototype.
+    if (key === '__proto__' || key === 'constructor' || key === 'prototype') {
+      throw new Error(`Refusing unsafe translation key: ${keyPath}`);
+    }
+    if (!current[key]) current[key] = {};
+    current = current[key];
   }
-  current[keys[keys.length - 1]] = value;
-}
-
-/**
- * Get nested value from object
- */
-function getNestedValue(obj, keyPath) {
-  return keyPath.split('.').reduce((acc, key) => acc?.[key], obj);
+  const lastKey = keys[keys.length - 1];
+  if (lastKey === '__proto__' || lastKey === 'constructor' || lastKey === 'prototype') {
+    throw new Error(`Refusing unsafe translation key: ${keyPath}`);
+  }
+  current[lastKey] = value;
 }
 
 /**
@@ -292,13 +294,15 @@ let created = 0;
 for (const [locale, { name, translations }] of Object.entries(NEW_LANGUAGES)) {
   const filePath = path.join(MESSAGES_DIR, `${locale}.json`);
   
-  if (fs.existsSync(filePath)) {
+  const content = createTranslation(locale, translations);
+  try {
+    // 'wx' fails if the file already exists, so existing translations are never overwritten.
+    fs.writeFileSync(filePath, JSON.stringify(content, null, 2) + '\n', { flag: 'wx' });
+  } catch (err) {
+    if (err.code !== 'EEXIST') throw err;
     console.log(`⏭️  ${name} (${locale}) already exists, skipping`);
     continue;
   }
-  
-  const content = createTranslation(locale, translations);
-  fs.writeFileSync(filePath, JSON.stringify(content, null, 2) + '\n');
   console.log(`✅ Created ${name} (${locale})`);
   created++;
 }

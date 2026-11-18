@@ -27,9 +27,7 @@
 // CONFIGURATION
 // =============================================================================
 
-const WHALE_ALERT_API = 'https://api.whale-alert.io/v1';
 const BLOCKCHAIN_INFO_API = 'https://blockchain.info';
-const ETHERSCAN_API = 'https://api.etherscan.io/api';
 
 // Thresholds for "significant" events
 const THRESHOLDS = {
@@ -168,7 +166,7 @@ const WhaleTracker = {
   async getRecentWhaleMovements() {
     // This would use Whale Alert API in production:
     // const data = await rateLimitedFetch('whale_alert', 
-    //   `${WHALE_ALERT_API}/transactions?api_key=${WHALE_ALERT_KEY}&min_value=${THRESHOLDS.usd_significant}`
+    //   `https://api.whale-alert.io/v1/transactions?api_key=${WHALE_ALERT_KEY}&min_value=${THRESHOLDS.usd_significant}`
     // );
     
     // For now, return empty with schema

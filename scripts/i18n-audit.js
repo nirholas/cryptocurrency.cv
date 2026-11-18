@@ -18,16 +18,6 @@
 const fs = require('fs');
 const path = require('path');
 
-// Patterns that indicate hardcoded strings
-const PATTERNS = [
-  // String literals in JSX
-  />\s*([A-Z][a-z]+(?:\s+[A-Za-z]+)*)\s*</g,
-  // Error messages
-  /(?:error|message|title|label|placeholder|description):\s*['"]([^'"]+)['"]/gi,
-  // console.log/error with strings
-  /console\.(log|error|warn)\(['"]([^'"]+)['"]/g,
-];
-
 // Directories to scan
 const SCAN_DIRS = [
   'src/app',
@@ -103,8 +93,6 @@ function scanFile(filePath) {
     // toast/alert messages
     { regex: /(?:toast|alert|showMessage)\(['"]([^'"]+)['"]/gi, type: 'Toast/Alert' },
   ];
-  
-  const lines = content.split('\n');
   
   patterns.forEach(({ regex, type }) => {
     let match;

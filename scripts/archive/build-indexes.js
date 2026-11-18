@@ -40,7 +40,6 @@ const INDEX_DIR = path.join(WORKSPACE, 'archive/indexes');
 
 const args = process.argv.slice(2);
 const VERBOSE = args.includes('--verbose') || args.includes('-v');
-const FULL = args.includes('--full');
 const STATS_ONLY = args.includes('--stats-only');
 
 /**
