@@ -150,7 +150,7 @@ test.describe('SEO & Metadata', () => {
 
   test('should have hreflang alternate links', async ({ page }) => {
     await page.goto('/');
-    const hreflangs = await page.locator('link[hreflang]').all();
+    await page.locator('link[hreflang]').all();
     // hreflang links are optional but should be present if implemented
   });
 
@@ -196,14 +196,10 @@ test.describe('API Language Parameter', () => {
 });
 
 test.describe('Locale Persistence', () => {
-  test('should remember locale preference', async ({ page, context }) => {
+  test('should remember locale preference', async ({ page }) => {
     await page.goto('/es');
     await page.waitForLoadState('networkidle');
 
-    const cookies = await context.cookies();
-    const localeCookie = cookies.find(
-      c => c.name.includes('locale') || c.name.includes('NEXT_LOCALE')
-    );
     // Either cookie or localStorage should store preference
   });
 });
@@ -213,7 +209,7 @@ test.describe('Date/Time Formatting', () => {
     await page.goto('/');
     await page.waitForLoadState('networkidle');
 
-    const timeElements = await page.locator('time, [data-time], .time-ago').all();
+    await page.locator('time, [data-time], .time-ago').all();
     // Dates should be present on a news site
   });
 });

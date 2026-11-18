@@ -133,8 +133,7 @@ export default async function MarketsPage({ params }: Props) {
   const coins: CoinRow[] = topCoinsData?.coins ?? [];
 
   // Fear & greed color
-  function fgColor(v: number | null) {
-    if (v == null) return 'text-text-secondary';
+  function fgColor(v: number) {
     if (v <= 25) return 'text-red-500 dark:text-red-400';
     if (v <= 45) return 'text-orange-500 dark:text-orange-400';
     if (v <= 55) return 'text-yellow-500 dark:text-yellow-400';

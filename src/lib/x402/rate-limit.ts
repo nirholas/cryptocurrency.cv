@@ -25,7 +25,6 @@
 import { API_TIERS, type ApiTier } from './pricing';
 import {
   checkRateLimit as checkUpstashRateLimit,
-  checkTierRateLimit as checkUpstashTierRateLimit,
   getUsage as getUpstashUsage,
   resetRateLimit as resetUpstashRateLimit,
   isRedisConfigured,

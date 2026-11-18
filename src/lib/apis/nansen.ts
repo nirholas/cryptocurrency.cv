@@ -419,7 +419,7 @@ export async function getWalletProfiler(address: string): Promise<WalletProfile 
           diversification?: number;
           timing?: number;
         };
-      }>(`/v1/wallet/${address}/profile`);
+      }>(`/v1/wallet/${encodeURIComponent(address)}/profile`);
 
       if (!data) return null;
 

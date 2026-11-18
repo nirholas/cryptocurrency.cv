@@ -57,9 +57,7 @@ test.describe('Global Search Modal', () => {
     const searchInput = page.locator('input[placeholder*="Search"]');
     await expect(searchInput).toBeVisible({ timeout: 5000 });
 
-    // Trending section should be visible when no query entered
-    const trendingLabel = page.locator('text=/trending/i');
-    // May or may not be present depending on data
+    // Trending section (text=/trending/i) may or may not be present depending on data
   });
 
   test('should type query and see results', async ({ page }) => {

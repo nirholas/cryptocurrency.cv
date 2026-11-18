@@ -24,7 +24,6 @@ export const MAX_LENGTHS = {
 } as const;
 
 // Allowed characters patterns
-const SAFE_TEXT_PATTERN = /^[\w\s\-.,!?@#$%&*()+=:;'"<>[\]{}|\\\/~`^]+$/;
 const ALPHANUMERIC_PATTERN = /^[\w\-.,]+$/;
 const URL_PATTERN = /^https?:\/\/[\w\-.]+(:\d+)?(\/[\w\-./?%&=]*)?$/;
 

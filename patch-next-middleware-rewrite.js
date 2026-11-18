@@ -27,12 +27,14 @@ const GUARD = '__loopbackRelativize';
 const HELPER = `function ${GUARD}(value, fallback){try{const u=new URL(value);if(['localhost','127.0.0.1','0.0.0.0','[::1]'].includes(u.hostname)){return u.pathname+u.search+u.hash;}}catch(e){}return fallback;}\n`;
 
 const filePath = path.resolve(__dirname, FILE);
-if (!fs.existsSync(filePath)) {
+let content;
+try {
+  content = fs.readFileSync(filePath, 'utf-8');
+} catch (err) {
+  if (err.code !== 'ENOENT') throw err;
   console.log('[patch-next-mw] resolve-routes.js not found, skipping');
   process.exit(0);
 }
-
-let content = fs.readFileSync(filePath, 'utf-8');
 
 if (content.includes(GUARD)) {
   console.log('[patch-next-mw] already patched');

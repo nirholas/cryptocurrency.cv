@@ -60,16 +60,12 @@ export const hyperliquidLiquidationsAdapter: DataProvider<LiquidationSummary[]> 
 
     for (let i = 0; i < meta.universe.length && i < assetCtxs.length; i++) {
       const coin = meta.universe[i];
-      const ctx = assetCtxs[i];
 
       if (symbols.length > 0 && !symbols.includes(coin.name.toUpperCase())) {
         continue;
       }
 
-      // Hyperliquid doesn't expose historical liquidation aggregates directly,
-      // but we can derive approximate data from the 24h notional volume and OI changes
-      const dayNtlVlm = parseFloat(ctx.dayNtlVlm) || 0;
-
+      // Hyperliquid doesn't expose historical liquidation aggregates directly
       results.push({
         symbol: coin.name,
         longLiquidationsUsd24h: 0, // Not available without event streaming

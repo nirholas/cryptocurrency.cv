@@ -149,7 +149,7 @@ function extractTickers(text: string): string[] {
 function generateSlug(title: string, date?: string): string {
   let slug = title
     .toLowerCase()
-    .replace(/['']/g, '')
+    .replace(/'/g, '')
     .replace(/[^a-z0-9\s-]/g, '')
     .replace(/\s+/g, '-')
     .replace(/-+/g, '-')

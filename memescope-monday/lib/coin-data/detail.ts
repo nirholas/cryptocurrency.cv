@@ -101,10 +101,18 @@ export interface CoinDetailData {
   heliusMeta: HeliusTokenMeta | null
 }
 
+// Token addresses (base58 on Solana, 0x-hex on EVM) are alphanumeric. Reject
+// anything else so the value can only ever fill one path segment upstream.
+function toAddressSegment(address: string): string | null {
+  return /^[A-Za-z0-9]{10,64}$/.test(address) ? encodeURIComponent(address) : null
+}
+
 // ── PumpFun ──
 async function fetchPumpFunData(mintAddress: string): Promise<PumpFunData | null> {
+  const segment = toAddressSegment(mintAddress)
+  if (!segment) return null
   try {
-    const res = await fetch(`https://frontend-api-v3.pump.fun/coins/${mintAddress}`, {
+    const res = await fetch(`https://frontend-api-v3.pump.fun/coins/${segment}`, {
       next: { revalidate: 60 },
     })
     if (!res.ok) return null
@@ -141,8 +149,10 @@ async function fetchPumpFunData(mintAddress: string): Promise<PumpFunData | null
 async function fetchDexScreenerData(
   tokenAddress: string,
 ): Promise<import("./types").DexScreenerPair | null> {
+  const segment = toAddressSegment(tokenAddress)
+  if (!segment) return null
   try {
-    const res = await fetch(`https://api.dexscreener.com/latest/dex/tokens/${tokenAddress}`, {
+    const res = await fetch(`https://api.dexscreener.com/latest/dex/tokens/${segment}`, {
       next: { revalidate: 30 },
     })
     if (!res.ok) return null
@@ -168,13 +178,15 @@ async function fetchCoinGeckoData(
   tokenAddress: string,
   chain: string = "solana",
 ): Promise<CoinGeckoResult | null> {
+  const segment = toAddressSegment(tokenAddress)
+  if (!segment) return null
   const apiKey = process.env.COINGECKO_API_KEY
   try {
     const platform = chain === "base" ? "base" : chain === "bnb" ? "binance-smart-chain" : "solana"
     const headers: Record<string, string> = {}
     if (apiKey) headers["x-cg-demo-api-key"] = apiKey
     const res = await fetch(
-      `https://api.coingecko.com/api/v3/coins/${platform}/contract/${tokenAddress}`,
+      `https://api.coingecko.com/api/v3/coins/${platform}/contract/${segment}`,
       { headers, next: { revalidate: 120 } },
     )
     if (!res.ok) return null

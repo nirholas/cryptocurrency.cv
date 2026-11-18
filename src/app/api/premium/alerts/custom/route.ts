@@ -202,10 +202,6 @@ async function handler(
       const priceChange24h = details?.market_data?.price_change_percentage_24h || 0;
       const volume24h = details?.market_data?.total_volume?.usd || 0;
       // Use 7-day average volume from CoinGecko sparkline or approximate from market data
-      const marketCap = details?.market_data?.market_cap?.usd || 0;
-      // CoinGecko provides volume_change_24h which we can use to estimate average
-      const volumeChange24h = details?.market_data?.total_volume_change_24h || 0;
-      // Approximate average: if current volume is X and changed by Y%, previous was X/(1+Y/100)
       // Better: use the 30-day average if available
       const avgVolume = details?.market_data?.total_volume?.usd
         ? (() => {

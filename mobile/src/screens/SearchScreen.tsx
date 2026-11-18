@@ -25,7 +25,6 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import NewsCard from '../components/NewsCard';
-import Badge from '../components/Badge';
 import { useSearch } from '../hooks/useNews';
 import type { Article } from '../api/client';
 

@@ -51,7 +51,6 @@ export const apyVisionAdapter: DataProvider<YieldPool[]> = {
 
     const json = await res.json();
     const pools: ApyPool[] = json?.data ?? json ?? [];
-    const now = new Date().toISOString();
 
     const results: YieldPool[] = pools.map(p => ({
       poolId: p.pool_id ?? p.address ?? '',

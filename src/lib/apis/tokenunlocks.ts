@@ -22,6 +22,7 @@
 
 import { resilientFetch } from '@/lib/resilient-fetch';
 import { staleCache } from '@/lib/cache';
+import { logSafe } from '@/lib/log-safe';
 
 const BASE_URL = 'https://token.unlocks.app/api';
 const API_KEY = process.env.TOKEN_UNLOCKS_API_KEY || '';
@@ -111,10 +112,10 @@ async function unlocksFetch<T>(path: string): Promise<T | null> {
       },
       next: { revalidate: 3600 }, // 1 hour cache
     });
-    if (stale) console.warn(`Token Unlocks API: upstream failed, serving last known good payload for ${path}`);
+    if (stale) console.warn(`Token Unlocks API: upstream failed, serving last known good payload for ${logSafe(path)}`);
     return data;
   } catch (error) {
-    console.error('Token Unlocks API request failed:', error);
+    console.error('Token Unlocks API request failed:', logSafe(error));
     return null;
   }
 }

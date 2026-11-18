@@ -834,8 +834,10 @@ async function fetchWithTimeout(
   timeout = 10000,
   skipRateLimit = false,
 ): Promise<Response> {
+  const isCoinGecko = isCoinGeckoUrl(url);
+
   // Check rate limit before making request (only for primary CoinGecko API)
-  if (!skipRateLimit && url.includes("coingecko.com") && !canMakeRequest()) {
+  if (!skipRateLimit && isCoinGecko && !canMakeRequest()) {
     throw new MarketDataError(
       "Rate limit exceeded. Please try again later.",
       429,
@@ -844,7 +846,7 @@ async function fetchWithTimeout(
   }
 
   try {
-    if (!skipRateLimit && url.includes("coingecko.com")) {
+    if (!skipRateLimit && isCoinGecko) {
       recordRequest();
     }
 
@@ -853,7 +855,7 @@ async function fetchWithTimeout(
       Accept: "application/json",
       "User-Agent": "FreeCryptoNews/2.0",
     };
-    if (url.includes("coingecko.com") && process.env.COINGECKO_API_KEY) {
+    if (isCoinGecko && process.env.COINGECKO_API_KEY) {
       headers["x-cg-demo-api-key"] = process.env.COINGECKO_API_KEY;
     }
 
@@ -861,14 +863,14 @@ async function fetchWithTimeout(
     const response = await resilientFetchResponse(url, {
       service: serviceNameForUrl(url),
       timeoutMs: timeout,
-      retries: url.includes("coingecko.com") ? 0 : 1,
+      retries: isCoinGecko ? 0 : 1,
       headers,
       next: { revalidate: 120 }, // Next.js cache for 2 minutes
     });
 
     // Handle rate limiting from API
     if (response.status === 429) {
-      if (url.includes("coingecko.com")) {
+      if (isCoinGecko) {
         handleRateLimitError(response.headers.get("retry-after") || undefined);
       }
       throw new MarketDataError("Rate limited by API", 429, true);
@@ -883,6 +885,16 @@ async function fetchWithTimeout(
   }
 }
 
+/** True only when the URL's host is coingecko.com or one of its subdomains */
+function isCoinGeckoUrl(url: string): boolean {
+  try {
+    const host = new URL(url).hostname;
+    return host === "coingecko.com" || host.endsWith(".coingecko.com");
+  } catch {
+    return false;
+  }
+}
+
 /** Map an upstream URL to its circuit-breaker service name */
 function serviceNameForUrl(url: string): string {
   try {
@@ -894,80 +906,6 @@ function serviceNameForUrl(url: string): string {
     return host.replace(/^(api|www)\./, "").replace(/\./g, "-");
   } catch {
     return "market-data";
-  }
-}
-
-/**
- * Fetch with caching and stale-while-revalidate pattern
- * @param url - URL to fetch
- * @param cacheKey - Key for caching
- * @param ttl - Cache TTL in seconds
- * @param fallbackValue - Value to return on error
- */
-async function fetchWithCache<T>(
-  url: string,
-  cacheKey: string,
-  ttl: number,
-  fallbackValue: T,
-): Promise<T> {
-  // Check cache first
-  const cached = getCached<T>(cacheKey);
-
-  if (cached) {
-    // If data is stale, trigger background refresh
-    if (cached.isStale) {
-      // Background refresh (non-blocking)
-      fetchAndCache<T>(url, cacheKey, ttl).catch(() => {
-        // Silently fail on background refresh
-      });
-    }
-    return cached.data;
-  }
-
-  // No cache, fetch fresh data
-  return fetchAndCache<T>(url, cacheKey, ttl, fallbackValue);
-}
-
-/**
- * Fetch and cache data
- */
-async function fetchAndCache<T>(
-  url: string,
-  cacheKey: string,
-  ttl: number,
-  fallbackValue?: T,
-): Promise<T> {
-  try {
-    const response = await fetchWithTimeout(url);
-
-    if (!response.ok) {
-      throw new MarketDataError(
-        `API request failed: ${response.statusText}`,
-        response.status,
-      );
-    }
-
-    const data = (await response.json()) as T;
-    setCache(cacheKey, data, ttl);
-    return data;
-  } catch (error) {
-    // Always serve stale cache on error — never show an error page.
-    // Since getCached never hard-deletes, this will work even if the entry
-    // is hours/days old. Stale data beats a broken page.
-    const cached = getCached<T>(cacheKey);
-    if (cached) {
-      console.warn(
-        `[cache] serving stale data for ${cacheKey} due to fetch error`,
-      );
-      return cached.data;
-    }
-
-    // Return fallback value if provided
-    if (fallbackValue !== undefined) {
-      return fallbackValue;
-    }
-
-    throw error;
   }
 }
 

@@ -16,6 +16,22 @@
  */
 
 const https = require('https');
+const fs = require('fs');
+const os = require('os');
+const path = require('path');
+
+/** Strip CR/LF so untrusted text cannot forge log lines */
+const logSafe = (v) => String(v).replace(/\n|\r/g, '');
+
+/** True if the URL's hostname is cryptopanic.com or a subdomain of it */
+function isCryptoPanicUrl(u) {
+  try {
+    const host = new URL(u).hostname;
+    return host === 'cryptopanic.com' || host.endsWith('.cryptopanic.com');
+  } catch {
+    return false;
+  }
+}
 
 const TEST_URL = 'https://cryptopanic.com/news/15444990/Worlds-Largest-Banks-Say-Crypto-is-Here-to-Stay/';
 
@@ -91,14 +107,14 @@ const req = https.get(TEST_URL, {
     
     // Look for any JavaScript that might contain the real URL
     console.log('=== JavaScript Analysis ===');
-    const scriptBlocks = body.match(/<script[^>]*>[\s\S]*?<\/script>/gi) || [];
+    const scriptBlocks = body.match(/<script[^>]*>[\s\S]*?<\/script[^>]*>/gi) || [];
     console.log(`Found ${scriptBlocks.length} script blocks`);
     
     for (let i = 0; i < scriptBlocks.length; i++) {
       const script = scriptBlocks[i];
       // Look for URL-like patterns in scripts
       const urlPatterns = script.match(/https?:\/\/[^"'\s<>]+/gi) || [];
-      const externalUrls = urlPatterns.filter(u => !u.includes('cryptopanic.com') && !u.includes('google') && !u.includes('facebook'));
+      const externalUrls = urlPatterns.filter(u => !isCryptoPanicUrl(u) && !u.includes('google') && !u.includes('facebook'));
       if (externalUrls.length > 0) {
         console.log(`\nScript ${i+1} contains external URLs:`);
         externalUrls.slice(0, 5).forEach(u => console.log(`  - ${u}`));
@@ -112,11 +128,13 @@ const req = https.get(TEST_URL, {
     console.log('\n... (truncated)');
     
     // Save full response to file for inspection
-    require('fs').writeFileSync('/tmp/cryptopanic-response.html', body);
-    console.log('\n=== Full response saved to /tmp/cryptopanic-response.html ===');
+    const outDir = fs.mkdtempSync(path.join(os.tmpdir(), 'cryptopanic-'));
+    const outFile = path.join(outDir, 'cryptopanic-response.html');
+    fs.writeFileSync(outFile, body, { mode: 0o600, flag: 'wx' });
+    console.log(`\n=== Full response saved to ${outFile} ===`);
   });
 });
 
 req.on('error', (err) => {
-  console.error('Error:', err.message);
+  console.error('Error:', logSafe(err.message));
 });

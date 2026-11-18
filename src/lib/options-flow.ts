@@ -139,8 +139,6 @@ export interface GammaExposure {
 // =============================================================================
 
 const DERIBIT_API = 'https://www.deribit.com/api/v2/public';
-const OKX_API = 'https://www.okx.com/api/v5';
-const BYBIT_API = 'https://api.bybit.com/v5';
 
 const CACHE_TTL = {
   tickers: 10,
@@ -158,16 +156,6 @@ const UNUSUAL_SIZE_MULTIPLIER = 5; // 5x average = unusual
 // =============================================================================
 // Deribit API Functions
 // =============================================================================
-
-interface DeribitInstrument {
-  instrument_name: string;
-  base_currency: string;
-  quote_currency: string;
-  strike: number;
-  expiration_timestamp: number;
-  option_type: 'call' | 'put';
-  is_active: boolean;
-}
 
 interface DeribitTicker {
   instrument_name: string;
@@ -187,42 +175,6 @@ interface DeribitTicker {
   };
   underlying_price: number;
   timestamp: number;
-}
-
-async function fetchDeribitInstruments(currency: string = 'BTC'): Promise<OptionContract[]> {
-  const cacheKey = `deribit:instruments:${currency}`;
-  const cached = cache.get<OptionContract[]>(cacheKey);
-  if (cached) return cached;
-
-  try {
-    const response = await resilientFetchResponse(
-      `${DERIBIT_API}/get_instruments?currency=${currency}&kind=option&expired=false`,
-      { service: 'deribit', timeoutMs: 8000, retries: 1 },
-    );
-    
-    if (!response.ok) throw new Error(`Deribit API error: ${response.status}`);
-    
-    const result = await response.json();
-    const instruments: DeribitInstrument[] = result.result || [];
-    
-    const contracts: OptionContract[] = instruments
-      .filter(i => i.is_active)
-      .map(i => ({
-        symbol: i.instrument_name,
-        underlying: currency,
-        strike: i.strike,
-        expiry: new Date(i.expiration_timestamp).toISOString().split('T')[0],
-        expiryTimestamp: i.expiration_timestamp,
-        type: i.option_type,
-        exchange: 'deribit',
-      }));
-
-    cache.set(cacheKey, contracts, 3600); // Cache for 1 hour
-    return contracts;
-  } catch (error) {
-    console.error('Deribit instruments fetch error:', error);
-    return [];
-  }
 }
 
 async function fetchDeribitTickers(currency: string = 'BTC'): Promise<OptionTicker[]> {
@@ -375,80 +327,6 @@ async function fetchDeribitTrades(currency: string = 'BTC', count: number = 100)
     return trades;
   } catch (error) {
     console.error('Deribit trades fetch error:', error);
-    return [];
-  }
-}
-
-// =============================================================================
-// OKX Options API
-// =============================================================================
-
-async function fetchOKXOptionsTickers(underlying: string = 'BTC-USD'): Promise<OptionTicker[]> {
-  const cacheKey = `okx:options:${underlying}`;
-  const cached = cache.get<OptionTicker[]>(cacheKey);
-  if (cached) return cached;
-
-  try {
-    const response = await resilientFetchResponse(`${OKX_API}/market/tickers?instType=OPTION&uly=${underlying}`, { service: 'okx', timeoutMs: 8000, retries: 1 });
-    
-    if (!response.ok) throw new Error(`OKX API error: ${response.status}`);
-    
-    const result = await response.json();
-    const data = result.data || [];
-    
-    const now = Date.now();
-    const tickers: OptionTicker[] = data.map((t: {
-      instId: string;
-      last: string;
-      bidPx: string;
-      bidSz: string;
-      askPx: string;
-      askSz: string;
-      vol24h: string;
-      volCcy24h: string;
-      ts: string;
-    }) => {
-      // Parse OKX instrument: BTC-USD-260126-100000-C
-      const parts = t.instId.split('-');
-      const strike = parseFloat(parts[3]);
-      const type = parts[4] === 'C' ? 'call' : 'put';
-      const expiry = `20${parts[2].slice(0, 2)}-${parts[2].slice(2, 4)}-${parts[2].slice(4, 6)}`;
-      
-      return {
-        contract: {
-          symbol: t.instId,
-          underlying: parts[0],
-          strike,
-          expiry,
-          expiryTimestamp: new Date(expiry).getTime(),
-          type,
-          exchange: 'okx',
-        },
-        markPrice: 0,
-        markIV: 0,
-        bidPrice: parseFloat(t.bidPx) || 0,
-        bidSize: parseFloat(t.bidSz) || 0,
-        bidIV: 0,
-        askPrice: parseFloat(t.askPx) || 0,
-        askSize: parseFloat(t.askSz) || 0,
-        askIV: 0,
-        lastPrice: parseFloat(t.last) || 0,
-        lastSize: 0,
-        volume24h: parseFloat(t.vol24h) || 0,
-        openInterest: 0,
-        delta: 0,
-        gamma: 0,
-        theta: 0,
-        vega: 0,
-        underlyingPrice: 0,
-        timestamp: now,
-      };
-    });
-
-    cache.set(cacheKey, tickers, CACHE_TTL.tickers);
-    return tickers;
-  } catch (error) {
-    console.error('OKX options tickers fetch error:', error);
     return [];
   }
 }

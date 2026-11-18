@@ -108,6 +108,9 @@ function needsTranslation(article) {
   return TARGET_LOCALES.some(locale => !article.translations[locale]);
 }
 
+// Upper bound on archive-derived text sent to the Groq API per request
+const MAX_TEXT_CHARS = 4000;
+
 /**
  * Call the Groq API for a plain-text translation.
  * Returns the translated string, or the original text on error.
@@ -128,7 +131,7 @@ async function translateWithGroq(text, localeCode) {
     `Translate the following cryptocurrency news text to ${targetLanguage}.\n` +
     `Preserve any numbers, ticker symbols (e.g. BTC, ETH), and proper nouns.\n` +
     `Return only the translated text.\n\n` +
-    `Text:\n${text}`;
+    `Text:\n${String(text).slice(0, MAX_TEXT_CHARS)}`;
 
   const res = await fetch(GROQ_API_URL, {
     method: 'POST',

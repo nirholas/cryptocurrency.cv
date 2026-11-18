@@ -147,11 +147,10 @@ function StepperTrigger({ asChild = false, className, children, ...props }: Step
   const { step, isDisabled } = useStepItem()
 
   if (asChild) {
-    const Comp = asChild ? Slot : "span"
     return (
-      <Comp data-slot="stepper-trigger" className={className}>
+      <Slot data-slot="stepper-trigger" className={className}>
         {children}
-      </Comp>
+      </Slot>
     )
   }
 

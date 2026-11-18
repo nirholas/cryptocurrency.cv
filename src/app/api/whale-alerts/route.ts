@@ -144,9 +144,6 @@ async function fetchEthereumWhaleTransactions(minValueUsd: number): Promise<Whal
     const priceData = await priceResponse.json();
     const ethPrice = priceData.ethereum?.usd || 3000;
 
-    // Minimum ETH value based on USD threshold
-    const minEthValue = minValueUsd / ethPrice;
-
     if (apiKey) {
       // Fetch recent blocks and their transactions
       const response = await resilientFetchResponse(

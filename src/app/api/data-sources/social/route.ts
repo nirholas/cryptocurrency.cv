@@ -72,7 +72,13 @@ export async function GET(request: NextRequest) {
         if (!symbol) {
           return NextResponse.json({ error: 'symbol parameter required' }, { status: 400 });
         }
+        if (!/^[A-Za-z0-9]{1,15}$/.test(symbol)) {
+          return NextResponse.json({ error: 'invalid symbol parameter' }, { status: 400 });
+        }
         const space = searchParams.get('space') || undefined;
+        if (space && !/^[A-Za-z0-9.-]{1,64}$/.test(space)) {
+          return NextResponse.json({ error: 'invalid space parameter' }, { status: 400 });
+        }
         const profile = await getTokenSentimentProfile(symbol, space);
         return NextResponse.json({ status: 'ok', data: profile, timestamp: new Date().toISOString() }, {
           headers: { 'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=600' },
@@ -88,6 +94,9 @@ export async function GET(request: NextRequest) {
 
       case 'proposals': {
         const space = searchParams.get('space') || undefined;
+        if (space && !/^[A-Za-z0-9.-]{1,64}$/.test(space)) {
+          return NextResponse.json({ error: 'invalid space parameter' }, { status: 400 });
+        }
         const limit = intParam(searchParams, 'limit', { fallback: 20, min: 1, max: 100 });
         const proposals = await getActiveProposals(space, limit);
         return NextResponse.json({ status: 'ok', data: proposals, timestamp: new Date().toISOString() }, {

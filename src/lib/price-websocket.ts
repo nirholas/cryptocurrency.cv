@@ -106,6 +106,16 @@ class PriceWebSocket {
 
           // Update prices
           Object.entries(data).forEach(([id, price]) => {
+            // Only accept assets we subscribed to, and never let a message key
+            // such as "__proto__" reach the prices object.
+            if (
+              !this.assets.has(id) ||
+              id === '__proto__' ||
+              id === 'constructor' ||
+              id === 'prototype'
+            ) {
+              return;
+            }
             this.prices[id] = {
               id,
               price: parseFloat(price as string),

@@ -247,7 +247,6 @@ export async function checkRateLimit(
   const config = TIER_CONFIG[tier];
   const now = Date.now();
   const windowMs = 3_600_000; // 1 hour
-  const windowStart = now - windowMs;
 
   const hourlyKey = `rl:hourly:${identifier}`;
   const dailyKey = `rl:daily:${identifier}`;

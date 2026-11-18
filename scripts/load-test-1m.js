@@ -36,7 +36,7 @@
 
 import http from 'k6/http';
 import { check, sleep, group } from 'k6';
-import { Rate, Trend, Counter, Gauge } from 'k6/metrics';
+import { Rate, Trend, Counter } from 'k6/metrics';
 
 // =============================================================================
 // CONFIG
@@ -52,7 +52,6 @@ const cacheHitRate   = new Rate('cdn_cache_hit');
 const newsDuration   = new Trend('news_p95_ms');
 const priceDuration  = new Trend('prices_p95_ms');
 const searchDuration = new Trend('search_p95_ms');
-const wsConnections  = new Gauge('ws_active_connections');
 
 export const options = {
   scenarios: {

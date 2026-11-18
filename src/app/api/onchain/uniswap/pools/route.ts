@@ -23,9 +23,6 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
   const searchParams = request.nextUrl.searchParams;
   const limit = intParam(searchParams, 'limit', { fallback: 20, min: 1, max: 100 });
   const orderBy = searchParams.get('order_by') || 'totalValueLockedUSD';
-  const orderDirection = (searchParams.get('order_direction') || 'desc') as 'asc' | 'desc';
-  const minLiquidityParam = searchParams.get('min_liquidity');
-  const minLiquidity = minLiquidityParam ? parseFloat(minLiquidityParam) : undefined;
 
   try {
     const data = await getUniswapPools('ethereum', { first: limit, orderBy });

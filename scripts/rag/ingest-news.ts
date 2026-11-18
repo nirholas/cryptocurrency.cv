@@ -85,7 +85,6 @@ async function main() {
   // Dynamic import to avoid issues with module loading
   const { vectorStore, computeVoteScore } = await import('../src/lib/rag/vector-store');
   const { generateEmbedding, getEmbeddingConfig } = await import('../src/lib/rag/embedding-service');
-  const { NewsDocument, NewsMetadata } = await import('../src/lib/rag/types');
   
   const embeddingConfig = getEmbeddingConfig();
   console.log(`📊 Embedding provider: ${embeddingConfig.provider}`);

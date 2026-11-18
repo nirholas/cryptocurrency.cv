@@ -62,7 +62,6 @@ export const aaveAdapter: DataProvider<YieldPool[]> = {
 
     const json = await response.json();
     const reserves: AaveReserve[] = json ?? [];
-    const now = new Date().toISOString();
 
     const results: YieldPool[] = reserves
       .filter(r => r.isActive && !r.isFrozen)

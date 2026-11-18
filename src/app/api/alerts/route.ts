@@ -391,7 +391,7 @@ export async function PATCH(request: NextRequest) {
     let success = await toggleAlert(alertId, active);
     
     if (!success) {
-      const updated = updateAlertRule(alertId, { enabled: active });
+      const updated = await updateAlertRule(alertId, { enabled: active });
       success = updated !== null;
     }
 

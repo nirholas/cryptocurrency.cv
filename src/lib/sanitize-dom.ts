@@ -11,6 +11,14 @@
 import DOMPurify from 'dompurify';
 
 /**
+ * Server-side fallback: drop complete tags, then escape any '<' or '>' left
+ * over so fragments such as "<<b>script>" can never re-form markup.
+ */
+function stripTags(html: string): string {
+  return html.replace(/<[^>]*>/g, ' ').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+
+/**
  * Sanitize HTML string to prevent XSS attacks.
  * Allows safe HTML tags and attributes only.
  * Falls back to regex tag stripping on the server side.
@@ -18,7 +26,7 @@ import DOMPurify from 'dompurify';
 export function sanitizeHTML(dirty: string): string {
   if (typeof window === 'undefined') {
     // Server-side: strip all HTML tags as a safe fallback
-    return dirty.replace(/<[^>]*>/g, '');
+    return stripTags(dirty);
   }
   return DOMPurify.sanitize(dirty, {
     ALLOWED_TAGS: [
@@ -40,7 +48,7 @@ export function sanitizeHTML(dirty: string): string {
  */
 export function sanitizeHighlight(dirty: string): string {
   if (typeof window === 'undefined') {
-    return dirty.replace(/<[^>]*>/g, '');
+    return stripTags(dirty);
   }
   return DOMPurify.sanitize(dirty, {
     ALLOWED_TAGS: ['mark', 'strong', 'em', 'b'],

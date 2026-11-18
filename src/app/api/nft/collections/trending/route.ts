@@ -22,9 +22,6 @@ export const revalidate = 300;
 export async function GET(request: NextRequest): Promise<NextResponse> {
   const searchParams = request.nextUrl.searchParams;
   const limit = intParam(searchParams, 'limit', { fallback: 20, min: 1, max: 100 });
-  const chain = searchParams.get('chain') || undefined;
-  const category = searchParams.get('category') || undefined;
-  const sortBy = searchParams.get('sort_by') || undefined;
 
   try {
     const data = await getTrendingCollections('24h', limit);

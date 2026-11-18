@@ -56,6 +56,9 @@ const DATE_PATTERNS = [
   /(\d{1,2}\/\d{1,2}\/\d{4})/,
 ];
 
+// Domains interpolated into search queries must be plain hostnames
+const DOMAIN_RE = /^[\w.-]{1,253}$/;
+
 /**
  * Load verification cache
  */
@@ -125,6 +128,7 @@ async function searchDuckDuckGo(title, domain) {
     .slice(0, 10)
     .join(' ');
   
+  if (!DOMAIN_RE.test(domain)) return null;
   const query = encodeURIComponent(`"${cleanTitle}" site:${domain}`);
   const url = `https://html.duckduckgo.com/html/?q=${query}`;
   
@@ -211,6 +215,7 @@ async function searchBrave(title, domain) {
     .slice(0, 10)
     .join(' ');
   
+  if (!DOMAIN_RE.test(domain)) return null;
   const query = encodeURIComponent(`"${cleanTitle}" site:${domain}`);
   const url = `https://api.search.brave.com/res/v1/web/search?q=${query}&count=5`;
   
@@ -390,7 +395,6 @@ async function processMonth(month, cache) {
       if (result.date) {
         const newDate = new Date(result.date);
         const oldMonth = article.pub_date?.substring(0, 7);
-        const newMonth = newDate.toISOString().substring(0, 7);
         
         article.pub_date = newDate.toISOString();
         article.first_seen = newDate.toISOString();

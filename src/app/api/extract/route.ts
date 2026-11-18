@@ -333,14 +333,20 @@ function extractMeta(html: string, name: string): string | null {
 }
 
 function extractMainContent(html: string): string {
-  // Remove scripts and styles
-  const content = html
-    .replace(/<script[\s\S]*?<\/script>/gi, '')
-    .replace(/<style[\s\S]*?<\/style>/gi, '')
-    .replace(/<nav[\s\S]*?<\/nav>/gi, '')
-    .replace(/<header[\s\S]*?<\/header>/gi, '')
-    .replace(/<footer[\s\S]*?<\/footer>/gi, '')
-    .replace(/<aside[\s\S]*?<\/aside>/gi, '');
+  // Remove scripts and styles; repeat until stable so nested fragments such
+  // as "<scr<script></script>ipt>" cannot reassemble into a tag.
+  let content = html;
+  let previous: string;
+  do {
+    previous = content;
+    content = content
+      .replace(/<script[\s\S]*?<\/script[^>]*>/gi, ' ')
+      .replace(/<style[\s\S]*?<\/style[^>]*>/gi, ' ')
+      .replace(/<nav[\s\S]*?<\/nav>/gi, ' ')
+      .replace(/<header[\s\S]*?<\/header>/gi, ' ')
+      .replace(/<footer[\s\S]*?<\/footer>/gi, ' ')
+      .replace(/<aside[\s\S]*?<\/aside>/gi, ' ');
+  } while (content !== previous);
 
   // Try to find article content
   const articleMatch = content.match(/<article[\s\S]*?<\/article>/i);
@@ -366,10 +372,11 @@ function stripHtml(html: string): string {
     .replace(/<[^>]+>/g, ' ')
     .replace(/\s+/g, ' ')
     .replace(/&nbsp;/g, ' ')
-    .replace(/&amp;/g, '&')
     .replace(/&lt;/g, '<')
     .replace(/&gt;/g, '>')
     .replace(/&quot;/g, '"')
+    // Decode &amp; last so "&amp;lt;" becomes "&lt;", not "<"
+    .replace(/&amp;/g, '&')
     .trim();
 }
 

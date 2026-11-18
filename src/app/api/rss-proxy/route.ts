@@ -16,8 +16,10 @@
  */
 
 import { type NextRequest, NextResponse } from 'next/server';
+import { safeFetch, UnsafeUrlError } from '@/lib/safe-fetch';
 
-export const runtime = 'edge';
+// nodejs (not edge): safeFetch resolves DNS to block private/internal targets
+export const runtime = 'nodejs';
 export const revalidate = 300;
 
 const ALLOWED_DOMAINS = new Set([
@@ -94,7 +96,8 @@ export async function GET(request: NextRequest) {
   }
 
   try {
-    const response = await fetch(feedUrl, {
+    // safeFetch re-checks every redirect hop and refuses private/internal addresses
+    const response = await safeFetch(parsedUrl, {
       headers: {
         'User-Agent': 'FreeCryptoNews/1.0 (+https://cryptocurrency.cv)',
         Accept: 'application/rss+xml, application/atom+xml, application/xml, text/xml, */*',
@@ -124,6 +127,9 @@ export async function GET(request: NextRequest) {
       },
     });
   } catch (error) {
+    if (error instanceof UnsafeUrlError) {
+      return NextResponse.json({ error: 'URL targets a non-public address' }, { status: 403 });
+    }
     const message = error instanceof Error ? error.message : 'Unknown error';
     const isTimeout = message.includes('timeout') || message.includes('abort');
 

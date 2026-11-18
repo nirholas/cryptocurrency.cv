@@ -85,8 +85,6 @@ function analyzeQuery(query: string): {
   needsDefi: boolean;
   specificCoins: string[];
 } {
-  const lowerQuery = query.toLowerCase();
-
   // Extract specific coin mentions
   const coinPatterns = [
     { pattern: /bitcoin|btc/i, id: 'bitcoin' },
@@ -106,11 +104,11 @@ function analyzeQuery(query: string): {
   return {
     needsNews: /news|headline|article|story|happen|latest|recent|update|announce/i.test(query),
     needsPrices: specificCoins.length > 0 || /price|cost|worth|value|trading|trade/i.test(query),
-    needsFearGreed: /fear|greed|sentiment|mood|market.*feel|emotion/i.test(query),
+    needsFearGreed: /fear|greed|sentiment|mood|market.{0,40}feel|emotion/i.test(query),
     needsMovers: /mover|gainer|loser|up|down|performing|winner|pump|dump|rally/i.test(query),
     needsTrending: /trend|hot|popular|buzz|viral|hype/i.test(query),
     needsGlobal: /market\s*(cap|size)|total|dominance|overall|global|crypto\s*market/i.test(query),
-    needsGas: /gas|fee|transaction\s*cost|gwei|eth.*gas/i.test(query),
+    needsGas: /gas|fee|transaction\s*cost|gwei|eth.{0,40}gas/i.test(query),
     needsDefi: /defi|tvl|total\s*value|locked|yield|lending|borrow/i.test(query),
     specificCoins,
   };

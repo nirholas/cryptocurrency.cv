@@ -251,7 +251,7 @@ describe('provider credentials and cooldowns', () => {
     await expect(aiComplete('sys', 'b')).resolves.toBe('second');
 
     const urls = mockFetch.mock.calls.map(([url]) => String(url));
-    expect(urls.filter((u) => u.includes('api.openai.com'))).toHaveLength(1);
+    expect(urls.filter((u) => new URL(u).hostname === 'api.openai.com')).toHaveLength(1);
   });
 
   it('says quota or billing, not bad keys, when every provider is unavailable', async () => {

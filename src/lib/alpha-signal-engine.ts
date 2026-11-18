@@ -105,18 +105,6 @@ export interface SmartMoneyIndicator {
   description: string;
 }
 
-// Signal type weights for scoring
-const SIGNAL_WEIGHTS = {
-  regulation: 1.5,
-  partnership: 1.3,
-  hack: 1.8,
-  adoption: 1.4,
-  technical: 1.2,
-  whale: 1.6,
-  exchange: 1.4,
-  macro: 1.3,
-};
-
 // Keywords that indicate high-alpha potential
 const ALPHA_KEYWORDS = {
   critical: [

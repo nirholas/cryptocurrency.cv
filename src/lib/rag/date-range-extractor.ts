@@ -39,15 +39,6 @@ function parseDate(dateStr: string): Date | null {
 }
 
 /**
- * Get date offset from today
- */
-function getDateOffset(days: number): string {
-  const date = new Date();
-  date.setDate(date.getDate() + days);
-  return formatDate(date);
-}
-
-/**
  * Extract date range from user query using LLM
  */
 export async function extractDateRange(

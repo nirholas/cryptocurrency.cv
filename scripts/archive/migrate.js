@@ -147,8 +147,13 @@ async function migrate() {
     
     // Load existing v2 articles for this month
     const existingArticles = new Map();
-    if (fs.existsSync(jsonlPath)) {
-      const content = fs.readFileSync(jsonlPath, 'utf-8');
+    let content = null;
+    try {
+      content = fs.readFileSync(jsonlPath, 'utf-8');
+    } catch (err) {
+      if (err.code !== 'ENOENT') throw err;
+    }
+    if (content !== null) {
       const lines = content.trim().split('\n').filter(l => l.trim());
       for (const line of lines) {
         try {

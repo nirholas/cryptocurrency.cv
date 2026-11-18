@@ -20,6 +20,7 @@
 
 import { db } from '@/lib/database';
 import { SITE_URL } from '@/lib/constants';
+import { logSafe } from '@/lib/log-safe';
 
 // Database collection
 const SUBSCRIBERS_COLLECTION = 'newsletter_subscribers';
@@ -53,15 +54,6 @@ async function getAllSubscribers(): Promise<Subscriber[]> {
   } catch (error) {
     console.error('Failed to get subscribers from database:', error);
     return [];
-  }
-}
-
-async function getSubscriberById(id: string): Promise<Subscriber | null> {
-  try {
-    const doc = await db.getDocument<Subscriber>(SUBSCRIBERS_COLLECTION, id);
-    return doc?.data || null;
-  } catch {
-    return null;
   }
 }
 
@@ -111,8 +103,9 @@ export async function subscribe(
   } = {}
 ): Promise<{ success: boolean; message: string; subscriber?: Subscriber }> {
   // Validate email
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!emailRegex.test(email)) {
+  // Domain labels exclude '.', so the pattern cannot backtrack polynomially.
+  const emailRegex = /^[^\s@]+@[^\s@.]+(?:\.[^\s@.]+)+$/;
+  if (email.length > 254 || !emailRegex.test(email)) {
     return { success: false, message: 'Invalid email address' };
   }
 
@@ -205,7 +198,7 @@ If you didn't subscribe, you can safely ignore this email.
   });
 
   if (!sent) {
-    console.warn(`Failed to send verification email to ${subscriber.email}`);
+    console.warn('Failed to send verification email to', logSafe(subscriber.email));
   }
 }
 

@@ -39,7 +39,7 @@ describe('SOURCE_TIERS catalog', () => {
 
   it('every entry has required fields with correct types', () => {
     const validTiers: SourceTier[] = ['tier1', 'tier2', 'tier3', 'research'];
-    for (const [key, entry] of Object.entries(SOURCE_TIERS)) {
+    for (const entry of Object.values(SOURCE_TIERS)) {
       expect(validTiers).toContain(entry.tier);
       expect(typeof entry.displayName).toBe('string');
       expect(entry.displayName.length).toBeGreaterThan(0);

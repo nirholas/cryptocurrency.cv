@@ -175,7 +175,6 @@ export function createApiError(options: ApiErrorOptions): NextResponse<ApiErrorR
     details,
     requestId,
     path,
-    severity = ErrorSeverity.MEDIUM,
     retryAfter,
     validationErrors,
     suggestion,

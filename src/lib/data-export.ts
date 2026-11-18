@@ -894,7 +894,6 @@ export async function exportData<T extends Record<string, unknown>>(
   options: ExportOptions
 ): Promise<ExportResult> {
   const schema = options.schema || NEWS_SCHEMA;
-  const startTime = Date.now();
   
   let exportedData: string | Uint8Array;
   let filename: string;

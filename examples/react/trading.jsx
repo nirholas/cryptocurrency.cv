@@ -14,7 +14,7 @@
  * Signals, whale alerts, funding rates, liquidations, and orderbook.
  */
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState } from 'react';
 import { 
   useSignals,
   useWhaleAlerts,
@@ -22,9 +22,6 @@ import {
   useLiquidations,
   useOrderbook,
   useArbitrage,
-  SignalCard,
-  WhaleAlertFeed,
-  OrderbookDepth,
 } from '@nirholas/react-crypto-news';
 
 // ═══════════════════════════════════════════════════════════════
@@ -173,8 +170,8 @@ export function WhaleAlerts() {
  * Funding rates heatmap
  */
 export function FundingRatesTable() {
-  const { rates, loading, error } = useFundingRates();
-  const [sortBy, setSortBy] = useState<'symbol' | 'rate'>('rate');
+  const { rates, loading } = useFundingRates();
+  const [sortBy, setSortBy] = useState('rate');
 
   const sortedRates = [...(rates || [])].sort((a, b) => {
     if (sortBy === 'rate') return Math.abs(b.rate) - Math.abs(a.rate);
@@ -187,7 +184,7 @@ export function FundingRatesTable() {
         <h2 className="text-xl font-bold">💵 Funding Rates</h2>
         <select 
           value={sortBy}
-          onChange={(e) => setSortBy(e.target.value as any)}
+          onChange={(e) => setSortBy(e.target.value)}
           className="px-2 py-1 border rounded text-sm"
         >
           <option value="rate">Sort by Rate</option>
@@ -248,7 +245,7 @@ export function FundingRatesTable() {
   );
 }
 
-function FundingCell({ rate }: { rate?: number }) {
+function FundingCell({ rate }) {
   if (rate === undefined) return <span className="text-gray-300">-</span>;
   
   const isHigh = Math.abs(rate) > 0.01;
@@ -371,7 +368,7 @@ export function LiquidationFeed() {
  */
 export function LiveOrderbook() {
   const [symbol, setSymbol] = useState('BTC');
-  const { orderbook, loading, error } = useOrderbook({
+  const { orderbook, loading } = useOrderbook({
     symbol,
     depth: 15,
     refreshInterval: 1000,
@@ -443,13 +440,7 @@ export function LiveOrderbook() {
   );
 }
 
-function OrderbookRow({ price, quantity, total, side, maxTotal }: {
-  price: number;
-  quantity: number;
-  total: number;
-  side: 'ask' | 'bid';
-  maxTotal: number;
-}) {
+function OrderbookRow({ price, quantity, total, side, maxTotal }) {
   const percentage = (total / maxTotal) * 100;
   
   return (
@@ -539,13 +530,13 @@ export function ArbitrageOpportunities() {
 // Helpers
 // ═══════════════════════════════════════════════════════════════
 
-function formatAmount(amount: number): string {
+function formatAmount(amount) {
   if (amount >= 1e6) return `${(amount / 1e6).toFixed(2)}M`;
   if (amount >= 1e3) return `${(amount / 1e3).toFixed(1)}K`;
   return amount.toFixed(2);
 }
 
-function formatUsd(value: number): string {
+function formatUsd(value) {
   if (value >= 1e9) return `$${(value / 1e9).toFixed(2)}B`;
   if (value >= 1e6) return `$${(value / 1e6).toFixed(2)}M`;
   if (value >= 1e3) return `$${(value / 1e3).toFixed(0)}K`;

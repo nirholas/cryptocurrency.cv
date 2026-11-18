@@ -185,7 +185,6 @@ export async function POST(request: NextRequest) {
         anchorId = 'anchor_01',
         style = 'professional',
         customScript,
-        articleIds,
         duration = 60,
       } = body;
       

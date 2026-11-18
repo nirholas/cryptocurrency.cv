@@ -90,8 +90,6 @@ const SOURCES = [
 ];
 
 export async function GET(_request: NextRequest) {
-  const start = Date.now();
-
   // Health-check all sources in parallel
   const sourceResults = await Promise.allSettled(
     SOURCES.map(async (source): Promise<SourceHealth> => {

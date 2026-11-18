@@ -24,9 +24,10 @@ export default function ChartWidget() {
     const i = params.get("interval") || "D";
     const h = params.get("height") || "100%";
 
-    setSymbol(s.toUpperCase());
+    const upperSymbol = s.toUpperCase();
+    setSymbol(/^[A-Z0-9:._-]{1,64}$/.test(upperSymbol) ? upperSymbol : "BINANCE:BTCUSDT");
     setTheme(t === "light" ? "light" : "dark");
-    setInterval(i);
+    setInterval(/^[A-Za-z0-9]{1,8}$/.test(i) ? i : "D");
     setHeight(h);
   }, []);
 
@@ -51,7 +52,7 @@ export default function ChartWidget() {
       "https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js";
     script.type = "text/javascript";
     script.async = true;
-    script.innerHTML = JSON.stringify({
+    script.textContent = JSON.stringify({
       autosize: true,
       symbol,
       interval,

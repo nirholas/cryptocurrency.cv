@@ -12,6 +12,8 @@
  *   - ConsoleProvider — Development fallback (logs to stdout)
  */
 
+import { logSafe } from '@/lib/log-safe';
+
 export interface SendEmailParams {
   to: string;
   subject: string;
@@ -74,11 +76,11 @@ export class ConsoleProvider implements EmailProvider {
   async send(params: SendEmailParams): Promise<{ id: string }> {
     const id = `console_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`;
     console.info('[EMAIL][ConsoleProvider] Would send email:');
-    console.info(`  To:      ${params.to}`);
-    console.info(`  Subject: ${params.subject}`);
+    console.info(`  To:      ${logSafe(params.to)}`);
+    console.info(`  Subject: ${logSafe(params.subject)}`);
     console.info(`  ID:      ${id}`);
     if (params.text) {
-      console.info(`  Text:    ${params.text.slice(0, 200)}...`);
+      console.info(`  Text:    ${logSafe(params.text.slice(0, 200))}...`);
     }
     return { id };
   }

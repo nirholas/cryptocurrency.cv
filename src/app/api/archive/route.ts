@@ -28,6 +28,7 @@ import {
   pgGetTrendingTickers,
   pgGetMarketHistory,
 } from '@/lib/db/queries';
+import { logSafe } from '@/lib/log-safe';
 
 export const runtime = 'edge';
 
@@ -267,7 +268,7 @@ export async function GET(request: NextRequest) {
         articles = await translateArticles(articles as any, lang);
         translatedLang = lang;
       } catch (translateError) {
-        console.error('Translation failed:', translateError);
+        console.error('Translation failed:', logSafe(translateError));
         // Continue with original articles on translation failure
       }
     }

@@ -281,13 +281,20 @@ function parseNitterRSS(rssText: string, username: string, limit: number): XTwee
       // Use description or title for content
       let content = '';
       if (descMatch) {
-        // Strip HTML from description
-        content = descMatch[1]
-          .replace(/<[^>]*>/g, '')
-          .replace(/&amp;/g, '&')
+        // Strip HTML from description (repeat until stable so nested/overlapping
+        // tags can't reassemble), then decode entities with &amp; last so
+        // "&amp;lt;" becomes the literal text "&lt;" rather than "<".
+        let stripped = descMatch[1];
+        let previous;
+        do {
+          previous = stripped;
+          stripped = stripped.replace(/<[^>]*>/g, '');
+        } while (stripped !== previous);
+        content = stripped
           .replace(/&lt;/g, '<')
           .replace(/&gt;/g, '>')
           .replace(/&quot;/g, '"')
+          .replace(/&amp;/g, '&')
           .trim();
       } else if (titleMatch) {
         content = titleMatch[1];

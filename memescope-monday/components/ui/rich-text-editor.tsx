@@ -34,12 +34,30 @@ interface RichTextDisplayProps {
   className?: string
 }
 
+// Balises produites par StarterKit (sans attributs) autorisées à l'affichage
+const ALLOWED_TAG_PATTERN =
+  /&lt;(\/?)(p|h[1-3]|strong|b|em|i|u|s|code|pre|blockquote|ul|ol|li|br|hr)\s*(\/?)&gt;/gi
+
+// Échappe tout le HTML, puis ne réactive que les balises de la liste blanche
+// (sans attributs) et les entités existantes. Tout le reste s'affiche en texte.
+export function sanitizeRichText(html: string): string {
+  return html
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;")
+    .replace(ALLOWED_TAG_PATTERN, "<$1$2$3>")
+    .replace(/&lt;ol start=&quot;(\d{1,6})&quot;&gt;/gi, '<ol start="$1">')
+    .replace(/&amp;([a-zA-Z][a-zA-Z0-9]{1,31}|#\d{1,7}|#x[0-9a-fA-F]{1,6});/g, "&$1;")
+}
+
 // Composant pour afficher le contenu riche formaté
 export function RichTextDisplay({ content, className }: RichTextDisplayProps) {
   return (
     <div
       className={cn(RICH_TEXT_STYLES, className)}
-      dangerouslySetInnerHTML={{ __html: content }}
+      dangerouslySetInnerHTML={{ __html: sanitizeRichText(content) }}
     />
   )
 }

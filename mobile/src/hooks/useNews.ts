@@ -9,7 +9,7 @@
  */
 
 import { useState, useEffect, useCallback } from 'react';
-import api, { Article, NewsResponse } from '../api/client';
+import api, { Article } from '../api/client';
 
 interface UseNewsOptions {
   limit?: number;
@@ -48,7 +48,6 @@ export function useNews(options: UseNewsOptions = {}): UseNewsResult {
       setLoading(true);
       setError(null);
       
-      const currentPage = reset ? 1 : page;
       const response = await api.getNews(limit, source, ticker);
       
       if (reset) {

@@ -25,8 +25,10 @@ const BATCH_SIZE = 50;
 const DELAY_MS = 20;
 
 async function resolve(id, retries = 0) {
+  const postId = String(id);
+  if (!/^\d{1,20}$/.test(postId)) return null;
   try {
-    const r = await fetch(`https://cryptopanic.com/news/click/${id}/`, {
+    const r = await fetch(`https://cryptopanic.com/news/click/${encodeURIComponent(postId)}/`, {
       method: 'HEAD', redirect: 'manual', signal: AbortSignal.timeout(8000),
       headers: { 'User-Agent': 'Mozilla/5.0 (compatible; NewsArchiver/1.0)' }
     });
@@ -54,7 +56,11 @@ async function main() {
   const myIds = allIds.filter((_, i) => i % TOTAL_WORKERS === WORKER_ID);
   
   let cache = {};
-  if (fs.existsSync(cacheFile)) cache = JSON.parse(fs.readFileSync(cacheFile, 'utf-8'));
+  try {
+    cache = JSON.parse(fs.readFileSync(cacheFile, 'utf-8'));
+  } catch (err) {
+    if (err.code !== 'ENOENT') throw err;
+  }
   
   const todo = myIds.filter(id => cache[id] === undefined);
   

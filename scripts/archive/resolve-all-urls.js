@@ -90,27 +90,6 @@ function saveCache(cache) {
 }
 
 /**
- * Load progress state
- */
-function loadProgress() {
-  if (fs.existsSync(CONFIG.progressPath)) {
-    try {
-      return JSON.parse(fs.readFileSync(CONFIG.progressPath, 'utf-8'));
-    } catch {
-      // ignore
-    }
-  }
-  return { lastProcessed: 0, startTime: Date.now() };
-}
-
-/**
- * Save progress state
- */
-function saveProgress(progress) {
-  fs.writeFileSync(CONFIG.progressPath, JSON.stringify(progress, null, 2));
-}
-
-/**
  * Extract unique article IDs from CSV
  */
 async function extractArticleIds(csvPath) {
@@ -195,6 +174,18 @@ function parseCSVLine(line) {
 }
 
 /**
+ * True if the URL (absolute or relative to cryptopanic.com) points at cryptopanic.com
+ */
+function isCryptoPanicUrl(u) {
+  try {
+    const host = new URL(u, 'https://cryptopanic.com').hostname;
+    return host === 'cryptopanic.com' || host.endsWith('.cryptopanic.com');
+  } catch {
+    return false;
+  }
+}
+
+/**
  * Resolve a single CryptoPanic URL to real source URL
  */
 async function resolveUrl(articleId, retryCount = 0) {
@@ -218,7 +209,7 @@ async function resolveUrl(articleId, retryCount = 0) {
     // Get Location header from 302 redirect
     if (response.status === 302 || response.status === 301) {
       const location = response.headers.get('location');
-      if (location && !location.includes('cryptopanic.com')) {
+      if (location && !isCryptoPanicUrl(location)) {
         return { id: articleId, url: location, status: 'resolved' };
       }
     }
@@ -237,7 +228,7 @@ async function resolveUrl(articleId, retryCount = 0) {
       
       if (getResponse.status === 302 || getResponse.status === 301) {
         const location = getResponse.headers.get('location');
-        if (location && !location.includes('cryptopanic.com')) {
+        if (location && !isCryptoPanicUrl(location)) {
           return { id: articleId, url: location, status: 'resolved' };
         }
       }
@@ -390,7 +381,7 @@ async function main() {
   
   // Extract article IDs from CSV
   console.log('Scanning CSV for article IDs...');
-  const { ids, urlMap } = await extractArticleIds(CONFIG.csvPath);
+  const { ids } = await extractArticleIds(CONFIG.csvPath);
   
   // Resolve URLs
   const finalCache = await resolveUrls(ids, cache);

@@ -16,6 +16,7 @@ import { createUser, getUserByEmail } from '@/lib/auth/users';
 import { createMagicLink } from '@/lib/auth/tokens';
 import { sendEmail, magicLinkEmail, isEmailDeliveryConfigured } from '@/lib/email';
 import { isDbAvailable } from '@/lib/db';
+import { logSafe } from '@/lib/log-safe';
 
 export const runtime = 'nodejs';
 
@@ -97,8 +98,8 @@ export async function POST(request: NextRequest) {
 
     const normalizedEmail = email.toLowerCase().trim();
 
-    // Basic email validation
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(normalizedEmail)) {
+    // Basic email validation (dot-separated domain labels keep the regex linear)
+    if (normalizedEmail.length > 254 || !/^[^\s@]+@[^\s@.]+(?:\.[^\s@.]+)+$/.test(normalizedEmail)) {
       return NextResponse.json({ error: 'Invalid email format' }, { status: 400 });
     }
 
@@ -117,7 +118,7 @@ export async function POST(request: NextRequest) {
     // Never log the actual magic link token — it's equivalent to a password.
     // In development, log only that a link was generated (not the token itself).
     if (process.env.NODE_ENV === 'development') {
-      console.info(`[AUTH] Magic link generated for ${normalizedEmail} (token redacted)`);
+      console.info(`[AUTH] Magic link generated for ${logSafe(normalizedEmail)} (token redacted)`);
     }
 
     // Send magic link email (Resend in prod, console fallback in dev)

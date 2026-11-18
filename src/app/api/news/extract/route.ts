@@ -29,24 +29,43 @@ interface ExtractedArticle {
 // Content Extraction Helpers
 // =============================================================================
 
+/** Remove tags, repeating until stable so fragments like "<<b>script>" cannot reassemble. */
+function stripTags(html: string): string {
+  let text = html;
+  let previous: string;
+  do {
+    previous = text;
+    text = text.replace(/<[^>]+>/g, '');
+  } while (text !== previous);
+  return text;
+}
+
 /** Remove non-content HTML elements (scripts, styles, nav, ads, etc.) */
 function stripNonContentElements(html: string): string {
-  return html
-    .replace(/<script[^>]*>[\s\S]*?<\/script>/gi, '')
-    .replace(/<style[^>]*>[\s\S]*?<\/style>/gi, '')
-    .replace(/<noscript[^>]*>[\s\S]*?<\/noscript>/gi, '')
-    .replace(/<iframe[^>]*>[\s\S]*?<\/iframe>/gi, '')
-    .replace(/<svg[^>]*>[\s\S]*?<\/svg>/gi, '')
-    .replace(/<nav[^>]*>[\s\S]*?<\/nav>/gi, '')
-    .replace(/<header[^>]*>[\s\S]*?<\/header>/gi, '')
-    .replace(/<footer[^>]*>[\s\S]*?<\/footer>/gi, '')
-    .replace(/<aside[^>]*>[\s\S]*?<\/aside>/gi, '')
-    .replace(/<form[^>]*>[\s\S]*?<\/form>/gi, '')
-    .replace(/<button[^>]*>[\s\S]*?<\/button>/gi, '')
-    // Remove common ad/sidebar divs
-    .replace(/<div[^>]*class="[^"]*(?:sidebar|widget|ad-|advertisement|social-share|related-posts|comment)[^"]*"[^>]*>[\s\S]*?<\/div>/gi, '')
-    // Remove HTML comments
-    .replace(/<!--[\s\S]*?-->/g, '');
+  // Repeat until stable: removing one element can join the pieces around it
+  // into a new one, e.g. "<scr<script></script>ipt>".
+  let stripped = html;
+  let previous: string;
+  do {
+    previous = stripped;
+    stripped = stripped
+      .replace(/<script[^>]*>[\s\S]*?<\/script[^>]*>/gi, ' ')
+      .replace(/<style[^>]*>[\s\S]*?<\/style[^>]*>/gi, ' ')
+      .replace(/<noscript[^>]*>[\s\S]*?<\/noscript[^>]*>/gi, ' ')
+      .replace(/<iframe[^>]*>[\s\S]*?<\/iframe[^>]*>/gi, ' ')
+      .replace(/<svg[^>]*>[\s\S]*?<\/svg>/gi, ' ')
+      .replace(/<nav[^>]*>[\s\S]*?<\/nav>/gi, ' ')
+      .replace(/<header[^>]*>[\s\S]*?<\/header>/gi, ' ')
+      .replace(/<footer[^>]*>[\s\S]*?<\/footer>/gi, ' ')
+      .replace(/<aside[^>]*>[\s\S]*?<\/aside>/gi, ' ')
+      .replace(/<form[^>]*>[\s\S]*?<\/form>/gi, ' ')
+      .replace(/<button[^>]*>[\s\S]*?<\/button>/gi, ' ')
+      // Remove common ad/sidebar divs
+      .replace(/<div[^>]*class="[^"]*(?:sidebar|widget|ad-|advertisement|social-share|related-posts|comment)[^"]*"[^>]*>[\s\S]*?<\/div>/gi, ' ')
+      // Remove HTML comments
+      .replace(/<!--[\s\S]*?-->/g, ' ');
+  } while (stripped !== previous);
+  return stripped;
 }
 
 /** Convert cleaned HTML to plain text, preserving paragraph structure. */
@@ -59,8 +78,7 @@ function cleanHTMLToText(html: string): string {
     .replace(/<\/?(ul|ol|table|thead|tbody|section|article|main)[^>]*>/gi, '\n')
     // Strip remaining tags
     .replace(/<[^>]+>/g, ' ')
-    // Decode common HTML entities
-    .replace(/&amp;/g, '&')
+    // Decode common HTML entities (&amp; last, so "&amp;lt;" stays "&lt;")
     .replace(/&lt;/g, '<')
     .replace(/&gt;/g, '>')
     .replace(/&quot;/g, '"')
@@ -68,6 +86,7 @@ function cleanHTMLToText(html: string): string {
     .replace(/&nbsp;/g, ' ')
     .replace(/&#x27;/g, "'")
     .replace(/&#x2F;/g, '/')
+    .replace(/&amp;/g, '&')
     // Collapse whitespace
     .replace(/[ \t]+/g, ' ')
     .replace(/\n[ \t]+/g, '\n')
@@ -116,7 +135,7 @@ function extractContentFromHTML(html: string): string {
       if (text.length > 100) {
         // Score: text length, penalized by link density
         const linkTextLen = (match[1].match(/<a[^>]*>[\s\S]*?<\/a>/gi) || [])
-          .map(a => a.replace(/<[^>]+>/g, '').length)
+          .map(a => stripTags(a).length)
           .reduce((s, l) => s + l, 0);
         const textDensity = text.length > 0 ? 1 - (linkTextLen / text.length) : 0;
         const score = text.length * Math.max(textDensity, 0.1);
@@ -188,11 +207,11 @@ export async function POST(request: NextRequest) {
     // --- Content Extraction (multi-strategy) ---
     // Strategy 1: JSON-LD structured data (most reliable when available)
     let content = '';
-    const jsonLdMatch = html.match(/<script[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/gi);
-    if (jsonLdMatch) {
-      for (const ldBlock of jsonLdMatch) {
+    const jsonLdMatches = [...html.matchAll(/<script[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/gi)];
+    if (jsonLdMatches.length > 0) {
+      for (const ldMatch of jsonLdMatches) {
         try {
-          const jsonStr = ldBlock.replace(/<script[^>]*>/i, '').replace(/<\/script>/i, '');
+          const jsonStr = ldMatch[1];
           const ld = JSON.parse(jsonStr);
           // Handle arrays of LD+JSON objects
           const items = Array.isArray(ld) ? ld : [ld];

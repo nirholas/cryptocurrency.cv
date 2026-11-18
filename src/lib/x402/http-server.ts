@@ -32,9 +32,6 @@ import { logger } from '@/lib/logger';
 import { API_TIERS } from './pricing';
 import { IS_PRODUCTION, IS_BUILD_TIME, PAYMENT_ADDRESS } from './config';
 
-// Track if we've already logged HTTP server status
-let _httpServerLogged = false;
-
 // =============================================================================
 // ROUTE CONFIGURATION
 // =============================================================================
@@ -268,8 +265,8 @@ export function validateHttpServerConfig(): {
 // STARTUP LOGGING
 // =============================================================================
 
-if (typeof window === 'undefined' && !IS_BUILD_TIME && !_httpServerLogged) {
-  _httpServerLogged = true;
+// Module-level code runs once per module instance, so no guard flag is needed.
+if (typeof window === 'undefined' && !IS_BUILD_TIME) {
   const validation = validateHttpServerConfig();
 
   if (validation.errors.length > 0) {

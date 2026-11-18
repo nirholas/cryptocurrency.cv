@@ -685,7 +685,7 @@ export class CryptoNewsAPI {
 // EXAMPLE USAGE
 // =============================================================================
 
-async function examples() {
+export async function examples() {
     const api = new CryptoNewsAPI();
 
     console.log("=".repeat(60));

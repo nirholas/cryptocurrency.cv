@@ -71,16 +71,17 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
     // Calculate normalised return series for the portfolio
     const portfolioReturns = calculateWeightedReturns(coins, weights, historicalMap);
 
-    // Calculate normalised return series for each benchmark
-    const benchmarkReturns: Record<string, { dates: string[]; returns: number[] }> = {};
+    // Calculate normalised return series for each benchmark. Benchmark ids come
+    // from the query string, so they key Maps rather than plain objects.
+    const benchmarkReturns = new Map<string, { dates: string[]; returns: number[] }>();
     for (const bId of benchmarkIds) {
       const prices = historicalMap.get(bId);
       if (prices && prices.length >= 2) {
         const startPrice = prices[0][1];
-        benchmarkReturns[bId] = {
+        benchmarkReturns.set(bId, {
           dates: prices.map(p => new Date(p[0]).toISOString().split('T')[0]),
           returns: prices.map(p => ((p[1] - startPrice) / startPrice) * 100),
-        };
+        });
       }
     }
 
@@ -89,14 +90,14 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
       ? portfolioReturns.returns[portfolioReturns.returns.length - 1]
       : 0;
 
-    const benchmarkSummary: Record<string, number> = {};
-    for (const [bId, br] of Object.entries(benchmarkReturns)) {
-      benchmarkSummary[bId] = br.returns.length > 0 ? br.returns[br.returns.length - 1] : 0;
+    const benchmarkSummary = new Map<string, number>();
+    for (const [bId, br] of benchmarkReturns) {
+      benchmarkSummary.set(bId, br.returns.length > 0 ? br.returns[br.returns.length - 1] : 0);
     }
 
-    const alpha: Record<string, number> = {};
-    for (const [bId, bPerf] of Object.entries(benchmarkSummary)) {
-      alpha[bId] = parseFloat((portfolioPerf - bPerf).toFixed(2));
+    const alpha = new Map<string, number>();
+    for (const [bId, bPerf] of benchmarkSummary) {
+      alpha.set(bId, parseFloat((portfolioPerf - bPerf).toFixed(2)));
     }
 
     return NextResponse.json(
@@ -109,15 +110,15 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
           series: portfolioReturns,
         },
         benchmarks: Object.fromEntries(
-          Object.entries(benchmarkReturns).map(([id, data]) => [
+          [...benchmarkReturns].map(([id, data]) => [
             id,
             {
-              performance: parseFloat(benchmarkSummary[id].toFixed(2)),
+              performance: parseFloat((benchmarkSummary.get(id) ?? 0).toFixed(2)),
               series: data,
             },
           ]),
         ),
-        alpha,
+        alpha: Object.fromEntries(alpha),
         timestamp: Date.now(),
       },
       {

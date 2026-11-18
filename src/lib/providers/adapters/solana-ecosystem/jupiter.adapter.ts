@@ -22,7 +22,6 @@
 import type { DataProvider, FetchParams, RateLimitConfig } from '../../types';
 import type { SolanaToken } from './types';
 
-const BASE = 'https://token.jup.ag';
 const PRICE_BASE = 'https://price.jup.ag/v6';
 
 const RATE_LIMIT: RateLimitConfig = { maxRequests: 30, windowMs: 60_000 };

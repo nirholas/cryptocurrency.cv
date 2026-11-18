@@ -18,7 +18,7 @@
  * Requires: sharp (npm install sharp)
  */
 
-import { readFile, writeFile, mkdir } from 'fs/promises';
+import { mkdir } from 'fs/promises';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 
@@ -134,12 +134,6 @@ function appleTouchIconSVG() {
 async function svgToPng(svgString, outputPath) {
   const buffer = Buffer.from(svgString);
   await sharp(buffer).png().toFile(outputPath);
-  console.log(`  ✓ ${outputPath.replace(ROOT + '/', '')}`);
-}
-
-async function svgToPngResized(svgString, outputPath, width, height) {
-  const buffer = Buffer.from(svgString);
-  await sharp(buffer).resize(width, height).png().toFile(outputPath);
   console.log(`  ✓ ${outputPath.replace(ROOT + '/', '')}`);
 }
 

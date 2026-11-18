@@ -14,13 +14,12 @@
  * Price tickers, charts, market cap, and trading data.
  */
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { 
   useMarketData,
   useFearGreed,
   usePrices,
   PriceTicker,
-  MarketOverview,
   FearGreedGauge,
   PriceChart,
 } from '@nirholas/react-crypto-news';

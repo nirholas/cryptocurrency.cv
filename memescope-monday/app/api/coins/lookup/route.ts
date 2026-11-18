@@ -5,9 +5,15 @@ export async function GET(request: NextRequest) {
   const address = searchParams.get("address")
   const chain = searchParams.get("chain") || "solana"
 
-  if (!address || address.length < 10) {
+  // Contract addresses (base58 on Solana, 0x-hex on EVM) are alphanumeric only.
+  // Restricting the format keeps the value confined to a single path segment.
+  if (!address || !/^[A-Za-z0-9]{10,64}$/.test(address)) {
     return NextResponse.json({ error: "Valid contract address required" }, { status: 400 })
   }
+  if (!/^[a-z0-9-]{1,32}$/.test(chain)) {
+    return NextResponse.json({ error: "Invalid chain" }, { status: 400 })
+  }
+  const safeAddress = encodeURIComponent(address)
 
   const result: Record<string, unknown> = {}
 
@@ -15,13 +21,13 @@ export async function GET(request: NextRequest) {
   const [pumpfunData, dexscreenerData, heliusData] = await Promise.allSettled([
     // PumpFun (Solana only)
     chain === "solana"
-      ? fetch(`https://frontend-api-v3.pump.fun/coins/${address}`)
+      ? fetch(`https://frontend-api-v3.pump.fun/coins/${safeAddress}`)
           .then((r) => (r.ok ? r.json() : null))
           .catch(() => null)
       : Promise.resolve(null),
 
     // DexScreener (all chains)
-    fetch(`https://api.dexscreener.com/latest/dex/tokens/${address}`)
+    fetch(`https://api.dexscreener.com/latest/dex/tokens/${safeAddress}`)
       .then((r) => (r.ok ? r.json() : null))
       .catch(() => null),
 

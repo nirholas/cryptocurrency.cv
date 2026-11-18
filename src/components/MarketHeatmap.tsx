@@ -74,7 +74,6 @@ function computeTreemap(
 ): TreemapBlock[] {
   if (coins.length === 0) return [];
 
-  const totalMcap = sumFinite(coins, (c) => c.market_cap);
   const blocks: TreemapBlock[] = [];
 
   // Squarified treemap via slice-and-dice rows

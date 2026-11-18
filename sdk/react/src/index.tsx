@@ -439,7 +439,7 @@ export function CryptoNews({
   renderEmpty,
   renderHeader,
 }: CryptoNewsProps) {
-  const { articles, loading, error, lastUpdated } = useCryptoNews({
+  const { articles, loading, error } = useCryptoNews({
     endpoint,
     limit,
     source,

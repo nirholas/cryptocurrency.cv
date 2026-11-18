@@ -221,7 +221,6 @@ export async function fetchOrderBook(
   exchange: Exchange,
   depth: number = 20
 ): Promise<OrderBook> {
-  const config = EXCHANGE_CONFIGS[exchange];
   const normalizedSymbol = normalizeSymbol(symbol, exchange);
   
   try {
@@ -696,7 +695,8 @@ export async function scanArbitrageOpportunities(
   exchanges: Exchange[] = ['binance', 'coinbase', 'kraken', 'bybit', 'okx'],
   minSpreadPercent: number = 0.1
 ): Promise<ArbitrageOpportunity[]> {
-  const aggregated = await aggregateOrderBooks(symbol, exchanges, 5);
+  // Populates the orderBooks cache read below
+  await aggregateOrderBooks(symbol, exchanges, 5);
   const opportunities: ArbitrageOpportunity[] = [];
   
   // Check each exchange pair

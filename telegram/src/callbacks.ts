@@ -11,7 +11,7 @@
 import type { Context } from 'grammy';
 import { getMenu, MENU_TEXT } from './menus.js';
 import { apiFetch } from './api.js';
-import { escHtml, articleLine, fmtUsd, fmtPct, sentimentEmoji, fearGreedEmoji, timeAgo } from './format.js';
+import { escHtml, articleLine, fmtUsd, fmtPct, sentimentEmoji, fearGreedEmoji } from './format.js';
 
 // ---------------------------------------------------------------------------
 // Callback query router — handles all button presses

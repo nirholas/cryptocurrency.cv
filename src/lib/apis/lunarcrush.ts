@@ -170,7 +170,7 @@ export async function getSocialMetrics(symbol: string): Promise<SocialMetrics | 
   if (!data) return null;
 
   const sentimentScore = data.average_sentiment || 3;
-  let sentimentLabel: SocialMetrics['sentimentLabel'] = 'neutral';
+  let sentimentLabel: SocialMetrics['sentimentLabel'];
   if (sentimentScore >= 4.5) sentimentLabel = 'very_bullish';
   else if (sentimentScore >= 3.5) sentimentLabel = 'bullish';
   else if (sentimentScore >= 2.5) sentimentLabel = 'neutral';

@@ -78,15 +78,17 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
     }
 
     // Build correlation matrix
-    const matrix: Record<string, Record<string, number>> = {};
-    for (const a of coins) {
-      matrix[a] = {};
-      for (const b of coins) {
+    // Built from entries (not by assigning user-supplied keys) so IDs like
+    // "__proto__" become plain own properties instead of touching prototypes.
+    const matrix: Record<string, Record<string, number>> = Object.fromEntries(
+      coins.map(a => {
         const ra = dailyReturnsMap.get(a)!;
-        const rb = dailyReturnsMap.get(b)!;
-        matrix[a][b] = parseFloat(pearson(ra, rb).toFixed(4));
-      }
-    }
+        const row: Record<string, number> = Object.fromEntries(
+          coins.map(b => [b, parseFloat(pearson(ra, dailyReturnsMap.get(b)!).toFixed(4))]),
+        );
+        return [a, row];
+      }),
+    );
 
     // Identify strongly correlated and uncorrelated pairs
     const pairs: { a: string; b: string; correlation: number }[] = [];

@@ -10,7 +10,7 @@
 
 import type { Bot, Context } from 'grammy';
 import { apiFetch } from './api.js';
-import { escHtml, articleLine } from './format.js';
+import { escHtml } from './format.js';
 import { CHANNEL_ID, BROADCAST_INTERVAL_MS } from './config.js';
 
 // ---------------------------------------------------------------------------

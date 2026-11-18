@@ -159,9 +159,7 @@ export default function PodcastClient() {
   const [expandedId, setExpandedId] = useState<string | null>(null);
   const [page, setPage] = useState(0);
   const [showTranscript, setShowTranscript] = useState(false);
-  const [formatFilter, setFormatFilter] = useState<FormatFilter>("all");
-  const [copiedEpisodeId, setCopiedEpisodeId] = useState<string | null>(null);
-  const [showShareMenu, setShowShareMenu] = useState<string | null>(null);
+  const [formatFilter] = useState<FormatFilter>("all");
 
   // Load one episode per show format. Each is generated on demand from the
   // live feed, so the requests run in parallel and the page renders whichever
@@ -242,25 +240,6 @@ export default function PodcastClient() {
   const selectEpisode = useCallback((ep: Episode) => {
     setActiveEpisode(ep);
     window.scrollTo({ top: 0, behavior: "smooth" });
-  }, []);
-
-  const copyEpisodeLink = useCallback((ep: Episode) => {
-    const url = `${window.location.origin}/podcast?episode=${ep.id}`;
-    navigator.clipboard.writeText(url);
-    setCopiedEpisodeId(ep.id);
-    setTimeout(() => setCopiedEpisodeId(null), 2000);
-  }, []);
-
-  const shareEpisode = useCallback((ep: Episode, platform: "x" | "telegram") => {
-    const url = `${window.location.origin}/podcast?episode=${ep.id}`;
-    const text = encodeURIComponent(ep.title);
-    const encodedUrl = encodeURIComponent(url);
-    const shareUrl =
-      platform === "x"
-        ? `https://x.com/intent/tweet?text=${text}&url=${encodedUrl}`
-        : `https://t.me/share/url?url=${encodedUrl}&text=${text}`;
-    window.open(shareUrl, "_blank", "noopener,noreferrer");
-    setShowShareMenu(null);
   }, []);
 
   /* ---------- Skeleton loader ---------- */

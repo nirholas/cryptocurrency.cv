@@ -128,8 +128,14 @@ async function translateLanguage(langCode, langName, englishSource) {
   const outputPath = path.join(MESSAGES_DIR, `${langCode}.json`);
   
   // Skip if already exists
-  if (fs.existsSync(outputPath)) {
-    const existing = JSON.parse(fs.readFileSync(outputPath, 'utf8'));
+  let existingRaw = null;
+  try {
+    existingRaw = fs.readFileSync(outputPath, 'utf8');
+  } catch (err) {
+    if (err.code !== 'ENOENT') throw err;
+  }
+  if (existingRaw !== null) {
+    const existing = JSON.parse(existingRaw);
     if (Object.keys(existing).length > 300) {
       console.log(`  ⏭️ Skipping - already translated`);
       return;
@@ -160,7 +166,12 @@ async function translateLanguage(langCode, langName, englishSource) {
       cleanResult = cleanResult.trim();
       
       const parsed = JSON.parse(cleanResult);
-      Object.assign(translated, parsed);
+      // Only accept keys we asked for, with the same value type as the English source
+      for (const [key, value] of Object.entries(parsed)) {
+        if (Object.prototype.hasOwnProperty.call(chunks[i], key) && typeof value === typeof chunks[i][key]) {
+          translated[key] = value;
+        }
+      }
       
       // Longer delay between chunks to avoid rate limits
       if (i < chunks.length - 1) {

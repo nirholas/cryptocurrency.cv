@@ -107,8 +107,6 @@ export default function SettingsContent() {
     setTimeout(() => setShowSaved(false), 2000);
   };
 
-  const activeSection = "all"; // Could be expanded for tab navigation
-
   return (
     <main id="main-content" className="container-main py-8">
       {/* Header */}

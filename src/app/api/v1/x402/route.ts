@@ -31,7 +31,6 @@ import {
   IS_TESTNET,
   getNetworkDisplayName,
   validateConfig,
-  getServerStatus,
 } from '@/lib/x402';
 
 // force-dynamic: checks live facilitator connectivity
@@ -40,10 +39,9 @@ export const dynamic = 'force-dynamic';
 export async function GET() {
   const now = new Date().toISOString();
   const validation = validateConfig();
-  const serverStatus = getServerStatus();
 
   // Check if facilitator is reachable
-  let facilitatorStatus = 'unknown';
+  let facilitatorStatus: string;
   let facilitatorLatency: number | null = null;
   try {
     const start = Date.now();

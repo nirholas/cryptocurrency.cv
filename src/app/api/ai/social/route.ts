@@ -30,8 +30,10 @@
 import { type NextRequest, NextResponse } from 'next/server';
 import { aiComplete, isAIConfigured, AIAuthError } from '@/lib/ai-provider';
 import { parseGroqJson } from '@/lib/groq';
+import { safeFetch } from '@/lib/safe-fetch';
 
-export const runtime = 'edge';
+// Node runtime: safeFetch resolves DNS to block requests to private addresses.
+export const runtime = 'nodejs';
 
 // ──────────────────────────────────────────────────────────────────────────────
 // Types
@@ -55,10 +57,21 @@ interface SocialOutput {
 // Helpers
 // ──────────────────────────────────────────────────────────────────────────────
 
+/** Remove tags, repeating until stable so fragments like "<<b>script>" cannot reassemble. */
+function stripTags(html: string): string {
+  let text = html;
+  let previous: string;
+  do {
+    previous = text;
+    text = text.replace(/<[^>]+>/g, '');
+  } while (text !== previous);
+  return text;
+}
+
 /** Lightweight fetch of article text from a URL (best-effort). */
 async function fetchArticleText(url: string): Promise<{ title: string; content: string } | null> {
   try {
-    const res = await fetch(url, {
+    const res = await safeFetch(url, {
       headers: { 'User-Agent': 'CryptoNewsBot/1.0 (https://cryptocurrency.cv)' },
     });
     if (!res.ok) return null;
@@ -70,7 +83,7 @@ async function fetchArticleText(url: string): Promise<{ title: string; content: 
 
     // Extract visible text from <p> tags (crude but works for articles)
     const paragraphs = [...html.matchAll(/<p[^>]*>([^<]+(?:<[^/][^>]*>[^<]*<\/[^>]+>)*[^<]*)<\/p>/gi)]
-      .map(m => m[1].replace(/<[^>]+>/g, '').trim())
+      .map(m => stripTags(m[1]).trim())
       .filter(p => p.length > 40)
       .slice(0, 20)
       .join('\n\n');

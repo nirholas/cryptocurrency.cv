@@ -25,18 +25,6 @@ if (!GROQ_API_KEY) {
 }
 const MESSAGES_DIR = path.join(__dirname, '..', 'messages');
 
-// Languages that need fixing (detected as broken)
-const BROKEN_LANGUAGES = {
-  'ja': 'Japanese',
-  'zh-CN': 'Chinese (Simplified)',
-  'zh-TW': 'Chinese (Traditional)',
-  'ko': 'Korean',
-  'hi': 'Hindi',
-  'bn': 'Bengali',
-  'th': 'Thai',
-  'vi': 'Vietnamese',
-};
-
 // Read source English file
 const enSource = JSON.parse(fs.readFileSync(path.join(MESSAGES_DIR, 'en.json'), 'utf-8'));
 

@@ -88,10 +88,6 @@ const TRUSTED_SOURCES = [
   'Bloomberg Crypto', 'Reuters', 'WSJ', 'Financial Times'
 ];
 
-const TABLOID_SOURCES = [
-  // Sources known for clickbait - adjust scores accordingly
-];
-
 /**
  * Score individual article quality
  */

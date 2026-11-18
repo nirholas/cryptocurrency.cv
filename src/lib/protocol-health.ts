@@ -28,6 +28,7 @@
  */
 
 import { resilientFetchResponse } from '@/lib/resilient-fetch';
+import { logSafe } from '@/lib/log-safe';
 import { getLlamaProtocols } from '@/lib/apis/llama-bulk';
 
 // =============================================================================
@@ -544,7 +545,7 @@ function calculateTeamRisk(team: TeamInfo | null): RiskFactor {
 }
 
 function calculateInsuranceScore(insurance: InsuranceCoverage | null, tvl: TVLData): RiskFactor {
-  let score = 50;
+  let score: number;
   const details: string[] = [];
 
   if (!insurance || insurance.totalCoverageUsd === 0) {
@@ -1080,7 +1081,16 @@ export function calculateRiskScore(
 // Data Fetching Functions
 // =============================================================================
 
+// Protocol slugs as used by DefiLlama and friends ("aave-v3", "curve-dex").
+// The id is interpolated into upstream URL paths, query strings and GraphQL
+// queries, so anything outside this shape is rejected up front.
+const PROTOCOL_ID_PATTERN = /^[a-z0-9][a-z0-9.-]{0,63}$/i;
+
 export async function fetchProtocolHealth(protocolId: string): Promise<ProtocolHealthSummary | null> {
+  if (!PROTOCOL_ID_PATTERN.test(protocolId)) {
+    return null;
+  }
+
   try {
     // In production, these would be real API calls
     const [protocol, audits, incidents, tvl, governance, insurance, team] = await Promise.all([
@@ -1121,7 +1131,7 @@ export async function fetchProtocolHealth(protocolId: string): Promise<ProtocolH
       alerts,
     };
   } catch (error) {
-    console.error(`[Protocol Health] Error fetching health for ${protocolId}:`, error);
+    console.error('[Protocol Health] Error fetching health for', logSafe(protocolId), error);
     return null;
   }
 }
@@ -1273,7 +1283,7 @@ async function fetchTVL(protocolId: string): Promise<TVLData | null> {
     });
 
     if (!response.ok) {
-      console.error(`DefiLlama API error for ${protocolId}: ${response.status}`);
+      console.error('DefiLlama API error for', logSafe(protocolId), response.status);
       return null;
     }
 
@@ -1291,7 +1301,7 @@ async function fetchTVL(protocolId: string): Promise<TVLData | null> {
       rank: 0,
     };
   } catch (error) {
-    console.error(`Failed to fetch TVL for ${protocolId}:`, error);
+    console.error('Failed to fetch TVL for', logSafe(protocolId), error);
     return null;
   }
 }

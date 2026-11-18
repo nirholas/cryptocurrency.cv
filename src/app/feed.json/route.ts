@@ -30,7 +30,7 @@ interface Article {
 function generateArticleSlug(title: string, date?: string): string {
   let slug = title
     .toLowerCase()
-    .replace(/['']/g, '')
+    .replace(/['\u2019]/g, '')
     .replace(/[^a-z0-9\s-]/g, '')
     .replace(/\s+/g, '-')
     .replace(/-+/g, '-')

@@ -248,9 +248,15 @@ export function optimizeTitle(title: string, includeBrand = true): string {
  * - Truncates to optimal length (150-160 chars)
  */
 export function optimizeDescription(description: string): string {
-  // Remove HTML tags
-  const cleaned = description
-    .replace(/<[^>]*>/g, '')
+  // Remove HTML tags (repeat until stable so nested fragments such as
+  // "<<b>script>" cannot leave a tag behind)
+  let stripped = description;
+  let previous: string;
+  do {
+    previous = stripped;
+    stripped = stripped.replace(/<[^>]*>/g, '');
+  } while (stripped !== previous);
+  const cleaned = stripped
     .replace(/\s+/g, ' ')
     .trim();
   

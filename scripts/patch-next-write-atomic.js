@@ -21,9 +21,13 @@ let patched = 0;
 
 for (const relPath of FILES_TO_PATCH) {
   const filePath = path.resolve(__dirname, '..', relPath);
-  if (!fs.existsSync(filePath)) continue;
-
-  let content = fs.readFileSync(filePath, 'utf-8');
+  let content;
+  try {
+    content = fs.readFileSync(filePath, 'utf-8');
+  } catch (err) {
+    if (err.code === 'ENOENT') continue;
+    throw err;
+  }
 
   // Skip if already patched
   if (content.includes('mkdirSync')) {

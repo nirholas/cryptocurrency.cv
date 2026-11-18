@@ -46,10 +46,17 @@ export async function POST(request: NextRequest) {
         
         if (response.ok) {
           const html = await response.text();
-          // Basic text extraction - strip HTML tags
-          content = html
-            .replace(/<script[^>]*>[\s\S]*?<\/script>/gi, '')
-            .replace(/<style[^>]*>[\s\S]*?<\/style>/gi, '')
+          // Basic text extraction - strip HTML tags. Script/style removal repeats
+          // until stable so nested fragments cannot reassemble into a new tag.
+          let stripped = html;
+          let previous: string;
+          do {
+            previous = stripped;
+            stripped = stripped
+              .replace(/<script[^>]*>[\s\S]*?<\/script[^>]*>/gi, ' ')
+              .replace(/<style[^>]*>[\s\S]*?<\/style[^>]*>/gi, ' ');
+          } while (stripped !== previous);
+          content = stripped
             .replace(/<[^>]+>/g, ' ')
             .replace(/\s+/g, ' ')
             .trim()

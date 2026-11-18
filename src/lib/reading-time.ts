@@ -49,8 +49,14 @@ export interface ReadingTimeResult {
  * Calculate reading time from text content
  */
 export function calculateReadingTime(text: string): ReadingTimeResult {
-  // Remove HTML tags if present
-  const cleanText = text.replace(/<[^>]*>/g, '');
+  // Remove HTML tags if present (repeat until stable so nested fragments
+  // such as "<<b>script>" cannot leave a tag behind)
+  let cleanText = text;
+  let previous: string;
+  do {
+    previous = cleanText;
+    cleanText = cleanText.replace(/<[^>]*>/g, '');
+  } while (cleanText !== previous);
   
   // Count words (split by whitespace)
   const words = cleanText.trim().split(/\s+/).filter(word => word.length > 0).length;

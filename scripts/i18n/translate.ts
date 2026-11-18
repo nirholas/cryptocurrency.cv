@@ -59,7 +59,6 @@ const PRESERVE_TERMS = [
 const args = process.argv.slice(2);
 const dryRun = args.includes('--dry-run');
 const localeFilter = args.find(a => a.startsWith('--locale='))?.split('=')[1]?.split(',');
-const concurrencyArg = args.find(a => a.startsWith('--concurrency='))?.split('=')[1];
 const targetLocales = localeFilter ?? TARGET_LOCALES;
 
 // ─── API keys ──────────────────────────────────────────────────────────
@@ -199,9 +198,12 @@ async function translateLocale(locale: string): Promise<void> {
   const dstPath = resolve(MESSAGES_DIR, `${locale}.json`);
 
   // Load existing translations (nested format)
-  const existingNested: Record<string, any> = existsSync(dstPath)
-    ? JSON.parse(readFileSync(dstPath, 'utf8'))
-    : {};
+  let existingNested: Record<string, any> = {};
+  try {
+    existingNested = JSON.parse(readFileSync(dstPath, 'utf8'));
+  } catch (err) {
+    if ((err as NodeJS.ErrnoException).code !== 'ENOENT') throw err;
+  }
   const existingFlat = flatten(existingNested);
 
   // Find keys that need translation

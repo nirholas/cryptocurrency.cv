@@ -64,6 +64,9 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
     const queryId = searchParams.get('queryId');
     const executionId = searchParams.get('executionId');
     const execute = searchParams.get('execute');
+    // Resolve the caller's privileges once, before any branch on query params,
+    // so which parameters a caller sends cannot decide whether auth is checked.
+    const isAdmin = isAdminAuthorized(request);
 
     const headers = {
       'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=600',
@@ -158,7 +161,7 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
     // A fresh execution spends the server's Dune credits and holds the request
     // open for up to a minute of polling, so it is not open to anonymous callers.
     if (execute) {
-      if (!isAdminAuthorized(request)) {
+      if (!isAdmin) {
         return NextResponse.json(
           {
             error: 'Fresh query execution requires an admin key',

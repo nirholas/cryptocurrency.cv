@@ -181,7 +181,7 @@ function parseCSVLine(line) {
  * Convert to v2 article format
  */
 function convertToV2Article(row) {
-  const [title, id, newsUrl, link, type, publishedAt, scrapedDate] = row;
+  const [title, id, newsUrl, link, type, publishedAt] = row;
   
   if (!title || !publishedAt) return null;
   
@@ -328,8 +328,13 @@ async function main() {
     let existing = [];
     let existingHashes = new Set();
     
-    if (fs.existsSync(filePath)) {
-      const existingContent = fs.readFileSync(filePath, 'utf-8');
+    let existingContent = null;
+    try {
+      existingContent = fs.readFileSync(filePath, 'utf-8');
+    } catch (err) {
+      if (err.code !== 'ENOENT') throw err;
+    }
+    if (existingContent !== null) {
       existing = existingContent.trim().split('\n').filter(Boolean).map(line => {
         try {
           const a = JSON.parse(line);

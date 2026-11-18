@@ -32,7 +32,7 @@ export async function GET(request: NextRequest) {
     return validation.error;
   }
   
-  const { limit, priority } = validation.data;
+  const { limit } = validation.data;
   
   // Note: lang parameter support could be added to schema if needed
   const lang = request.nextUrl.searchParams.get('lang') || 'en';

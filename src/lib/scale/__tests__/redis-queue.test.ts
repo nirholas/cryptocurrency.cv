@@ -88,8 +88,8 @@ describe('RedisQueueAdapter', () => {
   });
 
   it('purges dead letter queue', async () => {
-    const id1 = await adapter.enqueue('test', { x: 1 }, { maxAttempts: 1 });
-    const id2 = await adapter.enqueue('test', { x: 2 }, { maxAttempts: 1 });
+    await adapter.enqueue('test', { x: 1 }, { maxAttempts: 1 });
+    await adapter.enqueue('test', { x: 2 }, { maxAttempts: 1 });
 
     const jobs = await adapter.dequeue('test', 2);
     for (const j of jobs) {

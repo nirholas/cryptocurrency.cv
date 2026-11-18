@@ -232,8 +232,9 @@ export class PostgresSearchEngine implements SearchEngine {
       const db = getDb();
       if (!db) return [];
 
-      // Escape LIKE wildcards in user input to prevent wildcard injection
-      const escapedPrefix = prefix.replace(/%/g, "\\%").replace(/_/g, "\\_");
+      // Escape the LIKE escape character first, then the wildcards, so user
+      // input cannot inject wildcards or a dangling escape
+      const escapedPrefix = prefix.replace(/[\\%_]/g, "\\$&");
       const rows = await db
         .selectDistinct({ title: articles.title })
         .from(articles)

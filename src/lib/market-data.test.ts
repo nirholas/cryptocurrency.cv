@@ -15,9 +15,6 @@
 
 import { afterEach, describe, it, expect, vi } from 'vitest';
 
-// Store original fetch
-const originalFetch = global.fetch;
-
 // Import types first (these don't depend on mocks)
 import type { 
   HistoricalData,

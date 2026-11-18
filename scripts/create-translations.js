@@ -11,7 +11,6 @@
  */
 
 const fs = require('fs');
-const path = require('path');
 
 // Translation mappings for each language
 const translations = {

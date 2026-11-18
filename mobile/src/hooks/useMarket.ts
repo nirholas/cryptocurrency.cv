@@ -9,7 +9,7 @@
  */
 
 import { useState, useEffect, useCallback } from 'react';
-import api, { MarketCoin, FearGreed, Sentiment, ChartDataPoint } from '../api/client';
+import api, { MarketCoin, FearGreed, Sentiment } from '../api/client';
 
 export function useMarketCoins(limit: number = 20) {
   const [coins, setCoins] = useState<MarketCoin[]>([]);

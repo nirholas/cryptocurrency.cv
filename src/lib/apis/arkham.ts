@@ -156,7 +156,7 @@ export async function getWalletLabels(address: string): Promise<WalletLabel | nu
         isContract?: boolean;
         firstSeen?: string;
         lastSeen?: string;
-      }>(`/intelligence/address/${address}`);
+      }>(`/intelligence/address/${encodeURIComponent(address)}`);
 
       if (!data) return null;
 

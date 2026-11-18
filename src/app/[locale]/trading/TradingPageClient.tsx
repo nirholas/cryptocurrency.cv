@@ -63,12 +63,6 @@ function signalLabel(s: string): string {
     .replace(/\b\w/g, (c) => c.toUpperCase());
 }
 
-function signalColor(s: string): string {
-  if (s === "strong_buy" || s === "buy") return "text-green-600 dark:text-green-400";
-  if (s === "strong_sell" || s === "sell") return "text-red-600 dark:text-red-400";
-  return "text-text-secondary";
-}
-
 function signalBg(s: string): string {
   if (s === "strong_buy" || s === "buy") return "bg-green-900/30 text-green-400";
   if (s === "strong_sell" || s === "sell") return "bg-red-900/30 text-red-400";

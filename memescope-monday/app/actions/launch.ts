@@ -326,7 +326,9 @@ export async function scheduleLaunch(
 
     return true
   } catch (error) {
-    console.error("Error scheduling launch:", error)
+    // Error messages can embed user input (e.g. the submitted date); strip line breaks.
+    const message = error instanceof Error ? error.message : String(error)
+    console.error("Error scheduling launch:", message.replace(/\n|\r/g, "").replace(/[\u2028\u2029]/g, " "))
     throw error // Propager l'erreur au lieu de retourner false
   }
 }

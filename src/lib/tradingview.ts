@@ -247,12 +247,6 @@ export interface ScreenerResult {
 
 const INDICATORS_COLLECTION = 'tv_indicators';
 const ALERTS_COLLECTION = 'tv_alerts';
-const DRAWINGS_COLLECTION = 'tv_drawings';
-
-const CRYPTO_EXCHANGES = [
-  'BINANCE', 'COINBASE', 'KRAKEN', 'BITSTAMP', 
-  'BITFINEX', 'GEMINI', 'KUCOIN', 'HUOBI', 'OKX'
-];
 
 // =============================================================================
 // HELPER FUNCTIONS

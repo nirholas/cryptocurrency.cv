@@ -146,7 +146,6 @@ const DEFAULT_OPTIONS: OracleOptions = {
 const SESSION_TTL_SECONDS = 3600; // 1 hour
 const CACHE_TTL_SECONDS = 120; // 2 minutes for responses
 const MAX_HISTORY_LENGTH = 20;
-const MAX_CONTEXT_TOKENS = 4000;
 
 // =============================================================================
 // SYSTEM PROMPTS
@@ -618,7 +617,6 @@ export async function getOracleStats(): Promise<{
     const queriesThisWeek = last7Days.reduce((sum, day) => sum + (dailyStats[day] || 0), 0);
     
     // Count active users in last 24 hours
-    const oneDayAgo = Date.now() - 86400000;
     const activeUsers = (await db.zrange('oracle:users:active', 0, -1)).length;
 
     return {

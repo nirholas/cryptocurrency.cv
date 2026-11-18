@@ -290,8 +290,7 @@ function extractOutputSchema(content, method) {
   let matched = false;
 
   JSON_EMITTERS.lastIndex = 0;
-  let m;
-  while ((m = JSON_EMITTERS.exec(scope)) !== null) {
+  while (JSON_EMITTERS.exec(scope) !== null) {
     const args = matchBalanced(scope, JSON_EMITTERS.lastIndex - 1);
     if (args === null) continue;
     const [bodyArg, ...rest] = splitTopLevel(args);

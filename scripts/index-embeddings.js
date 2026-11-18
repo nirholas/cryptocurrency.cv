@@ -36,7 +36,6 @@
 
 const fs = require('fs');
 const path = require('path');
-const crypto = require('crypto');
 
 // ---------------------------------------------------------------------------
 // Config
@@ -153,7 +152,8 @@ async function generateEmbeddingsBatch(texts) {
     },
     body: JSON.stringify({
       model: EMBEDDING_MODEL,
-      input: texts,
+      // Bound what archive-derived text is sent: one batch, 8000 chars per entry
+      input: texts.slice(0, BATCH_SIZE).map((t) => String(t).slice(0, 8000)),
     }),
   });
 

@@ -184,7 +184,7 @@ async function mapWithLimit(items, limit, fn) {
   const worker = async () => {
     while (next < items.length) {
       const i = next++;
-      out[i] = await fn(items[i], i);
+      out[i] = await fn(items[i]);
       process.stderr.write(`\r  checked ${out.filter(Boolean).length}/${items.length}`);
     }
   };
@@ -200,9 +200,9 @@ if (FROM) {
   const report = JSON.parse(readFileSync(FROM, 'utf8'));
   broken = report.results.filter((r) => ['dead', 'notfeed', 'empty'].includes(r.state));
 } else {
-  const { execSync } = await import('node:child_process');
+  const { execFileSync } = await import('node:child_process');
   const tmp = resolve(HERE, '..', '.source-health.tmp.json');
-  execSync(`node ${resolve(HERE, 'check-source-health.mjs')} --json ${tmp}`, { stdio: 'inherit' });
+  execFileSync(process.execPath, [resolve(HERE, 'check-source-health.mjs'), '--json', tmp], { stdio: 'inherit' });
   const report = JSON.parse(readFileSync(tmp, 'utf8'));
   broken = report.results.filter((r) => ['dead', 'notfeed', 'empty'].includes(r.state));
 }

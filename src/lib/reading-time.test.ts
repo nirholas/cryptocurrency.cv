@@ -19,8 +19,6 @@ import {
   getReadingTimeBadgeColor,
 } from '@/lib/reading-time';
 
-const WORDS_PER_MINUTE = 200;
-
 // ---------------------------------------------------------------------------
 // calculateReadingTime
 // ---------------------------------------------------------------------------

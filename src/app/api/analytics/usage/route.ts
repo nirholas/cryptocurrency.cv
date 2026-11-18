@@ -67,7 +67,6 @@ interface UsageAnalytics {
 
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url);
-  const keyPrefix = searchParams.get('key_prefix');
   const keyId = searchParams.get('key_id');
   const days = intParam(searchParams, 'days', { fallback: 30, min: 1, max: 90 });
   

@@ -14,13 +14,12 @@
  * WebSocket connections for live news, prices, and alerts.
  */
 
-import React, { useState, useEffect, useRef, useCallback } from 'react';
+import React, { useState } from 'react';
 import { 
   useNewsStream,
   usePriceStream,
   useWhaleStream,
   useCombinedStream,
-  StreamStatus,
 } from '@nirholas/react-crypto-news';
 
 // ═══════════════════════════════════════════════════════════════
@@ -99,7 +98,7 @@ export function LiveNewsFeed() {
   );
 }
 
-function NewsItem({ article, isNew }: { article: any; isNew: boolean }) {
+function NewsItem({ article, isNew }) {
   return (
     <a
       href={article.link}
@@ -176,12 +175,7 @@ export function LivePriceTicker() {
   );
 }
 
-function PriceCell({ symbol, price, change, flash }: {
-  symbol: string;
-  price?: number;
-  change?: number;
-  flash?: 'up' | 'down';
-}) {
+function PriceCell({ symbol, price, change, flash }) {
   return (
     <div className={`bg-gray-800 p-4 transition-colors duration-300 ${
       flash === 'up' ? 'bg-green-900/50' :
@@ -265,7 +259,7 @@ export function LiveWhaleAlerts() {
   );
 }
 
-function WhaleAlertRow({ alert, isNew }: { alert: any; isNew: boolean }) {
+function WhaleAlertRow({ alert, isNew }) {
   const icon = alert.type === 'exchange_inflow' ? '📥' :
                alert.type === 'exchange_outflow' ? '📤' : '🔄';
   
@@ -326,7 +320,7 @@ function WhaleAlertRow({ alert, isNew }: { alert: any; isNew: boolean }) {
  * All-in-one streaming dashboard
  */
 export function CombinedStreamDashboard() {
-  const [filter, setFilter] = useState<'all' | 'news' | 'prices' | 'whales'>('all');
+  const [filter, setFilter] = useState('all');
   
   const { events, status, connect, disconnect } = useCombinedStream({
     maxItems: 100,
@@ -360,7 +354,7 @@ export function CombinedStreamDashboard() {
         </div>
 
         <div className="flex gap-2">
-          {(['all', 'news', 'prices', 'whales'] as const).map((f) => (
+          {['all', 'news', 'prices', 'whales'].map((f) => (
             <button
               key={f}
               onClick={() => setFilter(f)}
@@ -393,7 +387,7 @@ export function CombinedStreamDashboard() {
   );
 }
 
-function EventRow({ event }: { event: any }) {
+function EventRow({ event }) {
   const icons = {
     news: '📰',
     price: '💹',
@@ -411,9 +405,9 @@ function EventRow({ event }: { event: any }) {
   };
 
   return (
-    <div className={`p-4 ${colors[event.type as keyof typeof colors] || ''}`}>
+    <div className={`p-4 ${colors[event.type] || ''}`}>
       <div className="flex items-center gap-3">
-        <span className="text-2xl">{icons[event.type as keyof typeof icons] || '📌'}</span>
+        <span className="text-2xl">{icons[event.type] || '📌'}</span>
         <div className="flex-1 min-w-0">
           <div className="font-medium line-clamp-1">{event.title || event.summary}</div>
           <div className="text-sm text-gray-400">
@@ -429,7 +423,7 @@ function EventRow({ event }: { event: any }) {
 // Helper Components
 // ═══════════════════════════════════════════════════════════════
 
-function StreamStatusBadge({ status }: { status: StreamStatus }) {
+function StreamStatusBadge({ status }) {
   const config = {
     connecting: { color: 'bg-yellow-500', text: 'Connecting...' },
     connected: { color: 'bg-green-500', text: 'Live' },
@@ -449,13 +443,13 @@ function StreamStatusBadge({ status }: { status: StreamStatus }) {
   );
 }
 
-function formatAmount(amount: number): string {
+function formatAmount(amount) {
   if (amount >= 1e6) return `${(amount / 1e6).toFixed(2)}M`;
   if (amount >= 1e3) return `${(amount / 1e3).toFixed(1)}K`;
   return amount.toFixed(2);
 }
 
-function formatUsd(value: number): string {
+function formatUsd(value) {
   if (value >= 1e9) return `$${(value / 1e9).toFixed(2)}B`;
   if (value >= 1e6) return `$${(value / 1e6).toFixed(2)}M`;
   if (value >= 1e3) return `$${(value / 1e3).toFixed(0)}K`;

@@ -33,7 +33,6 @@ export const runtime = 'nodejs';
 // Constants
 // ---------------------------------------------------------------------------
 const MAX_EMAIL_LENGTH = 254; // RFC 5321
-const MAX_NAME_LENGTH = 64;
 
 // --- IP-based rate limiting for registration ---
 const registrationAttempts = new Map<string, { count: number; resetAt: number }>();
@@ -46,31 +45,6 @@ const ACTION_RATE_LIMIT = 10; // max list/revoke calls per window per IP
 const ACTION_WINDOW_MS = 60_000; // 1 minute
 
 let globalRequestCounter = 0;
-
-// --- Disposable / temporary email domain blocklist ---
-const DISPOSABLE_EMAIL_DOMAINS = new Set([
-  'mailinator.com', 'tempmail.com', 'throwaway.email', 'guerrillamail.com',
-  'guerrillamail.net', 'guerrillamail.org', 'sharklasers.com', 'grr.la',
-  'guerrillamailblock.com', 'pokemail.net', 'spam4.me', 'dispostable.com',
-  'yopmail.com', 'yopmail.fr', 'trashmail.com', 'trashmail.me', 'trashmail.net',
-  'mailnesia.com', 'maildrop.cc', 'discard.email', 'fakeinbox.com',
-  'getnada.com', 'tempail.com', 'temp-mail.org', 'temp-mail.io',
-  'mohmal.com', 'burnermail.io', 'mailcatch.com', 'mintemail.com',
-  'mytemp.email', 'harakirimail.com', 'mailsac.com', 'inboxbear.com',
-  '10minutemail.com', '10minutemail.net', 'minutemail.com', 'emailondeck.com',
-  'crazymailing.com', 'tempinbox.com', 'tempr.email', 'throwaway.email',
-  'mailforspam.com', 'safetymail.info', 'filzmail.com', 'spamgourmet.com',
-  'trashymail.com', 'receiveee.com', 'tmail.ws', 'tmpmail.net',
-  'tmpmail.org', 'bupmail.com', 'mailnator.com', 'spambox.us',
-  'jetable.org', 'trash-mail.com', 'getairmail.com', 'mailexpire.com',
-  'tempmailer.com', 'throwam.com', 'tempomail.fr', 'ephemail.net',
-  'disposableemailaddresses.emailmiser.com', 'mailzilla.com',
-  'anonymousemail.me', 'wegwerfmail.de', 'wegwerfmail.net',
-  'spamfree24.org', 'rmqkr.net', 'mobi.web.id', 'mozmail.com',
-  'emailfake.com', 'emkei.cz', 'deadfake.com', 'fakemailgenerator.com',
-  'armyspy.com', 'cuvox.de', 'dayrep.com', 'einrot.com', 'fleckens.hu',
-  'gustr.com', 'jourrapide.com', 'rhyta.com', 'superrito.com', 'teleworm.us',
-]);
 
 // ---------------------------------------------------------------------------
 // Helpers
@@ -120,33 +94,6 @@ function isValidEmail(email: string): boolean {
   if (!email || email.length > MAX_EMAIL_LENGTH) return false;
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return emailRegex.test(email);
-}
-
-/**
- * Normalize an email for deduplication:
- *  - lowercase
- *  - strip Gmail-style dots in local part (only for gmail/googlemail)
- *  - strip +tag aliases
- */
-function normalizeEmail(email: string): string {
-  const lower = email.toLowerCase().trim();
-  const [localRaw, domain] = lower.split('@');
-  if (!localRaw || !domain) return lower;
-
-  // Strip +tag aliases (user+promo@… → user@…)
-  const local = localRaw.split('+')[0];
-
-  // Gmail ignores dots in local part
-  if (domain === 'gmail.com' || domain === 'googlemail.com') {
-    return `${local.replace(/\./g, '')}@gmail.com`;
-  }
-
-  return `${local}@${domain}`;
-}
-
-function isDisposableEmail(email: string): boolean {
-  const domain = email.toLowerCase().split('@')[1];
-  return !!domain && DISPOSABLE_EMAIL_DOMAINS.has(domain);
 }
 
 function getClientIp(request: NextRequest): string {
@@ -268,25 +215,50 @@ export async function POST(request: NextRequest) {
 
   try {
     const body = await request.json();
-    const { email, name, action, keyId } = body;
+    const { email, action, keyId } = body;
 
-    // --- Handle key revocation (requires key ownership proof) ---
-    if (action === 'revoke' && keyId && email) {
-      if (!isValidEmail(email)) {
-        return NextResponse.json({ error: 'Invalid email address' }, { status: 400 });
-      }
+    const isRevoke = Boolean(action === 'revoke' && keyId && email);
+    const isList = Boolean(action === 'list' && email);
 
-      // Rate limit authenticated actions separately
-      if (!checkRateLimit(actionAttempts, ip, ACTION_RATE_LIMIT, ACTION_WINDOW_MS)) {
-        return NextResponse.json(
-          { error: 'Too many requests. Try again later.' },
-          { status: 429, headers: { 'Retry-After': '60' } }
-        );
-      }
+    // --- Create new key ---
+    // Free key registration is discontinued; only list/revoke remain.
+    if (!isRevoke && !isList) {
+      return NextResponse.json(
+        {
+          error: 'Free key registration discontinued',
+          message:
+            'Free API keys are no longer issued. Use x402 micropayment ($0.001/req in USDC on Base) ' +
+            'or subscribe to a Pro key ($29/mo) at /api/keys/upgrade.',
+          alternatives: {
+            sample: '/api/sample — free preview (2 headlines, 2 prices)',
+            x402: 'Include x402 payment header on any API request — $0.001/req',
+            pro: '/api/keys/upgrade — $29/mo for 50,000 req/day',
+            enterprise: '/api/keys/upgrade — $99/mo for 500,000 req/day',
+          },
+        },
+        { status: 410 }
+      );
+    }
 
-      const [authError, authedKey] = await verifyKeyOwnership(request, email);
-      if (authError) return authError;
+    if (!isValidEmail(email)) {
+      return NextResponse.json({ error: 'Invalid email address' }, { status: 400 });
+    }
 
+    // Rate limit authenticated actions separately
+    if (!checkRateLimit(actionAttempts, ip, ACTION_RATE_LIMIT, ACTION_WINDOW_MS)) {
+      return NextResponse.json(
+        { error: 'Too many requests. Try again later.' },
+        { status: 429, headers: { 'Retry-After': '60' } }
+      );
+    }
+
+    // Both list and revoke require key ownership proof; authenticate once,
+    // before dispatching on the requested action.
+    const [authError, authedKey] = await verifyKeyOwnership(request, email);
+    if (authError) return authError;
+
+    // --- Handle key revocation ---
+    if (isRevoke) {
       // Prevent self-revocation — don't let the user revoke the key they authenticated with
       if (authedKey.id === keyId) {
         return NextResponse.json(
@@ -306,55 +278,20 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // --- Handle key listing (requires key ownership proof) ---
-    if (action === 'list' && email) {
-      if (!isValidEmail(email)) {
-        return NextResponse.json({ error: 'Invalid email address' }, { status: 400 });
-      }
-
-      // Rate limit authenticated actions separately
-      if (!checkRateLimit(actionAttempts, ip, ACTION_RATE_LIMIT, ACTION_WINDOW_MS)) {
-        return NextResponse.json(
-          { error: 'Too many requests. Try again later.' },
-          { status: 429, headers: { 'Retry-After': '60' } }
-        );
-      }
-
-      const [authError] = await verifyKeyOwnership(request, email);
-      if (authError) return authError;
-
-      const keys = await getKeysByEmail(email);
-      return NextResponse.json({
-        keys: keys.map((k) => ({
-          id: k.id,
-          keyPrefix: k.keyPrefix,
-          name: k.name,
-          tier: k.tier,
-          rateLimit: k.rateLimit,
-          createdAt: k.createdAt,
-          lastUsedAt: k.lastUsedAt,
-          active: k.active,
-        })),
-      });
-    }
-
-    // --- Create new key ---
-    // Free key registration is discontinued
-    return NextResponse.json(
-      {
-        error: 'Free key registration discontinued',
-        message:
-          'Free API keys are no longer issued. Use x402 micropayment ($0.001/req in USDC on Base) ' +
-          'or subscribe to a Pro key ($29/mo) at /api/keys/upgrade.',
-        alternatives: {
-          sample: '/api/sample — free preview (2 headlines, 2 prices)',
-          x402: 'Include x402 payment header on any API request — $0.001/req',
-          pro: '/api/keys/upgrade — $29/mo for 50,000 req/day',
-          enterprise: '/api/keys/upgrade — $99/mo for 500,000 req/day',
-        },
-      },
-      { status: 410 }
-    );
+    // --- Handle key listing ---
+    const keys = await getKeysByEmail(email);
+    return NextResponse.json({
+      keys: keys.map((k) => ({
+        id: k.id,
+        keyPrefix: k.keyPrefix,
+        name: k.name,
+        tier: k.tier,
+        rateLimit: k.rateLimit,
+        createdAt: k.createdAt,
+        lastUsedAt: k.lastUsedAt,
+        active: k.active,
+      })),
+    });
   } catch {
     return NextResponse.json({ error: 'Invalid request body' }, { status: 400 });
   }

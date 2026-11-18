@@ -189,13 +189,20 @@ describe('crypto-news utilities', () => {
 
   describe('Content sanitization', () => {
     const stripHtml = (html: string): string => {
-      return html
-        .replace(/<[^>]*>/g, '')
+      // Strip tags until stable, then decode entities with &amp; last so
+      // "&amp;lt;" becomes "&lt;" rather than being double-unescaped to "<".
+      let text = html;
+      let previous: string;
+      do {
+        previous = text;
+        text = text.replace(/<[^>]*>/g, '');
+      } while (text !== previous);
+      return text
         .replace(/&nbsp;/g, ' ')
-        .replace(/&amp;/g, '&')
         .replace(/&lt;/g, '<')
         .replace(/&gt;/g, '>')
         .replace(/&quot;/g, '"')
+        .replace(/&amp;/g, '&')
         .trim();
     };
 

@@ -53,13 +53,11 @@ type UpgradeType = keyof typeof UPGRADE_PRICING;
  */
 export async function GET(request: NextRequest) {
   const rawKey = extractApiKey(request);
-  let currentTier: 'free' | 'pro' | 'enterprise' = 'free';
   let keyInfo = null;
 
   if (rawKey) {
     const keyData = await validateApiKey(rawKey);
     if (keyData) {
-      currentTier = keyData.tier;
       keyInfo = {
         id: keyData.id,
         tier: keyData.tier,

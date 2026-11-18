@@ -28,6 +28,7 @@
 import { resilientFetchResponse } from '@/lib/resilient-fetch';
 import { backOffCoinGecko, coinGeckoBackoffRemaining } from '@/lib/coingecko-backoff';
 import { getKeylessMarketCoins, getKeylessSimplePrice } from '@/lib/keyless-market';
+import { logSafe } from '@/lib/log-safe';
 
 // ---------------------------------------------------------------------------
 // Build-time detection
@@ -259,7 +260,7 @@ export async function fetchCoinGecko<T = unknown>(
     // may have been evicted during the await. Re-check the raw map.
     const stale = dataCache.get(cacheKey) as CacheEntry<T> | undefined;
     if (stale) {
-      console.warn(`[CoinGecko] Serving stale cache for ${url}`);
+      console.warn(`[CoinGecko] Serving stale cache for ${logSafe(url)}`);
       return stale.data;
     }
   }
@@ -343,14 +344,14 @@ async function _fetchFromCoinGecko<T>(
     }
 
     if (!res.ok) {
-      console.warn(`[CoinGecko] ${res.status} from ${url}`);
+      console.warn(`[CoinGecko] ${res.status} from ${logSafe(url)}`);
       return null;
     }
 
     return (await res.json()) as T;
   } catch (err) {
     if ((err as Error).name === 'AbortError') {
-      console.warn(`[CoinGecko] Timeout after ${timeout}ms for ${url}`);
+      console.warn(`[CoinGecko] Timeout after ${timeout}ms for ${logSafe(url)}`);
     } else {
       console.warn(`[CoinGecko] Fetch error:`, (err as Error).message);
     }

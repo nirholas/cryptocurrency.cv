@@ -48,10 +48,17 @@ const nouns = [
   "Fox",
 ]
 
+// Uniform integer in [0, max) from the Web Crypto CSPRNG.
+function randomInt(max: number): number {
+  const buf = new Uint32Array(1)
+  crypto.getRandomValues(buf)
+  return buf[0] % max
+}
+
 function generateUsername(): string {
-  const adj = adjectives[Math.floor(Math.random() * adjectives.length)]
-  const noun = nouns[Math.floor(Math.random() * nouns.length)]
-  const num = Math.floor(Math.random() * 99) + 1
+  const adj = adjectives[randomInt(adjectives.length)]
+  const noun = nouns[randomInt(nouns.length)]
+  const num = randomInt(99) + 1
   return `${adj}${noun}${num}`
 }
 

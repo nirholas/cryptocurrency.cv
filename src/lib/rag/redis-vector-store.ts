@@ -30,7 +30,6 @@ const EMBEDDINGS_KEY = 'rag:embeddings';
 const INDEX_BY_DATE = 'rag:idx:date';
 const INDEX_BY_SOURCE = 'rag:idx:source:';
 const INDEX_BY_CURRENCY = 'rag:idx:currency:';
-const STATS_KEY = 'rag:stats';
 
 /**
  * Compress embedding to base64 for storage

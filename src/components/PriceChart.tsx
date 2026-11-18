@@ -94,7 +94,7 @@ export default function PriceChart({ coinId }: { coinId: string }) {
   const chartHeight = 300;
   const padding = { top: 20, right: 60, bottom: 30, left: 10 };
 
-  const { closePrices, minPrice, maxPrice, priceRange, path, areaPath, isPositive, changePercent } =
+  const { minPrice, priceRange, path, areaPath, isPositive, changePercent } =
     useMemo(() => {
       if (data.length === 0) {
         return {

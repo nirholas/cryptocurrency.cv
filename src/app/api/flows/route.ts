@@ -54,8 +54,12 @@ const COINGECKO_IDS: Record<string, string> = {
 };
 
 function getCoinGeckoId(coin: string): string {
-  return COINGECKO_IDS[coin.toLowerCase()] ?? coin.toLowerCase();
+  const key = coin.toLowerCase();
+  return Object.hasOwn(COINGECKO_IDS, key) ? COINGECKO_IDS[key] : key;
 }
+
+/** CoinGecko ids are lowercase slugs; the id is interpolated into the upstream path. */
+const COIN_ID_PATTERN = /^[a-z0-9-]{1,64}$/;
 
 // ──────────────────────────────────────────────────────────────────────────────
 // Data fetchers
@@ -72,9 +76,10 @@ interface MarketData {
 }
 
 async function fetchCoinGeckoMarket(coinId: string): Promise<MarketData | null> {
+  if (!COIN_ID_PATTERN.test(coinId)) return null;
   try {
     const res = await fetch(
-      `${COINGECKO_BASE}/coins/${coinId}?localization=false&tickers=false&market_data=true&community_data=false&developer_data=false`,
+      `${COINGECKO_BASE}/coins/${encodeURIComponent(coinId)}?localization=false&tickers=false&market_data=true&community_data=false&developer_data=false`,
       { next: { revalidate: 300 } },
     );
     if (!res.ok) return null;

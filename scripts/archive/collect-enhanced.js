@@ -96,12 +96,37 @@ function loadExistingArticles(filePath) {
   return articles;
 }
 
+// Upper bound for one serialized article; anything larger is not a real feed item.
+const MAX_ARTICLE_BYTES = 1024 * 1024;
+
+// Resolve a path and require it to stay inside ARCHIVE_DIR.
+function resolveArchivePath(filePath) {
+  const base = path.resolve(ARCHIVE_DIR);
+  const resolved = path.resolve(filePath);
+  if (resolved !== base && !resolved.startsWith(base + path.sep)) {
+    throw new Error(`Refusing to write outside the archive: ${resolved}`);
+  }
+  return resolved;
+}
+
+// Serialize fetched articles as JSONL, keeping only well-formed, bounded records.
+function serializeArticles(articles) {
+  const lines = [];
+  for (const a of articles) {
+    if (!a || typeof a !== 'object' || Array.isArray(a)) continue;
+    if (typeof a.id !== 'string' && typeof a.id !== 'number') continue;
+    const line = JSON.stringify(a);
+    if (Buffer.byteLength(line) > MAX_ARTICLE_BYTES) continue;
+    lines.push(line);
+  }
+  return lines.join('\n') + '\n';
+}
+
 function writeJsonl(filePath, articles) {
-  const dir = path.dirname(filePath);
-  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+  const target = resolveArchivePath(filePath);
+  fs.mkdirSync(path.dirname(target), { recursive: true });
   
-  const lines = articles.map(a => JSON.stringify(a)).join('\n') + '\n';
-  fs.writeFileSync(filePath, lines);
+  fs.writeFileSync(target, serializeArticles(articles));
 }
 
 function appendJsonl(filePath, data) {
@@ -481,11 +506,11 @@ function updateEnhancedStats(newCount, updatedCount, data, totalArticleCount) {
     features_used: {}
   };
   
-  if (fs.existsSync(statsPath)) {
-    try {
-      const existing = JSON.parse(fs.readFileSync(statsPath, 'utf-8'));
-      stats = { ...stats, ...existing };
-    } catch {}
+  try {
+    const existing = JSON.parse(fs.readFileSync(statsPath, 'utf-8'));
+    stats = { ...stats, ...existing };
+  } catch {
+    // Missing or unreadable stats file: start from the defaults above.
   }
   
   // Ensure required fields exist (for backward compatibility)

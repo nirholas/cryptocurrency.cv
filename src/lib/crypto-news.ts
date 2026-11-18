@@ -2683,7 +2683,13 @@ export function normalizeAuthorName(raw: string): string {
   // Strip common "By " prefix
   name = name.replace(/^by\s+/i, '');
   // Strip email in angle brackets: "John <john@example.com>" → "John"
-  name = name.replace(/<[^>]+>/, '').trim();
+  // (repeat until stable so nested/overlapping brackets can't leave a tag behind)
+  let previous: string;
+  do {
+    previous = name;
+    name = name.replace(/<[^>]+>/g, '');
+  } while (name !== previous);
+  name = name.replace(/[<>]/g, '').trim();
   // Title-case
   name = name.toLowerCase().replace(/(?:^|\s|-)\S/g, (ch) => ch.toUpperCase());
   return name;

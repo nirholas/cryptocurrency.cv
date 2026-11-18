@@ -30,7 +30,6 @@
 const fs = require('fs');
 const path = require('path');
 const https = require('https');
-const http = require('http');
 const readline = require('readline');
 
 const TEMP_DIR = path.join(__dirname, '.temp-import');
@@ -81,13 +80,26 @@ function parseCsvLine(line) {
 }
 
 /**
+ * True if the URL's hostname is cryptopanic.com or a subdomain of it.
+ * Relative URLs are resolved against `base` when given.
+ */
+function isCryptoPanicUrl(url, base) {
+  try {
+    const host = new URL(url, base).hostname;
+    return host === 'cryptopanic.com' || host.endsWith('.cryptopanic.com');
+  } catch {
+    return false;
+  }
+}
+
+/**
  * Extract post ID from CryptoPanic URL
  * Examples:
  *   https://cryptopanic.com/news/15444990/ApeCoin-Community-Votes-to-Stay-on-Ethereum
  *   https://cryptopanic.com/news/click/15444990/...
  */
 function extractPostId(url) {
-  if (!url || !url.includes('cryptopanic.com')) return null;
+  if (!url || !isCryptoPanicUrl(url)) return null;
   const match = url.match(/\/news\/(?:click\/)?(\d+)/);
   return match ? match[1] : null;
 }
@@ -99,12 +111,12 @@ function extractPostId(url) {
 function resolveUrl(url) {
   return new Promise((resolve) => {
     const postId = extractPostId(url);
-    if (!postId) {
+    if (!postId || !/^\d{1,20}$/.test(postId)) {
       resolve({ success: false, error: 'Could not extract post ID' });
       return;
     }
     
-    const clickUrl = `https://cryptopanic.com/news/click/${postId}/`;
+    const clickUrl = `https://cryptopanic.com/news/click/${encodeURIComponent(postId)}/`;
     
     const timeout = setTimeout(() => {
       resolve({ success: false, error: 'Timeout' });
@@ -125,7 +137,7 @@ function resolveUrl(url) {
       // The click endpoint returns 302 with Location header containing real URL
       if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
         const realUrl = res.headers.location;
-        if (realUrl && !realUrl.includes('cryptopanic.com')) {
+        if (realUrl && !isCryptoPanicUrl(realUrl, 'https://cryptopanic.com')) {
           resolve({ success: true, url: realUrl });
         } else {
           resolve({ success: false, error: 'Redirect still points to CryptoPanic' });
@@ -174,7 +186,7 @@ async function processBatch(articles, cache) {
       }
       
       // Need to resolve CryptoPanic URL
-      if (url && url.includes('cryptopanic.com')) {
+      if (url && isCryptoPanicUrl(url)) {
         if (DRY_RUN) {
           return { id, resolvedUrl: null, dryRun: true };
         }
@@ -312,7 +324,7 @@ async function main() {
       hasSourceUrl++;
     } else if (cache[article.id]) {
       inCache++;
-    } else if (article.url && article.url.includes('cryptopanic.com')) {
+    } else if (article.url && isCryptoPanicUrl(article.url)) {
       needsResolution++;
     }
   }
@@ -332,7 +344,7 @@ async function main() {
   const toResolve = articles.filter(a => {
     if (a.sourceUrl && a.sourceUrl !== 'NULL' && !a.sourceUrl.includes('cryptopanic')) return false;
     if (cache[a.id]) return false;
-    return a.url && a.url.includes('cryptopanic.com');
+    return a.url && isCryptoPanicUrl(a.url);
   });
   
   // Apply start-from offset

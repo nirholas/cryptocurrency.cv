@@ -77,7 +77,7 @@ export async function GET(request: NextRequest) {
   try {
     // Find matching pattern or create one
     const topicLower = topic.toLowerCase();
-    const pattern = TOPIC_PATTERNS[topicLower] || new RegExp(topic, 'i');
+    const pattern = TOPIC_PATTERNS[topicLower] || new RegExp(topic.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'i');
 
     // Fetch recent news
     const data = await getLatestNews(100);

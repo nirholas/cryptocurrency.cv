@@ -222,7 +222,6 @@ function parseProtocolData(
         const mBorrows = parseFloat((m.totalBorrowBalanceUSD as string) || '0');
         // Aave APY from supply + borrow rates if available
         const supplyRate = parseFloat((m.rates as Record<string, string>)?.supply || '0');
-        const borrowRate = parseFloat((m.rates as Record<string, string>)?.borrow || '0');
         // If no rates directly, estimate from utilization: borrow/deposit * borrowSpread
         const utilization = mDeposits > 0 ? mBorrows / mDeposits : 0;
         const estimatedApy = supplyRate > 0 ? supplyRate : utilization * 5; // ~5% base borrow cost

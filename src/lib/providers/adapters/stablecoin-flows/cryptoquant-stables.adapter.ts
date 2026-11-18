@@ -55,7 +55,6 @@ export const cryptoquantStablesAdapter: DataProvider<StablecoinFlow[]> = {
 
         const supply = latest?.reserve ?? 0;
         const prevSupply = previous?.reserve ?? supply;
-        const change = prevSupply !== 0 ? ((supply - prevSupply) / prevSupply) * 100 : 0;
 
         return {
           id: coin,

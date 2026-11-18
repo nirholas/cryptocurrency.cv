@@ -350,7 +350,7 @@ export function getCircuitStatus(): Record<string, {
     lastFailure: string;
   }> = {};
 
-  for (const [name, circuit] of _circuits) {
+  for (const name of _circuits.keys()) {
     // Check for auto-transition
     const c = getCircuit(name);
     status[name] = {

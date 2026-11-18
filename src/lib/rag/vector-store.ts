@@ -92,7 +92,8 @@ class VectorStore {
    * Save store to disk
    */
   async save(): Promise<void> {
-    await fs.mkdir(STORE_PATH, { recursive: true });
+    // Owner-only permissions: STORE_PATH may live in the shared OS temp dir.
+    await fs.mkdir(STORE_PATH, { recursive: true, mode: 0o700 });
     
     const data: VectorStoreData = {
       version: 1,
@@ -105,7 +106,7 @@ class VectorStore {
     };
     
     const filePath = path.join(STORE_PATH, 'documents.json');
-    await fs.writeFile(filePath, JSON.stringify(data, null, 2));
+    await fs.writeFile(filePath, JSON.stringify(data, null, 2), { mode: 0o600 });
     
     logger.info(`[VectorStore] Saved ${this.documents.size} documents`);
   }

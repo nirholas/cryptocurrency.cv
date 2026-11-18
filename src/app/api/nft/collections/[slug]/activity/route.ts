@@ -30,7 +30,6 @@ export async function GET(
 
   const searchParams = request.nextUrl.searchParams;
   const limit = intParam(searchParams, 'limit', { fallback: 50, min: 1, max: 200 });
-  const eventType = searchParams.get('event_type') || undefined;
 
   try {
     const data = await getCollectionActivity(slug, limit);

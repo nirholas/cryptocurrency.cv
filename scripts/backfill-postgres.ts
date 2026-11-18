@@ -25,7 +25,6 @@
 import { neon } from '@neondatabase/serverless';
 import { drizzle } from 'drizzle-orm/neon-http';
 import * as schema from '../src/lib/db/schema';
-import { sql } from 'drizzle-orm';
 import * as fs from 'node:fs';
 import * as path from 'node:path';
 import * as readline from 'node:readline';
@@ -58,11 +57,6 @@ async function* readJsonl(filePath: string): AsyncGenerator<Record<string, unkno
       // skip malformed lines
     }
   }
-}
-
-function readJson(filePath: string): unknown {
-  const raw = fs.readFileSync(filePath, 'utf-8');
-  return JSON.parse(raw);
 }
 
 function findFiles(dir: string, ext: string): string[] {
@@ -126,7 +120,7 @@ async function backfillArticles() {
       batch.push(row);
 
       if (batch.length >= BATCH_SIZE) {
-        const result = await db
+        await db
           .insert(schema.articles)
           .values(batch)
           .onConflictDoNothing({ target: schema.articles.id });

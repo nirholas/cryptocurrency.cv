@@ -190,15 +190,17 @@ CRITICAL RULES:
 
     // Return exactly the keys that were sent; a model that drops or renames
     // keys has failed the request rather than partially succeeded.
-    const translations: Record<string, string> = {};
+    // Keys come from the caller, so collect them in a Map: a key such as
+    // "__proto__" then cannot reach Object.prototype.
+    const translations = new Map<string, string>();
     const result = typeof output === 'object' && output !== null ? (output as Record<string, unknown>) : {};
     for (const key of Object.keys(source)) {
       const value = Object.hasOwn(result, key) ? result[key] : undefined;
       if (typeof value !== 'string') return failure('Translation response was incomplete', 502, targetLocale);
-      translations[key] = value;
+      translations.set(key, value);
     }
 
-    return NextResponse.json({ success: true, translations, locale: targetLocale, model: 'auto' });
+    return NextResponse.json({ success: true, translations: Object.fromEntries(translations), locale: targetLocale, model: 'auto' });
   } catch (error) {
     if (isAIUnavailableError(error)) {
       return failure(AI_UNAVAILABLE_MESSAGE, 503, targetLocale);

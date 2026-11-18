@@ -388,17 +388,24 @@ export function encodeHtmlEntities(input: string): string {
  * @returns Sanitized string
  */
 export function sanitizeInput(input: string): string {
-  return input
-    .replace(/\0/g, '')                     // Strip null bytes
-    .replace(/<\/?[^>]*>/g, '')              // Remove HTML tags (including self-closing)
-    .replace(/javascript\s*:/gi, '')         // Remove javascript: protocol (with optional spaces)
-    .replace(/data\s*:/gi, '')               // Remove data: protocol
-    .replace(/vbscript\s*:/gi, '')           // Remove vbscript: protocol
-    .replace(/on\w+\s*=/gi, '')              // Remove event handlers (onerror=, onclick=, …)
-    .replace(/expression\s*\(/gi, '')        // Remove CSS expression()
-    .replace(/url\s*\(/gi, '')               // Remove CSS url()
-    .replace(/[\x00-\x08\x0B\x0C\x0E-\x1F]/g, '') // Strip control characters
-    .trim();
+  // Repeat until nothing changes: removing one match can splice together a
+  // new one (e.g. "<scr<b>ipt>" or "ononclick==").
+  let result = input;
+  let previous: string;
+  do {
+    previous = result;
+    result = result
+      .replace(/\0/g, '')                     // Strip null bytes
+      .replace(/<\/?[^>]*>/g, ' ')              // Remove HTML tags (including self-closing)
+      .replace(/javascript\s*:/gi, ' ')         // Remove javascript: protocol (with optional spaces)
+      .replace(/data\s*:/gi, ' ')               // Remove data: protocol
+      .replace(/vbscript\s*:/gi, ' ')           // Remove vbscript: protocol
+      .replace(/on\w+\s*=/gi, ' ')              // Remove event handlers (onerror=, onclick=, …)
+      .replace(/expression\s*\(/gi, ' ')        // Remove CSS expression()
+      .replace(/url\s*\(/gi, ' ')               // Remove CSS url()
+      .replace(/[\x00-\x08\x0B\x0C\x0E-\x1F]/g, ''); // Strip control characters
+  } while (result !== previous);
+  return result.trim();
 }
 
 /**

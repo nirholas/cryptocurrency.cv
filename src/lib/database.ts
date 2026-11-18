@@ -350,7 +350,7 @@ class FileBackend extends MemoryBackend {
       const path = pathModule.default || pathModule;
 
       const dir = path.dirname(this.filePath);
-      await fs.mkdir(dir, { recursive: true });
+      await fs.mkdir(dir, { recursive: true, mode: 0o700 });
 
       const data: Record<string, unknown> = {};
       const keys = await this.keys('*');
@@ -362,7 +362,8 @@ class FileBackend extends MemoryBackend {
         }
       }
 
-      await fs.writeFile(this.filePath, JSON.stringify(data, null, 2));
+      // Owner-only permissions: on Vercel this lives in the shared /tmp directory
+      await fs.writeFile(this.filePath, JSON.stringify(data, null, 2), { mode: 0o600 });
     } catch (error) {
       dbLogger.error(
         { err: error instanceof Error ? error : new Error(String(error)) },

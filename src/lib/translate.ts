@@ -26,6 +26,7 @@
  */
 
 import { callGroq, isGroqConfigured, parseGroqJson } from './groq';
+import { logSafe } from './log-safe';
 
 // ═══════════════════════════════════════════════════════════════
 // TYPES
@@ -355,7 +356,7 @@ async function translateWithFallback(
   try {
     return await translateWithGroq(texts, targetLang);
   } catch (error) {
-    console.warn(`[TRANSLATE] Groq failed for ${targetLang}, returning original text:`, error);
+    console.warn('[TRANSLATE] Groq failed for %s, returning original text:', logSafe(targetLang), error);
     return texts;
   }
 }

@@ -292,6 +292,7 @@ describe('RAGEvaluator', () => {
       const b = getRAGEvaluator({ passThreshold: 0.9 });
       // New config creates new instance
       expect(b).toBeDefined();
+      expect(b).not.toBe(a);
     });
   });
 

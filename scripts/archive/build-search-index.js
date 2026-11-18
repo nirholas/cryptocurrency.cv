@@ -30,7 +30,6 @@
 
 const fs = require('fs');
 const path = require('path');
-const crypto = require('crypto');
 
 const WORKSPACE = '/workspaces/free-crypto-news';
 const ARCHIVE_DIR = path.join(WORKSPACE, 'archive/articles');
@@ -51,12 +50,6 @@ const STOP_WORDS = new Set([
   'very', 'can', 'just', 'should', 'now', 'new', 'says', 'said', 'could',
   'would', 'also', 'may', 'about', 'after', 'before', 'over', 'under',
   'between', 'out', 'into', 'during', 'through', 'up', 'down', 'using'
-]);
-
-// Crypto-specific stop words
-const CRYPTO_STOP_WORDS = new Set([
-  'crypto', 'cryptocurrency', 'coin', 'token', 'blockchain', 'price',
-  'market', 'trading', 'exchange', 'wallet', 'investors'
 ]);
 
 /**
@@ -81,20 +74,6 @@ function tokenize(text) {
       word.length <= 30 &&
       !STOP_WORDS.has(word)
     );
-}
-
-/**
- * Generate n-grams for fuzzy matching
- */
-function generateNgrams(text, n = 3) {
-  const ngrams = new Set();
-  const clean = text.toLowerCase().replace(/[^a-z0-9]/g, '');
-  
-  for (let i = 0; i <= clean.length - n; i++) {
-    ngrams.add(clean.slice(i, i + n));
-  }
-  
-  return [...ngrams];
 }
 
 /**

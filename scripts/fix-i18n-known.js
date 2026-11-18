@@ -47,12 +47,16 @@ let totalChanges = 0;
 
 Object.entries(byFile).forEach(([relFile, findings]) => {
   const filePath = path.join(rootDir, relFile);
-  if (!fs.existsSync(filePath)) {
+  let original;
+  try {
+    original = fs.readFileSync(filePath, 'utf8');
+  } catch (err) {
+    if (err.code !== 'ENOENT') throw err;
     console.log(`SKIP (not found): ${relFile}`);
     return;
   }
 
-  const lines = fs.readFileSync(filePath, 'utf8').split('\n');
+  const lines = original.split('\n');
   let changed = false;
 
   console.log(`\n${relFile}`);

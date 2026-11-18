@@ -160,8 +160,7 @@ function formatTimeAgo(dateString: string): string {
   return `${Math.floor(seconds / 86400)}d ago`;
 }
 
-function responseTimeColor(ms: number | undefined): string {
-  if (ms === undefined) return 'text-text-tertiary';
+function responseTimeColor(ms: number): string {
   if (ms < 100) return 'text-green-600 dark:text-green-400';
   if (ms < 300) return 'text-yellow-600 dark:text-yellow-400';
   return 'text-red-600 dark:text-red-400';

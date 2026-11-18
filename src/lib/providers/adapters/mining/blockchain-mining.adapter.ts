@@ -33,11 +33,7 @@ export const blockchainMiningAdapter: DataProvider<MiningStats> = {
   capabilities: ['mining'],
 
   async fetch(_params: FetchParams): Promise<MiningStats> {
-    const [statsRes, hashRateRes, diffRes] = await Promise.all([
-      fetch(`${BASE}/stats`),
-      fetch(`${BASE}/charts/hash-rate?timespan=1days&format=json`),
-      fetch(`${BASE}/charts/difficulty?timespan=1days&format=json`),
-    ]);
+    const statsRes = await fetch(`${BASE}/stats`);
 
     if (!statsRes.ok) throw new Error(`Blockchain.info stats: ${statsRes.status}`);
 

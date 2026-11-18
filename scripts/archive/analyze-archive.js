@@ -57,15 +57,6 @@ function* streamArticles(filePath) {
 }
 
 /**
- * Count articles in file without loading all into memory
- */
-function countArticles(filePath) {
-  if (!fs.existsSync(filePath)) return 0;
-  const content = fs.readFileSync(filePath, 'utf-8');
-  return content.split('\n').filter(Boolean).length;
-}
-
-/**
  * Analyze a single file
  */
 function analyzeFile(fileKey) {

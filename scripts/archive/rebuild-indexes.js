@@ -129,7 +129,7 @@ function rebuildStats(articles, indexes) {
   const sourceCounts = {};
   const tickerCounts = {};
   
-  for (const [id, article] of articles) {
+  for (const [, article] of articles) {
     // Track dates
     const firstSeen = article.first_seen || article.pub_date;
     if (firstSeen) {
