@@ -272,14 +272,12 @@ export async function getActiveProposals(
   space?: string,
   limit = 20,
 ): Promise<GovernanceProposal[]> {
-  const query = `{
+  // Caller values go in GraphQL variables, never into the query text.
+  const query = `query ActiveProposals($first: Int!, $where: ProposalWhere) {
     proposals(
-      first: ${limit},
+      first: $first,
       skip: 0,
-      where: {
-        state: "active",
-        ${space ? `space: "${space}",` : ''}
-      },
+      where: $where,
       orderBy: "created",
       orderDirection: desc
     ) {
@@ -304,7 +302,13 @@ export async function getActiveProposals(
     const response = await fetch('https://hub.snapshot.org/graphql', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ query }),
+      body: JSON.stringify({
+        query,
+        variables: {
+          first: limit,
+          where: space ? { state: 'active', space } : { state: 'active' },
+        },
+      }),
     });
 
     if (!response.ok) return [];

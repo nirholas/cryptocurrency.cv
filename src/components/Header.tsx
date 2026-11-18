@@ -7,7 +7,7 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
-import { Link, usePathname } from '@/i18n/navigation';
+import { Link } from '@/i18n/navigation';
 import { useTranslations } from 'next-intl';
 import { useTheme } from '@/components/ThemeProvider';
 import { GlobalSearch } from '@/components/GlobalSearch';
@@ -102,7 +102,6 @@ const NAV_ITEMS: NavItem[] = [
 ];
 
 export default function Header() {
-  const pathname = usePathname();
   const t = useTranslations('nav');
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);

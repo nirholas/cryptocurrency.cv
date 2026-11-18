@@ -631,8 +631,6 @@ export class RAGEvaluator {
     results: EvalResult[],
     durationMs: number
   ): EvalRunResult {
-    const n = results.length || 1;
-
     const avg = (arr: number[]) => arr.reduce((a, b) => a + b, 0) / (arr.length || 1);
     const percentile = (arr: number[], p: number) => {
       const sorted = [...arr].sort((a, b) => a - b);

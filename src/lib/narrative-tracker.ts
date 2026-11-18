@@ -280,7 +280,6 @@ export function identifyMarketCycle(narratives: Narrative[]): {
   historicalAnalog: string;
 } {
   const bullishNarratives = narratives.filter(n => n.sentiment > 0.3);
-  const bearishNarratives = narratives.filter(n => n.sentiment < -0.3);
   const growingNarratives = narratives.filter(n => n.velocity > 0.2);
   const decliningNarratives = narratives.filter(n => n.velocity < -0.2);
 

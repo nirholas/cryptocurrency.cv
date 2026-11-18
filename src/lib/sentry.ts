@@ -63,8 +63,6 @@ export interface SentryBreadcrumb {
 const SENTRY_DSN = process.env.SENTRY_DSN || process.env.NEXT_PUBLIC_SENTRY_DSN;
 const SENTRY_ENVIRONMENT = process.env.SENTRY_ENVIRONMENT || process.env.NODE_ENV || 'development';
 const SENTRY_RELEASE = process.env.SENTRY_RELEASE || process.env.VERCEL_GIT_COMMIT_SHA || 'local';
-const SAMPLE_RATE = parseFloat(process.env.SENTRY_SAMPLE_RATE || '1.0');
-const TRACES_SAMPLE_RATE = parseFloat(process.env.SENTRY_TRACES_SAMPLE_RATE || '0.1');
 
 const isEnabled = !!SENTRY_DSN && process.env.NODE_ENV === 'production';
 

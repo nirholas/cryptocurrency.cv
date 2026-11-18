@@ -37,7 +37,7 @@ export function validatePressRelease(submission: Partial<PressReleaseSubmission>
   if (!submission.projectName) errors.push('Project name is required.');
   if (!submission.projectUrl || !/^https?:\/\/.+/.test(submission.projectUrl))
     errors.push('Valid project website URL is required.');
-  if (!submission.contactEmail || !/^\S+@\S+\.\S+$/.test(submission.contactEmail))
+  if (!submission.contactEmail || !/^[^\s@]+@[^\s@.]+(?:\.[^\s@.]+)+$/.test(submission.contactEmail))
     errors.push('Valid contact email is required.');
   if (!submission.contactName) errors.push('Contact name is required.');
   if (!submission.title) errors.push('Press release title is required.');
@@ -57,10 +57,20 @@ export function validatePressRelease(submission: Partial<PressReleaseSubmission>
 }
 
 export function sanitizeInput(input: string): string {
-  return input
-    .replace(/<script[^>]*>.*?<\/script>/gi, '')
-    .replace(/on\w+\s*=/gi, '')
-    .replace(/<\/?(?:iframe|object|embed|form|link|meta)[^>]*>/gi, '');
+  // Strip dangerous tags (opening and closing, any attributes or whitespace)
+  // and inline event-handler attributes. Repeat until nothing changes so that
+  // removals cannot splice together a new match (e.g. "<scr<script>ipt>").
+  // `[^<>]*` keeps each tag match from scanning past the next '<', which
+  // keeps the pass linear.
+  let result = input;
+  let previous: string;
+  do {
+    previous = result;
+    result = result
+      .replace(/<\/?(?:script|iframe|object|embed|form|link|meta)\b[^<>]*>/gi, ' ')
+      .replace(/on\w+\s*=/gi, ' ');
+  } while (result !== previous);
+  return result;
 }
 
 // In-memory store (shared across routes)

@@ -363,9 +363,12 @@ Return ONLY the JSON array, no other text.`;
 
   private extractMainTopic(query: string): string | null {
     // Simple extraction - find the first noun phrase after "about", "regarding", etc.
+    // The capture is a greedy run up to the first '?' or line end with no
+    // terminator to satisfy, so a failed start position never rescans the rest
+    // of the string (a lazy `.*?` followed by `(?:\?|$)` did, quadratically).
     const patterns = [
-      /(?:about|regarding|on|for)\s+(?:the\s+)?(.+?)(?:\?|$)/i,
-      /(?:what|how|why|when)\s+(?:is|are|did|does|was|were)\s+(?:the\s+)?(.+?)(?:\?|$)/i,
+      /(?:about|regarding|on|for)\s+(?:the\s+)?(\S[^?\n]*)/i,
+      /(?:what|how|why|when)\s+(?:is|are|did|does|was|were)\s+(?:the\s+)?(\S[^?\n]*)/i,
     ];
 
     for (const pattern of patterns) {

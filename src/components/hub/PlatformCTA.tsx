@@ -35,7 +35,7 @@ interface RouteStats {
 /* ------------------------------------------------------------------ */
 
 export default function PlatformCTA() {
-  const [stats, setStats] = useState<RouteStats>({ total: 477, categories: 30 });
+  const [stats] = useState<RouteStats>({ total: 477, categories: 30 });
   const [copied, setCopied] = useState(false);
   const [activeTab, setActiveTab] = useState<"curl" | "js" | "python">("curl");
 

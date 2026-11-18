@@ -32,12 +32,6 @@ function embeddingResponse(vectors: number[][]): Response {
   });
 }
 
-function makeVec(dim: number, ...values: [number, number][]): number[] {
-  const vec = new Array<number>(dim).fill(0);
-  for (const [i, v] of values) vec[i] = v;
-  return vec;
-}
-
 // --------------------------------------------------------------------------
 
 describe('ai-embeddings', () => {

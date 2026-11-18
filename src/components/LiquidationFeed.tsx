@@ -44,7 +44,6 @@ export default function LiquidationFeed() {
   const [visibleItems, setVisibleItems] = useState<Liquidation[]>([]);
   const [animatingIds, setAnimatingIds] = useState<Set<string>>(new Set());
   const prevIdsRef = useRef<Set<string>>(new Set());
-  const audioRef = useRef<HTMLAudioElement | null>(null);
 
   // Create a simple click sound using AudioContext
   const playSound = useCallback(() => {

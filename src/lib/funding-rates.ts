@@ -27,6 +27,7 @@
 import { cache } from './cache';
 import { EXTERNAL_APIS, CACHE_TTL } from './external-apis';
 import { resilientFetchResponse } from '@/lib/resilient-fetch';
+import { logSafe } from '@/lib/log-safe';
 
 // =============================================================================
 // Types
@@ -153,7 +154,7 @@ async function fetchBinanceFundingRates(): Promise<FundingRateData[]> {
   if (cached) return cached;
 
   try {
-    const [premiumResponse, oiResponse] = await Promise.all([
+    const [premiumResponse] = await Promise.all([
       resilientFetchResponse(`${EXTERNAL_APIS.BINANCE_FUTURES}/fapi/v1/premiumIndex`, { service: 'binance-futures', timeoutMs: 8000, retries: 1 }),
       resilientFetchResponse(`${EXTERNAL_APIS.BINANCE_FUTURES}/fapi/v1/openInterest?symbol=BTCUSDT`, { service: 'binance-futures', timeoutMs: 8000, retries: 1 }).catch(() => null),
     ]);
@@ -634,7 +635,7 @@ export async function getFundingHistory(
         throw new Error(`History not available for ${exchange}`);
     }
   } catch (error) {
-    console.error(`Funding history fetch error for ${exchange}:${symbol}:`, error);
+    console.error('Funding history fetch error for %s:%s:', logSafe(exchange), logSafe(symbol), logSafe(error));
   }
 
   // Calculate statistics

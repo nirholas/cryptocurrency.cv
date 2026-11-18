@@ -480,6 +480,20 @@ ${recentAlerts.map(a => `[${a.severity}] ${a.title}: ${a.analysis}`).join('\n') 
   }
 }
 
+const MIN_INTERVAL_MS = 1000;
+const MAX_INTERVAL_MS = 24 * 60 * 60 * 1000;
+
+/**
+ * Keep a caller-supplied timer interval within sane bounds. Non-numeric input
+ * (e.g. NaN from parseInt) would otherwise make setInterval fire continuously.
+ */
+function boundedInterval(ms: number, fallback: number): number {
+  if (!Number.isFinite(ms)) return fallback;
+  if (ms < MIN_INTERVAL_MS) return MIN_INTERVAL_MS;
+  if (ms > MAX_INTERVAL_MS) return MAX_INTERVAL_MS;
+  return ms;
+}
+
 // ---------------------------------------------------------------------------
 // Main Monitor Class
 // ---------------------------------------------------------------------------
@@ -510,17 +524,20 @@ export class AutonomousMarketMonitor {
   start(observeIntervalMs = 60000, analyzeIntervalMs = 300000) {
     if (this.state !== 'idle') return;
 
+    const observeEvery = boundedInterval(observeIntervalMs, 60000);
+    const analyzeEvery = boundedInterval(analyzeIntervalMs, 300000);
+
     this.state = 'observing';
     this.startedAt = Date.now();
     logger.info('[Monitor] Autonomous market monitor started');
 
     // Observation loop
     this.runObservationCycle(); // immediate first run
-    this.observeTimer = setInterval(() => this.runObservationCycle(), observeIntervalMs);
+    this.observeTimer = setInterval(() => this.runObservationCycle(), observeEvery);
 
     // Analysis loop
     setTimeout(() => this.runAnalysisCycle(), 10000); // first analysis after 10s
-    this.analyzeTimer = setInterval(() => this.runAnalysisCycle(), analyzeIntervalMs);
+    this.analyzeTimer = setInterval(() => this.runAnalysisCycle(), analyzeEvery);
   }
 
   stop() {

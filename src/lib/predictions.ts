@@ -157,7 +157,6 @@ export interface LeaderboardEntry {
 const COLLECTION = 'predictions';
 const USER_STATS_COLLECTION = 'prediction_user_stats';
 const MAX_PREDICTIONS_PER_USER = 100;
-const PARTIAL_ACCURACY_THRESHOLD = 0.1; // 10% margin for partial correctness
 
 // Point system
 const POINTS = {

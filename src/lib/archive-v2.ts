@@ -32,7 +32,7 @@ export function generateArticleSlug(title: string, date?: string): string {
   // Clean and slugify the title
   let slug = title
     .toLowerCase()
-    .replace(/['']/g, '') // Remove apostrophes
+    .replace(/['\u2019]/g, '') // Remove apostrophes
     .replace(/[^a-z0-9\s-]/g, '') // Remove special chars
     .replace(/\s+/g, '-') // Spaces to dashes
     .replace(/-+/g, '-') // Collapse multiple dashes

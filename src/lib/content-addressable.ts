@@ -167,13 +167,6 @@ function hashToCid(hash: string, codec: Codec = 'raw'): ContentIdentifier {
   return `cas_${codecPrefix}${hash.substring(0, 58)}`;
 }
 
-/**
- * Extract hash from CID
- */
-function cidToHash(cid: ContentIdentifier): string {
-  return cid.substring(6);
-}
-
 // =============================================================================
 // CORE STORAGE OPERATIONS
 // =============================================================================

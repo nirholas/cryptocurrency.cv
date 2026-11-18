@@ -21,7 +21,6 @@
 import type { DataProvider, FetchParams, RateLimitConfig } from '../../types';
 import type { YieldPool } from './types';
 
-const BASE = 'https://api.eigenlayer.xyz/api/v1';
 const DUNE_BASE = 'https://api.dune.com/api/v1';
 const DUNE_KEY = process.env.DUNE_API_KEY ?? '';
 
@@ -58,7 +57,6 @@ export const eigenlayerAdapter: DataProvider<YieldPool[]> = {
   async fetch(_params: FetchParams): Promise<YieldPool[]> {
     // Try DefiLlama first for EigenLayer TVL (no key needed)
     const strategies = await fetchEigenStrategies();
-    const now = new Date().toISOString();
 
     const results: YieldPool[] = strategies.map(s => ({
       poolId: `eigenlayer-${s.symbol.toLowerCase()}`,

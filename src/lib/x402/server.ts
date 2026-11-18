@@ -120,15 +120,14 @@ function createX402Server(): x402ResourceServer {
   if (
     IS_TESTNET &&
     CURRENT_NETWORK === NETWORKS.BASE_SEPOLIA &&
-    !IS_BUILD_TIME &&
     !_hasLoggedInit
   ) {
     // Mainnet scheme is already registered by registerExactEvmScheme
     logger.info('[x402] Testnet mode: Base Sepolia scheme registered');
   }
 
-  // Log server initialization (only once, not during build)
-  if (IS_PRODUCTION && !IS_BUILD_TIME && !_hasLoggedInit) {
+  // Log server initialization (only once; build time already rejected above)
+  if (IS_PRODUCTION && !_hasLoggedInit) {
     _hasLoggedInit = true;
     logger.info('[x402] Production server initialized');
     logger.info(`[x402] Network: ${CURRENT_NETWORK}`);

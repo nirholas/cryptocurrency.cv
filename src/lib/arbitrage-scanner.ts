@@ -149,11 +149,6 @@ const EXCHANGE_FEES: Record<string, { maker: number; taker: number; withdrawal: 
 };
 
 const MIN_PROFIT_THRESHOLD = 0.001; // 0.1% minimum profit
-const SCAN_SYMBOLS = [
-  'BTCUSDT', 'ETHUSDT', 'SOLUSDT', 'XRPUSDT', 'DOGEUSDT',
-  'ADAUSDT', 'AVAXUSDT', 'DOTUSDT', 'LINKUSDT', 'MATICUSDT',
-  'LTCUSDT', 'ATOMUSDT', 'UNIUSDT', 'APTUSDT', 'ARBUSDT',
-];
 
 // =============================================================================
 // Exchange Price Fetchers
@@ -602,12 +597,10 @@ function detectTriangularArbitrage(
       // Convert A to B using the B/A pair if available
       // If B/A pair not available, try A/B pair inverse
       let bAmount: number;
-      let hasRealRate = false;
       
       if (baPrice) {
         // We have B/A pair (e.g., ETH/BTC) - buy B with A
         bAmount = aAmount * baPrice.bidPrice * 0.999; // 0.1% slippage
-        hasRealRate = true;
       } else {
         // Try to find the inverse pair A/B
         const abAltSymbol = `${a}${b}`;
@@ -615,15 +608,11 @@ function detectTriangularArbitrage(
         if (abAltPrice) {
           // Sell A for B using A/B pair
           bAmount = aAmount / abAltPrice.askPrice * 0.999;
-          hasRealRate = true;
         } else {
           // No real pair data available - skip this triangular opportunity
           continue;
         }
       }
-      
-      // Only proceed with real exchange rate data
-      if (!hasRealRate) continue;
       
       // Sell C for USDT (but we have B, so we need B → USDT)
       // The path naming is confusing - let's use B to sell for USDT

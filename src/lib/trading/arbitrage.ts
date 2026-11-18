@@ -106,26 +106,6 @@ const WITHDRAWAL_FEES: Record<string, Record<string, number>> = {
   bybit: { BTC: 20, ETH: 8, USDT: 1 },
 };
 
-// Symbol mapping for exchange API compatibility
-const SYMBOL_MAP: Record<string, string> = {
-  BTC: 'bitcoin',
-  ETH: 'ethereum',
-  SOL: 'solana',
-  XRP: 'ripple',
-  DOGE: 'dogecoin',
-  ADA: 'cardano',
-  AVAX: 'avalanche-2',
-  DOT: 'polkadot',
-  LINK: 'chainlink',
-  MATIC: 'matic-network',
-  ATOM: 'cosmos',
-  UNI: 'uniswap',
-  LTC: 'litecoin',
-  NEAR: 'near',
-  APT: 'aptos',
-  ARB: 'arbitrum',
-};
-
 // Supported trading pairs
 const TRADING_PAIRS = [
   'BTC', 'ETH', 'SOL', 'XRP', 'DOGE', 'ADA', 'AVAX', 'DOT', 'LINK', 'MATIC',

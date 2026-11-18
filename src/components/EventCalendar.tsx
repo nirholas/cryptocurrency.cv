@@ -81,11 +81,6 @@ function toDateKey(d: Date): string {
   return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
 }
 
-function parseDateKey(s: string): Date {
-  const [y, m, d] = s.split("-").map(Number);
-  return new Date(y, m - 1, d);
-}
-
 function formatDate(dateStr: string): string {
   const d = new Date(dateStr);
   return d.toLocaleDateString("en-US", {

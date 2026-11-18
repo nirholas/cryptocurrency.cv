@@ -30,7 +30,6 @@
 import type { DataProvider, FetchParams, RateLimitConfig } from '../../types';
 import type { MarketPrice } from './coingecko.adapter';
 
-const MESSARI_BASE = 'https://data.messari.io/api/v1';
 const MESSARI_V2 = 'https://data.messari.io/api/v2';
 const MESSARI_API_KEY = process.env.MESSARI_API_KEY ?? '';
 

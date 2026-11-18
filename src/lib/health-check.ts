@@ -230,7 +230,7 @@ async function checkDatabase(): Promise<HealthCheck> {
     try {
       const { neon } = await import('@neondatabase/serverless');
       const sql = neon(dbUrl!);
-      const result = await sql`SELECT 1 as health_check`;
+      await sql`SELECT 1 as health_check`;
       
       return {
         name: 'database',
@@ -247,7 +247,7 @@ async function checkDatabase(): Promise<HealthCheck> {
       // If @neondatabase/serverless query fails, try a basic TCP check
       try {
         const url = new URL(dbUrl!.replace(/^postgres(ql)?:\/\//, 'http://'));
-        const connectCheck = await fetch(`http://${url.hostname}:${url.port || 5432}`, {
+        await fetch(`http://${url.hostname}:${url.port || 5432}`, {
           signal: AbortSignal.timeout(3000),
         }).catch(() => null);
         
@@ -296,8 +296,6 @@ async function checkDatabase(): Promise<HealthCheck> {
  * @param includeExternal - Whether to include external service checks (CoinGecko, news sources)
  */
 export async function performHealthCheck(includeExternal = true): Promise<SystemHealth> {
-  const startTime = Date.now();
-  
   // Run all checks in parallel for speed
   const checks = await Promise.all([
     checkRedis(),

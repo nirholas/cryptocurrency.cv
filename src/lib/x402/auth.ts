@@ -326,25 +326,6 @@ function extractApiKeyFromAdapter(adapter: { getHeader(name: string): string | u
 }
 
 /**
- * Extract API key from request headers (for hybridAuthMiddleware)
- * Supports multiple header formats for compatibility
- */
-function extractApiKey(headers: Headers): string | null {
-  // X-API-Key header (preferred)
-  const xApiKey = headers.get('X-API-Key');
-  if (xApiKey) return xApiKey;
-
-  // Authorization: Bearer token (if it's an API key)
-  const authHeader = headers.get('Authorization');
-  if (authHeader?.startsWith('Bearer ')) {
-    const token = authHeader.slice(7);
-    if (token.startsWith('cda_')) return token;
-  }
-
-  return null;
-}
-
-/**
  * Get rate limit headers for response (for API key authentication)
  * 
  * @deprecated Use getRateLimitHeaders from rate-limit.ts with RateLimitResult instead

@@ -33,16 +33,6 @@ const RTL_LOCALES = ['ar'];
 // Paths
 const MESSAGES_DIR = path.join(process.cwd(), 'messages');
 const ROOT_DIR = process.cwd();
-// Translated READMEs live in locales/ (the repo root keeps only README.md)
-const README_DIRS = [path.join(ROOT_DIR, 'locales'), ROOT_DIR];
-
-/**
- * Resolve a translated README, checking locales/ first and the repo root second.
- */
-function readmePath(locale: string): string {
-  const candidates = README_DIRS.map(dir => path.join(dir, `README.${locale}.md`));
-  return candidates.find(p => fs.existsSync(p)) ?? candidates[0];
-}
 
 /**
  * Recursively get all keys from a nested object
@@ -357,20 +347,15 @@ describe('RTL Support', () => {
 
 describe('Translation Quality', () => {
   it('should not have untranslated English in non-English files', () => {
-    const commonEnglishPhrases = ['Loading...', 'Click here', 'Learn more', 'Read more'];
-    
     LOCALES.filter(l => l !== 'en').forEach(locale => {
       const filePath = path.join(MESSAGES_DIR, `${locale}.json`);
       if (fs.existsSync(filePath)) {
         const content = fs.readFileSync(filePath, 'utf-8');
         
-        // These exact phrases shouldn't appear (would indicate untranslated content)
-        commonEnglishPhrases.forEach(_phrase => {
-          // Allow if it's in a key name, but not as a value
-          const messages = JSON.parse(content);
-          const values = JSON.stringify(Object.values(messages));
-          // This is a soft check - some technical terms might be kept in English
-        });
+        // Common English phrases ('Loading...', 'Click here', ...) would indicate
+        // untranslated content, but some technical terms are legitimately kept in
+        // English, so this stays a soft check: only require the file to parse.
+        expect(() => JSON.parse(content)).not.toThrow();
       }
     });
   });

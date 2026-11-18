@@ -23,7 +23,6 @@ import type { DataProvider, FetchParams, RateLimitConfig } from '../../types';
 import type { MEVStats } from './types';
 
 const BASE = 'https://boost-relay.flashbots.net';
-const EXPLORE_BASE = 'https://flashbots-data.s3.us-east-2.amazonaws.com/mev-explore/v0';
 
 const RATE_LIMIT: RateLimitConfig = { maxRequests: 30, windowMs: 60_000 };
 

@@ -383,7 +383,6 @@ async function getHistoricalData(
 ): Promise<HistoricalDataPoint[]> {
   const start = new Date(startDate);
   const end = new Date(endDate);
-  const days = Math.ceil((end.getTime() - start.getTime()) / (24 * 60 * 60 * 1000));
   
   // Map asset symbol to CoinGecko ID
   const symbolToGecko: Record<string, string> = {

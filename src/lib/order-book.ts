@@ -31,6 +31,7 @@
 import { db } from './database';
 import { aiCache } from './cache';
 import { resilientFetchResponse } from '@/lib/resilient-fetch';
+import { logSafe } from '@/lib/log-safe';
 
 // =============================================================================
 // TYPES
@@ -198,51 +199,7 @@ export interface OrderBookSnapshot {
 const SNAPSHOTS_COLLECTION = 'orderbook_snapshots';
 const CACHE_TTL = 10; // 10 seconds for order book data
 
-const EXCHANGE_ENDPOINTS: Record<Exchange, { rest: string; ws: string }> = {
-  binance: {
-    rest: 'https://api.binance.com/api/v3/depth',
-    ws: 'wss://stream.binance.com:9443/ws',
-  },
-  coinbase: {
-    rest: 'https://api.exchange.coinbase.com/products/{symbol}/book',
-    ws: 'wss://ws-feed.exchange.coinbase.com',
-  },
-  kraken: {
-    rest: 'https://api.kraken.com/0/public/Depth',
-    ws: 'wss://ws.kraken.com',
-  },
-  bitfinex: {
-    rest: 'https://api-pub.bitfinex.com/v2/book/{symbol}/P0',
-    ws: 'wss://api-pub.bitfinex.com/ws/2',
-  },
-  bitstamp: {
-    rest: 'https://www.bitstamp.net/api/v2/order_book/{symbol}',
-    ws: 'wss://ws.bitstamp.net',
-  },
-  okx: {
-    rest: 'https://www.okx.com/api/v5/market/books',
-    ws: 'wss://ws.okx.com:8443/ws/v5/public',
-  },
-  bybit: {
-    rest: 'https://api.bybit.com/v5/market/orderbook',
-    ws: 'wss://stream.bybit.com/v5/public/spot',
-  },
-  kucoin: {
-    rest: 'https://api.kucoin.com/api/v1/market/orderbook/level2_100',
-    ws: 'wss://ws-api.kucoin.com',
-  },
-  huobi: {
-    rest: 'https://api.huobi.pro/market/depth',
-    ws: 'wss://api.huobi.pro/ws',
-  },
-  gemini: {
-    rest: 'https://api.gemini.com/v1/book/{symbol}',
-    ws: 'wss://api.gemini.com/v1/marketdata',
-  },
-};
-
 const WHALE_THRESHOLD_USD = 100000;
-const WALL_THRESHOLD_PERCENT = 5;
 
 // =============================================================================
 // EXCHANGE API CONFIGURATIONS
@@ -634,7 +591,7 @@ export async function fetchOrderBook(
   
   const config = EXCHANGE_CONFIGS[exchange];
   if (!config) {
-    console.error(`Exchange ${exchange} not configured`);
+    console.error('Exchange not configured:', logSafe(exchange));
     return null;
   }
   
@@ -654,7 +611,7 @@ export async function fetchOrderBook(
     });
     
     if (!response.ok) {
-      console.error(`${exchange} API error: ${response.status} ${response.statusText}`);
+      console.error('Order book API error:', logSafe(exchange), response.status, logSafe(response.statusText));
       return null;
     }
     
@@ -662,7 +619,7 @@ export async function fetchOrderBook(
     const orderBook = config.transform(data, symbol, exchange);
     
     if (!orderBook) {
-      console.error(`Failed to transform ${exchange} order book data`);
+      console.error('Failed to transform order book data for', logSafe(exchange));
       return null;
     }
     
@@ -673,7 +630,7 @@ export async function fetchOrderBook(
     await aiCache.set(cacheKey, orderBook, CACHE_TTL);
     return orderBook;
   } catch (error) {
-    console.error(`Failed to fetch order book from ${exchange}:`, error);
+    console.error('Failed to fetch order book from', logSafe(exchange), error);
     return null;
   }
 }

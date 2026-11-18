@@ -18,6 +18,7 @@
 import { newsCache, withCache } from './cache';
 import { getLatestNews, type NewsArticle } from './crypto-news';
 import { calculateSentiment } from './headline-tracker';
+import { logSafe } from './log-safe';
 
 // ═══════════════════════════════════════════════════════════════
 // TYPES
@@ -429,7 +430,7 @@ export async function getSourceScore(sourceKey: string): Promise<SourceCredibili
     const news = await getLatestNews(20, sourceKey);
     updateSourceHistory(news.articles);
   } catch (error) {
-    console.warn(`Failed to fetch news for source ${sourceKey}:`, error);
+    console.warn('Failed to fetch news for source', logSafe(sourceKey), error);
   }
 
   return calculateSourceCredibility(sourceKey);

@@ -57,11 +57,6 @@ function toMonthKey(d: Date): string {
   return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}`;
 }
 
-/** YYYY-MM-DD string for a given Date */
-function toDateKey(d: Date): string {
-  return d.toISOString().slice(0, 10);
-}
-
 // ---------------------------------------------------------------------------
 // Ticker → tag-slug lookup
 // ---------------------------------------------------------------------------

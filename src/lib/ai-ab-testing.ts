@@ -438,11 +438,6 @@ function welchsTTest(
 
   const t = Math.abs(mean1 - mean2) / se;
 
-  // Welch-Satterthwaite degrees of freedom
-  const num = (var1 / n1 + var2 / n2) ** 2;
-  const den = (var1 / n1) ** 2 / (n1 - 1) + (var2 / n2) ** 2 / (n2 - 1);
-  const df = den > 0 ? num / den : 1;
-
   // Approximate p-value using normal distribution (good for df > 30)
   // For smaller df, this is conservative
   return 2 * (1 - normalCDF(t));

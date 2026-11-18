@@ -184,7 +184,9 @@ function getSessionId(): string {
   
   let sessionId = sessionStorage.getItem('analytics-session');
   if (!sessionId) {
-    sessionId = Math.random().toString(36).substring(2, 15);
+    sessionId = Array.from(crypto.getRandomValues(new Uint8Array(8)), (b) =>
+      b.toString(16).padStart(2, '0'),
+    ).join('');
     sessionStorage.setItem('analytics-session', sessionId);
   }
   return sessionId;

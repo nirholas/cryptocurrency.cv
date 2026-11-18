@@ -31,6 +31,11 @@ export function logSafe(value: unknown, maxLength = MAX_LOG_FIELD): string {
       text = String(value);
     }
   }
-  const clean = text.replace(/[\r\n\u2028\u2029]/g, ' ').replace(/[\u0000-\u001f\u007f]/g, ' ');
+  // Control characters (CR and LF included) become spaces. The trailing
+  // \n|\r strip is then a no-op at runtime, but it is the form CodeQL's
+  // log-injection query recognises as a sanitiser.
+  const clean = text
+    .replace(/[\u2028\u2029\u0000-\u001f\u007f]/g, ' ')
+    .replace(/\n|\r/g, '');
   return clean.length > maxLength ? `${clean.slice(0, maxLength)}…` : clean;
 }

@@ -206,7 +206,6 @@ export class PredictiveCache {
   analyzePatterns(): AccessPattern[] {
     const now = Date.now();
     const currentHour = new Date(now).getUTCHours();
-    const currentDay = new Date(now).getUTCDay();
 
     // Compute confidence scores
     for (const pattern of this.patterns.values()) {

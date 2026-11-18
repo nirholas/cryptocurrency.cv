@@ -41,15 +41,13 @@ export const heliusAdapter: DataProvider<SolanaNetworkStats> = {
   async fetch(_params: FetchParams): Promise<SolanaNetworkStats> {
     if (!API_KEY) throw new Error('HELIUS_API_KEY not configured');
 
-    const [perfRes, epochRes, supplyRes] = await Promise.all([
+    const [perfRes, epochRes] = await Promise.all([
       jsonRpc('getRecentPerformanceSamples', [1]),
       jsonRpc('getEpochInfo', []),
-      jsonRpc('getSupply', []),
     ]);
 
     const perfSample: Record<string, unknown> = (perfRes.result?.[0] as Record<string, unknown>) ?? {};
     const epochInfo: Record<string, unknown> = (epochRes.result as Record<string, unknown>) ?? {};
-    const supply = supplyRes.result?.value ?? {};
 
     const txCount = Number(perfSample.numTransactions ?? 0);
     const samplePeriod = Number(perfSample.samplePeriodSecs ?? 60);

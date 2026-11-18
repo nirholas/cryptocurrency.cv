@@ -63,7 +63,6 @@ export const lidoAdapter: DataProvider<YieldPool[]> = {
     const aprJson = await aprRes.json();
     const statsJson = statsRes.ok ? await statsRes.json() : null;
 
-    const now = new Date().toISOString();
     const apr = aprJson?.data?.smaApr ?? aprJson?.data?.aprs?.[0]?.apr ?? 0;
     const totalStaked = statsJson?.data?.totalPooledEther
       ? parseFloat(statsJson.data.totalPooledEther) / 1e18

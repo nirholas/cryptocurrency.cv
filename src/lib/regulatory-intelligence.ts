@@ -1031,7 +1031,7 @@ export function getJurisdictionProfile(jurisdiction: Jurisdiction): Jurisdiction
     .map(([agency]) => agency as RegulatoryAgency);
   
   // Risk level based on stance
-  let riskLevel: 'low' | 'medium' | 'high' | 'critical' = 'medium';
+  let riskLevel: 'low' | 'medium' | 'high' | 'critical';
   if (score >= 30) riskLevel = 'low';
   else if (score >= -20) riskLevel = 'medium';
   else if (score >= -50) riskLevel = 'high';
@@ -1120,12 +1120,10 @@ export function generateIntelligenceSummary(
   deadlines: ComplianceDeadline[]
 ): RegulatoryIntelligenceSummary {
   const now = new Date();
-  const last24h = new Date(now.getTime() - 24 * 60 * 60 * 1000);
   const last7d = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);
   
   // Recent events
   const recentEvents = events.filter(e => e.publishedAt > last7d);
-  const breakingEvents = recentEvents.filter(e => e.isBreaking);
   
   // Critical deadlines (next 30 days)
   const criticalDeadlines = deadlines

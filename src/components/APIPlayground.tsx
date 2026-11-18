@@ -259,7 +259,6 @@ export default function APIPlayground() {
   const [activeTab, setActiveTab] = useState<"body" | "headers" | "curl">("body");
   const [prettyJson, setPrettyJson] = useState(true);
   const [copied, setCopied] = useState(false);
-  const [headersOpen, setHeadersOpen] = useState(false);
   const abortRef = useRef<AbortController | null>(null);
 
   const endpoint = useMemo(

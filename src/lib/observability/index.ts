@@ -71,7 +71,8 @@ export function instrumented(
         ...(options.attributes ?? {}),
       },
       async (span: Span) => {
-        let statusCode = 200;
+        // Stays 500 if the handler throws before producing a response
+        let statusCode = 500;
 
         try {
           const response = await handler(request);
@@ -87,7 +88,6 @@ export function instrumented(
 
           return response;
         } catch (error) {
-          statusCode = 500;
           span.setStatus({ code: SpanStatusCode.ERROR, message: 'Unhandled exception' });
           if (error instanceof Error) {
             span.recordException(error);

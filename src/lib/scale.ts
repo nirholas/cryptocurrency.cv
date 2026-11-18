@@ -670,7 +670,6 @@ export async function scaleFetch<T>(
   const {
     cacheKey,
     cacheTtl = 30,
-    staleTtl,
     rateLimiter,
     fetchInit,
     parseJson = true,

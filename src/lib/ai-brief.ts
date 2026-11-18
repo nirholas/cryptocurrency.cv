@@ -194,7 +194,7 @@ ${format === 'summary' ? 'Keep responses brief and focus on executive summary.' 
     }
 
     // Determine BTC trend
-    let btcTrend = 'consolidating';
+    let btcTrend: string;
     if (btcChange24h > 5) btcTrend = 'strong rally';
     else if (btcChange24h > 2) btcTrend = 'upward';
     else if (btcChange24h > 0) btcTrend = 'slightly bullish';

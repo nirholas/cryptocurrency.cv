@@ -136,7 +136,13 @@ function sleep(ms: number): Promise<void> {
 }
 
 function buildUrl(base: string, endpoint: string, params?: Record<string, string>): string {
+  const baseOrigin = new URL(base).origin;
   const url = new URL(endpoint.startsWith('http') ? endpoint : `${base}${endpoint}`);
+  // Endpoints can carry caller-derived segments; never let one move the request
+  // (and the adapter's API key) to a different host, e.g. via "@evil.com/".
+  if (url.origin !== baseOrigin) {
+    throw new Error(`Data source endpoint must stay on ${baseOrigin}`);
+  }
   if (params) {
     for (const [key, value] of Object.entries(params)) {
       if (value !== undefined && value !== '') {

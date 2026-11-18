@@ -240,8 +240,8 @@ function preprocessText(text: string): {
 } {
   const cleaned = text
     .replace(/\s+/g, ' ')
-    .replace(/[""]/g, '"')
-    .replace(/['']/g, "'")
+    .replace(/[\u201C\u201D]/g, '"')
+    .replace(/[\u2018\u2019]/g, "'")
     .trim();
 
   const sentences = cleaned
@@ -358,13 +358,12 @@ function analyzeBurstiness(sentences: string[], paragraphs: string[]): Burstines
     : 0;
 
   // Rhythm score: check for varied sentence patterns
-  let rhythmScore = 50;
   const lengthChanges = [];
   for (let i = 1; i < sentenceLengths.length; i++) {
     lengthChanges.push(Math.abs(sentenceLengths[i] - sentenceLengths[i - 1]));
   }
   const avgChange = lengthChanges.reduce((a, b) => a + b, 0) / lengthChanges.length;
-  rhythmScore = Math.min(100, avgChange * 5);
+  const rhythmScore = Math.min(100, avgChange * 5);
 
   // Higher variance = more human-like
   const score = Math.max(0, Math.min(100,
@@ -623,7 +622,7 @@ export function detectAIContent(text: string): DetectionResult {
     };
   }
 
-  const { sentences, paragraphs, words, tokens } = preprocessText(text);
+  const { sentences, paragraphs, words } = preprocessText(text);
 
   // Run all analyses
   const perplexity = analyzePerplexity(words);

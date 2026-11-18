@@ -4,14 +4,13 @@
  * @see https://github.com/nirholas/free-crypto-news
  */
 
-import { describe, it, expect } from 'vitest';
+import { describe, it, expect, vi } from 'vitest';
 
 // Mock logger before importing pricing module
 vi.mock('@/lib/logger', () => ({
   logger: { info: vi.fn(), warn: vi.fn(), error: vi.fn(), debug: vi.fn() },
 }));
 
-import { vi } from 'vitest';
 import {
   usdToUsdc,
   usdToUsdcBigInt,

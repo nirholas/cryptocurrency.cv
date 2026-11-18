@@ -324,8 +324,7 @@ export class HealthMonitor {
 
     const isHealthy = status.circuitState === 'CLOSED' && successRate >= THRESHOLDS.degradedSuccessRate;
 
-    const elapsed = Date.now() - status.startedAt;
-    // Approximate uptime: ratio of successes to total, weighted by time
+    // Approximate uptime: ratio of successes to total
     const uptime = status.totalRequests > 0
       ? status.totalSuccesses / status.totalRequests
       : 1;
