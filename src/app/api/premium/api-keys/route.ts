@@ -82,15 +82,6 @@ async function getAllKeys(): Promise<APIKey[]> {
   }
 }
 
-async function getKeyById(id: string): Promise<APIKey | null> {
-  try {
-    const doc = await db.getDocument<APIKey>(API_KEYS_COLLECTION, id);
-    return doc?.data || null;
-  } catch {
-    return null;
-  }
-}
-
 async function saveKey(key: APIKey): Promise<void> {
   await db.saveDocument(API_KEYS_COLLECTION, key.id, key, {
     keyPrefix: key.key.substring(0, 8),

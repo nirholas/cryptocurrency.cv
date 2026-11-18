@@ -129,7 +129,6 @@ export default function AlertsPage() {
     alerts,
     addAlert,
     removeAlert,
-    updateAlert,
     duplicateAlert,
     toggleAlert,
     bulkToggle,

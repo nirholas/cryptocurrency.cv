@@ -171,8 +171,7 @@ function formatPrice(n: number | undefined | null): string {
   return `$${n.toPrecision(4)}`;
 }
 
-function formatPercent(n: number | undefined | null): string {
-  if (n == null) return '—';
+function formatPercent(n: number): string {
   const sign = n >= 0 ? '+' : '';
   return `${sign}${n.toFixed(2)}%`;
 }
@@ -225,7 +224,6 @@ export default async function CoinPage({ params }: Props) {
 
   const md = coin.market_data;
   const priceChange24h = md?.price_change_percentage_24h;
-  const isPositive = priceChange24h != null && priceChange24h >= 0;
 
   // Fetch related news in parallel (non-blocking)
   const relatedNews = await fetchRelatedNews(coin.name);

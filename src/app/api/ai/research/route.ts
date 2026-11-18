@@ -98,8 +98,8 @@ export async function GET(request: NextRequest) {
         );
       }
 
-      const pattern1 = TOPIC_PATTERNS[asset1Name.toLowerCase()] || new RegExp(asset1Name, 'i');
-      const pattern2 = TOPIC_PATTERNS[asset2Name.toLowerCase()] || new RegExp(asset2Name, 'i');
+      const pattern1 = TOPIC_PATTERNS[asset1Name.toLowerCase()] || new RegExp(asset1Name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'i');
+      const pattern2 = TOPIC_PATTERNS[asset2Name.toLowerCase()] || new RegExp(asset2Name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'i');
 
       const asset1Headlines = newsData.articles
         .filter(a => pattern1.test(a.title) || pattern1.test(a.description || ''))
@@ -143,7 +143,7 @@ export async function GET(request: NextRequest) {
     }
 
     // Find relevant headlines
-    const pattern = TOPIC_PATTERNS[topic.toLowerCase()] || new RegExp(topic, 'i');
+    const pattern = TOPIC_PATTERNS[topic.toLowerCase()] || new RegExp(topic.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'i');
     const relevantArticles = newsData.articles.filter(a => 
       pattern.test(a.title) || pattern.test(a.description || '')
     );

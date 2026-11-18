@@ -231,9 +231,6 @@ export default async function StablecoinsPage({ params }: Props) {
   const offPeg = stablecoins.filter((c) => Math.abs(c.pegDeviation) > 0.005);
 
   // Stats
-  const usdBackedCount = stablecoins.filter(
-    (c) => c.pegType === 'peggedUSD' || c.pegType === 'fiat',
-  ).length;
   const topStable = stablecoins[0];
 
   return (

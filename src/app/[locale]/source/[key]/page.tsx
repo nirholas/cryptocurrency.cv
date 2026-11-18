@@ -18,7 +18,6 @@ import { Link } from '@/i18n/navigation';
 import { generateSEOMetadata } from '@/lib/seo';
 import { getSourceInfo, getLatestNews, type NewsArticle } from '@/lib/crypto-news';
 import {
-  SOURCE_TIERS,
   getSourceTier,
   getSourceCredibility,
   getSourceReputation,
@@ -145,7 +144,6 @@ export default async function SourceProfilePage({ params }: Props) {
   const tier = getSourceTier(key);
   const credibility = getSourceCredibility(key);
   const reputation = getSourceReputation(key);
-  const tierEntry = SOURCE_TIERS[key.toLowerCase()];
   const credBar = credibilityBar(credibility);
 
   // Fetch latest articles from this source

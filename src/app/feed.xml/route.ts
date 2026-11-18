@@ -16,6 +16,7 @@
 import { NextResponse } from 'next/server';
 import { SITE_URL } from '@/lib/constants';
 import { getLatestNews } from '@/lib/crypto-news';
+import { getArticleSlug } from '@/lib/article-url';
 
 interface Article {
   title: string;
@@ -34,28 +35,6 @@ function escapeXml(text: string): string {
     .replace(/'/g, '&apos;');
 }
 
-/**
- * Generate SEO-friendly slug from article title and date
- */
-function generateArticleSlug(title: string, date?: string): string {
-  let slug = title
-    .toLowerCase()
-    .replace(/['']/g, '')
-    .replace(/[^a-z0-9\\s-]/g, '')
-    .replace(/\\s+/g, '-')
-    .replace(/-+/g, '-')
-    .replace(/^-|-$/g, '')
-    .slice(0, 60)
-    .replace(/-$/, '');
-  
-  if (date) {
-    const dateStr = new Date(date).toISOString().split('T')[0];
-    slug = `${slug}-${dateStr}`;
-  }
-  
-  return slug || 'untitled';
-}
-
 export async function GET() {
   try {
     // Read the aggregator directly rather than fetching our own public API:
@@ -68,7 +47,7 @@ export async function GET() {
 
     const rssItems = articles
       .map((article) => {
-        const articleSlug = generateArticleSlug(article.title, article.pubDate);
+        const articleSlug = getArticleSlug(article.title, article.pubDate);
         const pubDate = new Date(article.pubDate).toUTCString();
         const internalLink = `${SITE_URL}/article/${articleSlug}`;
 

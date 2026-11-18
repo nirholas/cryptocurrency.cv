@@ -19,14 +19,16 @@ const RATE_LIMIT_WINDOW = 24 * 60 * 60 * 1000; // 24h
 
 export async function POST(req: NextRequest) {
   try {
-    const data = await req.json();
+    const body = await req.json();
 
-    // Sanitize all string inputs
-    for (const key of Object.keys(data)) {
-      if (typeof data[key] === 'string') {
-        data[key] = sanitizeInput(data[key]);
-      }
-    }
+    // Sanitize all string inputs (rebuilt from entries so user-supplied keys
+    // such as "__proto__" are never assigned onto an existing object)
+    const data = Object.fromEntries(
+      Object.entries(body).map(([key, value]) => [
+        key,
+        typeof value === 'string' ? sanitizeInput(value) : value,
+      ]),
+    ) as Partial<PressReleaseSubmission>;
 
     // Validate
     const errors = validatePressRelease(data);
@@ -50,7 +52,7 @@ export async function POST(req: NextRequest) {
 
     // Store submission
     const submission: PressReleaseSubmission = {
-      ...data,
+      ...(data as PressReleaseSubmission), // required fields checked by validatePressRelease above
       id: crypto.randomUUID(),
       status: 'pending',
       createdAt: new Date().toISOString(),

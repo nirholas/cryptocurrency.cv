@@ -152,8 +152,19 @@ export async function POST(request: NextRequest) {
     requests.map(async (r): Promise<BatchSubResponse> => {
       const subStart = Date.now();
       try {
-        const url = new URL(r.path, origin);
-        const res = await fetch(url.toString(), {
+        // Resolve dot segments, then re-check the normalised path: "/api/x/../cron"
+        // passes the prefix test above but resolves to a blocked route.
+        const resolved = new URL(r.path, origin);
+        const pathname = resolved.pathname;
+        if (
+          resolved.origin !== origin ||
+          !pathname.startsWith(ALLOWED_PATH_PREFIX) ||
+          BLOCKED_PATHS.some((b) => pathname.startsWith(b))
+        ) {
+          return { id: r.id, status: 400, body: { error: 'Path cannot be batched', code: 'BLOCKED_PATH' }, cachedMs: 0 };
+        }
+        // Only the path and query come from the caller; the origin is always ours.
+        const res = await fetch(`${origin}${pathname}${resolved.search}`, {
           method: 'GET',
           headers: {
             ...forwardHeaders,

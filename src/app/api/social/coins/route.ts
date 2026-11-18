@@ -30,10 +30,12 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
     let data;
 
     if (symbolsParam) {
-      const symbols = symbolsParam
-        .split(',')
-        .map((s) => s.trim().toUpperCase())
-        .filter(Boolean);
+      // Symbols go into the upstream URL, so only plain tickers are passed on.
+      const symbols: string[] = [];
+      for (const raw of symbolsParam.split(',')) {
+        const s = raw.trim().toUpperCase();
+        if (/^[A-Z0-9]{1,15}$/.test(s)) symbols.push(s);
+      }
       data = await getBulkSocialMetrics(symbols);
     } else {
       const limit = intParam(searchParams, 'limit', { fallback: 50, min: 1, max: 100 });

@@ -19,6 +19,12 @@ import { optionalIntParam } from '@/lib/query-params';
 export const runtime = 'nodejs';
 export const revalidate = 60;
 
+// Every value below ends up in an upstream URL, so each one is held to a
+// strict format before it leaves this route.
+const ADDRESS_RE = /^[A-Za-z0-9]{20,100}$/;
+const CHAIN_RE = /^[a-z0-9-]{1,32}$/;
+const TOKEN_RE = /^[A-Za-z0-9.-]{1,100}$/;
+
 /**
  * GET /api/nansen
  *
@@ -37,10 +43,22 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
 
     switch (action) {
       case 'smart-money': {
+        const chain = searchParams.get('chain') || undefined;
+        const token = searchParams.get('token') || undefined;
+        const txAction = searchParams.get('txAction') || undefined;
+        if (chain && !CHAIN_RE.test(chain)) {
+          return NextResponse.json({ error: `invalid chain parameter` }, { status: 400 });
+        }
+        if (token && !TOKEN_RE.test(token)) {
+          return NextResponse.json({ error: `invalid token parameter` }, { status: 400 });
+        }
+        if (txAction && txAction !== 'buy' && txAction !== 'sell') {
+          return NextResponse.json({ error: `invalid txAction parameter` }, { status: 400 });
+        }
         const data = await getSmartMoneyActivity({
-          chain: searchParams.get('chain') || undefined,
-          token: searchParams.get('token') || undefined,
-          action: (searchParams.get('txAction') as 'buy' | 'sell') || undefined,
+          chain,
+          token,
+          action: txAction as 'buy' | 'sell' | undefined,
           limit: optionalIntParam(searchParams, 'limit', { min: 1, max: 100 }),
         });
         return jsonResponse(data);
@@ -48,6 +66,9 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
 
       case 'token-god-mode': {
         const token = searchParams.get('token');
+        if (token && !TOKEN_RE.test(token)) {
+          return NextResponse.json({ error: `invalid token parameter` }, { status: 400 });
+        }
         if (!token) {
           return NextResponse.json(
             { error: 'token parameter required' },
@@ -60,6 +81,9 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
 
       case 'wallet-profiler': {
         const address = searchParams.get('address');
+        if (address && !ADDRESS_RE.test(address)) {
+          return NextResponse.json({ error: `invalid address parameter` }, { status: 400 });
+        }
         if (!address) {
           return NextResponse.json(
             { error: 'address parameter required' },

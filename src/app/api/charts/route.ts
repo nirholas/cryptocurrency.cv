@@ -18,6 +18,7 @@
 import { type NextRequest, NextResponse } from 'next/server';
 
 import { resilientFetchResponse } from '@/lib/resilient-fetch';
+import { sanitizeCoinId } from '@/lib/sanitize';
 export const runtime = 'edge';
 export const revalidate = 60; // Cache for 60 seconds
 
@@ -149,11 +150,15 @@ function filterByTimeRange(data: [number, number][], range: string): [number, nu
 export async function GET(request: NextRequest) {
   try {
     const { searchParams } = new URL(request.url);
-    const coinId = searchParams.get('coin');
+    const rawCoin = searchParams.get('coin');
+    const coinId = rawCoin ? sanitizeCoinId(rawCoin) : null;
     const range = searchParams.get('range') || '24h';
 
-    if (!coinId) {
+    if (!rawCoin) {
       return NextResponse.json({ error: 'Missing coin parameter' }, { status: 400 });
+    }
+    if (!coinId) {
+      return NextResponse.json({ error: 'Invalid coin parameter' }, { status: 400 });
     }
 
     // Validate time range

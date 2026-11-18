@@ -87,11 +87,12 @@ async function fetchArticleContent(url: string): Promise<string> {
     const content = cleanHtml
       .replace(/<[^>]+>/g, ' ')
       .replace(/&nbsp;/g, ' ')
-      .replace(/&amp;/g, '&')
       .replace(/&lt;/g, '<')
       .replace(/&gt;/g, '>')
       .replace(/&quot;/g, '"')
       .replace(/&#39;/g, "'")
+      // Decode &amp; last so "&amp;lt;" becomes "&lt;", not "<"
+      .replace(/&amp;/g, '&')
       .replace(/\s+/g, ' ')
       .trim();
 

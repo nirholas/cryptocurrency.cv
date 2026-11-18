@@ -92,13 +92,14 @@ export default function CoinWidget() {
     const params = new URLSearchParams(window.location.search);
     const t = params.get("theme") || "dark";
     setTheme(t === "light" ? "light" : "dark");
-    setCoinId(params.get("coin") || "bitcoin");
+    const c = (params.get("coin") || "bitcoin").toLowerCase();
+    setCoinId(/^[a-z0-9-]{1,64}$/.test(c) ? c : "bitcoin");
   }, []);
 
   useEffect(() => {
     async function fetchCoin() {
       try {
-        const res = await fetch(`${BASE_URL}/api/prices/${coinId}`);
+        const res = await fetch(`${BASE_URL}/api/prices/${encodeURIComponent(coinId)}`);
         if (!res.ok) throw new Error("Failed to fetch");
         const data = await res.json();
         setCoin(data.data || data);

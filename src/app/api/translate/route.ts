@@ -128,9 +128,7 @@ ${text}`;
   return data.choices?.[0]?.message?.content?.trim() || text;
 }
 
-export async function GET(request: NextRequest) {
-  const { searchParams } = new URL(request.url);
-
+export async function GET() {
   // Return available locales
   return NextResponse.json({
     availableLocales: locales,

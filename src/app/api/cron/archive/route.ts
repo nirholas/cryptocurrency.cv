@@ -100,7 +100,7 @@ function verifyCronAuth(request: NextRequest): boolean {
 function generateArticleSlug(title: string, date?: string): string {
   let slug = title
     .toLowerCase()
-    .replace(/['']/g, '')
+    .replace(/'/g, '')
     .replace(/[^a-z0-9\s-]/g, '')
     .replace(/\s+/g, '-')
     .replace(/-+/g, '-')
@@ -133,26 +133,6 @@ function generateArticleId(article: NewsArticle): string {
     hash = hash & hash;
   }
   return Math.abs(hash).toString(16).padStart(16, '0');
-}
-
-/**
- * Extract tickers from article text
- */
-function extractTickers(text: string): string[] {
-  const tickerPatterns = [
-    /\$([A-Z]{2,5})\b/g,           // $BTC, $ETH
-    /\b(BTC|ETH|SOL|XRP|ADA|DOT|DOGE|SHIB|MATIC|AVAX|LINK|UNI|ATOM)\b/g,
-  ];
-
-  const tickers = new Set<string>();
-  for (const pattern of tickerPatterns) {
-    const matches = text.matchAll(pattern);
-    for (const match of matches) {
-      tickers.add(match[1].toUpperCase());
-    }
-  }
-
-  return Array.from(tickers);
 }
 
 /**

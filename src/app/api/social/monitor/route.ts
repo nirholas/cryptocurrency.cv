@@ -65,7 +65,6 @@ const CHANNEL_CONFIG_KEY = 'social:monitor:channels';
 // In-memory caches (backed by database where appropriate)
 let channelConfigCache: ChannelConfig[] | null = null;
 const messageCache: SocialMessage[] = [];
-const MAX_MESSAGE_CACHE = 1000; // Keep last 1000 messages in memory
 
 /**
  * Load channel configs from database

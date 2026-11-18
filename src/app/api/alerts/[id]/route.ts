@@ -82,7 +82,7 @@ export async function GET(
   }
 
   // Get the alert rule
-  const alert = getAlertRule(id);
+  const alert = await getAlertRule(id);
 
   if (!alert) {
     return NextResponse.json(
@@ -165,7 +165,7 @@ export async function PUT(
       );
     }
 
-    const alert = updateAlertRule(id, updates);
+    const alert = await updateAlertRule(id, updates);
 
     if (!alert) {
       return NextResponse.json(
@@ -192,7 +192,7 @@ export async function DELETE(
 ): Promise<NextResponse> {
   const { id } = await params;
 
-  const success = deleteAlertRule(id);
+  const success = await deleteAlertRule(id);
 
   if (!success) {
     return NextResponse.json(
@@ -296,7 +296,7 @@ export async function PATCH(
       );
     }
 
-    const alert = updateAlertRule(id, { enabled });
+    const alert = await updateAlertRule(id, { enabled });
 
     if (!alert) {
       return NextResponse.json(

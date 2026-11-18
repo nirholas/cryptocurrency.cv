@@ -42,15 +42,17 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Missing event name' }, { status: 400 });
     }
 
-    // Sanitize properties — only allow primitives
-    const properties: Record<string, string | number | boolean> = {};
+    // Sanitize properties — only allow primitives. Collected in a Map so a
+    // caller-chosen key such as "__proto__" cannot touch Object.prototype.
+    const propertyEntries = new Map<string, string | number | boolean>();
     if (body.properties && typeof body.properties === 'object') {
       for (const [key, val] of Object.entries(body.properties)) {
         if (typeof val === 'string' || typeof val === 'number' || typeof val === 'boolean') {
-          properties[key] = val;
+          propertyEntries.set(key, val);
         }
       }
     }
+    const properties: Record<string, string | number | boolean> = Object.fromEntries(propertyEntries);
 
     // Buffer the event
     if (eventBuffer.length < EVENT_BUFFER_MAX) {
@@ -83,15 +85,15 @@ export async function GET(request: NextRequest) {
   }
 
   // Aggregate event counts
-  const counts: Record<string, number> = {};
+  const counts = new Map<string, number>();
   for (const evt of eventBuffer) {
-    counts[evt.event] = (counts[evt.event] || 0) + 1;
+    counts.set(evt.event, (counts.get(evt.event) || 0) + 1);
   }
 
   return NextResponse.json({
     buffered: eventBuffer.length,
     maxBuffer: EVENT_BUFFER_MAX,
-    eventCounts: counts,
+    eventCounts: Object.fromEntries(counts),
     oldestEvent: eventBuffer[0]?.receivedAt || null,
     newestEvent: eventBuffer.length > 0 ? eventBuffer[eventBuffer.length - 1].receivedAt : null,
   });

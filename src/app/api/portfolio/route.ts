@@ -202,7 +202,7 @@ function getSearchTerms(query: string, token: TokenInfo | null): string[] {
   }
   
   // Add known aliases
-  for (const [id, aliases] of Object.entries(COIN_ALIASES)) {
+  for (const aliases of Object.values(COIN_ALIASES)) {
     if (aliases.some(a => terms.includes(a))) {
       terms.push(...aliases);
     }

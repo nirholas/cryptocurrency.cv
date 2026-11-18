@@ -77,6 +77,17 @@ const DISCORD_API = 'https://discord.com/api/v10';
 /** Discord IDs are 64-bit snowflakes written as 17-20 decimal digits. */
 const DISCORD_SNOWFLAKE_RE = /^\d{17,20}$/;
 
+/**
+ * Validate a Discord snowflake and re-serialise it from its numeric value, so
+ * only decimal digits can ever reach a Discord API path segment.
+ */
+function toSnowflake(id: string): string {
+  if (!DISCORD_SNOWFLAKE_RE.test(id)) {
+    throw new Error('Invalid Discord ID');
+  }
+  return BigInt(id).toString();
+}
+
 /** Most messages Discord returns from one channel history request. */
 const DISCORD_MAX_PAGE = 100;
 
@@ -181,7 +192,7 @@ interface DiscordChannel {
 }
 
 async function fetchGuildChannels(guildId: string, token: string): Promise<DiscordChannel[]> {
-  const response = await fetch(`${DISCORD_API}/guilds/${guildId}/channels`, {
+  const response = await fetch(`${DISCORD_API}/guilds/${toSnowflake(guildId)}/channels`, {
     headers: {
       Authorization: `Bot ${token}`,
     },
@@ -200,7 +211,7 @@ async function fetchChannelMessages(
   token: string,
 ): Promise<DiscordMessage[]> {
   const pageSize = Math.min(Math.max(limit, 1), DISCORD_MAX_PAGE);
-  const response = await fetch(`${DISCORD_API}/channels/${channelId}/messages?limit=${pageSize}`, {
+  const response = await fetch(`${DISCORD_API}/channels/${toSnowflake(channelId)}/messages?limit=${pageSize}`, {
     headers: {
       Authorization: `Bot ${token}`,
     },
