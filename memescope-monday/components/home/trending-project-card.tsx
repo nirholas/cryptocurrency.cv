@@ -11,7 +11,14 @@ import { formatMarketCap } from "@/lib/coin-data/enrichment"
 import { UpvoteButton } from "@/components/project/upvote-button"
 
 function stripHtml(html: string): string {
-  return html.replace(/<[^>]*>/g, "").trim()
+  // Repeat until stable so nested/overlapping tags can't reassemble after one pass.
+  let text = html
+  let previous
+  do {
+    previous = text
+    text = text.replace(/<[^>]*>/g, "")
+  } while (text !== previous)
+  return text.trim()
 }
 
 interface Category {

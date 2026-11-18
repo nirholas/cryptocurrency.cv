@@ -28,6 +28,9 @@ const WebSocket = require('ws');
 
 const WS_URL = process.env.WS_URL || 'ws://localhost:8080';
 
+// Server-supplied values are untrusted; strip line breaks before logging them.
+const clean = (v) => String(v).replace(/\n|\r/g, '').replace(/[\u2028\u2029]/g, ' ');
+
 class CryptoWebSocketClient {
   constructor(options = {}) {
     this.url = options.url || WS_URL;
@@ -101,9 +104,9 @@ class CryptoWebSocketClient {
     switch (message.type) {
       case 'connected':
         this.clientId = message.payload.clientId;
-        console.log(`📡 Client ID: ${this.clientId}`);
-        console.log(`   Features: ${message.payload.features.join(', ')}`);
-        console.log(`   Channels: ${message.payload.availableChannels.join(', ')}`);
+        console.log(`📡 Client ID: ${clean(this.clientId)}`);
+        console.log(`   Features: ${clean(message.payload.features.join(', '))}`);
+        console.log(`   Channels: ${clean(message.payload.availableChannels.join(', '))}`);
         this.handlers.connected(message.payload);
         break;
         
@@ -117,7 +120,7 @@ class CryptoWebSocketClient {
         break;
         
       case 'topic':
-        console.log(`📺 [${message.payload.channelName}] ${message.payload.articles.length} articles`);
+        console.log(`📺 [${clean(message.payload.channelName)}] ${clean(message.payload.articles.length)} articles`);
         this.handlers.topic(message.payload.channel, message.payload.articles);
         break;
         
@@ -126,30 +129,30 @@ class CryptoWebSocketClient {
         break;
         
       case 'whales':
-        console.log(`🐳 ${message.payload.alerts.length} whale alerts!`);
+        console.log(`🐳 ${clean(message.payload.alerts.length)} whale alerts!`);
         this.handlers.whales(message.payload.alerts);
         break;
         
       case 'sentiment':
-        console.log(`😱 Fear & Greed: ${message.payload.value} (${message.payload.classification})`);
+        console.log(`😱 Fear & Greed: ${clean(message.payload.value)} (${clean(message.payload.classification)})`);
         this.handlers.sentiment(message.payload);
         break;
         
       case 'alert':
-        console.log(`🔔 Alert: ${message.data.name}`);
+        console.log(`🔔 Alert: ${clean(message.data.name)}`);
         this.handlers.alert(message.data);
         break;
         
       case 'subscribed':
-        console.log('✅ Subscription updated:', message.payload.subscription);
+        console.log('✅ Subscription updated:', clean(JSON.stringify(message.payload.subscription)));
         break;
         
       case 'channel_joined':
-        console.log(`📺 Joined channel: ${message.payload.channel}`);
+        console.log(`📺 Joined channel: ${clean(message.payload.channel)}`);
         break;
         
       case 'channel_left':
-        console.log(`📺 Left channel: ${message.payload.channel}`);
+        console.log(`📺 Left channel: ${clean(message.payload.channel)}`);
         break;
         
       case 'prices_stream':
@@ -173,11 +176,11 @@ class CryptoWebSocketClient {
         break;
         
       case 'error':
-        console.error('Server error:', message.payload.message);
+        console.error('Server error:', clean(message.payload.message));
         break;
         
       default:
-        console.log('Unknown message:', message.type);
+        console.log('Unknown message:', clean(message.type));
     }
   }
 

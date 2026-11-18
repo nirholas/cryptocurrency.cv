@@ -9,7 +9,7 @@
  */
 
 import React from 'react';
-import { View, Text, StyleSheet, Image, useColorScheme } from 'react-native';
+import { View, Text, StyleSheet, useColorScheme } from 'react-native';
 
 interface HeaderProps {
   title?: string;

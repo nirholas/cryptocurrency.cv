@@ -24,12 +24,6 @@ import { test, expect } from '@playwright/test';
 
 const BASE_URL = process.env.BASE_URL || 'http://localhost:3000';
 
-// Test wallet (testnet only - never use real funds)
-const TEST_WALLET = {
-  address: '0x1234567890abcdef1234567890abcdef12345678',
-  network: 'eip155:84532', // Base Sepolia
-};
-
 test.describe('x402 Payment Protocol', () => {
   test.describe('Discovery', () => {
     test('GET /.well-known/x402 returns valid discovery document', async ({ request }) => {

@@ -129,7 +129,7 @@ async function runDashboard() {
   const grid = new contrib.grid({ rows: 12, cols: 12, screen });
 
   // Header
-  const header = grid.set(0, 0, 1, 12, blessed.box, {
+  grid.set(0, 0, 1, 12, blessed.box, {
     content: gradient.cristal(' 🆓 FREE CRYPTO NEWS ') + chalk.dim(' | Press q to quit | r to refresh'),
     style: { fg: 'white' },
   });

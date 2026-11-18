@@ -9,7 +9,14 @@ import { formatDistance } from "date-fns"
 
 // Function to strip HTML tags from text
 function stripHtml(html: string): string {
-  return html.replace(/<[^>]*>/g, "").trim()
+  // Repeat until stable so nested/overlapping tags can't reassemble after one pass.
+  let text = html
+  let previous
+  do {
+    previous = text
+    text = text.replace(/<[^>]*>/g, "")
+  } while (text !== previous)
+  return text.trim()
 }
 
 // Interface pour les props du composant

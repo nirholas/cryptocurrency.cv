@@ -25,6 +25,14 @@
   var BASE_URL = "https://cryptocurrency.cv";
   var VALID_TYPES = ["ticker", "news", "coin", "market", "fear-greed", "chart"];
   var VALID_THEMES = ["dark", "light", "auto"];
+  var EMBED_PATHS = {
+    ticker: "/embed/ticker",
+    news: "/embed/news",
+    coin: "/embed/coin",
+    market: "/embed/market",
+    "fear-greed": "/embed/fear-greed",
+    chart: "/embed/chart",
+  };
 
   // Default heights per widget type
   var DEFAULT_HEIGHTS = {
@@ -56,16 +64,19 @@
     if (VALID_TYPES.indexOf(type) === -1) type = "ticker";
 
     var theme = (script.getAttribute("data-theme") || "dark").toLowerCase();
-    if (VALID_THEMES.indexOf(theme) === -1) theme = "dark";
+    if (VALID_THEMES.indexOf(theme) === -1 || !/^[a-z]{1,8}$/.test(theme)) theme = "dark";
 
     var count = parseInt(script.getAttribute("data-count") || "10", 10);
     if (isNaN(count) || count < 1 || count > 50) count = 10;
 
     var coin = (script.getAttribute("data-coin") || "bitcoin").toLowerCase();
+    if (!/^[a-z0-9-]{1,64}$/.test(coin)) coin = "bitcoin";
     var title = script.getAttribute("data-title");
     var width = script.getAttribute("data-width") || "100%";
     var symbol = script.getAttribute("data-symbol") || "BINANCE:BTCUSDT";
+    if (!/^[A-Za-z0-9:._-]{1,64}$/.test(symbol)) symbol = "BINANCE:BTCUSDT";
     var interval = script.getAttribute("data-interval") || "D";
+    if (!/^[A-Za-z0-9]{1,8}$/.test(interval)) interval = "D";
 
     return {
       type: type,
@@ -100,7 +111,9 @@
       params.push("interval=" + encodeURIComponent(config.interval));
     }
 
-    return BASE_URL + "/embed/" + config.type + "?" + params.join("&");
+    // Look the path up in a fixed table so only known routes reach iframe.src.
+    var path = EMBED_PATHS[config.type] || EMBED_PATHS.ticker;
+    return BASE_URL + path + "?" + params.join("&");
   }
 
   /**

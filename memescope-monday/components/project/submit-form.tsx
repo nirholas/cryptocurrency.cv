@@ -41,6 +41,16 @@ import {
 } from "@/app/actions/launch"
 import { getAllCategories, submitProject } from "@/app/actions/projects"
 
+// Only allow http(s) links in rendered hrefs (blocks javascript:, data:, etc.).
+function safeHttpUrl(value: string): string | undefined {
+  try {
+    const url = new URL(value)
+    return url.protocol === "http:" || url.protocol === "https:" ? url.href : undefined
+  } catch {
+    return undefined
+  }
+}
+
 interface ProjectFormData {
   name: string
   ticker: string
@@ -343,7 +353,13 @@ export function SubmitProjectForm({ userId }: SubmitProjectFormProps) {
           console.error("Failed to send Discord notification:", discordError)
         }
       } catch (scheduleError) {
-        console.error("Error during auto-scheduling:", scheduleError)
+        // The error message can embed user input; strip line breaks before logging.
+        const scheduleMessage =
+          scheduleError instanceof Error ? scheduleError.message : String(scheduleError)
+        console.error(
+          "Error during auto-scheduling:",
+          scheduleMessage.replace(/\n|\r/g, "").replace(/[\u2028\u2029]/g, " "),
+        )
       }
 
       router.push(`/projects/${projectSlug}`)
@@ -1023,7 +1039,7 @@ export function SubmitProjectForm({ userId }: SubmitProjectFormProps) {
                     <p>
                       <strong>Website:</strong>{" "}
                       <a
-                        href={formData.websiteUrl}
+                        href={safeHttpUrl(formData.websiteUrl)}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-primary hover:underline"

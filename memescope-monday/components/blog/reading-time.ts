@@ -4,9 +4,14 @@ import path from "path"
 // Fonction pour calculer le temps de lecture d'un article
 export function calculateReadingTime(content: string): string {
   // Supprimer les balises MDX/HTML et le frontmatter
-  const cleanContent = content
-    .replace(/^---[\s\S]*?---/, "") // Enlever le frontmatter
-    .replace(/<[^>]*>/g, "") // Enlever les balises HTML
+  let withoutTags = content.replace(/^---[\s\S]*?---/, "") // Enlever le frontmatter
+  // Enlever les balises HTML (répéter jusqu'à stabilité pour les balises imbriquées)
+  let previous
+  do {
+    previous = withoutTags
+    withoutTags = withoutTags.replace(/<[^>]*>/g, "")
+  } while (withoutTags !== previous)
+  const cleanContent = withoutTags
     .replace(/\{[^}]*\}/g, "") // Enlever les composants JSX
     .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1") // Enlever les liens markdown mais garder le texte
     .replace(/[#*`_~]/g, "") // Enlever la syntaxe markdown

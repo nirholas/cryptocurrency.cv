@@ -21,7 +21,7 @@ const END = '<!-- TOOLS:END -->';
 const { TOOLS, TOOL_GROUPS } = await import(path.join(root, 'dist/tools.js'));
 
 function escapeCell(value) {
-  return String(value).replace(/\|/g, '\\|').replace(/\n+/g, ' ').trim();
+  return String(value).replace(/\\/g, '\\\\').replace(/\|/g, '\\|').replace(/\n+/g, ' ').trim();
 }
 
 const lines = [`**${TOOLS.length} tools.** Every tool maps onto one real REST route of the API.`, ''];

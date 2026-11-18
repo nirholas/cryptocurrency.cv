@@ -23,7 +23,6 @@ import {
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
 import NewsCard from '../components/NewsCard';
-import Header from '../components/Header';
 import { useNews, useBreakingNews, useTrending } from '../hooks/useNews';
 import { useFearGreed, useSentiment } from '../hooks/useMarket';
 import FearGreedGauge from '../components/FearGreedGauge';

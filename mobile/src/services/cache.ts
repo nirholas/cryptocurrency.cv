@@ -28,8 +28,7 @@ export async function getCached<T>(key: string): Promise<T | null> {
     const raw = await AsyncStorage.getItem(`${CACHE_PREFIX}${key}`);
     if (!raw) return null;
     const entry: CacheEntry<T> = JSON.parse(raw);
-    const isExpired = Date.now() - entry.timestamp > entry.ttl;
-    // Return data even if expired — caller decides freshness
+    // Return data even if expired — caller decides freshness (see isCacheFresh)
     return entry.data;
   } catch {
     return null;

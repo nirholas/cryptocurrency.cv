@@ -71,7 +71,7 @@ async function fetchNews(): Promise<void> {
 /**
  * Fetch multiple endpoints with payments
  */
-async function fetchMultiple(): Promise<void> {
+export async function fetchMultiple(): Promise<void> {
   const endpoints = [
     '/api/v1/news',
     '/api/v1/trending',
@@ -131,7 +131,7 @@ async function handlePaymentManually(): Promise<void> {
 /**
  * Stream real-time data with payment
  */
-async function streamData(): Promise<void> {
+export async function streamData(): Promise<void> {
   console.log('\n📺 Streaming with payment...');
 
   const response = await payFetch(`${API_BASE}/api/v1/stream/prices`, {
@@ -162,7 +162,7 @@ async function streamData(): Promise<void> {
 /**
  * Check USDC balance before making requests
  */
-async function checkBalance(): Promise<void> {
+export async function checkBalance(): Promise<void> {
   console.log('\n💰 Checking USDC balance...');
 
   // Use viem or ethers to check balance

@@ -630,6 +630,11 @@ self.addEventListener('periodicsync', (event) => {
 // Message Handler
 // ============================================
 self.addEventListener('message', (event) => {
+  // Only accept messages from pages on this origin.
+  if (event.origin !== self.location.origin) {
+    return;
+  }
+
   console.log('[SW] Message received:', event.data);
   
   const { type, payload } = event.data || {};
@@ -663,9 +668,15 @@ async function cacheUrls(urls, cacheName) {
   await Promise.all(
     urls.map(async (url) => {
       try {
-        const response = await fetch(url);
+        // Only cache same-origin URLs.
+        const target = new URL(url, self.location.origin);
+        if (target.origin !== self.location.origin) {
+          return;
+        }
+        const sameOriginUrl = `${self.location.origin}/${target.pathname.replace(/^\/+/, '')}${target.search}`;
+        const response = await fetch(sameOriginUrl);
         if (response.ok) {
-          await cache.put(url, response);
+          await cache.put(sameOriginUrl, response);
         }
       } catch (error) {
         console.warn(`[SW] Failed to cache: ${url}`);

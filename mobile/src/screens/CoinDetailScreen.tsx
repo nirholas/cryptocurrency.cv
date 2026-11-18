@@ -30,7 +30,7 @@ import { useChartData, TimeRange } from '../hooks/useChartData';
 import { useNews } from '../hooks/useNews';
 import NewsCard from '../components/NewsCard';
 import Badge from '../components/Badge';
-import { ChartSkeleton, StatsSkeleton, NewsListSkeleton } from '../components/Skeleton';
+import { ChartSkeleton } from '../components/Skeleton';
 import type { RootStackParamList } from '../../App';
 import type { Article } from '../api/client';
 
@@ -103,6 +103,8 @@ export default function CoinDetailScreen() {
     );
   }
 
+  const isPositive = coin ? coin.change24h >= 0 : true;
+
   const stats: StatItem[] = coin
     ? [
         {
@@ -168,7 +170,6 @@ export default function CoinDetailScreen() {
     }));
   }, [chart.data]);
 
-  const isPositive = coin ? coin.change24h >= 0 : true;
   const chartColor = isPositive ? '#22c55e' : '#ef4444';
 
   return (

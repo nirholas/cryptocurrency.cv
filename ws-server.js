@@ -51,6 +51,11 @@
 const WebSocket = require('ws');
 const http = require('http');
 
+/** Strip CR/LF so untrusted values cannot forge extra log lines. */
+function logSafe(value) {
+  return String(value).replace(/\n|\r/g, '');
+}
+
 // Redis pub/sub for horizontal scaling (optional — graceful fallback to single-process)
 let redisPub = null; // publish instance
 let redisSub = null; // subscribe instance
@@ -1129,7 +1134,7 @@ wss.on('connection', async (ws, req) => {
         reconnect: guidance,
       }),
     );
-    console.log(`[${new Date().toISOString()}] Auth rejected from ${ip}: ${authResult.reason}`);
+    console.log(`[${new Date().toISOString()}] Auth rejected from ${logSafe(ip)}: ${logSafe(authResult.reason)}`);
     return;
   }
 
@@ -1146,7 +1151,7 @@ wss.on('connection', async (ws, req) => {
       }),
     );
     console.log(
-      `[${new Date().toISOString()}] Connection limit hit for ${effectiveKey} from ${ip}`,
+      `[${new Date().toISOString()}] Connection limit hit for ${logSafe(effectiveKey)} from ${logSafe(ip)}`,
     );
     return;
   }
@@ -1448,7 +1453,6 @@ function handleMessage(clientId, message) {
       redisSaveConnectionState(clientId, client);
       break;
     }
-    default:
     // ── Topic-based subscriptions (prices:BTC, news:breaking, etc.) ──
     case 'subscribe_topics':
       handleSubscribeTopics(clientId, message.payload);
@@ -1456,12 +1460,13 @@ function handleMessage(clientId, message) {
     case 'unsubscribe_topics':
       handleUnsubscribeTopics(clientId, message.payload);
       break;
+    default:
       // Handle reconnection restore: client sends previous clientId to restore state
       if (message.type === 'restore' && message.payload?.previousClientId) {
         handleRestore(clientId, message.payload.previousClientId);
         break;
       }
-      console.log(`Unknown message type: ${message.type}`);
+      console.log(`Unknown message type: ${logSafe(message.type)}`);
   }
 }
 
@@ -1546,7 +1551,7 @@ function handleSubscribeTopics(clientId, payload) {
   if (subscribed.length > 0) {
     console.log(
       `[${new Date().toISOString()}] Client ${clientId} subscribed to topics:`,
-      subscribed,
+      logSafe(subscribed.join(', ')),
     );
   }
   redisSaveConnectionState(clientId, client);
@@ -1672,7 +1677,7 @@ async function handleRestore(clientId, previousClientId) {
   );
 
   console.log(
-    `[${new Date().toISOString()}] Client ${clientId} restored session from ${previousClientId}`,
+    `[${new Date().toISOString()}] Client ${clientId} restored session from ${logSafe(previousClientId)}`,
   );
 }
 
@@ -1770,7 +1775,7 @@ function handleSubscribeAlerts(clientId, payload) {
 
   console.log(
     `[${new Date().toISOString()}] Client ${clientId} subscribed to alerts:`,
-    Array.from(client.alertSubscriptions),
+    logSafe(Array.from(client.alertSubscriptions).join(', ')),
   );
   redisSaveConnectionState(clientId, client);
 }
@@ -1848,7 +1853,7 @@ function handleJoinChannel(clientId, payload) {
     }),
   );
 
-  console.log(`[${new Date().toISOString()}] Client ${clientId} joined channel: ${channelId}`);
+  console.log(`[${new Date().toISOString()}] Client ${clientId} joined channel: ${logSafe(channelId)}`);
   redisSaveConnectionState(clientId, client);
 }
 

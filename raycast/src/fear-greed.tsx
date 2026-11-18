@@ -8,7 +8,7 @@
  * For licensing inquiries: nirholas@users.noreply.github.com
  */
 
-import { Detail, ActionPanel, Action, Icon, getPreferenceValues } from "@raycast/api";
+import { Detail, ActionPanel, Action, getPreferenceValues } from "@raycast/api";
 import { useFetch } from "@raycast/utils";
 
 const API_BASE =

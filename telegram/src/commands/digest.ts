@@ -10,7 +10,7 @@
 
 import type { Context } from 'grammy';
 import { apiFetch } from '../api.js';
-import { escHtml, sentimentEmoji } from '../format.js';
+import { escHtml } from '../format.js';
 
 // ---------------------------------------------------------------------------
 // /digest — Daily news digest (AI-powered)

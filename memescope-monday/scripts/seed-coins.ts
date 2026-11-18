@@ -5,10 +5,6 @@ import { category, project, projectToCategory } from "../drizzle/db/schema"
 
 const now = new Date()
 
-function slugify(name: string): string {
-  return name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")
-}
-
 // ── Categories ──────────────────────────────────────────────────────────────
 
 const categories = [

@@ -42,7 +42,6 @@ export default function SettingsScreen() {
   const [notifications, setNotifications] = useState(true);
   const [breakingAlerts, setBreakingAlerts] = useState(true);
   const [priceAlerts, setPriceAlerts] = useState(false);
-  const [darkMode, setDarkMode] = useState(isDark);
   const [themeMode, setThemeMode] = useState<'light' | 'dark' | 'system'>('system');
   const [haptics, setHaptics] = useState(true);
   const [currency, setCurrency] = useState('USD');

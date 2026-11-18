@@ -161,10 +161,8 @@ test.describe('Theme Toggle', () => {
 
     // If both are the same, check data attribute instead
     if (initialHasDark === updatedHasDark) {
-      const initialDataTheme = await page.locator('html').getAttribute('data-theme');
       await themeToggle.click();
       await page.waitForTimeout(300);
-      const updatedDataTheme = await page.locator('html').getAttribute('data-theme');
       // At least detect that the toggle is clickable
     }
   });

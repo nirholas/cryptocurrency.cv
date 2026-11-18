@@ -41,7 +41,7 @@
  *   /unlocks      — Upcoming token unlocks
  */
 
-const { Client, GatewayIntentBits, EmbedBuilder, SlashCommandBuilder } = require('discord.js');
+const { Client, GatewayIntentBits, EmbedBuilder } = require('discord.js');
 
 const API_BASE = 'https://cryptocurrency.cv';
 const DISCORD_TOKEN = process.env.DISCORD_TOKEN;
@@ -125,10 +125,9 @@ const commands = {
   async market(interaction) {
     await interaction.deferReply();
 
-    const [prices, fearGreed, global] = await Promise.all([
+    const [prices, fearGreed] = await Promise.all([
       apiFetch('/api/prices', { ids: 'bitcoin,ethereum,solana', vs_currencies: 'usd' }),
       apiFetch('/api/fear-greed'),
-      apiFetch('/api/global'),
     ]);
 
     const embed = new EmbedBuilder()

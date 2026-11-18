@@ -20,8 +20,17 @@ export function TokenInfo({ data }: TokenInfoProps) {
   const description =
     coingeckoExtra?.description || pumpfun?.description || heliusMeta?.description || null
 
-  // Strip HTML tags for CoinGecko descriptions
-  const cleanDescription = description?.replace(/<[^>]*>/g, "").trim() || null
+  // Strip HTML tags for CoinGecko descriptions (repeat until stable so
+  // nested/overlapping tags can't reassemble after one pass)
+  let strippedDescription = description
+  if (strippedDescription) {
+    let previous
+    do {
+      previous = strippedDescription
+      strippedDescription = strippedDescription.replace(/<[^>]*>/g, "")
+    } while (strippedDescription !== previous)
+  }
+  const cleanDescription = strippedDescription?.trim() || null
 
   const categories = coingeckoExtra?.categories ?? []
   const genesisDate = coingeckoExtra?.genesisDate

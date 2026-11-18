@@ -28,17 +28,19 @@ import {
 // Types
 // ═══════════════════════════════════════════════════════════════
 
-interface Holding {
-  symbol: string;
-  quantity: number;
-  avgCost: number;
-}
+/**
+ * @typedef {Object} Holding
+ * @property {string} symbol
+ * @property {number} quantity
+ * @property {number} avgCost
+ */
 
-interface WatchlistItem {
-  symbol: string;
-  targetPrice?: number;
-  notes?: string;
-}
+/**
+ * @typedef {Object} WatchlistItem
+ * @property {string} symbol
+ * @property {number} [targetPrice]
+ * @property {string} [notes]
+ */
 
 // ═══════════════════════════════════════════════════════════════
 // Portfolio Overview
@@ -48,7 +50,7 @@ interface WatchlistItem {
  * Complete portfolio dashboard
  */
 export function PortfolioDashboard() {
-  const [holdings, setHoldings] = useState<Holding[]>([
+  const [holdings, setHoldings] = useState([
     { symbol: 'BTC', quantity: 1.5, avgCost: 42000 },
     { symbol: 'ETH', quantity: 20, avgCost: 2800 },
     { symbol: 'SOL', quantity: 100, avgCost: 95 },
@@ -117,12 +119,9 @@ export function PortfolioDashboard() {
   );
 }
 
-function HoldingsTable({ holdings, onRemove }: { 
-  holdings: any[];
-  onRemove: (symbol: string) => void;
-}) {
-  const [sortBy, setSortBy] = useState<'value' | 'pnl' | 'change'>('value');
-  const [sortDir, setSortDir] = useState<'asc' | 'desc'>('desc');
+function HoldingsTable({ holdings, onRemove }) {
+  const [sortBy, setSortBy] = useState('value');
+  const [sortDir, setSortDir] = useState('desc');
 
   const sorted = useMemo(() => {
     return [...holdings].sort((a, b) => {
@@ -136,7 +135,7 @@ function HoldingsTable({ holdings, onRemove }: {
     });
   }, [holdings, sortBy, sortDir]);
 
-  const handleSort = (column: typeof sortBy) => {
+  const handleSort = (column) => {
     if (sortBy === column) {
       setSortDir(d => d === 'asc' ? 'desc' : 'asc');
     } else {
@@ -230,12 +229,12 @@ function HoldingsTable({ holdings, onRemove }: {
   );
 }
 
-function AddHoldingForm({ onAdd }: { onAdd: (holding: Holding) => void }) {
+function AddHoldingForm({ onAdd }) {
   const [symbol, setSymbol] = useState('');
   const [quantity, setQuantity] = useState('');
   const [avgCost, setAvgCost] = useState('');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     if (symbol && quantity && avgCost) {
       onAdd({
@@ -309,7 +308,7 @@ export function PortfolioPerformance() {
       <div className="flex items-center justify-between mb-6">
         <h3 className="text-lg font-bold">Portfolio Performance</h3>
         <div className="flex gap-1">
-          {(['7d', '30d', '90d', '1y'] as const).map((tf) => (
+          {['7d', '30d', '90d', '1y'].map((tf) => (
             <button
               key={tf}
               onClick={() => setTimeframe(tf)}
@@ -344,7 +343,7 @@ export function PortfolioPerformance() {
 // ═══════════════════════════════════════════════════════════════
 
 export function Watchlist() {
-  const [items, setItems] = useState<WatchlistItem[]>([
+  const [items, setItems] = useState([
     { symbol: 'AVAX', targetPrice: 45, notes: 'Wait for breakout' },
     { symbol: 'MATIC', targetPrice: 1.20, notes: 'Layer 2 play' },
     { symbol: 'ARB', notes: 'Monitor for entry' },
@@ -415,7 +414,7 @@ export function Watchlist() {
   );
 }
 
-function WatchlistCard({ item, onRemove }: { item: any; onRemove: () => void }) {
+function WatchlistCard({ item, onRemove }) {
   const distanceToTarget = item.targetPrice 
     ? ((item.targetPrice - item.currentPrice) / item.currentPrice) * 100
     : null;
@@ -447,15 +446,15 @@ function WatchlistCard({ item, onRemove }: { item: any; onRemove: () => void }) 
         <div className="mt-3 pt-3 border-t">
           <div className="flex items-center justify-between text-sm">
             <span className="text-gray-500">Target: ${item.targetPrice}</span>
-            <span className={distanceToTarget! >= 0 ? 'text-green-600' : 'text-red-600'}>
-              {distanceToTarget! >= 0 ? '▲' : '▼'} {Math.abs(distanceToTarget!).toFixed(1)}%
+            <span className={distanceToTarget >= 0 ? 'text-green-600' : 'text-red-600'}>
+              {distanceToTarget >= 0 ? '▲' : '▼'} {Math.abs(distanceToTarget).toFixed(1)}%
             </span>
           </div>
           <div className="mt-2 h-2 bg-gray-200 rounded-full overflow-hidden">
             <div 
-              className={`h-full ${distanceToTarget! >= 0 ? 'bg-green-500' : 'bg-blue-500'}`}
+              className={`h-full ${distanceToTarget >= 0 ? 'bg-green-500' : 'bg-blue-500'}`}
               style={{ 
-                width: `${Math.min(100, Math.abs(100 - Math.abs(distanceToTarget!)))}%` 
+                width: `${Math.min(100, Math.abs(100 - Math.abs(distanceToTarget)))}%` 
               }}
             />
           </div>
@@ -487,7 +486,7 @@ export function PriceAlerts() {
   
   const [symbol, setSymbol] = useState('');
   const [price, setPrice] = useState('');
-  const [condition, setCondition] = useState<'above' | 'below'>('above');
+  const [condition, setCondition] = useState('above');
 
   const handleAdd = () => {
     if (symbol && price) {
@@ -528,7 +527,7 @@ export function PriceAlerts() {
         />
         <select
           value={condition}
-          onChange={(e) => setCondition(e.target.value as 'above' | 'below')}
+          onChange={(e) => setCondition(e.target.value)}
           className="px-3 py-2 border rounded-lg text-sm"
         >
           <option value="above">Above</option>
@@ -587,13 +586,7 @@ export function PriceAlerts() {
 // Helper Components
 // ═══════════════════════════════════════════════════════════════
 
-function StatCard({ label, value, change, large, colored }: {
-  label: string;
-  value: string;
-  change?: number;
-  large?: boolean;
-  colored?: boolean;
-}) {
+function StatCard({ label, value, change, large, colored }) {
   return (
     <div className="bg-white rounded-lg shadow p-4">
       <div className="text-sm text-gray-500">{label}</div>
@@ -628,7 +621,7 @@ function PortfolioSkeleton() {
   );
 }
 
-function ErrorState({ error, onRetry }: { error: Error; onRetry: () => void }) {
+function ErrorState({ error, onRetry }) {
   return (
     <div className="text-center py-12">
       <div className="text-red-500 text-xl mb-4">⚠️ {error.message}</div>
@@ -642,7 +635,7 @@ function ErrorState({ error, onRetry }: { error: Error; onRetry: () => void }) {
   );
 }
 
-function formatCurrency(value: number): string {
+function formatCurrency(value) {
   return new Intl.NumberFormat('en-US', {
     style: 'currency',
     currency: 'USD',

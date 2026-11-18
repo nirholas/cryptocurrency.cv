@@ -1,4 +1,4 @@
-import { describe, it, expect } from 'vitest';
+import { describe, it } from 'vitest';
 
 describe('full flow integration', () => {
   it.todo('should verify and settle a payment end-to-end');

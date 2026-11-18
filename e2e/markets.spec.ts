@@ -109,10 +109,6 @@ test.describe('Markets Page - Filters', () => {
     await page.goto('/markets');
     await page.waitForLoadState('networkidle');
 
-    // Look for filter buttons, tabs, or search input
-    const filters = page.locator(
-      '[role="tablist"], button:has-text("All"), button:has-text("DeFi"), input[placeholder*="search" i], input[placeholder*="coin" i]'
-    );
     // Filters are optional depending on page implementation
     const main = page.locator('main, body');
     await expect(main.first()).toBeVisible();
