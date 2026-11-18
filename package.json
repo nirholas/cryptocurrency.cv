@@ -268,6 +268,9 @@
       "esbuild@<0.25.0": "^0.25.0",
       "minimatch@>=7.0.0 <11.0.1": "^11.0.1",
       "glob@>=9.0.0 <14.0.2": "^14.0.2",
+      "hono@<4.13.16": "^4.13.16",
+      "@hono/node-server@>=2.0.0 <2.1.6": "^2.1.6",
+      "basic-ftp@<6.2.4": "^6.2.4",
       "deepmerge": "link:./vendor/deepmerge"
     },
     "onlyBuiltDependencies": [
