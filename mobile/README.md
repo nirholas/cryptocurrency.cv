@@ -234,4 +234,4 @@ MIT License - see [LICENSE](../LICENSE) for details.
 
 - **API**: https://cryptocurrency.cv
 - **Documentation**: https://cryptocurrency.cv/docs
-- **GitHub**: https://github.com/AItoolsbyai/free-crypto-news
+- **GitHub**: https://github.com/nirholas/cryptocurrency.cv

@@ -9,13 +9,13 @@
 ## Installation
 
 ```bash
-npm install -g @nicholasrq/fcn-cli
+npm install -g @nirholas/fcn-cli
 ```
 
 Or run directly with npx:
 
 ```bash
-npx @nicholasrq/fcn-cli news
+npx @nirholas/fcn-cli news
 ```
 
 After installing globally, use the `fcn` command:

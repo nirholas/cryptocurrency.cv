@@ -5,7 +5,7 @@ Production-ready Go client for the [Free Crypto News API](https://cryptocurrency
 ## Installation
 
 ```bash
-go get github.com/nirholas/free-crypto-news/sdk/go
+go get github.com/nirholas/cryptocurrency.cv/sdk/go
 ```
 
 ## Quick Start
@@ -19,7 +19,7 @@ import (
     "log"
     "time"
 
-    cryptonews "github.com/nirholas/free-crypto-news/sdk/go"
+    cryptonews "github.com/nirholas/cryptocurrency.cv/sdk/go"
 )
 
 func main() {
