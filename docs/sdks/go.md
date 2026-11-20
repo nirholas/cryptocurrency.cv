@@ -1,6 +1,6 @@
 # Go SDK
 
-The Go SDK provides a performant, idiomatic Go client for the Free Crypto News API.
+The Go SDK is a dependency-free, context-aware client for the Free Crypto News API. It lives in [sdk/go](https://github.com/nirholas/cryptocurrency.cv/tree/main/sdk/go) and the package name is `cryptonews`.
 
 ## Installation
 
@@ -14,101 +14,133 @@ go get github.com/nirholas/cryptocurrency.cv/sdk/go
 package main
 
 import (
-    "fmt"
-    "log"
+	"context"
+	"fmt"
+	"log"
 
-    fcn "github.com/nirholas/cryptocurrency.cv/sdk/go"
+	cryptonews "github.com/nirholas/cryptocurrency.cv/sdk/go"
 )
 
 func main() {
-    // Create client (no API key needed!)
-    client := fcn.NewClient()
+	client := cryptonews.NewClient() // no API key needed
 
-    // Get latest news
-    news, err := client.GetNews(fcn.NewsOptions{Limit: 10})
-    if err != nil {
-        log.Fatal(err)
-    }
-
-    for _, article := range news.Articles {
-        fmt.Printf("%s - %s\n", article.Title, article.Source)
-    }
+	news, err := client.GetLatest(context.Background(), 10)
+	if err != nil {
+		log.Fatal(err)
+	}
+	for _, article := range news.Articles {
+		fmt.Printf("%s - %s\n", article.Title, article.Source)
+	}
 }
 ```
+
+Every request method takes a `context.Context` as its first argument, so cancellation and deadlines are controlled by the caller.
 
 ## Configuration
 
 ```go
-// Default client
-client := fcn.NewClient()
+// Default client (https://cryptocurrency.cv)
+client := cryptonews.NewClient()
 
-// Custom configuration
-client := fcn.NewClient(
-    fcn.WithBaseURL("https://cryptocurrency.cv"),
-    fcn.WithTimeout(30 * time.Second),
-    fcn.WithHTTPClient(customHTTPClient),
-)
+// Self-hosted or staging instance
+client := cryptonews.NewClientWithURL("https://example.com")
 ```
 
 ## API Reference
 
-### News Methods
+### News
 
 ```go
-// Get latest news
-news, err := client.GetNews(fcn.NewsOptions{
-    Limit:    10,
-    Source:   "coindesk",    // optional
-    Category: "defi",        // optional
-    Lang:     "en",          // optional
-})
+ctx := context.Background()
 
-// Search news
-results, err := client.SearchNews("bitcoin etf", fcn.SearchOptions{
-    Limit: 10,
-})
+// Filtered news: limit, category, search (empty string skips a filter)
+news, err := client.GetNews(ctx, 10, "defi", "")
 
-// Get breaking news
-breaking, err := client.GetBreakingNews(fcn.NewsOptions{Limit: 5})
+// Latest headlines, optionally from one source
+latest, err := client.GetLatest(ctx, 10)
+fromSource, err := client.GetLatestFromSource(ctx, 10, "coindesk")
 
-// Get DeFi news
-defi, err := client.GetDefiNews(fcn.NewsOptions{Limit: 10})
+// Keyword search (comma-separated keywords)
+results, err := client.Search(ctx, "bitcoin,etf", 10)
 
-// Get Bitcoin news
-btc, err := client.GetBitcoinNews(fcn.NewsOptions{Limit: 10})
+// Topic feeds
+defi, err := client.GetDeFi(ctx, 10)
+btc, err := client.GetBitcoin(ctx, 10)
+breaking, err := client.GetBreaking(ctx, 5)
+
+// Trending topics over the last N hours
+trending, err := client.GetTrending(ctx, 10, 24)
+
+// News sources
+sources, err := client.GetSources(ctx)
 ```
 
-### Market Methods
+### Market
 
 ```go
-// Get market overview
-market, err := client.GetMarket()
-fmt.Printf("BTC: $%.2f\n", market.Bitcoin.Price)
+// Prices for a coin: map of coin id to currency to value
+prices, err := client.GetPrices(ctx, "bitcoin")
+fmt.Println(prices)
 
-// Get specific coin
-coin, err := client.GetCoin("ethereum")
+// Market overview: top coins as generic maps
+market, err := client.GetMarket(ctx)
+for _, coin := range market.Coins {
+	fmt.Println(coin["id"], coin["current_price"])
+}
 
-// Get Fear & Greed Index
-fg, err := client.GetFearGreedIndex()
+// Fear & Greed Index
+fg, err := client.GetFearGreed(ctx)
 fmt.Printf("Fear & Greed: %d (%s)\n", fg.Value, fg.Classification)
 
-// Get trending coins
-trending, err := client.GetTrending()
+// Gas prices
+gas, err := client.GetGas(ctx)
+fmt.Printf("Fast: %v Standard: %v Slow: %v\n", gas.Fast, gas.Standard, gas.Slow)
 ```
 
-### Category Filter
+### Analytics, health and archive
 
 ```go
-// Get institutional research
-institutional, err := client.GetNews(fcn.NewsOptions{
-    Category: "institutional",
-    Limit:    20,
-})
+health, err := client.GetHealth(ctx)
+fmt.Println(health.Status, health.Version)
 
-// Available categories
-categories, err := client.GetCategories()
-for _, cat := range categories.Categories {
-    fmt.Printf("%s: %d sources\n", cat.ID, cat.SourceCount)
+stats, err := client.GetStats(ctx)
+fmt.Println(stats.Summary)
+
+// Analyze: limit, topic, sentiment (empty string skips a filter)
+analysis, err := client.Analyze(ctx, 20, "", "positive")
+fmt.Println(analysis.TotalCount, analysis.Analysis.OverallSentiment)
+
+// Archive: date (YYYY-MM-DD), query, limit
+archive, err := client.GetArchive(ctx, "2025-01-15", "bitcoin", 20)
+fmt.Println(archive.Total, len(archive.Articles))
+
+// Origins of a story: query, category, limit
+origins, err := client.GetOrigins(ctx, "bitcoin", "", 10)
+fmt.Println(origins.Analyzed, len(origins.Articles))
+```
+
+### Per-coin sentiment
+
+`GetCoinSentiment` fans out across coins with a bounded worker pool and returns a result per pair symbol (for example `BTCUSD`).
+
+```go
+results, err := client.GetCoinSentiment(ctx, &cryptonews.GetCoinSentimentOptions{
+	Coins:         cryptonews.CoinPairs{"BTCUSD": "Bitcoin", "ETHUSD": "Ethereum"}, // defaults to DefaultCoinPairs
+	Limit:         50,
+	MinArticles:   3,
+	MinConfidence: 0.5,
+	Workers:       4,
+})
+if err != nil {
+	log.Fatal(err)
+}
+for pair, r := range results {
+	if r.Err != nil {
+		fmt.Printf("%s: %v\n", pair, r.Err)
+		continue
+	}
+	fmt.Printf("%s: %s (score %.2f, confidence %.2f, tradeable %v)\n",
+		pair, r.Signal, r.Score, r.Confidence, r.Tradeable)
 }
 ```
 
@@ -116,112 +148,107 @@ for _, cat := range categories.Categories {
 
 ```go
 type Article struct {
-    Title       string    `json:"title"`
-    Description string    `json:"description"`
-    Link        string    `json:"link"`
-    PubDate     time.Time `json:"pubDate"`
-    Source      string    `json:"source"`
-    Category    string    `json:"category"`
-    TimeAgo     string    `json:"timeAgo"`
+	Title       string `json:"title"`
+	Link        string `json:"link"`
+	Description string `json:"description,omitempty"`
+	PubDate     string `json:"pubDate"`
+	Source      string `json:"source"`
+	SourceKey   string `json:"sourceKey"`
+	Category    string `json:"category"`
+	TimeAgo     string `json:"timeAgo"`
 }
 
 type NewsResponse struct {
-    Articles   []Article `json:"articles"`
-    TotalCount int       `json:"totalCount"`
-    Sources    []string  `json:"sources"`
-    FetchedAt  time.Time `json:"fetchedAt"`
+	Articles   []Article   `json:"articles"`
+	TotalCount int         `json:"totalCount"`
+	Sources    []string    `json:"sources"`
+	FetchedAt  string      `json:"fetchedAt"`
+	Pagination *Pagination `json:"pagination,omitempty"`
 }
 
-type MarketData struct {
-    Bitcoin  CoinData `json:"bitcoin"`
-    Ethereum CoinData `json:"ethereum"`
-}
+type PriceData map[string]map[string]float64
 
-type CoinData struct {
-    ID        string  `json:"id"`
-    Symbol    string  `json:"symbol"`
-    Name      string  `json:"name"`
-    Price     float64 `json:"price"`
-    Change24h float64 `json:"change24h"`
-    MarketCap float64 `json:"marketCap"`
-    Volume24h float64 `json:"volume24h"`
+type MarketOverview struct {
+	Coins []map[string]interface{} `json:"coins"`
 }
 
 type FearGreedIndex struct {
-    Value          int       `json:"value"`
-    Classification string    `json:"classification"`
-    Timestamp      time.Time `json:"timestamp"`
+	Value          int
+	Classification string
+	Timestamp      int64
 }
 ```
 
+See [sdk/go/cryptonews.go](https://github.com/nirholas/cryptocurrency.cv/blob/main/sdk/go/cryptonews.go) for every response type.
+
 ## Error Handling
 
+All errors wrap a typed value, so use `errors.As` to branch on them.
+
 ```go
-news, err := client.GetNews(fcn.NewsOptions{Limit: 10})
+news, err := client.GetLatest(ctx, 10)
 if err != nil {
-    var apiErr *fcn.APIError
-    if errors.As(err, &apiErr) {
-        fmt.Printf("API Error: %d - %s\n", apiErr.StatusCode, apiErr.Message)
-    } else if errors.Is(err, fcn.ErrTimeout) {
-        fmt.Println("Request timed out")
-    } else {
-        fmt.Printf("Unknown error: %v\n", err)
-    }
-    return
+	var rl *cryptonews.RateLimitError
+	var apiErr *cryptonews.APIError
+	var netErr *cryptonews.NetworkError
+
+	switch {
+	case errors.As(err, &rl):
+		fmt.Printf("rate limited, retry after %.0fs\n", rl.RetryAfter)
+	case errors.As(err, &apiErr):
+		fmt.Printf("API error %d: %s\n", apiErr.StatusCode, apiErr.Message)
+	case errors.As(err, &netErr):
+		fmt.Printf("network error: %v\n", netErr)
+	case errors.Is(err, context.DeadlineExceeded):
+		fmt.Println("request timed out")
+	default:
+		fmt.Printf("unexpected error: %v\n", err)
+	}
+	return
 }
+fmt.Println(len(news.Articles))
 ```
 
 ## Concurrency
 
+The client is safe for concurrent use.
+
 ```go
 import "golang.org/x/sync/errgroup"
 
-func fetchAll(client *fcn.Client) error {
-    var g errgroup.Group
-    var news *fcn.NewsResponse
-    var market *fcn.MarketData
-    var fearGreed *fcn.FearGreedIndex
+func fetchAll(ctx context.Context, client *cryptonews.Client) error {
+	g, ctx := errgroup.WithContext(ctx)
 
-    g.Go(func() error {
-        var err error
-        news, err = client.GetNews(fcn.NewsOptions{Limit: 10})
-        return err
-    })
+	var news *cryptonews.NewsResponse
+	var fearGreed *cryptonews.FearGreedIndex
 
-    g.Go(func() error {
-        var err error
-        market, err = client.GetMarket()
-        return err
-    })
+	g.Go(func() (err error) {
+		news, err = client.GetLatest(ctx, 10)
+		return err
+	})
+	g.Go(func() (err error) {
+		fearGreed, err = client.GetFearGreed(ctx)
+		return err
+	})
 
-    g.Go(func() error {
-        var err error
-        fearGreed, err = client.GetFearGreedIndex()
-        return err
-    })
-
-    if err := g.Wait(); err != nil {
-        return err
-    }
-
-    fmt.Printf("News: %d articles\n", len(news.Articles))
-    fmt.Printf("BTC: $%.2f\n", market.Bitcoin.Price)
-    fmt.Printf("Fear & Greed: %d\n", fearGreed.Value)
-    return nil
+	if err := g.Wait(); err != nil {
+		return err
+	}
+	fmt.Printf("News: %d articles\n", len(news.Articles))
+	fmt.Printf("Fear & Greed: %d\n", fearGreed.Value)
+	return nil
 }
 ```
 
-## Context Support
+## Timeouts
 
 ```go
 ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
 defer cancel()
 
-news, err := client.GetNewsWithContext(ctx, fcn.NewsOptions{Limit: 10})
-if err != nil {
-    if errors.Is(err, context.DeadlineExceeded) {
-        fmt.Println("Request timed out")
-    }
+news, err := client.GetLatest(ctx, 10)
+if errors.Is(err, context.DeadlineExceeded) {
+	fmt.Println("request timed out")
 }
 ```
 
@@ -231,27 +258,26 @@ if err != nil {
 package main
 
 import (
-    "encoding/json"
-    "net/http"
+	"encoding/json"
+	"net/http"
 
-    fcn "github.com/nirholas/cryptocurrency.cv/sdk/go"
+	cryptonews "github.com/nirholas/cryptocurrency.cv/sdk/go"
 )
 
 func main() {
-    client := fcn.NewClient()
+	client := cryptonews.NewClient()
 
-    http.HandleFunc("/api/news", func(w http.ResponseWriter, r *http.Request) {
-        news, err := client.GetNews(fcn.NewsOptions{Limit: 10})
-        if err != nil {
-            http.Error(w, err.Error(), http.StatusInternalServerError)
-            return
-        }
-        
-        w.Header().Set("Content-Type", "application/json")
-        json.NewEncoder(w).Encode(news)
-    })
+	http.HandleFunc("/news", func(w http.ResponseWriter, r *http.Request) {
+		news, err := client.GetLatest(r.Context(), 10)
+		if err != nil {
+			http.Error(w, err.Error(), http.StatusBadGateway)
+			return
+		}
+		w.Header().Set("Content-Type", "application/json")
+		json.NewEncoder(w).Encode(news)
+	})
 
-    http.ListenAndServe(":8080", nil)
+	http.ListenAndServe(":8080", nil)
 }
 ```
 
