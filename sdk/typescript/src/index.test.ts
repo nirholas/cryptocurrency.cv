@@ -185,6 +185,37 @@ describe('CryptoNews', () => {
     });
   });
 
+  describe('getMarket', () => {
+    it('should call the live /api/market/coins endpoint', async () => {
+      mockFetch.mockResolvedValueOnce({
+        ok: true,
+        json: async () => ({ coins: [{ id: 'bitcoin', current_price: 58185.7 }] }),
+      });
+
+      const market = await new CryptoNews().getMarket();
+
+      expect(mockFetch.mock.calls[0][0]).toBe('https://cryptocurrency.cv/api/market/coins');
+      expect(market.coins[0].id).toBe('bitcoin');
+    });
+  });
+
+  describe('getFearGreed', () => {
+    it('should unwrap the live { current } response', async () => {
+      mockFetch.mockResolvedValueOnce({
+        ok: true,
+        json: async () => ({
+          current: { value: 12, valueClassification: 'Extreme Fear', timestamp: 1795132800000 },
+          historical: [],
+        }),
+      });
+
+      const fg = await new CryptoNews().getFearGreed();
+
+      expect(fg.value).toBe(12);
+      expect(fg.classification).toBe('Extreme Fear');
+    });
+  });
+
   describe('getRSSUrl', () => {
     it('should return RSS URL for all feeds', () => {
       const client = new CryptoNews();
@@ -270,19 +301,6 @@ describe('CryptoNews', () => {
       const client = new CryptoNews();
       const result = await client.getMarket();
       expect(result).toHaveProperty('totalMarketCap');
-    });
-  });
-
-  describe('getFearGreed', () => {
-    it('should fetch fear & greed index', async () => {
-      mockFetch.mockResolvedValueOnce({
-        ok: true,
-        json: async () => ({ value: 72, classification: 'Greed' }),
-      });
-
-      const client = new CryptoNews();
-      const result = await client.getFearGreed();
-      expect(result.value).toBe(72);
     });
   });
 

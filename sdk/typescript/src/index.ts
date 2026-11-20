@@ -228,19 +228,18 @@ export interface PriceData {
 
 /** Market overview data */
 export interface MarketOverview {
-  /** Total market capitalisation USD */
-  totalMarketCap?: number;
-  /** Total 24h trading volume */
-  totalVolume?: number;
-  /** BTC dominance percentage */
-  btcDominance?: number;
-  /** ETH dominance percentage */
-  ethDominance?: number;
-  /** Number of active cryptocurrencies */
-  activeCurrencies?: number;
-  /** ISO timestamp */
-  updatedAt?: string;
-  [key: string]: unknown;
+  /** Top coins by market cap (CoinGecko-style rows) */
+  coins: Array<{
+    id: string;
+    symbol?: string;
+    name?: string;
+    current_price?: number;
+    market_cap?: number;
+    market_cap_rank?: number;
+    total_volume?: number;
+    price_change_percentage_24h?: number;
+    [key: string]: unknown;
+  }>;
 }
 
 /** Fear & Greed Index */
@@ -249,8 +248,8 @@ export interface FearGreedIndex {
   value: number;
   /** Human-readable classification */
   classification: string;
-  /** ISO timestamp */
-  timestamp?: string;
+  /** Unix timestamp in milliseconds */
+  timestamp?: number;
   [key: string]: unknown;
 }
 
@@ -542,17 +541,21 @@ export class CryptoNews {
   }
 
   /**
-   * Get market overview (total cap, volume, dominance)
+   * Get market overview (top coins by market cap)
    */
   async getMarket(): Promise<MarketOverview> {
-    return this.request<MarketOverview>('/api/market');
+    return this.request<MarketOverview>('/api/market/coins');
   }
 
   /**
    * Get Fear & Greed Index
    */
   async getFearGreed(): Promise<FearGreedIndex> {
-    return this.request<FearGreedIndex>('/api/fear-greed');
+    const res = await this.request<{
+      current: { value: number; valueClassification: string; timestamp?: number };
+    }>('/api/fear-greed');
+    const { valueClassification, ...rest } = res.current;
+    return { ...rest, classification: valueClassification };
   }
 
   /**

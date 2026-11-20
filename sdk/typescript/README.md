@@ -178,7 +178,7 @@ const client = new CryptoNews({
 | `getSources()` | List all sources |
 | `getHealth()` | API health status |
 | `getPrices(coin?)` | Cryptocurrency prices |
-| `getMarket()` | Market overview |
+| `getMarket()` | Market overview (top coins, `/api/market/coins`) |
 | `getFearGreed()` | Fear & Greed Index |
 | `getGas()` | Ethereum gas prices |
 | `getTrending(limit?, hours?)` | Trending topics |
