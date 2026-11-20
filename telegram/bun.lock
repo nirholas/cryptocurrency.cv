@@ -3,7 +3,7 @@
   "configVersion": 1,
   "workspaces": {
     "": {
-      "name": "@nicholasrq/fcn-telegram-bot",
+      "name": "@nirholas/fcn-telegram-bot",
       "dependencies": {
         "grammy": "^1.35.0",
       },

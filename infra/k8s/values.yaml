@@ -6,7 +6,7 @@
 replicaCount: 3
 
 image:
-  repository: ghcr.io/nicholasgriffintn/free-crypto-news
+  repository: ghcr.io/nirholas/free-crypto-news
   tag: latest
   pullPolicy: IfNotPresent
 

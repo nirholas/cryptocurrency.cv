@@ -10,17 +10,17 @@ Gem::Specification.new do |spec|
   spec.description   = 'Production-ready Ruby client for the Free Crypto News API. ' \
                        'Features include news aggregation, AI-powered analysis, portfolio tools, ' \
                        'on-chain event correlation, and real-time market data.'
-  spec.homepage      = 'https://github.com/WilliamAGH/free-crypto-news'
+  spec.homepage      = 'https://github.com/nirholas/cryptocurrency.cv'
   spec.license       = 'MIT'
 
   spec.required_ruby_version = '>= 2.7.0'
 
   spec.metadata = {
-    'bug_tracker_uri'   => 'https://github.com/WilliamAGH/free-crypto-news/issues',
-    'changelog_uri'     => 'https://github.com/WilliamAGH/free-crypto-news/blob/main/CHANGELOG.md',
+    'bug_tracker_uri'   => 'https://github.com/nirholas/cryptocurrency.cv/issues',
+    'changelog_uri'     => 'https://github.com/nirholas/cryptocurrency.cv/blob/main/CHANGELOG.md',
     'documentation_uri' => 'https://cryptocurrency.cv/docs',
     'homepage_uri'      => spec.homepage,
-    'source_code_uri'   => 'https://github.com/WilliamAGH/free-crypto-news/tree/main/sdk/ruby',
+    'source_code_uri'   => 'https://github.com/nirholas/cryptocurrency.cv/tree/main/sdk/ruby',
     'rubygems_mfa_required' => 'true'
   }
 
