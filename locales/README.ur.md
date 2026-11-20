@@ -117,9 +117,9 @@ Free Crypto News ایک **مکمل انسٹال ہونے والا PWA** ہے ج�
 | زبان       | Package                         |
 | ---------- | ------------------------------- |
 | Python     | `sdk/python/crypto_news.py`        |
-| JavaScript | `npm install @fcn/sdk`          |
-| TypeScript | `npm install @fcn/sdk`          |
-| Go         | `go get github.com/fcn/sdk-go`  |
+| JavaScript | `npm install @nirholas/crypto-news`          |
+| TypeScript | `npm install @nirholas/crypto-news`          |
+| Go         | `go get github.com/nirholas/cryptocurrency.cv/sdk/go`  |
 | Rust       | `sdk/rust/` (path dep)             |
 
 ---
