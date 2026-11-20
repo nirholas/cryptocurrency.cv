@@ -2,7 +2,7 @@
 
 > Free, real-time cryptocurrency news API aggregating 130+ sources. No API key required.
 > REST JSON, RSS/Atom, WebSocket, AI analysis, historical archive, MCP server, ChatGPT plugin.
-> Open source (MIT). https://cryptocurrency.cv
+> Source-available (all rights reserved); the hosted API is free to use. https://cryptocurrency.cv
 
 This document is the complete inline reference intended for AI assistants and LLMs.
 It contains full API documentation, usage examples, response schemas, and integration guides.
@@ -19,7 +19,7 @@ and 500 recent articles) is available at https://cryptocurrency.cv/api/llms-full
 **Rate limiting:** Fair-use policy, no hard limits for reasonable use
 **CORS:** Open (`Access-Control-Allow-Origin: *`)
 **Format:** JSON (default), RSS, Atom, plain text where noted
-**License:** MIT — free to use, modify, and redistribute
+**License:** Source-available, all rights reserved (see LICENSE). The hosted API is free to use.
 
 Aggregates cryptocurrency news from 130+ sources: CoinDesk, The Block, Decrypt,
 CoinTelegraph, Bitcoin Magazine, Blockworks, The Defiant, BeInCrypto, NewsBTC,
@@ -910,7 +910,7 @@ total:      integer       — Total number of sources
 - **Live site:** https://cryptocurrency.cv
 - **Author:** nirholas (https://github.com/nirholas)
 - **Language:** TypeScript (Next.js)
-- **License:** MIT
+- **License:** source-available, all rights reserved (see LICENSE); the hosted API is free to use
 - **Last updated:** March 2026
 - **Dynamic version:** https://cryptocurrency.cv/api/llms-full.txt
 - **Compact reference:** https://cryptocurrency.cv/llms.txt
