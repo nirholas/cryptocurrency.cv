@@ -38,6 +38,7 @@ import {
   PAYMENT_ADDRESS,
   CURRENT_NETWORK,
   getAcceptedAssets,
+  getNetworkDisplayName,
   IS_PRODUCTION,
   IS_BUILD_TIME,
   isX402Configured,
@@ -405,7 +406,7 @@ export function create402Response(endpoint: string, price: string): NextResponse
           {
             type: 'x402',
             description: 'Pay per request with USDC - no rate limits',
-            networks: ['Base Mainnet', 'Base Sepolia'],
+            networks: [getNetworkDisplayName(CURRENT_NETWORK)],
             price: price,
             docs: 'https://docs.x402.org',
           },
@@ -422,7 +423,7 @@ export function create402Response(endpoint: string, price: string): NextResponse
         'X-Network': CURRENT_NETWORK,
         'WWW-Authenticate': `X402 realm="${endpoint}", Payment realm="${endpoint}"`,
         'X-X402-Version': '2',
-        'X-Accepts-Networks': 'eip155:8453,eip155:84532',
+        'X-Accepts-Networks': CURRENT_NETWORK,
       },
     }
   );

@@ -87,7 +87,7 @@ Use when:
 
 ### 5. x402 Micropayments
 **Why it matters**: Novel monetization without traditional API keys or subscriptions.
-- Pay-per-request with USDC on Base
+- Pay-per-request with USDC on Arbitrum One
 - No signup, no credit card, no monthly commitment
 - Aligns with crypto-native users
 - **Our moat**: Only crypto data API with native payment protocol

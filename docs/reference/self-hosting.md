@@ -137,7 +137,7 @@ X_AUTH_TOKEN        # For X/Twitter (from XActions login)
 | Technology | Purpose |
 |------------|--------|
 | x402 Protocol | HTTP micropayments |
-| USDC on Base L2 | Payment settlement |
+| USDC on Arbitrum One | Payment settlement |
 | Stripe | Subscription billing |
 
 ---

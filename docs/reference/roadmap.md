@@ -46,7 +46,7 @@ Building the definitive open crypto intelligence platform.
 - [x] Bitcoin on-chain data (Mempool.space)
 - [x] DeFi yields integration (Llama.fi)
 - [x] Real-time price WebSocket (CoinCap)
-- [x] x402 micropayments infrastructure (Base L2)
+- [x] x402 micropayments infrastructure (Arbitrum One in production)
 
 ## 🔨 In Progress
 
@@ -112,7 +112,7 @@ Building the definitive open crypto intelligence platform.
 ### x402 Premium Features
 
 - [x] x402 payment protocol integration ✅
-- [x] Pay-per-request micropayments (USDC on Base) ✅
+- [x] Pay-per-request micropayments (USDC on Arbitrum One) ✅
 - [x] Payment provider React component ✅
 - [x] Payment button component ✅
 - [x] Payment lifecycle hooks ✅

@@ -267,7 +267,7 @@ The API implements a **distributed sliding-window** rate limiter:
 | Tier | Limit | Window | Description |
 |------|-------|--------|-------------|
 | Anonymous (no key) | 10 req | 1 hour | `/api/sample` only |
-| x402 micropayment | Unlimited | — | $0.001/req in USDC on Base |
+| x402 micropayment | Unlimited | — | $0.001/req in USDC on Arbitrum One |
 | Pro API key | 50,000 req | 1 day | Pro subscribers ($29/mo) |
 | Enterprise key | 500,000 req | 1 day | Enterprise customers ($99/mo) |
 | Internal / SperaxOS | Unlimited | — | Server-to-server |
