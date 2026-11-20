@@ -464,7 +464,7 @@ All API routes are in `src/app/api/`. The project has **394 discoverable endpoin
 | Route | Method | Description |
 |-------|--------|-------------|
 | `/api/prices` | GET | Current prices |
-| `/api/market` | GET | Market overview |
+| `/api/market/coins` | GET | Top coins by market cap |
 | `/api/fear-greed` | GET | Fear & Greed Index |
 | `/api/charts` | GET | Price charts |
 | `/api/ohlc` | GET | OHLC candle data |

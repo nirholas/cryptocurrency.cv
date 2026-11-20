@@ -14,7 +14,8 @@ Free Crypto News is a source-available project by [nirholas](https://github.com/
 - [Trending topics](https://cryptocurrency.cv/api/trending): `GET /api/trending` — trending keywords and topics
 - [Sources list](https://cryptocurrency.cv/api/sources): `GET /api/sources` — all 300+ sources with status
 - [Sentiment](https://cryptocurrency.cv/api/sentiment): `GET /api/sentiment` — AI-powered sentiment analysis
-- [Market data](https://cryptocurrency.cv/api/market): `GET /api/market` — prices and market context
+- [Prices](https://cryptocurrency.cv/api/prices): `GET /api/prices?coin={id}` - spot prices with market cap and 24h volume/change
+- [Market data](https://cryptocurrency.cv/api/market/coins): `GET /api/market/coins` - top coins by market cap (sub-routes: history, ohlc, tickers, exchanges, defi, derivatives, categories, search)
 - [Fear & Greed](https://cryptocurrency.cv/api/fear-greed): `GET /api/fear-greed` — crypto fear & greed index
 - [Source health](https://cryptocurrency.cv/api/sources/health): `GET /api/sources/health` — per-source success rate, latency and last error (`?status=failing`, `?category=`, `?summary=1`)
 - [Feed index](https://cryptocurrency.cv/api/feeds): `GET /api/feeds` — every RSS/Atom/JSON feed, one per topic

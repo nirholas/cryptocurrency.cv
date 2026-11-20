@@ -148,7 +148,7 @@ A compact map of the API, grouped by area. The interactive explorer is at **[cry
 | **International** | `/api/news/international?lang=ko`, `/api/news?translate=es` | 77 outlets, 18 translation targets |
 | **AI** | `/api/ask`, `/api/ai` (summarize, sentiment, fact-check), `/api/ai/summarize`, `/api/ai/narratives`, `/api/ai/research`, `/api/ai/brief`, `/api/rag`, `/api/predictions` | Free via Groq |
 | **Sentiment and social** | `/api/sentiment`, `/api/fear-greed`, `/api/trending`, `/api/social` | Includes X/Twitter sentiment without a key |
-| **Market data** | `/api/market`, `/api/prices`, `/api/defi`, `/api/gas`, `/api/yields`, `/api/hyperliquid` | Prices, DeFi, gas, derivatives |
+| **Market data** | `/api/market/coins`, `/api/prices`, `/api/defi`, `/api/gas`, `/api/yields`, `/api/hyperliquid` | Prices, DeFi, gas, derivatives |
 | **On-chain** | `/api/whales`, `/api/whale-alerts`, `/api/flows`, `/api/liquidations`, `/api/unlocks` | Whale alerts, exchange flows, unlock calendar |
 | **Portfolio and signals** | `/api/portfolio`, `/api/signals`, `/api/alerts` | Portfolio-aware news, trading signals |
 | **Archive** | `/api/archive?date=2024-01`, `?ticker=BTC`, `?q=`, `?stats=true` | 662k articles, see [archive](docs/reference/archive.md) |
