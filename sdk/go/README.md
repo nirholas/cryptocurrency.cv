@@ -183,7 +183,7 @@ All methods require `context.Context` as the first argument.
 | `GetNews(ctx, limit, category, search)` | News with optional filters |
 | `Search(ctx, keywords, limit)` | Search by keywords |
 | `GetPrices(ctx, coin)` | Cryptocurrency prices |
-| `GetMarket(ctx)` | Market overview |
+| `GetMarket(ctx)` | Market overview (top coins, `/api/market/coins`) |
 | `GetFearGreed(ctx)` | Fear & Greed Index |
 | `GetGas(ctx)` | Ethereum gas prices |
 | `GetDeFi(ctx, limit)` | DeFi-specific news |
