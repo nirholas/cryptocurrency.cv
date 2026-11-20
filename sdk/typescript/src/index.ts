@@ -410,12 +410,12 @@ export const COIN_PAIRS: CoinPairs = {
 export class CryptoNews {
   private baseUrl: string;
   private timeout: number;
-  private fetchFn: typeof fetch;
+  private fetchFn?: typeof fetch;
 
   constructor(options: CryptoNewsOptions = {}) {
     this.baseUrl = options.baseUrl || 'https://cryptocurrency.cv';
     this.timeout = options.timeout || 30000;
-    this.fetchFn = options.fetch || fetch;
+    this.fetchFn = options.fetch;
   }
 
   private async request<T>(endpoint: string): Promise<T> {
@@ -423,7 +423,7 @@ export class CryptoNews {
     const timeoutId = setTimeout(() => controller.abort(), this.timeout);
 
     try {
-      const response = await this.fetchFn(`${this.baseUrl}${endpoint}`, {
+      const response = await (this.fetchFn ?? globalThis.fetch)(`${this.baseUrl}${endpoint}`, {
         signal: controller.signal,
         headers: {
           'Accept': 'application/json',
