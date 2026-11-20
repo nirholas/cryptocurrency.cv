@@ -330,29 +330,32 @@ export default function WidgetBuilder() {
 
   const scriptCode = `<script src="${BASE_URL}/widget/embed.js" data-type="${config.type}" data-theme="${config.theme}"${config.type === "news" ? ` data-count="${config.count}"` : ""}${config.type === "coin" ? ` data-coin="${config.coin}"` : ""}${config.type === "chart" ? ` data-symbol="${config.symbol}" data-interval="${config.interval}"` : ""}${!config.showTitle ? ' data-title="false"' : ""}${config.accentColor !== "#3b82f6" ? ` data-accent="${config.accentColor.replace("#", "")}"` : ""}${config.borderRadius !== 8 ? ` data-radius="${config.borderRadius}"` : ""}><\/script>`;
 
-  const reactCode = `import { CryptoWidget } from '@nicholasgriffintn/crypto-widget-react';
-
-export default function MyWidget() {
+  const reactCode = `// No package to install: the widget is a hosted page, embed it with an iframe.
+export default function CryptoNewsWidget() {
   return (
-    <CryptoWidget
-      type="${config.type}"
-      theme="${config.theme}"${config.type === "news" ? `\n      count={${config.count}}` : ""}${config.type === "coin" ? `\n      coin="${config.coin}"` : ""}${config.type === "chart" ? `\n      symbol="${config.symbol}"\n      interval="${config.interval}"` : ""}${!config.showTitle ? "\n      showTitle={false}" : ""}${config.accentColor !== "#3b82f6" ? `\n      accentColor="${config.accentColor}"` : ""}${config.borderRadius !== 8 ? `\n      borderRadius={${config.borderRadius}}` : ""}
+    <iframe
+      src="${embedUrl}"
+      width="${config.width === "fixed" ? config.fixedWidth : "100%"}"
+      height="${iframeHeight}"
+      style={{ border: "none", borderRadius: ${config.borderRadius}, overflow: "hidden" }}
+      loading="lazy"
+      title="Crypto Vision News Widget"
     />
   );
 }`;
 
   const vueCode = `<template>
-  <crypto-widget
-    type="${config.type}"
-    theme="${config.theme}"${config.type === "news" ? `\n    :count="${config.count}"` : ""}${config.type === "coin" ? `\n    coin="${config.coin}"` : ""}${config.type === "chart" ? `\n    symbol="${config.symbol}"\n    interval="${config.interval}"` : ""}${!config.showTitle ? '\n    :show-title="false"' : ""}${config.accentColor !== "#3b82f6" ? `\n    accent-color="${config.accentColor}"` : ""}${config.borderRadius !== 8 ? `\n    :border-radius="${config.borderRadius}"` : ""}
+  <iframe
+    src="${embedUrl}"
+    width="${config.width === "fixed" ? config.fixedWidth : "100%"}"
+    height="${iframeHeight}"
+    style="border:none;border-radius:${config.borderRadius}px;overflow:hidden;"
+    loading="lazy"
+    title="Crypto Vision News Widget"
   />
-</template>
+</template>`;
 
-<script setup>
-import { CryptoWidget } from '@nicholasgriffintn/crypto-widget-vue';
-<\/script>`;
-
-  const wordpressCode = `[crypto_widget type="${config.type}" theme="${config.theme}"${config.type === "news" ? ` count="${config.count}"` : ""}${config.type === "coin" ? ` coin="${config.coin}"` : ""}${config.type === "chart" ? ` symbol="${config.symbol}" interval="${config.interval}"` : ""}${!config.showTitle ? ' title="false"' : ""}${config.accentColor !== "#3b82f6" ? ` accent="${config.accentColor.replace("#", "")}"` : ""}${config.borderRadius !== 8 ? ` radius="${config.borderRadius}"` : ""}]`;
+  const wordpressCode = scriptCode;
 
   const getEmbedCode = () => {
     switch (embedTab) {
@@ -987,24 +990,20 @@ import { CryptoWidget } from '@nicholasgriffintn/crypto-widget-vue';
               )}
               {embedTab === "react" && (
                 <p className="text-xs text-text-tertiary mt-3">
-                  Install:{" "}
-                  <code className="bg-surface-secondary px-1.5 py-0.5 rounded text-xs">
-                    npm install @nicholasgriffintn/crypto-widget-react
-                  </code>
+                  No package needed. Paste this component into your app; it embeds
+                  the hosted widget page.
                 </p>
               )}
               {embedTab === "vue" && (
                 <p className="text-xs text-text-tertiary mt-3">
-                  Install:{" "}
-                  <code className="bg-surface-secondary px-1.5 py-0.5 rounded text-xs">
-                    npm install @nicholasgriffintn/crypto-widget-vue
-                  </code>
+                  No package needed. Paste this component into your app; it embeds
+                  the hosted widget page.
                 </p>
               )}
               {embedTab === "wordpress" && (
                 <p className="text-xs text-text-tertiary mt-3">
-                  Paste this shortcode into any post or page. Requires the
-                  Crypto Vision News WordPress plugin.
+                  No plugin needed. Add a Custom HTML block to any post or page
+                  and paste this script tag.
                 </p>
               )}
             </div>
